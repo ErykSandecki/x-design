@@ -1,1 +1,1 @@
-# react-x-achitecture
+# react-x-achitect
