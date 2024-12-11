@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form snapshots should render Form 1`] = `
+<DocumentFragment>
+  <form
+    class=""
+    data-test-form="test-form"
+  >
+    <input
+      type="text"
+    />
+    <button
+      type="submit"
+    >
+      Click
+    </button>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`Form snapshots should render Form when is not valid 1`] = `
+<DocumentFragment>
+  <form
+    class=""
+    data-test-form="test-form"
+  >
+    <input
+      type="text"
+    />
+    <button
+      type="submit"
+    >
+      Click
+    </button>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`Form snapshots should render Form with not parsed value 1`] = `
+<DocumentFragment>
+  <form
+    class=""
+    data-test-form="test-form"
+  >
+    <input
+      type="text"
+    />
+    <button
+      type="submit"
+    >
+      Click
+    </button>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`Form snapshots should render with init form 1`] = `
+<DocumentFragment>
+  <form
+    class=""
+    data-test-form="test-form"
+  >
+    <input
+      type="text"
+    />
+    <button
+      type="submit"
+    >
+      Click
+    </button>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`Form snapshots should render with passed e2evalue 1`] = `
+<DocumentFragment>
+  <form
+    class=""
+    data-test-form="test-form-e2eValue"
+  >
+    <input
+      type="text"
+    />
+    <button
+      type="submit"
+    >
+      Click
+    </button>
+  </form>
+</DocumentFragment>
+`;

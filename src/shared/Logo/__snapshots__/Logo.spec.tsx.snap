@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Logo snapshots should render in dark mode 1`] = `
+<DocumentFragment>
+  <div
+    class=""
+    data-test-logo=""
+  />
+</DocumentFragment>
+`;
+
+exports[`Logo snapshots should render in light mode 1`] = `
+<DocumentFragment>
+  <div
+    class=""
+    data-test-logo=""
+  />
+</DocumentFragment>
+`;

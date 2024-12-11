@@ -1,0 +1,13 @@
+@use 'sass:map';
+
+.App {
+  min-height: 100%;
+  overflow: auto;
+
+  @each $mode in $--cth-theme-list {
+    &--#{$mode} {
+      background-color: map.get($--cth-colors-map, 'neutral-4' + '--' + $mode);
+      color: map.get($--cth-colors-map, 'neutral-1' + '--' + $mode);
+    }
+  }
+}

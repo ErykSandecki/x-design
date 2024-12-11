@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppInitializer snapshots should render AppInitializer 1`] = `
+<DocumentFragment>
+  <div
+    class="AppInitializer"
+  >
+    <div
+      class="AppInitializer__logo-wrapper"
+    >
+      <div
+        class="AppInitializer__squares-wrapper"
+      >
+        <div
+          class="AppInitializer__first-square-wrapper"
+        >
+          <div
+            class="AppInitializer__first-square"
+          />
+        </div>
+        <div
+          class="AppInitializer__second-square-wrapper"
+        >
+          <div
+            class="AppInitializer__second-square"
+          />
+        </div>
+      </div>
+      <div
+        class="AppInitializer__logo"
+      />
+    </div>
+    <h1
+      class="AppInitializer__company-name typography_Typography__Hvofe typography_Typography--light__ma6Vx typography_Typography--semi-bold__o4iwT typography_Typography--normal__2w6Rv typography_Typography--h1__NYzWT typography_Typography--without-margin__uJld2"
+      data-test-text=""
+      style="text-align: inherit;"
+    >
+      CryptoTradingHub
+    </h1>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AppInitializer snapshots should render in dark mode 1`] = `
+<DocumentFragment>
+  <div
+    class="AppInitializer"
+  >
+    <div
+      class="AppInitializer__logo-wrapper"
+    >
+      <div
+        class="AppInitializer__squares-wrapper"
+      >
+        <div
+          class="AppInitializer__first-square-wrapper"
+        >
+          <div
+            class="AppInitializer__first-square"
+          />
+        </div>
+        <div
+          class="AppInitializer__second-square-wrapper"
+        >
+          <div
+            class="AppInitializer__second-square"
+          />
+        </div>
+      </div>
+      <div
+        class="AppInitializer__logo"
+      />
+    </div>
+    <h1
+      class="AppInitializer__company-name typography_Typography__Hvofe typography_Typography--dark__3M8RF typography_Typography--semi-bold__o4iwT typography_Typography--normal__2w6Rv typography_Typography--h1__NYzWT typography_Typography--without-margin__uJld2"
+      data-test-text=""
+      style="text-align: inherit;"
+    >
+      CryptoTradingHub
+    </h1>
+  </div>
+</DocumentFragment>
+`;

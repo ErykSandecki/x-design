@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RouteTransitionLoader snapshots should render RouteTransitionLoader 1`] = `
+<DocumentFragment>
+  <div>
+    RouteTransitionLoader
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "baseUrl": "./src",
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "lib": ["dom", "dom.iterable", "esnext", "es5"],
+    "outDir": "./dist",
+    "resolveJsonModule": true
+  },
+  "include": ["cypress", "src", "scripts/test.js", "config/sass"]
+}

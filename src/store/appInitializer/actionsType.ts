@@ -1,0 +1,7 @@
+export const REDUCER_KEY = 'appInitializer';
+
+export const APP_INIT = `${REDUCER_KEY}/APP_INIT`;
+export const INIT_LANGUAGE = `${REDUCER_KEY}/INIT_LANGUAGE`;
+export const INIT_LANGUAGE_SUCCESS = `${REDUCER_KEY}/INIT_LANGUAGE_SUCCESS`;
+export const SET_IS_APP_LOADED = `${REDUCER_KEY}/SET_IS_APP_LOADED`;
+export const SET_THEME = `${REDUCER_KEY}/SET_THEME`;

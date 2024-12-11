@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProtectedRoute snapshots should allow user on route 1`] = `<DocumentFragment />`;
+
+exports[`ProtectedRoute snapshots should allow user without guards 1`] = `<DocumentFragment />`;
+
+exports[`ProtectedRoute snapshots should not allow user on route 1`] = `<DocumentFragment />`;
+
+exports[`ProtectedRoute snapshots should not allow user on route with translation key 1`] = `<DocumentFragment />`;

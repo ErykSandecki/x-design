@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Field snapshots should render as boolean type 1`] = `
+<DocumentFragment>
+  <input
+    type="checkbox"
+  />
+</DocumentFragment>
+`;
+
+exports[`Field snapshots should render as component 1`] = `
+<DocumentFragment>
+  <input
+    type="text"
+  />
+</DocumentFragment>
+`;
+
+exports[`Field snapshots should render as number type 1`] = `
+<DocumentFragment>
+  <input
+    type="text"
+  />
+</DocumentFragment>
+`;
+
+exports[`Field snapshots should render when name is not defined & redux hook form empty 1`] = `
+<DocumentFragment>
+  <input
+    type="text"
+  />
+</DocumentFragment>
+`;
+
+exports[`Field snapshots should render when ref is passed 1`] = `
+<DocumentFragment>
+  <input
+    type="text"
+  />
+</DocumentFragment>
+`;
+
+exports[`Field snapshots should render with passed default value 1`] = `
+<DocumentFragment>
+  <input
+    type="text"
+  />
+</DocumentFragment>
+`;
+
+exports[`Field snapshots should render with passed function to format value on init 1`] = `
+<DocumentFragment>
+  <input
+    type="text"
+  />
+</DocumentFragment>
+`;

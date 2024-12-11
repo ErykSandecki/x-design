@@ -1,0 +1,11 @@
+@mixin input-transition($time: 250ms) {
+  transition:
+    $time cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow $time cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border-color $time cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    color $time cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+@mixin transition {
+  transition: 200ms linear;
+}

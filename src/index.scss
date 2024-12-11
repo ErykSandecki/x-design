@@ -1,0 +1,19 @@
+@import 'react-loading-skeleton/dist/skeleton.css';
+
+@import './styles/fonts';
+@import './styles/mixins/index';
+
+:global {
+  body {
+    align-items: center;
+    font-family: Rubik, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    overflow-y: auto;
+  }
+}
+
+div {
+  outline: none;
+}

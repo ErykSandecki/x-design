@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renderRoute snaphots should render renderRoute 1`] = `
+<DocumentFragment>
+  <div
+    class="Page Page--light"
+  >
+    <div
+      class="ErrorPage ErrorPage--light"
+    >
+      <div
+        class="ErrorPage__background ErrorPage__background--light"
+      />
+      <div
+        class="ErrorPage__content ErrorPage__content--light"
+      >
+        <div
+          class="ErrorPage__logo ErrorPage__logo--light"
+          data-test-logo=""
+        />
+        <h3
+          class="ErrorPage__title ErrorPage__title--light typography_Typography__Hvofe typography_Typography--light__ma6Vx typography_Typography--regular__G4QAa typography_Typography--normal__2w6Rv typography_Typography--h3__yKIyB typography_Typography--without-margin__uJld2"
+          data-test-text=""
+          style="text-align: inherit;"
+        >
+          Interval Server Error
+        </h3>
+        <p
+          class="ErrorPage__description ErrorPage__description--light typography_Typography__Hvofe typography_Typography--light__ma6Vx typography_Typography--regular__G4QAa typography_Typography--normal__2w6Rv typography_Typography--p__efCcF typography_Typography--without-margin__uJld2"
+          data-test-text=""
+          style="text-align: inherit;"
+        >
+          The server has been deserted for a while. Please be patient or try again later.
+        </p>
+        <div />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`renderRoute snaphots should render when routeDataArg is string 1`] = `<DocumentFragment />`;

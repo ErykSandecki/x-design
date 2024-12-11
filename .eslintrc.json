@@ -1,0 +1,57 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint"],
+  "rules": {
+    "ban-types": 0,
+    "curly": 1,
+    "default-case": 1,
+    "default-case-last": 1,
+    "default-param-last": 0,
+    "dot-notation": 1,
+    "eqeqeq": 1,
+    "max-classes-per-file": ["error", 1],
+    "no-case-declarations": "off",
+    "no-console": 1,
+    "no-constructor-return": 1,
+    "no-duplicate-imports": 1,
+    "no-else-return": 1,
+    "no-empty-function": 0,
+    "no-extra-bind": 1,
+    "no-extra-boolean-cast": 0,
+    "no-floating-decimal": 1,
+    "no-multi-spaces": 1,
+    "react/display-name": 0,
+    "react/prop-types": 0,
+    "react/react-in-jsx-scope": "off",
+    "sort-keys": 1,
+    "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/ban-ts-comment": 0,
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-non-null-assertion": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

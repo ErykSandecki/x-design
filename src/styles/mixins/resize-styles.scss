@@ -1,0 +1,21 @@
+@mixin resize-x-styles {
+  &--resize-x-enabled {
+    cursor: ew-resize;
+
+    & * {
+      pointer-events: none;
+      user-select: none;
+    }
+  }
+}
+
+@mixin resize-y-styles {
+  &--resize-y-enabled {
+    cursor: ns-resize;
+
+    & * {
+      pointer-events: none;
+      user-select: none;
+    }
+  }
+}

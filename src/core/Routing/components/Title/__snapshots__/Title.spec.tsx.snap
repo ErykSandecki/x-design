@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Title snapshots should render Title 1`] = `<DocumentFragment />`;
+
+exports[`Title snapshots should render with handle error 1`] = `<DocumentFragment />`;
