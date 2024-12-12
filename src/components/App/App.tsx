@@ -32,17 +32,17 @@ const App: FC = () => {
 
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
-  if (!isAppLoaded && isPending) {
-    return (
-      <main className={cx(classNamesWithTheme[className])}>
-        <AppInitializer />
-      </main>
-    );
-  }
+  // if (!isAppLoaded && isPending) {
+  //   return (
+  //     <main className={cx(classNamesWithTheme[className])}>
+  //       <AppInitializer />
+  //     </main>
+  //   );
+  // }
 
-  if (!isAppLoaded && !isPending) {
-    return <Router>{/* <ErrorPage /> */}</Router>;
-  }
+  // if (!isAppLoaded && !isPending) {
+  //   return <Router>{/* <ErrorPage /> */}</Router>;
+  // }
 
   return (
     <main className={cx(classNamesWithTheme[className])}>

@@ -1,0 +1,17 @@
+@use 'sass:map';
+
+.Toolbar {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+
+  @each $mode in $--cth-theme-list {
+    &--#{$mode} {
+      background-color: map.get($--cth-colors-map, 'neutral-5' + '--' + $mode);
+      border-bottom: 1px
+        solid
+        map.get($--cth-colors-map, 'neutral-3' + '--' + $mode);
+    }
+  }
+}

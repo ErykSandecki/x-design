@@ -12,15 +12,13 @@ import styles from './home-page.scss';
 
 // types
 import { PageType } from 'components/Page/enums';
+import HTMLEditor from 'components/HTMLEditor/HTMLEditor';
 
 const HomePage: FC = () => (
-  <Page
-    isLoading={false}
-    pageType={PageType.layout}
-    translationNameSpace={translationNameSpace}
-    withBackground
-  >
-    <div className={styles[classNames[className]]}></div>
+  <Page pageType={PageType.blank} translationNameSpace={translationNameSpace}>
+    <div className={styles[classNames[className]]}>
+      <HTMLEditor />
+    </div>
   </Page>
 );
 

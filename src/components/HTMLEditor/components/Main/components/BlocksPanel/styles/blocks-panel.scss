@@ -1,0 +1,17 @@
+@use 'sass:map';
+
+.BlocksPanel {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  height: 100%;
+  position: relative;
+
+  @each $mode in $--cth-theme-list {
+    &--#{$mode} {
+      background-color: map.get($--cth-colors-map, 'neutral-5' + '--' + $mode);
+      border-right: 1px
+        solid
+        map.get($--cth-colors-map, 'neutral-3' + '--' + $mode);
+    }
+  }
+}

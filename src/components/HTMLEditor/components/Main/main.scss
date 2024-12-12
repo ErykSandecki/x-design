@@ -1,0 +1,13 @@
+.Main {
+  display: flex;
+  height: calc(100vh - 56px);
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+
+  #{&}__panel-view {
+    height: 100%;
+    position: relative;
+    width: 100%;
+  }
+}
