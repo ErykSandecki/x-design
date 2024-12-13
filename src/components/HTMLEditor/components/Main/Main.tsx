@@ -1,8 +1,8 @@
 import { FC } from 'react';
 
 // components
-import BlocksPanel from './components/BlocksPanel/BlocksPanel';
-import Diagram from './components/Diagram/Diagram';
+import PanelComponents from './components/PanelComponents/PanelComponents';
+import Editor from './components/Editor/Editor';
 import PanelProperties from './components/PanelProperties/PanelProperties';
 
 // others
@@ -17,11 +17,11 @@ const Main: FC<TProps> = () => {
   return (
     <div className={styles[classNames[className]]}>
       {/* BLOCKS PANEL */}
-      <BlocksPanel />
+      <PanelComponents />
 
       {/* PANEL VIEW */}
       <div className={styles[classNames.panelView]}>
-        <Diagram />
+        <Editor />
       </div>
 
       {/* PROPERTIES */}

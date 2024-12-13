@@ -1,4 +1,4 @@
-export const className = 'Diagram';
+export const className = 'PanelComponents';
 
 export const classNames = {
   [className]: {

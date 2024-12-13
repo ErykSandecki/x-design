@@ -1,28 +1,29 @@
-import { forwardRef } from 'react';
+import { forwardRef, memo } from 'react';
 
 // hooks
 import { useTheme } from 'hooks/useTheme/useTheme';
 
 // others
-import { BLOCKS_PANEL_ID } from './constants';
 import { className, classNames } from './classNames';
 
 // styles
-import styles from './styles/blocks-panel.scss';
+import styles from './styles/editor.scss';
+
+// types
+import { MouseMode } from '../../../../enums';
 
 export type TProps = {};
 
-const BlocksPanel = forwardRef<HTMLDivElement, TProps>((_, ref) => {
+const Editor = forwardRef<HTMLDivElement, TProps>(() => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   return (
     <div
       className={cx(classNamesWithTheme[className].name)}
-      id={BLOCKS_PANEL_ID}
-      ref={ref}
-      style={{ width: '250px' }}
+      onContextMenu={(event) => event.preventDefault()}
+      tabIndex={0}
     ></div>
   );
 });
 
-export default BlocksPanel;
+export default memo(Editor);

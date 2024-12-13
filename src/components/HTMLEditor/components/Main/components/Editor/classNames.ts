@@ -1,4 +1,4 @@
-export const className = 'BlocksPanel';
+export const className = 'Editor';
 
 export const classNames = {
   [className]: {

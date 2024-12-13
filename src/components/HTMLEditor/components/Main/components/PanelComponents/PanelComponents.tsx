@@ -1,29 +1,28 @@
-import { forwardRef, memo } from 'react';
+import { forwardRef } from 'react';
 
 // hooks
 import { useTheme } from 'hooks/useTheme/useTheme';
 
 // others
+import { BLOCKS_PANEL_ID } from './constants';
 import { className, classNames } from './classNames';
 
 // styles
-import styles from './styles/diagram.scss';
-
-// types
-import { MouseMode } from '../../../../enums';
+import styles from './styles/panel-components.scss';
 
 export type TProps = {};
 
-const Diagram = forwardRef<HTMLDivElement, TProps>(() => {
+const PanelComponents = forwardRef<HTMLDivElement, TProps>((_, ref) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   return (
     <div
       className={cx(classNamesWithTheme[className].name)}
-      onContextMenu={(event) => event.preventDefault()}
-      tabIndex={0}
+      id={BLOCKS_PANEL_ID}
+      ref={ref}
+      style={{ width: '250px' }}
     ></div>
   );
 });
 
-export default memo(Diagram);
+export default PanelComponents;
