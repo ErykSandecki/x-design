@@ -2,9 +2,6 @@ import createSagaMiddleware from 'redux-saga';
 import { applyMiddleware, createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
-// api
-import { configureAxios } from 'api/configureAxios';
-
 // store
 import reducers from './reducers';
 import sagaMiddlewareRuns from './watchers';
@@ -25,7 +22,6 @@ export const configureStore = (initialState = {}): TStore => {
     composeEnhancers(applyMiddleware(sagaMiddleware)),
   );
 
-  configureAxios();
   sagaMiddlewareRuns(sagaMiddleware);
 
   return store;

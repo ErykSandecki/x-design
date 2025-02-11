@@ -18,6 +18,7 @@ import {
 } from '../../../../store/reduxHookForm/selectors';
 
 // types
+import { E2EAttribute } from 'types/e2e';
 import {
   E2EDataAttribute,
   TE2EDataAttributeProps,
@@ -46,7 +47,7 @@ export const Form = <T extends {}>({
   asyncTimeDelay = 0,
   children,
   className = '',
-  e2eAttribute = 'form',
+  e2eAttribute = E2EAttribute.form,
   e2eValue = '',
   formName,
   isValid: isValidInitial = false,

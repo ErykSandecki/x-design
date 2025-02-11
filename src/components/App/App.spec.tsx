@@ -1,4 +1,3 @@
-import { HelmetProvider } from 'react-helmet-async';
 import { Provider } from 'react-redux';
 import { render } from '@testing-library/react';
 
@@ -67,9 +66,7 @@ describe('App snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <HelmetProvider>
-          <App />
-        </HelmetProvider>
+        <App />
       </Provider>,
     );
 
