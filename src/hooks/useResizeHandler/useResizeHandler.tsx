@@ -1,5 +1,8 @@
 import { useState, useEffect, MutableRefObject } from 'react';
 
+// utils
+import { handleMouseDown } from './utils/handleMouseDown';
+
 type TUseResizeHandler = {
   height: number;
   isPressingX: boolean;
@@ -37,10 +40,14 @@ export const useResizeHandler = (
     event: React.MouseEvent<HTMLElement>,
     isInverted: boolean,
   ): void => {
-    if (event.button === 0) {
-      setIsInvertedX(isInverted);
-      setIsPressingX(true);
-    }
+    handleMouseDown(event, isInverted, setIsInvertedX, setIsPressingX);
+  };
+
+  const handleMouseDownY = (
+    event: React.MouseEvent<HTMLElement>,
+    isInverted: boolean,
+  ): void => {
+    handleMouseDown(event, isInverted, setIsInvertedY, setIsPressingY);
   };
 
   const handleMouseMoveX = (event: MouseEvent): void => {
@@ -62,16 +69,6 @@ export const useResizeHandler = (
           setWidth(position);
           break;
       }
-    }
-  };
-
-  const handleMouseDownY = (
-    event: React.MouseEvent<HTMLElement>,
-    isInverted: boolean,
-  ): void => {
-    if (event.button === 0) {
-      setIsInvertedY(isInverted);
-      setIsPressingY(true);
     }
   };
 

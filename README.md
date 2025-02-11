@@ -110,17 +110,6 @@ git commit -m "<message>" --no-verify
 
 <br />
 
-## 🎹 Dev Mode
-
-You can set timeout for resposne, by adding to local storage key `dev-response-timeout` & pass time in ms.
-If key doesn't exists the default time is 2000ms.
-
-```
-dev-response-timeout = <time> in ms
-```
-
-<br />
-
 ## 📥 Material Icon Theme
 
 After install `Material Icon Theme` you can pass custom folder

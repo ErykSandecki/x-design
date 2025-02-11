@@ -1,6 +1,5 @@
 import { Chart, registerables } from 'chart.js';
 import { createRoot } from 'react-dom/client';
-import { HelmetProvider } from 'react-helmet-async';
 import { Provider } from 'react-redux';
 
 // components
@@ -23,11 +22,9 @@ appendOverlayContainers();
 
 createRoot(document.getElementById('root')!).render(
   <Provider store={store}>
-    <HelmetProvider>
-      <ContextProvider actionOnChangeTheme={setTheme}>
-        <App />
-      </ContextProvider>
-    </HelmetProvider>
+    <ContextProvider actionOnChangeTheme={setTheme}>
+      <App />
+    </ContextProvider>
   </Provider>,
 );
 

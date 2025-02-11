@@ -14,7 +14,7 @@ module.exports = {
 
         return [
           false,
-          'The name of the commit must look according to the formula: TBA-<ticket-number>: <message>.',
+          'The name of the commit must look according to the formula: RX: <message>.',
         ];
       },
     ],
