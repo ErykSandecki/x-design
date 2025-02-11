@@ -1,4 +1,3 @@
-import { Chart, registerables } from 'chart.js';
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 
@@ -27,7 +26,5 @@ createRoot(document.getElementById('root')!).render(
     </ContextProvider>
   </Provider>,
 );
-
-Chart.register(...registerables);
 
 window.store = store;
