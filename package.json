@@ -17,7 +17,7 @@
     "prettier:write": "npx prettier --write .",
     "start": "node scripts/start.js",
     "test": "node scripts/test.js --watchAll",
-    "test:check": "node scripts/test.js =false --passWithNoTests --coverage",
+    "test:check": "node scripts/test.js --watchAll=false  --passWithNoTests --coverage",
     "test:coverage": "node scripts/test.js  --colors --coverage --watchAll",
     "test:update": "node scripts/test.js  --updateSnapshot --watchAll"
   },
