@@ -3,7 +3,7 @@
 exports[`E2EDataAttribute snapshots should render E2EDataAttribute 1`] = `
 <DocumentFragment>
   <span
-    data-test-test-1=""
+    data-test-test1=""
   >
     child
   </span>
@@ -13,8 +13,8 @@ exports[`E2EDataAttribute snapshots should render E2EDataAttribute 1`] = `
 exports[`E2EDataAttribute snapshots should render with multiple types and values 1`] = `
 <DocumentFragment>
   <span
-    data-test-test-1="test-1"
-    data-test-test-2="test-2"
+    data-test-test1="test-1"
+    data-test-test2="test-2"
   >
     child
   </span>
@@ -24,7 +24,7 @@ exports[`E2EDataAttribute snapshots should render with multiple types and values
 exports[`E2EDataAttribute snapshots should render with value 1`] = `
 <DocumentFragment>
   <span
-    data-test-test-1="test-1"
+    data-test-test1="test-1"
   >
     child
   </span>
@@ -33,7 +33,9 @@ exports[`E2EDataAttribute snapshots should render with value 1`] = `
 
 exports[`E2EDataAttribute snapshots should render without attribute id 1`] = `
 <DocumentFragment>
-  <span>
+  <span
+    data-test-unset=""
+  >
     child
   </span>
 </DocumentFragment>

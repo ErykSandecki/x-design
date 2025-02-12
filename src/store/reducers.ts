@@ -1,11 +1,10 @@
-import { CombinedState, combineReducers, Reducer } from 'redux';
+import { combineReducers, Reducer } from 'redux';
 
 // store
 import appInitializer from './appInitializer/reducer';
 import reduxHookForm from './reduxHookForm/reducer';
 
 // types
-import { TAction } from 'types/redux';
 import { TMainState } from 'types/reducers';
 
 const reducers = {
@@ -13,9 +12,6 @@ const reducers = {
   reduxHookForm,
 };
 
-const createRootReducer = (): Reducer<
-  CombinedState<TMainState>,
-  TAction<any>
-> => combineReducers(reducers);
+const createRootReducer = (): Reducer<TMainState> => combineReducers(reducers);
 
 export default createRootReducer;

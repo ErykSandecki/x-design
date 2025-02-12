@@ -1,4 +1,3 @@
-import { FC, ReactNode } from 'react';
 import { History } from 'history';
 import { Provider } from 'react-redux';
 import { Router } from 'react-router-dom';
@@ -24,11 +23,13 @@ export const getByE2EAttribute = (
     : container.querySelector(`[${getDataTestAttribute(e2eAttribute)}]`)!;
 
 export const getProviderWrapper =
-  (store: TStore, history?: History): FC<{ children: ReactNode }> =>
+  (store: TStore, history?: History) =>
   ({ children }) =>
     history ? (
       <Provider store={store}>
-        <Router history={history}>{children}</Router>
+        <Router location={history.location} navigator={history}>
+          {children}
+        </Router>
       </Provider>
     ) : (
       <Provider store={store}>{children}</Provider>

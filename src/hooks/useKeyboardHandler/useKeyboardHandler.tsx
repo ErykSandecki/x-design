@@ -56,15 +56,16 @@ export const useKeyboardHandler = (
     }
   };
 
-  // useEffect(() => {
-  //   if (attachListener && !drawerId && !modalId) {
-  //     updateEventHandler(handleKeyDown, 'addEventListener', 'keydown');
-  //   }
+  useEffect(() => {
+    if (attachListener) {
+      // attachListener && !drawerId && !modalId
+      updateEventHandler(handleKeyDown, 'addEventListener', 'keydown');
+    }
 
-  //   return () => {
-  //     updateEventHandler(handleKeyDown, 'removeEventListener', 'keydown');
-  //   };
-  // }, [drawerId, id, modalId, ...dependencies]);
+    return () => {
+      updateEventHandler(handleKeyDown, 'removeEventListener', 'keydown');
+    };
+  }, [id, ...dependencies]); // drawerId, id, modalId, ...dependencies
 
   return {
     onKeyDown: handleKeyDown,

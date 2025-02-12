@@ -1,6 +1,6 @@
 import createSagaMiddleware from 'redux-saga';
 import { applyMiddleware, createStore } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
+import { composeWithDevTools } from '@redux-devtools/extension';
 
 // store
 import reducers from './reducers';
@@ -19,7 +19,7 @@ export const configureStore = (initialState = {}): TStore => {
   const store = createStore(
     reducers(),
     initialState,
-    composeEnhancers(applyMiddleware(sagaMiddleware)),
+    composeEnhancers(applyMiddleware(sagaMiddleware))
   );
 
   sagaMiddlewareRuns(sagaMiddleware);

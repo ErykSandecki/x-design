@@ -8,7 +8,7 @@ import { useScrollLock } from './useScrollLock';
 const mockCallBack = jest.fn();
 
 jest.mock('react', () => ({
-  ...(jest.requireActual('react') as Object),
+  ...(jest.requireActual('react') as object),
   useContext: jest.fn(),
 }));
 

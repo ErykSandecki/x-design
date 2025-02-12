@@ -17,7 +17,7 @@ const mockCallBack = jest.fn();
 const stateMock = {};
 
 jest.mock('react-redux', () => ({
-  ...(jest.requireActual('react-redux') as Object),
+  ...(jest.requireActual('react-redux') as object),
   useDispatch: () => () => {},
 }));
 

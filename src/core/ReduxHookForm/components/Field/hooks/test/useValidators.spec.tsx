@@ -67,7 +67,7 @@ jest.mock('../../../../utils/dispatchFieldHandler', () => ({
 }));
 
 jest.mock('lodash', () => ({
-  ...(jest.requireActual('lodash') as Object),
+  ...(jest.requireActual('lodash') as object),
   debounce: async (callback: any) => await callback(),
 }));
 

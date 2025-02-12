@@ -15,7 +15,7 @@ import {
 import { Theme } from 'types/enums';
 
 jest.mock('react', () => ({
-  ...(jest.requireActual('react') as Object),
+  ...(jest.requireActual('react') as object),
   useContext: jest.fn(),
 }));
 

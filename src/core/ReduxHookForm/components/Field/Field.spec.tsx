@@ -30,7 +30,7 @@ const TextField = () => {
 };
 
 jest.mock('lodash', () => ({
-  ...(jest.requireActual('lodash') as Object),
+  ...(jest.requireActual('lodash') as object),
   defer: (callback: any) => callback(),
 }));
 
