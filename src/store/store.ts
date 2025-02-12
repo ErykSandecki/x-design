@@ -19,7 +19,7 @@ export const configureStore = (initialState = {}): TStore => {
   const store = createStore(
     reducers(),
     initialState,
-    composeEnhancers(applyMiddleware(sagaMiddleware))
+    composeEnhancers(applyMiddleware(sagaMiddleware)),
   );
 
   sagaMiddlewareRuns(sagaMiddleware);

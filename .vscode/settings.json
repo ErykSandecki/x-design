@@ -194,7 +194,7 @@
     "**/*.spec.tsx.snap": true,
     "build": true,
     "dist": true,
-    "src/library": true,
+    "src/library": true
   },
   "typescript.tsdk": "node_modules/typescript/lib"
 }
