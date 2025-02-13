@@ -11,7 +11,7 @@ import { Sample1, Sample2 } from './mock/Sample';
 import { configureStore } from '../../store/store';
 
 // types
-import { Theme } from 'types/enums';
+import { Theme } from 'types/enums/theme';
 
 const mockCallBack = jest.fn();
 const stateMock = {};

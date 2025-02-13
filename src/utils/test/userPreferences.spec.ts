@@ -5,7 +5,7 @@ import { mockMatchMedia } from 'test/mocks/mockMatchMedia';
 import { THEME } from 'constant/localStorageKeys';
 
 // types
-import { Theme } from 'types/enums';
+import { Theme } from 'types/enums/theme';
 
 // utils
 import { getThemePreferences } from '../userPreferences';

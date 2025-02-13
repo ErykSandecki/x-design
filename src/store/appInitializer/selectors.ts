@@ -7,7 +7,7 @@ import { REDUCER_KEY } from './actionsType';
 
 // types
 import { TAppInitializerState } from './types';
-import { Theme } from 'types/enums';
+import { Theme } from 'types/enums/theme';
 import { TMainState } from 'types/reducers';
 
 export const appInitializerStateSelector: Selector<

@@ -7,7 +7,7 @@ import { THEME } from 'constant/localStorageKeys';
 
 // types
 import { TActionOnChangeTheme, TContext } from './types';
-import { Theme } from 'types/enums';
+import { Theme } from 'types/enums/theme';
 
 // utils
 import { getThemePreferences } from '../../utils/userPreferences';

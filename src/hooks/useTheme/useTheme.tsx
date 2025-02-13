@@ -4,7 +4,7 @@ import { useContext, useLayoutEffect, useMemo, useState } from 'react';
 import { Context } from '../../core/ContextProvider/ContextProvider';
 
 // types
-import { Theme } from 'types/enums';
+import { Theme } from 'types/enums/theme';
 import { TThemeClassNames, TThemeClassNamesApplier } from './types';
 import { TObject } from 'types/generic';
 

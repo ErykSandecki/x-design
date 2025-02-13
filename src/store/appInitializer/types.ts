@@ -8,7 +8,7 @@ import {
 } from './actionsType';
 
 // types
-import { Theme } from 'types/enums';
+import { Theme } from 'types/enums/theme';
 
 export type TAppInitializerState = {
   isAppLoaded: boolean;

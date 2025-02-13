@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`H4 snapshots should render H4 1`] = `
+<DocumentFragment>
+  <h4
+    class="Typography Typography--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--h4 Typography--h4--light Typography--without-margin Typography--without-margin--light"
+    data-test-text=""
+    style="text-align: inherit;"
+  >
+    H4
+  </h4>
+</DocumentFragment>
+`;

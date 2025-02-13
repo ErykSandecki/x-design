@@ -2,7 +2,7 @@
 import { THEME } from 'constant/localStorageKeys';
 
 // types
-import { Theme } from 'types/enums';
+import { Theme } from 'types/enums/theme';
 
 export const getThemePreferences = (): Theme => {
   const theme = localStorage.getItem(THEME) as Theme;

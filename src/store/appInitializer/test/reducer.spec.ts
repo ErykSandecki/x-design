@@ -17,7 +17,7 @@ import {
 // types
 import { TAction } from 'types/redux';
 import { TAppInitializerState } from '../types';
-import { Theme } from 'types/enums';
+import { Theme } from 'types/enums/theme';
 
 describe('AppInitializerReducer', () => {
   const reducer = (action: TAction, initialState = {}): TAppInitializerState =>

@@ -1,5 +1,5 @@
 // types
-import { Theme } from 'types/enums';
+import { Theme } from 'types/enums/theme';
 
 export type TContext = {
   scrollLock: boolean;

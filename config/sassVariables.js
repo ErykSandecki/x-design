@@ -1,20 +1,20 @@
 const colors = require('./sass/variables/colors');
 
 const interpolateIntoSass = (obj, mapName) => {
-  const prefix = '$--cth-';
+  const prefix = '$--rx-';
   const variables = [];
-  const isMap = !!mapName;
+  const withTheme = !!mapName;
 
   for (const [key, value] of Object.entries(obj)) {
-    const close = isMap ? ',' : ';';
-    const withPrefix = isMap ? '' : prefix;
+    const close = withTheme ? ',' : ';';
+    const withPrefix = withTheme ? '' : prefix;
     const unit = value.$type === 'number' ? 'px' : '';
 
     variables.push(`${withPrefix}${key}: ${value.$value}${unit}${close}`);
   }
 
-  return isMap
-    ? `${prefix}${mapName}-map: (${variables.join(' ')});`
+  return withTheme
+    ? `${prefix}${mapName}-theme: (${variables.join(' ')});`
     : variables.join(' ');
 };
 

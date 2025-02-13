@@ -4,7 +4,7 @@ import { DEFAULT_LANGUAGE } from 'translations/constants';
 // types
 import { REDUCER_KEY as APP_INITIALIZER } from 'store/appInitializer/actionsType';
 import { TAppInitializerState } from '../../../store/appInitializer/types';
-import { Theme } from 'types/enums';
+import { Theme } from 'types/enums/theme';
 
 export const appInitializerStateMock: Record<
   typeof APP_INITIALIZER,

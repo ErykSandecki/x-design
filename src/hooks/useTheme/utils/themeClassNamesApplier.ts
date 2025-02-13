@@ -1,7 +1,7 @@
 import cx from 'classnames';
 
 // types
-import { Theme } from 'types/enums';
+import { Theme } from 'types/enums/theme';
 import { TObject } from 'types/generic';
 import {
   TThemeClassNamesApplier,

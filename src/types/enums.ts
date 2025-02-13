@@ -73,8 +73,3 @@ export enum MousePosition {
   southWest = 'southWest',
   southEast = 'southEast',
 }
-
-export enum Theme {
-  dark = 'dark',
-  light = 'light',
-}

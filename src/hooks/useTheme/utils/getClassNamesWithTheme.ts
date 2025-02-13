@@ -1,7 +1,7 @@
 import { isObject, mapValues } from 'lodash';
 
 // types
-import { Theme } from 'types/enums';
+import { Theme } from 'types/enums/theme';
 import { TObject } from 'types/generic';
 import { TThemeModificator } from '../types';
 

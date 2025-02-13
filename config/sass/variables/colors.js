@@ -1,17 +1,9 @@
 module.exports = {
-  'neutral-1': {
-    $type: 'color',
-    $value: '#ffffff',
-  },
-  'neutral-2': {
-    $type: 'color',
-    $value: '#929292',
-  },
-  'blue-1': {
+  'blue-1--light': {
     $type: 'color',
     $value: '#035afc',
   },
-  'blue-2': {
+  'blue-1--dark': {
     $type: 'color',
     $value: '#8ab4f8',
   },
@@ -31,11 +23,11 @@ module.exports = {
     $type: 'color',
     $value: '#d93025',
   },
-  'orange-1': {
+  'orange-1--light': {
     $type: 'color',
     $value: '#df9862',
   },
-  'orange-2': {
+  'orange-1--dark': {
     $type: 'color',
     $value: '#fdb32a',
   },

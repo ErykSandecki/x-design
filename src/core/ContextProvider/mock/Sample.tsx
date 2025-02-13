@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import { Context } from '../ContextProvider';
 
 // types
-import { Theme } from 'types/enums';
+import { Theme } from 'types/enums/theme';
 
 export const Sample1 = () => {
   const { theme, setTheme } = useContext(Context);

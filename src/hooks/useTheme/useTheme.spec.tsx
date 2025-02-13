@@ -12,7 +12,7 @@ import {
 } from './mock/classNames';
 
 // types
-import { Theme } from 'types/enums';
+import { Theme } from 'types/enums/theme';
 
 jest.mock('react', () => ({
   ...(jest.requireActual('react') as object),

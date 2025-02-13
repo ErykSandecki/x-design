@@ -1,6 +1,6 @@
 // types
 import { TClassNameWithModificator } from 'types/classNames';
-import { Theme } from '../../types/enums';
+import { Theme } from 'types/enums/theme';
 
 export type TThemeModificator =
   | {

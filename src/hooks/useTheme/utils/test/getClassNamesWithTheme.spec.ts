@@ -6,7 +6,7 @@ import {
 } from '../../mock/classNames';
 
 // types
-import { Theme } from '../../../../types/enums';
+import { Theme } from 'types/enums/theme';
 
 // utils
 import { getClassNamesWithTheme } from '../getClassNamesWithTheme';

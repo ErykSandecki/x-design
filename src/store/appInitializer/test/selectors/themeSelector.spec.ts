@@ -8,7 +8,7 @@ import { REDUCER_KEY as APP_INITIALIZER } from '../../actionsType';
 import { themeSelector } from '../../selectors';
 
 // types
-import { Theme } from 'types/enums';
+import { Theme } from 'types/enums/theme';
 
 const state = {
   ...appInitializerStateMock[APP_INITIALIZER],

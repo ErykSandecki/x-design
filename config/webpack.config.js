@@ -7,6 +7,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 const sassList = require('./sassList');
+const sassMaps = require('./sassMaps');
 const sassVariables = require('./sassVariables');
 
 const getClientEnvironment = require('./env');
@@ -25,6 +26,7 @@ const imageInlineSizeLimit = parseInt(
 module.exports = {
   mode: process.env.NODE_ENV,
   entry: paths.appIndexTs,
+  ignoreWarnings: [() => true],
   infrastructureLogging: {
     level: 'none',
   },
@@ -86,6 +88,7 @@ module.exports = {
                 localIdentName: `${
                   isDevelopment ? '' : 'cl__'
                 }[local]__[contenthash:base64:5]`,
+                namedExport: false,
               },
             },
           },
@@ -93,9 +96,12 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               additionalData: async (content) => {
-                return sassList + sassVariables() + content;
+                return sassList + sassVariables() + sassMaps() + content;
               },
               sourceMap: isDevelopment,
+              sassOptions: {
+                quietDeps: true,
+              },
             },
           },
         ],

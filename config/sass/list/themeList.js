@@ -1,3 +1,3 @@
-const themeList = `$--cth-theme-list: 'light', 'dark';`;
+const themeList = `$--rx-theme-list: 'light', 'dark';`;
 
 module.exports = themeList;

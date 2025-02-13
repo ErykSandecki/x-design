@@ -1,0 +1,56 @@
+@use 'sass:map';
+
+@import '../../../../styles/mixins/text-ellipsis';
+@import '../../../../styles/mixins/typography/typography';
+@import '../../../../styles/mixins/typography/typography-list';
+@import '../../../../styles/mixins/typography/typography-map';
+
+.Typography {
+  @each $mode in $--rx-theme-list {
+    @each $color in $--rx-font-colors {
+      &--#{$mode}-#{$color} {
+        @if $mode != 'light' {
+          color: map.get($--rx-font-colors-light-map, $color);
+        } @else {
+          color: map.get($--rx-font-colors-dark-map, $color);
+        }
+      }
+    }
+  }
+
+  @each $font-type in $--rx-font-types {
+    &--#{$font-type} {
+      $--rx-font-size: map.get($--rx-font-size-map, $font-type);
+      $--rx-line-height: map.get($--rx-line-height-map, $font-type);
+      $--rx-margin-bottom: map.get($--rx-margin-bottom-map, $font-type);
+
+      @include typography-styles(
+        $--rx-font-size,
+        $--rx-line-height,
+        $--rx-margin-bottom
+      );
+    }
+  }
+
+  @each $font-style in $--rx-font-styles {
+    &--#{$font-style} {
+      font-style: map.get($--rx-font-styles-map, $font-style);
+    }
+  }
+
+  @each $font-weight in $--rx-font-weights {
+    &--#{$font-weight} {
+      font-weight: map.get($--rx-font-weights-map, $font-weight);
+    }
+  }
+
+  font-family: Rubik, sans-serif;
+
+  &--no-wrap {
+    @include text-ellipsis;
+  }
+
+  &--without-margin {
+    margin: 0;
+  }
+}
