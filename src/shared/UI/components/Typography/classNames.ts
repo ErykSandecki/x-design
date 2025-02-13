@@ -1,6 +1,7 @@
 import { mapValues } from 'lodash';
 
 // types
+import { TypographyColor } from 'types/enums/scss/typographyColor';
 import {
   TypographyFontStyle,
   TypographyFontWeight,
@@ -15,6 +16,7 @@ export const classNames = {
     modificators: {
       noWrap: `${className}--no-wrap`,
       withoutMargin: `${className}--without-margin`,
+      ...mapValues(TypographyColor, (color) => `${className}--${color}`),
       ...mapValues(
         TypographyFontType,
         (fontType) => `${className}--${fontType}`,

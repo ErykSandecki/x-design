@@ -8,8 +8,8 @@
 .Typography {
   @each $mode in $--rx-theme-list {
     @each $color in $--rx-font-colors {
-      &--#{$mode}-#{$color} {
-        @if $mode != 'light' {
+      &--#{$color}--#{$mode} {
+        @if $mode == 'light' {
           color: map.get($--rx-font-colors-light-map, $color);
         } @else {
           color: map.get($--rx-font-colors-dark-map, $color);

@@ -99,9 +99,6 @@ module.exports = {
                 return sassList + sassVariables() + sassMaps() + content;
               },
               sourceMap: isDevelopment,
-              sassOptions: {
-                quietDeps: true,
-              },
             },
           },
         ],

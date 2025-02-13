@@ -1,0 +1,15 @@
+export enum TypographyColor {
+  blue1 = 'blue1',
+  green1 = 'green1',
+  green2 = 'green2',
+  neutral1 = 'neutral1',
+  neutral2 = 'neutral2',
+  neutral3 = 'neutral3',
+  neutral4 = 'neutral4',
+  neutral5 = 'neutral5',
+  orange1 = 'orange1',
+  pink1 = 'pink1',
+  red1 = 'red1',
+  skyBlue1 = 'skyBlue1',
+  violet1 = 'violet1',
+}

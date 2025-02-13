@@ -1,4 +1,4 @@
-import { camelCase, isObject } from 'lodash';
+import { camelCase } from 'lodash';
 import {
   createElement,
   CSSProperties,
@@ -13,7 +13,6 @@ import { useTheme } from '../../../../hooks/useTheme/useTheme';
 
 // others
 import { className as classNameTypography, classNames } from './classNames';
-import { TYPOGRAPHY_COLORS_MODE } from './constants';
 
 // styles
 import styles from './typography.scss';
@@ -21,7 +20,7 @@ import styles from './typography.scss';
 // types
 import { E2EAttribute } from 'types/e2e';
 import { TE2EDataAttributeProps } from '../../../E2EDataAttributes/E2EDataAttribute';
-import { TTypographyColor } from './types';
+import { TypographyColor } from 'types/enums/scss/typographyColor';
 import {
   TypographyFontStyle,
   TypographyFontWeight,
@@ -33,9 +32,8 @@ import { getAttributes } from '../../../E2EDataAttributes/utils';
 
 export type TTypographyProps = Omit<HTMLAttributes<HTMLElement>, 'color'> & {
   align?: CSSProperties['textAlign'];
-  applyInlineColors?: boolean;
   children?: ReactNode;
-  color?: TTypographyColor;
+  color?: TypographyColor;
   e2eAttribute?: TE2EDataAttributeProps['type'];
   e2eValue?: TE2EDataAttributeProps['value'];
   fontStyle?: TypographyFontStyle;
@@ -50,11 +48,10 @@ export type TTypographyProps = Omit<HTMLAttributes<HTMLElement>, 'color'> & {
 export const Typography = forwardRef<HTMLElement, TTypographyProps>(
   (
     {
-      applyInlineColors = false,
       align: textAlign = 'inherit',
       children,
       className = '',
-      color = TYPOGRAPHY_COLORS_MODE.neutral1,
+      color = TypographyColor.neutral1,
       e2eAttribute = E2EAttribute.text,
       e2eValue = '',
       fontStyle = TypographyFontStyle.normal,
@@ -68,7 +65,7 @@ export const Typography = forwardRef<HTMLElement, TTypographyProps>(
     },
     ref,
   ) => {
-    const { classNamesWithTheme, cx, theme } = useTheme(classNames, styles);
+    const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
     if (!children && !innerHtml) {
       return null;
@@ -81,6 +78,7 @@ export const Typography = forwardRef<HTMLElement, TTypographyProps>(
         className: cx(
           className,
           classNamesWithTheme[classNameTypography].name,
+          classNamesWithTheme[classNameTypography].modificators[color],
           classNamesWithTheme[classNameTypography].modificators[
             camelCase(fontWeight)
           ],
@@ -102,9 +100,6 @@ export const Typography = forwardRef<HTMLElement, TTypographyProps>(
         ref,
         style: {
           ...style,
-          ...(applyInlineColors
-            ? { color: isObject(color) ? color[theme] : color }
-            : {}),
           textAlign,
         },
       },

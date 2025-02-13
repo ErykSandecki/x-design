@@ -2,7 +2,7 @@ import cx from 'classnames';
 
 // types
 import { Theme } from 'types/enums/theme';
-import { TObject } from 'types/generic';
+import { TObject } from '../../../types/generic';
 import {
   TThemeClassNamesApplier,
   TThemeClassNamesApplierArgs,
@@ -11,13 +11,18 @@ import {
 } from '../types';
 
 // utils
-import { isTypeGuard } from 'utils/ts/guards';
+import { isTypeGuard } from '../../../utils/ts/guards';
+import { camelCase } from 'lodash';
 
 export const getModificator = (
   styles: TObject<string>,
   theme: Theme,
   themeModificator: TThemeModificator,
-): string => cx(styles[themeModificator.name], styles[themeModificator[theme]]);
+): string =>
+  cx(
+    styles[camelCase(themeModificator.name)],
+    styles[camelCase(themeModificator[theme])],
+  );
 
 export const getModificatorConditional = (
   styles: TObject<string>,
