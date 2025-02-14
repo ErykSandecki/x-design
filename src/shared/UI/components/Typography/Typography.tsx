@@ -65,11 +65,13 @@ export const Typography = forwardRef<HTMLElement, TTypographyProps>(
     },
     ref,
   ) => {
-    const { classNamesWithTheme, cx } = useTheme(classNames, styles);
+    const { classNamesWithTheme, cx, theme } = useTheme(classNames, styles);
 
     if (!children && !innerHtml) {
       return null;
     }
+
+    console.log(theme);
 
     return createElement(
       fontType,

@@ -6,8 +6,10 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const webpack = require('webpack');
 
+const sassImports = require('./sassImports');
 const sassList = require('./sassList');
 const sassMaps = require('./sassMaps');
+const sassMixins = require('./sassMixins');
 const sassVariables = require('./sassVariables');
 
 const getClientEnvironment = require('./env');
@@ -96,7 +98,14 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               additionalData: async (content) => {
-                return sassList + sassVariables() + sassMaps() + content;
+                return (
+                  sassImports +
+                  sassList +
+                  sassVariables() +
+                  sassMaps() +
+                  sassMixins +
+                  content
+                );
               },
               sourceMap: isDevelopment,
             },

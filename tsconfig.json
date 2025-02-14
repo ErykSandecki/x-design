@@ -8,5 +8,11 @@
     "outDir": "./dist",
     "resolveJsonModule": true
   },
-  "include": ["cypress", "src", "scripts/test.js", "config/sass"]
+  "include": [
+    "cypress",
+    "src",
+    "scripts/test.js",
+    "config/sass",
+    "config/imports.js"
+  ]
 }
