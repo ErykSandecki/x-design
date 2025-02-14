@@ -1,4 +1,4 @@
-const typographyColorsList = `$--rx-font-colors: 
+const colorsThemeList = `$--rx-font-colors: 
 'blue-1', 
 'green-1', 
 'green-2', 
@@ -13,4 +13,4 @@ const typographyColorsList = `$--rx-font-colors:
 'sky-blue-1',
 'violet-1';`;
 
-module.exports = typographyColorsList;
+module.exports = colorsThemeList;

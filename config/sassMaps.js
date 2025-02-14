@@ -1,4 +1,4 @@
-const typographyColor = require('./sass/maps/typographyColors');
+const colorsTheme = require('./sass/maps/colorsThemes');
 
 const interpolateIntoSass = (obj, mapName) => {
   const prefix = '$--rx-';
@@ -14,6 +14,6 @@ const interpolateIntoSass = (obj, mapName) => {
 
 module.exports = () =>
   [
-    interpolateIntoSass(typographyColor.dark, 'font-colors-dark'),
-    interpolateIntoSass(typographyColor.light, 'font-colors-light'),
+    interpolateIntoSass(colorsTheme.dark, 'colors-dark'),
+    interpolateIntoSass(colorsTheme.light, 'colors-light'),
   ].join(' ');

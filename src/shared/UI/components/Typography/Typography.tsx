@@ -18,9 +18,9 @@ import { className as classNameTypography, classNames } from './classNames';
 import styles from './typography.scss';
 
 // types
+import { ColorsTheme } from 'types/enums/scss/colorsTheme';
 import { E2EAttribute } from 'types/e2e';
 import { TE2EDataAttributeProps } from '../../../E2EDataAttributes/E2EDataAttribute';
-import { TypographyColor } from 'types/enums/scss/typographyColor';
 import {
   TypographyFontStyle,
   TypographyFontWeight,
@@ -33,7 +33,7 @@ import { getAttributes } from '../../../E2EDataAttributes/utils';
 export type TTypographyProps = Omit<HTMLAttributes<HTMLElement>, 'color'> & {
   align?: CSSProperties['textAlign'];
   children?: ReactNode;
-  color?: TypographyColor;
+  color?: ColorsTheme;
   e2eAttribute?: TE2EDataAttributeProps['type'];
   e2eValue?: TE2EDataAttributeProps['value'];
   fontStyle?: TypographyFontStyle;
@@ -51,7 +51,7 @@ export const Typography = forwardRef<HTMLElement, TTypographyProps>(
       align: textAlign = 'inherit',
       children,
       className = '',
-      color = TypographyColor.neutral1,
+      color = ColorsTheme.neutral1,
       e2eAttribute = E2EAttribute.text,
       e2eValue = '',
       fontStyle = TypographyFontStyle.normal,

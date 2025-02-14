@@ -1,4 +1,4 @@
-export enum TypographyColor {
+export enum ColorsTheme {
   blue1 = 'blue1',
   green1 = 'green1',
   green2 = 'green2',

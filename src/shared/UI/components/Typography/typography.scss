@@ -10,9 +10,9 @@
     @each $color in $--rx-font-colors {
       &--#{$color}--#{$mode} {
         @if $mode == 'light' {
-          color: map.get($--rx-font-colors-light-map, $color);
+          color: map.get($--rx-colors-light-map, $color);
         } @else {
-          color: map.get($--rx-font-colors-dark-map, $color);
+          color: map.get($--rx-colors-dark-map, $color);
         }
       }
     }
