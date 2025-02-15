@@ -27,7 +27,7 @@ import { renderElement } from './utils/renderElement';
 
 export type TTypographyProps = Omit<
   HTMLAttributes<HTMLElement>,
-  'className' | 'color'
+  'className' | 'color' | 'style'
 > &
   TUIProps<typeof classes> & {
     align?: CSSProperties['textAlign'];
@@ -60,7 +60,6 @@ export const Typography = ({
   innerHtml = '',
   noWrap = false,
   ref,
-  style = {},
   variant = TypographyVariant.p,
   variantMapping = {},
   ...restProps
@@ -93,7 +92,6 @@ export const Typography = ({
       ...(innerHtml ? { dangerouslySetInnerHTML: { __html: innerHtml } } : {}),
       ref,
       style: {
-        ...style,
         textAlign,
       },
     },

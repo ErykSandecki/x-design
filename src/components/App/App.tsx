@@ -22,7 +22,11 @@ const App: FC = () => {
       <H1 color={ColorsTheme.blue1} classes={{ className: 'sasd' }}>
         dasds
       </H1>
-      <Typography variantMapping={{ h1: 'a' }} variant={TypographyVariant.h1}>
+      <Typography
+        component={({ className }) => <div>{className}</div>}
+        variantMapping={{ h1: 'a' }}
+        variant={TypographyVariant.h1}
+      >
         czxzxc
       </Typography>
       <button onClick={() => setVisivle(!visible)}>

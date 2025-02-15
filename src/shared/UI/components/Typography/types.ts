@@ -1,4 +1,4 @@
-import { JSX, ReactNode } from 'react';
+import { CSSProperties, JSX } from 'react';
 
 // types
 import { THTMLTag, TObject } from 'types';
@@ -10,7 +10,10 @@ export type TOmittedTypographyProps = Omit<
   'component' | 'fontType'
 > & { component?: TTypograpghyElement };
 
-export type TTypograpghyComponentProps = { children: ReactNode };
+export type TTypograpghyComponentProps = TTypographyProps & {
+  className: string;
+  style: CSSProperties;
+};
 
 export type TTypograpghyElement = (
   props: TTypograpghyComponentProps,
