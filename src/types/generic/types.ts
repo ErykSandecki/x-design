@@ -15,10 +15,6 @@ export type TNestedKeyOf<OBJECT_TYPE extends object> = {
     : `${KEY}`;
 }[keyof OBJECT_TYPE & (string | number)];
 
-export type TObject<T> = { [key: string]: T };
-
-export type TObjectArray<T> = Array<keyof T>;
-
 export type TPickAliases<
   T,
   PropMap extends Partial<Record<keyof T, string>>,

@@ -10,12 +10,16 @@ import {
 
 export const className = 'Typography';
 
+export const classes = {
+  className,
+};
+
 export const classNames = {
   [className]: {
     name: className,
     modificators: {
+      gutterBottom: `${className}--gutter-bottom`,
       noWrap: `${className}--no-wrap`,
-      withoutMargin: `${className}--without-margin`,
       ...mapValues(ColorsTheme, (color) => `${className}--${color}`),
       ...mapValues(
         TypographyFontType,

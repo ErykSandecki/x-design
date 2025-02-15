@@ -16,10 +16,11 @@ const generateEnumsSass = (variableName, variables) => {
 fs.readdir(testFolder, (_, files) => {
   files.forEach((file) => {
     const [fileName] = file.split('.');
-    const name = fileName.substring(0, fileName.length - 1);
-    const stream = fs.createWriteStream(`./src/types/enums/scss/${name}.ts`);
+    const stream = fs.createWriteStream(
+      `./src/types/enums/scss/${fileName}.ts`,
+    );
     const variables = require(`../config/sass/maps/${fileName}`);
-    const variableName = `${name[0].toUpperCase()}${name.substring(1)}`;
+    const variableName = `${fileName[0].toUpperCase()}${fileName.substring(1)}`;
 
     stream.once('open', function () {
       stream.write(generateEnumsSass(variableName, variables.keys));

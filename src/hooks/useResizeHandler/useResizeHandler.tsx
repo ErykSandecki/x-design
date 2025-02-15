@@ -1,4 +1,4 @@
-import { useState, useEffect, MutableRefObject } from 'react';
+import { useState, useEffect, RefObject } from 'react';
 
 // utils
 import { handleMouseDown } from './utils/handleMouseDown';
@@ -27,7 +27,7 @@ export const useResizeHandler = (
   maxWidth: number,
   minHeight: number,
   minWidth: number,
-  ref: MutableRefObject<HTMLElement>,
+  ref: RefObject<HTMLElement>,
 ): TUseResizeHandler => {
   const [height, setHeight] = useState(initialHeight);
   const [isInvertedX, setIsInvertedX] = useState(false);

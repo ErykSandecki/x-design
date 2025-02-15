@@ -38,11 +38,11 @@
 
   font-family: Rubik, sans-serif;
 
-  &--no-wrap {
-    @include text-ellipsis;
+  &:not(&--gutter-bottom) {
+    margin: 0;
   }
 
-  &--without-margin {
-    margin: 0;
+  &--no-wrap {
+    @include text-ellipsis;
   }
 }

@@ -8,9 +8,6 @@ import {
 import { isEmpty } from 'lodash';
 import { useSelector } from 'react-redux';
 
-// components
-import { fixedForwardRef } from 'shared/FixedForwardRed/fixedForwardRef';
-
 // hooks
 import { useMetaProps } from './hooks/useMetaProps';
 import { useInitField } from './hooks/useInitField';
@@ -50,29 +47,27 @@ export type TFieldProps<T, V> = {
   visited?: boolean;
 } & T;
 
-export const FieldInner = <T, V extends TFieldValue>(
-  {
-    afterSubmit,
-    asyncValidators = [],
-    beforeSubmit,
-    Component,
-    data,
-    defaultValue,
-    fieldsToClearOnChange = [],
-    formatOnBlur,
-    formatOnChange,
-    formatOnFocus,
-    formatOnInit,
-    name,
-    parse,
-    subscriptionFields = [],
-    syncValidators = [],
-    touched: initialTouched = false,
-    visited: initialVisited = false,
-    ...restProps
-  }: TFieldProps<T, V>,
-  ref: RefObject<HTMLElement>,
-) => {
+export const Field = <T, V extends TFieldValue>({
+  afterSubmit,
+  asyncValidators = [],
+  beforeSubmit,
+  Component,
+  data,
+  defaultValue,
+  fieldsToClearOnChange = [],
+  formatOnBlur,
+  formatOnChange,
+  formatOnFocus,
+  formatOnInit,
+  name,
+  parse,
+  ref,
+  subscriptionFields = [],
+  syncValidators = [],
+  touched: initialTouched = false,
+  visited: initialVisited = false,
+  ...restProps
+}: TFieldProps<T, V>) => {
   const formName = useContext(FormContext);
   const field = useSelector(fieldSelectorCreator(formName, name));
   const inputProps = useInputProps<V>(formName, name);
@@ -118,7 +113,5 @@ export const FieldInner = <T, V extends TFieldValue>(
     />
   );
 };
-
-export const Field = fixedForwardRef(FieldInner);
 
 export default Field;

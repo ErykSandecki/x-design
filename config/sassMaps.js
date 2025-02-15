@@ -1,4 +1,4 @@
-const colorsTheme = require('./sass/maps/colorsThemes');
+const colorsTheme = require('./sass/maps/colorsTheme');
 
 const interpolateIntoSass = (obj, mapName) => {
   const prefix = '$--rx-';
