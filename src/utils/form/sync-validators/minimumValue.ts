@@ -1,5 +1,5 @@
 // types
-import { TT } from 'types/generic';
+import { TT } from 'types';
 
 export const minimumValue =
   (amount: number): ((t: TT, value: number) => string) =>

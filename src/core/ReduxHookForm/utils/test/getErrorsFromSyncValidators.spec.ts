@@ -1,6 +1,6 @@
 // types
 import { TSyncValidator } from '../../types';
-import { TT } from 'types/generic';
+import { TT } from 'types';
 
 // utils
 import { getErrorsFromSyncValidators } from '../validators';

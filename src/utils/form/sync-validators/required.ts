@@ -2,7 +2,7 @@ import { isArray, isNumber } from 'lodash';
 
 // types
 import { TFieldValue } from 'core/ReduxHookForm/types';
-import { TT } from 'types/generic';
+import { TT } from 'types';
 
 export const required = (t: TT, value: TFieldValue): string => {
   const error = t('formValidators.required');

@@ -6,7 +6,7 @@ import { DEFAULT_LANGUAGE } from './constants';
 import { resources } from './resources';
 
 // types
-import { TObject } from 'types/generic';
+import { TObject } from 'types';
 
 export const initI18n = async (
   language: string,

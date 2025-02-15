@@ -11,7 +11,7 @@ import styles from './app.scss';
 import { H1 } from 'shared/UI/components/Typography';
 import { ColorsTheme } from 'types';
 import Typography from 'shared/UI/components/Typography/Typography';
-import { TypographyFontType } from 'shared/UI/components/Typography/enums';
+import { TypographyVariant } from 'shared/UI/components/Typography/enums';
 
 const App: FC = () => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
@@ -22,7 +22,9 @@ const App: FC = () => {
       <H1 color={ColorsTheme.blue1} classes={{ className: 'sasd' }}>
         dasds
       </H1>
-      <Typography fontType={TypographyFontType.h1}>czxzxc</Typography>
+      <Typography variantMapping={{ h1: 'a' }} variant={TypographyVariant.h1}>
+        czxzxc
+      </Typography>
       <button onClick={() => setVisivle(!visible)}>
         {visible ? 'visible' : 'not'}
       </button>

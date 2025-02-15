@@ -1,6 +1,6 @@
 // types
 import { TAsyncValidator, TFieldValue } from '../../types';
-import { TT } from 'types/generic';
+import { TT } from 'types';
 
 // utils
 import { getErrorsFromAsyncValidators } from '../validators';

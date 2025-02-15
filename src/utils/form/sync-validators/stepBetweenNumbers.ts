@@ -1,6 +1,6 @@
 // types
 import { TFields } from 'store/reduxHookForm/types';
-import { TT } from 'types/generic';
+import { TT } from 'types';
 
 export const stepBetweenNumbers =
   (fieldFromName: string, fieldToName: string) =>

@@ -1,5 +1,5 @@
 // types
-import { TObject } from 'types/generic';
+import { TObject } from 'types';
 
 export const mockAll = (pathName: string): TObject<jest.Mock<any, any>> => {
   const obj = jest.requireActual(pathName);

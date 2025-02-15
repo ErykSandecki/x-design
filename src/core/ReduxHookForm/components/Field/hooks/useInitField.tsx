@@ -11,7 +11,7 @@ import { initField } from 'store/reduxHookForm/actions';
 
 // types
 import { TAsyncValidator, TFieldValue, TSyncValidator } from '../../../types';
-import { TObject } from 'types/generic';
+import { TObject } from 'types';
 import { TUseValidator, useValidators } from './useValidators';
 
 // utils

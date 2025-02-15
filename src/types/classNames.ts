@@ -1,5 +1,5 @@
 // types
-import { TObject } from './generic';
+import { TObject } from 'types';
 
 export type TModificators = TObject<string>;
 

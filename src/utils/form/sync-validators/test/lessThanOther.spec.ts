@@ -1,6 +1,6 @@
 // types
 import { TField } from 'store/reduxHookForm/types';
-import { TT } from 'types/generic';
+import { TT } from 'types';
 
 // utils
 import { lessThanOther } from '../../syncValidators';

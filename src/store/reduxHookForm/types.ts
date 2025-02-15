@@ -20,7 +20,7 @@ import {
 
 // types
 import { TFieldValue } from 'core/ReduxHookForm/types';
-import { TObject } from 'types/generic';
+import { TObject } from 'types';
 
 export type TField<V = TFieldValue> = {
   active: boolean;

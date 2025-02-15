@@ -2,7 +2,7 @@ import { isObject, mapValues } from 'lodash';
 
 // types
 import { Theme } from 'types/enums/theme';
-import { TObject } from 'types/generic';
+import { TObject } from 'types';
 import { TThemeModificator } from '../types';
 
 const getClassNameWithTheme = (

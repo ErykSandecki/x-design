@@ -9,7 +9,7 @@ import {
 
 // types
 import { TFieldValue } from '../../../types';
-import { TObject } from 'types/generic';
+import { TObject } from 'types';
 
 export type TUseMetaProps<V> = {
   active: boolean;

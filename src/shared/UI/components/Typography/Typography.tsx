@@ -17,7 +17,7 @@ import { TTypograpghyComponent, TTypograpghyVariantMapping } from './types';
 import {
   TypographyFontStyle,
   TypographyFontWeight,
-  TypographyFontType,
+  TypographyVariant,
 } from './enums';
 import { TUIProps } from '../../types';
 
@@ -37,12 +37,12 @@ export type TTypographyProps = Omit<
     e2eAttribute?: TE2EDataAttributeProps['type'];
     e2eValue?: TE2EDataAttributeProps['value'];
     fontStyle?: TypographyFontStyle;
-    fontType?: TypographyFontType;
     fontWeight?: TypographyFontWeight;
     gutterBottom?: boolean;
     innerHtml?: string;
     noWrap?: boolean;
     ref?: Ref<HTMLElement>;
+    variant?: TypographyVariant;
     variantMapping?: TTypograpghyVariantMapping;
   };
 
@@ -55,13 +55,13 @@ export const Typography = ({
   e2eAttribute = E2EAttribute.text,
   e2eValue = '',
   fontStyle = TypographyFontStyle.normal,
-  fontType = TypographyFontType.p,
   fontWeight = TypographyFontWeight.regular,
   gutterBottom = false,
   innerHtml = '',
   noWrap = false,
   ref,
   style = {},
+  variant = TypographyVariant.p,
   variantMapping = {},
   ...restProps
 }: TTypographyProps) => {
@@ -74,7 +74,6 @@ export const Typography = ({
   return renderElement(
     children,
     component,
-    fontType,
     {
       ...restProps,
       className: cx(
@@ -83,7 +82,7 @@ export const Typography = ({
         classNamesWithTheme[className].modificators[color],
         classNamesWithTheme[className].modificators[camelCase(fontWeight)],
         classNamesWithTheme[className].modificators[fontStyle],
-        classNamesWithTheme[className].modificators[fontType],
+        classNamesWithTheme[className].modificators[variant],
         [
           classNamesWithTheme[className].modificators.gutterBottom,
           gutterBottom,
@@ -98,6 +97,7 @@ export const Typography = ({
         textAlign,
       },
     },
+    variant,
     variantMapping,
   );
 };

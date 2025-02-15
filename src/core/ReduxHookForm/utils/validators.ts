@@ -4,7 +4,7 @@ import { every } from 'lodash';
 import { TAsyncValidator, TFieldValue, TSyncValidator } from '../types';
 import { TFields } from 'store/reduxHookForm/types';
 import { TFileData } from 'types/types';
-import { TT } from 'types/generic';
+import { TT } from 'types';
 
 export const defaultFormValidator = (fields: TFields): boolean =>
   every(

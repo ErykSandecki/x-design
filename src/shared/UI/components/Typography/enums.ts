@@ -3,7 +3,7 @@ export enum TypographyFontStyle {
   normal = 'normal',
 }
 
-export enum TypographyFontType {
+export enum TypographyVariant {
   h1 = 'h1',
   h2 = 'h2',
   h3 = 'h3',

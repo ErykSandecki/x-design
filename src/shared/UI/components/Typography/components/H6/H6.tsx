@@ -5,10 +5,10 @@ import Typography from '../../Typography';
 
 // types
 import { TOmittedTypographyProps } from '../../types';
-import { TypographyFontType } from '../../enums';
+import { TypographyVariant } from '../../enums';
 
 const H6: FC<TOmittedTypographyProps> = ({ children, ...restProps }) => (
-  <Typography fontType={TypographyFontType.h6} {...restProps}>
+  <Typography variant={TypographyVariant.h6} {...restProps}>
     {children}
   </Typography>
 );

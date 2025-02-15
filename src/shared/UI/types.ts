@@ -1,5 +1,5 @@
 // types
-import { TObject } from 'types/generic';
+import { TObject } from 'types';
 
 export type TClasses = TObject<string>;
 

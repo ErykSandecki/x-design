@@ -5,7 +5,7 @@ import { values } from 'lodash';
 
 // types
 import { TE2EDataAttributeProps } from 'shared/E2EDataAttributes/E2EDataAttribute';
-import { TObject } from 'types/generic';
+import { TObject } from 'types';
 import { TStore } from '../store/types';
 
 // utils

@@ -3,7 +3,7 @@ import { JSX, ReactNode } from 'react';
 // types
 import { THTMLTag, TObject } from 'types';
 import { TTypographyProps } from './Typography';
-import { TypographyFontType } from './enums';
+import { TypographyVariant } from './enums';
 
 export type TOmittedTypographyProps = Omit<
   TTypographyProps,
@@ -51,6 +51,6 @@ export type TTypograpghyHTMLTag = Exclude<
 
 export type TTypograpghyVariantMapping = TObject<
   TTypograpghyHTMLTag,
-  typeof TypographyFontType,
+  typeof TypographyVariant,
   'optional'
 >;

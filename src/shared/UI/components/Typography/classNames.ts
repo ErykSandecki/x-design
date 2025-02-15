@@ -5,7 +5,7 @@ import { ColorsTheme } from 'types/enums/scss/colorsTheme';
 import {
   TypographyFontStyle,
   TypographyFontWeight,
-  TypographyFontType,
+  TypographyVariant,
 } from './enums';
 
 export const className = 'Typography';
@@ -22,7 +22,7 @@ export const classNames = {
       noWrap: `${className}--no-wrap`,
       ...mapValues(ColorsTheme, (color) => `${className}--${color}`),
       ...mapValues(
-        TypographyFontType,
+        TypographyVariant,
         (fontType) => `${className}--${fontType}`,
       ),
       ...mapValues(

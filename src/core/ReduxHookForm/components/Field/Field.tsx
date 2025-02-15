@@ -22,7 +22,7 @@ import { fieldSelectorCreator } from 'store/reduxHookForm/selectors';
 // types
 import { TAsyncValidator, TFieldValue, TSyncValidator } from '../../types';
 import { TFieldComponentProps } from './types';
-import { TObject } from 'types/generic';
+import { TObject } from 'types';
 
 export type TFieldProps<T, V> = {
   afterSubmit?: () => void;

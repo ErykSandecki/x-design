@@ -1,5 +1,5 @@
 // types
-import { TT } from 'types/generic';
+import { TT } from 'types';
 
 // utils
 import { name } from '../../syncValidators';
