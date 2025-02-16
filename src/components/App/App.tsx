@@ -19,13 +19,18 @@ const App: FC = () => {
 
   return (
     <>
-      <H1 color={ColorsTheme.blue1} classes={{ className: 'sasd' }}>
+      <H1
+        sx={{ spacings: { px: 20 } }}
+        color={ColorsTheme.blue1}
+        classes={{ className: 'sasd' }}
+      >
         dasds
       </H1>
       <Typography
         component={({ className }) => <div>{className}</div>}
         variantMapping={{ h1: 'a' }}
         variant={TypographyVariant.h1}
+        sx={{ spacings: { mt: 2 } }}
       >
         czxzxc
       </Typography>

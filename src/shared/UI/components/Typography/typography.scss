@@ -11,7 +11,7 @@
   }
 
   @each $font-type in $--rx-font-types {
-    &--#{$font-type} {
+    &--gutter-bottom#{&}--#{$font-type} {
       $--rx-font-size: map.get($--rx-font-size-map, $font-type);
       $--rx-line-height: map.get($--rx-line-height-map, $font-type);
       $--rx-margin-bottom: map.get($--rx-margin-bottom-map, $font-type);
@@ -37,10 +37,7 @@
   }
 
   font-family: Rubik, sans-serif;
-
-  &:not(&--gutter-bottom) {
-    margin: 0;
-  }
+  margin: 0;
 
   &--no-wrap {
     @include text-ellipsis;

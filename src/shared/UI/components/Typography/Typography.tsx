@@ -2,6 +2,7 @@ import { camelCase } from 'lodash';
 import { CSSProperties, HTMLAttributes, ReactNode, Ref } from 'react';
 
 // hooks
+import { useSX } from '../../hooks/sx/useSX';
 import { useTheme } from '../../../../hooks/useTheme/useTheme';
 
 // others
@@ -60,11 +61,13 @@ export const Typography = ({
   innerHtml = '',
   noWrap = false,
   ref,
+  sx = {},
   variant = TypographyVariant.p,
   variantMapping = {},
   ...restProps
 }: TTypographyProps) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
+  const sxClassName = useSX(sx);
 
   if (!children && !innerHtml) {
     return null;
@@ -76,6 +79,7 @@ export const Typography = ({
     {
       ...restProps,
       className: cx(
+        sxClassName,
         classes.className,
         classNamesWithTheme[className].name,
         classNamesWithTheme[className].modificators[color],
