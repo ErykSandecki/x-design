@@ -3,14 +3,27 @@ const { camelCase } = require('lodash');
 
 const testFolder = './config/sass/maps';
 
-const generateEnumsSass = (variableName, variables) => {
+const generateEnum = (parsedVariables, variableName) =>
+  `export enum ${variableName} { ${parsedVariables.sort().join(',')} }`;
+
+const generateEnumsColorsSass = (variableName, variables) => {
   const parsedVariables = [];
 
   for (const [key] of Object.entries(variables)) {
     parsedVariables.push(`${camelCase(key)} = '${camelCase(key)}'`);
   }
 
-  return `export enum ${variableName} { ${parsedVariables.sort().join(',')} }`;
+  return generateEnum(parsedVariables, variableName);
+};
+
+const generateEnumsSass = (variableName, variables) => {
+  const parsedVariables = [];
+
+  for (const [key, value] of Object.entries(variables)) {
+    parsedVariables.push(`${camelCase(key)} = '${value}'`);
+  }
+
+  return generateEnum(parsedVariables, variableName);
 };
 
 fs.readdir(testFolder, (_, files) => {
@@ -22,9 +35,25 @@ fs.readdir(testFolder, (_, files) => {
     const variables = require(`../config/sass/maps/${fileName}`);
     const variableName = `${fileName[0].toUpperCase()}${fileName.substring(1)}`;
 
-    stream.once('open', function () {
-      stream.write(generateEnumsSass(variableName, variables.keys));
-      stream.end();
-    });
+    switch (fileName) {
+      case 'colorsTheme':
+        stream.once('open', function () {
+          stream.write(generateEnumsColorsSass(variableName, variables.keys));
+          stream.end();
+        });
+        break;
+      case 'boxShadow':
+        stream.once('open', function () {
+          stream.write(generateEnumsSass(variableName, variables(false)));
+          stream.end();
+        });
+        break;
+      default:
+        stream.once('open', function () {
+          stream.write(generateEnumsSass(variableName, variables));
+          stream.end();
+        });
+        break;
+    }
   });
 });

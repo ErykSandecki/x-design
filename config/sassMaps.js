@@ -1,4 +1,6 @@
+const boxShadow = require('./sass/maps/boxShadow');
 const colorsTheme = require('./sass/maps/colorsTheme');
+const zIndex = require('./sass/maps/zIndex');
 
 const interpolateIntoSass = (obj, mapName) => {
   const prefix = '$--rx-';
@@ -14,6 +16,8 @@ const interpolateIntoSass = (obj, mapName) => {
 
 module.exports = () =>
   [
+    interpolateIntoSass(boxShadow(true), 'box-shadow'),
     interpolateIntoSass(colorsTheme.dark, 'colors-dark'),
     interpolateIntoSass(colorsTheme.light, 'colors-light'),
+    interpolateIntoSass(zIndex, 'z-indexes'),
   ].join(' ');

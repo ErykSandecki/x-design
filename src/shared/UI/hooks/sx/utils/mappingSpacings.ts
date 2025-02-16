@@ -4,7 +4,7 @@ import { TSXSpacings } from '../types/spacings';
 
 // utils
 import { enumToArray } from 'utils';
-import { seperateCssProperties } from './seperateCssProperties';
+import { seperateCssProperties } from './utils';
 
 export const mappingSpacings = (spacings: TSXSpacings): string => {
   const keys = enumToArray(Spacing);

@@ -1,8 +1,7 @@
+import { isString } from 'lodash';
+
 // types
 import { TSXBorders } from '../types/borders';
-
-// utils
-import { isString } from 'lodash';
 
 export const mappingBorderRadius = (borders: TSXBorders): string => {
   const { borderRadius } = borders;

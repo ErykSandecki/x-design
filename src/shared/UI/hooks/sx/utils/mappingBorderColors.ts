@@ -1,3 +1,5 @@
+import { kebabCase } from 'lodash';
+
 // others
 import { THEME_COLORS } from 'constant/themeColors';
 
@@ -8,7 +10,6 @@ import { TSXBorders } from '../types/borders';
 
 // utils
 import { enumToArray } from 'utils';
-import { kebabCase } from 'lodash';
 
 export const mappingBorderColors = (
   borderColors: TSXBorders,
