@@ -20,7 +20,11 @@ const App: FC = () => {
   return (
     <>
       <H1
-        sx={{ spacings: { px: 20 } }}
+        sx={{
+          borderBottom: 0,
+          px: 20,
+          borderColor: 'neutral1',
+        }}
         color={ColorsTheme.blue1}
         classes={{ className: 'sasd' }}
       >
@@ -30,7 +34,6 @@ const App: FC = () => {
         component={({ className }) => <div>{className}</div>}
         variantMapping={{ h1: 'a' }}
         variant={TypographyVariant.h1}
-        sx={{ spacings: { mt: 2 } }}
       >
         czxzxc
       </Typography>
