@@ -8,9 +8,6 @@ import App from './App';
 import { wholeStateMock } from 'test/mocks/reducer/wholeStateMock';
 import 'test/mocks/sagas/allSagas';
 
-// others
-import { REDUCER_KEY as APP_INITIALIZER } from 'store/appInitializer/actionsType';
-
 // store
 import { configureStore } from 'store/store';
 

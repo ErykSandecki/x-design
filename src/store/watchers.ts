@@ -1,9 +1,8 @@
 import { Saga, SagaMiddleware } from 'redux-saga';
 
 // store
-import { watchAppInitializer } from './appInitializer/watch';
 
-const watchers: Array<Saga<any>> = [watchAppInitializer];
+const watchers: Array<Saga<any>> = [];
 
 const sagaMiddlewareRuns = (sagaMiddleware: SagaMiddleware): void => {
   for (const watcher of watchers) {

@@ -15,13 +15,15 @@ import './index.scss';
 
 // utils
 import { appendOverlayContainers } from 'config';
-import { setTheme } from 'store/appInitializer/actions';
+import { noop } from 'lodash';
+// import { setTheme } from 'store/appInitializer/actions';
 
 appendOverlayContainers();
 
 createRoot(document.getElementById('root')!).render(
   <Provider store={store}>
-    <ContextProvider actionOnChangeTheme={setTheme}>
+    {/* @ts-ignore */}
+    <ContextProvider actionOnChangeTheme={noop}>
       <App />
     </ContextProvider>
   </Provider>,
