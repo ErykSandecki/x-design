@@ -5,8 +5,7 @@ import { values } from 'lodash';
 
 // types
 import { TE2EDataAttributeProps } from 'shared/E2EDataAttributes/E2EDataAttribute';
-import { TObject } from 'types';
-import { TStore } from '../store/types';
+import { TStore } from 'store/types';
 
 // utils
 import { getDataTestAttribute } from 'shared/E2EDataAttributes/utils';
@@ -34,13 +33,6 @@ export const getProviderWrapper =
     ) : (
       <Provider store={store}>{children}</Provider>
     );
-
-export const mockAll = (pathName: string): TObject<jest.Mock<any, any>> => {
-  const obj = jest.requireActual(pathName);
-  const { mapValues } = jest.requireActual('lodash');
-
-  return mapValues(obj, () => jest.fn());
-};
 
 export const sleep = async (time = 0): Promise<NodeJS.Timeout> =>
   await new Promise((resolve) => setTimeout(resolve, time));

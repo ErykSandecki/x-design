@@ -9,8 +9,8 @@ import { TSX } from './types/types';
 
 // utils
 import { mappingBorders } from './utils/mappingBorders';
-import { mappingBorderColors } from './utils/mappingBorderColors';
-import { mappingBorderRadius } from './utils/mappingBorderRadius';
+import { mappingBordersColors } from './utils/mappingBordersColors';
+import { mappingBordersRadius } from './utils/mappingBordersRadius';
 import { mappingDisplay } from './utils/mappingDisplay';
 import { mappingFlex } from './utils/mappingFlex';
 import { mappingGrid } from './utils/mappingGrid';
@@ -27,8 +27,8 @@ export const useSX = (sx: TSX): TUseSX => {
 
   return css`
     ${mappingBorders(sx, theme)}
-    ${mappingBorderColors(sx, theme)}
-    ${mappingBorderRadius(sx)}
+    ${mappingBordersColors(sx, theme)}
+    ${mappingBordersRadius(sx)}
     ${mappingDisplay(sx)}
     ${mappingFlex(sx)}
     ${mappingGrid(sx)}

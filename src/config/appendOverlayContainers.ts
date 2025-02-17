@@ -10,7 +10,6 @@ export const appendOverlayContainers = (): void => {
 
   ids.forEach((id) => {
     const element = createHtmlElement('div', { id });
-
     document.body.appendChild(element);
   });
 };

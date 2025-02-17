@@ -7,10 +7,9 @@ import { enumToArray } from 'utils';
 import { getCssStyles } from './utils';
 
 export const mappingPositions = (display: TSXPositions): string => {
-  const position =
-    !display[Position.position] && display[Position.zIndex]
-      ? 'relative'
-      : display[Position.position];
+  const anyPosition = display[Position.position];
+  const zIndex = display[Position.zIndex];
+  const position = !anyPosition && zIndex ? 'relative' : anyPosition;
 
   return getCssStyles({ ...display, position }, enumToArray<string>(Position));
 };

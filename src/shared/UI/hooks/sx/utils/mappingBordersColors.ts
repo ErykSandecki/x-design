@@ -11,7 +11,7 @@ import { TSXBorders } from '../types/borders';
 // utils
 import { enumToArray } from 'utils';
 
-export const mappingBorderColors = (
+export const mappingBordersColors = (
   borderColors: TSXBorders,
   theme: Theme,
 ): string => {

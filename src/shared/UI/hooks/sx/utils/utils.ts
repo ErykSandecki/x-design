@@ -10,7 +10,7 @@ export const getCssStyles = (sx: TSX, keys: Array<string>): string =>
   keys
     .map((key) => {
       const value = sx[key];
-      return value ? `${kebabCase(key)}: ${value};` : '';
+      return value !== undefined ? `${kebabCase(key)}: ${value};` : '';
     })
     .filter(Boolean)
     .join('\n');
