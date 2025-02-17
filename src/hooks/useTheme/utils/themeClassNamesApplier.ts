@@ -1,4 +1,5 @@
 import cx from 'classnames';
+import { camelCase } from 'lodash';
 
 // types
 import { Theme } from 'types/enums/theme';
@@ -11,8 +12,11 @@ import {
 } from '../types';
 
 // utils
+import { isJestRunning } from 'utils';
 import { isTypeGuard } from '../../../utils/ts/guards';
-import { camelCase } from 'lodash';
+
+export const transformKey = (name): string =>
+  isJestRunning ? name : camelCase(name);
 
 export const getModificator = (
   styles: TObject<string>,
@@ -20,8 +24,8 @@ export const getModificator = (
   themeModificator: TThemeModificator,
 ): string =>
   cx(
-    styles[camelCase(themeModificator.name)],
-    styles[camelCase(themeModificator[theme])],
+    styles[transformKey(themeModificator.name)],
+    styles[transformKey(themeModificator[theme])],
   );
 
 export const getModificatorConditional = (

@@ -1,299 +1,265 @@
-// import { render } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
-// // components
-// import Typography from './Typography';
+// components
+import Typography from './Typography';
 
-// // others
-// import { COLORS } from 'constant/scss/variables/colors';
-// import { className as classNameTypography, classNames } from './classNames';
+// others
+import { className as classNameTypography, classNames } from './classNames';
 
-// // types
-// import { E2EAttribute } from 'types/e2e';
-// import {
-//   TypographyFontStyle,
-//   TypographyFontType,
-//   TypographyFontWeight,
-// } from './enums';
+// types
+import { ColorsTheme } from 'types';
+import { E2EAttribute } from 'types/e2e';
+import {
+  TypographyFontStyle,
+  TypographyFontWeight,
+  TypographyVariant,
+} from './enums';
 
-// // utils
-// import { getByE2EAttribute } from 'test/testHelpers';
-// import { getDataTestAttribute } from '../../../E2EDataAttributes/utils';
-// import { enumToArray } from 'utils/transform/enumToArray';
-// import { hexToRgb } from '../../../../utils/transform/hexToRgb/hexToRgb';
+// utils
+import { enumToArray } from 'utils/transform/enumToArray';
+import { getByE2EAttribute } from 'test/testHelpers';
+import { getDataTestAttribute } from '../../../E2EDataAttributes/utils';
 
-// const className = 'className';
+const className = 'className';
 
-// describe('Typography props', () => {
-//   it('should pass align', () => {
-//     // mock
-//     const align = 'center';
+describe('Typography props', () => {
+  it('should pass align', () => {
+    // mock
+    const align = 'center';
 
-//     // before
-//     const { container } = render(
-//       <Typography align={align}>children</Typography>,
-//     );
+    // before
+    const { container } = render(
+      <Typography align={align}>children</Typography>,
+    );
 
-//     // result
-//     expect(getByE2EAttribute(container, E2EAttribute.text)).toHaveAttribute(
-//       'style',
-//       `text-align: ${align};`,
-//     );
-//   });
+    // result
+    expect(getByE2EAttribute(container, E2EAttribute.text)).toHaveAttribute(
+      'style',
+      `text-align: ${align};`,
+    );
+  });
 
-//   it('should pass applyInlineColors', () => {
-//     // mock
-//     const rgb = hexToRgb(COLORS.neutral1Light);
+  it('should pass children', () => {
+    // mock
+    const children = 'children';
 
-//     // before
-//     const { container } = render(
-//       <Typography applyInlineColors>children</Typography>,
-//     );
+    //before
+    const { container } = render(<Typography>{children}</Typography>);
 
-//     // result
-//     expect(getByE2EAttribute(container, E2EAttribute.text)).toHaveAttribute(
-//       'style',
-//       `color: rgb(${rgb.r}, ${rgb.g}, ${rgb.b}); text-align: inherit;`,
-//     );
-//   });
+    // result
+    expect(getByE2EAttribute(container, E2EAttribute.text)).toHaveTextContent(
+      children,
+    );
+  });
 
-//   it('should pass children', () => {
-//     // mock
-//     const children = 'children';
+  it('should pass classes', () => {
+    //before
+    const { container } = render(
+      <Typography classes={{ className }}>children</Typography>,
+    );
 
-//     //before
-//     const { container } = render(<Typography>{children}</Typography>);
+    // result
+    expect(container.querySelector(`.${className}`)).not.toBeNull();
+  });
 
-//     // result
-//     expect(getByE2EAttribute(container, E2EAttribute.text)).toHaveTextContent(
-//       children,
-//     );
-//   });
+  it('should pass color', () => {
+    // before
+    const { container } = render(
+      <Typography classes={{ className }} color={ColorsTheme.blue1}>
+        children
+      </Typography>,
+    );
 
-//   it('should pass className', () => {
-//     //before
-//     const { container } = render(
-//       <Typography className={className}>children</Typography>,
-//     );
+    // result
+    expect(container.querySelector(`.${className}`)).toHaveClass(
+      `${classNameTypography}--${ColorsTheme.blue1}`,
+    );
+  });
 
-//     // result
-//     expect(container.querySelector(`.${className}`)).not.toBeNull();
-//   });
+  it('should pass e2eAttribute', () => {
+    // before
+    const { container } = render(
+      <Typography e2eAttribute={E2EAttribute.text}>children</Typography>,
+    );
 
-//   it('should pass color', () => {
-//     //mock
-//     const rgb1 = hexToRgb(COLORS.blue1Light);
-//     const rgb2 = hexToRgb(COLORS.neutral5Light);
+    // result
+    expect(getByE2EAttribute(container, E2EAttribute.text)).toHaveAttribute(
+      getDataTestAttribute(E2EAttribute.text),
+    );
+  });
 
-//     // before
-//     const { container: container1 } = render(
-//       <Typography applyInlineColors fontColor={COLORS.blue1Light}>
-//         children
-//       </Typography>,
-//     );
+  it('should pass e2eValue', () => {
+    // mock
+    const e2eValue = 'e2eValue';
 
-//     const { container: container2 } = render(
-//       <Typography applyInlineColors fontColor={TYPOGRAPHY_COLORS_MODE.neutral5}>
-//         children
-//       </Typography>,
-//     );
+    // before
+    const { container } = render(
+      <Typography e2eValue={e2eValue}>children</Typography>,
+    );
 
-//     // result
-//     expect(getByE2EAttribute(container1, E2EAttribute.text)).toHaveAttribute(
-//       'style',
-//       `color: rgb(${rgb1.r}, ${rgb1.g}, ${rgb1.b}); text-align: inherit;`,
-//     );
+    // result
+    expect(getByE2EAttribute(container, E2EAttribute.text)).toHaveAttribute(
+      getDataTestAttribute(E2EAttribute.text),
+      e2eValue,
+    );
+  });
 
-//     expect(getByE2EAttribute(container2, E2EAttribute.text)).toHaveAttribute(
-//       'style',
-//       `color: rgb(${rgb2.r}, ${rgb2.g}, ${rgb2.b}); text-align: inherit;`,
-//     );
-//   });
+  it('should pass fontStyle', () => {
+    // mock
+    const fontStyles = enumToArray<TypographyFontStyle>(TypographyFontStyle);
 
-//   it('should pass e2eAttribute', () => {
-//     // before
-//     const { container } = render(
-//       <Typography e2eAttribute={E2EAttribute.text}>children</Typography>,
-//     );
+    //before
+    const { container } = render(
+      <>
+        {fontStyles.map((fontStyle) => (
+          <Typography
+            e2eValue={fontStyle}
+            fontStyle={fontStyle}
+            key={fontStyle}
+          >
+            children
+          </Typography>
+        ))}
+      </>,
+    );
 
-//     // result
-//     expect(getByE2EAttribute(container, E2EAttribute.text)).toHaveAttribute(
-//       getDataTestAttribute(E2EAttribute.text),
-//     );
-//   });
+    // result
+    fontStyles.forEach((fontStyle) => {
+      expect(
+        getByE2EAttribute(container, E2EAttribute.text, fontStyle),
+      ).toHaveClass(classNames[classNameTypography].modificators[fontStyle]);
+    });
+  });
 
-//   it('should pass e2eValue', () => {
-//     // mock
-//     const e2eValue = 'e2eValue';
+  it('should pass fontWeight', () => {
+    // mock
+    const fontWeights = enumToArray<TypographyFontWeight>(TypographyFontWeight);
 
-//     // before
-//     const { container } = render(
-//       <Typography e2eValue={e2eValue}>children</Typography>,
-//     );
+    //before
+    const { container } = render(
+      <>
+        {fontWeights.map((fontWeight) => (
+          <Typography
+            e2eValue={fontWeight}
+            fontWeight={fontWeight}
+            key={fontWeight}
+          >
+            children
+          </Typography>
+        ))}
+      </>,
+    );
 
-//     // result
-//     expect(getByE2EAttribute(container, E2EAttribute.text)).toHaveAttribute(
-//       getDataTestAttribute(E2EAttribute.text),
-//       e2eValue,
-//     );
-//   });
+    // result
+    fontWeights.forEach((fontWeight) => {
+      expect(
+        getByE2EAttribute(container, E2EAttribute.text, fontWeight),
+      ).toHaveClass(classNames[classNameTypography].modificators[fontWeight]);
+    });
+  });
 
-//   it('should pass fontStyle', () => {
-//     // mock
-//     const fontStyles = enumToArray<TypographyFontStyle>(TypographyFontStyle);
+  it('should pass gutterBottom', () => {
+    // before
+    const { container } = render(
+      <Typography classes={{ className }} gutterBottom>
+        children
+      </Typography>,
+    );
 
-//     //before
-//     const { container } = render(
-//       <>
-//         {fontStyles.map((fontStyle) => (
-//           <Typography
-//             e2eValue={fontStyle}
-//             fontStyle={fontStyle}
-//             key={fontStyle}
-//           >
-//             children
-//           </Typography>
-//         ))}
-//       </>,
-//     );
+    // result
+    expect(container.querySelector(`.${className}`)).toHaveClass(
+      classNames[classNameTypography].modificators.gutterBottom,
+    );
+  });
 
-//     // result
-//     fontStyles.forEach((fontStyle) => {
-//       expect(
-//         getByE2EAttribute(container, E2EAttribute.text, fontStyle),
-//       ).toHaveClass(classNames[classNameTypography].modificators[fontStyle]);
-//     });
-//   });
+  it('should pass innerHtml', () => {
+    // mock
+    const children = 'children';
+    const htmlTag = 'span';
 
-//   it('should pass fontType', () => {
-//     // mock
-//     const fontTypes = enumToArray<TypographyFontType>(TypographyFontType);
+    //before
+    const { container } = render(
+      <Typography innerHtml={`<${htmlTag}>${children}</${htmlTag}>`} />,
+    );
 
-//     //before
-//     const { container } = render(
-//       <>
-//         {fontTypes.map((fontType) => (
-//           <Typography e2eValue={fontType} fontType={fontType} key={fontType}>
-//             children
-//           </Typography>
-//         ))}
-//       </>,
-//     );
+    // result
+    expect(container.getElementsByTagName(htmlTag)[0]).not.toBeNull();
 
-//     // result
-//     fontTypes.forEach((fontType) => {
-//       expect(
-//         getByE2EAttribute(container, E2EAttribute.text, fontType),
-//       ).toHaveClass(classNames[classNameTypography].modificators[fontType]);
+    expect(container.getElementsByTagName(htmlTag)[0]).toHaveTextContent(
+      children,
+    );
+  });
 
-//       expect(container.getElementsByTagName(fontType)[0]).not.toBeNull();
-//     });
-//   });
+  it('should pass noWrap', () => {
+    //before
+    const { container } = render(<Typography noWrap>children</Typography>);
 
-//   it('should pass fontWeight', () => {
-//     // mock
-//     const fontWeights = enumToArray<TypographyFontWeight>(TypographyFontWeight);
+    // result
+    expect(getByE2EAttribute(container, E2EAttribute.text)).toHaveClass(
+      classNames[classNameTypography].modificators.noWrap,
+    );
+  });
 
-//     //before
-//     const { container } = render(
-//       <>
-//         {fontWeights.map((fontWeight) => (
-//           <Typography
-//             e2eValue={fontWeight}
-//             fontWeight={fontWeight}
-//             key={fontWeight}
-//           >
-//             children
-//           </Typography>
-//         ))}
-//       </>,
-//     );
+  it('should pass variant', () => {
+    // mock
+    const variants = enumToArray<TypographyVariant>(TypographyVariant);
 
-//     // result
-//     fontWeights.forEach((fontWeight) => {
-//       expect(
-//         getByE2EAttribute(container, E2EAttribute.text, fontWeight),
-//       ).toHaveClass(classNames[classNameTypography].modificators[fontWeight]);
-//     });
-//   });
+    //before
+    const { container } = render(
+      <>
+        {variants.map((fontType) => (
+          <Typography e2eValue={fontType} variant={fontType} key={fontType}>
+            children
+          </Typography>
+        ))}
+      </>,
+    );
 
-//   it('should pass innerHtml', () => {
-//     // mock
-//     const children = 'children';
-//     const htmlTag = 'span';
+    // result
+    variants.forEach((fontType) => {
+      expect(
+        getByE2EAttribute(container, E2EAttribute.text, fontType),
+      ).toHaveClass(classNames[classNameTypography].modificators[fontType]);
 
-//     //before
-//     const { container } = render(
-//       <Typography innerHtml={`<${htmlTag}>${children}</${htmlTag}>`} />,
-//     );
+      expect(container.getElementsByTagName(fontType)[0]).not.toBeNull();
+    });
+  });
 
-//     // result
-//     expect(container.getElementsByTagName(htmlTag)[0]).not.toBeNull();
+  it('should pass variantMapping', () => {
+    //before
+    const { container } = render(
+      <Typography variantMapping={{ p: 'a' }}>children</Typography>,
+    );
 
-//     expect(container.getElementsByTagName(htmlTag)[0]).toHaveTextContent(
-//       children,
-//     );
-//   });
+    // result
+    expect(getByE2EAttribute(container, E2EAttribute.text).tagName).toBe('A');
+  });
+});
 
-//   it('should pass noWrap', () => {
-//     //before
-//     const { container } = render(<Typography noWrap>children</Typography>);
+describe('Typography snapshots', () => {
+  it('should render empty', () => {
+    //before
+    const { asFragment } = render(<Typography />);
 
-//     // result
-//     expect(getByE2EAttribute(container, E2EAttribute.text)).toHaveClass(
-//       classNames[classNameTypography].modificators.noWrap,
-//     );
-//   });
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
 
-//   it('should pass style', () => {
-//     // before
-//     const { container } = render(
-//       <Typography style={{ width: '100%' }}>children</Typography>,
-//     );
+  it('should render with some text', () => {
+    // before
+    const { asFragment } = render(<Typography>Text</Typography>);
 
-//     // result
-//     expect(getByE2EAttribute(container, E2EAttribute.text)).toHaveAttribute(
-//       'style',
-//       `width: 100%; text-align: inherit;`,
-//     );
-//   });
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
 
-//   it('should pass withoutMargin', () => {
-//     //before
-//     const { container } = render(
-//       <Typography withoutMargin={false}>children</Typography>,
-//     );
+  it('should render with passed inner html', () => {
+    // before
+    const { asFragment } = render(
+      <Typography innerHtml={'<div>innerHtml</div>'} />,
+    );
 
-//     // result
-//     expect(getByE2EAttribute(container, E2EAttribute.text)).not.toHaveClass(
-//       classNames[classNameTypography].modificators.withoutMargin,
-//     );
-//   });
-// });
-
-// describe('Typography snapshots', () => {
-//   it('should render empty', () => {
-//     //before
-//     const { asFragment } = render(<Typography />);
-
-//     // result
-//     expect(asFragment()).toMatchSnapshot();
-//   });
-
-//   it('should render with some text', () => {
-//     // before
-//     const { asFragment } = render(<Typography>Text</Typography>);
-
-//     // result
-//     expect(asFragment()).toMatchSnapshot();
-//   });
-
-//   it('should render with passed inner html', () => {
-//     // before
-//     const { asFragment } = render(
-//       <Typography innerHtml={'<div>innerHtml</div>'} />,
-//     );
-
-//     // result
-//     expect(asFragment()).toMatchSnapshot();
-//   });
-// });
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
+});
