@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import App from './components/App/App';
 
 // core
-import { ContextProvider } from 'core/ContextProvider/ContextProvider';
+import { ContextProvider } from 'core';
 
 // store
 import { store } from 'store/store';

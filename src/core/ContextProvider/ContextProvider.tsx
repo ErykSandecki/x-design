@@ -10,7 +10,7 @@ import { TActionOnChangeTheme, TContext } from './types';
 import { Theme } from 'types/enums/theme';
 
 // utils
-import { getThemePreferences } from '../../utils/userPreferences';
+import { getThemePreferences } from 'utils';
 
 export type TContextProviderProps = {
   actionOnChangeTheme?: TActionOnChangeTheme;

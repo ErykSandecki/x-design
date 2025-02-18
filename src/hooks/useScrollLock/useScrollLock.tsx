@@ -1,10 +1,7 @@
 import { useContext, useEffect } from 'react';
 
 // core
-import { Context } from 'core/ContextProvider/ContextProvider';
-
-// types
-import { TContext } from 'core/ContextProvider/types';
+import { Context, TContext } from 'core';
 
 export type TUseScrollLock = Pick<TContext, 'scrollLock' | 'setScrollLock'>;
 

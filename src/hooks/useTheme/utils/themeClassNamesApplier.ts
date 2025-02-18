@@ -12,8 +12,7 @@ import {
 } from '../types';
 
 // utils
-import { isJestRunning } from 'utils';
-import { isTypeGuard } from '../../../utils/ts/guards';
+import { isJestRunning, isTypeGuard } from 'utils';
 
 export const transformKey = (name): string =>
   isJestRunning ? name : camelCase(name);

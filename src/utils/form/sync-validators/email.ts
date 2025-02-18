@@ -1,5 +1,5 @@
 // types
-import { TFieldValue } from 'core/ReduxHookForm/types';
+import { TFieldValue } from 'core';
 import { TT } from 'types';
 
 export const email = (t: TT, value: TFieldValue): string => {

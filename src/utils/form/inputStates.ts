@@ -1,5 +1,5 @@
 // types
-import { TUseMetaProps } from 'core/ReduxHookForm/components/Field/hooks/useMetaProps';
+import { TUseMetaProps } from 'core';
 
 export const isInvalidState = (
   errors: Array<string>,

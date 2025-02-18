@@ -5,13 +5,10 @@ import { render } from '@testing-library/react';
 import App from './App';
 
 // mocks
-import { wholeStateMock } from 'test/mocks/reducer/wholeStateMock';
 import 'test/mocks/sagas/allSagas';
 
 // store
 import { configureStore } from 'store/store';
-
-// jest.mock('core/Routing/Routing', () => () => 'Routing');
 
 describe('App snapshots', () => {
   it('should render initializer', () => {

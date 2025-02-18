@@ -15,7 +15,7 @@ import { REDUCER_KEY as REDUX_HOOK_FORM } from 'store/reduxHookForm/actionsType'
 import { configureStore } from 'store/store';
 
 // utils
-import { required } from 'utils/form/syncValidators';
+import { required } from 'utils';
 
 const stateMock = {
   ...reduxHookFormStateMock,

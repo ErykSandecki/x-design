@@ -1,5 +1,5 @@
 import { isMacOs } from 'react-device-detect';
-import { TPrimaryKey } from '../hooks/useKeyboardHandler/types';
+import { TPrimaryKey } from 'hooks';
 
 export const APPLICATION_NAME = 'R|X /Architect';
 

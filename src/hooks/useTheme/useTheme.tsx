@@ -1,7 +1,7 @@
 import { useContext, useLayoutEffect, useMemo, useState } from 'react';
 
 // core
-import { Context } from '../../core/ContextProvider/ContextProvider';
+import { Context } from 'core';
 
 // types
 import { Theme } from 'types/enums/theme';

@@ -19,7 +19,7 @@ import {
 } from './actionsType';
 
 // types
-import { TFieldValue } from 'core/ReduxHookForm/types';
+import { TFieldValue } from 'core';
 import { TObject } from 'types';
 
 export type TField<V = TFieldValue> = {

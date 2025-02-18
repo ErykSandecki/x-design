@@ -13,7 +13,7 @@ import { REDUCER_KEY } from './actionsType';
 
 // types
 import { TField, TFields, TForm, TReduxHookFormState } from './types';
-import { TFieldValue } from 'core/ReduxHookForm/types';
+import { TFieldValue } from 'core';
 import { TMainState } from 'types/reducers';
 
 export const reduxHookFormStateSelector: Selector<

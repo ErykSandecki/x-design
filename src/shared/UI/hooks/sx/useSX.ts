@@ -2,7 +2,7 @@ import { css } from '@emotion/css';
 import { useContext } from 'react';
 
 // core
-import { Context } from 'core/ContextProvider/ContextProvider';
+import { Context } from 'core';
 
 // types
 import { TSX } from './types/types';

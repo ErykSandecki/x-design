@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 
 // hooks
-import { useTheme } from 'hooks/useTheme/useTheme';
+import { useTheme } from 'hooks';
 
 // others
 import { className, classNames } from './classNames';

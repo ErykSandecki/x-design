@@ -16,7 +16,7 @@ import {
 } from './enums';
 
 // utils
-import { enumToArray } from 'utils/transform/enumToArray';
+import { enumToArray } from 'utils';
 import { getByE2EAttribute } from 'test/testHelpers';
 import { getDataTestAttribute } from '../../../E2EDataAttributes/utils';
 
@@ -74,6 +74,18 @@ describe('Typography props', () => {
     expect(container.querySelector(`.${className}`)).toHaveClass(
       `${classNameTypography}--${ColorsTheme.blue1}`,
     );
+  });
+
+  it('should pass component', () => {
+    // before
+    const { container } = render(
+      <Typography classes={{ className }} component="a">
+        children
+      </Typography>,
+    );
+
+    // result
+    expect(container.querySelector(`.${className}`).tagName).toBe('A');
   });
 
   it('should pass e2eAttribute', () => {

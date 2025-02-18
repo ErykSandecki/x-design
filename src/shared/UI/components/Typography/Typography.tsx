@@ -3,7 +3,7 @@ import { CSSProperties, HTMLAttributes, ReactNode, Ref } from 'react';
 
 // hooks
 import { useSX } from '../../hooks/sx/useSX';
-import { useTheme } from '../../../../hooks/useTheme/useTheme';
+import { useTheme } from 'hooks';
 
 // others
 import { classes, className, classNames } from './classNames';
