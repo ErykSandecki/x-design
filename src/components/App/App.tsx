@@ -7,46 +7,12 @@ import { useTheme } from 'hooks/useTheme/useTheme';
 import { className, classNames } from './classNames';
 // styles
 import styles from './app.scss';
-import { H1 } from 'shared/UI/components/Typography';
-import { ColorsTheme } from 'types';
-import Typography from 'shared/UI/components/Typography/Typography';
-import { TypographyVariant } from 'shared/UI/components/Typography/enums';
-import { ZIndex } from 'types/enums/scss/zIndex';
-import { mapValues } from 'lodash';
-import { BoxShadow } from 'types/enums/scss/boxShadow';
 
 const App: FC = () => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const [visible, setVisivle] = useState(false);
 
-  return (
-    <>
-      <H1
-        sx={{
-          borderBottom: 0,
-          px: 20,
-          borderColor: 'neutral1',
-          bg: 'orange1',
-          zIndex: ZIndex.dropdown,
-          boxShadow: BoxShadow.boxShadow24,
-        }}
-        color={ColorsTheme.blue1}
-        classes={{ className: 'sasd' }}
-      >
-        dasds
-      </H1>
-      <Typography
-        component={({ className }) => <div>{className}</div>}
-        variantMapping={{ h1: 'a' }}
-        variant={TypographyVariant.h1}
-      >
-        czxzxc
-      </Typography>
-      <button onClick={() => setVisivle(!visible)}>
-        {visible ? 'visible' : 'not'}
-      </button>
-    </>
-  );
+  return <></>;
 };
 
 export default App;
