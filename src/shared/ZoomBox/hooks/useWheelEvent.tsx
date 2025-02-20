@@ -4,8 +4,8 @@ import { RefObject, useState, WheelEvent } from 'react';
 import { T3DCoordinates } from 'types';
 
 // utils
-import { getZoomSpeed, limitZoom } from '../utils/zoom';
-import { isControlPressed } from 'utils';
+import { handleScrollPage } from '../utils/handleScrollPage';
+import { handleZoom } from '../utils/handleZoom';
 
 export type TUseWheelEvent = (event: WheelEvent) => void;
 
@@ -17,22 +17,15 @@ export const useWheelEvent = (
   const [lastTouchpadTime, setLastTouchpadTime] = useState(0);
 
   const handleWheelEvent = (event: WheelEvent): void => {
-    if (isControlPressed(event)) {
-      const { x, y, z } = coordinates;
-      const { left, top } = zoomBoxRef.current.getBoundingClientRect();
-      const cursorX = (event.clientX - left - x) / z;
-      const cursorY = (event.clientY - top - y) / z;
-      const zoomSpeed = getZoomSpeed(lastTouchpadTime);
-      const zoom = event.deltaY < 0 ? zoomSpeed : -zoomSpeed;
-      const targetZ = limitZoom(z + zoom);
-
-      setLastTouchpadTime(Date.now());
-      setCoordinates({
-        x: x - cursorX * (targetZ - z),
-        y: y - cursorY * (targetZ - z),
-        z: targetZ,
-      });
-    }
+    handleScrollPage(coordinates, event, setCoordinates);
+    handleZoom(
+      coordinates,
+      event,
+      lastTouchpadTime,
+      setCoordinates,
+      setLastTouchpadTime,
+      zoomBoxRef,
+    );
   };
 
   return handleWheelEvent;

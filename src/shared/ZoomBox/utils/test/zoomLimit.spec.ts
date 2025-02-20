@@ -2,7 +2,7 @@
 import { DATE_NOW_MOCKED } from 'test';
 
 // utils
-import { getZoomSpeed } from '../zoom';
+import { getZoomSpeed } from '../handleZoom';
 
 describe('getZoomSpeed', () => {
   it('should return speed for mouse wheel', () => {

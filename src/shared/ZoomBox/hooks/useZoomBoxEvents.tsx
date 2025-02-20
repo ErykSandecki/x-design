@@ -1,10 +1,10 @@
 import { RefObject, WheelEvent } from 'react';
 
+// hooks
+import { useWheelEvent } from './useWheelEvent';
+
 // types
 import { T3DCoordinates } from 'types';
-
-// utils
-import { useWheelEvent } from './useWheelEvent';
 
 export type TUseZoomBoxEvents = {
   onWheel: (event: WheelEvent) => void;

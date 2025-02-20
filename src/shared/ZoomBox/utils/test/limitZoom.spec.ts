@@ -1,5 +1,5 @@
 // utils
-import { limitZoom } from '../zoom';
+import { limitZoom } from '../handleZoom';
 
 describe('limitZoom', () => {
   it('should return max when value is over the limit', () => {
