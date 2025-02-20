@@ -8,6 +8,7 @@ export * from './dom/toggleOverscroollBehaviorX';
 export * from './form/formStates';
 export * from './form/inputStates';
 export * from './form/syncValidators';
+export * from './isControlPressed';
 export * from './isJestRunning';
 export * from './transform/hexToRgb/hexToRgb';
 export * from './transform/enumToArray';

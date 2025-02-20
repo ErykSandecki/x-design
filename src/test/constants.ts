@@ -1,0 +1,1 @@
+export const DATE_NOW_MOCKED = 1577836800000;

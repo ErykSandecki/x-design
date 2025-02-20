@@ -15,7 +15,7 @@ import {
 import { isJestRunning, isTypeGuard } from 'utils';
 
 export const transformKey = (name): string =>
-  isJestRunning ? name : camelCase(name);
+  isJestRunning() ? name : camelCase(name);
 
 export const getModificator = (
   styles: TObject<string>,
