@@ -2,8 +2,17 @@
 
 exports[`App snapshots should render initializer 1`] = `
 <DocumentFragment>
-  <div>
-    App
+  <div
+    class="css-17c89wm ZoomBox ZoomBox--light ZoomBox__idle ZoomBox__idle--light"
+    data-test-box=""
+  >
+    <div
+      class="css-1c4zruk ZoomBox__zoom-content ZoomBox__zoom-content--light"
+      data-test-box=""
+      style="transform: translate(0px, 0px) scale(1);"
+    >
+      ZoomBox
+    </div>
   </div>
 </DocumentFragment>
 `;

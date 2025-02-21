@@ -32,7 +32,7 @@ describe('useResizeHandler', () => {
 
     // action
     act(() => {
-      result.current.onMouseDownX({ button: MouseButton.lmb } as any, false);
+      result.current.onMouseDownX({ buttons: MouseButton.lmb } as any, false);
     });
 
     act(() => {
@@ -59,7 +59,7 @@ describe('useResizeHandler', () => {
 
     // action
     act(() => {
-      result.current.onMouseDownX({ button: MouseButton.lmb } as any, true);
+      result.current.onMouseDownX({ buttons: MouseButton.lmb } as any, true);
     });
 
     act(() => {
@@ -86,7 +86,7 @@ describe('useResizeHandler', () => {
 
     // action
     act(() => {
-      result.current.onMouseDownX({ button: MouseButton.lmb } as any, false);
+      result.current.onMouseDownX({ buttons: MouseButton.lmb } as any, false);
     });
 
     act(() => {
@@ -113,7 +113,7 @@ describe('useResizeHandler', () => {
 
     // action
     act(() => {
-      result.current.onMouseDownX({ button: MouseButton.lmb } as any, false);
+      result.current.onMouseDownX({ buttons: MouseButton.lmb } as any, false);
     });
 
     act(() => {
@@ -140,7 +140,7 @@ describe('useResizeHandler', () => {
 
     // action
     act(() => {
-      result.current.onMouseDownX({ button: MouseButton.mmb } as any, false);
+      result.current.onMouseDownX({ buttons: MouseButton.mmb } as any, false);
     });
 
     act(() => {
@@ -167,7 +167,7 @@ describe('useResizeHandler', () => {
 
     // action
     act(() => {
-      result.current.onMouseDownY({ button: MouseButton.lmb } as any, false);
+      result.current.onMouseDownY({ buttons: MouseButton.lmb } as any, false);
     });
 
     act(() => {
@@ -194,7 +194,7 @@ describe('useResizeHandler', () => {
 
     // action
     act(() => {
-      result.current.onMouseDownY({ button: MouseButton.lmb } as any, true);
+      result.current.onMouseDownY({ buttons: MouseButton.lmb } as any, true);
     });
 
     act(() => {
@@ -221,7 +221,7 @@ describe('useResizeHandler', () => {
 
     // action
     act(() => {
-      result.current.onMouseDownY({ button: MouseButton.lmb } as any, false);
+      result.current.onMouseDownY({ buttons: MouseButton.lmb } as any, false);
     });
 
     act(() => {
@@ -248,7 +248,7 @@ describe('useResizeHandler', () => {
 
     // action
     act(() => {
-      result.current.onMouseDownY({ button: MouseButton.lmb } as any, false);
+      result.current.onMouseDownY({ buttons: MouseButton.lmb } as any, false);
     });
 
     act(() => {
@@ -276,7 +276,7 @@ describe('useResizeHandler', () => {
     // action
     act(() => {
       result.current.onMouseDownY(
-        { button: MouseButton.mmb, clientY: 250 } as any,
+        { buttons: MouseButton.mmb, clientY: 250 } as any,
         false,
       );
     });

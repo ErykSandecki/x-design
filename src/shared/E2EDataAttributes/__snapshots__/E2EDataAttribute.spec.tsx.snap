@@ -30,13 +30,3 @@ exports[`E2EDataAttribute snapshots should render with value 1`] = `
   </span>
 </DocumentFragment>
 `;
-
-exports[`E2EDataAttribute snapshots should render without attribute id 1`] = `
-<DocumentFragment>
-  <span
-    data-test-unset=""
-  >
-    child
-  </span>
-</DocumentFragment>
-`;

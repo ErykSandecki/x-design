@@ -1,6 +1,7 @@
 module.exports = {
   collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}', '!src/**/*.d.ts'],
   coveragePathIgnorePatterns: [
+    'classNames',
     'constants',
     'keys',
     'mock/*',
@@ -17,7 +18,7 @@ module.exports = {
     'src/store/reducers.ts',
     'src/store/store.ts',
     'src/store/watchers.ts',
-    'src/tests',
+    'src/test',
     'src/translations',
     'src/types',
     'src/utils/history',

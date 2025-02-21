@@ -45,16 +45,4 @@ describe('E2EDataAttribute snapshots', () => {
     // result
     expect(asFragment()).toMatchSnapshot();
   });
-
-  it('should render without attribute id', () => {
-    // before
-    const { asFragment } = render(
-      <E2EDataAttribute>
-        <span>child</span>
-      </E2EDataAttribute>,
-    );
-
-    // result
-    expect(asFragment()).toMatchSnapshot();
-  });
 });

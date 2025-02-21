@@ -9,7 +9,7 @@ import { getAttributes } from './utils';
 
 export type TE2EDataAttributeProps = {
   children: ReactElement<HTMLElement>;
-  type?: E2EType | Array<E2EType>;
+  type: E2EType | Array<E2EType>;
   value?: E2EValue | Array<E2EValue>;
 };
 
@@ -19,10 +19,6 @@ export const E2EDataAttribute: FC<TE2EDataAttributeProps> = ({
   value = '',
 }) => {
   const childrenOnly = Children.only(children);
-
-  if (!type && !value) {
-    return childrenOnly;
-  }
 
   return React.cloneElement(childrenOnly, getAttributes(type, value));
 };
