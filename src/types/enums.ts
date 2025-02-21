@@ -62,9 +62,9 @@ export enum KeyboardKeys {
 }
 
 export enum MouseButton {
-  lmb = 0,
-  mmb = 1,
-  rmb = 2,
+  lmb = 1,
+  mmb = 2,
+  rmb = 4,
 }
 
 export enum MousePosition {

@@ -23,6 +23,8 @@ describe('useZoomBoxEvents', () => {
 
     // result
     expect(result.current).toStrictEqual({
+      onMouseDown: expect.any(Function),
+      onMouseMove: expect.any(Function),
       onWheel: expect.any(Function),
     });
   });

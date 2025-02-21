@@ -16,8 +16,8 @@ export const useWheelEvent = (
 ): TUseWheelEvent => {
   const [lastTouchpadTime, setLastTouchpadTime] = useState(0);
 
-  const handleWheelEvent = (event: WheelEvent): void => {
-    handleScrollPage(coordinates, event, setCoordinates);
+  const handleWheel = (event: WheelEvent): void => {
+    // handleScrollPage(coordinates, event, setCoordinates);
     handleZoom(
       coordinates,
       event,
@@ -28,5 +28,5 @@ export const useWheelEvent = (
     );
   };
 
-  return handleWheelEvent;
+  return handleWheel;
 };

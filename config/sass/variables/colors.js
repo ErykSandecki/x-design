@@ -65,18 +65,18 @@ module.exports = {
   },
   'neutral-2--dark': {
     $type: 'color',
-    $value: '#888888',
+    $value: '#b9bbbe',
   },
   'neutral-3--dark': {
     $type: 'color',
-    $value: '#333333',
+    $value: '#343c43',
   },
   'neutral-4--dark': {
     $type: 'color',
-    $value: '#111111',
+    $value: '#1e262f',
   },
   'neutral-5--dark': {
     $type: 'color',
-    $value: '#000000',
+    $value: '#151d25',
   },
 };

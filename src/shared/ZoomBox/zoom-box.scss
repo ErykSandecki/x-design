@@ -1,4 +1,8 @@
 .ZoomBox {
+  cursor:
+    url('assets/icons/cursors/default.png') 8 8,
+    auto;
+
   &__zoom-content {
     transform-origin: 0 0;
     transition: transform 0.1s ease-out;
