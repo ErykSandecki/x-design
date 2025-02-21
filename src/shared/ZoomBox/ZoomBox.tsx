@@ -30,12 +30,20 @@ export const ZoomBox: FC<TZoomBoxProps> = ({
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const zoomBoxRef = useRef<HTMLDivElement>(null);
   const zoomContentRef = useRef<HTMLDivElement>(null);
-  const events = useZoomBoxEvents(coordinates, setCoordinates, zoomBoxRef);
-  const { x, y, z } = coordinates;
+  const { cursorState, ...events } = useZoomBoxEvents(
+    coordinates,
+    setCoordinates,
+    zoomBoxRef,
+  );
 
   return (
     <Box
-      classes={{ className: cx(classNamesWithTheme[className]) }}
+      classes={{
+        className: cx(
+          classNamesWithTheme[className].name,
+          classNamesWithTheme[className].modificators[cursorState],
+        ),
+      }}
       ref={zoomBoxRef}
       sx={{ bg: 'neutral4', height: '100%', overflow: 'hidden' }}
       {...events}
@@ -44,7 +52,9 @@ export const ZoomBox: FC<TZoomBoxProps> = ({
         classes={{ className: cx(classNamesWithTheme.zoomContent) }}
         ref={zoomContentRef}
         sx={{ bg: 'neutral3', height: '100vh', position: 'relative' }}
-        style={{ transform: `translate(${x}px, ${y}px) scale(${z})` }}
+        style={{
+          transform: `translate(${coordinates.x}px, ${coordinates.y}px) scale(${coordinates.z})`,
+        }}
       >
         {children}
       </Box>

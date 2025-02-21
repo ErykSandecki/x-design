@@ -1,6 +1,17 @@
+// others
+import { CURSOR_STATES } from 'constant/constants';
+
 export const className = 'ZoomBox';
 
 export const classNames = {
-  [className]: className,
+  [className]: {
+    name: className,
+    modificators: {
+      ...CURSOR_STATES.reduce(
+        (obj, key) => ({ ...obj, [key]: `${className}__${key}` }),
+        {},
+      ),
+    },
+  },
   zoomContent: `${className}__zoom-content`,
 };
