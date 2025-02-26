@@ -14,18 +14,9 @@ export const useWheelEvent = (
   setCoordinates: (coordinates: T3DCoordinates) => void,
   zoomBoxRef: RefObject<HTMLDivElement>,
 ): TUseWheelEvent => {
-  const [lastTouchpadTime, setLastTouchpadTime] = useState(0);
-
   const handleWheel = (event: WheelEvent): void => {
     handleScrollPage(coordinates, event, setCoordinates);
-    handleZoom(
-      coordinates,
-      event,
-      lastTouchpadTime,
-      setCoordinates,
-      setLastTouchpadTime,
-      zoomBoxRef,
-    );
+    handleZoom(coordinates, event, setCoordinates, zoomBoxRef);
   };
 
   return handleWheel;

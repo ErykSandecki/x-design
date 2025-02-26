@@ -1,7 +1,6 @@
 import { RefObject, WheelEvent } from 'react';
 
 // others
-import { DATE_NOW_MOCKED } from 'test';
 import { INITIAL_COORDINATES } from 'shared/ZoomBox/constants';
 
 // utils
@@ -20,8 +19,6 @@ describe('handleZoom', () => {
         clientY: 0,
         deltaY: 0,
       } as WheelEvent,
-      0,
-      mockCallBack,
       mockCallBack,
       ref as RefObject<HTMLDivElement>,
     );
@@ -40,15 +37,16 @@ describe('handleZoom', () => {
         ctrlKey: true,
         deltaY: 1,
       } as WheelEvent,
-      0,
-      mockCallBack,
       mockCallBack,
       ref as RefObject<HTMLDivElement>,
     );
 
     // result
-    expect(mockCallBack.mock.calls[0][0]).toBe(DATE_NOW_MOCKED);
-    expect(mockCallBack.mock.calls[1][0]).toStrictEqual({ x: 0, y: 0, z: 0.9 });
+    expect(mockCallBack.mock.calls[0][0]).toStrictEqual({
+      x: 0,
+      y: 0,
+      z: 0.99,
+    });
   });
 
   it('should zoom in', () => {
@@ -61,15 +59,16 @@ describe('handleZoom', () => {
         ctrlKey: true,
         deltaY: -1,
       } as WheelEvent,
-      0,
-      mockCallBack,
       mockCallBack,
       ref as RefObject<HTMLDivElement>,
     );
 
     // result
-    expect(mockCallBack.mock.calls[0][0]).toBe(DATE_NOW_MOCKED);
-    expect(mockCallBack.mock.calls[1][0]).toStrictEqual({ x: 0, y: 0, z: 1.1 });
+    expect(mockCallBack.mock.calls[0][0]).toStrictEqual({
+      x: 0,
+      y: 0,
+      z: 1.01,
+    });
   });
 
   it('should zoom with change position', () => {
@@ -82,18 +81,15 @@ describe('handleZoom', () => {
         ctrlKey: true,
         deltaY: 1,
       } as WheelEvent,
-      0,
-      mockCallBack,
       mockCallBack,
       ref as RefObject<HTMLDivElement>,
     );
 
     // result
-    expect(mockCallBack.mock.calls[0][0]).toBe(DATE_NOW_MOCKED);
-    expect(mockCallBack.mock.calls[1][0]).toStrictEqual({
-      x: 9.999999999999998,
-      y: 9.999999999999998,
-      z: 0.9,
+    expect(mockCallBack.mock.calls[0][0]).toStrictEqual({
+      x: 1.0000000000000009,
+      y: 1.0000000000000009,
+      z: 0.99,
     });
   });
 });
