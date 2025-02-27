@@ -1,11 +1,9 @@
 declare module '*.scss';
 
 declare module '*.svg' {
-  import * as React from 'react';
+  import { TSvgComponent } from 'types';
 
-  export const ReactComponent: React.FunctionComponent<
-    React.SVGProps<SVGSVGElement> & { title?: string }
-  >;
+  export const ReactComponent: TSvgComponent;
 
   const src: string;
   export default src;

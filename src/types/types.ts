@@ -19,3 +19,7 @@ declare global {
 }
 
 export type TFileData = string | ArrayBuffer | null;
+
+export type TSvgComponent = React.FunctionComponent<
+  React.SVGProps<SVGSVGElement> & { title?: string }
+>;

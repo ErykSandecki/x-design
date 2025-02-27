@@ -23,17 +23,13 @@ import { TUIProps } from '../../types';
 // utils
 import { getAttributes } from '../../../E2EDataAttributes/utils';
 
-export type TBoxProps = Omit<
-  HTMLAttributes<HTMLElement>,
-  'className' | 'style'
-> &
+export type TBoxProps = Omit<HTMLAttributes<HTMLElement>, 'className'> &
   TUIProps<typeof classes> & {
     children?: ReactNode;
     component?: TBoxHTMLTag;
     e2eAttribute?: TE2EDataAttributeProps['type'];
     e2eValue?: TE2EDataAttributeProps['value'];
     ref?: Ref<HTMLElement>;
-    style?: CSSProperties;
   };
 
 export const Box: FC<TBoxProps> = ({

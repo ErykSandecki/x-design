@@ -1,0 +1,26 @@
+$--rx-attr-fill: '*[data-svg-property=' fill ']';
+$--rx-attr-stroke: '*[data-svg-property=' stroke ']';
+
+@mixin apply-icon-styles($color, $selector: '') {
+  @include theme-selector($color, fill, #{$selector}#{$--rx-attr-fill});
+  @include theme-selector($color, stroke, #{$selector}#{$--rx-attr-stroke});
+}
+
+.Icon {
+  @each $color in $--rx-font-colors {
+    &--#{$color} {
+      @include apply-icon-styles($color);
+    }
+  }
+
+  &--clickable {
+    @include apply-icon-styles('neutral-2');
+    @include apply-icon-styles('neutral-1', #{'&:hover'}#{' '});
+    cursor: pointer;
+  }
+
+  &--disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}

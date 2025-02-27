@@ -6,7 +6,7 @@ import { useSX } from '../../hooks/sx/useSX';
 import { useTheme } from 'hooks';
 
 // others
-import { classes, className, classNames } from './classNames';
+import { className, classNames, classes } from './classNames';
 
 // styles
 import styles from './typography.scss';
