@@ -1,4 +1,4 @@
-import { RefObject, useState, WheelEvent } from 'react';
+import { RefObject, useRef, WheelEvent } from 'react';
 
 // types
 import { T3DCoordinates } from 'types';
@@ -14,9 +14,11 @@ export const useWheelEvent = (
   setCoordinates: (coordinates: T3DCoordinates) => void,
   zoomBoxRef: RefObject<HTMLDivElement>,
 ): TUseWheelEvent => {
+  const lastWheelTime = useRef(0);
+
   const handleWheel = (event: WheelEvent): void => {
     handleScrollPage(coordinates, event, setCoordinates);
-    handleZoom(coordinates, event, setCoordinates, zoomBoxRef);
+    handleZoom(coordinates, event, lastWheelTime, setCoordinates, zoomBoxRef);
   };
 
   return handleWheel;

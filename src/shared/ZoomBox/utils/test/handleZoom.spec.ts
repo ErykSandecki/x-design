@@ -1,11 +1,13 @@
 import { RefObject, WheelEvent } from 'react';
 
 // others
+import { DATE_NOW_MOCKED } from 'test';
 import { INITIAL_COORDINATES } from 'shared/ZoomBox/constants';
 
 // utils
 import { handleZoom } from '../handleZoom';
 
+const lastWheelTime = { current: 0 };
 const mockCallBack = jest.fn();
 const ref = { current: { getBoundingClientRect: () => ({ left: 0, top: 0 }) } };
 
@@ -19,6 +21,7 @@ describe('handleZoom', () => {
         clientY: 0,
         deltaY: 0,
       } as WheelEvent,
+      lastWheelTime,
       mockCallBack,
       ref as RefObject<HTMLDivElement>,
     );
@@ -37,6 +40,7 @@ describe('handleZoom', () => {
         ctrlKey: true,
         deltaY: 1,
       } as WheelEvent,
+      { current: DATE_NOW_MOCKED },
       mockCallBack,
       ref as RefObject<HTMLDivElement>,
     );
@@ -59,6 +63,7 @@ describe('handleZoom', () => {
         ctrlKey: true,
         deltaY: -1,
       } as WheelEvent,
+      { current: DATE_NOW_MOCKED },
       mockCallBack,
       ref as RefObject<HTMLDivElement>,
     );
@@ -81,6 +86,7 @@ describe('handleZoom', () => {
         ctrlKey: true,
         deltaY: 1,
       } as WheelEvent,
+      { current: DATE_NOW_MOCKED },
       mockCallBack,
       ref as RefObject<HTMLDivElement>,
     );

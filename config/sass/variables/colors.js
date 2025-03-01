@@ -3,9 +3,17 @@ module.exports = {
     $type: 'color',
     $value: '#035afc',
   },
+  'blue-2--light': {
+    $type: 'color',
+    $value: '#bdd6ff',
+  },
   'blue-1--dark': {
     $type: 'color',
     $value: '#8ab4f8',
+  },
+  'blue-2--dark': {
+    $type: 'color',
+    $value: '#035afc',
   },
   'sky-blue-1': {
     $type: 'color',

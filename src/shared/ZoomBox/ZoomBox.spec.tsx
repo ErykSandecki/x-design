@@ -8,7 +8,7 @@ import ZoomBox from './ZoomBox';
 import { INITIAL_COORDINATES } from './constants';
 
 describe('ZoomBox snapshots', () => {
-  it('should render empty', () => {
+  it('should render Zoombox', () => {
     //before
     const { asFragment } = render(
       <ZoomBox coordinates={INITIAL_COORDINATES} setCoordinates={noop}>

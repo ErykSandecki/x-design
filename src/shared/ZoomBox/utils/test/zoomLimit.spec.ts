@@ -1,23 +1,28 @@
-// others
-import { DATE_NOW_MOCKED } from 'test';
-
 // utils
 import { getZoomSpeed } from '../handleZoom';
 
 describe('getZoomSpeed', () => {
-  it('should return speed for mouse wheel', () => {
+  it('should return default spped', () => {
     // before
-    const result = getZoomSpeed(0);
+    const result = getZoomSpeed(0, 0, 100);
 
     // result
-    expect(result).toBe(0.1);
+    expect(result).toBe(0);
   });
 
   it('should return speed for touchpad', () => {
     // before
-    const result = getZoomSpeed(DATE_NOW_MOCKED + 50);
+    const result = getZoomSpeed(0, 0, 0);
 
     // result
-    expect(result).toBe(0.02);
+    expect(result).toBe(0.01);
+  });
+
+  it('should return speed for mouse', () => {
+    // before
+    const result = getZoomSpeed(20, 0, 0);
+
+    // result
+    expect(result).toBe(0.1);
   });
 });

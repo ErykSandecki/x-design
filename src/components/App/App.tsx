@@ -1,16 +1,8 @@
-import { FC, useState } from 'react';
-
-// compoentn
-import { INITIAL_COORDINATES, ZoomBox } from 'shared';
+import PageBuilderPage from 'pages/PageBuilderPage/PageBuilderPage';
+import { FC } from 'react';
 
 const App: FC = () => {
-  const [coordinates, setCoordinates] = useState(INITIAL_COORDINATES);
-
-  return (
-    <ZoomBox coordinates={coordinates} setCoordinates={setCoordinates}>
-      ZoomBox
-    </ZoomBox>
-  );
+  return <PageBuilderPage />;
 };
 
 export default App;

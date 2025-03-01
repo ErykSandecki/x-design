@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App snapshots should render initializer 1`] = `
+exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
 <DocumentFragment>
   <div
     class="css-q0izro"

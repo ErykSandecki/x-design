@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toolbar snapshots should render Toolbar 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1hfqfil"
+    data-test-box=""
+  >
+    <div
+      class="css-q0izro MouseModes MouseModes--light"
+      data-test-box=""
+    >
+      <div
+        class="css-q0izro MouseModes__button MouseModes__button--light"
+        data-test-box=""
+      >
+        <div
+          class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          data-test-icon="menu"
+          height="16"
+          name="Logo"
+          width="16"
+        />
+      </div>
+      <div
+        class="css-q0izro MouseModes__button MouseModes__button--light MouseModes__button--active MouseModes__button--active--light"
+        data-test-box=""
+      >
+        <div
+          class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          data-test-icon="default"
+          height="16"
+          name="MoveTool"
+          width="16"
+        />
+      </div>
+      <div
+        class="css-q0izro MouseModes__button MouseModes__button--light"
+        data-test-box=""
+      >
+        <div
+          class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          data-test-icon="toolBeltA"
+          height="16"
+          name="FrameTool"
+          width="16"
+        />
+      </div>
+      <div
+        class="css-q0izro MouseModes__button MouseModes__button--light"
+        data-test-box=""
+      >
+        <div
+          class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          data-test-icon="move"
+          height="16"
+          name="MoveHand"
+          width="16"
+        />
+      </div>
+      <div
+        class="css-q0izro MouseModes__button MouseModes__button--light"
+        data-test-box=""
+      >
+        <div
+          class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          data-test-icon="comment"
+          height="16"
+          name="Comment"
+          width="16"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

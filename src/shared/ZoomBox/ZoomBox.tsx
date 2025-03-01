@@ -51,7 +51,7 @@ export const ZoomBox: FC<TZoomBoxProps> = ({
       <Box
         classes={{ className: cx(classNamesWithTheme.zoomContent) }}
         ref={zoomContentRef}
-        sx={{ bg: 'neutral3', height: '100vh', position: 'relative' }}
+        sx={{ height: '100vh', position: 'relative' }}
         style={{
           transform: `translate(${coordinates.x}px, ${coordinates.y}px) scale(${coordinates.z})`,
         }}
