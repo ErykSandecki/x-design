@@ -1,4 +1,4 @@
-import { FC, ReactNode, useRef } from 'react';
+import { FC, ReactNode, RefObject, useRef } from 'react';
 
 // components
 import Box from '../UI/components/Box/Box';
@@ -20,15 +20,16 @@ export type TZoomBoxProps = {
   children: ReactNode;
   coordinates: T3DCoordinates;
   setCoordinates: (coordinates: T3DCoordinates) => void;
+  zoomBoxRef: RefObject<HTMLDivElement>;
 };
 
 export const ZoomBox: FC<TZoomBoxProps> = ({
   children,
   coordinates,
   setCoordinates,
+  zoomBoxRef,
 }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-  const zoomBoxRef = useRef<HTMLDivElement>(null);
   const zoomContentRef = useRef<HTMLDivElement>(null);
   const { cursorState, ...events } = useZoomBoxEvents(
     coordinates,

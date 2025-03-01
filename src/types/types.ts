@@ -11,6 +11,13 @@ export type T3DCoordinates = T2DCoordinates & {
   z: number;
 };
 
+export type TRectCoordinates = {
+  x1: number;
+  x2: number;
+  y1: number;
+  y2: number;
+};
+
 declare global {
   interface Window {
     Cypress?: unknown;

@@ -1,23 +1,24 @@
 import { renderHook } from '@testing-library/react';
-import { WheelEvent } from 'react';
+import { RefObject, WheelEvent } from 'react';
 
 // hooks
 import { useMouseDownEvent } from '../useMouseDownEvent';
 
 // others
+import { BASE_2D, BASE_3D } from 'shared/ZoomBox/constants';
 import { CURSOR_STATES } from 'constant/constants';
-import { INITIAL_COORDINATES } from 'shared/ZoomBox/constants';
 
 // types
-import { MouseButton } from 'types';
+import { MouseButton, T2DCoordinates } from 'types';
 
+const cursorPosition = { current: BASE_2D } as RefObject<T2DCoordinates>;
 const mockCallBack = jest.fn();
 
 describe('useMouseDownEvent', () => {
   it(`should save mouse position after trigger mouse down`, () => {
     // before
     const { result } = renderHook(() =>
-      useMouseDownEvent(INITIAL_COORDINATES, mockCallBack, mockCallBack),
+      useMouseDownEvent(BASE_3D, cursorPosition, mockCallBack),
     );
 
     // action
@@ -29,6 +30,6 @@ describe('useMouseDownEvent', () => {
 
     // result
     expect(mockCallBack.mock.calls[0][0]).toBe(CURSOR_STATES[MouseButton.lmb]);
-    expect(mockCallBack.mock.calls[1][0]).toStrictEqual({ x: 0, y: 0 });
+    expect(cursorPosition.current).toStrictEqual({ x: 0, y: 0 });
   });
 });

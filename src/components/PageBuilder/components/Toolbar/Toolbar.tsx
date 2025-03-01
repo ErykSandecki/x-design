@@ -11,6 +11,7 @@ export type TProps = Pick<TMouseModeProps, 'mouseMode' | 'setMouseMode'>;
 
 const Toolbar: FC<TProps> = ({ ...restProps }) => (
   <Box
+    onMouseDown={(event) => event.stopPropagation()}
     sx={{
       bg: 'neutral5',
       borderBottom: 1,

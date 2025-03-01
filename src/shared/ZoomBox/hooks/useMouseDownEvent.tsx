@@ -1,4 +1,4 @@
-import { MouseEvent } from 'react';
+import { MouseEvent, RefObject } from 'react';
 
 // others
 import { CURSOR_STATES } from 'constant/constants';
@@ -10,15 +10,15 @@ export type TUseMouseDownEvent = (event: MouseEvent) => void;
 
 export const useMouseDownEvent = (
   coordinates: T3DCoordinates,
-  setCursorPosition: (cursorPosition: T2DCoordinates) => void,
+  cursorPosition: RefObject<T2DCoordinates>,
   setCursorState: (cursorState: string) => void,
 ): TUseMouseDownEvent => {
   const handleMouseDown = (event: MouseEvent): void => {
     setCursorState(CURSOR_STATES[event.buttons]);
-    setCursorPosition({
+    cursorPosition.current = {
       x: event.clientX - coordinates.x,
       y: event.clientY - coordinates.y,
-    });
+    };
   };
 
   return handleMouseDown;

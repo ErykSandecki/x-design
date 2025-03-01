@@ -1,8 +1,8 @@
 import { RefObject, WheelEvent } from 'react';
 
 // others
+import { BASE_3D } from 'shared/ZoomBox/constants';
 import { DATE_NOW_MOCKED } from 'test';
-import { INITIAL_COORDINATES } from 'shared/ZoomBox/constants';
 
 // utils
 import { handleZoom } from '../handleZoom';
@@ -15,7 +15,7 @@ describe('handleZoom', () => {
   it('should not trigger event when is no contol pressed', () => {
     // before
     handleZoom(
-      INITIAL_COORDINATES,
+      BASE_3D,
       {
         clientX: 0,
         clientY: 0,
@@ -33,7 +33,7 @@ describe('handleZoom', () => {
   it('should zoom out', () => {
     // before
     handleZoom(
-      INITIAL_COORDINATES,
+      BASE_3D,
       {
         clientX: 0,
         clientY: 0,
@@ -56,7 +56,7 @@ describe('handleZoom', () => {
   it('should zoom in', () => {
     // before
     handleZoom(
-      INITIAL_COORDINATES,
+      BASE_3D,
       {
         clientX: 0,
         clientY: 0,
@@ -79,7 +79,7 @@ describe('handleZoom', () => {
   it('should zoom with change position', () => {
     // before
     handleZoom(
-      INITIAL_COORDINATES,
+      BASE_3D,
       {
         clientX: 100,
         clientY: 100,

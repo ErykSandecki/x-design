@@ -1,32 +1,60 @@
-import { renderHook } from '@testing-library/react';
-import { WheelEvent } from 'react';
+import { fireEvent, renderHook } from '@testing-library/react';
+import { RefObject } from 'react';
 
 // hooks
 import { useMouseMoveEvent } from '../useMouseMoveEvent';
 
 // others
-import { INITIAL_COORDINATES } from 'shared/ZoomBox/constants';
+import { BASE_2D, BASE_3D } from 'shared/ZoomBox/constants';
+import { CURSOR_STATES } from 'constant/constants';
 
 // types
-import { MouseButton } from 'types';
+import { MouseButton, T2DCoordinates } from 'types';
 
+const cursorPosition = { current: BASE_2D } as RefObject<T2DCoordinates>;
 const mockCallBack = jest.fn();
 
 describe('useMouseMoveEvent', () => {
   it(`should change position after trigger mouse move`, () => {
     // before
-    const { result } = renderHook(() =>
-      useMouseMoveEvent(INITIAL_COORDINATES, INITIAL_COORDINATES, mockCallBack),
+    renderHook(() =>
+      useMouseMoveEvent(
+        BASE_3D,
+        cursorPosition,
+        CURSOR_STATES[4],
+        mockCallBack,
+      ),
     );
 
     // action
-    result.current({
+    fireEvent.mouseMove(window, {
       buttons: MouseButton.rmb,
       clientX: 0,
       clientY: 0,
-    } as WheelEvent);
+    });
 
     // result
     expect(mockCallBack.mock.calls[0][0]).toStrictEqual({ x: 0, y: 0, z: 1 });
+  });
+
+  it(`should not change position`, () => {
+    // before
+    renderHook(() =>
+      useMouseMoveEvent(
+        BASE_3D,
+        cursorPosition,
+        CURSOR_STATES[4],
+        mockCallBack,
+      ),
+    );
+
+    // action
+    fireEvent.mouseMove(window, {
+      clientX: 0,
+      clientY: 0,
+    });
+
+    // result
+    expect(mockCallBack.mock.calls.length).toBe(0);
   });
 });

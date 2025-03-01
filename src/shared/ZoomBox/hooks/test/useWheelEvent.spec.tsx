@@ -5,7 +5,7 @@ import { renderHook } from '@testing-library/react';
 import { useWheelEvent } from '../useWheelEvent';
 
 // others
-import { INITIAL_COORDINATES } from 'shared/ZoomBox/constants';
+import { BASE_3D } from 'shared/ZoomBox/constants';
 
 const mockCallBack = jest.fn();
 const ref = { current: { getBoundingClientRect: () => ({ left: 0, top: 0 }) } };
@@ -14,11 +14,7 @@ describe('useWheelEvent', () => {
   it(`should trigger handle zoom`, () => {
     // before
     const { result } = renderHook(() =>
-      useWheelEvent(
-        INITIAL_COORDINATES,
-        mockCallBack,
-        ref as RefObject<HTMLDivElement>,
-      ),
+      useWheelEvent(BASE_3D, mockCallBack, ref as RefObject<HTMLDivElement>),
     );
 
     // action
@@ -36,11 +32,7 @@ describe('useWheelEvent', () => {
   it(`should trigger handle scroll page`, () => {
     // before
     const { result } = renderHook(() =>
-      useWheelEvent(
-        INITIAL_COORDINATES,
-        mockCallBack,
-        ref as RefObject<HTMLDivElement>,
-      ),
+      useWheelEvent(BASE_3D, mockCallBack, ref as RefObject<HTMLDivElement>),
     );
 
     // action

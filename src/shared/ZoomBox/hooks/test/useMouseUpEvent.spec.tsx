@@ -1,5 +1,4 @@
-import { renderHook } from '@testing-library/react';
-import { WheelEvent } from 'react';
+import { fireEvent, renderHook } from '@testing-library/react';
 
 // hooks
 import { useMouseUpEvent } from '../useMouseUpEvent';
@@ -15,13 +14,13 @@ const mockCallBack = jest.fn();
 describe('useMouseDownEvent', () => {
   it(`should change cursor to idle state`, () => {
     // before
-    const { result } = renderHook(() => useMouseUpEvent(mockCallBack));
+    renderHook(() => useMouseUpEvent(mockCallBack));
 
     // action
-    result.current({
+    fireEvent.mouseUp(window, {
       clientX: 0,
       clientY: 0,
-    } as WheelEvent);
+    });
 
     // result
     expect(mockCallBack.mock.calls[0][0]).toBe(CURSOR_STATES[MouseButton.idle]);

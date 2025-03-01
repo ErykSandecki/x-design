@@ -1,5 +1,7 @@
+// others
+import { BASE_3D } from 'shared/ZoomBox/constants';
+
 // utils
-import { INITIAL_COORDINATES } from 'shared/ZoomBox/constants';
 import { handleScrollPage } from '../handleScrollPage';
 
 const mockCallBack = jest.fn();
@@ -8,7 +10,7 @@ describe('handleScrollPage', () => {
   it('should not scroll page', () => {
     // before
     handleScrollPage(
-      INITIAL_COORDINATES,
+      BASE_3D,
       { buttons: 1, deltaY: 1, metaKey: true } as React.WheelEvent,
       mockCallBack,
     );
@@ -20,7 +22,7 @@ describe('handleScrollPage', () => {
   it('should scroll page', () => {
     // before
     handleScrollPage(
-      INITIAL_COORDINATES,
+      BASE_3D,
       { buttons: 0, deltaX: 1, deltaY: 1 } as React.WheelEvent,
       mockCallBack,
     );
