@@ -4,6 +4,12 @@
   height: 100%;
 
   &__button {
+    @include theme-selector(
+      'neutral-3',
+      background-color,
+      #{'&:not('}#{$self}#{'__button--active):hover'}
+    );
+
     align-items: center;
     cursor:
       url('assets/icons/cursors/pointer.png') 10 6,
@@ -12,12 +18,6 @@
     height: 100%;
     justify-content: center;
     width: 55px;
-
-    @include theme-selector(
-      'neutral-3',
-      background-color,
-      #{'&:not('}#{$self}#{'__button--active):hover'}
-    );
 
     &--active {
       @include theme('blue-2', background-color);

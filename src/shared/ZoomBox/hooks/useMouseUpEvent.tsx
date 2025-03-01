@@ -9,9 +9,12 @@ import { MouseButton } from 'types';
 export type TUseMouseUpEvent = void;
 
 export const useMouseUpEvent = (
+  depedencies: Array<any>,
+  onMouseUp: (event: MouseEvent) => void,
   setCursorState: (cursorState: string) => void,
 ): TUseMouseUpEvent => {
-  const handleMouseUp = (): void => {
+  const handleMouseUp = (event: MouseEvent): void => {
+    onMouseUp(event);
     setCursorState(CURSOR_STATES[MouseButton.idle]);
   };
 
@@ -21,5 +24,5 @@ export const useMouseUpEvent = (
     return () => {
       window.removeEventListener('mouseup', handleMouseUp);
     };
-  }, [setCursorState]);
+  }, [setCursorState, ...depedencies]);
 };

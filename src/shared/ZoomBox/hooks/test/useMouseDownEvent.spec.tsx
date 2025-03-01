@@ -18,7 +18,7 @@ describe('useMouseDownEvent', () => {
   it(`should save mouse position after trigger mouse down`, () => {
     // before
     const { result } = renderHook(() =>
-      useMouseDownEvent(BASE_3D, cursorPosition, mockCallBack),
+      useMouseDownEvent(BASE_3D, cursorPosition, mockCallBack, mockCallBack),
     );
 
     // action
@@ -29,7 +29,8 @@ describe('useMouseDownEvent', () => {
     } as WheelEvent);
 
     // result
-    expect(mockCallBack.mock.calls[0][0]).toBe(CURSOR_STATES[MouseButton.lmb]);
+    expect(mockCallBack.mock.calls.length).toBe(2);
+    expect(mockCallBack.mock.calls[1][0]).toBe(CURSOR_STATES[MouseButton.lmb]);
     expect(cursorPosition.current).toStrictEqual({ x: 0, y: 0 });
   });
 });

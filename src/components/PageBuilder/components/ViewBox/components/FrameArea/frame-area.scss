@@ -1,0 +1,39 @@
+.FrameArea {
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+
+  &__label {
+    font-size: 11px;
+    position: absolute;
+    transform: translate(1.5px, -20px);
+    z-index: 3;
+  }
+
+  &__area {
+    @include theme-selector('blue-1', stroke, path);
+
+    height: 100%;
+    overflow: visible;
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+
+    path {
+      fill: rgba(white, $alpha: 0);
+    }
+  }
+
+  &__corners {
+    @include theme-selector('neutral-1', fill, rect);
+    @include theme-selector('blue-1', stroke, rect);
+
+    height: 100%;
+    overflow: visible;
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+  }
+}

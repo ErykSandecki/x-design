@@ -1,4 +1,4 @@
-import { FC, ReactNode, RefObject, useRef } from 'react';
+import React, { FC, ReactNode, RefObject, useRef } from 'react';
 
 // components
 import Box from '../UI/components/Box/Box';
@@ -8,7 +8,7 @@ import { useTheme } from 'hooks';
 import { useZoomBoxEvents } from './hooks/useZoomBoxEvents';
 
 // others
-import { className, classNames } from './classNames';
+import { classes, className, classNames } from './classNames';
 
 // styles
 import styles from './zoom-box.scss';
@@ -18,21 +18,38 @@ import { T3DCoordinates } from 'types';
 
 export type TZoomBoxProps = {
   children: ReactNode;
+  classes?: typeof classes;
   coordinates: T3DCoordinates;
+  onMouseDown: (event: React.MouseEvent) => void;
+  onMouseMove: (event: MouseEvent) => void;
+  onMouseMoveDepedencies?: Array<any>;
+  onMouseUp: (event: MouseEvent) => void;
+  onMouseUpDepedencies?: Array<any>;
   setCoordinates: (coordinates: T3DCoordinates) => void;
   zoomBoxRef: RefObject<HTMLDivElement>;
 };
 
 export const ZoomBox: FC<TZoomBoxProps> = ({
   children,
+  classes = { className: '' },
   coordinates,
+  onMouseDown,
+  onMouseMove,
+  onMouseMoveDepedencies = [],
+  onMouseUp,
+  onMouseUpDepedencies = [],
   setCoordinates,
   zoomBoxRef,
 }) => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const zoomContentRef = useRef<HTMLDivElement>(null);
+  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { cursorState, ...events } = useZoomBoxEvents(
     coordinates,
+    onMouseDown,
+    onMouseMove,
+    onMouseMoveDepedencies,
+    onMouseUp,
+    onMouseUpDepedencies,
     setCoordinates,
     zoomBoxRef,
   );
@@ -41,6 +58,7 @@ export const ZoomBox: FC<TZoomBoxProps> = ({
     <Box
       classes={{
         className: cx(
+          classes.className,
           classNamesWithTheme[className].name,
           classNamesWithTheme[className].modificators[cursorState],
         ),

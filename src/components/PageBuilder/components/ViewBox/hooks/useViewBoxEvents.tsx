@@ -1,7 +1,9 @@
-import { MouseEvent, RefObject, useState } from 'react';
+import { RefObject, useState } from 'react';
 
 // hooks
 import { useMouseDownEvent } from './useMouseDownEvent';
+import { useMouseMoveEvent } from './useMouseMoveEvent';
+import { useMouseUpEvent } from './useMouseUpEvent';
 
 // others
 import { BASE_RECT } from 'shared';
@@ -12,19 +14,32 @@ import { T3DCoordinates, TRectCoordinates } from 'types';
 
 export type TUseViewBoxEvents = {
   frameArea: TRectCoordinates;
-  onMouseDown: (event: MouseEvent) => void;
+  onMouseDown: (event: React.MouseEvent) => void;
+  onMouseMove: (event: MouseEvent) => void;
+  onMouseUp: (event: MouseEvent) => void;
 };
 
 export const useViewBoxEvents = (
   coordinates: T3DCoordinates,
   mouseMode: MouseMode,
-  setCoordinates: (coordinates: T3DCoordinates) => void,
-  zoomBoxRef: RefObject<HTMLDivElement>,
+  setMouseMode: (mouseMode: MouseMode) => void,
 ): TUseViewBoxEvents => {
-  const [frameArea, setFrameArea] = useState(BASE_RECT);
+  const [frameArea, setFrameArea] = useState<TRectCoordinates | null>(null);
 
   return {
     frameArea,
-    onMouseDown: useMouseDownEvent(mouseMode, setFrameArea),
+    onMouseDown: useMouseDownEvent(coordinates, mouseMode, setFrameArea),
+    onMouseMove: useMouseMoveEvent(
+      coordinates,
+      frameArea,
+      mouseMode,
+      setFrameArea,
+    ),
+    onMouseUp: useMouseUpEvent(
+      frameArea,
+      mouseMode,
+      setFrameArea,
+      setMouseMode,
+    ),
   };
 };

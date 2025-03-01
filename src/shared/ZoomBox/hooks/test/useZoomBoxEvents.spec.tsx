@@ -18,7 +18,16 @@ describe('useZoomBoxEvents', () => {
   it(`should return zoom events and data`, () => {
     // before
     const { result } = renderHook(() =>
-      useZoomBoxEvents(BASE_3D, mockCallBack, ref as RefObject<HTMLDivElement>),
+      useZoomBoxEvents(
+        BASE_3D,
+        mockCallBack,
+        mockCallBack,
+        [],
+        mockCallBack,
+        [],
+        mockCallBack,
+        ref as RefObject<HTMLDivElement>,
+      ),
     );
 
     // result

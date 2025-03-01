@@ -26,6 +26,7 @@ const PageBuilderPage: FC = () => {
         coordinates={coordinates}
         mouseMode={mouseMode}
         setCoordinates={setCoordinates}
+        setMouseMode={setMouseMode}
       />
     </Box>
   );

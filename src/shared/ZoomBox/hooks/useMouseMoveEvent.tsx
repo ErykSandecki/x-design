@@ -1,10 +1,10 @@
 import { RefObject, useEffect } from 'react';
 
-// others
-import { CURSOR_STATES } from 'constant/constants';
-
 // types
-import { MouseButton, T2DCoordinates, T3DCoordinates } from 'types';
+import { T2DCoordinates, T3DCoordinates } from 'types';
+
+// utils
+import { handleMoveArea } from '../utils/handleMoveArea';
 
 export type TUseMouseMoveEvent = void;
 
@@ -12,19 +12,19 @@ export const useMouseMoveEvent = (
   coordinates: T3DCoordinates,
   cursorPosition: RefObject<T2DCoordinates>,
   cursorState: string,
+  depedencies: Array<any>,
+  onMouseMove: (event: MouseEvent) => void,
   setCoordinates: (coordinates: T3DCoordinates) => void,
 ): TUseMouseMoveEvent => {
   const handleMouseMove = (event: MouseEvent): void => {
-    const { x, y } = cursorPosition.current;
-    const cursor = cursorState as (typeof CURSOR_STATES)[number];
-
-    if (event.buttons === MouseButton.rmb && cursor === 'rmb') {
-      setCoordinates({
-        ...coordinates,
-        x: event.clientX - x,
-        y: event.clientY - y,
-      });
-    }
+    onMouseMove(event);
+    handleMoveArea(
+      coordinates,
+      cursorPosition,
+      cursorState,
+      event,
+      setCoordinates,
+    );
   };
 
   useEffect(() => {
@@ -39,5 +39,6 @@ export const useMouseMoveEvent = (
     cursorPosition.current.y,
     cursorState,
     setCoordinates,
+    ...depedencies,
   ]);
 };

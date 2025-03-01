@@ -14,7 +14,7 @@ const mockCallBack = jest.fn();
 describe('useMouseDownEvent', () => {
   it(`should change cursor to idle state`, () => {
     // before
-    renderHook(() => useMouseUpEvent(mockCallBack));
+    renderHook(() => useMouseUpEvent([], mockCallBack, mockCallBack));
 
     // action
     fireEvent.mouseUp(window, {
@@ -23,6 +23,7 @@ describe('useMouseDownEvent', () => {
     });
 
     // result
-    expect(mockCallBack.mock.calls[0][0]).toBe(CURSOR_STATES[MouseButton.idle]);
+    expect(mockCallBack.mock.calls.length).toBe(2);
+    expect(mockCallBack.mock.calls[1][0]).toBe(CURSOR_STATES[MouseButton.idle]);
   });
 });

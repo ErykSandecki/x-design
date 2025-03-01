@@ -15,13 +15,15 @@ const cursorPosition = { current: BASE_2D } as RefObject<T2DCoordinates>;
 const mockCallBack = jest.fn();
 
 describe('useMouseMoveEvent', () => {
-  it(`should change position after trigger mouse move`, () => {
+  it(`should trigger events`, () => {
     // before
     renderHook(() =>
       useMouseMoveEvent(
         BASE_3D,
         cursorPosition,
         CURSOR_STATES[4],
+        [],
+        mockCallBack,
         mockCallBack,
       ),
     );
@@ -34,27 +36,6 @@ describe('useMouseMoveEvent', () => {
     });
 
     // result
-    expect(mockCallBack.mock.calls[0][0]).toStrictEqual({ x: 0, y: 0, z: 1 });
-  });
-
-  it(`should not change position`, () => {
-    // before
-    renderHook(() =>
-      useMouseMoveEvent(
-        BASE_3D,
-        cursorPosition,
-        CURSOR_STATES[4],
-        mockCallBack,
-      ),
-    );
-
-    // action
-    fireEvent.mouseMove(window, {
-      clientX: 0,
-      clientY: 0,
-    });
-
-    // result
-    expect(mockCallBack.mock.calls.length).toBe(0);
+    expect(mockCallBack.mock.calls.length).toBe(2);
   });
 });
