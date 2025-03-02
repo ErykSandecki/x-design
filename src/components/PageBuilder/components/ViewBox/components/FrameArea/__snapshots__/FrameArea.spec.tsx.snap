@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FrameArea snapshots should not render FrameArea 1`] = `<DocumentFragment />`;
+
+exports[`FrameArea snapshots should render FrameArea 1`] = `
+<DocumentFragment>
+  <div
+    class="css-q0izro FrameArea FrameArea--light"
+    data-test-box=""
+  >
+    <small
+      class="css-1ssji0j FrameArea__label FrameArea__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      data-test-text=""
+      style="text-align: inherit;"
+    >
+      Frame
+    </small>
+    <svg
+      class="FrameArea__area FrameArea__area--light"
+    >
+      <path
+        d="M 0,0 H 0 V 0 H 0 V 0"
+      />
+    </svg>
+    <svg
+      class="FrameArea__corners FrameArea__corners--light"
+    >
+      <rect
+        height="6"
+        rx="1.5"
+        width="6"
+        x="-3"
+        y="-3"
+      />
+      <rect
+        height="6"
+        rx="1.5"
+        width="6"
+        x="-3"
+        y="-3"
+      />
+      <rect
+        height="6"
+        rx="1.5"
+        width="6"
+        x="-3"
+        y="-3"
+      />
+      <rect
+        height="6"
+        rx="1.5"
+        width="6"
+        x="-3"
+        y="-3"
+      />
+    </svg>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FrameArea snapshots should render with label when x2 i y2 is less than rest cords 1`] = `
+<DocumentFragment>
+  <div
+    class="css-q0izro FrameArea FrameArea--light"
+    data-test-box=""
+  >
+    <small
+      class="css-8d3d4i FrameArea__label FrameArea__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      data-test-text=""
+      style="text-align: inherit;"
+    >
+      Frame
+    </small>
+    <svg
+      class="FrameArea__area FrameArea__area--light"
+    >
+      <path
+        d="M 0,0 H -100 V -100 H 0 V 0"
+      />
+    </svg>
+    <svg
+      class="FrameArea__corners FrameArea__corners--light"
+    >
+      <rect
+        height="6"
+        rx="1.5"
+        width="6"
+        x="-3"
+        y="-3"
+      />
+      <rect
+        height="6"
+        rx="1.5"
+        width="6"
+        x="-3"
+        y="-103"
+      />
+      <rect
+        height="6"
+        rx="1.5"
+        width="6"
+        x="-103"
+        y="-3"
+      />
+      <rect
+        height="6"
+        rx="1.5"
+        width="6"
+        x="-103"
+        y="-103"
+      />
+    </svg>
+  </div>
+</DocumentFragment>
+`;

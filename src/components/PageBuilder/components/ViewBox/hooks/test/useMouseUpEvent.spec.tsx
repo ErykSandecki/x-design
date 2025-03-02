@@ -1,0 +1,32 @@
+import { renderHook } from '@testing-library/react';
+
+// hooks
+import { useMouseUpEvent } from '../useMouseUpEvent';
+
+// others
+import { BASE_RECT } from 'shared/ZoomBox/constants';
+
+// types
+import { MouseMode } from 'components/PageBuilder/enums';
+
+const mockCallBack = jest.fn();
+
+describe('useMouseUpEvent', () => {
+  it(`should trigger event`, () => {
+    // before
+    const { result } = renderHook(() =>
+      useMouseUpEvent(
+        BASE_RECT,
+        MouseMode.toolBeltA,
+        mockCallBack,
+        mockCallBack,
+      ),
+    );
+
+    // action
+    result.current({} as MouseEvent);
+
+    // result
+    expect(mockCallBack.mock.calls.length).toBe(2);
+  });
+});

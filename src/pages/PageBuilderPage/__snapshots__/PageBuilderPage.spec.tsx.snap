@@ -77,16 +77,14 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
       </div>
     </div>
     <div
-      class="css-17c89wm ZoomBox ZoomBox--light ZoomBox__idle ZoomBox__idle--light"
+      class="css-17c89wm ViewBox ViewBox--light ZoomBox ZoomBox--light ZoomBox__idle ZoomBox__idle--light"
       data-test-box=""
     >
       <div
         class="css-qel697 ZoomBox__zoom-content ZoomBox__zoom-content--light"
         data-test-box=""
         style="transform: translate(0px, 0px) scale(1);"
-      >
-        zoombox
-      </div>
+      />
     </div>
   </div>
 </DocumentFragment>

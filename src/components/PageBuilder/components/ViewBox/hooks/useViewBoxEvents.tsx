@@ -1,12 +1,9 @@
-import { RefObject, useState } from 'react';
+import { useState } from 'react';
 
 // hooks
 import { useMouseDownEvent } from './useMouseDownEvent';
 import { useMouseMoveEvent } from './useMouseMoveEvent';
 import { useMouseUpEvent } from './useMouseUpEvent';
-
-// others
-import { BASE_RECT } from 'shared';
 
 // types
 import { MouseMode } from 'components/PageBuilder/enums';

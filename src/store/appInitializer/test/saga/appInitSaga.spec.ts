@@ -86,6 +86,7 @@ describe('appInitSaga', () => {
     expect(sagaTester.getState()).toEqual({
       [APP_INITIALIZER]: {
         ...appInitializerStateMock[APP_INITIALIZER],
+        isAppLoaded: true,
         isPending: false,
         language: DEFAULT_LANGUAGE,
       },
