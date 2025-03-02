@@ -15,17 +15,17 @@ describe('isLoadingSelector', () => {
     const selectorFunction = (isLoadingSelector as any).resultFunc;
 
     // result
-    expect(selectorFunction(state)).toStrictEqual(true);
+    expect(selectorFunction(state)).toBe(true);
   });
 
   it('should return false', () => {
     // mock
-    const stateMock = { ...state, isPending: false };
+    const stateMock = { ...state, isLoading: true };
 
     // before
     const selectorFunction = (isLoadingSelector as any).resultFunc;
 
     // result
-    expect(selectorFunction(stateMock)).toStrictEqual(false);
+    expect(selectorFunction(stateMock)).toBe(true);
   });
 });

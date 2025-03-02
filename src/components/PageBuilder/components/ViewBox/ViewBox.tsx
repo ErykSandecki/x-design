@@ -1,8 +1,9 @@
-import { FC, useRef, useState } from 'react';
+import { FC, useRef } from 'react';
 
 // components
+import Elements from './components/Elements/Elements';
 import FrameArea from './components/FrameArea/FrameArea';
-import { Box, BASE_3D, ZoomBox } from 'shared';
+import { ZoomBox } from 'shared';
 
 // others
 import { className, classNames } from './classNames';
@@ -55,6 +56,7 @@ const ViewBox: FC<TViewBoxProps> = ({
       {...events}
     >
       <FrameArea frameArea={frameArea} />
+      <Elements />
     </ZoomBox>
   );
 };

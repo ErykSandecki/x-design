@@ -11,6 +11,11 @@ import { MouseMode } from 'components/PageBuilder/enums';
 
 const mockCallBack = jest.fn();
 
+jest.mock('react-redux', () => ({
+  ...jest.requireActual('react-redux'),
+  useDispatch: () => mockCallBack,
+}));
+
 describe('useMouseUpEvent', () => {
   it(`should trigger event`, () => {
     // before
@@ -27,6 +32,6 @@ describe('useMouseUpEvent', () => {
     result.current({} as MouseEvent);
 
     // result
-    expect(mockCallBack.mock.calls.length).toBe(2);
+    expect(mockCallBack.mock.calls.length).toBe(3);
   });
 });

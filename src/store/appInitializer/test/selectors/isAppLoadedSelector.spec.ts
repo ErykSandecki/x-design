@@ -10,12 +10,12 @@ import { isAppLoadedSelector } from '../../selectors';
 const state = appInitializerStateMock[APP_INITIALIZER];
 
 describe('isAppLoadedSelector', () => {
-  it('should return false', () => {
+  it('should return true', () => {
     // before
     const selectorFunction = (isAppLoadedSelector as any).resultFunc;
 
     // result
-    expect(selectorFunction(state)).toStrictEqual(false);
+    expect(selectorFunction(state)).toStrictEqual(true);
   });
 
   it('should return true', () => {

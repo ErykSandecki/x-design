@@ -23,7 +23,7 @@ exports[`FrameArea snapshots should render FrameArea 1`] = `
       />
     </svg>
     <svg
-      class="FrameArea__corners FrameArea__corners--light"
+      class="Corners Corners--light"
     >
       <rect
         height="6"
@@ -79,7 +79,7 @@ exports[`FrameArea snapshots should render with label when x2 i y2 is less than 
       />
     </svg>
     <svg
-      class="FrameArea__corners FrameArea__corners--light"
+      class="Corners Corners--light"
     >
       <rect
         height="6"

@@ -1,3 +1,5 @@
+import { useDispatch } from 'react-redux';
+
 // types
 import { MouseMode } from '../../../enums';
 import { TRectCoordinates } from 'types';
@@ -13,8 +15,16 @@ export const useMouseUpEvent = (
   setFrameArea: (frameArea: TRectCoordinates) => void,
   setMouseMode: (mouseMode: MouseMode) => void,
 ): TUseMouseUpEvent => {
+  const dispatch = useDispatch();
+
   const handleMouseUp = (): void => {
-    handleCreateElement(frameArea, mouseMode, setFrameArea, setMouseMode);
+    handleCreateElement(
+      dispatch,
+      frameArea,
+      mouseMode,
+      setFrameArea,
+      setMouseMode,
+    );
   };
 
   return handleMouseUp;

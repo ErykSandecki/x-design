@@ -1,0 +1,11 @@
+.Frame {
+  background-color: white;
+  position: absolute;
+
+  &__label {
+    font-size: 11px;
+    position: absolute;
+    transform: translate(1.5px, -20px);
+    z-index: 3;
+  }
+}

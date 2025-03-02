@@ -1,0 +1,10 @@
+.Corners {
+  @include theme-selector('neutral-1', fill, rect);
+  @include theme-selector('blue-1', stroke, rect);
+
+  height: 100%;
+  overflow: visible;
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+}

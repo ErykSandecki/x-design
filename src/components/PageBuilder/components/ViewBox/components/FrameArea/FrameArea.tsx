@@ -10,19 +10,20 @@ import { useTheme } from 'hooks';
 // others
 import { className, classNames } from './classNames';
 
-import { HHW, RX, SHW, translationNameSpace } from './contants';
+import { translationNameSpace } from './constants';
 
 // styles
 import styles from './frame-area.scss';
 
 // types
 import { TRectCoordinates } from 'types';
+import Corners from '../Corners/Corners';
 
-export type TViewBoxProps = {
+export type TFrameAreaProps = {
   frameArea: TRectCoordinates;
 };
 
-const FrameArea: FC<TViewBoxProps> = ({ frameArea }) => {
+const FrameArea: FC<TFrameAreaProps> = ({ frameArea }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { t } = useTranslation();
   const { x1, x2, y1, y2 } = frameArea || {};
@@ -48,12 +49,7 @@ const FrameArea: FC<TViewBoxProps> = ({ frameArea }) => {
       <svg className={cx(classNamesWithTheme.area)}>
         <path d={`M ${x1},${y1} H ${x2} V ${y2} H ${x1} V ${y1}`} />
       </svg>
-      <svg className={cx(classNamesWithTheme.corners)}>
-        <rect x={x1 - HHW} y={y1 - HHW} width={SHW} height={SHW} rx={RX} />
-        <rect x={x1 - HHW} y={y2 - HHW} width={SHW} height={SHW} rx={RX} />
-        <rect x={x2 - HHW} y={y1 - HHW} width={SHW} height={SHW} rx={RX} />
-        <rect x={x2 - HHW} y={y2 - HHW} width={SHW} height={SHW} rx={RX} />
-      </svg>
+      <Corners rectCoordinates={frameArea} />
     </Box>
   );
 };

@@ -1,15 +1,18 @@
 // others
-import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
+import { REDUCER_KEY as APP_INITIALIZER } from 'store/appInitializer/actionsType';
 
 // types
-import { TPageBuilderState } from '../../../store/pageBuilder/types';
+import { TAppInitializerState } from 'store/appInitializer/types';
+import { Theme } from 'types';
 
 export const appInitializerStateMock: Record<
-  typeof PAGE_BUILDER,
-  TPageBuilderState
+  typeof APP_INITIALIZER,
+  TAppInitializerState
 > = {
-  [PAGE_BUILDER]: {
-    isLoading: false,
+  [APP_INITIALIZER]: {
+    isAppLoaded: true,
     isPending: true,
+    language: 'en',
+    theme: Theme.light,
   },
 };
