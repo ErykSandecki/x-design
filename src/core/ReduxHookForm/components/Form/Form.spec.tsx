@@ -6,7 +6,7 @@ import Field from '../Field/Field';
 import Form from './Form';
 
 // mocks
-import { reduxHookFormStateMock } from 'test/mocks/reducer/reduxHookForm';
+import { reduxHookFormStateMock } from 'test/mocks/reducer/reduxHookFormMock';
 
 // others
 import { REDUCER_KEY as REDUX_HOOK_FORM } from 'store/reduxHookForm/actionsType';

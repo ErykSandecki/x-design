@@ -5,7 +5,7 @@ import { renderHook } from '@testing-library/react';
 import { useValidators } from '../useValidators';
 
 // mocks
-import { fieldMock } from 'test/mocks/reducer/reduxHookForm';
+import { fieldMock } from 'test/mocks/reducer/reduxHookFormMock';
 
 // others
 import { REDUCER_KEY as REDUX_HOOK_FORM } from 'store/reduxHookForm/actionsType';

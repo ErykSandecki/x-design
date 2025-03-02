@@ -1,8 +1,10 @@
 // mocks
 import { appInitializerStateMock } from './appInitializerMock';
-import { reduxHookFormStateMock } from './reduxHookForm';
+import { pageBuilderStateMock } from './pageBuilderMock';
+import { reduxHookFormStateMock } from './reduxHookFormMock';
 
 export const wholeStateMock = {
   ...appInitializerStateMock,
+  ...pageBuilderStateMock,
   ...reduxHookFormStateMock,
 };

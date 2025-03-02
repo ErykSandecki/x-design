@@ -3,7 +3,7 @@ import {
   fieldMock,
   formMock,
   reduxHookFormStateMock,
-} from 'test/mocks/reducer/reduxHookForm';
+} from 'test/mocks/reducer/reduxHookFormMock';
 
 // others
 import {

@@ -4,7 +4,7 @@ import { renderHook } from '@testing-library/react';
 import { useField } from '../useField';
 
 // mocks
-import { reduxHookFormStateMock } from 'test/mocks/reducer/reduxHookForm';
+import { reduxHookFormStateMock } from 'test/mocks/reducer/reduxHookFormMock';
 
 // store
 import { configureStore } from 'store/store';

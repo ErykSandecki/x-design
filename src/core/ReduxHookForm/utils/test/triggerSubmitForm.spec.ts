@@ -1,5 +1,5 @@
 // mocks
-import { fieldMock } from 'test/mocks/reducer/reduxHookForm';
+import { fieldMock } from 'test/mocks/reducer/reduxHookFormMock';
 
 // utils
 import { triggerSubmitForm } from '../triggerSubmitForm';
