@@ -1,8 +1,8 @@
 // others
-import { ADD_ELEMENT } from './actionsType';
+import { ADD_ELEMENT, SET_SELECTED_ELEMENTS } from './actionsType';
 
 // types
-import { TElement } from 'types';
+import { ElementType, T3DCoordinates, TElement } from 'types';
 
 export type TElementDynamicData = Pick<
   TElement,
@@ -16,13 +16,27 @@ export type TElementsData = {
   staticData: Array<TElementStaticData>;
 };
 
+export type TSelectedElement = {
+  coordinates: T3DCoordinates;
+  id: string;
+  type: ElementType;
+};
+
+export type TSelectedElements = Array<TSelectedElement>;
+
 export type TPageBuilderState = {
   elements: TElementsData;
   isLoading: boolean;
   isPending: boolean;
+  selectedElements: TSelectedElements;
 };
 
 export type TAddELementAction = {
   payload: TElement;
   type: typeof ADD_ELEMENT;
+};
+
+export type TSetSelectedElementsAction = {
+  payload: TSelectedElements;
+  type: typeof SET_SELECTED_ELEMENTS;
 };

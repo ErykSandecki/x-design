@@ -56,7 +56,7 @@ const ViewBox: FC<TViewBoxProps> = ({
       zoomBoxRef={zoomBoxRef}
       {...events}
     >
-      <Elements eventsDisabled={eventsDisabled} />
+      <Elements eventsDisabled={eventsDisabled} mouseMode={mouseMode} />
       <FrameArea frameArea={frameArea} />
     </ZoomBox>
   );

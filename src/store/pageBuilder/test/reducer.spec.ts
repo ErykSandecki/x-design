@@ -2,6 +2,7 @@
 import {
   createFrameMock,
   pageBuilderStateMock,
+  selectedElementMock,
 } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
@@ -9,7 +10,7 @@ import { REDUCER_KEY as PAGE_BUILDER } from '../actionsType';
 
 // store
 import pageBuilder from '../reducer';
-import { addElement } from '../actions';
+import { addElement, setSelectedElements } from '../actions';
 
 // types
 import { TAction } from 'types';
@@ -58,6 +59,19 @@ describe('PageBuilderReducer', () => {
           },
         ],
       },
+    });
+  });
+
+  it('should handle SET_SELECTED_ELEMENTS', () => {
+    // before
+    const state = reducer(setSelectedElements([selectedElementMock]), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      selectedElements: [selectedElementMock],
     });
   });
 });

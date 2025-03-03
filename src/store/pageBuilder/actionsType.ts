@@ -1,3 +1,4 @@
 export const REDUCER_KEY = 'pageBuilder';
 
 export const ADD_ELEMENT = `${REDUCER_KEY}/ADD_ELEMENT`;
+export const SET_SELECTED_ELEMENTS = `${REDUCER_KEY}/SET_SELECTED_ELEMENTS`;

@@ -11,6 +11,7 @@ import {
   TElementDynamicData,
   TElementStaticData,
   TPageBuilderState,
+  TSelectedElements,
 } from './types';
 import { TMainState } from 'types/reducers';
 
@@ -46,3 +47,6 @@ export const isPendingSelector: Selector<TMainState, boolean> = createSelector(
   pageBuilderStateSelector,
   getFp('isPending'),
 );
+
+export const selectedElementsSelector: Selector<TMainState, TSelectedElements> =
+  createSelector(pageBuilderStateSelector, getFp('selectedElements'));

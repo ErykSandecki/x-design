@@ -19,6 +19,9 @@ import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 // store
 import { configureStore } from 'store/store';
 
+// types
+import { MouseMode } from 'components/PageBuilder/enums';
+
 const stateMock = {
   ...wholeStateMock,
   [PAGE_BUILDER]: {
@@ -34,7 +37,7 @@ describe('Elements snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <Elements eventsDisabled={false} />
+        <Elements eventsDisabled={false} mouseMode={MouseMode.default} />
       </Provider>,
     );
 
@@ -57,7 +60,7 @@ describe('Elements snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <Elements eventsDisabled={false} />
+        <Elements eventsDisabled={false} mouseMode={MouseMode.default} />
       </Provider>,
     );
 

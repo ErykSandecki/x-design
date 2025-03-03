@@ -19,6 +19,9 @@ import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 // store
 import { configureStore } from 'store/store';
 
+// types
+import { MouseMode } from 'components/PageBuilder/enums';
+
 const stateMock = {
   ...wholeStateMock,
   [PAGE_BUILDER]: {
@@ -38,7 +41,11 @@ describe('Frame snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <Frame className="className" id={elementDynamicDataMock.id} />
+        <Frame
+          className="className"
+          id={elementDynamicDataMock.id}
+          mouseMode={MouseMode.default}
+        />
       </Provider>,
     );
 

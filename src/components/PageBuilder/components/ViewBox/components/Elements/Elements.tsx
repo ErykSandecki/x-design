@@ -18,12 +18,14 @@ import styles from './elements.scss';
 
 // types
 import { ElementType } from 'types';
+import { MouseMode } from 'components/PageBuilder/enums';
 
 export type TElementsProps = {
   eventsDisabled: boolean;
+  mouseMode: MouseMode;
 };
 
-const Elements: FC<TElementsProps> = ({ eventsDisabled }) => {
+const Elements: FC<TElementsProps> = ({ eventsDisabled, mouseMode }) => {
   const staticData = useSelector(staticDataSelector);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
@@ -37,6 +39,8 @@ const Elements: FC<TElementsProps> = ({ eventsDisabled }) => {
               eventsDisabled,
             ])}
             id={id}
+            key={id}
+            mouseMode={mouseMode}
           />
         );
       default:
