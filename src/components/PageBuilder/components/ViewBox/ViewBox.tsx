@@ -39,6 +39,7 @@ const ViewBox: FC<TViewBoxProps> = ({
     mouseMode,
     setMouseMode,
   );
+  const eventsDisabled = frameArea !== null || mouseMode !== MouseMode.default;
 
   return (
     <ZoomBox
@@ -55,8 +56,8 @@ const ViewBox: FC<TViewBoxProps> = ({
       zoomBoxRef={zoomBoxRef}
       {...events}
     >
+      <Elements eventsDisabled={eventsDisabled} />
       <FrameArea frameArea={frameArea} />
-      <Elements isFrameDraggable={frameArea !== null} />
     </ZoomBox>
   );
 };

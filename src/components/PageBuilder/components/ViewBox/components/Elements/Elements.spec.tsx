@@ -34,7 +34,7 @@ describe('Elements snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <Elements isFrameDraggable={false} />
+        <Elements eventsDisabled={false} />
       </Provider>,
     );
 
@@ -57,7 +57,7 @@ describe('Elements snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <Elements isFrameDraggable={false} />
+        <Elements eventsDisabled={false} />
       </Provider>,
     );
 

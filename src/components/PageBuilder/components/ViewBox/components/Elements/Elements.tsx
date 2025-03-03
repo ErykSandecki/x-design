@@ -20,10 +20,10 @@ import styles from './elements.scss';
 import { ElementType } from 'types';
 
 export type TElementsProps = {
-  isFrameDraggable: boolean;
+  eventsDisabled: boolean;
 };
 
-const Elements: FC<TElementsProps> = ({ isFrameDraggable }) => {
+const Elements: FC<TElementsProps> = ({ eventsDisabled }) => {
   const staticData = useSelector(staticDataSelector);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
@@ -33,8 +33,8 @@ const Elements: FC<TElementsProps> = ({ isFrameDraggable }) => {
         return (
           <Frame
             className={cx(classNamesWithTheme[className].name, [
-              classNamesWithTheme[className].modificators.frameDraggable,
-              isFrameDraggable,
+              classNamesWithTheme[className].modificators.eventsDisabled,
+              eventsDisabled,
             ])}
             id={id}
           />
