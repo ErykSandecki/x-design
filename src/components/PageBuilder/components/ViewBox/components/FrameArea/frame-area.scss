@@ -1,3 +1,5 @@
+@import '../../../../styles/z-indexes.scss';
+
 .FrameArea {
   height: 100%;
   overflow: visible;
@@ -9,7 +11,7 @@
     font-size: 11px;
     position: absolute;
     transform: translate(1.5px, -20px);
-    z-index: 3;
+    z-index: $--rx-zindex-element;
   }
 
   &__area {
@@ -19,7 +21,7 @@
     overflow: visible;
     position: absolute;
     width: 100%;
-    z-index: 3;
+    z-index: $--rx-zindex-element;
 
     path {
       fill: rgba(white, $alpha: 0);
