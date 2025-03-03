@@ -56,7 +56,7 @@ const ViewBox: FC<TViewBoxProps> = ({
       {...events}
     >
       <FrameArea frameArea={frameArea} />
-      <Elements />
+      <Elements isFrameDraggable={frameArea !== null} />
     </ZoomBox>
   );
 };

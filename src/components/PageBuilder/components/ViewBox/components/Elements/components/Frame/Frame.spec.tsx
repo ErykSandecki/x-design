@@ -38,7 +38,7 @@ describe('Frame snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <Frame id={elementDynamicDataMock.id} />
+        <Frame className="className" id={elementDynamicDataMock.id} />
       </Provider>,
     );
 

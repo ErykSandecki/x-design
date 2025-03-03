@@ -9,7 +9,7 @@ import { Box, Small } from 'shared';
 import { useTheme } from 'hooks';
 
 // others
-import { className, classNames } from './classNames';
+import { className as classNameFrame, classNames } from './classNames';
 import { translationNameSpace } from './contants';
 
 // store
@@ -18,11 +18,14 @@ import { elementDynamicDataSelectorCreator } from 'store/pageBuilder/selectors';
 // styles
 import styles from './frame.scss';
 
-export type TFrameProps = {
+// types
+import { TElementProps } from '../../types';
+
+export type TFrameProps = TElementProps & {
   id: string;
 };
 
-const Frame: FC<TFrameProps> = ({ id }) => {
+const Frame: FC<TFrameProps> = ({ className, id }) => {
   const elementDynamicData = useSelector(elementDynamicDataSelectorCreator(id));
   const [position, setPosition] = useState(elementDynamicData.positionAbsolute);
   const { height, width } = elementDynamicData;
@@ -33,7 +36,7 @@ const Frame: FC<TFrameProps> = ({ id }) => {
   return (
     <Box
       classes={{
-        className: cx(classNamesWithTheme[className]),
+        className: cx(className, classNamesWithTheme[classNameFrame]),
       }}
       style={{
         height: `${height}px`,

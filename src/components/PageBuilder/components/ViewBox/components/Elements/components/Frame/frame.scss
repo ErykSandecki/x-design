@@ -1,13 +1,22 @@
 @import '../../../../../../styles/z-indexes.scss';
 
 .Frame {
+  @include theme-selector('blue-1', outline, '&:hover', '2.5px solid');
+  @include theme-selector('blue-1', color, '&:hover .Frame__label');
+
   background-color: white;
   position: absolute;
+  z-index: $--rx-zindex-element;
+
+  &:hover {
+    z-index: $--rx-zindex-element-active;
+  }
 
   &__label {
+    @include theme('neutral-2', color);
+
     font-size: 11px;
     position: absolute;
     transform: translate(1.5px, -20px);
-    z-index: $--rx-zindex-element;
   }
 }
