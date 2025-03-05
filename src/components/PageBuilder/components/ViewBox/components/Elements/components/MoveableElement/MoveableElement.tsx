@@ -23,21 +23,39 @@ import styles from './moveable-element.scss';
 
 // types
 import { MouseMode } from 'components/PageBuilder/enums';
+import { ElementType, TElement } from 'types';
 
 type TProps = {
   classes: typeof classes;
   children: ReactNode;
   id: string;
   mouseMode: MouseMode;
+  parentId: TElement['parentId'];
+  type: ElementType;
 };
 
-const MoveableElement: FC<TProps> = ({ classes, children, id, mouseMode }) => {
+const MoveableElement: FC<TProps> = ({
+  classes,
+  children,
+  id,
+  mouseMode,
+  parentId,
+  type,
+}) => {
   const elementDynamicData = useSelector(elementDynamicDataSelectorCreator(id));
+  const { positionAbsolute } = elementDynamicData;
   const [position, setPosition] = useState(elementDynamicData.positionAbsolute);
   const { height, width } = elementDynamicData;
   const { x, y } = position;
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-  const events = useMoveableElementEvents(mouseMode, position);
+  const events = useMoveableElementEvents(
+    positionAbsolute,
+    id,
+    mouseMode,
+    parentId,
+    position,
+    type,
+  );
 
   return (
     <Box

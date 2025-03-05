@@ -58,5 +58,6 @@ export const createFrameMock: TElement = {
 export const selectedElementMock: TSelectedElement = {
   coordinates: BASE_3D,
   id: '1',
+  parentId: '-1',
   type: ElementType.frame,
 };

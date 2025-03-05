@@ -45,6 +45,8 @@ describe('Frame snapshots', () => {
           className="className"
           id={elementDynamicDataMock.id}
           mouseMode={MouseMode.default}
+          parentId={elementStaticDataMock.parentId}
+          type={elementStaticDataMock.type}
         />
       </Provider>,
     );

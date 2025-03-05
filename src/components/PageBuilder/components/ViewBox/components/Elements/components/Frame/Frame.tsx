@@ -18,11 +18,15 @@ import styles from './frame.scss';
 // types
 import { TElementProps } from '../../types';
 
-export type TFrameProps = TElementProps & {
-  id: string;
-};
+export type TFrameProps = TElementProps;
 
-const Frame: FC<TFrameProps> = ({ className, id, mouseMode }) => {
+const Frame: FC<TFrameProps> = ({
+  className,
+  id,
+  mouseMode,
+  parentId,
+  type,
+}) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { t } = useTranslation();
 
@@ -32,7 +36,9 @@ const Frame: FC<TFrameProps> = ({ className, id, mouseMode }) => {
         className: cx(className, classNamesWithTheme[classNameFrame]),
       }}
       id={id}
+      parentId={parentId}
       mouseMode={mouseMode}
+      type={type}
     >
       <Small classes={{ className: cx(classNamesWithTheme.label) }}>
         {t(`${translationNameSpace}.label.createFrame`)}

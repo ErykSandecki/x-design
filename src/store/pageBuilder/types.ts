@@ -2,7 +2,7 @@
 import { ADD_ELEMENT, SET_SELECTED_ELEMENTS } from './actionsType';
 
 // types
-import { ElementType, T3DCoordinates, TElement } from 'types';
+import { ElementType, T2DCoordinates, TElement } from 'types';
 
 export type TElementDynamicData = Pick<
   TElement,
@@ -17,8 +17,9 @@ export type TElementsData = {
 };
 
 export type TSelectedElement = {
-  coordinates: T3DCoordinates;
-  id: string;
+  coordinates: T2DCoordinates;
+  id: TElement['id'];
+  parentId: TElement['parentId'];
   type: ElementType;
 };
 

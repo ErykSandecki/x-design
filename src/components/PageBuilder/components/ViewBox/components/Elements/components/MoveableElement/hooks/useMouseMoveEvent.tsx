@@ -16,7 +16,7 @@ export const useMouseMoveEvent = (
   position: T2DCoordinates,
 ): TUseMouseMoveEvent => {
   const handleMouseMove = throttle((event: MouseEvent): void => {
-    if (handleMouseMove && isPressing && mouseMode !== MouseMode.comment) {
+    if (isPressing && mouseMode === MouseMode.default) {
       noop();
     }
   }, THROTTLE_WAIT);

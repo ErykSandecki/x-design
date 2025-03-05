@@ -1,5 +1,12 @@
+import { useDispatch } from 'react-redux';
+
 // types
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseButton } from 'types';
+import { MouseMode } from '../../../../../../../../PageBuilder/enums';
+import { TSelectedElement } from 'store/pageBuilder/types';
+
+// utils
+import { handleSelectElement } from '../utils/handleSelectElement';
 
 export type TUseMouseDownEvent = (
   event: React.MouseEvent<HTMLElement, MouseEvent>,
@@ -7,17 +14,17 @@ export type TUseMouseDownEvent = (
 
 export const useMouseDownEvent = (
   mouseMode: MouseMode,
+  selectedElement: TSelectedElement,
   setIsPressing: (isPressing: boolean) => void,
 ): TUseMouseDownEvent => {
+  const dispatch = useDispatch();
+
   const handleMouseDown = (
     event: React.MouseEvent<HTMLElement, MouseEvent>,
   ): void => {
-    if (event.button === 0 && mouseMode !== MouseMode.comment) {
+    if (event.buttons === MouseButton.lmb && mouseMode === MouseMode.default) {
       setIsPressing(true);
-
-      if (handleMouseDown) {
-        handleMouseDown(event);
-      }
+      handleSelectElement(dispatch, selectedElement);
     }
   };
 
