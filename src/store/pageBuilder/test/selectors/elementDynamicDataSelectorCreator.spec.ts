@@ -12,9 +12,9 @@ describe('elementDynamicDataSelectorCreator', () => {
     ).resultFunc;
 
     // result
-    expect(selectorFunction([elementDynamicDataMock])).toStrictEqual(
-      elementDynamicDataMock,
-    );
+    expect(
+      selectorFunction({ [elementDynamicDataMock.id]: elementDynamicDataMock }),
+    ).toStrictEqual(elementDynamicDataMock);
   });
 
   it('should not find item', () => {
@@ -23,6 +23,8 @@ describe('elementDynamicDataSelectorCreator', () => {
       .resultFunc;
 
     // result
-    expect(selectorFunction([elementDynamicDataMock])).toBe(undefined);
+    expect(
+      selectorFunction({ [elementDynamicDataMock.id]: elementDynamicDataMock }),
+    ).toBe(undefined);
   });
 });

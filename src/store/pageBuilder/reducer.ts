@@ -13,10 +13,10 @@ import {
 import { handleAddElement } from './utils/handleAddElement';
 
 const initialState: TPageBuilderState = {
-  elements: { dynamicData: [], staticData: [] },
+  elements: { dynamicData: {}, staticData: {} },
   isLoading: true,
   isPending: false,
-  selectedElements: [],
+  selectedElements: {},
 };
 
 const addElement = (

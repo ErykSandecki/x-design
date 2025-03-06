@@ -41,8 +41,8 @@ describe('PageBuilderReducer', () => {
     expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       elements: {
-        dynamicData: [
-          {
+        dynamicData: {
+          [createFrameMock.id]: {
             height: createFrameMock.height,
             id: createFrameMock.id,
             positionAbsolute: createFrameMock.positionAbsolute,
@@ -50,28 +50,32 @@ describe('PageBuilderReducer', () => {
             rotate: createFrameMock.rotate,
             width: createFrameMock.width,
           },
-        ],
-        staticData: [
-          {
+        },
+        staticData: {
+          [createFrameMock.id]: {
             id: createFrameMock.id,
+            index: 0,
             parentId: createFrameMock.parentId,
             type: createFrameMock.type,
           },
-        ],
+        },
       },
     });
   });
 
   it('should handle SET_SELECTED_ELEMENTS', () => {
+    // mock
+    const id = 'id';
+
     // before
-    const state = reducer(setSelectedElements([selectedElementMock]), {
+    const state = reducer(setSelectedElements({ [id]: selectedElementMock }), {
       ...pageBuilderStateMock[PAGE_BUILDER],
     });
 
     // result
     expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
-      selectedElements: [selectedElementMock],
+      selectedElements: { [id]: selectedElementMock },
     });
   });
 });

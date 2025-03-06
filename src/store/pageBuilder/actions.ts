@@ -2,10 +2,14 @@
 import { ADD_ELEMENT, SET_SELECTED_ELEMENTS } from './actionsType';
 
 // types
-import { TAddELementAction, TSetSelectedElementsAction } from './types';
+import {
+  TAddELementAction,
+  TAddELementActionPayload,
+  TSetSelectedElementsAction,
+} from './types';
 
 export const addElement = (
-  payload: TAddELementAction['payload'],
+  payload: TAddELementActionPayload,
 ): TAddELementAction => ({
   payload,
   type: ADD_ELEMENT,

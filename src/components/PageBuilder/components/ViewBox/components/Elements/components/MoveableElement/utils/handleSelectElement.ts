@@ -10,5 +10,5 @@ export const handleSelectElement = (
   dispatch: Dispatch,
   selectedElement: TSelectedElement,
 ): void => {
-  dispatch(setSelectedElements([selectedElement]));
+  dispatch(setSelectedElements({ [selectedElement.id]: selectedElement }));
 };

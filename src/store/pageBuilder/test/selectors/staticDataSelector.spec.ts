@@ -15,6 +15,6 @@ describe('staticDataSelector', () => {
     const selectorFunction = (staticDataSelector as any).resultFunc;
 
     // result
-    expect(selectorFunction(elements)).toStrictEqual([]);
+    expect(selectorFunction(elements)).toStrictEqual({});
   });
 });

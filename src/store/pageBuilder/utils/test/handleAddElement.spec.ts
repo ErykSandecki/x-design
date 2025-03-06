@@ -22,8 +22,8 @@ describe('handleAddElement', () => {
     expect(result).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       elements: {
-        dynamicData: [
-          {
+        dynamicData: {
+          [createFrameMock.id]: {
             height: createFrameMock.height,
             id: createFrameMock.id,
             positionAbsolute: createFrameMock.positionAbsolute,
@@ -31,14 +31,15 @@ describe('handleAddElement', () => {
             rotate: createFrameMock.rotate,
             width: createFrameMock.width,
           },
-        ],
-        staticData: [
-          {
+        },
+        staticData: {
+          [createFrameMock.id]: {
             id: createFrameMock.id,
+            index: createFrameMock.index,
             parentId: createFrameMock.parentId,
             type: createFrameMock.type,
           },
-        ],
+        },
       },
     });
   });

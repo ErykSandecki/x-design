@@ -16,10 +16,10 @@ export const pageBuilderStateMock: Record<
   TPageBuilderState
 > = {
   [PAGE_BUILDER]: {
-    elements: { dynamicData: [], staticData: [] },
+    elements: { dynamicData: {}, staticData: {} },
     isLoading: true,
     isPending: false,
-    selectedElements: [],
+    selectedElements: {},
   },
 };
 
@@ -40,6 +40,7 @@ export const elementDynamicDataMock: TElementDynamicData = {
 
 export const elementStaticDataMock: TElementStaticData = {
   id: '1',
+  index: 0,
   parentId: '-1',
   type: ElementType.frame,
 };
@@ -47,6 +48,7 @@ export const elementStaticDataMock: TElementStaticData = {
 export const createFrameMock: TElement = {
   height: 0,
   id: '1',
+  index: 0,
   parentId: '-1',
   positionAbsolute: { x: 0, y: 0 },
   positionRelative: { x: 0, y: 0 },

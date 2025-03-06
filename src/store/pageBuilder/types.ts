@@ -2,18 +2,21 @@
 import { ADD_ELEMENT, SET_SELECTED_ELEMENTS } from './actionsType';
 
 // types
-import { ElementType, T2DCoordinates, TElement } from 'types';
+import { ElementType, T2DCoordinates, TElement, TObject } from 'types';
 
 export type TElementDynamicData = Pick<
   TElement,
   'height' | 'id' | 'positionAbsolute' | 'positionRelative' | 'rotate' | 'width'
 >;
 
-export type TElementStaticData = Pick<TElement, 'id' | 'parentId' | 'type'>;
+export type TElementStaticData = Pick<
+  TElement,
+  'id' | 'index' | 'parentId' | 'type'
+>;
 
 export type TElementsData = {
-  dynamicData: Array<TElementDynamicData>;
-  staticData: Array<TElementStaticData>;
+  dynamicData: TObject<TElementDynamicData>;
+  staticData: TObject<TElementStaticData>;
 };
 
 export type TSelectedElement = {
@@ -23,7 +26,7 @@ export type TSelectedElement = {
   type: ElementType;
 };
 
-export type TSelectedElements = Array<TSelectedElement>;
+export type TSelectedElements = TObject<TSelectedElement>;
 
 export type TPageBuilderState = {
   elements: TElementsData;
@@ -32,8 +35,10 @@ export type TPageBuilderState = {
   selectedElements: TSelectedElements;
 };
 
+export type TAddELementActionPayload = Omit<TElement, 'index'>;
+
 export type TAddELementAction = {
-  payload: TElement;
+  payload: TAddELementActionPayload;
   type: typeof ADD_ELEMENT;
 };
 

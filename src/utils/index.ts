@@ -13,6 +13,7 @@ export * from './isControlPressed';
 export * from './isJestRunning';
 export * from './transform/hexToRgb/hexToRgb';
 export * from './transform/enumToArray';
+export * from './transform/objectToArray';
 export * from './transform/rgbToHex';
 export * from './transform/seperateValue';
 export * from './ts/guards';

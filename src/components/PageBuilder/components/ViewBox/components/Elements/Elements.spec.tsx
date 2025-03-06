@@ -51,8 +51,8 @@ describe('Elements snapshots', () => {
       [PAGE_BUILDER]: {
         ...stateMock[PAGE_BUILDER],
         elements: {
-          dynamicData: [elementDynamicDataMock],
-          staticData: [elementStaticDataMock],
+          dynamicData: { [elementDynamicDataMock.id]: elementDynamicDataMock },
+          staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
         },
       },
     });

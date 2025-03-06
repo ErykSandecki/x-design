@@ -15,6 +15,6 @@ describe('selectedElementsSelector', () => {
     const selectorFunction = (selectedElementsSelector as any).resultFunc;
 
     // result
-    expect(selectorFunction(state)).toStrictEqual([]);
+    expect(selectorFunction(state)).toStrictEqual({});
   });
 });

@@ -1,18 +1,17 @@
 import { pick } from 'lodash';
 
 // types
-import { TElement } from 'types';
-import { TPageBuilderState } from '../types';
+import { TAddELementActionPayload, TPageBuilderState } from '../types';
 
 export const handleAddElement = (
-  element: TElement,
+  element: TAddELementActionPayload,
   state: TPageBuilderState,
 ): TPageBuilderState => ({
   ...state,
   elements: {
-    dynamicData: [
+    dynamicData: {
       ...state.elements.dynamicData,
-      pick(
+      [element.id]: pick(
         element,
         'height',
         'id',
@@ -21,10 +20,13 @@ export const handleAddElement = (
         'rotate',
         'width',
       ),
-    ],
-    staticData: [
+    },
+    staticData: {
       ...state.elements.staticData,
-      pick(element, 'id', 'parentId', 'type'),
-    ],
+      [element.id]: {
+        ...pick(element, 'id', 'parentId', 'type'),
+        index: 0,
+      },
+    },
   },
 });

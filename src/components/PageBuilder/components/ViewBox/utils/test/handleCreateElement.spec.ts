@@ -1,3 +1,8 @@
+import { omit } from 'lodash';
+
+// mocks
+import { createFrameMock } from 'test/mocks/reducer/pageBuilderMock';
+
 // others
 import { BASE_RECT } from 'shared/ZoomBox/constants';
 
@@ -6,7 +11,6 @@ import { MouseMode } from 'components/PageBuilder/enums';
 
 // utils
 import { handleCreateElement } from '../handleCreateElement';
-import { createFrameMock } from 'test/mocks/reducer/pageBuilderMock';
 
 const mockCallBack = jest.fn();
 
@@ -28,7 +32,7 @@ describe('handleCreateElement', () => {
 
     // result
     expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual(
-      createFrameMock,
+      omit(createFrameMock, 'index'),
     );
     expect(mockCallBack.mock.calls[1][0]).toBe(null);
     expect(mockCallBack.mock.calls[2][0]).toBe(MouseMode.default);

@@ -15,6 +15,6 @@ describe('dynamicDataSelector', () => {
     const selectorFunction = (dynamicDataSelector as any).resultFunc;
 
     // result
-    expect(selectorFunction(elements)).toStrictEqual([]);
+    expect(selectorFunction(elements)).toStrictEqual({});
   });
 });

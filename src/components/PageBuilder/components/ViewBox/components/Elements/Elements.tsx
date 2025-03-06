@@ -17,8 +17,12 @@ import { staticDataSelector } from 'store/pageBuilder/selectors';
 import styles from './elements.scss';
 
 // types
-import { ElementType } from 'types';
+import { ElementType, Sort } from 'types';
 import { MouseMode } from 'components/PageBuilder/enums';
+
+// utils
+import { objectToArray } from 'utils';
+import { sortNumbersByObject } from 'utils/math/sort';
 
 export type TElementsProps = {
   eventsDisabled: boolean;
@@ -29,7 +33,11 @@ const Elements: FC<TElementsProps> = ({ eventsDisabled, mouseMode }) => {
   const staticData = useSelector(staticDataSelector);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
-  return staticData.map(({ id, parentId, type }) => {
+  return sortNumbersByObject(
+    objectToArray(staticData),
+    'index',
+    Sort.ascent,
+  ).map(({ id, parentId, type }) => {
     switch (type) {
       case ElementType.frame:
         return (

@@ -9,7 +9,6 @@ import { TElement } from 'types';
 import {
   TElementsData,
   TElementDynamicData,
-  TElementStaticData,
   TPageBuilderState,
   TSelectedElements,
 } from './types';
@@ -23,19 +22,17 @@ export const elementsSelector: Selector<TMainState, TElementsData> =
 
 export const dynamicDataSelector: Selector<
   TMainState,
-  Array<TElementDynamicData>
+  TElementsData['dynamicData']
 > = createSelector(elementsSelector, getFp('dynamicData'));
 
 export const elementDynamicDataSelectorCreator = (
   elementId: TElement['id'],
 ): Selector<TMainState, TElementDynamicData | undefined> =>
-  createSelector(dynamicDataSelector, (dynamicData) =>
-    dynamicData.find(({ id }) => id === elementId),
-  );
+  createSelector(dynamicDataSelector, getFp(elementId));
 
 export const staticDataSelector: Selector<
   TMainState,
-  Array<TElementStaticData>
+  TElementsData['staticData']
 > = createSelector(elementsSelector, getFp('staticData'));
 
 export const isLoadingSelector: Selector<TMainState, boolean> = createSelector(
