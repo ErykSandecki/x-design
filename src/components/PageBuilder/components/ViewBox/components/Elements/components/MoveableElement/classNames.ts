@@ -5,5 +5,10 @@ export const classes = {
 };
 
 export const classNames = {
-  [className]: className,
+  [className]: {
+    name: className,
+    modificators: {
+      selected: `${className}--selected`,
+    },
+  },
 };

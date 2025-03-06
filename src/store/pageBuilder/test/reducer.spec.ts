@@ -10,7 +10,12 @@ import { REDUCER_KEY as PAGE_BUILDER } from '../actionsType';
 
 // store
 import pageBuilder from '../reducer';
-import { addElement, setSelectedElements } from '../actions';
+import {
+  addElement,
+  addSelectedElement,
+  removeSelectedElement,
+  setSelectedElements,
+} from '../actions';
 
 // types
 import { TAction } from 'types';
@@ -63,9 +68,41 @@ describe('PageBuilderReducer', () => {
     });
   });
 
+  it('should handle ADD_SELECTED_ELEMENT', () => {
+    // mock
+    const id = selectedElementMock.id;
+
+    // before
+    const state = reducer(addSelectedElement(selectedElementMock), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      selectedElements: { [id]: selectedElementMock },
+    });
+  });
+
+  it('should handle REMOVE_SELECTED_ELEMENT', () => {
+    // mock
+    const id = selectedElementMock.id;
+
+    // before
+    const state = reducer(removeSelectedElement(id), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      selectedElements: { [id]: selectedElementMock },
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+    });
+  });
+
   it('should handle SET_SELECTED_ELEMENTS', () => {
     // mock
-    const id = 'id';
+    const id = selectedElementMock.id;
 
     // before
     const state = reducer(setSelectedElements({ [id]: selectedElementMock }), {

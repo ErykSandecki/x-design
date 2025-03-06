@@ -1,5 +1,10 @@
 // others
-import { ADD_ELEMENT, SET_SELECTED_ELEMENTS } from './actionsType';
+import {
+  ADD_ELEMENT,
+  ADD_SELECTED_ELEMENT,
+  REMOVE_SELECTED_ELEMENT,
+  SET_SELECTED_ELEMENTS,
+} from './actionsType';
 
 // types
 import { ElementType, T2DCoordinates, TElement, TObject } from 'types';
@@ -40,6 +45,16 @@ export type TAddELementActionPayload = Omit<TElement, 'index'>;
 export type TAddELementAction = {
   payload: TAddELementActionPayload;
   type: typeof ADD_ELEMENT;
+};
+
+export type TAddSelectedElementAction = {
+  payload: TSelectedElement;
+  type: typeof ADD_SELECTED_ELEMENT;
+};
+
+export type TRemoveSelectedElementAction = {
+  payload: TElement['id'];
+  type: typeof REMOVE_SELECTED_ELEMENT;
 };
 
 export type TSetSelectedElementsAction = {

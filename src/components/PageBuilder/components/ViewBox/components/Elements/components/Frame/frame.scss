@@ -16,5 +16,9 @@
     font-size: 11px;
     position: absolute;
     transform: translate(1.5px, -20px);
+
+    &--selected {
+      @include theme('blue-1', color);
+    }
   }
 }

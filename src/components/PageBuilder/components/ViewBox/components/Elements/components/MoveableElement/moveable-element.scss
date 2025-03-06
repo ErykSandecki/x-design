@@ -4,5 +4,10 @@
   @include theme-selector('blue-1', outline, '&:hover', '2.5px solid');
 
   position: absolute;
+  user-select: none;
   z-index: $--rx-zindex-element;
+
+  &--selected {
+    @include theme('blue-1', outline, '2.5px solid');
+  }
 }

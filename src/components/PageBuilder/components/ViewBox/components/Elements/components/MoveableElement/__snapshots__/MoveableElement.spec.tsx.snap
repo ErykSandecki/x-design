@@ -3,9 +3,9 @@
 exports[`MoveableElement snapshots should render MoveableElement 1`] = `
 <DocumentFragment>
   <div
-    class="MoveableElement"
-  >
-    MoveableElement
-  </div>
+    class="css-q0izro className MoveableElement MoveableElement--light"
+    data-test-box=""
+    style="height: 100px; left: 0px; top: 0px; width: 100px;"
+  />
 </DocumentFragment>
 `;

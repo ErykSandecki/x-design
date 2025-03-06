@@ -1,4 +1,4 @@
-import { FC, memo, ReactNode, useState } from 'react';
+import { FC, memo, ReactNode, useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 // components
@@ -22,12 +22,12 @@ import { elementDynamicDataSelectorCreator } from 'store/pageBuilder/selectors';
 import styles from './moveable-element.scss';
 
 // types
-import { MouseMode } from 'components/PageBuilder/enums';
 import { ElementType, TElement } from 'types';
+import { MouseMode } from 'components/PageBuilder/enums';
 
 type TProps = {
   classes: typeof classes;
-  children: ReactNode;
+  children: (selected: boolean) => ReactNode;
   id: string;
   mouseMode: MouseMode;
   parentId: TElement['parentId'];
@@ -42,14 +42,15 @@ const MoveableElement: FC<TProps> = ({
   parentId,
   type,
 }) => {
+  const elementRef = useRef<HTMLDivElement>(null);
   const elementDynamicData = useSelector(elementDynamicDataSelectorCreator(id));
   const { positionAbsolute } = elementDynamicData;
-  const [position, setPosition] = useState(elementDynamicData.positionAbsolute);
+  const [position, setPosition] = useState(positionAbsolute);
   const { height, width } = elementDynamicData;
   const { x, y } = position;
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-  const events = useMoveableElementEvents(
-    positionAbsolute,
+  const { selected, ...events } = useMoveableElementEvents(
+    elementRef,
     id,
     mouseMode,
     parentId,
@@ -62,9 +63,14 @@ const MoveableElement: FC<TProps> = ({
       classes={{
         className: cx(
           classes.className,
-          classNamesWithTheme[classNameMoveableELement],
+          classNamesWithTheme[classNameMoveableELement].name,
+          [
+            classNamesWithTheme[classNameMoveableELement].modificators.selected,
+            selected,
+          ],
         ),
       }}
+      ref={elementRef}
       style={{
         height: `${height}px`,
         left: `${x}px`,
@@ -73,7 +79,7 @@ const MoveableElement: FC<TProps> = ({
       }}
       {...events}
     >
-      {children}
+      {children(selected)}
     </Box>
   );
 };

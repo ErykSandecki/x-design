@@ -47,3 +47,11 @@ export const isPendingSelector: Selector<TMainState, boolean> = createSelector(
 
 export const selectedElementsSelector: Selector<TMainState, TSelectedElements> =
   createSelector(pageBuilderStateSelector, getFp('selectedElements'));
+
+export const isSelectedElementSelectorCreator = (
+  elementId: TElement['id'],
+): Selector<TMainState, boolean> =>
+  createSelector(
+    selectedElementsSelector,
+    (selectedElements) => !!selectedElements[elementId],
+  );

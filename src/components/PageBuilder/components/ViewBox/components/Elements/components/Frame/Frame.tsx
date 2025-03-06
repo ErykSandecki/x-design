@@ -40,9 +40,18 @@ const Frame: FC<TFrameProps> = ({
       mouseMode={mouseMode}
       type={type}
     >
-      <Small classes={{ className: cx(classNamesWithTheme.label) }}>
-        {t(`${translationNameSpace}.label.createFrame`)}
-      </Small>
+      {(selected) => (
+        <Small
+          classes={{
+            className: cx(classNamesWithTheme.label.name, [
+              classNamesWithTheme.label.modificators.selected,
+              selected,
+            ]),
+          }}
+        >
+          {t(`${translationNameSpace}.label.createFrame`)}
+        </Small>
+      )}
     </MoveableElement>
   );
 };
