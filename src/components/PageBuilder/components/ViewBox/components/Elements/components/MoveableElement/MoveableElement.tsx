@@ -2,6 +2,7 @@ import { FC, memo, ReactNode, useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 // components
+import Corners from '../../../Corners/Corners';
 import { Box } from 'shared';
 
 // hooks
@@ -16,7 +17,10 @@ import {
 } from './classNames';
 
 // store
-import { elementDynamicDataSelectorCreator } from 'store/pageBuilder/selectors';
+import {
+  elementDynamicDataSelectorCreator,
+  multipleSelectedElementsSelector,
+} from 'store/pageBuilder/selectors';
 
 // styles
 import styles from './moveable-element.scss';
@@ -24,6 +28,7 @@ import styles from './moveable-element.scss';
 // types
 import { ElementType, TElement } from 'types';
 import { MouseMode } from 'components/PageBuilder/enums';
+import { getCornersPosition } from './utils/getCornersPosition';
 
 type TProps = {
   classes: typeof classes;
@@ -42,6 +47,7 @@ const MoveableElement: FC<TProps> = ({
   parentId,
   type,
 }) => {
+  const isMultiple = useSelector(multipleSelectedElementsSelector);
   const elementRef = useRef<HTMLDivElement>(null);
   const elementDynamicData = useSelector(elementDynamicDataSelectorCreator(id));
   const { positionAbsolute } = elementDynamicData;
@@ -49,6 +55,7 @@ const MoveableElement: FC<TProps> = ({
   const { height, width } = elementDynamicData;
   const { x, y } = position;
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
+  const rectCoordinates = getCornersPosition(height, width);
   const { selected, ...events } = useMoveableElementEvents(
     elementRef,
     id,
@@ -80,6 +87,7 @@ const MoveableElement: FC<TProps> = ({
       {...events}
     >
       {children(selected)}
+      {selected && <Corners rectCoordinates={rectCoordinates} />}
     </Box>
   );
 };

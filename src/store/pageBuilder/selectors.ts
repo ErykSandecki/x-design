@@ -1,5 +1,6 @@
 import { createSelector, Selector } from 'reselect';
 import { get as getFp } from 'lodash/fp';
+import { size } from 'lodash';
 
 // others
 import { REDUCER_KEY } from './actionsType';
@@ -54,4 +55,10 @@ export const isSelectedElementSelectorCreator = (
   createSelector(
     selectedElementsSelector,
     (selectedElements) => !!selectedElements[elementId],
+  );
+
+export const multipleSelectedElementsSelector: Selector<TMainState, boolean> =
+  createSelector(
+    selectedElementsSelector,
+    (selectedElements) => size(selectedElements) > 1,
   );
