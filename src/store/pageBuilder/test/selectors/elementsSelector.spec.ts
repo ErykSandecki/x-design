@@ -16,6 +16,7 @@ describe('elementsSelector', () => {
 
     // result
     expect(selectorFunction(state)).toStrictEqual({
+      allData: {},
       dynamicData: {},
       staticData: {},
     });

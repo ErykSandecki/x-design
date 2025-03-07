@@ -3,7 +3,7 @@ import { MouseEvent } from 'react';
 // types
 import { MouseButton, T3DCoordinates } from 'types';
 import { MouseMode } from '../../../enums';
-import { TReactArea } from '../../../../PageBuilder/types';
+import { TRectArea } from '../../../../PageBuilder/types';
 
 // utils
 import { mousePoisitionRelative } from 'shared';
@@ -12,7 +12,7 @@ export const handleInitElementArea = (
   coordinates: T3DCoordinates,
   event: MouseEvent,
   mouseMode: MouseMode,
-  setElementArea: (elementArea: TReactArea) => void,
+  setElementArea: (elementArea: TRectArea) => void,
 ): void => {
   if (event.buttons === MouseButton.lmb && mouseMode === MouseMode.toolBeltA) {
     const { x, y } = mousePoisitionRelative(coordinates, event);

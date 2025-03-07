@@ -20,6 +20,7 @@ export type TElementStaticData = Pick<
 >;
 
 export type TElementsData = {
+  allData: TObject<TElement>;
   dynamicData: TObject<TElementDynamicData>;
   staticData: TObject<TElementStaticData>;
 };

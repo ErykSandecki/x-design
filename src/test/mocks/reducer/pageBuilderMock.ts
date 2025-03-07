@@ -1,5 +1,5 @@
 // others
-import { BASE_3D } from 'shared';
+import { BASE_2D } from 'shared';
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 
 // types
@@ -16,7 +16,7 @@ export const pageBuilderStateMock: Record<
   TPageBuilderState
 > = {
   [PAGE_BUILDER]: {
-    elements: { dynamicData: {}, staticData: {} },
+    elements: { allData: {}, dynamicData: {}, staticData: {} },
     isLoading: true,
     isPending: false,
     selectedElements: {},
@@ -45,6 +45,11 @@ export const elementStaticDataMock: TElementStaticData = {
   type: ElementType.frame,
 };
 
+export const allDataMock: TElement = {
+  ...elementDynamicDataMock,
+  ...elementStaticDataMock,
+};
+
 export const createFrameMock: TElement = {
   height: 0,
   id: '1',
@@ -58,7 +63,7 @@ export const createFrameMock: TElement = {
 };
 
 export const selectedElementMock: TSelectedElement = {
-  coordinates: BASE_3D,
+  coordinates: BASE_2D,
   id: '1',
   parentId: '-1',
   type: ElementType.frame,

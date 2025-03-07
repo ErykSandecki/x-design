@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 // hooks
+import { useHandleSelectElement } from './useHandleSelectElement';
 import { useMouseDownEvent } from './useMouseDownEvent';
 import { useMouseMoveEvent } from './useMouseMoveEvent';
 import { useMouseUpEvent } from './useMouseUpEvent';
@@ -8,14 +9,14 @@ import { useMouseUpEvent } from './useMouseUpEvent';
 // types
 import { MouseMode } from 'components/PageBuilder/enums';
 import { T3DCoordinates } from 'types';
-import { TReactArea } from '../../../../PageBuilder/types';
+import { TRectArea } from '../../../../PageBuilder/types';
 
 export type TUseViewBoxEvents = {
-  elementArea: TReactArea;
+  elementArea: TRectArea;
   onMouseDown: (event: React.MouseEvent) => void;
   onMouseMove: (event: MouseEvent) => void;
   onMouseUp: (event: MouseEvent) => void;
-  selectableArea: TReactArea;
+  selectableArea: TRectArea;
 };
 
 export const useViewBoxEvents = (
@@ -23,8 +24,10 @@ export const useViewBoxEvents = (
   mouseMode: MouseMode,
   setMouseMode: (mouseMode: MouseMode) => void,
 ): TUseViewBoxEvents => {
-  const [elementArea, setElementArea] = useState<TReactArea>(null);
-  const [selectableArea, setSelectableArea] = useState<TReactArea>(null);
+  const [elementArea, setElementArea] = useState<TRectArea>(null);
+  const [selectableArea, setSelectableArea] = useState<TRectArea>(null);
+
+  useHandleSelectElement(selectableArea);
 
   return {
     elementArea,

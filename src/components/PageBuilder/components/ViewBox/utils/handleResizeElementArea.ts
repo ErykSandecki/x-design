@@ -1,17 +1,17 @@
 // types
 import { MouseButton, T3DCoordinates } from 'types';
 import { MouseMode } from '../../../enums';
-import { TReactArea } from '../../../../PageBuilder/types';
+import { TRectArea } from '../../../../PageBuilder/types';
 
 // utils
 import { mousePoisitionRelative } from 'shared';
 
 export const handleResizeElementArea = (
   coordinates: T3DCoordinates,
-  elementArea: TReactArea,
+  elementArea: TRectArea,
   event: MouseEvent,
   mouseMode: MouseMode,
-  setElementArea: (elementArea: TReactArea) => void,
+  setElementArea: (elementArea: TRectArea) => void,
 ): void => {
   if (
     elementArea &&

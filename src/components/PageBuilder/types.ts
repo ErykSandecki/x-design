@@ -1,4 +1,4 @@
 // types
 import { TRectCoordinates } from 'types';
 
-export type TReactArea = TRectCoordinates | null;
+export type TRectArea = TRectCoordinates | null;

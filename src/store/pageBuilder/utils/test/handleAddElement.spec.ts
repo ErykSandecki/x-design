@@ -22,6 +22,9 @@ describe('handleAddElement', () => {
     expect(result).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       elements: {
+        allData: {
+          [createFrameMock.id]: createFrameMock,
+        },
         dynamicData: {
           [createFrameMock.id]: {
             height: createFrameMock.height,

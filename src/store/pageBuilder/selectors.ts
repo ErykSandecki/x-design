@@ -21,6 +21,9 @@ export const pageBuilderStateSelector: Selector<TMainState, TPageBuilderState> =
 export const elementsSelector: Selector<TMainState, TElementsData> =
   createSelector(pageBuilderStateSelector, getFp('elements'));
 
+export const allDataSelector: Selector<TMainState, TElementsData['allData']> =
+  createSelector(elementsSelector, getFp('allData'));
+
 export const dynamicDataSelector: Selector<
   TMainState,
   TElementsData['dynamicData']

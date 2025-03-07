@@ -46,6 +46,9 @@ describe('PageBuilderReducer', () => {
     expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       elements: {
+        allData: {
+          [createFrameMock.id]: createFrameMock,
+        },
         dynamicData: {
           [createFrameMock.id]: {
             height: createFrameMock.height,

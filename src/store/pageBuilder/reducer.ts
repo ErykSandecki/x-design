@@ -21,7 +21,7 @@ import { handleAddElement } from './utils/handleAddElement';
 import { omit } from 'lodash';
 
 const initialState: TPageBuilderState = {
-  elements: { dynamicData: {}, staticData: {} },
+  elements: { allData: {}, dynamicData: {}, staticData: {} },
   isLoading: true,
   isPending: false,
   selectedElements: {},
