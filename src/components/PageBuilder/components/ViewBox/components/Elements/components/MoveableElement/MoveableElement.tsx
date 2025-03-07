@@ -28,6 +28,8 @@ import styles from './moveable-element.scss';
 // types
 import { ElementType, TElement } from 'types';
 import { MouseMode } from 'components/PageBuilder/enums';
+
+// utils
 import { getCornersPosition } from './utils/getCornersPosition';
 
 type TProps = {

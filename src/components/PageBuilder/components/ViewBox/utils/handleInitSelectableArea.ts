@@ -14,7 +14,11 @@ export const handleInitSelectableArea = (
   mouseMode: MouseMode,
   setSelectableArea: (elementArea: TRectArea) => void,
 ): void => {
-  if (event.buttons === MouseButton.lmb && mouseMode === MouseMode.default) {
+  if (
+    !event.shiftKey &&
+    event.buttons === MouseButton.lmb &&
+    mouseMode === MouseMode.default
+  ) {
     const { x, y } = mousePoisitionRelative(coordinates, event);
     setSelectableArea({ x1: x, x2: x, y1: y, y2: y });
   }
