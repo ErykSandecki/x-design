@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 // components
+import Corners from '../Corners/Corners';
 import { Box, Small } from 'shared';
 
 // hooks
@@ -17,7 +18,6 @@ import styles from './element-area.scss';
 
 // types
 import { TRectCoordinates } from 'types';
-import Corners from '../Corners/Corners';
 
 export type TElementAreaProps = {
   elementArea: TRectCoordinates;

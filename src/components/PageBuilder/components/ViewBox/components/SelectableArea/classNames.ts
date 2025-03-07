@@ -1,7 +1,6 @@
-export const className = 'ElementArea';
+export const className = 'SelectableArea';
 
 export const classNames = {
   [className]: className,
-  label: `${className}__label`,
   area: `${className}__area`,
 };

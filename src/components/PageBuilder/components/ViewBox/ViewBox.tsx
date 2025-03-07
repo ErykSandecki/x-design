@@ -3,6 +3,7 @@ import { FC, useRef } from 'react';
 // components
 import Elements from './components/Elements/Elements';
 import ElementArea from './components/ElementArea/ElementArea';
+import SelectableArea from './components/SelectableArea/SelectableArea';
 import { ZoomBox } from 'shared';
 
 // others
@@ -34,13 +35,11 @@ const ViewBox: FC<TViewBoxProps> = ({
 }) => {
   const zoomBoxRef = useRef<HTMLDivElement>(null);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-  const { elementArea, ...events } = useViewBoxEvents(
+  const { elementArea, selectableArea, ...events } = useViewBoxEvents(
     coordinates,
     mouseMode,
     setMouseMode,
   );
-  const eventsDisabled =
-    elementArea !== null || mouseMode !== MouseMode.default;
 
   return (
     <ZoomBox
@@ -57,8 +56,12 @@ const ViewBox: FC<TViewBoxProps> = ({
       zoomBoxRef={zoomBoxRef}
       {...events}
     >
-      <Elements eventsDisabled={eventsDisabled} mouseMode={mouseMode} />
+      <Elements
+        eventsDisabled={elementArea !== null || mouseMode !== MouseMode.default}
+        mouseMode={mouseMode}
+      />
       <ElementArea elementArea={elementArea} />
+      <SelectableArea selectableArea={selectableArea} />
     </ZoomBox>
   );
 };

@@ -1,42 +1,42 @@
-import { MouseEvent } from 'react';
-
 // others
-import { BASE_3D } from 'shared/ZoomBox/constants';
+import { BASE_3D, BASE_RECT } from 'shared/ZoomBox/constants';
 
 // types
 import { MouseButton } from 'types';
 import { MouseMode } from 'components/PageBuilder/enums';
 
 // utils
-import { handleInitElement } from '../handleInitElement';
+import { handleResizeSelectableArea } from '../handleResizeSelectableArea';
 
 const mockCallBack = jest.fn();
 
-describe('handleInitElement', () => {
-  it(`should init position of element`, () => {
+describe('handleResizeSelectableArea', () => {
+  it(`should resize area`, () => {
     // before
-    handleInitElement(
+    handleResizeSelectableArea(
       BASE_3D,
       { buttons: MouseButton.lmb, clientX: 100, clientY: 100 } as MouseEvent,
-      MouseMode.toolBeltA,
+      MouseMode.default,
+      BASE_RECT,
       mockCallBack,
     );
 
     // result
     expect(mockCallBack.mock.calls[0][0]).toStrictEqual({
-      x1: 100,
+      x1: 0,
       x2: 100,
-      y1: 100,
+      y1: 0,
       y2: 100,
     });
   });
 
-  it(`should not resize element`, () => {
+  it(`should not resize area`, () => {
     // before
-    handleInitElement(
+    handleResizeSelectableArea(
       BASE_3D,
-      { buttons: MouseButton.idle, clientX: 100, clientY: 100 } as MouseEvent,
-      MouseMode.toolBeltA,
+      { buttons: MouseButton.lmb, clientX: 100, clientY: 100 } as MouseEvent,
+      MouseMode.default,
+      null,
       mockCallBack,
     );
 

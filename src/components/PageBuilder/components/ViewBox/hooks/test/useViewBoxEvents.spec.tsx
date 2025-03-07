@@ -29,6 +29,7 @@ describe('useViewBoxEvents', () => {
       onMouseDown: expect.any(Function),
       onMouseMove: expect.any(Function),
       onMouseUp: expect.any(Function),
+      selectableArea: null,
     });
   });
 });

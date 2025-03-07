@@ -7,13 +7,15 @@ import { useMouseUpEvent } from './useMouseUpEvent';
 
 // types
 import { MouseMode } from 'components/PageBuilder/enums';
-import { T3DCoordinates, TRectCoordinates } from 'types';
+import { T3DCoordinates } from 'types';
+import { TReactArea } from '../../../../PageBuilder/types';
 
 export type TUseViewBoxEvents = {
-  elementArea: TRectCoordinates;
+  elementArea: TReactArea;
   onMouseDown: (event: React.MouseEvent) => void;
   onMouseMove: (event: MouseEvent) => void;
   onMouseUp: (event: MouseEvent) => void;
+  selectableArea: TReactArea;
 };
 
 export const useViewBoxEvents = (
@@ -21,22 +23,32 @@ export const useViewBoxEvents = (
   mouseMode: MouseMode,
   setMouseMode: (mouseMode: MouseMode) => void,
 ): TUseViewBoxEvents => {
-  const [elementArea, setElementArea] = useState<TRectCoordinates | null>(null);
+  const [elementArea, setElementArea] = useState<TReactArea>(null);
+  const [selectableArea, setSelectableArea] = useState<TReactArea>(null);
 
   return {
     elementArea,
-    onMouseDown: useMouseDownEvent(coordinates, mouseMode, setElementArea),
+    onMouseDown: useMouseDownEvent(
+      coordinates,
+      mouseMode,
+      setElementArea,
+      setSelectableArea,
+    ),
     onMouseMove: useMouseMoveEvent(
       coordinates,
       elementArea,
       mouseMode,
+      selectableArea,
       setElementArea,
+      setSelectableArea,
     ),
     onMouseUp: useMouseUpEvent(
       elementArea,
       mouseMode,
       setElementArea,
       setMouseMode,
+      setSelectableArea,
     ),
+    selectableArea,
   };
 };

@@ -13,7 +13,7 @@ exports[`ElementArea snapshots should render ElementArea 1`] = `
       data-test-text=""
       style="text-align: inherit;"
     >
-      pageBuilder.viewBox.elementArea.label.createFrame
+      Frame
     </small>
     <svg
       class="ElementArea__area ElementArea__area--light"
@@ -69,7 +69,7 @@ exports[`ElementArea snapshots should render with label when x2 i y2 is less tha
       data-test-text=""
       style="text-align: inherit;"
     >
-      pageBuilder.viewBox.elementArea.label.createFrame
+      Frame
     </small>
     <svg
       class="ElementArea__area ElementArea__area--light"

@@ -25,6 +25,7 @@ describe('useMouseUpEvent', () => {
         MouseMode.toolBeltA,
         mockCallBack,
         mockCallBack,
+        mockCallBack,
       ),
     );
 
@@ -32,6 +33,6 @@ describe('useMouseUpEvent', () => {
     result.current({} as MouseEvent);
 
     // result
-    expect(mockCallBack.mock.calls.length).toBe(3);
+    expect(mockCallBack.mock.calls.length).toBe(4);
   });
 });

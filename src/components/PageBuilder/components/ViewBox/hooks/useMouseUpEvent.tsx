@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 
 // types
 import { MouseMode } from '../../../enums';
-import { TRectCoordinates } from 'types';
+import { TReactArea } from '../../../../PageBuilder/types';
 
 // utils
 import { handleCreateElement } from '../utils/handleCreateElement';
@@ -10,10 +10,11 @@ import { handleCreateElement } from '../utils/handleCreateElement';
 export type TUseMouseUpEvent = (event: MouseEvent) => void;
 
 export const useMouseUpEvent = (
-  elementArea: TRectCoordinates,
+  elementArea: TReactArea,
   mouseMode: MouseMode,
-  setElementArea: (elementArea: TRectCoordinates) => void,
+  setElementArea: (elementArea: TReactArea) => void,
   setMouseMode: (mouseMode: MouseMode) => void,
+  setSelectableArea: (elementArea: TReactArea) => void,
 ): TUseMouseUpEvent => {
   const dispatch = useDispatch();
 
@@ -25,6 +26,7 @@ export const useMouseUpEvent = (
       setElementArea,
       setMouseMode,
     );
+    setSelectableArea(null);
   };
 
   return handleMouseUp;

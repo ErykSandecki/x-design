@@ -6,14 +6,14 @@ import { MouseButton } from 'types';
 import { MouseMode } from 'components/PageBuilder/enums';
 
 // utils
-import { handleResizeElement } from '../handleResizeElement';
+import { handleResizeElementArea } from '../handleResizeElementArea';
 
 const mockCallBack = jest.fn();
 
-describe('handleResizeElement', () => {
+describe('handleResizeElementArea', () => {
   it(`should resize frame`, () => {
     // before
-    handleResizeElement(
+    handleResizeElementArea(
       BASE_3D,
       BASE_RECT,
       { buttons: MouseButton.lmb, clientX: 100, clientY: 100 } as MouseEvent,
@@ -32,7 +32,7 @@ describe('handleResizeElement', () => {
 
   it(`should not resize frame`, () => {
     // before
-    handleResizeElement(
+    handleResizeElementArea(
       BASE_3D,
       null,
       { buttons: MouseButton.lmb, clientX: 100, clientY: 100 } as MouseEvent,
