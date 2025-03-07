@@ -8,14 +8,14 @@ import { MouseButton } from 'types';
 import { MouseMode } from 'components/PageBuilder/enums';
 
 // utils
-import { handleInitFrame } from '../handleInitFrame';
+import { handleInitElement } from '../handleInitElement';
 
 const mockCallBack = jest.fn();
 
-describe('handleInitFrame', () => {
-  it(`should init position of frame`, () => {
+describe('handleInitElement', () => {
+  it(`should init position of element`, () => {
     // before
-    handleInitFrame(
+    handleInitElement(
       BASE_3D,
       { buttons: MouseButton.lmb, clientX: 100, clientY: 100 } as MouseEvent,
       MouseMode.toolBeltA,
@@ -31,9 +31,9 @@ describe('handleInitFrame', () => {
     });
   });
 
-  it(`should not resize frame`, () => {
+  it(`should not resize element`, () => {
     // before
-    handleInitFrame(
+    handleInitElement(
       BASE_3D,
       { buttons: MouseButton.idle, clientX: 100, clientY: 100 } as MouseEvent,
       MouseMode.toolBeltA,

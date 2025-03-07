@@ -13,13 +13,13 @@ import { generateID } from 'utils';
 
 export const handleCreateElement = (
   dispatch: Dispatch,
-  frameArea: TRectCoordinates,
+  elementArea: TRectCoordinates,
   mouseMode: MouseMode,
-  setFrameArea: (frameArea: TRectCoordinates) => void,
+  setElementArea: (elementArea: TRectCoordinates) => void,
   setMouseMode: (mouseMode: MouseMode) => void,
 ): void => {
-  if (frameArea && mouseMode === MouseMode.toolBeltA) {
-    const { x1, x2, y1, y2 } = frameArea;
+  if (elementArea && mouseMode === MouseMode.toolBeltA) {
+    const { x1, x2, y1, y2 } = elementArea;
     const x = x1 < x2 ? x1 : x2;
     const y = y1 < y2 ? y1 : y2;
     const element: TAddELementActionPayload = {
@@ -34,7 +34,7 @@ export const handleCreateElement = (
     };
 
     dispatch(addElement(element));
-    setFrameArea(null);
+    setElementArea(null);
     setMouseMode(MouseMode.default);
   }
 };

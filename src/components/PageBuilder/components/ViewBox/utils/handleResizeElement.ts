@@ -5,19 +5,19 @@ import { MouseMode } from '../../../enums';
 // utils
 import { mousePoisitionRelative } from 'shared';
 
-export const handleResizeFrame = (
+export const handleResizeElement = (
   coordinates: T3DCoordinates,
+  elementArea: TRectCoordinates,
   event: MouseEvent,
-  frameArea: TRectCoordinates,
   mouseMode: MouseMode,
-  setFrameArea: (frameArea: TRectCoordinates) => void,
+  setElementArea: (elementArea: TRectCoordinates) => void,
 ): void => {
   if (
-    frameArea &&
+    elementArea &&
     event.buttons === MouseButton.lmb &&
     mouseMode === MouseMode.toolBeltA
   ) {
     const { x, y } = mousePoisitionRelative(coordinates, event);
-    setFrameArea({ ...frameArea, x2: x, y2: y });
+    setElementArea({ ...elementArea, x2: x, y2: y });
   }
 };

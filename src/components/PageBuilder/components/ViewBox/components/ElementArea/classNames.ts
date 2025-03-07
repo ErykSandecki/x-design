@@ -1,4 +1,4 @@
-export const className = 'FrameArea';
+export const className = 'ElementArea';
 
 export const classNames = {
   [className]: className,

@@ -14,11 +14,11 @@ import styles from './corners.scss';
 // types
 import { TRectCoordinates } from 'types';
 
-export type TFrameAreaProps = {
+export type TCornersProps = {
   rectCoordinates: TRectCoordinates;
 };
 
-const Corners: FC<TFrameAreaProps> = ({ rectCoordinates }) => {
+const Corners: FC<TCornersProps> = ({ rectCoordinates }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { x1, x2, y1, y2 } = rectCoordinates || {};
 

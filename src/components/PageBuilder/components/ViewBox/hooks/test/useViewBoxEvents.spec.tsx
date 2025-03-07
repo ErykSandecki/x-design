@@ -25,7 +25,7 @@ describe('useViewBoxEvents', () => {
 
     // result
     expect(result.current).toStrictEqual({
-      frameArea: null,
+      elementArea: null,
       onMouseDown: expect.any(Function),
       onMouseMove: expect.any(Function),
       onMouseUp: expect.any(Function),

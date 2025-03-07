@@ -5,17 +5,17 @@ import { MouseMode } from '../../../../PageBuilder/enums';
 import { T3DCoordinates, TRectCoordinates } from 'types';
 
 // utils
-import { handleInitFrame } from '../utils/handleInitFrame';
+import { handleInitElement } from '../utils/handleInitElement';
 
 export type TUseMouseDownEvent = (event: MouseEvent) => void;
 
 export const useMouseDownEvent = (
   coordinates: T3DCoordinates,
   mouseMode: MouseMode,
-  setFrameArea: (frameArea: TRectCoordinates) => void,
+  setElementArea: (elementArea: TRectCoordinates) => void,
 ): TUseMouseDownEvent => {
   const handleMouseDown = (event: MouseEvent): void => {
-    handleInitFrame(coordinates, event, mouseMode, setFrameArea);
+    handleInitElement(coordinates, event, mouseMode, setElementArea);
   };
 
   return handleMouseDown;

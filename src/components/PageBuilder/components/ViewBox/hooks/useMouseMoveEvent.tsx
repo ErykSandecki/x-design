@@ -3,18 +3,24 @@ import { MouseMode } from '../../../enums';
 import { T3DCoordinates, TRectCoordinates } from 'types';
 
 // utils
-import { handleResizeFrame } from '../utils/handleResizeFrame';
+import { handleResizeElement } from '../utils/handleResizeElement';
 
 export type TUseMouseMoveEvent = (event: MouseEvent) => void;
 
 export const useMouseMoveEvent = (
   coordinates: T3DCoordinates,
-  frameArea: TRectCoordinates,
+  elementArea: TRectCoordinates,
   mouseMode: MouseMode,
-  setFrameArea: (frameArea: TRectCoordinates) => void,
+  setElementArea: (elementArea: TRectCoordinates) => void,
 ): TUseMouseMoveEvent => {
   const handleMouseMove = (event: MouseEvent): void => {
-    handleResizeFrame(coordinates, event, frameArea, mouseMode, setFrameArea);
+    handleResizeElement(
+      coordinates,
+      elementArea,
+      event,
+      mouseMode,
+      setElementArea,
+    );
   };
 
   return handleMouseMove;

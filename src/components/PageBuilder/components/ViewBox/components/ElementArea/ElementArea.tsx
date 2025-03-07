@@ -13,24 +13,24 @@ import { className, classNames } from './classNames';
 import { translationNameSpace } from './constants';
 
 // styles
-import styles from './frame-area.scss';
+import styles from './element-area.scss';
 
 // types
 import { TRectCoordinates } from 'types';
 import Corners from '../Corners/Corners';
 
-export type TFrameAreaProps = {
-  frameArea: TRectCoordinates;
+export type TElementAreaProps = {
+  elementArea: TRectCoordinates;
 };
 
-const FrameArea: FC<TFrameAreaProps> = ({ frameArea }) => {
+const ElementArea: FC<TElementAreaProps> = ({ elementArea }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { t } = useTranslation();
-  const { x1, x2, y1, y2 } = frameArea || {};
+  const { x1, x2, y1, y2 } = elementArea || {};
   const labelX = x1 < x2 ? x1 : x2;
   const labelY = y1 < y2 ? y1 : y2;
 
-  if (!frameArea) {
+  if (!elementArea) {
     return null;
   }
 
@@ -49,9 +49,9 @@ const FrameArea: FC<TFrameAreaProps> = ({ frameArea }) => {
       <svg className={cx(classNamesWithTheme.area)}>
         <path d={`M ${x1},${y1} H ${x2} V ${y2} H ${x1} V ${y1}`} />
       </svg>
-      <Corners rectCoordinates={frameArea} />
+      <Corners rectCoordinates={elementArea} />
     </Box>
   );
 };
 
-export default FrameArea;
+export default ElementArea;

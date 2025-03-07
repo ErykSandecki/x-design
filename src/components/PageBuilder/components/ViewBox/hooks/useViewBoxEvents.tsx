@@ -10,7 +10,7 @@ import { MouseMode } from 'components/PageBuilder/enums';
 import { T3DCoordinates, TRectCoordinates } from 'types';
 
 export type TUseViewBoxEvents = {
-  frameArea: TRectCoordinates;
+  elementArea: TRectCoordinates;
   onMouseDown: (event: React.MouseEvent) => void;
   onMouseMove: (event: MouseEvent) => void;
   onMouseUp: (event: MouseEvent) => void;
@@ -21,21 +21,21 @@ export const useViewBoxEvents = (
   mouseMode: MouseMode,
   setMouseMode: (mouseMode: MouseMode) => void,
 ): TUseViewBoxEvents => {
-  const [frameArea, setFrameArea] = useState<TRectCoordinates | null>(null);
+  const [elementArea, setElementArea] = useState<TRectCoordinates | null>(null);
 
   return {
-    frameArea,
-    onMouseDown: useMouseDownEvent(coordinates, mouseMode, setFrameArea),
+    elementArea,
+    onMouseDown: useMouseDownEvent(coordinates, mouseMode, setElementArea),
     onMouseMove: useMouseMoveEvent(
       coordinates,
-      frameArea,
+      elementArea,
       mouseMode,
-      setFrameArea,
+      setElementArea,
     ),
     onMouseUp: useMouseUpEvent(
-      frameArea,
+      elementArea,
       mouseMode,
-      setFrameArea,
+      setElementArea,
       setMouseMode,
     ),
   };

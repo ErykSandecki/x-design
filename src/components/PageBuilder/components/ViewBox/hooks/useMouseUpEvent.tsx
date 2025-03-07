@@ -10,9 +10,9 @@ import { handleCreateElement } from '../utils/handleCreateElement';
 export type TUseMouseUpEvent = (event: MouseEvent) => void;
 
 export const useMouseUpEvent = (
-  frameArea: TRectCoordinates,
+  elementArea: TRectCoordinates,
   mouseMode: MouseMode,
-  setFrameArea: (frameArea: TRectCoordinates) => void,
+  setElementArea: (elementArea: TRectCoordinates) => void,
   setMouseMode: (mouseMode: MouseMode) => void,
 ): TUseMouseUpEvent => {
   const dispatch = useDispatch();
@@ -20,9 +20,9 @@ export const useMouseUpEvent = (
   const handleMouseUp = (): void => {
     handleCreateElement(
       dispatch,
-      frameArea,
+      elementArea,
       mouseMode,
-      setFrameArea,
+      setElementArea,
       setMouseMode,
     );
   };

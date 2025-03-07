@@ -2,7 +2,7 @@ import { Provider } from 'react-redux';
 import { render } from '@testing-library/react';
 
 // components
-import FrameArea from './FrameArea';
+import ElementArea from './ElementArea';
 
 // mocks
 import 'test/mocks/sagas/allSagas';
@@ -13,15 +13,15 @@ import { BASE_RECT } from 'shared';
 // store
 import { configureStore } from 'store/store';
 
-describe('FrameArea snapshots', () => {
-  it('should render FrameArea', () => {
+describe('ElementArea snapshots', () => {
+  it('should render ElementArea', () => {
     // mock
     const store = configureStore();
 
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <FrameArea frameArea={BASE_RECT} />
+        <ElementArea elementArea={BASE_RECT} />
       </Provider>,
     );
 
@@ -36,7 +36,7 @@ describe('FrameArea snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <FrameArea frameArea={{ ...BASE_RECT, x2: -100, y2: -100 }} />
+        <ElementArea elementArea={{ ...BASE_RECT, x2: -100, y2: -100 }} />
       </Provider>,
     );
 
@@ -44,14 +44,14 @@ describe('FrameArea snapshots', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('should not render FrameArea', () => {
+  it('should not render ElementArea', () => {
     // mock
     const store = configureStore();
 
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <FrameArea frameArea={null} />
+        <ElementArea elementArea={null} />
       </Provider>,
     );
 

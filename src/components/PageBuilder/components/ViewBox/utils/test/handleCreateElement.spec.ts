@@ -20,7 +20,7 @@ jest.mock('utils', () => ({
 }));
 
 describe('handleCreateElement', () => {
-  it(`should create frame and reset data`, () => {
+  it(`should create element and reset data`, () => {
     // before
     handleCreateElement(
       mockCallBack,
@@ -38,7 +38,7 @@ describe('handleCreateElement', () => {
     expect(mockCallBack.mock.calls[2][0]).toBe(MouseMode.default);
   });
 
-  it(`should not create frame`, () => {
+  it(`should not create element`, () => {
     // before
     handleCreateElement(
       mockCallBack,
