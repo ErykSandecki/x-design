@@ -38,12 +38,14 @@ describe('useElementEvents', () => {
       () =>
         useElementEvents(
           ref,
+          100,
           selectedElementMock.id,
           true,
           MouseMode.default,
           selectedElementMock.parentId,
           BASE_2D,
           ElementType.frame,
+          100,
         ),
       {
         wrapper: getProviderWrapper(store),

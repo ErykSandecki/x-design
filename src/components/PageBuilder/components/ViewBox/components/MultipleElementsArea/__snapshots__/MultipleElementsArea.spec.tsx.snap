@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MultipleElementsArea snapshots should not render MultipleElementsArea 1`] = `<DocumentFragment />`;
+
+exports[`MultipleElementsArea snapshots should render MultipleElementsArea 1`] = `
+<DocumentFragment>
+  <svg
+    class="Corners Corners--light"
+  >
+    <path
+      class="Corners__outline Corners__outline--light"
+      d="M -1.25,-1.25 H 1.25 V 1.25 H -1.25 V -1.25"
+      stroke-width="2.5"
+    />
+    <rect
+      height="6"
+      rx="1.5"
+      width="6"
+      x="-4.25"
+      y="-4.25"
+    />
+    <rect
+      height="6"
+      rx="1.5"
+      width="6"
+      x="-4.25"
+      y="-1.75"
+    />
+    <rect
+      height="6"
+      rx="1.5"
+      width="6"
+      x="-1.75"
+      y="-4.25"
+    />
+    <rect
+      height="6"
+      rx="1.5"
+      width="6"
+      x="-1.75"
+      y="-1.75"
+    />
+  </svg>
+</DocumentFragment>
+`;

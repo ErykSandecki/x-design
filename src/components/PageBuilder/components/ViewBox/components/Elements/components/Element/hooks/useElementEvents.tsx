@@ -8,7 +8,7 @@ import { useOutsideClickElement } from './useOutsideClickElement';
 
 // types
 import { MouseMode } from 'components/PageBuilder/enums';
-import { T2DCoordinates } from 'types';
+import { T2DCoordinates, TElement } from 'types';
 import { TSelectedElement } from 'store/pageBuilder/types';
 
 export type TUseElementEvents = {
@@ -17,16 +17,23 @@ export type TUseElementEvents = {
 
 export const useElementEvents = (
   elementRef: RefObject<any>,
+  height: TElement['height'],
   id: TSelectedElement['id'],
   isSelected,
   mouseMode: MouseMode,
   parentId: TSelectedElement['parentId'],
   position: T2DCoordinates,
   type: TSelectedElement['type'],
+  width: TElement['width'],
 ): TUseElementEvents => {
   const [isPressing, setIsPressing] = useState(false);
   const selectedElement = {
-    coordinates: position,
+    coordinates: {
+      x1: position.x,
+      x2: position.x + width,
+      y1: position.y,
+      y2: position.y + height,
+    },
     id,
     parentId,
     type,

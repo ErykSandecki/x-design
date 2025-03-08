@@ -62,12 +62,14 @@ const Element: FC<TElementProps> = ({
   const rectCoordinates = getCornersPosition(height, width);
   const events = useElementEvents(
     elementRef,
+    height,
     id,
     isSelected,
     mouseMode,
     parentId,
     position,
     type,
+    width,
   );
 
   return (

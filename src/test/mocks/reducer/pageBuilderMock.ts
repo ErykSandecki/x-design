@@ -1,5 +1,5 @@
 // others
-import { BASE_2D } from 'shared';
+import { BASE_2D, BASE_RECT } from 'shared';
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 
 // types
@@ -63,7 +63,7 @@ export const createFrameMock: TElement = {
 };
 
 export const selectedElementMock: TSelectedElement = {
-  coordinates: BASE_2D,
+  coordinates: BASE_RECT,
   id: '1',
   parentId: '-1',
   type: ElementType.frame,

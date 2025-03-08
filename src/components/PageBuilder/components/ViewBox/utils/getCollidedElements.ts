@@ -31,7 +31,12 @@ export const getCollidedElements = (
       y2 > positionAbsolute.y
     ) {
       collidedElements[key] = {
-        coordinates: positionAbsolute,
+        coordinates: {
+          x1: positionAbsolute.x,
+          x2: positionAbsolute.x + width,
+          y1: positionAbsolute.y,
+          y2: positionAbsolute.y + height,
+        },
         id,
         parentId,
         type,

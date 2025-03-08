@@ -87,22 +87,6 @@ describe('PageBuilderReducer', () => {
     });
   });
 
-  it('should handle REMOVE_SELECTED_ELEMENT', () => {
-    // mock
-    const id = selectedElementMock.id;
-
-    // before
-    const state = reducer(unselectElement(id), {
-      ...pageBuilderStateMock[PAGE_BUILDER],
-      selectedElements: { [id]: selectedElementMock },
-    });
-
-    // result
-    expect(state).toStrictEqual({
-      ...pageBuilderStateMock[PAGE_BUILDER],
-    });
-  });
-
   it('should handle SELECT_ELEMENTS', () => {
     // mock
     const id = selectedElementMock.id;
@@ -126,15 +110,12 @@ describe('PageBuilderReducer', () => {
     // before
     const state = reducer(unselectElement(id), {
       ...pageBuilderStateMock[PAGE_BUILDER],
-      selectedElements: {
-        [id]: selectedElementMock,
-      },
+      selectedElements: { [id]: selectedElementMock },
     });
 
     // result
     expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
-      selectedElements: {},
     });
   });
 });

@@ -6,7 +6,14 @@
 
   height: 100%;
   overflow: visible;
+  pointer-events: none;
   position: absolute;
   width: 100%;
   z-index: $--rx-zindex-element-active;
+
+  &__outline {
+    @include theme('blue-1', stroke);
+
+    fill: none;
+  }
 }

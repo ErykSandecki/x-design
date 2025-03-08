@@ -7,7 +7,7 @@ import {
 } from './actionsType';
 
 // types
-import { ElementType, T2DCoordinates, TElement, TObject } from 'types';
+import { ElementType, TElement, TObject, TRectCoordinates } from 'types';
 
 export type TElementDynamicData = Pick<
   TElement,
@@ -26,7 +26,7 @@ export type TElementsData = {
 };
 
 export type TSelectedElement = {
-  coordinates: T2DCoordinates;
+  coordinates: TRectCoordinates;
   id: TElement['id'];
   parentId: TElement['parentId'];
   type: ElementType;

@@ -28,4 +28,19 @@ describe('Corners snapshots', () => {
     // result
     expect(asFragment()).toMatchSnapshot();
   });
+
+  it('should render wiht outline', () => {
+    // mock
+    const store = configureStore();
+
+    // before
+    const { asFragment } = render(
+      <Provider store={store}>
+        <Corners rectCoordinates={BASE_RECT} withOutline />
+      </Provider>,
+    );
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
 });

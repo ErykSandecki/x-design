@@ -19,6 +19,7 @@ import styles from './view-box.scss';
 // types
 import { MouseMode } from 'components/PageBuilder/enums';
 import { T3DCoordinates } from 'types';
+import MultipleElementsArea from './components/MultipleElementsArea/MultipleElementsArea';
 
 export type TViewBoxProps = {
   coordinates: T3DCoordinates;
@@ -61,6 +62,7 @@ const ViewBox: FC<TViewBoxProps> = ({
         mouseMode={mouseMode}
       />
       <ElementArea elementArea={elementArea} />
+      <MultipleElementsArea mouseMode={mouseMode} />
       <SelectableArea selectableArea={selectableArea} />
     </ZoomBox>
   );
