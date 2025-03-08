@@ -12,9 +12,9 @@ import { REDUCER_KEY as PAGE_BUILDER } from '../actionsType';
 import pageBuilder from '../reducer';
 import {
   addElement,
-  addSelectedElement,
-  removeSelectedElement,
-  setSelectedElements,
+  selectElement,
+  unselectElement,
+  selectElements,
 } from '../actions';
 
 // types
@@ -71,12 +71,12 @@ describe('PageBuilderReducer', () => {
     });
   });
 
-  it('should handle ADD_SELECTED_ELEMENT', () => {
+  it('should handle SELECT_ELEMENT', () => {
     // mock
     const id = selectedElementMock.id;
 
     // before
-    const state = reducer(addSelectedElement(selectedElementMock), {
+    const state = reducer(selectElement(selectedElementMock), {
       ...pageBuilderStateMock[PAGE_BUILDER],
     });
 
@@ -92,7 +92,7 @@ describe('PageBuilderReducer', () => {
     const id = selectedElementMock.id;
 
     // before
-    const state = reducer(removeSelectedElement(id), {
+    const state = reducer(unselectElement(id), {
       ...pageBuilderStateMock[PAGE_BUILDER],
       selectedElements: { [id]: selectedElementMock },
     });
@@ -103,12 +103,12 @@ describe('PageBuilderReducer', () => {
     });
   });
 
-  it('should handle SET_SELECTED_ELEMENTS', () => {
+  it('should handle SELECT_ELEMENTS', () => {
     // mock
     const id = selectedElementMock.id;
 
     // before
-    const state = reducer(setSelectedElements({ [id]: selectedElementMock }), {
+    const state = reducer(selectElements({ [id]: selectedElementMock }), {
       ...pageBuilderStateMock[PAGE_BUILDER],
     });
 
@@ -116,6 +116,25 @@ describe('PageBuilderReducer', () => {
     expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       selectedElements: { [id]: selectedElementMock },
+    });
+  });
+
+  it('should handle UNSELECT_ELEMENT', () => {
+    // mock
+    const id = selectedElementMock.id;
+
+    // before
+    const state = reducer(unselectElement(id), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      selectedElements: {
+        [id]: selectedElementMock,
+      },
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      selectedElements: {},
     });
   });
 });

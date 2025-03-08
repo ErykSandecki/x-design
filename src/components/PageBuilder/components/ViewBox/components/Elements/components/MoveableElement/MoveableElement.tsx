@@ -19,6 +19,7 @@ import {
 // store
 import {
   elementDynamicDataSelectorCreator,
+  isSelectedElementSelectorCreator,
   multipleSelectedElementsSelector,
 } from 'store/pageBuilder/selectors';
 
@@ -49,6 +50,7 @@ const MoveableElement: FC<TProps> = ({
   parentId,
   type,
 }) => {
+  const isSelected = useSelector(isSelectedElementSelectorCreator(id));
   const isMultiple = useSelector(multipleSelectedElementsSelector);
   const elementRef = useRef<HTMLDivElement>(null);
   const elementDynamicData = useSelector(elementDynamicDataSelectorCreator(id));
@@ -58,9 +60,10 @@ const MoveableElement: FC<TProps> = ({
   const { x, y } = position;
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const rectCoordinates = getCornersPosition(height, width);
-  const { selected, ...events } = useMoveableElementEvents(
+  const events = useMoveableElementEvents(
     elementRef,
     id,
+    isSelected,
     mouseMode,
     parentId,
     position,
@@ -75,7 +78,7 @@ const MoveableElement: FC<TProps> = ({
           classNamesWithTheme[classNameMoveableELement].name,
           [
             classNamesWithTheme[classNameMoveableELement].modificators.selected,
-            selected,
+            isSelected,
           ],
         ),
       }}
@@ -88,8 +91,8 @@ const MoveableElement: FC<TProps> = ({
       }}
       {...events}
     >
-      {children(selected)}
-      {selected && <Corners rectCoordinates={rectCoordinates} />}
+      {children(isSelected)}
+      {isSelected && <Corners rectCoordinates={rectCoordinates} />}
     </Box>
   );
 };

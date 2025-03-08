@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 
 // store
 import { selectedElementsSelector } from 'store/pageBuilder/selectors';
-import { setSelectedElements } from 'store/pageBuilder/actions';
+import { selectElements } from 'store/pageBuilder/actions';
 import { store } from 'store';
 
 // types
@@ -25,7 +25,7 @@ export const useHandleSelectElement = (
     const selectedElements = selectedElementsSelector(store.getState());
 
     if (size(collidedElements) !== size(selectedElements)) {
-      dispatch(setSelectedElements(collidedElements));
+      dispatch(selectElements(collidedElements));
     }
   };
 

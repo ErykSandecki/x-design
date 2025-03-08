@@ -39,6 +39,7 @@ describe('useMoveableElementEvents', () => {
         useMoveableElementEvents(
           ref,
           selectedElementMock.id,
+          true,
           MouseMode.default,
           selectedElementMock.parentId,
           BASE_2D,
@@ -52,7 +53,6 @@ describe('useMoveableElementEvents', () => {
     // result
     expect(result.current).toStrictEqual({
       onMouseDown: expect.any(Function),
-      selected: false,
     });
   });
 });

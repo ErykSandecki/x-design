@@ -1,19 +1,19 @@
 // others
 import {
   ADD_ELEMENT,
-  ADD_SELECTED_ELEMENT,
-  REMOVE_SELECTED_ELEMENT,
-  SET_SELECTED_ELEMENTS,
+  SELECT_ELEMENT,
+  UNSELECT_ELEMENT,
+  SELECT_ELEMENTS,
 } from './actionsType';
 
 // types
 import { TAction } from 'types';
 import {
   TAddELementAction,
-  TAddSelectedElementAction,
+  TSelectElementAction,
   TPageBuilderState,
-  TRemoveSelectedElementAction,
-  TSetSelectedElementsAction,
+  TUnselectElementAction,
+  TSelectElementsAction,
 } from './types';
 
 // utils
@@ -32,9 +32,9 @@ const addElement = (
   { payload: element }: TAction<TAddELementAction['payload']>,
 ): TPageBuilderState => handleAddElement(element, state);
 
-const addSelectedElement = (
+const selectElement = (
   state: TPageBuilderState,
-  { payload: selectedElement }: TAction<TAddSelectedElementAction['payload']>,
+  { payload: selectedElement }: TAction<TSelectElementAction['payload']>,
 ): TPageBuilderState => ({
   ...state,
   selectedElements: {
@@ -43,18 +43,18 @@ const addSelectedElement = (
   },
 });
 
-const removeSelectedElement = (
+const selectElements = (
   state: TPageBuilderState,
-  { payload: id }: TAction<TRemoveSelectedElementAction['payload']>,
+  { payload: selectedElements }: TAction<TSelectElementsAction['payload']>,
+): TPageBuilderState => ({ ...state, selectedElements });
+
+const unselectElement = (
+  state: TPageBuilderState,
+  { payload: id }: TAction<TUnselectElementAction['payload']>,
 ): TPageBuilderState => ({
   ...state,
   selectedElements: omit(state.selectedElements, id),
 });
-
-const setSelectedElements = (
-  state: TPageBuilderState,
-  { payload: selectedElements }: TAction<TSetSelectedElementsAction['payload']>,
-): TPageBuilderState => ({ ...state, selectedElements });
 
 const pageBuilder = (
   state: TPageBuilderState = initialState,
@@ -63,12 +63,12 @@ const pageBuilder = (
   switch (action.type) {
     case ADD_ELEMENT:
       return addElement(state, action);
-    case ADD_SELECTED_ELEMENT:
-      return addSelectedElement(state, action);
-    case REMOVE_SELECTED_ELEMENT:
-      return removeSelectedElement(state, action);
-    case SET_SELECTED_ELEMENTS:
-      return setSelectedElements(state, action);
+    case SELECT_ELEMENT:
+      return selectElement(state, action);
+    case UNSELECT_ELEMENT:
+      return unselectElement(state, action);
+    case SELECT_ELEMENTS:
+      return selectElements(state, action);
     default:
       return state;
   }

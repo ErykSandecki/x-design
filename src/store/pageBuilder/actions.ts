@@ -1,18 +1,18 @@
 // others
 import {
   ADD_ELEMENT,
-  ADD_SELECTED_ELEMENT,
-  REMOVE_SELECTED_ELEMENT,
-  SET_SELECTED_ELEMENTS,
+  SELECT_ELEMENT,
+  UNSELECT_ELEMENT,
+  SELECT_ELEMENTS,
 } from './actionsType';
 
 // types
 import {
   TAddELementAction,
   TAddELementActionPayload,
-  TAddSelectedElementAction,
-  TRemoveSelectedElementAction,
-  TSetSelectedElementsAction,
+  TSelectElementAction,
+  TUnselectElementAction,
+  TSelectElementsAction,
 } from './types';
 
 export const addElement = (
@@ -22,23 +22,23 @@ export const addElement = (
   type: ADD_ELEMENT,
 });
 
-export const addSelectedElement = (
-  payload: TAddSelectedElementAction['payload'],
-): TAddSelectedElementAction => ({
+export const selectElement = (
+  payload: TSelectElementAction['payload'],
+): TSelectElementAction => ({
   payload,
-  type: ADD_SELECTED_ELEMENT,
+  type: SELECT_ELEMENT,
 });
 
-export const removeSelectedElement = (
-  payload: TRemoveSelectedElementAction['payload'],
-): TRemoveSelectedElementAction => ({
+export const selectElements = (
+  payload: TSelectElementsAction['payload'],
+): TSelectElementsAction => ({
   payload,
-  type: REMOVE_SELECTED_ELEMENT,
+  type: SELECT_ELEMENTS,
 });
 
-export const setSelectedElements = (
-  payload: TSetSelectedElementsAction['payload'],
-): TSetSelectedElementsAction => ({
+export const unselectElement = (
+  payload: TUnselectElementAction['payload'],
+): TUnselectElementAction => ({
   payload,
-  type: SET_SELECTED_ELEMENTS,
+  type: UNSELECT_ELEMENT,
 });

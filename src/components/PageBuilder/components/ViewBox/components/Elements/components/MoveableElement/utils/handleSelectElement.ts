@@ -3,9 +3,9 @@ import { MouseEvent } from 'react';
 
 // store
 import {
-  addSelectedElement,
-  removeSelectedElement,
-  setSelectedElements,
+  selectElement,
+  unselectElement,
+  selectElements,
 } from 'store/pageBuilder/actions';
 
 // types
@@ -16,16 +16,14 @@ export const handleSelectElement = (
   event: MouseEvent,
   isSelected: boolean,
   selectedElement: TSelectedElement,
-  setSelected: (flag: boolean) => void,
 ): void => {
   const { shiftKey } = event;
 
   if (shiftKey && !isSelected) {
-    dispatch(addSelectedElement(selectedElement));
+    dispatch(selectElement(selectedElement));
   } else if (shiftKey && isSelected) {
-    dispatch(removeSelectedElement(selectedElement.id));
+    dispatch(unselectElement(selectedElement.id));
   } else if (!shiftKey) {
-    setSelected(true);
-    dispatch(setSelectedElements({ [selectedElement.id]: selectedElement }));
+    dispatch(selectElements({ [selectedElement.id]: selectedElement }));
   }
 };

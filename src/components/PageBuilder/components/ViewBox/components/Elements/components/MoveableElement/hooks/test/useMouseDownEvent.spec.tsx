@@ -39,7 +39,6 @@ describe('useMouseMoveEvent', () => {
           MouseMode.default,
           selectedElementMock,
           mockCallBack,
-          mockCallBack,
         ),
       {
         wrapper: getProviderWrapper(store),
@@ -50,7 +49,7 @@ describe('useMouseMoveEvent', () => {
     result.current({ buttons: MouseButton.lmb } as MouseEvent);
 
     // result
-    expect(mockCallBack.mock.calls.length).toBe(2);
+    expect(mockCallBack.mock.calls.length).toBe(1);
   });
 
   it(`should not trigger event`, () => {
@@ -64,7 +63,6 @@ describe('useMouseMoveEvent', () => {
           true,
           MouseMode.comment,
           selectedElementMock,
-          mockCallBack,
           mockCallBack,
         ),
       {

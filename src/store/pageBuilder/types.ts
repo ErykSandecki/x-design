@@ -1,9 +1,9 @@
 // others
 import {
   ADD_ELEMENT,
-  ADD_SELECTED_ELEMENT,
-  REMOVE_SELECTED_ELEMENT,
-  SET_SELECTED_ELEMENTS,
+  SELECT_ELEMENT,
+  UNSELECT_ELEMENT,
+  SELECT_ELEMENTS,
 } from './actionsType';
 
 // types
@@ -48,17 +48,17 @@ export type TAddELementAction = {
   type: typeof ADD_ELEMENT;
 };
 
-export type TAddSelectedElementAction = {
+export type TSelectElementAction = {
   payload: TSelectedElement;
-  type: typeof ADD_SELECTED_ELEMENT;
+  type: typeof SELECT_ELEMENT;
 };
 
-export type TRemoveSelectedElementAction = {
-  payload: TElement['id'];
-  type: typeof REMOVE_SELECTED_ELEMENT;
-};
-
-export type TSetSelectedElementsAction = {
+export type TSelectElementsAction = {
   payload: TSelectedElements;
-  type: typeof SET_SELECTED_ELEMENTS;
+  type: typeof SELECT_ELEMENTS;
+};
+
+export type TUnselectElementAction = {
+  payload: TElement['id'];
+  type: typeof UNSELECT_ELEMENT;
 };

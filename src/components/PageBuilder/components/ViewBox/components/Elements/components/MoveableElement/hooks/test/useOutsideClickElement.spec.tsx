@@ -24,7 +24,12 @@ import { getProviderWrapper } from 'test/testHelpers';
 
 const ref = { current: { contains: () => false } } as RefObject<any>;
 const stateMock = {
-  ...pageBuilderStateMock,
+  [PAGE_BUILDER]: {
+    ...pageBuilderStateMock[PAGE_BUILDER],
+    selectedElements: {
+      [selectedElementMock.id]: selectedElementMock,
+    },
+  },
 };
 
 jest.mock('lodash', () => ({
@@ -33,55 +38,25 @@ jest.mock('lodash', () => ({
 }));
 
 describe('useOutsideClickElement', () => {
-  it('should not be selected', () => {
+  it('should not trigger event when shift key', () => {
     // mock
     const store = configureStore(stateMock);
 
     // before
-    const { result } = renderHook(
-      () => useOutsideClickElement(ref, '-1', false),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
-
-    // result
-    expect(result.current.selected).toEqual(false);
-  });
-
-  it('should be selected', () => {
-    // mock
-    const store = configureStore(stateMock);
-
-    // before
-    const { result } = renderHook(
+    renderHook(
       () => useOutsideClickElement(ref, selectedElementMock.id, true),
       {
         wrapper: getProviderWrapper(store),
       },
     );
 
-    // result
-    expect(result.current.selected).toEqual(true);
-  });
-
-  it('should not be selected if on the store is not selected', () => {
-    // mock
-    const store = configureStore(stateMock);
-
-    // before
-    const { result } = renderHook(
-      () => useOutsideClickElement(ref, selectedElementMock.id, false),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
-
     // action
-    result.current.setSelected(true);
+    fireEvent.mouseDown(window, { buttons: MouseButton.lmb, shiftKey: true });
 
     // result
-    expect(result.current.selected).toEqual(false);
+    expect(store.getState()[PAGE_BUILDER].selectedElements).toStrictEqual({
+      [selectedElementMock.id]: selectedElementMock,
+    });
   });
 
   it('should not be selected if click outside', () => {

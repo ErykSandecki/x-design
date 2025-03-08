@@ -16,20 +16,13 @@ export const useMouseDownEvent = (
   mouseMode: MouseMode,
   selectedElement: TSelectedElement,
   setIsPressing: (isPressing: boolean) => void,
-  setSelected: (flag: boolean) => void,
 ): TUseMouseDownEvent => {
   const dispatch = useDispatch();
 
   const handleMouseDown = (event: MouseEvent): void => {
     if (event.buttons === MouseButton.lmb && mouseMode === MouseMode.default) {
       setIsPressing(true);
-      handleSelectElement(
-        dispatch,
-        event,
-        isSelected,
-        selectedElement,
-        setSelected,
-      );
+      handleSelectElement(dispatch, event, isSelected, selectedElement);
     }
   };
 
