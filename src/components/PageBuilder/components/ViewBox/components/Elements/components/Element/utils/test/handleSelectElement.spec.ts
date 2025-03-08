@@ -18,6 +18,7 @@ describe('handleSelectElement', () => {
       mockCallBack,
       { shiftKey: true } as MouseEvent,
       false,
+      false,
       selectedElementMock,
     );
 
@@ -32,6 +33,7 @@ describe('handleSelectElement', () => {
     handleSelectElement(
       mockCallBack,
       { shiftKey: true } as MouseEvent,
+      false,
       true,
       selectedElementMock,
     );
@@ -45,6 +47,7 @@ describe('handleSelectElement', () => {
     handleSelectElement(
       mockCallBack,
       { shiftKey: false } as MouseEvent,
+      false,
       false,
       selectedElementMock,
     );

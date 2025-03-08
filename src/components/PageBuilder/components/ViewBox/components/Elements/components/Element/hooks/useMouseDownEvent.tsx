@@ -12,6 +12,7 @@ import { handleSelectElement } from '../utils/handleSelectElement';
 export type TUseMouseDownEvent = (event: MouseEvent) => void;
 
 export const useMouseDownEvent = (
+  isMultiple: boolean,
   isSelected: boolean,
   mouseMode: MouseMode,
   selectedElement: TSelectedElement,
@@ -20,9 +21,17 @@ export const useMouseDownEvent = (
   const dispatch = useDispatch();
 
   const handleMouseDown = (event: MouseEvent): void => {
+    event.stopPropagation();
+
     if (event.buttons === MouseButton.lmb && mouseMode === MouseMode.default) {
       setIsPressing(true);
-      handleSelectElement(dispatch, event, isSelected, selectedElement);
+      handleSelectElement(
+        dispatch,
+        event,
+        isMultiple,
+        isSelected,
+        selectedElement,
+      );
     }
   };
 

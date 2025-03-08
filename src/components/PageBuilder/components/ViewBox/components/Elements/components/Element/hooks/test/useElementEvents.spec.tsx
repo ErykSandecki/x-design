@@ -40,6 +40,7 @@ describe('useElementEvents', () => {
           ref,
           100,
           selectedElementMock.id,
+          false,
           true,
           MouseMode.default,
           selectedElementMock.parentId,

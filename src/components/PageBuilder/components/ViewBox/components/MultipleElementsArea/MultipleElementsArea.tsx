@@ -3,22 +3,12 @@ import { useSelector } from 'react-redux';
 
 // components
 import Corners from '../Corners/Corners';
-import { Box } from 'shared';
-
-// hooks
-import { useTheme } from 'hooks';
-
-// others
-import { className, classNames } from './classNames';
 
 // store
 import {
   multipleSelectedElementsSelector,
   selectedElementsSelector,
 } from 'store/pageBuilder/selectors';
-
-// styles
-import styles from './multiple-elements-area.scss';
 
 // types
 import { MouseMode } from 'components/PageBuilder/enums';
@@ -39,7 +29,6 @@ const MultipleElementsArea: FC<TMultipleElementsAreaProps> = ({
   const coordinates = getCoordinates(selectedElements);
   const { height, width, x, y } = calculateBoxSize(coordinates);
   const isMultiple = useSelector(multipleSelectedElementsSelector);
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   if (!isMultiple) {
     return null;
@@ -47,6 +36,7 @@ const MultipleElementsArea: FC<TMultipleElementsAreaProps> = ({
 
   return (
     <Corners
+      clickable
       rectCoordinates={{
         x1: coordinates.x1,
         x2: coordinates.x2,

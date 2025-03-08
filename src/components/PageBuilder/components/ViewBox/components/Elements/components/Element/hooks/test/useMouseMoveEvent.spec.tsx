@@ -1,20 +1,18 @@
-import { MouseEvent } from 'react';
-import { renderHook } from '@testing-library/react';
+import { fireEvent, renderHook } from '@testing-library/react';
 
 // mocks
-import {
-  pageBuilderStateMock,
-  selectedElementMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // hooks
-import { useMouseDownEvent } from '../useMouseDownEvent';
+import { useMouseMoveEvent } from '../useMouseMoveEvent';
+
+// others
+import { BASE_2D } from 'shared';
 
 // store
 import { configureStore } from 'store';
 
 // types
-import { MouseButton } from 'types';
 import { MouseMode } from 'components/PageBuilder/enums';
 
 // utils
@@ -26,19 +24,24 @@ const stateMock = {
   ...pageBuilderStateMock,
 };
 
+jest.mock('lodash', () => ({
+  ...jest.requireActual('lodash'),
+  throttle: (callback) => callback,
+}));
+
 describe('useMouseMoveEvent', () => {
   it(`should trigger event`, () => {
     // mock
     const store = configureStore(stateMock);
 
     // before
-    const { result } = renderHook(
+    renderHook(
       () =>
-        useMouseDownEvent(
+        useMouseMoveEvent(
           false,
           true,
           MouseMode.default,
-          selectedElementMock,
+          BASE_2D,
           mockCallBack,
         ),
       {
@@ -47,10 +50,10 @@ describe('useMouseMoveEvent', () => {
     );
 
     // action
-    result.current({ buttons: MouseButton.lmb } as MouseEvent);
+    fireEvent.mouseMove(window, {});
 
     // result
-    expect(mockCallBack.mock.calls.length).toBe(1);
+    expect(mockCallBack.mock.calls[0][0]).toBe(true);
   });
 
   it(`should not trigger event`, () => {
@@ -58,13 +61,13 @@ describe('useMouseMoveEvent', () => {
     const store = configureStore(stateMock);
 
     // before
-    const { result } = renderHook(
+    renderHook(
       () =>
-        useMouseDownEvent(
+        useMouseMoveEvent(
           false,
-          true,
-          MouseMode.comment,
-          selectedElementMock,
+          false,
+          MouseMode.default,
+          BASE_2D,
           mockCallBack,
         ),
       {
@@ -73,7 +76,7 @@ describe('useMouseMoveEvent', () => {
     );
 
     // action
-    result.current({} as MouseEvent);
+    fireEvent.mouseMove(window, {});
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(0);

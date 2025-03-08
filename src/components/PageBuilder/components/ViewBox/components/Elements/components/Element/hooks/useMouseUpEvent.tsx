@@ -1,27 +1,45 @@
-import { noop } from 'lodash';
+import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
+
+// types
+import { TSelectedElement } from 'store/pageBuilder/types';
+
+// utils
+import { handleTrySelectElement } from '../utils/handleTrySelectElement';
 
 export type TUseMouseUpEvent = void;
 
 export const useMouseUpEvent = (
+  isMoving: boolean,
+  isMultiple: boolean,
   isPressing: boolean,
+  isSelected: boolean,
+  selectedElement: TSelectedElement,
+  setIsMoving: (isMoving: boolean) => void,
   setIsPressing: (isPressing: boolean) => void,
 ): TUseMouseUpEvent => {
-  const handleMouseUp = (): void => {
-    setIsPressing(false);
+  const dispatch = useDispatch();
 
-    if (isPressing) {
-      noop();
-    }
+  const handleMouseUp = (event: MouseEvent): void => {
+    handleTrySelectElement(
+      dispatch,
+      event,
+      isMoving,
+      isMultiple,
+      isSelected,
+      selectedElement,
+    );
+    setIsMoving(false);
+    setIsPressing(false);
   };
 
   useEffect(() => {
     if (isPressing) {
-      document.addEventListener('mouseup', handleMouseUp);
+      window.addEventListener('mouseup', handleMouseUp);
     }
 
     return () => {
-      document.removeEventListener('mouseup', handleMouseUp);
+      window.removeEventListener('mouseup', handleMouseUp);
     };
-  }, [isPressing]);
+  }, [isMoving, isPressing]);
 };

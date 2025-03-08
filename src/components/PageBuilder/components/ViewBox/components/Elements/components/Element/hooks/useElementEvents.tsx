@@ -19,13 +19,15 @@ export const useElementEvents = (
   elementRef: RefObject<any>,
   height: TElement['height'],
   id: TSelectedElement['id'],
-  isSelected,
+  isMultiple: boolean,
+  isSelected: boolean,
   mouseMode: MouseMode,
   parentId: TSelectedElement['parentId'],
   position: T2DCoordinates,
   type: TSelectedElement['type'],
   width: TElement['width'],
 ): TUseElementEvents => {
+  const [isMoving, setIsMoving] = useState(false);
   const [isPressing, setIsPressing] = useState(false);
   const selectedElement = {
     coordinates: {
@@ -39,12 +41,21 @@ export const useElementEvents = (
     type,
   };
 
-  useMouseMoveEvent(isPressing, mouseMode, position);
-  useMouseUpEvent(isPressing, setIsPressing);
+  useMouseMoveEvent(isMoving, isPressing, mouseMode, position, setIsMoving);
+  useMouseUpEvent(
+    isMoving,
+    isMultiple,
+    isPressing,
+    isSelected,
+    selectedElement,
+    setIsMoving,
+    setIsPressing,
+  );
   useOutsideClickElement(elementRef, id, isSelected);
 
   return {
     onMouseDown: useMouseDownEvent(
+      isMultiple,
       isSelected,
       mouseMode,
       selectedElement,

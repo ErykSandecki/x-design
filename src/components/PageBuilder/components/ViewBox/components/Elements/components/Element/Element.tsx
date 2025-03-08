@@ -64,6 +64,7 @@ const Element: FC<TElementProps> = ({
     elementRef,
     height,
     id,
+    isMultiple,
     isSelected,
     mouseMode,
     parentId,

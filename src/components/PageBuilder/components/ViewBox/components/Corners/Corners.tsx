@@ -15,11 +15,13 @@ import styles from './corners.scss';
 import { TRectCoordinates } from 'types';
 
 export type TCornersProps = {
+  clickable?: boolean;
   rectCoordinates: TRectCoordinates;
   withOutline?: boolean;
 };
 
 const Corners: FC<TCornersProps> = ({
+  clickable,
   rectCoordinates,
   withOutline = false,
 }) => {
@@ -27,10 +29,19 @@ const Corners: FC<TCornersProps> = ({
   const { x1, x2, y1, y2 } = rectCoordinates || {};
 
   return (
-    <svg className={cx(classNamesWithTheme[className])}>
+    <svg
+      className={cx(classNamesWithTheme[className].name, [
+        classNamesWithTheme[className].modificators.clickable,
+        clickable,
+      ])}
+    >
       {withOutline && (
         <path
-          className={cx(classNamesWithTheme.outline)}
+          className={cx(classNamesWithTheme.outline.name, [
+            classNamesWithTheme.outline.modificators.clickable,
+            clickable,
+          ])}
+          onMouseDown={(event) => event.stopPropagation()}
           d={`M ${x1},${y1} H ${x2} V ${y2} H ${x1} V ${y1}`}
           strokeWidth={SW}
         />

@@ -9,11 +9,20 @@
   pointer-events: none;
   position: absolute;
   width: 100%;
-  z-index: $--rx-zindex-element-active;
+  z-index: $--rx-zindex-element;
+
+  &--clickable {
+    pointer-events: all;
+    z-index: $--rx-zindex-events;
+  }
 
   &__outline {
     @include theme('blue-1', stroke);
 
-    fill: none;
+    fill: rgba($color: #000000, $alpha: 0);
+
+    &--clickable {
+      pointer-events: all;
+    }
   }
 }

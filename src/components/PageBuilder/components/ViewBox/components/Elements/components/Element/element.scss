@@ -1,6 +1,7 @@
 @import '../../../../../../styles/z-indexes.scss';
 
 .Element {
+  $self: &;
   @include theme-selector('blue-1', outline, '&:hover', '2.5px solid');
 
   position: absolute;
