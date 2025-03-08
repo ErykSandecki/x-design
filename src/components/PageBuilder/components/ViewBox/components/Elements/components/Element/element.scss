@@ -1,6 +1,6 @@
 @import '../../../../../../styles/z-indexes.scss';
 
-.MoveableElement {
+.Element {
   @include theme-selector('blue-1', outline, '&:hover', '2.5px solid');
 
   position: absolute;

@@ -2,7 +2,7 @@ import { Provider } from 'react-redux';
 import { render } from '@testing-library/react';
 
 // components
-import MoveableElement from './MoveableElement';
+import Element from './Element';
 
 // mocks
 import {
@@ -33,15 +33,15 @@ const stateMock = {
   },
 };
 
-describe('MoveableElement snapshots', () => {
-  it('should render MoveableElement', () => {
+describe('Element snapshots', () => {
+  it('should render Element', () => {
     // mock
     const store = configureStore(stateMock);
 
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <MoveableElement
+        <Element
           classes={{ className: 'className' }}
           id={elementDynamicDataMock.id}
           mouseMode={MouseMode.default}
@@ -49,7 +49,7 @@ describe('MoveableElement snapshots', () => {
           type={ElementType.frame}
         >
           {() => <></>}
-        </MoveableElement>
+        </Element>
       </Provider>,
     );
 

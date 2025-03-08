@@ -2,7 +2,7 @@ import { RefObject } from 'react';
 import { renderHook } from '@testing-library/react';
 
 // hooks
-import { useMoveableElementEvents } from '../useMoveableElementEvents';
+import { useElementEvents } from '../useElementEvents';
 
 // mocks
 import {
@@ -28,7 +28,7 @@ const stateMock = {
   ...pageBuilderStateMock,
 };
 
-describe('useMoveableElementEvents', () => {
+describe('useElementEvents', () => {
   it(`should return view moveable events and data`, () => {
     // mock
     const store = configureStore(stateMock);
@@ -36,7 +36,7 @@ describe('useMoveableElementEvents', () => {
     // before
     const { result } = renderHook(
       () =>
-        useMoveableElementEvents(
+        useElementEvents(
           ref,
           selectedElementMock.id,
           true,

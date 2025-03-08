@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 
 // types
 import { MouseButton } from 'types';
-import { MouseMode } from '../../../../../../../../PageBuilder/enums';
+import { MouseMode } from '../../../../../../../enums';
 import { TSelectedElement } from 'store/pageBuilder/types';
 
 // utils

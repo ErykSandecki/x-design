@@ -2,7 +2,7 @@ import { FC, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
 // components
-import MoveableElement from '../MoveableElement/MoveableElement';
+import Element from '../Element/Element';
 import { Small } from 'shared';
 
 // hooks
@@ -31,7 +31,7 @@ const Frame: FC<TFrameProps> = ({
   const { t } = useTranslation();
 
   return (
-    <MoveableElement
+    <Element
       classes={{
         className: cx(className, classNamesWithTheme[classNameFrame]),
       }}
@@ -52,7 +52,7 @@ const Frame: FC<TFrameProps> = ({
           {t(`${translationNameSpace}.label.createFrame`)}
         </Small>
       )}
-    </MoveableElement>
+    </Element>
   );
 };
 

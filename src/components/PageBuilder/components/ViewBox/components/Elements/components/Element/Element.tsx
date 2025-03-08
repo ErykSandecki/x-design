@@ -6,7 +6,7 @@ import Corners from '../../../Corners/Corners';
 import { Box } from 'shared';
 
 // hooks
-import { useMoveableElementEvents } from './hooks/useMoveableElementEvents';
+import { useElementEvents } from './hooks/useElementEvents';
 import { useTheme } from 'hooks';
 
 // others
@@ -24,7 +24,7 @@ import {
 } from 'store/pageBuilder/selectors';
 
 // styles
-import styles from './moveable-element.scss';
+import styles from './element.scss';
 
 // types
 import { ElementType, TElement } from 'types';
@@ -33,7 +33,7 @@ import { MouseMode } from 'components/PageBuilder/enums';
 // utils
 import { getCornersPosition } from './utils/getCornersPosition';
 
-type TProps = {
+type TElementProps = {
   classes: typeof classes;
   children: (selected: boolean) => ReactNode;
   id: string;
@@ -42,7 +42,7 @@ type TProps = {
   type: ElementType;
 };
 
-const MoveableElement: FC<TProps> = ({
+const Element: FC<TElementProps> = ({
   classes,
   children,
   id,
@@ -60,7 +60,7 @@ const MoveableElement: FC<TProps> = ({
   const { x, y } = position;
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const rectCoordinates = getCornersPosition(height, width);
-  const events = useMoveableElementEvents(
+  const events = useElementEvents(
     elementRef,
     id,
     isSelected,
@@ -92,9 +92,11 @@ const MoveableElement: FC<TProps> = ({
       {...events}
     >
       {children(isSelected)}
-      {isSelected && <Corners rectCoordinates={rectCoordinates} />}
+      {!isMultiple && isSelected && (
+        <Corners rectCoordinates={rectCoordinates} />
+      )}
     </Box>
   );
 };
 
-export default memo(MoveableElement);
+export default memo(Element);

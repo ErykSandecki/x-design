@@ -1,4 +1,4 @@
-export const className = 'MoveableElement';
+export const className = 'Element';
 
 export const classes = {
   className,

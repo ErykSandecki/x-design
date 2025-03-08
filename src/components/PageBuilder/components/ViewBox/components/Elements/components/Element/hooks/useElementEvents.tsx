@@ -11,11 +11,11 @@ import { MouseMode } from 'components/PageBuilder/enums';
 import { T2DCoordinates } from 'types';
 import { TSelectedElement } from 'store/pageBuilder/types';
 
-export type TUseMoveableElementEvents = {
+export type TUseElementEvents = {
   onMouseDown: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
 };
 
-export const useMoveableElementEvents = (
+export const useElementEvents = (
   elementRef: RefObject<any>,
   id: TSelectedElement['id'],
   isSelected,
@@ -23,7 +23,7 @@ export const useMoveableElementEvents = (
   parentId: TSelectedElement['parentId'],
   position: T2DCoordinates,
   type: TSelectedElement['type'],
-): TUseMoveableElementEvents => {
+): TUseElementEvents => {
   const [isPressing, setIsPressing] = useState(false);
   const selectedElement = {
     coordinates: position,
