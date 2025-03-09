@@ -14,6 +14,11 @@ import { MouseButton, T2DCoordinates } from 'types';
 const cursorPosition = { current: BASE_2D } as RefObject<T2DCoordinates>;
 const mockCallBack = jest.fn();
 
+jest.mock('lodash', () => ({
+  ...jest.requireActual('lodash'),
+  debounce: (callback: any) => (value: any) => callback(value),
+}));
+
 describe('useMouseMoveEvent', () => {
   it(`should trigger events`, () => {
     // before

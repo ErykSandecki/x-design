@@ -10,6 +10,11 @@ import { BASE_3D } from 'shared/ZoomBox/constants';
 const mockCallBack = jest.fn();
 const ref = { current: { getBoundingClientRect: () => ({ left: 0, top: 0 }) } };
 
+jest.mock('lodash', () => ({
+  ...jest.requireActual('lodash'),
+  debounce: (callback: any) => (value: any) => callback(value),
+}));
+
 describe('useWheelEvent', () => {
   it(`should trigger handle zoom`, () => {
     // before

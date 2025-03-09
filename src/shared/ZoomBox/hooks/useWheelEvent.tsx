@@ -1,4 +1,5 @@
-import { RefObject, useRef, WheelEvent } from 'react';
+import { debounce } from 'lodash';
+import { RefObject, useCallback, useRef, WheelEvent } from 'react';
 
 // types
 import { T3DCoordinates } from 'types';
@@ -16,14 +17,25 @@ export const useWheelEvent = (
   zoomBoxRef: RefObject<HTMLDivElement>,
 ): TUseWheelEvent => {
   const lastWheelTime = useRef(0);
+  const onUpdateCoordinatesDelay = useCallback(
+    debounce((coordinates: T3DCoordinates) => {
+      onUpdateCoordinates(coordinates);
+    }, 500),
+    [],
+  );
 
   const handleWheel = (event: WheelEvent): void => {
-    handleScrollPage(coordinates, event, onUpdateCoordinates, setCoordinates);
+    handleScrollPage(
+      coordinates,
+      event,
+      onUpdateCoordinatesDelay,
+      setCoordinates,
+    );
     handleZoom(
       coordinates,
       event,
       lastWheelTime,
-      onUpdateCoordinates,
+      onUpdateCoordinatesDelay,
       setCoordinates,
       zoomBoxRef,
     );

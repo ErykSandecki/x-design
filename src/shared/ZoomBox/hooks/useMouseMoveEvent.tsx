@@ -1,4 +1,5 @@
-import { RefObject, useEffect } from 'react';
+import { debounce } from 'lodash';
+import { RefObject, useCallback, useEffect } from 'react';
 
 // types
 import { T2DCoordinates, T3DCoordinates } from 'types';
@@ -17,6 +18,13 @@ export const useMouseMoveEvent = (
   onUpdateCoordinates: ((coordinates: T3DCoordinates) => void) | null,
   setCoordinates: (coordinates: T3DCoordinates) => void,
 ): TUseMouseMoveEvent => {
+  const onUpdateCoordinatesDelay = useCallback(
+    debounce((coordinates: T3DCoordinates) => {
+      onUpdateCoordinates(coordinates);
+    }, 500),
+    [],
+  );
+
   const handleMouseMove = (event: MouseEvent): void => {
     onMouseMove(event);
     handleMoveArea(
@@ -24,7 +32,7 @@ export const useMouseMoveEvent = (
       cursorPosition,
       cursorState,
       event,
-      onUpdateCoordinates,
+      onUpdateCoordinatesDelay,
       setCoordinates,
     );
   };

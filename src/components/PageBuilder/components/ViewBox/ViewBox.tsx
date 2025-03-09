@@ -20,6 +20,8 @@ import styles from './view-box.scss';
 // types
 import { MouseMode } from 'components/PageBuilder/enums';
 import { T3DCoordinates } from 'types';
+import { useDispatch } from 'react-redux';
+import { setAreCoordinates } from 'store/pageBuilder/actions';
 
 export type TViewBoxProps = {
   coordinates: T3DCoordinates;
@@ -34,6 +36,7 @@ const ViewBox: FC<TViewBoxProps> = ({
   setCoordinates,
   setMouseMode,
 }) => {
+  const dispatch = useDispatch();
   const zoomBoxRef = useRef<HTMLDivElement>(null);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { elementArea, selectableArea, ...events } = useViewBoxEvents(
@@ -53,6 +56,9 @@ const ViewBox: FC<TViewBoxProps> = ({
       coordinates={coordinates}
       onMouseMoveDepedencies={[elementArea, mouseMode]}
       onMouseUpDepedencies={[elementArea, mouseMode]}
+      onUpdateCoordinates={(coordinates) =>
+        dispatch(setAreCoordinates(coordinates))
+      }
       setCoordinates={setCoordinates}
       zoomBoxRef={zoomBoxRef}
       {...events}
