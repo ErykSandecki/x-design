@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { CSSProperties, FC } from 'react';
 
 // hooks
 import { useTheme } from 'hooks';
@@ -17,12 +17,14 @@ import { TRectCoordinates } from 'types';
 export type TCornersProps = {
   clickable?: boolean;
   rectCoordinates: TRectCoordinates;
+  style?: CSSProperties;
   withOutline?: boolean;
 };
 
 const Corners: FC<TCornersProps> = ({
   clickable,
   rectCoordinates,
+  style = {},
   withOutline = false,
 }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
@@ -34,6 +36,7 @@ const Corners: FC<TCornersProps> = ({
         classNamesWithTheme[className].modificators.clickable,
         clickable,
       ])}
+      style={style}
     >
       {withOutline && (
         <path
