@@ -37,7 +37,14 @@ describe('getCollidedElements', () => {
 
     // result
     expect(result).toStrictEqual({
-      [selectedElementMock.id]: selectedElementMock,
+      [selectedElementMock.id]: {
+        ...selectedElementMock,
+        coordinates: {
+          ...selectedElementMock.coordinates,
+          x2: 100,
+          y2: 100,
+        },
+      },
     });
   });
 

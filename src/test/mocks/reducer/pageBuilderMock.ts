@@ -1,5 +1,5 @@
 // others
-import { BASE_2D, BASE_RECT } from 'shared';
+import { BASE_3D, BASE_RECT } from 'shared';
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 
 // types
@@ -16,6 +16,7 @@ export const pageBuilderStateMock: Record<
   TPageBuilderState
 > = {
   [PAGE_BUILDER]: {
+    areaCoordinates: BASE_3D,
     elements: { allData: {}, dynamicData: {}, staticData: {} },
     isLoading: true,
     isPending: false,

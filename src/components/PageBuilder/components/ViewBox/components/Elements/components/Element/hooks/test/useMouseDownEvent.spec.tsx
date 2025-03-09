@@ -1,4 +1,4 @@
-import { MouseEvent } from 'react';
+import { MouseEvent, RefObject } from 'react';
 import { renderHook } from '@testing-library/react';
 
 // mocks
@@ -10,16 +10,20 @@ import {
 // hooks
 import { useMouseDownEvent } from '../useMouseDownEvent';
 
+// others
+import { BASE_2D } from 'shared';
+
 // store
 import { configureStore } from 'store';
 
 // types
-import { MouseButton } from 'types';
+import { MouseButton, T2DCoordinates } from 'types';
 import { MouseMode } from 'components/PageBuilder/enums';
 
 // utils
 import { getProviderWrapper } from 'test';
 
+const ref = { current: BASE_2D } as RefObject<T2DCoordinates>;
 const mockCallBack = jest.fn();
 
 const stateMock = {
@@ -35,6 +39,7 @@ describe('useMouseMoveEvent', () => {
     const { result } = renderHook(
       () =>
         useMouseDownEvent(
+          ref,
           false,
           true,
           MouseMode.default,
@@ -47,10 +52,13 @@ describe('useMouseMoveEvent', () => {
     );
 
     // action
-    result.current({ buttons: MouseButton.lmb } as MouseEvent);
+    result.current({
+      buttons: MouseButton.lmb,
+      stopPropagation: mockCallBack as any,
+    } as MouseEvent);
 
     // result
-    expect(mockCallBack.mock.calls.length).toBe(1);
+    expect(mockCallBack.mock.calls.length).toBe(2);
   });
 
   it(`should not trigger event`, () => {
@@ -61,6 +69,7 @@ describe('useMouseMoveEvent', () => {
     const { result } = renderHook(
       () =>
         useMouseDownEvent(
+          ref,
           false,
           true,
           MouseMode.comment,
@@ -73,9 +82,9 @@ describe('useMouseMoveEvent', () => {
     );
 
     // action
-    result.current({} as MouseEvent);
+    result.current({ stopPropagation: mockCallBack as any } as MouseEvent);
 
     // result
-    expect(mockCallBack.mock.calls.length).toBe(0);
+    expect(mockCallBack.mock.calls.length).toBe(1);
   });
 });

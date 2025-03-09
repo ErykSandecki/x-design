@@ -25,6 +25,7 @@ export type TZoomBoxProps = {
   onMouseMoveDepedencies?: Array<any>;
   onMouseUp: (event: MouseEvent) => void;
   onMouseUpDepedencies?: Array<any>;
+  onUpdateCoordinates?: (coordinates: T3DCoordinates) => void;
   setCoordinates: (coordinates: T3DCoordinates) => void;
   zoomBoxRef: RefObject<HTMLDivElement>;
 };
@@ -38,6 +39,7 @@ export const ZoomBox: FC<TZoomBoxProps> = ({
   onMouseMoveDepedencies = [],
   onMouseUp,
   onMouseUpDepedencies = [],
+  onUpdateCoordinates = null,
   setCoordinates,
   zoomBoxRef,
 }) => {
@@ -50,6 +52,7 @@ export const ZoomBox: FC<TZoomBoxProps> = ({
     onMouseMoveDepedencies,
     onMouseUp,
     onMouseUpDepedencies,
+    onUpdateCoordinates,
     setCoordinates,
     zoomBoxRef,
   );

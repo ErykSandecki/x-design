@@ -6,7 +6,7 @@ import { size } from 'lodash';
 import { REDUCER_KEY } from './actionsType';
 
 // types
-import { TElement } from 'types';
+import { T3DCoordinates, TElement } from 'types';
 import {
   TElementsData,
   TElementDynamicData,
@@ -17,6 +17,14 @@ import { TMainState } from 'types/reducers';
 
 export const pageBuilderStateSelector: Selector<TMainState, TPageBuilderState> =
   getFp(REDUCER_KEY);
+
+export const areaCoordinatesSelector: Selector<TMainState, T3DCoordinates> =
+  createSelector(pageBuilderStateSelector, getFp('areaCoordinates'));
+
+export const areaAxisSelectorCreator = (
+  axis: keyof T3DCoordinates,
+): Selector<TMainState, T3DCoordinates[typeof axis]> =>
+  createSelector(areaCoordinatesSelector, getFp(axis));
 
 export const elementsSelector: Selector<TMainState, TElementsData> =
   createSelector(pageBuilderStateSelector, getFp('elements'));

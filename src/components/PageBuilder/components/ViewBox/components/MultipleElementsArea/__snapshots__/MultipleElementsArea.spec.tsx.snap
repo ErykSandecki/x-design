@@ -5,10 +5,10 @@ exports[`MultipleElementsArea snapshots should not render MultipleElementsArea 1
 exports[`MultipleElementsArea snapshots should render MultipleElementsArea 1`] = `
 <DocumentFragment>
   <svg
-    class="Corners Corners--light"
+    class="Corners Corners--light Corners--clickable Corners--clickable--light"
   >
     <path
-      class="Corners__outline Corners__outline--light"
+      class="Corners__outline Corners__outline--light Corners__outline--clickable Corners__outline--clickable--light"
       d="M -1.25,-1.25 H 1.25 V 1.25 H -1.25 V -1.25"
       stroke-width="2.5"
     />

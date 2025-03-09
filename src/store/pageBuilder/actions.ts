@@ -4,6 +4,7 @@ import {
   SELECT_ELEMENT,
   UNSELECT_ELEMENT,
   SELECT_ELEMENTS,
+  SET_AREA_COORDINATES,
 } from './actionsType';
 
 // types
@@ -13,6 +14,7 @@ import {
   TSelectElementAction,
   TUnselectElementAction,
   TSelectElementsAction,
+  TSetAreaCoordinatesAction,
 } from './types';
 
 export const addElement = (
@@ -34,6 +36,13 @@ export const selectElements = (
 ): TSelectElementsAction => ({
   payload,
   type: SELECT_ELEMENTS,
+});
+
+export const setAreCoordinates = (
+  payload: TSetAreaCoordinatesAction['payload'],
+): TSetAreaCoordinatesAction => ({
+  payload,
+  type: SET_AREA_COORDINATES,
 });
 
 export const unselectElement = (

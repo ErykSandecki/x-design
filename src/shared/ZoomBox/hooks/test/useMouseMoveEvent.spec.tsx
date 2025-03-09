@@ -25,6 +25,7 @@ describe('useMouseMoveEvent', () => {
         [],
         mockCallBack,
         mockCallBack,
+        mockCallBack,
       ),
     );
 
@@ -36,6 +37,6 @@ describe('useMouseMoveEvent', () => {
     });
 
     // result
-    expect(mockCallBack.mock.calls.length).toBe(2);
+    expect(mockCallBack.mock.calls.length).toBe(3);
   });
 });

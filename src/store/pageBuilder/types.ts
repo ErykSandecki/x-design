@@ -4,10 +4,17 @@ import {
   SELECT_ELEMENT,
   UNSELECT_ELEMENT,
   SELECT_ELEMENTS,
+  SET_AREA_COORDINATES,
 } from './actionsType';
 
 // types
-import { ElementType, TElement, TObject, TRectCoordinates } from 'types';
+import {
+  ElementType,
+  T3DCoordinates,
+  TElement,
+  TObject,
+  TRectCoordinates,
+} from 'types';
 
 export type TElementDynamicData = Pick<
   TElement,
@@ -35,6 +42,7 @@ export type TSelectedElement = {
 export type TSelectedElements = TObject<TSelectedElement>;
 
 export type TPageBuilderState = {
+  areaCoordinates: T3DCoordinates;
   elements: TElementsData;
   isLoading: boolean;
   isPending: boolean;
@@ -56,6 +64,11 @@ export type TSelectElementAction = {
 export type TSelectElementsAction = {
   payload: TSelectedElements;
   type: typeof SELECT_ELEMENTS;
+};
+
+export type TSetAreaCoordinatesAction = {
+  payload: Partial<T3DCoordinates>;
+  type: typeof SET_AREA_COORDINATES;
 };
 
 export type TUnselectElementAction = {

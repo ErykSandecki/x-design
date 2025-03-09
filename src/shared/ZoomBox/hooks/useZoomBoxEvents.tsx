@@ -26,6 +26,7 @@ export const useZoomBoxEvents = (
   onMouseMoveDepedencies: Array<any>,
   onMouseUp: (event: MouseEvent) => void,
   onMouseUpDepedencies: Array<any>,
+  onUpdateCoordinates: ((coordinates: T3DCoordinates) => void) | null,
   setCoordinates: (coordinates: T3DCoordinates) => void,
   zoomBoxRef: RefObject<HTMLDivElement>,
 ): TUseZoomBoxEvents => {
@@ -38,6 +39,7 @@ export const useZoomBoxEvents = (
     cursorState,
     onMouseMoveDepedencies,
     onMouseMove,
+    onUpdateCoordinates,
     setCoordinates,
   );
   useMouseUpEvent(onMouseUpDepedencies, onMouseUp, setCursorState);
@@ -50,6 +52,11 @@ export const useZoomBoxEvents = (
       onMouseDown,
       setCursorState,
     ),
-    onWheel: useWheelEvent(coordinates, setCoordinates, zoomBoxRef),
+    onWheel: useWheelEvent(
+      coordinates,
+      onUpdateCoordinates,
+      setCoordinates,
+      zoomBoxRef,
+    ),
   };
 };

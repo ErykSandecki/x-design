@@ -11,16 +11,20 @@ export const handleMoveArea = (
   cursorPosition: RefObject<T2DCoordinates>,
   cursorState: string,
   event: MouseEvent,
+  onUpdateCoordinates: ((coordinates: T3DCoordinates) => void) | null,
   setCoordinates: (coordinates: T3DCoordinates) => void,
 ) => {
   const { x, y } = cursorPosition.current;
   const cursor = cursorState as (typeof CURSOR_STATES)[number];
 
   if (event.buttons === MouseButton.rmb && cursor === 'rmb') {
-    setCoordinates({
+    const targetCoordinates = {
       ...coordinates,
       x: event.clientX - x,
       y: event.clientY - y,
-    });
+    };
+
+    onUpdateCoordinates(targetCoordinates);
+    setCoordinates(targetCoordinates);
   }
 };

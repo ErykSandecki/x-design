@@ -3,6 +3,7 @@ import { FC, useRef } from 'react';
 // components
 import Elements from './components/Elements/Elements';
 import ElementArea from './components/ElementArea/ElementArea';
+import MultipleElementsArea from './components/MultipleElementsArea/MultipleElementsArea';
 import SelectableArea from './components/SelectableArea/SelectableArea';
 import { ZoomBox } from 'shared';
 
@@ -19,7 +20,6 @@ import styles from './view-box.scss';
 // types
 import { MouseMode } from 'components/PageBuilder/enums';
 import { T3DCoordinates } from 'types';
-import MultipleElementsArea from './components/MultipleElementsArea/MultipleElementsArea';
 
 export type TViewBoxProps = {
   coordinates: T3DCoordinates;

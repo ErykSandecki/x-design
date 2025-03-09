@@ -22,6 +22,7 @@ describe('handleMoveArea', () => {
       CURSOR_STATES[4],
       { buttons: MouseButton.rmb, clientX: 0, clientY: 0 } as MouseEvent,
       mockCallBack,
+      mockCallBack,
     );
 
     // result
@@ -35,6 +36,7 @@ describe('handleMoveArea', () => {
       cursorPosition,
       CURSOR_STATES[4],
       { clientX: 0, clientY: 0 } as MouseEvent,
+      mockCallBack,
       mockCallBack,
     );
 

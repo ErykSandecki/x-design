@@ -37,6 +37,48 @@ exports[`Corners snapshots should render Corners 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Corners snapshots should render wiht outline & clickable events 1`] = `
+<DocumentFragment>
+  <svg
+    class="Corners Corners--light"
+  >
+    <path
+      class="Corners__outline Corners__outline--light"
+      d="M 0,0 H 0 V 0 H 0 V 0"
+      stroke-width="2.5"
+    />
+    <rect
+      height="6"
+      rx="1.5"
+      width="6"
+      x="-3"
+      y="-3"
+    />
+    <rect
+      height="6"
+      rx="1.5"
+      width="6"
+      x="-3"
+      y="-3"
+    />
+    <rect
+      height="6"
+      rx="1.5"
+      width="6"
+      x="-3"
+      y="-3"
+    />
+    <rect
+      height="6"
+      rx="1.5"
+      width="6"
+      x="-3"
+      y="-3"
+    />
+  </svg>
+</DocumentFragment>
+`;
+
 exports[`Corners snapshots should render wiht outline 1`] = `
 <DocumentFragment>
   <svg

@@ -1,10 +1,13 @@
-import { RefObject, useState } from 'react';
+import { RefObject, useRef, useState } from 'react';
 
 // hooks
 import { useMouseDownEvent } from './useMouseDownEvent';
 import { useMouseMoveEvent } from './useMouseMoveEvent';
 import { useMouseUpEvent } from './useMouseUpEvent';
 import { useOutsideClickElement } from './useOutsideClickElement';
+
+// others
+import { BASE_2D } from 'shared';
 
 // types
 import { MouseMode } from 'components/PageBuilder/enums';
@@ -27,6 +30,7 @@ export const useElementEvents = (
   type: TSelectedElement['type'],
   width: TElement['width'],
 ): TUseElementEvents => {
+  const cursorPosition = useRef(BASE_2D);
   const [isMoving, setIsMoving] = useState(false);
   const [isPressing, setIsPressing] = useState(false);
   const selectedElement = {
@@ -55,6 +59,7 @@ export const useElementEvents = (
 
   return {
     onMouseDown: useMouseDownEvent(
+      cursorPosition,
       isMultiple,
       isSelected,
       mouseMode,

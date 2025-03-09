@@ -26,6 +26,7 @@ describe('useZoomBoxEvents', () => {
         mockCallBack,
         [],
         mockCallBack,
+        mockCallBack,
         ref as RefObject<HTMLDivElement>,
       ),
     );

@@ -13,6 +13,7 @@ describe('handleScrollPage', () => {
       BASE_3D,
       { buttons: 1, deltaY: 1, metaKey: true } as React.WheelEvent,
       mockCallBack,
+      mockCallBack,
     );
 
     // result
@@ -24,6 +25,7 @@ describe('handleScrollPage', () => {
     handleScrollPage(
       BASE_3D,
       { buttons: 0, deltaX: 1, deltaY: 1 } as React.WheelEvent,
+      mockCallBack,
       mockCallBack,
     );
 

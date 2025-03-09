@@ -15,6 +15,7 @@ import {
   selectElement,
   unselectElement,
   selectElements,
+  setAreCoordinates,
 } from '../actions';
 
 // types
@@ -100,6 +101,22 @@ describe('PageBuilderReducer', () => {
     expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       selectedElements: { [id]: selectedElementMock },
+    });
+  });
+
+  it('should handle SET_AREA_COORDINATES', () => {
+    // mock
+    const areaCoordinates = { x: 100, y: 100, z: 2 };
+
+    // before
+    const state = reducer(setAreCoordinates(areaCoordinates), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      areaCoordinates,
     });
   });
 

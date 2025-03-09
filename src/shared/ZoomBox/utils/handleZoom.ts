@@ -24,6 +24,7 @@ export const handleZoom = (
   coordinates: T3DCoordinates,
   event: WheelEvent,
   lastWheelTime: RefObject<number>,
+  onUpdateCoordinates: ((coordinates: T3DCoordinates) => void) | null,
   setCoordinates: (coordinates: T3DCoordinates) => void,
   zoomBoxRef: RefObject<HTMLDivElement>,
 ) => {
@@ -36,12 +37,14 @@ export const handleZoom = (
     const zoomSpeed = getZoomSpeed(event.deltaY, lastWheelTime.current, now);
     const zoom = event.deltaY < 0 ? zoomSpeed : -zoomSpeed;
     const targetZ = limitZoom(z + zoom);
-
-    lastWheelTime.current = now;
-    setCoordinates({
+    const targetCoordinates = {
       x: x - cursorX * (targetZ - z),
       y: y - cursorY * (targetZ - z),
       z: targetZ,
-    });
+    };
+
+    lastWheelTime.current = now;
+    onUpdateCoordinates(targetCoordinates);
+    setCoordinates(targetCoordinates);
   }
 };

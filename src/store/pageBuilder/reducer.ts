@@ -1,10 +1,14 @@
+import { omit } from 'lodash';
+
 // others
 import {
   ADD_ELEMENT,
   SELECT_ELEMENT,
   UNSELECT_ELEMENT,
   SELECT_ELEMENTS,
+  SET_AREA_COORDINATES,
 } from './actionsType';
+import { BASE_3D } from 'shared';
 
 // types
 import { TAction } from 'types';
@@ -14,13 +18,14 @@ import {
   TPageBuilderState,
   TUnselectElementAction,
   TSelectElementsAction,
+  TSetAreaCoordinatesAction,
 } from './types';
 
 // utils
 import { handleAddElement } from './utils/handleAddElement';
-import { omit } from 'lodash';
 
 const initialState: TPageBuilderState = {
+  areaCoordinates: BASE_3D,
   elements: { allData: {}, dynamicData: {}, staticData: {} },
   isLoading: true,
   isPending: false,
@@ -48,6 +53,14 @@ const selectElements = (
   { payload: selectedElements }: TAction<TSelectElementsAction['payload']>,
 ): TPageBuilderState => ({ ...state, selectedElements });
 
+const setAreCoordinates = (
+  state: TPageBuilderState,
+  { payload: areaCoordinates }: TAction<TSetAreaCoordinatesAction['payload']>,
+): TPageBuilderState => ({
+  ...state,
+  areaCoordinates: { ...state.areaCoordinates, ...areaCoordinates },
+});
+
 const unselectElement = (
   state: TPageBuilderState,
   { payload: id }: TAction<TUnselectElementAction['payload']>,
@@ -65,10 +78,12 @@ const pageBuilder = (
       return addElement(state, action);
     case SELECT_ELEMENT:
       return selectElement(state, action);
-    case UNSELECT_ELEMENT:
-      return unselectElement(state, action);
     case SELECT_ELEMENTS:
       return selectElements(state, action);
+    case SET_AREA_COORDINATES:
+      return setAreCoordinates(state, action);
+    case UNSELECT_ELEMENT:
+      return unselectElement(state, action);
     default:
       return state;
   }

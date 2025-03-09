@@ -14,6 +14,7 @@ export const useMouseMoveEvent = (
   cursorState: string,
   depedencies: Array<any>,
   onMouseMove: (event: MouseEvent) => void,
+  onUpdateCoordinates: ((coordinates: T3DCoordinates) => void) | null,
   setCoordinates: (coordinates: T3DCoordinates) => void,
 ): TUseMouseMoveEvent => {
   const handleMouseMove = (event: MouseEvent): void => {
@@ -23,6 +24,7 @@ export const useMouseMoveEvent = (
       cursorPosition,
       cursorState,
       event,
+      onUpdateCoordinates,
       setCoordinates,
     );
   };

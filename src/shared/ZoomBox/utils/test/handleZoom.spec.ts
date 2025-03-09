@@ -23,6 +23,7 @@ describe('handleZoom', () => {
       } as WheelEvent,
       lastWheelTime,
       mockCallBack,
+      mockCallBack,
       ref as RefObject<HTMLDivElement>,
     );
 
@@ -41,6 +42,7 @@ describe('handleZoom', () => {
         deltaY: 1,
       } as WheelEvent,
       { current: DATE_NOW_MOCKED },
+      mockCallBack,
       mockCallBack,
       ref as RefObject<HTMLDivElement>,
     );
@@ -65,6 +67,7 @@ describe('handleZoom', () => {
       } as WheelEvent,
       { current: DATE_NOW_MOCKED },
       mockCallBack,
+      mockCallBack,
       ref as RefObject<HTMLDivElement>,
     );
 
@@ -87,6 +90,7 @@ describe('handleZoom', () => {
         deltaY: 1,
       } as WheelEvent,
       { current: DATE_NOW_MOCKED },
+      mockCallBack,
       mockCallBack,
       ref as RefObject<HTMLDivElement>,
     );

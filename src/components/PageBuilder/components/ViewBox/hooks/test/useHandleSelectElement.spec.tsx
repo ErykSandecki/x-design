@@ -47,7 +47,14 @@ describe('useHandleSelectElement', () => {
 
     // result
     expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
-      [selectedElementMock.id]: selectedElementMock,
+      [selectedElementMock.id]: {
+        ...selectedElementMock,
+        coordinates: {
+          ...selectedElementMock.coordinates,
+          x2: 100,
+          y2: 100,
+        },
+      },
     });
   });
 
