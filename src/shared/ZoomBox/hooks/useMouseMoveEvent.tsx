@@ -1,6 +1,9 @@
 import { debounce } from 'lodash';
 import { RefObject, useCallback, useEffect } from 'react';
 
+// others
+import { DEBOUNCE_TIME } from 'constant/constants';
+
 // types
 import { T2DCoordinates, T3DCoordinates } from 'types';
 
@@ -21,7 +24,7 @@ export const useMouseMoveEvent = (
   const onUpdateCoordinatesDelay = useCallback(
     debounce((coordinates: T3DCoordinates) => {
       onUpdateCoordinates(coordinates);
-    }, 500),
+    }, DEBOUNCE_TIME),
     [],
   );
 

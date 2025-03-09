@@ -7,6 +7,7 @@ import {
   UNSELECT_ELEMENT,
   SELECT_ELEMENTS,
   SET_AREA_COORDINATES,
+  SET_ELEMENT_COORDINATES,
 } from './actionsType';
 import { BASE_3D } from 'shared';
 
@@ -19,10 +20,12 @@ import {
   TUnselectElementAction,
   TSelectElementsAction,
   TSetAreaCoordinatesAction,
+  TSetElementCoordinatesAction,
 } from './types';
 
 // utils
 import { handleAddElement } from './utils/handleAddElement';
+import { handlSetElementCoordinates } from './utils/handlSetElementCoordinates';
 
 const initialState: TPageBuilderState = {
   areaCoordinates: BASE_3D,
@@ -61,6 +64,13 @@ const setAreCoordinates = (
   areaCoordinates: { ...state.areaCoordinates, ...areaCoordinates },
 });
 
+const setElementCoordinates = (
+  state: TPageBuilderState,
+  {
+    payload: { id, positionAbsolute },
+  }: TAction<TSetElementCoordinatesAction['payload']>,
+): TPageBuilderState => handlSetElementCoordinates(id, positionAbsolute, state);
+
 const unselectElement = (
   state: TPageBuilderState,
   { payload: id }: TAction<TUnselectElementAction['payload']>,
@@ -82,6 +92,8 @@ const pageBuilder = (
       return selectElements(state, action);
     case SET_AREA_COORDINATES:
       return setAreCoordinates(state, action);
+    case SET_ELEMENT_COORDINATES:
+      return setElementCoordinates(state, action);
     case UNSELECT_ELEMENT:
       return unselectElement(state, action);
     default:

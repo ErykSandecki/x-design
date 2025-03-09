@@ -2,7 +2,7 @@ import { Provider } from 'react-redux';
 import { render } from '@testing-library/react';
 
 // components
-import Corners from './Corners';
+import ClickableArea from './ClickableArea';
 
 // mocks
 import 'test/mocks/sagas/allSagas';
@@ -13,15 +13,15 @@ import { BASE_RECT } from 'shared';
 // store
 import { configureStore } from 'store/store';
 
-describe('Corners snapshots', () => {
-  it('should render Corners', () => {
+describe('ClickableArea snapshots', () => {
+  it('should render ClickableArea', () => {
     // mock
     const store = configureStore();
 
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <Corners rectCoordinates={BASE_RECT} />
+        <ClickableArea rectCoordinates={BASE_RECT} />
       </Provider>,
     );
 

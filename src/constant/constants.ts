@@ -24,4 +24,6 @@ export const DATE_FORMATS = [
   DATE_FORMAT_HOURS_MINUTES_SECONDS,
 ] as const;
 
+export const DEBOUNCE_TIME = 250;
+
 export const ROWS_PER_PAGE = [5, 25, 50, 100] as const;

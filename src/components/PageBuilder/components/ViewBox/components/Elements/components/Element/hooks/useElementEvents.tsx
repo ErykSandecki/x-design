@@ -27,6 +27,7 @@ export const useElementEvents = (
   mouseMode: MouseMode,
   parentId: TSelectedElement['parentId'],
   position: T2DCoordinates,
+  setPosition: (position: T2DCoordinates) => void,
   type: TSelectedElement['type'],
   width: TElement['width'],
 ): TUseElementEvents => {
@@ -45,7 +46,16 @@ export const useElementEvents = (
     type,
   };
 
-  useMouseMoveEvent(isMoving, isPressing, mouseMode, position, setIsMoving);
+  useMouseMoveEvent(
+    cursorPosition,
+    id,
+    isMoving,
+    isPressing,
+    mouseMode,
+    position,
+    setIsMoving,
+    setPosition,
+  );
   useMouseUpEvent(
     isMoving,
     isMultiple,
@@ -63,6 +73,7 @@ export const useElementEvents = (
       isMultiple,
       isSelected,
       mouseMode,
+      position,
       selectedElement,
       setIsPressing,
     ),

@@ -5,6 +5,7 @@ import {
   UNSELECT_ELEMENT,
   SELECT_ELEMENTS,
   SET_AREA_COORDINATES,
+  SET_ELEMENT_COORDINATES,
 } from './actionsType';
 
 // types
@@ -69,6 +70,16 @@ export type TSelectElementsAction = {
 export type TSetAreaCoordinatesAction = {
   payload: Partial<T3DCoordinates>;
   type: typeof SET_AREA_COORDINATES;
+};
+
+export type TSetElementCoordinatesActionPayload = Pick<
+  TElement,
+  'id' | 'positionAbsolute'
+>;
+
+export type TSetElementCoordinatesAction = {
+  payload: TSetElementCoordinatesActionPayload;
+  type: typeof SET_ELEMENT_COORDINATES;
 };
 
 export type TUnselectElementAction = {

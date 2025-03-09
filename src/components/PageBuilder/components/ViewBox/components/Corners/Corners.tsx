@@ -1,4 +1,4 @@
-import { CSSProperties, FC } from 'react';
+import { FC } from 'react';
 
 // hooks
 import { useTheme } from 'hooks';
@@ -6,7 +6,7 @@ import { useTheme } from 'hooks';
 // others
 import { className, classNames } from './classNames';
 
-import { HHW, RX, SHW, SW } from './constants';
+import { HHW, RX, SHW } from './constants';
 
 // styles
 import styles from './corners.scss';
@@ -15,40 +15,15 @@ import styles from './corners.scss';
 import { TRectCoordinates } from 'types';
 
 export type TCornersProps = {
-  clickable?: boolean;
   rectCoordinates: TRectCoordinates;
-  style?: CSSProperties;
-  withOutline?: boolean;
 };
 
-const Corners: FC<TCornersProps> = ({
-  clickable,
-  rectCoordinates,
-  style = {},
-  withOutline = false,
-}) => {
+const Corners: FC<TCornersProps> = ({ rectCoordinates }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { x1, x2, y1, y2 } = rectCoordinates || {};
 
   return (
-    <svg
-      className={cx(classNamesWithTheme[className].name, [
-        classNamesWithTheme[className].modificators.clickable,
-        clickable,
-      ])}
-      style={style}
-    >
-      {withOutline && (
-        <path
-          className={cx(classNamesWithTheme.outline.name, [
-            classNamesWithTheme.outline.modificators.clickable,
-            clickable,
-          ])}
-          onMouseDown={(event) => event.stopPropagation()}
-          d={`M ${x1},${y1} H ${x2} V ${y2} H ${x1} V ${y1}`}
-          strokeWidth={SW}
-        />
-      )}
+    <svg className={cx(classNamesWithTheme[className])}>
       <rect x={x1 - HHW} y={y1 - HHW} width={SHW} height={SHW} rx={RX} />
       <rect x={x1 - HHW} y={y2 - HHW} width={SHW} height={SHW} rx={RX} />
       <rect x={x2 - HHW} y={y1 - HHW} width={SHW} height={SHW} rx={RX} />

@@ -43,6 +43,7 @@ describe('useMouseMoveEvent', () => {
           false,
           true,
           MouseMode.default,
+          { x: 0, y: 0 },
           selectedElementMock,
           mockCallBack,
         ),
@@ -73,6 +74,7 @@ describe('useMouseMoveEvent', () => {
           false,
           true,
           MouseMode.comment,
+          { x: 0, y: 0 },
           selectedElementMock,
           mockCallBack,
         ),
@@ -85,6 +87,6 @@ describe('useMouseMoveEvent', () => {
     result.current({ stopPropagation: mockCallBack as any } as MouseEvent);
 
     // result
-    expect(mockCallBack.mock.calls.length).toBe(1);
+    expect(mockCallBack.mock.calls.length).toBe(0);
   });
 });

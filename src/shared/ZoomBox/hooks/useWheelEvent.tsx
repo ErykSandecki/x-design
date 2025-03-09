@@ -1,6 +1,9 @@
 import { debounce } from 'lodash';
 import { RefObject, useCallback, useRef, WheelEvent } from 'react';
 
+// others
+import { DEBOUNCE_TIME } from 'constant/constants';
+
 // types
 import { T3DCoordinates } from 'types';
 
@@ -20,7 +23,7 @@ export const useWheelEvent = (
   const onUpdateCoordinatesDelay = useCallback(
     debounce((coordinates: T3DCoordinates) => {
       onUpdateCoordinates(coordinates);
-    }, 500),
+    }, DEBOUNCE_TIME),
     [],
   );
 

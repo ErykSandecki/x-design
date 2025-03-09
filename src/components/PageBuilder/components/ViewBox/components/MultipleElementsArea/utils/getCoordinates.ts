@@ -1,7 +1,7 @@
 import { max, min } from 'lodash';
 
 // others
-import { SW } from '../../Corners/constants';
+import { SW } from '../../ClickableArea/constants';
 
 // types
 import { TRectCoordinates } from 'types';

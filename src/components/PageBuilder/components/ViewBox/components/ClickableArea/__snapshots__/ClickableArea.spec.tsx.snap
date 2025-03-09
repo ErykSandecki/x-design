@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClickableArea snapshots should render ClickableArea 1`] = `
+<DocumentFragment>
+  <svg
+    class="ClickableArea ClickableArea--light"
+  >
+    <path
+      class="ClickableArea__outline ClickableArea__outline--light"
+      d="M 0,0 H 0 V 0 H 0 V 0"
+      stroke-width="2.5"
+    />
+  </svg>
+</DocumentFragment>
+`;

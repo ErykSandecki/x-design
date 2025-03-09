@@ -1,0 +1,15 @@
+@import '../../../../styles/z-indexes.scss';
+
+.ClickableArea {
+  height: 100%;
+  overflow: visible;
+  position: absolute;
+  width: 100%;
+  z-index: $--rx-zindex-events;
+
+  &__outline {
+    @include theme('blue-1', stroke);
+
+    fill: rgba($color: #000000, $alpha: 0);
+  }
+}

@@ -1,24 +1,26 @@
 import { RefObject } from 'react';
 
 // others
-import { BASE_2D } from 'shared';
+import { BASE_2D, BASE_3D } from 'shared';
 
 // types
 import { T2DCoordinates } from 'types';
 
 // utils
-import { updateCursorPosition } from '../updateCursorPosition';
+import { updateCursorPositionByElementPosition } from '../updateCursorPositionByElementPosition';
 
 const ref = { current: BASE_2D } as RefObject<T2DCoordinates>;
 
-describe('updateCursorPosition', () => {
+describe('updateCursorPositionByElementPosition', () => {
   it(`should update cursor position`, () => {
     // before
-    updateCursorPosition(
+    updateCursorPositionByElementPosition(
       ref,
-      { clientX: 0, clientY: 0 } as MouseEvent,
-      0,
-      0,
+      { x: 0, y: 0 },
+      {
+        clientX: 0,
+        clientY: 0,
+      } as MouseEvent,
       1,
     );
 

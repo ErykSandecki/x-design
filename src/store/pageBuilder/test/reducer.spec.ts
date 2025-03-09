@@ -1,6 +1,9 @@
 // mocks
 import {
+  allDataMock,
   createFrameMock,
+  elementDynamicDataMock,
+  elementStaticDataMock,
   pageBuilderStateMock,
   selectedElementMock,
 } from 'test/mocks/reducer/pageBuilderMock';
@@ -16,6 +19,7 @@ import {
   unselectElement,
   selectElements,
   setAreCoordinates,
+  setElementCoordinates,
 } from '../actions';
 
 // types
@@ -117,6 +121,53 @@ describe('PageBuilderReducer', () => {
     expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       areaCoordinates,
+    });
+  });
+
+  it('should handle SET_ELEMENT_COORDINATES', () => {
+    // mock
+    const positionAbsolute = { x: 100, y: 100 };
+
+    // before
+    const state = reducer(
+      setElementCoordinates(allDataMock.id, positionAbsolute),
+      {
+        ...pageBuilderStateMock[PAGE_BUILDER],
+        elements: {
+          allData: {
+            [allDataMock.id]: allDataMock,
+          },
+          dynamicData: {
+            [elementDynamicDataMock.id]: elementDynamicDataMock,
+          },
+          staticData: {
+            [elementStaticDataMock.id]: elementStaticDataMock,
+          },
+        },
+      },
+    );
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      elements: {
+        ...pageBuilderStateMock[PAGE_BUILDER].elements,
+        allData: {
+          [allDataMock.id]: {
+            ...allDataMock,
+            positionAbsolute,
+          },
+        },
+        dynamicData: {
+          [elementDynamicDataMock.id]: {
+            ...elementDynamicDataMock,
+            positionAbsolute,
+          },
+        },
+        staticData: {
+          [elementStaticDataMock.id]: elementStaticDataMock,
+        },
+      },
     });
   });
 

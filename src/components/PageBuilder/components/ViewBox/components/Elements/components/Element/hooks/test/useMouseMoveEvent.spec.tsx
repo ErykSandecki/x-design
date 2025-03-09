@@ -1,4 +1,5 @@
 import { fireEvent, renderHook } from '@testing-library/react';
+import { RefObject } from 'react';
 
 // mocks
 import { pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
@@ -14,12 +15,13 @@ import { configureStore } from 'store';
 
 // types
 import { MouseMode } from 'components/PageBuilder/enums';
+import { T2DCoordinates } from 'types';
 
 // utils
 import { getProviderWrapper } from 'test';
 
 const mockCallBack = jest.fn();
-
+const ref = { current: BASE_2D } as RefObject<T2DCoordinates>;
 const stateMock = {
   ...pageBuilderStateMock,
 };
@@ -38,10 +40,13 @@ describe('useMouseMoveEvent', () => {
     renderHook(
       () =>
         useMouseMoveEvent(
+          ref,
+          '-1',
           false,
           true,
           MouseMode.default,
           BASE_2D,
+          mockCallBack,
           mockCallBack,
         ),
       {
@@ -64,10 +69,13 @@ describe('useMouseMoveEvent', () => {
     renderHook(
       () =>
         useMouseMoveEvent(
+          ref,
+          '-1',
           false,
           false,
           MouseMode.default,
           BASE_2D,
+          mockCallBack,
           mockCallBack,
         ),
       {

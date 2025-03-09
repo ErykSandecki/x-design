@@ -69,6 +69,7 @@ const Element: FC<TElementProps> = ({
     mouseMode,
     parentId,
     position,
+    setPosition,
     type,
     width,
   );
