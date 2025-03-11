@@ -1,13 +1,26 @@
-import { pick } from 'lodash';
+import { max, pick } from 'lodash';
 
 // types
 import { TAddELementActionPayload, TPageBuilderState } from '../types';
+
+// utils
+import { objectToArray } from 'utils';
+
+export const findIndex = (
+  element: TAddELementActionPayload,
+  state: TPageBuilderState,
+): number =>
+  max(
+    objectToArray(state.elements.allData)
+      .filter(({ parentId }) => element.parentId === parentId)
+      .map(({ index }) => index),
+  ) + 1 || 0;
 
 export const handleAddElement = (
   element: TAddELementActionPayload,
   state: TPageBuilderState,
 ): TPageBuilderState => {
-  const index = 0;
+  const index = findIndex(element, state);
 
   return {
     ...state,
