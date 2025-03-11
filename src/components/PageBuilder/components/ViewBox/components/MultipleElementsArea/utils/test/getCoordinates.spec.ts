@@ -15,7 +15,7 @@ describe('calculateBoxSize', () => {
     });
 
     // result
-    expect(result).toStrictEqual({ x1: -1.25, x2: 1.25, y1: -1.25, y2: 1.25 });
+    expect(result).toStrictEqual({ x1: -0.75, x2: 0.75, y1: -0.75, y2: 0.75 });
   });
 
   it(`should return default coordinates`, () => {

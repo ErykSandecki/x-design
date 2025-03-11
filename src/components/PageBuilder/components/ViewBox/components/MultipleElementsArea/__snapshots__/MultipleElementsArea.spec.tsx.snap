@@ -9,8 +9,8 @@ exports[`MultipleElementsArea snapshots should render MultipleElementsArea 1`] =
   >
     <path
       class="ClickableArea__outline ClickableArea__outline--light"
-      d="M -1.25,-1.25 H 1.25 V 1.25 H -1.25 V -1.25"
-      stroke-width="2.5"
+      d="M -0.75,-0.75 H 0.75 V 0.75 H -0.75 V -0.75"
+      stroke-width="1.5"
     />
   </svg>
   <svg
@@ -20,29 +20,29 @@ exports[`MultipleElementsArea snapshots should render MultipleElementsArea 1`] =
       height="6"
       rx="1.5"
       width="6"
-      x="-4.25"
-      y="-4.25"
+      x="-3.75"
+      y="-3.75"
     />
     <rect
       height="6"
       rx="1.5"
       width="6"
-      x="-4.25"
-      y="-1.75"
+      x="-3.75"
+      y="-2.25"
     />
     <rect
       height="6"
       rx="1.5"
       width="6"
-      x="-1.75"
-      y="-4.25"
+      x="-2.25"
+      y="-3.75"
     />
     <rect
       height="6"
       rx="1.5"
       width="6"
-      x="-1.75"
-      y="-1.75"
+      x="-2.25"
+      y="-2.25"
     />
   </svg>
 </DocumentFragment>

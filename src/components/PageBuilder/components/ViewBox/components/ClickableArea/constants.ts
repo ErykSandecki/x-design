@@ -1,1 +1,1 @@
-export const SW = 2.5;
+export const SW = 1.5;

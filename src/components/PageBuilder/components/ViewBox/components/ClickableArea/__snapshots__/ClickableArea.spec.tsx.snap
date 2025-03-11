@@ -10,7 +10,7 @@ exports[`ClickableArea snapshots should render ClickableArea 1`] = `
     <path
       class="ClickableArea__outline ClickableArea__outline--light"
       d="M 0,0 H 0 V 0 H 0 V 0"
-      stroke-width="2.5"
+      stroke-width="1.5"
     />
   </svg>
 </DocumentFragment>
