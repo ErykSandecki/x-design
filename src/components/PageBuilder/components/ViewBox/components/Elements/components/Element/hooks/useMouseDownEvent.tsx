@@ -1,18 +1,14 @@
 import { MouseEvent, RefObject } from 'react';
 import { useDispatch } from 'react-redux';
 
-// store
-import { areaAxisSelectorCreator } from 'store/pageBuilder/selectors';
-import { store } from 'store';
-
 // types
 import { MouseButton, T2DCoordinates } from 'types';
 import { MouseMode } from '../../../../../../../enums';
-import { TSelectedElement } from 'store/pageBuilder/types';
+import { TPageBuilderState, TSelectedElement } from 'store/pageBuilder/types';
 
 // utils
 import { handleSelectElement } from '../utils/handleSelectElement';
-import { updateCursorPositionByElementPosition } from 'components/PageBuilder/components/ViewBox/utils/updateCursorPositionByElementPosition';
+import { updateCursorPosition } from '../utils/updateCursorPosition';
 
 export type TUseMouseDownEvent = (event: MouseEvent) => void;
 
@@ -22,6 +18,7 @@ export const useMouseDownEvent = (
   isSelected: boolean,
   mouseMode: MouseMode,
   position: T2DCoordinates,
+  prevState: RefObject<TPageBuilderState>,
   selectedElement: TSelectedElement,
   setIsPressing: (isPressing: boolean) => void,
 ): TUseMouseDownEvent => {
@@ -30,9 +27,16 @@ export const useMouseDownEvent = (
   const handleMouseDown = (event: MouseEvent): void => {
     if (event.buttons === MouseButton.lmb && mouseMode === MouseMode.default) {
       event.stopPropagation();
-      const z = areaAxisSelectorCreator('z')(store.getState());
 
-      updateCursorPositionByElementPosition(cursorPosition, position, event, z);
+      updateCursorPosition(
+        cursorPosition,
+        dispatch,
+        position,
+        event,
+        isMultiple,
+        isSelected,
+        prevState,
+      );
       setIsPressing(true);
       handleSelectElement(
         dispatch,

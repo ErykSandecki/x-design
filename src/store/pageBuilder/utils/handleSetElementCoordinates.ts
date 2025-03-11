@@ -4,7 +4,7 @@ import {
   TSetElementCoordinatesActionPayload,
 } from '../types';
 
-export const handlSetElementCoordinates = (
+export const handleSetElementCoordinates = (
   id: TSetElementCoordinatesActionPayload['id'],
   positionAbsolute: TSetElementCoordinatesActionPayload['positionAbsolute'],
   state: TPageBuilderState,

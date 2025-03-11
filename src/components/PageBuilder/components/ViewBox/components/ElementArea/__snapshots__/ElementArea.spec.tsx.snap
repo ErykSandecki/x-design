@@ -23,7 +23,7 @@ exports[`ElementArea snapshots should render ElementArea 1`] = `
       />
     </svg>
     <svg
-      class="Corners Corners--light"
+      class="Corners Corners--light Corners--increase-zindex Corners--increase-zindex--light"
     >
       <rect
         height="6"
@@ -79,7 +79,7 @@ exports[`ElementArea snapshots should render with label when x2 i y2 is less tha
       />
     </svg>
     <svg
-      class="Corners Corners--light"
+      class="Corners Corners--light Corners--increase-zindex Corners--increase-zindex--light"
     >
       <rect
         height="6"

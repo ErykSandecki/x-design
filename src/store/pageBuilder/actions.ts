@@ -6,6 +6,8 @@ import {
   SELECT_ELEMENTS,
   SET_AREA_COORDINATES,
   SET_ELEMENT_COORDINATES,
+  SET_ELEMENTS_COORDINATES,
+  UPDATE_EVENTS_STATUS,
 } from './actionsType';
 
 // types
@@ -18,6 +20,9 @@ import {
   TSetAreaCoordinatesAction,
   TSetElementCoordinatesAction,
   TSetElementCoordinatesActionPayload,
+  TSetElementsCoordinatesAction,
+  TSetElementsCoordinatesActionPayload,
+  TUpdateEventsStatusAction,
 } from './types';
 
 export const addElement = (
@@ -54,6 +59,21 @@ export const setElementCoordinates = (
 ): TSetElementCoordinatesAction => ({
   payload: { id, positionAbsolute },
   type: SET_ELEMENT_COORDINATES,
+});
+
+export const setElementsCoordinates = (
+  coordinates: TSetElementsCoordinatesActionPayload['coordinates'],
+  prevState: TSetElementsCoordinatesActionPayload['prevState'],
+): TSetElementsCoordinatesAction => ({
+  payload: { coordinates, prevState },
+  type: SET_ELEMENTS_COORDINATES,
+});
+
+export const updateEventsStauts = (
+  payload: TUpdateEventsStatusAction['payload'],
+): TUpdateEventsStatusAction => ({
+  payload,
+  type: UPDATE_EVENTS_STATUS,
 });
 
 export const unselectElement = (

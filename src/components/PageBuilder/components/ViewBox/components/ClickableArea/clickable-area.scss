@@ -5,7 +5,7 @@
   overflow: visible;
   position: absolute;
   width: 100%;
-  z-index: $--rx-zindex-events;
+  z-index: $--rx-zindex-element;
 
   &__outline {
     @include theme('blue-1', stroke);

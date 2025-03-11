@@ -1,4 +1,5 @@
 import { FC, useRef } from 'react';
+import { useDispatch } from 'react-redux';
 
 // components
 import Elements from './components/Elements/Elements';
@@ -14,14 +15,15 @@ import { className, classNames } from './classNames';
 import { useTheme } from 'hooks';
 import { useViewBoxEvents } from './hooks/useViewBoxEvents';
 
+// store
+import { setAreCoordinates } from 'store/pageBuilder/actions';
+
 // styles
 import styles from './view-box.scss';
 
 // types
 import { MouseMode } from 'components/PageBuilder/enums';
 import { T3DCoordinates } from 'types';
-import { useDispatch } from 'react-redux';
-import { setAreCoordinates } from 'store/pageBuilder/actions';
 
 export type TViewBoxProps = {
   coordinates: T3DCoordinates;
@@ -63,12 +65,12 @@ const ViewBox: FC<TViewBoxProps> = ({
       zoomBoxRef={zoomBoxRef}
       {...events}
     >
+      <MultipleElementsArea />
       <Elements
         eventsDisabled={elementArea !== null || mouseMode !== MouseMode.default}
         mouseMode={mouseMode}
       />
       <ElementArea elementArea={elementArea} />
-      <MultipleElementsArea mouseMode={mouseMode} />
       <SelectableArea selectableArea={selectableArea} />
     </ZoomBox>
   );

@@ -23,7 +23,6 @@ import { MouseMode } from 'components/PageBuilder/enums';
 // utils
 import { getProviderWrapper } from 'test';
 
-const mockCallBack = jest.fn();
 const ref = { current: { contains: () => false } } as RefObject<any>;
 const stateMock = {
   ...pageBuilderStateMock,
@@ -46,7 +45,6 @@ describe('useElementEvents', () => {
           MouseMode.default,
           selectedElementMock.parentId,
           BASE_2D,
-          mockCallBack,
           ElementType.frame,
           100,
         ),

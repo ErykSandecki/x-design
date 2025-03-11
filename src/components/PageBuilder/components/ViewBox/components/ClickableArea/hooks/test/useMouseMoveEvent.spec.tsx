@@ -15,25 +15,25 @@ import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 import { configureStore } from 'store';
 
 // types
-import { MouseMode } from 'components/PageBuilder/enums';
 import { T2DCoordinates } from 'types';
 import { TPageBuilderState } from 'store/pageBuilder/types';
 
 // utils
 import { getProviderWrapper } from 'test';
 
+const cursorPosition = { current: BASE_2D } as RefObject<T2DCoordinates>;
 const mockCallBack = jest.fn();
-const ref = { current: BASE_2D } as RefObject<T2DCoordinates>;
 const prevState = {
   current: pageBuilderStateMock[PAGE_BUILDER],
 } as RefObject<TPageBuilderState>;
+
 const stateMock = {
   ...pageBuilderStateMock,
 };
 
 jest.mock('lodash', () => ({
   ...jest.requireActual('lodash'),
-  throttle: (callback) => callback,
+  throttle: () => mockCallBack,
 }));
 
 describe('useMouseMoveEvent', () => {
@@ -42,29 +42,15 @@ describe('useMouseMoveEvent', () => {
     const store = configureStore(stateMock);
 
     // before
-    renderHook(
-      () =>
-        useMouseMoveEvent(
-          ref,
-          '-1',
-          false,
-          false,
-          true,
-          MouseMode.default,
-          BASE_2D,
-          prevState,
-          mockCallBack,
-        ),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    renderHook(() => useMouseMoveEvent(cursorPosition, true, prevState), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // action
-    fireEvent.mouseMove(window, {});
+    fireEvent.mouseMove(window);
 
     // result
-    expect(mockCallBack.mock.calls[0][0]).toBe(true);
+    expect(mockCallBack.mock.calls.length).toBe(1);
   });
 
   it(`should not trigger event`, () => {
@@ -72,26 +58,12 @@ describe('useMouseMoveEvent', () => {
     const store = configureStore(stateMock);
 
     // before
-    renderHook(
-      () =>
-        useMouseMoveEvent(
-          ref,
-          '-1',
-          false,
-          false,
-          false,
-          MouseMode.default,
-          BASE_2D,
-          prevState,
-          mockCallBack,
-        ),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    renderHook(() => useMouseMoveEvent(cursorPosition, false, prevState), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // action
-    fireEvent.mouseMove(window, {});
+    fireEvent.mouseMove(window);
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(0);

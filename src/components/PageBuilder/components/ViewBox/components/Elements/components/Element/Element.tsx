@@ -1,4 +1,4 @@
-import { FC, memo, ReactNode, useRef, useState } from 'react';
+import { FC, memo, ReactNode, useRef } from 'react';
 import { useSelector } from 'react-redux';
 
 // components
@@ -55,9 +55,8 @@ const Element: FC<TElementProps> = ({
   const elementRef = useRef<HTMLDivElement>(null);
   const elementDynamicData = useSelector(elementDynamicDataSelectorCreator(id));
   const { positionAbsolute } = elementDynamicData;
-  const [position, setPosition] = useState(positionAbsolute);
   const { height, width } = elementDynamicData;
-  const { x, y } = position;
+  const { x, y } = positionAbsolute;
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const rectCoordinates = getCornersPosition(height, width);
   const events = useElementEvents(
@@ -68,8 +67,7 @@ const Element: FC<TElementProps> = ({
     isSelected,
     mouseMode,
     parentId,
-    position,
-    setPosition,
+    positionAbsolute,
     type,
     width,
   );

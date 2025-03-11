@@ -10,4 +10,8 @@
   position: absolute;
   width: 100%;
   z-index: $--rx-zindex-element;
+
+  &--increase-zindex {
+    z-index: $--rx-zindex-element-active;
+  }
 }

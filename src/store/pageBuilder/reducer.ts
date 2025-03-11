@@ -8,6 +8,8 @@ import {
   SELECT_ELEMENTS,
   SET_AREA_COORDINATES,
   SET_ELEMENT_COORDINATES,
+  SET_ELEMENTS_COORDINATES,
+  UPDATE_EVENTS_STATUS,
 } from './actionsType';
 import { BASE_3D } from 'shared';
 
@@ -21,15 +23,19 @@ import {
   TSelectElementsAction,
   TSetAreaCoordinatesAction,
   TSetElementCoordinatesAction,
+  TSetElementsCoordinatesAction,
+  TUpdateEventsStatusAction,
 } from './types';
 
 // utils
 import { handleAddElement } from './utils/handleAddElement';
-import { handlSetElementCoordinates } from './utils/handlSetElementCoordinates';
+import { handleSetElementCoordinates } from './utils/handleSetElementCoordinates';
+import { handleSetElementsCoordinates } from './utils/handleSetElementsCoordinates';
 
 const initialState: TPageBuilderState = {
   areaCoordinates: BASE_3D,
   elements: { allData: {}, dynamicData: {}, staticData: {} },
+  events: { isMultipleMoving: false },
   isLoading: true,
   isPending: false,
   selectedElements: {},
@@ -69,7 +75,27 @@ const setElementCoordinates = (
   {
     payload: { id, positionAbsolute },
   }: TAction<TSetElementCoordinatesAction['payload']>,
-): TPageBuilderState => handlSetElementCoordinates(id, positionAbsolute, state);
+): TPageBuilderState =>
+  handleSetElementCoordinates(id, positionAbsolute, state);
+
+const setElementsCoordinates = (
+  state: TPageBuilderState,
+  {
+    payload: { coordinates, prevState },
+  }: TAction<TSetElementsCoordinatesAction['payload']>,
+): TPageBuilderState =>
+  handleSetElementsCoordinates(coordinates, prevState, state);
+
+const updateEventsStatus = (
+  state: TPageBuilderState,
+  { payload: events }: TAction<TUpdateEventsStatusAction['payload']>,
+): TPageBuilderState => ({
+  ...state,
+  events: {
+    ...state.events,
+    ...events,
+  },
+});
 
 const unselectElement = (
   state: TPageBuilderState,
@@ -94,6 +120,10 @@ const pageBuilder = (
       return setAreCoordinates(state, action);
     case SET_ELEMENT_COORDINATES:
       return setElementCoordinates(state, action);
+    case SET_ELEMENTS_COORDINATES:
+      return setElementsCoordinates(state, action);
+    case UPDATE_EVENTS_STATUS:
+      return updateEventsStatus(state, action);
     case UNSELECT_ELEMENT:
       return unselectElement(state, action);
     default:

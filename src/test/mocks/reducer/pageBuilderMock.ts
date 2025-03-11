@@ -6,6 +6,7 @@ import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 import {
   TElementDynamicData,
   TElementStaticData,
+  TEvents,
   TPageBuilderState,
   TSelectedElement,
 } from 'store/pageBuilder/types';
@@ -18,6 +19,7 @@ export const pageBuilderStateMock: Record<
   [PAGE_BUILDER]: {
     areaCoordinates: BASE_3D,
     elements: { allData: {}, dynamicData: {}, staticData: {} },
+    events: { isMultipleMoving: false },
     isLoading: true,
     isPending: false,
     selectedElements: {},
@@ -61,6 +63,10 @@ export const createFrameMock: TElement = {
   rotate: 0,
   type: ElementType.frame,
   width: 0,
+};
+
+export const eventsMock: TEvents = {
+  isMultipleMoving: false,
 };
 
 export const selectedElementMock: TSelectedElement = {

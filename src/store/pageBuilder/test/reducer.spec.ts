@@ -1,3 +1,5 @@
+import { cloneDeep } from 'lodash';
+
 // mocks
 import {
   allDataMock,
@@ -20,6 +22,8 @@ import {
   selectElements,
   setAreCoordinates,
   setElementCoordinates,
+  setElementsCoordinates,
+  updateEventsStauts,
 } from '../actions';
 
 // types
@@ -167,6 +171,77 @@ describe('PageBuilderReducer', () => {
         staticData: {
           [elementStaticDataMock.id]: elementStaticDataMock,
         },
+      },
+    });
+  });
+
+  it('should handle SET_ELEMENTS_COORDINATES', () => {
+    // mock
+    const coordinates = { x: 100, y: 100 };
+    const mockState = {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      elements: {
+        allData: { [allDataMock.id]: allDataMock },
+        dynamicData: { [elementDynamicDataMock.id]: elementDynamicDataMock },
+        staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
+      },
+      selectedElements: {
+        [selectedElementMock.id]: selectedElementMock,
+      },
+    };
+    const prevState = cloneDeep(mockState);
+
+    // before
+    const state = reducer(
+      setElementsCoordinates(coordinates, prevState),
+      mockState,
+    );
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      elements: {
+        allData: {
+          [allDataMock.id]: {
+            ...allDataMock,
+            positionAbsolute: coordinates,
+            positionRelative: coordinates,
+          },
+        },
+        dynamicData: {
+          [elementDynamicDataMock.id]: {
+            ...elementDynamicDataMock,
+            positionAbsolute: coordinates,
+            positionRelative: coordinates,
+          },
+        },
+        staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
+      },
+      selectedElements: {
+        [selectedElementMock.id]: {
+          ...selectedElementMock,
+          coordinates: {
+            x1: coordinates.x,
+            x2: coordinates.x,
+            y1: coordinates.y,
+            y2: coordinates.y,
+          },
+        },
+      },
+    });
+  });
+
+  it('should handle UPDATE_EVENTS_STATUS', () => {
+    // before
+    const state = reducer(updateEventsStauts({ isMultipleMoving: true }), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      events: {
+        isMultipleMoving: true,
       },
     });
   });

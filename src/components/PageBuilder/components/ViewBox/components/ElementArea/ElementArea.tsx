@@ -49,7 +49,7 @@ const ElementArea: FC<TElementAreaProps> = ({ elementArea }) => {
       <svg className={cx(classNamesWithTheme.area)}>
         <path d={`M ${x1},${y1} H ${x2} V ${y2} H ${x1} V ${y1}`} />
       </svg>
-      <Corners rectCoordinates={elementArea} />
+      <Corners increaseZIndex rectCoordinates={elementArea} />
     </Box>
   );
 };

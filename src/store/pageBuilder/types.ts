@@ -6,11 +6,14 @@ import {
   SELECT_ELEMENTS,
   SET_AREA_COORDINATES,
   SET_ELEMENT_COORDINATES,
+  SET_ELEMENTS_COORDINATES,
+  UPDATE_EVENTS_STATUS,
 } from './actionsType';
 
 // types
 import {
   ElementType,
+  T2DCoordinates,
   T3DCoordinates,
   TElement,
   TObject,
@@ -33,6 +36,16 @@ export type TElementsData = {
   staticData: TObject<TElementStaticData>;
 };
 
+export type TEvents = {
+  isMultipleMoving;
+};
+
+export type TPositions = {
+  allData: TElementsData['allData'];
+  dynamicData: TElementsData['dynamicData'];
+  selectedElements: TSelectedElements;
+};
+
 export type TSelectedElement = {
   coordinates: TRectCoordinates;
   id: TElement['id'];
@@ -45,6 +58,7 @@ export type TSelectedElements = TObject<TSelectedElement>;
 export type TPageBuilderState = {
   areaCoordinates: T3DCoordinates;
   elements: TElementsData;
+  events: TEvents;
   isLoading: boolean;
   isPending: boolean;
   selectedElements: TSelectedElements;
@@ -80,6 +94,21 @@ export type TSetElementCoordinatesActionPayload = Pick<
 export type TSetElementCoordinatesAction = {
   payload: TSetElementCoordinatesActionPayload;
   type: typeof SET_ELEMENT_COORDINATES;
+};
+
+export type TSetElementsCoordinatesActionPayload = {
+  coordinates: T2DCoordinates;
+  prevState: TPageBuilderState;
+};
+
+export type TSetElementsCoordinatesAction = {
+  payload: TSetElementsCoordinatesActionPayload;
+  type: typeof SET_ELEMENTS_COORDINATES;
+};
+
+export type TUpdateEventsStatusAction = {
+  payload: Partial<TObject<boolean, TEvents>>;
+  type: typeof UPDATE_EVENTS_STATUS;
 };
 
 export type TUnselectElementAction = {

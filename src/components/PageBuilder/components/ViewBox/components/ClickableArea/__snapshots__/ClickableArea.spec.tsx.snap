@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ClickableArea snapshots should not render when isMultipleMoving 1`] = `<DocumentFragment />`;
+
 exports[`ClickableArea snapshots should render ClickableArea 1`] = `
 <DocumentFragment>
   <svg

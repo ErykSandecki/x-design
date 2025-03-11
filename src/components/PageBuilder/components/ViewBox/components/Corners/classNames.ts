@@ -1,5 +1,10 @@
 export const className = 'Corners';
 
 export const classNames = {
-  [className]: className,
+  [className]: {
+    name: className,
+    modificators: {
+      increaseZIndex: `${className}--increase-zindex`,
+    },
+  },
 };

@@ -1,18 +1,14 @@
-import { debounce, throttle } from 'lodash';
-import { RefObject, useCallback, useEffect } from 'react';
+import { RefObject, useEffect } from 'react';
+import { throttle } from 'lodash';
 import { useDispatch } from 'react-redux';
 
 // others
-import { DEBOUNCE_TIME } from 'constant/constants';
 import { THROTTLE_WAIT } from '../constants';
-
-// store
-import { setElementCoordinates } from 'store/pageBuilder/actions';
 
 // types
 import { MouseMode } from 'components/PageBuilder/enums';
 import { T2DCoordinates } from 'types';
-import { TSelectedElement } from 'store/pageBuilder/types';
+import { TPageBuilderState, TSelectedElement } from 'store/pageBuilder/types';
 
 // utils
 import { updateElementPosition } from '../utils/updateElementPosition';
@@ -23,28 +19,25 @@ export const useMouseMoveEvent = (
   cursorPosition: RefObject<T2DCoordinates>,
   id: TSelectedElement['id'],
   isMoving: boolean,
+  isMultiple: boolean,
   isPressing: boolean,
   mouseMode: MouseMode,
   position: T2DCoordinates,
+  prevState: RefObject<TPageBuilderState>,
   setIsMoving: (isMoving: boolean) => void,
-  setPosition: (position: T2DCoordinates) => void,
 ): TUseMouseMoveEvent => {
   const dispatch = useDispatch();
-  const onUpdateCoordinatesDelay = useCallback(
-    debounce((coordinates: T2DCoordinates) => {
-      dispatch(setElementCoordinates(id, coordinates));
-    }, DEBOUNCE_TIME),
-    [],
-  );
 
   const handleMouseMove = throttle((event: MouseEvent): void => {
     if (isPressing && mouseMode === MouseMode.default) {
       setIsMoving(true);
       updateElementPosition(
         cursorPosition,
+        dispatch,
         event,
-        onUpdateCoordinatesDelay,
-        setPosition,
+        id,
+        isMultiple,
+        prevState,
       );
     }
   }, THROTTLE_WAIT);

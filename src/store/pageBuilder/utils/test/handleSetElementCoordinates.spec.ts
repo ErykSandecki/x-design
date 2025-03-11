@@ -10,15 +10,15 @@ import {
 import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
 
 // utils
-import { handlSetElementCoordinates } from '../handlSetElementCoordinates';
+import { handleSetElementCoordinates } from '../handleSetElementCoordinates';
 
-describe('handlSetElementCoordinates', () => {
+describe('handleSetElementCoordinates', () => {
   it(`should return data with changed element coordinates`, () => {
     // mock
     const positionAbsolute = { x: 100, y: 100 };
 
     // before
-    const result = handlSetElementCoordinates(
+    const result = handleSetElementCoordinates(
       allDataMock.id,
       positionAbsolute,
       {

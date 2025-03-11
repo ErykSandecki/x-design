@@ -12,6 +12,7 @@ import {
   TElementDynamicData,
   TPageBuilderState,
   TSelectedElements,
+  TEvents,
 } from './types';
 import { TMainState } from 'types/reducers';
 
@@ -46,6 +47,11 @@ export const staticDataSelector: Selector<
   TMainState,
   TElementsData['staticData']
 > = createSelector(elementsSelector, getFp('staticData'));
+
+export const eventsSelector: Selector<TMainState, TEvents> = createSelector(
+  pageBuilderStateSelector,
+  getFp('events'),
+);
 
 export const isLoadingSelector: Selector<TMainState, boolean> = createSelector(
   pageBuilderStateSelector,

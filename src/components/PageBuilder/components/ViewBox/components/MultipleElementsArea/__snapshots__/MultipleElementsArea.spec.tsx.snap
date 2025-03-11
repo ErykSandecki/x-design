@@ -14,7 +14,7 @@ exports[`MultipleElementsArea snapshots should render MultipleElementsArea 1`] =
     />
   </svg>
   <svg
-    class="Corners Corners--light"
+    class="Corners Corners--light Corners--increase-zindex Corners--increase-zindex--light"
   >
     <rect
       height="6"
