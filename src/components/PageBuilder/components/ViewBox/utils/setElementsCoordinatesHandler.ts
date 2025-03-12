@@ -8,13 +8,11 @@ import { store } from 'store';
 
 // types
 import { T2DCoordinates } from 'types';
-import { TPageBuilderState } from 'store/pageBuilder/types';
 
 export const setElementsCoordinatesHandler = (
   cursorPosition: RefObject<T2DCoordinates>,
   dispatch: Dispatch,
   event: MouseEvent,
-  prevState: RefObject<TPageBuilderState>,
 ): void => {
   const z = areaAxisSelectorCreator('z')(store.getState());
   const { x, y } = cursorPosition.current;
@@ -24,5 +22,5 @@ export const setElementsCoordinatesHandler = (
     y: Math.round(event.clientY / z - y / z),
   };
 
-  dispatch(setElementsCoordinates(coordinates, prevState.current));
+  dispatch(setElementsCoordinates(coordinates));
 };

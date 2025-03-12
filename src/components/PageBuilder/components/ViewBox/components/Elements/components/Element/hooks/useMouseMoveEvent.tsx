@@ -8,7 +8,7 @@ import { THROTTLE_WAIT } from '../constants';
 // types
 import { MouseMode } from 'components/PageBuilder/enums';
 import { T2DCoordinates } from 'types';
-import { TPageBuilderState, TSelectedElement } from 'store/pageBuilder/types';
+import { TSelectedElement } from 'store/pageBuilder/types';
 
 // utils
 import { updateElementPosition } from '../utils/updateElementPosition';
@@ -23,7 +23,6 @@ export const useMouseMoveEvent = (
   isPressing: boolean,
   mouseMode: MouseMode,
   position: T2DCoordinates,
-  prevState: RefObject<TPageBuilderState>,
   setIsMoving: (isMoving: boolean) => void,
 ): TUseMouseMoveEvent => {
   const dispatch = useDispatch();
@@ -31,14 +30,7 @@ export const useMouseMoveEvent = (
   const handleMouseMove = throttle((event: MouseEvent): void => {
     if (isPressing && mouseMode === MouseMode.default) {
       setIsMoving(true);
-      updateElementPosition(
-        cursorPosition,
-        dispatch,
-        event,
-        id,
-        isMultiple,
-        prevState,
-      );
+      updateElementPosition(cursorPosition, dispatch, event, id, isMultiple);
     }
   }, THROTTLE_WAIT);
 

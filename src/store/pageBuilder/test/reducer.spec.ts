@@ -23,7 +23,7 @@ import {
   setAreCoordinates,
   setElementCoordinates,
   setElementsCoordinates,
-  updateEventsStauts,
+  updateEventsStatus,
 } from '../actions';
 
 // types
@@ -192,10 +192,10 @@ describe('PageBuilderReducer', () => {
     const prevState = cloneDeep(mockState);
 
     // before
-    const state = reducer(
-      setElementsCoordinates(coordinates, prevState),
-      mockState,
-    );
+    const state = reducer(setElementsCoordinates(coordinates), {
+      ...mockState,
+      prevState,
+    });
 
     // result
     expect(state).toStrictEqual({
@@ -217,6 +217,7 @@ describe('PageBuilderReducer', () => {
         },
         staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
       },
+      prevState,
       selectedElements: {
         [selectedElementMock.id]: {
           ...selectedElementMock,
@@ -233,7 +234,7 @@ describe('PageBuilderReducer', () => {
 
   it('should handle UPDATE_EVENTS_STATUS', () => {
     // before
-    const state = reducer(updateEventsStauts({ isMultipleMoving: true }), {
+    const state = reducer(updateEventsStatus({ isMultipleMoving: true }), {
       ...pageBuilderStateMock[PAGE_BUILDER],
     });
 
@@ -242,6 +243,9 @@ describe('PageBuilderReducer', () => {
       ...pageBuilderStateMock[PAGE_BUILDER],
       events: {
         isMultipleMoving: true,
+      },
+      prevState: {
+        ...pageBuilderStateMock[PAGE_BUILDER],
       },
     });
   });

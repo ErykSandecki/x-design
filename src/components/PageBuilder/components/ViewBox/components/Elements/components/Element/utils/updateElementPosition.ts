@@ -8,7 +8,7 @@ import { store } from 'store';
 
 // types
 import { T2DCoordinates } from 'types';
-import { TPageBuilderState, TSelectedElement } from 'store/pageBuilder/types';
+import { TSelectedElement } from 'store/pageBuilder/types';
 
 // utils
 import { setElementsCoordinatesHandler } from '../../../../../utils/setElementsCoordinatesHandler';
@@ -19,7 +19,6 @@ export const updateElementPosition = (
   event: MouseEvent,
   id: TSelectedElement['id'],
   isMultiple: boolean,
-  prevState: RefObject<TPageBuilderState>,
 ) => {
   if (!isMultiple) {
     const z = areaAxisSelectorCreator('z')(store.getState());
@@ -31,6 +30,6 @@ export const updateElementPosition = (
 
     dispatch(setElementCoordinates(id, positionAbsolute));
   } else {
-    setElementsCoordinatesHandler(cursorPosition, dispatch, event, prevState);
+    setElementsCoordinatesHandler(cursorPosition, dispatch, event);
   }
 };

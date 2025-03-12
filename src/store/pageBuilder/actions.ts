@@ -21,7 +21,6 @@ import {
   TSetElementCoordinatesAction,
   TSetElementCoordinatesActionPayload,
   TSetElementsCoordinatesAction,
-  TSetElementsCoordinatesActionPayload,
   TUpdateEventsStatusAction,
 } from './types';
 
@@ -62,14 +61,13 @@ export const setElementCoordinates = (
 });
 
 export const setElementsCoordinates = (
-  coordinates: TSetElementsCoordinatesActionPayload['coordinates'],
-  prevState: TSetElementsCoordinatesActionPayload['prevState'],
+  payload: TSetElementsCoordinatesAction['payload'],
 ): TSetElementsCoordinatesAction => ({
-  payload: { coordinates, prevState },
+  payload,
   type: SET_ELEMENTS_COORDINATES,
 });
 
-export const updateEventsStauts = (
+export const updateEventsStatus = (
   payload: TUpdateEventsStatusAction['payload'],
 ): TUpdateEventsStatusAction => ({
   payload,

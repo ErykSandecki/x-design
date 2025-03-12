@@ -34,11 +34,10 @@ describe('handleSetElementsCoordinates', () => {
     const prevState = cloneDeep(mockState);
 
     // before
-    const result = handleSetElementsCoordinates(
-      coordinates,
+    const result = handleSetElementsCoordinates(coordinates, {
+      ...mockState,
       prevState,
-      mockState,
-    );
+    });
 
     // result
     expect(result).toStrictEqual({
@@ -60,6 +59,7 @@ describe('handleSetElementsCoordinates', () => {
         },
         staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
       },
+      prevState,
       selectedElements: {
         [selectedElementMock.id]: {
           ...selectedElementMock,

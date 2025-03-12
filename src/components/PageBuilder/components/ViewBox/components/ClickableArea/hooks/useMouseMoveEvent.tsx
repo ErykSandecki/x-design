@@ -7,7 +7,6 @@ import { THROTTLE_WAIT } from '../../../constants';
 
 // types
 import { T2DCoordinates } from 'types';
-import { TPageBuilderState } from 'store/pageBuilder/types';
 
 // utils
 import { setElementsCoordinatesHandler } from '../../../utils/setElementsCoordinatesHandler';
@@ -17,12 +16,11 @@ export type TUseMouseDownEvent = void;
 export const useMouseMoveEvent = (
   cursorPosition: RefObject<T2DCoordinates>,
   isPressing: boolean,
-  prevState: RefObject<TPageBuilderState>,
 ): TUseMouseDownEvent => {
   const dispatch = useDispatch();
 
   const handleMouseMove = throttle((event: MouseEvent) => {
-    setElementsCoordinatesHandler(cursorPosition, dispatch, event, prevState);
+    setElementsCoordinatesHandler(cursorPosition, dispatch, event);
   }, THROTTLE_WAIT);
 
   useEffect(() => {

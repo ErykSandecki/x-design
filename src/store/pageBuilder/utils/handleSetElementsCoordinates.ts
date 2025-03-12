@@ -4,7 +4,7 @@ import {
   TPageBuilderState,
   TPositions,
   TSelectedElements,
-  TSetElementsCoordinatesActionPayload,
+  TSetElementsCoordinatesAction,
 } from '../types';
 
 export const getSelectedElementPosition = (
@@ -28,8 +28,8 @@ export const getSelectedElementPosition = (
 });
 
 export const getPositions = (
-  { x, y }: TSetElementsCoordinatesActionPayload['coordinates'],
-  prevState: TSetElementsCoordinatesActionPayload['prevState'],
+  { x, y }: TSetElementsCoordinatesAction['payload'],
+  prevState: TPageBuilderState['prevState'],
 ): TPositions => {
   const { allData, dynamicData } = prevState.elements;
   const selectedElements = prevState.selectedElements;
@@ -69,11 +69,10 @@ export const getPositions = (
 };
 
 export const handleSetElementsCoordinates = (
-  coordinates: TSetElementsCoordinatesActionPayload['coordinates'],
-  prevState: TSetElementsCoordinatesActionPayload['prevState'],
+  coordinates: TSetElementsCoordinatesAction['payload'],
   state: TPageBuilderState,
 ): TPageBuilderState => {
-  const positions = getPositions(coordinates, prevState);
+  const positions = getPositions(coordinates, state.prevState);
 
   return {
     ...state,

@@ -12,7 +12,7 @@ import { BASE_2D } from 'shared';
 // types
 import { MouseMode } from 'components/PageBuilder/enums';
 import { T2DCoordinates, TElement } from 'types';
-import { TPageBuilderState, TSelectedElement } from 'store/pageBuilder/types';
+import { TSelectedElement } from 'store/pageBuilder/types';
 
 export type TUseElementEvents = {
   onMouseDown: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
@@ -31,7 +31,6 @@ export const useElementEvents = (
   width: TElement['width'],
 ): TUseElementEvents => {
   const cursorPosition = useRef(BASE_2D);
-  const prevState = useRef<TPageBuilderState>(null);
   const [isMoving, setIsMoving] = useState(false);
   const [isPressing, setIsPressing] = useState(false);
   const selectedElement = {
@@ -54,7 +53,6 @@ export const useElementEvents = (
     isPressing,
     mouseMode,
     position,
-    prevState,
     setIsMoving,
   );
   useMouseUpEvent(
@@ -75,7 +73,6 @@ export const useElementEvents = (
       isSelected,
       mouseMode,
       position,
-      prevState,
       selectedElement,
       setIsPressing,
     ),

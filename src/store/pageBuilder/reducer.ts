@@ -38,6 +38,7 @@ const initialState: TPageBuilderState = {
   events: { isMultipleMoving: false },
   isLoading: true,
   isPending: false,
+  prevState: undefined,
   selectedElements: {},
 };
 
@@ -80,11 +81,8 @@ const setElementCoordinates = (
 
 const setElementsCoordinates = (
   state: TPageBuilderState,
-  {
-    payload: { coordinates, prevState },
-  }: TAction<TSetElementsCoordinatesAction['payload']>,
-): TPageBuilderState =>
-  handleSetElementsCoordinates(coordinates, prevState, state);
+  { payload: coordinates }: TAction<TSetElementsCoordinatesAction['payload']>,
+): TPageBuilderState => handleSetElementsCoordinates(coordinates, state);
 
 const updateEventsStatus = (
   state: TPageBuilderState,
@@ -95,6 +93,7 @@ const updateEventsStatus = (
     ...state.events,
     ...events,
   },
+  prevState: state,
 });
 
 const unselectElement = (

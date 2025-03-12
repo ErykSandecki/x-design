@@ -9,7 +9,6 @@ import { useMouseMoveEvent } from '../useMouseMoveEvent';
 
 // others
 import { BASE_2D } from 'shared';
-import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 
 // store
 import { configureStore } from 'store';
@@ -17,16 +16,12 @@ import { configureStore } from 'store';
 // types
 import { MouseMode } from 'components/PageBuilder/enums';
 import { T2DCoordinates } from 'types';
-import { TPageBuilderState } from 'store/pageBuilder/types';
 
 // utils
 import { getProviderWrapper } from 'test';
 
 const mockCallBack = jest.fn();
 const ref = { current: BASE_2D } as RefObject<T2DCoordinates>;
-const prevState = {
-  current: pageBuilderStateMock[PAGE_BUILDER],
-} as RefObject<TPageBuilderState>;
 const stateMock = {
   ...pageBuilderStateMock,
 };
@@ -52,7 +47,6 @@ describe('useMouseMoveEvent', () => {
           true,
           MouseMode.default,
           BASE_2D,
-          prevState,
           mockCallBack,
         ),
       {
@@ -82,7 +76,6 @@ describe('useMouseMoveEvent', () => {
           false,
           MouseMode.default,
           BASE_2D,
-          prevState,
           mockCallBack,
         ),
       {

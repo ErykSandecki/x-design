@@ -7,7 +7,6 @@ import { store } from 'store';
 
 // types
 import { T2DCoordinates, TElement } from 'types';
-import { TPageBuilderState } from 'store/pageBuilder/types';
 
 // utils
 import { initSetElementsCoordinates } from '../../../../../utils/initSetElementsCoordinates';
@@ -19,7 +18,6 @@ export const updateCursorPosition = (
   event: MouseEvent | React.MouseEvent,
   isMultiple: boolean,
   isSelected: boolean,
-  prevState: RefObject<TPageBuilderState>,
 ): void => {
   const z = areaAxisSelectorCreator('z')(store.getState());
 
@@ -29,12 +27,6 @@ export const updateCursorPosition = (
       y: Math.round(event.clientY - elementPosition.y * z),
     };
   } else {
-    initSetElementsCoordinates(
-      cursorPosition,
-      dispatch,
-      event,
-      true,
-      prevState,
-    );
+    initSetElementsCoordinates(cursorPosition, dispatch, event, true);
   }
 };

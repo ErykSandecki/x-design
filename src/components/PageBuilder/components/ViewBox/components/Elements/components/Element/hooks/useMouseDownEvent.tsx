@@ -18,7 +18,6 @@ export const useMouseDownEvent = (
   isSelected: boolean,
   mouseMode: MouseMode,
   position: T2DCoordinates,
-  prevState: RefObject<TPageBuilderState>,
   selectedElement: TSelectedElement,
   setIsPressing: (isPressing: boolean) => void,
 ): TUseMouseDownEvent => {
@@ -35,7 +34,6 @@ export const useMouseDownEvent = (
         event,
         isMultiple,
         isSelected,
-        prevState,
       );
       setIsPressing(true);
       handleSelectElement(

@@ -22,6 +22,7 @@ export const pageBuilderStateMock: Record<
     events: { isMultipleMoving: false },
     isLoading: true,
     isPending: false,
+    prevState: undefined,
     selectedElements: {},
   },
 };

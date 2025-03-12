@@ -17,13 +17,12 @@ export type TUseClickableAreaEvents = {
 
 export const useClickableAreaEvents = (): TUseClickableAreaEvents => {
   const cursorPosition = useRef(BASE_2D);
-  const prevState = useRef<TPageBuilderState>(null);
   const [isPressing, setIsPressing] = useState(false);
 
-  useMouseMoveEvent(cursorPosition, isPressing, prevState);
+  useMouseMoveEvent(cursorPosition, isPressing);
   useMouseUpEvent(setIsPressing);
 
   return {
-    onMouseDown: useMouseDownEvent(cursorPosition, prevState, setIsPressing),
+    onMouseDown: useMouseDownEvent(cursorPosition, setIsPressing),
   };
 };

@@ -1,8 +1,8 @@
 import { Dispatch } from 'redux';
 
 // store
-import { updateEventsStauts } from 'store/pageBuilder/actions';
+import { updateEventsStatus } from 'store/pageBuilder/actions';
 
 export const finishSetElementsCoordinates = (dispatch: Dispatch): void => {
-  dispatch(updateEventsStauts({ isMultipleMoving: false }));
+  dispatch(updateEventsStatus({ isMultipleMoving: false }));
 };

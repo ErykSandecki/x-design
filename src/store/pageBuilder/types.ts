@@ -61,6 +61,7 @@ export type TPageBuilderState = {
   events: TEvents;
   isLoading: boolean;
   isPending: boolean;
+  prevState: TPageBuilderState;
   selectedElements: TSelectedElements;
 };
 
@@ -96,13 +97,8 @@ export type TSetElementCoordinatesAction = {
   type: typeof SET_ELEMENT_COORDINATES;
 };
 
-export type TSetElementsCoordinatesActionPayload = {
-  coordinates: T2DCoordinates;
-  prevState: TPageBuilderState;
-};
-
 export type TSetElementsCoordinatesAction = {
-  payload: TSetElementsCoordinatesActionPayload;
+  payload: T2DCoordinates;
   type: typeof SET_ELEMENTS_COORDINATES;
 };
 
