@@ -25,6 +25,8 @@ const Corners: FC<TCornersProps> = ({
 }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { x1, x2, y1, y2 } = rectCoordinates || {};
+  const height = y2 - y1;
+  const width = x2 - x1;
 
   return (
     <svg
@@ -32,11 +34,17 @@ const Corners: FC<TCornersProps> = ({
         classNamesWithTheme[className].modificators.increaseZIndex,
         increaseZIndex,
       ])}
+      style={{
+        height: `${height}px`,
+        left: `${x1}px`,
+        top: `${y1}px`,
+        width: `${width}px`,
+      }}
     >
-      <rect x={x1 - HHW} y={y1 - HHW} width={SHW} height={SHW} rx={RX} />
-      <rect x={x1 - HHW} y={y2 - HHW} width={SHW} height={SHW} rx={RX} />
-      <rect x={x2 - HHW} y={y1 - HHW} width={SHW} height={SHW} rx={RX} />
-      <rect x={x2 - HHW} y={y2 - HHW} width={SHW} height={SHW} rx={RX} />
+      <rect x={0 - HHW} y={0 - HHW} width={SHW} height={SHW} rx={RX} />
+      <rect x={0 - HHW} y={height - HHW} width={SHW} height={SHW} rx={RX} />
+      <rect x={width - HHW} y={0 - HHW} width={SHW} height={SHW} rx={RX} />
+      <rect x={width - HHW} y={height - HHW} width={SHW} height={SHW} rx={RX} />
     </svg>
   );
 };
