@@ -53,6 +53,11 @@ export const eventsSelector: Selector<TMainState, TEvents> = createSelector(
   getFp('events'),
 );
 
+export const eventSelectorCreator = (
+  key: keyof TEvents,
+): Selector<TMainState, TEvents[typeof key]> =>
+  createSelector(eventsSelector, getFp(key));
+
 export const isLoadingSelector: Selector<TMainState, boolean> = createSelector(
   pageBuilderStateSelector,
   getFp('isLoading'),

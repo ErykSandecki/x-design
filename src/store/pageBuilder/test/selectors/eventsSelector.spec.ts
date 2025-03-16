@@ -1,5 +1,8 @@
 // mocks
-import { pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
+import {
+  eventsMock,
+  pageBuilderStateMock,
+} from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
@@ -15,8 +18,6 @@ describe('eventsSelector', () => {
     const selectorFunction = (eventsSelector as any).resultFunc;
 
     // result
-    expect(selectorFunction(state)).toStrictEqual({
-      isMultipleMoving: false,
-    });
+    expect(selectorFunction(state)).toStrictEqual(eventsMock);
   });
 });

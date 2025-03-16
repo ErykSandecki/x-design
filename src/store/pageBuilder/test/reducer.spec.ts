@@ -24,9 +24,11 @@ import {
   setElementCoordinates,
   setElementsCoordinates,
   updateEventsStatus,
+  setElementSizes,
 } from '../actions';
 
 // types
+import { Anchor } from '../enums';
 import { TAction } from 'types';
 import { TPageBuilderState } from '../types';
 
@@ -175,6 +177,75 @@ describe('PageBuilderReducer', () => {
     });
   });
 
+  it('should handle SET_ELEMENT_SIZES', () => {
+    // mock
+    const baseCoordinates = { x1: 0, x2: 100, y1: 0, y2: 100 };
+    const mouseCoordinates = { x: 200, y: 100 };
+
+    // before
+    const state = reducer(
+      setElementSizes(
+        baseCoordinates,
+        100,
+        selectedElementMock.id,
+        mouseCoordinates,
+        100,
+      ),
+      {
+        ...pageBuilderStateMock[PAGE_BUILDER],
+        elements: {
+          allData: {
+            [allDataMock.id]: allDataMock,
+          },
+          dynamicData: { [elementDynamicDataMock.id]: elementDynamicDataMock },
+          staticData: {
+            [elementStaticDataMock.id]: elementStaticDataMock,
+          },
+        },
+        events: {
+          ...pageBuilderStateMock[PAGE_BUILDER].events,
+          selectedAnchor: Anchor.east,
+        },
+        selectedElements: {
+          [selectedElementMock.id]: selectedElementMock,
+        },
+      },
+    );
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      elements: {
+        allData: {
+          [allDataMock.id]: {
+            ...allDataMock,
+            height: 100,
+            positionAbsolute: { x: 0, y: 0 },
+            width: 300,
+          },
+        },
+        dynamicData: {
+          [elementDynamicDataMock.id]: {
+            ...elementDynamicDataMock,
+            height: 100,
+            positionAbsolute: { x: 0, y: 0 },
+            width: 300,
+          },
+        },
+        staticData: {
+          [elementStaticDataMock.id]: elementStaticDataMock,
+        },
+      },
+      events: {
+        ...pageBuilderStateMock[PAGE_BUILDER].events,
+        selectedAnchor: Anchor.east,
+      },
+      selectedElements: {
+        [selectedElementMock.id]: selectedElementMock,
+      },
+    });
+  });
+
   it('should handle SET_ELEMENTS_COORDINATES', () => {
     // mock
     const coordinates = { x: 100, y: 100 };
@@ -242,6 +313,7 @@ describe('PageBuilderReducer', () => {
     expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       events: {
+        ...pageBuilderStateMock[PAGE_BUILDER].events,
         isMultipleMoving: true,
       },
       prevState: {

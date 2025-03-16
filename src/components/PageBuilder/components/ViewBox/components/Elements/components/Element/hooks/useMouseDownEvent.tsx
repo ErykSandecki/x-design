@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 // types
 import { MouseButton, T2DCoordinates } from 'types';
 import { MouseMode } from '../../../../../../../enums';
-import { TPageBuilderState, TSelectedElement } from 'store/pageBuilder/types';
+import { TSelectedElement } from 'store/pageBuilder/types';
 
 // utils
 import { handleSelectElement } from '../utils/handleSelectElement';

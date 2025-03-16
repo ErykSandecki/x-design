@@ -8,9 +8,6 @@ import { useMouseUpEvent } from './useMouseUpEvent';
 // others
 import { BASE_2D } from 'shared';
 
-// types
-import { TPageBuilderState } from 'store/pageBuilder/types';
-
 export type TUseClickableAreaEvents = {
   onMouseDown: (event: MouseEvent) => void;
 };

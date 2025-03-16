@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 
 // components
 import Corners from '../../../Corners/Corners';
+import ResizeArea from '../../../ResizeArea/ResizeArea';
 import { Box } from 'shared';
 
 // hooks
@@ -59,6 +60,7 @@ const Element: FC<TElementProps> = ({
   const { x, y } = positionAbsolute;
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const rectCoordinates = getCornersPosition(height, width);
+  const displayEvents = !isMultiple && isSelected;
   const events = useElementEvents(
     elementRef,
     height,
@@ -94,8 +96,16 @@ const Element: FC<TElementProps> = ({
       {...events}
     >
       {children(isSelected)}
-      {!isMultiple && isSelected && (
-        <Corners rectCoordinates={rectCoordinates} />
+      {displayEvents && <Corners rectCoordinates={rectCoordinates} />}
+      {displayEvents && (
+        <ResizeArea
+          height={height}
+          id={id}
+          moseMode={mouseMode}
+          x={x}
+          y={y}
+          width={width}
+        />
       )}
     </Box>
   );

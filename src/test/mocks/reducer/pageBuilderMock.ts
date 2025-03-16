@@ -3,6 +3,7 @@ import { BASE_3D, BASE_RECT } from 'shared';
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 
 // types
+import { Anchor } from 'store/pageBuilder/enums';
 import {
   TElementDynamicData,
   TElementStaticData,
@@ -19,7 +20,7 @@ export const pageBuilderStateMock: Record<
   [PAGE_BUILDER]: {
     areaCoordinates: BASE_3D,
     elements: { allData: {}, dynamicData: {}, staticData: {} },
-    events: { isMultipleMoving: false },
+    events: { isMultipleMoving: false, selectedAnchor: Anchor.none },
     isLoading: true,
     isPending: false,
     prevState: undefined,
@@ -68,6 +69,7 @@ export const createFrameMock: TElement = {
 
 export const eventsMock: TEvents = {
   isMultipleMoving: false,
+  selectedAnchor: Anchor.none,
 };
 
 export const selectedElementMock: TSelectedElement = {

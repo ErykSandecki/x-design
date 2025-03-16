@@ -10,6 +10,7 @@ import {
   SET_ELEMENT_COORDINATES,
   SET_ELEMENTS_COORDINATES,
   UPDATE_EVENTS_STATUS,
+  SET_ELEMENT_SIZES,
 } from './actionsType';
 import { BASE_3D } from 'shared';
 
@@ -25,17 +26,66 @@ import {
   TSetElementCoordinatesAction,
   TSetElementsCoordinatesAction,
   TUpdateEventsStatusAction,
+  TSetElementSizesAction,
 } from './types';
 
 // utils
 import { handleAddElement } from './utils/handleAddElement';
 import { handleSetElementCoordinates } from './utils/handleSetElementCoordinates';
 import { handleSetElementsCoordinates } from './utils/handleSetElementsCoordinates';
+import { handleSetElementSizes } from './utils/handleSetElementSize';
+import { Anchor } from './enums';
 
 const initialState: TPageBuilderState = {
   areaCoordinates: BASE_3D,
-  elements: { allData: {}, dynamicData: {}, staticData: {} },
-  events: { isMultipleMoving: false },
+  elements: {
+    allData: {
+      m861mgpj1741791393558: {
+        height: 325,
+        id: 'm861mgpj1741791393558',
+        parentId: '-1',
+        positionAbsolute: {
+          x: 500,
+          y: 324,
+        },
+        positionRelative: {
+          x: 500,
+          y: 324,
+        },
+        rotate: 0,
+        // @ts-ignore
+        type: 'frame',
+        width: 500,
+        index: 0,
+      },
+    },
+    dynamicData: {
+      m861mgpj1741791393558: {
+        height: 325,
+        id: 'm861mgpj1741791393558',
+        positionAbsolute: {
+          x: 500,
+          y: 324,
+        },
+        positionRelative: {
+          x: 500,
+          y: 324,
+        },
+        rotate: 0,
+        width: 500,
+      },
+    },
+    staticData: {
+      m861mgpj1741791393558: {
+        id: 'm861mgpj1741791393558',
+        parentId: '-1',
+        // @ts-ignore
+        type: 'frame',
+        index: 0,
+      },
+    },
+  },
+  events: { isMultipleMoving: false, selectedAnchor: Anchor.none },
   isLoading: true,
   isPending: false,
   prevState: undefined,
@@ -79,6 +129,21 @@ const setElementCoordinates = (
 ): TPageBuilderState =>
   handleSetElementCoordinates(id, positionAbsolute, state);
 
+const setElementSizes = (
+  state: TPageBuilderState,
+  {
+    payload: { baseCoordinates, height, id, mouseCoordinates, width },
+  }: TAction<TSetElementSizesAction['payload']>,
+): TPageBuilderState =>
+  handleSetElementSizes(
+    baseCoordinates,
+    height,
+    width,
+    id,
+    mouseCoordinates,
+    state,
+  );
+
 const setElementsCoordinates = (
   state: TPageBuilderState,
   { payload: coordinates }: TAction<TSetElementsCoordinatesAction['payload']>,
@@ -119,6 +184,8 @@ const pageBuilder = (
       return setAreCoordinates(state, action);
     case SET_ELEMENT_COORDINATES:
       return setElementCoordinates(state, action);
+    case SET_ELEMENT_SIZES:
+      return setElementSizes(state, action);
     case SET_ELEMENTS_COORDINATES:
       return setElementsCoordinates(state, action);
     case UPDATE_EVENTS_STATUS:

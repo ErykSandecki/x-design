@@ -8,6 +8,7 @@ import {
   SET_ELEMENT_COORDINATES,
   SET_ELEMENTS_COORDINATES,
   UPDATE_EVENTS_STATUS,
+  SET_ELEMENT_SIZES,
 } from './actionsType';
 
 // types
@@ -22,6 +23,8 @@ import {
   TSetElementCoordinatesActionPayload,
   TSetElementsCoordinatesAction,
   TUpdateEventsStatusAction,
+  TSetElementSizesAction,
+  TSetElementSizesActionPayload,
 } from './types';
 
 export const addElement = (
@@ -58,6 +61,17 @@ export const setElementCoordinates = (
 ): TSetElementCoordinatesAction => ({
   payload: { id, positionAbsolute },
   type: SET_ELEMENT_COORDINATES,
+});
+
+export const setElementSizes = (
+  baseCoordinates: TSetElementSizesActionPayload['baseCoordinates'],
+  height: TSetElementSizesActionPayload['height'],
+  id: TSetElementSizesActionPayload['id'],
+  mouseCoordinates: TSetElementSizesActionPayload['mouseCoordinates'],
+  width: TSetElementSizesActionPayload['width'],
+): TSetElementSizesAction => ({
+  payload: { baseCoordinates, height, id, mouseCoordinates, width },
+  type: SET_ELEMENT_SIZES,
 });
 
 export const setElementsCoordinates = (

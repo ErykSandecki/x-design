@@ -8,9 +8,11 @@ import {
   SET_ELEMENT_COORDINATES,
   SET_ELEMENTS_COORDINATES,
   UPDATE_EVENTS_STATUS,
+  SET_ELEMENT_SIZES,
 } from './actionsType';
 
 // types
+import { Anchor } from './enums';
 import {
   ElementType,
   T2DCoordinates,
@@ -37,7 +39,8 @@ export type TElementsData = {
 };
 
 export type TEvents = {
-  isMultipleMoving;
+  isMultipleMoving: boolean;
+  selectedAnchor: Anchor;
 };
 
 export type TPositions = {
@@ -54,6 +57,11 @@ export type TSelectedElement = {
 };
 
 export type TSelectedElements = TObject<TSelectedElement>;
+
+export type TSizeCoordinates = Pick<
+  TElement,
+  'height' | 'positionAbsolute' | 'width'
+>;
 
 export type TPageBuilderState = {
   areaCoordinates: T3DCoordinates;
@@ -97,13 +105,26 @@ export type TSetElementCoordinatesAction = {
   type: typeof SET_ELEMENT_COORDINATES;
 };
 
+export type TSetElementSizesActionPayload = Pick<
+  TElement,
+  'height' | 'id' | 'width'
+> & {
+  baseCoordinates: TRectCoordinates;
+  mouseCoordinates: T2DCoordinates;
+};
+
+export type TSetElementSizesAction = {
+  payload: TSetElementSizesActionPayload;
+  type: typeof SET_ELEMENT_SIZES;
+};
+
 export type TSetElementsCoordinatesAction = {
   payload: T2DCoordinates;
   type: typeof SET_ELEMENTS_COORDINATES;
 };
 
 export type TUpdateEventsStatusAction = {
-  payload: Partial<TObject<boolean, TEvents>>;
+  payload: Partial<TEvents>;
   type: typeof UPDATE_EVENTS_STATUS;
 };
 
