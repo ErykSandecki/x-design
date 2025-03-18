@@ -56,7 +56,7 @@ const Element: FC<TElementProps> = ({
   const elementRef = useRef<HTMLDivElement>(null);
   const elementDynamicData = useSelector(elementDynamicDataSelectorCreator(id));
   const { positionAbsolute } = elementDynamicData;
-  const { height, width } = elementDynamicData;
+  const { height, rotate, width } = elementDynamicData;
   const { x, y } = positionAbsolute;
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const rectCoordinates = getCornersPosition(height, width);
@@ -91,6 +91,7 @@ const Element: FC<TElementProps> = ({
         height: `${height}px`,
         left: `${x}px`,
         top: `${y}px`,
+        transform: `rotate(${rotate}deg)`,
         width: `${width}px`,
       }}
       {...events}

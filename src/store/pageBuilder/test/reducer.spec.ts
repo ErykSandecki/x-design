@@ -2,7 +2,7 @@ import { cloneDeep } from 'lodash';
 
 // mocks
 import {
-  allDataMock,
+  elementAllDataMock,
   createFrameMock,
   elementDynamicDataMock,
   elementStaticDataMock,
@@ -25,6 +25,7 @@ import {
   setElementsCoordinates,
   updateEventsStatus,
   setElementSizes,
+  rotateElement,
 } from '../actions';
 
 // types
@@ -76,6 +77,65 @@ describe('PageBuilderReducer', () => {
             index: 0,
             parentId: createFrameMock.parentId,
             type: createFrameMock.type,
+          },
+        },
+      },
+    });
+  });
+
+  it('should handle ROTATE_ELEMENT', () => {
+    // mock
+    const rotate = 180;
+
+    // before
+    const state = reducer(rotateElement(selectedElementMock.id, rotate), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      elements: {
+        ...pageBuilderStateMock[PAGE_BUILDER].elements,
+        allData: {
+          ...pageBuilderStateMock[PAGE_BUILDER].elements.allData,
+          [elementAllDataMock.id]: {
+            ...elementAllDataMock,
+          },
+        },
+        dynamicData: {
+          ...pageBuilderStateMock[PAGE_BUILDER].elements.dynamicData,
+          [elementDynamicDataMock.id]: {
+            ...elementDynamicDataMock,
+          },
+        },
+        staticData: {
+          ...pageBuilderStateMock[PAGE_BUILDER].elements.staticData,
+          [elementStaticDataMock.id]: {
+            ...elementStaticDataMock,
+          },
+        },
+      },
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      elements: {
+        ...pageBuilderStateMock[PAGE_BUILDER].elements,
+        allData: {
+          ...pageBuilderStateMock[PAGE_BUILDER].elements.allData,
+          [elementAllDataMock.id]: {
+            ...elementAllDataMock,
+            rotate,
+          },
+        },
+        dynamicData: {
+          ...pageBuilderStateMock[PAGE_BUILDER].elements.dynamicData,
+          [elementDynamicDataMock.id]: {
+            ...elementDynamicDataMock,
+            rotate,
+          },
+        },
+        staticData: {
+          ...pageBuilderStateMock[PAGE_BUILDER].elements.staticData,
+          [elementStaticDataMock.id]: {
+            ...elementStaticDataMock,
           },
         },
       },
@@ -136,12 +196,12 @@ describe('PageBuilderReducer', () => {
 
     // before
     const state = reducer(
-      setElementCoordinates(allDataMock.id, positionAbsolute),
+      setElementCoordinates(elementAllDataMock.id, positionAbsolute),
       {
         ...pageBuilderStateMock[PAGE_BUILDER],
         elements: {
           allData: {
-            [allDataMock.id]: allDataMock,
+            [elementAllDataMock.id]: elementAllDataMock,
           },
           dynamicData: {
             [elementDynamicDataMock.id]: elementDynamicDataMock,
@@ -159,8 +219,8 @@ describe('PageBuilderReducer', () => {
       elements: {
         ...pageBuilderStateMock[PAGE_BUILDER].elements,
         allData: {
-          [allDataMock.id]: {
-            ...allDataMock,
+          [elementAllDataMock.id]: {
+            ...elementAllDataMock,
             positionAbsolute,
           },
         },
@@ -195,7 +255,7 @@ describe('PageBuilderReducer', () => {
         ...pageBuilderStateMock[PAGE_BUILDER],
         elements: {
           allData: {
-            [allDataMock.id]: allDataMock,
+            [elementAllDataMock.id]: elementAllDataMock,
           },
           dynamicData: { [elementDynamicDataMock.id]: elementDynamicDataMock },
           staticData: {
@@ -217,8 +277,8 @@ describe('PageBuilderReducer', () => {
       ...pageBuilderStateMock[PAGE_BUILDER],
       elements: {
         allData: {
-          [allDataMock.id]: {
-            ...allDataMock,
+          [elementAllDataMock.id]: {
+            ...elementAllDataMock,
             height: 100,
             positionAbsolute: { x: 0, y: 0 },
             width: 300,
@@ -252,7 +312,7 @@ describe('PageBuilderReducer', () => {
     const mockState = {
       ...pageBuilderStateMock[PAGE_BUILDER],
       elements: {
-        allData: { [allDataMock.id]: allDataMock },
+        allData: { [elementAllDataMock.id]: elementAllDataMock },
         dynamicData: { [elementDynamicDataMock.id]: elementDynamicDataMock },
         staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
       },
@@ -273,8 +333,8 @@ describe('PageBuilderReducer', () => {
       ...pageBuilderStateMock[PAGE_BUILDER],
       elements: {
         allData: {
-          [allDataMock.id]: {
-            ...allDataMock,
+          [elementAllDataMock.id]: {
+            ...elementAllDataMock,
             positionAbsolute: coordinates,
             positionRelative: coordinates,
           },

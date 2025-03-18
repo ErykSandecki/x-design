@@ -1,6 +1,6 @@
 // mocks
 import {
-  allDataMock,
+  elementAllDataMock,
   elementDynamicDataMock,
   elementStaticDataMock,
   pageBuilderStateMock,
@@ -19,13 +19,13 @@ describe('handleSetElementCoordinates', () => {
 
     // before
     const result = handleSetElementCoordinates(
-      allDataMock.id,
+      elementAllDataMock.id,
       positionAbsolute,
       {
         ...pageBuilderStateMock[PAGE_BUILDER],
         elements: {
           allData: {
-            [allDataMock.id]: allDataMock,
+            [elementAllDataMock.id]: elementAllDataMock,
           },
           dynamicData: {
             [elementDynamicDataMock.id]: elementDynamicDataMock,
@@ -43,8 +43,8 @@ describe('handleSetElementCoordinates', () => {
       elements: {
         ...pageBuilderStateMock[PAGE_BUILDER].elements,
         allData: {
-          [allDataMock.id]: {
-            ...allDataMock,
+          [elementAllDataMock.id]: {
+            ...elementAllDataMock,
             positionAbsolute,
           },
         },

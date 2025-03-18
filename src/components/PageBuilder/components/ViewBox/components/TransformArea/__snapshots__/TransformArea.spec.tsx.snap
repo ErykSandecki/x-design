@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransformArea snapshots should render TransformArea 1`] = `
+<DocumentFragment>
+  <div
+    class="TransformArea TransformArea--light"
+  >
+    <div
+      class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--east TransformArea__anchor--east--light"
+    />
+    <div
+      class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--none TransformArea__anchor--none--light"
+    />
+    <div
+      class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--north TransformArea__anchor--north--light"
+    />
+    <div
+      class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--northEast TransformArea__anchor--northEast--light"
+    />
+    <div
+      class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--northWest TransformArea__anchor--northWest--light"
+    />
+    <div
+      class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--south TransformArea__anchor--south--light"
+    />
+    <div
+      class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--southEast TransformArea__anchor--southEast--light"
+    />
+    <div
+      class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--southWest TransformArea__anchor--southWest--light"
+    />
+    <div
+      class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--west TransformArea__anchor--west--light"
+    />
+  </div>
+</DocumentFragment>
+`;

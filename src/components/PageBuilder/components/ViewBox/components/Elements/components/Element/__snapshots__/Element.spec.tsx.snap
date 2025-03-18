@@ -5,7 +5,7 @@ exports[`Element snapshots should render Element 1`] = `
   <div
     class="css-q0izro className Element Element--light"
     data-test-box=""
-    style="height: 100px; left: 0px; top: 0px; width: 100px;"
+    style="height: 100px; left: 0px; top: 0px; transform: rotate(0deg); width: 100px;"
   />
 </DocumentFragment>
 `;

@@ -1,30 +1,33 @@
 // others
 import {
   ADD_ELEMENT,
+  ROTATE_ELEMENT,
   SELECT_ELEMENT,
-  UNSELECT_ELEMENT,
   SELECT_ELEMENTS,
   SET_AREA_COORDINATES,
   SET_ELEMENT_COORDINATES,
-  SET_ELEMENTS_COORDINATES,
-  UPDATE_EVENTS_STATUS,
   SET_ELEMENT_SIZES,
+  SET_ELEMENTS_COORDINATES,
+  UNSELECT_ELEMENT,
+  UPDATE_EVENTS_STATUS,
 } from './actionsType';
 
 // types
 import {
   TAddELementAction,
   TAddELementActionPayload,
+  TRotateElementAction,
+  TRotateElementActionPayload,
   TSelectElementAction,
-  TUnselectElementAction,
   TSelectElementsAction,
   TSetAreaCoordinatesAction,
   TSetElementCoordinatesAction,
   TSetElementCoordinatesActionPayload,
   TSetElementsCoordinatesAction,
-  TUpdateEventsStatusAction,
   TSetElementSizesAction,
   TSetElementSizesActionPayload,
+  TUnselectElementAction,
+  TUpdateEventsStatusAction,
 } from './types';
 
 export const addElement = (
@@ -32,6 +35,14 @@ export const addElement = (
 ): TAddELementAction => ({
   payload,
   type: ADD_ELEMENT,
+});
+
+export const rotateElement = (
+  id: TRotateElementActionPayload['id'],
+  rotate: TRotateElementActionPayload['rotate'],
+): TRotateElementAction => ({
+  payload: { id, rotate },
+  type: ROTATE_ELEMENT,
 });
 
 export const selectElement = (

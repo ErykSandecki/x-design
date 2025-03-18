@@ -5,7 +5,7 @@ import { useHandleSelectElement } from '../useHandleSelectElement';
 
 // mocks
 import {
-  allDataMock,
+  elementAllDataMock,
   pageBuilderStateMock,
   selectedElementMock,
 } from 'test/mocks/reducer/pageBuilderMock';
@@ -23,7 +23,7 @@ const stateMock = {
     ...pageBuilderStateMock[PAGE_BUILDER],
     elements: {
       allData: {
-        [allDataMock.id]: allDataMock,
+        [elementAllDataMock.id]: elementAllDataMock,
       },
     },
   },
@@ -67,7 +67,7 @@ describe('useHandleSelectElement', () => {
           ...pageBuilderStateMock[PAGE_BUILDER],
           elements: {
             allData: {
-              [allDataMock.id]: allDataMock,
+              [elementAllDataMock.id]: elementAllDataMock,
             },
           },
           selectedElements: {

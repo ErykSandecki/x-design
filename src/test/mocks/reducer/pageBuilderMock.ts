@@ -50,7 +50,7 @@ export const elementStaticDataMock: TElementStaticData = {
   type: ElementType.frame,
 };
 
-export const allDataMock: TElement = {
+export const elementAllDataMock: TElement = {
   ...elementDynamicDataMock,
   ...elementStaticDataMock,
 };

@@ -11,10 +11,12 @@ import {
   SET_ELEMENTS_COORDINATES,
   UPDATE_EVENTS_STATUS,
   SET_ELEMENT_SIZES,
+  ROTATE_ELEMENT,
 } from './actionsType';
 import { BASE_3D } from 'shared';
 
 // types
+import { Anchor } from './enums';
 import { TAction } from 'types';
 import {
   TAddELementAction,
@@ -27,14 +29,15 @@ import {
   TSetElementsCoordinatesAction,
   TUpdateEventsStatusAction,
   TSetElementSizesAction,
+  TRotateElementAction,
 } from './types';
 
 // utils
 import { handleAddElement } from './utils/handleAddElement';
+import { handleRotateElement } from './utils/handleRotateElement';
 import { handleSetElementCoordinates } from './utils/handleSetElementCoordinates';
 import { handleSetElementsCoordinates } from './utils/handleSetElementsCoordinates';
 import { handleSetElementSizes } from './utils/handleSetElementSize';
-import { Anchor } from './enums';
 
 const initialState: TPageBuilderState = {
   areaCoordinates: BASE_3D,
@@ -96,6 +99,11 @@ const addElement = (
   state: TPageBuilderState,
   { payload: element }: TAction<TAddELementAction['payload']>,
 ): TPageBuilderState => handleAddElement(element, state);
+
+const rotateElement = (
+  state: TPageBuilderState,
+  { payload }: TAction<TRotateElementAction['payload']>,
+): TPageBuilderState => handleRotateElement(payload, state);
 
 const selectElement = (
   state: TPageBuilderState,
@@ -176,6 +184,8 @@ const pageBuilder = (
   switch (action.type) {
     case ADD_ELEMENT:
       return addElement(state, action);
+    case ROTATE_ELEMENT:
+      return rotateElement(state, action);
     case SELECT_ELEMENT:
       return selectElement(state, action);
     case SELECT_ELEMENTS:

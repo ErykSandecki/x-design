@@ -1,6 +1,6 @@
 // mocks
 import {
-  allDataMock,
+  elementAllDataMock,
   elementDynamicDataMock,
   elementStaticDataMock,
   pageBuilderStateMock,
@@ -32,7 +32,7 @@ describe('handleSetElementSizes', () => {
         ...pageBuilderStateMock[PAGE_BUILDER],
         elements: {
           allData: {
-            [allDataMock.id]: allDataMock,
+            [elementAllDataMock.id]: elementAllDataMock,
           },
           dynamicData: { [elementDynamicDataMock.id]: elementDynamicDataMock },
           staticData: {
@@ -54,8 +54,8 @@ describe('handleSetElementSizes', () => {
       ...pageBuilderStateMock[PAGE_BUILDER],
       elements: {
         allData: {
-          [allDataMock.id]: {
-            ...allDataMock,
+          [elementAllDataMock.id]: {
+            ...elementAllDataMock,
             height: 100,
             positionAbsolute: { x: 0, y: 0 },
             width: 300,

@@ -5,7 +5,7 @@ exports[`Frame snapshots should render Frame 1`] = `
   <div
     class="css-q0izro className Frame Frame--light Element Element--light"
     data-test-box=""
-    style="height: 100px; left: 0px; top: 0px; width: 100px;"
+    style="height: 100px; left: 0px; top: 0px; transform: rotate(0deg); width: 100px;"
   >
     <small
       class="css-q0izro Frame__label Frame__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"

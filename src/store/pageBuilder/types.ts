@@ -9,6 +9,7 @@ import {
   SET_ELEMENTS_COORDINATES,
   UPDATE_EVENTS_STATUS,
   SET_ELEMENT_SIZES,
+  ROTATE_ELEMENT,
 } from './actionsType';
 
 // types
@@ -78,6 +79,13 @@ export type TAddELementActionPayload = Omit<TElement, 'index'>;
 export type TAddELementAction = {
   payload: TAddELementActionPayload;
   type: typeof ADD_ELEMENT;
+};
+
+export type TRotateElementActionPayload = Pick<TElement, 'id' | 'rotate'>;
+
+export type TRotateElementAction = {
+  payload: TRotateElementActionPayload;
+  type: typeof ROTATE_ELEMENT;
 };
 
 export type TSelectElementAction = {

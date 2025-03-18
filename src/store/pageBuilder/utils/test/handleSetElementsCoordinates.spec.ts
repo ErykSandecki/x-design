@@ -2,7 +2,7 @@ import { cloneDeep } from 'lodash';
 
 // mocks
 import {
-  allDataMock,
+  elementAllDataMock,
   elementDynamicDataMock,
   elementStaticDataMock,
   pageBuilderStateMock,
@@ -18,7 +18,7 @@ import { handleSetElementsCoordinates } from '../handleSetElementsCoordinates';
 const mockState = {
   ...pageBuilderStateMock[PAGE_BUILDER],
   elements: {
-    allData: { [allDataMock.id]: allDataMock },
+    allData: { [elementAllDataMock.id]: elementAllDataMock },
     dynamicData: { [elementDynamicDataMock.id]: elementDynamicDataMock },
     staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
   },
@@ -44,8 +44,8 @@ describe('handleSetElementsCoordinates', () => {
       ...pageBuilderStateMock[PAGE_BUILDER],
       elements: {
         allData: {
-          [allDataMock.id]: {
-            ...allDataMock,
+          [elementAllDataMock.id]: {
+            ...elementAllDataMock,
             positionAbsolute: coordinates,
             positionRelative: coordinates,
           },
