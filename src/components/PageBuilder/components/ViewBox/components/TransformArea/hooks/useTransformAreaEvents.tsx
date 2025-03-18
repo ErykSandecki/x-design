@@ -13,21 +13,21 @@ import { Anchor } from 'store/pageBuilder/enums';
 import { MouseMode } from 'components/PageBuilder/enums';
 import { TElement } from 'types';
 
-export type TUseResizeAreaEvents = {
+export type TUseTransformAreaEvents = {
   onMouseDown: (
     anchor: Anchor,
     event: React.MouseEvent<HTMLElement, MouseEvent>,
   ) => void;
 };
 
-export const useResizeAreaEvents = (
+export const useTransformAreaEvents = (
   height: TElement['height'],
   id: TElement['id'],
   mouseMode: MouseMode,
   width: TElement['width'],
   x: TElement['positionAbsolute']['x'],
   y: TElement['positionAbsolute']['y'],
-): TUseResizeAreaEvents => {
+): TUseTransformAreaEvents => {
   const cursorPosition = useRef(BASE_2D);
 
   useMouseMoveEvent(cursorPosition, height, id, width, x, y);

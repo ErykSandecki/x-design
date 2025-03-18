@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 // components
 import Corners from '../../../Corners/Corners';
-import ResizeArea from '../../../ResizeArea/ResizeArea';
+import TransformArea from '../../../TransformArea/TransformArea';
 import { Box } from 'shared';
 
 // hooks
@@ -98,7 +98,7 @@ const Element: FC<TElementProps> = ({
       {children(isSelected)}
       {displayEvents && <Corners rectCoordinates={rectCoordinates} />}
       {displayEvents && (
-        <ResizeArea
+        <TransformArea
           height={height}
           id={id}
           moseMode={mouseMode}

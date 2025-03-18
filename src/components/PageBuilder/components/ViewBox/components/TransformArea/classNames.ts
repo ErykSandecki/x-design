@@ -3,7 +3,7 @@ import { mapValues } from 'lodash';
 // types
 import { Anchor } from 'store/pageBuilder/enums';
 
-export const className = 'ResizeArea';
+export const className = 'TransformArea';
 
 export const classNames = {
   [className]: className,

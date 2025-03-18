@@ -2,7 +2,7 @@ import { Provider } from 'react-redux';
 import { render } from '@testing-library/react';
 
 // components
-import ResizeArea from './ResizeArea';
+import TransformArea from './TransformArea';
 
 // mocks
 import { selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
@@ -14,15 +14,15 @@ import { configureStore } from 'store/store';
 // types
 import { MouseMode } from 'components/PageBuilder/enums';
 
-describe('Corners snapshots', () => {
-  it('should render Corners', () => {
+describe('TransformArea snapshots', () => {
+  it('should render TransformArea', () => {
     // mock
     const store = configureStore();
 
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <ResizeArea
+        <TransformArea
           height={100}
           id={selectedElementMock.id}
           moseMode={MouseMode.default}

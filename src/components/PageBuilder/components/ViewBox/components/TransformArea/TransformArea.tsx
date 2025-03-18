@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 // hooks
-import { useResizeAreaEvents } from './hooks/useResizeAreaEvents';
+import { useTransformAreaEvents } from './hooks/useTransformAreaEvents';
 import { useTheme } from 'hooks';
 
 // others
@@ -13,7 +13,7 @@ import { MouseMode } from 'components/PageBuilder/enums';
 import { TElement } from 'types';
 
 // styles
-import styles from './resize-area.scss';
+import styles from './transform-area.scss';
 
 // utils
 import { enumToArray } from 'utils';
@@ -27,7 +27,7 @@ export type TResizeAreaProps = {
   y: TElement['positionAbsolute']['y'];
 };
 
-const ResizeArea: FC<TResizeAreaProps> = ({
+const TransformArea: FC<TResizeAreaProps> = ({
   height,
   id,
   moseMode,
@@ -35,7 +35,7 @@ const ResizeArea: FC<TResizeAreaProps> = ({
   x,
   y,
 }) => {
-  const events = useResizeAreaEvents(height, id, moseMode, width, x, y);
+  const events = useTransformAreaEvents(height, id, moseMode, width, x, y);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   return (
@@ -56,4 +56,4 @@ const ResizeArea: FC<TResizeAreaProps> = ({
   );
 };
 
-export default ResizeArea;
+export default TransformArea;

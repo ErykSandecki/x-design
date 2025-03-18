@@ -13,6 +13,7 @@ import { setElementSizes } from 'store/pageBuilder/actions';
 // types
 import { Anchor } from 'store/pageBuilder/enums';
 import { T2DCoordinates, TElement } from 'types';
+import { handleResizeElement } from '../utils/handleResizeElement';
 
 export type TUseMouseMoveEvent = void;
 
@@ -29,21 +30,15 @@ export const useMouseMoveEvent = (
 
   const handleMouseMove = (event: MouseEvent): void => {
     event.stopPropagation();
-    const z = areaAxisSelectorCreator('z')(store.getState());
-    const { current } = cursorPosition;
-    const baseCoordinates = {
-      x1: x,
-      x2: x + width,
-      y1: y,
-      y2: y + height,
-    };
-    const mousePosition = {
-      x: Math.round(event.clientX / z - current.x / z),
-      y: Math.round(event.clientY / z - current.y / z),
-    };
-
-    dispatch(
-      setElementSizes(baseCoordinates, height, id, mousePosition, width),
+    handleResizeElement(
+      cursorPosition,
+      dispatch,
+      event,
+      height,
+      id,
+      width,
+      x,
+      y,
     );
   };
 

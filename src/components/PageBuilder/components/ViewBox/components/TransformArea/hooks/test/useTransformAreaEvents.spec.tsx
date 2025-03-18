@@ -1,7 +1,7 @@
 import { renderHook } from '@testing-library/react';
 
 // hooks
-import { useResizeAreaEvents } from '../useResizeAreaEvents';
+import { useTransformAreaEvents } from '../useTransformAreaEvents';
 
 // mocks
 import {
@@ -22,7 +22,7 @@ const stateMock = {
   ...pageBuilderStateMock,
 };
 
-describe('useResizeAreaEvents', () => {
+describe('useTransformAreaEvents', () => {
   it(`should return view moveable events and data`, () => {
     // mock
     const store = configureStore(stateMock);
@@ -30,7 +30,7 @@ describe('useResizeAreaEvents', () => {
     // before
     const { result } = renderHook(
       () =>
-        useResizeAreaEvents(
+        useTransformAreaEvents(
           100,
           selectedElementMock.id,
           MouseMode.default,
