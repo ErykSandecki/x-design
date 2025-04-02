@@ -65,8 +65,7 @@ describe('PageBuilderReducer', () => {
           [createFrameMock.id]: {
             height: createFrameMock.height,
             id: createFrameMock.id,
-            positionAbsolute: createFrameMock.positionAbsolute,
-            positionRelative: createFrameMock.positionRelative,
+            position: createFrameMock.position,
             rotate: createFrameMock.rotate,
             width: createFrameMock.width,
           },
@@ -192,11 +191,11 @@ describe('PageBuilderReducer', () => {
 
   it('should handle SET_ELEMENT_COORDINATES', () => {
     // mock
-    const positionAbsolute = { x: 100, y: 100 };
+    const position = { x: 100, y: 100 };
 
     // before
     const state = reducer(
-      setElementCoordinates(elementAllDataMock.id, positionAbsolute),
+      setElementCoordinates(elementAllDataMock.id, position),
       {
         ...pageBuilderStateMock[PAGE_BUILDER],
         elements: {
@@ -221,13 +220,13 @@ describe('PageBuilderReducer', () => {
         allData: {
           [elementAllDataMock.id]: {
             ...elementAllDataMock,
-            positionAbsolute,
+            position,
           },
         },
         dynamicData: {
           [elementDynamicDataMock.id]: {
             ...elementDynamicDataMock,
-            positionAbsolute,
+            position,
           },
         },
         staticData: {
@@ -280,7 +279,7 @@ describe('PageBuilderReducer', () => {
           [elementAllDataMock.id]: {
             ...elementAllDataMock,
             height: 100,
-            positionAbsolute: { x: 0, y: 0 },
+            position: { x: 0, y: 0 },
             width: 300,
           },
         },
@@ -288,7 +287,7 @@ describe('PageBuilderReducer', () => {
           [elementDynamicDataMock.id]: {
             ...elementDynamicDataMock,
             height: 100,
-            positionAbsolute: { x: 0, y: 0 },
+            position: { x: 0, y: 0 },
             width: 300,
           },
         },
@@ -335,15 +334,13 @@ describe('PageBuilderReducer', () => {
         allData: {
           [elementAllDataMock.id]: {
             ...elementAllDataMock,
-            positionAbsolute: coordinates,
-            positionRelative: coordinates,
+            position: coordinates,
           },
         },
         dynamicData: {
           [elementDynamicDataMock.id]: {
             ...elementDynamicDataMock,
-            positionAbsolute: coordinates,
-            positionRelative: coordinates,
+            position: coordinates,
           },
         },
         staticData: { [elementStaticDataMock.id]: elementStaticDataMock },

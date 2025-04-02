@@ -47,11 +47,7 @@ const initialState: TPageBuilderState = {
         height: 325,
         id: 'm861mgpj1741791393558',
         parentId: '-1',
-        positionAbsolute: {
-          x: 500,
-          y: 324,
-        },
-        positionRelative: {
+        position: {
           x: 500,
           y: 324,
         },
@@ -66,11 +62,7 @@ const initialState: TPageBuilderState = {
       m861mgpj1741791393558: {
         height: 325,
         id: 'm861mgpj1741791393558',
-        positionAbsolute: {
-          x: 500,
-          y: 324,
-        },
-        positionRelative: {
+        position: {
           x: 500,
           y: 324,
         },
@@ -132,10 +124,9 @@ const setAreCoordinates = (
 const setElementCoordinates = (
   state: TPageBuilderState,
   {
-    payload: { id, positionAbsolute },
+    payload: { id, position },
   }: TAction<TSetElementCoordinatesAction['payload']>,
-): TPageBuilderState =>
-  handleSetElementCoordinates(id, positionAbsolute, state);
+): TPageBuilderState => handleSetElementCoordinates(id, position, state);
 
 const setElementSizes = (
   state: TPageBuilderState,

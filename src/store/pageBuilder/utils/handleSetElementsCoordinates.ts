@@ -41,19 +41,20 @@ export const getPositions = (
 
   for (const [_, { coordinates, id }] of Object.entries(selectedElements)) {
     const {
-      positionAbsolute: { x: xA, y: yA },
-      positionRelative: { x: xR, y: yR },
+      position: { x: xA, y: yA },
     } = allData[id];
-    const positionAbsolute = { x: xA + x, y: yA + y };
-    const positionRelative = { x: xR + x, y: yR + y };
+    const position = { x: xA + x, y: yA + y };
 
     positions.allData = {
       ...positions.allData,
-      [id]: { ...allData[id], positionAbsolute, positionRelative },
+      [id]: { ...allData[id], position },
     };
     positions.dynamicData = {
       ...positions.dynamicData,
-      [id]: { ...dynamicData[id], positionAbsolute, positionRelative },
+      [id]: {
+        ...dynamicData[id],
+        position,
+      },
     };
     positions.selectedElements = getSelectedElementPosition(
       coordinates,

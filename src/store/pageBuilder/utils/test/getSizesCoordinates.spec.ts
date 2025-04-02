@@ -21,7 +21,7 @@ describe('getSizesCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       height: 100,
-      positionAbsolute: { x: 0, y: 0 },
+      position: { x: 0, y: 0 },
       width: 300,
     });
   });
@@ -36,7 +36,7 @@ describe('getSizesCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       height: 100,
-      positionAbsolute: { x: -200, y: 0 },
+      position: { x: -200, y: 0 },
       width: 200,
     });
   });
@@ -54,7 +54,7 @@ describe('getSizesCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       height: 0,
-      positionAbsolute: { x: 0, y: 100 },
+      position: { x: 0, y: 100 },
       width: 100,
     });
   });
@@ -72,7 +72,7 @@ describe('getSizesCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       height: 400,
-      positionAbsolute: { x: 0, y: -300 },
+      position: { x: 0, y: -300 },
       width: 100,
     });
   });
@@ -90,7 +90,7 @@ describe('getSizesCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       height: 0,
-      positionAbsolute: { x: 0, y: 100 },
+      position: { x: 0, y: 100 },
       width: 300,
     });
   });
@@ -108,7 +108,7 @@ describe('getSizesCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       height: 0,
-      positionAbsolute: { x: 100, y: 100 },
+      position: { x: 100, y: 100 },
       width: 100,
     });
   });
@@ -126,7 +126,7 @@ describe('getSizesCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       height: 200,
-      positionAbsolute: { x: 0, y: 0 },
+      position: { x: 0, y: 0 },
       width: 100,
     });
   });
@@ -144,7 +144,7 @@ describe('getSizesCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       height: 200,
-      positionAbsolute: { x: 0, y: 0 },
+      position: { x: 0, y: 0 },
       width: 300,
     });
   });
@@ -162,7 +162,7 @@ describe('getSizesCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       height: 200,
-      positionAbsolute: { x: 0, y: 0 },
+      position: { x: 0, y: 0 },
       width: 300,
     });
   });
@@ -180,7 +180,7 @@ describe('getSizesCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       height: 100,
-      positionAbsolute: { x: 100, y: 0 },
+      position: { x: 100, y: 0 },
       width: 100,
     });
   });

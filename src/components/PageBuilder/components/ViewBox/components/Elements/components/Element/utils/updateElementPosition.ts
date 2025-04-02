@@ -23,12 +23,12 @@ export const updateElementPosition = (
   if (!isMultiple) {
     const z = areaAxisSelectorCreator('z')(store.getState());
     const { x, y } = cursorPosition.current;
-    const positionAbsolute = {
+    const position = {
       x: Math.round(event.clientX / z - x / z),
       y: Math.round(event.clientY / z - y / z),
     };
 
-    dispatch(setElementCoordinates(id, positionAbsolute));
+    dispatch(setElementCoordinates(id, position));
   } else {
     setElementsCoordinatesHandler(cursorPosition, dispatch, event);
   }

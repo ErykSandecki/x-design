@@ -68,9 +68,9 @@ export const setAreCoordinates = (
 
 export const setElementCoordinates = (
   id: TSetElementCoordinatesActionPayload['id'],
-  positionAbsolute: TSetElementCoordinatesActionPayload['positionAbsolute'],
+  position: TSetElementCoordinatesActionPayload['position'],
 ): TSetElementCoordinatesAction => ({
-  payload: { id, positionAbsolute },
+  payload: { id, position },
   type: SET_ELEMENT_COORDINATES,
 });
 

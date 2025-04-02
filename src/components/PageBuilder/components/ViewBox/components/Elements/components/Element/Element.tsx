@@ -55,9 +55,9 @@ const Element: FC<TElementProps> = ({
   const isMultiple = useSelector(multipleSelectedElementsSelector);
   const elementRef = useRef<HTMLDivElement>(null);
   const elementDynamicData = useSelector(elementDynamicDataSelectorCreator(id));
-  const { positionAbsolute } = elementDynamicData;
+  const { position } = elementDynamicData;
   const { height, rotate, width } = elementDynamicData;
-  const { x, y } = positionAbsolute;
+  const { x, y } = position;
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const rectCoordinates = getCornersPosition(height, width);
   const displayEvents = !isMultiple && isSelected;
@@ -69,7 +69,7 @@ const Element: FC<TElementProps> = ({
     isSelected,
     mouseMode,
     parentId,
-    positionAbsolute,
+    position,
     type,
     width,
   );

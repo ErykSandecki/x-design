@@ -25,7 +25,7 @@ import {
 
 export type TElementDynamicData = Pick<
   TElement,
-  'height' | 'id' | 'positionAbsolute' | 'positionRelative' | 'rotate' | 'width'
+  'height' | 'id' | 'position' | 'rotate' | 'width'
 >;
 
 export type TElementStaticData = Pick<
@@ -59,10 +59,7 @@ export type TSelectedElement = {
 
 export type TSelectedElements = TObject<TSelectedElement>;
 
-export type TSizeCoordinates = Pick<
-  TElement,
-  'height' | 'positionAbsolute' | 'width'
->;
+export type TSizeCoordinates = Pick<TElement, 'height' | 'position' | 'width'>;
 
 export type TPageBuilderState = {
   areaCoordinates: T3DCoordinates;
@@ -105,7 +102,7 @@ export type TSetAreaCoordinatesAction = {
 
 export type TSetElementCoordinatesActionPayload = Pick<
   TElement,
-  'id' | 'positionAbsolute'
+  'id' | 'position'
 >;
 
 export type TSetElementCoordinatesAction = {

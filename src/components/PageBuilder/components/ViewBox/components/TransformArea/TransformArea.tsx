@@ -23,8 +23,8 @@ export type TResizeAreaProps = {
   id: TElement['id'];
   moseMode: MouseMode;
   width: TElement['width'];
-  x: TElement['positionAbsolute']['x'];
-  y: TElement['positionAbsolute']['y'];
+  x: TElement['position']['x'];
+  y: TElement['position']['y'];
 };
 
 const TransformArea: FC<TResizeAreaProps> = ({

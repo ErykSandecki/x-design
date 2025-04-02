@@ -16,8 +16,8 @@ export const handleResizeElement = (
   height: TElement['height'],
   id: TElement['id'],
   width: TElement['width'],
-  x: TElement['positionAbsolute']['x'],
-  y: TElement['positionAbsolute']['y'],
+  x: TElement['position']['x'],
+  y: TElement['position']['y'],
 ): void => {
   const z = areaAxisSelectorCreator('z')(store.getState());
   const { current } = cursorPosition;

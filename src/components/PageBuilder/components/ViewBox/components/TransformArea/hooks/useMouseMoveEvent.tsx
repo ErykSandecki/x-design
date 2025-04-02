@@ -3,12 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 
 // store
-import {
-  areaAxisSelectorCreator,
-  eventSelectorCreator,
-} from 'store/pageBuilder/selectors';
-import { store } from 'store';
-import { setElementSizes } from 'store/pageBuilder/actions';
+import { eventSelectorCreator } from 'store/pageBuilder/selectors';
 
 // types
 import { Anchor } from 'store/pageBuilder/enums';
@@ -22,8 +17,8 @@ export const useMouseMoveEvent = (
   height: TElement['height'],
   id: TElement['id'],
   width: TElement['width'],
-  x: TElement['positionAbsolute']['x'],
-  y: TElement['positionAbsolute']['y'],
+  x: TElement['position']['x'],
+  y: TElement['position']['y'],
 ): TUseMouseMoveEvent => {
   const anchor = useSelector(eventSelectorCreator('selectedAnchor'));
   const dispatch = useDispatch();

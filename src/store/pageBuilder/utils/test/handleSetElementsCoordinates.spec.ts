@@ -46,15 +46,13 @@ describe('handleSetElementsCoordinates', () => {
         allData: {
           [elementAllDataMock.id]: {
             ...elementAllDataMock,
-            positionAbsolute: coordinates,
-            positionRelative: coordinates,
+            position: coordinates,
           },
         },
         dynamicData: {
           [elementDynamicDataMock.id]: {
             ...elementDynamicDataMock,
-            positionAbsolute: coordinates,
-            positionRelative: coordinates,
+            position: coordinates,
           },
         },
         staticData: { [elementStaticDataMock.id]: elementStaticDataMock },

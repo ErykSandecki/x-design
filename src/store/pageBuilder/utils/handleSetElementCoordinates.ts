@@ -6,7 +6,7 @@ import {
 
 export const handleSetElementCoordinates = (
   id: TSetElementCoordinatesActionPayload['id'],
-  positionAbsolute: TSetElementCoordinatesActionPayload['positionAbsolute'],
+  position: TSetElementCoordinatesActionPayload['position'],
   state: TPageBuilderState,
 ): TPageBuilderState => ({
   ...state,
@@ -16,14 +16,14 @@ export const handleSetElementCoordinates = (
       ...state.elements.allData,
       [id]: {
         ...state.elements.allData[id],
-        positionAbsolute,
+        position,
       },
     },
     dynamicData: {
       ...state.elements.dynamicData,
       [id]: {
         ...state.elements.dynamicData[id],
-        positionAbsolute,
+        position,
       },
     },
   },

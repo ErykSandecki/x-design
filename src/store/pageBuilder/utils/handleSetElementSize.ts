@@ -12,7 +12,7 @@ export const handleSetElementSizes = (
   mouseCoordinates: TSetElementSizesActionPayload['mouseCoordinates'],
   state: TPageBuilderState,
 ): TPageBuilderState => {
-  const { height, positionAbsolute, width } = getSizesCoordinates(
+  const { height, position, width } = getSizesCoordinates(
     state.events.selectedAnchor,
     baseCoordinates,
     baseHeight,
@@ -29,7 +29,7 @@ export const handleSetElementSizes = (
         [id]: {
           ...state.elements.allData[id],
           height,
-          positionAbsolute,
+          position,
           width,
         },
       },
@@ -38,7 +38,7 @@ export const handleSetElementSizes = (
         [id]: {
           ...state.elements.dynamicData[id],
           height,
-          positionAbsolute,
+          position,
           width,
         },
       },

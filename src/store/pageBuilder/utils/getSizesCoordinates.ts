@@ -15,7 +15,7 @@ export const getEastCordinates = (
 
   return {
     height: baseHeight,
-    positionAbsolute: {
+    position: {
       x: reverse ? x2 + x : x1,
       y: y1,
     },
@@ -35,7 +35,7 @@ export const getNorthCordinates = (
 
   return {
     height: reverseY ? y - baseHeight : y2 - (y1 + y),
-    positionAbsolute: {
+    position: {
       x: x1,
       y: reverseY ? y2 : y1 + y,
     },
@@ -55,7 +55,7 @@ export const getSouthCordinates = (
 
   return {
     height: reverseY ? y1 - (y2 + y) : baseHeight + y,
-    positionAbsolute: {
+    position: {
       x: x1,
       y: reverseY ? y2 + y : y1,
     },
@@ -75,7 +75,7 @@ export const getWestCordinates = (
 
   return {
     height: baseHeight,
-    positionAbsolute: {
+    position: {
       x: reverseX ? x2 : x1 + x,
       y: y1,
     },
@@ -123,18 +123,18 @@ export const getSizesCoordinates = (
     case Anchor.northEast:
       return {
         height: northCoordinates.height,
-        positionAbsolute: {
-          x: eastCoordinates.positionAbsolute.x,
-          y: northCoordinates.positionAbsolute.y,
+        position: {
+          x: eastCoordinates.position.x,
+          y: northCoordinates.position.y,
         },
         width: eastCoordinates.width,
       };
     case Anchor.northWest:
       return {
         height: northCoordinates.height,
-        positionAbsolute: {
-          x: westCoordinates.positionAbsolute.x,
-          y: northCoordinates.positionAbsolute.y,
+        position: {
+          x: westCoordinates.position.x,
+          y: northCoordinates.position.y,
         },
         width: westCoordinates.width,
       };
@@ -143,18 +143,18 @@ export const getSizesCoordinates = (
     case Anchor.southEast:
       return {
         height: southCoordinates.height,
-        positionAbsolute: {
-          x: eastCoordinates.positionAbsolute.x,
-          y: southCoordinates.positionAbsolute.y,
+        position: {
+          x: eastCoordinates.position.x,
+          y: southCoordinates.position.y,
         },
         width: eastCoordinates.width,
       };
     case Anchor.southWest:
       return {
         height: southCoordinates.height,
-        positionAbsolute: {
-          x: westCoordinates.positionAbsolute.x,
-          y: southCoordinates.positionAbsolute.y,
+        position: {
+          x: westCoordinates.position.x,
+          y: southCoordinates.position.y,
         },
         width: westCoordinates.width,
       };

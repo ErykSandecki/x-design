@@ -44,9 +44,10 @@ describe('updateElementPosition', () => {
     );
 
     // result
-    expect(
-      mockCallBack.mock.calls[0][0].payload.positionAbsolute,
-    ).toStrictEqual({ x: 0, y: 0 });
+    expect(mockCallBack.mock.calls[0][0].payload.position).toStrictEqual({
+      x: 0,
+      y: 0,
+    });
   });
 
   it(`should set elements coordinates`, () => {

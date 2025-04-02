@@ -15,12 +15,12 @@ import { handleSetElementCoordinates } from '../handleSetElementCoordinates';
 describe('handleSetElementCoordinates', () => {
   it(`should return data with changed element coordinates`, () => {
     // mock
-    const positionAbsolute = { x: 100, y: 100 };
+    const position = { x: 100, y: 100 };
 
     // before
     const result = handleSetElementCoordinates(
       elementAllDataMock.id,
-      positionAbsolute,
+      position,
       {
         ...pageBuilderStateMock[PAGE_BUILDER],
         elements: {
@@ -45,13 +45,13 @@ describe('handleSetElementCoordinates', () => {
         allData: {
           [elementAllDataMock.id]: {
             ...elementAllDataMock,
-            positionAbsolute,
+            position,
           },
         },
         dynamicData: {
           [elementDynamicDataMock.id]: {
             ...elementDynamicDataMock,
-            positionAbsolute,
+            position,
           },
         },
         staticData: {

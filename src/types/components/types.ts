@@ -7,8 +7,7 @@ export type TElement = {
   id: string;
   index: number;
   parentId: TElement['id'] | '-1';
-  positionAbsolute: T2DCoordinates;
-  positionRelative: T2DCoordinates;
+  position: T2DCoordinates;
   rotate: number;
   type: ElementType;
   width: number;

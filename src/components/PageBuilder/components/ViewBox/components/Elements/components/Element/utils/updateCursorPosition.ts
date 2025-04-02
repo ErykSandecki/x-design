@@ -14,7 +14,7 @@ import { initSetElementsCoordinates } from '../../../../../utils/initSetElements
 export const updateCursorPosition = (
   cursorPosition: RefObject<T2DCoordinates>,
   dispatch: Dispatch,
-  elementPosition: TElement['positionAbsolute'],
+  elementPosition: TElement['position'],
   event: MouseEvent | React.MouseEvent,
   isMultiple: boolean,
   isSelected: boolean,

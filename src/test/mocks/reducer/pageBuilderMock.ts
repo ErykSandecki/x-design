@@ -31,14 +31,11 @@ export const pageBuilderStateMock: Record<
 export const elementDynamicDataMock: TElementDynamicData = {
   height: 100,
   id: '1',
-  positionAbsolute: {
+  position: {
     x: 0,
     y: 0,
   },
-  positionRelative: {
-    x: 0,
-    y: 0,
-  },
+
   rotate: 0,
   width: 100,
 };
@@ -60,8 +57,7 @@ export const createFrameMock: TElement = {
   id: '1',
   index: 0,
   parentId: '-1',
-  positionAbsolute: { x: 0, y: 0 },
-  positionRelative: { x: 0, y: 0 },
+  position: { x: 0, y: 0 },
   rotate: 0,
   type: ElementType.frame,
   width: 0,

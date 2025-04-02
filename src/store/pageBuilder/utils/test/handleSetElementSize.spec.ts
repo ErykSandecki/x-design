@@ -57,7 +57,7 @@ describe('handleSetElementSizes', () => {
           [elementAllDataMock.id]: {
             ...elementAllDataMock,
             height: 100,
-            positionAbsolute: { x: 0, y: 0 },
+            position: { x: 0, y: 0 },
             width: 300,
           },
         },
@@ -65,7 +65,7 @@ describe('handleSetElementSizes', () => {
           [elementDynamicDataMock.id]: {
             ...elementDynamicDataMock,
             height: 100,
-            positionAbsolute: { x: 0, y: 0 },
+            position: { x: 0, y: 0 },
             width: 300,
           },
         },
