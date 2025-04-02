@@ -1,5 +1,6 @@
 export enum E2EAttribute {
   box = 'box',
+  button = 'button',
   form = 'form',
   icon = 'icon',
   logo = 'logo',

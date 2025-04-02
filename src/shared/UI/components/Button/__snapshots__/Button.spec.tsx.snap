@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button snapshots should render Button 1`] = `
+<DocumentFragment>
+  <button
+    class="Button Button--primary Button--medium Button--contained"
+    data-test-button=""
+    type="button"
+  >
+    Click
+  </button>
+</DocumentFragment>
+`;

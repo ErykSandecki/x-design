@@ -1,0 +1,117 @@
+@use 'sass:map';
+
+@import './button-icons';
+@import './button-list';
+@import './button-map';
+@import '../../../../../styles/mixins/transitions/ripple/ripple-styles';
+
+@mixin button-idle-styles($className, $color, $variant) {
+  @if $variant == 'contained' {
+    background-color: map.get(
+      $--rx-background-color-map,
+      $variant + '-' + $color
+    );
+  } @else if $variant == 'outlined' {
+    border-color: map.get($--rx-border-map, $variant + '-' + $color);
+  }
+
+  @include button-icons($className, $color, 'idle', $variant);
+}
+
+@mixin button-disabled-styles($className, $color, $variant) {
+  @if $variant == 'contained' {
+    background-color: map.get(
+      $--rx-background-color-map,
+      $variant + '-' + $color + '-disabled'
+    );
+  } @else if $variant == 'outlined' {
+    border-color: map.get(
+      $--rx-border-map,
+      $variant + '-' + $color + '-disabled'
+    );
+  }
+
+  @if $variant != 'contained' {
+    @include button-icons($className, $color, 'disabled', $variant);
+
+    color: map.get($--rx-color-map, $variant + '-' + $color + '-disabled');
+  }
+}
+
+@mixin button-hover-styles($className, $color, $variant) {
+  @if $variant != 'outlined' {
+    background-color: map.get(
+      $--rx-background-color-map,
+      $variant + '-' + $color + '-hover'
+    );
+
+    @if $variant == 'contained' {
+      box-shadow:
+        0 1px 2px 0 #58585875,
+        0 1px 3px 1px #58585875;
+    }
+  } @else {
+    border-color: map.get($--rx-border-map, $variant + '-' + $color + '-hover');
+  }
+
+  @if $variant != 'contained' {
+    @include button-icons($className, $color, 'hover', $variant);
+
+    color: map.get($--rx-color-map, $variant + '-' + $color + '-hover');
+  }
+}
+
+@mixin button-ripple-styles($color, $variant) {
+  @if $variant == 'text' {
+    @include ripple-circle(
+      map.get($--rx-color-map, $variant + '-' + $color + '-hover')
+    );
+  } @else if $variant == 'contained' {
+    @include ripple-circle(
+      map.get($--rx-background-color-map, $variant + '-' + $color + '-hover')
+    );
+  } @else {
+    @include ripple-circle(
+      map.get($--rx-border-map, $variant + '-' + $color + '-hover')
+    );
+  }
+}
+
+@mixin button-state-styles($className, $color, $variant) {
+  @include button-idle-styles($className, $color, $variant);
+
+  color: map.get($--rx-color-map, $variant + '-' + $color);
+
+  &:disabled {
+    cursor: not-allowed;
+    @include button-disabled-styles($className, $color, $variant);
+  }
+
+  @at-root #{&}#{$className}--forced-hover,
+    &:focus:enabled,
+    &:hover:enabled {
+    @include button-hover-styles($className, $color, $variant);
+  }
+
+  #{$className}--ripple {
+    @include button-ripple-styles($color, $variant);
+  }
+}
+
+@mixin button-variants($className) {
+  @each $variant in $--rx-button-variants {
+    @each $color in $--rx-button-colors {
+      &--#{$variant}#{&}--#{$color} {
+        @include button-state-styles($className, $color, $variant);
+
+        @if $variant == 'text' or $variant == 'outlined' {
+          background: unset;
+        }
+
+        @if $variant == 'outlined' {
+          border: 1px solid;
+        }
+      }
+    }
+  }
+}

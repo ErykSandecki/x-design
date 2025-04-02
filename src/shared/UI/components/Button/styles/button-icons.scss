@@ -1,0 +1,69 @@
+@use 'sass:map';
+
+@import './button-icons-list';
+@import './button-list';
+@import './button-map';
+
+@mixin button-icons-apply-property($color, $property) {
+  path {
+    #{$property}: $color;
+  }
+}
+
+@mixin button-icons-state-styles($color, $property, $state, $variant) {
+  @if $state == 'idle' {
+    @include button-icons-apply-property(
+      map.get($--rx-color-map, $variant + '-' + $color),
+      $property
+    );
+  } @else if $state == 'disabled' {
+    @include button-icons-apply-property(
+      map.get($--rx-color-map, $variant + '-' + $color + '-disabled'),
+      $property
+    );
+  } @else {
+    @include button-icons-apply-property(
+      map.get($--rx-color-map, $variant + '-' + $color + '-hover'),
+      $property
+    );
+  }
+}
+
+@mixin button-icons-apply-margins {
+  &--start {
+    margin-right: map.get($--rx-button-map, 'btn-space-between');
+  }
+
+  &--end {
+    margin-left: map.get($--rx-button-map, 'btn-space-between');
+  }
+}
+
+@mixin button-icons-apply-sizes {
+  &--small {
+    height: map.get($--rx-button-map, 'btn-small-icon-size');
+  }
+
+  &--medium {
+    height: map.get($--rx-button-map, 'btn-medium-icon-size');
+  }
+
+  &--large {
+    height: map.get($--rx-button-map, 'btn-large-icon-size');
+  }
+}
+
+@mixin button-icons($className, $color, $state, $variant) {
+  #{$className}__icon {
+    @each $property in $--rx-button-icons-properties {
+      &--apply-#{$property} {
+        @include button-icons-state-styles($color, $property, $state, $variant);
+      }
+    }
+
+    @if $state == 'idle' {
+      @include button-icons-apply-margins;
+      @include button-icons-apply-sizes;
+    }
+  }
+}

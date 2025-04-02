@@ -1,0 +1,191 @@
+@use 'sass:map';
+
+$--rx-color-map: (
+  text-primary: map.get($--rx-button-map, 'btn-text-primary-color'),
+  text-primary-hover: map.get($--rx-button-map, 'btn-text-primary-color-hover'),
+  text-primary-disabled: map.get(
+      $--rx-button-map,
+      'btn-text-primary-color-disabled'
+    ),
+  text-secondary: map.get($--rx-button-map, 'btn-text-secondary-color'),
+  text-secondary-hover: map.get(
+      $--rx-button-map,
+      'btn-text-secondary-color-hover'
+    ),
+  text-secondary-disabled: map.get(
+      $--rx-button-map,
+      'btn-text-secondary-color-disabled'
+    ),
+  text-success: map.get($--rx-button-map, 'btn-text-success-color'),
+  text-success-hover: map.get($--rx-button-map, 'btn-text-success-color-hover'),
+  text-success-disabled: map.get(
+      $--rx-button-map,
+      'btn-text-success-color-disabled'
+    ),
+  text-warning: map.get($--rx-button-map, 'btn-text-warning-color'),
+  text-warning-hover: map.get($--rx-button-map, 'btn-text-warning-color-hover'),
+  text-warning-disabled: map.get(
+      $--rx-button-map,
+      'btn-text-warning-color-disabled'
+    ),
+  text-error: map.get($--rx-button-map, 'btn-text-error-color'),
+  text-error-hover: map.get($--rx-button-map, 'btn-text-error-color-hover'),
+  text-error-disabled: map.get(
+      $--rx-button-map,
+      'btn-text-error-color-disabled'
+    ),
+  contained-primary: map.get($--rx-button-map, 'btn-contained-primary-color'),
+  contained-secondary: map.get(
+      $--rx-button-map,
+      'btn-contained-secondary-color'
+    ),
+  contained-success: map.get($--rx-button-map, 'btn-contained-success-color'),
+  contained-warning: map.get($--rx-button-map, 'btn-contained-warning-color'),
+  contained-error: map.get($--rx-button-map, 'btn-contained-error-color'),
+  outlined-primary: map.get($--rx-button-map, 'btn-outlined-primary-color'),
+  outlined-primary-hover: map.get(
+      $--rx-button-map,
+      'btn-outlined-primary-color-hover'
+    ),
+  outlined-primary-disabled: map.get(
+      $--rx-button-map,
+      'btn-outlined-primary-color-disabled'
+    ),
+  outlined-secondary: map.get($--rx-button-map, 'btn-outlined-secondary-color'),
+  outlined-secondary-hover: map.get(
+      $--rx-button-map,
+      'btn-outlined-secondary-color-hover'
+    ),
+  outlined-secondary-disabled: map.get(
+      $--rx-button-map,
+      'btn-outlined-secondary-color-disabled'
+    ),
+  outlined-success: map.get($--rx-button-map, 'btn-outlined-success-color'),
+  outlined-success-hover: map.get(
+      $--rx-button-map,
+      'btn-outlined-success-color-hover'
+    ),
+  outlined-success-disabled: map.get(
+      $--rx-button-map,
+      'btn-outlined-success-color-disabled'
+    ),
+  outlined-warning: map.get($--rx-button-map, 'btn-outlined-warning-color'),
+  outlined-warning-hover: map.get(
+      $--rx-button-map,
+      'btn-outlined-warning-color-hover'
+    ),
+  outlined-warning-disabled: map.get(
+      $--rx-button-map,
+      'btn-outlined-warning-color-disabled'
+    ),
+  outlined-error: map.get($--rx-button-map, 'btn-outlined-error-color'),
+  outlined-error-hover: map.get(
+      $--rx-button-map,
+      'btn-outlined-error-color-hover'
+    ),
+  outlined-error-disabled: map.get(
+      $--rx-button-map,
+      'btn-outlined-error-color-disabled'
+    ),
+);
+
+$--rx-background-color-map: (
+  text-primary-hover: map.get($--rx-button-map, 'btn-text-primary-bg-hover'),
+  text-secondary-hover: map.get($--rx-button-map, 'btn-text-secondary-bg-hover'),
+  text-success-hover: map.get($--rx-button-map, 'btn-text-success-bg-hover'),
+  text-warning-hover: map.get($--rx-button-map, 'btn-text-warning-bg-hover'),
+  text-error-hover: map.get($--rx-button-map, 'btn-text-error-bg-hover'),
+  contained-primary: map.get($--rx-button-map, 'btn-contained-primary-bg'),
+  contained-primary-hover: map.get(
+      $--rx-button-map,
+      'btn-contained-primary-bg-hover'
+    ),
+  contained-primary-disabled: map.get(
+      $--rx-button-map,
+      'btn-contained-primary-bg-disabled'
+    ),
+  contained-secondary: map.get($--rx-button-map, 'btn-contained-secondary-bg'),
+  contained-secondary-hover: map.get(
+      $--rx-button-map,
+      'btn-contained-secondary-bg-hover'
+    ),
+  contained-secondary-disabled: map.get(
+      $--rx-button-map,
+      'btn-contained-secondary-bg-disabled'
+    ),
+  contained-success: map.get($--rx-button-map, 'btn-contained-success-bg'),
+  contained-success-hover: map.get(
+      $--rx-button-map,
+      'btn-contained-success-bg-hover'
+    ),
+  contained-success-disabled: map.get(
+      $--rx-button-map,
+      'btn-contained-success-bg-disabled'
+    ),
+  contained-warning: map.get($--rx-button-map, 'btn-contained-warning-bg'),
+  contained-warning-hover: map.get(
+      $--rx-button-map,
+      'btn-contained-warning-bg-hover'
+    ),
+  contained-warning-disabled: map.get(
+      $--rx-button-map,
+      'btn-contained-warning-bg-disabled'
+    ),
+  contained-error: map.get($--rx-button-map, 'btn-contained-error-bg'),
+  contained-error-hover: map.get(
+      $--rx-button-map,
+      'btn-contained-error-bg-hover'
+    ),
+  contained-error-disabled: map.get(
+      $--rx-button-map,
+      'btn-contained-error-bg-disabled'
+    ),
+);
+
+$--rx-border-map: (
+  outlined-primary: map.get($--rx-button-map, 'btn-outlined-primary-border'),
+  outlined-primary-hover: map.get(
+      $--rx-button-map,
+      'btn-outlined-primary-border-hover'
+    ),
+  outlined-primary-disabled: map.get(
+      $--rx-button-map,
+      'btn-outlined-primary-border-disabled'
+    ),
+  outlined-secondary: map.get($--rx-button-map, 'btn-outlined-secondary-border'),
+  outlined-secondary-hover: map.get(
+      $--rx-button-map,
+      'btn-outlined-secondary-border-hover'
+    ),
+  outlined-secondary-disabled: map.get(
+      $--rx-button-map,
+      'btn-outlined-secondary-border-disabled'
+    ),
+  outlined-success: map.get($--rx-button-map, 'btn-outlined-success-border'),
+  outlined-success-hover: map.get(
+      $--rx-button-map,
+      'btn-outlined-success-border-hover'
+    ),
+  outlined-success-disabled: map.get(
+      $--rx-button-map,
+      'btn-outlined-success-border-disabled'
+    ),
+  outlined-warning: map.get($--rx-button-map, 'btn-outlined-warning-border'),
+  outlined-warning-hover: map.get(
+      $--rx-button-map,
+      'btn-outlined-warning-border-hover'
+    ),
+  outlined-warning-disabled: map.get(
+      $--rx-button-map,
+      'btn-outlined-warning-border-disabled'
+    ),
+  outlined-error: map.get($--rx-button-map, 'btn-outlined-error-border'),
+  outlined-error-hover: map.get(
+      $--rx-button-map,
+      'btn-outlined-error-border-hover'
+    ),
+  outlined-error-disabled: map.get(
+      $--rx-button-map,
+      'btn-outlined-error-border-disabled'
+    ),
+);

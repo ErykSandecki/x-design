@@ -1,0 +1,14 @@
+@import '../transitions/common';
+
+@mixin button() {
+  @include transition;
+
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+}

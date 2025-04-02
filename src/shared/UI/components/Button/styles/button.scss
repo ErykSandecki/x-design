@@ -1,0 +1,20 @@
+@use 'sass:map';
+
+@import './button-sizes';
+@import './button-variants';
+@import '../../../../../styles/mixins/button/button';
+
+.Button {
+  $self: &;
+
+  @include button-variants($self);
+  @include button-size;
+  @include button;
+
+  border-radius: map.get($--rx-button-map, 'btn-border-radius');
+  user-select: none;
+
+  &--full-width {
+    width: 100%;
+  }
+}
