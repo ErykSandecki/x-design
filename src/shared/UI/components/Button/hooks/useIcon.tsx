@@ -1,5 +1,5 @@
 import cx from 'classnames';
-import { useCallback } from 'react';
+import { JSX, useCallback } from 'react';
 
 // components
 import Icon from '../../Icon/Icon';
@@ -16,25 +16,16 @@ export type TUseIcon = (data: TButtonIconArgs) => JSX.Element;
 
 export const useIcon = (size: InputSize, styles: TObject<string>): TUseIcon =>
   useCallback(
-    ({
-      placement,
-      src: { applyFill, applyStroke, iconComponent, iconName },
-    }: TButtonIconArgs): JSX.Element => (
+    ({ placement, src: { name } }: TButtonIconArgs): JSX.Element => (
       <Icon
-        className={cx(
-          styles[classNames.icon.name],
-          {
-            [styles[classNames.icon.modificators.applyFill]]: applyFill,
-          },
-          {
-            [styles[classNames.icon.modificators.applyStroke]]: applyStroke,
-          },
-          styles[classNames.icon.modificators[placement]],
-          styles[classNames.icon.modificators[size]],
-        )}
-        iconComponent={iconComponent}
-        iconName={iconName}
-        ignoreDefaultStyles
+        classes={{
+          className: cx(
+            styles[classNames.icon.name],
+            styles[classNames.icon.modificators[placement]],
+            styles[classNames.icon.modificators[size]],
+          ),
+        }}
+        name={name}
       />
     ),
     [],

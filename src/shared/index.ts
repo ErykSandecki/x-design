@@ -2,6 +2,7 @@ export * from './E2EDataAttributes/E2EDataAttribute';
 export * from './E2EDataAttributes/types';
 export * from './E2EDataAttributes/utils';
 export * from './UI/components/Box/Box';
+export * from './UI/components/Button/Button';
 export * from './UI/components/Icon/Icon';
 export * from './UI/components/Typography';
 export * from './UI/components/Typography/Typography';

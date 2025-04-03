@@ -1,5 +1,7 @@
 @use 'sass:map';
 
+@import '../../../../../styles/map/button.scss';
+
 $--rx-color-map: (
   text-primary: map.get($--rx-button-map, 'btn-text-primary-color'),
   text-primary-hover: map.get($--rx-button-map, 'btn-text-primary-color-hover'),

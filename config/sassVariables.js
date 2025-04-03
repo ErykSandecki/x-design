@@ -1,5 +1,4 @@
 const boxShadows = require('./sass/variables/boxShadows');
-const buttonVariables = require('./sass/variables/buttonVariables');
 const colors = require('./sass/variables/colors');
 const constants = require('./constants/constants');
 
@@ -23,7 +22,6 @@ const interpolateIntoSass = (obj, isTheme) => {
 module.exports = () =>
   [
     interpolateIntoSass(boxShadows),
-    interpolateIntoSass(buttonVariables, 'button'),
     interpolateIntoSass(colors),
     interpolateIntoSass(colors, 'colors'),
   ].join(' ');

@@ -2,7 +2,6 @@ import { fireEvent, render, waitFor } from '@testing-library/react';
 
 // components
 import Button from './Button';
-import Icons from '../Icon/components';
 
 // others
 import { className as classNameButton, classNames } from './classNames';
@@ -10,13 +9,12 @@ import { RIPPLE_EFFECT_MODIFICATOR } from '../../../../hooks/useRippleEffect/con
 
 // types
 import { ButtonColor, ButtonVariant } from './enums';
-import { E2EAttribute } from '../../../E2EDataAttributes/enums';
-import { IconName } from '../Icon/icons';
+import { E2EAttribute } from 'types';
 import { InputSize } from '../../enums';
 
 // utils
 import { enumToArray } from '../../../../utils/transform/enumToArray';
-import { getByE2EAttribute } from '../../../../tests';
+import { getByE2EAttribute } from 'test';
 import { getDataTestAttribute } from '../../../E2EDataAttributes/utils';
 
 const className = 'className';
@@ -134,15 +132,10 @@ describe('Button props', () => {
   });
 
   it('should pass endIcon', () => {
-    // mock
-    const endIcon = {
-      applyFill: true,
-      iconComponent: Icons.IconUpOutlined,
-      iconName: IconName.upOutlined,
-    };
-
     // before
-    const { container } = render(<Button endIcon={endIcon}>{content}</Button>);
+    const { container } = render(
+      <Button endIcon={{ name: 'Comment' }}>{content}</Button>,
+    );
 
     // result
     expect(
@@ -207,16 +200,9 @@ describe('Button props', () => {
   });
 
   it('should pass startIcon', () => {
-    // mock
-    const startIcon = {
-      applyFill: true,
-      iconComponent: Icons.IconUpOutlined,
-      iconName: IconName.upOutlined,
-    };
-
     // before
     const { container } = render(
-      <Button startIcon={startIcon}>{content}</Button>,
+      <Button startIcon={{ name: 'Comment' }}>{content}</Button>,
     );
 
     // result

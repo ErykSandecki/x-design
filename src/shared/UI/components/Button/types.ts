@@ -1,12 +1,7 @@
 // types
 import { TIconProps } from '../Icon/Icon';
 
-export type TButtonIcon =
-  | (Pick<TIconProps, 'iconComponent' | 'iconName'> & {
-      applyFill?: boolean;
-      applyStroke?: boolean;
-    })
-  | null;
+export type TButtonIcon = null | Pick<TIconProps, 'name'>;
 
 export type TButtonIconArgs = {
   placement: 'start' | 'end';
