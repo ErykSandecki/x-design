@@ -55,7 +55,7 @@ describe('Button props', () => {
   it('should pass className', () => {
     // before
     const { container } = render(
-      <Button className={className}>{content}</Button>,
+      <Button classes={{ className }}>{content}</Button>,
     );
 
     // result

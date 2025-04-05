@@ -9,10 +9,15 @@ import E2EDataAttribute, {
 import { useClickEvent } from './hooks/useClickEvent';
 import { useIcon } from './hooks/useIcon';
 import { useRippleEffect } from 'hooks/useRippleEffect/useRippleEffect';
+import { useSX } from '../../hooks/sx/useSX';
 import { useTheme } from 'hooks';
 
 // others
-import { className as classNameButton, classNames } from './classNames';
+import {
+  classes,
+  className as classNameButton,
+  classNames,
+} from './classNames';
 
 // styles
 import styles from './styles/button.scss';
@@ -22,26 +27,30 @@ import { ButtonColor, ButtonVariant } from './enums';
 import { E2EAttribute } from 'types';
 import { InputSize } from '../../enums';
 import { TButtonIcon } from './types';
+import { TUIProps } from '../../types';
 
-export type TButtonProps = ButtonHTMLAttributes<HTMLElement> & {
-  children?: ReactNode;
-  className?: string;
-  color?: ButtonColor;
-  disabledRippleEffect?: boolean;
-  e2eAttribute?: TE2EDataAttributeProps['type'];
-  e2eValue?: TE2EDataAttributeProps['value'];
-  endIcon?: TButtonIcon;
-  forcedHover?: boolean;
-  fullWidth?: boolean;
-  ref?: Ref<HTMLButtonElement>;
-  size?: InputSize;
-  startIcon?: TButtonIcon;
-  variant?: ButtonVariant;
-};
+export type TButtonProps = Omit<
+  ButtonHTMLAttributes<HTMLElement>,
+  'className' | 'color' | 'style'
+> &
+  TUIProps<typeof classes> & {
+    children?: ReactNode;
+    color?: ButtonColor;
+    disabledRippleEffect?: boolean;
+    e2eAttribute?: TE2EDataAttributeProps['type'];
+    e2eValue?: TE2EDataAttributeProps['value'];
+    endIcon?: TButtonIcon;
+    forcedHover?: boolean;
+    fullWidth?: boolean;
+    ref?: Ref<HTMLButtonElement>;
+    size?: InputSize;
+    startIcon?: TButtonIcon;
+    variant?: ButtonVariant;
+  };
 
 export const Button: FC<TButtonProps> = ({
   children,
-  className = '',
+  classes = { className: '' },
   color = ButtonColor.primary,
   disabled = false,
   disabledRippleEffect = false,
@@ -52,14 +61,16 @@ export const Button: FC<TButtonProps> = ({
   fullWidth = false,
   onClick,
   ref,
+  sx = {},
   size = InputSize.medium,
   startIcon = null,
   type = 'button',
   variant = ButtonVariant.contained,
   ...restProps
 }) => {
-  const Icon = useIcon(size, styles);
+  const sxClassName = useSX(sx);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
+  const Icon = useIcon(classNamesWithTheme, cx, size);
   const { rippleEffect, triggerRippleEffect } = useRippleEffect(
     classNames[classNameButton].name,
     styles,
@@ -74,7 +85,8 @@ export const Button: FC<TButtonProps> = ({
     <E2EDataAttribute type={e2eAttribute} value={e2eValue}>
       <button
         className={cx(
-          className,
+          sxClassName,
+          classes.className,
           classNamesWithTheme[classNameButton].name,
           [
             classNamesWithTheme[classNameButton].modificators.fullwidth,

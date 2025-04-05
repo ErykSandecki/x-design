@@ -2,29 +2,30 @@ import { Provider } from 'react-redux';
 import { render } from '@testing-library/react';
 
 // components
-import Element from './Element';
+import NewSectionButton from './NewSectionButton';
 
 // mocks
 import {
+  elementAllDataMock,
   elementDynamicDataMock,
   elementStaticDataMock,
   pageBuilderStateMock,
 } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
+import { BASE_RECT } from 'shared';
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 
 // store
 import { configureStore } from 'store/store';
 
-// types
-import { ElementType } from 'types';
-import { MouseMode } from 'components/PageBuilder/enums';
-
 const stateMock = {
   [PAGE_BUILDER]: {
     ...pageBuilderStateMock[PAGE_BUILDER],
     elements: {
+      allData: {
+        [elementAllDataMock.id]: elementAllDataMock,
+      },
       dynamicData: {
         [elementDynamicDataMock.id]: elementDynamicDataMock,
       },
@@ -34,23 +35,14 @@ const stateMock = {
 };
 
 describe('Element snapshots', () => {
-  it('should render Element', () => {
+  it('should render NewSectionButton', () => {
     // mock
     const store = configureStore(stateMock);
 
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <Element
-          classes={{ className: 'className' }}
-          id={elementDynamicDataMock.id}
-          mouseMode={MouseMode.default}
-          parentId={elementStaticDataMock.parentId}
-          position="top"
-          type={ElementType.frame}
-        >
-          {() => <></>}
-        </Element>
+        <NewSectionButton position="top" rectCoordinates={BASE_RECT} />
       </Provider>,
     );
 

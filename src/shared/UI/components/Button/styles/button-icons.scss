@@ -4,27 +4,28 @@
 @import './button-list';
 @import './button-map';
 
-@mixin button-icons-apply-property($color, $property) {
-  path {
-    #{$property}: $color;
+@mixin button-icons-apply-property($color) {
+  *[data-svg-property='fill'] {
+    fill: $color;
+  }
+
+  *[data-svg-property='stroke'] {
+    stroke: $color;
   }
 }
 
-@mixin button-icons-state-styles($color, $property, $state, $variant) {
+@mixin button-icons-state-styles($color, $state, $variant) {
   @if $state == 'idle' {
     @include button-icons-apply-property(
-      map.get($--rx-color-map, $variant + '-' + $color),
-      $property
+      map.get($--rx-color-map, $variant + '-' + $color)
     );
   } @else if $state == 'disabled' {
     @include button-icons-apply-property(
-      map.get($--rx-color-map, $variant + '-' + $color + '-disabled'),
-      $property
+      map.get($--rx-color-map, $variant + '-' + $color + '-disabled')
     );
   } @else {
     @include button-icons-apply-property(
-      map.get($--rx-color-map, $variant + '-' + $color + '-hover'),
-      $property
+      map.get($--rx-color-map, $variant + '-' + $color + '-hover')
     );
   }
 }
@@ -55,11 +56,7 @@
 
 @mixin button-icons($className, $color, $state, $variant) {
   #{$className}__icon {
-    @each $property in $--rx-button-icons-properties {
-      &--apply-#{$property} {
-        @include button-icons-state-styles($color, $property, $state, $variant);
-      }
-    }
+    @include button-icons-state-styles($color, $state, $variant);
 
     @if $state == 'idle' {
       @include button-icons-apply-margins;

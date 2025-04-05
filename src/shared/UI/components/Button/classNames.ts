@@ -6,6 +6,10 @@ import { InputSize } from '../../enums';
 
 export const className = 'Button';
 
+export const classes = {
+  className,
+};
+
 export const classNames = {
   [className]: {
     name: className,
@@ -20,8 +24,6 @@ export const classNames = {
   icon: {
     name: `${className}__icon`,
     modificators: {
-      applyFill: `${className}__icon--apply-fill`,
-      applyStroke: `${className}__icon--apply-stroke`,
       end: `${className}__icon--end`,
       start: `${className}__icon--start`,
       ...mapValues(InputSize, (size) => `${className}__icon--${size}`),

@@ -1,4 +1,5 @@
 {
   "pageBuilder.viewBox.elements.frame.label.createFrame": "Kontener",
-  "pageBuilder.viewBox.elementArea.label.createFrame": "Kontener"
+  "pageBuilder.viewBox.elementArea.label.createFrame": "Kontener",
+  "pageBuilder.viewBox.elements.element.newElementButton.label": "Dodaj sekcje"
 }

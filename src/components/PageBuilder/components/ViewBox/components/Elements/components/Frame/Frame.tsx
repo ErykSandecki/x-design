@@ -38,6 +38,7 @@ const Frame: FC<TFrameProps> = ({
       id={id}
       parentId={parentId}
       mouseMode={mouseMode}
+      position="top"
       type={type}
     >
       {(selected) => (

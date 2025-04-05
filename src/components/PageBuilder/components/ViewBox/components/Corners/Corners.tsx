@@ -17,6 +17,7 @@ import { TRectCoordinates } from 'types';
 export type TCornersProps = {
   increaseZIndex?: boolean;
   rectCoordinates: TRectCoordinates;
+  showTopButton?: boolean;
 };
 
 const Corners: FC<TCornersProps> = ({
@@ -41,7 +42,6 @@ const Corners: FC<TCornersProps> = ({
         width: `${width}px`,
       }}
     >
-      <circle cx={width / 2} cy={0} r={HHW} />
       <rect x={0 - HHW} y={0 - HHW} width={SHW} height={SHW} rx={RX} />
       <rect x={0 - HHW} y={height - HHW} width={SHW} height={SHW} rx={RX} />
       <rect x={width - HHW} y={0 - HHW} width={SHW} height={SHW} rx={RX} />

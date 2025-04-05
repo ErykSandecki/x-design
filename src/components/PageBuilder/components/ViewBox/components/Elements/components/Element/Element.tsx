@@ -3,6 +3,9 @@ import { useSelector } from 'react-redux';
 
 // components
 import Corners from '../../../Corners/Corners';
+import NewElementButton, {
+  TNewElementButtonProps,
+} from './components/NewSectionButton/NewSectionButton';
 import TransformArea from '../../../TransformArea/TransformArea';
 import { Box } from 'shared';
 
@@ -34,7 +37,7 @@ import { MouseMode } from 'components/PageBuilder/enums';
 // utils
 import { getCornersPosition } from './utils/getCornersPosition';
 
-type TElementProps = {
+type TElementProps = Pick<TNewElementButtonProps, 'position'> & {
   classes: typeof classes;
   children: (selected: boolean) => ReactNode;
   id: string;
@@ -50,6 +53,7 @@ const Element: FC<TElementProps> = ({
   mouseMode,
   parentId,
   type,
+  ...restProps
 }) => {
   const isSelected = useSelector(isSelectedElementSelectorCreator(id));
   const isMultiple = useSelector(multipleSelectedElementsSelector);
@@ -60,7 +64,7 @@ const Element: FC<TElementProps> = ({
   const { x, y } = position;
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const rectCoordinates = getCornersPosition(height, width);
-  const displayEvents = !isMultiple && isSelected;
+  const displayElements = !isMultiple && isSelected;
   const events = useElementEvents(
     elementRef,
     height,
@@ -97,8 +101,11 @@ const Element: FC<TElementProps> = ({
       {...events}
     >
       {children(isSelected)}
-      {displayEvents && <Corners rectCoordinates={rectCoordinates} />}
-      {displayEvents && (
+      {displayElements && <Corners rectCoordinates={rectCoordinates} />}
+      {displayElements && (
+        <NewElementButton rectCoordinates={rectCoordinates} {...restProps} />
+      )}
+      {displayElements && (
         <TransformArea
           height={height}
           id={id}
