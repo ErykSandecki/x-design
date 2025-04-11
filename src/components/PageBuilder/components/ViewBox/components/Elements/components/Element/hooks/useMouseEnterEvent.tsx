@@ -17,6 +17,7 @@ export type TUseMouseEnterEvent = (event: MouseEvent) => void;
 
 export const useMouseEnterEvent = (
   id: TElement['id'],
+  isSelected: boolean,
   mouseMode: MouseMode,
 ): TUseMouseEnterEvent => {
   const dispatch = useDispatch();
@@ -27,7 +28,7 @@ export const useMouseEnterEvent = (
         store.getState(),
       );
 
-      if (!isEmpty(draggableElements)) {
+      if (!isEmpty(draggableElements) && !isSelected) {
         dispatch(updateEventsStatus({ possibleParent: id }));
       }
     }

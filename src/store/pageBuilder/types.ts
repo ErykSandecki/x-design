@@ -50,7 +50,7 @@ export type TElementsData = {
 export type TEvents = {
   draggableElements: Array<TElement['id']>;
   isMultipleMoving: boolean;
-  possibleParent: TElement['id'] | '-1';
+  possibleParent: TElement['id'] | null;
   selectedAnchor: Anchor;
 };
 

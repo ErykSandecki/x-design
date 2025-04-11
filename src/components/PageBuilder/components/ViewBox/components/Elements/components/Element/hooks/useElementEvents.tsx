@@ -83,7 +83,7 @@ export const useElementEvents = (
       selectedElement,
       setIsPressing,
     ),
-    onMouseEnter: useMouseEnterEvent(id, mouseMode),
+    onMouseEnter: useMouseEnterEvent(id, isSelected, mouseMode),
     onMouseLeave: useMouseLeaveEvent(mouseMode, parentId),
   };
 };

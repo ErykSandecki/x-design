@@ -23,7 +23,7 @@ export const pageBuilderStateMock: Record<
     events: {
       draggableElements: [],
       isMultipleMoving: false,
-      possibleParent: '-1',
+      possibleParent: null,
       selectedAnchor: Anchor.none,
     },
     isLoading: true,
@@ -74,7 +74,7 @@ export const createFrameMock: TElement = {
 export const eventsMock: TEvents = {
   draggableElements: [],
   isMultipleMoving: false,
-  possibleParent: '-1',
+  possibleParent: null,
   selectedAnchor: Anchor.none,
 };
 

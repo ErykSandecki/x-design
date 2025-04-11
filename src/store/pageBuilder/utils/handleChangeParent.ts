@@ -1,3 +1,5 @@
+import { first } from 'lodash';
+
 // others
 import { BASE_2D } from 'shared';
 
@@ -6,6 +8,7 @@ import { T2DCoordinates, TElement } from 'types';
 import { TElementsData, TEvents, TPageBuilderState } from '../types';
 
 // utils
+import { findLastIndex } from './findLastIndex';
 import { findMainParent } from './findMainParent';
 
 export const getOffsetXY = (
@@ -68,17 +71,24 @@ export const getMappedDraggableElements = (
   draggableElements: TEvents['draggableElements'],
   possibleParent: TEvents['possibleParent'],
   state: TPageBuilderState,
-): TElementsData =>
-  draggableElements
+): TElementsData => {
+  const id = first(draggableElements);
+  const parentHasChanged = id
+    ? state.elements.allData[id].parentId !== possibleParent
+    : false;
+  const lastIndex = id
+    ? findLastIndex(possibleParent, state.elements.staticData)
+    : -1;
+
+  return draggableElements
     .map((id, index) => {
       const element = elements.allData[id];
-      const parentHasChanged = element.parentId !== possibleParent;
       const targetPosition = possibleParent === '-1' ? 'absolute' : 'relative';
       const data = {
         coordinates: parentHasChanged
           ? calculateCoordinates(element.parentId, id, possibleParent, state)
           : element.coordinates,
-        index: parentHasChanged ? index : element.index,
+        index: parentHasChanged ? index + lastIndex : element.index,
         parentId: parentHasChanged ? possibleParent : element.parentId,
         position: parentHasChanged ? targetPosition : element.position,
       };
@@ -123,6 +133,7 @@ export const getMappedDraggableElements = (
         staticData: {},
       },
     );
+};
 
 export const handleChangeParent = (
   state: TPageBuilderState,
@@ -130,34 +141,38 @@ export const handleChangeParent = (
   const { elements, events } = state;
   const { draggableElements, possibleParent } = events;
 
-  const mappedDraggableElements = getMappedDraggableElements(
-    elements,
-    draggableElements,
-    possibleParent,
-    state,
-  );
+  if (possibleParent !== null) {
+    const mappedDraggableElements = getMappedDraggableElements(
+      elements,
+      draggableElements,
+      possibleParent,
+      state,
+    );
 
-  return {
-    ...state,
-    elements: {
-      allData: {
-        ...state.elements.allData,
-        ...mappedDraggableElements.allData,
+    return {
+      ...state,
+      elements: {
+        allData: {
+          ...state.elements.allData,
+          ...mappedDraggableElements.allData,
+        },
+        dynamicData: {
+          ...state.elements.dynamicData,
+          ...mappedDraggableElements.dynamicData,
+        },
+        staticData: {
+          ...state.elements.staticData,
+          ...mappedDraggableElements.staticData,
+        },
       },
-      dynamicData: {
-        ...state.elements.dynamicData,
-        ...mappedDraggableElements.dynamicData,
+      events: {
+        ...state.events,
+        draggableElements: [],
+        possibleParent: null,
       },
-      staticData: {
-        ...state.elements.staticData,
-        ...mappedDraggableElements.staticData,
-      },
-    },
-    events: {
-      ...state.events,
-      draggableElements: [],
-      possibleParent: '-1',
-    },
-    selectedElements: possibleParent === '-1' ? state.selectedElements : {},
-  };
+      selectedElements: possibleParent === '-1' ? state.selectedElements : {},
+    };
+  }
+
+  return state;
 };

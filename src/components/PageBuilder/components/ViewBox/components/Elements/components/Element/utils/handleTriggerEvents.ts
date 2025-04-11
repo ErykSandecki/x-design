@@ -1,8 +1,5 @@
 import { Dispatch } from 'redux';
 
-// store
-import { changeParent } from 'store/pageBuilder/actions';
-
 // utils
 import { finishSetElementsCoordinates } from '../../../../../utils/finishSetElementsCoordinates';
 
@@ -12,6 +9,5 @@ export const handleTriggerEvents = (
 ): void => {
   if (!isMultiple) {
     finishSetElementsCoordinates(dispatch);
-    dispatch(changeParent());
   }
 };

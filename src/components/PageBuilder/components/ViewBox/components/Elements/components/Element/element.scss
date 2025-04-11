@@ -8,6 +8,10 @@
   user-select: none;
   z-index: $--rx-zindex-element;
 
+  &:hover {
+    z-index: $--rx-zindex-element-active;
+  }
+
   &--moving {
     pointer-events: none;
     z-index: $--rx-zindex-element-moving !important;

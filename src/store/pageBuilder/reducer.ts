@@ -41,6 +41,7 @@ import { handleRotateElement } from './utils/handleRotateElement';
 import { handleSetElementCoordinates } from './utils/handleSetElementCoordinates';
 import { handleSetElementsCoordinates } from './utils/handleSetElementsCoordinates';
 import { handleSetElementSizes } from './utils/handleSetElementSize';
+import { filterSelectedElements } from './utils/filterSelectedElements';
 
 const initialState: TPageBuilderState = {
   areaCoordinates: BASE_3D,
@@ -125,7 +126,7 @@ const initialState: TPageBuilderState = {
   events: {
     draggableElements: [],
     isMultipleMoving: false,
-    possibleParent: '-1',
+    possibleParent: null,
     selectedAnchor: Anchor.none,
   },
   isLoading: true,
@@ -152,16 +153,19 @@ const selectElement = (
   { payload: selectedElement }: TAction<TSelectElementAction['payload']>,
 ): TPageBuilderState => ({
   ...state,
-  selectedElements: {
+  selectedElements: filterSelectedElements({
     ...state.selectedElements,
     [selectedElement.id]: selectedElement,
-  },
+  }),
 });
 
 const selectElements = (
   state: TPageBuilderState,
   { payload: selectedElements }: TAction<TSelectElementsAction['payload']>,
-): TPageBuilderState => ({ ...state, selectedElements });
+): TPageBuilderState => ({
+  ...state,
+  selectedElements: filterSelectedElements(selectedElements),
+});
 
 const setAreCoordinates = (
   state: TPageBuilderState,
