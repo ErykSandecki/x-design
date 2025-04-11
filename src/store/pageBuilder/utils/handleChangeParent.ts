@@ -40,9 +40,10 @@ export const calculateCoordinates = (
       state.elements.staticData,
     );
     const parentCords = state.elements.dynamicData[mainParentId].coordinates;
+    const { z } = state.areaCoordinates;
     const { x, y } = getOffsetXY(id, mainParentId);
 
-    return { x: parentCords.x - x, y: parentCords.y - y };
+    return { x: parentCords.x - x / z, y: parentCords.y - y / z };
   }
 
   return { x: 0, y: 0 };
