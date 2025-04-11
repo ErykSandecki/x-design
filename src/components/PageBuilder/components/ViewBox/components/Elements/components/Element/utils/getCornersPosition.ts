@@ -10,7 +10,7 @@ export const getCornersPosition = (
   width: TElementDynamicData['width'],
 ): TRectCoordinates => ({
   x1: (OUTLINE / 2) * -1,
-  x2: width + OUTLINE / 2,
+  x2: (width as number) + OUTLINE / 2,
   y1: (OUTLINE / 2) * -1,
-  y2: height + OUTLINE / 2,
+  y2: (height as number) + OUTLINE / 2,
 });

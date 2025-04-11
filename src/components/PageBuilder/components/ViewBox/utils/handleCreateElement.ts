@@ -23,10 +23,12 @@ export const handleCreateElement = (
     const x = x1 < x2 ? x1 : x2;
     const y = y1 < y2 ? y1 : y2;
     const element: TAddELementActionPayload = {
+      backgroundColor: '#ffffff',
+      coordinates: { x, y },
       height: Math.abs(y1 - y2),
       id: generateID(),
       parentId: '-1',
-      position: { x, y },
+      position: 'absolute',
       rotate: 0,
       type: ElementType.frame,
       width: Math.abs(x1 - x2),

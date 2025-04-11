@@ -5,7 +5,8 @@ import { useEffect } from 'react';
 import { TSelectedElement } from 'store/pageBuilder/types';
 
 // utils
-import { finishSetElementsCoordinates } from 'components/PageBuilder/components/ViewBox/utils/finishSetElementsCoordinates';
+import { finishSetElementsCoordinates } from '../../../../../utils/finishSetElementsCoordinates';
+import { handleTriggerEvents } from '../utils/handleTriggerEvents';
 import { handleTrySelectElement } from '../utils/handleTrySelectElement';
 
 export type TUseMouseUpEvent = void;
@@ -32,7 +33,7 @@ export const useMouseUpEvent = (
     );
     setIsMoving(false);
     setIsPressing(false);
-    finishSetElementsCoordinates(dispatch);
+    handleTriggerEvents(dispatch, isMultiple);
   };
 
   useEffect(() => {

@@ -37,7 +37,11 @@ describe('Elements snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <Elements eventsDisabled={false} mouseMode={MouseMode.default} />
+        <Elements
+          eventsDisabled={false}
+          mouseMode={MouseMode.default}
+          parentId="-1"
+        />
       </Provider>,
     );
 
@@ -60,7 +64,11 @@ describe('Elements snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <Elements eventsDisabled={false} mouseMode={MouseMode.default} />
+        <Elements
+          eventsDisabled={false}
+          mouseMode={MouseMode.default}
+          parentId="-1"
+        />
       </Provider>,
     );
 

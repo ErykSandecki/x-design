@@ -40,13 +40,13 @@ describe('useMouseMoveEvent', () => {
     renderHook(
       () =>
         useMouseMoveEvent(
+          BASE_2D,
           ref,
           '-1',
           false,
           false,
           true,
           MouseMode.default,
-          BASE_2D,
           mockCallBack,
         ),
       {
@@ -69,13 +69,13 @@ describe('useMouseMoveEvent', () => {
     renderHook(
       () =>
         useMouseMoveEvent(
+          BASE_2D,
           ref,
           '-1',
           false,
           false,
           false,
           MouseMode.default,
-          BASE_2D,
           mockCallBack,
         ),
       {

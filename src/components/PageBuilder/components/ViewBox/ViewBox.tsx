@@ -69,6 +69,7 @@ const ViewBox: FC<TViewBoxProps> = ({
       <Elements
         eventsDisabled={elementArea !== null || mouseMode !== MouseMode.default}
         mouseMode={mouseMode}
+        parentId="-1"
       />
       <ElementArea elementArea={elementArea} />
       <SelectableArea selectableArea={selectableArea} />

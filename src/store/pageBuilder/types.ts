@@ -1,15 +1,17 @@
 // others
 import {
   ADD_ELEMENT,
+  CHANGE_PARENT,
+  ROTATE_ELEMENT,
   SELECT_ELEMENT,
-  UNSELECT_ELEMENT,
   SELECT_ELEMENTS,
   SET_AREA_COORDINATES,
   SET_ELEMENT_COORDINATES,
-  SET_ELEMENTS_COORDINATES,
-  UPDATE_EVENTS_STATUS,
   SET_ELEMENT_SIZES,
-  ROTATE_ELEMENT,
+  SET_ELEMENTS_COORDINATES,
+  UNSELECT_ELEMENT,
+  UPDATE_EVENTS_STATUS,
+  UPDATE_PREV_STATE,
 } from './actionsType';
 
 // types
@@ -25,7 +27,13 @@ import {
 
 export type TElementDynamicData = Pick<
   TElement,
-  'height' | 'id' | 'position' | 'rotate' | 'width'
+  | 'backgroundColor'
+  | 'coordinates'
+  | 'height'
+  | 'id'
+  | 'position'
+  | 'rotate'
+  | 'width'
 >;
 
 export type TElementStaticData = Pick<
@@ -40,7 +48,9 @@ export type TElementsData = {
 };
 
 export type TEvents = {
+  draggableElements: Array<TElement['id']>;
   isMultipleMoving: boolean;
+  possibleParent: TElement['id'] | '-1';
   selectedAnchor: Anchor;
 };
 
@@ -59,7 +69,10 @@ export type TSelectedElement = {
 
 export type TSelectedElements = TObject<TSelectedElement>;
 
-export type TSizeCoordinates = Pick<TElement, 'height' | 'position' | 'width'>;
+export type TSizeCoordinates = Pick<
+  TElement,
+  'coordinates' | 'height' | 'width'
+>;
 
 export type TPageBuilderState = {
   areaCoordinates: T3DCoordinates;
@@ -76,6 +89,10 @@ export type TAddELementActionPayload = Omit<TElement, 'index'>;
 export type TAddELementAction = {
   payload: TAddELementActionPayload;
   type: typeof ADD_ELEMENT;
+};
+
+export type TChangeParentAction = {
+  type: typeof CHANGE_PARENT;
 };
 
 export type TRotateElementActionPayload = Pick<TElement, 'id' | 'rotate'>;
@@ -102,7 +119,7 @@ export type TSetAreaCoordinatesAction = {
 
 export type TSetElementCoordinatesActionPayload = Pick<
   TElement,
-  'id' | 'position'
+  'coordinates' | 'id'
 >;
 
 export type TSetElementCoordinatesAction = {
@@ -131,6 +148,10 @@ export type TSetElementsCoordinatesAction = {
 export type TUpdateEventsStatusAction = {
   payload: Partial<TEvents>;
   type: typeof UPDATE_EVENTS_STATUS;
+};
+
+export type TUpdatePrevStateAction = {
+  type: typeof UPDATE_PREV_STATE;
 };
 
 export type TUnselectElementAction = {

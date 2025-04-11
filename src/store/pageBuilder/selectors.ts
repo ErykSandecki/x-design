@@ -1,20 +1,24 @@
 import { createSelector, Selector } from 'reselect';
-import { get as getFp } from 'lodash/fp';
+import { get as getFp, pickBy as pickByFb } from 'lodash/fp';
 import { size } from 'lodash';
 
 // others
 import { REDUCER_KEY } from './actionsType';
 
 // types
-import { T3DCoordinates, TElement } from 'types';
+import { T3DCoordinates, TElement, TObject } from 'types';
 import {
   TElementsData,
   TElementDynamicData,
   TPageBuilderState,
   TSelectedElements,
   TEvents,
+  TElementStaticData,
 } from './types';
 import { TMainState } from 'types/reducers';
+
+// utils
+import { findMainParent } from './utils/findMainParent';
 
 export const pageBuilderStateSelector: Selector<TMainState, TPageBuilderState> =
   getFp(REDUCER_KEY);
@@ -48,6 +52,14 @@ export const staticDataSelector: Selector<
   TElementsData['staticData']
 > = createSelector(elementsSelector, getFp('staticData'));
 
+export const filtredStaticDataSelectorCreator = (
+  parentId: TElement['parentId'],
+): Selector<TMainState, TObject<TElementStaticData> | {}> =>
+  createSelector(
+    staticDataSelector,
+    pickByFb((value) => value.parentId === parentId),
+  );
+
 export const eventsSelector: Selector<TMainState, TEvents> = createSelector(
   pageBuilderStateSelector,
   getFp('events'),
@@ -77,6 +89,13 @@ export const isSelectedElementSelectorCreator = (
   createSelector(
     selectedElementsSelector,
     (selectedElements) => !!selectedElements[elementId],
+  );
+
+export const mainParentIdSelectorCreator = (
+  parentId: TElement['parentId'],
+): Selector<TMainState, TElement['id']> =>
+  createSelector(staticDataSelector, (staticData) =>
+    findMainParent(parentId, staticData),
   );
 
 export const multipleSelectedElementsSelector: Selector<TMainState, boolean> =

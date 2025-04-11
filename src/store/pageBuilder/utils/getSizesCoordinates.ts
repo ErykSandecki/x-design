@@ -5,8 +5,8 @@ import { TSizeCoordinates } from '../types';
 
 export const getEastCordinates = (
   baseCoordinates: TRectCoordinates,
-  baseHeight: TElement['height'],
-  baseWidth: TElement['width'],
+  baseHeight: number,
+  baseWidth: number,
   mouseCoordinates: T2DCoordinates,
 ): TSizeCoordinates => {
   const { x } = mouseCoordinates;
@@ -14,19 +14,19 @@ export const getEastCordinates = (
   const reverse = -x >= baseWidth;
 
   return {
-    height: baseHeight,
-    position: {
+    coordinates: {
       x: reverse ? x2 + x : x1,
       y: y1,
     },
+    height: baseHeight,
     width: reverse ? x1 - (x2 + x) : baseWidth + x,
   };
 };
 
 export const getNorthCordinates = (
   baseCoordinates: TRectCoordinates,
-  baseHeight: TElement['height'],
-  baseWidth: TElement['width'],
+  baseHeight: number,
+  baseWidth: number,
   mouseCoordinates: T2DCoordinates,
 ): TSizeCoordinates => {
   const { y } = mouseCoordinates;
@@ -34,19 +34,19 @@ export const getNorthCordinates = (
   const reverseY = y >= baseHeight;
 
   return {
-    height: reverseY ? y - baseHeight : y2 - (y1 + y),
-    position: {
+    coordinates: {
       x: x1,
       y: reverseY ? y2 : y1 + y,
     },
+    height: reverseY ? y - baseHeight : y2 - (y1 + y),
     width: baseWidth,
   };
 };
 
 export const getSouthCordinates = (
   baseCoordinates: TRectCoordinates,
-  baseHeight: TElement['height'],
-  baseWidth: TElement['width'],
+  baseHeight: number,
+  baseWidth: number,
   mouseCoordinates: T2DCoordinates,
 ): TSizeCoordinates => {
   const { y } = mouseCoordinates;
@@ -54,19 +54,19 @@ export const getSouthCordinates = (
   const reverseY = -y >= baseHeight;
 
   return {
-    height: reverseY ? y1 - (y2 + y) : baseHeight + y,
-    position: {
+    coordinates: {
       x: x1,
       y: reverseY ? y2 + y : y1,
     },
+    height: reverseY ? y1 - (y2 + y) : baseHeight + y,
     width: baseWidth,
   };
 };
 
 export const getWestCordinates = (
   baseCoordinates: TRectCoordinates,
-  baseHeight: TElement['height'],
-  baseWidth: TElement['width'],
+  baseHeight: number,
+  baseWidth: number,
   mouseCoordinates: T2DCoordinates,
 ): TSizeCoordinates => {
   const { x } = mouseCoordinates;
@@ -74,11 +74,11 @@ export const getWestCordinates = (
   const reverseX = x >= baseWidth;
 
   return {
-    height: baseHeight,
-    position: {
+    coordinates: {
       x: reverseX ? x2 : x1 + x,
       y: y1,
     },
+    height: baseHeight,
     width: reverseX ? x - baseWidth : x2 - (x1 + x),
   };
 };
@@ -86,8 +86,8 @@ export const getWestCordinates = (
 export const getSizesCoordinates = (
   anchor: Anchor,
   baseCoordinates: TRectCoordinates,
-  baseHeight: TElement['height'],
-  baseWidth: TElement['width'],
+  baseHeight: number,
+  baseWidth: number,
   mouseCoordinates: T2DCoordinates,
 ): TSizeCoordinates => {
   const eastCoordinates = getEastCordinates(
@@ -122,40 +122,40 @@ export const getSizesCoordinates = (
       return northCoordinates;
     case Anchor.northEast:
       return {
-        height: northCoordinates.height,
-        position: {
-          x: eastCoordinates.position.x,
-          y: northCoordinates.position.y,
+        coordinates: {
+          x: eastCoordinates.coordinates.x,
+          y: northCoordinates.coordinates.y,
         },
+        height: northCoordinates.height,
         width: eastCoordinates.width,
       };
     case Anchor.northWest:
       return {
-        height: northCoordinates.height,
-        position: {
-          x: westCoordinates.position.x,
-          y: northCoordinates.position.y,
+        coordinates: {
+          x: westCoordinates.coordinates.x,
+          y: northCoordinates.coordinates.y,
         },
+        height: northCoordinates.height,
         width: westCoordinates.width,
       };
     case Anchor.south:
       return southCoordinates;
     case Anchor.southEast:
       return {
-        height: southCoordinates.height,
-        position: {
-          x: eastCoordinates.position.x,
-          y: southCoordinates.position.y,
+        coordinates: {
+          x: eastCoordinates.coordinates.x,
+          y: southCoordinates.coordinates.y,
         },
+        height: southCoordinates.height,
         width: eastCoordinates.width,
       };
     case Anchor.southWest:
       return {
-        height: southCoordinates.height,
-        position: {
-          x: westCoordinates.position.x,
-          y: southCoordinates.position.y,
+        coordinates: {
+          x: westCoordinates.coordinates.x,
+          y: southCoordinates.coordinates.y,
         },
+        height: southCoordinates.height,
         width: westCoordinates.width,
       };
     default:

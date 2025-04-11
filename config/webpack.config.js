@@ -124,13 +124,6 @@ module.exports = {
     publicPath: '/',
   },
   plugins: [
-    new CircularDependencyPlugin({
-      exclude: /a\.js|node_modules/,
-      include: /src/,
-      failOnError: true,
-      allowAsyncCycles: false,
-      cwd: process.cwd(),
-    }),
     new InterpolateHtmlPlugin(HtmlWebpackPlugin, env.raw),
     new webpack.DefinePlugin(env.stringified),
     !disableESLintPlugin &&

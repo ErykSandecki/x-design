@@ -3,9 +3,6 @@ import { useSelector } from 'react-redux';
 
 // components
 import Corners from '../../../Corners/Corners';
-import NewElementButton, {
-  TNewElementButtonProps,
-} from './components/NewSectionButton/NewSectionButton';
 import TransformArea from '../../../TransformArea/TransformArea';
 import { Box } from 'shared';
 
@@ -37,7 +34,7 @@ import { MouseMode } from 'components/PageBuilder/enums';
 // utils
 import { getCornersPosition } from './utils/getCornersPosition';
 
-type TElementProps = Pick<TNewElementButtonProps, 'position'> & {
+type TElementProps = {
   classes: typeof classes;
   children: (selected: boolean) => ReactNode;
   id: string;
@@ -53,19 +50,20 @@ const Element: FC<TElementProps> = ({
   mouseMode,
   parentId,
   type,
-  ...restProps
 }) => {
   const isSelected = useSelector(isSelectedElementSelectorCreator(id));
   const isMultiple = useSelector(multipleSelectedElementsSelector);
   const elementRef = useRef<HTMLDivElement>(null);
   const elementDynamicData = useSelector(elementDynamicDataSelectorCreator(id));
-  const { position } = elementDynamicData;
-  const { height, rotate, width } = elementDynamicData;
-  const { x, y } = position;
+  const { coordinates } = elementDynamicData;
+  const { backgroundColor, height, position, rotate, width } =
+    elementDynamicData;
+  const { x, y } = coordinates;
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const rectCoordinates = getCornersPosition(height, width);
   const displayElements = !isMultiple && isSelected;
-  const events = useElementEvents(
+  const { isMoving, ...events } = useElementEvents(
+    coordinates,
     elementRef,
     height,
     id,
@@ -85,15 +83,22 @@ const Element: FC<TElementProps> = ({
           classes.className,
           classNamesWithTheme[classNameMoveableELement].name,
           [
+            classNamesWithTheme[classNameMoveableELement].modificators.moving,
+            isMoving,
+          ],
+          [
             classNamesWithTheme[classNameMoveableELement].modificators.selected,
             isSelected,
           ],
         ),
       }}
+      id={id}
       ref={elementRef}
       style={{
+        backgroundColor,
         height: `${height}px`,
         left: `${x}px`,
+        position,
         top: `${y}px`,
         transform: `rotate(${rotate}deg)`,
         width: `${width}px`,
@@ -102,9 +107,6 @@ const Element: FC<TElementProps> = ({
     >
       {children(isSelected)}
       {displayElements && <Corners rectCoordinates={rectCoordinates} />}
-      {displayElements && (
-        <NewElementButton rectCoordinates={rectCoordinates} {...restProps} />
-      )}
       {displayElements && (
         <TransformArea
           height={height}

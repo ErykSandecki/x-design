@@ -25,8 +25,8 @@ export const useTransformAreaEvents = (
   id: TElement['id'],
   mouseMode: MouseMode,
   width: TElement['width'],
-  x: TElement['position']['x'],
-  y: TElement['position']['y'],
+  x: TElement['coordinates']['x'],
+  y: TElement['coordinates']['y'],
 ): TUseTransformAreaEvents => {
   const cursorPosition = useRef(BASE_2D);
 

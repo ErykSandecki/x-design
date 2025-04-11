@@ -46,7 +46,6 @@ describe('Element snapshots', () => {
           id={elementDynamicDataMock.id}
           mouseMode={MouseMode.default}
           parentId={elementStaticDataMock.parentId}
-          position="top"
           type={ElementType.frame}
         >
           {() => <></>}

@@ -8,6 +8,7 @@ export const classNames = {
   [className]: {
     name: className,
     modificators: {
+      moving: `${className}--moving`,
       selected: `${className}--selected`,
     },
   },

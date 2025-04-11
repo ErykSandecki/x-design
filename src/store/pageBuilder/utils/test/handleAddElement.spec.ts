@@ -29,7 +29,7 @@ describe('handleAddElement', () => {
           [createFrameMock.id]: {
             height: createFrameMock.height,
             id: createFrameMock.id,
-            position: createFrameMock.position,
+            position: createFrameMock.coordinates,
             rotate: createFrameMock.rotate,
             width: createFrameMock.width,
           },

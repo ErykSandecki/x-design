@@ -17,8 +17,8 @@ export const useMouseMoveEvent = (
   height: TElement['height'],
   id: TElement['id'],
   width: TElement['width'],
-  x: TElement['position']['x'],
-  y: TElement['position']['y'],
+  x: TElement['coordinates']['x'],
+  y: TElement['coordinates']['y'],
 ): TUseMouseMoveEvent => {
   const anchor = useSelector(eventSelectorCreator('selectedAnchor'));
   const dispatch = useDispatch();

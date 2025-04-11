@@ -37,6 +37,7 @@ describe('useElementEvents', () => {
     const { result } = renderHook(
       () =>
         useElementEvents(
+          BASE_2D,
           ref,
           100,
           selectedElementMock.id,
@@ -44,7 +45,7 @@ describe('useElementEvents', () => {
           true,
           MouseMode.default,
           selectedElementMock.parentId,
-          BASE_2D,
+          'absolute',
           ElementType.frame,
           100,
         ),

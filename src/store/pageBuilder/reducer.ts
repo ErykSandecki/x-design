@@ -12,6 +12,8 @@ import {
   UPDATE_EVENTS_STATUS,
   SET_ELEMENT_SIZES,
   ROTATE_ELEMENT,
+  CHANGE_PARENT,
+  UPDATE_PREV_STATE,
 } from './actionsType';
 import { BASE_3D } from 'shared';
 
@@ -34,6 +36,7 @@ import {
 
 // utils
 import { handleAddElement } from './utils/handleAddElement';
+import { handleChangeParent } from './utils/handleChangeParent';
 import { handleRotateElement } from './utils/handleRotateElement';
 import { handleSetElementCoordinates } from './utils/handleSetElementCoordinates';
 import { handleSetElementsCoordinates } from './utils/handleSetElementsCoordinates';
@@ -44,30 +47,62 @@ const initialState: TPageBuilderState = {
   elements: {
     allData: {
       m861mgpj1741791393558: {
+        backgroundColor: '#ffffff',
         height: 325,
         id: 'm861mgpj1741791393558',
         parentId: '-1',
-        position: {
+        coordinates: {
           x: 500,
           y: 324,
         },
+        position: 'absolute',
         rotate: 0,
         // @ts-ignore
         type: 'frame',
         width: 500,
         index: 0,
       },
+      m861mgpj17417913935518: {
+        backgroundColor: 'red',
+        height: 150,
+        id: 'm861mgpj17417913935518',
+        parentId: '-1',
+        position: 'absolute',
+        coordinates: {
+          x: 0,
+          y: 0,
+        },
+        rotate: 0,
+        // @ts-ignore
+        type: 'frame',
+        width: 250,
+        index: 0,
+      },
     },
     dynamicData: {
       m861mgpj1741791393558: {
+        backgroundColor: '#ffffff',
         height: 325,
         id: 'm861mgpj1741791393558',
-        position: {
+        coordinates: {
           x: 500,
           y: 324,
         },
+        position: 'absolute',
         rotate: 0,
         width: 500,
+      },
+      m861mgpj17417913935518: {
+        backgroundColor: 'red',
+        height: 150,
+        id: 'm861mgpj17417913935518',
+        coordinates: {
+          x: 0,
+          y: 0,
+        },
+        position: 'absolute',
+        rotate: 0,
+        width: 250,
       },
     },
     staticData: {
@@ -78,9 +113,21 @@ const initialState: TPageBuilderState = {
         type: 'frame',
         index: 0,
       },
+      m861mgpj17417913935518: {
+        id: 'm861mgpj17417913935518',
+        parentId: '-1',
+        // @ts-ignore
+        type: 'frame',
+        index: 0,
+      },
     },
   },
-  events: { isMultipleMoving: false, selectedAnchor: Anchor.none },
+  events: {
+    draggableElements: [],
+    isMultipleMoving: false,
+    possibleParent: '-1',
+    selectedAnchor: Anchor.none,
+  },
   isLoading: true,
   isPending: false,
   prevState: undefined,
@@ -91,6 +138,9 @@ const addElement = (
   state: TPageBuilderState,
   { payload: element }: TAction<TAddELementAction['payload']>,
 ): TPageBuilderState => handleAddElement(element, state);
+
+const changeParent = (state: TPageBuilderState): TPageBuilderState =>
+  handleChangeParent(state);
 
 const rotateElement = (
   state: TPageBuilderState,
@@ -124,7 +174,7 @@ const setAreCoordinates = (
 const setElementCoordinates = (
   state: TPageBuilderState,
   {
-    payload: { id, position },
+    payload: { id, coordinates: position },
   }: TAction<TSetElementCoordinatesAction['payload']>,
 ): TPageBuilderState => handleSetElementCoordinates(id, position, state);
 
@@ -157,6 +207,10 @@ const updateEventsStatus = (
     ...state.events,
     ...events,
   },
+});
+
+const updatePrevState = (state: TPageBuilderState): TPageBuilderState => ({
+  ...state,
   prevState: state,
 });
 
@@ -175,6 +229,8 @@ const pageBuilder = (
   switch (action.type) {
     case ADD_ELEMENT:
       return addElement(state, action);
+    case CHANGE_PARENT:
+      return changeParent(state);
     case ROTATE_ELEMENT:
       return rotateElement(state, action);
     case SELECT_ELEMENT:
@@ -191,6 +247,8 @@ const pageBuilder = (
       return setElementsCoordinates(state, action);
     case UPDATE_EVENTS_STATUS:
       return updateEventsStatus(state, action);
+    case UPDATE_PREV_STATE:
+      return updatePrevState(state);
     case UNSELECT_ELEMENT:
       return unselectElement(state, action);
     default:

@@ -2,7 +2,9 @@ import { Dispatch } from 'redux';
 import { RefObject } from 'react';
 
 // store
-import { updateEventsStatus } from 'store/pageBuilder/actions';
+import { selectedElementsSelector } from 'store/pageBuilder/selectors';
+import { store } from 'store';
+import { updateEventsStatus, updatePrevState } from 'store/pageBuilder/actions';
 
 // types
 import { T2DCoordinates } from 'types';
@@ -18,6 +20,16 @@ export const initSetElementsCoordinates = (
       x: Math.round(event.clientX),
       y: Math.round(event.clientY),
     };
-    dispatch(updateEventsStatus({ isMultipleMoving: true }));
+    const selectedElementsId = Object.keys(
+      selectedElementsSelector(store.getState()),
+    );
+
+    dispatch(updatePrevState());
+    dispatch(
+      updateEventsStatus({
+        draggableElements: selectedElementsId,
+        isMultipleMoving: true,
+      }),
+    );
   }
 };

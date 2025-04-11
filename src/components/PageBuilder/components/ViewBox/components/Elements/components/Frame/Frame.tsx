@@ -17,6 +17,7 @@ import styles from './frame.scss';
 
 // types
 import { TElementProps } from '../../types';
+import Elements from '../../Elements';
 
 export type TFrameProps = TElementProps;
 
@@ -38,20 +39,26 @@ const Frame: FC<TFrameProps> = ({
       id={id}
       parentId={parentId}
       mouseMode={mouseMode}
-      position="top"
       type={type}
     >
       {(selected) => (
-        <Small
-          classes={{
-            className: cx(classNamesWithTheme.label.name, [
-              classNamesWithTheme.label.modificators.selected,
-              selected,
-            ]),
-          }}
-        >
-          {t(`${translationNameSpace}.label.createFrame`)}
-        </Small>
+        <>
+          <Small
+            classes={{
+              className: cx(classNamesWithTheme.label.name, [
+                classNamesWithTheme.label.modificators.selected,
+                selected,
+              ]),
+            }}
+          >
+            {t(`${translationNameSpace}.label.createFrame`)}
+          </Small>
+          <Elements
+            eventsDisabled={false}
+            mouseMode={mouseMode}
+            parentId={id}
+          />
+        </>
       )}
     </Element>
   );

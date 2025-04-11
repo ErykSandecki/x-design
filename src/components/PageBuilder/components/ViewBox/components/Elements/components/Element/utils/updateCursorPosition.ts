@@ -12,9 +12,9 @@ import { T2DCoordinates, TElement } from 'types';
 import { initSetElementsCoordinates } from '../../../../../utils/initSetElementsCoordinates';
 
 export const updateCursorPosition = (
+  coordinates: TElement['coordinates'],
   cursorPosition: RefObject<T2DCoordinates>,
   dispatch: Dispatch,
-  elementPosition: TElement['position'],
   event: MouseEvent | React.MouseEvent,
   isMultiple: boolean,
   isSelected: boolean,
@@ -23,8 +23,8 @@ export const updateCursorPosition = (
 
   if (!isMultiple || !isSelected) {
     cursorPosition.current = {
-      x: Math.round(event.clientX - elementPosition.x * z),
-      y: Math.round(event.clientY - elementPosition.y * z),
+      x: Math.round(event.clientX - coordinates.x * z),
+      y: Math.round(event.clientY - coordinates.y * z),
     };
   } else {
     initSetElementsCoordinates(cursorPosition, dispatch, event, true);

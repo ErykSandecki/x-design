@@ -20,9 +20,9 @@ describe('updateCursorPosition', () => {
   it(`should update cursor position`, () => {
     // before
     updateCursorPosition(
+      { x: 0, y: 0 },
       ref,
       mockCallBack,
-      { x: 0, y: 0 },
       {
         clientX: 0,
         clientY: 0,
@@ -38,9 +38,9 @@ describe('updateCursorPosition', () => {
   it(`should init set element coordinates`, () => {
     // before
     updateCursorPosition(
+      { x: 0, y: 0 },
       ref,
       mockCallBack,
-      { x: 0, y: 0 },
       {
         clientX: 0,
         clientY: 0,

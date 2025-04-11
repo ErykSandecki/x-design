@@ -1,14 +1,18 @@
+import { CSSProperties } from 'react';
+
 // types
 import { ElementType } from './enums';
 import { T2DCoordinates } from 'types/types';
 
 export type TElement = {
-  height: number;
+  backgroundColor: string;
+  coordinates: T2DCoordinates;
+  height: number | CSSProperties['height'];
   id: string;
   index: number;
   parentId: TElement['id'] | '-1';
-  position: T2DCoordinates;
+  position: CSSProperties['position'];
   rotate: number;
   type: ElementType;
-  width: number;
+  width: number | CSSProperties['width'];
 };

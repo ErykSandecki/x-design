@@ -63,9 +63,9 @@ describe('PageBuilderReducer', () => {
         },
         dynamicData: {
           [createFrameMock.id]: {
+            coordinates: createFrameMock.coordinates,
             height: createFrameMock.height,
             id: createFrameMock.id,
-            position: createFrameMock.position,
             rotate: createFrameMock.rotate,
             width: createFrameMock.width,
           },
@@ -191,11 +191,11 @@ describe('PageBuilderReducer', () => {
 
   it('should handle SET_ELEMENT_COORDINATES', () => {
     // mock
-    const position = { x: 100, y: 100 };
+    const coordinates = { x: 100, y: 100 };
 
     // before
     const state = reducer(
-      setElementCoordinates(elementAllDataMock.id, position),
+      setElementCoordinates(coordinates, elementAllDataMock.id),
       {
         ...pageBuilderStateMock[PAGE_BUILDER],
         elements: {
@@ -220,13 +220,13 @@ describe('PageBuilderReducer', () => {
         allData: {
           [elementAllDataMock.id]: {
             ...elementAllDataMock,
-            position,
+            coordinates,
           },
         },
         dynamicData: {
           [elementDynamicDataMock.id]: {
             ...elementDynamicDataMock,
-            position,
+            coordinates,
           },
         },
         staticData: {
@@ -278,16 +278,16 @@ describe('PageBuilderReducer', () => {
         allData: {
           [elementAllDataMock.id]: {
             ...elementAllDataMock,
+            coordinates: { x: 0, y: 0 },
             height: 100,
-            position: { x: 0, y: 0 },
             width: 300,
           },
         },
         dynamicData: {
           [elementDynamicDataMock.id]: {
             ...elementDynamicDataMock,
+            coordinates: { x: 0, y: 0 },
             height: 100,
-            position: { x: 0, y: 0 },
             width: 300,
           },
         },
@@ -334,13 +334,13 @@ describe('PageBuilderReducer', () => {
         allData: {
           [elementAllDataMock.id]: {
             ...elementAllDataMock,
-            position: coordinates,
+            coordinates,
           },
         },
         dynamicData: {
           [elementDynamicDataMock.id]: {
             ...elementDynamicDataMock,
-            position: coordinates,
+            coordinates,
           },
         },
         staticData: { [elementStaticDataMock.id]: elementStaticDataMock },

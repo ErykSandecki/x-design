@@ -13,11 +13,11 @@ import { updateCursorPosition } from '../utils/updateCursorPosition';
 export type TUseMouseDownEvent = (event: MouseEvent) => void;
 
 export const useMouseDownEvent = (
+  coordinates: T2DCoordinates,
   cursorPosition: RefObject<T2DCoordinates>,
   isMultiple: boolean,
   isSelected: boolean,
   mouseMode: MouseMode,
-  position: T2DCoordinates,
   selectedElement: TSelectedElement,
   setIsPressing: (isPressing: boolean) => void,
 ): TUseMouseDownEvent => {
@@ -28,9 +28,9 @@ export const useMouseDownEvent = (
       event.stopPropagation();
 
       updateCursorPosition(
+        coordinates,
         cursorPosition,
         dispatch,
-        position,
         event,
         isMultiple,
         isSelected,

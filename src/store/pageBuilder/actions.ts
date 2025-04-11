@@ -1,6 +1,7 @@
 // others
 import {
   ADD_ELEMENT,
+  CHANGE_PARENT,
   ROTATE_ELEMENT,
   SELECT_ELEMENT,
   SELECT_ELEMENTS,
@@ -10,12 +11,14 @@ import {
   SET_ELEMENTS_COORDINATES,
   UNSELECT_ELEMENT,
   UPDATE_EVENTS_STATUS,
+  UPDATE_PREV_STATE,
 } from './actionsType';
 
 // types
 import {
   TAddELementAction,
   TAddELementActionPayload,
+  TChangeParentAction,
   TRotateElementAction,
   TRotateElementActionPayload,
   TSelectElementAction,
@@ -28,6 +31,7 @@ import {
   TSetElementSizesActionPayload,
   TUnselectElementAction,
   TUpdateEventsStatusAction,
+  TUpdatePrevStateAction,
 } from './types';
 
 export const addElement = (
@@ -35,6 +39,10 @@ export const addElement = (
 ): TAddELementAction => ({
   payload,
   type: ADD_ELEMENT,
+});
+
+export const changeParent = (): TChangeParentAction => ({
+  type: CHANGE_PARENT,
 });
 
 export const rotateElement = (
@@ -67,10 +75,10 @@ export const setAreCoordinates = (
 });
 
 export const setElementCoordinates = (
+  coordinates: TSetElementCoordinatesActionPayload['coordinates'],
   id: TSetElementCoordinatesActionPayload['id'],
-  position: TSetElementCoordinatesActionPayload['position'],
 ): TSetElementCoordinatesAction => ({
-  payload: { id, position },
+  payload: { coordinates, id },
   type: SET_ELEMENT_COORDINATES,
 });
 
@@ -97,6 +105,10 @@ export const updateEventsStatus = (
 ): TUpdateEventsStatusAction => ({
   payload,
   type: UPDATE_EVENTS_STATUS,
+});
+
+export const updatePrevState = (): TUpdatePrevStateAction => ({
+  type: UPDATE_PREV_STATE,
 });
 
 export const unselectElement = (

@@ -16,16 +16,16 @@ export const handleResizeElement = (
   height: TElement['height'],
   id: TElement['id'],
   width: TElement['width'],
-  x: TElement['position']['x'],
-  y: TElement['position']['y'],
+  x: TElement['coordinates']['x'],
+  y: TElement['coordinates']['y'],
 ): void => {
   const z = areaAxisSelectorCreator('z')(store.getState());
   const { current } = cursorPosition;
   const baseCoordinates = {
     x1: x,
-    x2: x + width,
+    x2: x + (width as number),
     y1: y,
-    y2: y + height,
+    y2: y + (height as number),
   };
   const mousePosition = {
     x: Math.round(event.clientX / z - current.x / z),

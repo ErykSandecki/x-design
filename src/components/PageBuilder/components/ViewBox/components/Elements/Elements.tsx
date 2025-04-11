@@ -11,13 +11,13 @@ import { useTheme } from 'hooks';
 import { className, classNames } from './classNames';
 
 // store
-import { staticDataSelector } from 'store/pageBuilder/selectors';
+import { filtredStaticDataSelectorCreator } from 'store/pageBuilder/selectors';
 
 // styles
 import styles from './elements.scss';
 
 // types
-import { ElementType, Sort } from 'types';
+import { ElementType, Sort, TElement } from 'types';
 import { MouseMode } from 'components/PageBuilder/enums';
 
 // utils
@@ -27,10 +27,15 @@ import { sortNumbersByObject } from 'utils/math/sort';
 export type TElementsProps = {
   eventsDisabled: boolean;
   mouseMode: MouseMode;
+  parentId: TElement['parentId'];
 };
 
-const Elements: FC<TElementsProps> = ({ eventsDisabled, mouseMode }) => {
-  const staticData = useSelector(staticDataSelector);
+const Elements: FC<TElementsProps> = ({
+  eventsDisabled,
+  mouseMode,
+  parentId,
+}) => {
+  const staticData = useSelector(filtredStaticDataSelectorCreator(parentId));
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   return sortNumbersByObject(

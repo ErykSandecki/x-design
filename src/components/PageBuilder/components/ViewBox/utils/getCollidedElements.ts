@@ -22,20 +22,21 @@ export const getCollidedElements = (
   const { x1, x2, y1, y2 } = getBaseCoordinatesTopLeft(selectableArea);
 
   for (const [key, value] of Object.entries(allData)) {
-    const { height, id, parentId, position, type, width } = value;
+    const { height, id, parentId, coordinates: position, type, width } = value;
 
     if (
-      x1 < position.x + width &&
+      parentId === '-1' &&
+      x1 < position.x + (width as number) &&
       x2 > position.x &&
-      y1 < position.y + height &&
+      y1 < position.y + (height as number) &&
       y2 > position.y
     ) {
       collidedElements[key] = {
         coordinates: {
           x1: position.x,
-          x2: position.x + width,
+          x2: position.x + (width as number),
           y1: position.y,
-          y2: position.y + height,
+          y2: position.y + (height as number),
         },
         id,
         parentId,
