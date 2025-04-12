@@ -48,85 +48,10 @@ const initialState: TPageBuilderState = {
   elements: {
     allData: {
       [BASE_ALL_DATA.id]: BASE_ALL_DATA,
-      m861mgpj1741791393558: {
-        children: [],
-        backgroundColor: '#ffffff',
-        height: 325,
-        id: 'm861mgpj1741791393558',
-        parentId: '-1',
-        coordinates: {
-          x: 500,
-          y: 324,
-        },
-        position: 'absolute',
-        rotate: 0,
-        // @ts-ignore
-        type: 'frame',
-        width: 500,
-        index: 0,
-      },
-      m861mgpj17417913935518: {
-        children: [],
-        backgroundColor: 'red',
-        height: 150,
-        id: 'm861mgpj17417913935518',
-        parentId: '-1',
-        position: 'absolute',
-        coordinates: {
-          x: 0,
-          y: 0,
-        },
-        rotate: 0,
-        // @ts-ignore
-        type: 'frame',
-        width: 250,
-        index: 0,
-      },
     },
-    dynamicData: {
-      m861mgpj1741791393558: {
-        backgroundColor: '#ffffff',
-        height: 325,
-        id: 'm861mgpj1741791393558',
-        coordinates: {
-          x: 500,
-          y: 324,
-        },
-        position: 'absolute',
-        rotate: 0,
-        width: 500,
-      },
-      m861mgpj17417913935518: {
-        backgroundColor: 'red',
-        height: 150,
-        id: 'm861mgpj17417913935518',
-        coordinates: {
-          x: 0,
-          y: 0,
-        },
-        position: 'absolute',
-        rotate: 0,
-        width: 250,
-      },
-    },
+    dynamicData: {},
     staticData: {
       [BASE_STATIC_DATA.id]: BASE_STATIC_DATA,
-      m861mgpj1741791393558: {
-        children: [],
-        id: 'm861mgpj1741791393558',
-        parentId: '-1',
-        // @ts-ignore
-        type: 'frame',
-        index: 0,
-      },
-      m861mgpj17417913935518: {
-        children: [],
-        id: 'm861mgpj17417913935518',
-        parentId: '-1',
-        // @ts-ignore
-        type: 'frame',
-        index: 0,
-      },
     },
   },
   events: {

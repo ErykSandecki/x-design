@@ -7,7 +7,7 @@ import { TElementStaticData } from './types';
 
 export const BASE_ALL_DATA: TElement = {
   backgroundColor: '#ffffff',
-  children: ['m861mgpj1741791393558', 'm861mgpj17417913935518'],
+  children: [],
   coordinates: BASE_2D,
   height: 0,
   id: '-1',
