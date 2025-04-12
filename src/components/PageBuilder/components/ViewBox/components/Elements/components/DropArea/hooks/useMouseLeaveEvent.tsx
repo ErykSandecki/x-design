@@ -1,4 +1,4 @@
-import { isEmpty } from 'lodash';
+import { defer, isEmpty } from 'lodash';
 import { MouseEvent } from 'react';
 import { useDispatch } from 'react-redux';
 
@@ -26,7 +26,9 @@ export const useMouseLeaveEvent = (
       );
 
       if (!isEmpty(draggableElements)) {
-        dispatch(updateEventsStatus({ possibleIndexPosition: null }));
+        defer(() =>
+          dispatch(updateEventsStatus({ possibleIndexPosition: null })),
+        );
       }
     }
   };

@@ -1,5 +1,5 @@
 import { MouseEvent } from 'react';
-import { isEmpty } from 'lodash';
+import { defer, isEmpty } from 'lodash';
 import { useDispatch } from 'react-redux';
 
 // types
@@ -29,7 +29,7 @@ export const useMouseEnterEvent = (
       );
 
       if (!isEmpty(draggableElements) && !isSelected) {
-        dispatch(updateEventsStatus({ possibleParent: id }));
+        defer(() => dispatch(updateEventsStatus({ possibleParent: id })));
       }
     }
   };

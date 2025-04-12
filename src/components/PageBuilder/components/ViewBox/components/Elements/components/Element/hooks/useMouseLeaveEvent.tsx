@@ -1,4 +1,4 @@
-import { isEmpty } from 'lodash';
+import { defer, isEmpty } from 'lodash';
 import { MouseEvent } from 'react';
 import { useDispatch } from 'react-redux';
 
@@ -28,7 +28,7 @@ export const useMouseLeaveEvent = (
       );
 
       if (!isEmpty(draggableElements)) {
-        dispatch(updateEventsStatus({ possibleParent: parentId }));
+        defer(() => dispatch(updateEventsStatus({ possibleParent: parentId })));
       }
     }
   };

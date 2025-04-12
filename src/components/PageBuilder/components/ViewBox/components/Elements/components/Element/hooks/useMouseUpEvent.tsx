@@ -5,7 +5,6 @@ import { useEffect } from 'react';
 import { TSelectedElement } from 'store/pageBuilder/types';
 
 // utils
-import { finishSetElementsCoordinates } from '../../../../../utils/finishSetElementsCoordinates';
 import { handleTriggerEvents } from '../utils/handleTriggerEvents';
 import { handleTrySelectElement } from '../utils/handleTrySelectElement';
 

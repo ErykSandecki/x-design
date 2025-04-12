@@ -78,6 +78,13 @@ export const eventSelectorCreator = (
 ): Selector<TMainState, TEvents[typeof key]> =>
   createSelector(eventsSelector, getFp(key));
 
+export const isDraggableSelectorCreator = (
+  id: TElement['id'],
+): Selector<TMainState, boolean> =>
+  createSelector(eventsSelector, ({ draggableElements }) =>
+    draggableElements.includes(id),
+  );
+
 export const isLoadingSelector: Selector<TMainState, boolean> = createSelector(
   pageBuilderStateSelector,
   getFp('isLoading'),

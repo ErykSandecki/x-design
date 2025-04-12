@@ -32,7 +32,6 @@ export const useElementEvents = (
   isSelected: boolean,
   mouseMode: MouseMode,
   parentId: TSelectedElement['parentId'],
-  position: TElement['position'],
   type: TSelectedElement['type'],
   width: TElement['width'],
 ): TUseElementEvents => {

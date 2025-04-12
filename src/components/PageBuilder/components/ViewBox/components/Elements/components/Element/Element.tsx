@@ -34,6 +34,7 @@ import { MouseMode } from 'components/PageBuilder/enums';
 // utils
 import { getCornersPosition } from './utils/getCornersPosition';
 import { isNumber } from 'lodash';
+import { DATA_STATUS_ATTRIBUTE } from './constants';
 
 type TElementProps = {
   classes: typeof classes;
@@ -72,13 +73,13 @@ const Element: FC<TElementProps> = ({
     isSelected,
     mouseMode,
     parentId,
-    position,
     type,
     width,
   );
 
   return (
     <Box
+      attributes={{ [DATA_STATUS_ATTRIBUTE]: isSelected ? 'true' : 'false' }}
       classes={{
         className: cx(
           classes.className,

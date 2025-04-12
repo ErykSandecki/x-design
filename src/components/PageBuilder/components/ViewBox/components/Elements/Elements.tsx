@@ -2,7 +2,7 @@ import { FC, memo } from 'react';
 import { useSelector } from 'react-redux';
 
 // components
-import DropArea from './components/DropArea/DropArea';
+import DropAnchors from './components/DropArea/DropAnchors';
 import Frame from './components/Frame/Frame';
 
 // hooks
@@ -41,9 +41,14 @@ const Elements: FC<TElementsProps> = ({
     const Wrapper =
       !isSelected && position === 'relative'
         ? ({ children }) => (
-            <DropArea index={index} mouseMode={mouseMode} parentId={parentId}>
+            <DropAnchors
+              id={id}
+              index={index}
+              mouseMode={mouseMode}
+              parentId={parentId}
+            >
               {children}
-            </DropArea>
+            </DropAnchors>
           )
         : ({ children }) => <>{children}</>;
 

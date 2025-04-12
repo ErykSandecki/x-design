@@ -13,6 +13,7 @@
   }
 
   &--moving {
+    opacity: 0.5;
     pointer-events: none;
     z-index: $--rx-zindex-element-moving !important;
   }
@@ -21,5 +22,9 @@
     @include theme('blue-1', outline, '1.5px solid');
 
     z-index: $--rx-zindex-element-active;
+  }
+
+  &:has([data-status='true']) {
+    z-index: $--rx-zindex-element-moving;
   }
 }

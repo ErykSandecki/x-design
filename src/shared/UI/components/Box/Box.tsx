@@ -33,6 +33,7 @@ export type TBoxProps = Omit<HTMLAttributes<HTMLElement>, 'className'> &
   };
 
 export const Box: FC<TBoxProps> = ({
+  attributes = {},
   children,
   classes = { className: '' },
   component = 'div',
@@ -51,6 +52,7 @@ export const Box: FC<TBoxProps> = ({
       ...restProps,
       className: cx(sxClassName, classes.className),
       ...getAttributes(e2eAttribute, e2eValue),
+      ...attributes,
       ref,
       style,
     },

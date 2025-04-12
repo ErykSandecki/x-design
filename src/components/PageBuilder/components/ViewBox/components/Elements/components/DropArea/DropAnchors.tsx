@@ -1,4 +1,5 @@
-import { FC, ReactNode, useMemo } from 'react';
+import { FC, ReactNode } from 'react';
+import { useSelector } from 'react-redux';
 
 // hooks
 import { useDropAreaEvents } from './hooks/useDropAreaEvents';
@@ -7,8 +8,14 @@ import { useTheme } from 'hooks';
 // others
 import { className, classNames } from './classNames';
 
+// store
+import {
+  eventSelectorCreator,
+  isDraggableSelectorCreator,
+} from 'store/pageBuilder/selectors';
+
 // styles
-import styles from './drop-area.scss';
+import styles from './drop-anchors.scss';
 
 // types
 import { DropAreaPosition } from './enums';
@@ -17,41 +24,55 @@ import { TElement } from 'types';
 
 // utils
 import { enumToArray } from 'utils';
-import { useSelector } from 'react-redux';
-import {
-  eventSelectorCreator,
-  eventsSelector,
-} from 'store/pageBuilder/selectors';
 
-export type TDropAreaProps = {
+export type TDropAnchorsProps = {
   children: ReactNode;
+  id: TElement['id'];
   index: number;
   mouseMode: MouseMode;
   parentId: TElement['parentId'];
 };
 
-const DropArea: FC<TDropAreaProps> = ({
+const DropAnchors: FC<TDropAnchorsProps> = ({
   children,
+  id,
   index,
   mouseMode,
   parentId,
 }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { onMouseEnter, ...events } = useDropAreaEvents(index, mouseMode);
+  const isDraggable = useSelector(isDraggableSelectorCreator(id));
   const possibleIndexPosition = useSelector(
     eventSelectorCreator('possibleIndexPosition'),
   ) as number;
   const possibleParent = useSelector(eventSelectorCreator('possibleParent'));
+  const isFirst = index === 0;
   const isParent = possibleParent === parentId;
-  const displayPrevArea =
-    isParent && index === 0 && possibleIndexPosition === index;
-  const displayNextArea = isParent && possibleIndexPosition - 1 === index;
+  const displayPrevPrompt =
+    !isDraggable && isParent && isFirst && possibleIndexPosition === index;
+  const displayNextPrompt =
+    !isDraggable && isParent && possibleIndexPosition - 1 === index;
 
   return (
     <div className={cx(classNamesWithTheme[className])}>
-      {displayPrevArea && <div className={cx(classNamesWithTheme.area)} />}
+      {displayPrevPrompt && (
+        <div
+          className={cx(
+            classNamesWithTheme.prompt.name,
+            classNamesWithTheme.prompt.modificators.top,
+          )}
+        />
+      )}
       {children}
-      {displayNextArea && <div className={cx(classNamesWithTheme.area)} />}
+      {displayNextPrompt && (
+        <div
+          className={cx(
+            classNamesWithTheme.prompt.name,
+            classNamesWithTheme.prompt.modificators.bottom,
+          )}
+        />
+      )}
       {enumToArray(DropAreaPosition).map((position) => (
         <div
           className={cx(
@@ -73,4 +94,4 @@ const DropArea: FC<TDropAreaProps> = ({
   );
 };
 
-export default DropArea;
+export default DropAnchors;

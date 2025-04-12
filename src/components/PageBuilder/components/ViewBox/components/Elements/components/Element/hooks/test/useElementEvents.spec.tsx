@@ -45,7 +45,6 @@ describe('useElementEvents', () => {
           true,
           MouseMode.default,
           selectedElementMock.parentId,
-          'absolute',
           ElementType.frame,
           100,
         ),
