@@ -1,25 +1,25 @@
 import { cloneDeep, first } from 'lodash';
 
 // types
-import { TPageBuilderState } from '../../types';
+import { TChangeParentActionPayload, TPageBuilderState } from '../../types';
 
 // utils
 import { getMappedChildren } from './getMappedChildren';
 import { getMappedParents } from './getMappedParents';
 
 export const handleChangeParent = (
+  payload: TChangeParentActionPayload,
   state: TPageBuilderState,
 ): TPageBuilderState => {
-  const { events } = state;
-  const { draggableElements, possibleParent } = events;
+  const { draggableElements, possibleParent } = payload;
   const id = first(draggableElements);
 
   if (possibleParent !== null) {
     const parentHasChanged =
       state.elements.allData[id].parentId !== possibleParent;
     const clonedState = cloneDeep(state);
-    const children = getMappedChildren(parentHasChanged, clonedState);
-    const parents = getMappedParents(parentHasChanged, state);
+    const children = getMappedChildren(parentHasChanged, payload, clonedState);
+    const parents = getMappedParents(parentHasChanged, payload, state);
 
     return {
       ...state,

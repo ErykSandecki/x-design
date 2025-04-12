@@ -92,7 +92,13 @@ export type TAddELementAction = {
   type: typeof ADD_ELEMENT;
 };
 
+export type TChangeParentActionPayload = Pick<
+  TEvents,
+  'draggableElements' | 'possibleIndexPosition' | 'possibleParent'
+>;
+
 export type TChangeParentAction = {
+  payload: TChangeParentActionPayload;
   type: typeof CHANGE_PARENT;
 };
 

@@ -33,6 +33,7 @@ import {
   TUpdateEventsStatusAction,
   TSetElementSizesAction,
   TRotateElementAction,
+  TChangeParentAction,
 } from './types';
 
 // utils
@@ -148,8 +149,10 @@ const addElement = (
   { payload: element }: TAction<TAddELementAction['payload']>,
 ): TPageBuilderState => handleAddElement(element, state);
 
-const changeParent = (state: TPageBuilderState): TPageBuilderState =>
-  handleChangeParent(state);
+const changeParent = (
+  state: TPageBuilderState,
+  { payload }: TAction<TChangeParentAction['payload']>,
+): TPageBuilderState => handleChangeParent(payload, state);
 
 const rotateElement = (
   state: TPageBuilderState,
@@ -242,7 +245,7 @@ const pageBuilder = (
     case ADD_ELEMENT:
       return addElement(state, action);
     case CHANGE_PARENT:
-      return changeParent(state);
+      return changeParent(state, action);
     case ROTATE_ELEMENT:
       return rotateElement(state, action);
     case SELECT_ELEMENT:

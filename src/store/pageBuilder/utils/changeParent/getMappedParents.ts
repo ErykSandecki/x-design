@@ -3,6 +3,7 @@ import { cloneDeep, first } from 'lodash';
 // types
 import { TElement } from 'types';
 import {
+  TChangeParentActionPayload,
   TElementsData,
   TEvents,
   TPageBuilderState,
@@ -49,11 +50,12 @@ export const replaceChildrenPosition = (
 
 export const getMappedParents = (
   parentHasChanged: boolean,
+  payload: TChangeParentActionPayload,
   state: TPageBuilderState,
 ): TElementsData => {
-  const { elements, events } = state;
+  const { elements } = state;
+  const { draggableElements, possibleIndexPosition, possibleParent } = payload;
   const { allData, staticData } = elements;
-  const { draggableElements, possibleIndexPosition, possibleParent } = events;
   const id = first(draggableElements);
   const prevParent = cloneDeep(allData[allData[id].parentId]);
   const nextParent = cloneDeep(allData[possibleParent]);

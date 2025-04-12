@@ -4,6 +4,7 @@ import { BASE_2D } from 'shared';
 // types
 import { T2DCoordinates, TElement } from 'types';
 import {
+  TChangeParentActionPayload,
   TElementDynamicData,
   TElementsData,
   TElementStaticData,
@@ -126,10 +127,11 @@ export const reduceData = (
 
 export const getMappedChildren = (
   parentHasChanged: boolean,
+  payload: TChangeParentActionPayload,
   state: TPageBuilderState,
 ): TElementsData => {
-  const { elements, events } = state;
-  const { draggableElements, possibleParent } = events;
+  const { elements } = state;
+  const { draggableElements, possibleParent } = payload;
 
   return reduceData(
     draggableElements.map((id) => {

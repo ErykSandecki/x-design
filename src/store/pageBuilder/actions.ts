@@ -19,6 +19,7 @@ import {
   TAddELementAction,
   TAddELementActionPayload,
   TChangeParentAction,
+  TChangeParentActionPayload,
   TRotateElementAction,
   TRotateElementActionPayload,
   TSelectElementAction,
@@ -41,7 +42,12 @@ export const addElement = (
   type: ADD_ELEMENT,
 });
 
-export const changeParent = (): TChangeParentAction => ({
+export const changeParent = (
+  draggableElements: TChangeParentActionPayload['draggableElements'],
+  possibleIndexPosition: TChangeParentActionPayload['possibleIndexPosition'],
+  possibleParent: TChangeParentActionPayload['possibleParent'],
+): TChangeParentAction => ({
+  payload: { draggableElements, possibleIndexPosition, possibleParent },
   type: CHANGE_PARENT,
 });
 
