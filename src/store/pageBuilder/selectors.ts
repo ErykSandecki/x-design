@@ -1,6 +1,6 @@
 import { createSelector, Selector } from 'reselect';
 import { get as getFp, pickBy as pickByFb } from 'lodash/fp';
-import { size } from 'lodash';
+import { get, map, pickBy, size } from 'lodash';
 
 // others
 import { REDUCER_KEY } from './actionsType';
@@ -37,6 +37,13 @@ export const elementsSelector: Selector<TMainState, TElementsData> =
 export const allDataSelector: Selector<TMainState, TElementsData['allData']> =
   createSelector(elementsSelector, getFp('allData'));
 
+export const childrenSelectorCreator = (
+  id: TElement['id'] | '-1',
+): Selector<TMainState, TElement['children']> =>
+  createSelector(elementsSelector, (elements) =>
+    get(elements, `allData.${id}.children`),
+  );
+
 export const dynamicDataSelector: Selector<
   TMainState,
   TElementsData['dynamicData']
@@ -54,10 +61,11 @@ export const staticDataSelector: Selector<
 
 export const filtredStaticDataSelectorCreator = (
   parentId: TElement['parentId'],
-): Selector<TMainState, TObject<TElementStaticData> | {}> =>
+): Selector<TMainState, Array<TElementStaticData>> =>
   createSelector(
+    childrenSelectorCreator(parentId),
     staticDataSelector,
-    pickByFb((value) => value.parentId === parentId),
+    (children, staticData) => map(children, (id) => staticData[id]),
   );
 
 export const eventsSelector: Selector<TMainState, TEvents> = createSelector(

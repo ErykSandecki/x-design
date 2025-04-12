@@ -1,5 +1,7 @@
 .Elements {
-  &--events-disabled {
-    pointer-events: none;
+  &__element {
+    &--events-disabled {
+      pointer-events: none;
+    }
   }
 }

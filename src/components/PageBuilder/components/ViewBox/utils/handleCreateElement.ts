@@ -24,6 +24,7 @@ export const handleCreateElement = (
     const y = y1 < y2 ? y1 : y2;
     const element: TAddELementActionPayload = {
       backgroundColor: '#ffffff',
+      children: [],
       coordinates: { x, y },
       height: Math.abs(y1 - y2),
       id: generateID(),

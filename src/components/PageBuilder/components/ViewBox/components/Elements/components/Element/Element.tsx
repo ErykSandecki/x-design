@@ -33,6 +33,7 @@ import { MouseMode } from 'components/PageBuilder/enums';
 
 // utils
 import { getCornersPosition } from './utils/getCornersPosition';
+import { isNumber } from 'lodash';
 
 type TElementProps = {
   classes: typeof classes;
@@ -96,12 +97,12 @@ const Element: FC<TElementProps> = ({
       ref={elementRef}
       style={{
         backgroundColor,
-        height: `${height}px`,
+        height: isNumber(height) ? `${height}px` : height,
         left: `${x}px`,
         position,
         top: `${y}px`,
         transform: `rotate(${rotate}deg)`,
-        width: `${width}px`,
+        width: isNumber(width) ? `${width}px` : width,
       }}
       {...events}
     >

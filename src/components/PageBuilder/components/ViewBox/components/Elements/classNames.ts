@@ -7,4 +7,10 @@ export const classNames = {
       eventsDisabled: `${className}--events-disabled`,
     },
   },
+  element: {
+    name: `${className}__element`,
+    modificators: {
+      eventsDisabled: `${className}__element--events-disabled`,
+    },
+  },
 };

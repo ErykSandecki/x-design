@@ -23,6 +23,7 @@ export const pageBuilderStateMock: Record<
     events: {
       draggableElements: [],
       isMultipleMoving: false,
+      possibleIndexPosition: null,
       possibleParent: null,
       selectedAnchor: Anchor.none,
     },
@@ -47,9 +48,10 @@ export const elementDynamicDataMock: TElementDynamicData = {
 };
 
 export const elementStaticDataMock: TElementStaticData = {
+  children: [],
   id: '1',
-  index: 0,
   parentId: '-1',
+  position: 'absolute',
   type: ElementType.frame,
 };
 
@@ -60,10 +62,10 @@ export const elementAllDataMock: TElement = {
 
 export const createFrameMock: TElement = {
   backgroundColor: '#ffffff',
+  children: [],
   coordinates: { x: 0, y: 0 },
   height: 0,
   id: '1',
-  index: 0,
   parentId: '-1',
   position: 'absolute',
   rotate: 0,
@@ -74,6 +76,7 @@ export const createFrameMock: TElement = {
 export const eventsMock: TEvents = {
   draggableElements: [],
   isMultipleMoving: false,
+  possibleIndexPosition: null,
   possibleParent: null,
   selectedAnchor: Anchor.none,
 };

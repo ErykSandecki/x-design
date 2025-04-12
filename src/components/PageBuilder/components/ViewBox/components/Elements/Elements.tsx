@@ -2,13 +2,14 @@ import { FC, memo } from 'react';
 import { useSelector } from 'react-redux';
 
 // components
+import DropArea from './components/DropArea/DropArea';
 import Frame from './components/Frame/Frame';
 
 // hooks
 import { useTheme } from 'hooks';
 
 // others
-import { className, classNames } from './classNames';
+import { classNames } from './classNames';
 
 // store
 import { filtredStaticDataSelectorCreator } from 'store/pageBuilder/selectors';
@@ -17,46 +18,50 @@ import { filtredStaticDataSelectorCreator } from 'store/pageBuilder/selectors';
 import styles from './elements.scss';
 
 // types
-import { ElementType, Sort, TElement } from 'types';
+import { ElementType, TElement } from 'types';
 import { MouseMode } from 'components/PageBuilder/enums';
-
-// utils
-import { objectToArray } from 'utils';
-import { sortNumbersByObject } from 'utils/math/sort';
 
 export type TElementsProps = {
   eventsDisabled: boolean;
+  isSelected?: boolean;
   mouseMode: MouseMode;
   parentId: TElement['parentId'];
 };
 
 const Elements: FC<TElementsProps> = ({
   eventsDisabled,
+  isSelected = false,
   mouseMode,
   parentId,
 }) => {
   const staticData = useSelector(filtredStaticDataSelectorCreator(parentId));
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
-  return sortNumbersByObject(
-    objectToArray(staticData),
-    'index',
-    Sort.ascent,
-  ).map(({ id, parentId, type }) => {
+  return staticData.map(({ id, parentId, position, type }, index) => {
+    const Wrapper =
+      !isSelected && position === 'relative'
+        ? ({ children }) => (
+            <DropArea index={index} mouseMode={mouseMode} parentId={parentId}>
+              {children}
+            </DropArea>
+          )
+        : ({ children }) => <>{children}</>;
+
     switch (type) {
       case ElementType.frame:
         return (
-          <Frame
-            className={cx(classNamesWithTheme[className].name, [
-              classNamesWithTheme[className].modificators.eventsDisabled,
-              eventsDisabled,
-            ])}
-            id={id}
-            key={id}
-            mouseMode={mouseMode}
-            parentId={parentId}
-            type={type}
-          />
+          <Wrapper key={id}>
+            <Frame
+              className={cx(classNamesWithTheme.element.name, [
+                classNamesWithTheme.element.modificators.eventsDisabled,
+                eventsDisabled,
+              ])}
+              id={id}
+              mouseMode={mouseMode}
+              parentId={parentId}
+              type={type}
+            />
+          </Wrapper>
         );
       default:
         return <></>;

@@ -38,7 +38,7 @@ export type TElementDynamicData = Pick<
 
 export type TElementStaticData = Pick<
   TElement,
-  'id' | 'index' | 'parentId' | 'type'
+  'children' | 'id' | 'parentId' | 'position' | 'type'
 >;
 
 export type TElementsData = {
@@ -50,6 +50,7 @@ export type TElementsData = {
 export type TEvents = {
   draggableElements: Array<TElement['id']>;
   isMultipleMoving: boolean;
+  possibleIndexPosition: number | null;
   possibleParent: TElement['id'] | null;
   selectedAnchor: Anchor;
 };

@@ -37,7 +37,6 @@ describe('handleAddElement', () => {
         staticData: {
           [createFrameMock.id]: {
             id: createFrameMock.id,
-            index: createFrameMock.index,
             parentId: createFrameMock.parentId,
             type: createFrameMock.type,
           },

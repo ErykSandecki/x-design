@@ -16,6 +16,7 @@ import {
   UPDATE_PREV_STATE,
 } from './actionsType';
 import { BASE_3D } from 'shared';
+import { BASE_ALL_DATA, BASE_STATIC_DATA } from './constants';
 
 // types
 import { Anchor } from './enums';
@@ -36,7 +37,7 @@ import {
 
 // utils
 import { handleAddElement } from './utils/handleAddElement';
-import { handleChangeParent } from './utils/handleChangeParent';
+import { handleChangeParent } from './utils/changeParent/handleChangeParent';
 import { handleRotateElement } from './utils/handleRotateElement';
 import { handleSetElementCoordinates } from './utils/handleSetElementCoordinates';
 import { handleSetElementsCoordinates } from './utils/handleSetElementsCoordinates';
@@ -47,7 +48,9 @@ const initialState: TPageBuilderState = {
   areaCoordinates: BASE_3D,
   elements: {
     allData: {
+      [BASE_ALL_DATA.id]: BASE_ALL_DATA,
       m861mgpj1741791393558: {
+        children: [],
         backgroundColor: '#ffffff',
         height: 325,
         id: 'm861mgpj1741791393558',
@@ -64,6 +67,7 @@ const initialState: TPageBuilderState = {
         index: 0,
       },
       m861mgpj17417913935518: {
+        children: [],
         backgroundColor: 'red',
         height: 150,
         id: 'm861mgpj17417913935518',
@@ -107,7 +111,9 @@ const initialState: TPageBuilderState = {
       },
     },
     staticData: {
+      [BASE_STATIC_DATA.id]: BASE_STATIC_DATA,
       m861mgpj1741791393558: {
+        children: [],
         id: 'm861mgpj1741791393558',
         parentId: '-1',
         // @ts-ignore
@@ -115,6 +121,7 @@ const initialState: TPageBuilderState = {
         index: 0,
       },
       m861mgpj17417913935518: {
+        children: [],
         id: 'm861mgpj17417913935518',
         parentId: '-1',
         // @ts-ignore
@@ -126,6 +133,7 @@ const initialState: TPageBuilderState = {
   events: {
     draggableElements: [],
     isMultipleMoving: false,
+    possibleIndexPosition: null,
     possibleParent: null,
     selectedAnchor: Anchor.none,
   },

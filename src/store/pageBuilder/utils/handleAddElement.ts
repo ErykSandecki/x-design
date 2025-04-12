@@ -6,28 +6,21 @@ import { TAddELementActionPayload, TPageBuilderState } from '../types';
 // utils
 import { objectToArray } from 'utils';
 
-export const findIndex = (
-  element: TAddELementActionPayload,
-  state: TPageBuilderState,
-): number =>
-  max(
-    objectToArray(state.elements.allData)
-      .filter(({ parentId }) => element.parentId === parentId)
-      .map(({ index }) => index),
-  ) + 1 || 0;
-
 export const handleAddElement = (
   element: TAddELementActionPayload,
   state: TPageBuilderState,
 ): TPageBuilderState => {
-  const index = findIndex(element, state);
-
   return {
     ...state,
     elements: {
+      ...state.elements,
       allData: {
         ...state.elements.allData,
-        [element.id]: { ...element, index },
+        [element.id]: { ...element },
+        '-1': {
+          ...state.elements.allData['-1'],
+          children: [...state.elements.allData['-1'].children, element.id],
+        },
       },
       dynamicData: {
         ...state.elements.dynamicData,
@@ -45,8 +38,11 @@ export const handleAddElement = (
       staticData: {
         ...state.elements.staticData,
         [element.id]: {
-          ...pick(element, 'id', 'parentId', 'type'),
-          index,
+          ...pick(element, 'children', 'id', 'parentId', 'position', 'type'),
+        },
+        '-1': {
+          ...state.elements.staticData['-1'],
+          children: [...state.elements.staticData['-1'].children, element.id],
         },
       },
     },

@@ -1,0 +1,33 @@
+@import '../../../../../../styles/z-indexes.scss';
+
+.DropArea {
+  position: relative;
+
+  &__area {
+    background-color: #0b99ff;
+    border-radius: 2px;
+    box-sizing: border-box;
+    height: 4px;
+    margin-left: 10px;
+    width: calc(90% - 20px);
+  }
+
+  &__anchor {
+    position: absolute;
+    z-index: $--rx-zindex-element-anchor;
+
+    &--bottom {
+      height: 10px;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+
+    &--top {
+      height: 10px;
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+  }
+}

@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 // components
 import Element from '../Element/Element';
+import Elements from '../../Elements';
 import { Small } from 'shared';
 
 // hooks
@@ -17,7 +18,6 @@ import styles from './frame.scss';
 
 // types
 import { TElementProps } from '../../types';
-import Elements from '../../Elements';
 
 export type TFrameProps = TElementProps;
 
@@ -43,18 +43,21 @@ const Frame: FC<TFrameProps> = ({
     >
       {(selected) => (
         <>
-          <Small
-            classes={{
-              className: cx(classNamesWithTheme.label.name, [
-                classNamesWithTheme.label.modificators.selected,
-                selected,
-              ]),
-            }}
-          >
-            {t(`${translationNameSpace}.label.createFrame`)}
-          </Small>
+          {parentId === '-1' && (
+            <Small
+              classes={{
+                className: cx(classNamesWithTheme.label.name, [
+                  classNamesWithTheme.label.modificators.selected,
+                  selected,
+                ]),
+              }}
+            >
+              {t(`${translationNameSpace}.label.createFrame`)}
+            </Small>
+          )}
           <Elements
             eventsDisabled={false}
+            isSelected={selected}
             mouseMode={mouseMode}
             parentId={id}
           />
