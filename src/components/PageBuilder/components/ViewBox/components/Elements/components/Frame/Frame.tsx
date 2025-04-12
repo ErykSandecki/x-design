@@ -41,15 +41,16 @@ const Frame: FC<TFrameProps> = ({
       mouseMode={mouseMode}
       type={type}
     >
-      {(selected) => (
+      {(hover, selected) => (
         <>
           {parentId === '-1' && (
             <Small
               classes={{
-                className: cx(classNamesWithTheme.label.name, [
-                  classNamesWithTheme.label.modificators.selected,
-                  selected,
-                ]),
+                className: cx(
+                  classNamesWithTheme.label.name,
+                  [classNamesWithTheme.label.modificators.hover, hover],
+                  [classNamesWithTheme.label.modificators.selected, selected],
+                ),
               }}
             >
               {t(`${translationNameSpace}.label.createFrame`)}

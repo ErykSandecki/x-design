@@ -22,6 +22,7 @@ export const pageBuilderStateMock: Record<
     elements: { allData: {}, dynamicData: {}, staticData: {} },
     events: {
       draggableElements: [],
+      hoverOnElement: '-1',
       isMultipleMoving: false,
       possibleIndexPosition: null,
       possibleParent: null,
@@ -75,6 +76,7 @@ export const createFrameMock: TElement = {
 
 export const eventsMock: TEvents = {
   draggableElements: [],
+  hoverOnElement: '-1',
   isMultipleMoving: false,
   possibleIndexPosition: null,
   possibleParent: null,

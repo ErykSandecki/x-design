@@ -1,4 +1,5 @@
 import { FC, memo, ReactNode, useRef } from 'react';
+import { isNumber } from 'lodash';
 import { useSelector } from 'react-redux';
 
 // components
@@ -16,10 +17,12 @@ import {
   classNames,
   classes,
 } from './classNames';
+import { DATA_STATUS_ATTRIBUTE } from './constants';
 
 // store
 import {
   elementDynamicDataSelectorCreator,
+  isHoverSelectorCreator,
   isSelectedElementSelectorCreator,
   multipleSelectedElementsSelector,
 } from 'store/pageBuilder/selectors';
@@ -33,12 +36,10 @@ import { MouseMode } from 'components/PageBuilder/enums';
 
 // utils
 import { getCornersPosition } from './utils/getCornersPosition';
-import { isNumber } from 'lodash';
-import { DATA_STATUS_ATTRIBUTE } from './constants';
 
 type TElementProps = {
   classes: typeof classes;
-  children: (selected: boolean) => ReactNode;
+  children: (hover: boolean, selected: boolean) => ReactNode;
   id: string;
   mouseMode: MouseMode;
   parentId: TElement['parentId'];
@@ -53,6 +54,7 @@ const Element: FC<TElementProps> = ({
   parentId,
   type,
 }) => {
+  const isHover = useSelector(isHoverSelectorCreator(id));
   const isSelected = useSelector(isSelectedElementSelectorCreator(id));
   const isMultiple = useSelector(multipleSelectedElementsSelector);
   const elementRef = useRef<HTMLDivElement>(null);
@@ -85,6 +87,10 @@ const Element: FC<TElementProps> = ({
           classes.className,
           classNamesWithTheme[classNameMoveableELement].name,
           [
+            classNamesWithTheme[classNameMoveableELement].modificators.hover,
+            isHover,
+          ],
+          [
             classNamesWithTheme[classNameMoveableELement].modificators.moving,
             isMoving,
           ],
@@ -107,7 +113,7 @@ const Element: FC<TElementProps> = ({
       }}
       {...events}
     >
-      {children(isSelected)}
+      {children(isHover, isSelected)}
       {displayElements && <Corners rectCoordinates={rectCoordinates} />}
       {displayElements && (
         <TransformArea

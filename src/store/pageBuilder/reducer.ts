@@ -133,6 +133,7 @@ const initialState: TPageBuilderState = {
   },
   events: {
     draggableElements: [],
+    hoverOnElement: '-1',
     isMultipleMoving: false,
     possibleIndexPosition: null,
     possibleParent: null,

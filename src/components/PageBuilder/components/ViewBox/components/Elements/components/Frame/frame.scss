@@ -1,8 +1,6 @@
 @import '../../../../../../styles/z-indexes.scss';
 
 .Frame {
-  @include theme-selector('blue-1', color, '&:hover .Frame__label');
-
   background-color: white;
 
   &__label {
@@ -11,6 +9,10 @@
     font-size: 11px;
     position: absolute;
     transform: translate(1.5px, -20px);
+
+    &--hover {
+      @include theme('blue-1', color);
+    }
 
     &--selected {
       @include theme('blue-1', color);

@@ -2,13 +2,13 @@
 
 .Element {
   $self: &;
-  @include theme-selector('blue-1', outline, '&:hover', '1.5px solid');
 
   position: absolute;
   user-select: none;
   z-index: $--rx-zindex-element;
 
-  &:hover {
+  &--hover {
+    @include theme('blue-1', outline, '1.5px solid');
     z-index: $--rx-zindex-element-active;
   }
 

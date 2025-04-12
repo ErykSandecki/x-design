@@ -5,9 +5,9 @@
 
   &__prompt {
     background-color: #0b99ff;
-    border-radius: 2px;
+    border-radius: 1px;
     box-sizing: border-box;
-    height: 4px;
+    height: 2px;
     position: absolute;
     width: calc(90% - 20px);
     z-index: $--rx-zindex-element-anchor;

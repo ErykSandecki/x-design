@@ -28,7 +28,18 @@ export const useMouseLeaveEvent = (
       );
 
       if (!isEmpty(draggableElements)) {
-        dispatch(updateEventsStatus({ possibleParent: parentId }));
+        dispatch(
+          updateEventsStatus({
+            hoverOnElement: parentId,
+            possibleParent: parentId,
+          }),
+        );
+      } else {
+        dispatch(
+          updateEventsStatus({
+            hoverOnElement: parentId,
+          }),
+        );
       }
     }
   };

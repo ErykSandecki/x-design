@@ -29,7 +29,11 @@ export const useMouseEnterEvent = (
       );
 
       if (!isEmpty(draggableElements) && !isSelected) {
-        dispatch(updateEventsStatus({ possibleParent: id }));
+        dispatch(
+          updateEventsStatus({ hoverOnElement: id, possibleParent: id }),
+        );
+      } else {
+        dispatch(updateEventsStatus({ hoverOnElement: id }));
       }
     }
   };

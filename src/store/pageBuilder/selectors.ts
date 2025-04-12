@@ -78,6 +78,11 @@ export const eventSelectorCreator = (
 ): Selector<TMainState, TEvents[typeof key]> =>
   createSelector(eventsSelector, getFp(key));
 
+export const isHoverSelectorCreator = (
+  id: TElement['id'],
+): Selector<TMainState, boolean> =>
+  createSelector(eventsSelector, ({ hoverOnElement }) => hoverOnElement === id);
+
 export const isDraggableSelectorCreator = (
   id: TElement['id'],
 ): Selector<TMainState, boolean> =>
