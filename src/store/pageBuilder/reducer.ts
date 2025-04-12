@@ -1,5 +1,3 @@
-import { omit } from 'lodash';
-
 // others
 import {
   ADD_ELEMENT,
@@ -142,7 +140,7 @@ const initialState: TPageBuilderState = {
   isLoading: true,
   isPending: false,
   prevState: undefined,
-  selectedElements: {},
+  selectedElements: [],
 };
 
 const addElement = (
@@ -165,10 +163,10 @@ const selectElement = (
   { payload: selectedElement }: TAction<TSelectElementAction['payload']>,
 ): TPageBuilderState => ({
   ...state,
-  selectedElements: filterSelectedElements({
+  selectedElements: filterSelectedElements([
     ...state.selectedElements,
-    [selectedElement.id]: selectedElement,
-  }),
+    selectedElement,
+  ]),
 });
 
 const selectElements = (
@@ -235,7 +233,9 @@ const unselectElement = (
   { payload: id }: TAction<TUnselectElementAction['payload']>,
 ): TPageBuilderState => ({
   ...state,
-  selectedElements: omit(state.selectedElements, id),
+  selectedElements: state.selectedElements.filter(
+    (element) => element.id !== id,
+  ),
 });
 
 const pageBuilder = (

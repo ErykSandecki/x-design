@@ -1,12 +1,12 @@
 import { createSelector, Selector } from 'reselect';
-import { get as getFp, pickBy as pickByFb } from 'lodash/fp';
-import { get, map, pickBy, size } from 'lodash';
+import { get as getFp } from 'lodash/fp';
+import { get, map, size } from 'lodash';
 
 // others
 import { REDUCER_KEY } from './actionsType';
 
 // types
-import { T3DCoordinates, TElement, TObject } from 'types';
+import { T3DCoordinates, TElement } from 'types';
 import {
   TElementsData,
   TElementDynamicData,
@@ -108,7 +108,7 @@ export const isSelectedElementSelectorCreator = (
 ): Selector<TMainState, boolean> =>
   createSelector(
     selectedElementsSelector,
-    (selectedElements) => !!selectedElements[elementId],
+    (selectedElements) => !!selectedElements.find(({ id }) => id === elementId),
   );
 
 export const mainParentIdSelectorCreator = (

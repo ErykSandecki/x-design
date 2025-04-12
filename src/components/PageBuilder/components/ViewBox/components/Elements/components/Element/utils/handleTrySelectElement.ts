@@ -17,6 +17,6 @@ export const handleTrySelectElement = (
   const { shiftKey } = event;
 
   if (!isMoving && isMultiple && isSelected && !shiftKey) {
-    dispatch(selectElements({ [selectedElement.id]: selectedElement }));
+    dispatch(selectElements([selectedElement]));
   }
 };

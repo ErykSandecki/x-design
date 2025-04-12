@@ -69,7 +69,7 @@ export type TSelectedElement = {
   type: ElementType;
 };
 
-export type TSelectedElements = TObject<TSelectedElement>;
+export type TSelectedElements = Array<TSelectedElement>;
 
 export type TSizeCoordinates = Pick<
   TElement,

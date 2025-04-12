@@ -10,9 +10,7 @@ import { getCoordinates } from '../getCoordinates';
 describe('calculateBoxSize', () => {
   it(`should return coordinates`, () => {
     // before
-    const result = getCoordinates(false, {
-      [selectedElementMock.id]: selectedElementMock,
-    });
+    const result = getCoordinates(false, [selectedElementMock]);
 
     // result
     expect(result).toStrictEqual({ x1: -0.75, x2: 0.75, y1: -0.75, y2: 0.75 });
@@ -20,9 +18,7 @@ describe('calculateBoxSize', () => {
 
   it(`should return default coordinates`, () => {
     // before
-    const result = getCoordinates(true, {
-      [selectedElementMock.id]: selectedElementMock,
-    });
+    const result = getCoordinates(true, [selectedElementMock]);
 
     // result
     expect(result).toStrictEqual(BASE_RECT);

@@ -20,8 +20,8 @@ export const initSetElementsCoordinates = (
       x: Math.round(event.clientX),
       y: Math.round(event.clientY),
     };
-    const selectedElementsId = Object.keys(
-      selectedElementsSelector(store.getState()),
+    const selectedElementsId = selectedElementsSelector(store.getState()).map(
+      ({ id }) => id,
     );
 
     dispatch(updatePrevState());

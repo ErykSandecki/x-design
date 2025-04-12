@@ -1,4 +1,4 @@
-import { pickBy, size } from 'lodash';
+import { size } from 'lodash';
 
 // types
 import { TSelectedElements } from '../types';
@@ -8,4 +8,4 @@ export const filterSelectedElements = (
 ): TSelectedElements =>
   size(selectedElements) === 1
     ? selectedElements
-    : pickBy(selectedElements, ({ parentId }) => parentId === '-1');
+    : selectedElements.filter(({ parentId }) => parentId === '-1');

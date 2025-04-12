@@ -31,7 +31,7 @@ export const pageBuilderStateMock: Record<
     isLoading: true,
     isPending: false,
     prevState: undefined,
-    selectedElements: {},
+    selectedElements: [],
   },
 };
 

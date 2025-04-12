@@ -3,28 +3,20 @@ import { T2DCoordinates, TElement, TRectCoordinates } from 'types';
 import {
   TPageBuilderState,
   TPositions,
+  TSelectedElement,
   TSelectedElements,
   TSetElementsCoordinatesAction,
 } from '../types';
 
 export const getSelectedElementPosition = (
   coordinates: TRectCoordinates,
-  id: TElement['id'],
-  positions: TPositions,
-  selectedElements: TSelectedElements,
   x: T2DCoordinates['x'],
   y: T2DCoordinates['y'],
-): TSelectedElements => ({
-  ...positions.selectedElements,
-  [id]: {
-    ...selectedElements[id],
-    coordinates: {
-      x1: coordinates.x1 + x,
-      x2: coordinates.x2 + x,
-      y1: coordinates.y1 + y,
-      y2: coordinates.y2 + y,
-    },
-  },
+): TSelectedElement['coordinates'] => ({
+  x1: coordinates.x1 + x,
+  x2: coordinates.x2 + x,
+  y1: coordinates.y1 + y,
+  y2: coordinates.y2 + y,
 });
 
 export const getPositions = (
@@ -36,10 +28,10 @@ export const getPositions = (
   const positions: TPositions = {
     allData: {},
     dynamicData: {},
-    selectedElements: {},
+    selectedElements: [],
   };
 
-  for (const [_, { coordinates, id }] of Object.entries(selectedElements)) {
+  selectedElements.forEach(({ coordinates, id, ...restData }) => {
     const {
       coordinates: { x: xA, y: yA },
     } = allData[id];
@@ -56,15 +48,13 @@ export const getPositions = (
         coordinates: position,
       },
     };
-    positions.selectedElements = getSelectedElementPosition(
-      coordinates,
+
+    positions.selectedElements.push({
+      ...restData,
+      coordinates: getSelectedElementPosition(coordinates, x, y),
       id,
-      positions,
-      selectedElements,
-      x,
-      y,
-    );
-  }
+    });
+  });
 
   return positions;
 };
@@ -88,8 +78,6 @@ export const handleSetElementsCoordinates = (
         ...positions.dynamicData,
       },
     },
-    selectedElements: {
-      ...positions.selectedElements,
-    },
+    selectedElements: positions.selectedElements,
   };
 };

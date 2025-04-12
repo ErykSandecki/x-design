@@ -47,7 +47,7 @@ export const handleChangeParent = (
         possibleIndexPosition: null,
         possibleParent: null,
       },
-      selectedElements: possibleParent === '-1' ? state.selectedElements : {},
+      selectedElements: possibleParent === '-1' ? state.selectedElements : [],
     };
   }
 

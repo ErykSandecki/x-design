@@ -8,16 +8,13 @@ import { SW } from '../../ClickableArea/constants';
 import { TRectCoordinates } from 'types';
 import { TSelectedElements } from 'store/pageBuilder/types';
 
-// utils
-import { objectToArray } from 'utils';
-
 export const getCoordinates = (
   isMultipleMoving: boolean,
   selectedElements: TSelectedElements,
 ): TRectCoordinates => {
   if (!isMultipleMoving) {
     const offset = SW / 2;
-    const setCoordinates = objectToArray(selectedElements).reduce(
+    const setCoordinates = selectedElements.reduce(
       (obj, { coordinates: { x1, x2, y1, y2 } }) => ({
         x1: [...obj.x1, x1],
         x2: [...obj.x2, x2],

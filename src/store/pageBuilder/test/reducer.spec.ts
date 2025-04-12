@@ -162,7 +162,7 @@ describe('PageBuilderReducer', () => {
     const id = selectedElementMock.id;
 
     // before
-    const state = reducer(selectElements({ [id]: selectedElementMock }), {
+    const state = reducer(selectElements([selectedElementMock]), {
       ...pageBuilderStateMock[PAGE_BUILDER],
     });
 

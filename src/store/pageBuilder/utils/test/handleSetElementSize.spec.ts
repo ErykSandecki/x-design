@@ -43,9 +43,7 @@ describe('handleSetElementSizes', () => {
           ...pageBuilderStateMock[PAGE_BUILDER].events,
           selectedAnchor: Anchor.east,
         },
-        selectedElements: {
-          [selectedElementMock.id]: selectedElementMock,
-        },
+        selectedElements: [selectedElementMock],
       },
     );
 

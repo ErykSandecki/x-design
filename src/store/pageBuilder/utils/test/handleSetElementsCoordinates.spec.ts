@@ -23,9 +23,7 @@ const mockState = {
     dynamicData: { [elementDynamicDataMock.id]: elementDynamicDataMock },
     staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
   },
-  selectedElements: {
-    [selectedElementMock.id]: selectedElementMock,
-  },
+  selectedElements: [selectedElementMock],
 };
 
 describe('handleSetElementsCoordinates', () => {

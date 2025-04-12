@@ -28,6 +28,6 @@ export const handleSelectElement = (
   } else if (isOutside && shiftKey && isSelected) {
     dispatch(unselectElement(selectedElement.id));
   } else if (canTrigger && !shiftKey) {
-    dispatch(selectElements({ [selectedElement.id]: selectedElement }));
+    dispatch(selectElements([selectedElement]));
   }
 };
