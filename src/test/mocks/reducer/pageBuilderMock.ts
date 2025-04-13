@@ -85,7 +85,7 @@ export const createFrameMock: TElement = {
 
 export const eventsMock: TEvents = {
   draggableElements: [],
-  hoverOnElement: '-1',
+  hoverOnElement: null,
   isMultipleMoving: false,
   possibleIndexPosition: null,
   possibleParent: null,
