@@ -16,9 +16,13 @@ describe('elementsSelector', () => {
 
     // result
     expect(selectorFunction(state)).toStrictEqual({
-      allData: {},
+      allData: {
+        ...pageBuilderStateMock[PAGE_BUILDER].elements.allData,
+      },
       dynamicData: {},
-      staticData: {},
+      staticData: {
+        ...pageBuilderStateMock[PAGE_BUILDER].elements.staticData,
+      },
     });
   });
 });

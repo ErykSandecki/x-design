@@ -9,12 +9,14 @@ import { allDataSelector } from '../../selectors';
 
 const { elements } = pageBuilderStateMock[PAGE_BUILDER];
 
-describe('allDataSelector.spec', () => {
+describe('allDataSelector', () => {
   it('should return data', () => {
     // before
     const selectorFunction = (allDataSelector as any).resultFunc;
 
     // result
-    expect(selectorFunction(elements)).toStrictEqual({});
+    expect(selectorFunction(elements)).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER].elements.allData,
+    });
   });
 });

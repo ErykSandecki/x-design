@@ -19,7 +19,6 @@ const mockState = {
   ...pageBuilderStateMock[PAGE_BUILDER],
   elements: {
     allData: { [elementAllDataMock.id]: elementAllDataMock },
-    children: [],
     dynamicData: { [elementDynamicDataMock.id]: elementDynamicDataMock },
     staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
   },
@@ -45,20 +44,20 @@ describe('handleSetElementsCoordinates', () => {
         allData: {
           [elementAllDataMock.id]: {
             ...elementAllDataMock,
-            position: coordinates,
+            coordinates,
           },
         },
         dynamicData: {
           [elementDynamicDataMock.id]: {
             ...elementDynamicDataMock,
-            position: coordinates,
+            coordinates,
           },
         },
         staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
       },
       prevState,
-      selectedElements: {
-        [selectedElementMock.id]: {
+      selectedElements: [
+        {
           ...selectedElementMock,
           coordinates: {
             x1: coordinates.x,
@@ -67,7 +66,7 @@ describe('handleSetElementsCoordinates', () => {
             y2: coordinates.y,
           },
         },
-      },
+      ],
     });
   });
 });

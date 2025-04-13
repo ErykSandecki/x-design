@@ -4,8 +4,10 @@ exports[`Element snapshots should render Element 1`] = `
 <DocumentFragment>
   <div
     class="css-q0izro className Element Element--light"
+    data-status="false"
     data-test-box=""
-    style="height: 100px; left: 0px; top: 0px; transform: rotate(0deg); width: 100px;"
+    id="1"
+    style="background-color: rgb(255, 255, 255); height: 100px; left: 0px; position: absolute; top: 0px; transform: rotate(0deg); width: 100px;"
   />
 </DocumentFragment>
 `;

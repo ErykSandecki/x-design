@@ -46,8 +46,8 @@ describe('useHandleSelectElement', () => {
     );
 
     // result
-    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
-      [selectedElementMock.id]: {
+    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual([
+      {
         ...selectedElementMock,
         coordinates: {
           ...selectedElementMock.coordinates,
@@ -55,7 +55,7 @@ describe('useHandleSelectElement', () => {
           y2: 100,
         },
       },
-    });
+    ]);
   });
 
   it(`should not select items when are the same selected`, () => {
@@ -70,9 +70,7 @@ describe('useHandleSelectElement', () => {
               [elementAllDataMock.id]: elementAllDataMock,
             },
           },
-          selectedElements: {
-            [selectedElementMock.id]: selectedElementMock,
-          },
+          selectedElements: [selectedElementMock],
         },
       }) as any;
 

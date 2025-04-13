@@ -44,7 +44,7 @@ describe('updateElementPosition', () => {
     );
 
     // result
-    expect(mockCallBack.mock.calls[0][0].payload.position).toStrictEqual({
+    expect(mockCallBack.mock.calls[0][0].payload.coordinates).toStrictEqual({
       x: 0,
       y: 0,
     });

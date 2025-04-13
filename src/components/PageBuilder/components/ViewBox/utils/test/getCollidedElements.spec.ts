@@ -36,8 +36,8 @@ describe('getCollidedElements', () => {
     const result = getCollidedElements({ x1: 0, x2: 100, y1: 0, y2: 100 });
 
     // result
-    expect(result).toStrictEqual({
-      [selectedElementMock.id]: {
+    expect(result).toStrictEqual([
+      {
         ...selectedElementMock,
         coordinates: {
           ...selectedElementMock.coordinates,
@@ -45,7 +45,7 @@ describe('getCollidedElements', () => {
           y2: 100,
         },
       },
-    });
+    ]);
   });
 
   it(`should return empty data`, () => {
@@ -53,6 +53,6 @@ describe('getCollidedElements', () => {
     const result = getCollidedElements(BASE_RECT);
 
     // result
-    expect(result).toStrictEqual({});
+    expect(result).toStrictEqual([]);
   });
 });

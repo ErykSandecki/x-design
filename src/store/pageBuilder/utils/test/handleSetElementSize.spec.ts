@@ -55,7 +55,7 @@ describe('handleSetElementSizes', () => {
           [elementAllDataMock.id]: {
             ...elementAllDataMock,
             height: 100,
-            position: { x: 0, y: 0 },
+            position: 'absolute',
             width: 300,
           },
         },
@@ -63,7 +63,7 @@ describe('handleSetElementSizes', () => {
           [elementDynamicDataMock.id]: {
             ...elementDynamicDataMock,
             height: 100,
-            position: { x: 0, y: 0 },
+            position: 'absolute',
             width: 300,
           },
         },
@@ -75,9 +75,7 @@ describe('handleSetElementSizes', () => {
         ...pageBuilderStateMock[PAGE_BUILDER].events,
         selectedAnchor: Anchor.east,
       },
-      selectedElements: {
-        [selectedElementMock.id]: selectedElementMock,
-      },
+      selectedElements: [selectedElementMock],
     });
   });
 });

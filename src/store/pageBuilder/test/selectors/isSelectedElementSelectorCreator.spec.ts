@@ -12,9 +12,7 @@ describe('isSelectedElementSelectorCreator', () => {
     ).resultFunc;
 
     // result
-    expect(
-      selectorFunction({ [selectedElementMock.id]: selectedElementMock }),
-    ).toBe(true);
+    expect(selectorFunction([selectedElementMock])).toBe(true);
   });
 
   it('should be not selected', () => {
@@ -24,6 +22,6 @@ describe('isSelectedElementSelectorCreator', () => {
     ).resultFunc;
 
     // result
-    expect(selectorFunction({})).toBe(false);
+    expect(selectorFunction([])).toBe(false);
   });
 });

@@ -19,13 +19,13 @@ import { configureStore } from 'store/store';
 const stateMock = {
   [PAGE_BUILDER]: {
     ...pageBuilderStateMock[PAGE_BUILDER],
-    selectedElements: {
-      [selectedElementMock.id]: selectedElementMock,
-      ['2']: {
+    selectedElements: [
+      selectedElementMock,
+      {
         ...selectedElementMock,
         id: '2',
       },
-    },
+    ],
   },
 };
 

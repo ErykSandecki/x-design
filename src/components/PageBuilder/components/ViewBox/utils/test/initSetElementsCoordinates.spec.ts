@@ -23,7 +23,8 @@ describe('initSetElementsCoordinates', () => {
     );
 
     // result
-    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
+    expect(mockCallBack.mock.calls[1][0].payload).toStrictEqual({
+      draggableElements: [],
       isMultipleMoving: true,
     });
   });

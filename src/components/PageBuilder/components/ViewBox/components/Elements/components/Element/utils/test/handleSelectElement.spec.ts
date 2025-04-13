@@ -54,8 +54,8 @@ describe('handleSelectElement', () => {
 
     // result
     expect(mockCallBack.mock.calls[0][0].type).toBe(SELECT_ELEMENTS);
-    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
-      [selectedElementMock.id]: selectedElementMock,
-    });
+    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual([
+      selectedElementMock,
+    ]);
   });
 });

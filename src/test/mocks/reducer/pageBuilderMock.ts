@@ -1,5 +1,6 @@
 // others
 import { BASE_3D, BASE_RECT } from 'shared';
+import { BASE_ALL_DATA, BASE_STATIC_DATA } from 'store/pageBuilder/constants';
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 
 // types
@@ -19,7 +20,15 @@ export const pageBuilderStateMock: Record<
 > = {
   [PAGE_BUILDER]: {
     areaCoordinates: BASE_3D,
-    elements: { allData: {}, dynamicData: {}, staticData: {} },
+    elements: {
+      allData: {
+        [BASE_ALL_DATA.id]: BASE_ALL_DATA,
+      },
+      dynamicData: {},
+      staticData: {
+        [BASE_STATIC_DATA.id]: BASE_STATIC_DATA,
+      },
+    },
     events: {
       draggableElements: [],
       hoverOnElement: '-1',

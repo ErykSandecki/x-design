@@ -19,9 +19,9 @@ describe('handleTrySelectElement', () => {
     );
 
     // result
-    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
-      [selectedElementMock.id]: selectedElementMock,
-    });
+    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual([
+      selectedElementMock,
+    ]);
   });
 
   it(`should not try add element`, () => {

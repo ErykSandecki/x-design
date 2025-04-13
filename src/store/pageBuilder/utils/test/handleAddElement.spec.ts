@@ -23,21 +23,33 @@ describe('handleAddElement', () => {
       ...pageBuilderStateMock[PAGE_BUILDER],
       elements: {
         allData: {
+          ['-1']: {
+            ...pageBuilderStateMock[PAGE_BUILDER].elements.allData['-1'],
+            children: [createFrameMock.id],
+          },
           [createFrameMock.id]: createFrameMock,
         },
         dynamicData: {
           [createFrameMock.id]: {
+            backgroundColor: createFrameMock.backgroundColor,
+            coordinates: createFrameMock.coordinates,
             height: createFrameMock.height,
             id: createFrameMock.id,
-            position: createFrameMock.coordinates,
+            position: createFrameMock.position,
             rotate: createFrameMock.rotate,
             width: createFrameMock.width,
           },
         },
         staticData: {
+          ['-1']: {
+            ...pageBuilderStateMock[PAGE_BUILDER].elements.staticData['-1'],
+            children: [createFrameMock.id],
+          },
           [createFrameMock.id]: {
+            children: createFrameMock.children,
             id: createFrameMock.id,
             parentId: createFrameMock.parentId,
+            position: createFrameMock.position,
             type: createFrameMock.type,
           },
         },
