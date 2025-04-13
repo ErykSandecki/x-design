@@ -1,10 +1,7 @@
-import { max, pick } from 'lodash';
+import { pick } from 'lodash';
 
 // types
 import { TAddELementActionPayload, TPageBuilderState } from '../types';
-
-// utils
-import { objectToArray } from 'utils';
 
 export const handleAddElement = (
   element: TAddELementActionPayload,

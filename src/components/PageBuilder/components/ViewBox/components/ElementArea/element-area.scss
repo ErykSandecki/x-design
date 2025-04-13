@@ -1,4 +1,4 @@
-@import '../../../../styles/z-indexes.scss';
+@import '../../../../styles/z-indexes';
 
 .ElementArea {
   height: 100%;
@@ -24,7 +24,7 @@
     z-index: $--rx-zindex-element-active;
 
     path {
-      fill: rgba(white, $alpha: 0);
+      fill: rgba(#ffffff, $alpha: 0);
     }
   }
 }

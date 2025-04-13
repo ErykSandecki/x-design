@@ -19,6 +19,7 @@ export function* appInitSaga() {
 
   try {
     yield put(setIsAppLoaded(true));
+    // eslint-disable-next-line
   } catch (_) {
     yield put(setIsAppLoaded(false));
   }

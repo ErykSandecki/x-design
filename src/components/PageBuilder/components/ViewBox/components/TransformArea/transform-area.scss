@@ -1,4 +1,4 @@
-@import '../../../../styles/z-indexes.scss';
+@import '../../../../styles/z-indexes';
 
 .TransformArea {
   height: 100%;
@@ -9,16 +9,17 @@
   width: 100%;
 
   &__anchor {
-    $--size: 5px;
+    $--rx-size: 5px;
+
     pointer-events: all;
     position: absolute;
 
     &--east {
       cursor: ew-resize;
-      height: calc(100% - #{$--size});
-      right: calc(-#{$--size} / 2);
-      top: calc(#{$--size} / 2);
-      width: $--size;
+      height: calc(100% - #{$--rx-size});
+      right: calc(-#{$--rx-size} / 2);
+      top: calc(#{$--rx-size} / 2);
+      width: $--rx-size;
     }
 
     &--none {
@@ -27,59 +28,59 @@
 
     &--north {
       cursor: ns-resize;
-      height: $--size;
-      left: calc(#{$--size} / 2);
-      top: calc(-#{$--size} / 2);
-      width: calc(100% - #{$--size});
+      height: $--rx-size;
+      left: calc(#{$--rx-size} / 2);
+      top: calc(-#{$--rx-size} / 2);
+      width: calc(100% - #{$--rx-size});
     }
 
     &--north-east {
       cursor: nesw-resize;
-      height: $--size;
-      right: calc(-#{$--size} / 2);
-      top: calc(-#{$--size} / 2);
-      width: $--size;
+      height: $--rx-size;
+      right: calc(-#{$--rx-size} / 2);
+      top: calc(-#{$--rx-size} / 2);
+      width: $--rx-size;
     }
 
     &--north-west {
       cursor: nwse-resize;
-      height: $--size;
-      left: calc(-#{$--size} / 2);
-      top: calc(-#{$--size} / 2);
-      width: $--size;
+      height: $--rx-size;
+      left: calc(-#{$--rx-size} / 2);
+      top: calc(-#{$--rx-size} / 2);
+      width: $--rx-size;
       z-index: 10;
     }
 
     &--south {
+      bottom: calc(-#{$--rx-size} / 2);
       cursor: ns-resize;
-      height: $--size;
-      left: calc(#{$--size} / 2);
-      bottom: calc(-#{$--size} / 2);
-      width: calc(100% - #{$--size});
+      height: $--rx-size;
+      left: calc(#{$--rx-size} / 2);
+      width: calc(100% - #{$--rx-size});
     }
 
     &--south-east {
+      bottom: calc(-#{$--rx-size} / 2);
       cursor: nwse-resize;
-      height: $--size;
-      right: calc(-#{$--size} / 2);
-      bottom: calc(-#{$--size} / 2);
-      width: $--size;
+      height: $--rx-size;
+      right: calc(-#{$--rx-size} / 2);
+      width: $--rx-size;
     }
 
     &--south-west {
+      bottom: calc(-#{$--rx-size} / 2);
       cursor: nesw-resize;
-      height: $--size;
-      left: calc(-#{$--size} / 2);
-      bottom: calc(-#{$--size} / 2);
-      width: $--size;
+      height: $--rx-size;
+      left: calc(-#{$--rx-size} / 2);
+      width: $--rx-size;
     }
 
     &--west {
       cursor: ew-resize;
-      height: calc(100% - #{$--size});
-      left: calc(-#{$--size} / 2);
-      top: calc(#{$--size} / 2);
-      width: $--size;
+      height: calc(100% - #{$--rx-size});
+      left: calc(-#{$--rx-size} / 2);
+      top: calc(#{$--rx-size} / 2);
+      width: $--rx-size;
     }
   }
 }

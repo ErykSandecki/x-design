@@ -4,7 +4,7 @@ import { render } from '@testing-library/react';
 import Icon from './Icon';
 
 // others
-import { className as classNameIcon, classNames, classes } from './classNames';
+import { className as classNameIcon, classNames } from './classNames';
 
 // types
 import { ColorsTheme } from 'types';

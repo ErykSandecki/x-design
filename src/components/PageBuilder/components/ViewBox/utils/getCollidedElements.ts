@@ -27,6 +27,7 @@ export const getCollidedElements = (
   const collidedElements: TSelectedElements = [];
   const { x1, x2, y1, y2 } = getBaseCoordinatesTopLeft(selectableArea);
 
+  // eslint-disable-next-line
   for (const [_, value] of Object.entries(allData)) {
     const { height, id, parentId, coordinates: position, type, width } = value;
 

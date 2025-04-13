@@ -1,12 +1,5 @@
 import cx from 'classnames';
-import {
-  createElement,
-  CSSProperties,
-  FC,
-  HTMLAttributes,
-  ReactNode,
-  Ref,
-} from 'react';
+import { createElement, FC, HTMLAttributes, ReactNode, Ref } from 'react';
 
 // hooks
 import { useSX } from '../../hooks/sx/useSX';

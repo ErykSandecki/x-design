@@ -1,6 +1,6 @@
 @use 'sass:map';
 
-@import '../../../../../styles/map/button.scss';
+@import '../../../../../styles/map/button';
 
 $--rx-color-map: (
   text-primary: map.get($--rx-button-map, 'btn-text-primary-color'),

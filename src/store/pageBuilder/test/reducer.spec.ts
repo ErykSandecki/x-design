@@ -153,9 +153,6 @@ describe('PageBuilderReducer', () => {
   });
 
   it('should handle SELECT_ELEMENT', () => {
-    // mock
-    const id = selectedElementMock.id;
-
     // before
     const state = reducer(selectElement(selectedElementMock), {
       ...pageBuilderStateMock[PAGE_BUILDER],
@@ -169,9 +166,6 @@ describe('PageBuilderReducer', () => {
   });
 
   it('should handle SELECT_ELEMENTS', () => {
-    // mock
-    const id = selectedElementMock.id;
-
     // before
     const state = reducer(selectElements([selectedElementMock]), {
       ...pageBuilderStateMock[PAGE_BUILDER],

@@ -1,4 +1,4 @@
-@import '../../../../styles/z-indexes.scss';
+@import '../../../../styles/z-indexes';
 
 .ClickableArea {
   overflow: visible;
@@ -8,6 +8,6 @@
   &__outline {
     @include theme('blue-1', stroke);
 
-    fill: rgba($color: #000000, $alpha: 0);
+    fill: rgba($color: #000000, $alpha: 0%);
   }
 }

@@ -16,6 +16,7 @@ $--rx-attr-stroke: '*[data-svg-property=' stroke ']';
   &--clickable {
     @include apply-icon-styles('neutral-2');
     @include apply-icon-styles('neutral-1', #{'&:hover'}#{' '});
+
     cursor: pointer;
   }
 

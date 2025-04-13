@@ -1,7 +1,7 @@
-@import '../../../../../../styles/z-indexes.scss';
+@import '../../../../../../styles/z-indexes';
 
 .Frame {
-  background-color: white;
+  background-color: #ffffff;
 
   &__label {
     @include theme('neutral-2', color);

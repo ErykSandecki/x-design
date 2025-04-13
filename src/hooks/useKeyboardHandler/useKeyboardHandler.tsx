@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
 
 // store
 // import { drawerIdSelector } from '../../store/drawer/selectors';

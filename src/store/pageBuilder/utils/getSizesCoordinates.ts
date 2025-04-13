@@ -1,6 +1,6 @@
 // types
 import { Anchor } from '../enums';
-import { T2DCoordinates, TElement, TRectCoordinates } from 'types';
+import { T2DCoordinates, TRectCoordinates } from 'types';
 import { TSizeCoordinates } from '../types';
 
 export const getEastCordinates = (

@@ -1,4 +1,4 @@
-@import '../../../../styles/z-indexes.scss';
+@import '../../../../styles/z-indexes';
 
 .Corners {
   @include theme-selector('neutral-1', fill, rect);

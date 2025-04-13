@@ -1,4 +1,4 @@
-@import '../../../../../../styles/z-indexes.scss';
+@import '../../../../../../styles/z-indexes';
 
 .Element {
   $self: &;
@@ -9,6 +9,7 @@
 
   &--hover {
     @include theme('blue-1', outline, '1.5px solid');
+
     z-index: $--rx-zindex-element-active;
   }
 
