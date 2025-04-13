@@ -12,6 +12,7 @@ export type TProps = Pick<TMouseModeProps, 'mouseMode' | 'setMouseMode'>;
 const Toolbar: FC<TProps> = ({ ...restProps }) => (
   <Box
     onMouseDown={(event) => event.stopPropagation()}
+    style={{ touchAction: 'manipulation' }}
     sx={{
       bg: 'neutral5',
       borderBottom: 1,
@@ -23,7 +24,6 @@ const Toolbar: FC<TProps> = ({ ...restProps }) => (
       width: '100%',
       zIndex: ZIndex.standard,
     }}
-    style={{ touchAction: 'manipulation' }}
   >
     <MouseModes {...restProps} />
   </Box>

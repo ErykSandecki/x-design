@@ -7,10 +7,12 @@ import { store } from 'store';
 import { updateEventsStatus } from 'store/pageBuilder/actions';
 
 // types
-import { DropAreaPosition } from '../enums';
+import { DropAnchorsPosition } from '../enums';
 import { MouseMode } from 'components/PageBuilder/enums';
 
-export type TUseMouseEnterEvent = (dropAreaPosition: DropAreaPosition) => void;
+export type TUseMouseEnterEvent = (
+  dropAreaPosition: DropAnchorsPosition,
+) => void;
 
 export const useMouseEnterEvent = (
   index: number,
@@ -18,14 +20,14 @@ export const useMouseEnterEvent = (
 ): TUseMouseEnterEvent => {
   const dispatch = useDispatch();
 
-  const handleMouseEnter = (dropAreaPosition: DropAreaPosition): void => {
+  const handleMouseEnter = (dropAreaPosition: DropAnchorsPosition): void => {
     if (mouseMode === MouseMode.default) {
       const draggableElements = eventSelectorCreator('draggableElements')(
         store.getState(),
       );
       const targetIndex =
-        dropAreaPosition === DropAreaPosition.top ||
-        dropAreaPosition === DropAreaPosition.left
+        dropAreaPosition === DropAnchorsPosition.top ||
+        dropAreaPosition === DropAnchorsPosition.left
           ? index
           : index + 1;
 

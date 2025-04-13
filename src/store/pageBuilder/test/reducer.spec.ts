@@ -26,6 +26,8 @@ import {
   updateEventsStatus,
   setElementSizes,
   rotateElement,
+  changeParent,
+  updatePrevState,
 } from '../actions';
 
 // types
@@ -87,6 +89,123 @@ describe('PageBuilderReducer', () => {
             parentId: createFrameMock.parentId,
             position: createFrameMock.position,
             type: createFrameMock.type,
+          },
+        },
+      },
+    });
+  });
+
+  it('should handle CHANGE_PARENT', () => {
+    // mock
+    const draggableElements = ['2'];
+    const possibleIndexPosition = null;
+    const possibleParent = '-1';
+    const el1 = document.createElement('div');
+    const el2 = document.createElement('div');
+
+    // before
+    el1.setAttribute('id', selectedElementMock.id);
+    el1.style.height = '100px';
+    el1.style.width = '100px';
+    el2.setAttribute('id', '2');
+    el2.style.height = '100px';
+    el2.style.width = '100px';
+    document.body.appendChild(el1);
+    document.body.appendChild(el2);
+
+    // before
+    const state = reducer(
+      changeParent(draggableElements, possibleIndexPosition, possibleParent),
+      {
+        ...pageBuilderStateMock[PAGE_BUILDER],
+        elements: {
+          ...pageBuilderStateMock[PAGE_BUILDER].elements,
+          allData: {
+            ['-1']: {
+              ...pageBuilderStateMock[PAGE_BUILDER].elements.allData['-1'],
+              children: [selectedElementMock.id],
+            },
+            [elementAllDataMock.id]: {
+              ...elementAllDataMock,
+              children: ['2'],
+            },
+            ['2']: {
+              ...elementAllDataMock,
+              id: '2',
+              parentId: selectedElementMock.id,
+            },
+          },
+          dynamicData: {
+            ...pageBuilderStateMock[PAGE_BUILDER].elements.dynamicData,
+            [elementDynamicDataMock.id]: {
+              ...elementDynamicDataMock,
+            },
+            ['2']: {
+              ...elementDynamicDataMock,
+              id: '2',
+            },
+          },
+          staticData: {
+            ['-1']: {
+              ...pageBuilderStateMock[PAGE_BUILDER].elements.staticData['-1'],
+              children: [selectedElementMock.id],
+            },
+
+            [elementStaticDataMock.id]: {
+              ...elementStaticDataMock,
+              children: ['2'],
+            },
+            ['2']: {
+              ...elementStaticDataMock,
+              id: '2',
+              parentId: selectedElementMock.id,
+            },
+          },
+        },
+      },
+    );
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      elements: {
+        ...pageBuilderStateMock[PAGE_BUILDER].elements,
+        allData: {
+          ['-1']: {
+            ...pageBuilderStateMock[PAGE_BUILDER].elements.allData['-1'],
+            children: [selectedElementMock.id, '2'],
+          },
+          [elementAllDataMock.id]: {
+            ...elementAllDataMock,
+          },
+          ['2']: {
+            ...elementAllDataMock,
+            id: '2',
+            parentId: '-1',
+          },
+        },
+        dynamicData: {
+          ...pageBuilderStateMock[PAGE_BUILDER].elements.dynamicData,
+          [elementDynamicDataMock.id]: {
+            ...elementDynamicDataMock,
+          },
+          ['2']: {
+            ...elementDynamicDataMock,
+            id: '2',
+          },
+        },
+        staticData: {
+          ['-1']: {
+            ...pageBuilderStateMock[PAGE_BUILDER].elements.staticData['-1'],
+            children: [selectedElementMock.id, '2'],
+          },
+          [elementStaticDataMock.id]: {
+            ...elementStaticDataMock,
+          },
+          ['2']: {
+            ...elementStaticDataMock,
+            id: '2',
+            parentId: '-1',
           },
         },
       },
@@ -376,6 +495,19 @@ describe('PageBuilderReducer', () => {
         ...pageBuilderStateMock[PAGE_BUILDER].events,
         isMultipleMoving: true,
       },
+    });
+  });
+
+  it('should handle UPDATE_PREV_STATE', () => {
+    // before
+    const state = reducer(updatePrevState(), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      prevState: pageBuilderStateMock[PAGE_BUILDER],
     });
   });
 

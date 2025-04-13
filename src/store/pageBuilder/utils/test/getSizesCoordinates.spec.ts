@@ -152,7 +152,7 @@ describe('getSizesCoordinates', () => {
   it(`should return cords south west`, () => {
     // before
     const result = getSizesCoordinates(
-      Anchor.southEast,
+      Anchor.southWest,
       baseCoordinates,
       100,
       100,
@@ -161,9 +161,9 @@ describe('getSizesCoordinates', () => {
 
     // result
     expect(result).toStrictEqual({
-      coordinates: { x: 0, y: 0 },
+      coordinates: { x: 100, y: 0 },
       height: 200,
-      width: 300,
+      width: 100,
     });
   });
 

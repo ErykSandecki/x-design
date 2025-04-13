@@ -4,8 +4,8 @@ import { cloneDeep, first } from 'lodash';
 import { TChangeParentActionPayload, TPageBuilderState } from '../../types';
 
 // utils
-import { getMappedChildren } from './getMappedChildren';
-import { getMappedParents } from './getMappedParents';
+import { getMappedElementsToMove } from './getMappedElementsToMove';
+import { getMappedParentsChildren } from './getMappedParentsChildren';
 
 export const handleChangeParent = (
   payload: TChangeParentActionPayload,
@@ -18,8 +18,12 @@ export const handleChangeParent = (
     const parentHasChanged =
       state.elements.allData[id].parentId !== possibleParent;
     const clonedState = cloneDeep(state);
-    const children = getMappedChildren(parentHasChanged, payload, clonedState);
-    const parents = getMappedParents(parentHasChanged, payload, state);
+    const children = getMappedElementsToMove(
+      parentHasChanged,
+      payload,
+      clonedState,
+    );
+    const parents = getMappedParentsChildren(parentHasChanged, payload, state);
 
     return {
       ...state,

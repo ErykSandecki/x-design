@@ -7,30 +7,39 @@ exports[`TransformArea snapshots should render TransformArea 1`] = `
   >
     <div
       class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--east TransformArea__anchor--east--light"
+      data-test-anchor="east"
     />
     <div
       class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--none TransformArea__anchor--none--light"
+      data-test-anchor="none"
     />
     <div
       class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--north TransformArea__anchor--north--light"
+      data-test-anchor="north"
     />
     <div
       class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--northEast TransformArea__anchor--northEast--light"
+      data-test-anchor="north-east"
     />
     <div
       class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--northWest TransformArea__anchor--northWest--light"
+      data-test-anchor="north-west"
     />
     <div
       class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--south TransformArea__anchor--south--light"
+      data-test-anchor="south"
     />
     <div
       class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--southEast TransformArea__anchor--southEast--light"
+      data-test-anchor="south-east"
     />
     <div
       class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--southWest TransformArea__anchor--southWest--light"
+      data-test-anchor="south-west"
     />
     <div
       class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--west TransformArea__anchor--west--light"
+      data-test-anchor="west"
     />
   </div>
 </DocumentFragment>

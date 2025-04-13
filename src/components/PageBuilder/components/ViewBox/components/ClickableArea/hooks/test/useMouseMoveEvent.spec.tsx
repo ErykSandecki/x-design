@@ -27,7 +27,16 @@ const stateMock = {
 
 jest.mock('lodash', () => ({
   ...jest.requireActual('lodash'),
-  throttle: () => mockCallBack,
+  throttle: (callback: any) => (value: any) => callback(value),
+}));
+
+jest.mock('react-redux', () => ({
+  ...jest.requireActual('react-redux'),
+  useDispatch: () => () => {},
+}));
+
+jest.mock('../../../../utils/setElementsCoordinatesHandler', () => ({
+  setElementsCoordinatesHandler: () => mockCallBack(),
 }));
 
 describe('useMouseMoveEvent', () => {

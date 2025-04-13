@@ -1,9 +1,107 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`App snapshots should render error page 1`] = `
+<DocumentFragment>
+  <main>
+    Error
+  </main>
+</DocumentFragment>
+`;
+
 exports[`App snapshots should render initializer 1`] = `
 <DocumentFragment>
   <main>
     Init
   </main>
+</DocumentFragment>
+`;
+
+exports[`App snapshots should render router 1`] = `
+<DocumentFragment>
+  <div
+    class="css-q0izro"
+    data-test-box=""
+  >
+    <div
+      class="css-1hfqfil"
+      data-test-box=""
+    >
+      <div
+        class="css-q0izro MouseModes MouseModes--light"
+        data-test-box=""
+      >
+        <div
+          class="css-q0izro MouseModes__button MouseModes__button--light"
+          data-test-box=""
+        >
+          <div
+            class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            data-test-icon="menu"
+            height="16"
+            name="Logo"
+            width="16"
+          />
+        </div>
+        <div
+          class="css-q0izro MouseModes__button MouseModes__button--light MouseModes__button--active MouseModes__button--active--light"
+          data-test-box=""
+        >
+          <div
+            class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            data-test-icon="default"
+            height="16"
+            name="MoveTool"
+            width="16"
+          />
+        </div>
+        <div
+          class="css-q0izro MouseModes__button MouseModes__button--light"
+          data-test-box=""
+        >
+          <div
+            class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            data-test-icon="toolBeltA"
+            height="16"
+            name="FrameTool"
+            width="16"
+          />
+        </div>
+        <div
+          class="css-q0izro MouseModes__button MouseModes__button--light"
+          data-test-box=""
+        >
+          <div
+            class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            data-test-icon="move"
+            height="16"
+            name="MoveHand"
+            width="16"
+          />
+        </div>
+        <div
+          class="css-q0izro MouseModes__button MouseModes__button--light"
+          data-test-box=""
+        >
+          <div
+            class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            data-test-icon="comment"
+            height="16"
+            name="Comment"
+            width="16"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-17c89wm ViewBox ViewBox--light ZoomBox ZoomBox--light ZoomBox__idle ZoomBox__idle--light"
+      data-test-box="zoom-box"
+    >
+      <div
+        class="css-qel697 ZoomBox__zoom-content ZoomBox__zoom-content--light"
+        data-test-box=""
+        style="transform: translate(0px, 0px) scale(1);"
+      />
+    </div>
+  </div>
 </DocumentFragment>
 `;

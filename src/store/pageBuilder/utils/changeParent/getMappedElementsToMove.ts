@@ -119,13 +119,12 @@ export const reduceData = (
     }),
     {
       allData: {},
-      children: [],
       dynamicData: {},
       staticData: {},
     },
   );
 
-export const getMappedChildren = (
+export const getMappedElementsToMove = (
   parentHasChanged: boolean,
   payload: TChangeParentActionPayload,
   state: TPageBuilderState,
@@ -142,13 +141,13 @@ export const getMappedChildren = (
         possibleParent,
         state,
       );
-      const isRelative = data.position === 'relative';
+      const shouldResetCoordinates = data.position === 'relative';
 
       return {
         ...state.elements,
         allData: {
           ...elements.allData[id],
-          coordinates: isRelative ? BASE_2D : data.coordinates,
+          coordinates: shouldResetCoordinates ? BASE_2D : data.coordinates,
           height: data.height,
           parentId: data.parentId,
           position: data.position,
@@ -156,7 +155,7 @@ export const getMappedChildren = (
         },
         dynamicData: {
           ...elements.dynamicData[id],
-          coordinates: isRelative ? BASE_2D : data.coordinates,
+          coordinates: shouldResetCoordinates ? BASE_2D : data.coordinates,
           height: data.height,
           position: data.position,
           width: data.width,

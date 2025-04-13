@@ -2,7 +2,7 @@ import { FC, ReactNode } from 'react';
 import { useSelector } from 'react-redux';
 
 // hooks
-import { useDropAreaEvents } from './hooks/useDropAreaEvents';
+import { useDropAnchorsEvents } from './hooks/useDropAnchorsEvents';
 import { useTheme } from 'hooks';
 
 // others
@@ -18,12 +18,13 @@ import {
 import styles from './drop-anchors.scss';
 
 // types
-import { DropAreaPosition } from './enums';
+import { DropAnchorsPosition } from './enums';
 import { MouseMode } from 'components/PageBuilder/enums';
-import { TElement } from 'types';
+import { E2EAttribute, TElement } from 'types';
 
 // utils
 import { enumToArray } from 'utils';
+import { E2EDataAttribute } from 'shared';
 
 export type TDropAnchorsProps = {
   children: ReactNode;
@@ -41,7 +42,7 @@ const DropAnchors: FC<TDropAnchorsProps> = ({
   parentId,
 }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-  const { onMouseEnter, ...events } = useDropAreaEvents(index, mouseMode);
+  const { onMouseEnter, ...events } = useDropAnchorsEvents(index, mouseMode);
   const isDraggable = useSelector(isDraggableSelectorCreator(id));
   const possibleIndexPosition = useSelector(
     eventSelectorCreator('possibleIndexPosition'),
@@ -73,22 +74,29 @@ const DropAnchors: FC<TDropAnchorsProps> = ({
           )}
         />
       )}
-      {enumToArray(DropAreaPosition).map((position) => (
-        <div
-          className={cx(
-            classNamesWithTheme.anchor.name,
-            classNamesWithTheme.anchor.modificators[
-              position as keyof typeof DropAreaPosition
-            ],
-          )}
-          key={position as keyof typeof DropAreaPosition}
-          onMouseEnter={() =>
-            onMouseEnter(
-              DropAreaPosition[position as keyof typeof DropAreaPosition],
-            )
-          }
-          {...events}
-        />
+      {enumToArray(DropAnchorsPosition).map((position) => (
+        <E2EDataAttribute
+          key={position as keyof typeof DropAnchorsPosition}
+          type={E2EAttribute.anchor}
+          value={position as string}
+        >
+          <div
+            className={cx(
+              classNamesWithTheme.anchor.name,
+              classNamesWithTheme.anchor.modificators[
+                position as keyof typeof DropAnchorsPosition
+              ],
+            )}
+            onMouseEnter={() =>
+              onMouseEnter(
+                DropAnchorsPosition[
+                  position as keyof typeof DropAnchorsPosition
+                ],
+              )
+            }
+            {...events}
+          />
+        </E2EDataAttribute>
       ))}
     </div>
   );

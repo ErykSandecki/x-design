@@ -1,4 +1,4 @@
-export enum DropAreaPosition {
+export enum DropAnchorsPosition {
   top = 'top',
   bottom = 'bottom',
   left = 'left',

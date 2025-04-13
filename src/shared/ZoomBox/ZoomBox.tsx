@@ -66,6 +66,7 @@ export const ZoomBox: FC<TZoomBoxProps> = ({
           classNamesWithTheme[className].modificators[cursorState],
         ),
       }}
+      e2eValue="zoom-box"
       ref={zoomBoxRef}
       sx={{ bg: 'neutral4', height: '100%', overflow: 'hidden' }}
       {...events}

@@ -3,6 +3,11 @@ import { finishSetElementsCoordinates } from '../finishSetElementsCoordinates';
 
 const mockCallBack = jest.fn();
 
+jest.mock('lodash', () => ({
+  ...jest.requireActual('lodash'),
+  defer: (callback: any) => callback(),
+}));
+
 describe('finishSetElementsCoordinates', () => {
   it(`should finish set coordinates`, () => {
     // before

@@ -2,7 +2,7 @@ import { FC, memo } from 'react';
 import { useSelector } from 'react-redux';
 
 // components
-import DropAnchors from './components/DropArea/DropAnchors';
+import DropAnchors from './components/DropAnchors/DropAnchors';
 import Frame from './components/Frame/Frame';
 
 // hooks

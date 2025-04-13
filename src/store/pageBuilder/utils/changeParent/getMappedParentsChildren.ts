@@ -13,7 +13,7 @@ export const getTargetIndex = (
   nextParent: TElement,
   parentHasChanged: boolean,
   possibleIndexPosition: TEvents['possibleIndexPosition'],
-) => {
+): number => {
   const hasTargetIndex = possibleIndexPosition !== null;
 
   if (parentHasChanged) {
@@ -23,6 +23,11 @@ export const getTargetIndex = (
   return hasTargetIndex ? possibleIndexPosition : -1;
 };
 
+export const filterDraggableElements = (
+  children: Array<string>,
+  draggableElements: TEvents['draggableElements'],
+): Array<string> => children.filter((id) => !draggableElements.includes(id));
+
 export const replaceChildrenPosition = (
   draggableElements: TEvents['draggableElements'],
   nextParent: TElement,
@@ -30,12 +35,13 @@ export const replaceChildrenPosition = (
   parentHasChanged: boolean,
   prevParent: TElement,
 ): void => {
-  const prevParentChildren = prevParent.children.filter(
-    (id) => !draggableElements.includes(id),
+  const prevParentChildren = filterDraggableElements(
+    prevParent.children,
+    draggableElements,
   );
   const nextParentChildren = parentHasChanged
     ? nextParent.children
-    : nextParent.children.filter((id) => !draggableElements.includes(id));
+    : [...prevParentChildren];
 
   prevParent.children = prevParentChildren;
   nextParent.children =
@@ -48,7 +54,7 @@ export const replaceChildrenPosition = (
       : nextParent.children;
 };
 
-export const getMappedParents = (
+export const getMappedParentsChildren = (
   parentHasChanged: boolean,
   payload: TChangeParentActionPayload,
   state: TPageBuilderState,

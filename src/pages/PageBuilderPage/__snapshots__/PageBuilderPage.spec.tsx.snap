@@ -78,7 +78,7 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
     </div>
     <div
       class="css-17c89wm ViewBox ViewBox--light ZoomBox ZoomBox--light ZoomBox__idle ZoomBox__idle--light"
-      data-test-box=""
+      data-test-box="zoom-box"
     >
       <div
         class="css-qel697 ZoomBox__zoom-content ZoomBox__zoom-content--light"

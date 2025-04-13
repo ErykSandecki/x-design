@@ -1,5 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Elements snapshots should render Element in relative position 1`] = `
+<DocumentFragment>
+  <div
+    class="DropAnchors DropAnchors--light"
+  >
+    <div
+      class="css-q0izro Elements__element Elements__element--light Frame Frame--light Element Element--light"
+      data-status="false"
+      data-test-box=""
+      id="1"
+      style="background-color: rgb(255, 255, 255); height: 100px; left: 0px; position: relative; top: 0px; transform: rotate(0deg); width: 100px;"
+    >
+      <small
+        class="css-q0izro Frame__label Frame__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        data-test-text=""
+        style="text-align: inherit;"
+      >
+        Frame
+      </small>
+    </div>
+    <div
+      class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--top DropAnchors__anchor--top--light"
+      data-test-anchor="top"
+    />
+    <div
+      class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--bottom DropAnchors__anchor--bottom--light"
+      data-test-anchor="bottom"
+    />
+    <div
+      class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--left DropAnchors__anchor--left--light"
+      data-test-anchor="left"
+    />
+    <div
+      class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--right DropAnchors__anchor--right--light"
+      data-test-anchor="right"
+    />
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Elements snapshots should render Elements 1`] = `<DocumentFragment />`;
 
-exports[`Elements snapshots should render Frame 1`] = `<DocumentFragment />`;
+exports[`Elements snapshots should render Frame 1`] = `
+<DocumentFragment>
+  <div
+    class="css-q0izro Elements__element Elements__element--light Frame Frame--light Element Element--light"
+    data-status="false"
+    data-test-box=""
+    id="1"
+    style="background-color: rgb(255, 255, 255); height: 100px; left: 0px; position: absolute; top: 0px; transform: rotate(0deg); width: 100px;"
+  >
+    <small
+      class="css-q0izro Frame__label Frame__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      data-test-text=""
+      style="text-align: inherit;"
+    >
+      Frame
+    </small>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Elements snapshots should render default Element 1`] = `<DocumentFragment />`;

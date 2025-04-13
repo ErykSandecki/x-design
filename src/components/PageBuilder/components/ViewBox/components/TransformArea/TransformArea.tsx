@@ -1,4 +1,8 @@
 import { FC } from 'react';
+import { kebabCase } from 'lodash';
+
+// components
+import { E2EDataAttribute } from 'shared';
 
 // hooks
 import { useTransformAreaEvents } from './hooks/useTransformAreaEvents';
@@ -9,8 +13,8 @@ import { className, classNames } from './classNames';
 
 // types
 import { Anchor } from 'store/pageBuilder/enums';
+import { E2EAttribute, TElement } from 'types';
 import { MouseMode } from 'components/PageBuilder/enums';
-import { TElement } from 'types';
 
 // styles
 import styles from './transform-area.scss';
@@ -41,16 +45,21 @@ const TransformArea: FC<TResizeAreaProps> = ({
   return (
     <div className={cx(classNamesWithTheme[className])}>
       {enumToArray(Anchor).map((anchor) => (
-        <div
-          className={cx(
-            classNamesWithTheme.anchor.name,
-            classNamesWithTheme.anchor.modificators[
-              anchor as keyof typeof Anchor
-            ],
-          )}
+        <E2EDataAttribute
           key={anchor as keyof typeof Anchor}
-          onMouseDown={(event) => events.onMouseDown(anchor as Anchor, event)}
-        />
+          type={E2EAttribute.anchor}
+          value={kebabCase(anchor as string)}
+        >
+          <div
+            className={cx(
+              classNamesWithTheme.anchor.name,
+              classNamesWithTheme.anchor.modificators[
+                anchor as keyof typeof Anchor
+              ],
+            )}
+            onMouseDown={(event) => events.onMouseDown(anchor as Anchor, event)}
+          />
+        </E2EDataAttribute>
       ))}
     </div>
   );

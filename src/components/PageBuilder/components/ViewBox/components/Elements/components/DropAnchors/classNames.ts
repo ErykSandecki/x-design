@@ -1,5 +1,5 @@
 import { mapValues } from 'lodash';
-import { DropAreaPosition } from './enums';
+import { DropAnchorsPosition } from './enums';
 
 export const className = 'DropAnchors';
 
@@ -9,7 +9,7 @@ export const classNames = {
     name: `${className}__prompt`,
     modificators: {
       ...mapValues(
-        DropAreaPosition,
+        DropAnchorsPosition,
         (position) => `${className}__prompt--${position}`,
       ),
     },
@@ -18,7 +18,7 @@ export const classNames = {
     name: `${className}__anchor`,
     modificators: {
       ...mapValues(
-        DropAreaPosition,
+        DropAnchorsPosition,
         (position) => `${className}__anchor--${position}`,
       ),
     },

@@ -3,18 +3,18 @@ import { useMouseEnterEvent } from './useMouseEnterEvent';
 import { useMouseLeaveEvent } from './useMouseLeaveEvent';
 
 // types
-import { DropAreaPosition } from '../enums';
+import { DropAnchorsPosition } from '../enums';
 import { MouseMode } from 'components/PageBuilder/enums';
 
-export type TUseElementEvents = {
-  onMouseEnter: (dropAreaPosition: DropAreaPosition) => void;
+export type TUseDropAnchorsEvents = {
+  onMouseEnter: (dropAreaPosition: DropAnchorsPosition) => void;
   onMouseLeave: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
 };
 
-export const useDropAreaEvents = (
+export const useDropAnchorsEvents = (
   index: number,
   mouseMode: MouseMode,
-): TUseElementEvents => ({
+): TUseDropAnchorsEvents => ({
   onMouseEnter: useMouseEnterEvent(index, mouseMode),
   onMouseLeave: useMouseLeaveEvent(mouseMode),
 });

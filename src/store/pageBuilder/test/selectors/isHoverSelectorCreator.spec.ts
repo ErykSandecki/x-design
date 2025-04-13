@@ -10,6 +10,6 @@ describe('isHoverSelectorCreator', () => {
     const selectorFunction = (isHoverSelectorCreator('-1') as any).resultFunc;
 
     // result
-    expect(selectorFunction(eventsMock)).toBe(false);
+    expect(selectorFunction(eventsMock)).toBe(true);
   });
 });

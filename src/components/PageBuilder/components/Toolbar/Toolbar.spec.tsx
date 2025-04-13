@@ -1,5 +1,5 @@
 import { Provider } from 'react-redux';
-import { render } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react';
 
 // components
 import Toolbar from './Toolbar';
@@ -11,7 +11,11 @@ import 'test/mocks/sagas/allSagas';
 import { configureStore } from 'store/store';
 
 // types
+import { E2EAttribute } from 'types';
 import { MouseMode } from 'components/PageBuilder/enums';
+
+// utils
+import { getByE2EAttribute } from 'test';
 
 const mockCallBack = jest.fn();
 
@@ -29,5 +33,29 @@ describe('Toolbar snapshots', () => {
 
     // result
     expect(asFragment()).toMatchSnapshot();
+  });
+});
+
+describe('Toolbar behaviors', () => {
+  it('should stop propagation on mouse down', () => {
+    // mock
+    const store = configureStore();
+
+    // before
+    const { container } = render(
+      <Provider store={store}>
+        <div onMouseDown={mockCallBack}>
+          <Toolbar mouseMode={MouseMode.default} setMouseMode={mockCallBack} />
+        </div>
+      </Provider>,
+    );
+
+    // action
+    fireEvent.mouseDown(
+      getByE2EAttribute(container, E2EAttribute.icon, MouseMode.comment),
+    );
+
+    // result
+    expect(mockCallBack.mock.calls.length).toBe(0);
   });
 });

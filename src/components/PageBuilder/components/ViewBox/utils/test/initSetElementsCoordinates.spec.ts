@@ -1,7 +1,17 @@
 import { RefObject } from 'react';
 
+// mocks
+import {
+  pageBuilderStateMock,
+  selectedElementMock,
+} from 'test/mocks/reducer/pageBuilderMock';
+
 // others
 import { BASE_2D } from 'shared';
+import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
+
+// store
+import { store as storeToMock } from 'store/store';
 
 // types
 import { T2DCoordinates } from 'types';
@@ -11,9 +21,22 @@ import { initSetElementsCoordinates } from '../initSetElementsCoordinates';
 
 const cursorPosition = { current: BASE_2D } as RefObject<T2DCoordinates>;
 const mockCallBack = jest.fn();
+const stateMock = {
+  ...pageBuilderStateMock,
+};
 
 describe('initSetElementsCoordinates', () => {
   it(`should trigger event`, () => {
+    // mock
+    storeToMock.getState = () =>
+      ({
+        ...stateMock,
+        [PAGE_BUILDER]: {
+          ...stateMock[PAGE_BUILDER],
+          selectedElements: [selectedElementMock],
+        },
+      }) as any;
+
     // before
     initSetElementsCoordinates(
       cursorPosition,
@@ -24,7 +47,7 @@ describe('initSetElementsCoordinates', () => {
 
     // result
     expect(mockCallBack.mock.calls[1][0].payload).toStrictEqual({
-      draggableElements: [],
+      draggableElements: [selectedElementMock.id],
       isMultipleMoving: true,
     });
   });
