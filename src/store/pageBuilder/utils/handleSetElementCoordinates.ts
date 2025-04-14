@@ -10,21 +10,25 @@ export const handleSetElementCoordinates = (
   state: TPageBuilderState,
 ): TPageBuilderState => ({
   ...state,
-  elements: {
-    ...state.elements,
-    allData: {
-      ...state.elements.allData,
-      [id]: {
-        ...state.elements.allData[id],
-        coordinates: position,
-      },
-    },
-    dynamicData: {
-      ...state.elements.dynamicData,
-      [id]: {
-        ...state.elements.dynamicData[id],
-        coordinates: position,
-      },
-    },
-  },
+  ...(state.events.canMoveElements
+    ? {
+        elements: {
+          ...state.elements,
+          allData: {
+            ...state.elements.allData,
+            [id]: {
+              ...state.elements.allData[id],
+              coordinates: position,
+            },
+          },
+          dynamicData: {
+            ...state.elements.dynamicData,
+            [id]: {
+              ...state.elements.dynamicData[id],
+              coordinates: position,
+            },
+          },
+        },
+      }
+    : {}),
 });

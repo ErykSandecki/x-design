@@ -1,4 +1,7 @@
 {
+  "pageBuilder.panelProperties.section.label": "Mode",
+  "pageBuilder.panelProperties.tabs.1": "Design",
+  "pageBuilder.panelProperties.tabs.2": "Prototype",
   "pageBuilder.viewBox.elements.frame.label.createFrame": "Frame",
   "pageBuilder.viewBox.elementArea.label.createFrame": "Frame",
   "pageBuilder.viewBox.elements.element.newElementButton.label": "Add section"

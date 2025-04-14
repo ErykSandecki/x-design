@@ -6,6 +6,8 @@ export enum E2EAttribute {
   icon = 'icon',
   logo = 'logo',
   resize = 'resize',
+  section = 'section',
+  tab = 'tab',
   test1 = 'test1',
   test2 = 'test2',
   text = 'text',

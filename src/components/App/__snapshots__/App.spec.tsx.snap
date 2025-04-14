@@ -93,6 +93,44 @@ exports[`App snapshots should render router 1`] = `
       </div>
     </div>
     <div
+      class="css-i7rldk PanelProperties PanelProperties--light"
+      data-test-box=""
+    >
+      <div
+        class="PanelProperties__area-handle-resize PanelProperties__area-handle-resize--light"
+        data-test-resize=""
+      />
+      <div
+        class="css-q0izro Section Section--light"
+        data-test-section=""
+      >
+        <small
+          class="css-q0izro Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+          data-test-text=""
+          style="text-align: inherit;"
+        >
+          Mode
+        </small>
+        <div
+          class="css-q0izro Tabs Tabs--light"
+          data-test-box=""
+        >
+          <div
+            class="Tabs__tab Tabs__tab--light Tabs__tab--active Tabs__tab--active--light"
+            data-test-tab="design"
+          >
+            Design
+          </div>
+          <div
+            class="Tabs__tab Tabs__tab--light"
+            data-test-tab="prototype\`,"
+          >
+            Prototype
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
       class="css-17c89wm ViewBox ViewBox--light ZoomBox ZoomBox--light ZoomBox__idle ZoomBox__idle--light"
       data-test-box="zoom-box"
     >

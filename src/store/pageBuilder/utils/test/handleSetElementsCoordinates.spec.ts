@@ -69,4 +69,31 @@ describe('handleSetElementsCoordinates', () => {
       ],
     });
   });
+
+  it(`should return data with not changed coordinates when event locked`, () => {
+    // mock
+    const coordinates = { x: 100, y: 100 };
+    const prevState = cloneDeep(mockState);
+
+    // before
+    const result = handleSetElementsCoordinates(coordinates, {
+      ...mockState,
+      events: {
+        ...mockState.events,
+        canMoveElements: false,
+      },
+      prevState,
+    });
+
+    // result
+    expect(result).toStrictEqual({
+      ...mockState,
+      events: {
+        ...mockState.events,
+        canMoveElements: false,
+      },
+      prevState,
+      selectedElements: [],
+    });
+  });
 });

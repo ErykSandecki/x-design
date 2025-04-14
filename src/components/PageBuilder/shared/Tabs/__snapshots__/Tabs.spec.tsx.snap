@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs snapshots should render Tabs 1`] = `
+<DocumentFragment>
+  <div
+    class="css-q0izro Tabs Tabs--light"
+    data-test-box=""
+  >
+    <div
+      class="Tabs__tab Tabs__tab--light Tabs__tab--active Tabs__tab--active--light"
+      data-test-tab="name"
+    >
+      label
+    </div>
+  </div>
+</DocumentFragment>
+`;

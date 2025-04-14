@@ -1,4 +1,7 @@
 {
+  "pageBuilder.panelProperties.section.label": "Tryb",
+  "pageBuilder.panelProperties.tabs.1": "Tworzennie",
+  "pageBuilder.panelProperties.tabs.2": "Prototyp",
   "pageBuilder.viewBox.elements.frame.label.createFrame": "Kontener",
   "pageBuilder.viewBox.elementArea.label.createFrame": "Kontener",
   "pageBuilder.viewBox.elements.element.newElementButton.label": "Dodaj sekcje"

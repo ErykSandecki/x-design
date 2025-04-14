@@ -55,6 +55,7 @@ const initialState: TPageBuilderState = {
     },
   },
   events: {
+    canMoveElements: true,
     draggableElements: [],
     hoverOnElement: '-1',
     isMultipleMoving: false,

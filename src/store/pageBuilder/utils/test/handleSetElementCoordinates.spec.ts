@@ -3,6 +3,7 @@ import {
   elementAllDataMock,
   elementDynamicDataMock,
   elementStaticDataMock,
+  eventsMock,
   pageBuilderStateMock,
 } from 'test/mocks/reducer/pageBuilderMock';
 
@@ -57,6 +58,55 @@ describe('handleSetElementCoordinates', () => {
         staticData: {
           [elementStaticDataMock.id]: elementStaticDataMock,
         },
+      },
+    });
+  });
+
+  it(`should return data with not changed coordinates when event lock`, () => {
+    // mock
+    const coordinates = { x: 100, y: 100 };
+
+    // before
+    const result = handleSetElementCoordinates(
+      elementAllDataMock.id,
+      coordinates,
+      {
+        ...pageBuilderStateMock[PAGE_BUILDER],
+        elements: {
+          allData: {
+            [elementAllDataMock.id]: elementAllDataMock,
+          },
+          dynamicData: {
+            [elementDynamicDataMock.id]: elementDynamicDataMock,
+          },
+          staticData: {
+            [elementStaticDataMock.id]: elementStaticDataMock,
+          },
+        },
+        events: {
+          ...eventsMock,
+          canMoveElements: false,
+        },
+      },
+    );
+
+    // result
+    expect(result).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      elements: {
+        allData: {
+          [elementAllDataMock.id]: elementAllDataMock,
+        },
+        dynamicData: {
+          [elementDynamicDataMock.id]: elementDynamicDataMock,
+        },
+        staticData: {
+          [elementStaticDataMock.id]: elementStaticDataMock,
+        },
+      },
+      events: {
+        ...eventsMock,
+        canMoveElements: false,
       },
     });
   });

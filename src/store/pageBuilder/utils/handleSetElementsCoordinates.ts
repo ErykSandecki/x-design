@@ -6,6 +6,7 @@ import {
   TSelectedElement,
   TSetElementsCoordinatesAction,
 } from '../types';
+import { all } from 'axios';
 
 export const getSelectedElementPosition = (
   coordinates: TRectCoordinates,
@@ -62,7 +63,10 @@ export const handleSetElementsCoordinates = (
   coordinates: TSetElementsCoordinatesAction['payload'],
   state: TPageBuilderState,
 ): TPageBuilderState => {
-  const positions = getPositions(coordinates, state.prevState);
+  const { canMoveElements } = state.events;
+  const positions = canMoveElements
+    ? getPositions(coordinates, state.prevState)
+    : { allData: {}, dynamicData: {}, selectedElements: [] };
 
   return {
     ...state,

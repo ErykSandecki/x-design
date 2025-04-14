@@ -1,6 +1,9 @@
-import { FC, memo, useRef } from 'react';
+import { FC, memo, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 // components
+import Section from 'components/PageBuilder/shared/Section/Section';
+import Tabs, { TTabsProps } from 'components/PageBuilder/shared/Tabs/Tabs';
 import { Box, E2EDataAttribute } from 'shared';
 
 // hooks
@@ -8,18 +11,22 @@ import { useResizeHandler, useTheme } from 'hooks';
 
 // others
 import { className, classNames } from './classNames';
-import { TOOLBAR_HEIGHT } from 'components/PageBuilder/constants';
+import { TABS, translationNameSpace } from './constants';
+import { TOOLBAR_HEIGHT } from '../../constants';
 
 // styles
 import styles from './panel-properties.scss';
 
 // types
 import { E2EAttribute, ZIndex } from 'types';
+import { Tab } from './enums';
 
 export type TPanelPropertiesProps = {};
 
 const PanelProperties: FC<TPanelPropertiesProps> = () => {
   const boxRef = useRef(null);
+  const { t } = useTranslation();
+  const [activeTab, setActiveTab] = useState(Tab.design);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { onMouseDownX, width } = useResizeHandler(
     0,
@@ -34,7 +41,6 @@ const PanelProperties: FC<TPanelPropertiesProps> = () => {
   return (
     <Box
       classes={{ className: cx(classNamesWithTheme[className]) }}
-      onMouseDown={(event) => event.stopPropagation()}
       ref={boxRef}
       style={{ touchAction: 'manipulation' }}
       sx={{
@@ -55,6 +61,13 @@ const PanelProperties: FC<TPanelPropertiesProps> = () => {
           onMouseDown={(event) => onMouseDownX(event, true)}
         />
       </E2EDataAttribute>
+      <Section label={t(`${translationNameSpace}.section.label`)}>
+        <Tabs
+          activeTab={activeTab}
+          setActiveTab={setActiveTab as TTabsProps['setActiveTab']}
+          tabs={TABS}
+        />
+      </Section>
     </Box>
   );
 };

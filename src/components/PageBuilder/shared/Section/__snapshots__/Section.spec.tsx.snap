@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Section snapshots should render Section 1`] = `
+<DocumentFragment>
+  <div
+    class="css-q0izro Section Section--light"
+    data-test-section=""
+  >
+    <small
+      class="css-q0izro Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      data-test-text=""
+      style="text-align: inherit;"
+    >
+      label
+    </small>
+    children
+  </div>
+</DocumentFragment>
+`;
