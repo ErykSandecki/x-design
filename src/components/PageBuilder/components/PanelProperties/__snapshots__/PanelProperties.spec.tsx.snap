@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PanelProperties snapshots should render PanelProperties 1`] = `
+<DocumentFragment>
+  <div
+    class="css-i7rldk PanelProperties PanelProperties--light"
+    data-test-box=""
+  >
+    <div
+      class="PanelProperties__area-handle-resize PanelProperties__area-handle-resize--light"
+      data-test-resize=""
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`PanelProperties snapshots should render with changed width 1`] = `
+<DocumentFragment>
+  <div
+    class="css-18uqunt PanelProperties PanelProperties--light"
+    data-test-box=""
+  >
+    <div
+      class="PanelProperties__area-handle-resize PanelProperties__area-handle-resize--light"
+      data-test-resize=""
+    />
+  </div>
+</DocumentFragment>
+`;

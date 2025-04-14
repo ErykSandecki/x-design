@@ -55,7 +55,7 @@ export const useResizeHandler = (
       const { left, right } = ref.current.getBoundingClientRect();
 
       const position = isInvertedX
-        ? event.clientX - right
+        ? Math.abs(event.clientX - right)
         : event.clientX - left;
 
       switch (true) {

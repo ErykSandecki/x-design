@@ -2,6 +2,7 @@ import { FC, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 // components
+import PanelProperties from 'components/PageBuilder/components/PanelProperties/PanelProperties';
 import Toolbar from 'components/PageBuilder/components/Toolbar/Toolbar';
 import ViewBox from 'components/PageBuilder/components/ViewBox/ViewBox';
 
@@ -27,6 +28,7 @@ const PageBuilderPage: FC = () => {
   return (
     <Box>
       <Toolbar mouseMode={mouseMode} setMouseMode={setMouseMode} />
+      <PanelProperties />
       <ViewBox
         coordinates={coordinates}
         mouseMode={mouseMode}

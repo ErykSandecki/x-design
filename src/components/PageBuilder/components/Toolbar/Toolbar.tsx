@@ -4,12 +4,15 @@ import { FC, memo } from 'react';
 import MouseModes, { TMouseModeProps } from './components/MouseModes';
 import { Box } from 'shared';
 
+// others
+import { TOOLBAR_HEIGHT } from 'components/PageBuilder/constants';
+
 // types
 import { ZIndex } from 'types';
 
-export type TProps = Pick<TMouseModeProps, 'mouseMode' | 'setMouseMode'>;
+export type TToolbarProps = Pick<TMouseModeProps, 'mouseMode' | 'setMouseMode'>;
 
-const Toolbar: FC<TProps> = ({ ...restProps }) => (
+const Toolbar: FC<TToolbarProps> = ({ ...restProps }) => (
   <Box
     onMouseDown={(event) => event.stopPropagation()}
     style={{ touchAction: 'manipulation' }}
@@ -17,7 +20,7 @@ const Toolbar: FC<TProps> = ({ ...restProps }) => (
       bg: 'neutral5',
       borderBottom: 1,
       boxSizing: 'border-box',
-      height: '56px',
+      height: `${TOOLBAR_HEIGHT}px`,
       left: 0,
       position: 'absolute',
       top: 0,
