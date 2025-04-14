@@ -1,5 +1,3 @@
-import { omit } from 'lodash';
-
 // mocks
 import { createFrameMock } from 'test/mocks/reducer/pageBuilderMock';
 
@@ -31,9 +29,29 @@ describe('handleCreateElement', () => {
     );
 
     // result
-    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual(
-      omit(createFrameMock, 'index'),
+    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
+      ...createFrameMock,
+    });
+    expect(mockCallBack.mock.calls[1][0]).toBe(null);
+    expect(mockCallBack.mock.calls[2][0]).toBe(MouseMode.default);
+  });
+
+  it(`should create element when y2 & x2 are bigger than rest cords`, () => {
+    // before
+    handleCreateElement(
+      mockCallBack,
+      { ...BASE_RECT, x2: 100, y2: 100 },
+      MouseMode.toolBeltA,
+      mockCallBack,
+      mockCallBack,
     );
+
+    // result
+    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
+      ...createFrameMock,
+      height: 100,
+      width: 100,
+    });
     expect(mockCallBack.mock.calls[1][0]).toBe(null);
     expect(mockCallBack.mock.calls[2][0]).toBe(MouseMode.default);
   });

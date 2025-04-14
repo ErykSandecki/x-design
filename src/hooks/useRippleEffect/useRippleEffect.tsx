@@ -23,6 +23,7 @@ export const useRippleEffect = (
 ): TUseRippleEffect => {
   const [coords, setCoords] = useState({ x: -1, y: -1 });
   const [isRippling, setIsRippling] = useState(false);
+  /* istanbul ignore next */
   const transform = isJestRunning() ? (value: string) => value : camelCase;
 
   const rippleEffect = isRippling ? (

@@ -9,6 +9,7 @@ import {
   elementDynamicDataMock,
   elementStaticDataMock,
   pageBuilderStateMock,
+  selectedElementMock,
 } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
@@ -43,9 +44,76 @@ describe('Element snapshots', () => {
       <Provider store={store}>
         <Element
           classes={{ className: 'className' }}
-          id={elementDynamicDataMock.id}
+          id={selectedElementMock.id}
           mouseMode={MouseMode.default}
-          parentId={elementStaticDataMock.parentId}
+          parentId={selectedElementMock.parentId}
+          type={ElementType.frame}
+        >
+          {() => <></>}
+        </Element>
+      </Provider>,
+    );
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('should render Element when is selected', () => {
+    // mock
+    const store = configureStore({
+      ...stateMock,
+      [PAGE_BUILDER]: {
+        ...stateMock[PAGE_BUILDER],
+        selectedElements: [selectedElementMock],
+      },
+    });
+
+    // before
+    const { asFragment } = render(
+      <Provider store={store}>
+        <Element
+          classes={{ className: 'className' }}
+          id={selectedElementMock.id}
+          mouseMode={MouseMode.default}
+          parentId={selectedElementMock.parentId}
+          type={ElementType.frame}
+        >
+          {() => <></>}
+        </Element>
+      </Provider>,
+    );
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('should render Element when width & height is auto', () => {
+    // mock
+    const store = configureStore({
+      ...stateMock,
+      [PAGE_BUILDER]: {
+        ...stateMock[PAGE_BUILDER],
+        elements: {
+          dynamicData: {
+            [elementDynamicDataMock.id]: {
+              ...elementDynamicDataMock,
+              height: 'auto',
+              width: 'auto',
+            },
+          },
+          staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
+        },
+      },
+    });
+
+    // before
+    const { asFragment } = render(
+      <Provider store={store}>
+        <Element
+          classes={{ className: 'className' }}
+          id={selectedElementMock.id}
+          mouseMode={MouseMode.default}
+          parentId={selectedElementMock.parentId}
           type={ElementType.frame}
         >
           {() => <></>}

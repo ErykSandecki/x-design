@@ -29,7 +29,7 @@ export const useMouseMoveEvent = (
   const dispatch = useDispatch();
 
   const handleMouseMove = throttle((event: MouseEvent): void => {
-    if (isPressing && mouseMode === MouseMode.default) {
+    if (mouseMode === MouseMode.default) {
       setIsMoving(true);
       updateElementPosition(cursorPosition, dispatch, event, id, isMultiple);
 

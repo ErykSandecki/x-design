@@ -19,12 +19,12 @@ exports[`ElementArea snapshots should render ElementArea 1`] = `
       class="ElementArea__area ElementArea__area--light"
     >
       <path
-        d="M 0,0 H 0 V 0 H 0 V 0"
+        d="M 0,0 H 100 V 100 H 0 V 0"
       />
     </svg>
     <svg
       class="Corners Corners--light Corners--increase-zindex Corners--increase-zindex--light"
-      style="height: 0px; left: 0px; top: 0px; width: 0px;"
+      style="height: 100px; left: 0px; top: 0px; width: 100px;"
     >
       <rect
         height="6"
@@ -38,21 +38,21 @@ exports[`ElementArea snapshots should render ElementArea 1`] = `
         rx="1.5"
         width="6"
         x="-3"
+        y="97"
+      />
+      <rect
+        height="6"
+        rx="1.5"
+        width="6"
+        x="97"
         y="-3"
       />
       <rect
         height="6"
         rx="1.5"
         width="6"
-        x="-3"
-        y="-3"
-      />
-      <rect
-        height="6"
-        rx="1.5"
-        width="6"
-        x="-3"
-        y="-3"
+        x="97"
+        y="97"
       />
     </svg>
   </div>

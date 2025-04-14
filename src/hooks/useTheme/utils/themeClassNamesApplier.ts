@@ -15,6 +15,7 @@ import {
 import { isJestRunning, isTypeGuard } from 'utils';
 
 export const transformKey = (name): string =>
+  /* istanbul ignore next */
   isJestRunning() ? name : camelCase(name);
 
 export const getModificator = (

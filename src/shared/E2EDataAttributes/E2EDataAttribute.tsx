@@ -1,7 +1,6 @@
 import React, { Children, FC, ReactElement } from 'react';
 
 // types
-import { E2EAttribute } from 'types/e2e';
 import { E2EType, E2EValue } from './types';
 
 // utils
@@ -15,7 +14,7 @@ export type TE2EDataAttributeProps = {
 
 export const E2EDataAttribute: FC<TE2EDataAttributeProps> = ({
   children,
-  type = E2EAttribute.unset,
+  type,
   value = '',
 }) => {
   const childrenOnly = Children.only(children);

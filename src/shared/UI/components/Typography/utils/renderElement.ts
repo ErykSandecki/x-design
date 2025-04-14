@@ -3,12 +3,12 @@ import { isString } from 'lodash';
 
 // types
 import { TObject } from 'types';
-import { TypographyVariant } from '../enums';
 import {
   TTypograpghyComponent,
   TTypograpghyComponentProps,
   TTypograpghyVariantMapping,
 } from '../types';
+import { TypographyVariant } from '../enums';
 
 export const renderElement = (
   children: ReactNode,

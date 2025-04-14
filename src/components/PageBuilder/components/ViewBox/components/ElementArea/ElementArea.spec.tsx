@@ -21,7 +21,7 @@ describe('ElementArea snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <ElementArea elementArea={BASE_RECT} />
+        <ElementArea elementArea={{ ...BASE_RECT, x2: 100, y2: 100 }} />
       </Provider>,
     );
 

@@ -25,7 +25,7 @@ export type TClickableAreaProps = {
 const ClickableArea: FC<TClickableAreaProps> = ({ rectCoordinates }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { isMultipleMoving } = useSelector(eventsSelector);
-  const { x1, x2, y1, y2 } = rectCoordinates || {};
+  const { x1, x2, y1, y2 } = rectCoordinates;
   const height = y2 - y1;
   const width = x2 - x1;
   const { ...events } = useClickableAreaEvents();

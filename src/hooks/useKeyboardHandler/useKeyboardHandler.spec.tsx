@@ -70,6 +70,25 @@ describe('useKeyboardHandler', () => {
     expect(mockCallBack.mock.calls.length).toBe(1);
   });
 
+  it('should not trigger action when attachlistener not attached', () => {
+    // mock
+    const store = configureStore(stateMock);
+
+    // before
+    renderHook(
+      () => useKeyboardHandler(false, [], [{ ...keyMap, anyKey: true }]),
+      {
+        wrapper: getProviderWrapper(store),
+      },
+    );
+
+    // action
+    fireEvent.keyDown(window, { key: KeyboardKeys.A });
+
+    // result
+    expect(mockCallBack.mock.calls.length).toBe(0);
+  });
+
   it('should trigger actionw with passed id', () => {
     // mock
     const id = 'id';

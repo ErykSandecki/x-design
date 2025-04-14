@@ -28,6 +28,22 @@ describe('handleSelectElement', () => {
     );
   });
 
+  it(`should add element to selection`, () => {
+    // before
+    handleSelectElement(
+      mockCallBack,
+      { shiftKey: true } as MouseEvent,
+      true,
+      false,
+      selectedElementMock,
+    );
+
+    // result
+    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual(
+      selectedElementMock,
+    );
+  });
+
   it(`should remove element from selection`, () => {
     // before
     handleSelectElement(
@@ -42,7 +58,7 @@ describe('handleSelectElement', () => {
     expect(mockCallBack.mock.calls[0][0].payload).toBe(selectedElementMock.id);
   });
 
-  it(`should add element & ovverwrite selection`, () => {
+  it(`should add element & overwrite selection`, () => {
     // before
     handleSelectElement(
       mockCallBack,
@@ -57,5 +73,19 @@ describe('handleSelectElement', () => {
     expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual([
       selectedElementMock,
     ]);
+  });
+
+  it(`should not trigger any event`, () => {
+    // before
+    handleSelectElement(
+      mockCallBack,
+      { shiftKey: false } as MouseEvent,
+      true,
+      true,
+      selectedElementMock,
+    );
+
+    // result
+    expect(mockCallBack.mock.calls.length).toBe(0);
   });
 });

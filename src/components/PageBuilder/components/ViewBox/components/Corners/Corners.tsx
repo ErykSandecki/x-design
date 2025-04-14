@@ -25,7 +25,7 @@ const Corners: FC<TCornersProps> = ({
   rectCoordinates,
 }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-  const { x1, x2, y1, y2 } = rectCoordinates || {};
+  const { x1, x2, y1, y2 } = rectCoordinates;
   const height = y2 - y1;
   const width = x2 - x1;
 

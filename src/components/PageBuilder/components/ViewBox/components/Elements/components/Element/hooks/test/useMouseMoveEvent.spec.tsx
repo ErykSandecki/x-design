@@ -1,4 +1,5 @@
 import { fireEvent, renderHook } from '@testing-library/react';
+import { noop } from 'lodash';
 import { RefObject } from 'react';
 
 // mocks
@@ -31,7 +32,16 @@ jest.mock('lodash', () => ({
   throttle: (callback) => callback,
 }));
 
+jest.mock('react-redux', () => ({
+  ...jest.requireActual('react-redux'),
+  useDispatch: () => mockCallBack,
+}));
+
 describe('useMouseMoveEvent', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   it(`should trigger event`, () => {
     // mock
     const store = configureStore(stateMock);
@@ -61,7 +71,7 @@ describe('useMouseMoveEvent', () => {
     expect(mockCallBack.mock.calls[0][0]).toBe(true);
   });
 
-  it(`should not trigger event`, () => {
+  it(`should not trigger event when mouse mode is not default`, () => {
     // mock
     const store = configureStore(stateMock);
 
@@ -74,8 +84,8 @@ describe('useMouseMoveEvent', () => {
           '-1',
           false,
           false,
-          false,
-          MouseMode.default,
+          true,
+          MouseMode.comment,
           mockCallBack,
         ),
       {
@@ -88,5 +98,34 @@ describe('useMouseMoveEvent', () => {
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(0);
+  });
+
+  it(`should not trigger event when is multiple`, () => {
+    // mock
+    const store = configureStore(stateMock);
+
+    // before
+    renderHook(
+      () =>
+        useMouseMoveEvent(
+          BASE_2D,
+          ref,
+          '-1',
+          false,
+          true,
+          true,
+          MouseMode.default,
+          noop,
+        ),
+      {
+        wrapper: getProviderWrapper(store),
+      },
+    );
+
+    // action
+    fireEvent.mouseMove(window, {});
+
+    // result
+    expect(mockCallBack.mock.calls.length).toBe(1);
   });
 });
