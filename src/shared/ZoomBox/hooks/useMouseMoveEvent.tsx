@@ -9,6 +9,7 @@ import { T2DCoordinates, T3DCoordinates } from 'types';
 
 // utils
 import { handleMoveArea } from '../utils/handleMoveArea';
+import { MouseMode } from 'components/PageBuilder/enums';
 
 export type TUseMouseMoveEvent = void;
 
@@ -17,6 +18,7 @@ export const useMouseMoveEvent = (
   cursorPosition: RefObject<T2DCoordinates>,
   cursorState: string,
   depedencies: Array<any>,
+  mouseMode: MouseMode,
   onMouseMove: (event: MouseEvent) => void,
   onUpdateCoordinates: ((coordinates: T3DCoordinates) => void) | null,
   setCoordinates: (coordinates: T3DCoordinates) => void,
@@ -35,6 +37,7 @@ export const useMouseMoveEvent = (
       cursorPosition,
       cursorState,
       event,
+      mouseMode,
       onUpdateCoordinatesDelay,
       setCoordinates,
     );

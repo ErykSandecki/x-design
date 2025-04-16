@@ -8,18 +8,21 @@ import { useTheme } from 'hooks';
 import { useZoomBoxEvents } from './hooks/useZoomBoxEvents';
 
 // others
+import { CURSOR_STATES } from 'constant/constants';
 import { classes, className, classNames } from './classNames';
 
 // styles
 import styles from './zoom-box.scss';
 
 // types
+import { MouseMode } from 'components/PageBuilder/enums';
 import { T3DCoordinates } from 'types';
 
 export type TZoomBoxProps = {
   children: ReactNode;
   classes?: typeof classes;
   coordinates: T3DCoordinates;
+  mouseMode: MouseMode;
   onMouseDown: (event: React.MouseEvent) => void;
   onMouseMove: (event: MouseEvent) => void;
   onMouseMoveDepedencies?: Array<any>;
@@ -34,6 +37,7 @@ export const ZoomBox: FC<TZoomBoxProps> = ({
   children,
   classes = { className: '' },
   coordinates,
+  mouseMode,
   onMouseDown,
   onMouseMove,
   onMouseMoveDepedencies = [],
@@ -47,6 +51,7 @@ export const ZoomBox: FC<TZoomBoxProps> = ({
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { cursorState, ...events } = useZoomBoxEvents(
     coordinates,
+    mouseMode,
     onMouseDown,
     onMouseMove,
     onMouseMoveDepedencies,
@@ -64,6 +69,11 @@ export const ZoomBox: FC<TZoomBoxProps> = ({
           classes.className,
           classNamesWithTheme[className].name,
           classNamesWithTheme[className].modificators[cursorState],
+          classNamesWithTheme[className].modificators[mouseMode],
+          [
+            classNamesWithTheme[className].modificators.pressing,
+            mouseMode === MouseMode.move && cursorState === CURSOR_STATES[1],
+          ],
         ),
       }}
       e2eValue="zoom-box"

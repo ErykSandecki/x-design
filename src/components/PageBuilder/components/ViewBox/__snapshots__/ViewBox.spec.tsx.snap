@@ -3,7 +3,7 @@
 exports[`ViewBox snapshots should render ViewBox 1`] = `
 <DocumentFragment>
   <div
-    class="css-17c89wm ViewBox ViewBox--light ZoomBox ZoomBox--light ZoomBox__idle ZoomBox__idle--light"
+    class="css-17c89wm ViewBox ViewBox--light ZoomBox ZoomBox--light ZoomBox__idle ZoomBox__idle--light ZoomBox__default ZoomBox__default--light"
     data-test-box="zoom-box"
   >
     <div

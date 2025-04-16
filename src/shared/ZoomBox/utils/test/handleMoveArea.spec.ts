@@ -6,6 +6,7 @@ import { CURSOR_STATES } from 'constant/constants';
 
 // types
 import { MouseButton, T2DCoordinates } from 'types';
+import { MouseMode } from 'components/PageBuilder/enums';
 
 // utils
 import { handleMoveArea } from '../handleMoveArea';
@@ -21,6 +22,23 @@ describe('handleMoveArea', () => {
       cursorPosition,
       CURSOR_STATES[4],
       { buttons: MouseButton.rmb, clientX: 0, clientY: 0 } as MouseEvent,
+      MouseMode.default,
+      mockCallBack,
+      mockCallBack,
+    );
+
+    // result
+    expect(mockCallBack.mock.calls[0][0]).toStrictEqual({ x: 0, y: 0, z: 1 });
+  });
+
+  it('should move area whe mouse mode is move', () => {
+    // before
+    handleMoveArea(
+      BASE_3D,
+      cursorPosition,
+      CURSOR_STATES[4],
+      { buttons: MouseButton.lmb, clientX: 0, clientY: 0 } as MouseEvent,
+      MouseMode.move,
       mockCallBack,
       mockCallBack,
     );
@@ -36,6 +54,7 @@ describe('handleMoveArea', () => {
       cursorPosition,
       CURSOR_STATES[4],
       { clientX: 0, clientY: 0 } as MouseEvent,
+      MouseMode.default,
       mockCallBack,
       mockCallBack,
     );

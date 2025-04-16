@@ -3,6 +3,13 @@
     url('assets/icons/cursors/default.png') 9 9,
     auto;
 
+  &--move {
+    cursor:
+      url('assets/icons/cursors/move.png') 8 8,
+      auto !important;
+  }
+
+  &--pressing,
   &--rmb {
     cursor:
       url('assets/icons/cursors/pressing.png') 8 8,

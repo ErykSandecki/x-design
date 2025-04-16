@@ -3,7 +3,24 @@
 exports[`ZoomBox snapshots should render Zoombox 1`] = `
 <DocumentFragment>
   <div
-    class="css-17c89wm ZoomBox ZoomBox--light ZoomBox__idle ZoomBox__idle--light"
+    class="css-17c89wm ZoomBox ZoomBox--light ZoomBox__idle ZoomBox__idle--light ZoomBox__default ZoomBox__default--light"
+    data-test-box="zoom-box"
+  >
+    <div
+      class="css-qel697 ZoomBox__zoom-content ZoomBox__zoom-content--light"
+      data-test-box=""
+      style="transform: translate(0px, 0px) scale(1);"
+    >
+      children
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ZoomBox snapshots should render when mouse mode is move & cursor state is pressing 1`] = `
+<DocumentFragment>
+  <div
+    class="css-17c89wm ZoomBox ZoomBox--light ZoomBox__lmb ZoomBox__lmb--light ZoomBox__move ZoomBox__move--light ZoomBox__pressing ZoomBox__pressing--light"
     data-test-box="zoom-box"
   >
     <div

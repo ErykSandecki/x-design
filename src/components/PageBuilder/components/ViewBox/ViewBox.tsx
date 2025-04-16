@@ -56,6 +56,7 @@ const ViewBox: FC<TViewBoxProps> = ({
         ]),
       }}
       coordinates={coordinates}
+      mouseMode={mouseMode}
       onMouseMoveDepedencies={[elementArea, mouseMode]}
       onMouseUpDepedencies={[elementArea, mouseMode]}
       onUpdateCoordinates={(coordinates) =>

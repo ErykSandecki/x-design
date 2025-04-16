@@ -10,6 +10,7 @@ import { CURSOR_STATES } from 'constant/constants';
 
 // types
 import { MouseButton } from 'types';
+import { MouseMode } from 'components/PageBuilder/enums';
 
 const mockCallBack = jest.fn();
 const ref = { current: { getBoundingClientRect: () => ({ left: 0, top: 0 }) } };
@@ -20,6 +21,7 @@ describe('useZoomBoxEvents', () => {
     const { result } = renderHook(() =>
       useZoomBoxEvents(
         BASE_3D,
+        MouseMode.default,
         mockCallBack,
         mockCallBack,
         [],

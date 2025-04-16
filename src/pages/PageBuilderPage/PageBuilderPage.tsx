@@ -7,6 +7,7 @@ import Toolbar from 'components/PageBuilder/components/Toolbar/Toolbar';
 import ViewBox from 'components/PageBuilder/components/ViewBox/ViewBox';
 
 // hooks
+import { useKeyDown } from './hooks/useKeyDown';
 import { useWheelEvent } from './hooks/useWheelEvent';
 
 // others
@@ -23,6 +24,7 @@ const PageBuilderPage: FC = () => {
   const [coordinates, setCoordinates] = useState(areaCoordinates);
   const [mouseMode, setMouseMode] = useState(MouseMode.default);
 
+  useKeyDown(setMouseMode);
   useWheelEvent();
 
   return (

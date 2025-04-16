@@ -10,6 +10,7 @@ import { CURSOR_STATES } from 'constant/constants';
 
 // types
 import { MouseButton, T2DCoordinates } from 'types';
+import { MouseMode } from 'components/PageBuilder/enums';
 
 const cursorPosition = { current: BASE_2D } as RefObject<T2DCoordinates>;
 const mockCallBack = jest.fn();
@@ -28,6 +29,7 @@ describe('useMouseMoveEvent', () => {
         cursorPosition,
         CURSOR_STATES[4],
         [],
+        MouseMode.default,
         mockCallBack,
         mockCallBack,
         mockCallBack,

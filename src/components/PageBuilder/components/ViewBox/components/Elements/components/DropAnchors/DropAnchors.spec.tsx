@@ -18,8 +18,7 @@ import 'test/mocks/sagas/allSagas';
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 
 // store
-import { configureStore } from 'store/store';
-import { store as storeToMock } from 'store/store';
+import { configureStore, store as storeToMock } from 'store/store';
 
 // types
 import { DropAnchorsPosition } from './enums';

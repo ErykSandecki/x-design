@@ -11,6 +11,7 @@ import { BASE_2D } from '../constants';
 import { CURSOR_STATES } from 'constant/constants';
 
 // types
+import { MouseMode } from 'components/PageBuilder/enums';
 import { T3DCoordinates } from 'types';
 
 export type TUseZoomBoxEvents = {
@@ -21,6 +22,7 @@ export type TUseZoomBoxEvents = {
 
 export const useZoomBoxEvents = (
   coordinates: T3DCoordinates,
+  mouseMode: MouseMode,
   onMouseDown: (event: React.MouseEvent) => void,
   onMouseMove: (event: MouseEvent) => void,
   onMouseMoveDepedencies: Array<any>,
@@ -38,6 +40,7 @@ export const useZoomBoxEvents = (
     cursorPosition,
     cursorState,
     onMouseMoveDepedencies,
+    mouseMode,
     onMouseMove,
     onUpdateCoordinates,
     setCoordinates,

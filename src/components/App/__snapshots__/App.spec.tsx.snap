@@ -60,18 +60,6 @@ exports[`App snapshots should render router 1`] = `
         >
           <div
             class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-            data-test-icon="toolBeltA"
-            height="16"
-            name="FrameTool"
-            width="16"
-          />
-        </div>
-        <div
-          class="css-q0izro MouseModes__button MouseModes__button--light"
-          data-test-box=""
-        >
-          <div
-            class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
             data-test-icon="move"
             height="16"
             name="MoveHand"
@@ -87,6 +75,18 @@ exports[`App snapshots should render router 1`] = `
             data-test-icon="comment"
             height="16"
             name="Comment"
+            width="16"
+          />
+        </div>
+        <div
+          class="css-q0izro MouseModes__button MouseModes__button--light"
+          data-test-box=""
+        >
+          <div
+            class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            data-test-icon="toolBeltA"
+            height="16"
+            name="FrameTool"
             width="16"
           />
         </div>
@@ -131,7 +131,7 @@ exports[`App snapshots should render router 1`] = `
       </div>
     </div>
     <div
-      class="css-17c89wm ViewBox ViewBox--light ZoomBox ZoomBox--light ZoomBox__idle ZoomBox__idle--light"
+      class="css-17c89wm ViewBox ViewBox--light ZoomBox ZoomBox--light ZoomBox__idle ZoomBox__idle--light ZoomBox__default ZoomBox__default--light"
       data-test-box="zoom-box"
     >
       <div

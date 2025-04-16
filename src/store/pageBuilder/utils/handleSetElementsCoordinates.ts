@@ -6,7 +6,6 @@ import {
   TSelectedElement,
   TSetElementsCoordinatesAction,
 } from '../types';
-import { all } from 'axios';
 
 export const getSelectedElementPosition = (
   coordinates: TRectCoordinates,

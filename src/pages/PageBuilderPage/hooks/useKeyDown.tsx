@@ -1,0 +1,37 @@
+// hooks
+import { useKeyboardHandler } from 'hooks';
+
+// types
+import { KeyboardKeys } from 'types';
+import { MouseMode } from 'components/PageBuilder/enums';
+
+type TUseKeyDown = void;
+
+export const useKeyDown = (
+  setMouseMode: (mouseMode: MouseMode) => void,
+): TUseKeyDown => {
+  useKeyboardHandler(
+    true,
+    [],
+    [
+      {
+        action: () => setMouseMode(MouseMode.comment),
+        secondaryKey: KeyboardKeys.e,
+      },
+      {
+        action: () => setMouseMode(MouseMode.default),
+        secondaryKey: KeyboardKeys.escape,
+      },
+      {
+        action: () => setMouseMode(MouseMode.default),
+        secondaryKey: KeyboardKeys.q,
+      },
+      {
+        action: () => setMouseMode(MouseMode.move),
+        secondaryKey: KeyboardKeys.w,
+      },
+    ],
+    '',
+    true,
+  );
+};

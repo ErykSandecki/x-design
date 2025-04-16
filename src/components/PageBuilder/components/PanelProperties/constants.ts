@@ -1,5 +1,4 @@
 // others
-import { noop } from 'lodash';
 import { translationNameSpace as parentNameSpace } from '../../constants';
 
 // types
