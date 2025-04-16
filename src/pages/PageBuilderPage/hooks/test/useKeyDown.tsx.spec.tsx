@@ -2,6 +2,8 @@ import { fireEvent, renderHook } from '@testing-library/react';
 
 // hooks
 import { useKeyDown } from '../useKeyDown';
+
+// types
 import { KeyboardKeys } from 'types';
 import { MouseMode } from 'components/PageBuilder/enums';
 
@@ -50,5 +52,16 @@ describe('useWheelEvent', () => {
 
     // result
     expect(mockCallBack.mock.calls[0][0]).toBe(MouseMode.move);
+  });
+
+  it(`should triger action set mouse mode on tool belt a`, () => {
+    // before
+    renderHook(() => useKeyDown(mockCallBack));
+
+    // action
+    fireEvent.keyDown(window, { key: KeyboardKeys.f });
+
+    // result
+    expect(mockCallBack.mock.calls[0][0]).toBe(MouseMode.toolBeltA);
   });
 });

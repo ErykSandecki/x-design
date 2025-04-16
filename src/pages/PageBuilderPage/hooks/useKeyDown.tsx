@@ -30,6 +30,10 @@ export const useKeyDown = (
         action: () => setMouseMode(MouseMode.move),
         secondaryKey: KeyboardKeys.w,
       },
+      {
+        action: () => setMouseMode(MouseMode.toolBeltA),
+        secondaryKey: KeyboardKeys.f,
+      },
     ],
     '',
     true,
