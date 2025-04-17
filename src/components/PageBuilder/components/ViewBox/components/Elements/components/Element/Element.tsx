@@ -103,7 +103,7 @@ const Element: FC<TElementProps> = ({
       id={id}
       ref={elementRef}
       style={{
-        backgroundColor,
+        backgroundColor: backgroundColor.value,
         height: isNumber(height) ? `${height}px` : height,
         left: `${x}px`,
         position,

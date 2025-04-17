@@ -1,12 +1,19 @@
 // others
 import { BASE_2D } from 'shared';
+import { THEME } from 'constant/localStorageKeys';
+import { THEME_COLORS } from 'constant/themeColors';
 
 // types
-import { ElementType, TElement } from 'types';
+import { ElementType, TElement, Theme } from 'types';
 import { TElementStaticData } from './types';
 
+const value =
+  localStorage.getItem(THEME) === Theme.dark
+    ? THEME_COLORS.dark.neutral4
+    : THEME_COLORS.light.neutral4;
+
 export const BASE_ALL_DATA: TElement = {
-  backgroundColor: '#ffffff',
+  backgroundColor: { format: 'hex', value },
   children: [],
   coordinates: BASE_2D,
   height: 0,

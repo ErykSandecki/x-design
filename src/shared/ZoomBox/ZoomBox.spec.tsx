@@ -22,6 +22,7 @@ describe('ZoomBox snapshots', () => {
     //before
     const { asFragment } = render(
       <ZoomBox
+        backgroundColor="#ffffff"
         coordinates={BASE_3D}
         mouseMode={MouseMode.default}
         onMouseDown={mockCallBack}
@@ -42,6 +43,7 @@ describe('ZoomBox snapshots', () => {
     //before
     const { asFragment, container } = render(
       <ZoomBox
+        backgroundColor="#ffffff"
         coordinates={BASE_3D}
         mouseMode={MouseMode.move}
         onMouseDown={mockCallBack}

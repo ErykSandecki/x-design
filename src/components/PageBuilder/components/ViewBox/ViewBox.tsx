@@ -1,5 +1,5 @@
 import { FC, useRef } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 // components
 import Elements from './components/Elements/Elements';
@@ -16,6 +16,7 @@ import { useTheme } from 'hooks';
 import { useViewBoxEvents } from './hooks/useViewBoxEvents';
 
 // store
+import { pageBackgroundSelectorCreator } from 'store/pageBuilder/selectors';
 import { setAreCoordinates } from 'store/pageBuilder/actions';
 
 // styles
@@ -38,6 +39,7 @@ const ViewBox: FC<TViewBoxProps> = ({
   setCoordinates,
   setMouseMode,
 }) => {
+  const backgroundColor = useSelector(pageBackgroundSelectorCreator('-1'));
   const dispatch = useDispatch();
   const zoomBoxRef = useRef<HTMLDivElement>(null);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
@@ -49,6 +51,7 @@ const ViewBox: FC<TViewBoxProps> = ({
 
   return (
     <ZoomBox
+      backgroundColor={backgroundColor.value}
       classes={{
         className: cx(classNamesWithTheme[className].name, [
           classNamesWithTheme[className].modificators.createFrame,

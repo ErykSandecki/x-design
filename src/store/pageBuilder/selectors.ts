@@ -1,5 +1,5 @@
 import { createSelector, Selector } from 'reselect';
-import { get as getFp } from 'lodash/fp';
+import { compose, get as getFp } from 'lodash/fp';
 import { get, map, size } from 'lodash';
 
 // others
@@ -36,6 +36,11 @@ export const elementsSelector: Selector<TMainState, TElementsData> =
 
 export const allDataSelector: Selector<TMainState, TElementsData['allData']> =
   createSelector(elementsSelector, getFp('allData'));
+
+export const pageBackgroundSelectorCreator = (
+  id: TElement['id'] | '-1',
+): Selector<TMainState, TElement['backgroundColor']> =>
+  createSelector(allDataSelector, compose(getFp('backgroundColor'), getFp(id)));
 
 export const childrenSelectorCreator = (
   id: TElement['id'] | '-1',

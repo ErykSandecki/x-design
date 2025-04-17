@@ -1,6 +1,7 @@
 // others
 import {
   ADD_ELEMENT,
+  CHANGE_BACKGROUND,
   CHANGE_PARENT,
   ROTATE_ELEMENT,
   SELECT_ELEMENT,
@@ -18,6 +19,8 @@ import {
 import {
   TAddELementAction,
   TAddELementActionPayload,
+  TChangeBackgroundAction,
+  TChangeBackgroundActionPayload,
   TChangeParentAction,
   TChangeParentActionPayload,
   TRotateElementAction,
@@ -40,6 +43,14 @@ export const addElement = (
 ): TAddELementAction => ({
   payload,
   type: ADD_ELEMENT,
+});
+
+export const changeBackground = (
+  backgroundColor: TChangeBackgroundActionPayload['backgroundColor'],
+  id: TChangeBackgroundActionPayload['id'],
+): TChangeBackgroundAction => ({
+  payload: { backgroundColor, id },
+  type: CHANGE_BACKGROUND,
 });
 
 export const changeParent = (

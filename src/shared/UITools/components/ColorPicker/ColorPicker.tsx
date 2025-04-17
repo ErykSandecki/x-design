@@ -1,3 +1,4 @@
+import { Color } from 'antd/es/color-picker';
 import { ColorPicker as ColorPickerAntd, ColorPickerProps } from 'antd';
 import { FC, useState } from 'react';
 
@@ -18,19 +19,26 @@ import { getAttributes } from '../../../E2EDataAttributes/utils';
 export type TColorPickerProps = TUIProps<typeof classes> &
   Omit<ColorPickerProps, 'arrow' | 'onOpenChange' | 'open' | 'panelRender'> & {
     e2eValue?: TE2EDataAttributeProps['value'];
+    onChange: (value: string) => void;
   };
 
 export const ColorPicker: FC<TColorPickerProps> = ({
   classes = { className: '' },
   e2eValue = '',
+  onChange,
   ...restProps
 }) => {
   const [visible, setVisible] = useState(false);
+
+  const onChangeHandler = (value: Color) => {
+    onChange(`#${value.toHex()}`);
+  };
 
   return (
     <ColorPickerAntd
       arrow={false}
       className={classes.className}
+      onChange={onChangeHandler}
       onOpenChange={(visible) => setVisible(visible)}
       open={visible}
       panelRender={(children) => (

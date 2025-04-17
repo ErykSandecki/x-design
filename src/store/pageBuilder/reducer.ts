@@ -12,6 +12,7 @@ import {
   ROTATE_ELEMENT,
   CHANGE_PARENT,
   UPDATE_PREV_STATE,
+  CHANGE_BACKGROUND,
 } from './actionsType';
 import { BASE_3D } from 'shared';
 import { BASE_ALL_DATA, BASE_STATIC_DATA } from './constants';
@@ -32,10 +33,12 @@ import {
   TSetElementSizesAction,
   TRotateElementAction,
   TChangeParentAction,
+  TChangeBackgroundAction,
 } from './types';
 
 // utils
 import { handleAddElement } from './utils/handleAddElement';
+import { handleChangeBackground } from './utils/handleChangeBackground';
 import { handleChangeParent } from './utils/changeParent/handleChangeParent';
 import { handleRotateElement } from './utils/handleRotateElement';
 import { handleSetElementCoordinates } from './utils/handleSetElementCoordinates';
@@ -73,6 +76,11 @@ const addElement = (
   state: TPageBuilderState,
   { payload: element }: TAction<TAddELementAction['payload']>,
 ): TPageBuilderState => handleAddElement(element, state);
+
+const changeBackground = (
+  state: TPageBuilderState,
+  { payload }: TAction<TChangeBackgroundAction['payload']>,
+): TPageBuilderState => handleChangeBackground(payload, state);
 
 const changeParent = (
   state: TPageBuilderState,
@@ -171,6 +179,8 @@ const pageBuilder = (
   switch (action.type) {
     case ADD_ELEMENT:
       return addElement(state, action);
+    case CHANGE_BACKGROUND:
+      return changeBackground(state, action);
     case CHANGE_PARENT:
       return changeParent(state, action);
     case ROTATE_ELEMENT:

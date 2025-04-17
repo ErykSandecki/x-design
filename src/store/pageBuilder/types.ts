@@ -1,6 +1,7 @@
 // others
 import {
   ADD_ELEMENT,
+  CHANGE_BACKGROUND,
   CHANGE_PARENT,
   ROTATE_ELEMENT,
   SELECT_ELEMENT,
@@ -20,6 +21,7 @@ import {
   ElementType,
   T2DCoordinates,
   T3DCoordinates,
+  TBackground,
   TElement,
   TObject,
   TRectCoordinates,
@@ -92,6 +94,16 @@ export type TAddELementActionPayload = Omit<TElement, 'index'>;
 export type TAddELementAction = {
   payload: TAddELementActionPayload;
   type: typeof ADD_ELEMENT;
+};
+
+export type TChangeBackgroundActionPayload = Pick<
+  TElement,
+  'backgroundColor' | 'id'
+>;
+
+export type TChangeBackgroundAction = {
+  payload: TChangeBackgroundActionPayload;
+  type: typeof CHANGE_BACKGROUND;
 };
 
 export type TChangeParentActionPayload = Pick<
