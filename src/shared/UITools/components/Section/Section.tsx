@@ -1,7 +1,8 @@
 import { FC, ReactNode } from 'react';
 
 // components
-import { Box, Small } from 'shared';
+import Box from '../../..//UI/components/Box/Box';
+import { Small } from '../../../UI/components/Typography';
 
 // hooks
 import { useTheme } from 'hooks';
@@ -20,7 +21,7 @@ export type TSectionProps = {
   label: string;
 };
 
-const Section: FC<TSectionProps> = ({ children, label }) => {
+export const Section: FC<TSectionProps> = ({ children, label }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   return (

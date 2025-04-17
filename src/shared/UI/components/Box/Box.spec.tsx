@@ -12,7 +12,7 @@ import { getDataTestAttribute } from '../../../E2EDataAttributes/utils';
 
 const className = 'className';
 
-describe('Typography props', () => {
+describe('Box props', () => {
   it('should pass children', () => {
     // mock
     const children = 'children';

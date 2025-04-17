@@ -1,0 +1,7 @@
+@mixin box-shadow-panel($mode) {
+  @if (mode == 'light') {
+    box-shadow: 0 2px 20px #78787880;
+  } @else {
+    box-shadow: 0 2px 20px 0 #000000b3;
+  }
+}

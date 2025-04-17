@@ -2,7 +2,7 @@
 import { translationNameSpace as parentNameSpace } from '../../constants';
 
 // types
-import { TTab } from '../../shared/Tabs/types';
+import { TTab } from '../../../../shared/UITools/components/Tabs/types';
 
 export const translationNameSpace = `${parentNameSpace}.panelProperties`;
 

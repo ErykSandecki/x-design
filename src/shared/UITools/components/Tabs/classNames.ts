@@ -6,6 +6,7 @@ export const classNames = {
     name: `${className}__tab`,
     modificators: {
       active: `${className}__tab--active`,
+      disabled: `${className}__tab--disabled`,
     },
   },
 };

@@ -8,6 +8,7 @@ export * from './UI/components/Typography';
 export * from './UI/components/Typography/Typography';
 export * from './UI/components/Typography/enums';
 export * from './UI/components/Typography/types';
+export * from './UITools';
 export * from './ZoomBox/ZoomBox';
 export * from './ZoomBox/utils/mousePoisitionRelative';
 export * from './ZoomBox/utils/hasBasePosition';

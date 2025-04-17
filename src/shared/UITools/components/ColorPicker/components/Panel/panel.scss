@@ -1,0 +1,17 @@
+.Panel {
+  &__header {
+    @include theme('neutral-3', border-bottom, '1px solid');
+
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8px;
+  }
+
+  &__sample {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+}

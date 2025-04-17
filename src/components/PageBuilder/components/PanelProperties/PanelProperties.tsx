@@ -1,10 +1,10 @@
 import { FC, memo, useRef, useState } from 'react';
+import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
 // components
-import Section from 'components/PageBuilder/shared/Section/Section';
-import Tabs, { TTabsProps } from 'components/PageBuilder/shared/Tabs/Tabs';
-import { Box, E2EDataAttribute } from 'shared';
+import MainPanel from './components/MainPanel/MainPanel';
+import { Box, E2EDataAttribute, TUITypes, UITools } from 'shared';
 
 // hooks
 import { useResizeHandler, useTheme } from 'hooks';
@@ -13,6 +13,9 @@ import { useResizeHandler, useTheme } from 'hooks';
 import { className, classNames } from './classNames';
 import { TABS, translationNameSpace } from './constants';
 import { TOOLBAR_HEIGHT } from '../../constants';
+
+// store
+import { selectedElementsSelector } from 'store/pageBuilder/selectors';
 
 // styles
 import styles from './panel-properties.scss';
@@ -25,6 +28,7 @@ export type TPanelPropertiesProps = {};
 
 const PanelProperties: FC<TPanelPropertiesProps> = () => {
   const boxRef = useRef(null);
+  const selectedElements = useSelector(selectedElementsSelector);
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState(Tab.design);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
@@ -61,13 +65,14 @@ const PanelProperties: FC<TPanelPropertiesProps> = () => {
           onMouseDown={(event) => onMouseDownX(event, true)}
         />
       </E2EDataAttribute>
-      <Section label={t(`${translationNameSpace}.section.label`)}>
-        <Tabs
+      <UITools.Section label={t(`${translationNameSpace}.section.label`)}>
+        <UITools.Tabs
           activeTab={activeTab}
-          setActiveTab={setActiveTab as TTabsProps['setActiveTab']}
+          setActiveTab={setActiveTab as TUITypes['TTabsProps']['setActiveTab']}
           tabs={TABS}
         />
-      </Section>
+      </UITools.Section>
+      {selectedElements.length === 0 && <MainPanel activeTab={activeTab} />}
     </Box>
   );
 };

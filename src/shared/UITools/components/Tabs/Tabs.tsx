@@ -23,7 +23,8 @@ export type TTabsProps = {
   tabs: Array<TTab>;
 };
 
-const Tabs: FC<TTabsProps> = ({ activeTab, setActiveTab, tabs }) => {
+export const Tabs: FC<TTabsProps> = ({ activeTab, setActiveTab, tabs }) => {
+  const disabledStates = tabs.length < 2;
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { t } = useTranslation();
 
@@ -32,10 +33,11 @@ const Tabs: FC<TTabsProps> = ({ activeTab, setActiveTab, tabs }) => {
       {tabs.map(({ labelTranslationKey, name }) => (
         <E2EDataAttribute key={name} type={E2EAttribute.tab} value={name}>
           <div
-            className={cx(classNamesWithTheme.tab.name, [
-              classNamesWithTheme.tab.modificators.active,
-              activeTab === name,
-            ])}
+            className={cx(
+              classNamesWithTheme.tab.name,
+              [classNamesWithTheme.tab.modificators.active, activeTab === name],
+              [classNamesWithTheme.tab.modificators.disabled, disabledStates],
+            )}
             key={name}
             onClick={() => setActiveTab(name)}
           >

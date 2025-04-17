@@ -1,5 +1,5 @@
 .Tabs {
-  align-items: flex-start;
+  align-items: center;
   column-gap: 5px;
   display: flex;
   height: 32px;
@@ -23,6 +23,16 @@
     &--active {
       @include theme('neutral-1', color);
       @include theme('neutral-3', background-color);
+    }
+
+    &--disabled {
+      @include theme('neutral-1', color);
+
+      background-color: unset;
+
+      &:hover {
+        background-color: unset;
+      }
     }
   }
 }

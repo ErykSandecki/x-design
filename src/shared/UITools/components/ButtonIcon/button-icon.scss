@@ -1,0 +1,25 @@
+.ButtonIcon {
+  @include theme-selector(
+    'neutral-3',
+    background-color,
+    '&:hover:not(.ButtonIcon--selected)'
+  );
+
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  height: 24px;
+  justify-content: center;
+  width: 24px;
+
+  &--selected {
+    &--light {
+      background-color: rgba($color: $--rx-blue-1--light, $alpha: 0.3);
+    }
+
+    &--dark {
+      background-color: rgba($color: $--rx-blue-1--dark, $alpha: 0.3);
+    }
+  }
+}
