@@ -4,9 +4,16 @@ import { FC, useState } from 'react';
 
 // components
 import Panel from './components/Panel/Panel';
+import TextField from '../TextField/TextField';
+
+// hooks
+import { useTheme } from 'hooks';
 
 // others
-import { classes } from './classNames';
+import { classes, className, classNames } from './classNames';
+
+// styles
+import styles from './color-picker.scss';
 
 // types
 import { E2EAttribute } from 'types';
@@ -28,6 +35,7 @@ export const ColorPicker: FC<TColorPickerProps> = ({
   onChange,
   ...restProps
 }) => {
+  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const [visible, setVisible] = useState(false);
 
   const onChangeHandler = (value: Color) => {
@@ -35,17 +43,27 @@ export const ColorPicker: FC<TColorPickerProps> = ({
   };
 
   return (
-    <ColorPickerAntd
-      arrow={false}
-      className={classes.className}
-      onChange={onChangeHandler}
-      onOpenChange={(visible) => setVisible(visible)}
-      open={visible}
-      panelRender={(children) => (
-        <Panel setVisible={setVisible}>{children}</Panel>
-      )}
-      {...getAttributes(E2EAttribute.colorPicker, e2eValue)}
-      {...restProps}
+    <TextField
+      startAdornment={
+        <ColorPickerAntd
+          arrow={false}
+          className={cx(classes.className, classNamesWithTheme[className])}
+          onChange={onChangeHandler}
+          onOpenChange={(visible) => setVisible(visible)}
+          open={visible}
+          panelRender={(children) => (
+            <Panel setVisible={setVisible}>{children}</Panel>
+          )}
+          {...getAttributes(E2EAttribute.colorPicker, e2eValue)}
+          {...restProps}
+        >
+          <div
+            className={cx(classNamesWithTheme.picker)}
+            style={{ backgroundColor: restProps.value as string }}
+          />
+        </ColorPickerAntd>
+      }
+      value={(restProps.value as string).substring(1)}
     />
   );
 };

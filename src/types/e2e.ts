@@ -13,5 +13,6 @@ export enum E2EAttribute {
   test1 = 'test1',
   test2 = 'test2',
   text = 'text',
+  textField = 'text-field',
   unset = 'unset',
 }

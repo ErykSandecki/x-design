@@ -12,7 +12,7 @@ export const getZoomSpeed = (
   now: number,
 ): number => {
   if (now - lastWheelTime < 100) {
-    return Math.abs(deltaY) < 20 ? 0.01 : 0.1;
+    return Math.abs(deltaY) < 20 ? 0.035 : 0.1;
   }
 
   return 0;
