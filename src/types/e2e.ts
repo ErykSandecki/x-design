@@ -5,6 +5,7 @@ export enum E2EAttribute {
   buttonIcon = 'button-icon',
   color = 'color',
   colorPicker = 'color-picker',
+  colorPickerPanel = 'color-picker-panel',
   fieldGroup = 'field-group',
   form = 'form',
   icon = 'icon',

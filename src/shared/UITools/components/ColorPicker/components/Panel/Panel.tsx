@@ -3,6 +3,7 @@ import { FC, ReactNode, useEffect, useRef, useState } from 'react';
 
 // components
 import ButtonIcon from '../../../ButtonIcon/ButtonIcon';
+import E2EDataAttribute from 'shared/E2EDataAttributes/E2EDataAttribute';
 import Icon from '../../../../../UI/components/Icon/Icon';
 import Tabs, { TTabsProps } from '../../../Tabs/Tabs';
 
@@ -10,13 +11,14 @@ import Tabs, { TTabsProps } from '../../../Tabs/Tabs';
 import { useTheme } from 'hooks';
 
 // others
+import { antColorPickerSliderContainerClassName, TABS } from './constants';
 import { className, classNames } from './classNames';
-import { TABS } from './constants';
 
 // styles
 import styles from './panel.scss';
 
 // types
+import { E2EAttribute } from 'types';
 import { Tab } from './enums';
 
 export type TPanelProps = {
@@ -27,14 +29,13 @@ export type TPanelProps = {
 export const Panel: FC<TPanelProps> = ({ children, setVisible }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const [activeTab, setActiveTab] = useState(Tab.custom);
-  const [aaa, setaa] = useState(false);
   const [sampleContainer, setSampleContainer] = useState<HTMLDivElement>(null);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (ref.current) {
       const pickerContainer = ref.current.getElementsByClassName(
-        'ant-color-picker-slider-container',
+        antColorPickerSliderContainerClassName,
       );
 
       setSampleContainer(pickerContainer[0] as HTMLDivElement);
@@ -42,38 +43,36 @@ export const Panel: FC<TPanelProps> = ({ children, setVisible }) => {
   }, []);
 
   return (
-    <div
-      className={cx(classNamesWithTheme[className])}
-      onKeyDown={() => event.stopPropagation()}
-      ref={ref}
-    >
-      <div className={cx(classNamesWithTheme.header)}>
-        <Tabs
-          activeTab={activeTab}
-          setActiveTab={setActiveTab as TTabsProps['setActiveTab']}
-          tabs={TABS}
-        />
-        <Icon
-          clickable
-          height={11}
-          name="Close"
-          onClick={() => setVisible(false)}
-          width={11}
-        />
+    <E2EDataAttribute type={E2EAttribute.colorPickerPanel}>
+      <div
+        className={cx(classNamesWithTheme[className])}
+        onKeyDown={(event) => event.stopPropagation()}
+        ref={ref}
+      >
+        <div className={cx(classNamesWithTheme.header)}>
+          <Tabs
+            activeTab={activeTab}
+            setActiveTab={setActiveTab as TTabsProps['setActiveTab']}
+            tabs={TABS}
+          />
+          <Icon
+            clickable
+            height={11}
+            name="Close"
+            onClick={() => setVisible(false)}
+            width={11}
+          />
+        </div>
+        {children}
+        {sampleContainer &&
+          createPortal(
+            <div className={cx(classNamesWithTheme.sample)}>
+              <ButtonIcon name="Sample" />
+            </div>,
+            sampleContainer,
+          )}
       </div>
-      {children}
-      {sampleContainer &&
-        createPortal(
-          <div className={cx(classNamesWithTheme.sample)}>
-            <ButtonIcon
-              name="Sample"
-              selected={aaa}
-              onClick={() => setaa(!aaa)}
-            />
-          </div>,
-          sampleContainer,
-        )}
-    </div>
+    </E2EDataAttribute>
   );
 };
 

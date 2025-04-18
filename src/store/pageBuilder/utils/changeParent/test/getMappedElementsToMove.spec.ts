@@ -54,7 +54,6 @@ describe('getMappedElementsToMove', () => {
           },
         },
         dynamicData: {
-          ...pageBuilderStateMock[PAGE_BUILDER].elements.dynamicData,
           [elementDynamicDataMock.id]: {
             ...elementDynamicDataMock,
           },
@@ -82,7 +81,6 @@ describe('getMappedElementsToMove', () => {
         },
       },
       dynamicData: {
-        ...pageBuilderStateMock[PAGE_BUILDER].elements.dynamicData,
         [elementDynamicDataMock.id]: {
           ...elementDynamicDataMock,
         },
@@ -125,7 +123,6 @@ describe('getMappedElementsToMove', () => {
           },
         },
         dynamicData: {
-          ...pageBuilderStateMock[PAGE_BUILDER].elements.dynamicData,
           [elementDynamicDataMock.id]: {
             ...elementDynamicDataMock,
           },
@@ -163,7 +160,6 @@ describe('getMappedElementsToMove', () => {
         },
       },
       dynamicData: {
-        ...pageBuilderStateMock[PAGE_BUILDER].elements.dynamicData,
         ['2']: {
           ...elementDynamicDataMock,
           id: '2',
@@ -208,7 +204,6 @@ describe('getMappedElementsToMove', () => {
           },
         },
         dynamicData: {
-          ...pageBuilderStateMock[PAGE_BUILDER].elements.dynamicData,
           [elementDynamicDataMock.id]: {
             ...elementDynamicDataMock,
           },
@@ -248,7 +243,6 @@ describe('getMappedElementsToMove', () => {
         },
       },
       dynamicData: {
-        ...pageBuilderStateMock[PAGE_BUILDER].elements.dynamicData,
         ['2']: {
           ...elementDynamicDataMock,
           id: '2',

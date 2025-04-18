@@ -28,11 +28,12 @@ import {
   rotateElement,
   changeParent,
   updatePrevState,
+  changeBackground,
 } from '../actions';
 
 // types
 import { Anchor } from '../enums';
-import { TAction } from 'types';
+import { TAction, TBackground } from 'types';
 import { TPageBuilderState } from '../types';
 
 describe('PageBuilderReducer', () => {
@@ -68,6 +69,9 @@ describe('PageBuilderReducer', () => {
           [createFrameMock.id]: createFrameMock,
         },
         dynamicData: {
+          ['-1']: {
+            ...pageBuilderStateMock[PAGE_BUILDER].elements.dynamicData['-1'],
+          },
           [createFrameMock.id]: {
             background: createFrameMock.background,
             coordinates: createFrameMock.coordinates,
@@ -89,6 +93,57 @@ describe('PageBuilderReducer', () => {
             parentId: createFrameMock.parentId,
             position: createFrameMock.position,
             type: createFrameMock.type,
+          },
+        },
+      },
+    });
+  });
+
+  it('should handle CHANGE_BACKGROUND', () => {
+    // mock
+    const background: TBackground = {
+      alpha: '100',
+      format: 'hex',
+      value: '#ffffff',
+      visible: true,
+    };
+
+    // before
+    const state = reducer(changeBackground(background, '-1'), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      elements: {
+        ...pageBuilderStateMock[PAGE_BUILDER].elements,
+        allData: {
+          ...pageBuilderStateMock[PAGE_BUILDER].elements.allData,
+          ['-1']: {
+            ...pageBuilderStateMock[PAGE_BUILDER].elements.allData['-1'],
+            background: {
+              ...pageBuilderStateMock[PAGE_BUILDER].elements.allData['-1']
+                .background,
+              ...background,
+            },
+          },
+        },
+        dynamicData: {
+          ...pageBuilderStateMock[PAGE_BUILDER].elements.dynamicData,
+          ['-1']: {
+            ...pageBuilderStateMock[PAGE_BUILDER].elements.dynamicData['-1'],
+            background: {
+              ...pageBuilderStateMock[PAGE_BUILDER].elements.dynamicData['-1']
+                .background,
+              ...background,
+            },
+          },
+        },
+        staticData: {
+          ...pageBuilderStateMock[PAGE_BUILDER].elements.staticData,
+          ['-1']: {
+            ...pageBuilderStateMock[PAGE_BUILDER].elements.staticData['-1'],
           },
         },
       },

@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SectionColumn snapshots should render SectionColumn 1`] = `
+<DocumentFragment>
+  <div
+    class="css-q0izro SectionColumn SectionColumn--light"
+    data-test-section=""
+  >
+    <div
+      class="SectionColumn__content SectionColumn__content--light"
+    >
+      children
+    </div>
+    <div
+      class="SectionColumn__button SectionColumn__button--light"
+    />
+  </div>
+</DocumentFragment>
+`;

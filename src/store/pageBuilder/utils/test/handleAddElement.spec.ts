@@ -30,8 +30,11 @@ describe('handleAddElement', () => {
           [createFrameMock.id]: createFrameMock,
         },
         dynamicData: {
+          ['-1']: {
+            ...pageBuilderStateMock[PAGE_BUILDER].elements.dynamicData['-1'],
+          },
           [createFrameMock.id]: {
-            backgroundColor: createFrameMock.background,
+            background: createFrameMock.background,
             coordinates: createFrameMock.coordinates,
             height: createFrameMock.height,
             id: createFrameMock.id,

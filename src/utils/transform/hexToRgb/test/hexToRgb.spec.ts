@@ -7,6 +7,6 @@ describe('hexToRgb', () => {
     const result = hexToRgb('#000000');
 
     // result
-    expect(result).toStrictEqual({ b: 0, g: 0, r: 0 });
+    expect(result).toStrictEqual('rgba(0, 0, 0, 1)');
   });
 });

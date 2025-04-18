@@ -51,7 +51,7 @@ describe('handleZoom', () => {
     expect(mockCallBack.mock.calls[0][0]).toStrictEqual({
       x: 0,
       y: 0,
-      z: 0.99,
+      z: 0.965,
     });
   });
 
@@ -75,7 +75,7 @@ describe('handleZoom', () => {
     expect(mockCallBack.mock.calls[0][0]).toStrictEqual({
       x: 0,
       y: 0,
-      z: 1.01,
+      z: 1.035,
     });
   });
 
@@ -97,9 +97,9 @@ describe('handleZoom', () => {
 
     // result
     expect(mockCallBack.mock.calls[0][0]).toStrictEqual({
-      x: 1.0000000000000009,
-      y: 1.0000000000000009,
-      z: 0.99,
+      x: 3.500000000000003,
+      y: 3.500000000000003,
+      z: 0.965,
     });
   });
 });

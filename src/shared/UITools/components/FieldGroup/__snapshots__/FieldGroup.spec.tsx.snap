@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FieldGroup snapshots should render FieldGroup 1`] = `
+<DocumentFragment>
+  <div
+    class="css-q0izro FieldGroup FieldGroup--light"
+    data-test-field-group=""
+  >
+    children
+  </div>
+</DocumentFragment>
+`;

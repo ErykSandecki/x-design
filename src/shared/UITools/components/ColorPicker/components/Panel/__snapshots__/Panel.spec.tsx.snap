@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Panel snapshots should render Panel 1`] = `
+<DocumentFragment>
+  <div
+    class="Panel Panel--light"
+    data-test-color-picker-panel=""
+  >
+    <div
+      class="Panel__header Panel__header--light"
+    >
+      <div
+        class="css-q0izro Tabs Tabs--light"
+        data-test-box=""
+      >
+        <div
+          class="Tabs__tab Tabs__tab--light Tabs__tab--active Tabs__tab--active--light Tabs__tab--disabled Tabs__tab--disabled--light"
+          data-test-tab="custom"
+        >
+          Custom
+        </div>
+      </div>
+      <div
+        class="css-q0izro Icon Icon--light Icon--clickable Icon--clickable--light"
+        data-test-icon="Close"
+        height="11"
+        name="Close"
+        width="11"
+      />
+    </div>
+    <div
+      class="ant-color-picker-slider-container"
+    />
+    <div
+      class="Panel__sample Panel__sample--light"
+    >
+      <div
+        class="css-q0izro ButtonIcon ButtonIcon--light"
+        data-test-button-icon=""
+      >
+        <div
+          class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          data-test-icon="Sample"
+          height="14"
+          name="Sample"
+          width="14"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

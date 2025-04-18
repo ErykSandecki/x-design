@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Color snapshots should render Color 1`] = `
+<DocumentFragment>
+  <div
+    class="css-q0izro Color Color--light"
+    data-test-color=""
+  >
+    <div
+      class="Color__picker Color__picker--light"
+      style="background-color: rgb(0, 0, 0);"
+    />
+    <div
+      class="Color__picker-alpha Color__picker-alpha--light"
+      style="background-color: rgb(0, 0, 0);"
+    />
+    <div
+      class="Color__picker-texture Color__picker-texture--light"
+    />
+  </div>
+</DocumentFragment>
+`;

@@ -3,15 +3,21 @@ import { render } from '@testing-library/react';
 // components
 import ColorPicker from './ColorPicker';
 
-// types
-import { E2EAttribute } from 'types/e2e';
+const mockCallBack = jest.fn();
 
-// utils
-import { getByE2EAttribute } from 'test/testHelpers';
-import { getDataTestAttribute } from '../../../E2EDataAttributes/utils';
+describe('ColorPicker snapshots', () => {
+  it('should render ColorPicker', () => {
+    // before
+    const { asFragment } = render(
+      <ColorPicker
+        alpha="100"
+        color="#ffffff"
+        onChangeAlpha={mockCallBack}
+        onChangeColor={mockCallBack}
+      />,
+    );
 
-const className = 'className';
-
-describe('Typography props', () => {});
-
-describe('Box snapshots', () => {});
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
+});

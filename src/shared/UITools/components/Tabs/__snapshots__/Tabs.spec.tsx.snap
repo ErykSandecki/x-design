@@ -7,7 +7,7 @@ exports[`Tabs snapshots should render Tabs 1`] = `
     data-test-box=""
   >
     <div
-      class="Tabs__tab Tabs__tab--light Tabs__tab--active Tabs__tab--active--light"
+      class="Tabs__tab Tabs__tab--light Tabs__tab--active Tabs__tab--active--light Tabs__tab--disabled Tabs__tab--disabled--light"
       data-test-tab="name"
     >
       label

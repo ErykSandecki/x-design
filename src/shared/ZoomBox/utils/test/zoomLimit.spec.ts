@@ -15,7 +15,7 @@ describe('getZoomSpeed', () => {
     const result = getZoomSpeed(0, 0, 0);
 
     // result
-    expect(result).toBe(0.01);
+    expect(result).toBe(0.035);
   });
 
   it('should return speed for mouse', () => {

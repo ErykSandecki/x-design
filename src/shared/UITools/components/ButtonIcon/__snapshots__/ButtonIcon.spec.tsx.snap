@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonIcon snapshots should render ButtonIcon 1`] = `
+<DocumentFragment>
+  <div
+    class="css-q0izro ButtonIcon ButtonIcon--light"
+    data-test-button-icon=""
+  >
+    <div
+      class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      data-test-icon="Close"
+      height="14"
+      name="Close"
+      width="14"
+    />
+  </div>
+</DocumentFragment>
+`;

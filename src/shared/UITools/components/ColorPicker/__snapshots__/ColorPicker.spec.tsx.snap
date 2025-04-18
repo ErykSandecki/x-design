@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorPicker snapshots should render ColorPicker 1`] = `
+<DocumentFragment>
+  <div
+    class="css-q0izro FieldGroup FieldGroup--light"
+    data-test-field-group=""
+  >
+    <div
+      class="css-q0izro ColorPicker__hex-input ColorPicker__hex-input--light TextField TextField--light"
+      data-test-text-field=""
+    >
+      <div
+        aria-describedby="test-id"
+      >
+        <div
+          class="css-q0izro Color Color--light"
+          data-test-color=""
+        >
+          <div
+            class="Color__picker Color__picker--light"
+            style="background-color: rgb(255, 255, 255);"
+          />
+          <div
+            class="Color__picker-alpha Color__picker-alpha--light"
+            style="background-color: rgb(255, 255, 255);"
+          />
+          <div
+            class="Color__picker-texture Color__picker-texture--light"
+          />
+        </div>
+      </div>
+      <input
+        class="TextField__input TextField__input--light"
+        maxlength="6"
+        value="ffffff"
+      />
+    </div>
+    <div
+      class="css-q0izro ColorPicker__alpha-input ColorPicker__alpha-input--light TextField TextField--light"
+      data-test-text-field=""
+    >
+      <input
+        class="TextField__input TextField__input--light"
+        max="100"
+        maxlength="6"
+        min="0"
+        type="number"
+        value="100"
+      />
+      <div>
+        %
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

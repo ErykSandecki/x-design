@@ -129,11 +129,109 @@ exports[`App snapshots should render router 1`] = `
           </div>
         </div>
       </div>
+      <div
+        class="css-q0izro Section Section--light"
+        data-test-section=""
+      >
+        <small
+          class="css-q0izro Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+          data-test-text=""
+          style="text-align: inherit;"
+        >
+          Page
+        </small>
+        <div
+          class="css-q0izro SectionColumn SectionColumn--light"
+          data-test-section=""
+        >
+          <div
+            class="SectionColumn__content SectionColumn__content--light"
+          >
+            <div
+              class="css-q0izro FieldGroup FieldGroup--light"
+              data-test-field-group=""
+            >
+              <div
+                class="css-q0izro ColorPicker__hex-input ColorPicker__hex-input--light TextField TextField--light"
+                data-test-text-field=""
+              >
+                <div
+                  aria-describedby="test-id"
+                >
+                  <div
+                    class="css-q0izro Color Color--light"
+                    data-test-color=""
+                  >
+                    <div
+                      class="Color__picker Color__picker--light"
+                      style="background-color: rgb(241, 242, 246);"
+                    />
+                    <div
+                      class="Color__picker-alpha Color__picker-alpha--light"
+                      style="background-color: rgb(241, 242, 246);"
+                    />
+                    <div
+                      class="Color__picker-texture Color__picker-texture--light"
+                    />
+                  </div>
+                </div>
+                <input
+                  class="TextField__input TextField__input--light"
+                  maxlength="6"
+                  value="f1f2f6"
+                />
+              </div>
+              <div
+                class="css-q0izro ColorPicker__alpha-input ColorPicker__alpha-input--light TextField TextField--light"
+                data-test-text-field=""
+              >
+                <input
+                  class="TextField__input TextField__input--light"
+                  max="100"
+                  maxlength="6"
+                  min="0"
+                  type="number"
+                  value="100"
+                />
+                <div>
+                  %
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="SectionColumn__button SectionColumn__button--light"
+          >
+            <div
+              class="css-q0izro ButtonIcon ButtonIcon--light"
+              data-test-button-icon=""
+            >
+              <div
+                class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="EyesOpened"
+                height="14"
+                name="EyesOpened"
+                width="14"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div
-      class="css-17c89wm ViewBox ViewBox--light ZoomBox ZoomBox--light ZoomBox__idle ZoomBox__idle--light ZoomBox__default ZoomBox__default--light"
+      class="css-p683st ViewBox ViewBox--light ZoomBox ZoomBox--light ZoomBox__idle ZoomBox__idle--light ZoomBox__default ZoomBox__default--light"
       data-test-box="zoom-box"
     >
+      <div
+        class="css-q0izro ZoomBox__background-mask ZoomBox__background-mask--light"
+        data-test-box=""
+        style="background-color: rgb(241, 242, 246); display: initial;"
+      />
+      <div
+        class="css-q0izro ZoomBox__texture-blank ZoomBox__texture-blank--light"
+        data-test-box=""
+        style="transform: translate(0px, 0px) scale(1);"
+      />
       <div
         class="css-qel697 ZoomBox__zoom-content ZoomBox__zoom-content--light"
         data-test-box=""

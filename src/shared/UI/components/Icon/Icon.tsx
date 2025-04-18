@@ -60,7 +60,7 @@ export const Icon: FC<TIconProps> = ({
   const sxClassName = useSX(sx);
 
   return (
-    <E2EDataAttribute type={e2eAttribute} value={e2eValue}>
+    <E2EDataAttribute type={e2eAttribute} value={e2eValue || name}>
       <SVG
         className={cx(
           sxClassName,

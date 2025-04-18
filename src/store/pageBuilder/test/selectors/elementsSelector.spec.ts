@@ -19,7 +19,9 @@ describe('elementsSelector', () => {
       allData: {
         ...pageBuilderStateMock[PAGE_BUILDER].elements.allData,
       },
-      dynamicData: {},
+      dynamicData: {
+        ...pageBuilderStateMock[PAGE_BUILDER].elements.dynamicData,
+      },
       staticData: {
         ...pageBuilderStateMock[PAGE_BUILDER].elements.staticData,
       },
