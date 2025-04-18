@@ -1,4 +1,3 @@
-import { Color } from 'antd/es/color-picker';
 import { ColorPicker as ColorPickerAntd, ColorPickerProps } from 'antd';
 import { FC, useState } from 'react';
 
@@ -7,6 +6,7 @@ import Panel from './components/Panel/Panel';
 import TextField from '../TextField/TextField';
 
 // hooks
+import { useColorPickerEvents } from './hooks/useColorPickerEvents';
 import { useTheme } from 'hooks';
 
 // others
@@ -36,19 +36,19 @@ export const ColorPicker: FC<TColorPickerProps> = ({
   ...restProps
 }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
+  const { colorValue, onBlurColor, onChangeColor, onChangeColorPicker } =
+    useColorPickerEvents(restProps.value as string, onChange);
   const [visible, setVisible] = useState(false);
-
-  const onChangeHandler = (value: Color) => {
-    onChange(`#${value.toHex()}`);
-  };
 
   return (
     <TextField
+      onBlur={onBlurColor}
+      onChange={onChangeColor}
       startAdornment={
         <ColorPickerAntd
           arrow={false}
           className={cx(classes.className, classNamesWithTheme[className])}
-          onChange={onChangeHandler}
+          onChange={onChangeColorPicker}
           onOpenChange={(visible) => setVisible(visible)}
           open={visible}
           panelRender={(children) => (
@@ -63,7 +63,7 @@ export const ColorPicker: FC<TColorPickerProps> = ({
           />
         </ColorPickerAntd>
       }
-      value={(restProps.value as string).substring(1)}
+      value={colorValue.replace('#', '')}
     />
   );
 };
