@@ -1,7 +1,8 @@
 import { ColorPicker as ColorPickerAntd, ColorPickerProps } from 'antd';
-import { FC, useState } from 'react';
+import { FC, useRef, useState } from 'react';
 
 // components
+import Color from '../Color/Color';
 import FieldGroup from '../FieldGroup/FieldGroup';
 import Panel from './components/Panel/Panel';
 import TextField from '../TextField/TextField';
@@ -17,13 +18,13 @@ import { classes, className, classNames } from './classNames';
 import styles from './color-picker.scss';
 
 // types
-import { E2EAttribute, TBackground } from 'types';
+import { E2EAttribute, KeyboardKeys, TBackground } from 'types';
 import { TE2EDataAttributeProps } from '../../../E2EDataAttributes/E2EDataAttribute';
 import { TUIProps } from '../../../UI/types';
 
 // utils
 import { getAttributes } from '../../../E2EDataAttributes/utils';
-import { hexToRgb } from 'utils';
+import { handleSubmitInput, hexToRgb } from 'utils';
 
 export type TColorPickerProps = TUIProps<typeof classes> &
   Omit<ColorPickerProps, 'arrow' | 'onOpenChange' | 'open' | 'panelRender'> & {
@@ -58,6 +59,8 @@ export const ColorPicker: FC<TColorPickerProps> = ({
     onChangeAlphaHandler,
     onChangeColorHandler,
   );
+  const inputAlpha = useRef(null);
+  const inputColor = useRef(null);
   const [visible, setVisible] = useState(false);
 
   return (
@@ -66,6 +69,10 @@ export const ColorPicker: FC<TColorPickerProps> = ({
         className={cx(classNamesWithTheme.hexInput)}
         onBlur={onBlurColor}
         onChange={onChangeColor}
+        onKeyDown={(event) =>
+          handleSubmitInput(KeyboardKeys.enter, inputColor.current)(event)
+        }
+        ref={inputColor}
         startAdornment={
           <ColorPickerAntd
             arrow={false}
@@ -80,10 +87,9 @@ export const ColorPicker: FC<TColorPickerProps> = ({
             {...getAttributes(E2EAttribute.colorPicker, e2eValue)}
             {...restProps}
           >
-            <div
-              className={cx(classNamesWithTheme.picker)}
-              style={{ backgroundColor: color }}
-            />
+            <div>
+              <Color alpha={alpha} color={color} />
+            </div>
           </ColorPickerAntd>
         }
         value={colorValue.replace('#', '')}
@@ -94,6 +100,10 @@ export const ColorPicker: FC<TColorPickerProps> = ({
         min={0}
         onBlur={onBlurAlpha}
         onChange={onChangeAlpha}
+        onKeyDown={(event) =>
+          handleSubmitInput(KeyboardKeys.enter, inputAlpha.current)(event)
+        }
+        ref={inputAlpha}
         type="number"
         value={alphaValue}
       />

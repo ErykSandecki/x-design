@@ -1,5 +1,6 @@
 export * from './common/generateID';
 export * from './dom/createHtmlElement';
+export * from './dom/handleSubmitInput';
 export * from './dom/hasScroll';
 export * from './dom/scrollIntoView';
 export * from './dom/toggleBodyScroll';

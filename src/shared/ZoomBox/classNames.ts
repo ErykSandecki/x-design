@@ -24,5 +24,7 @@ export const classNames = {
       ...mapValues(MouseMode, (mode) => `${className}__${mode}`),
     },
   },
+  backgroundMask: `${className}__background-mask`,
+  textureBlank: `${className}__texture-blank`,
   zoomContent: `${className}__zoom-content`,
 };

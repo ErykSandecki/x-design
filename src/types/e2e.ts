@@ -3,6 +3,7 @@ export enum E2EAttribute {
   box = 'box',
   button = 'button',
   buttonIcon = 'button-icon',
+  color = 'color',
   colorPicker = 'color-picker',
   fieldGroup = 'field-group',
   form = 'form',

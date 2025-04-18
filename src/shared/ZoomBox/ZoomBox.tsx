@@ -83,10 +83,19 @@ export const ZoomBox: FC<TZoomBoxProps> = ({
       }}
       e2eValue="zoom-box"
       ref={zoomBoxRef}
-      style={{ backgroundColor: hexToRgb(backgroundColor, parseInt(alpha)) }}
       sx={{ height: '100%', overflow: 'hidden' }}
       {...events}
     >
+      <Box
+        classes={{ className: cx(classNamesWithTheme.backgroundMask) }}
+        style={{ backgroundColor: hexToRgb(backgroundColor, parseInt(alpha)) }}
+      />
+      <Box
+        classes={{ className: cx(classNamesWithTheme.textureBlank) }}
+        style={{
+          transform: `translate(${coordinates.x}px, ${coordinates.y}px) scale(${coordinates.z})`,
+        }}
+      />
       <Box
         classes={{ className: cx(classNamesWithTheme.zoomContent) }}
         ref={zoomContentRef}

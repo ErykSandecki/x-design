@@ -1,4 +1,4 @@
-import { FC, InputHTMLAttributes, ReactNode } from 'react';
+import { FC, InputHTMLAttributes, ReactNode, Ref } from 'react';
 
 // components
 import Box from '../../../UI/components/Box/Box';
@@ -23,6 +23,7 @@ export type TTextFieldProps = Omit<
   className?: string;
   e2eValue?: TE2EDataAttributeProps['value'];
   endAdorment?: ReactNode;
+  ref?: Ref<HTMLInputElement>;
   startAdornment?: ReactNode;
 };
 
@@ -30,6 +31,7 @@ export const TextField: FC<TTextFieldProps> = ({
   className = '',
   e2eValue = '',
   endAdorment,
+  ref,
   startAdornment,
   ...restProps
 }) => {
@@ -47,6 +49,7 @@ export const TextField: FC<TTextFieldProps> = ({
       <input
         className={cx(classNamesWithTheme.input)}
         maxLength={6}
+        ref={ref}
         {...restProps}
       />
       {endAdorment}

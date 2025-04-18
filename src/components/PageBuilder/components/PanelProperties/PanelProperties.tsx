@@ -45,6 +45,7 @@ const PanelProperties: FC<TPanelPropertiesProps> = () => {
   return (
     <Box
       classes={{ className: cx(classNamesWithTheme[className]) }}
+      onKeyDown={(event) => event.stopPropagation()}
       ref={boxRef}
       style={{ touchAction: 'manipulation' }}
       sx={{

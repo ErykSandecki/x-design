@@ -1,5 +1,6 @@
 import { ChangeEvent, useCallback, useEffect, useState } from 'react';
 import { Color } from 'antd/es/color-picker';
+import { debounce } from 'lodash';
 
 // hooks
 import { useOnBlurAlphaEvent } from './useOnBlurAlphaEvent';
@@ -7,7 +8,6 @@ import { useOnBlurColorEvent } from './useOnBlurColorEvent';
 import { useOnChangeAlphaEvent } from './useOnChangeAlphaEvent';
 import { useOnChangeColorEvent } from './useOnChangeColorEvent';
 import { useOnChangeColorPickerEvent } from './useOnChangeColorPickerEvent';
-import { debounce } from 'lodash';
 
 export type TUseColorPickerEvents = {
   alphaValue: string;
