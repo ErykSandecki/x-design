@@ -11,6 +11,7 @@ export enum E2EAttribute {
   logo = 'logo',
   resize = 'resize',
   section = 'section',
+  sectionColumn = 'section-column',
   tab = 'tab',
   test1 = 'test1',
   test2 = 'test2',

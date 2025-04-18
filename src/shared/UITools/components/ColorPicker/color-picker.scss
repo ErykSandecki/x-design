@@ -2,4 +2,8 @@
   &__hex-input {
     width: 100%;
   }
+
+  &__alpha-input {
+    flex-shrink: 0;
+  }
 }

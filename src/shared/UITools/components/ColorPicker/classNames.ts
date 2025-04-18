@@ -7,4 +7,5 @@ export const classes = {
 export const classNames = {
   [className]: className,
   hexInput: `${className}__hex-input`,
+  alphaInput: `${className}__alpha-input`,
 };

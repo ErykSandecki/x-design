@@ -5,7 +5,7 @@ import { THEME_COLORS } from 'constant/themeColors';
 
 // types
 import { ElementType, TElement, Theme } from 'types';
-import { TElementStaticData } from './types';
+import { TElementDynamicData, TElementStaticData } from './types';
 
 const value =
   localStorage.getItem(THEME) === Theme.dark
@@ -13,7 +13,7 @@ const value =
     : THEME_COLORS.light.neutral4;
 
 export const BASE_ALL_DATA: TElement = {
-  background: { alpha: '100', format: 'hex', value },
+  background: { alpha: '100', format: 'hex', value, visible: true },
   children: [],
   coordinates: BASE_2D,
   height: 0,
@@ -23,6 +23,16 @@ export const BASE_ALL_DATA: TElement = {
   rotate: 0,
   type: ElementType.base,
   width: 0,
+};
+
+export const BASE_DYNAMIC_DATA: TElementDynamicData = {
+  background: BASE_ALL_DATA.background,
+  coordinates: BASE_ALL_DATA.coordinates,
+  height: BASE_ALL_DATA.height,
+  id: BASE_ALL_DATA.id,
+  position: BASE_ALL_DATA.position,
+  rotate: BASE_ALL_DATA.rotate,
+  width: BASE_ALL_DATA.width,
 };
 
 export const BASE_STATIC_DATA: TElementStaticData = {

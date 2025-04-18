@@ -1,6 +1,8 @@
 import { ReactComponent as Check } from './svg/check.svg';
 import { ReactComponent as Close } from './svg/close.svg';
 import { ReactComponent as Comment } from './svg/comment.svg';
+import { ReactComponent as EyesClosed } from './svg/eyes-closed.svg';
+import { ReactComponent as EyesOpened } from './svg/eyes-opened.svg';
 import { ReactComponent as FrameTool } from './svg/frame-tool.svg';
 import { ReactComponent as Logo } from './svg/logo.svg';
 import { ReactComponent as MoveHand } from './svg/move-hand.svg';
@@ -13,6 +15,8 @@ export const Icons = {
   Check,
   Close,
   Comment,
+  EyesClosed,
+  EyesOpened,
   FrameTool,
   Logo,
   MoveHand,

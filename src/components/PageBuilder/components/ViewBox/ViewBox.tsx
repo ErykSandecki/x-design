@@ -53,6 +53,7 @@ const ViewBox: FC<TViewBoxProps> = ({
     <ZoomBox
       alpha={background.alpha}
       backgroundColor={background.value}
+      backgroundVissible={background.visible}
       classes={{
         className: cx(classNamesWithTheme[className].name, [
           classNamesWithTheme[className].modificators.createFrame,

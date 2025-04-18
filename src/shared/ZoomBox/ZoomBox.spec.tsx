@@ -24,6 +24,7 @@ describe('ZoomBox snapshots', () => {
       <ZoomBox
         alpha="100"
         backgroundColor="#ffffff"
+        backgroundVissible
         coordinates={BASE_3D}
         mouseMode={MouseMode.default}
         onMouseDown={mockCallBack}
@@ -46,6 +47,7 @@ describe('ZoomBox snapshots', () => {
       <ZoomBox
         alpha="100"
         backgroundColor="#ffffff"
+        backgroundVissible
         coordinates={BASE_3D}
         mouseMode={MouseMode.move}
         onMouseDown={mockCallBack}

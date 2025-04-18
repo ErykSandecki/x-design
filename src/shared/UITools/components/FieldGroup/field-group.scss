@@ -8,9 +8,6 @@
   column-gap: 1px;
   display: flex;
 
-  &:focus-within {
-  }
-
   *[data-test-text-field] {
     &:first-child {
       border-bottom-right-radius: 0;

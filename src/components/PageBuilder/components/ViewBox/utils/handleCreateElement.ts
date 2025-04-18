@@ -23,7 +23,12 @@ export const handleCreateElement = (
     const x = x1 < x2 ? x1 : x2;
     const y = y1 < y2 ? y1 : y2;
     const element: TAddELementActionPayload = {
-      background: { alpha: '100', format: 'hex', value: '#ffffff' },
+      background: {
+        alpha: '100',
+        format: 'hex',
+        value: '#ffffff',
+        visible: true,
+      },
       children: [],
       coordinates: { x, y },
       height: Math.abs(y1 - y2),

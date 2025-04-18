@@ -15,7 +15,11 @@ import {
   CHANGE_BACKGROUND,
 } from './actionsType';
 import { BASE_3D } from 'shared';
-import { BASE_ALL_DATA, BASE_STATIC_DATA } from './constants';
+import {
+  BASE_ALL_DATA,
+  BASE_DYNAMIC_DATA,
+  BASE_STATIC_DATA,
+} from './constants';
 
 // types
 import { Anchor } from './enums';
@@ -52,7 +56,9 @@ const initialState: TPageBuilderState = {
     allData: {
       [BASE_ALL_DATA.id]: BASE_ALL_DATA,
     },
-    dynamicData: {},
+    dynamicData: {
+      [BASE_DYNAMIC_DATA.id]: BASE_DYNAMIC_DATA,
+    },
     staticData: {
       [BASE_STATIC_DATA.id]: BASE_STATIC_DATA,
     },

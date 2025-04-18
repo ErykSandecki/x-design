@@ -1,6 +1,10 @@
 // others
 import { BASE_3D, BASE_RECT } from 'shared';
-import { BASE_ALL_DATA, BASE_STATIC_DATA } from 'store/pageBuilder/constants';
+import {
+  BASE_ALL_DATA,
+  BASE_DYNAMIC_DATA,
+  BASE_STATIC_DATA,
+} from 'store/pageBuilder/constants';
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 
 // types
@@ -24,7 +28,9 @@ export const pageBuilderStateMock: Record<
       allData: {
         [BASE_ALL_DATA.id]: BASE_ALL_DATA,
       },
-      dynamicData: {},
+      dynamicData: {
+        [BASE_DYNAMIC_DATA.id]: BASE_DYNAMIC_DATA,
+      },
       staticData: {
         [BASE_STATIC_DATA.id]: BASE_STATIC_DATA,
       },
@@ -46,7 +52,7 @@ export const pageBuilderStateMock: Record<
 };
 
 export const elementDynamicDataMock: TElementDynamicData = {
-  background: { alpha: '100', format: 'hex', value: '#ffffff' },
+  background: { alpha: '100', format: 'hex', value: '#ffffff', visible: true },
   coordinates: {
     x: 0,
     y: 0,
@@ -72,7 +78,7 @@ export const elementAllDataMock: TElement = {
 };
 
 export const createFrameMock: TElement = {
-  background: { alpha: '100', format: 'hex', value: '#ffffff' },
+  background: { alpha: '100', format: 'hex', value: '#ffffff', visible: true },
   children: [],
   coordinates: { x: 0, y: 0 },
   height: 0,

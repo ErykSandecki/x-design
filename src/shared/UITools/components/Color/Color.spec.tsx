@@ -3,10 +3,10 @@ import { render } from '@testing-library/react';
 // components
 import Color from './Color';
 
-describe('FieldGroup snapshots', () => {
-  it('should render FieldGroup', () => {
+describe('Color snapshots', () => {
+  it('should render Color', () => {
     // before
-    const { asFragment } = render(<Color>children</Color>);
+    const { asFragment } = render(<Color alpha="" color="" />);
 
     // result
     expect(asFragment()).toMatchSnapshot();

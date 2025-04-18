@@ -36,8 +36,8 @@ $--rx-font-size: 11px;
 
     background: none;
     border: none;
-
     outline: none;
+    width: 100%;
 
     &[type='number']::-webkit-outer-spin-button,
     &[type='number']::-webkit-inner-spin-button {

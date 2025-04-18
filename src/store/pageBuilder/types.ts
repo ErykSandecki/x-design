@@ -21,6 +21,7 @@ import {
   ElementType,
   T2DCoordinates,
   T3DCoordinates,
+  TBackground,
   TElement,
   TObject,
   TRectCoordinates,
@@ -95,10 +96,9 @@ export type TAddELementAction = {
   type: typeof ADD_ELEMENT;
 };
 
-export type TChangeBackgroundActionPayload = Pick<
-  TElement,
-  'background' | 'id'
->;
+export type TChangeBackgroundActionPayload = Pick<TElement, 'id'> & {
+  background: Partial<TBackground>;
+};
 
 export type TChangeBackgroundAction = {
   payload: TChangeBackgroundActionPayload;

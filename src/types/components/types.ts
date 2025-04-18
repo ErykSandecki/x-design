@@ -9,6 +9,7 @@ export type TBackground = {
   alpha: string;
   format: ColorFormatType;
   value: string;
+  visible: boolean;
 };
 
 export type TElement = {

@@ -95,7 +95,8 @@ export const ColorPicker: FC<TColorPickerProps> = ({
         value={colorValue.replace('#', '')}
       />
       <TextField
-        endAdorment={'%'}
+        className={cx(classNamesWithTheme.alphaInput)}
+        endAdorment={<div>%</div>}
         max={100}
         min={0}
         onBlur={onBlurAlpha}

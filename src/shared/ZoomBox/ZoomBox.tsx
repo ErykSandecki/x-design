@@ -22,6 +22,7 @@ import { hexToRgb } from 'utils';
 export type TZoomBoxProps = {
   alpha: string;
   backgroundColor: TBackground['value'];
+  backgroundVissible: boolean;
   children: ReactNode;
   classes?: typeof classes;
   coordinates: T3DCoordinates;
@@ -39,6 +40,7 @@ export type TZoomBoxProps = {
 export const ZoomBox: FC<TZoomBoxProps> = ({
   alpha,
   backgroundColor,
+  backgroundVissible,
   children,
   classes = { className: '' },
   coordinates,
@@ -83,12 +85,18 @@ export const ZoomBox: FC<TZoomBoxProps> = ({
       }}
       e2eValue="zoom-box"
       ref={zoomBoxRef}
-      sx={{ height: '100%', overflow: 'hidden' }}
+      sx={{
+        height: '100%',
+        overflow: 'hidden',
+      }}
       {...events}
     >
       <Box
         classes={{ className: cx(classNamesWithTheme.backgroundMask) }}
-        style={{ backgroundColor: hexToRgb(backgroundColor, parseInt(alpha)) }}
+        style={{
+          backgroundColor: hexToRgb(backgroundColor, parseInt(alpha)),
+          display: backgroundVissible ? 'initial' : 'none',
+        }}
       />
       <Box
         classes={{ className: cx(classNamesWithTheme.textureBlank) }}
