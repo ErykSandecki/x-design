@@ -1,0 +1,29 @@
+.FieldGroup {
+  @include theme-selector('blue-1', border, '&:focus-within', '1px solid');
+  @include theme('neutral-3', border, '1px solid');
+
+  align-items: center;
+  border-radius: 5px;
+  box-sizing: border-box;
+  column-gap: 1px;
+  display: flex;
+
+  &:focus-within {
+  }
+
+  *[data-test-text-field] {
+    &:first-child {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+    }
+  }
+}

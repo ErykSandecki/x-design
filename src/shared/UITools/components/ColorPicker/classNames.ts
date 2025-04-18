@@ -6,5 +6,6 @@ export const classes = {
 
 export const classNames = {
   [className]: className,
+  hexInput: `${className}__hex-input`,
   picker: `${className}__picker`,
 };

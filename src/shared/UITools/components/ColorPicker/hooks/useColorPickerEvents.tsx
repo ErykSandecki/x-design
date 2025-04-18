@@ -38,10 +38,21 @@ export const useColorPickerEvents = (
   return {
     alphaValue,
     colorValue,
-    onBlurAlpha: useOnBlurAlphaEvent(alpha, setAlphaValue),
-    onBlurColor: useOnBlurColorEvent(color, setColorValue),
-    onChangeAlpha: useOnChangeAlphaEvent(onChangeAlpha, setAlphaValue),
-    onChangeColor: useOnChangeColorEvent(alpha, onChangeColor, setColorValue),
+    onBlurAlpha: useOnBlurAlphaEvent(
+      alpha,
+      alphaValue,
+      onChangeAlpha,
+      setAlphaValue,
+    ),
+    onBlurColor: useOnBlurColorEvent(
+      alpha,
+      color,
+      colorValue,
+      onChangeColor,
+      setColorValue,
+    ),
+    onChangeAlpha: useOnChangeAlphaEvent(setAlphaValue),
+    onChangeColor: useOnChangeColorEvent(setColorValue),
     onChangeColorPicker: useOnChangeColorPickerEvent(onChangeColor),
   };
 };

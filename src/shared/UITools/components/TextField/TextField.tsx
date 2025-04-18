@@ -7,7 +7,7 @@ import Box from '../../../UI/components/Box/Box';
 import { useTheme } from 'hooks';
 
 // others
-import { className, classNames } from './classNames';
+import { className as textFieldClassName, classNames } from './classNames';
 
 // styles
 import styles from './text-field.scss';
@@ -20,12 +20,14 @@ export type TTextFieldProps = Omit<
   InputHTMLAttributes<HTMLInputElement>,
   'className' | 'color' | 'style'
 > & {
+  className?: string;
   e2eValue?: TE2EDataAttributeProps['value'];
   endAdorment?: ReactNode;
   startAdornment?: ReactNode;
 };
 
 export const TextField: FC<TTextFieldProps> = ({
+  className = '',
   e2eValue = '',
   endAdorment,
   startAdornment,
@@ -36,7 +38,7 @@ export const TextField: FC<TTextFieldProps> = ({
   return (
     <Box
       classes={{
-        className: cx(classNamesWithTheme[className].name),
+        className: cx(className, classNamesWithTheme[textFieldClassName].name),
       }}
       e2eAttribute={E2EAttribute.textField}
       e2eValue={e2eValue}

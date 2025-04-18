@@ -2,6 +2,7 @@ import { ColorPicker as ColorPickerAntd, ColorPickerProps } from 'antd';
 import { FC, useState } from 'react';
 
 // components
+import FieldGroup from '../FieldGroup/FieldGroup';
 import Panel from './components/Panel/Panel';
 import TextField from '../TextField/TextField';
 
@@ -60,8 +61,9 @@ export const ColorPicker: FC<TColorPickerProps> = ({
   const [visible, setVisible] = useState(false);
 
   return (
-    <>
+    <FieldGroup>
       <TextField
+        className={cx(classNamesWithTheme.hexInput)}
         onBlur={onBlurColor}
         onChange={onChangeColor}
         startAdornment={
@@ -95,7 +97,7 @@ export const ColorPicker: FC<TColorPickerProps> = ({
         type="number"
         value={alphaValue}
       />
-    </>
+    </FieldGroup>
   );
 };
 
