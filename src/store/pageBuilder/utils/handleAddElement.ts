@@ -22,7 +22,7 @@ export const handleAddElement = (
       ...state.elements.dynamicData,
       [element.id]: pick(
         element,
-        'backgroundColor',
+        'background',
         'coordinates',
         'height',
         'id',

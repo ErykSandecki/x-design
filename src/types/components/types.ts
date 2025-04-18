@@ -6,12 +6,13 @@ import { ElementType } from './enums';
 import { T2DCoordinates } from 'types/types';
 
 export type TBackground = {
+  alpha: string;
   format: ColorFormatType;
   value: string;
 };
 
 export type TElement = {
-  backgroundColor: TBackground;
+  background: TBackground;
   children: Array<string>;
   coordinates: T2DCoordinates;
   height: number | CSSProperties['height'];

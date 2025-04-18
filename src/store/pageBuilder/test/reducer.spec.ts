@@ -69,7 +69,7 @@ describe('PageBuilderReducer', () => {
         },
         dynamicData: {
           [createFrameMock.id]: {
-            backgroundColor: createFrameMock.backgroundColor,
+            background: createFrameMock.background,
             coordinates: createFrameMock.coordinates,
             height: createFrameMock.height,
             id: createFrameMock.id,

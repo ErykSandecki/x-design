@@ -16,55 +16,86 @@ import { classes, className, classNames } from './classNames';
 import styles from './color-picker.scss';
 
 // types
-import { E2EAttribute } from 'types';
+import { E2EAttribute, TBackground } from 'types';
 import { TE2EDataAttributeProps } from '../../../E2EDataAttributes/E2EDataAttribute';
 import { TUIProps } from '../../../UI/types';
 
 // utils
 import { getAttributes } from '../../../E2EDataAttributes/utils';
+import { hexToRgb } from 'utils';
 
 export type TColorPickerProps = TUIProps<typeof classes> &
   Omit<ColorPickerProps, 'arrow' | 'onOpenChange' | 'open' | 'panelRender'> & {
+    alpha: TBackground['alpha'];
+    color: string;
     e2eValue?: TE2EDataAttributeProps['value'];
-    onChange: (value: string) => void;
+    onChangeAlpha: (value: string) => void;
+    onChangeColor: (alpha: string, value: string) => void;
   };
 
 export const ColorPicker: FC<TColorPickerProps> = ({
+  alpha,
   classes = { className: '' },
+  color,
   e2eValue = '',
-  onChange,
+  onChangeAlpha: onChangeAlphaHandler,
+  onChangeColor: onChangeColorHandler,
   ...restProps
 }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-  const { colorValue, onBlurColor, onChangeColor, onChangeColorPicker } =
-    useColorPickerEvents(restProps.value as string, onChange);
+  const {
+    alphaValue,
+    colorValue,
+    onBlurAlpha,
+    onBlurColor,
+    onChangeAlpha,
+    onChangeColor,
+    onChangeColorPicker,
+  } = useColorPickerEvents(
+    alpha,
+    color,
+    onChangeAlphaHandler,
+    onChangeColorHandler,
+  );
   const [visible, setVisible] = useState(false);
 
   return (
-    <TextField
-      onBlur={onBlurColor}
-      onChange={onChangeColor}
-      startAdornment={
-        <ColorPickerAntd
-          arrow={false}
-          className={cx(classes.className, classNamesWithTheme[className])}
-          onChange={onChangeColorPicker}
-          onOpenChange={(visible) => setVisible(visible)}
-          open={visible}
-          panelRender={(children) => (
-            <Panel setVisible={setVisible}>{children}</Panel>
-          )}
-          {...getAttributes(E2EAttribute.colorPicker, e2eValue)}
-          {...restProps}
-        >
-          <div
-            className={cx(classNamesWithTheme.picker)}
-            style={{ backgroundColor: restProps.value as string }}
-          />
-        </ColorPickerAntd>
-      }
-      value={colorValue.replace('#', '')}
-    />
+    <>
+      <TextField
+        onBlur={onBlurColor}
+        onChange={onChangeColor}
+        startAdornment={
+          <ColorPickerAntd
+            arrow={false}
+            className={cx(classes.className, classNamesWithTheme[className])}
+            onChange={onChangeColorPicker}
+            onOpenChange={(visible) => setVisible(visible)}
+            open={visible}
+            panelRender={(children) => (
+              <Panel setVisible={setVisible}>{children}</Panel>
+            )}
+            value={hexToRgb(colorValue, parseInt(alphaValue))}
+            {...getAttributes(E2EAttribute.colorPicker, e2eValue)}
+            {...restProps}
+          >
+            <div
+              className={cx(classNamesWithTheme.picker)}
+              style={{ backgroundColor: color }}
+            />
+          </ColorPickerAntd>
+        }
+        value={colorValue.replace('#', '')}
+      />
+      <TextField
+        endAdorment={'%'}
+        max={100}
+        min={0}
+        onBlur={onBlurAlpha}
+        onChange={onChangeAlpha}
+        type="number"
+        value={alphaValue}
+      />
+    </>
   );
 };
 

@@ -1,3 +1,18 @@
+$--rx-font-family:
+  Inter,
+  ui-sans-serif,
+  system-ui,
+  -apple-system,
+  'system-ui',
+  'Segoe UI',
+  Roboto,
+  'Helvetica Neue',
+  Arial,
+  'Noto Sans',
+  sans-serif,
+  SFProLocalRange;
+$--rx-font-size: 11px;
+
 .TextField {
   @include theme('neutral-3', background-color);
 
@@ -6,28 +21,31 @@
   box-sizing: border-box;
   column-gap: 5px;
   display: flex;
+  font-family: $--rx-font-family;
+  font-size: $--rx-font-size;
   height: 24px;
   padding: 0 5px;
+
+  & * {
+    font-family: $--rx-font-family;
+    font-size: $--rx-font-size;
+  }
 
   &__input {
     @include theme('neutral-1', color);
 
     background: none;
     border: none;
-    font-family:
-      Inter,
-      ui-sans-serif,
-      system-ui,
-      -apple-system,
-      'system-ui',
-      'Segoe UI',
-      Roboto,
-      'Helvetica Neue',
-      Arial,
-      'Noto Sans',
-      sans-serif,
-      SFProLocalRange;
-    font-size: 11px;
+
     outline: none;
+
+    &[type='number']::-webkit-outer-spin-button,
+    &[type='number']::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    &[type='number'] {
+      -moz-appearance: textfield;
+    }
   }
 }

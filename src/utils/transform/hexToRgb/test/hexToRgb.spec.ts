@@ -9,12 +9,4 @@ describe('hexToRgb', () => {
     // result
     expect(result).toStrictEqual({ b: 0, g: 0, r: 0 });
   });
-
-  it('Should return null', () => {
-    // before
-    const result = hexToRgb();
-
-    // result
-    expect(result).toBe(null);
-  });
 });

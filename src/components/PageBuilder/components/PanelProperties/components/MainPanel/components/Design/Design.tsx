@@ -16,22 +16,28 @@ export type TDesign = {};
 
 const Design: FC<TDesign> = () => {
   const dispatch = useDispatch();
-  const { format, value } = useSelector(pageBackgroundSelectorCreator('-1'));
+  const { alpha, format, value } = useSelector(
+    pageBackgroundSelectorCreator('-1'),
+  );
   const { t } = useTranslation();
 
   return (
     <>
       <UITools.Section label={t(`${translationNameSpace}.section.1.label`)}>
         <UITools.ColorPicker
+          alpha={alpha}
+          color={value}
           format={format}
-          onChange={(value) =>
-            dispatch(changeBackground({ format, value }, '-1'))
+          onChangeAlpha={(alpha) =>
+            dispatch(changeBackground({ alpha, format, value }, '-1'))
+          }
+          onChangeColor={(alpha, value) =>
+            dispatch(changeBackground({ alpha, format, value }, '-1'))
           }
           onFormatChange={(format) =>
-            dispatch(changeBackground({ format, value }, '-1'))
+            dispatch(changeBackground({ alpha, format, value }, '-1'))
           }
           placement="leftBottom"
-          value={value}
         />
       </UITools.Section>
     </>

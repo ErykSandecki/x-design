@@ -17,8 +17,10 @@ import styles from './zoom-box.scss';
 // types
 import { MouseMode } from 'components/PageBuilder/enums';
 import { T3DCoordinates, TBackground } from 'types';
+import { hexToRgb } from 'utils';
 
 export type TZoomBoxProps = {
+  alpha: string;
   backgroundColor: TBackground['value'];
   children: ReactNode;
   classes?: typeof classes;
@@ -35,6 +37,7 @@ export type TZoomBoxProps = {
 };
 
 export const ZoomBox: FC<TZoomBoxProps> = ({
+  alpha,
   backgroundColor,
   children,
   classes = { className: '' },
@@ -80,7 +83,7 @@ export const ZoomBox: FC<TZoomBoxProps> = ({
       }}
       e2eValue="zoom-box"
       ref={zoomBoxRef}
-      style={{ backgroundColor }}
+      style={{ backgroundColor: hexToRgb(backgroundColor, parseInt(alpha)) }}
       sx={{ height: '100%', overflow: 'hidden' }}
       {...events}
     >

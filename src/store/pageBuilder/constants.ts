@@ -13,7 +13,7 @@ const value =
     : THEME_COLORS.light.neutral4;
 
 export const BASE_ALL_DATA: TElement = {
-  backgroundColor: { format: 'hex', value },
+  background: { alpha: '100', format: 'hex', value },
   children: [],
   coordinates: BASE_2D,
   height: 0,

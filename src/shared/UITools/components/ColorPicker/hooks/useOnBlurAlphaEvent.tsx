@@ -1,9 +1,9 @@
-export type TUseOnBlurColorEvent = () => void;
+export type TUseOnBlurAlphaEvent = () => void;
 
-export const useOnBlurColorEvent = (
+export const useOnBlurAlphaEvent = (
   currentValue: string,
   setValue: (value: string) => void,
-): TUseOnBlurColorEvent => {
+): TUseOnBlurAlphaEvent => {
   const handleBlur = (): void => {
     setValue(currentValue);
   };

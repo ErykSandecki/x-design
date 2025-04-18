@@ -21,11 +21,13 @@ export type TTextFieldProps = Omit<
   'className' | 'color' | 'style'
 > & {
   e2eValue?: TE2EDataAttributeProps['value'];
+  endAdorment?: ReactNode;
   startAdornment?: ReactNode;
 };
 
 export const TextField: FC<TTextFieldProps> = ({
   e2eValue = '',
+  endAdorment,
   startAdornment,
   ...restProps
 }) => {
@@ -45,6 +47,7 @@ export const TextField: FC<TTextFieldProps> = ({
         maxLength={6}
         {...restProps}
       />
+      {endAdorment}
     </Box>
   );
 };

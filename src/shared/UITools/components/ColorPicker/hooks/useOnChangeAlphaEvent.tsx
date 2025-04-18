@@ -1,22 +1,18 @@
 import { ChangeEvent } from 'react';
 
-// utils
-import { isHexColor } from 'utils';
-
-export type TUseOnChangeColorEvent = (
+export type TUseOnChangeAlphaEvent = (
   event: ChangeEvent<HTMLInputElement>,
 ) => void;
 
-export const useOnChangeColorEvent = (
-  alpha: string,
-  onChange: (alpha: string, value: string) => void,
+export const useOnChangeAlphaEvent = (
+  onChange: (value: string) => void,
   setValue: (value: string) => void,
-): TUseOnChangeColorEvent => {
+): TUseOnChangeAlphaEvent => {
   const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
     const { value } = event.target as HTMLInputElement;
 
-    if (isHexColor(value)) {
-      onChange(alpha, `#${value}`);
+    if (value) {
+      onChange(value);
     }
 
     setValue(value);

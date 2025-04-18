@@ -12,14 +12,14 @@ export const handleChangeBackground = (
       ...state.elements.allData,
       [payload.id]: {
         ...state.elements.allData[payload.id],
-        backgroundColor: payload.backgroundColor,
+        background: payload.background,
       },
     },
     dynamicData: {
       ...state.elements.dynamicData,
       [payload.id]: {
         ...state.elements.dynamicData[payload.id],
-        backgroundColor: payload.backgroundColor,
+        background: payload.background,
       },
     },
   },

@@ -1,14 +1,17 @@
-// types
-import { THexArg, THexToRgb } from './types';
+export const hexToRgb = (hex: string, alpha = 100) => {
+  hex = hex.replace(/^#/, '');
 
-export const hexToRgb = (hex?: THexArg): THexToRgb | null => {
-  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  if (hex.length === 3) {
+    hex = hex
+      .split('')
+      .map((c) => c + c)
+      .join('');
+  }
 
-  return result
-    ? {
-        b: parseInt(result[3], 16),
-        g: parseInt(result[2], 16),
-        r: parseInt(result[1], 16),
-      }
-    : null;
+  const bigint = parseInt(hex, 16);
+  const r = (bigint >> 16) & 255;
+  const g = (bigint >> 8) & 255;
+  const b = bigint & 255;
+
+  return `rgba(${r}, ${g}, ${b}, ${alpha / 100})`;
 };

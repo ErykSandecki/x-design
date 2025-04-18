@@ -46,10 +46,10 @@ export const addElement = (
 });
 
 export const changeBackground = (
-  backgroundColor: TChangeBackgroundActionPayload['backgroundColor'],
+  backgroundColor: TChangeBackgroundActionPayload['background'],
   id: TChangeBackgroundActionPayload['id'],
 ): TChangeBackgroundAction => ({
-  payload: { backgroundColor, id },
+  payload: { background: backgroundColor, id },
   type: CHANGE_BACKGROUND,
 });
 

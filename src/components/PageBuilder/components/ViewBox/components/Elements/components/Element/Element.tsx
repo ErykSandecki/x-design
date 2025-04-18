@@ -60,8 +60,7 @@ const Element: FC<TElementProps> = ({
   const elementRef = useRef<HTMLDivElement>(null);
   const elementDynamicData = useSelector(elementDynamicDataSelectorCreator(id));
   const { coordinates } = elementDynamicData;
-  const { backgroundColor, height, position, rotate, width } =
-    elementDynamicData;
+  const { background, height, position, rotate, width } = elementDynamicData;
   const { x, y } = coordinates;
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const rectCoordinates = getCornersPosition(height, width);
@@ -103,7 +102,7 @@ const Element: FC<TElementProps> = ({
       id={id}
       ref={elementRef}
       style={{
-        backgroundColor: backgroundColor.value,
+        backgroundColor: background.value,
         height: isNumber(height) ? `${height}px` : height,
         left: `${x}px`,
         position,

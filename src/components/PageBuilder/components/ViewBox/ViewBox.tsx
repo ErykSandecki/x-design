@@ -39,7 +39,7 @@ const ViewBox: FC<TViewBoxProps> = ({
   setCoordinates,
   setMouseMode,
 }) => {
-  const backgroundColor = useSelector(pageBackgroundSelectorCreator('-1'));
+  const background = useSelector(pageBackgroundSelectorCreator('-1'));
   const dispatch = useDispatch();
   const zoomBoxRef = useRef<HTMLDivElement>(null);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
@@ -51,7 +51,8 @@ const ViewBox: FC<TViewBoxProps> = ({
 
   return (
     <ZoomBox
-      backgroundColor={backgroundColor.value}
+      alpha={background.alpha}
+      backgroundColor={background.value}
       classes={{
         className: cx(classNamesWithTheme[className].name, [
           classNamesWithTheme[className].modificators.createFrame,

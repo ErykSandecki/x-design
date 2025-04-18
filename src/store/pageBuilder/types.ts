@@ -21,7 +21,6 @@ import {
   ElementType,
   T2DCoordinates,
   T3DCoordinates,
-  TBackground,
   TElement,
   TObject,
   TRectCoordinates,
@@ -29,7 +28,7 @@ import {
 
 export type TElementDynamicData = Pick<
   TElement,
-  | 'backgroundColor'
+  | 'background'
   | 'coordinates'
   | 'height'
   | 'id'
@@ -98,7 +97,7 @@ export type TAddELementAction = {
 
 export type TChangeBackgroundActionPayload = Pick<
   TElement,
-  'backgroundColor' | 'id'
+  'background' | 'id'
 >;
 
 export type TChangeBackgroundAction = {

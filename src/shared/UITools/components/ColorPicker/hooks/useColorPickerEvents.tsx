@@ -1,30 +1,47 @@
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 import { Color } from 'antd/es/color-picker';
 
 // hooks
+import { useOnBlurAlphaEvent } from './useOnBlurAlphaEvent';
 import { useOnBlurColorEvent } from './useOnBlurColorEvent';
+import { useOnChangeAlphaEvent } from './useOnChangeAlphaEvent';
 import { useOnChangeColorEvent } from './useOnChangeColorEvent';
 import { useOnChangeColorPickerEvent } from './useOnChangeColorPickerEvent';
 
 export type TUseColorPickerEvents = {
+  alphaValue: string;
   colorValue: string;
+  onBlurAlpha: () => void;
   onBlurColor: () => void;
+  onChangeAlpha: (event: ChangeEvent<HTMLInputElement>) => void;
   onChangeColor: (event: ChangeEvent<HTMLInputElement>) => void;
   onChangeColorPicker: (value: Color) => void;
 };
 
 export const useColorPickerEvents = (
-  currentValue: string,
-  onChange: (value: string) => void,
+  alpha: string,
+  color: string,
+  onChangeAlpha: (value: string) => void,
+  onChangeColor: (alpha: string, value: string) => void,
 ): TUseColorPickerEvents => {
-  const [colorValue, setColorValue] = useState<string>(
-    currentValue.substring(1),
-  );
+  const [alphaValue, setAlphaValue] = useState<string>(alpha);
+  const [colorValue, setColorValue] = useState<string>(color.substring(1));
+
+  useEffect(() => {
+    setAlphaValue(alpha);
+  }, [alpha]);
+
+  useEffect(() => {
+    setColorValue(color.substring(1));
+  }, [color]);
 
   return {
+    alphaValue,
     colorValue,
-    onBlurColor: useOnBlurColorEvent(currentValue, setColorValue),
-    onChangeColor: useOnChangeColorEvent(onChange, setColorValue),
-    onChangeColorPicker: useOnChangeColorPickerEvent(onChange),
+    onBlurAlpha: useOnBlurAlphaEvent(alpha, setAlphaValue),
+    onBlurColor: useOnBlurColorEvent(color, setColorValue),
+    onChangeAlpha: useOnChangeAlphaEvent(onChangeAlpha, setAlphaValue),
+    onChangeColor: useOnChangeColorEvent(alpha, onChangeColor, setColorValue),
+    onChangeColorPicker: useOnChangeColorPickerEvent(onChangeColor),
   };
 };

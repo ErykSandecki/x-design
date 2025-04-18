@@ -39,8 +39,8 @@ export const allDataSelector: Selector<TMainState, TElementsData['allData']> =
 
 export const pageBackgroundSelectorCreator = (
   id: TElement['id'] | '-1',
-): Selector<TMainState, TElement['backgroundColor']> =>
-  createSelector(allDataSelector, compose(getFp('backgroundColor'), getFp(id)));
+): Selector<TMainState, TElement['background']> =>
+  createSelector(allDataSelector, compose(getFp('background'), getFp(id)));
 
 export const childrenSelectorCreator = (
   id: TElement['id'] | '-1',

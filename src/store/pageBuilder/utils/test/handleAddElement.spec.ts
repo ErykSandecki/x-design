@@ -31,7 +31,7 @@ describe('handleAddElement', () => {
         },
         dynamicData: {
           [createFrameMock.id]: {
-            backgroundColor: createFrameMock.backgroundColor,
+            backgroundColor: createFrameMock.background,
             coordinates: createFrameMock.coordinates,
             height: createFrameMock.height,
             id: createFrameMock.id,

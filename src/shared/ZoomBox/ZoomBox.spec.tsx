@@ -22,6 +22,7 @@ describe('ZoomBox snapshots', () => {
     //before
     const { asFragment } = render(
       <ZoomBox
+        alpha="100"
         backgroundColor="#ffffff"
         coordinates={BASE_3D}
         mouseMode={MouseMode.default}
@@ -43,6 +44,7 @@ describe('ZoomBox snapshots', () => {
     //before
     const { asFragment, container } = render(
       <ZoomBox
+        alpha="100"
         backgroundColor="#ffffff"
         coordinates={BASE_3D}
         mouseMode={MouseMode.move}
