@@ -8,6 +8,7 @@ exports[`TextField snapshots should render TextField 1`] = `
   >
     <input
       class="TextField__input TextField__input--light"
+      data-test-text-field-input=""
       maxlength="6"
     />
   </div>

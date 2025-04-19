@@ -8,7 +8,7 @@ exports[`ColorPicker snapshots should render ColorPicker 1`] = `
   >
     <div
       class="css-q0izro ColorPicker__hex-input ColorPicker__hex-input--light TextField TextField--light"
-      data-test-text-field=""
+      data-test-text-field="color"
     >
       <div
         aria-describedby="test-id"
@@ -32,16 +32,18 @@ exports[`ColorPicker snapshots should render ColorPicker 1`] = `
       </div>
       <input
         class="TextField__input TextField__input--light"
+        data-test-text-field-input="color"
         maxlength="6"
         value="ffffff"
       />
     </div>
     <div
       class="css-q0izro ColorPicker__alpha-input ColorPicker__alpha-input--light TextField TextField--light"
-      data-test-text-field=""
+      data-test-text-field="alpha"
     >
       <input
         class="TextField__input TextField__input--light"
+        data-test-text-field-input="alpha"
         max="100"
         maxlength="6"
         min="0"

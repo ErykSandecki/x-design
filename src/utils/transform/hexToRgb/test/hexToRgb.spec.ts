@@ -9,4 +9,12 @@ describe('hexToRgb', () => {
     // result
     expect(result).toStrictEqual('rgba(0, 0, 0, 1)');
   });
+
+  it('Should return rgb value', () => {
+    // before
+    const result = hexToRgb('#000');
+
+    // result
+    expect(result).toStrictEqual('rgba(0, 0, 0, 1)');
+  });
 });

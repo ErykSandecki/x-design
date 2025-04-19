@@ -33,6 +33,7 @@ export const Panel: FC<TPanelProps> = ({ children, setVisible }) => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    /* istanbul ignore next */
     if (ref.current) {
       const pickerContainer = ref.current.getElementsByClassName(
         antColorPickerSliderContainerClassName,

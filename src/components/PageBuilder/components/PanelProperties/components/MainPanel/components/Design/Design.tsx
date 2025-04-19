@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
 // components
-import { Icon, UITools } from 'shared';
+import { UITools } from 'shared';
 
 // others
 import { translationNameSpace } from './constants';
@@ -12,9 +12,7 @@ import { translationNameSpace } from './constants';
 import { changeBackground } from 'store/pageBuilder/actions';
 import { pageBackgroundSelectorCreator } from 'store/pageBuilder/selectors';
 
-export type TDesign = {};
-
-const Design: FC<TDesign> = () => {
+const Design: FC = () => {
   const dispatch = useDispatch();
   const { alpha, format, value, visible } = useSelector(
     pageBackgroundSelectorCreator('-1'),

@@ -17,6 +17,8 @@ import styles from './zoom-box.scss';
 // types
 import { MouseMode } from 'components/PageBuilder/enums';
 import { T3DCoordinates, TBackground } from 'types';
+
+// utils
 import { hexToRgb } from 'utils';
 
 export type TZoomBoxProps = {

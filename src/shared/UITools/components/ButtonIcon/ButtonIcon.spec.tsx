@@ -11,4 +11,12 @@ describe('ButtonIcon snapshots', () => {
     // result
     expect(asFragment()).toMatchSnapshot();
   });
+
+  it('should render when is selected', () => {
+    // before
+    const { asFragment } = render(<ButtonIcon name="Close" selected />);
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
 });

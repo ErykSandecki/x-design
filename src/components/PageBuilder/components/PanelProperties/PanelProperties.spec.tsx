@@ -16,6 +16,8 @@ import { E2EAttribute, MouseButton } from 'types';
 // utils
 import { getByE2EAttribute } from 'test';
 
+const mockCallBack = jest.fn();
+
 describe('PanelProperties snapshots', () => {
   it('should render PanelProperties', () => {
     // mock
@@ -51,5 +53,29 @@ describe('PanelProperties snapshots', () => {
 
     // result
     expect(asFragment()).toMatchSnapshot();
+  });
+});
+
+describe('PanelProperties behaviors', () => {
+  it('should stop propagation on key down', () => {
+    // mock
+    const store = configureStore();
+
+    // before
+    const { container } = render(
+      <Provider store={store}>
+        <div onKeyDown={mockCallBack}>
+          <PanelProperties />
+        </div>
+      </Provider>,
+    );
+
+    // action
+    fireEvent.keyDown(
+      getByE2EAttribute(container, E2EAttribute.box, 'panel-properties'),
+    );
+
+    // result
+    expect(mockCallBack.mock.calls.length).toBe(0);
   });
 });

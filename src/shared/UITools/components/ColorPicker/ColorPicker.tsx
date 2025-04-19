@@ -67,6 +67,7 @@ export const ColorPicker: FC<TColorPickerProps> = ({
     <FieldGroup>
       <TextField
         className={cx(classNamesWithTheme.hexInput)}
+        e2eValue="color"
         onBlur={onBlurColor}
         onChange={onChangeColor}
         onKeyDown={(event) =>
@@ -96,6 +97,7 @@ export const ColorPicker: FC<TColorPickerProps> = ({
       />
       <TextField
         className={cx(classNamesWithTheme.alphaInput)}
+        e2eValue="alpha"
         endAdorment={<div>%</div>}
         max={100}
         min={0}

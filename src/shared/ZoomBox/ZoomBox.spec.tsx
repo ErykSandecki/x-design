@@ -71,4 +71,27 @@ describe('ZoomBox snapshots', () => {
     // result
     expect(asFragment()).toMatchSnapshot();
   });
+
+  it('should render when background is hidden', () => {
+    //before
+    const { asFragment } = render(
+      <ZoomBox
+        alpha="100"
+        backgroundColor="#ffffff"
+        backgroundVissible={false}
+        coordinates={BASE_3D}
+        mouseMode={MouseMode.default}
+        onMouseDown={mockCallBack}
+        onMouseMove={mockCallBack}
+        onMouseUp={mockCallBack}
+        setCoordinates={noop}
+        zoomBoxRef={ref}
+      >
+        children
+      </ZoomBox>,
+    );
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
 });

@@ -16,6 +16,9 @@ import styles from './text-field.scss';
 import { E2EAttribute } from 'types';
 import { TE2EDataAttributeProps } from '../../../E2EDataAttributes/E2EDataAttribute';
 
+// utils
+import { getAttributes } from 'shared/E2EDataAttributes/utils';
+
 export type TTextFieldProps = Omit<
   InputHTMLAttributes<HTMLInputElement>,
   'className' | 'color' | 'style'
@@ -50,6 +53,7 @@ export const TextField: FC<TTextFieldProps> = ({
         className={cx(classNamesWithTheme.input)}
         maxLength={6}
         ref={ref}
+        {...getAttributes(E2EAttribute.textFieldInput, e2eValue)}
         {...restProps}
       />
       {endAdorment}
