@@ -7,7 +7,7 @@ import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
 // store
 import { dynamicDataSelector } from '../../selectors';
 
-const { elements } = pageBuilderStateMock[PAGE_BUILDER];
+const { elements } = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
 describe('dynamicDataSelector', () => {
   it('should return data', () => {
@@ -16,7 +16,7 @@ describe('dynamicDataSelector', () => {
 
     // result
     expect(selectorFunction(elements)).toStrictEqual({
-      ...pageBuilderStateMock[PAGE_BUILDER].elements.dynamicData,
+      ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements.dynamicData,
     });
   });
 });

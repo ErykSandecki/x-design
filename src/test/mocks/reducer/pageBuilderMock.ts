@@ -1,10 +1,6 @@
 // others
-import { BASE_3D, BASE_RECT } from 'shared';
-import {
-  BASE_ALL_DATA,
-  BASE_DYNAMIC_DATA,
-  BASE_STATIC_DATA,
-} from 'store/pageBuilder/constants';
+import { BASE_RECT } from 'shared';
+import { BASE_PAGE } from 'store/pageBuilder/constants';
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 
 // types
@@ -23,18 +19,7 @@ export const pageBuilderStateMock: Record<
   TPageBuilderState
 > = {
   [PAGE_BUILDER]: {
-    areaCoordinates: BASE_3D,
-    elements: {
-      allData: {
-        [BASE_ALL_DATA.id]: BASE_ALL_DATA,
-      },
-      dynamicData: {
-        [BASE_DYNAMIC_DATA.id]: BASE_DYNAMIC_DATA,
-      },
-      staticData: {
-        [BASE_STATIC_DATA.id]: BASE_STATIC_DATA,
-      },
-    },
+    currentPage: '0',
     events: {
       canMoveElements: true,
       draggableElements: [],
@@ -46,8 +31,9 @@ export const pageBuilderStateMock: Record<
     },
     isLoading: true,
     isPending: false,
-    prevState: undefined,
-    selectedElements: [],
+    pages: {
+      [BASE_PAGE.id]: BASE_PAGE,
+    },
   },
 };
 

@@ -32,6 +32,7 @@ describe('getMappedElementsToMove', () => {
 
   it(`should get mapped children when parent was not changed`, () => {
     // mock
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
     const payload = {
       draggableElements: ['1'],
       possibleIndexPosition: null,
@@ -41,31 +42,37 @@ describe('getMappedElementsToMove', () => {
     // before
     const result = getMappedElementsToMove(false, payload, {
       ...pageBuilderStateMock[PAGE_BUILDER],
-      elements: {
-        ...pageBuilderStateMock[PAGE_BUILDER].elements,
-        allData: {
-          ['-1']: {
-            ...pageBuilderStateMock[PAGE_BUILDER].elements.allData['-1'],
-            children: [elementAllDataMock.id],
-          },
-          [elementAllDataMock.id]: {
-            ...elementAllDataMock,
-            children: [],
-          },
-        },
-        dynamicData: {
-          [elementDynamicDataMock.id]: {
-            ...elementDynamicDataMock,
-          },
-        },
-        staticData: {
-          ['-1']: {
-            ...pageBuilderStateMock[PAGE_BUILDER].elements.staticData['-1'],
-            children: [elementAllDataMock.id],
-          },
-          [elementStaticDataMock.id]: {
-            ...elementStaticDataMock,
-            children: [],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            allData: {
+              ['-1']: {
+                ...currentPage.elements.allData['-1'],
+                children: [elementAllDataMock.id],
+              },
+              [elementAllDataMock.id]: {
+                ...elementAllDataMock,
+                children: [],
+              },
+            },
+            dynamicData: {
+              [elementDynamicDataMock.id]: {
+                ...elementDynamicDataMock,
+              },
+            },
+            staticData: {
+              ['-1']: {
+                ...currentPage.elements.staticData['-1'],
+                children: [elementAllDataMock.id],
+              },
+              [elementStaticDataMock.id]: {
+                ...elementStaticDataMock,
+                children: [],
+              },
+            },
           },
         },
       },
@@ -73,7 +80,7 @@ describe('getMappedElementsToMove', () => {
 
     // result
     expect(result).toStrictEqual({
-      ...pageBuilderStateMock[PAGE_BUILDER].elements,
+      ...currentPage.elements,
       allData: {
         [elementAllDataMock.id]: {
           ...elementAllDataMock,
@@ -96,6 +103,7 @@ describe('getMappedElementsToMove', () => {
 
   it(`should get mapped children when parent was changed`, () => {
     // mock
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
     const payload = {
       draggableElements: ['2'],
       possibleIndexPosition: null,
@@ -105,45 +113,51 @@ describe('getMappedElementsToMove', () => {
     // before
     const result = getMappedElementsToMove(true, payload, {
       ...pageBuilderStateMock[PAGE_BUILDER],
-      elements: {
-        ...pageBuilderStateMock[PAGE_BUILDER].elements,
-        allData: {
-          ['-1']: {
-            ...pageBuilderStateMock[PAGE_BUILDER].elements.allData['-1'],
-            children: [elementAllDataMock.id],
-          },
-          [elementAllDataMock.id]: {
-            ...elementAllDataMock,
-            children: ['2'],
-          },
-          ['2']: {
-            ...elementAllDataMock,
-            id: '2',
-            parentId: elementStaticDataMock.id,
-          },
-        },
-        dynamicData: {
-          [elementDynamicDataMock.id]: {
-            ...elementDynamicDataMock,
-          },
-          ['2']: {
-            ...elementDynamicDataMock,
-            id: '2',
-          },
-        },
-        staticData: {
-          ['-1']: {
-            ...pageBuilderStateMock[PAGE_BUILDER].elements.staticData['-1'],
-            children: [elementAllDataMock.id],
-          },
-          [elementStaticDataMock.id]: {
-            ...elementStaticDataMock,
-            children: ['2'],
-          },
-          ['2']: {
-            ...elementStaticDataMock,
-            id: '2',
-            parentId: elementStaticDataMock.id,
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            allData: {
+              ['-1']: {
+                ...currentPage.elements.allData['-1'],
+                children: [elementAllDataMock.id],
+              },
+              [elementAllDataMock.id]: {
+                ...elementAllDataMock,
+                children: ['2'],
+              },
+              ['2']: {
+                ...elementAllDataMock,
+                id: '2',
+                parentId: elementStaticDataMock.id,
+              },
+            },
+            dynamicData: {
+              [elementDynamicDataMock.id]: {
+                ...elementDynamicDataMock,
+              },
+              ['2']: {
+                ...elementDynamicDataMock,
+                id: '2',
+              },
+            },
+            staticData: {
+              ['-1']: {
+                ...currentPage.elements.staticData['-1'],
+                children: [elementAllDataMock.id],
+              },
+              [elementStaticDataMock.id]: {
+                ...elementStaticDataMock,
+                children: ['2'],
+              },
+              ['2']: {
+                ...elementStaticDataMock,
+                id: '2',
+                parentId: elementStaticDataMock.id,
+              },
+            },
           },
         },
       },
@@ -151,7 +165,7 @@ describe('getMappedElementsToMove', () => {
 
     // result
     expect(result).toStrictEqual({
-      ...pageBuilderStateMock[PAGE_BUILDER].elements,
+      ...currentPage.elements,
       allData: {
         ['2']: {
           ...elementAllDataMock,
@@ -177,6 +191,7 @@ describe('getMappedElementsToMove', () => {
 
   it(`should put element inside another element`, () => {
     // mock
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
     const payload = {
       draggableElements: ['2'],
       possibleIndexPosition: null,
@@ -186,45 +201,51 @@ describe('getMappedElementsToMove', () => {
     // before
     const result = getMappedElementsToMove(true, payload, {
       ...pageBuilderStateMock[PAGE_BUILDER],
-      elements: {
-        ...pageBuilderStateMock[PAGE_BUILDER].elements,
-        allData: {
-          ['-1']: {
-            ...pageBuilderStateMock[PAGE_BUILDER].elements.allData['-1'],
-            children: [elementAllDataMock.id, '2'],
-          },
-          [elementAllDataMock.id]: {
-            ...elementAllDataMock,
-            children: [],
-          },
-          ['2']: {
-            ...elementAllDataMock,
-            id: '2',
-            parentId: '-1',
-          },
-        },
-        dynamicData: {
-          [elementDynamicDataMock.id]: {
-            ...elementDynamicDataMock,
-          },
-          ['2']: {
-            ...elementDynamicDataMock,
-            id: '2',
-          },
-        },
-        staticData: {
-          ['-1']: {
-            ...pageBuilderStateMock[PAGE_BUILDER].elements.staticData['-1'],
-            children: [elementAllDataMock.id, '2'],
-          },
-          [elementStaticDataMock.id]: {
-            ...elementStaticDataMock,
-            children: [],
-          },
-          ['2']: {
-            ...elementStaticDataMock,
-            id: '2',
-            parentId: '-1',
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            allData: {
+              ['-1']: {
+                ...currentPage.elements.allData['-1'],
+                children: [elementAllDataMock.id, '2'],
+              },
+              [elementAllDataMock.id]: {
+                ...elementAllDataMock,
+                children: [],
+              },
+              ['2']: {
+                ...elementAllDataMock,
+                id: '2',
+                parentId: '-1',
+              },
+            },
+            dynamicData: {
+              [elementDynamicDataMock.id]: {
+                ...elementDynamicDataMock,
+              },
+              ['2']: {
+                ...elementDynamicDataMock,
+                id: '2',
+              },
+            },
+            staticData: {
+              ['-1']: {
+                ...currentPage.elements.staticData['-1'],
+                children: [elementAllDataMock.id, '2'],
+              },
+              [elementStaticDataMock.id]: {
+                ...elementStaticDataMock,
+                children: [],
+              },
+              ['2']: {
+                ...elementStaticDataMock,
+                id: '2',
+                parentId: '-1',
+              },
+            },
           },
         },
       },
@@ -232,7 +253,7 @@ describe('getMappedElementsToMove', () => {
 
     // result
     expect(result).toStrictEqual({
-      ...pageBuilderStateMock[PAGE_BUILDER].elements,
+      ...currentPage.elements,
       allData: {
         ['2']: {
           ...elementAllDataMock,

@@ -15,8 +15,9 @@ export const handleChangeParent = (
   const id = first(draggableElements);
 
   if (possibleParent !== null) {
+    const currentPage = state.pages[state.currentPage];
     const parentHasChanged =
-      state.elements.allData[id].parentId !== possibleParent;
+      currentPage.elements.allData[id].parentId !== possibleParent;
     const clonedState = cloneDeep(state);
     const children = getMappedElementsToMove(
       parentHasChanged,
@@ -27,31 +28,38 @@ export const handleChangeParent = (
 
     return {
       ...state,
-      elements: {
-        ...state.elements,
-        allData: {
-          ...state.elements.allData,
-          ...children.allData,
-          ...parents.allData,
-        },
-        dynamicData: {
-          ...state.elements.dynamicData,
-          ...children.dynamicData,
-          ...parents.dynamicData,
-        },
-        staticData: {
-          ...state.elements.staticData,
-          ...children.staticData,
-          ...parents.staticData,
-        },
-      },
       events: {
         ...state.events,
         draggableElements: [],
         possibleIndexPosition: null,
         possibleParent: null,
       },
-      selectedElements: possibleParent === '-1' ? state.selectedElements : [],
+      pages: {
+        ...state.pages,
+        [state.currentPage]: {
+          ...state.pages[state.currentPage],
+          elements: {
+            ...currentPage.elements,
+            allData: {
+              ...currentPage.elements.allData,
+              ...children.allData,
+              ...parents.allData,
+            },
+            dynamicData: {
+              ...currentPage.elements.dynamicData,
+              ...children.dynamicData,
+              ...parents.dynamicData,
+            },
+            staticData: {
+              ...currentPage.elements.staticData,
+              ...children.staticData,
+              ...parents.staticData,
+            },
+          },
+          selectedElements:
+            possibleParent === '-1' ? currentPage.selectedElements : [],
+        },
+      },
     };
   }
 

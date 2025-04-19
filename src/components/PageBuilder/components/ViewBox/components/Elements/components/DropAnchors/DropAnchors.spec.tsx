@@ -33,9 +33,15 @@ const stateMock = {
   ...wholeStateMock,
   [PAGE_BUILDER]: {
     ...pageBuilderStateMock[PAGE_BUILDER],
-    elements: {
-      dynamicData: { [elementDynamicDataMock.id]: elementDynamicDataMock },
-      staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
+    pages: {
+      ...pageBuilderStateMock[PAGE_BUILDER].pages,
+      ['0']: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages['0'],
+        elements: {
+          dynamicData: { [elementDynamicDataMock.id]: elementDynamicDataMock },
+          staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
+        },
+      },
     },
   },
 };
@@ -74,15 +80,23 @@ describe('DropAnchors snapshots', () => {
       ...stateMock,
       [PAGE_BUILDER]: {
         ...pageBuilderStateMock[PAGE_BUILDER],
-        elements: {
-          dynamicData: { [elementDynamicDataMock.id]: elementDynamicDataMock },
-          staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
-        },
         events: {
           ...eventsMock,
           draggableElements: [],
           possibleIndexPosition: 0,
           possibleParent: elementStaticDataMock.parentId,
+        },
+        pages: {
+          ...pageBuilderStateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...pageBuilderStateMock[PAGE_BUILDER].pages['0'],
+            elements: {
+              dynamicData: {
+                [elementDynamicDataMock.id]: elementDynamicDataMock,
+              },
+              staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
+            },
+          },
         },
       },
     });
@@ -111,15 +125,23 @@ describe('DropAnchors snapshots', () => {
       ...stateMock,
       [PAGE_BUILDER]: {
         ...pageBuilderStateMock[PAGE_BUILDER],
-        elements: {
-          dynamicData: { [elementDynamicDataMock.id]: elementDynamicDataMock },
-          staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
-        },
         events: {
           ...eventsMock,
           draggableElements: [],
           possibleIndexPosition: 1,
           possibleParent: elementStaticDataMock.parentId,
+        },
+        pages: {
+          ...pageBuilderStateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...pageBuilderStateMock[PAGE_BUILDER].pages['0'],
+            elements: {
+              dynamicData: {
+                [elementDynamicDataMock.id]: elementDynamicDataMock,
+              },
+              staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
+            },
+          },
         },
       },
     });

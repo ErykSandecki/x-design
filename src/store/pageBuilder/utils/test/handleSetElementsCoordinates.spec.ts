@@ -15,8 +15,8 @@ import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
 // utils
 import { handleSetElementsCoordinates } from '../handleSetElementsCoordinates';
 
-const mockState = {
-  ...pageBuilderStateMock[PAGE_BUILDER],
+const mockPage = {
+  ...pageBuilderStateMock[PAGE_BUILDER].pages['0'],
   elements: {
     allData: { [elementAllDataMock.id]: elementAllDataMock },
     dynamicData: { [elementDynamicDataMock.id]: elementDynamicDataMock },
@@ -29,71 +29,99 @@ describe('handleSetElementsCoordinates', () => {
   it(`should return data with changed elements coordinates`, () => {
     // mock
     const coordinates = { x: 100, y: 100 };
-    const prevState = cloneDeep(mockState);
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+    const prevState = cloneDeep(mockPage);
 
     // before
     const result = handleSetElementsCoordinates(coordinates, {
-      ...mockState,
-      prevState,
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          ...mockPage,
+          prevState,
+        },
+      },
     });
 
     // result
     expect(result).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
-      elements: {
-        allData: {
-          [elementAllDataMock.id]: {
-            ...elementAllDataMock,
-            coordinates,
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            allData: {
+              [elementAllDataMock.id]: {
+                ...elementAllDataMock,
+                coordinates,
+              },
+            },
+            dynamicData: {
+              [elementDynamicDataMock.id]: {
+                ...elementDynamicDataMock,
+                coordinates,
+              },
+            },
+            staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
           },
+          prevState,
+          selectedElements: [
+            {
+              ...selectedElementMock,
+              coordinates: {
+                x1: coordinates.x,
+                x2: coordinates.x,
+                y1: coordinates.y,
+                y2: coordinates.y,
+              },
+            },
+          ],
         },
-        dynamicData: {
-          [elementDynamicDataMock.id]: {
-            ...elementDynamicDataMock,
-            coordinates,
-          },
-        },
-        staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
       },
-      prevState,
-      selectedElements: [
-        {
-          ...selectedElementMock,
-          coordinates: {
-            x1: coordinates.x,
-            x2: coordinates.x,
-            y1: coordinates.y,
-            y2: coordinates.y,
-          },
-        },
-      ],
     });
   });
 
   it(`should return data with not changed coordinates when event locked`, () => {
     // mock
     const coordinates = { x: 100, y: 100 };
-    const prevState = cloneDeep(mockState);
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+    const prevState = cloneDeep(mockPage);
 
     // before
     const result = handleSetElementsCoordinates(coordinates, {
-      ...mockState,
+      ...pageBuilderStateMock[PAGE_BUILDER],
       events: {
-        ...mockState.events,
+        ...pageBuilderStateMock[PAGE_BUILDER].events,
         canMoveElements: false,
       },
-      prevState,
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          ...mockPage,
+          prevState,
+        },
+      },
     });
 
     // result
     expect(result).toStrictEqual({
-      ...mockState,
+      ...pageBuilderStateMock[PAGE_BUILDER],
       events: {
-        ...mockState.events,
+        ...pageBuilderStateMock[PAGE_BUILDER].events,
         canMoveElements: false,
       },
-      prevState,
-      selectedElements: [],
+      pages: {
+        ['0']: {
+          ...currentPage,
+          ...mockPage,
+          prevState,
+          selectedElements: [],
+        },
+      },
     });
   });
 });

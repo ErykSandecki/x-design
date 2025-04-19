@@ -33,7 +33,13 @@ describe('initSetElementsCoordinates', () => {
         ...stateMock,
         [PAGE_BUILDER]: {
           ...stateMock[PAGE_BUILDER],
-          selectedElements: [selectedElementMock],
+          pages: {
+            ...stateMock[PAGE_BUILDER].pages,
+            ['0']: {
+              ...stateMock[PAGE_BUILDER].pages['0'],
+              selectedElements: [selectedElementMock],
+            },
+          },
         },
       }) as any;
 

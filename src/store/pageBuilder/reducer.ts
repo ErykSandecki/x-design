@@ -14,12 +14,7 @@ import {
   UPDATE_PREV_STATE,
   CHANGE_BACKGROUND,
 } from './actionsType';
-import { BASE_3D } from 'shared';
-import {
-  BASE_ALL_DATA,
-  BASE_DYNAMIC_DATA,
-  BASE_STATIC_DATA,
-} from './constants';
+import { BASE_PAGE } from './constants';
 
 // types
 import { Anchor } from './enums';
@@ -51,18 +46,7 @@ import { handleSetElementSizes } from './utils/handleSetElementSize';
 import { filterSelectedElements } from './utils/filterSelectedElements';
 
 const initialState: TPageBuilderState = {
-  areaCoordinates: BASE_3D,
-  elements: {
-    allData: {
-      [BASE_ALL_DATA.id]: BASE_ALL_DATA,
-    },
-    dynamicData: {
-      [BASE_DYNAMIC_DATA.id]: BASE_DYNAMIC_DATA,
-    },
-    staticData: {
-      [BASE_STATIC_DATA.id]: BASE_STATIC_DATA,
-    },
-  },
+  currentPage: '0',
   events: {
     canMoveElements: true,
     draggableElements: [],
@@ -74,8 +58,9 @@ const initialState: TPageBuilderState = {
   },
   isLoading: true,
   isPending: false,
-  prevState: undefined,
-  selectedElements: [],
+  pages: {
+    [BASE_PAGE.id]: BASE_PAGE,
+  },
 };
 
 const addElement = (
@@ -103,10 +88,16 @@ const selectElement = (
   { payload: selectedElement }: TAction<TSelectElementAction['payload']>,
 ): TPageBuilderState => ({
   ...state,
-  selectedElements: filterSelectedElements([
-    ...state.selectedElements,
-    selectedElement,
-  ]),
+  pages: {
+    ...state.pages,
+    [state.currentPage]: {
+      ...state.pages[state.currentPage],
+      selectedElements: filterSelectedElements([
+        ...state.pages[state.currentPage].selectedElements,
+        selectedElement,
+      ]),
+    },
+  },
 });
 
 const selectElements = (
@@ -114,15 +105,30 @@ const selectElements = (
   { payload: selectedElements }: TAction<TSelectElementsAction['payload']>,
 ): TPageBuilderState => ({
   ...state,
-  selectedElements: filterSelectedElements(selectedElements),
+  pages: {
+    ...state.pages,
+    [state.currentPage]: {
+      ...state.pages[state.currentPage],
+      selectedElements: filterSelectedElements(selectedElements),
+    },
+  },
 });
 
-const setAreCoordinates = (
+const setAreaCoordinates = (
   state: TPageBuilderState,
   { payload: areaCoordinates }: TAction<TSetAreaCoordinatesAction['payload']>,
 ): TPageBuilderState => ({
   ...state,
-  areaCoordinates: { ...state.areaCoordinates, ...areaCoordinates },
+  pages: {
+    ...state.pages,
+    [state.currentPage]: {
+      ...state.pages[state.currentPage],
+      areaCoordinates: {
+        ...state.pages[state.currentPage].areaCoordinates,
+        ...areaCoordinates,
+      },
+    },
+  },
 });
 
 const setElementCoordinates = (
@@ -165,7 +171,13 @@ const updateEventsStatus = (
 
 const updatePrevState = (state: TPageBuilderState): TPageBuilderState => ({
   ...state,
-  prevState: state,
+  pages: {
+    ...state.pages,
+    [state.currentPage]: {
+      ...state.pages[state.currentPage],
+      prevState: state.pages[state.currentPage],
+    },
+  },
 });
 
 const unselectElement = (
@@ -173,9 +185,15 @@ const unselectElement = (
   { payload: id }: TAction<TUnselectElementAction['payload']>,
 ): TPageBuilderState => ({
   ...state,
-  selectedElements: state.selectedElements.filter(
-    (element) => element.id !== id,
-  ),
+  pages: {
+    ...state.pages,
+    [state.currentPage]: {
+      ...state.pages[state.currentPage],
+      selectedElements: state.pages[state.currentPage].selectedElements.filter(
+        (element) => element.id !== id,
+      ),
+    },
+  },
 });
 
 const pageBuilder = (
@@ -196,7 +214,7 @@ const pageBuilder = (
     case SELECT_ELEMENTS:
       return selectElements(state, action);
     case SET_AREA_COORDINATES:
-      return setAreCoordinates(state, action);
+      return setAreaCoordinates(state, action);
     case SET_ELEMENT_COORDINATES:
       return setElementCoordinates(state, action);
     case SET_ELEMENT_SIZES:

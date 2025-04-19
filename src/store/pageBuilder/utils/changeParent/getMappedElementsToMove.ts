@@ -39,12 +39,14 @@ export const calculateCoordinates = (
   state: TPageBuilderState,
 ): T2DCoordinates => {
   if (possibleParent === '-1') {
+    const currentPage = state.pages[state.currentPage];
     const mainParentId = findMainParent(
       currentParentId,
-      state.elements.staticData,
+      currentPage.elements.staticData,
     );
-    const parentCords = state.elements.dynamicData[mainParentId].coordinates;
-    const { z } = state.areaCoordinates;
+    const parentCords =
+      currentPage.elements.dynamicData[mainParentId].coordinates;
+    const { z } = currentPage.areaCoordinates;
     const { x, y } = getOffsetXY(id, mainParentId);
 
     return { x: parentCords.x - x / z, y: parentCords.y - y / z };
@@ -129,7 +131,8 @@ export const getMappedElementsToMove = (
   payload: TChangeParentActionPayload,
   state: TPageBuilderState,
 ): TElementsData => {
-  const { elements } = state;
+  const currentPage = state.pages[state.currentPage];
+  const { elements } = currentPage;
   const { draggableElements, possibleParent } = payload;
 
   return reduceData(
@@ -144,7 +147,7 @@ export const getMappedElementsToMove = (
       const shouldResetCoordinates = data.position === 'relative';
 
       return {
-        ...state.elements,
+        ...currentPage.elements,
         allData: {
           ...elements.allData[id],
           coordinates: shouldResetCoordinates ? BASE_2D : data.coordinates,

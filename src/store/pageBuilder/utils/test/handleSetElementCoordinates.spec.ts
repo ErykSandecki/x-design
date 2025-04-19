@@ -17,6 +17,7 @@ describe('handleSetElementCoordinates', () => {
   it(`should return data with changed element coordinates`, () => {
     // mock
     const coordinates = { x: 100, y: 100 };
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
     // before
     const result = handleSetElementCoordinates(
@@ -24,15 +25,21 @@ describe('handleSetElementCoordinates', () => {
       coordinates,
       {
         ...pageBuilderStateMock[PAGE_BUILDER],
-        elements: {
-          allData: {
-            [elementAllDataMock.id]: elementAllDataMock,
-          },
-          dynamicData: {
-            [elementDynamicDataMock.id]: elementDynamicDataMock,
-          },
-          staticData: {
-            [elementStaticDataMock.id]: elementStaticDataMock,
+        pages: {
+          ...pageBuilderStateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...currentPage,
+            elements: {
+              allData: {
+                [elementAllDataMock.id]: elementAllDataMock,
+              },
+              dynamicData: {
+                [elementDynamicDataMock.id]: elementDynamicDataMock,
+              },
+              staticData: {
+                [elementStaticDataMock.id]: elementStaticDataMock,
+              },
+            },
           },
         },
       },
@@ -41,22 +48,28 @@ describe('handleSetElementCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
-      elements: {
-        ...pageBuilderStateMock[PAGE_BUILDER].elements,
-        allData: {
-          [elementAllDataMock.id]: {
-            ...elementAllDataMock,
-            coordinates,
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            allData: {
+              [elementAllDataMock.id]: {
+                ...elementAllDataMock,
+                coordinates,
+              },
+            },
+            dynamicData: {
+              [elementDynamicDataMock.id]: {
+                ...elementDynamicDataMock,
+                coordinates,
+              },
+            },
+            staticData: {
+              [elementStaticDataMock.id]: elementStaticDataMock,
+            },
           },
-        },
-        dynamicData: {
-          [elementDynamicDataMock.id]: {
-            ...elementDynamicDataMock,
-            coordinates,
-          },
-        },
-        staticData: {
-          [elementStaticDataMock.id]: elementStaticDataMock,
         },
       },
     });
@@ -65,6 +78,7 @@ describe('handleSetElementCoordinates', () => {
   it(`should return data with not changed coordinates when event lock`, () => {
     // mock
     const coordinates = { x: 100, y: 100 };
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
     // before
     const result = handleSetElementCoordinates(
@@ -72,20 +86,26 @@ describe('handleSetElementCoordinates', () => {
       coordinates,
       {
         ...pageBuilderStateMock[PAGE_BUILDER],
-        elements: {
-          allData: {
-            [elementAllDataMock.id]: elementAllDataMock,
-          },
-          dynamicData: {
-            [elementDynamicDataMock.id]: elementDynamicDataMock,
-          },
-          staticData: {
-            [elementStaticDataMock.id]: elementStaticDataMock,
-          },
-        },
         events: {
           ...eventsMock,
           canMoveElements: false,
+        },
+        pages: {
+          ...pageBuilderStateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...currentPage,
+            elements: {
+              allData: {
+                [elementAllDataMock.id]: elementAllDataMock,
+              },
+              dynamicData: {
+                [elementDynamicDataMock.id]: elementDynamicDataMock,
+              },
+              staticData: {
+                [elementStaticDataMock.id]: elementStaticDataMock,
+              },
+            },
+          },
         },
       },
     );
@@ -93,20 +113,26 @@ describe('handleSetElementCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
-      elements: {
-        allData: {
-          [elementAllDataMock.id]: elementAllDataMock,
-        },
-        dynamicData: {
-          [elementDynamicDataMock.id]: elementDynamicDataMock,
-        },
-        staticData: {
-          [elementStaticDataMock.id]: elementStaticDataMock,
-        },
-      },
       events: {
         ...eventsMock,
         canMoveElements: false,
+      },
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            allData: {
+              [elementAllDataMock.id]: elementAllDataMock,
+            },
+            dynamicData: {
+              [elementDynamicDataMock.id]: elementDynamicDataMock,
+            },
+            staticData: {
+              [elementStaticDataMock.id]: elementStaticDataMock,
+            },
+          },
+        },
       },
     });
   });

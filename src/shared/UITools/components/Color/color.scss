@@ -2,8 +2,8 @@
   border-radius: 2.5px;
   cursor: pointer;
   display: flex;
-  position: relative;
   height: 14px;
+  position: relative;
   width: 14px;
 
   &__picker {
@@ -23,7 +23,7 @@
   &__picker-texture {
     background:
       url('assets/images/texture.svg') 0 0 / auto 50%,
-      #fff;
+      #ffffff;
     height: 100%;
     left: 0;
     position: absolute;

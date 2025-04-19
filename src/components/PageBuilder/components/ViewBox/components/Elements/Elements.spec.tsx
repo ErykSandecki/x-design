@@ -53,38 +53,45 @@ describe('Elements snapshots', () => {
 
   it('should render Element in relative position', () => {
     // mock
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
     const store = configureStore({
       [PAGE_BUILDER]: {
         ...pageBuilderStateMock[PAGE_BUILDER],
-        elements: {
-          allData: {
-            ['-1']: {
-              ...pageBuilderStateMock[PAGE_BUILDER].elements.allData['-1'],
-              children: [elementAllDataMock.id],
-            },
-            [elementAllDataMock.id]: {
-              ...elementAllDataMock,
-              position: 'relative',
-            },
-          },
-          dynamicData: {
-            ['-1']: {
-              ...pageBuilderStateMock[PAGE_BUILDER].elements.dynamicData['-1'],
-              children: [elementDynamicDataMock.id],
-            },
-            [elementDynamicDataMock.id]: {
-              ...elementDynamicDataMock,
-              position: 'relative',
-            },
-          },
-          staticData: {
-            ['-1']: {
-              ...pageBuilderStateMock[PAGE_BUILDER].elements.staticData['-1'],
-              children: [elementStaticDataMock.id],
-            },
-            [elementStaticDataMock.id]: {
-              ...elementStaticDataMock,
-              position: 'relative',
+        pages: {
+          ...pageBuilderStateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...currentPage,
+            elements: {
+              allData: {
+                ['-1']: {
+                  ...currentPage.elements.allData['-1'],
+                  children: [elementAllDataMock.id],
+                },
+                [elementAllDataMock.id]: {
+                  ...elementAllDataMock,
+                  position: 'relative',
+                },
+              },
+              dynamicData: {
+                ['-1']: {
+                  ...currentPage.elements.dynamicData['-1'],
+                  children: [elementDynamicDataMock.id],
+                },
+                [elementDynamicDataMock.id]: {
+                  ...elementDynamicDataMock,
+                  position: 'relative',
+                },
+              },
+              staticData: {
+                ['-1']: {
+                  ...currentPage.elements.staticData['-1'],
+                  children: [elementStaticDataMock.id],
+                },
+                [elementStaticDataMock.id]: {
+                  ...elementStaticDataMock,
+                  position: 'relative',
+                },
+              },
             },
           },
         },
@@ -108,30 +115,37 @@ describe('Elements snapshots', () => {
 
   it('should render Frame', () => {
     // mock
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
     const store = configureStore({
       [PAGE_BUILDER]: {
         ...pageBuilderStateMock[PAGE_BUILDER],
-        elements: {
-          allData: {
-            ['-1']: {
-              ...pageBuilderStateMock[PAGE_BUILDER].elements.allData['-1'],
-              children: [elementAllDataMock.id],
+        pages: {
+          ...pageBuilderStateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...currentPage,
+            elements: {
+              allData: {
+                ['-1']: {
+                  ...currentPage.elements.allData['-1'],
+                  children: [elementAllDataMock.id],
+                },
+                [elementAllDataMock.id]: elementAllDataMock,
+              },
+              dynamicData: {
+                ['-1']: {
+                  ...currentPage.elements.dynamicData['-1'],
+                  children: [elementDynamicDataMock.id],
+                },
+                [elementDynamicDataMock.id]: elementDynamicDataMock,
+              },
+              staticData: {
+                ['-1']: {
+                  ...currentPage.elements.staticData['-1'],
+                  children: [elementStaticDataMock.id],
+                },
+                [elementStaticDataMock.id]: elementStaticDataMock,
+              },
             },
-            [elementAllDataMock.id]: elementAllDataMock,
-          },
-          dynamicData: {
-            ['-1']: {
-              ...pageBuilderStateMock[PAGE_BUILDER].elements.dynamicData['-1'],
-              children: [elementDynamicDataMock.id],
-            },
-            [elementDynamicDataMock.id]: elementDynamicDataMock,
-          },
-          staticData: {
-            ['-1']: {
-              ...pageBuilderStateMock[PAGE_BUILDER].elements.staticData['-1'],
-              children: [elementStaticDataMock.id],
-            },
-            [elementStaticDataMock.id]: elementStaticDataMock,
           },
         },
       },
@@ -154,13 +168,14 @@ describe('Elements snapshots', () => {
 
   it('should render default Element', () => {
     // mock
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
     const store = configureStore({
       [PAGE_BUILDER]: {
         ...pageBuilderStateMock[PAGE_BUILDER],
         elements: {
           allData: {
             ['-1']: {
-              ...pageBuilderStateMock[PAGE_BUILDER].elements.allData['-1'],
+              ...currentPage.elements.allData['-1'],
               children: [elementAllDataMock.id],
             },
             [elementAllDataMock.id]: {
@@ -170,14 +185,14 @@ describe('Elements snapshots', () => {
           },
           dynamicData: {
             ['-1']: {
-              ...pageBuilderStateMock[PAGE_BUILDER].elements.dynamicData['-1'],
+              ...currentPage.elements.dynamicData['-1'],
               children: [elementDynamicDataMock.id],
             },
             [elementDynamicDataMock.id]: elementDynamicDataMock,
           },
           staticData: {
             ['-1']: {
-              ...pageBuilderStateMock[PAGE_BUILDER].elements.staticData['-1'],
+              ...currentPage.elements.staticData['-1'],
               children: [elementStaticDataMock.id],
             },
             [elementStaticDataMock.id]: {

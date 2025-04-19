@@ -25,11 +25,18 @@ import { MouseMode } from 'components/PageBuilder/enums';
 const stateMock = {
   [PAGE_BUILDER]: {
     ...pageBuilderStateMock[PAGE_BUILDER],
-    elements: {
-      dynamicData: {
-        [elementDynamicDataMock.id]: elementDynamicDataMock,
+    pages: {
+      ...pageBuilderStateMock[PAGE_BUILDER].pages,
+      ['0']: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages['0'],
+        elements: {
+          ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements,
+          dynamicData: {
+            [elementDynamicDataMock.id]: elementDynamicDataMock,
+          },
+          staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
+        },
       },
-      staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
     },
   },
 };
@@ -64,7 +71,13 @@ describe('Element snapshots', () => {
       ...stateMock,
       [PAGE_BUILDER]: {
         ...stateMock[PAGE_BUILDER],
-        selectedElements: [selectedElementMock],
+        pages: {
+          ...stateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...stateMock[PAGE_BUILDER].pages['0'],
+            selectedElements: [selectedElementMock],
+          },
+        },
       },
     });
 
@@ -93,15 +106,21 @@ describe('Element snapshots', () => {
       ...stateMock,
       [PAGE_BUILDER]: {
         ...stateMock[PAGE_BUILDER],
-        elements: {
-          dynamicData: {
-            [elementDynamicDataMock.id]: {
-              ...elementDynamicDataMock,
-              height: 'auto',
-              width: 'auto',
+        pages: {
+          ...pageBuilderStateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...pageBuilderStateMock[PAGE_BUILDER].pages['0'],
+            elements: {
+              dynamicData: {
+                [elementDynamicDataMock.id]: {
+                  ...elementDynamicDataMock,
+                  height: 'auto',
+                  width: 'auto',
+                },
+              },
+              staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
             },
           },
-          staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
         },
       },
     });

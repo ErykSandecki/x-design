@@ -1,16 +1,16 @@
 $--rx-font-family:
-  Inter,
+  inter,
   ui-sans-serif,
   system-ui,
   -apple-system,
   'system-ui',
   'Segoe UI',
-  Roboto,
+  roboto,
   'Helvetica Neue',
-  Arial,
+  arial,
   'Noto Sans',
   sans-serif,
-  SFProLocalRange;
+  sfprolocalrange;
 $--rx-font-size: 11px;
 
 .TextField {
@@ -44,6 +44,7 @@ $--rx-font-size: 11px;
       -webkit-appearance: none;
       margin: 0;
     }
+
     &[type='number'] {
       -moz-appearance: textfield;
     }

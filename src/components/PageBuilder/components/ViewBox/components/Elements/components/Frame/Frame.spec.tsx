@@ -26,9 +26,15 @@ const stateMock = {
   ...wholeStateMock,
   [PAGE_BUILDER]: {
     ...pageBuilderStateMock[PAGE_BUILDER],
-    elements: {
-      dynamicData: { [elementDynamicDataMock.id]: elementDynamicDataMock },
-      staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
+    pages: {
+      ...pageBuilderStateMock[PAGE_BUILDER].pages,
+      ['0']: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages['0'],
+        elements: {
+          dynamicData: { [elementDynamicDataMock.id]: elementDynamicDataMock },
+          staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
+        },
+      },
     },
   },
 };

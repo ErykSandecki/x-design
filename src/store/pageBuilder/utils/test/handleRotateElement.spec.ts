@@ -16,6 +16,7 @@ import { handleRotateElement } from '../handleRotateElement';
 describe('handleRotateElement', () => {
   it(`should return data with rotated element`, () => {
     // mock
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
     const rotate = 180;
 
     // before
@@ -23,24 +24,30 @@ describe('handleRotateElement', () => {
       { id: createFrameMock.id, rotate },
       {
         ...pageBuilderStateMock[PAGE_BUILDER],
-        elements: {
-          ...pageBuilderStateMock[PAGE_BUILDER].elements,
-          allData: {
-            ...pageBuilderStateMock[PAGE_BUILDER].elements.allData,
-            [elementAllDataMock.id]: {
-              ...elementAllDataMock,
-            },
-          },
-          dynamicData: {
-            ...pageBuilderStateMock[PAGE_BUILDER].elements.dynamicData,
-            [elementDynamicDataMock.id]: {
-              ...elementDynamicDataMock,
-            },
-          },
-          staticData: {
-            ...pageBuilderStateMock[PAGE_BUILDER].elements.staticData,
-            [elementStaticDataMock.id]: {
-              ...elementStaticDataMock,
+        pages: {
+          ...pageBuilderStateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...currentPage,
+            elements: {
+              ...currentPage.elements,
+              allData: {
+                ...currentPage.elements.allData,
+                [elementAllDataMock.id]: {
+                  ...elementAllDataMock,
+                },
+              },
+              dynamicData: {
+                ...currentPage.elements.dynamicData,
+                [elementDynamicDataMock.id]: {
+                  ...elementDynamicDataMock,
+                },
+              },
+              staticData: {
+                ...currentPage.elements.staticData,
+                [elementStaticDataMock.id]: {
+                  ...elementStaticDataMock,
+                },
+              },
             },
           },
         },
@@ -50,26 +57,32 @@ describe('handleRotateElement', () => {
     // result
     expect(result).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
-      elements: {
-        ...pageBuilderStateMock[PAGE_BUILDER].elements,
-        allData: {
-          ...pageBuilderStateMock[PAGE_BUILDER].elements.allData,
-          [elementAllDataMock.id]: {
-            ...elementAllDataMock,
-            rotate,
-          },
-        },
-        dynamicData: {
-          ...pageBuilderStateMock[PAGE_BUILDER].elements.dynamicData,
-          [elementDynamicDataMock.id]: {
-            ...elementDynamicDataMock,
-            rotate,
-          },
-        },
-        staticData: {
-          ...pageBuilderStateMock[PAGE_BUILDER].elements.staticData,
-          [elementStaticDataMock.id]: {
-            ...elementStaticDataMock,
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            allData: {
+              ...currentPage.elements.allData,
+              [elementAllDataMock.id]: {
+                ...elementAllDataMock,
+                rotate,
+              },
+            },
+            dynamicData: {
+              ...currentPage.elements.dynamicData,
+              [elementDynamicDataMock.id]: {
+                ...elementDynamicDataMock,
+                rotate,
+              },
+            },
+            staticData: {
+              ...currentPage.elements.staticData,
+              [elementStaticDataMock.id]: {
+                ...elementStaticDataMock,
+              },
+            },
           },
         },
       },

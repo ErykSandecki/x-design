@@ -8,37 +8,50 @@ export const handleAddElement = (
   state: TPageBuilderState,
 ): TPageBuilderState => ({
   ...state,
-  elements: {
-    ...state.elements,
-    allData: {
-      ...state.elements.allData,
-      [element.id]: { ...element },
-      '-1': {
-        ...state.elements.allData['-1'],
-        children: [...state.elements.allData['-1'].children, element.id],
-      },
-    },
-    dynamicData: {
-      ...state.elements.dynamicData,
-      [element.id]: pick(
-        element,
-        'background',
-        'coordinates',
-        'height',
-        'id',
-        'position',
-        'rotate',
-        'width',
-      ),
-    },
-    staticData: {
-      ...state.elements.staticData,
-      [element.id]: {
-        ...pick(element, 'children', 'id', 'parentId', 'position', 'type'),
-      },
-      '-1': {
-        ...state.elements.staticData['-1'],
-        children: [...state.elements.staticData['-1'].children, element.id],
+  pages: {
+    ...state.pages,
+    [state.currentPage]: {
+      ...state.pages[state.currentPage],
+      elements: {
+        ...state.pages[state.currentPage].elements,
+        allData: {
+          ...state.pages[state.currentPage].elements.allData,
+          [element.id]: { ...element },
+          '-1': {
+            ...state.pages[state.currentPage].elements.allData['-1'],
+            children: [
+              ...state.pages[state.currentPage].elements.allData['-1'].children,
+              element.id,
+            ],
+          },
+        },
+        dynamicData: {
+          ...state.pages[state.currentPage].elements.dynamicData,
+          [element.id]: pick(
+            element,
+            'background',
+            'coordinates',
+            'height',
+            'id',
+            'position',
+            'rotate',
+            'width',
+          ),
+        },
+        staticData: {
+          ...state.pages[state.currentPage].elements.staticData,
+          [element.id]: {
+            ...pick(element, 'children', 'id', 'parentId', 'position', 'type'),
+          },
+          '-1': {
+            ...state.pages[state.currentPage].elements.staticData['-1'],
+            children: [
+              ...state.pages[state.currentPage].elements.staticData['-1']
+                .children,
+              element.id,
+            ],
+          },
+        },
       },
     },
   },

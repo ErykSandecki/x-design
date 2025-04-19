@@ -12,20 +12,26 @@ export const handleSetElementCoordinates = (
   ...state,
   ...(state.events.canMoveElements
     ? {
-        elements: {
-          ...state.elements,
-          allData: {
-            ...state.elements.allData,
-            [id]: {
-              ...state.elements.allData[id],
-              coordinates: position,
-            },
-          },
-          dynamicData: {
-            ...state.elements.dynamicData,
-            [id]: {
-              ...state.elements.dynamicData[id],
-              coordinates: position,
+        pages: {
+          ...state.pages,
+          [state.currentPage]: {
+            ...state.pages[state.currentPage],
+            elements: {
+              ...state.pages[state.currentPage].elements,
+              allData: {
+                ...state.pages[state.currentPage].elements.allData,
+                [id]: {
+                  ...state.pages[state.currentPage].elements.allData[id],
+                  coordinates: position,
+                },
+              },
+              dynamicData: {
+                ...state.pages[state.currentPage].elements.dynamicData,
+                [id]: {
+                  ...state.pages[state.currentPage].elements.dynamicData[id],
+                  coordinates: position,
+                },
+              },
             },
           },
         },

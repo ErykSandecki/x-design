@@ -59,7 +59,7 @@ export const getMappedParentsChildren = (
   payload: TChangeParentActionPayload,
   state: TPageBuilderState,
 ): TElementsData => {
-  const { elements } = state;
+  const { elements } = state.pages[state.currentPage];
   const { draggableElements, possibleIndexPosition, possibleParent } = payload;
   const { allData, staticData } = elements;
   const id = first(draggableElements);

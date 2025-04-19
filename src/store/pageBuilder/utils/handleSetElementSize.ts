@@ -23,27 +23,34 @@ export const handleSetElementSizes = (
     baseWidth as number,
     mouseCoordinates,
   );
+  const currentPage = state.pages[state.currentPage];
 
   return {
     ...state,
-    elements: {
-      ...state.elements,
-      allData: {
-        ...state.elements.allData,
-        [id]: {
-          ...state.elements.allData[id],
-          coordinates: position,
-          height,
-          width,
-        },
-      },
-      dynamicData: {
-        ...state.elements.dynamicData,
-        [id]: {
-          ...state.elements.dynamicData[id],
-          coordinates: position,
-          height,
-          width,
+    pages: {
+      ...state.pages,
+      [state.currentPage]: {
+        ...currentPage,
+        elements: {
+          ...currentPage.elements,
+          allData: {
+            ...currentPage.elements.allData,
+            [id]: {
+              ...currentPage.elements.allData[id],
+              coordinates: position,
+              height,
+              width,
+            },
+          },
+          dynamicData: {
+            ...currentPage.elements.dynamicData,
+            [id]: {
+              ...currentPage.elements.dynamicData[id],
+              coordinates: position,
+              height,
+              width,
+            },
+          },
         },
       },
     },

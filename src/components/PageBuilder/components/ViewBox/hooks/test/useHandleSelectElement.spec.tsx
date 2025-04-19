@@ -21,9 +21,15 @@ const mockCallBack = jest.fn();
 const stateMock = {
   [PAGE_BUILDER]: {
     ...pageBuilderStateMock[PAGE_BUILDER],
-    elements: {
-      allData: {
-        [elementAllDataMock.id]: elementAllDataMock,
+    pages: {
+      ...pageBuilderStateMock[PAGE_BUILDER].pages,
+      ['0']: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages['0'],
+        elements: {
+          allData: {
+            [elementAllDataMock.id]: elementAllDataMock,
+          },
+        },
       },
     },
   },
@@ -65,12 +71,18 @@ describe('useHandleSelectElement', () => {
         ...stateMock,
         [PAGE_BUILDER]: {
           ...pageBuilderStateMock[PAGE_BUILDER],
-          elements: {
-            allData: {
-              [elementAllDataMock.id]: elementAllDataMock,
+          pages: {
+            ...pageBuilderStateMock[PAGE_BUILDER].pages,
+            ['0']: {
+              ...pageBuilderStateMock[PAGE_BUILDER].pages['0'],
+              elements: {
+                allData: {
+                  [elementAllDataMock.id]: elementAllDataMock,
+                },
+              },
+              selectedElements: [selectedElementMock],
             },
           },
-          selectedElements: [selectedElementMock],
         },
       }) as any;
 

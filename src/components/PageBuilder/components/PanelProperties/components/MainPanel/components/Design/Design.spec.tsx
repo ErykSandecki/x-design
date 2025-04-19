@@ -1,5 +1,5 @@
-import { Provider } from 'react-redux';
 import { fireEvent, render, screen } from '@testing-library/react';
+import { Provider } from 'react-redux';
 
 // components
 import Design from './Design';
@@ -59,7 +59,8 @@ describe('Design behaviors', () => {
 
     // result
     expect(
-      store.getState()[PAGE_BUILDER].elements.allData['-1'].background.visible,
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['-1']
+        .background.visible,
     ).toBe(false);
   });
 
@@ -89,7 +90,8 @@ describe('Design behaviors', () => {
 
     // result
     expect(
-      store.getState()[PAGE_BUILDER].elements.allData['-1'].background.alpha,
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['-1']
+        .background.alpha,
     ).toBe('50');
   });
 
@@ -119,7 +121,8 @@ describe('Design behaviors', () => {
 
     // result
     expect(
-      store.getState()[PAGE_BUILDER].elements.allData['-1'].background.value,
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['-1']
+        .background.value,
     ).toBe('#ffffff');
   });
 
@@ -151,7 +154,8 @@ describe('Design behaviors', () => {
 
     // result
     expect(
-      store.getState()[PAGE_BUILDER].elements.allData['-1'].background.format,
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['-1']
+        .background.format,
     ).toBe('rgb');
   });
 });

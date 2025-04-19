@@ -8,7 +8,7 @@ import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
 // store
 import { areaCoordinatesSelector } from '../../selectors';
 
-const state = pageBuilderStateMock[PAGE_BUILDER];
+const state = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
 describe('areaCoordinatesSelector', () => {
   it('should return coordinates', () => {

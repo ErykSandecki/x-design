@@ -26,7 +26,13 @@ const ref = { current: { contains: () => false } } as RefObject<any>;
 const stateMock = {
   [PAGE_BUILDER]: {
     ...pageBuilderStateMock[PAGE_BUILDER],
-    selectedElements: [selectedElementMock],
+    pages: {
+      ...pageBuilderStateMock[PAGE_BUILDER].pages,
+      ['0']: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages['0'],
+        selectedElements: [selectedElementMock],
+      },
+    },
   },
 };
 
@@ -52,9 +58,9 @@ describe('useOutsideClickElement', () => {
     fireEvent.mouseDown(window, { buttons: MouseButton.lmb, shiftKey: true });
 
     // result
-    expect(store.getState()[PAGE_BUILDER].selectedElements).toStrictEqual([
-      selectedElementMock,
-    ]);
+    expect(
+      store.getState()[PAGE_BUILDER].pages['0'].selectedElements,
+    ).toStrictEqual([selectedElementMock]);
   });
 
   it('should not be selected if click outside', () => {
@@ -73,6 +79,8 @@ describe('useOutsideClickElement', () => {
     fireEvent.mouseDown(window, { buttons: MouseButton.lmb, shiftKey: false });
 
     // result
-    expect(store.getState()[PAGE_BUILDER].selectedElements).toStrictEqual([]);
+    expect(
+      store.getState()[PAGE_BUILDER].pages['0'].selectedElements,
+    ).toStrictEqual([]);
   });
 });

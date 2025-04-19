@@ -50,6 +50,7 @@ describe('handleChangeParent', () => {
 
   it(`should change parent`, () => {
     // mock
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
     const payload = {
       draggableElements: ['2'],
       possibleIndexPosition: null,
@@ -59,46 +60,52 @@ describe('handleChangeParent', () => {
     // before
     const result = handleChangeParent(payload, {
       ...pageBuilderStateMock[PAGE_BUILDER],
-      elements: {
-        ...pageBuilderStateMock[PAGE_BUILDER].elements,
-        allData: {
-          ['-1']: {
-            ...pageBuilderStateMock[PAGE_BUILDER].elements.allData['-1'],
-            children: [elementAllDataMock.id],
-          },
-          [elementAllDataMock.id]: {
-            ...elementAllDataMock,
-            children: ['2'],
-          },
-          ['2']: {
-            ...elementAllDataMock,
-            id: '2',
-            parentId: elementStaticDataMock.id,
-          },
-        },
-        dynamicData: {
-          ...pageBuilderStateMock[PAGE_BUILDER].elements.dynamicData,
-          [elementDynamicDataMock.id]: {
-            ...elementDynamicDataMock,
-          },
-          ['2']: {
-            ...elementDynamicDataMock,
-            id: '2',
-          },
-        },
-        staticData: {
-          ['-1']: {
-            ...pageBuilderStateMock[PAGE_BUILDER].elements.staticData['-1'],
-            children: [elementAllDataMock.id],
-          },
-          [elementStaticDataMock.id]: {
-            ...elementStaticDataMock,
-            children: ['2'],
-          },
-          ['2']: {
-            ...elementStaticDataMock,
-            id: '2',
-            parentId: elementStaticDataMock.id,
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            allData: {
+              ['-1']: {
+                ...currentPage.elements.allData['-1'],
+                children: [elementAllDataMock.id],
+              },
+              [elementAllDataMock.id]: {
+                ...elementAllDataMock,
+                children: ['2'],
+              },
+              ['2']: {
+                ...elementAllDataMock,
+                id: '2',
+                parentId: elementStaticDataMock.id,
+              },
+            },
+            dynamicData: {
+              ...currentPage.elements.dynamicData,
+              [elementDynamicDataMock.id]: {
+                ...elementDynamicDataMock,
+              },
+              ['2']: {
+                ...elementDynamicDataMock,
+                id: '2',
+              },
+            },
+            staticData: {
+              ['-1']: {
+                ...currentPage.elements.staticData['-1'],
+                children: [elementAllDataMock.id],
+              },
+              [elementStaticDataMock.id]: {
+                ...elementStaticDataMock,
+                children: ['2'],
+              },
+              ['2']: {
+                ...elementStaticDataMock,
+                id: '2',
+                parentId: elementStaticDataMock.id,
+              },
+            },
           },
         },
       },
@@ -107,46 +114,52 @@ describe('handleChangeParent', () => {
     // result
     expect(result).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
-      elements: {
-        ...pageBuilderStateMock[PAGE_BUILDER].elements,
-        allData: {
-          ['-1']: {
-            ...pageBuilderStateMock[PAGE_BUILDER].elements.allData['-1'],
-            children: [elementAllDataMock.id, '2'],
-          },
-          [elementAllDataMock.id]: {
-            ...elementAllDataMock,
-            children: [],
-          },
-          ['2']: {
-            ...elementAllDataMock,
-            id: '2',
-            parentId: '-1',
-          },
-        },
-        dynamicData: {
-          ...pageBuilderStateMock[PAGE_BUILDER].elements.dynamicData,
-          [elementDynamicDataMock.id]: {
-            ...elementDynamicDataMock,
-          },
-          ['2']: {
-            ...elementDynamicDataMock,
-            id: '2',
-          },
-        },
-        staticData: {
-          ['-1']: {
-            ...pageBuilderStateMock[PAGE_BUILDER].elements.staticData['-1'],
-            children: [elementAllDataMock.id, '2'],
-          },
-          [elementStaticDataMock.id]: {
-            ...elementStaticDataMock,
-            children: [],
-          },
-          ['2']: {
-            ...elementStaticDataMock,
-            id: '2',
-            parentId: '-1',
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            allData: {
+              ['-1']: {
+                ...currentPage.elements.allData['-1'],
+                children: [elementAllDataMock.id, '2'],
+              },
+              [elementAllDataMock.id]: {
+                ...elementAllDataMock,
+                children: [],
+              },
+              ['2']: {
+                ...elementAllDataMock,
+                id: '2',
+                parentId: '-1',
+              },
+            },
+            dynamicData: {
+              ...currentPage.elements.dynamicData,
+              [elementDynamicDataMock.id]: {
+                ...elementDynamicDataMock,
+              },
+              ['2']: {
+                ...elementDynamicDataMock,
+                id: '2',
+              },
+            },
+            staticData: {
+              ['-1']: {
+                ...currentPage.elements.staticData['-1'],
+                children: [elementAllDataMock.id, '2'],
+              },
+              [elementStaticDataMock.id]: {
+                ...elementStaticDataMock,
+                children: [],
+              },
+              ['2']: {
+                ...elementStaticDataMock,
+                id: '2',
+                parentId: '-1',
+              },
+            },
           },
         },
       },
@@ -155,6 +168,7 @@ describe('handleChangeParent', () => {
 
   it(`should change parent when element is put inside another element`, () => {
     // mock
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
     const payload = {
       draggableElements: ['2'],
       possibleIndexPosition: null,
@@ -164,46 +178,53 @@ describe('handleChangeParent', () => {
     // before
     const result = handleChangeParent(payload, {
       ...pageBuilderStateMock[PAGE_BUILDER],
-      elements: {
-        ...pageBuilderStateMock[PAGE_BUILDER].elements,
-        allData: {
-          ['-1']: {
-            ...pageBuilderStateMock[PAGE_BUILDER].elements.allData['-1'],
-            children: [elementAllDataMock.id, '2'],
-          },
-          [elementAllDataMock.id]: {
-            ...elementAllDataMock,
-            children: [],
-          },
-          ['2']: {
-            ...elementAllDataMock,
-            id: '2',
-            parentId: '-1',
-          },
-        },
-        dynamicData: {
-          ...pageBuilderStateMock[PAGE_BUILDER].elements.dynamicData,
-          [elementDynamicDataMock.id]: {
-            ...elementDynamicDataMock,
-          },
-          ['2']: {
-            ...elementDynamicDataMock,
-            id: '2',
-          },
-        },
-        staticData: {
-          ['-1']: {
-            ...pageBuilderStateMock[PAGE_BUILDER].elements.staticData['-1'],
-            children: [elementAllDataMock.id, '2'],
-          },
-          [elementStaticDataMock.id]: {
-            ...elementStaticDataMock,
-            children: [],
-          },
-          ['2']: {
-            ...elementStaticDataMock,
-            id: '2',
-            parentId: '-1',
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+
+            allData: {
+              ['-1']: {
+                ...currentPage.elements.allData['-1'],
+                children: [elementAllDataMock.id, '2'],
+              },
+              [elementAllDataMock.id]: {
+                ...elementAllDataMock,
+                children: [],
+              },
+              ['2']: {
+                ...elementAllDataMock,
+                id: '2',
+                parentId: '-1',
+              },
+            },
+            dynamicData: {
+              ...currentPage.elements.dynamicData,
+              [elementDynamicDataMock.id]: {
+                ...elementDynamicDataMock,
+              },
+              ['2']: {
+                ...elementDynamicDataMock,
+                id: '2',
+              },
+            },
+            staticData: {
+              ['-1']: {
+                ...currentPage.elements.staticData['-1'],
+                children: [elementAllDataMock.id, '2'],
+              },
+              [elementStaticDataMock.id]: {
+                ...elementStaticDataMock,
+                children: [],
+              },
+              ['2']: {
+                ...elementStaticDataMock,
+                id: '2',
+                parentId: '-1',
+              },
+            },
           },
         },
       },
@@ -212,49 +233,55 @@ describe('handleChangeParent', () => {
     // result
     expect(result).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
-      elements: {
-        ...pageBuilderStateMock[PAGE_BUILDER].elements,
-        allData: {
-          ['-1']: {
-            ...pageBuilderStateMock[PAGE_BUILDER].elements.allData['-1'],
-            children: [elementAllDataMock.id],
-          },
-          [elementAllDataMock.id]: {
-            ...elementAllDataMock,
-            children: ['2'],
-          },
-          ['2']: {
-            ...elementAllDataMock,
-            id: '2',
-            parentId: elementAllDataMock.id,
-            position: 'relative',
-          },
-        },
-        dynamicData: {
-          ...pageBuilderStateMock[PAGE_BUILDER].elements.dynamicData,
-          [elementDynamicDataMock.id]: {
-            ...elementDynamicDataMock,
-          },
-          ['2']: {
-            ...elementDynamicDataMock,
-            id: '2',
-            position: 'relative',
-          },
-        },
-        staticData: {
-          ['-1']: {
-            ...pageBuilderStateMock[PAGE_BUILDER].elements.staticData['-1'],
-            children: [elementAllDataMock.id],
-          },
-          [elementStaticDataMock.id]: {
-            ...elementStaticDataMock,
-            children: ['2'],
-          },
-          ['2']: {
-            ...elementStaticDataMock,
-            id: '2',
-            parentId: elementStaticDataMock.id,
-            position: 'relative',
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            allData: {
+              ['-1']: {
+                ...currentPage.elements.allData['-1'],
+                children: [elementAllDataMock.id],
+              },
+              [elementAllDataMock.id]: {
+                ...elementAllDataMock,
+                children: ['2'],
+              },
+              ['2']: {
+                ...elementAllDataMock,
+                id: '2',
+                parentId: elementAllDataMock.id,
+                position: 'relative',
+              },
+            },
+            dynamicData: {
+              ...currentPage.elements.dynamicData,
+              [elementDynamicDataMock.id]: {
+                ...elementDynamicDataMock,
+              },
+              ['2']: {
+                ...elementDynamicDataMock,
+                id: '2',
+                position: 'relative',
+              },
+            },
+            staticData: {
+              ['-1']: {
+                ...currentPage.elements.staticData['-1'],
+                children: [elementAllDataMock.id],
+              },
+              [elementStaticDataMock.id]: {
+                ...elementStaticDataMock,
+                children: ['2'],
+              },
+              ['2']: {
+                ...elementStaticDataMock,
+                id: '2',
+                parentId: elementStaticDataMock.id,
+                position: 'relative',
+              },
+            },
           },
         },
       },

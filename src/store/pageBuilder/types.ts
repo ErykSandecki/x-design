@@ -79,14 +79,21 @@ export type TSizeCoordinates = Pick<
   'coordinates' | 'height' | 'width'
 >;
 
-export type TPageBuilderState = {
+export type TPage = {
   areaCoordinates: T3DCoordinates;
   elements: TElementsData;
+  id: string;
+  name: string;
+  prevState: TPage;
+  selectedElements: TSelectedElements;
+};
+
+export type TPageBuilderState = {
+  currentPage: TPage['id'];
   events: TEvents;
   isLoading: boolean;
   isPending: boolean;
-  prevState: TPageBuilderState;
-  selectedElements: TSelectedElements;
+  pages: TObject<TPage>;
 };
 
 export type TAddELementActionPayload = Omit<TElement, 'index'>;

@@ -33,13 +33,13 @@
                   &::after {
                     background:
                       url('assets/images/texture.svg') 0 0 / auto 50%,
-                      #fff;
+                      #ffffff;
                     border-radius: 9px;
                     content: '';
                     height: 18px;
-                    position: absolute;
-                    opacity: 0.2;
                     left: -9px;
+                    opacity: 0.2;
+                    position: absolute;
                     top: 3px;
                     width: calc(100% + 18px);
                   }
@@ -58,8 +58,8 @@
                 }
 
                 .ant-slider-handle {
-                  top: 3px;
                   height: 18px;
+                  top: 3px;
                   width: 18px;
 
                   &::after,
@@ -128,8 +128,8 @@
 
             .ant-color-picker-input {
               .ant-color-picker-hex-input {
-                border-bottom-right-radius: 0px;
-                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0;
+                border-top-right-radius: 0;
                 box-shadow: none;
               }
 
@@ -139,8 +139,8 @@
                 gap: 1px;
 
                 &:first-child {
-                  border-bottom-right-radius: 0px;
-                  border-top-right-radius: 0px;
+                  border-bottom-right-radius: 0;
+                  border-top-right-radius: 0;
                 }
 
                 &:not(:first-child) {
@@ -150,8 +150,8 @@
             }
 
             .ant-color-picker-alpha-input {
-              border-bottom-left-radius: 0px;
-              border-top-left-radius: 0px;
+              border-bottom-left-radius: 0;
+              border-top-left-radius: 0;
               box-shadow: none;
               margin-left: 1px;
             }
@@ -273,6 +273,7 @@
     .ant-popover-content {
       .ant-popover-inner {
         @include box-shadow-panel('dark');
+
         background-color: $--rx-neutral-5--dark;
 
         .ant-color-picker-inner-content {

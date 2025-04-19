@@ -8,12 +8,13 @@ import { REDUCER_KEY } from './actionsType';
 // types
 import { T3DCoordinates, TElement } from 'types';
 import {
-  TElementsData,
   TElementDynamicData,
+  TElementsData,
+  TElementStaticData,
+  TEvents,
+  TPage,
   TPageBuilderState,
   TSelectedElements,
-  TEvents,
-  TElementStaticData,
 } from './types';
 import { TMainState } from 'types/reducers';
 
@@ -23,8 +24,13 @@ import { findMainParent } from './utils/findMainParent';
 export const pageBuilderStateSelector: Selector<TMainState, TPageBuilderState> =
   getFp(REDUCER_KEY);
 
+export const pageSelector: Selector<TMainState, TPage> = createSelector(
+  pageBuilderStateSelector,
+  (state) => state.pages[state.currentPage],
+);
+
 export const areaCoordinatesSelector: Selector<TMainState, T3DCoordinates> =
-  createSelector(pageBuilderStateSelector, getFp('areaCoordinates'));
+  createSelector(pageSelector, getFp('areaCoordinates'));
 
 export const areaAxisSelectorCreator = (
   axis: keyof T3DCoordinates,
@@ -32,7 +38,7 @@ export const areaAxisSelectorCreator = (
   createSelector(areaCoordinatesSelector, getFp(axis));
 
 export const elementsSelector: Selector<TMainState, TElementsData> =
-  createSelector(pageBuilderStateSelector, getFp('elements'));
+  createSelector(pageSelector, getFp('elements'));
 
 export const allDataSelector: Selector<TMainState, TElementsData['allData']> =
   createSelector(elementsSelector, getFp('allData'));
@@ -106,7 +112,7 @@ export const isPendingSelector: Selector<TMainState, boolean> = createSelector(
 );
 
 export const selectedElementsSelector: Selector<TMainState, TSelectedElements> =
-  createSelector(pageBuilderStateSelector, getFp('selectedElements'));
+  createSelector(pageSelector, getFp('selectedElements'));
 
 export const isSelectedElementSelectorCreator = (
   elementId: TElement['id'],

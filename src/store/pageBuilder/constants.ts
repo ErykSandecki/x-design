@@ -1,11 +1,11 @@
 // others
-import { BASE_2D } from 'shared';
+import { BASE_2D, BASE_3D } from 'shared';
 import { THEME } from 'constant/localStorageKeys';
 import { THEME_COLORS } from 'constant/themeColors';
 
 // types
 import { ElementType, TElement, Theme } from 'types';
-import { TElementDynamicData, TElementStaticData } from './types';
+import { TElementDynamicData, TElementStaticData, TPage } from './types';
 
 const value =
   localStorage.getItem(THEME) === Theme.dark
@@ -41,4 +41,23 @@ export const BASE_STATIC_DATA: TElementStaticData = {
   parentId: BASE_ALL_DATA.parentId,
   position: BASE_ALL_DATA.position,
   type: BASE_ALL_DATA.type,
+};
+
+export const BASE_PAGE: TPage = {
+  areaCoordinates: BASE_3D,
+  elements: {
+    allData: {
+      [BASE_ALL_DATA.id]: BASE_ALL_DATA,
+    },
+    dynamicData: {
+      [BASE_DYNAMIC_DATA.id]: BASE_DYNAMIC_DATA,
+    },
+    staticData: {
+      [BASE_STATIC_DATA.id]: BASE_STATIC_DATA,
+    },
+  },
+  id: '0',
+  name: 'Page 1',
+  prevState: undefined,
+  selectedElements: [],
 };

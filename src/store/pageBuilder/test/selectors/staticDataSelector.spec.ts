@@ -7,7 +7,7 @@ import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
 // store
 import { staticDataSelector } from '../../selectors';
 
-const { elements } = pageBuilderStateMock[PAGE_BUILDER];
+const { elements } = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
 describe('staticDataSelector', () => {
   it('should return data', () => {
@@ -16,7 +16,7 @@ describe('staticDataSelector', () => {
 
     // result
     expect(selectorFunction(elements)).toStrictEqual({
-      ...pageBuilderStateMock[PAGE_BUILDER].elements.staticData,
+      ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements.staticData,
     });
   });
 });

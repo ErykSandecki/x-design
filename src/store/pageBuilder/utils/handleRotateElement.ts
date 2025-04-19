@@ -5,20 +5,26 @@ export const handleRotateElement = (
   state: TPageBuilderState,
 ): TPageBuilderState => ({
   ...state,
-  elements: {
-    ...state.elements,
-    allData: {
-      ...state.elements.allData,
-      [id]: {
-        ...state.elements.allData[id],
-        rotate,
-      },
-    },
-    dynamicData: {
-      ...state.elements.dynamicData,
-      [id]: {
-        ...state.elements.dynamicData[id],
-        rotate,
+  pages: {
+    ...state.pages,
+    [state.currentPage]: {
+      ...state.pages[state.currentPage],
+      elements: {
+        ...state.pages[state.currentPage].elements,
+        allData: {
+          ...state.pages[state.currentPage].elements.allData,
+          [id]: {
+            ...state.pages[state.currentPage].elements.allData[id],
+            rotate,
+          },
+        },
+        dynamicData: {
+          ...state.pages[state.currentPage].elements.dynamicData,
+          [id]: {
+            ...state.pages[state.currentPage].elements.dynamicData[id],
+            rotate,
+          },
+        },
       },
     },
   },

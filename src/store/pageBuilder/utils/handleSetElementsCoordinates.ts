@@ -1,6 +1,7 @@
 // types
 import { T2DCoordinates, TRectCoordinates } from 'types';
 import {
+  TPage,
   TPageBuilderState,
   TPositions,
   TSelectedElement,
@@ -20,7 +21,7 @@ export const getSelectedElementPosition = (
 
 export const getPositions = (
   { x, y }: TSetElementsCoordinatesAction['payload'],
-  prevState: TPageBuilderState['prevState'],
+  prevState: TPage['prevState'],
 ): TPositions => {
   const { allData, dynamicData } = prevState.elements;
   const selectedElements = prevState.selectedElements;
@@ -63,23 +64,30 @@ export const handleSetElementsCoordinates = (
   state: TPageBuilderState,
 ): TPageBuilderState => {
   const { canMoveElements } = state.events;
+  const currentPage = state.pages[state.currentPage];
   const positions = canMoveElements
-    ? getPositions(coordinates, state.prevState)
+    ? getPositions(coordinates, currentPage.prevState)
     : { allData: {}, dynamicData: {}, selectedElements: [] };
 
   return {
     ...state,
-    elements: {
-      ...state.elements,
-      allData: {
-        ...state.elements.allData,
-        ...positions.allData,
-      },
-      dynamicData: {
-        ...state.elements.dynamicData,
-        ...positions.dynamicData,
+    pages: {
+      ...state.pages,
+      [state.currentPage]: {
+        ...currentPage,
+        elements: {
+          ...currentPage.elements,
+          allData: {
+            ...currentPage.elements.allData,
+            ...positions.allData,
+          },
+          dynamicData: {
+            ...currentPage.elements.dynamicData,
+            ...positions.dynamicData,
+          },
+        },
+        selectedElements: positions.selectedElements,
       },
     },
-    selectedElements: positions.selectedElements,
   };
 };

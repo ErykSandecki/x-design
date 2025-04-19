@@ -17,11 +17,11 @@ describe('filtredStaticDataSelectorCreator', () => {
     expect(
       selectorFunction([], {
         allData: {
-          ...pageBuilderStateMock[PAGE_BUILDER].elements.allData,
+          ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements.allData,
         },
         dynamicData: {},
         staticData: {
-          ...pageBuilderStateMock[PAGE_BUILDER].elements.staticData,
+          ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements.staticData,
         },
       }),
     ).toStrictEqual([]);

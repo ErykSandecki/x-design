@@ -15,9 +15,12 @@ describe('pageBackgroundSelectorCreator', () => {
 
     // result
     expect(
-      selectorFunction(pageBuilderStateMock[PAGE_BUILDER].elements.allData),
+      selectorFunction(
+        pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements.allData,
+      ),
     ).toStrictEqual(
-      pageBuilderStateMock[PAGE_BUILDER].elements.allData['-1'].background,
+      pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements.allData['-1']
+        .background,
     );
   });
 });
