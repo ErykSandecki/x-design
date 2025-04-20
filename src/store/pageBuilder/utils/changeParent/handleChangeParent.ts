@@ -56,8 +56,6 @@ export const handleChangeParent = (
               ...parents.staticData,
             },
           },
-          selectedElements:
-            possibleParent === '-1' ? currentPage.selectedElements : [],
         },
       },
     };

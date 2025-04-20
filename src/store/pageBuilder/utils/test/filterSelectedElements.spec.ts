@@ -7,7 +7,7 @@ import { filterSelectedElements } from '../filterSelectedElements';
 describe('filterSelectedElements', () => {
   it(`should not filter when single element`, () => {
     // before
-    const result = filterSelectedElements([selectedElementMock]);
+    const result = filterSelectedElements([selectedElementMock], {} as any);
 
     // result
     expect(result).toStrictEqual([selectedElementMock]);
@@ -15,10 +15,13 @@ describe('filterSelectedElements', () => {
 
   it(`should filter elements`, () => {
     // before
-    const result = filterSelectedElements([
-      selectedElementMock,
-      { ...selectedElementMock, id: '2', parentId: selectedElementMock.id },
-    ]);
+    const result = filterSelectedElements(
+      [
+        selectedElementMock,
+        { ...selectedElementMock, id: '2', parentId: selectedElementMock.id },
+      ],
+      {} as any,
+    );
 
     // result
     expect(result).toStrictEqual([selectedElementMock]);

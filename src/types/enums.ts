@@ -59,6 +59,7 @@ export enum KeyboardKeys {
   w = 'w',
   Z = 'Z',
   z = 'z',
+  none = 'none',
 }
 
 export enum MouseButton {

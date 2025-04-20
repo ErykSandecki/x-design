@@ -1,4 +1,4 @@
-import React, { FC, ReactNode, RefObject, useRef } from 'react';
+import React, { FC, KeyboardEvent, ReactNode, RefObject, useRef } from 'react';
 
 // components
 import Box from '../UI/components/Box/Box';
@@ -29,6 +29,8 @@ export type TZoomBoxProps = {
   classes?: typeof classes;
   coordinates: T3DCoordinates;
   mouseMode: MouseMode;
+  onKeyDown: (event: KeyboardEvent) => void;
+  onKeyUp: () => void;
   onMouseDown: (event: React.MouseEvent) => void;
   onMouseMove: (event: MouseEvent) => void;
   onMouseMoveDepedencies?: Array<any>;
@@ -47,6 +49,8 @@ export const ZoomBox: FC<TZoomBoxProps> = ({
   classes = { className: '' },
   coordinates,
   mouseMode,
+  onKeyDown,
+  onKeyUp,
   onMouseDown,
   onMouseMove,
   onMouseMoveDepedencies = [],
@@ -86,7 +90,10 @@ export const ZoomBox: FC<TZoomBoxProps> = ({
         ),
       }}
       e2eValue="zoom-box"
+      onKeyDown={onKeyDown}
+      onKeyUp={onKeyUp}
       ref={zoomBoxRef}
+      tabIndex={0}
       sx={{
         height: '100%',
         overflow: 'hidden',

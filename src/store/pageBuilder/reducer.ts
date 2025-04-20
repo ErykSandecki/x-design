@@ -18,7 +18,7 @@ import { BASE_PAGE } from './constants';
 
 // types
 import { Anchor } from './enums';
-import { TAction } from 'types';
+import { KeyboardKeys, TAction } from 'types';
 import {
   TAddELementAction,
   TSelectElementAction,
@@ -54,6 +54,7 @@ const initialState: TPageBuilderState = {
     isMultipleMoving: false,
     possibleIndexPosition: null,
     possibleParent: null,
+    pressedKey: KeyboardKeys.none,
     selectedAnchor: Anchor.none,
   },
   isLoading: true,
@@ -92,10 +93,10 @@ const selectElement = (
     ...state.pages,
     [state.currentPage]: {
       ...state.pages[state.currentPage],
-      selectedElements: filterSelectedElements([
-        ...state.pages[state.currentPage].selectedElements,
-        selectedElement,
-      ]),
+      selectedElements: filterSelectedElements(
+        [...state.pages[state.currentPage].selectedElements, selectedElement],
+        state,
+      ),
     },
   },
 });
@@ -109,7 +110,7 @@ const selectElements = (
     ...state.pages,
     [state.currentPage]: {
       ...state.pages[state.currentPage],
-      selectedElements: filterSelectedElements(selectedElements),
+      selectedElements: filterSelectedElements(selectedElements, state),
     },
   },
 });

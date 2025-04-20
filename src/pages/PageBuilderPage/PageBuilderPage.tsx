@@ -6,6 +6,9 @@ import PanelProperties from 'components/PageBuilder/components/PanelProperties/P
 import Toolbar from 'components/PageBuilder/components/Toolbar/Toolbar';
 import ViewBox from 'components/PageBuilder/components/ViewBox/ViewBox';
 
+// core
+import { RefsProvider } from './core/RefsProvider';
+
 // hooks
 import { useKeyDown } from './hooks/useKeyDown';
 import { useWheelEvent } from './hooks/useWheelEvent';
@@ -28,16 +31,18 @@ const PageBuilderPage: FC = () => {
   useWheelEvent();
 
   return (
-    <Box>
-      <Toolbar mouseMode={mouseMode} setMouseMode={setMouseMode} />
-      <PanelProperties />
-      <ViewBox
-        coordinates={coordinates}
-        mouseMode={mouseMode}
-        setCoordinates={setCoordinates}
-        setMouseMode={setMouseMode}
-      />
-    </Box>
+    <RefsProvider>
+      <Box>
+        <Toolbar mouseMode={mouseMode} setMouseMode={setMouseMode} />
+        <PanelProperties />
+        <ViewBox
+          coordinates={coordinates}
+          mouseMode={mouseMode}
+          setCoordinates={setCoordinates}
+          setMouseMode={setMouseMode}
+        />
+      </Box>
+    </RefsProvider>
   );
 };
 

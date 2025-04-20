@@ -5,7 +5,7 @@ import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 
 // types
 import { Anchor } from 'store/pageBuilder/enums';
-import { ElementType, TElement } from 'types';
+import { ElementType, KeyboardKeys, TElement } from 'types';
 import {
   TElementDynamicData,
   TElementStaticData,
@@ -27,6 +27,7 @@ export const pageBuilderStateMock: Record<
       isMultipleMoving: false,
       possibleIndexPosition: null,
       possibleParent: null,
+      pressedKey: KeyboardKeys.none,
       selectedAnchor: Anchor.none,
     },
     isLoading: true,
@@ -83,6 +84,7 @@ export const eventsMock: TEvents = {
   isMultipleMoving: false,
   possibleIndexPosition: null,
   possibleParent: null,
+  pressedKey: KeyboardKeys.none,
   selectedAnchor: Anchor.none,
 };
 

@@ -27,6 +27,8 @@ describe('ZoomBox snapshots', () => {
         backgroundVissible
         coordinates={BASE_3D}
         mouseMode={MouseMode.default}
+        onKeyDown={mockCallBack}
+        onKeyUp={mockCallBack}
         onMouseDown={mockCallBack}
         onMouseMove={mockCallBack}
         onMouseUp={mockCallBack}
@@ -50,6 +52,8 @@ describe('ZoomBox snapshots', () => {
         backgroundVissible
         coordinates={BASE_3D}
         mouseMode={MouseMode.move}
+        onKeyDown={mockCallBack}
+        onKeyUp={mockCallBack}
         onMouseDown={mockCallBack}
         onMouseMove={mockCallBack}
         onMouseUp={mockCallBack}
@@ -81,6 +85,8 @@ describe('ZoomBox snapshots', () => {
         backgroundVissible={false}
         coordinates={BASE_3D}
         mouseMode={MouseMode.default}
+        onKeyDown={mockCallBack}
+        onKeyUp={mockCallBack}
         onMouseDown={mockCallBack}
         onMouseMove={mockCallBack}
         onMouseUp={mockCallBack}

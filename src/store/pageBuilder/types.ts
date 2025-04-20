@@ -19,6 +19,7 @@ import {
 import { Anchor } from './enums';
 import {
   ElementType,
+  KeyboardKeys,
   T2DCoordinates,
   T3DCoordinates,
   TBackground,
@@ -56,6 +57,7 @@ export type TEvents = {
   isMultipleMoving: boolean;
   possibleIndexPosition: number | null;
   possibleParent: TElement['id'] | null;
+  pressedKey: KeyboardKeys;
   selectedAnchor: Anchor;
 };
 

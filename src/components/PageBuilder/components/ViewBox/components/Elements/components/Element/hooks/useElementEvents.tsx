@@ -1,6 +1,7 @@
 import { RefObject, useRef, useState } from 'react';
 
 // hooks
+import { useInitializeRef } from './useInitializeRef';
 import { useMouseDownEvent } from './useMouseDownEvent';
 import { useMouseEnterEvent } from './useMouseEnterEvent';
 import { useMouseLeaveEvent } from './useMouseLeaveEvent';
@@ -50,6 +51,7 @@ export const useElementEvents = (
     type,
   };
 
+  useInitializeRef(elementRef, id);
   useMouseMoveEvent(
     coordinates,
     cursorPosition,
