@@ -16,8 +16,8 @@ export const handleChangeParent = (
 
   if (possibleParent !== null) {
     const currentPage = state.pages[state.currentPage];
-    const parentHasChanged =
-      currentPage.elements.allData[id].parentId !== possibleParent;
+    const prevParentId = currentPage.elements.allData[id].parentId;
+    const parentHasChanged = prevParentId !== possibleParent;
     const clonedState = cloneDeep(state);
     const children = getMappedElementsToMove(
       parentHasChanged,
@@ -56,6 +56,12 @@ export const handleChangeParent = (
               ...parents.staticData,
             },
           },
+          selectedElements: currentPage.selectedElements.map(
+            (selectedElement) => ({
+              ...selectedElement,
+              parentId: possibleParent || prevParentId,
+            }),
+          ),
         },
       },
     };

@@ -67,7 +67,11 @@ export const handleSetElementsCoordinates = (
   const currentPage = state.pages[state.currentPage];
   const positions = canMoveElements
     ? getPositions(coordinates, currentPage.prevState)
-    : { allData: {}, dynamicData: {}, selectedElements: [] };
+    : {
+        allData: {},
+        dynamicData: {},
+        selectedElements: currentPage.selectedElements,
+      };
 
   return {
     ...state,

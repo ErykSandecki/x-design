@@ -19,13 +19,11 @@ export const handleSelectElement = (
   selectedElement: TSelectedElement,
 ): void => {
   const { shiftKey } = event;
-  const { parentId } = selectedElement;
-  const isOutside = parentId === '-1';
-  const canTrigger = (!isSelected && isMultiple && isOutside) || !isMultiple;
+  const canTrigger = (!isSelected && isMultiple) || !isMultiple;
 
-  if (isOutside && shiftKey && !isSelected) {
+  if (shiftKey && !isSelected) {
     dispatch(selectElement(selectedElement));
-  } else if (isOutside && shiftKey && isSelected) {
+  } else if (shiftKey && isSelected) {
     dispatch(unselectElement(selectedElement.id));
   } else if (canTrigger && !shiftKey) {
     dispatch(selectElements([selectedElement]));

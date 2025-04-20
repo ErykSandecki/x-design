@@ -1,13 +1,20 @@
-import { FC, memo } from 'react';
+import { defer } from 'lodash';
+import { FC, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 // components
 import ClickableArea from '../ClickableArea/ClickableArea';
 import Corners from '../Corners/Corners';
 
+// core
+import { useRefs } from 'pages/PageBuilderPage/core/RefsProvider';
+
+// others
+import { BASE_RECT } from 'shared';
+
 // store
 import {
-  eventsSelector,
+  eventSelectorCreator,
   multipleSelectedElementsSelector,
   selectedElementsSelector,
 } from 'store/pageBuilder/selectors';
@@ -16,16 +23,32 @@ import {
 import { getCoordinates } from './utils/getCoordinates';
 
 const MultipleElementsArea: FC = () => {
-  const { isMultipleMoving } = useSelector(eventsSelector);
+  const isMultipleMoving = useSelector(
+    eventSelectorCreator('isMultipleMoving'),
+  ) as boolean;
+  const [coordinates, setCoordinates] = useState(BASE_RECT);
   const selectedElements = useSelector(selectedElementsSelector);
-  const coordinates = getCoordinates(isMultipleMoving, selectedElements);
   const isMultiple = useSelector(multipleSelectedElementsSelector);
+  const sharedRefs = useRefs();
+
   const rectCoordinates = {
     x1: coordinates.x1,
     x2: coordinates.x2,
     y1: coordinates.y1,
     y2: coordinates.y2,
   };
+
+  useEffect(() => {
+    defer(() => {
+      const coordinates = getCoordinates(
+        isMultipleMoving,
+        selectedElements,
+        sharedRefs,
+      );
+
+      setCoordinates(coordinates);
+    });
+  }, [isMultipleMoving, selectedElements]);
 
   if (!isMultiple) {
     return null;
@@ -41,4 +64,4 @@ const MultipleElementsArea: FC = () => {
   );
 };
 
-export default memo(MultipleElementsArea);
+export default MultipleElementsArea;
