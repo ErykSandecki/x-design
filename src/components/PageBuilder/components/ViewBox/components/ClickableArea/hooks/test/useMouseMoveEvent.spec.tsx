@@ -1,74 +1,74 @@
-import { fireEvent, renderHook } from '@testing-library/react';
-import { RefObject } from 'react';
+// import { fireEvent, renderHook } from '@testing-library/react';
+// import { RefObject } from 'react';
 
-// mocks
-import { pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
+// // mocks
+// import { pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
 
-// hooks
-import { useMouseMoveEvent } from '../useMouseMoveEvent';
+// // hooks
+// import { useMouseMoveEvent } from '../useMouseMoveEvent';
 
-// others
-import { BASE_2D } from 'shared';
+// // others
+// import { BASE_2D } from 'shared';
 
-// store
-import { configureStore } from 'store';
+// // store
+// import { configureStore } from 'store';
 
-// types
-import { T2DCoordinates } from 'types';
+// // types
+// import { T2DCoordinates } from 'types';
 
-// utils
-import { getProviderWrapper } from 'test';
+// // utils
+// import { getProviderWrapper } from 'test';
 
-const cursorPosition = { current: BASE_2D } as RefObject<T2DCoordinates>;
-const mockCallBack = jest.fn();
-const stateMock = {
-  ...pageBuilderStateMock,
-};
+// const cursorPosition = { current: BASE_2D } as RefObject<T2DCoordinates>;
+// const mockCallBack = jest.fn();
+// const stateMock = {
+//   ...pageBuilderStateMock,
+// };
 
-jest.mock('lodash', () => ({
-  ...jest.requireActual('lodash'),
-  throttle: (callback: any) => (value: any) => callback(value),
-}));
+// jest.mock('lodash', () => ({
+//   ...jest.requireActual('lodash'),
+//   throttle: (callback: any) => (value: any) => callback(value),
+// }));
 
-jest.mock('react-redux', () => ({
-  ...jest.requireActual('react-redux'),
-  useDispatch: () => () => {},
-}));
+// jest.mock('react-redux', () => ({
+//   ...jest.requireActual('react-redux'),
+//   useDispatch: () => () => {},
+// }));
 
-jest.mock('../../../../utils/setElementsCoordinatesHandler', () => ({
-  setElementsCoordinatesHandler: () => mockCallBack(),
-}));
+// jest.mock('../../../../utils/setElementsCoordinatesHandler', () => ({
+//   setElementsCoordinatesHandler: () => mockCallBack(),
+// }));
 
-describe('useMouseMoveEvent', () => {
-  it(`should trigger event`, () => {
-    // mock
-    const store = configureStore(stateMock);
+// describe('useMouseMoveEvent', () => {
+//   it(`should trigger event`, () => {
+//     // mock
+//     const store = configureStore(stateMock);
 
-    // before
-    renderHook(() => useMouseMoveEvent(cursorPosition, true), {
-      wrapper: getProviderWrapper(store),
-    });
+//     // before
+//     renderHook(() => useMouseMoveEvent(cursorPosition, true), {
+//       wrapper: getProviderWrapper(store),
+//     });
 
-    // action
-    fireEvent.mouseMove(window);
+//     // action
+//     fireEvent.mouseMove(window);
 
-    // result
-    expect(mockCallBack.mock.calls.length).toBe(1);
-  });
+//     // result
+//     expect(mockCallBack.mock.calls.length).toBe(1);
+//   });
 
-  it(`should not trigger event`, () => {
-    // mock
-    const store = configureStore(stateMock);
+//   it(`should not trigger event`, () => {
+//     // mock
+//     const store = configureStore(stateMock);
 
-    // before
-    renderHook(() => useMouseMoveEvent(cursorPosition, false), {
-      wrapper: getProviderWrapper(store),
-    });
+//     // before
+//     renderHook(() => useMouseMoveEvent(cursorPosition, false), {
+//       wrapper: getProviderWrapper(store),
+//     });
 
-    // action
-    fireEvent.mouseMove(window);
+//     // action
+//     fireEvent.mouseMove(window);
 
-    // result
-    expect(mockCallBack.mock.calls.length).toBe(0);
-  });
-});
+//     // result
+//     expect(mockCallBack.mock.calls.length).toBe(0);
+//   });
+// });

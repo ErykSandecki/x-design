@@ -19,24 +19,23 @@ import {
   selectedElementsSelector,
 } from 'store/pageBuilder/selectors';
 
+// types
+import { TElements } from './types';
+
 // utils
 import { getCoordinates } from './utils/getCoordinates';
 
 const MultipleElementsArea: FC = () => {
-  const isMultipleMoving = useSelector(
-    eventSelectorCreator('isMultipleMoving'),
-  ) as boolean;
-  const [coordinates, setCoordinates] = useState(BASE_RECT);
   const selectedElements = useSelector(selectedElementsSelector);
   const isMultiple = useSelector(multipleSelectedElementsSelector);
   const sharedRefs = useRefs();
-
-  const rectCoordinates = {
-    x1: coordinates.x1,
-    x2: coordinates.x2,
-    y1: coordinates.y1,
-    y2: coordinates.y2,
-  };
+  const isMultipleMoving = useSelector(
+    eventSelectorCreator('isMultipleMoving'),
+  ) as boolean;
+  const [elements, setElements] = useState<TElements>({
+    elementsCordinates: [],
+    outline: BASE_RECT,
+  });
 
   useEffect(() => {
     defer(() => {
@@ -46,7 +45,7 @@ const MultipleElementsArea: FC = () => {
         sharedRefs,
       );
 
-      setCoordinates(coordinates);
+      setElements(coordinates);
     });
   }, [isMultipleMoving, selectedElements]);
 
@@ -56,9 +55,12 @@ const MultipleElementsArea: FC = () => {
 
   return (
     <>
-      <ClickableArea rectCoordinates={rectCoordinates} />
+      <ClickableArea
+        elementsCordinates={elements.elementsCordinates}
+        rectCoordinates={elements.outline}
+      />
       {!isMultipleMoving && (
-        <Corners rectCoordinates={rectCoordinates} increaseZIndex />
+        <Corners rectCoordinates={elements.outline} increaseZIndex />
       )}
     </>
   );

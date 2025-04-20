@@ -22,6 +22,7 @@ import { DATA_STATUS_ATTRIBUTE } from './constants';
 // store
 import {
   elementDynamicDataSelectorCreator,
+  eventsSelector,
   isHoverSelectorCreator,
   isSelectedElementSelectorCreator,
   multipleSelectedElementsSelector,
@@ -59,6 +60,7 @@ const Element: FC<TElementProps> = ({
   const isMultiple = useSelector(multipleSelectedElementsSelector);
   const elementRef = useRef<HTMLDivElement>(null);
   const elementDynamicData = useSelector(elementDynamicDataSelectorCreator(id));
+  const { isMultipleMoving } = useSelector(eventsSelector);
   const { coordinates } = elementDynamicData;
   const { background, height, position, rotate, width } = elementDynamicData;
   const { x, y } = coordinates;
@@ -91,7 +93,7 @@ const Element: FC<TElementProps> = ({
           ],
           [
             classNamesWithTheme[classNameMoveableELement].modificators.moving,
-            isMoving,
+            isMoving || (isMultipleMoving && isSelected),
           ],
           [
             classNamesWithTheme[classNameMoveableELement].modificators.selected,

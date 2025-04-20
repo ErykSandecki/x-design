@@ -54,12 +54,6 @@ export const getCollidedElements = (
     if (condition) {
       if (!prevIds.includes(id)) {
         collidedElements.push({
-          coordinates: {
-            x1: coordinates.x1,
-            x2: coordinates.x2,
-            y1: coordinates.y1,
-            y2: coordinates.y2,
-          },
           id,
           parentId,
           type,

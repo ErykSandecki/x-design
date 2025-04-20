@@ -16,10 +16,12 @@ export type TUseMouseDownEvent = void;
 export const useMouseMoveEvent = (
   cursorPosition: RefObject<T2DCoordinates>,
   isPressing: boolean,
+  setIsMoving: (isMoving: boolean) => void,
 ): TUseMouseDownEvent => {
   const dispatch = useDispatch();
 
   const handleMouseMove = throttle((event: MouseEvent) => {
+    setIsMoving(true);
     setElementsCoordinatesHandler(cursorPosition, dispatch, event);
   }, THROTTLE_WAIT);
 

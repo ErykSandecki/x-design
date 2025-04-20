@@ -10,7 +10,7 @@ import { store } from 'store';
 
 // types
 import { TContext } from 'pages/PageBuilderPage/core/types';
-import { TRectCoordinates } from 'types';
+import { TElements } from '../types';
 import { TSelectedElements } from 'store/pageBuilder/types';
 
 // utils
@@ -20,7 +20,7 @@ export const getCoordinates = (
   isMultipleMoving: boolean,
   selectedElements: TSelectedElements,
   sharedRefs: TContext,
-): TRectCoordinates => {
+): TElements => {
   if (!isMultipleMoving && size(selectedElements) > 1) {
     const allData = allDataSelector(store.getState());
     const offset = SW / 2;
@@ -35,22 +35,32 @@ export const getCoordinates = (
         );
 
         return {
+          elementsCords: [
+            ...obj.elementsCords,
+            { coordinates: { x1, x2, y1, y2 }, id },
+          ],
           x1: [...obj.x1, x1],
           x2: [...obj.x2, x2],
           y1: [...obj.y1, y1],
           y2: [...obj.y2, y2],
         };
       },
-      { x1: [], x2: [], y1: [], y2: [] },
+      { elementsCords: [], x1: [], x2: [], y1: [], y2: [] },
     );
 
     return {
-      x1: min(setCoordinates.x1) - offset,
-      x2: max(setCoordinates.x2) + offset,
-      y1: min(setCoordinates.y1) - offset,
-      y2: max(setCoordinates.y2) + offset,
+      elementsCordinates: setCoordinates.elementsCords,
+      outline: {
+        x1: min(setCoordinates.x1) - offset,
+        x2: max(setCoordinates.x2) + offset,
+        y1: min(setCoordinates.y1) - offset,
+        y2: max(setCoordinates.y2) + offset,
+      },
     };
   }
 
-  return BASE_RECT;
+  return {
+    elementsCordinates: [],
+    outline: BASE_RECT,
+  };
 };

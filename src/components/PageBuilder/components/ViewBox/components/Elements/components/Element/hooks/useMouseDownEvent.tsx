@@ -35,7 +35,6 @@ export const useMouseDownEvent = (
         isMultiple,
         isSelected,
       );
-      setIsPressing(true);
       handleSelectElement(
         dispatch,
         event,
@@ -43,6 +42,10 @@ export const useMouseDownEvent = (
         isSelected,
         selectedElement,
       );
+
+      if (!event.shiftKey) {
+        setIsPressing(true);
+      }
     }
   };
 

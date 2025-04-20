@@ -1,5 +1,4 @@
 // others
-import { BASE_RECT } from 'shared';
 import { BASE_PAGE } from 'store/pageBuilder/constants';
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 
@@ -89,7 +88,6 @@ export const eventsMock: TEvents = {
 };
 
 export const selectedElementMock: TSelectedElement = {
-  coordinates: BASE_RECT,
   id: '1',
   parentId: '-1',
   type: ElementType.frame,

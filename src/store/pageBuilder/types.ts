@@ -68,7 +68,6 @@ export type TPositions = {
 };
 
 export type TSelectedElement = {
-  coordinates: TRectCoordinates;
   id: TElement['id'];
   parentId: TElement['parentId'];
   type: ElementType;

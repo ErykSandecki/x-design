@@ -8,17 +8,6 @@ import {
   TSetElementsCoordinatesAction,
 } from '../types';
 
-export const getSelectedElementPosition = (
-  coordinates: TRectCoordinates,
-  x: T2DCoordinates['x'],
-  y: T2DCoordinates['y'],
-): TSelectedElement['coordinates'] => ({
-  x1: coordinates.x1 + x,
-  x2: coordinates.x2 + x,
-  y1: coordinates.y1 + y,
-  y2: coordinates.y2 + y,
-});
-
 export const getPositions = (
   { x, y }: TSetElementsCoordinatesAction['payload'],
   prevState: TPage['prevState'],
@@ -31,7 +20,7 @@ export const getPositions = (
     selectedElements: [],
   };
 
-  selectedElements.forEach(({ coordinates, id, ...restData }) => {
+  selectedElements.forEach(({ id, ...restData }) => {
     const {
       coordinates: { x: xA, y: yA },
     } = allData[id];
@@ -51,7 +40,6 @@ export const getPositions = (
 
     positions.selectedElements.push({
       ...restData,
-      coordinates: getSelectedElementPosition(coordinates, x, y),
       id,
     });
   });
