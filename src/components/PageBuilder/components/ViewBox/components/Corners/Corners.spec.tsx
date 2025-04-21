@@ -28,19 +28,4 @@ describe('Corners snapshots', () => {
     // result
     expect(asFragment()).toMatchSnapshot();
   });
-
-  it('should render with increases zindex', () => {
-    // mock
-    const store = configureStore();
-
-    // before
-    const { asFragment } = render(
-      <Provider store={store}>
-        <Corners rectCoordinates={BASE_RECT} increaseZIndex />
-      </Provider>,
-    );
-
-    // result
-    expect(asFragment()).toMatchSnapshot();
-  });
 });

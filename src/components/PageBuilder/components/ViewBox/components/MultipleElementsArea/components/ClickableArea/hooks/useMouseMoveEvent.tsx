@@ -3,13 +3,13 @@ import { throttle } from 'lodash';
 import { useDispatch } from 'react-redux';
 
 // others
-import { THROTTLE_WAIT } from '../../../constants';
+import { THROTTLE_WAIT } from '../../../../../constants';
 
 // types
 import { T2DCoordinates } from 'types';
 
 // utils
-import { setElementsCoordinatesHandler } from '../../../utils/setElementsCoordinatesHandler';
+import { setElementsCoordinatesHandler } from '../../../../../utils/setElementsCoordinatesHandler';
 
 export type TUseMouseDownEvent = void;
 

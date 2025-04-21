@@ -1,6 +1,9 @@
 import { RefObject } from 'react';
 import { renderHook } from '@testing-library/react';
 
+// core
+import { RefsProvider } from 'pages/PageBuilderPage/core/RefsProvider';
+
 // hooks
 import { useElementEvents } from '../useElementEvents';
 
@@ -49,7 +52,15 @@ describe('useElementEvents', () => {
           100,
         ),
       {
-        wrapper: getProviderWrapper(store),
+        wrapper: ({ children }) => {
+          const Wrapper = getProviderWrapper(store);
+
+          return (
+            <Wrapper>
+              <RefsProvider>{children}</RefsProvider>
+            </Wrapper>
+          );
+        },
       },
     );
 

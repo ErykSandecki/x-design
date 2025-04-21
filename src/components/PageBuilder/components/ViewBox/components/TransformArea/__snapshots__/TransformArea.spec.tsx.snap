@@ -4,6 +4,7 @@ exports[`TransformArea snapshots should render TransformArea 1`] = `
 <DocumentFragment>
   <div
     class="TransformArea TransformArea--light"
+    style="height: 100px; width: 100px;"
   >
     <div
       class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--east TransformArea__anchor--east--light"

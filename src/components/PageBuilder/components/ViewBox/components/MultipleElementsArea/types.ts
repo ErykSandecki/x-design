@@ -1,7 +1,7 @@
 // types
 import { TElement, TRectCoordinates } from 'types';
 
-export type TElements = {
+export type TCoordinatesData = {
   elementsCordinates: Array<{
     coordinates: TRectCoordinates;
     id: TElement['id'];

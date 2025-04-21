@@ -23,7 +23,7 @@ exports[`ElementArea snapshots should render ElementArea 1`] = `
       />
     </svg>
     <svg
-      class="Corners Corners--light Corners--increase-zindex Corners--increase-zindex--light"
+      class="Corners Corners--light"
       style="height: 100px; left: 0px; top: 0px; width: 100px;"
     >
       <rect
@@ -38,21 +38,21 @@ exports[`ElementArea snapshots should render ElementArea 1`] = `
         rx="1.5"
         width="6"
         x="-3"
-        y="97"
+        y="95.5"
       />
       <rect
         height="6"
         rx="1.5"
         width="6"
-        x="97"
+        x="95.5"
         y="-3"
       />
       <rect
         height="6"
         rx="1.5"
         width="6"
-        x="97"
-        y="97"
+        x="95.5"
+        y="95.5"
       />
     </svg>
   </div>
@@ -80,8 +80,8 @@ exports[`ElementArea snapshots should render with label when x2 i y2 is less tha
       />
     </svg>
     <svg
-      class="Corners Corners--light Corners--increase-zindex Corners--increase-zindex--light"
-      style="height: -100px; left: 0px; top: 0px; width: -100px;"
+      class="Corners Corners--light"
+      style="height: 100px; left: -100px; top: -100px; width: 100px;"
     >
       <rect
         height="6"
@@ -95,21 +95,21 @@ exports[`ElementArea snapshots should render with label when x2 i y2 is less tha
         rx="1.5"
         width="6"
         x="-3"
-        y="-103"
+        y="95.5"
       />
       <rect
         height="6"
         rx="1.5"
         width="6"
-        x="-103"
+        x="95.5"
         y="-3"
       />
       <rect
         height="6"
         rx="1.5"
         width="6"
-        x="-103"
-        y="-103"
+        x="95.5"
+        y="95.5"
       />
     </svg>
   </div>

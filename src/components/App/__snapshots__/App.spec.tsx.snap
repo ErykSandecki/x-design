@@ -223,6 +223,7 @@ exports[`App snapshots should render router 1`] = `
     <div
       class="css-p683st ViewBox ViewBox--light ZoomBox ZoomBox--light ZoomBox__idle ZoomBox__idle--light ZoomBox__default ZoomBox__default--light"
       data-test-box="zoom-box"
+      tabindex="0"
     >
       <div
         class="css-q0izro ZoomBox__background-mask ZoomBox__background-mask--light"
@@ -238,7 +239,12 @@ exports[`App snapshots should render router 1`] = `
         class="css-qel697 ZoomBox__zoom-content ZoomBox__zoom-content--light"
         data-test-box=""
         style="transform: translate(0px, 0px) scale(1);"
-      />
+      >
+        <div
+          class="ViewBox__overlay-container ViewBox__overlay-container--light"
+          id="overlayContainer"
+        />
+      </div>
     </div>
   </div>
 </DocumentFragment>

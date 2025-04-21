@@ -1,8 +1,11 @@
 @import '../../../../../../styles/z-indexes';
+@import '../../../../../../../../styles/mixins/enter-delay';
 
 .Element {
   $self: &;
+  @include enter-delay;
 
+  animation-delay: 100ms;
   position: absolute;
   overflow: hidden;
   user-select: none;

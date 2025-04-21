@@ -4,6 +4,9 @@ import { render } from '@testing-library/react';
 // components
 import Elements from './Elements';
 
+// core
+import { RefsProvider } from 'pages/PageBuilderPage/core/RefsProvider';
+
 // mocks
 import {
   elementAllDataMock,
@@ -24,6 +27,13 @@ import { configureStore } from 'store/store';
 import { MouseMode } from 'components/PageBuilder/enums';
 import { ElementType } from 'types';
 
+const element = document.createElement('div');
+const overlayContainer = document.createElement('div');
+
+const sharedRefs = {
+  [elementAllDataMock.id]: element,
+};
+
 const stateMock = {
   ...wholeStateMock,
   [PAGE_BUILDER]: {
@@ -39,11 +49,16 @@ describe('Elements snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <Elements
-          eventsDisabled={false}
-          mouseMode={MouseMode.default}
-          parentId="-1"
-        />
+        <RefsProvider
+          itemsRefs={sharedRefs}
+          overlayContainerRefHtml={overlayContainer}
+        >
+          <Elements
+            eventsDisabled={false}
+            mouseMode={MouseMode.default}
+            parentId="-1"
+          />
+        </RefsProvider>
       </Provider>,
     );
 
@@ -101,11 +116,16 @@ describe('Elements snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <Elements
-          eventsDisabled={false}
-          mouseMode={MouseMode.default}
-          parentId="-1"
-        />
+        <RefsProvider
+          itemsRefs={sharedRefs}
+          overlayContainerRefHtml={overlayContainer}
+        >
+          <Elements
+            eventsDisabled={false}
+            mouseMode={MouseMode.default}
+            parentId="-1"
+          />
+        </RefsProvider>
       </Provider>,
     );
 
@@ -154,11 +174,16 @@ describe('Elements snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <Elements
-          eventsDisabled={false}
-          mouseMode={MouseMode.default}
-          parentId="-1"
-        />
+        <RefsProvider
+          itemsRefs={sharedRefs}
+          overlayContainerRefHtml={overlayContainer}
+        >
+          <Elements
+            eventsDisabled={false}
+            mouseMode={MouseMode.default}
+            parentId="-1"
+          />
+        </RefsProvider>
       </Provider>,
     );
 
@@ -172,32 +197,38 @@ describe('Elements snapshots', () => {
     const store = configureStore({
       [PAGE_BUILDER]: {
         ...pageBuilderStateMock[PAGE_BUILDER],
-        elements: {
-          allData: {
-            ['-1']: {
-              ...currentPage.elements.allData['-1'],
-              children: [elementAllDataMock.id],
-            },
-            [elementAllDataMock.id]: {
-              ...elementAllDataMock,
-              type: ElementType.none,
-            },
-          },
-          dynamicData: {
-            ['-1']: {
-              ...currentPage.elements.dynamicData['-1'],
-              children: [elementDynamicDataMock.id],
-            },
-            [elementDynamicDataMock.id]: elementDynamicDataMock,
-          },
-          staticData: {
-            ['-1']: {
-              ...currentPage.elements.staticData['-1'],
-              children: [elementStaticDataMock.id],
-            },
-            [elementStaticDataMock.id]: {
-              ...elementStaticDataMock,
-              type: ElementType.none,
+        pages: {
+          ...pageBuilderStateMock[PAGE_BUILDER],
+          ['0']: {
+            ...currentPage,
+            elements: {
+              allData: {
+                ['-1']: {
+                  ...currentPage.elements.allData['-1'],
+                  children: [elementAllDataMock.id],
+                },
+                [elementAllDataMock.id]: {
+                  ...elementAllDataMock,
+                  type: ElementType.none,
+                },
+              },
+              dynamicData: {
+                ['-1']: {
+                  ...currentPage.elements.dynamicData['-1'],
+                  children: [elementDynamicDataMock.id],
+                },
+                [elementDynamicDataMock.id]: elementDynamicDataMock,
+              },
+              staticData: {
+                ['-1']: {
+                  ...currentPage.elements.staticData['-1'],
+                  children: [elementStaticDataMock.id],
+                },
+                [elementStaticDataMock.id]: {
+                  ...elementStaticDataMock,
+                  type: ElementType.none,
+                },
+              },
             },
           },
         },
@@ -207,11 +238,16 @@ describe('Elements snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <Elements
-          eventsDisabled={false}
-          mouseMode={MouseMode.default}
-          parentId="-1"
-        />
+        <RefsProvider
+          itemsRefs={sharedRefs}
+          overlayContainerRefHtml={overlayContainer}
+        >
+          <Elements
+            eventsDisabled={false}
+            mouseMode={MouseMode.default}
+            parentId="-1"
+          />
+        </RefsProvider>
       </Provider>,
     );
 

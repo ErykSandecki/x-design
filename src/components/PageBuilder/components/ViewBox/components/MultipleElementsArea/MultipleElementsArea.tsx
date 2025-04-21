@@ -4,7 +4,7 @@ import { FC, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 // components
-import ClickableArea from '../ClickableArea/ClickableArea';
+import ClickableArea from './components/ClickableArea/ClickableArea';
 import Corners from '../Corners/Corners';
 
 // core
@@ -21,10 +21,10 @@ import {
 } from 'store/pageBuilder/selectors';
 
 // types
-import { TElements } from './types';
+import { TCoordinatesData } from './types';
 
 // utils
-import { getCoordinates } from './utils/getCoordinates';
+import { getCoordinatesData } from './utils/getCoordinatesData';
 
 const MultipleElementsArea: FC = () => {
   const selectedElements = useSelector(selectedElementsSelector);
@@ -33,20 +33,20 @@ const MultipleElementsArea: FC = () => {
   const isMultipleMoving = useSelector(
     eventSelectorCreator('isMultipleMoving'),
   ) as boolean;
-  const [elements, setElements] = useState<TElements>({
+  const [coordinatesData, setCoordinatesData] = useState<TCoordinatesData>({
     elementsCordinates: [],
     outline: BASE_RECT,
   });
 
   useEffect(() => {
     defer(() => {
-      const coordinates = getCoordinates(
+      const coordinates = getCoordinatesData(
         isMultipleMoving,
         selectedElements,
         itemsRefs,
       );
 
-      setElements(coordinates);
+      setCoordinatesData(coordinates);
     });
   }, [isMultipleMoving, selectedElements]);
 
@@ -57,12 +57,12 @@ const MultipleElementsArea: FC = () => {
   return (
     <>
       <ClickableArea
-        elementsCordinates={elements.elementsCordinates}
-        rectCoordinates={elements.outline}
+        elementsCordinates={coordinatesData.elementsCordinates}
+        outlineCoordinates={coordinatesData.outline}
       />
       {!isMultipleMoving &&
         createPortal(
-          <Corners rectCoordinates={elements.outline} />,
+          <Corners rectCoordinates={coordinatesData.outline} />,
           overlayContainerRef.current,
         )}
     </>

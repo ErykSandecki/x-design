@@ -9,9 +9,9 @@ import { T3DCoordinates, TObject, TRectCoordinates } from 'types';
 import { TRectArea } from '../../../../PageBuilder/types';
 
 // utils
+import { calculateAbsolutePositions } from '../utils/calculateAbsolutePositions';
 import { handleInitElementArea } from '../utils/handleInitElementArea';
 import { handleInitSelectableArea } from '../utils/handleInitSelectableArea';
-import { calculateAbsolutePositions } from '../utils/calculateAbsolutePositions';
 
 export type TUseMouseDownEvent = (event: MouseEvent) => void;
 

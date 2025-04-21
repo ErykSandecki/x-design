@@ -6,17 +6,44 @@ exports[`MultipleElementsArea snapshots should render MultipleElementsArea 1`] =
 <DocumentFragment>
   <svg
     class="ClickableArea ClickableArea--light"
-    style="height: 1.5px; left: -0.75px; top: -0.75px; width: 1.5px;"
+    data-test-outline=""
+    style="height: 101.5px; left: -0.75px; top: -0.75px; width: 101.5px;"
   >
     <path
       class="ClickableArea__outline ClickableArea__outline--light"
-      d="M 0,0 H 1.5 V 1.5 H 0 V 0"
+      d="M 0,0 H 101.5 V 101.5 H 0 V 0"
       stroke-width="1.5"
     />
   </svg>
   <svg
-    class="Corners Corners--light Corners--increase-zindex Corners--increase-zindex--light"
-    style="height: 1.5px; left: -0.75px; top: -0.75px; width: 1.5px;"
+    class="ClickableArea ClickableArea--light"
+    data-test-rect="1"
+    style="height: 100px; left: 0px; pointer-events: all; top: 0px; width: 100px;"
+  >
+    <rect
+      fill="none"
+      height="100"
+      width="100"
+      x="0"
+      y="0"
+    />
+  </svg>
+  <svg
+    class="ClickableArea ClickableArea--light"
+    data-test-rect="2"
+    style="height: 100px; left: 0px; pointer-events: all; top: 0px; width: 100px;"
+  >
+    <rect
+      fill="none"
+      height="100"
+      width="100"
+      x="0"
+      y="0"
+    />
+  </svg>
+  <svg
+    class="Corners Corners--light"
+    style="height: 101.5px; left: -0.75px; top: -0.75px; width: 101.5px;"
   >
     <rect
       height="6"
@@ -30,21 +57,21 @@ exports[`MultipleElementsArea snapshots should render MultipleElementsArea 1`] =
       rx="1.5"
       width="6"
       x="-3"
-      y="-1.5"
+      y="97"
     />
     <rect
       height="6"
       rx="1.5"
       width="6"
-      x="-1.5"
+      x="97"
       y="-3"
     />
     <rect
       height="6"
       rx="1.5"
       width="6"
-      x="-1.5"
-      y="-1.5"
+      x="97"
+      y="97"
     />
   </svg>
 </DocumentFragment>

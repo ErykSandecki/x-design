@@ -1,10 +1,14 @@
-import { Provider } from 'react-redux';
 import { fireEvent, render } from '@testing-library/react';
+import { Provider } from 'react-redux';
 
 // components
 import ViewBox from './ViewBox';
 
+// core
+import { RefsProvider } from 'pages/PageBuilderPage/core/RefsProvider';
+
 // mocks
+import { elementAllDataMock } from 'test/mocks/reducer/pageBuilderMock';
 import 'test/mocks/sagas/allSagas';
 
 // others
@@ -16,9 +20,17 @@ import { configureStore } from 'store/store';
 // types
 import { MouseMode } from 'components/PageBuilder/enums';
 import { E2EAttribute, MouseButton } from 'types';
+
+// utils
 import { getByE2EAttribute } from 'test';
 
+const element = document.createElement('div');
+const overlayContainer = document.createElement('div');
 const mockCallBack = jest.fn();
+const sharedRefs = {
+  [elementAllDataMock.id]: element,
+  ['2']: element,
+};
 
 jest.mock('lodash', () => ({
   ...jest.requireActual('lodash'),
@@ -26,6 +38,12 @@ jest.mock('lodash', () => ({
 }));
 
 describe('ViewBox snapshots', () => {
+  beforeAll(() => {
+    element.style.height = '100px';
+    element.style.width = '100px';
+    document.body.appendChild(overlayContainer);
+  });
+
   it('should render ViewBox', () => {
     // mock
     const store = configureStore();
@@ -33,12 +51,17 @@ describe('ViewBox snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <ViewBox
-          coordinates={BASE_3D}
-          mouseMode={MouseMode.default}
-          setCoordinates={mockCallBack}
-          setMouseMode={mockCallBack}
-        />
+        <RefsProvider
+          itemsRefs={sharedRefs}
+          overlayContainerRefHtml={overlayContainer}
+        >
+          <ViewBox
+            coordinates={BASE_3D}
+            mouseMode={MouseMode.default}
+            setCoordinates={mockCallBack}
+            setMouseMode={mockCallBack}
+          />
+        </RefsProvider>
       </Provider>,
     );
 
@@ -55,12 +78,17 @@ describe('ViewBox behaviors', () => {
     // before
     const { container } = render(
       <Provider store={store}>
-        <ViewBox
-          coordinates={BASE_3D}
-          mouseMode={MouseMode.default}
-          setCoordinates={mockCallBack}
-          setMouseMode={mockCallBack}
-        />
+        <RefsProvider
+          itemsRefs={sharedRefs}
+          overlayContainerRefHtml={overlayContainer}
+        >
+          <ViewBox
+            coordinates={BASE_3D}
+            mouseMode={MouseMode.default}
+            setCoordinates={mockCallBack}
+            setMouseMode={mockCallBack}
+          />
+        </RefsProvider>
       </Provider>,
     );
 

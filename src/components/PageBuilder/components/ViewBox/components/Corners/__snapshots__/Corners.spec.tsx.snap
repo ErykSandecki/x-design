@@ -18,59 +18,21 @@ exports[`Corners snapshots should render Corners 1`] = `
       rx="1.5"
       width="6"
       x="-3"
+      y="-4.5"
+    />
+    <rect
+      height="6"
+      rx="1.5"
+      width="6"
+      x="-4.5"
       y="-3"
     />
     <rect
       height="6"
       rx="1.5"
       width="6"
-      x="-3"
-      y="-3"
-    />
-    <rect
-      height="6"
-      rx="1.5"
-      width="6"
-      x="-3"
-      y="-3"
-    />
-  </svg>
-</DocumentFragment>
-`;
-
-exports[`Corners snapshots should render with increases zindex 1`] = `
-<DocumentFragment>
-  <svg
-    class="Corners Corners--light Corners--increase-zindex Corners--increase-zindex--light"
-    style="height: 0px; left: 0px; top: 0px; width: 0px;"
-  >
-    <rect
-      height="6"
-      rx="1.5"
-      width="6"
-      x="-3"
-      y="-3"
-    />
-    <rect
-      height="6"
-      rx="1.5"
-      width="6"
-      x="-3"
-      y="-3"
-    />
-    <rect
-      height="6"
-      rx="1.5"
-      width="6"
-      x="-3"
-      y="-3"
-    />
-    <rect
-      height="6"
-      rx="1.5"
-      width="6"
-      x="-3"
-      y="-3"
+      x="-4.5"
+      y="-4.5"
     />
   </svg>
 </DocumentFragment>

@@ -5,6 +5,7 @@ exports[`ZoomBox snapshots should render Zoombox 1`] = `
   <div
     class="css-p683st ZoomBox ZoomBox--light ZoomBox__idle ZoomBox__idle--light ZoomBox__default ZoomBox__default--light"
     data-test-box="zoom-box"
+    tabindex="0"
   >
     <div
       class="css-q0izro ZoomBox__background-mask ZoomBox__background-mask--light"
@@ -32,6 +33,7 @@ exports[`ZoomBox snapshots should render when background is hidden 1`] = `
   <div
     class="css-p683st ZoomBox ZoomBox--light ZoomBox__idle ZoomBox__idle--light ZoomBox__default ZoomBox__default--light"
     data-test-box="zoom-box"
+    tabindex="0"
   >
     <div
       class="css-q0izro ZoomBox__background-mask ZoomBox__background-mask--light"
@@ -59,6 +61,7 @@ exports[`ZoomBox snapshots should render when mouse mode is move & cursor state 
   <div
     class="css-p683st ZoomBox ZoomBox--light ZoomBox__lmb ZoomBox__lmb--light ZoomBox__move ZoomBox__move--light ZoomBox__pressing ZoomBox__pressing--light"
     data-test-box="zoom-box"
+    tabindex="0"
   >
     <div
       class="css-q0izro ZoomBox__background-mask ZoomBox__background-mask--light"

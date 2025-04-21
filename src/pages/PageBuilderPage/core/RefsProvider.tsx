@@ -9,17 +9,23 @@ export const useRefs = () => useContext(RefsContext);
 
 export type TRefsProvider = {
   children: ReactNode;
+  itemsRefs?: TContext['itemsRefs'];
+  overlayContainerRefHtml?: HTMLDivElement;
 };
 
-export const RefsProvider: FC<TRefsProvider> = ({ children }) => {
-  const overlayContainerRef = useRef(null);
-  const itemRefs = useRef({});
+export const RefsProvider: FC<TRefsProvider> = ({
+  children,
+  itemsRefs: itemRefsDefault = {},
+  overlayContainerRefHtml = null,
+}) => {
+  const itemRefs = useRef(itemRefsDefault);
+  const overlayContainerRef = useRef(overlayContainerRefHtml);
 
   return (
     <RefsContext.Provider
       value={{
         itemsRefs: itemRefs.current,
-        overlayContainerRef: overlayContainerRef,
+        overlayContainerRef,
       }}
     >
       {children}

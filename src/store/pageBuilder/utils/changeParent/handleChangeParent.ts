@@ -59,7 +59,7 @@ export const handleChangeParent = (
           selectedElements: currentPage.selectedElements.map(
             (selectedElement) => ({
               ...selectedElement,
-              parentId: possibleParent || prevParentId,
+              parentId: possibleParent,
             }),
           ),
         },

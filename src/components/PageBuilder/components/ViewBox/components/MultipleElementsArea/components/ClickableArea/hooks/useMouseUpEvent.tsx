@@ -1,14 +1,12 @@
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 
-// store
-import { selectElements } from 'store/pageBuilder/actions';
-
 // types
-import { ElementType, TElement } from 'types';
+import { TElement } from 'types';
 
 // utils
-import { finishSetElementsCoordinates } from '../../../utils/finishSetElementsCoordinates';
+import { finishSetElementsCoordinates } from '../../../../../utils/finishSetElementsCoordinates';
+import { handleTrySingleElement } from '../utils/handleTrySingleElement';
 
 export type TUseMouseUpEvent = void;
 
@@ -26,18 +24,7 @@ export const useMouseUpEvent = (
     finishSetElementsCoordinates(dispatch);
     setIsMoving(false);
     setPossibleElementToSelect('-1');
-
-    if (!isMoving && possibleElementToSelect !== '-1') {
-      dispatch(
-        selectElements([
-          {
-            id: possibleElementToSelect,
-            parentId: '-1',
-            type: ElementType.frame,
-          },
-        ]),
-      );
-    }
+    handleTrySingleElement(dispatch, isMoving, possibleElementToSelect);
   };
 
   useEffect(() => {

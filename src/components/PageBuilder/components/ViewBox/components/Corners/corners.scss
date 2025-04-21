@@ -1,6 +1,8 @@
 @import '../../../../styles/z-indexes';
+@import '../../../../../../styles/mixins/enter-delay';
 
 .Corners {
+  @include enter-delay;
   @include theme-selector('neutral-1', fill, rect);
   @include theme-selector('blue-1', stroke, rect);
   @include theme('blue-1', border, '1px solid');
@@ -10,8 +12,4 @@
   pointer-events: none;
   position: absolute;
   z-index: $--rx-zindex-element;
-
-  &--increase-zindex {
-    z-index: $--rx-zindex-element-active;
-  }
 }

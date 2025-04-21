@@ -7,6 +7,7 @@ import { MouseMode } from '../../../../../../../enums';
 import { TSelectedElement } from 'store/pageBuilder/types';
 
 // utils
+import { handlePressing } from '../utils/handlePressing';
 import { handleSelectElement } from '../utils/handleSelectElement';
 import { updateCursorPosition } from '../utils/updateCursorPosition';
 
@@ -42,10 +43,7 @@ export const useMouseDownEvent = (
         isSelected,
         selectedElement,
       );
-
-      if (!event.shiftKey) {
-        setIsPressing(true);
-      }
+      handlePressing(event, setIsPressing);
     }
   };
 

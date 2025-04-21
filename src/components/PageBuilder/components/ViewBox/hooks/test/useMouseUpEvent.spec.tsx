@@ -1,38 +1,38 @@
-// import { renderHook } from '@testing-library/react';
+import { renderHook } from '@testing-library/react';
 
-// // hooks
-// import { useMouseUpEvent } from '../useMouseUpEvent';
+// hooks
+import { useMouseUpEvent } from '../useMouseUpEvent';
 
-// // others
-// import { BASE_RECT } from 'shared/ZoomBox/constants';
+// others
+import { BASE_RECT } from 'shared/ZoomBox/constants';
 
-// // types
-// import { MouseMode } from 'components/PageBuilder/enums';
+// types
+import { MouseMode } from 'components/PageBuilder/enums';
 
-// const mockCallBack = jest.fn();
+const mockCallBack = jest.fn();
 
-// jest.mock('react-redux', () => ({
-//   ...jest.requireActual('react-redux'),
-//   useDispatch: () => mockCallBack,
-// }));
+jest.mock('react-redux', () => ({
+  ...jest.requireActual('react-redux'),
+  useDispatch: () => mockCallBack,
+}));
 
-// describe('useMouseUpEvent', () => {
-//   it(`should trigger event`, () => {
-//     // before
-//     const { result } = renderHook(() =>
-//       useMouseUpEvent(
-//         BASE_RECT,
-//         MouseMode.toolBeltA,
-//         mockCallBack,
-//         mockCallBack,
-//         mockCallBack,
-//       ),
-//     );
+describe('useMouseUpEvent', () => {
+  it(`should trigger event`, () => {
+    // before
+    const { result } = renderHook(() =>
+      useMouseUpEvent(
+        BASE_RECT,
+        MouseMode.toolBeltA,
+        mockCallBack,
+        mockCallBack,
+        mockCallBack,
+      ),
+    );
 
-//     // action
-//     result.current({} as MouseEvent);
+    // action
+    result.current({} as MouseEvent);
 
-//     // result
-//     expect(mockCallBack.mock.calls.length).toBe(4);
-//   });
-// });
+    // result
+    expect(mockCallBack.mock.calls.length).toBe(4);
+  });
+});

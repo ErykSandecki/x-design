@@ -36,14 +36,13 @@ export const getCollidedElements = (
     pressedKey,
   );
 
-  // eslint-disable-next-line
   for (const [id, coordinates] of Object.entries(rectCoordinates.current)) {
     const { parentId, type } = allData[id];
     const condition = isControlPressed
-      ? x1 < coordinates.x1 &&
-        x2 > coordinates.x2 &&
-        y1 < coordinates.y1 &&
-        y2 > coordinates.y2
+      ? x1 <= coordinates.x1 &&
+        x2 >= coordinates.x2 &&
+        y1 <= coordinates.y1 &&
+        y2 >= coordinates.y2
       : !(
           coordinates.x2 < x1 ||
           coordinates.x1 > x2 ||

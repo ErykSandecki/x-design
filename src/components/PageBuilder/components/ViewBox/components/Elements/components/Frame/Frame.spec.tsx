@@ -4,8 +4,12 @@ import { render } from '@testing-library/react';
 // components
 import Frame from './Frame';
 
+// core
+import { RefsProvider } from 'pages/PageBuilderPage/core/RefsProvider';
+
 // mocks
 import {
+  elementAllDataMock,
   elementDynamicDataMock,
   elementStaticDataMock,
   pageBuilderStateMock,
@@ -21,6 +25,13 @@ import { configureStore } from 'store/store';
 
 // types
 import { MouseMode } from 'components/PageBuilder/enums';
+
+const element = document.createElement('div');
+const overlayContainer = document.createElement('div');
+
+const sharedRefs = {
+  [elementAllDataMock.id]: element,
+};
 
 const stateMock = {
   ...wholeStateMock,
@@ -40,6 +51,12 @@ const stateMock = {
 };
 
 describe('Frame snapshots', () => {
+  beforeAll(() => {
+    element.style.height = '100px';
+    element.style.width = '100px';
+    document.body.appendChild(overlayContainer);
+  });
+
   it('should render Frame', () => {
     // mock
     const store = configureStore(stateMock);
@@ -47,13 +64,18 @@ describe('Frame snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <Frame
-          className="className"
-          id={elementDynamicDataMock.id}
-          mouseMode={MouseMode.default}
-          parentId={elementStaticDataMock.parentId}
-          type={elementStaticDataMock.type}
-        />
+        <RefsProvider
+          itemsRefs={sharedRefs}
+          overlayContainerRefHtml={overlayContainer}
+        >
+          <Frame
+            className="className"
+            id={elementDynamicDataMock.id}
+            mouseMode={MouseMode.default}
+            parentId={elementStaticDataMock.parentId}
+            type={elementStaticDataMock.type}
+          />
+        </RefsProvider>
       </Provider>,
     );
 

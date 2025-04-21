@@ -2,7 +2,7 @@ import { max, min, size } from 'lodash';
 
 // others
 import { BASE_RECT } from 'shared';
-import { SW } from '../../ClickableArea/constants';
+import { SW } from '../components/ClickableArea/constants';
 
 // store
 import { allDataSelector } from 'store/pageBuilder/selectors';
@@ -10,17 +10,17 @@ import { store } from 'store';
 
 // types
 import { TContext } from 'pages/PageBuilderPage/core/types';
-import { TElements } from '../types';
+import { TCoordinatesData } from '../types';
 import { TSelectedElements } from 'store/pageBuilder/types';
 
 // utils
 import { getAbsolutePosition } from '../../../utils/getAbsolutePosition';
 
-export const getCoordinates = (
+export const getCoordinatesData = (
   isMultipleMoving: boolean,
   selectedElements: TSelectedElements,
   sharedRefs: TContext['itemsRefs'],
-): TElements => {
+): TCoordinatesData => {
   if (!isMultipleMoving && size(selectedElements) > 1) {
     const allData = allDataSelector(store.getState());
     const offset = SW / 2;
@@ -35,8 +35,8 @@ export const getCoordinates = (
         );
 
         return {
-          elementsCords: [
-            ...obj.elementsCords,
+          elementsCordinates: [
+            ...obj.elementsCordinates,
             { coordinates: { x1, x2, y1, y2 }, id },
           ],
           x1: [...obj.x1, x1],
@@ -45,11 +45,11 @@ export const getCoordinates = (
           y2: [...obj.y2, y2],
         };
       },
-      { elementsCords: [], x1: [], x2: [], y1: [], y2: [] },
+      { elementsCordinates: [], x1: [], x2: [], y1: [], y2: [] },
     );
 
     return {
-      elementsCordinates: setCoordinates.elementsCords,
+      elementsCordinates: setCoordinates.elementsCordinates,
       outline: {
         x1: min(setCoordinates.x1) - offset,
         x2: max(setCoordinates.x2) + offset,

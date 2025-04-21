@@ -4,10 +4,15 @@ import { render } from '@testing-library/react';
 // components
 import Element from './Element';
 
+// core
+import { RefsProvider } from 'pages/PageBuilderPage/core/RefsProvider';
+
 // mocks
 import {
+  elementAllDataMock,
   elementDynamicDataMock,
   elementStaticDataMock,
+  eventsMock,
   pageBuilderStateMock,
   selectedElementMock,
 } from 'test/mocks/reducer/pageBuilderMock';
@@ -21,6 +26,13 @@ import { configureStore } from 'store/store';
 // types
 import { ElementType } from 'types';
 import { MouseMode } from 'components/PageBuilder/enums';
+
+const element = document.createElement('div');
+const overlayContainer = document.createElement('div');
+
+const sharedRefs = {
+  [elementAllDataMock.id]: element,
+};
 
 const stateMock = {
   [PAGE_BUILDER]: {
@@ -42,6 +54,12 @@ const stateMock = {
 };
 
 describe('Element snapshots', () => {
+  beforeAll(() => {
+    element.style.height = '100px';
+    element.style.width = '100px';
+    document.body.appendChild(overlayContainer);
+  });
+
   it('should render Element', () => {
     // mock
     const store = configureStore(stateMock);
@@ -49,15 +67,20 @@ describe('Element snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <Element
-          classes={{ className: 'className' }}
-          id={selectedElementMock.id}
-          mouseMode={MouseMode.default}
-          parentId={selectedElementMock.parentId}
-          type={ElementType.frame}
+        <RefsProvider
+          itemsRefs={sharedRefs}
+          overlayContainerRefHtml={overlayContainer}
         >
-          {() => <></>}
-        </Element>
+          <Element
+            classes={{ className: 'className' }}
+            id={selectedElementMock.id}
+            mouseMode={MouseMode.default}
+            parentId={selectedElementMock.parentId}
+            type={ElementType.frame}
+          >
+            {() => <></>}
+          </Element>
+        </RefsProvider>
       </Provider>,
     );
 
@@ -84,15 +107,20 @@ describe('Element snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <Element
-          classes={{ className: 'className' }}
-          id={selectedElementMock.id}
-          mouseMode={MouseMode.default}
-          parentId={selectedElementMock.parentId}
-          type={ElementType.frame}
+        <RefsProvider
+          itemsRefs={sharedRefs}
+          overlayContainerRefHtml={overlayContainer}
         >
-          {() => <></>}
-        </Element>
+          <Element
+            classes={{ className: 'className' }}
+            id={selectedElementMock.id}
+            mouseMode={MouseMode.default}
+            parentId={selectedElementMock.parentId}
+            type={ElementType.frame}
+          >
+            {() => <></>}
+          </Element>
+        </RefsProvider>
       </Provider>,
     );
 
@@ -128,15 +156,64 @@ describe('Element snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <Element
-          classes={{ className: 'className' }}
-          id={selectedElementMock.id}
-          mouseMode={MouseMode.default}
-          parentId={selectedElementMock.parentId}
-          type={ElementType.frame}
+        <RefsProvider
+          itemsRefs={sharedRefs}
+          overlayContainerRefHtml={overlayContainer}
         >
-          {() => <></>}
-        </Element>
+          <Element
+            classes={{ className: 'className' }}
+            id={selectedElementMock.id}
+            mouseMode={MouseMode.default}
+            parentId={selectedElementMock.parentId}
+            type={ElementType.frame}
+          >
+            {() => <></>}
+          </Element>
+        </RefsProvider>
+      </Provider>,
+    );
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('should render Element when is selected & is multiple moving', () => {
+    // mock
+    const store = configureStore({
+      ...stateMock,
+      [PAGE_BUILDER]: {
+        ...stateMock[PAGE_BUILDER],
+        events: {
+          ...eventsMock,
+          isMultipleMoving: true,
+        },
+        pages: {
+          ...stateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...stateMock[PAGE_BUILDER].pages['0'],
+            selectedElements: [selectedElementMock],
+          },
+        },
+      },
+    });
+
+    // before
+    const { asFragment } = render(
+      <Provider store={store}>
+        <RefsProvider
+          itemsRefs={sharedRefs}
+          overlayContainerRefHtml={overlayContainer}
+        >
+          <Element
+            classes={{ className: 'className' }}
+            id={selectedElementMock.id}
+            mouseMode={MouseMode.default}
+            parentId={selectedElementMock.parentId}
+            type={ElementType.frame}
+          >
+            {() => <></>}
+          </Element>
+        </RefsProvider>
       </Provider>,
     );
 

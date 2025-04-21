@@ -1,0 +1,12 @@
+@keyframes animation-enter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@mixin enter-delay {
+  animation: 0s animation-enter forwards;
+}

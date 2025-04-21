@@ -1,47 +1,82 @@
-// import { MouseEvent } from 'react';
-// import { renderHook } from '@testing-library/react';
+import { MouseEvent, RefObject } from 'react';
+import { renderHook } from '@testing-library/react';
 
-// // hooks
-// import { useMouseDownEvent } from '../useMouseDownEvent';
+// core
+import { RefsProvider } from 'pages/PageBuilderPage/core/RefsProvider';
 
-// // others
-// import { BASE_3D } from 'shared/ZoomBox/constants';
+// hooks
+import { useMouseDownEvent } from '../useMouseDownEvent';
 
-// // types
-// import { MouseButton } from 'types';
-// import { MouseMode } from 'components/PageBuilder/enums';
+// mocks
+import { elementAllDataMock } from 'test/mocks/reducer/pageBuilderMock';
 
-// const mockCallBack = jest.fn();
+// others
+import { BASE_3D } from 'shared/ZoomBox/constants';
 
-// describe('useMouseMoveEvent', () => {
-//   it(`should trigger event for toolBeltA`, () => {
-//     // before
-//     const { result } = renderHook(() =>
-//       useMouseDownEvent(
-//         BASE_3D,
-//         MouseMode.toolBeltA,
-//         mockCallBack,
-//         mockCallBack,
-//       ),
-//     );
+// types
+import { MouseButton, TObject, TRectCoordinates } from 'types';
+import { MouseMode } from 'components/PageBuilder/enums';
 
-//     // action
-//     result.current({ buttons: MouseButton.lmb } as MouseEvent);
+const mockCallBack = jest.fn();
+const rectCoordinates = {
+  current: {
+    [elementAllDataMock.id]: {
+      x1: elementAllDataMock.coordinates.x,
+      x2: elementAllDataMock.width,
+      y1: elementAllDataMock.coordinates.y,
+      y2: elementAllDataMock.height,
+    },
+  },
+} as RefObject<TObject<TRectCoordinates>>;
 
-//     // result
-//     expect(mockCallBack.mock.calls.length).toBe(1);
-//   });
+jest.mock('../../utils/calculateAbsolutePositions', () => ({
+  calculateAbsolutePositions: jest.fn(),
+}));
 
-//   it(`should trigger event for default`, () => {
-//     // before
-//     const { result } = renderHook(() =>
-//       useMouseDownEvent(BASE_3D, MouseMode.default, mockCallBack, mockCallBack),
-//     );
+describe('useMouseMoveEvent', () => {
+  it(`should trigger event for toolBeltA`, () => {
+    // before
+    const { result } = renderHook(
+      () =>
+        useMouseDownEvent(
+          BASE_3D,
+          MouseMode.toolBeltA,
+          rectCoordinates,
+          mockCallBack,
+          mockCallBack,
+        ),
+      {
+        wrapper: ({ children }) => <RefsProvider>{children}</RefsProvider>,
+      },
+    );
 
-//     // action
-//     result.current({ buttons: MouseButton.lmb } as MouseEvent);
+    // action
+    result.current({ buttons: MouseButton.lmb } as MouseEvent);
 
-//     // result
-//     expect(mockCallBack.mock.calls.length).toBe(1);
-//   });
-// });
+    // result
+    expect(mockCallBack.mock.calls.length).toBe(1);
+  });
+
+  it(`should trigger event for default`, () => {
+    // before
+    const { result } = renderHook(
+      () =>
+        useMouseDownEvent(
+          BASE_3D,
+          MouseMode.default,
+          rectCoordinates,
+          mockCallBack,
+          mockCallBack,
+        ),
+      {
+        wrapper: ({ children }) => <RefsProvider>{children}</RefsProvider>,
+      },
+    );
+
+    // action
+    result.current({ buttons: MouseButton.lmb } as MouseEvent);
+
+    // result
+    expect(mockCallBack.mock.calls.length).toBe(1);
+  });
+});

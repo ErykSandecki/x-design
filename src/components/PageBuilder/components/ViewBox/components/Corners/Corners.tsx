@@ -15,15 +15,11 @@ import styles from './corners.scss';
 import { TRectCoordinates } from 'types';
 
 export type TCornersProps = {
-  increaseZIndex?: boolean;
   rectCoordinates: TRectCoordinates;
   showTopButton?: boolean;
 };
 
-const Corners: FC<TCornersProps> = ({
-  increaseZIndex = false,
-  rectCoordinates,
-}) => {
+const Corners: FC<TCornersProps> = ({ rectCoordinates }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { x1, x2, y1, y2 } = rectCoordinates;
   const height = y2 - y1;
@@ -31,10 +27,7 @@ const Corners: FC<TCornersProps> = ({
 
   return (
     <svg
-      className={cx(classNamesWithTheme[className].name, [
-        classNamesWithTheme[className].modificators.increaseZIndex,
-        increaseZIndex,
-      ])}
+      className={cx(classNamesWithTheme[className].name)}
       style={{
         height: `${height}px`,
         left: `${x1}px`,

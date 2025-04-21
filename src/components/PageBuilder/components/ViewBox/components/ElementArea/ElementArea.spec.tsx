@@ -4,6 +4,9 @@ import { render } from '@testing-library/react';
 // components
 import ElementArea from './ElementArea';
 
+// core
+import { RefsProvider } from 'pages/PageBuilderPage/core/RefsProvider';
+
 // mocks
 import 'test/mocks/sagas/allSagas';
 
@@ -13,7 +16,14 @@ import { BASE_RECT } from 'shared';
 // store
 import { configureStore } from 'store/store';
 
+const overlayContainer = document.createElement('div');
+
 describe('ElementArea snapshots', () => {
+  beforeAll(() => {
+    // mock
+    document.body.appendChild(overlayContainer);
+  });
+
   it('should render ElementArea', () => {
     // mock
     const store = configureStore();
@@ -21,7 +31,9 @@ describe('ElementArea snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <ElementArea elementArea={{ ...BASE_RECT, x2: 100, y2: 100 }} />
+        <RefsProvider overlayContainerRefHtml={overlayContainer}>
+          <ElementArea elementArea={{ ...BASE_RECT, x2: 100, y2: 100 }} />
+        </RefsProvider>
       </Provider>,
     );
 
@@ -36,7 +48,9 @@ describe('ElementArea snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <ElementArea elementArea={{ ...BASE_RECT, x2: -100, y2: -100 }} />
+        <RefsProvider overlayContainerRefHtml={overlayContainer}>
+          <ElementArea elementArea={{ ...BASE_RECT, x2: -100, y2: -100 }} />
+        </RefsProvider>
       </Provider>,
     );
 
@@ -51,7 +65,9 @@ describe('ElementArea snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <ElementArea elementArea={null} />
+        <RefsProvider overlayContainerRefHtml={overlayContainer}>
+          <ElementArea elementArea={null} />
+        </RefsProvider>
       </Provider>,
     );
 

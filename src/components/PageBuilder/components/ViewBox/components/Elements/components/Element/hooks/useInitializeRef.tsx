@@ -15,12 +15,10 @@ export const useInitializeRef = (
   const { itemsRefs } = useRefs();
 
   useEffect(() => {
-    if (elementRef.current) {
-      itemsRefs[id] = elementRef.current;
-    }
+    itemsRefs[id] = elementRef.current;
 
     return () => {
-      delete itemsRefs[id];
+      delete itemsRefs?.[id];
     };
   }, [elementRef]);
 };

@@ -10,6 +10,8 @@ export enum E2EAttribute {
   form = 'form',
   icon = 'icon',
   logo = 'logo',
+  outline = 'outline',
+  rect = 'rect',
   resize = 'resize',
   section = 'section',
   sectionColumn = 'section-column',

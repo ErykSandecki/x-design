@@ -1,64 +1,213 @@
-// // mocks
-// import {
-//   elementAllDataMock,
-//   pageBuilderStateMock,
-//   selectedElementMock,
-// } from 'test/mocks/reducer/pageBuilderMock';
+import { RefObject } from 'react';
 
-// // others
-// import { BASE_RECT } from 'shared';
-// import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
+// mocks
+import {
+  elementAllDataMock,
+  eventsMock,
+  pageBuilderStateMock,
+  selectedElementMock,
+} from 'test/mocks/reducer/pageBuilderMock';
+import { wholeStateMock } from 'test/mocks/reducer/wholeStateMock';
 
-// // store
-// import { store as storeToMock } from 'store/store';
+// others
+import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 
-// // utils
-// import { getCollidedElements } from '../getCollidedElements';
+// store
+import { store as storeToMock } from 'store/store';
 
-// const stateMock = {
-//   [PAGE_BUILDER]: {
-//     ...pageBuilderStateMock[PAGE_BUILDER],
-//     pages: {
-//       ...pageBuilderStateMock[PAGE_BUILDER].pages,
-//       ['0']: {
-//         ...pageBuilderStateMock[PAGE_BUILDER].pages['0'],
-//         elements: {
-//           allData: {
-//             [elementAllDataMock.id]: elementAllDataMock,
-//           },
-//         },
-//       },
-//     },
-//   },
-// };
+// types
+import { KeyboardKeys, TObject, TRectCoordinates } from 'types';
 
-// describe('getCollidedElements', () => {
-//   beforeAll(() => {
-//     storeToMock.getState = () => stateMock as any;
-//   });
+// utils
+import { getCollidedElements } from '../getCollidedElements';
 
-//   it(`should return collided elements`, () => {
-//     // before
-//     const result = getCollidedElements({ x1: 0, x2: 100, y1: 0, y2: 100 });
+const currentPage =
+  pageBuilderStateMock[PAGE_BUILDER].pages[
+    pageBuilderStateMock[PAGE_BUILDER].currentPage
+  ];
 
-//     // result
-//     expect(result).toStrictEqual([
-//       {
-//         ...selectedElementMock,
-//         coordinates: {
-//           ...selectedElementMock.coordinates,
-//           x2: 100,
-//           y2: 100,
-//         },
-//       },
-//     ]);
-//   });
+const rectCoordinates = {
+  current: {
+    [elementAllDataMock.id]: {
+      x1: elementAllDataMock.coordinates.x,
+      x2: elementAllDataMock.width,
+      y1: elementAllDataMock.coordinates.y,
+      y2: elementAllDataMock.height,
+    },
+  },
+} as RefObject<TObject<TRectCoordinates>>;
 
-//   it(`should return empty data`, () => {
-//     // before
-//     const result = getCollidedElements(BASE_RECT);
+describe('getCollidedElements', () => {
+  beforeAll(() => {
+    storeToMock.getState = () =>
+      ({
+        ...wholeStateMock,
+        [PAGE_BUILDER]: {
+          ...pageBuilderStateMock[PAGE_BUILDER],
+          pages: {
+            ...pageBuilderStateMock[PAGE_BUILDER].pages,
+            [currentPage.id]: {
+              ...currentPage,
+              elements: {
+                ...currentPage.elements,
+                allData: {
+                  ...currentPage.elements.allData,
+                  [selectedElementMock.id]: {
+                    ...elementAllDataMock,
+                  },
+                  ['2']: {
+                    ...elementAllDataMock,
+                    id: '2',
+                  },
+                },
+              },
+            },
+          },
+        },
+      }) as any;
+  });
 
-//     // result
-//     expect(result).toStrictEqual([]);
-//   });
-// });
+  it(`should return collided elements`, () => {
+    // before
+    const result = getCollidedElements(rectCoordinates, {
+      x1: 0,
+      x2: 100,
+      y1: 0,
+      y2: 100,
+    });
+
+    // result
+    expect(result).toStrictEqual([selectedElementMock]);
+  });
+
+  it(`should return collided elements`, () => {
+    // before
+    const result = getCollidedElements(rectCoordinates, {
+      x1: 100,
+      x2: 0,
+      y1: 100,
+      y2: 0,
+    });
+
+    // result
+    expect(result).toStrictEqual([selectedElementMock]);
+  });
+
+  it(`should not return any collided elements`, () => {
+    // before
+    const result = getCollidedElements(rectCoordinates, {
+      x1: 200,
+      x2: 300,
+      y1: 200,
+      y2: 300,
+    });
+
+    // result
+    expect(result).toStrictEqual([]);
+  });
+
+  it(`should return collided elements which are inside area`, () => {
+    // mock
+    storeToMock.getState = () =>
+      ({
+        ...wholeStateMock,
+        [PAGE_BUILDER]: {
+          ...pageBuilderStateMock[PAGE_BUILDER],
+          events: { ...eventsMock, pressedKey: KeyboardKeys.control },
+          pages: {
+            ...pageBuilderStateMock[PAGE_BUILDER].pages,
+            [currentPage.id]: {
+              ...currentPage,
+              elements: {
+                ...currentPage.elements,
+                allData: {
+                  ...currentPage.elements.allData,
+                  [selectedElementMock.id]: {
+                    ...elementAllDataMock,
+                  },
+                  ['2']: {
+                    ...elementAllDataMock,
+                    id: '2',
+                  },
+                },
+              },
+            },
+          },
+        },
+      }) as any;
+
+    // before
+    const result = getCollidedElements(rectCoordinates, {
+      x1: 0,
+      x2: 100,
+      y1: 0,
+      y2: 100,
+    });
+
+    // result
+    expect(result).toStrictEqual([selectedElementMock]);
+  });
+
+  it(`should return collided elements in the same structure when new one was added`, () => {
+    // mock
+    storeToMock.getState = () =>
+      ({
+        ...wholeStateMock,
+        [PAGE_BUILDER]: {
+          ...pageBuilderStateMock[PAGE_BUILDER],
+          pages: {
+            ...pageBuilderStateMock[PAGE_BUILDER].pages,
+            [currentPage.id]: {
+              ...currentPage,
+              elements: {
+                ...currentPage.elements,
+                allData: {
+                  ...currentPage.elements.allData,
+                  [selectedElementMock.id]: {
+                    ...elementAllDataMock,
+                  },
+                  ['2']: {
+                    ...elementAllDataMock,
+                    id: '2',
+                  },
+                },
+              },
+              selectedElements: [{ ...selectedElementMock, id: '2' }],
+            },
+          },
+        },
+      }) as any;
+
+    // before
+    const result = getCollidedElements(
+      {
+        current: {
+          [elementAllDataMock.id]: {
+            x1: elementAllDataMock.coordinates.x,
+            x2: elementAllDataMock.width,
+            y1: elementAllDataMock.coordinates.y,
+            y2: elementAllDataMock.height,
+          },
+          ['2']: {
+            x1: elementAllDataMock.coordinates.x,
+            x2: elementAllDataMock.width as number,
+            y1: elementAllDataMock.coordinates.y,
+            y2: elementAllDataMock.height as number,
+          },
+        },
+      } as RefObject<TObject<TRectCoordinates>>,
+      {
+        x1: 0,
+        x2: 100,
+        y1: 0,
+        y2: 100,
+      },
+    );
+
+    // result
+    expect(result).toStrictEqual([
+      { ...selectedElementMock, id: '2' },
+      selectedElementMock,
+    ]);
+  });
+});

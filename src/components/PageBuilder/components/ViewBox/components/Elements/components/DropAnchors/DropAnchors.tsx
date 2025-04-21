@@ -1,6 +1,9 @@
 import { FC, ReactNode } from 'react';
 import { useSelector } from 'react-redux';
 
+// components
+import { E2EDataAttribute } from 'shared';
+
 // hooks
 import { useDropAnchorsEvents } from './hooks/useDropAnchorsEvents';
 import { useTheme } from 'hooks';
@@ -19,12 +22,11 @@ import styles from './drop-anchors.scss';
 
 // types
 import { DropAnchorsPosition } from './enums';
-import { MouseMode } from 'components/PageBuilder/enums';
 import { E2EAttribute, TElement } from 'types';
+import { MouseMode } from 'components/PageBuilder/enums';
 
 // utils
 import { enumToArray } from 'utils';
-import { E2EDataAttribute } from 'shared';
 
 export type TDropAnchorsProps = {
   children: ReactNode;

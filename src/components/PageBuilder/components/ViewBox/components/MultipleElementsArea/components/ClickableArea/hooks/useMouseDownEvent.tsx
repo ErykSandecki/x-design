@@ -5,7 +5,8 @@ import { useDispatch } from 'react-redux';
 import { MouseButton, T2DCoordinates, TElement } from 'types';
 
 // utils
-import { initSetElementsCoordinates } from '../../../utils/initSetElementsCoordinates';
+import { initSetElementsCoordinates } from '../../../../../utils/initSetElementsCoordinates';
+import { initStatesOnMouseDown } from '../utils/initStatesOnMouseDown';
 
 export type TUseMouseDownEvent = (
   event: MouseEvent,
@@ -23,11 +24,12 @@ export const useMouseDownEvent = (
     if (event.buttons === MouseButton.lmb) {
       event.stopPropagation();
       initSetElementsCoordinates(cursorPosition, dispatch, event, true);
-
-      if (!event.shiftKey) {
-        setIsPressing(true);
-        setPossibleElementToSelect(id);
-      }
+      initStatesOnMouseDown(
+        event,
+        id,
+        setIsPressing,
+        setPossibleElementToSelect,
+      );
     }
   };
 

@@ -41,6 +41,7 @@ describe('useMouseUpEvent', () => {
 
     // result
     expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
+      isResizing: false,
       selectedAnchor: Anchor.none,
     });
   });

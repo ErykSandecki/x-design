@@ -635,17 +635,7 @@ describe('PageBuilderReducer', () => {
             staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
           },
           prevState,
-          selectedElements: [
-            {
-              ...selectedElementMock,
-              coordinates: {
-                x1: coordinates.x,
-                x2: coordinates.x,
-                y1: coordinates.y,
-                y2: coordinates.y,
-              },
-            },
-          ],
+          selectedElements: [selectedElementMock],
         },
       },
     });
