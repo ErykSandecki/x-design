@@ -21,7 +21,9 @@ export const useMouseDownEvent = (
     if (event.buttons === MouseButton.lmb && mouseMode === MouseMode.default) {
       event.stopPropagation();
 
-      dispatch(updateEventsStatus({ selectedAnchor: anchor }));
+      dispatch(
+        updateEventsStatus({ isResizing: true, selectedAnchor: anchor }),
+      );
       cursorPosition.current = {
         x: Math.round(event.clientX),
         y: Math.round(event.clientY),

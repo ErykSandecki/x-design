@@ -1,5 +1,14 @@
+@import '../../styles/z-indexes';
+
 .ViewBox {
   &--create-frame {
     cursor: crosshair;
+  }
+
+  &__overlay-container {
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: $--rx-zindex-overlay-container;
   }
 }

@@ -23,9 +23,9 @@ export const handleResizeElement = (
   const { current } = cursorPosition;
   const baseCoordinates = {
     x1: x,
-    x2: x + (width as number),
+    x2: x + parseInt(width as string),
     y1: y,
-    y2: y + (height as number),
+    y2: y + parseInt(height as string),
   };
   const mousePosition = {
     x: Math.round(event.clientX / z - current.x / z),

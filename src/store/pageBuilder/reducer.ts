@@ -36,6 +36,7 @@ import {
 } from './types';
 
 // utils
+import { filterSelectedElements } from './utils/filterSelectedElements';
 import { handleAddElement } from './utils/handleAddElement';
 import { handleChangeBackground } from './utils/handleChangeBackground';
 import { handleChangeParent } from './utils/changeParent/handleChangeParent';
@@ -43,7 +44,6 @@ import { handleRotateElement } from './utils/handleRotateElement';
 import { handleSetElementCoordinates } from './utils/handleSetElementCoordinates';
 import { handleSetElementsCoordinates } from './utils/handleSetElementsCoordinates';
 import { handleSetElementSizes } from './utils/handleSetElementSize';
-import { filterSelectedElements } from './utils/filterSelectedElements';
 
 const initialState: TPageBuilderState = {
   currentPage: '0',
@@ -52,6 +52,7 @@ const initialState: TPageBuilderState = {
     draggableElements: [],
     hoverOnElement: '-1',
     isMultipleMoving: false,
+    isResizing: false,
     possibleIndexPosition: null,
     possibleParent: null,
     pressedKey: KeyboardKeys.none,

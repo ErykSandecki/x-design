@@ -6,7 +6,7 @@ import { useTheme } from 'hooks';
 // others
 import { className, classNames } from './classNames';
 
-import { HHW, RX, SHW } from './constants';
+import { BORDER, HHW, RX, SHW } from './constants';
 
 // styles
 import styles from './corners.scss';
@@ -43,9 +43,27 @@ const Corners: FC<TCornersProps> = ({
       }}
     >
       <rect x={0 - HHW} y={0 - HHW} width={SHW} height={SHW} rx={RX} />
-      <rect x={0 - HHW} y={height - HHW} width={SHW} height={SHW} rx={RX} />
-      <rect x={width - HHW} y={0 - HHW} width={SHW} height={SHW} rx={RX} />
-      <rect x={width - HHW} y={height - HHW} width={SHW} height={SHW} rx={RX} />
+      <rect
+        x={0 - HHW}
+        y={height - HHW - BORDER}
+        width={SHW}
+        height={SHW}
+        rx={RX}
+      />
+      <rect
+        x={width - HHW - BORDER}
+        y={0 - HHW}
+        width={SHW}
+        height={SHW}
+        rx={RX}
+      />
+      <rect
+        x={width - HHW - BORDER}
+        y={height - HHW - BORDER}
+        width={SHW}
+        height={SHW}
+        rx={RX}
+      />
     </svg>
   );
 };

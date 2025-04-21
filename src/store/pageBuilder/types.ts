@@ -55,6 +55,7 @@ export type TEvents = {
   draggableElements: Array<TElement['id']>;
   hoverOnElement: TElement['id'];
   isMultipleMoving: boolean;
+  isResizing: boolean;
   possibleIndexPosition: number | null;
   possibleParent: TElement['id'] | null;
   pressedKey: KeyboardKeys;

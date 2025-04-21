@@ -1,3 +1,4 @@
+import { createPortal } from 'react-dom';
 import { FC, memo, ReactNode, useRef } from 'react';
 import { isNumber } from 'lodash';
 import { useSelector } from 'react-redux';
@@ -6,6 +7,9 @@ import { useSelector } from 'react-redux';
 import Corners from '../../../Corners/Corners';
 import TransformArea from '../../../TransformArea/TransformArea';
 import { Box } from 'shared';
+
+// core
+import { useRefs } from 'pages/PageBuilderPage/core/RefsProvider';
 
 // hooks
 import { useElementEvents } from './hooks/useElementEvents';
@@ -36,11 +40,16 @@ import { ElementType, TElement } from 'types';
 import { MouseMode } from 'components/PageBuilder/enums';
 
 // utils
+import { getAbsolutePosition } from 'components/PageBuilder/components/ViewBox/utils/getAbsolutePosition';
 import { getCornersPosition } from './utils/getCornersPosition';
 
 type TElementProps = {
   classes: typeof classes;
-  children: (hover: boolean, selected: boolean) => ReactNode;
+  children: (
+    coordinates: TElement['coordinates'],
+    hover: boolean,
+    selected: boolean,
+  ) => ReactNode;
   id: string;
   mouseMode: MouseMode;
   parentId: TElement['parentId'];
@@ -61,12 +70,12 @@ const Element: FC<TElementProps> = ({
   const elementRef = useRef<HTMLDivElement>(null);
   const elementDynamicData = useSelector(elementDynamicDataSelectorCreator(id));
   const { isMultipleMoving } = useSelector(eventsSelector);
+  const { itemsRefs, overlayContainerRef } = useRefs();
   const { coordinates } = elementDynamicData;
   const { background, height, position, rotate, width } = elementDynamicData;
   const { x, y } = coordinates;
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const rectCoordinates = getCornersPosition(height, width);
-  const displayElements = !isMultiple && isSelected;
   const { isMoving, ...events } = useElementEvents(
     coordinates,
     elementRef,
@@ -79,6 +88,12 @@ const Element: FC<TElementProps> = ({
     type,
     width,
   );
+  const displayOutline = !isMultiple && isSelected;
+  const { x1, y1 } = (displayOutline &&
+    getAbsolutePosition(coordinates, id, parentId, itemsRefs)) || {
+    x1: 0,
+    y1: 0,
+  };
 
   return (
     <Box
@@ -114,18 +129,25 @@ const Element: FC<TElementProps> = ({
       }}
       {...events}
     >
-      {children(isHover, isSelected)}
-      {displayElements && <Corners rectCoordinates={rectCoordinates} />}
-      {displayElements && (
-        <TransformArea
-          height={height}
-          id={id}
-          moseMode={mouseMode}
-          x={x}
-          y={y}
-          width={width}
-        />
-      )}
+      {children(coordinates, isHover, isSelected)}
+      {displayOutline &&
+        createPortal(
+          <Box
+            style={{ left: `${x1}px`, top: `${y1}px` }}
+            sx={{ position: 'absolute' }}
+          >
+            <Corners rectCoordinates={rectCoordinates} />
+            <TransformArea
+              height={height}
+              id={id}
+              moseMode={mouseMode}
+              x={x}
+              y={y}
+              width={width}
+            />
+          </Box>,
+          overlayContainerRef.current,
+        )}
     </Box>
   );
 };

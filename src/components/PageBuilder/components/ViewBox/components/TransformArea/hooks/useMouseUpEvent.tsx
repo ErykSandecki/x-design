@@ -13,7 +13,9 @@ export const useMouseUpEvent = (): TUseMouseUpEvent => {
   const dispatch = useDispatch();
 
   const handleMouseUp = (): void => {
-    dispatch(updateEventsStatus({ selectedAnchor: Anchor.none }));
+    dispatch(
+      updateEventsStatus({ isResizing: false, selectedAnchor: Anchor.none }),
+    );
   };
 
   useEffect(() => {

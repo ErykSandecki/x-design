@@ -16,7 +16,7 @@ export const calculateAbsolutePositions = (
   event: MouseEvent | React.MouseEvent,
   mouseMode: MouseMode,
   rectCoordinates: RefObject<TObject<TRectCoordinates>>,
-  sharedRefs: TContext,
+  sharedRefs: TContext['itemsRefs'],
 ): void => {
   if (event.buttons === MouseButton.lmb && mouseMode === MouseMode.default) {
     const allData = allDataSelector(store.getState());

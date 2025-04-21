@@ -4,9 +4,9 @@
   $self: &;
 
   position: absolute;
+  overflow: hidden;
   user-select: none;
   z-index: $--rx-zindex-element;
-  // overflow: hidden;
 
   &--hover {
     @include theme('blue-1', outline, '1.5px solid');
@@ -18,12 +18,6 @@
     opacity: 0.5;
     pointer-events: none;
     z-index: $--rx-zindex-element-moving !important;
-  }
-
-  &--selected {
-    @include theme('blue-1', outline, '1.5px solid');
-
-    z-index: $--rx-zindex-element-active;
   }
 
   &:has([data-status='true']) {

@@ -7,4 +7,5 @@ export const classNames = {
       createFrame: `${className}--create-frame`,
     },
   },
+  overlayContainer: `${className}__overlay-container`,
 };

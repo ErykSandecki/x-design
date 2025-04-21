@@ -12,10 +12,16 @@ export type TRefsProvider = {
 };
 
 export const RefsProvider: FC<TRefsProvider> = ({ children }) => {
+  const overlayContainerRef = useRef(null);
   const itemRefs = useRef({});
 
   return (
-    <RefsContext.Provider value={itemRefs.current}>
+    <RefsContext.Provider
+      value={{
+        itemsRefs: itemRefs.current,
+        overlayContainerRef: overlayContainerRef,
+      }}
+    >
       {children}
     </RefsContext.Provider>
   );

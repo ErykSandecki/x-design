@@ -1,3 +1,4 @@
+import { createPortal } from 'react-dom';
 import { defer } from 'lodash';
 import { FC, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
@@ -28,7 +29,7 @@ import { getCoordinates } from './utils/getCoordinates';
 const MultipleElementsArea: FC = () => {
   const selectedElements = useSelector(selectedElementsSelector);
   const isMultiple = useSelector(multipleSelectedElementsSelector);
-  const sharedRefs = useRefs();
+  const { itemsRefs, overlayContainerRef } = useRefs();
   const isMultipleMoving = useSelector(
     eventSelectorCreator('isMultipleMoving'),
   ) as boolean;
@@ -42,7 +43,7 @@ const MultipleElementsArea: FC = () => {
       const coordinates = getCoordinates(
         isMultipleMoving,
         selectedElements,
-        sharedRefs,
+        itemsRefs,
       );
 
       setElements(coordinates);
@@ -59,9 +60,11 @@ const MultipleElementsArea: FC = () => {
         elementsCordinates={elements.elementsCordinates}
         rectCoordinates={elements.outline}
       />
-      {!isMultipleMoving && (
-        <Corners rectCoordinates={elements.outline} increaseZIndex />
-      )}
+      {!isMultipleMoving &&
+        createPortal(
+          <Corners rectCoordinates={elements.outline} />,
+          overlayContainerRef.current,
+        )}
     </>
   );
 };

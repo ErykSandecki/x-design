@@ -19,7 +19,7 @@ export const getAbsolutePosition = (
   coordinates: T2DCoordinates,
   id: TElement['id'],
   parentId: TElement['parentId'],
-  sharedRefs: TContext,
+  sharedRefs: TContext['itemsRefs'],
 ): TRectCoordinates => {
   if (sharedRefs[id]) {
     const height = parseInt(getComputedStyle(sharedRefs[id]).height);

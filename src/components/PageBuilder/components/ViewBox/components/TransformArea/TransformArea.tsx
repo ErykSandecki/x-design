@@ -43,7 +43,10 @@ const TransformArea: FC<TResizeAreaProps> = ({
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   return (
-    <div className={cx(classNamesWithTheme[className])}>
+    <div
+      className={cx(classNamesWithTheme[className])}
+      style={{ height, width }}
+    >
       {enumToArray(Anchor).map((anchor) => (
         <E2EDataAttribute
           key={anchor as keyof typeof Anchor}

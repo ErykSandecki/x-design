@@ -12,15 +12,15 @@ export const useInitializeRef = (
   elementRef: RefObject<any>,
   id: TSelectedElement['id'],
 ): TUseInitializeRef => {
-  const sharedRefs = useRefs();
+  const { itemsRefs } = useRefs();
 
   useEffect(() => {
     if (elementRef.current) {
-      sharedRefs[id] = elementRef.current;
+      itemsRefs[id] = elementRef.current;
     }
 
     return () => {
-      delete sharedRefs[id];
+      delete itemsRefs[id];
     };
   }, [elementRef]);
 };

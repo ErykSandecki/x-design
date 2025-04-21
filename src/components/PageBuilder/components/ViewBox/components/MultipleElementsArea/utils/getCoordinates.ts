@@ -19,7 +19,7 @@ import { getAbsolutePosition } from '../../../utils/getAbsolutePosition';
 export const getCoordinates = (
   isMultipleMoving: boolean,
   selectedElements: TSelectedElements,
-  sharedRefs: TContext,
+  sharedRefs: TContext['itemsRefs'],
 ): TElements => {
   if (!isMultipleMoving && size(selectedElements) > 1) {
     const allData = allDataSelector(store.getState());
