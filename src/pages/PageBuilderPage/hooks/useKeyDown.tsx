@@ -3,7 +3,7 @@ import { useKeyboardHandler } from 'hooks';
 
 // types
 import { KeyboardKeys } from 'types';
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 
 type TUseKeyDown = void;
 

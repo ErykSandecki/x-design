@@ -9,7 +9,7 @@ import { BASE_3D } from './constants';
 
 // types
 import { E2EAttribute, MouseButton } from 'types';
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 
 // utils
 import { getByE2EAttribute } from 'test';

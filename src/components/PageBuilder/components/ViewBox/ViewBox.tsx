@@ -27,7 +27,7 @@ import { setAreCoordinates } from 'store/pageBuilder/actions';
 import styles from './view-box.scss';
 
 // types
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 import { T3DCoordinates, TColor } from 'types';
 
 export type TViewBoxProps = {

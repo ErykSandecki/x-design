@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 
 // types
 import { MouseButton, T2DCoordinates } from 'types';
-import { MouseMode } from '../../../../../../../enums';
+import { MouseMode } from '../../../../../../../../../types/enums/mouseMode';
 import { TSelectedElement } from 'store/pageBuilder/types';
 
 // utils

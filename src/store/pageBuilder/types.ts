@@ -52,6 +52,7 @@ export type TElementsData = {
 
 export type TEvents = {
   canMoveElements: boolean;
+  colorSampler: boolean;
   draggableElements: Array<TElement['id']>;
   hoverOnElement: TElement['id'];
   isMultipleMoving: boolean;

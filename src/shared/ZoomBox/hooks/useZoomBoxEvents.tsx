@@ -11,7 +11,7 @@ import { BASE_2D } from '../constants';
 import { CURSOR_STATES } from 'constant/constants';
 
 // types
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 import { T3DCoordinates } from 'types';
 
 export type TUseZoomBoxEvents = {

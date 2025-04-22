@@ -23,7 +23,7 @@ import styles from './drop-anchors.scss';
 // types
 import { DropAnchorsPosition } from './enums';
 import { E2EAttribute, TElement } from 'types';
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 
 // utils
 import { enumToArray } from 'utils';

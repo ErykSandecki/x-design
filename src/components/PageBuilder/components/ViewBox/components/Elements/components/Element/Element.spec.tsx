@@ -25,7 +25,7 @@ import { configureStore } from 'store/store';
 
 // types
 import { ElementType } from 'types';
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 
 const element = document.createElement('div');
 const overlayContainer = document.createElement('div');

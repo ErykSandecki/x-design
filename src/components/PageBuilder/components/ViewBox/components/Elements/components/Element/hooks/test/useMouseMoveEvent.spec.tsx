@@ -15,7 +15,7 @@ import { BASE_2D } from 'shared';
 import { configureStore } from 'store';
 
 // types
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 import { T2DCoordinates } from 'types';
 
 // utils

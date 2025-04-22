@@ -4,6 +4,7 @@ export * from './components/types';
 export * from './e2e';
 export * from './enums';
 export * from './enums/math';
+export * from './enums/mouseMode';
 export * from './enums/theme';
 export * from './enums/scss/boxShadow';
 export * from './enums/scss/colorsTheme';

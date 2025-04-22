@@ -1,5 +1,5 @@
 // types
-import { MouseMode } from '../../../enums';
+import { MouseMode } from '../../../../../types/enums/mouseMode';
 import { T3DCoordinates } from 'types';
 import { TRectArea } from '../../../../PageBuilder/types';
 

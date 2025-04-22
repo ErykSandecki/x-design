@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 
 // types
-import { MouseMode } from '../../../enums';
+import { MouseMode } from '../../../../../types/enums/mouseMode';
 import { TRectArea } from '../../../../PageBuilder/types';
 
 // utils

@@ -15,7 +15,7 @@ import { classes, className, classNames } from './classNames';
 import styles from './zoom-box.scss';
 
 // types
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 import { T3DCoordinates, TColor } from 'types';
 
 // utils

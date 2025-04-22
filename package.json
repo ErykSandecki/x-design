@@ -34,6 +34,7 @@
     "dayjs": "^1.11.13",
     "exenv": "^1.2.2",
     "history": "^5.3.0",
+    "html2canvas": "^1.4.1",
     "lodash": "^4.17.21",
     "query-string": "^9.1.1",
     "rc-virtual-list": "^3.18.1",

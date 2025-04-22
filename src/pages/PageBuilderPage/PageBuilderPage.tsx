@@ -20,7 +20,7 @@ import { Box } from 'shared';
 import { areaCoordinatesSelector } from 'store/pageBuilder/selectors';
 
 // types
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 
 const PageBuilderPage: FC = () => {
   const areaCoordinates = useSelector(areaCoordinatesSelector);

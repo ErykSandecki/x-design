@@ -18,7 +18,7 @@ import { BASE_3D } from 'shared';
 import { configureStore } from 'store/store';
 
 // types
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 import { E2EAttribute, MouseButton } from 'types';
 
 // utils

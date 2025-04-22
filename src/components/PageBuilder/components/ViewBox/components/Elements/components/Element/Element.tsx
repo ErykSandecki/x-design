@@ -37,7 +37,7 @@ import styles from './element.scss';
 
 // types
 import { ElementType, TColor, TElement } from 'types';
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 
 // utils
 import { getAbsolutePosition } from 'components/PageBuilder/components/ViewBox/utils/getAbsolutePosition';

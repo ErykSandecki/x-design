@@ -19,7 +19,7 @@ import styles from './elements.scss';
 
 // types
 import { ElementType, TElement } from 'types';
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 
 export type TElementsProps = {
   eventsDisabled: boolean;

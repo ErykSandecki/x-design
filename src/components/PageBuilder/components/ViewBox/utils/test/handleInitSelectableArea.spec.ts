@@ -5,7 +5,7 @@ import { BASE_3D } from 'shared/ZoomBox/constants';
 
 // types
 import { MouseButton } from 'types';
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 
 // utils
 import { handleInitSelectableArea } from '../handleInitSelectableArea';

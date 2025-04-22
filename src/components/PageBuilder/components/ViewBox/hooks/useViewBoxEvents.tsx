@@ -9,7 +9,7 @@ import { useMouseMoveEvent } from './useMouseMoveEvent';
 import { useMouseUpEvent } from './useMouseUpEvent';
 
 // types
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 import { T3DCoordinates, TObject, TRectCoordinates } from 'types';
 import { TRectArea } from '../../../../PageBuilder/types';
 

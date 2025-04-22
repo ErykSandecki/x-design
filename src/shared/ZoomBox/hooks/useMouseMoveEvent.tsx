@@ -9,7 +9,7 @@ import { T2DCoordinates, T3DCoordinates } from 'types';
 
 // utils
 import { handleMoveArea } from '../utils/handleMoveArea';
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 
 export type TUseMouseMoveEvent = void;
 

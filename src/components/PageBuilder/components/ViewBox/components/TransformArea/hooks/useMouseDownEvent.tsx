@@ -7,7 +7,7 @@ import { updateEventsStatus } from 'store/pageBuilder/actions';
 // types
 import { Anchor } from 'store/pageBuilder/enums';
 import { MouseButton, T2DCoordinates } from 'types';
-import { MouseMode } from '../../../../../enums';
+import { MouseMode } from '../../../../../../../types/enums/mouseMode';
 
 export type TUseMouseDownEvent = (anchor: Anchor, event: MouseEvent) => void;
 

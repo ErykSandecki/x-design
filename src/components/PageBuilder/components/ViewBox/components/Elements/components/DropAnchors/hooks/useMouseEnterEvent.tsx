@@ -8,7 +8,7 @@ import { updateEventsStatus } from 'store/pageBuilder/actions';
 
 // types
 import { DropAnchorsPosition } from '../enums';
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 
 export type TUseMouseEnterEvent = (
   dropAreaPosition: DropAnchorsPosition,

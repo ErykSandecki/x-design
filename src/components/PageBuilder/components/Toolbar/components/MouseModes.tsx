@@ -14,7 +14,7 @@ import { MOUSE_MODE_ICON } from '../constants';
 import styles from './mouse-modes.scss';
 
 // types
-import { MouseMode } from '../../../enums';
+import { MouseMode } from '../../../../../types/enums/mouseMode';
 
 // utils
 import { enumToArray } from 'utils';

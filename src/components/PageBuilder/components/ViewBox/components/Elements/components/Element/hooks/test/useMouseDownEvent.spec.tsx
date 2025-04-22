@@ -18,7 +18,7 @@ import { configureStore } from 'store';
 
 // types
 import { MouseButton, T2DCoordinates } from 'types';
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 
 // utils
 import { getProviderWrapper } from 'test';

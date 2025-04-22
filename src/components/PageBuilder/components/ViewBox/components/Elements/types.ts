@@ -1,5 +1,5 @@
 // types
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 import { TElement } from 'types';
 
 export type TElementProps = {

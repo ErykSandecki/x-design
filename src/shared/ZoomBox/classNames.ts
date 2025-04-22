@@ -4,7 +4,7 @@ import { mapValues } from 'lodash';
 import { CURSOR_STATES } from 'constant/constants';
 
 // types
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 
 export const className = 'ZoomBox';
 

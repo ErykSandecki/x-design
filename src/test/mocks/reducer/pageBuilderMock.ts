@@ -21,6 +21,7 @@ export const pageBuilderStateMock: Record<
     currentPage: '0',
     events: {
       canMoveElements: true,
+      colorSampler: false,
       draggableElements: [],
       hoverOnElement: '-1',
       isMultipleMoving: false,
@@ -85,6 +86,7 @@ export const createFrameMock: TElement = {
 
 export const eventsMock: TEvents = {
   canMoveElements: true,
+  colorSampler: false,
   draggableElements: [],
   hoverOnElement: '-1',
   isMultipleMoving: false,

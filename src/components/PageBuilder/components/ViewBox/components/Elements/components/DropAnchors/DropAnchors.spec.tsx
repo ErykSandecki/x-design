@@ -23,7 +23,7 @@ import { configureStore, store as storeToMock } from 'store/store';
 // types
 import { DropAnchorsPosition } from './enums';
 import { E2EAttribute } from 'types';
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 
 // utils
 import { getByE2EAttribute } from 'test';

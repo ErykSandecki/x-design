@@ -10,7 +10,7 @@ import { CURSOR_STATES } from 'constant/constants';
 
 // types
 import { MouseButton } from 'types';
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 
 const mockCallBack = jest.fn();
 const ref = { current: { getBoundingClientRect: () => ({ left: 0, top: 0 }) } };

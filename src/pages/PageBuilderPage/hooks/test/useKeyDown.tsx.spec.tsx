@@ -5,7 +5,7 @@ import { useKeyDown } from '../useKeyDown';
 
 // types
 import { KeyboardKeys } from 'types';
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 
 const mockCallBack = jest.fn();
 

@@ -5,7 +5,7 @@ import { CURSOR_STATES } from 'constant/constants';
 
 // types
 import { MouseButton, T2DCoordinates, T3DCoordinates } from 'types';
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 
 export const handleMoveArea = (
   coordinates: T3DCoordinates,

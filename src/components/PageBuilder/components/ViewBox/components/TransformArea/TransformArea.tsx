@@ -14,7 +14,7 @@ import { className, classNames } from './classNames';
 // types
 import { Anchor } from 'store/pageBuilder/enums';
 import { E2EAttribute, TElement } from 'types';
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 
 // styles
 import styles from './transform-area.scss';

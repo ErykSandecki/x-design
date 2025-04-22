@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux';
 import { THROTTLE_WAIT } from '../constants';
 
 // types
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 import { T2DCoordinates } from 'types';
 import { TSelectedElement } from 'store/pageBuilder/types';
 

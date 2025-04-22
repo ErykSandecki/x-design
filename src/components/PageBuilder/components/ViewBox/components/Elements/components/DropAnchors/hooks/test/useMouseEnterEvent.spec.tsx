@@ -17,7 +17,7 @@ import { store as storeToMock } from 'store/store';
 
 // types
 import { DropAnchorsPosition } from '../../enums';
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 
 const mockCallBack = jest.fn();
 const stateMock = {

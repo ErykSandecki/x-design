@@ -5,7 +5,7 @@ import { createFrameMock } from 'test/mocks/reducer/pageBuilderMock';
 import { BASE_RECT } from 'shared/ZoomBox/constants';
 
 // types
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 
 // utils
 import { handleCreateElement } from '../handleCreateElement';

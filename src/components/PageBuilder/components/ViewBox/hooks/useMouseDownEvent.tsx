@@ -4,7 +4,7 @@ import { MouseEvent, RefObject } from 'react';
 import { useRefs } from 'pages/PageBuilderPage/core/RefsProvider';
 
 // types
-import { MouseMode } from '../../../../PageBuilder/enums';
+import { MouseMode } from '../../../../../types/enums/mouseMode';
 import { T3DCoordinates, TObject, TRectCoordinates } from 'types';
 import { TRectArea } from '../../../../PageBuilder/types';
 

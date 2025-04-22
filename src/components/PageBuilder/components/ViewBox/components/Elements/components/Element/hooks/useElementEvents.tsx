@@ -13,7 +13,7 @@ import { useOutsideClickElement } from './useOutsideClickElement';
 import { BASE_2D } from 'shared';
 
 // types
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 import { T2DCoordinates, TElement } from 'types';
 import { TSelectedElement } from 'store/pageBuilder/types';
 

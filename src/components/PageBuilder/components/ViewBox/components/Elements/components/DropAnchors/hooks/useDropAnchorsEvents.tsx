@@ -4,7 +4,7 @@ import { useMouseLeaveEvent } from './useMouseLeaveEvent';
 
 // types
 import { DropAnchorsPosition } from '../enums';
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 
 export type TUseDropAnchorsEvents = {
   onMouseEnter: (dropAreaPosition: DropAnchorsPosition) => void;

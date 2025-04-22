@@ -8,7 +8,7 @@ import { BASE_3D, BASE_RECT } from 'shared/ZoomBox/constants';
 
 // types
 import { MouseButton } from 'types';
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 
 const mockCallBack = jest.fn();
 

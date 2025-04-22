@@ -49,6 +49,7 @@ const initialState: TPageBuilderState = {
   currentPage: '0',
   events: {
     canMoveElements: true,
+    colorSampler: false,
     draggableElements: [],
     hoverOnElement: '-1',
     isMultipleMoving: false,

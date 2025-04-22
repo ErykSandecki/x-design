@@ -10,7 +10,7 @@ import { BASE_2D } from 'shared';
 
 // types
 import { Anchor } from 'store/pageBuilder/enums';
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 import { TElement } from 'types';
 
 export type TUseTransformAreaEvents = {

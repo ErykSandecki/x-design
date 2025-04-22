@@ -5,7 +5,7 @@ import { addElement } from 'store/pageBuilder/actions';
 
 // types
 import { ElementType, TRectCoordinates } from 'types';
-import { MouseMode } from '../../../enums';
+import { MouseMode } from '../../../../../types/enums/mouseMode';
 import { TAddELementActionPayload } from 'store/pageBuilder/types';
 
 // utils

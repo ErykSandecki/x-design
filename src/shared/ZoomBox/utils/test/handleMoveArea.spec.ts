@@ -6,7 +6,7 @@ import { CURSOR_STATES } from 'constant/constants';
 
 // types
 import { MouseButton, T2DCoordinates } from 'types';
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 
 // utils
 import { handleMoveArea } from '../handleMoveArea';

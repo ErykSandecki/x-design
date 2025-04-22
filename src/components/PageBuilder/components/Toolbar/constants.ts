@@ -2,7 +2,7 @@
 import { Icons } from 'assets/svg';
 
 // types
-import { MouseMode } from '../../../PageBuilder/enums';
+import { MouseMode } from '../../../../types/enums/mouseMode';
 import { TObject } from 'types';
 
 export const MOUSE_MODE_ICON: TObject<keyof typeof Icons, typeof MouseMode> = {

@@ -6,7 +6,7 @@ import { store } from 'store';
 
 // types
 import { MouseButton, TObject, TRectCoordinates } from 'types';
-import { MouseMode } from '../../../enums';
+import { MouseMode } from '../../../../../types/enums/mouseMode';
 import { TContext } from 'pages/PageBuilderPage/core/types';
 
 // utils

@@ -17,7 +17,7 @@ import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 import { store as storeToMock } from 'store/store';
 
 // types
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 
 const mockCallBack = jest.fn();
 const stateMock = {

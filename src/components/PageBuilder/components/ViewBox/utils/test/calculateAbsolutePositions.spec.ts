@@ -17,7 +17,7 @@ import { store as storeToMock } from 'store/store';
 
 // types
 import { MouseButton, TObject, TRectCoordinates } from 'types';
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 
 // utils
 import { calculateAbsolutePositions } from '../calculateAbsolutePositions';

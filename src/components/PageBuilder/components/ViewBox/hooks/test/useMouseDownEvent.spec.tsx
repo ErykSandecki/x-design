@@ -15,7 +15,7 @@ import { BASE_3D } from 'shared/ZoomBox/constants';
 
 // types
 import { MouseButton, TObject, TRectCoordinates } from 'types';
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 
 const mockCallBack = jest.fn();
 const rectCoordinates = {

@@ -3,7 +3,7 @@ import { isEmpty } from 'lodash';
 import { useDispatch } from 'react-redux';
 
 // types
-import { MouseMode } from 'components/PageBuilder/enums';
+import { MouseMode } from 'types/enums/mouseMode';
 import { TElement } from 'types';
 
 // store
