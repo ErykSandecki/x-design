@@ -8,5 +8,9 @@ export const classNames = {
   pickerGrid: `${className}__picker-grid`,
   pickerTargetColor: `${className}__picker-target-color`,
   pickerLoader: `${className}__picker-loader`,
+  data: `${className}__data`,
   header: `${className}__header`,
+  selectedColor: `${className}__selected-color`,
+  prompt: `${className}__prompt`,
+  promptDescription: `${className}__prompt-description`,
 };

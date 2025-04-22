@@ -1,16 +1,19 @@
 import { createPortal } from 'react-dom';
 import { FC } from 'react';
 import { Spin } from 'antd';
+import { useTranslation } from 'react-i18next';
 
 // components
-import Box from 'shared/UI/components/Box/Box';
+import Box from '../../../../../UI/components/Box/Box';
+import Icon from '../../../../../UI/components/Icon/Icon';
+import { Small } from '../../../../../UI/components/Typography';
 
 // hooks
 import { useColorSamplerEvents } from './hooks/useColorSamplerEvents';
 import { useTheme } from 'hooks';
 
 // others
-import { BOX_OFFSET } from './constants';
+import { BOX_OFFSET, MIDDLE_ARRAY, translationNameSpace } from './constants';
 import { className, classNames } from './classNames';
 
 // styles
@@ -32,9 +35,10 @@ export const ColorSampler: FC<TColorSamplerProps> = ({
   onClickColorSampler,
 }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
+  const { t } = useTranslation();
   const { colors, isPending, mousePosition } =
     useColorSamplerEvents(initialMousePosition);
-  const { r, g, b } = colors[24] || {};
+  const { r, g, b, a } = colors[MIDDLE_ARRAY] || {};
 
   return createPortal(
     <Box
@@ -66,6 +70,26 @@ export const ColorSampler: FC<TColorSamplerProps> = ({
           </div>
         )}
       </div>
+      {colors[MIDDLE_ARRAY] && (
+        <div className={cx(classNamesWithTheme.data)}>
+          <div className={cx(classNamesWithTheme.header)}>
+            <div
+              className={cx(classNamesWithTheme.selectedColor)}
+              style={{ backgroundColor: `rgba(${r},${g},${b},${a})` }}
+            />
+            <Small>{rgbToHex(r, g, b)}</Small>
+          </div>
+          <div className={cx(classNamesWithTheme.prompt)}>
+            <Icon height={12} name="EyesDropper" width={12} />
+            <Small
+              classes={{ className: cx(classNamesWithTheme.promptDescription) }}
+              sx={{ cl: 'neutral2' }}
+            >
+              {t(`${translationNameSpace}.prompt`)}
+            </Small>
+          </div>
+        </div>
+      )}
     </Box>,
     document.body,
   );
