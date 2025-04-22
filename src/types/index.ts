@@ -1,4 +1,5 @@
 export * from './classNames';
+export * from './color';
 export * from './components/enums';
 export * from './components/types';
 export * from './e2e';

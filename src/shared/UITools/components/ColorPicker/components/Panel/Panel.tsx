@@ -8,10 +8,12 @@ import Icon from '../../../../../UI/components/Icon/Icon';
 import Tabs, { TTabsProps } from '../../../Tabs/Tabs';
 
 // hooks
+import { useClickEvent } from './hooks/useClickEvent';
 import { useTheme } from 'hooks';
 
 // others
 import { antColorPickerSliderContainerClassName, TABS } from './constants';
+import { BASE_2D } from 'shared/ZoomBox/constants';
 import { className, classNames } from './classNames';
 
 // styles
@@ -20,6 +22,7 @@ import styles from './panel.scss';
 // types
 import { E2EAttribute } from 'types';
 import { Tab } from './enums';
+import { ColorSampler } from '../ColorSampler/ColorSampler';
 
 export type TPanelProps = {
   children: ReactNode;
@@ -27,10 +30,13 @@ export type TPanelProps = {
 };
 
 export const Panel: FC<TPanelProps> = ({ children, setVisible }) => {
+  const mousePosition = useRef(BASE_2D);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const [activeTab, setActiveTab] = useState(Tab.custom);
+  const [activeSampler, setActiveSampler] = useState(false);
   const [sampleContainer, setSampleContainer] = useState<HTMLDivElement>(null);
   const ref = useRef<HTMLDivElement>(null);
+  const onClick = useClickEvent(mousePosition, setActiveSampler);
 
   useEffect(() => {
     /* istanbul ignore next */
@@ -68,7 +74,11 @@ export const Panel: FC<TPanelProps> = ({ children, setVisible }) => {
         {sampleContainer &&
           createPortal(
             <div className={cx(classNamesWithTheme.sample)}>
-              <ButtonIcon name="Sample" />
+              <ButtonIcon name="Sample" onClick={onClick} />
+              <ColorSampler
+                active={activeSampler}
+                initialMousePosition={mousePosition.current}
+              />
             </div>,
             sampleContainer,
           )}

@@ -1,163 +1,168 @@
 @import '../mixins/box-shadow';
+@import '../z-indexes';
 
 :global {
   body {
-    .ant-popover-content {
-      border-radius: 5px;
-      right: 10px;
+    .ant-popover {
+      z-index: map.get($map: $--rx-z-indexes, $key: 'overlay');
 
-      .ant-popover-inner {
-        padding: 0;
+      .ant-popover-content {
+        border-radius: 5px;
+        right: 10px;
 
-        .ant-color-picker-inner-content {
-          padding: 16px;
+        .ant-popover-inner {
+          padding: 0;
 
-          .ant-color-picker-handler {
-            border-width: 4px;
-          }
+          .ant-color-picker-inner-content {
+            padding: 16px;
 
-          .ant-color-picker-slider-container {
-            flex-direction: row-reverse;
+            .ant-color-picker-handler {
+              border-width: 4px;
+            }
 
-            .ant-color-picker-slider-group {
-              align-items: center;
-              row-gap: 10px;
+            .ant-color-picker-slider-container {
+              flex-direction: row-reverse;
 
-              .ant-slider {
+              .ant-color-picker-slider-group {
                 align-items: center;
-                display: flex;
-                height: 24px;
-                width: calc(100% - 18px);
+                row-gap: 10px;
 
-                &:last-child {
-                  &::after {
-                    background:
-                      url('assets/images/texture.svg') 0 0 / auto 50%,
-                      #ffffff;
+                .ant-slider {
+                  align-items: center;
+                  display: flex;
+                  height: 24px;
+                  width: calc(100% - 18px);
+
+                  &:last-child {
+                    &::after {
+                      background:
+                        url('assets/images/texture.svg') 0 0 / auto 50%,
+                        #ffffff;
+                      border-radius: 9px;
+                      content: '';
+                      height: 18px;
+                      left: -9px;
+                      opacity: 0.2;
+                      position: absolute;
+                      top: 3px;
+                      width: calc(100% + 18px);
+                    }
+                  }
+
+                  .ant-slider-rail {
                     border-radius: 9px;
-                    content: '';
                     height: 18px;
                     left: -9px;
-                    opacity: 0.2;
-                    position: absolute;
-                    top: 3px;
                     width: calc(100% + 18px);
                   }
-                }
 
-                .ant-slider-rail {
-                  border-radius: 9px;
-                  height: 18px;
-                  left: -9px;
-                  width: calc(100% + 18px);
-                }
+                  .ant-slider-step {
+                    top: 50%;
+                    transform: translateY(-50%);
+                  }
 
-                .ant-slider-step {
-                  top: 50%;
-                  transform: translateY(-50%);
-                }
-
-                .ant-slider-handle {
-                  height: 18px;
-                  top: 3px;
-                  width: 18px;
-
-                  &::after,
-                  &::before {
-                    border-width: 4px;
-                    box-shadow: none;
+                  .ant-slider-handle {
                     height: 18px;
-                    left: 0;
-                    top: 0;
-                    transform: unset;
+                    top: 3px;
                     width: 18px;
-                  }
-                }
-              }
-            }
 
-            .ant-color-picker-color-block {
-              display: none;
-            }
-          }
-
-          .ant-color-picker-input-container {
-            .ant-select {
-              .ant-select-selector {
-                padding: 0 5px;
-
-                .ant-select-dropdown {
-                  overflow: visible;
-
-                  * {
-                    overflow: visible !important;
-                  }
-
-                  [role='listbox'] {
-                    display: none;
-                  }
-
-                  &:has(
-                      .ant-select-item:hover:not(
-                          .ant-select-item-option-selected
-                        )
-                    )
-                    .ant-select-item-option-selected {
-                    background: none;
-                  }
-
-                  .ant-select-item {
-                    .ant-select-item-option-content {
-                      align-items: center;
-                      display: flex;
-                      text-overflow: unset;
+                    &::after,
+                    &::before {
+                      border-width: 4px;
+                      box-shadow: none;
+                      height: 18px;
+                      left: 0;
+                      top: 0;
+                      transform: unset;
+                      width: 18px;
                     }
                   }
                 }
               }
 
-              .ant-select-arrow {
-                right: 5px;
-
-                svg {
-                  height: 8px;
-                  width: 8px;
-                }
+              .ant-color-picker-color-block {
+                display: none;
               }
             }
 
-            .ant-color-picker-input {
-              .ant-color-picker-hex-input {
-                border-bottom-right-radius: 0;
-                border-top-right-radius: 0;
-                box-shadow: none;
+            .ant-color-picker-input-container {
+              .ant-select {
+                .ant-select-selector {
+                  padding: 0 5px;
+
+                  .ant-select-dropdown {
+                    overflow: visible;
+
+                    * {
+                      overflow: visible !important;
+                    }
+
+                    [role='listbox'] {
+                      display: none;
+                    }
+
+                    &:has(
+                        .ant-select-item:hover:not(
+                            .ant-select-item-option-selected
+                          )
+                      )
+                      .ant-select-item-option-selected {
+                      background: none;
+                    }
+
+                    .ant-select-item {
+                      .ant-select-item-option-content {
+                        align-items: center;
+                        display: flex;
+                        text-overflow: unset;
+                      }
+                    }
+                  }
+                }
+
+                .ant-select-arrow {
+                  right: 5px;
+
+                  svg {
+                    height: 8px;
+                    width: 8px;
+                  }
+                }
               }
 
-              .ant-color-picker-hsb-input,
-              .ant-color-picker-rgb-input {
-                box-shadow: none;
-                gap: 1px;
-
-                &:first-child {
+              .ant-color-picker-input {
+                .ant-color-picker-hex-input {
                   border-bottom-right-radius: 0;
                   border-top-right-radius: 0;
+                  box-shadow: none;
                 }
 
-                &:not(:first-child) {
-                  border-radius: 0;
+                .ant-color-picker-hsb-input,
+                .ant-color-picker-rgb-input {
+                  box-shadow: none;
+                  gap: 1px;
+
+                  &:first-child {
+                    border-bottom-right-radius: 0;
+                    border-top-right-radius: 0;
+                  }
+
+                  &:not(:first-child) {
+                    border-radius: 0;
+                  }
                 }
               }
-            }
 
-            .ant-color-picker-alpha-input {
-              border-bottom-left-radius: 0;
-              border-top-left-radius: 0;
-              box-shadow: none;
-              margin-left: 1px;
-            }
+              .ant-color-picker-alpha-input {
+                border-bottom-left-radius: 0;
+                border-top-left-radius: 0;
+                box-shadow: none;
+                margin-left: 1px;
+              }
 
-            .ant-input-number-handler-wrap {
-              display: none;
+              .ant-input-number-handler-wrap {
+                display: none;
+              }
             }
           }
         }
