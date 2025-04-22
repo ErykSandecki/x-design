@@ -27,7 +27,7 @@ export const useMouseMoveEvent = (
 
       setColors(colors);
       setIsPending(false);
-    }, 500);
+    }, 150);
   }, 20);
 
   useEffect(() => {
