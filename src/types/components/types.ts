@@ -5,10 +5,12 @@ import { CSSProperties } from 'react';
 import { ElementType } from './enums';
 import { T2DCoordinates } from 'types/types';
 
+export type TColor = { alpha: string; color: string; format: ColorFormatType };
+
+export type TColorGradient = Array<TColor & { direction: 'linear' }>;
+
 export type TBackground = {
-  alpha: string;
-  format: ColorFormatType;
-  value: string;
+  properties: TColor | TColorGradient;
   visible: boolean;
 };
 

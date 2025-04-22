@@ -16,14 +16,14 @@ import styles from './zoom-box.scss';
 
 // types
 import { MouseMode } from 'components/PageBuilder/enums';
-import { T3DCoordinates, TBackground } from 'types';
+import { T3DCoordinates, TColor } from 'types';
 
 // utils
 import { hexToRgb } from 'utils';
 
 export type TZoomBoxProps = {
   alpha: string;
-  backgroundColor: TBackground['value'];
+  backgroundColor: TColor['color'];
   backgroundVissible: boolean;
   children: ReactNode;
   classes?: typeof classes;

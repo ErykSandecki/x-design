@@ -18,7 +18,7 @@ import { classes, className, classNames } from './classNames';
 import styles from './color-picker.scss';
 
 // types
-import { E2EAttribute, KeyboardKeys, TBackground } from 'types';
+import { E2EAttribute, KeyboardKeys, TColor } from 'types';
 import { TE2EDataAttributeProps } from '../../../E2EDataAttributes/E2EDataAttribute';
 import { TUIProps } from '../../../UI/types';
 
@@ -28,7 +28,7 @@ import { handleSubmitInput, hexToRgb } from 'utils';
 
 export type TColorPickerProps = TUIProps<typeof classes> &
   Omit<ColorPickerProps, 'arrow' | 'onOpenChange' | 'open' | 'panelRender'> & {
-    alpha: TBackground['alpha'];
+    alpha: TColor['alpha'];
     color: string;
     e2eValue?: TE2EDataAttributeProps['value'];
     onChangeAlpha: (value: string) => void;

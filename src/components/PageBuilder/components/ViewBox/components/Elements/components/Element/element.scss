@@ -6,8 +6,8 @@
   @include enter-delay;
 
   animation-delay: 100ms;
-  position: absolute;
   overflow: hidden;
+  position: absolute;
   user-select: none;
   z-index: $--rx-zindex-element;
 

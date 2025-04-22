@@ -7,13 +7,16 @@ import { THEME_COLORS } from 'constant/themeColors';
 import { ElementType, TElement, Theme } from 'types';
 import { TElementDynamicData, TElementStaticData, TPage } from './types';
 
-const value =
+const color =
   localStorage.getItem(THEME) === Theme.dark
     ? THEME_COLORS.dark.neutral4
     : THEME_COLORS.light.neutral4;
 
 export const BASE_ALL_DATA: TElement = {
-  background: { alpha: '100', format: 'hex', value, visible: true },
+  background: {
+    properties: { alpha: '100', color, format: 'hex' },
+    visible: true,
+  },
   children: [],
   coordinates: BASE_2D,
   height: 0,

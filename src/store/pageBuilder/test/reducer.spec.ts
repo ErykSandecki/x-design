@@ -111,9 +111,11 @@ describe('PageBuilderReducer', () => {
   it('should handle CHANGE_BACKGROUND', () => {
     // mock
     const background: TBackground = {
-      alpha: '100',
-      format: 'hex',
-      value: '#ffffff',
+      properties: {
+        alpha: '100',
+        color: '#ffffff',
+        format: 'hex',
+      },
       visible: true,
     };
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];

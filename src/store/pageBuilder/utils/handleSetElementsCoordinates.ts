@@ -1,10 +1,8 @@
 // types
-import { T2DCoordinates, TRectCoordinates } from 'types';
 import {
   TPage,
   TPageBuilderState,
   TPositions,
-  TSelectedElement,
   TSetElementsCoordinatesAction,
 } from '../types';
 

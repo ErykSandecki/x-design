@@ -36,7 +36,7 @@ import {
 import styles from './element.scss';
 
 // types
-import { ElementType, TElement } from 'types';
+import { ElementType, TColor, TElement } from 'types';
 import { MouseMode } from 'components/PageBuilder/enums';
 
 // utils
@@ -119,7 +119,7 @@ const Element: FC<TElementProps> = ({
       id={id}
       ref={elementRef}
       style={{
-        backgroundColor: background.value,
+        backgroundColor: (background.properties as TColor).color,
         height: isNumber(height) ? `${height}px` : height,
         left: `${x}px`,
         position,

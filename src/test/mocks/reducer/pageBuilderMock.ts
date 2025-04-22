@@ -39,7 +39,10 @@ export const pageBuilderStateMock: Record<
 };
 
 export const elementDynamicDataMock: TElementDynamicData = {
-  background: { alpha: '100', format: 'hex', value: '#ffffff', visible: true },
+  background: {
+    properties: { alpha: '100', color: '#ffffff', format: 'hex' },
+    visible: true,
+  },
   coordinates: {
     x: 0,
     y: 0,
@@ -65,7 +68,10 @@ export const elementAllDataMock: TElement = {
 };
 
 export const createFrameMock: TElement = {
-  background: { alpha: '100', format: 'hex', value: '#ffffff', visible: true },
+  background: {
+    properties: { alpha: '100', color: '#ffffff', format: 'hex' },
+    visible: true,
+  },
   children: [],
   coordinates: { x: 0, y: 0 },
   height: 0,

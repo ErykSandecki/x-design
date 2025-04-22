@@ -28,7 +28,7 @@ import styles from './view-box.scss';
 
 // types
 import { MouseMode } from 'components/PageBuilder/enums';
-import { T3DCoordinates } from 'types';
+import { T3DCoordinates, TColor } from 'types';
 
 export type TViewBoxProps = {
   coordinates: T3DCoordinates;
@@ -44,6 +44,7 @@ const ViewBox: FC<TViewBoxProps> = ({
   setMouseMode,
 }) => {
   const background = useSelector(pageBackgroundSelectorCreator('-1'));
+  const data = background.properties as TColor;
   const dispatch = useDispatch();
   const zoomBoxRef = useRef<HTMLDivElement>(null);
   const { overlayContainerRef } = useRefs();
@@ -56,8 +57,8 @@ const ViewBox: FC<TViewBoxProps> = ({
 
   return (
     <ZoomBox
-      alpha={background.alpha}
-      backgroundColor={background.value}
+      alpha={data.alpha}
+      backgroundColor={data.color}
       backgroundVissible={background.visible}
       classes={{
         className: cx(classNamesWithTheme[className].name, [
