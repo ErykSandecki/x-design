@@ -10,7 +10,6 @@ import { extractColors } from '../utils/extractColors';
 export type TUseMouseMoveEvent = void;
 
 export const useMouseMoveEvent = (
-  active: boolean,
   setColors: (colors: Array<TRGBA>) => void,
   setMousePosition: (mousePosition: T2DCoordinates) => void,
   setIsPending: (isPending: boolean) => void,
@@ -27,16 +26,14 @@ export const useMouseMoveEvent = (
 
       setColors(colors);
       setIsPending(false);
-    }, 150);
+    }, 100);
   }, 20);
 
   useEffect(() => {
-    if (active) {
-      window.addEventListener('mousemove', handleMouseMove);
-    }
+    window.addEventListener('mousemove', handleMouseMove);
 
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
     };
-  }, [active]);
+  }, []);
 };

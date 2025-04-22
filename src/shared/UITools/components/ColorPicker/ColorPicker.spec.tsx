@@ -16,10 +16,12 @@ describe('ColorPicker snapshots', () => {
     // before
     const { asFragment } = render(
       <ColorPicker
+        activeSampler={false}
         alpha="100"
         color="#ffffff"
         onChangeAlpha={mockCallBack}
         onChangeColor={mockCallBack}
+        onClickColorSampler={mockCallBack}
       />,
     );
 
@@ -33,10 +35,12 @@ describe('ColorPicker behaviors', () => {
     // before
     const { container } = render(
       <ColorPicker
+        activeSampler={false}
         alpha="100"
         color="#ffffff"
         onChangeAlpha={mockCallBack}
         onChangeColor={mockCallBack}
+        onClickColorSampler={mockCallBack}
       />,
     );
 
@@ -60,10 +64,12 @@ describe('ColorPicker behaviors', () => {
     // before
     const { container } = render(
       <ColorPicker
+        activeSampler={false}
         alpha="100"
         color="#ffffff"
         onChangeAlpha={mockCallBack}
         onChangeColor={mockCallBack}
+        onClickColorSampler={mockCallBack}
       />,
     );
 

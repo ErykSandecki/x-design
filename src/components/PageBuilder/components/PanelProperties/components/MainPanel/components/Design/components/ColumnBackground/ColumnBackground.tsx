@@ -6,12 +6,16 @@ import { UITools } from 'shared';
 
 // store
 import { changeBackground } from 'store/pageBuilder/actions';
-import { pageBackgroundSelectorCreator } from 'store/pageBuilder/selectors';
+import {
+  eventSelectorCreator,
+  pageBackgroundSelectorCreator,
+} from 'store/pageBuilder/selectors';
 
 // types
 import { TColor } from 'types';
 
 const ColumnBackground: FC = () => {
+  const colorSampler = useSelector(eventSelectorCreator('colorSampler'));
   const dispatch = useDispatch();
   const background = useSelector(pageBackgroundSelectorCreator('-1'));
   const { alpha, color, format } = background.properties as TColor;
@@ -29,6 +33,7 @@ const ColumnBackground: FC = () => {
       }
     >
       <UITools.ColorPicker
+        activeSampler={colorSampler as boolean}
         alpha={alpha}
         color={color}
         format={format}
@@ -47,6 +52,11 @@ const ColumnBackground: FC = () => {
             changeBackground({ properties: { alpha, color, format } }, '-1'),
           )
         }
+        onClickColorSampler={(color) => {
+          dispatch(
+            changeBackground({ properties: { alpha, color, format } }, '-1'),
+          );
+        }}
         placement="leftBottom"
       />
     </UITools.SectionColumn>

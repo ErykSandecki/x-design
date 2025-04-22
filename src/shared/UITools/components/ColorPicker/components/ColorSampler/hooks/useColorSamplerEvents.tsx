@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 // hooks
 import { useMouseMoveEvent } from './useMouseMoveEvent';
@@ -13,7 +13,6 @@ export type TUseColorSamplerEvents = {
 };
 
 export const useColorSamplerEvents = (
-  active: boolean,
   initialMousePosition: T2DCoordinates,
 ): TUseColorSamplerEvents => {
   const [gridColors, setGridColors] = useState<Array<TRGBA>>([]);
@@ -21,7 +20,15 @@ export const useColorSamplerEvents = (
   const [mousePosition, setMousePosition] =
     useState<T2DCoordinates>(initialMousePosition);
 
-  useMouseMoveEvent(active, setGridColors, setMousePosition, setIsPending);
+  useMouseMoveEvent(setGridColors, setMousePosition, setIsPending);
+
+  useEffect(() => {
+    document.body.style.pointerEvents = 'none';
+
+    return () => {
+      document.body.style.pointerEvents = 'all';
+    };
+  }, []);
 
   return { colors: gridColors, isPending, mousePosition };
 };

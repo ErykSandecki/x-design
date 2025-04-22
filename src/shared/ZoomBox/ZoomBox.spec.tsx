@@ -25,6 +25,7 @@ describe('ZoomBox snapshots', () => {
         alpha="100"
         backgroundColor="#ffffff"
         backgroundVissible
+        colorSampler={false}
         coordinates={BASE_3D}
         mouseMode={MouseMode.default}
         onKeyDown={mockCallBack}
@@ -50,6 +51,7 @@ describe('ZoomBox snapshots', () => {
         alpha="100"
         backgroundColor="#ffffff"
         backgroundVissible
+        colorSampler={false}
         coordinates={BASE_3D}
         mouseMode={MouseMode.move}
         onKeyDown={mockCallBack}
@@ -83,6 +85,7 @@ describe('ZoomBox snapshots', () => {
         alpha="100"
         backgroundColor="#ffffff"
         backgroundVissible={false}
+        colorSampler={false}
         coordinates={BASE_3D}
         mouseMode={MouseMode.default}
         onKeyDown={mockCallBack}

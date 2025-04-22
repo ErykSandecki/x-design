@@ -4,7 +4,7 @@ import { FC, useRef, useState } from 'react';
 // components
 import Color from '../Color/Color';
 import FieldGroup from '../FieldGroup/FieldGroup';
-import Panel from './components/Panel/Panel';
+import Panel, { TPanelProps } from './components/Panel/Panel';
 import TextField from '../TextField/TextField';
 
 // hooks
@@ -26,7 +26,11 @@ import { TUIProps } from '../../../UI/types';
 import { getAttributes } from '../../../E2EDataAttributes/utils';
 import { handleSubmitInput, hexToRgb } from 'utils';
 
-export type TColorPickerProps = TUIProps<typeof classes> &
+export type TColorPickerProps = Pick<
+  TPanelProps,
+  'activeSampler' | 'onClickColorSampler'
+> &
+  TUIProps<typeof classes> &
   Omit<ColorPickerProps, 'arrow' | 'onOpenChange' | 'open' | 'panelRender'> & {
     alpha: TColor['alpha'];
     color: string;
@@ -36,12 +40,14 @@ export type TColorPickerProps = TUIProps<typeof classes> &
   };
 
 export const ColorPicker: FC<TColorPickerProps> = ({
+  activeSampler,
   alpha,
   classes = { className: '' },
   color,
   e2eValue = '',
   onChangeAlpha: onChangeAlphaHandler,
   onChangeColor: onChangeColorHandler,
+  onClickColorSampler,
   ...restProps
 }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
@@ -82,7 +88,13 @@ export const ColorPicker: FC<TColorPickerProps> = ({
             onOpenChange={(visible) => setVisible(visible)}
             open={visible}
             panelRender={(children) => (
-              <Panel setVisible={setVisible}>{children}</Panel>
+              <Panel
+                activeSampler={activeSampler}
+                onClickColorSampler={onClickColorSampler}
+                setVisible={setVisible}
+              >
+                {children}
+              </Panel>
             )}
             value={hexToRgb(colorValue, parseInt(alphaValue))}
             {...getAttributes(E2EAttribute.colorPicker, e2eValue)}

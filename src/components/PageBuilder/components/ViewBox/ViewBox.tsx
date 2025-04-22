@@ -20,7 +20,10 @@ import { useTheme } from 'hooks';
 import { useViewBoxEvents } from './hooks/useViewBoxEvents';
 
 // store
-import { pageBackgroundSelectorCreator } from 'store/pageBuilder/selectors';
+import {
+  eventSelectorCreator,
+  pageBackgroundSelectorCreator,
+} from 'store/pageBuilder/selectors';
 import { setAreCoordinates } from 'store/pageBuilder/actions';
 
 // styles
@@ -43,6 +46,7 @@ const ViewBox: FC<TViewBoxProps> = ({
   setCoordinates,
   setMouseMode,
 }) => {
+  const colorSampler = useSelector(eventSelectorCreator('colorSampler'));
   const background = useSelector(pageBackgroundSelectorCreator('-1'));
   const data = background.properties as TColor;
   const dispatch = useDispatch();
@@ -66,6 +70,7 @@ const ViewBox: FC<TViewBoxProps> = ({
           mouseMode === MouseMode.toolBeltA,
         ]),
       }}
+      colorSampler={colorSampler as boolean}
       coordinates={coordinates}
       mouseMode={mouseMode}
       onMouseMoveDepedencies={[elementArea, mouseMode]}

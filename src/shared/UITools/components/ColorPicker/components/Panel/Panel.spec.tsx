@@ -19,7 +19,11 @@ describe('Panel snapshots', () => {
   it('should render Panel', () => {
     // before
     const { asFragment } = render(
-      <Panel setVisible={noop}>
+      <Panel
+        activeSampler={false}
+        onClickColorSampler={mockCallBack}
+        setVisible={noop}
+      >
         <div className={antColorPickerSliderContainerClassName}></div>
       </Panel>,
     );
@@ -37,7 +41,13 @@ describe('Panel behaviors', () => {
   it('should change visibility after click close icon', () => {
     // before
     const { container } = render(
-      <Panel setVisible={mockCallBack}>children</Panel>,
+      <Panel
+        activeSampler={false}
+        onClickColorSampler={mockCallBack}
+        setVisible={mockCallBack}
+      >
+        children
+      </Panel>,
     );
 
     // action
@@ -51,7 +61,14 @@ describe('Panel behaviors', () => {
     // before
     const { container } = render(
       <div id="test" onKeyDown={mockCallBack}>
-        <Panel setVisible={noop}>children</Panel>,
+        <Panel
+          activeSampler={false}
+          onClickColorSampler={mockCallBack}
+          setVisible={noop}
+        >
+          children
+        </Panel>
+        ,
       </div>,
     );
 

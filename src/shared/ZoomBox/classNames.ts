@@ -16,12 +16,13 @@ export const classNames = {
   [className]: {
     name: className,
     modificators: {
-      pressing: `${className}__pressing`,
+      colorSampler: `${className}--color-sampler`,
+      pressing: `${className}--pressing`,
       ...CURSOR_STATES.reduce(
-        (obj, key) => ({ ...obj, [key]: `${className}__${key}` }),
+        (obj, key) => ({ ...obj, [key]: `${className}--${key}` }),
         {},
       ),
-      ...mapValues(MouseMode, (mode) => `${className}__${mode}`),
+      ...mapValues(MouseMode, (mode) => `${className}--${mode}`),
     },
   },
   backgroundMask: `${className}__background-mask`,

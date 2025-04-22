@@ -5,6 +5,13 @@
   position: relative;
   z-index: 1;
 
+  &--color-sampler {
+    cursor:
+      url('assets/icons/cursors/sampler.svg') 8 24,
+      auto !important;
+    pointer-events: all;
+  }
+
   &--move {
     cursor:
       url('assets/icons/cursors/move.png') 8 8,

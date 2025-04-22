@@ -3,6 +3,7 @@ import { FC, ReactNode, useEffect, useRef, useState } from 'react';
 
 // components
 import ButtonIcon from '../../../ButtonIcon/ButtonIcon';
+import ColorSampler from '../ColorSampler/ColorSampler';
 import E2EDataAttribute from 'shared/E2EDataAttributes/E2EDataAttribute';
 import Icon from '../../../../../UI/components/Icon/Icon';
 import Tabs, { TTabsProps } from '../../../Tabs/Tabs';
@@ -22,21 +23,26 @@ import styles from './panel.scss';
 // types
 import { E2EAttribute } from 'types';
 import { Tab } from './enums';
-import { ColorSampler } from '../ColorSampler/ColorSampler';
 
 export type TPanelProps = {
+  activeSampler: boolean;
   children: ReactNode;
+  onClickColorSampler: (color: string) => void;
   setVisible: (vissible: boolean) => void;
 };
 
-export const Panel: FC<TPanelProps> = ({ children, setVisible }) => {
+export const Panel: FC<TPanelProps> = ({
+  activeSampler,
+  children,
+  onClickColorSampler,
+  setVisible,
+}) => {
   const mousePosition = useRef(BASE_2D);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const [activeTab, setActiveTab] = useState(Tab.custom);
-  const [activeSampler, setActiveSampler] = useState(false);
   const [sampleContainer, setSampleContainer] = useState<HTMLDivElement>(null);
   const ref = useRef<HTMLDivElement>(null);
-  const onClick = useClickEvent(mousePosition, setActiveSampler);
+  const onClick = useClickEvent(mousePosition);
 
   useEffect(() => {
     /* istanbul ignore next */
@@ -74,11 +80,17 @@ export const Panel: FC<TPanelProps> = ({ children, setVisible }) => {
         {sampleContainer &&
           createPortal(
             <div className={cx(classNamesWithTheme.sample)}>
-              <ButtonIcon name="Sample" onClick={onClick} />
-              <ColorSampler
-                active={activeSampler}
-                initialMousePosition={mousePosition.current}
+              <ButtonIcon
+                name="Sample"
+                onClick={onClick}
+                selected={activeSampler}
               />
+              {activeSampler && (
+                <ColorSampler
+                  initialMousePosition={mousePosition.current}
+                  onClickColorSampler={onClickColorSampler}
+                />
+              )}
             </div>,
             sampleContainer,
           )}

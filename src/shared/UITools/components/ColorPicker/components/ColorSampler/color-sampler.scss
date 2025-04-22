@@ -12,12 +12,16 @@
   z-index: map.get($map: $--rx-z-indexes, $key: 'overlay');
   width: 260px;
 
-  &__clickable-mask {
-    height: 100%;
-    left: -15px;
+  &__prevent-antd-event-mask {
+    cursor:
+      url('assets/icons/cursors/sampler.svg') 8 24,
+      auto !important;
+    height: 150px;
+    left: -150px;
     position: absolute;
-    top: -15px;
-    width: 100%;
+    pointer-events: all;
+    top: -150px;
+    width: 150px;
   }
 
   &__picker-wrapper {

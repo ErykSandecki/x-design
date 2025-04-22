@@ -27,6 +27,7 @@ export type TZoomBoxProps = {
   backgroundVissible: boolean;
   children: ReactNode;
   classes?: typeof classes;
+  colorSampler: boolean;
   coordinates: T3DCoordinates;
   mouseMode: MouseMode;
   onKeyDown: (event: KeyboardEvent) => void;
@@ -47,6 +48,7 @@ export const ZoomBox: FC<TZoomBoxProps> = ({
   backgroundVissible,
   children,
   classes = { className: '' },
+  colorSampler,
   coordinates,
   mouseMode,
   onKeyDown,
@@ -81,6 +83,10 @@ export const ZoomBox: FC<TZoomBoxProps> = ({
         className: cx(
           classes.className,
           classNamesWithTheme[className].name,
+          [
+            classNamesWithTheme[className].modificators.colorSampler,
+            colorSampler,
+          ],
           classNamesWithTheme[className].modificators[cursorState],
           classNamesWithTheme[className].modificators[mouseMode],
           [

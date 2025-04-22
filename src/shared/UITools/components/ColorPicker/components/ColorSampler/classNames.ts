@@ -2,7 +2,7 @@ export const className = 'ColorSampler';
 
 export const classNames = {
   [className]: className,
-  clickableMask: `${className}__clickable-mask`,
+  preventAntdEventMask: `${className}__prevent-antd-event-mask`,
   pickerWrapper: `${className}__picker-wrapper`,
   picker: `${className}__picker`,
   pickerGrid: `${className}__picker-grid`,

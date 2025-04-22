@@ -6,6 +6,10 @@ export const handleChangeBackground = (
   state: TPageBuilderState,
 ): TPageBuilderState => ({
   ...state,
+  events: {
+    ...state.events,
+    colorSampler: false,
+  },
   pages: {
     ...state.pages,
     [state.currentPage]: {
