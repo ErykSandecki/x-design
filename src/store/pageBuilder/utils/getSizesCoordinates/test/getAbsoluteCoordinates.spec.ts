@@ -2,15 +2,15 @@
 import { Anchor } from 'store/pageBuilder/enums';
 
 // utils
-import { getSizesCoordinates } from '../getSizesCoordinates';
+import { getAbsoluteCoordinates } from '../getAbsoluteCoordinates';
 
 const baseCoordinates = { x1: 0, x2: 100, y1: 0, y2: 100 };
 const mouseCoordinates = { x: 200, y: 100 };
 
-describe('getSizesCoordinates', () => {
+describe('getAbsoluteCoordinates', () => {
   it(`should return cords east`, () => {
     // before
-    const result = getSizesCoordinates(
+    const result = getAbsoluteCoordinates(
       Anchor.east,
       baseCoordinates,
       100,
@@ -28,10 +28,16 @@ describe('getSizesCoordinates', () => {
 
   it(`should return cords east reverse`, () => {
     // before
-    const result = getSizesCoordinates(Anchor.east, baseCoordinates, 100, 100, {
-      ...mouseCoordinates,
-      x: -300,
-    });
+    const result = getAbsoluteCoordinates(
+      Anchor.east,
+      baseCoordinates,
+      100,
+      100,
+      {
+        ...mouseCoordinates,
+        x: -300,
+      },
+    );
 
     // result
     expect(result).toStrictEqual({
@@ -43,7 +49,7 @@ describe('getSizesCoordinates', () => {
 
   it(`should return cords north`, () => {
     // before
-    const result = getSizesCoordinates(
+    const result = getAbsoluteCoordinates(
       Anchor.north,
       baseCoordinates,
       100,
@@ -61,7 +67,7 @@ describe('getSizesCoordinates', () => {
 
   it(`should return cords north reverse`, () => {
     // before
-    const result = getSizesCoordinates(
+    const result = getAbsoluteCoordinates(
       Anchor.north,
       baseCoordinates,
       100,
@@ -79,7 +85,7 @@ describe('getSizesCoordinates', () => {
 
   it(`should return cords north east`, () => {
     // before
-    const result = getSizesCoordinates(
+    const result = getAbsoluteCoordinates(
       Anchor.northEast,
       baseCoordinates,
       100,
@@ -97,7 +103,7 @@ describe('getSizesCoordinates', () => {
 
   it(`should return cords north west`, () => {
     // before
-    const result = getSizesCoordinates(
+    const result = getAbsoluteCoordinates(
       Anchor.northWest,
       baseCoordinates,
       100,
@@ -115,7 +121,7 @@ describe('getSizesCoordinates', () => {
 
   it(`should return cords south`, () => {
     // before
-    const result = getSizesCoordinates(
+    const result = getAbsoluteCoordinates(
       Anchor.south,
       baseCoordinates,
       100,
@@ -133,7 +139,7 @@ describe('getSizesCoordinates', () => {
 
   it(`should return cords south east`, () => {
     // before
-    const result = getSizesCoordinates(
+    const result = getAbsoluteCoordinates(
       Anchor.southEast,
       baseCoordinates,
       100,
@@ -151,7 +157,7 @@ describe('getSizesCoordinates', () => {
 
   it(`should return cords south west`, () => {
     // before
-    const result = getSizesCoordinates(
+    const result = getAbsoluteCoordinates(
       Anchor.southWest,
       baseCoordinates,
       100,
@@ -169,7 +175,7 @@ describe('getSizesCoordinates', () => {
 
   it(`should return cords west`, () => {
     // before
-    const result = getSizesCoordinates(
+    const result = getAbsoluteCoordinates(
       Anchor.west,
       baseCoordinates,
       100,

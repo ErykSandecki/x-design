@@ -1,9 +1,9 @@
 // types
-import { Anchor } from '../enums';
+import { Anchor } from '../../enums';
 import { T2DCoordinates, TRectCoordinates } from 'types';
-import { TSizeCoordinates } from '../types';
+import { TSizeCoordinates } from '../../types';
 
-export const getEastCordinates = (
+export const getEastCoordinates = (
   baseCoordinates: TRectCoordinates,
   baseHeight: number,
   baseWidth: number,
@@ -23,7 +23,7 @@ export const getEastCordinates = (
   };
 };
 
-export const getNorthCordinates = (
+export const getNorthCoordinates = (
   baseCoordinates: TRectCoordinates,
   baseHeight: number,
   baseWidth: number,
@@ -43,7 +43,7 @@ export const getNorthCordinates = (
   };
 };
 
-export const getSouthCordinates = (
+export const getSouthCoordinates = (
   baseCoordinates: TRectCoordinates,
   baseHeight: number,
   baseWidth: number,
@@ -63,7 +63,7 @@ export const getSouthCordinates = (
   };
 };
 
-export const getWestCordinates = (
+export const getWestCoordinates = (
   baseCoordinates: TRectCoordinates,
   baseHeight: number,
   baseWidth: number,
@@ -83,32 +83,32 @@ export const getWestCordinates = (
   };
 };
 
-export const getSizesCoordinates = (
+export const getAbsoluteCoordinates = (
   anchor: Anchor,
   baseCoordinates: TRectCoordinates,
   baseHeight: number,
   baseWidth: number,
   mouseCoordinates: T2DCoordinates,
 ): TSizeCoordinates => {
-  const eastCoordinates = getEastCordinates(
+  const eastCoordinates = getEastCoordinates(
     baseCoordinates,
     baseHeight,
     baseWidth,
     mouseCoordinates,
   );
-  const northCoordinates = getNorthCordinates(
+  const northCoordinates = getNorthCoordinates(
     baseCoordinates,
     baseHeight,
     baseWidth,
     mouseCoordinates,
   );
-  const southCoordinates = getSouthCordinates(
+  const southCoordinates = getSouthCoordinates(
     baseCoordinates,
     baseHeight,
     baseWidth,
     mouseCoordinates,
   );
-  const westCoordinates = getWestCordinates(
+  const westCoordinates = getWestCoordinates(
     baseCoordinates,
     baseHeight,
     baseWidth,
