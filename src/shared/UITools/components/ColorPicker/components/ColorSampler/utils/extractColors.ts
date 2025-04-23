@@ -20,10 +20,9 @@ export const getCanvas = async (
   });
 
 export const extractColors = async (
-  event: MouseEvent,
+  x: number,
+  y: number,
 ): Promise<Array<TRGBA>> => {
-  const x = event.clientX;
-  const y = event.clientY;
   const canvas = await getCanvas(x, y);
   const ctx = canvas.getContext('2d');
   const pixel = ctx.getImageData(0, 0, 7, 7).data;

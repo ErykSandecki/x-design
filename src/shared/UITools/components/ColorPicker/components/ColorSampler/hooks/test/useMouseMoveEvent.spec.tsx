@@ -3,6 +3,9 @@ import { fireEvent, renderHook } from '@testing-library/react';
 // hooks
 import { useMouseMoveEvent } from '../useMouseMoveEvent';
 
+// others
+import { BASE_2D } from 'shared/ZoomBox/constants';
+
 // utils
 import { sleep } from 'test';
 
@@ -21,7 +24,7 @@ describe('useMouseMoveEvent', () => {
   it(`should trigger event`, async () => {
     // before
     renderHook(() =>
-      useMouseMoveEvent(mockCallBack, mockCallBack, mockCallBack),
+      useMouseMoveEvent(BASE_2D, mockCallBack, mockCallBack, mockCallBack),
     );
 
     // action

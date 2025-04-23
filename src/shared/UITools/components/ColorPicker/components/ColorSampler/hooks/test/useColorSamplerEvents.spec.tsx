@@ -14,7 +14,7 @@ describe('useColorSamplerEvents', () => {
     // result
     expect(result.current).toStrictEqual({
       colors: [],
-      isPending: false,
+      isPending: true,
       mousePosition: { x: 0, y: 0 },
     });
   });

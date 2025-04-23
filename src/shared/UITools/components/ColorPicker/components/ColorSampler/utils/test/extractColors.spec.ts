@@ -18,10 +18,7 @@ jest.mock('html2canvas', () => ({
 describe('extractColors', () => {
   it('should extract colors', async () => {
     // before
-    const result = await extractColors({
-      clientX: 0,
-      clientY: 0,
-    } as MouseEvent);
+    const result = await extractColors(0, 0);
 
     // result
     expect(result).toStrictEqual(

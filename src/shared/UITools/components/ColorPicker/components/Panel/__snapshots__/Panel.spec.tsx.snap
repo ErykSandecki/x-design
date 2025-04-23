@@ -115,6 +115,36 @@ exports[`Panel snapshots should render with active sampler 1`] = `
           <div
             class="ColorSampler__picker-target-color ColorSampler__picker-target-color--light"
           />
+          <div
+            class="ColorSampler__picker-loader ColorSampler__picker-loader--light"
+          >
+            <div
+              aria-busy="true"
+              aria-live="polite"
+              class="ant-spin ant-spin-spinning css-dev-only-do-not-override-1261szd"
+            >
+              <span
+                class="ant-spin-dot-holder"
+              >
+                <span
+                  class="ant-spin-dot ant-spin-dot-spin"
+                >
+                  <i
+                    class="ant-spin-dot-item"
+                  />
+                  <i
+                    class="ant-spin-dot-item"
+                  />
+                  <i
+                    class="ant-spin-dot-item"
+                  />
+                  <i
+                    class="ant-spin-dot-item"
+                  />
+                </span>
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

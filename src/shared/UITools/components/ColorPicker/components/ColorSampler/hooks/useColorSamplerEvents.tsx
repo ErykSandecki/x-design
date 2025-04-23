@@ -16,11 +16,16 @@ export const useColorSamplerEvents = (
   initialMousePosition: T2DCoordinates,
 ): TUseColorSamplerEvents => {
   const [gridColors, setGridColors] = useState<Array<TRGBA>>([]);
-  const [isPending, setIsPending] = useState(false);
+  const [isPending, setIsPending] = useState(true);
   const [mousePosition, setMousePosition] =
     useState<T2DCoordinates>(initialMousePosition);
 
-  useMouseMoveEvent(setGridColors, setMousePosition, setIsPending);
+  useMouseMoveEvent(
+    initialMousePosition,
+    setGridColors,
+    setMousePosition,
+    setIsPending,
+  );
 
   useEffect(() => {
     document.body.style.pointerEvents = 'none';
