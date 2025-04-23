@@ -221,7 +221,7 @@ exports[`App snapshots should render router 1`] = `
       </div>
     </div>
     <div
-      class="css-p683st ViewBox ViewBox--light ZoomBox ZoomBox--light ZoomBox__idle ZoomBox__idle--light ZoomBox__default ZoomBox__default--light"
+      class="css-p683st ViewBox ViewBox--light ZoomBox ZoomBox--light ZoomBox--idle ZoomBox--idle--light ZoomBox--default ZoomBox--default--light"
       data-test-box="zoom-box"
       tabindex="0"
     >

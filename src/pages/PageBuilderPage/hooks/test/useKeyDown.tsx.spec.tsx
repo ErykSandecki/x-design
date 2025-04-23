@@ -9,6 +9,11 @@ import { MouseMode } from 'types/enums/mouseMode';
 
 const mockCallBack = jest.fn();
 
+jest.mock('react-redux', () => ({
+  ...jest.requireActual('react-redux'),
+  useDispatch: () => mockCallBack,
+}));
+
 describe('useWheelEvent', () => {
   it(`should triger action set mouse mode on comment state`, () => {
     // before

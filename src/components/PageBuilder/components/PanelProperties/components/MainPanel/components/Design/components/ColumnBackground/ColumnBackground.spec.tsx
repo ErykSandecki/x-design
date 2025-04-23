@@ -23,6 +23,11 @@ const stateMock = {
   ...pageBuilderStateMock,
 };
 
+jest.mock('utils', () => ({
+  ...jest.requireActual('utils'),
+  rgbToHex: () => '#ffffff',
+}));
+
 describe('ColumnBackground snapshots', () => {
   it('should render ColumnBackground', () => {
     // mock
@@ -163,5 +168,62 @@ describe('ColumnBackground behaviors', () => {
           .background.properties as TColor
       ).format,
     ).toBe('rgb');
+  });
+
+  it('should active color sampler', async () => {
+    // mock
+    const store = configureStore(stateMock);
+
+    // before
+    const { container } = render(
+      <Provider store={store}>
+        <ColumnBackground />
+      </Provider>,
+    );
+
+    // action
+    fireEvent.click(getByE2EAttribute(container, E2EAttribute.color));
+
+    // action
+    fireEvent.click(
+      getByE2EAttribute(container, E2EAttribute.buttonIcon, 'sampler'),
+    );
+
+    // result
+    expect(store.getState()[PAGE_BUILDER].events.colorSampler).toBe(true);
+  });
+
+  it('should get color from sampler', async () => {
+    // mock
+    const store = configureStore(stateMock);
+
+    // before
+    const { container } = render(
+      <Provider store={store}>
+        <ColumnBackground />
+      </Provider>,
+    );
+
+    // action
+    fireEvent.click(getByE2EAttribute(container, E2EAttribute.color));
+
+    // action
+    fireEvent.click(
+      getByE2EAttribute(container, E2EAttribute.buttonIcon, 'sampler'),
+    );
+
+    // action
+    fireEvent.click(
+      getByE2EAttribute(container, E2EAttribute.button, 'color-sampler'),
+    );
+
+    // result
+    expect(store.getState()[PAGE_BUILDER].events.colorSampler).toBe(false);
+    expect(
+      (
+        store.getState()[PAGE_BUILDER].pages['0'].elements.allData['-1']
+          .background.properties as TColor
+      ).color,
+    ).toBe('#ffffff');
   });
 });

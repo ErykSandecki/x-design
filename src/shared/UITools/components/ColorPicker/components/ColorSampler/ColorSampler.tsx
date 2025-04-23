@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 // components
 import Box from '../../../../../UI/components/Box/Box';
+import E2EDataAttribute from 'shared/E2EDataAttributes/E2EDataAttribute';
 import Icon from '../../../../../UI/components/Icon/Icon';
 import { Small } from '../../../../../UI/components/Typography';
 
@@ -20,7 +21,7 @@ import { className, classNames } from './classNames';
 import styles from './color-sampler.scss';
 
 // types
-import { T2DCoordinates } from 'types';
+import { E2EAttribute, T2DCoordinates } from 'types';
 
 // utils
 import { rgbToHex } from 'utils';
@@ -49,10 +50,12 @@ export const ColorSampler: FC<TColorSamplerProps> = ({
       }}
       sx={{ bg: 'neutral5' }}
     >
-      <div
-        className={cx(classNamesWithTheme.preventAntdEventMask)}
-        onClick={() => onClickColorSampler(rgbToHex(r, g, b))}
-      />
+      <E2EDataAttribute type={E2EAttribute.button} value="color-sampler">
+        <div
+          className={cx(classNamesWithTheme.preventAntdEventMask)}
+          onClick={() => onClickColorSampler(rgbToHex(r, g, b))}
+        />
+      </E2EDataAttribute>
       <div className={cx(classNamesWithTheme.pickerWrapper)}>
         <div className={cx(classNamesWithTheme.picker)}>
           {colors.map(({ a, b, g, r }, index) => (

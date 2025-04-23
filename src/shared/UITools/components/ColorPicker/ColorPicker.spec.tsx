@@ -22,6 +22,7 @@ describe('ColorPicker snapshots', () => {
         onChangeAlpha={mockCallBack}
         onChangeColor={mockCallBack}
         onClickColorSampler={mockCallBack}
+        onClickSampler={mockCallBack}
       />,
     );
 
@@ -41,6 +42,7 @@ describe('ColorPicker behaviors', () => {
         onChangeAlpha={mockCallBack}
         onChangeColor={mockCallBack}
         onClickColorSampler={mockCallBack}
+        onClickSampler={mockCallBack}
       />,
     );
 
@@ -70,6 +72,7 @@ describe('ColorPicker behaviors', () => {
         onChangeAlpha={mockCallBack}
         onChangeColor={mockCallBack}
         onClickColorSampler={mockCallBack}
+        onClickSampler={mockCallBack}
       />,
     );
 

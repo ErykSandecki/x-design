@@ -35,9 +35,6 @@
 
                   &:last-child {
                     &::after {
-                      background:
-                        url('assets/images/texture.svg') 0 0 / auto 50%,
-                        #ffffff;
                       border-radius: 9px;
                       content: '';
                       height: 18px;
@@ -65,6 +62,7 @@
                     height: 18px;
                     top: 3px;
                     width: 18px;
+                    z-index: 2;
 
                     &::after,
                     &::before {
@@ -178,6 +176,20 @@
         background-color: $--rx-neutral-5--light;
 
         .ant-color-picker-inner-content {
+          .ant-color-picker-slider-container {
+            .ant-color-picker-slider-group {
+              .ant-slider {
+                &:last-child {
+                  &::after {
+                    background:
+                      url('assets/images/texture--light.svg') 0 0 / auto 50%,
+                      #ffffff;
+                  }
+                }
+              }
+            }
+          }
+
           .ant-color-picker-input-container {
             .ant-select {
               .ant-select-selector {
@@ -282,6 +294,20 @@
         background-color: $--rx-neutral-5--dark;
 
         .ant-color-picker-inner-content {
+          .ant-color-picker-slider-container {
+            .ant-color-picker-slider-group {
+              .ant-slider {
+                &:last-child {
+                  &::after {
+                    background:
+                      url('assets/images/texture--dark.svg') 0 0 / auto 50%,
+                      #ffffff;
+                  }
+                }
+              }
+            }
+          }
+
           .ant-color-picker-input-container {
             .ant-select {
               .ant-select-selector {

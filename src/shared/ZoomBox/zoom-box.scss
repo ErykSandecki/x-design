@@ -32,15 +32,28 @@
   }
 
   &__texture-blank {
-    background: url('assets/images/texture.svg'), #ffffff;
-    background-repeat: repeat;
-    background-size: 20px 20px;
     height: 10000%;
     left: -4950%;
     pointer-events: none;
     position: absolute;
     top: -4950%;
     width: 10000%;
+
+    &--light {
+      background:
+        url('assets/images/texture--light.svg') 0 0 / auto 50%,
+        #ffffff;
+      background-repeat: repeat;
+      background-size: 20px 20px;
+    }
+
+    &--dark {
+      background:
+        url('assets/images/texture--dark.svg') 0 0 / auto 50%,
+        #000000;
+      background-repeat: repeat;
+      background-size: 20px 20px;
+    }
   }
 
   &__zoom-content {

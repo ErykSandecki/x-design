@@ -5,7 +5,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { UITools } from 'shared';
 
 // store
-import { changeBackground } from 'store/pageBuilder/actions';
+import {
+  changeBackground,
+  updateEventsStatus,
+} from 'store/pageBuilder/actions';
 import {
   eventSelectorCreator,
   pageBackgroundSelectorCreator,
@@ -15,11 +18,11 @@ import {
 import { TColor } from 'types';
 
 const ColumnBackground: FC = () => {
+  const background = useSelector(pageBackgroundSelectorCreator('-1'));
   const colorSampler = useSelector(eventSelectorCreator('colorSampler'));
   const dispatch = useDispatch();
-  const background = useSelector(pageBackgroundSelectorCreator('-1'));
-  const { alpha, color, format } = background.properties as TColor;
-  const visible = background.visible;
+  const { properties, visible } = background;
+  const { alpha, color, format } = properties as TColor;
 
   return (
     <UITools.SectionColumn
@@ -57,6 +60,9 @@ const ColumnBackground: FC = () => {
             changeBackground({ properties: { alpha, color, format } }, '-1'),
           );
         }}
+        onClickSampler={() =>
+          dispatch(updateEventsStatus({ colorSampler: true }))
+        }
         placement="leftBottom"
       />
     </UITools.SectionColumn>

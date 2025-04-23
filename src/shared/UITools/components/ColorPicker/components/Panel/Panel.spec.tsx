@@ -22,6 +22,24 @@ describe('Panel snapshots', () => {
       <Panel
         activeSampler={false}
         onClickColorSampler={mockCallBack}
+        onClickSampler={mockCallBack}
+        setVisible={noop}
+      >
+        <div className={antColorPickerSliderContainerClassName}></div>
+      </Panel>,
+    );
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('should render with active sampler', () => {
+    // before
+    const { asFragment } = render(
+      <Panel
+        activeSampler
+        onClickColorSampler={mockCallBack}
+        onClickSampler={mockCallBack}
         setVisible={noop}
       >
         <div className={antColorPickerSliderContainerClassName}></div>
@@ -44,6 +62,7 @@ describe('Panel behaviors', () => {
       <Panel
         activeSampler={false}
         onClickColorSampler={mockCallBack}
+        onClickSampler={mockCallBack}
         setVisible={mockCallBack}
       >
         children
@@ -64,6 +83,7 @@ describe('Panel behaviors', () => {
         <Panel
           activeSampler={false}
           onClickColorSampler={mockCallBack}
+          onClickSampler={mockCallBack}
           setVisible={noop}
         >
           children

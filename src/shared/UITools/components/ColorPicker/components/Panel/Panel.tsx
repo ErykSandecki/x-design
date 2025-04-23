@@ -28,6 +28,7 @@ export type TPanelProps = {
   activeSampler: boolean;
   children: ReactNode;
   onClickColorSampler: (color: string) => void;
+  onClickSampler: () => void;
   setVisible: (vissible: boolean) => void;
 };
 
@@ -35,6 +36,7 @@ export const Panel: FC<TPanelProps> = ({
   activeSampler,
   children,
   onClickColorSampler,
+  onClickSampler,
   setVisible,
 }) => {
   const mousePosition = useRef(BASE_2D);
@@ -42,7 +44,7 @@ export const Panel: FC<TPanelProps> = ({
   const [activeTab, setActiveTab] = useState(Tab.custom);
   const [sampleContainer, setSampleContainer] = useState<HTMLDivElement>(null);
   const ref = useRef<HTMLDivElement>(null);
-  const onClick = useClickEvent(mousePosition);
+  const onClick = useClickEvent(mousePosition, onClickSampler);
 
   useEffect(() => {
     /* istanbul ignore next */
@@ -81,6 +83,7 @@ export const Panel: FC<TPanelProps> = ({
           createPortal(
             <div className={cx(classNamesWithTheme.sample)}>
               <ButtonIcon
+                e2eValue="sampler"
                 name="Sample"
                 onClick={onClick}
                 selected={activeSampler}

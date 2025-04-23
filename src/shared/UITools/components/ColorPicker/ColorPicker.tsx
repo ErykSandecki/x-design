@@ -28,7 +28,7 @@ import { handleSubmitInput, hexToRgb } from 'utils';
 
 export type TColorPickerProps = Pick<
   TPanelProps,
-  'activeSampler' | 'onClickColorSampler'
+  'activeSampler' | 'onClickColorSampler' | 'onClickSampler'
 > &
   TUIProps<typeof classes> &
   Omit<ColorPickerProps, 'arrow' | 'onOpenChange' | 'open' | 'panelRender'> & {
@@ -48,6 +48,7 @@ export const ColorPicker: FC<TColorPickerProps> = ({
   onChangeAlpha: onChangeAlphaHandler,
   onChangeColor: onChangeColorHandler,
   onClickColorSampler,
+  onClickSampler,
   ...restProps
 }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
@@ -91,6 +92,7 @@ export const ColorPicker: FC<TColorPickerProps> = ({
               <Panel
                 activeSampler={activeSampler}
                 onClickColorSampler={onClickColorSampler}
+                onClickSampler={onClickSampler}
                 setVisible={setVisible}
               >
                 {children}

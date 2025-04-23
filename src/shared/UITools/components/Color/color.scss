@@ -21,14 +21,23 @@
   }
 
   &__picker-texture {
-    background:
-      url('assets/images/texture.svg') 0 0 / auto 50%,
-      #ffffff;
     height: 100%;
     left: 0;
     position: absolute;
     top: 0;
     width: 100%;
     z-index: 1;
+
+    &--light {
+      background:
+        url('assets/images/texture--light.svg') 0 0 / auto 50%,
+        #ffffff;
+    }
+
+    &--dark {
+      background:
+        url('assets/images/texture--dark.svg') 0 0 / auto 50%,
+        #000000;
+    }
   }
 }

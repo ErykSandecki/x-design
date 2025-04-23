@@ -36,7 +36,7 @@ exports[`Panel snapshots should render Panel 1`] = `
     >
       <div
         class="css-q0izro ButtonIcon ButtonIcon--light"
-        data-test-button-icon=""
+        data-test-button-icon="sampler"
       >
         <div
           class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -45,6 +45,77 @@ exports[`Panel snapshots should render Panel 1`] = `
           name="Sample"
           width="14"
         />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Panel snapshots should render with active sampler 1`] = `
+<DocumentFragment>
+  <div
+    class="Panel Panel--light"
+    data-test-color-picker-panel=""
+  >
+    <div
+      class="Panel__header Panel__header--light"
+    >
+      <div
+        class="css-q0izro Tabs Tabs--light"
+        data-test-box=""
+      >
+        <div
+          class="Tabs__tab Tabs__tab--light Tabs__tab--active Tabs__tab--active--light Tabs__tab--disabled Tabs__tab--disabled--light"
+          data-test-tab="custom"
+        >
+          Custom
+        </div>
+      </div>
+      <div
+        class="css-q0izro Icon Icon--light Icon--clickable Icon--clickable--light"
+        data-test-icon="Close"
+        height="11"
+        name="Close"
+        width="11"
+      />
+    </div>
+    <div
+      class="ant-color-picker-slider-container"
+    />
+    <div
+      class="Panel__sample Panel__sample--light"
+    >
+      <div
+        class="css-q0izro ButtonIcon ButtonIcon--light ButtonIcon--selected ButtonIcon--selected--light"
+        data-test-button-icon="sampler"
+      >
+        <div
+          class="css-q0izro Icon Icon--light Icon--blue1 Icon--blue1--light"
+          data-test-icon="Sample"
+          height="14"
+          name="Sample"
+          width="14"
+        />
+      </div>
+      <div
+        class="css-cf0e16 ColorSampler ColorSampler--light"
+        data-test-box=""
+        style="left: 15px; top: 15px;"
+      >
+        <div
+          class="ColorSampler__prevent-antd-event-mask ColorSampler__prevent-antd-event-mask--light"
+          data-test-button="color-sampler"
+        />
+        <div
+          class="ColorSampler__picker-wrapper ColorSampler__picker-wrapper--light"
+        >
+          <div
+            class="ColorSampler__picker ColorSampler__picker--light"
+          />
+          <div
+            class="ColorSampler__picker-target-color ColorSampler__picker-target-color--light"
+          />
+        </div>
       </div>
     </div>
   </div>
