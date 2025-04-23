@@ -1,6 +1,7 @@
 import { ReactComponent as Check } from './svg/check.svg';
 import { ReactComponent as Close } from './svg/close.svg';
 import { ReactComponent as Comment } from './svg/comment.svg';
+import { ReactComponent as EWResize } from './svg/ew-resize.svg';
 import { ReactComponent as EyesClosed } from './svg/eyes-closed.svg';
 import { ReactComponent as EyesDropper } from './svg/eyes-dropper.svg';
 import { ReactComponent as EyesOpened } from './svg/eyes-opened.svg';
@@ -16,6 +17,7 @@ export const Icons = {
   Check,
   Close,
   Comment,
+  EWResize,
   EyesClosed,
   EyesDropper,
   EyesOpened,

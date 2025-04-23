@@ -195,7 +195,10 @@ exports[`App snapshots should render router 1`] = `
                   type="number"
                   value="100"
                 />
-                <div>
+                <div
+                  class="ScrubbableInput ScrubbableInput--light"
+                  data-test-scrubbable-input=""
+                >
                   %
                 </div>
               </div>

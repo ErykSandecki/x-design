@@ -57,7 +57,10 @@ exports[`ColumnBackground snapshots should render ColumnBackground 1`] = `
             type="number"
             value="100"
           />
-          <div>
+          <div
+            class="ScrubbableInput ScrubbableInput--light"
+            data-test-scrubbable-input=""
+          >
             %
           </div>
         </div>

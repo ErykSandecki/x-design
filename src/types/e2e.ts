@@ -15,6 +15,7 @@ export enum E2EAttribute {
   resize = 'resize',
   section = 'section',
   sectionColumn = 'section-column',
+  scrubbableInput = 'scrubbable-input',
   tab = 'tab',
   test1 = 'test1',
   test2 = 'test2',

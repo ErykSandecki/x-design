@@ -62,6 +62,44 @@ describe('ColorPicker behaviors', () => {
     expect(mockCallBack.mock.calls[0][0]).toBe('50');
   });
 
+  it('should change alpha when triger ScrubbableInput', () => {
+    // mock
+    const mouseMoveEvent = new MouseEvent('mousemove', {
+      bubbles: true,
+      cancelable: true,
+      shiftKey: false,
+      view: window,
+    });
+    Object.defineProperty(mouseMoveEvent, 'movementX', { value: -100 });
+
+    // before
+    const { container } = render(
+      <ColorPicker
+        activeSampler={false}
+        alpha="100"
+        color="#ffffff"
+        onChangeAlpha={mockCallBack}
+        onChangeColor={mockCallBack}
+        onClickColorSampler={mockCallBack}
+        onClickSampler={mockCallBack}
+      />,
+    );
+
+    // find
+    const scrubbableInput = getByE2EAttribute(
+      container,
+      E2EAttribute.scrubbableInput,
+    );
+
+    // action
+    fireEvent.mouseDown(scrubbableInput, { clientX: 0, clientY: 0 });
+    window.dispatchEvent(mouseMoveEvent);
+    fireEvent.mouseUp(scrubbableInput);
+
+    // result
+    expect(mockCallBack.mock.calls[0][0]).toBe('50');
+  });
+
   it('should change and submit color', () => {
     // before
     const { container } = render(

@@ -24,10 +24,7 @@ import { TSX } from '../../hooks/sx/types/types';
 import { TSXPallete } from '../../hooks/sx/types/pallete';
 import { TUIProps } from '../../types';
 
-export type TIconProps = Omit<
-  HTMLAttributes<HTMLOrSVGElement>,
-  'className' | 'style'
-> &
+export type TIconProps = Omit<HTMLAttributes<HTMLOrSVGElement>, 'className'> &
   TUIProps<typeof classes, Omit<TSX, keyof TSXPallete>> & {
     clickable?: boolean;
     color?: ColorsTheme;

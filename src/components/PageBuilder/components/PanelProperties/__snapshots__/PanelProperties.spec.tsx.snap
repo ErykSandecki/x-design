@@ -105,7 +105,10 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
                 type="number"
                 value="100"
               />
-              <div>
+              <div
+                class="ScrubbableInput ScrubbableInput--light"
+                data-test-scrubbable-input=""
+              >
                 %
               </div>
             </div>
@@ -238,7 +241,10 @@ exports[`PanelProperties snapshots should render with changed width 1`] = `
                 type="number"
                 value="100"
               />
-              <div>
+              <div
+                class="ScrubbableInput ScrubbableInput--light"
+                data-test-scrubbable-input=""
+              >
                 %
               </div>
             </div>

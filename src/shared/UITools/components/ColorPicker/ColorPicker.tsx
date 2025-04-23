@@ -5,6 +5,7 @@ import { FC, useRef, useState } from 'react';
 import Color from '../Color/Color';
 import FieldGroup from '../FieldGroup/FieldGroup';
 import Panel, { TPanelProps } from './components/Panel/Panel';
+import ScrubbableInput from '../../../ScrubbableInput/ScrubbableInput';
 import TextField from '../TextField/TextField';
 
 // hooks
@@ -112,7 +113,16 @@ export const ColorPicker: FC<TColorPickerProps> = ({
       <TextField
         className={cx(classNamesWithTheme.alphaInput)}
         e2eValue="alpha"
-        endAdorment={<div>%</div>}
+        endAdorment={
+          <ScrubbableInput
+            max={100}
+            min={0}
+            onChange={(value) => onChangeAlphaHandler(value.toString())}
+            value={parseInt(alphaValue)}
+          >
+            %
+          </ScrubbableInput>
+        }
         max={100}
         min={0}
         onBlur={onBlurAlpha}

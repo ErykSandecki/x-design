@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ScrubbableInput snapshots should render ScrubbableInput 1`] = `
+<DocumentFragment>
+  <div
+    class="ScrubbableInput ScrubbableInput--light"
+    data-test-scrubbable-input=""
+  >
+    <span>
+      child
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ScrubbableInput snapshots should render with icon 1`] = `
+<DocumentFragment>
+  <div
+    class="ScrubbableInput ScrubbableInput--light"
+    data-test-scrubbable-input=""
+  >
+    <span>
+      child
+    </span>
+    <div
+      class="css-q0izro ScrubbableInput__handler ScrubbableInput__handler--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      data-test-icon="EWResize"
+      height="14"
+      name="EWResize"
+      style="left: 0px; top: 0px;"
+      width="25"
+    />
+  </div>
+</DocumentFragment>
+`;
