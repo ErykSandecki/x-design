@@ -39,7 +39,7 @@ export const ColorSampler: FC<TColorSamplerProps> = ({
   const { t } = useTranslation();
   const { colors, isPending, mousePosition } =
     useColorSamplerEvents(initialMousePosition);
-  const { r, g, b, a } = colors[MIDDLE_ARRAY] || {};
+  const { r, g, b, a } = colors[MIDDLE_ARRAY] || { a: 0, b: 0, g: 0, r: 0 };
 
   return createPortal(
     <Box
