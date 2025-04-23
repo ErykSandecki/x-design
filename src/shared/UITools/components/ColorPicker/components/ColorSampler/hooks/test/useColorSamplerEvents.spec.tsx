@@ -6,8 +6,6 @@ import { useColorSamplerEvents } from '../useColorSamplerEvents';
 // others
 import { BASE_2D } from 'shared/ZoomBox/constants';
 
-const mockCallBack = jest.fn();
-
 describe('useColorSamplerEvents', () => {
   it(`should return data`, () => {
     // before
