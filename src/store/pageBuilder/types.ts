@@ -3,6 +3,9 @@ import {
   ADD_ELEMENT,
   CHANGE_BACKGROUND,
   CHANGE_PARENT,
+  REDUCER_HISTORY_REDO,
+  REDUCER_HISTORY_SAVE,
+  REDUCER_HISTORY_UNDO,
   ROTATE_ELEMENT,
   SELECT_ELEMENT,
   SELECT_ELEMENTS,
@@ -22,6 +25,7 @@ import {
   KeyboardKeys,
   T2DCoordinates,
   T3DCoordinates,
+  TAction,
   TBackground,
   TElement,
   TObject,
@@ -69,6 +73,11 @@ export type TPositions = {
   selectedElements: TSelectedElements;
 };
 
+export type TReducerHistory = Pick<
+  TPage,
+  'areaCoordinates' | 'elements' | 'selectedElements'
+>;
+
 export type TSelectedElement = {
   id: TElement['id'];
   parentId: TElement['parentId'];
@@ -88,6 +97,8 @@ export type TPage = {
   id: string;
   name: string;
   prevState: TPage;
+  reducerHistory: Array<TReducerHistory>;
+  reducerHistoryIndex: number;
   selectedElements: TSelectedElements;
 };
 
@@ -123,6 +134,19 @@ export type TChangeParentActionPayload = Pick<
 export type TChangeParentAction = {
   payload: TChangeParentActionPayload;
   type: typeof CHANGE_PARENT;
+};
+
+export type TReducerHistoryRedoAction = {
+  type: typeof REDUCER_HISTORY_REDO;
+};
+
+export type TReducerHistorySaveAction = {
+  payload: TAction['type'];
+  type: typeof REDUCER_HISTORY_SAVE;
+};
+
+export type TReducerHistoryUndoAction = {
+  type: typeof REDUCER_HISTORY_UNDO;
 };
 
 export type TRotateElementActionPayload = Pick<TElement, 'id' | 'rotate'>;

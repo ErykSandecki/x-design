@@ -1,5 +1,5 @@
 // others
-import { BASE_PAGE } from 'store/pageBuilder/constants';
+import { BASE_PAGE, BASE_PAGE_ELEMENTS } from 'store/pageBuilder/constants';
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 
 // types
@@ -10,8 +10,10 @@ import {
   TElementStaticData,
   TEvents,
   TPageBuilderState,
+  TReducerHistory,
   TSelectedElement,
 } from 'store/pageBuilder/types';
+import { BASE_3D } from 'shared';
 
 export const pageBuilderStateMock: Record<
   typeof PAGE_BUILDER,
@@ -96,6 +98,45 @@ export const eventsMock: TEvents = {
   pressedKey: KeyboardKeys.none,
   selectedAnchor: Anchor.none,
 };
+
+export const reducerHistoryMock: Array<TReducerHistory> = [
+  {
+    areaCoordinates: BASE_3D,
+    elements: BASE_PAGE_ELEMENTS,
+    selectedElements: [],
+  },
+  {
+    areaCoordinates: BASE_3D,
+    elements: {
+      ...BASE_PAGE_ELEMENTS,
+      allData: {
+        ...BASE_PAGE_ELEMENTS.allData,
+        ['1']: elementAllDataMock,
+        ['2']: {
+          ...elementAllDataMock,
+          id: '2',
+        },
+      },
+      dynamicData: {
+        ...BASE_PAGE_ELEMENTS.dynamicData,
+        ['1']: elementDynamicDataMock,
+        ['2']: {
+          ...elementDynamicDataMock,
+          id: '2',
+        },
+      },
+      staticData: {
+        ...BASE_PAGE_ELEMENTS.staticData,
+        ['1']: elementStaticDataMock,
+        ['2']: {
+          ...elementStaticDataMock,
+          id: '2',
+        },
+      },
+    },
+    selectedElements: [],
+  },
+];
 
 export const selectedElementMock: TSelectedElement = {
   id: '1',

@@ -1,11 +1,29 @@
 // others
+import {
+  ADD_ELEMENT,
+  CHANGE_BACKGROUND,
+  CHANGE_PARENT,
+  ROTATE_ELEMENT,
+  SELECT_ELEMENT,
+  SELECT_ELEMENTS,
+  SET_AREA_COORDINATES,
+  SET_ELEMENT_COORDINATES,
+  SET_ELEMENT_SIZES,
+  SET_ELEMENTS_COORDINATES,
+  UNSELECT_ELEMENT,
+} from './actionsType';
 import { BASE_2D, BASE_3D } from 'shared';
 import { THEME } from 'constant/localStorageKeys';
 import { THEME_COLORS } from 'constant/themeColors';
 
 // types
 import { ElementType, TElement, Theme } from 'types';
-import { TElementDynamicData, TElementStaticData, TPage } from './types';
+import {
+  TElementDynamicData,
+  TElementsData,
+  TElementStaticData,
+  TPage,
+} from './types';
 
 const color =
   localStorage.getItem(THEME) === Theme.dark
@@ -46,21 +64,50 @@ export const BASE_STATIC_DATA: TElementStaticData = {
   type: BASE_ALL_DATA.type,
 };
 
+export const BASE_PAGE_ELEMENTS: TElementsData = {
+  allData: {
+    [BASE_ALL_DATA.id]: BASE_ALL_DATA,
+  },
+  dynamicData: {
+    [BASE_DYNAMIC_DATA.id]: BASE_DYNAMIC_DATA,
+  },
+  staticData: {
+    [BASE_STATIC_DATA.id]: BASE_STATIC_DATA,
+  },
+};
+
 export const BASE_PAGE: TPage = {
   areaCoordinates: BASE_3D,
-  elements: {
-    allData: {
-      [BASE_ALL_DATA.id]: BASE_ALL_DATA,
-    },
-    dynamicData: {
-      [BASE_DYNAMIC_DATA.id]: BASE_DYNAMIC_DATA,
-    },
-    staticData: {
-      [BASE_STATIC_DATA.id]: BASE_STATIC_DATA,
-    },
-  },
+  elements: BASE_PAGE_ELEMENTS,
   id: '0',
   name: 'Page 1',
   prevState: undefined,
+  reducerHistory: [
+    {
+      areaCoordinates: BASE_3D,
+      elements: BASE_PAGE_ELEMENTS,
+      selectedElements: [],
+    },
+  ],
+  reducerHistoryIndex: 0,
   selectedElements: [],
 };
+
+export const MAX_LENGTH_HISTORY = 50;
+
+export const REDUCER_HISTORY_SAVE_ACTIONS = [
+  ADD_ELEMENT,
+  CHANGE_PARENT,
+  SELECT_ELEMENT,
+  SELECT_ELEMENTS,
+  UNSELECT_ELEMENT,
+];
+
+export const REDUCER_HISTORY_SAVE_WITH_DELAY_ACTIONS = [
+  CHANGE_BACKGROUND,
+  ROTATE_ELEMENT,
+  SET_AREA_COORDINATES,
+  SET_ELEMENT_COORDINATES,
+  SET_ELEMENT_SIZES,
+  SET_ELEMENTS_COORDINATES,
+];

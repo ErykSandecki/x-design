@@ -3,6 +3,9 @@ import {
   ADD_ELEMENT,
   CHANGE_BACKGROUND,
   CHANGE_PARENT,
+  REDUCER_HISTORY_REDO,
+  REDUCER_HISTORY_SAVE,
+  REDUCER_HISTORY_UNDO,
   ROTATE_ELEMENT,
   SELECT_ELEMENT,
   SELECT_ELEMENTS,
@@ -23,6 +26,9 @@ import {
   TChangeBackgroundActionPayload,
   TChangeParentAction,
   TChangeParentActionPayload,
+  TReducerHistoryRedoAction,
+  TReducerHistorySaveAction,
+  TReducerHistoryUndoAction,
   TRotateElementAction,
   TRotateElementActionPayload,
   TSelectElementAction,
@@ -46,10 +52,10 @@ export const addElement = (
 });
 
 export const changeBackground = (
-  backgroundColor: TChangeBackgroundActionPayload['background'],
+  background: TChangeBackgroundActionPayload['background'],
   id: TChangeBackgroundActionPayload['id'],
 ): TChangeBackgroundAction => ({
-  payload: { background: backgroundColor, id },
+  payload: { background, id },
   type: CHANGE_BACKGROUND,
 });
 
@@ -60,6 +66,21 @@ export const changeParent = (
 ): TChangeParentAction => ({
   payload: { draggableElements, possibleIndexPosition, possibleParent },
   type: CHANGE_PARENT,
+});
+
+export const reducerHistoryRedo = (): TReducerHistoryRedoAction => ({
+  type: REDUCER_HISTORY_REDO,
+});
+
+export const reducerHistorySave = (
+  payload: TReducerHistorySaveAction['payload'],
+): TReducerHistorySaveAction => ({
+  payload,
+  type: REDUCER_HISTORY_SAVE,
+});
+
+export const reducerHistoryUndo = (): TReducerHistoryUndoAction => ({
+  type: REDUCER_HISTORY_UNDO,
 });
 
 export const rotateElement = (

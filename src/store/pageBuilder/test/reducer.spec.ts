@@ -8,10 +8,14 @@ import {
   elementStaticDataMock,
   pageBuilderStateMock,
   selectedElementMock,
+  reducerHistoryMock,
 } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
-import { REDUCER_KEY as PAGE_BUILDER } from '../actionsType';
+import {
+  REDUCER_KEY as PAGE_BUILDER,
+  SET_AREA_COORDINATES,
+} from '../actionsType';
 
 // store
 import pageBuilder from '../reducer';
@@ -29,6 +33,9 @@ import {
   changeParent,
   updatePrevState,
   changeBackground,
+  reducerHistoryRedo,
+  reducerHistorySave,
+  reducerHistoryUndo,
 } from '../actions';
 
 // types
@@ -291,6 +298,111 @@ describe('PageBuilderReducer', () => {
               },
             },
           },
+        },
+      },
+    });
+  });
+
+  it('should handle REDUCER_HISTORY_REDO', () => {
+    // mock
+    const currentPage =
+      pageBuilderStateMock[PAGE_BUILDER].pages[
+        pageBuilderStateMock[PAGE_BUILDER].currentPage
+      ];
+
+    // before
+    const state = reducer(reducerHistoryRedo(), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+
+          reducerHistory: reducerHistoryMock,
+          reducerHistoryIndex: 1,
+        },
+      },
+    });
+
+    // result
+    expect(state).toEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          ...reducerHistoryMock[0],
+          reducerHistory: reducerHistoryMock,
+          reducerHistoryIndex: 0,
+        },
+      },
+    });
+  });
+
+  it('should handle REDUCER_HISTORY_SAVE', () => {
+    // mock
+    const currentPage =
+      pageBuilderStateMock[PAGE_BUILDER].pages[
+        pageBuilderStateMock[PAGE_BUILDER].currentPage
+      ];
+
+    // before
+    const state = reducer(reducerHistorySave(SET_AREA_COORDINATES), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          reducerHistory: reducerHistoryMock,
+          reducerHistoryIndex: 1,
+        },
+      },
+    });
+
+    // result
+    expect(state).toEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          reducerHistory: [reducerHistoryMock[0], reducerHistoryMock[1]],
+          reducerHistoryIndex: 1,
+        },
+      },
+    });
+  });
+
+  it('should handle REDUCER_HISTORY_UNDO', () => {
+    // mock
+    const currentPage =
+      pageBuilderStateMock[PAGE_BUILDER].pages[
+        pageBuilderStateMock[PAGE_BUILDER].currentPage
+      ];
+
+    // before
+    const state = reducer(reducerHistoryUndo(), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          reducerHistory: reducerHistoryMock,
+          reducerHistoryIndex: 0,
+        },
+      },
+    });
+
+    // result
+    expect(state).toEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          ...reducerHistoryMock[1],
+          reducerHistory: reducerHistoryMock,
+          reducerHistoryIndex: 1,
         },
       },
     });

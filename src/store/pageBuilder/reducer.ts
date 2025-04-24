@@ -1,18 +1,21 @@
 // others
 import {
   ADD_ELEMENT,
+  CHANGE_BACKGROUND,
+  CHANGE_PARENT,
+  REDUCER_HISTORY_REDO,
+  REDUCER_HISTORY_SAVE,
+  REDUCER_HISTORY_UNDO,
+  ROTATE_ELEMENT,
   SELECT_ELEMENT,
-  UNSELECT_ELEMENT,
   SELECT_ELEMENTS,
   SET_AREA_COORDINATES,
   SET_ELEMENT_COORDINATES,
-  SET_ELEMENTS_COORDINATES,
-  UPDATE_EVENTS_STATUS,
   SET_ELEMENT_SIZES,
-  ROTATE_ELEMENT,
-  CHANGE_PARENT,
+  SET_ELEMENTS_COORDINATES,
+  UNSELECT_ELEMENT,
+  UPDATE_EVENTS_STATUS,
   UPDATE_PREV_STATE,
-  CHANGE_BACKGROUND,
 } from './actionsType';
 import { BASE_PAGE } from './constants';
 
@@ -33,6 +36,7 @@ import {
   TRotateElementAction,
   TChangeParentAction,
   TChangeBackgroundAction,
+  TReducerHistorySaveAction,
 } from './types';
 
 // utils
@@ -40,6 +44,9 @@ import { filterSelectedElements } from './utils/filterSelectedElements';
 import { handleAddElement } from './utils/handleAddElement';
 import { handleChangeBackground } from './utils/handleChangeBackground';
 import { handleChangeParent } from './utils/changeParent/handleChangeParent';
+import { handleReducerHistoryRedo } from './utils/reducerHistory/handleReducerHistoryRedo';
+import { handleReducerHistorySave } from './utils/reducerHistory/handleReducerHistorySave';
+import { handleReducerHistoryUndo } from './utils/reducerHistory/handleReducerHistoryUndo';
 import { handleRotateElement } from './utils/handleRotateElement';
 import { handleSetElementCoordinates } from './utils/handleSetElementCoordinates';
 import { handleSetElementsCoordinates } from './utils/handleSetElementsCoordinates';
@@ -80,6 +87,17 @@ const changeParent = (
   state: TPageBuilderState,
   { payload }: TAction<TChangeParentAction['payload']>,
 ): TPageBuilderState => handleChangeParent(payload, state);
+
+const reducerHistoryRedo = (state: TPageBuilderState): TPageBuilderState =>
+  handleReducerHistoryRedo(state);
+
+const reducerHistorySave = (
+  state: TPageBuilderState,
+  { payload }: TAction<TReducerHistorySaveAction['payload']>,
+): TPageBuilderState => handleReducerHistorySave(state, payload);
+
+const reducerHistoryUndo = (state: TPageBuilderState): TPageBuilderState =>
+  handleReducerHistoryUndo(state);
 
 const rotateElement = (
   state: TPageBuilderState,
@@ -210,6 +228,12 @@ const pageBuilder = (
       return changeBackground(state, action);
     case CHANGE_PARENT:
       return changeParent(state, action);
+    case REDUCER_HISTORY_REDO:
+      return reducerHistoryRedo(state);
+    case REDUCER_HISTORY_SAVE:
+      return reducerHistorySave(state, action);
+    case REDUCER_HISTORY_UNDO:
+      return reducerHistoryUndo(state);
     case ROTATE_ELEMENT:
       return rotateElement(state, action);
     case SELECT_ELEMENT:

@@ -43,6 +43,24 @@ export const elementsSelector: Selector<TMainState, TElementsData> =
 export const allDataSelector: Selector<TMainState, TElementsData['allData']> =
   createSelector(elementsSelector, getFp('allData'));
 
+export const canRedoReduxHistorySelector: Selector<TMainState, boolean> =
+  createSelector(pageSelector, ({ reducerHistory, reducerHistoryIndex }) => {
+    if (reducerHistory[reducerHistoryIndex - 1]) {
+      return true;
+    }
+
+    return false;
+  });
+
+export const canUndoReduxHistorySelector: Selector<TMainState, boolean> =
+  createSelector(pageSelector, ({ reducerHistory, reducerHistoryIndex }) => {
+    if (reducerHistory[reducerHistoryIndex + 1]) {
+      return true;
+    }
+
+    return false;
+  });
+
 export const pageBackgroundSelectorCreator = (
   id: TElement['id'] | '-1',
 ): Selector<TMainState, TElement['background']> =>
