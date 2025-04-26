@@ -3,6 +3,7 @@ import {
   ADD_ELEMENT,
   CHANGE_BACKGROUND,
   CHANGE_PARENT,
+  CHANGE_POSITION,
   REDUCER_HISTORY_REDO,
   REDUCER_HISTORY_SAVE,
   REDUCER_HISTORY_UNDO,
@@ -134,6 +135,10 @@ export type TChangeParentActionPayload = Pick<
 export type TChangeParentAction = {
   payload: TChangeParentActionPayload;
   type: typeof CHANGE_PARENT;
+};
+
+export type TChangePositionAction = {
+  type: typeof CHANGE_POSITION;
 };
 
 export type TReducerHistoryRedoAction = {

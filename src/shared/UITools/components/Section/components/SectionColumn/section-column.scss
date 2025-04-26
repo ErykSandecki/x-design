@@ -1,10 +1,25 @@
 .SectionColumn {
-  align-items: center;
-  column-gap: 8px;
-  display: flex;
+  &__labels {
+    column-gap: 2.5px;
+    display: flex;
+  }
+
+  &__label {
+    @include theme('neutral-2', color);
+
+    font-size: 9px;
+    margin-bottom: 5px;
+  }
+
+  &__wrapper {
+    align-items: center;
+    column-gap: 8px;
+    display: flex;
+  }
 
   &__content {
-    width: calc(100% - 24px - 8px);
+    column-gap: 2.5px;
+    display: flex;
   }
 
   &__buttons {

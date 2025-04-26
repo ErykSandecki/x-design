@@ -3,6 +3,7 @@ import {
   ADD_ELEMENT,
   CHANGE_BACKGROUND,
   CHANGE_PARENT,
+  CHANGE_POSITION,
   REDUCER_HISTORY_REDO,
   REDUCER_HISTORY_SAVE,
   REDUCER_HISTORY_UNDO,
@@ -26,6 +27,7 @@ import {
   TChangeBackgroundActionPayload,
   TChangeParentAction,
   TChangeParentActionPayload,
+  TChangePositionAction,
   TReducerHistoryRedoAction,
   TReducerHistorySaveAction,
   TReducerHistoryUndoAction,
@@ -66,6 +68,10 @@ export const changeParent = (
 ): TChangeParentAction => ({
   payload: { draggableElements, possibleIndexPosition, possibleParent },
   type: CHANGE_PARENT,
+});
+
+export const changePosition = (): TChangePositionAction => ({
+  type: CHANGE_POSITION,
 });
 
 export const reducerHistoryRedo = (): TReducerHistoryRedoAction => ({

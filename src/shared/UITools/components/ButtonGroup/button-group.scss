@@ -1,0 +1,45 @@
+.ButtonGroup {
+  align-items: center;
+  column-gap: 1px;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  height: 24px;
+
+  &__button {
+    @include theme('neutral-3', background-color);
+
+    align-items: center;
+    border-radius: 5px;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    height: 100%;
+    min-width: 28px;
+
+    &:first-child {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+    }
+
+    &:hover:not(&--disabled) {
+      cursor: pointer;
+      filter: brightness(150%);
+    }
+  }
+
+  &__icon {
+    &--disabled {
+      filter: brightness(50%);
+    }
+  }
+}

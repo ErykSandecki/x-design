@@ -43,6 +43,11 @@ export const elementsSelector: Selector<TMainState, TElementsData> =
 export const allDataSelector: Selector<TMainState, TElementsData['allData']> =
   createSelector(elementsSelector, getFp('allData'));
 
+export const elementAllDataSelectorCreator = (
+  elementId: TElement['id'],
+): Selector<TMainState, TElement | undefined> =>
+  createSelector(allDataSelector, getFp(elementId));
+
 export const canRedoReduxHistorySelector: Selector<TMainState, boolean> =
   createSelector(pageSelector, ({ reducerHistory, reducerHistoryIndex }) => {
     if (reducerHistory[reducerHistoryIndex - 1]) {

@@ -17,11 +17,16 @@ import styles from './section.scss';
 import { E2EAttribute } from 'types';
 
 export type TSectionProps = {
+  buttonsIcon?: Array<ReactNode>;
   children: ReactNode;
   label?: string;
 };
 
-export const Section: FC<TSectionProps> = ({ children, label }) => {
+export const Section: FC<TSectionProps> = ({
+  buttonsIcon = [],
+  children,
+  label,
+}) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   return (
@@ -30,9 +35,14 @@ export const Section: FC<TSectionProps> = ({ children, label }) => {
       e2eAttribute={E2EAttribute.section}
     >
       {label && (
-        <Small classes={{ className: cx(classNamesWithTheme.label) }}>
-          {label}
-        </Small>
+        <div className={cx(classNamesWithTheme.header)}>
+          <Small classes={{ className: cx(classNamesWithTheme.label) }}>
+            {label}
+          </Small>
+          <div className={cx(classNamesWithTheme.buttons)}>
+            {buttonsIcon.map((buttonIcon) => buttonIcon)}
+          </div>
+        </div>
       )}
       {children}
     </Box>

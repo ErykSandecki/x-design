@@ -2,6 +2,7 @@ export enum E2EAttribute {
   anchor = 'anchor',
   box = 'box',
   button = 'button',
+  buttonGroup = 'button-group',
   buttonIcon = 'button-icon',
   color = 'color',
   colorPicker = 'color-picker',

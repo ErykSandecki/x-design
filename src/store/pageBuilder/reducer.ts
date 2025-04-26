@@ -3,6 +3,7 @@ import {
   ADD_ELEMENT,
   CHANGE_BACKGROUND,
   CHANGE_PARENT,
+  CHANGE_POSITION,
   REDUCER_HISTORY_REDO,
   REDUCER_HISTORY_SAVE,
   REDUCER_HISTORY_UNDO,
@@ -44,6 +45,7 @@ import { filterSelectedElements } from './utils/filterSelectedElements';
 import { handleAddElement } from './utils/handleAddElement';
 import { handleChangeBackground } from './utils/handleChangeBackground';
 import { handleChangeParent } from './utils/changeParent/handleChangeParent';
+import { handleChangePosition } from './utils/handleChangePosition';
 import { handleReducerHistoryRedo } from './utils/reducerHistory/handleReducerHistoryRedo';
 import { handleReducerHistorySave } from './utils/reducerHistory/handleReducerHistorySave';
 import { handleReducerHistoryUndo } from './utils/reducerHistory/handleReducerHistoryUndo';
@@ -87,6 +89,9 @@ const changeParent = (
   state: TPageBuilderState,
   { payload }: TAction<TChangeParentAction['payload']>,
 ): TPageBuilderState => handleChangeParent(payload, state);
+
+const changePosition = (state: TPageBuilderState): TPageBuilderState =>
+  handleChangePosition(state);
 
 const reducerHistoryRedo = (state: TPageBuilderState): TPageBuilderState =>
   handleReducerHistoryRedo(state);
@@ -228,6 +233,8 @@ const pageBuilder = (
       return changeBackground(state, action);
     case CHANGE_PARENT:
       return changeParent(state, action);
+    case CHANGE_POSITION:
+      return changePosition(state);
     case REDUCER_HISTORY_REDO:
       return reducerHistoryRedo(state);
     case REDUCER_HISTORY_SAVE:

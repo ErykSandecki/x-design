@@ -1,3 +1,9 @@
+import { ReactComponent as AlignHorizontalCenter } from './svg/align-horizontal-center.svg';
+import { ReactComponent as AlignHorizontalLeft } from './svg/align-horizontal-left.svg';
+import { ReactComponent as AlignHorizontalRight } from './svg/align-horizontal-right.svg';
+import { ReactComponent as AlignVerticalBottom } from './svg/align-vertical-bottom.svg';
+import { ReactComponent as AlignVerticalCenter } from './svg/align-vertical-center.svg';
+import { ReactComponent as AlignVerticalTop } from './svg/align-vertical-top.svg';
 import { ReactComponent as Check } from './svg/check.svg';
 import { ReactComponent as Close } from './svg/close.svg';
 import { ReactComponent as Comment } from './svg/comment.svg';
@@ -12,10 +18,17 @@ import { ReactComponent as Logo } from './svg/logo.svg';
 import { ReactComponent as MoveHand } from './svg/move-hand.svg';
 import { ReactComponent as MoveTool } from './svg/move-tool.svg';
 import { ReactComponent as PlusOutlined } from './svg/plus-outlined.svg';
+import { ReactComponent as PositionSwitcher } from './svg/position-switcher.svg';
 import { ReactComponent as Sample } from './svg/sample.svg';
 import { ReactComponent as StepBackwardOutlined } from './svg/step-backward-outlined.svg';
 
 export const Icons = {
+  AlignHorizontalCenter,
+  AlignHorizontalLeft,
+  AlignHorizontalRight,
+  AlignVerticalBottom,
+  AlignVerticalCenter,
+  AlignVerticalTop,
   Check,
   Close,
   Comment,
@@ -30,6 +43,7 @@ export const Icons = {
   MoveHand,
   MoveTool,
   PlusOutlined,
+  PositionSwitcher,
   Sample,
   StepBackwardOutlined,
 };
