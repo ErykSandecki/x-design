@@ -1,6 +1,7 @@
 // others
 import {
   ADD_ELEMENT,
+  CHANGE_ALIGNMENT,
   CHANGE_BACKGROUND,
   CHANGE_PARENT,
   CHANGE_POSITION,
@@ -22,6 +23,8 @@ import {
 // types
 import { Anchor } from './enums';
 import {
+  AlignmentHorizontal,
+  AlignmentVertical,
   ElementType,
   KeyboardKeys,
   T2DCoordinates,
@@ -35,6 +38,7 @@ import {
 
 export type TElementDynamicData = Pick<
   TElement,
+  | 'alignment'
   | 'background'
   | 'coordinates'
   | 'height'
@@ -116,6 +120,16 @@ export type TAddELementActionPayload = Omit<TElement, 'index'>;
 export type TAddELementAction = {
   payload: TAddELementActionPayload;
   type: typeof ADD_ELEMENT;
+};
+
+export type TChangeAlignmentActionPayload = {
+  horizontal?: AlignmentHorizontal;
+  vertical?: AlignmentVertical;
+};
+
+export type TChangeAlignmentAction = {
+  payload: TChangeAlignmentActionPayload;
+  type: typeof CHANGE_ALIGNMENT;
 };
 
 export type TChangeBackgroundActionPayload = Pick<TElement, 'id'> & {

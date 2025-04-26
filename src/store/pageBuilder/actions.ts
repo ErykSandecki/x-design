@@ -1,6 +1,7 @@
 // others
 import {
   ADD_ELEMENT,
+  CHANGE_ALIGNMENT,
   CHANGE_BACKGROUND,
   CHANGE_PARENT,
   CHANGE_POSITION,
@@ -23,6 +24,8 @@ import {
 import {
   TAddELementAction,
   TAddELementActionPayload,
+  TChangeAlignmentAction,
+  TChangeAlignmentActionPayload,
   TChangeBackgroundAction,
   TChangeBackgroundActionPayload,
   TChangeParentAction,
@@ -51,6 +54,13 @@ export const addElement = (
 ): TAddELementAction => ({
   payload,
   type: ADD_ELEMENT,
+});
+
+export const changeAlignment = (
+  payload: TChangeAlignmentAction['payload'],
+): TChangeAlignmentAction => ({
+  payload,
+  type: CHANGE_ALIGNMENT,
 });
 
 export const changeBackground = (

@@ -1,6 +1,8 @@
+$--rx-gap: 10px;
+
 .SectionColumn {
   &__labels {
-    column-gap: 2.5px;
+    column-gap: $--rx-gap;
     display: flex;
   }
 
@@ -18,7 +20,7 @@
   }
 
   &__content {
-    column-gap: 10px;
+    column-gap: $--rx-gap;
     display: flex;
   }
 

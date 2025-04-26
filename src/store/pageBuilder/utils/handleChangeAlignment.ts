@@ -1,41 +1,36 @@
 import { cloneDeep, first } from 'lodash';
 
-// others
-import { BASE_2D } from 'shared';
-
 // types
-import { TPageBuilderState } from '../types';
+import { TChangeAlignmentAction, TPageBuilderState } from '../types';
 
 // utils
 import { getAbsolutePosition } from './getOffsetXY';
 
-export const handleChangePosition = (
+export const handleChangeAlignment = (
+  payload: TChangeAlignmentAction['payload'],
   state: TPageBuilderState,
 ): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];
   const { elements, selectedElements } = currentPage;
   const { z } = currentPage.areaCoordinates;
-  const allId = selectedElements.map(({ id }) => id);
+  const { parentId } = first(selectedElements);
   const clonedElements = cloneDeep(elements);
-  const { id, parentId } = first(selectedElements);
-  const currentPosition = elements.allData[id].position;
-  const reversePosition =
-    currentPosition === 'relative' ? 'absolute' : 'relative';
-  const isRelative = reversePosition === 'relative';
+  const allId = selectedElements.map(({ id }) => id);
   const filteredChildren = currentPage.elements.allData[
     parentId
   ].children.filter((id) => !allId.includes(id));
 
   selectedElements.forEach(({ id }) => {
-    const targetCoordinates = isRelative
-      ? BASE_2D
-      : getAbsolutePosition(id, parentId, z);
+    const { alignment } = currentPage.elements.allData[id];
+    const targetCoordinates = getAbsolutePosition(id, parentId, z);
 
-    clonedElements.allData[id].position = reversePosition;
+    clonedElements.allData[id].alignment = { ...alignment, ...payload };
+    clonedElements.allData[id].position = 'absolute';
     clonedElements.allData[id].coordinates = targetCoordinates;
-    clonedElements.dynamicData[id].position = reversePosition;
+    clonedElements.dynamicData[id].alignment = { ...alignment, ...payload };
+    clonedElements.dynamicData[id].position = 'absolute';
     clonedElements.dynamicData[id].coordinates = targetCoordinates;
-    clonedElements.staticData[id].position = reversePosition;
+    clonedElements.staticData[id].position = 'absolute';
   });
 
   return {

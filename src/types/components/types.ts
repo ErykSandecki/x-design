@@ -2,8 +2,13 @@ import { ColorFormatType } from 'antd/es/color-picker/interface';
 import { CSSProperties } from 'react';
 
 // types
-import { ElementType } from './enums';
+import { AlignmentHorizontal, AlignmentVertical, ElementType } from './enums';
 import { T2DCoordinates } from 'types/types';
+
+export type Alignment = {
+  horizontal?: AlignmentHorizontal;
+  vertical?: AlignmentVertical;
+};
 
 export type TColor = { alpha: string; color: string; format: ColorFormatType };
 
@@ -15,6 +20,7 @@ export type TBackground = {
 };
 
 export type TElement = {
+  alignment?: Alignment;
   background: TBackground;
   children: Array<string>;
   coordinates: T2DCoordinates;

@@ -1,6 +1,7 @@
 // others
 import {
   ADD_ELEMENT,
+  CHANGE_ALIGNMENT,
   CHANGE_BACKGROUND,
   CHANGE_PARENT,
   CHANGE_POSITION,
@@ -38,11 +39,13 @@ import {
   TChangeParentAction,
   TChangeBackgroundAction,
   TReducerHistorySaveAction,
+  TChangeAlignmentAction,
 } from './types';
 
 // utils
 import { filterSelectedElements } from './utils/filterSelectedElements';
 import { handleAddElement } from './utils/handleAddElement';
+import { handleChangeAlignment } from './utils/handleChangeAlignment';
 import { handleChangeBackground } from './utils/handleChangeBackground';
 import { handleChangeParent } from './utils/changeParent/handleChangeParent';
 import { handleChangePosition } from './utils/handleChangePosition';
@@ -79,6 +82,11 @@ const addElement = (
   state: TPageBuilderState,
   { payload: element }: TAction<TAddELementAction['payload']>,
 ): TPageBuilderState => handleAddElement(element, state);
+
+const changeAlignment = (
+  state: TPageBuilderState,
+  { payload }: TAction<TChangeAlignmentAction['payload']>,
+): TPageBuilderState => handleChangeAlignment(payload, state);
 
 const changeBackground = (
   state: TPageBuilderState,
@@ -229,6 +237,8 @@ const pageBuilder = (
   switch (action.type) {
     case ADD_ELEMENT:
       return addElement(state, action);
+    case CHANGE_ALIGNMENT:
+      return changeAlignment(state, action);
     case CHANGE_BACKGROUND:
       return changeBackground(state, action);
     case CHANGE_PARENT:
