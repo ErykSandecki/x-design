@@ -3,11 +3,34 @@ import { fireEvent, renderHook } from '@testing-library/react';
 // hooks
 import { useKeyDown } from '../useKeyDown';
 
+// mocks
+import { pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
+
+// store
+import {
+  canRedoReduxHistorySelector,
+  canUndoReduxHistorySelector,
+} from 'store/pageBuilder/selectors';
+import { configureStore } from 'store';
+
 // types
 import { KeyboardKeys } from 'types';
 import { MouseMode } from 'types/enums/mouseMode';
 
+// utils
+import { getProviderWrapper } from 'test';
+
 const mockCallBack = jest.fn();
+
+const stateMock = {
+  ...pageBuilderStateMock,
+};
+
+jest.mock('store/pageBuilder/selectors', () => ({
+  ...jest.requireActual('store/pageBuilder/selectors'),
+  canRedoReduxHistorySelector: jest.fn(),
+  canUndoReduxHistorySelector: jest.fn(),
+}));
 
 jest.mock('react-redux', () => ({
   ...jest.requireActual('react-redux'),
@@ -15,9 +38,52 @@ jest.mock('react-redux', () => ({
 }));
 
 describe('useWheelEvent', () => {
-  it(`should triger action set mouse mode on comment state`, () => {
+  it(`should triger redo`, () => {
+    // mock
+    const store = configureStore(stateMock);
+    (canRedoReduxHistorySelector as jest.Mock).mockImplementation(() => true);
+
     // before
-    renderHook(() => useKeyDown(mockCallBack));
+    renderHook(() => useKeyDown(mockCallBack), {
+      wrapper: getProviderWrapper(store),
+    });
+
+    // action
+    fireEvent.keyDown(window, {
+      ctrlKey: true,
+      key: KeyboardKeys.z,
+      shiftKey: true,
+    });
+
+    // result
+    expect(mockCallBack.mock.calls.length).toBe(1);
+  });
+
+  it(`should triger undo`, () => {
+    // mock
+    const store = configureStore(stateMock);
+    (canUndoReduxHistorySelector as jest.Mock).mockImplementation(() => true);
+
+    // before
+    renderHook(() => useKeyDown(mockCallBack), {
+      wrapper: getProviderWrapper(store),
+    });
+
+    // action
+    fireEvent.keyDown(window, { ctrlKey: true, key: KeyboardKeys.z });
+
+    // result
+    expect(mockCallBack.mock.calls.length).toBe(1);
+  });
+
+  it(`should triger action set mouse mode on comment state`, () => {
+    // mock
+    const store = configureStore(stateMock);
+
+    // before
+    renderHook(() => useKeyDown(mockCallBack), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // action
     fireEvent.keyDown(window, { key: KeyboardKeys.e });
@@ -27,8 +93,13 @@ describe('useWheelEvent', () => {
   });
 
   it(`should triger action set mouse mode on default state`, () => {
+    // mock
+    const store = configureStore(stateMock);
+
     // before
-    renderHook(() => useKeyDown(mockCallBack));
+    renderHook(() => useKeyDown(mockCallBack), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // action
     fireEvent.keyDown(window, { key: KeyboardKeys.escape });
@@ -38,8 +109,13 @@ describe('useWheelEvent', () => {
   });
 
   it(`should triger action set mouse mode on default state`, () => {
+    // mock
+    const store = configureStore(stateMock);
+
     // before
-    renderHook(() => useKeyDown(mockCallBack));
+    renderHook(() => useKeyDown(mockCallBack), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // action
     fireEvent.keyDown(window, { key: KeyboardKeys.q });
@@ -49,8 +125,13 @@ describe('useWheelEvent', () => {
   });
 
   it(`should triger action set mouse mode on move state`, () => {
+    // mock
+    const store = configureStore(stateMock);
+
     // before
-    renderHook(() => useKeyDown(mockCallBack));
+    renderHook(() => useKeyDown(mockCallBack), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // action
     fireEvent.keyDown(window, { key: KeyboardKeys.w });
@@ -60,8 +141,13 @@ describe('useWheelEvent', () => {
   });
 
   it(`should triger action set mouse mode on tool belt a`, () => {
+    // mock
+    const store = configureStore(stateMock);
+
     // before
-    renderHook(() => useKeyDown(mockCallBack));
+    renderHook(() => useKeyDown(mockCallBack), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // action
     fireEvent.keyDown(window, { key: KeyboardKeys.f });
