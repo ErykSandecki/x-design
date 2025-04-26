@@ -88,13 +88,20 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
         class="css-q0izro Section Section--light"
         data-test-section=""
       >
-        <small
-          class="css-q0izro Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
-          data-test-text=""
-          style="text-align: inherit;"
+        <div
+          class="Section__header Section__header--light"
         >
-          Mode
-        </small>
+          <small
+            class="css-q0izro Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+            data-test-text=""
+            style="text-align: inherit;"
+          >
+            Mode
+          </small>
+          <div
+            class="Section__buttons Section__buttons--light"
+          />
+        </div>
         <div
           class="css-q0izro Tabs Tabs--light"
           data-test-box=""
@@ -114,94 +121,114 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
         </div>
       </div>
       <div
-        class="css-q0izro Section Section--light"
-        data-test-section=""
+        class="PanelProperties__sections PanelProperties__sections--light"
       >
-        <small
-          class="css-q0izro Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
-          data-test-text=""
-          style="text-align: inherit;"
-        >
-          Page
-        </small>
         <div
-          class="css-q0izro SectionColumn SectionColumn--light"
+          class="css-q0izro Section Section--light"
           data-test-section=""
         >
           <div
-            class="SectionColumn__content SectionColumn__content--light"
+            class="Section__header Section__header--light"
           >
-            <div
-              class="css-q0izro FieldGroup FieldGroup--light"
-              data-test-field-group=""
+            <small
+              class="css-q0izro Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+              data-test-text=""
+              style="text-align: inherit;"
             >
-              <div
-                class="css-q0izro ColorPicker__hex-input ColorPicker__hex-input--light TextField TextField--light"
-                data-test-text-field="color"
-              >
-                <div
-                  aria-describedby="test-id"
-                >
-                  <div
-                    class="css-q0izro Color Color--light"
-                    data-test-color=""
-                  >
-                    <div
-                      class="Color__picker Color__picker--light"
-                      style="background-color: rgb(241, 242, 246);"
-                    />
-                    <div
-                      class="Color__picker-alpha Color__picker-alpha--light"
-                      style="background-color: rgb(241, 242, 246);"
-                    />
-                    <div
-                      class="Color__picker-texture Color__picker-texture--light"
-                    />
-                  </div>
-                </div>
-                <input
-                  class="TextField__input TextField__input--light"
-                  data-test-text-field-input="color"
-                  maxlength="6"
-                  value="f1f2f6"
-                />
-              </div>
-              <div
-                class="css-q0izro ColorPicker__alpha-input ColorPicker__alpha-input--light TextField TextField--light"
-                data-test-text-field="alpha"
-              >
-                <input
-                  class="TextField__input TextField__input--light"
-                  data-test-text-field-input="alpha"
-                  max="100"
-                  maxlength="6"
-                  min="0"
-                  type="number"
-                  value="100"
-                />
-                <div
-                  class="ScrubbableInput ScrubbableInput--light"
-                  data-test-scrubbable-input=""
-                >
-                  %
-                </div>
-              </div>
-            </div>
+              Page
+            </small>
+            <div
+              class="Section__buttons Section__buttons--light"
+            />
           </div>
           <div
-            class="SectionColumn__buttons SectionColumn__buttons--light"
+            class="css-q0izro SectionColumn SectionColumn--light"
+            data-test-section=""
           >
             <div
-              class="css-q0izro ButtonIcon ButtonIcon--light"
-              data-test-button-icon=""
+              class="SectionColumn__labels SectionColumn__labels--light"
+              style="width: calc(100% - 24px - 0px - 8px);"
+            />
+            <div
+              class="SectionColumn__wrapper SectionColumn__wrapper--light"
             >
               <div
-                class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-                data-test-icon="EyesOpened"
-                height="14"
-                name="EyesOpened"
-                width="14"
-              />
+                class="SectionColumn__content SectionColumn__content--light"
+                style="width: calc(100% - 24px - 0px - 8px);"
+              >
+                <div
+                  class="css-q0izro FieldGroup FieldGroup--light"
+                  data-test-field-group=""
+                >
+                  <div
+                    class="css-q0izro ColorPicker__hex-input ColorPicker__hex-input--light TextField TextField--light"
+                    data-test-text-field="color"
+                  >
+                    <div
+                      aria-describedby="test-id"
+                    >
+                      <div
+                        class="css-q0izro Color Color--light"
+                        data-test-color=""
+                      >
+                        <div
+                          class="Color__picker Color__picker--light"
+                          style="background-color: rgb(241, 242, 246);"
+                        />
+                        <div
+                          class="Color__picker-alpha Color__picker-alpha--light"
+                          style="background-color: rgb(241, 242, 246);"
+                        />
+                        <div
+                          class="Color__picker-texture Color__picker-texture--light"
+                        />
+                      </div>
+                    </div>
+                    <input
+                      class="TextField__input TextField__input--light"
+                      data-test-text-field-input="color"
+                      maxlength="6"
+                      value="f1f2f6"
+                    />
+                  </div>
+                  <div
+                    class="css-q0izro ColorPicker__alpha-input ColorPicker__alpha-input--light TextField TextField--light"
+                    data-test-text-field="alpha"
+                  >
+                    <input
+                      class="TextField__input TextField__input--light"
+                      data-test-text-field-input="alpha"
+                      max="100"
+                      maxlength="6"
+                      min="0"
+                      type="number"
+                      value="100"
+                    />
+                    <div
+                      class="ScrubbableInput ScrubbableInput--light"
+                      data-test-scrubbable-input=""
+                    >
+                      %
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="SectionColumn__buttons SectionColumn__buttons--light"
+              >
+                <div
+                  class="css-q0izro ButtonIcon ButtonIcon--light"
+                  data-test-button-icon=""
+                >
+                  <div
+                    class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="EyesOpened"
+                    height="14"
+                    name="EyesOpened"
+                    width="14"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>

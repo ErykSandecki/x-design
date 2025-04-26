@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonGroup snapshots should render ButtonGroup 1`] = `
+<DocumentFragment>
+  <div
+    class="css-q0izro ButtonGroup ButtonGroup--light"
+    data-test-button-group=""
+  >
+    <div
+      class="ButtonGroup__button ButtonGroup__button--light"
+    >
+      <div
+        class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+        data-test-icon="AlignHorizontalLeft"
+        height="12"
+        name="AlignHorizontalLeft"
+        width="12"
+      />
+    </div>
+    <div
+      class="ButtonGroup__button ButtonGroup__button--light"
+    >
+      <div
+        class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+        data-test-icon="AlignHorizontalCenter"
+        height="12"
+        name="AlignHorizontalCenter"
+        width="12"
+      />
+    </div>
+    <div
+      class="ButtonGroup__button ButtonGroup__button--light"
+    >
+      <div
+        class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+        data-test-icon="AlignHorizontalRight"
+        height="12"
+        name="AlignHorizontalRight"
+        width="12"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ButtonGroup snapshots should render with disabled states 1`] = `
+<DocumentFragment>
+  <div
+    class="css-q0izro ButtonGroup ButtonGroup--light"
+    data-test-button-group=""
+  >
+    <div
+      class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
+    >
+      <div
+        class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+        data-test-icon="AlignHorizontalLeft"
+        height="12"
+        name="AlignHorizontalLeft"
+        width="12"
+      />
+    </div>
+    <div
+      class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
+    >
+      <div
+        class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+        data-test-icon="AlignHorizontalCenter"
+        height="12"
+        name="AlignHorizontalCenter"
+        width="12"
+      />
+    </div>
+    <div
+      class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
+    >
+      <div
+        class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+        data-test-icon="AlignHorizontalRight"
+        height="12"
+        name="AlignHorizontalRight"
+        width="12"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

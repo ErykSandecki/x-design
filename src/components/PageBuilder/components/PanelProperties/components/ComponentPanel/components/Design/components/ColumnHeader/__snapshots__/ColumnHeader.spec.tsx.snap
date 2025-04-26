@@ -7,42 +7,51 @@ exports[`ColumnHeader snapshots should render ColumnHeader 1`] = `
     data-test-section=""
   >
     <div
-      class="SectionColumn__content SectionColumn__content--light"
-    >
-      <small
-        class="css-q0izro Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
-        data-test-text=""
-        style="text-align: inherit;"
-      >
-        0 selected
-      </small>
-    </div>
+      class="SectionColumn__labels SectionColumn__labels--light"
+      style="width: calc(100% - 48px - 2.5px - 8px);"
+    />
     <div
-      class="SectionColumn__buttons SectionColumn__buttons--light"
+      class="SectionColumn__wrapper SectionColumn__wrapper--light"
     >
       <div
-        class="css-q0izro ButtonIcon ButtonIcon--light"
-        data-test-button-icon=""
+        class="SectionColumn__content SectionColumn__content--light"
+        style="width: calc(100% - 48px - 2.5px - 8px);"
       >
-        <div
-          class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-          data-test-icon="HtmlTag"
-          height="14"
-          name="HtmlTag"
-          width="14"
-        />
+        <small
+          class="css-q0izro Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+          data-test-text=""
+          style="text-align: inherit;"
+        >
+          Frame
+        </small>
       </div>
       <div
-        class="css-q0izro ButtonIcon ButtonIcon--light"
-        data-test-button-icon=""
+        class="SectionColumn__buttons SectionColumn__buttons--light"
       >
         <div
-          class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-          data-test-icon="Component"
-          height="14"
-          name="Component"
-          width="14"
-        />
+          class="css-q0izro ButtonIcon ButtonIcon--light"
+          data-test-button-icon=""
+        >
+          <div
+            class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            data-test-icon="HtmlTag"
+            height="14"
+            name="HtmlTag"
+            width="14"
+          />
+        </div>
+        <div
+          class="css-q0izro ButtonIcon ButtonIcon--light"
+          data-test-button-icon=""
+        >
+          <div
+            class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            data-test-icon="Component"
+            height="14"
+            name="Component"
+            width="14"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -56,42 +65,51 @@ exports[`ColumnHeader snapshots should render with multiple selects 1`] = `
     data-test-section=""
   >
     <div
-      class="SectionColumn__content SectionColumn__content--light"
-    >
-      <small
-        class="css-q0izro Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
-        data-test-text=""
-        style="text-align: inherit;"
-      >
-        0 selected
-      </small>
-    </div>
+      class="SectionColumn__labels SectionColumn__labels--light"
+      style="width: calc(100% - 48px - 2.5px - 8px);"
+    />
     <div
-      class="SectionColumn__buttons SectionColumn__buttons--light"
+      class="SectionColumn__wrapper SectionColumn__wrapper--light"
     >
       <div
-        class="css-q0izro ButtonIcon ButtonIcon--light"
-        data-test-button-icon=""
+        class="SectionColumn__content SectionColumn__content--light"
+        style="width: calc(100% - 48px - 2.5px - 8px);"
       >
-        <div
-          class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-          data-test-icon="HtmlTag"
-          height="14"
-          name="HtmlTag"
-          width="14"
-        />
+        <small
+          class="css-q0izro Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+          data-test-text=""
+          style="text-align: inherit;"
+        >
+          2 selected
+        </small>
       </div>
       <div
-        class="css-q0izro ButtonIcon ButtonIcon--light"
-        data-test-button-icon=""
+        class="SectionColumn__buttons SectionColumn__buttons--light"
       >
         <div
-          class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-          data-test-icon="Component"
-          height="14"
-          name="Component"
-          width="14"
-        />
+          class="css-q0izro ButtonIcon ButtonIcon--light"
+          data-test-button-icon=""
+        >
+          <div
+            class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            data-test-icon="HtmlTag"
+            height="14"
+            name="HtmlTag"
+            width="14"
+          />
+        </div>
+        <div
+          class="css-q0izro ButtonIcon ButtonIcon--light"
+          data-test-button-icon=""
+        >
+          <div
+            class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            data-test-icon="Component"
+            height="14"
+            name="Component"
+            width="14"
+          />
+        </div>
       </div>
     </div>
   </div>

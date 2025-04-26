@@ -3,8 +3,8 @@
   column-gap: 1px;
   display: flex;
   flex-grow: 1;
-  justify-content: space-between;
   height: 24px;
+  justify-content: space-between;
 
   &__button {
     @include theme('neutral-3', background-color);
@@ -13,8 +13,8 @@
     border-radius: 5px;
     display: flex;
     flex-grow: 1;
-    justify-content: center;
     height: 100%;
+    justify-content: center;
     min-width: 28px;
 
     &:first-child {

@@ -11,43 +11,176 @@ exports[`Design snapshots should render Design 1`] = `
       data-test-section=""
     >
       <div
-        class="SectionColumn__content SectionColumn__content--light"
+        class="SectionColumn__labels SectionColumn__labels--light"
+        style="width: calc(100% - 48px - 2.5px - 8px);"
+      />
+      <div
+        class="SectionColumn__wrapper SectionColumn__wrapper--light"
+      >
+        <div
+          class="SectionColumn__content SectionColumn__content--light"
+          style="width: calc(100% - 48px - 2.5px - 8px);"
+        >
+          <small
+            class="css-q0izro Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+            data-test-text=""
+            style="text-align: inherit;"
+          >
+            Frame
+          </small>
+        </div>
+        <div
+          class="SectionColumn__buttons SectionColumn__buttons--light"
+        >
+          <div
+            class="css-q0izro ButtonIcon ButtonIcon--light"
+            data-test-button-icon=""
+          >
+            <div
+              class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="HtmlTag"
+              height="14"
+              name="HtmlTag"
+              width="14"
+            />
+          </div>
+          <div
+            class="css-q0izro ButtonIcon ButtonIcon--light"
+            data-test-button-icon=""
+          >
+            <div
+              class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="Component"
+              height="14"
+              name="Component"
+              width="14"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="css-q0izro Section Section--light"
+    data-test-section=""
+  >
+    <div
+      class="Section__header Section__header--light"
+    >
+      <small
+        class="css-q0izro Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        data-test-text=""
+        style="text-align: inherit;"
+      >
+        Position
+      </small>
+      <div
+        class="Section__buttons Section__buttons--light"
+      />
+    </div>
+    <div
+      class="css-q0izro SectionColumn SectionColumn--light"
+      data-test-section=""
+    >
+      <div
+        class="SectionColumn__labels SectionColumn__labels--light"
+        style="width: calc(100% - 24px - 0px - 8px);"
       >
         <small
-          class="css-q0izro Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+          class="css-q0izro SectionColumn__label SectionColumn__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
           data-test-text=""
           style="text-align: inherit;"
         >
-          0 selected
+          Alignment
         </small>
       </div>
       <div
-        class="SectionColumn__buttons SectionColumn__buttons--light"
+        class="SectionColumn__wrapper SectionColumn__wrapper--light"
       >
         <div
-          class="css-q0izro ButtonIcon ButtonIcon--light"
-          data-test-button-icon=""
+          class="SectionColumn__content SectionColumn__content--light"
+          style="width: calc(100% - 24px - 0px - 8px);"
         >
           <div
-            class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-            data-test-icon="HtmlTag"
-            height="14"
-            name="HtmlTag"
-            width="14"
-          />
+            class="css-q0izro ButtonGroup ButtonGroup--light"
+            data-test-button-group=""
+          >
+            <div
+              class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
+            >
+              <div
+                class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="AlignHorizontalLeft"
+                height="12"
+                name="AlignHorizontalLeft"
+                width="12"
+              />
+            </div>
+            <div
+              class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
+            >
+              <div
+                class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="AlignHorizontalCenter"
+                height="12"
+                name="AlignHorizontalCenter"
+                width="12"
+              />
+            </div>
+            <div
+              class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
+            >
+              <div
+                class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="AlignHorizontalRight"
+                height="12"
+                name="AlignHorizontalRight"
+                width="12"
+              />
+            </div>
+          </div>
+          <div
+            class="css-q0izro ButtonGroup ButtonGroup--light"
+            data-test-button-group=""
+          >
+            <div
+              class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
+            >
+              <div
+                class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="AlignVerticalTop"
+                height="12"
+                name="AlignVerticalTop"
+                width="12"
+              />
+            </div>
+            <div
+              class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
+            >
+              <div
+                class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="AlignVerticalCenter"
+                height="12"
+                name="AlignVerticalCenter"
+                width="12"
+              />
+            </div>
+            <div
+              class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
+            >
+              <div
+                class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="AlignVerticalBottom"
+                height="12"
+                name="AlignVerticalBottom"
+                width="12"
+              />
+            </div>
+          </div>
         </div>
         <div
-          class="css-q0izro ButtonIcon ButtonIcon--light"
-          data-test-button-icon=""
-        >
-          <div
-            class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-            data-test-icon="Component"
-            height="14"
-            name="Component"
-            width="14"
-          />
-        </div>
+          class="SectionColumn__buttons SectionColumn__buttons--light"
+        />
       </div>
     </div>
   </div>

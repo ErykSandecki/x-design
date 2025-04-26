@@ -11,8 +11,8 @@
   height: 64px;
   padding: 8px;
   position: fixed;
-  z-index: map.get($map: $--rx-z-indexes, $key: 'overlay');
   width: 260px;
+  z-index: map.get($map: $--rx-z-indexes, $key: 'overlay');
 
   &__prevent-antd-event-mask {
     cursor:
@@ -20,8 +20,8 @@
       auto !important;
     height: 150px;
     left: -150px;
-    position: absolute;
     pointer-events: all;
+    position: absolute;
     top: -150px;
     width: 150px;
   }
@@ -50,8 +50,8 @@
 
     border-radius: 2.5px;
     height: 6.85px;
-    position: absolute;
     left: 50%;
+    position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
     width: 6.85px;
@@ -62,8 +62,8 @@
 
     align-items: center;
     display: flex;
-    justify-content: center;
     height: 100%;
+    justify-content: center;
     left: 0;
     position: absolute;
     top: 0;
