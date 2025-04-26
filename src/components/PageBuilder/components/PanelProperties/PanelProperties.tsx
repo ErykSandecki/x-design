@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
 // components
+import ComponentPanel from './components/ComponentPanel/ComponentPanel';
 import MainPanel from './components/MainPanel/MainPanel';
 import { Box, E2EDataAttribute, TUITypes, UITools } from 'shared';
 
@@ -46,6 +47,7 @@ const PanelProperties: FC<TPanelPropertiesProps> = () => {
     <Box
       classes={{ className: cx(classNamesWithTheme[className]) }}
       e2eValue="panel-properties"
+      onMouseDown={(event) => event.stopPropagation()}
       onKeyDown={(event) => event.stopPropagation()}
       ref={boxRef}
       style={{ touchAction: 'manipulation' }}
@@ -74,7 +76,11 @@ const PanelProperties: FC<TPanelPropertiesProps> = () => {
           tabs={TABS}
         />
       </UITools.Section>
-      {selectedElements.length === 0 && <MainPanel activeTab={activeTab} />}
+      {selectedElements.length === 0 ? (
+        <MainPanel activeTab={activeTab} />
+      ) : (
+        <ComponentPanel activeTab={activeTab} />
+      )}
     </Box>
   );
 };

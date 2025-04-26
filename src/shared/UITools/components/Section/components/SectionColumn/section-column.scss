@@ -7,11 +7,11 @@
     width: calc(100% - 24px - 8px);
   }
 
-  &__button {
+  &__buttons {
     align-items: center;
+    column-gap: 2.5px;
     display: flex;
     flex-grow: 1;
     justify-content: center;
-    width: 24px;
   }
 }

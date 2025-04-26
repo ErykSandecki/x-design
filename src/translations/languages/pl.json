@@ -1,6 +1,9 @@
 {
   "colorPicker.panel.tabs.1": "Standardowy",
   "colorPicker.sampler.prompt": "Kliknij, aby pobrać",
+  "pageBuilder.panelProperties.componentPanel.design.columnHeader.header.frame": "Ramka",
+  "pageBuilder.panelProperties.componentPanel.design.columnHeader.header_few": "{{ amount }} zaznaczone",
+  "pageBuilder.panelProperties.componentPanel.design.columnHeader.header_many": "{{ amount }} zaznaczonych",
   "pageBuilder.panelProperties.mainPanel.design.section.1.label": "Strona",
   "pageBuilder.panelProperties.section.label": "Tryb",
   "pageBuilder.panelProperties.tabs.1": "Tworzennie",

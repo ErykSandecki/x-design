@@ -16,13 +16,13 @@ import styles from './section-column.scss';
 import { E2EAttribute } from 'types';
 
 export type TSectionColumnProps = {
-  buttonIcon?: ReactNode;
+  buttonsIcon?: Array<ReactNode>;
   children: ReactNode;
 };
 
 export const SectionColumn: FC<TSectionColumnProps> = ({
+  buttonsIcon = [],
   children,
-  buttonIcon,
 }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
@@ -32,7 +32,9 @@ export const SectionColumn: FC<TSectionColumnProps> = ({
       e2eAttribute={E2EAttribute.section}
     >
       <div className={cx(classNamesWithTheme.content)}>{children}</div>
-      <div className={cx(classNamesWithTheme.button)}>{buttonIcon}</div>
+      <div className={cx(classNamesWithTheme.buttons)}>
+        {buttonsIcon.map((buttonIcon) => buttonIcon)}
+      </div>
     </Box>
   );
 };

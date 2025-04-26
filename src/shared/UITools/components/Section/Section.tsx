@@ -18,7 +18,7 @@ import { E2EAttribute } from 'types';
 
 export type TSectionProps = {
   children: ReactNode;
-  label: string;
+  label?: string;
 };
 
 export const Section: FC<TSectionProps> = ({ children, label }) => {
@@ -29,9 +29,11 @@ export const Section: FC<TSectionProps> = ({ children, label }) => {
       classes={{ className: cx(classNamesWithTheme[className]) }}
       e2eAttribute={E2EAttribute.section}
     >
-      <Small classes={{ className: cx(classNamesWithTheme.label) }}>
-        {label}
-      </Small>
+      {label && (
+        <Small classes={{ className: cx(classNamesWithTheme.label) }}>
+          {label}
+        </Small>
+      )}
       {children}
     </Box>
   );

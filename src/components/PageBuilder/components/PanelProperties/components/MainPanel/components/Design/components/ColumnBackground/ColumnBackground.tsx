@@ -26,14 +26,15 @@ const ColumnBackground: FC = () => {
 
   return (
     <UITools.SectionColumn
-      buttonIcon={
+      buttonsIcon={[
         <UITools.ButtonIcon
+          key={0}
           name={visible ? 'EyesOpened' : 'EyesClosed'}
           onClick={() =>
             dispatch(changeBackground({ visible: !visible }, '-1'))
           }
-        />
-      }
+        />,
+      ]}
     >
       <UITools.ColorPicker
         activeSampler={colorSampler as boolean}

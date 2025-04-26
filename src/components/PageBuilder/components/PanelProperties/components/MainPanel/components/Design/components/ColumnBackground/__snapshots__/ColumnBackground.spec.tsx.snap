@@ -67,7 +67,7 @@ exports[`ColumnBackground snapshots should render ColumnBackground 1`] = `
       </div>
     </div>
     <div
-      class="SectionColumn__button SectionColumn__button--light"
+      class="SectionColumn__buttons SectionColumn__buttons--light"
     >
       <div
         class="css-q0izro ButtonIcon ButtonIcon--light"

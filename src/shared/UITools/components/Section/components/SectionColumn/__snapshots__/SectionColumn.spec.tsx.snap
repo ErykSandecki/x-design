@@ -12,7 +12,7 @@ exports[`SectionColumn snapshots should render SectionColumn 1`] = `
       children
     </div>
     <div
-      class="SectionColumn__button SectionColumn__button--light"
+      class="SectionColumn__buttons SectionColumn__buttons--light"
     />
   </div>
 </DocumentFragment>

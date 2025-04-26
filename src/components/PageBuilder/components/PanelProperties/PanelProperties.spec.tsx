@@ -5,7 +5,14 @@ import { Provider } from 'react-redux';
 import PanelProperties from './PanelProperties';
 
 // mocks
+import {
+  pageBuilderStateMock,
+  selectedElementMock,
+} from 'test/mocks/reducer/pageBuilderMock';
 import 'test/mocks/sagas/allSagas';
+
+// others
+import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 
 // store
 import { configureStore } from 'store/store';
@@ -18,10 +25,42 @@ import { getByE2EAttribute } from 'test';
 
 const mockCallBack = jest.fn();
 
+const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+const stateMock = {
+  ...pageBuilderStateMock,
+};
+
 describe('PanelProperties snapshots', () => {
   it('should render PanelProperties', () => {
     // mock
     const store = configureStore();
+
+    // before
+    const { asFragment } = render(
+      <Provider store={store}>
+        <PanelProperties />
+      </Provider>,
+    );
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('should render when some element is selected', () => {
+    // mock
+    const store = configureStore({
+      ...stateMock,
+      [PAGE_BUILDER]: {
+        ...pageBuilderStateMock[PAGE_BUILDER],
+        pages: {
+          ...pageBuilderStateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...currentPage,
+            selectedElements: [selectedElementMock],
+          },
+        },
+      },
+    });
 
     // before
     const { asFragment } = render(

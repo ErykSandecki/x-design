@@ -115,7 +115,7 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
           </div>
         </div>
         <div
-          class="SectionColumn__button SectionColumn__button--light"
+          class="SectionColumn__buttons SectionColumn__buttons--light"
         >
           <div
             class="css-q0izro ButtonIcon ButtonIcon--light"
@@ -126,6 +126,98 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
               data-test-icon="EyesOpened"
               height="14"
               name="EyesOpened"
+              width="14"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`PanelProperties snapshots should render when some element is selected 1`] = `
+<DocumentFragment>
+  <div
+    class="css-i7rldk PanelProperties PanelProperties--light"
+    data-test-box="panel-properties"
+  >
+    <div
+      class="PanelProperties__area-handle-resize PanelProperties__area-handle-resize--light"
+      data-test-resize=""
+    />
+    <div
+      class="css-q0izro Section Section--light"
+      data-test-section=""
+    >
+      <small
+        class="css-q0izro Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        data-test-text=""
+        style="text-align: inherit;"
+      >
+        Mode
+      </small>
+      <div
+        class="css-q0izro Tabs Tabs--light"
+        data-test-box=""
+      >
+        <div
+          class="Tabs__tab Tabs__tab--light Tabs__tab--active Tabs__tab--active--light"
+          data-test-tab="design"
+        >
+          Design
+        </div>
+        <div
+          class="Tabs__tab Tabs__tab--light"
+          data-test-tab="prototype\`,"
+        >
+          Prototype
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-q0izro Section Section--light"
+      data-test-section=""
+    >
+      <div
+        class="css-q0izro SectionColumn SectionColumn--light"
+        data-test-section=""
+      >
+        <div
+          class="SectionColumn__content SectionColumn__content--light"
+        >
+          <small
+            class="css-q0izro Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+            data-test-text=""
+            style="text-align: inherit;"
+          >
+            Frame
+          </small>
+        </div>
+        <div
+          class="SectionColumn__buttons SectionColumn__buttons--light"
+        >
+          <div
+            class="css-q0izro ButtonIcon ButtonIcon--light"
+            data-test-button-icon=""
+          >
+            <div
+              class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="HtmlTag"
+              height="14"
+              name="HtmlTag"
+              width="14"
+            />
+          </div>
+          <div
+            class="css-q0izro ButtonIcon ButtonIcon--light"
+            data-test-button-icon=""
+          >
+            <div
+              class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="Component"
+              height="14"
+              name="Component"
               width="14"
             />
           </div>
@@ -251,7 +343,7 @@ exports[`PanelProperties snapshots should render with changed width 1`] = `
           </div>
         </div>
         <div
-          class="SectionColumn__button SectionColumn__button--light"
+          class="SectionColumn__buttons SectionColumn__buttons--light"
         >
           <div
             class="css-q0izro ButtonIcon ButtonIcon--light"
