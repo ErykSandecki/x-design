@@ -1,0 +1,40 @@
+$--rx-scollbar-bg--light: #fafafa;
+$--rx-scollbar-bg--dark: #2b2b2b;
+$--rx-scollbar-track--light: #c7c7c7;
+$--rx-scollbar-track--dark: #6b6b6b;
+
+@mixin scrollbar-mode-styles($bg, $track) {
+  &::-webkit-scrollbar-track {
+    background: $bg;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $track;
+    border: 3px solid $bg;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background: $bg;
+  }
+}
+
+@mixin scrollbar-styles(
+  $bgLight: $--rx-scollbar-bg--light,
+  $trackLight: $--rx-scollbar-track--light,
+  $bgDark: $--rx-scollbar-bg--dark,
+  $trackDark: $--rx-scollbar-track--dark
+) {
+  &::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+  }
+
+  &--light {
+    @include scrollbar-mode-styles($bgLight, $trackLight);
+  }
+
+  &--dark {
+    @include scrollbar-mode-styles($bgDark, $trackDark);
+  }
+}

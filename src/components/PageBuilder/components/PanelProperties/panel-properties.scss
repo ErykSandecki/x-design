@@ -1,3 +1,5 @@
+@import '../../../../styles/mixins/scrollbar';
+
 .PanelProperties {
   &__area-handle-resize {
     cursor: ew-resize;
@@ -6,5 +8,13 @@
     position: absolute;
     top: 0;
     width: 5px;
+  }
+
+  &__sections {
+    @include scrollbar-styles;
+
+    max-height: calc(100% - 72.5px);
+    min-height: calc(100% - 72.5px);
+    overflow: overlay;
   }
 }
