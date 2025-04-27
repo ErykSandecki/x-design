@@ -22,5 +22,5 @@ export const setElementsCoordinatesHandler = (
     y: Math.round(event.clientY / z - y / z),
   };
 
-  dispatch(setElementsCoordinates(coordinates));
+  dispatch(setElementsCoordinates(coordinates, 'dynamic'));
 };

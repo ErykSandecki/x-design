@@ -1,7 +1,10 @@
 import { useDispatch } from 'react-redux';
 
 // store
-import { setElementCoordinates } from 'store/pageBuilder/actions';
+import {
+  setElementCoordinates,
+  setElementsCoordinates,
+} from 'store/pageBuilder/actions';
 
 // types
 import { TElement } from 'types';
@@ -13,6 +16,7 @@ export type TUseOnBlurEvent = {
 
 export const useOnBlurEvent = (
   element: TElement,
+  isMultiple: boolean,
   setX: (value: string) => void,
   setY: (value: string) => void,
   x: string,
@@ -21,22 +25,29 @@ export const useOnBlurEvent = (
   const dispatch = useDispatch();
   const { id } = element;
 
+  const handleBlur = () => {
+    const coordinates = { x: parseFloat(x), y: parseFloat(y) };
+
+    if (isMultiple) {
+      dispatch(setElementsCoordinates(coordinates, 'static'));
+    } else {
+      dispatch(setElementCoordinates(coordinates, id));
+    }
+  };
+
   const handleBlurX = (): void => {
     if (x === '') {
       setX(element.coordinates.x.toString());
     } else {
-      dispatch(
-        setElementCoordinates({ x: parseFloat(x), y: parseFloat(y) }, id),
-      );
+      handleBlur();
     }
   };
+
   const handleBlurY = (): void => {
     if (y === '') {
       setY(element.coordinates.y.toString());
     } else {
-      dispatch(
-        setElementCoordinates({ x: parseFloat(x), y: parseFloat(y) }, id),
-      );
+      handleBlur();
     }
   };
 

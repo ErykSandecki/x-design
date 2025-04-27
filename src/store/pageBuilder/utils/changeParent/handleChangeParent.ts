@@ -60,6 +60,7 @@ export const handleChangeParent = (
             (selectedElement) => ({
               ...selectedElement,
               parentId: possibleParent,
+              position: children.allData[selectedElement.id].position,
             }),
           ),
         },

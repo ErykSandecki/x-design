@@ -5,6 +5,7 @@ import {
   CHANGE_BACKGROUND,
   CHANGE_PARENT,
   CHANGE_POSITION,
+  CLEAR_PREV_STATE,
   REDUCER_HISTORY_REDO,
   REDUCER_HISTORY_SAVE,
   REDUCER_HISTORY_UNDO,
@@ -86,6 +87,7 @@ export type TReducerHistory = Pick<
 export type TSelectedElement = {
   id: TElement['id'];
   parentId: TElement['parentId'];
+  position: TElement['position'];
   type: ElementType;
 };
 
@@ -155,6 +157,10 @@ export type TChangePositionAction = {
   type: typeof CHANGE_POSITION;
 };
 
+export type TClearPrevStateAction = {
+  type: typeof CLEAR_PREV_STATE;
+};
+
 export type TReducerHistoryRedoAction = {
   type: typeof REDUCER_HISTORY_REDO;
 };
@@ -213,8 +219,13 @@ export type TSetElementSizesAction = {
   type: typeof SET_ELEMENT_SIZES;
 };
 
+export type TSetElementsCoordinatesActionPayload = {
+  coordinates: T2DCoordinates;
+  mode: 'dynamic' | 'static';
+};
+
 export type TSetElementsCoordinatesAction = {
-  payload: T2DCoordinates;
+  payload: TSetElementsCoordinatesActionPayload;
   type: typeof SET_ELEMENTS_COORDINATES;
 };
 

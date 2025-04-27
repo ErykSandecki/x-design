@@ -17,26 +17,46 @@ import { getCoordinates } from '../utils/getCoordinates';
 type TUsePositionEvents = {
   onBlurX: () => void;
   onBlurY: () => void;
-  onChangeX: (value: string, withUpdateStore?: boolean) => void;
-  onChangeY: (value: string, withUpdateStore?: boolean) => void;
+  onChangeX: (value: string, isScrubbableInput?: boolean) => void;
+  onChangeY: (value: string, isScrubbableInput?: boolean) => void;
   x: string;
   y: string;
 };
 
-export const usePositionEvents = (element: TElement): TUsePositionEvents => {
+export const usePositionEvents = (
+  element: TElement,
+  isMixedX: boolean,
+  isMixedY: boolean,
+  isMultiple: boolean,
+  isRelative: boolean,
+): TUsePositionEvents => {
   const { alignment, coordinates, parentId, position } = element;
   const [x, setX] = useState('');
   const [y, setY] = useState('');
   const mainParentId = useSelector(mainParentIdSelectorCreator(parentId));
-  const onBlurEvents = useOnBlurEvent(element, setX, setY, x, y);
-  const onChangeEvents = useOnChangeEvent(element, setX, setY, x, y);
+  const onBlurEvents = useOnBlurEvent(element, isMultiple, setX, setY, x, y);
+  const onChangeEvents = useOnChangeEvent(
+    element,
+    isMultiple,
+    isMixedX,
+    isMixedY,
+    setX,
+    setY,
+    x,
+    y,
+  );
 
   useEffect(() => {
-    const { x, y } = getCoordinates(element, mainParentId);
+    if (!isRelative) {
+      const { x, y } = getCoordinates(element, mainParentId);
 
-    setX(x.toString());
-    setY(y.toString());
-  }, [alignment, coordinates, parentId, position]);
+      setX(isMixedX ? 'Mixed' : x.toString());
+      setY(isMixedY ? 'Mixed' : y.toString());
+    } else {
+      setX('0');
+      setY('0');
+    }
+  }, [alignment, coordinates, parentId, position, isMultiple, isRelative]);
 
   return {
     ...onBlurEvents,

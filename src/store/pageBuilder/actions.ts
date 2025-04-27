@@ -5,6 +5,7 @@ import {
   CHANGE_BACKGROUND,
   CHANGE_PARENT,
   CHANGE_POSITION,
+  CLEAR_PREV_STATE,
   REDUCER_HISTORY_REDO,
   REDUCER_HISTORY_SAVE,
   REDUCER_HISTORY_UNDO,
@@ -25,12 +26,12 @@ import {
   TAddELementAction,
   TAddELementActionPayload,
   TChangeAlignmentAction,
-  TChangeAlignmentActionPayload,
   TChangeBackgroundAction,
   TChangeBackgroundActionPayload,
   TChangeParentAction,
   TChangeParentActionPayload,
   TChangePositionAction,
+  TClearPrevStateAction,
   TReducerHistoryRedoAction,
   TReducerHistorySaveAction,
   TReducerHistoryUndoAction,
@@ -42,6 +43,7 @@ import {
   TSetElementCoordinatesAction,
   TSetElementCoordinatesActionPayload,
   TSetElementsCoordinatesAction,
+  TSetElementsCoordinatesActionPayload,
   TSetElementSizesAction,
   TSetElementSizesActionPayload,
   TUnselectElementAction,
@@ -82,6 +84,10 @@ export const changeParent = (
 
 export const changePosition = (): TChangePositionAction => ({
   type: CHANGE_POSITION,
+});
+
+export const clearPrevState = (): TClearPrevStateAction => ({
+  type: CLEAR_PREV_STATE,
 });
 
 export const reducerHistoryRedo = (): TReducerHistoryRedoAction => ({
@@ -148,9 +154,10 @@ export const setElementSizes = (
 });
 
 export const setElementsCoordinates = (
-  payload: TSetElementsCoordinatesAction['payload'],
+  coordinates: TSetElementsCoordinatesActionPayload['coordinates'],
+  mode: TSetElementsCoordinatesActionPayload['mode'],
 ): TSetElementsCoordinatesAction => ({
-  payload,
+  payload: { coordinates, mode },
   type: SET_ELEMENTS_COORDINATES,
 });
 

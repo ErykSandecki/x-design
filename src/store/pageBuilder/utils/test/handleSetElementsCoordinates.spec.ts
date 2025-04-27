@@ -33,17 +33,20 @@ describe('handleSetElementsCoordinates', () => {
     const prevState = cloneDeep(mockPage);
 
     // before
-    const result = handleSetElementsCoordinates(coordinates, {
-      ...pageBuilderStateMock[PAGE_BUILDER],
-      pages: {
-        ...pageBuilderStateMock[PAGE_BUILDER].pages,
-        ['0']: {
-          ...currentPage,
-          ...mockPage,
-          prevState,
+    const result = handleSetElementsCoordinates(
+      { coordinates, mode: 'dynamic' },
+      {
+        ...pageBuilderStateMock[PAGE_BUILDER],
+        pages: {
+          ...pageBuilderStateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...currentPage,
+            ...mockPage,
+            prevState,
+          },
         },
       },
-    });
+    );
 
     // result
     expect(result).toStrictEqual({
@@ -83,21 +86,24 @@ describe('handleSetElementsCoordinates', () => {
     const prevState = cloneDeep(mockPage);
 
     // before
-    const result = handleSetElementsCoordinates(coordinates, {
-      ...pageBuilderStateMock[PAGE_BUILDER],
-      events: {
-        ...pageBuilderStateMock[PAGE_BUILDER].events,
-        canMoveElements: false,
-      },
-      pages: {
-        ...pageBuilderStateMock[PAGE_BUILDER].pages,
-        ['0']: {
-          ...currentPage,
-          ...mockPage,
-          prevState,
+    const result = handleSetElementsCoordinates(
+      { coordinates, mode: 'dynamic' },
+      {
+        ...pageBuilderStateMock[PAGE_BUILDER],
+        events: {
+          ...pageBuilderStateMock[PAGE_BUILDER].events,
+          canMoveElements: false,
+        },
+        pages: {
+          ...pageBuilderStateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...currentPage,
+            ...mockPage,
+            prevState,
+          },
         },
       },
-    });
+    );
 
     // result
     expect(result).toStrictEqual({

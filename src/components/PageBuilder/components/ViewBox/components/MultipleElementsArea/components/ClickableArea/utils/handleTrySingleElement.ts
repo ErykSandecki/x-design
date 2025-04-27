@@ -14,7 +14,7 @@ export const handleTrySingleElement = (
   possibleElementToSelect: TElement['id'],
 ) => {
   if (!isMoving && possibleElementToSelect !== '-1') {
-    const { parentId, type } = allDataSelector(store.getState())[
+    const { parentId, position, type } = allDataSelector(store.getState())[
       possibleElementToSelect
     ];
 
@@ -23,6 +23,7 @@ export const handleTrySingleElement = (
         {
           id: possibleElementToSelect,
           parentId,
+          position,
           type,
         },
       ]),

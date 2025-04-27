@@ -37,7 +37,7 @@ export const getCollidedElements = (
   );
 
   for (const [id, coordinates] of Object.entries(rectCoordinates.current)) {
-    const { parentId, type } = allData[id];
+    const { parentId, position, type } = allData[id];
     const condition = isControlPressed
       ? x1 <= coordinates.x1 &&
         x2 >= coordinates.x2 &&
@@ -55,6 +55,7 @@ export const getCollidedElements = (
         collidedElements.push({
           id,
           parentId,
+          position,
           type,
         });
       } else {

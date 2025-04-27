@@ -1,6 +1,6 @@
 import { FC, useRef } from 'react';
-import { first } from 'lodash';
-import { useSelector } from 'react-redux';
+import { first, size } from 'lodash';
+import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
 // components
@@ -13,7 +13,9 @@ import { MAX, MIN, translationNameSpace } from './constants';
 import { usePositionEvents } from './hooks/usePositionEvents';
 
 // store
+import { clearPrevState } from 'store/pageBuilder/actions';
 import {
+  dynamicDataSelector,
   elementAllDataSelectorCreator,
   selectedElementsSelector,
 } from 'store/pageBuilder/selectors';
@@ -23,62 +25,79 @@ import { ColorsTheme, KeyboardKeys } from 'types';
 
 // utils
 import { handleSubmitInput } from 'utils';
+import { isMixed } from './utils/isMixed';
 
 const ColumnPosition: FC = () => {
+  const dispatch = useDispatch();
+  const dynamicData = useSelector(dynamicDataSelector);
   const selectedElements = useSelector(selectedElementsSelector);
   const firstElement = first(selectedElements);
   const element = useSelector(elementAllDataSelectorCreator(firstElement.id));
-  const refInputX = useRef(null);
-  const refInputY = useRef(null);
-  const disabled = element.position === 'relative';
+  const refInputX = useRef<HTMLInputElement>(null);
+  const refInputY = useRef<HTMLInputElement>(null);
   const { t } = useTranslation();
-  const { onBlurX, onBlurY, onChangeX, onChangeY, x, y } =
-    usePositionEvents(element);
+  const isMultiple = size(selectedElements) > 1;
+  const isMixedX = isMixed('x', dynamicData, firstElement, selectedElements);
+  const isMixedY = isMixed('y', dynamicData, firstElement, selectedElements);
+  const isRelative = selectedElements.some(
+    ({ position }) => position === 'relative',
+  );
+  const { onBlurX, onBlurY, onChangeX, onChangeY, x, y } = usePositionEvents(
+    element,
+    isMixedX,
+    isMixedY,
+    isMultiple,
+    isRelative,
+  );
 
   return (
     <UITools.SectionColumn labels={[t(`${translationNameSpace}.label`)]}>
       <UITools.TextField
-        disabled={disabled}
+        disabled={isRelative}
         onBlur={onBlurX}
         onChange={(event) => onChangeX(event.target.value)}
+        onClick={() => refInputX.current.select()}
         onKeyDown={(event) =>
           handleSubmitInput(KeyboardKeys.enter, refInputX.current)(event)
         }
         ref={refInputX}
         startAdornment={
           <ScrubbableInput
-            disabled={disabled}
+            disabled={isRelative}
             max={MAX}
             min={MIN}
             onChange={(value) => onChangeX(value.toString(), true)}
-            value={parseFloat(x)}
+            onMouseDown={() => dispatch(clearPrevState())}
+            value={isMultiple ? 0 : parseFloat(x)}
           >
             <Small color={ColorsTheme.neutral2}>X</Small>
           </ScrubbableInput>
         }
-        type="number"
+        type={isMixedX ? 'text' : 'number'}
         value={x}
       />
       <UITools.TextField
-        disabled={disabled}
+        disabled={isRelative}
         onBlur={onBlurY}
         onChange={(event) => onChangeY(event.target.value)}
+        onClick={() => refInputY.current.select()}
         onKeyDown={(event) =>
           handleSubmitInput(KeyboardKeys.enter, refInputY.current)(event)
         }
         ref={refInputY}
         startAdornment={
           <ScrubbableInput
-            disabled={disabled}
+            disabled={isRelative}
             max={MAX}
             min={MIN}
             onChange={(value) => onChangeY(value.toString(), true)}
-            value={parseFloat(y)}
+            onMouseDown={() => dispatch(clearPrevState())}
+            value={isMultiple ? 0 : parseFloat(y)}
           >
             <Small color={ColorsTheme.neutral2}>Y</Small>
           </ScrubbableInput>
         }
-        type="number"
+        type={isMixedY ? 'text' : 'number'}
         value={y}
       />
     </UITools.SectionColumn>

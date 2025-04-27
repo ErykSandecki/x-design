@@ -1092,7 +1092,7 @@ describe('PageBuilderReducer', () => {
     const prevState = cloneDeep(mockState);
 
     // before
-    const state = reducer(setElementsCoordinates(coordinates), {
+    const state = reducer(setElementsCoordinates(coordinates, 'dynamic'), {
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,

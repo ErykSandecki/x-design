@@ -31,28 +31,22 @@ export const useElementEvents = (
   alignment: TElement['alignment'],
   coordinates: T2DCoordinates,
   elementRef: RefObject<any>,
-  height: TElement['height'],
   id: TElement['id'],
   isMultiple: boolean,
   isSelected: boolean,
   mouseMode: MouseMode,
   parentId: TElement['parentId'],
+  position: TElement['position'],
   type: TElement['type'],
-  width: TElement['width'],
 ): TUseElementEvents => {
   const mainParentId = useSelector(mainParentIdSelectorCreator(parentId));
   const cursorPosition = useRef(BASE_2D);
   const [isMoving, setIsMoving] = useState(false);
   const [isPressing, setIsPressing] = useState(false);
   const selectedElement = {
-    coordinates: {
-      x1: coordinates.x,
-      x2: coordinates.x + (width as number),
-      y1: coordinates.y,
-      y2: coordinates.y + (height as number),
-    },
     id,
     parentId,
+    position,
     type,
   };
 

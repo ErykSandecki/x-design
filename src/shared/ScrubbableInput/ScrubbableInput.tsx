@@ -19,6 +19,7 @@ import styles from './scrubbable-input.scss';
 
 // types
 import { E2EAttribute } from 'types';
+import { noop } from 'lodash';
 
 export type TScrubbableInput = {
   children: ReactNode;
@@ -27,6 +28,8 @@ export type TScrubbableInput = {
   max: number;
   min: number;
   onChange: (value: number) => void;
+  onMouseDown?: () => void;
+  onMouseUp?: () => void;
   value: number;
 };
 
@@ -37,6 +40,8 @@ export const ScrubbableInput: FC<TScrubbableInput> = ({
   max,
   min,
   onChange,
+  onMouseDown = noop,
+  onMouseUp = noop,
   value,
 }) => {
   const inputRef = useRef(null);
@@ -46,6 +51,8 @@ export const ScrubbableInput: FC<TScrubbableInput> = ({
     max,
     min,
     onChange,
+    onMouseDown,
+    onMouseUp,
     value,
   );
 

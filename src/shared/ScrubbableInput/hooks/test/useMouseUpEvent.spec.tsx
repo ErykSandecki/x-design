@@ -8,7 +8,9 @@ const mockCallBack = jest.fn();
 describe('useMouseUpEvent', () => {
   it(`should triiger event`, () => {
     // before
-    const { result } = renderHook(() => useMouseUpEvent(mockCallBack));
+    const { result } = renderHook(() =>
+      useMouseUpEvent(mockCallBack, mockCallBack),
+    );
 
     // action
     result.current();

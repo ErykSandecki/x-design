@@ -1,18 +1,24 @@
 import { useDispatch } from 'react-redux';
 
 // store
-import { setElementCoordinates } from 'store/pageBuilder/actions';
+import {
+  setElementCoordinates,
+  setElementsCoordinates,
+} from 'store/pageBuilder/actions';
 
 // types
 import { TElement } from 'types';
 
 export type TUseOnChangeEvent = {
-  onChangeX: (value: string, withUpdateStore?: boolean) => void;
-  onChangeY: (value: string, withUpdateStore?: boolean) => void;
+  onChangeX: (value: string, isScrubbableInput?: boolean) => void;
+  onChangeY: (value: string, isScrubbableInput?: boolean) => void;
 };
 
 export const useOnChangeEvent = (
   element: TElement,
+  isMultiple: boolean,
+  isMixedX: boolean,
+  isMixedY: boolean,
   setX: (value: string) => void,
   setY: (value: string) => void,
   x: string,
@@ -24,20 +30,46 @@ export const useOnChangeEvent = (
   const updateStore = (
     x: number,
     y: number,
-    withUpdateStore: boolean,
+    isScrubbableInput: boolean,
   ): void => {
-    if (withUpdateStore) {
-      dispatch(setElementCoordinates({ x, y }, id));
+    if (isScrubbableInput) {
+      if (isMultiple) {
+        dispatch(setElementsCoordinates({ x, y }, 'dynamic'));
+      } else {
+        dispatch(setElementCoordinates({ x, y }, id));
+      }
     }
   };
 
-  const handleChangeX = (value: string, withUpdateStore: boolean): void => {
-    setX(value);
-    updateStore(parseFloat(value), parseFloat(y), withUpdateStore);
+  const canChange = (isMixed: boolean, isScrubbableInput: boolean): boolean => {
+    if (isMixed || isMultiple) {
+      return !isScrubbableInput;
+    }
+
+    return true;
   };
-  const handleChangeY = (value: string, withUpdateStore: boolean): void => {
-    setY(value);
-    updateStore(parseFloat(x), parseFloat(value), withUpdateStore);
+
+  const handleChangeX = (value: string, isScrubbableInput: boolean): void => {
+    if (canChange(isMixedX, isScrubbableInput)) {
+      setX(value);
+    }
+
+    updateStore(
+      parseFloat(value),
+      isMultiple ? NaN : parseFloat(y),
+      isScrubbableInput,
+    );
+  };
+  const handleChangeY = (value: string, isScrubbableInput: boolean): void => {
+    if (canChange(isMixedY, isScrubbableInput)) {
+      setY(value);
+    }
+
+    updateStore(
+      isMultiple ? NaN : parseFloat(x),
+      parseFloat(value),
+      isScrubbableInput,
+    );
   };
 
   return {

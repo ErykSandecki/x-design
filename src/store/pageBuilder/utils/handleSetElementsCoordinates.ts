@@ -1,3 +1,5 @@
+import { isNaN } from 'lodash';
+
 // types
 import {
   TPage,
@@ -7,11 +9,12 @@ import {
 } from '../types';
 
 export const getPositions = (
-  { x, y }: TSetElementsCoordinatesAction['payload'],
-  prevState: TPage['prevState'],
+  { coordinates: { x, y }, mode }: TSetElementsCoordinatesAction['payload'],
+  prevPageState: TPage['prevState'],
 ): TPositions => {
-  const { allData, dynamicData } = prevState.elements;
-  const selectedElements = prevState.selectedElements;
+  const isDynamic = mode === 'dynamic';
+  const { allData, dynamicData } = prevPageState.elements;
+  const selectedElements = prevPageState.selectedElements;
   const positions: TPositions = {
     allData: {},
     dynamicData: {},
@@ -20,20 +23,22 @@ export const getPositions = (
 
   selectedElements.forEach(({ id, ...restData }) => {
     const {
-      coordinates: { x: xA, y: yA },
+      coordinates: { x: prevX, y: prevY },
     } = allData[id];
-    const position = { x: xA + x, y: yA + y };
+    const coordinates = isDynamic
+      ? { x: prevX + (isNaN(x) ? 0 : x), y: prevY + (isNaN(y) ? 0 : y) }
+      : { x: isNaN(x) ? prevX : x, y: isNaN(y) ? prevY : y };
 
     positions.allData = {
       ...positions.allData,
-      [id]: { ...allData[id], alignment: undefined, coordinates: position },
+      [id]: { ...allData[id], alignment: undefined, coordinates },
     };
     positions.dynamicData = {
       ...positions.dynamicData,
       [id]: {
         ...dynamicData[id],
         alignment: undefined,
-        coordinates: position,
+        coordinates,
       },
     };
 
@@ -53,7 +58,7 @@ export const handleSetElementsCoordinates = (
   const { canMoveElements } = state.events;
   const currentPage = state.pages[state.currentPage];
   const positions = canMoveElements
-    ? getPositions(coordinates, currentPage.prevState)
+    ? getPositions(coordinates, currentPage.prevState || currentPage)
     : {
         allData: {},
         dynamicData: {},

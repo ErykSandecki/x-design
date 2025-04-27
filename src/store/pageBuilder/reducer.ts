@@ -5,6 +5,7 @@ import {
   CHANGE_BACKGROUND,
   CHANGE_PARENT,
   CHANGE_POSITION,
+  CLEAR_PREV_STATE,
   REDUCER_HISTORY_REDO,
   REDUCER_HISTORY_SAVE,
   REDUCER_HISTORY_UNDO,
@@ -100,6 +101,17 @@ const changeParent = (
 
 const changePosition = (state: TPageBuilderState): TPageBuilderState =>
   handleChangePosition(state);
+
+const clearPrevState = (state: TPageBuilderState): TPageBuilderState => ({
+  ...state,
+  pages: {
+    ...state.pages,
+    [state.currentPage]: {
+      ...state.pages[state.currentPage],
+      prevState: undefined,
+    },
+  },
+});
 
 const reducerHistoryRedo = (state: TPageBuilderState): TPageBuilderState =>
   handleReducerHistoryRedo(state);
@@ -245,6 +257,8 @@ const pageBuilder = (
       return changeParent(state, action);
     case CHANGE_POSITION:
       return changePosition(state);
+    case CLEAR_PREV_STATE:
+      return clearPrevState(state);
     case REDUCER_HISTORY_REDO:
       return reducerHistoryRedo(state);
     case REDUCER_HISTORY_SAVE:

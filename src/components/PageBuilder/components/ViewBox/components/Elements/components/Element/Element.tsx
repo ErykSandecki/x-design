@@ -82,14 +82,13 @@ const Element: FC<TElementProps> = ({
     alignment,
     coordinates,
     elementRef,
-    height,
     id,
     isMultiple,
     isSelected,
     mouseMode,
     parentId,
+    position,
     type,
-    width,
   );
   const displayOutline = !isMoving && !isMultiple && isSelected;
 

@@ -43,14 +43,13 @@ describe('useElementEvents', () => {
           undefined,
           BASE_2D,
           ref,
-          100,
           selectedElementMock.id,
           false,
           true,
           MouseMode.default,
           selectedElementMock.parentId,
+          'absolute',
           ElementType.frame,
-          100,
         ),
       {
         wrapper: ({ children }) => {

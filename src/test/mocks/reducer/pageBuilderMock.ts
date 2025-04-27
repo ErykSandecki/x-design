@@ -141,5 +141,6 @@ export const reducerHistoryMock: Array<TReducerHistory> = [
 export const selectedElementMock: TSelectedElement = {
   id: '1',
   parentId: '-1',
+  position: 'absolute',
   type: ElementType.frame,
 };

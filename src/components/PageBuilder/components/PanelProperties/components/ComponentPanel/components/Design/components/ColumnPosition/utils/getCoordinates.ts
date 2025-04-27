@@ -12,7 +12,7 @@ export const getCoordinates = (
   element: TElement,
   mainParentId: TElement['parentId'],
 ): T2DCoordinates => {
-  if (element.alignment || element.parentId !== '-1') {
+  if (element.alignment) {
     const z = areaAxisSelectorCreator('z')(store.getState());
     return getAbsolutePosition(element.id, mainParentId, z);
   }

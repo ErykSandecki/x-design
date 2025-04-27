@@ -71,9 +71,10 @@ export const handleChangePosition = (
             },
           },
         },
-        selectedElements: selectedElements.map(
-          (selectedElement) => selectedElement,
-        ),
+        selectedElements: selectedElements.map((selectedElement) => ({
+          ...selectedElement,
+          position: reversePosition,
+        })),
       },
     },
   };
