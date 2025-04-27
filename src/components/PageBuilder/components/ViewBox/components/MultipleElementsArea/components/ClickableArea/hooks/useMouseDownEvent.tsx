@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { MouseButton, T2DCoordinates, TElement } from 'types';
 
 // utils
-import { initSetElementsCoordinates } from '../../../../../utils/initSetElementsCoordinates';
+import { initSetElementsCoordinates } from '../utils/initSetElementsCoordinates';
 import { initStatesOnMouseDown } from '../utils/initStatesOnMouseDown';
 
 export type TUseMouseDownEvent = (
