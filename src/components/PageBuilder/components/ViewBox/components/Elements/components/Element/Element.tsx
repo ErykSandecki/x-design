@@ -42,6 +42,7 @@ import { MouseMode } from 'types/enums/mouseMode';
 // utils
 import { getAbsolutePosition } from 'components/PageBuilder/components/ViewBox/utils/getAbsolutePosition';
 import { getCornersPosition } from './utils/getCornersPosition';
+import { getPosition } from './utils/getPosition';
 
 type TElementProps = {
   classes: typeof classes;
@@ -50,7 +51,7 @@ type TElementProps = {
     hover: boolean,
     selected: boolean,
   ) => ReactNode;
-  id: string;
+  id: TElement['id'];
   mouseMode: MouseMode;
   parentId: TElement['parentId'];
   type: ElementType;
@@ -71,12 +72,13 @@ const Element: FC<TElementProps> = ({
   const elementDynamicData = useSelector(elementDynamicDataSelectorCreator(id));
   const { isMultipleMoving } = useSelector(eventsSelector);
   const { itemsRefs, overlayContainerRef } = useRefs();
-  const { coordinates } = elementDynamicData;
+  const { alignment, coordinates } = elementDynamicData;
   const { background, height, position, rotate, width } = elementDynamicData;
   const { x, y } = coordinates;
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const rectCoordinates = getCornersPosition(height, width);
   const { isMoving, ...events } = useElementEvents(
+    alignment,
     coordinates,
     elementRef,
     height,
@@ -119,12 +121,10 @@ const Element: FC<TElementProps> = ({
       id={id}
       ref={elementRef}
       style={{
+        ...getPosition(alignment, rotate, x, y),
         backgroundColor: (background.properties as TColor).color,
         height: isNumber(height) ? `${height}px` : height,
-        left: `${x}px`,
         position,
-        top: `${y}px`,
-        transform: `rotate(${rotate}deg)`,
         width: isNumber(width) ? `${width}px` : width,
       }}
       {...events}

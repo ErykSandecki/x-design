@@ -22,6 +22,7 @@ export const handleSetElementCoordinates = (
                 ...state.pages[state.currentPage].elements.allData,
                 [id]: {
                   ...state.pages[state.currentPage].elements.allData[id],
+                  alignment: undefined,
                   coordinates: position,
                 },
               },
@@ -29,6 +30,7 @@ export const handleSetElementCoordinates = (
                 ...state.pages[state.currentPage].elements.dynamicData,
                 [id]: {
                   ...state.pages[state.currentPage].elements.dynamicData[id],
+                  alignment: undefined,
                   coordinates: position,
                 },
               },

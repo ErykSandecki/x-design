@@ -2,7 +2,7 @@ import { MouseEvent, RefObject } from 'react';
 import { useDispatch } from 'react-redux';
 
 // types
-import { MouseButton, T2DCoordinates } from 'types';
+import { MouseButton, T2DCoordinates, TElement } from 'types';
 import { MouseMode } from '../../../../../../../../../types/enums/mouseMode';
 import { TSelectedElement } from 'store/pageBuilder/types';
 
@@ -14,10 +14,13 @@ import { updateCursorPosition } from '../utils/updateCursorPosition';
 export type TUseMouseDownEvent = (event: MouseEvent) => void;
 
 export const useMouseDownEvent = (
+  alignment: TElement['alignment'],
   coordinates: T2DCoordinates,
   cursorPosition: RefObject<T2DCoordinates>,
+  id: TSelectedElement['id'],
   isMultiple: boolean,
   isSelected: boolean,
+  mainParentId: TElement['parentId'],
   mouseMode: MouseMode,
   selectedElement: TSelectedElement,
   setIsPressing: (isPressing: boolean) => void,
@@ -29,12 +32,15 @@ export const useMouseDownEvent = (
       event.stopPropagation();
 
       updateCursorPosition(
+        alignment,
         coordinates,
         cursorPosition,
         dispatch,
         event,
+        id,
         isMultiple,
         isSelected,
+        mainParentId,
       );
       handleSelectElement(
         dispatch,

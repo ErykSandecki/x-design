@@ -3,16 +3,12 @@ import { cloneDeep, first } from 'lodash';
 // types
 import { TChangeAlignmentAction, TPageBuilderState } from '../types';
 
-// utils
-import { getAbsolutePosition } from './getOffsetXY';
-
 export const handleChangeAlignment = (
   payload: TChangeAlignmentAction['payload'],
   state: TPageBuilderState,
 ): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];
   const { elements, selectedElements } = currentPage;
-  const { z } = currentPage.areaCoordinates;
   const { parentId } = first(selectedElements);
   const clonedElements = cloneDeep(elements);
   const allId = selectedElements.map(({ id }) => id);
@@ -22,14 +18,11 @@ export const handleChangeAlignment = (
 
   selectedElements.forEach(({ id }) => {
     const { alignment } = currentPage.elements.allData[id];
-    const targetCoordinates = getAbsolutePosition(id, parentId, z);
 
     clonedElements.allData[id].alignment = { ...alignment, ...payload };
     clonedElements.allData[id].position = 'absolute';
-    clonedElements.allData[id].coordinates = targetCoordinates;
     clonedElements.dynamicData[id].alignment = { ...alignment, ...payload };
     clonedElements.dynamicData[id].position = 'absolute';
-    clonedElements.dynamicData[id].coordinates = targetCoordinates;
     clonedElements.staticData[id].position = 'absolute';
   });
 

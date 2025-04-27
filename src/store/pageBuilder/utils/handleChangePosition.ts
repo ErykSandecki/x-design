@@ -7,7 +7,8 @@ import { BASE_2D } from 'shared';
 import { TPageBuilderState } from '../types';
 
 // utils
-import { getAbsolutePosition } from './getOffsetXY';
+import { findMainParent } from './findMainParent';
+import { getAbsolutePosition } from './getAbsolutePosition';
 
 export const handleChangePosition = (
   state: TPageBuilderState,
@@ -18,6 +19,7 @@ export const handleChangePosition = (
   const allId = selectedElements.map(({ id }) => id);
   const clonedElements = cloneDeep(elements);
   const { id, parentId } = first(selectedElements);
+  const mainParent = findMainParent(parentId, currentPage.elements.staticData);
   const currentPosition = elements.allData[id].position;
   const reversePosition =
     currentPosition === 'relative' ? 'absolute' : 'relative';
@@ -29,7 +31,7 @@ export const handleChangePosition = (
   selectedElements.forEach(({ id }) => {
     const targetCoordinates = isRelative
       ? BASE_2D
-      : getAbsolutePosition(id, parentId, z);
+      : getAbsolutePosition(id, mainParent, z);
 
     clonedElements.allData[id].position = reversePosition;
     clonedElements.allData[id].coordinates = targetCoordinates;

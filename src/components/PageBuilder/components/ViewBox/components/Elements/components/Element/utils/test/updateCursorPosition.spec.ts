@@ -20,6 +20,7 @@ describe('updateCursorPosition', () => {
   it(`should update cursor position`, () => {
     // before
     updateCursorPosition(
+      undefined,
       { x: 0, y: 0 },
       ref,
       mockCallBack,
@@ -27,8 +28,10 @@ describe('updateCursorPosition', () => {
         clientX: 0,
         clientY: 0,
       } as MouseEvent,
+      '1',
       false,
       false,
+      '-1',
     );
 
     // result
@@ -38,6 +41,7 @@ describe('updateCursorPosition', () => {
   it(`should init set element coordinates`, () => {
     // before
     updateCursorPosition(
+      undefined,
       { x: 0, y: 0 },
       ref,
       mockCallBack,
@@ -45,8 +49,10 @@ describe('updateCursorPosition', () => {
         clientX: 0,
         clientY: 0,
       } as MouseEvent,
+      '1',
       true,
       true,
+      '-1',
     );
 
     // result

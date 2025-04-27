@@ -26,12 +26,13 @@ export const getPositions = (
 
     positions.allData = {
       ...positions.allData,
-      [id]: { ...allData[id], coordinates: position },
+      [id]: { ...allData[id], alignment: undefined, coordinates: position },
     };
     positions.dynamicData = {
       ...positions.dynamicData,
       [id]: {
         ...dynamicData[id],
+        alignment: undefined,
         coordinates: position,
       },
     };

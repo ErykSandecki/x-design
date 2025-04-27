@@ -40,6 +40,7 @@ describe('useElementEvents', () => {
     const { result } = renderHook(
       () =>
         useElementEvents(
+          undefined,
           BASE_2D,
           ref,
           100,

@@ -38,10 +38,13 @@ describe('useMouseMoveEvent', () => {
     const { result } = renderHook(
       () =>
         useMouseDownEvent(
+          undefined,
           { x: 0, y: 0 },
           mousePosition,
+          selectedElementMock.id,
           false,
           true,
+          '-1',
           MouseMode.default,
           selectedElementMock,
           mockCallBack,
@@ -69,10 +72,13 @@ describe('useMouseMoveEvent', () => {
     const { result } = renderHook(
       () =>
         useMouseDownEvent(
+          undefined,
           { x: 0, y: 0 },
           mousePosition,
+          selectedElementMock.id,
           false,
           true,
+          '-1',
           MouseMode.comment,
           selectedElementMock,
           mockCallBack,
