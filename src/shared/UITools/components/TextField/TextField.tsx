@@ -32,6 +32,7 @@ export type TTextFieldProps = Omit<
 
 export const TextField: FC<TTextFieldProps> = ({
   className = '',
+  disabled,
   e2eValue = '',
   endAdorment,
   ref,
@@ -43,7 +44,10 @@ export const TextField: FC<TTextFieldProps> = ({
   return (
     <Box
       classes={{
-        className: cx(className, classNamesWithTheme[textFieldClassName].name),
+        className: cx(className, classNamesWithTheme[textFieldClassName].name, [
+          classNamesWithTheme[textFieldClassName].modificators.disabled,
+          disabled,
+        ]),
       }}
       e2eAttribute={E2EAttribute.textField}
       e2eValue={e2eValue}
@@ -51,6 +55,7 @@ export const TextField: FC<TTextFieldProps> = ({
       {startAdornment}
       <input
         className={cx(classNamesWithTheme.input)}
+        disabled={disabled}
         maxLength={6}
         ref={ref}
         {...getAttributes(E2EAttribute.textFieldInput, e2eValue)}

@@ -1,6 +1,6 @@
 import { createPortal } from 'react-dom';
-import { FC, memo, ReactNode, useEffect, useRef, useState } from 'react';
 import { defer, isNumber } from 'lodash';
+import { FC, memo, ReactNode, useEffect, useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 // components

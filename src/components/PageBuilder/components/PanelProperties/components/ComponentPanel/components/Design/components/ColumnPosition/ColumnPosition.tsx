@@ -30,6 +30,7 @@ const ColumnPosition: FC = () => {
   const element = useSelector(elementAllDataSelectorCreator(firstElement.id));
   const refInputX = useRef(null);
   const refInputY = useRef(null);
+  const disabled = element.position === 'relative';
   const { t } = useTranslation();
   const { onBlurX, onBlurY, onChangeX, onChangeY, x, y } =
     usePositionEvents(element);
@@ -37,6 +38,7 @@ const ColumnPosition: FC = () => {
   return (
     <UITools.SectionColumn labels={[t(`${translationNameSpace}.label`)]}>
       <UITools.TextField
+        disabled={disabled}
         onBlur={onBlurX}
         onChange={(event) => onChangeX(event.target.value)}
         onKeyDown={(event) =>
@@ -45,6 +47,7 @@ const ColumnPosition: FC = () => {
         ref={refInputX}
         startAdornment={
           <ScrubbableInput
+            disabled={disabled}
             max={MAX}
             min={MIN}
             onChange={(value) => onChangeX(value.toString(), true)}
@@ -57,6 +60,7 @@ const ColumnPosition: FC = () => {
         value={x}
       />
       <UITools.TextField
+        disabled={disabled}
         onBlur={onBlurY}
         onChange={(event) => onChangeY(event.target.value)}
         onKeyDown={(event) =>
@@ -65,6 +69,7 @@ const ColumnPosition: FC = () => {
         ref={refInputY}
         startAdornment={
           <ScrubbableInput
+            disabled={disabled}
             max={MAX}
             min={MIN}
             onChange={(value) => onChangeY(value.toString(), true)}

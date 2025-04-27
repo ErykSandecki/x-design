@@ -22,6 +22,7 @@ import { E2EAttribute } from 'types';
 
 export type TScrubbableInput = {
   children: ReactNode;
+  disabled?: boolean;
   e2eValue?: TE2EDataAttributeProps['value'];
   max: number;
   min: number;
@@ -31,6 +32,7 @@ export type TScrubbableInput = {
 
 export const ScrubbableInput: FC<TScrubbableInput> = ({
   children,
+  disabled = false,
   e2eValue = '',
   max,
   min,
@@ -50,7 +52,10 @@ export const ScrubbableInput: FC<TScrubbableInput> = ({
   return (
     <E2EDataAttribute type={E2EAttribute.scrubbableInput} value={e2eValue}>
       <div
-        className={cx(classNamesWithTheme[className])}
+        className={cx(classNamesWithTheme[className].name, [
+          classNamesWithTheme[className].modificators.disabled,
+          disabled,
+        ])}
         ref={inputRef}
         {...events}
       >

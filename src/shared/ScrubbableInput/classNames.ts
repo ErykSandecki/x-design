@@ -1,6 +1,11 @@
 export const className = 'ScrubbableInput';
 
 export const classNames = {
-  [className]: className,
+  [className]: {
+    name: className,
+    modificators: {
+      disabled: `${className}--disabled`,
+    },
+  },
   handler: `${className}__handler`,
 };

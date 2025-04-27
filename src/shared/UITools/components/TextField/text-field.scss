@@ -15,6 +15,7 @@ $--rx-font-size: 11px;
 
 .TextField {
   @include theme('neutral-3', background-color);
+  @include theme('neutral-3', border, '1px solid');
 
   align-items: center;
   border-radius: 5px;
@@ -31,6 +32,10 @@ $--rx-font-size: 11px;
     font-size: $--rx-font-size;
   }
 
+  &--disabled {
+    background-color: unset;
+  }
+
   &__input {
     @include theme('neutral-1', color);
 
@@ -38,6 +43,10 @@ $--rx-font-size: 11px;
     border: none;
     outline: none;
     width: 100%;
+
+    &:disabled {
+      opacity: 0.5;
+    }
 
     &[type='number']::-webkit-outer-spin-button,
     &[type='number']::-webkit-inner-spin-button {

@@ -4,6 +4,10 @@
   cursor: ew-resize;
   user-select: none;
 
+  &--disabled {
+    pointer-events: none;
+  }
+
   &__handler {
     position: fixed;
     transform: translate(-50%, -7px);
