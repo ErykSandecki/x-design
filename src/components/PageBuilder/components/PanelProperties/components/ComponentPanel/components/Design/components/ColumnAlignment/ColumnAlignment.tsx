@@ -36,7 +36,10 @@ const ColumnAlignment: FC = () => {
   const { t } = useTranslation();
 
   return (
-    <UITools.SectionColumn labels={[t(`${translationNameSpace}.label`)]}>
+    <UITools.SectionColumn
+      labels={[t(`${translationNameSpace}.label`)]}
+      withMargin
+    >
       <UITools.ButtonGroup
         buttons={HORIZONTAL_BUTTONS.map(
           ({ key, name }) =>

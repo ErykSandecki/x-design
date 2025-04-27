@@ -5,6 +5,7 @@
   "pageBuilder.panelProperties.componentPanel.design.columnHeader.header.frame": "Ramka",
   "pageBuilder.panelProperties.componentPanel.design.columnHeader.header_few": "{{ amount }} zaznaczone",
   "pageBuilder.panelProperties.componentPanel.design.columnHeader.header_many": "{{ amount }} zaznaczonych",
+  "pageBuilder.panelProperties.componentPanel.design.columnPosition.label": "Pozycja",
   "pageBuilder.panelProperties.componentPanel.design.section.2.label": "Pozycja",
   "pageBuilder.panelProperties.mainPanel.design.section.1.label": "Strona",
   "pageBuilder.panelProperties.section.label": "Tryb",

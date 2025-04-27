@@ -1,6 +1,6 @@
 import { createPortal } from 'react-dom';
-import { FC, memo, ReactNode, useRef } from 'react';
-import { isNumber } from 'lodash';
+import { FC, memo, ReactNode, useEffect, useRef, useState } from 'react';
+import { defer, isNumber } from 'lodash';
 import { useSelector } from 'react-redux';
 
 // components
@@ -70,6 +70,7 @@ const Element: FC<TElementProps> = ({
   const isMultiple = useSelector(multipleSelectedElementsSelector);
   const elementRef = useRef<HTMLDivElement>(null);
   const elementDynamicData = useSelector(elementDynamicDataSelectorCreator(id));
+  const [outline, setOutline] = useState({ x: 0, y: 0 });
   const { isMultipleMoving } = useSelector(eventsSelector);
   const { itemsRefs, overlayContainerRef } = useRefs();
   const { alignment, coordinates } = elementDynamicData;
@@ -90,12 +91,22 @@ const Element: FC<TElementProps> = ({
     type,
     width,
   );
-  const displayOutline = !isMultiple && isSelected;
-  const { x1, y1 } = (displayOutline &&
-    getAbsolutePosition(coordinates, id, parentId, itemsRefs)) || {
-    x1: 0,
-    y1: 0,
-  };
+  const displayOutline = !isMoving && !isMultiple && isSelected;
+
+  useEffect(() => {
+    if (displayOutline) {
+      defer(() => {
+        const { x1, y1 } = getAbsolutePosition(
+          coordinates,
+          id,
+          parentId,
+          itemsRefs,
+        );
+
+        setOutline({ x: x1, y: y1 });
+      });
+    }
+  }, [displayOutline, coordinates, parentId, itemsRefs]);
 
   return (
     <Box
@@ -133,7 +144,8 @@ const Element: FC<TElementProps> = ({
       {displayOutline &&
         createPortal(
           <Box
-            style={{ left: `${x1}px`, top: `${y1}px` }}
+            classes={{ className: cx(classNamesWithTheme.outline) }}
+            style={{ left: `${outline.x}px`, top: `${outline.y}px` }}
             sx={{ position: 'absolute' }}
           >
             <Corners rectCoordinates={rectCoordinates} />

@@ -8,6 +8,6 @@
   }
 }
 
-@mixin enter-delay {
-  animation: 0s animation-enter forwards;
+@mixin enter-delay($delay: 0s) {
+  animation: $delay animation-enter forwards;
 }

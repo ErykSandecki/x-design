@@ -1,6 +1,7 @@
 export * from './E2EDataAttributes/E2EDataAttribute';
 export * from './E2EDataAttributes/types';
 export * from './E2EDataAttributes/utils';
+export * from './ScrubbableInput/ScrubbableInput';
 export * from './UI/components/Box/Box';
 export * from './UI/components/Button/Button';
 export * from './UI/components/Icon/Icon';

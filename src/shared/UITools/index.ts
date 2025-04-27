@@ -7,6 +7,7 @@ import FieldGroup from './components/FieldGroup/FieldGroup';
 import SectionColumn from './components/Section/components/SectionColumn/SectionColumn';
 import Section from './components/Section/Section';
 import Tabs, { TTabsProps } from './components/Tabs/Tabs';
+import TextField from './components/TextField/TextField';
 
 export const UITools = {
   ButtonGroup,
@@ -17,6 +18,7 @@ export const UITools = {
   Section,
   SectionColumn,
   Tabs,
+  TextField,
 };
 
 export type TUITypes = {

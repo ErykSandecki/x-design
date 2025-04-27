@@ -1,7 +1,12 @@
 export const className = 'SectionColumn';
 
 export const classNames = {
-  [className]: className,
+  [className]: {
+    name: className,
+    modificators: {
+      withMargin: `${className}--with-margin`,
+    },
+  },
   labels: `${className}__labels`,
   label: `${className}__label`,
   wrapper: `${className}__wrapper`,

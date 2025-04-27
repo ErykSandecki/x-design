@@ -21,12 +21,14 @@ export type TSectionColumnProps = {
   buttonsIcon?: Array<ReactNode>;
   children: ReactNode;
   labels?: [string] | [string, string];
+  withMargin?: boolean;
 };
 
 export const SectionColumn: FC<TSectionColumnProps> = ({
   buttonsIcon = [],
   children,
   labels = [],
+  withMargin = false,
 }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const buttonsWidthTotal = (size(buttonsIcon) || 1) * 24;
@@ -35,7 +37,12 @@ export const SectionColumn: FC<TSectionColumnProps> = ({
 
   return (
     <Box
-      classes={{ className: cx(classNamesWithTheme[className]) }}
+      classes={{
+        className: cx(classNamesWithTheme[className].name, [
+          classNamesWithTheme[className].modificators.withMargin,
+          withMargin,
+        ]),
+      }}
       e2eAttribute={E2EAttribute.section}
     >
       <div className={cx(classNamesWithTheme.labels)} style={{ width }}>

@@ -26,4 +26,8 @@
   &:has([data-status='true']) {
     z-index: $--rx-zindex-element-moving;
   }
+
+  &__outline {
+    @include enter-delay(100ms);
+  }
 }

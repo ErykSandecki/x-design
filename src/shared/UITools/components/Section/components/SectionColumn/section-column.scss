@@ -1,6 +1,10 @@
 $--rx-gap: 10px;
 
 .SectionColumn {
+  &--with-margin {
+    margin-bottom: 7.5px;
+  }
+
   &__labels {
     column-gap: $--rx-gap;
     display: flex;
