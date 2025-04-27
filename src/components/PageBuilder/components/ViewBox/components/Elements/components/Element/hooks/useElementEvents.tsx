@@ -21,7 +21,6 @@ import { MouseMode } from 'types/enums/mouseMode';
 import { T2DCoordinates, TElement } from 'types';
 
 export type TUseElementEvents = {
-  isMoving: boolean;
   onMouseDown: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
   onMouseEnter: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
   onMouseLeave: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
@@ -41,7 +40,6 @@ export const useElementEvents = (
 ): TUseElementEvents => {
   const mainParentId = useSelector(mainParentIdSelectorCreator(parentId));
   const cursorPosition = useRef(BASE_2D);
-  const [isMoving, setIsMoving] = useState(false);
   const [isPressing, setIsPressing] = useState(false);
   const selectedElement = {
     id,
@@ -55,25 +53,14 @@ export const useElementEvents = (
     coordinates,
     cursorPosition,
     id,
-    isMoving,
     isMultiple,
     isPressing,
     mouseMode,
-    setIsMoving,
   );
-  useMouseUpEvent(
-    isMoving,
-    isMultiple,
-    isPressing,
-    isSelected,
-    selectedElement,
-    setIsMoving,
-    setIsPressing,
-  );
+  useMouseUpEvent(isPressing, setIsPressing);
   useOutsideClickElement(elementRef, id, isSelected);
 
   return {
-    isMoving,
     onMouseDown: useMouseDownEvent(
       alignment,
       coordinates,

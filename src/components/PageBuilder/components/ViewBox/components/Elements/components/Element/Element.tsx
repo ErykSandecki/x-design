@@ -26,7 +26,8 @@ import { DATA_STATUS_ATTRIBUTE } from './constants';
 // store
 import {
   elementDynamicDataSelectorCreator,
-  eventsSelector,
+  eventSelectorCreator,
+  isDraggableSelectorCreator,
   isHoverSelectorCreator,
   isSelectedElementSelectorCreator,
   multipleSelectedElementsSelector,
@@ -65,20 +66,20 @@ const Element: FC<TElementProps> = ({
   parentId,
   type,
 }) => {
+  const isDraggable = useSelector(isDraggableSelectorCreator(id));
   const isHover = useSelector(isHoverSelectorCreator(id));
   const isSelected = useSelector(isSelectedElementSelectorCreator(id));
   const isMultiple = useSelector(multipleSelectedElementsSelector);
   const elementRef = useRef<HTMLDivElement>(null);
   const elementDynamicData = useSelector(elementDynamicDataSelectorCreator(id));
   const [outline, setOutline] = useState({ x: 0, y: 0 });
-  const { isMultipleMoving } = useSelector(eventsSelector);
   const { itemsRefs, overlayContainerRef } = useRefs();
   const { alignment, coordinates } = elementDynamicData;
   const { background, height, position, rotate, width } = elementDynamicData;
   const { x, y } = coordinates;
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const rectCoordinates = getCornersPosition(height, width);
-  const { isMoving, ...events } = useElementEvents(
+  const { ...events } = useElementEvents(
     alignment,
     coordinates,
     elementRef,
@@ -90,7 +91,10 @@ const Element: FC<TElementProps> = ({
     position,
     type,
   );
-  const displayOutline = !isMoving && !isMultiple && isSelected;
+  const isMultipleMoving = useSelector(
+    eventSelectorCreator('isMultipleMoving'),
+  ) as boolean;
+  const displayOutline = !isDraggable && !isMultiple && isSelected;
 
   useEffect(() => {
     if (displayOutline) {
@@ -120,7 +124,7 @@ const Element: FC<TElementProps> = ({
           ],
           [
             classNamesWithTheme[classNameMoveableELement].modificators.moving,
-            isMoving || (isMultipleMoving && isSelected),
+            isDraggable || (isMultipleMoving && isSelected),
           ],
           [
             classNamesWithTheme[classNameMoveableELement].modificators.selected,

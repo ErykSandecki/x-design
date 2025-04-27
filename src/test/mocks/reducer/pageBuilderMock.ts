@@ -1,4 +1,5 @@
 // others
+import { BASE_3D } from 'shared';
 import { BASE_PAGE, BASE_PAGE_ELEMENTS } from 'store/pageBuilder/constants';
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 
@@ -13,7 +14,6 @@ import {
   TReducerHistory,
   TSelectedElement,
 } from 'store/pageBuilder/types';
-import { BASE_3D } from 'shared';
 
 export const pageBuilderStateMock: Record<
   typeof PAGE_BUILDER,

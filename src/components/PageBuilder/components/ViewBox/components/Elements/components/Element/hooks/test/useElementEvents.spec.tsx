@@ -66,7 +66,6 @@ describe('useElementEvents', () => {
 
     // result
     expect(result.current).toStrictEqual({
-      isMoving: false,
       onMouseDown: expect.any(Function),
       onMouseEnter: expect.any(Function),
       onMouseLeave: expect.any(Function),

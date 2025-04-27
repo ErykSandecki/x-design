@@ -1,10 +1,7 @@
 import { fireEvent, renderHook } from '@testing-library/react';
 
 // mocks
-import {
-  pageBuilderStateMock,
-  selectedElementMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // hooks
 import { useMouseUpEvent } from '../useMouseUpEvent';
@@ -27,21 +24,9 @@ describe('useMouseUpEvent', () => {
     const store = configureStore(stateMock);
 
     // before
-    renderHook(
-      () =>
-        useMouseUpEvent(
-          false,
-          false,
-          true,
-          false,
-          selectedElementMock,
-          mockCallBack,
-          mockCallBack,
-        ),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    renderHook(() => useMouseUpEvent(true, mockCallBack), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // action
     fireEvent.mouseUp(window, {});
@@ -55,21 +40,9 @@ describe('useMouseUpEvent', () => {
     const store = configureStore(stateMock);
 
     // before
-    renderHook(
-      () =>
-        useMouseUpEvent(
-          false,
-          false,
-          false,
-          false,
-          selectedElementMock,
-          mockCallBack,
-          mockCallBack,
-        ),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    renderHook(() => useMouseUpEvent(false, mockCallBack), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // action
     fireEvent.mouseUp(window, {});

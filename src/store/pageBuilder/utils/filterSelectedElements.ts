@@ -22,15 +22,16 @@ export const filterSelectedElements = (
 ): TSelectedElements => {
   const selectedElementsId = selectedElements.map(({ id }) => id);
   const { allData } = state.pages[state.currentPage].elements;
+  const firstElParentId = allData[selectedElementsId[0]]?.parentId;
 
   return size(selectedElements) === 1
     ? selectedElements
-    : selectedElements.filter(({ id }) => {
+    : selectedElements.filter(({ id, parentId }) => {
         const parents = getAllParents(allData, id);
         const isParentSelected = parents.some((id) =>
           selectedElementsId.includes(id),
         );
 
-        return !isParentSelected;
+        return !isParentSelected && parentId === firstElParentId;
       });
 };

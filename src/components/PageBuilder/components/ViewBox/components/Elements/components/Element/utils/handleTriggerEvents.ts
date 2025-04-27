@@ -1,13 +1,18 @@
 import { Dispatch } from 'redux';
+import { defer } from 'lodash';
 
-// utils
-import { finishSetElementsCoordinates } from '../../../../../utils/finishSetElementsCoordinates';
+// store
+import { changeParent } from 'store/pageBuilder/actions';
+import { eventsSelector } from 'store/pageBuilder/selectors';
+import { store } from 'store';
 
-export const handleTriggerEvents = (
-  dispatch: Dispatch,
-  isMultiple: boolean,
-): void => {
-  if (!isMultiple) {
-    finishSetElementsCoordinates(dispatch);
-  }
+export const handleTriggerEvents = (dispatch: Dispatch): void => {
+  const { draggableElements, possibleIndexPosition, possibleParent } =
+    eventsSelector(store.getState());
+
+  defer(() =>
+    dispatch(
+      changeParent(draggableElements, possibleIndexPosition, possibleParent),
+    ),
+  );
 };

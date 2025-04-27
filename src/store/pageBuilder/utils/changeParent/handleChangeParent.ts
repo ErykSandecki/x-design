@@ -13,6 +13,12 @@ export const handleChangeParent = (
 ): TPageBuilderState => {
   const { draggableElements, possibleParent } = payload;
   const id = first(draggableElements);
+  const events = {
+    ...state.events,
+    draggableElements: [],
+    possibleIndexPosition: null,
+    possibleParent: null,
+  };
 
   if (possibleParent !== null) {
     const currentPage = state.pages[state.currentPage];
@@ -28,12 +34,7 @@ export const handleChangeParent = (
 
     return {
       ...state,
-      events: {
-        ...state.events,
-        draggableElements: [],
-        possibleIndexPosition: null,
-        possibleParent: null,
-      },
+      events,
       pages: {
         ...state.pages,
         [state.currentPage]: {
@@ -68,5 +69,8 @@ export const handleChangeParent = (
     };
   }
 
-  return state;
+  return {
+    ...state,
+    events,
+  };
 };

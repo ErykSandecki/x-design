@@ -1,5 +1,4 @@
 import { fireEvent, renderHook } from '@testing-library/react';
-import { noop } from 'lodash';
 import { RefObject } from 'react';
 
 // mocks
@@ -49,16 +48,7 @@ describe('useMouseMoveEvent', () => {
     // before
     renderHook(
       () =>
-        useMouseMoveEvent(
-          BASE_2D,
-          ref,
-          '-1',
-          false,
-          false,
-          true,
-          MouseMode.default,
-          mockCallBack,
-        ),
+        useMouseMoveEvent(BASE_2D, ref, '-1', false, true, MouseMode.default),
       {
         wrapper: getProviderWrapper(store),
       },
@@ -78,16 +68,7 @@ describe('useMouseMoveEvent', () => {
     // before
     renderHook(
       () =>
-        useMouseMoveEvent(
-          BASE_2D,
-          ref,
-          '-1',
-          false,
-          false,
-          true,
-          MouseMode.comment,
-          mockCallBack,
-        ),
+        useMouseMoveEvent(BASE_2D, ref, '-1', false, true, MouseMode.comment),
       {
         wrapper: getProviderWrapper(store),
       },
@@ -107,16 +88,7 @@ describe('useMouseMoveEvent', () => {
     // before
     renderHook(
       () =>
-        useMouseMoveEvent(
-          BASE_2D,
-          ref,
-          '-1',
-          false,
-          true,
-          true,
-          MouseMode.default,
-          noop,
-        ),
+        useMouseMoveEvent(BASE_2D, ref, '-1', false, true, MouseMode.default),
       {
         wrapper: getProviderWrapper(store),
       },

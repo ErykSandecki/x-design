@@ -20,22 +20,16 @@ export const useMouseMoveEvent = (
   coordinates: T2DCoordinates,
   cursorPosition: RefObject<T2DCoordinates>,
   id: TSelectedElement['id'],
-  isMoving: boolean,
   isMultiple: boolean,
   isPressing: boolean,
   mouseMode: MouseMode,
-  setIsMoving: (isMoving: boolean) => void,
 ): TUseMouseMoveEvent => {
   const dispatch = useDispatch();
 
   const handleMouseMove = throttle((event: MouseEvent): void => {
     if (mouseMode === MouseMode.default) {
-      setIsMoving(true);
       updateElementPosition(cursorPosition, dispatch, event, id, isMultiple);
-
-      if (!isMultiple) {
-        dispatch(updateEventsStatus({ draggableElements: [id] }));
-      }
+      dispatch(updateEventsStatus({ draggableElements: [id] }));
     }
   }, THROTTLE_WAIT);
 
@@ -47,5 +41,5 @@ export const useMouseMoveEvent = (
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
     };
-  }, [isMoving, isPressing, mouseMode, coordinates.x, coordinates.y]);
+  }, [isPressing, mouseMode, coordinates.x, coordinates.y]);
 };
