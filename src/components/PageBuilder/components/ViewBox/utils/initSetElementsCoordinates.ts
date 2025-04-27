@@ -15,7 +15,7 @@ export const initSetElementsCoordinates = (
   event: MouseEvent | React.MouseEvent,
   isMultiple: boolean,
 ): void => {
-  if (isMultiple) {
+  if (isMultiple && !event.shiftKey) {
     cursorPosition.current = {
       x: Math.round(event.clientX),
       y: Math.round(event.clientY),
