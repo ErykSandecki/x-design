@@ -25,6 +25,7 @@ export const useMouseDownEvent = (
       event.stopPropagation();
       initSetElementsCoordinates(cursorPosition, dispatch, event, true);
       initStatesOnMouseDown(
+        dispatch,
         event,
         id,
         setIsPressing,

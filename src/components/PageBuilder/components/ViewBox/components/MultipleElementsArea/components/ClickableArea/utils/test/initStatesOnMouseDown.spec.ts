@@ -9,6 +9,7 @@ describe('initStatesOnMouseDown', () => {
   it('should trigger events', () => {
     // before
     initStatesOnMouseDown(
+      mockCallBack,
       { shiftKey: false } as MouseEvent,
       '1',
       mockCallBack,
@@ -19,9 +20,10 @@ describe('initStatesOnMouseDown', () => {
     expect(mockCallBack.mock.calls.length).toBe(2);
   });
 
-  it('should not trigger events', () => {
+  it('should not trigger events but unselect item', () => {
     // before
     initStatesOnMouseDown(
+      mockCallBack,
       { shiftKey: true } as MouseEvent,
       '1',
       mockCallBack,
@@ -29,6 +31,6 @@ describe('initStatesOnMouseDown', () => {
     );
 
     // result
-    expect(mockCallBack.mock.calls.length).toBe(0);
+    expect(mockCallBack.mock.calls.length).toBe(1);
   });
 });
