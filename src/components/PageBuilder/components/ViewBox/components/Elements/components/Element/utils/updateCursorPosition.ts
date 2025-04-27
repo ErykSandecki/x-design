@@ -39,19 +39,16 @@ export const updateCursorPosition = (
   cursorPosition: RefObject<T2DCoordinates>,
   event: MouseEvent | React.MouseEvent,
   id: TElement['id'],
-  isSelected: boolean,
   mainParentId: TElement['parentId'],
 ): void => {
   const z = areaAxisSelectorCreator('z')(store.getState());
 
-  if (!isSelected) {
-    cursorPosition.current = getPositionXY(
-      alignment,
-      coordinates,
-      event,
-      id,
-      mainParentId,
-      z,
-    );
-  }
+  cursorPosition.current = getPositionXY(
+    alignment,
+    coordinates,
+    event,
+    id,
+    mainParentId,
+    z,
+  );
 };

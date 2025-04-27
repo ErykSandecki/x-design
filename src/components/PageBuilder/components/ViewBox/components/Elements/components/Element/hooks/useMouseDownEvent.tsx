@@ -37,7 +37,6 @@ export const useMouseDownEvent = (
         cursorPosition,
         event,
         id,
-        isSelected,
         mainParentId,
       );
       handleSelectElement(

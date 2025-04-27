@@ -23,7 +23,6 @@ describe('updateCursorPosition', () => {
         clientY: 0,
       } as MouseEvent,
       '1',
-      false,
       '-1',
     );
 
@@ -59,7 +58,6 @@ describe('updateCursorPosition', () => {
         clientY: 0,
       } as MouseEvent,
       '1',
-      false,
       '-1',
     );
 
