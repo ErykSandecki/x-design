@@ -106,7 +106,7 @@ const Element: FC<TElementProps> = ({
         setOutline({ x: x1, y: y1 });
       });
     }
-  }, [displayOutline, coordinates, parentId, itemsRefs]);
+  }, [displayOutline, coordinates, parentId, position, itemsRefs]);
 
   return (
     <Box

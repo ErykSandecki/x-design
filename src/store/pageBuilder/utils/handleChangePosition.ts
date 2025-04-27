@@ -33,8 +33,10 @@ export const handleChangePosition = (
       ? BASE_2D
       : getAbsolutePosition(id, mainParent, z);
 
+    clonedElements.allData[id].alignment = undefined;
     clonedElements.allData[id].position = reversePosition;
     clonedElements.allData[id].coordinates = targetCoordinates;
+    clonedElements.dynamicData[id].alignment = undefined;
     clonedElements.dynamicData[id].position = reversePosition;
     clonedElements.dynamicData[id].coordinates = targetCoordinates;
     clonedElements.staticData[id].position = reversePosition;
