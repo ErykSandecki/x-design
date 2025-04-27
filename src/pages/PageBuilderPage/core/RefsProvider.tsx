@@ -1,4 +1,11 @@
-import { createContext, useRef, useContext, FC, ReactNode } from 'react';
+import {
+  createContext,
+  useRef,
+  useContext,
+  FC,
+  ReactNode,
+  useMemo,
+} from 'react';
 
 // types
 import { TContext } from './types';
@@ -20,15 +27,13 @@ export const RefsProvider: FC<TRefsProvider> = ({
 }) => {
   const itemRefs = useRef(itemRefsDefault);
   const overlayContainerRef = useRef(overlayContainerRefHtml);
-
-  return (
-    <RefsContext.Provider
-      value={{
-        itemsRefs: itemRefs.current,
-        overlayContainerRef,
-      }}
-    >
-      {children}
-    </RefsContext.Provider>
+  const value = useMemo(
+    () => ({
+      itemsRefs: itemRefs.current,
+      overlayContainerRef: overlayContainerRef,
+    }),
+    [],
   );
+
+  return <RefsContext.Provider value={value}>{children}</RefsContext.Provider>;
 };
