@@ -11,7 +11,11 @@ import { useClickHorizontalAlignmentEvent } from './hooks/useClickHorizontalAlig
 import { useClickVerticalAlignmentEvent } from './hooks/useClickVerticalAlignmentEvent';
 
 // others
-import { translationNameSpace } from './constants';
+import {
+  HORIZONTAL_BUTTONS,
+  translationNameSpace,
+  VERTICAL_BUTTONS,
+} from './constants';
 
 // store
 import {
@@ -20,7 +24,7 @@ import {
 } from 'store/pageBuilder/selectors';
 
 // types
-import { AlignmentHorizontal, AlignmentVertical } from 'types';
+import { TButtonGroup } from 'shared/UITools/components/ButtonGroup/types';
 
 const ColumnAlignment: FC = () => {
   const selectedElements = useSelector(selectedElementsSelector);
@@ -34,44 +38,26 @@ const ColumnAlignment: FC = () => {
   return (
     <UITools.SectionColumn labels={[t(`${translationNameSpace}.label`)]}>
       <UITools.ButtonGroup
-        buttons={[
-          {
-            disabled,
-            name: 'AlignHorizontalLeft',
-            onClick: () => onClickHorizontalAlignment(AlignmentHorizontal.left),
-          },
-          {
-            disabled,
-            name: 'AlignHorizontalCenter',
-            onClick: () =>
-              onClickHorizontalAlignment(AlignmentHorizontal.center),
-          },
-          {
-            disabled,
-            name: 'AlignHorizontalRight',
-            onClick: () =>
-              onClickHorizontalAlignment(AlignmentHorizontal.right),
-          },
-        ]}
+        buttons={HORIZONTAL_BUTTONS.map(
+          ({ key, name }) =>
+            ({
+              disabled,
+              name,
+              onClick: () => onClickHorizontalAlignment(key),
+            }) as TButtonGroup,
+        )}
+        e2eValue="horizontal-alignment"
       />
       <UITools.ButtonGroup
-        buttons={[
-          {
-            disabled,
-            name: 'AlignVerticalTop',
-            onClick: () => onClickVerticalAlignment(AlignmentVertical.top),
-          },
-          {
-            disabled,
-            name: 'AlignVerticalCenter',
-            onClick: () => onClickVerticalAlignment(AlignmentVertical.center),
-          },
-          {
-            disabled,
-            name: 'AlignVerticalBottom',
-            onClick: () => onClickVerticalAlignment(AlignmentVertical.bottom),
-          },
-        ]}
+        buttons={VERTICAL_BUTTONS.map(
+          ({ key, name }) =>
+            ({
+              disabled,
+              name,
+              onClick: () => onClickVerticalAlignment(key),
+            }) as TButtonGroup,
+        )}
+        e2eValue="vertical-alignment"
       />
     </UITools.SectionColumn>
   );

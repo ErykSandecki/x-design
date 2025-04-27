@@ -44,9 +44,15 @@ const stateMock = {
         elements: {
           ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements,
           dynamicData: {
+            ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements
+              .dynamicData,
             [elementDynamicDataMock.id]: elementDynamicDataMock,
           },
-          staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
+          staticData: {
+            ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements
+              .staticData,
+            [elementStaticDataMock.id]: elementStaticDataMock,
+          },
         },
       },
     },
@@ -135,18 +141,23 @@ describe('Element snapshots', () => {
       [PAGE_BUILDER]: {
         ...stateMock[PAGE_BUILDER],
         pages: {
-          ...pageBuilderStateMock[PAGE_BUILDER].pages,
+          ...stateMock[PAGE_BUILDER].pages,
           ['0']: {
-            ...pageBuilderStateMock[PAGE_BUILDER].pages['0'],
+            ...stateMock[PAGE_BUILDER].pages['0'],
             elements: {
+              ...stateMock[PAGE_BUILDER].pages['0'].elements,
               dynamicData: {
+                ...stateMock[PAGE_BUILDER].pages['0'].elements.dynamicData,
                 [elementDynamicDataMock.id]: {
                   ...elementDynamicDataMock,
                   height: 'auto',
                   width: 'auto',
                 },
               },
-              staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
+              staticData: {
+                ...stateMock[PAGE_BUILDER].pages['0'].elements.staticData,
+                [elementStaticDataMock.id]: elementStaticDataMock,
+              },
             },
           },
         },

@@ -37,11 +37,17 @@ import {
   reducerHistorySave,
   reducerHistoryUndo,
   changePosition,
+  changeAlignment,
 } from '../actions';
 
 // types
+import {
+  AlignmentHorizontal,
+  AlignmentVertical,
+  TAction,
+  TBackground,
+} from 'types';
 import { Anchor } from '../enums';
-import { TAction, TBackground } from 'types';
 import { TPageBuilderState } from '../types';
 
 describe('PageBuilderReducer', () => {
@@ -111,6 +117,190 @@ describe('PageBuilderReducer', () => {
               },
             },
           },
+        },
+      },
+    });
+  });
+
+  it('should handle CHANGE_ALIGNMENT', () => {
+    const alignment = {
+      horizontal: AlignmentHorizontal.center,
+      vertical: AlignmentVertical.center,
+    };
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+
+    // before
+    const state = reducer(changeAlignment(alignment), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            allData: {
+              ...currentPage.elements.allData,
+              ['-1']: {
+                ...currentPage.elements.allData['-1'],
+                children: [elementAllDataMock.id],
+              },
+              [elementAllDataMock.id]: {
+                ...elementAllDataMock,
+                children: ['2', '3'],
+                position: 'absolute',
+              },
+              ['2']: {
+                ...elementAllDataMock,
+                children: [],
+                id: '2',
+                parentId: '1',
+                position: 'absolute',
+              },
+              ['3']: {
+                ...elementAllDataMock,
+                children: [],
+                id: '3',
+                parentId: '1',
+                position: 'relative',
+              },
+            },
+            dynamicData: {
+              ...currentPage.elements.dynamicData,
+              ...currentPage.elements.allData,
+              [elementDynamicDataMock.id]: {
+                ...elementDynamicDataMock,
+                position: 'absolute',
+              },
+              ['2']: {
+                ...elementDynamicDataMock,
+                id: '2',
+                position: 'absolute',
+              },
+              ['3']: {
+                ...elementDynamicDataMock,
+                id: '3',
+                position: 'relative',
+              },
+            },
+            staticData: {
+              ...currentPage.elements.staticData,
+              ['-1']: {
+                ...currentPage.elements.staticData['-1'],
+                children: [elementStaticDataMock.id],
+              },
+              [elementStaticDataMock.id]: {
+                ...elementStaticDataMock,
+                children: ['2', '3'],
+                position: 'absolute',
+              },
+              ['2']: {
+                ...elementStaticDataMock,
+                children: [],
+                id: '2',
+                position: 'absolute',
+              },
+              ['3']: {
+                ...elementStaticDataMock,
+                children: [],
+                id: '3',
+                position: 'relative',
+              },
+            },
+          },
+          selectedElements: [
+            { ...selectedElementMock, id: '2', parentId: '1' },
+            { ...selectedElementMock, id: '3', parentId: '1' },
+          ],
+        },
+      },
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            allData: {
+              ...currentPage.elements.allData,
+              ['-1']: {
+                ...currentPage.elements.allData['-1'],
+                children: [elementAllDataMock.id],
+              },
+              [elementAllDataMock.id]: {
+                ...elementAllDataMock,
+                children: ['2', '3'],
+                position: 'absolute',
+              },
+              ['2']: {
+                ...elementAllDataMock,
+                alignment,
+                children: [],
+                id: '2',
+                parentId: '1',
+                position: 'absolute',
+              },
+              ['3']: {
+                ...elementAllDataMock,
+                alignment,
+                children: [],
+                id: '3',
+                parentId: '1',
+                position: 'absolute',
+              },
+            },
+            dynamicData: {
+              ...currentPage.elements.dynamicData,
+              ...currentPage.elements.allData,
+              [elementDynamicDataMock.id]: {
+                ...elementDynamicDataMock,
+                position: 'absolute',
+              },
+              ['2']: {
+                ...elementDynamicDataMock,
+                alignment,
+                id: '2',
+                position: 'absolute',
+              },
+              ['3']: {
+                ...elementDynamicDataMock,
+                alignment,
+                id: '3',
+                position: 'absolute',
+              },
+            },
+            staticData: {
+              ...currentPage.elements.staticData,
+              ['-1']: {
+                ...currentPage.elements.staticData['-1'],
+                children: [elementStaticDataMock.id],
+              },
+              [elementStaticDataMock.id]: {
+                ...elementStaticDataMock,
+                children: ['2', '3'],
+                position: 'absolute',
+              },
+              ['2']: {
+                ...elementStaticDataMock,
+                children: [],
+                id: '2',
+                position: 'absolute',
+              },
+              ['3']: {
+                ...elementStaticDataMock,
+                children: [],
+                id: '3',
+                position: 'absolute',
+              },
+            },
+          },
+          selectedElements: [
+            { ...selectedElementMock, id: '2', parentId: '1' },
+            { ...selectedElementMock, id: '3', parentId: '1' },
+          ],
         },
       },
     });
@@ -782,12 +972,14 @@ describe('PageBuilderReducer', () => {
             allData: {
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
+                alignment: undefined,
                 coordinates,
               },
             },
             dynamicData: {
               [elementDynamicDataMock.id]: {
                 ...elementDynamicDataMock,
+                alignment: undefined,
                 coordinates,
               },
             },
@@ -930,12 +1122,14 @@ describe('PageBuilderReducer', () => {
             allData: {
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
+                alignment: undefined,
                 coordinates,
               },
             },
             dynamicData: {
               [elementDynamicDataMock.id]: {
                 ...elementDynamicDataMock,
+                alignment: undefined,
                 coordinates,
               },
             },

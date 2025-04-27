@@ -8,6 +8,7 @@ exports[`ButtonGroup snapshots should render ButtonGroup 1`] = `
   >
     <div
       class="ButtonGroup__button ButtonGroup__button--light"
+      data-test-button-group-input="AlignHorizontalLeft"
     >
       <div
         class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -19,6 +20,7 @@ exports[`ButtonGroup snapshots should render ButtonGroup 1`] = `
     </div>
     <div
       class="ButtonGroup__button ButtonGroup__button--light"
+      data-test-button-group-input="AlignHorizontalCenter"
     >
       <div
         class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -30,6 +32,7 @@ exports[`ButtonGroup snapshots should render ButtonGroup 1`] = `
     </div>
     <div
       class="ButtonGroup__button ButtonGroup__button--light"
+      data-test-button-group-input="AlignHorizontalRight"
     >
       <div
         class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -51,6 +54,7 @@ exports[`ButtonGroup snapshots should render with disabled states 1`] = `
   >
     <div
       class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
+      data-test-button-group-input="AlignHorizontalLeft"
     >
       <div
         class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -62,6 +66,7 @@ exports[`ButtonGroup snapshots should render with disabled states 1`] = `
     </div>
     <div
       class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
+      data-test-button-group-input="AlignHorizontalCenter"
     >
       <div
         class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -73,6 +78,7 @@ exports[`ButtonGroup snapshots should render with disabled states 1`] = `
     </div>
     <div
       class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
+      data-test-button-group-input="AlignHorizontalRight"
     >
       <div
         class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"

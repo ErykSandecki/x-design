@@ -35,6 +35,10 @@
       cursor: pointer;
       filter: brightness(150%);
     }
+
+    &--disabled {
+      pointer-events: none;
+    }
   }
 
   &__icon {

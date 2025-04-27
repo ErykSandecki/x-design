@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 
 // components
@@ -18,6 +18,12 @@ import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 
 // store
 import { configureStore } from 'store/store';
+
+// types
+import { E2EAttribute } from 'types';
+
+// utils
+import { getByE2EAttribute } from 'test';
 
 const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 const stateMock = {
@@ -158,5 +164,123 @@ describe('ColumnAlignment snapshots', () => {
 
     // result
     expect(asFragment()).toMatchSnapshot();
+  });
+});
+
+describe('ColumnAlignment behaviors', () => {
+  it('should change alignments', () => {
+    // mock
+    const store = configureStore({
+      ...stateMock,
+      [PAGE_BUILDER]: {
+        ...pageBuilderStateMock[PAGE_BUILDER],
+        pages: {
+          ...pageBuilderStateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...stateMock[PAGE_BUILDER].pages['0'],
+            elements: {
+              ...currentPage.elements,
+              allData: {
+                ...currentPage.elements.allData,
+                ['-1']: {
+                  ...currentPage.elements.allData['-1'],
+                  children: [elementAllDataMock.id],
+                },
+                [elementAllDataMock.id]: {
+                  ...elementAllDataMock,
+                  children: ['2'],
+                  position: 'absolute',
+                },
+                ['2']: {
+                  ...elementAllDataMock,
+                  children: [],
+                  id: '2',
+                  parentId: '1',
+                  position: 'absolute',
+                },
+              },
+              dynamicData: {
+                ...currentPage.elements.dynamicData,
+                ...currentPage.elements.allData,
+                [elementDynamicDataMock.id]: {
+                  ...elementDynamicDataMock,
+                  position: 'absolute',
+                },
+                ['2']: {
+                  ...elementDynamicDataMock,
+                  id: '2',
+                  position: 'absolute',
+                },
+              },
+              staticData: {
+                ...currentPage.elements.staticData,
+                ['-1']: {
+                  ...currentPage.elements.staticData['-1'],
+                  children: [elementStaticDataMock.id],
+                },
+                [elementStaticDataMock.id]: {
+                  ...elementStaticDataMock,
+                  children: ['2'],
+                  position: 'absolute',
+                },
+                ['2']: {
+                  ...elementStaticDataMock,
+                  children: [],
+                  id: '2',
+                  position: 'absolute',
+                },
+              },
+            },
+            selectedElements: [
+              { ...selectedElementMock, id: '2', parentId: '1' },
+            ],
+          },
+        },
+      },
+    });
+
+    // before
+    const { container } = render(
+      <Provider store={store}>
+        <ColumnAlignment />
+      </Provider>,
+    );
+
+    // find
+    const horizontalButtonGroup = getByE2EAttribute(
+      container,
+      E2EAttribute.buttonGroup,
+      'horizontal-alignment',
+    );
+
+    // action
+    fireEvent.click(
+      getByE2EAttribute(
+        horizontalButtonGroup,
+        E2EAttribute.buttonGroupInput,
+        'AlignHorizontalLeft',
+      ),
+    );
+
+    // find
+    const verticalButtonGroup = getByE2EAttribute(
+      container,
+      E2EAttribute.buttonGroup,
+      'vertical-alignment',
+    );
+
+    // action
+    fireEvent.click(
+      getByE2EAttribute(
+        verticalButtonGroup,
+        E2EAttribute.buttonGroupInput,
+        'AlignVerticalTop',
+      ),
+    );
+
+    // result
+    expect(
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['2'].alignment,
+    ).toStrictEqual({ horizontal: 'left', vertical: 'top' });
   });
 });

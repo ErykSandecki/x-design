@@ -2,9 +2,9 @@
 import { selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // utils
-import { getOffsetXY } from '../getOffsetXY';
+import { getAbsolutePosition } from '../getAbsolutePosition';
 
-describe('getOffsetXY', () => {
+describe('getAbsolutePosition', () => {
   beforeEach(() => {
     // mock
     const el1 = document.createElement('div');
@@ -21,11 +21,12 @@ describe('getOffsetXY', () => {
     document.body.appendChild(el2);
   });
 
-  it(`should return offset x & y`, () => {
+  it(`should return position`, () => {
     // before
-    const result = getOffsetXY(
+    const result = getAbsolutePosition(
       selectedElementMock.id,
       selectedElementMock.parentId,
+      1,
     );
 
     // result

@@ -57,12 +57,14 @@ describe('handleSetElementCoordinates', () => {
             allData: {
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
+                alignment: undefined,
                 coordinates,
               },
             },
             dynamicData: {
               [elementDynamicDataMock.id]: {
                 ...elementDynamicDataMock,
+                alignment: undefined,
                 coordinates,
               },
             },
@@ -123,10 +125,14 @@ describe('handleSetElementCoordinates', () => {
           ...currentPage,
           elements: {
             allData: {
-              [elementAllDataMock.id]: elementAllDataMock,
+              [elementAllDataMock.id]: {
+                ...elementAllDataMock,
+              },
             },
             dynamicData: {
-              [elementDynamicDataMock.id]: elementDynamicDataMock,
+              [elementDynamicDataMock.id]: {
+                ...elementDynamicDataMock,
+              },
             },
             staticData: {
               [elementStaticDataMock.id]: elementStaticDataMock,

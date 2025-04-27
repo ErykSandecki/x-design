@@ -35,10 +35,8 @@ export const useMouseDownEvent = (
         alignment,
         coordinates,
         cursorPosition,
-        dispatch,
         event,
         id,
-        isMultiple,
         isSelected,
         mainParentId,
       );

@@ -56,12 +56,14 @@ describe('handleSetElementsCoordinates', () => {
             allData: {
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
+                alignment: undefined,
                 coordinates,
               },
             },
             dynamicData: {
               [elementDynamicDataMock.id]: {
                 ...elementDynamicDataMock,
+                alignment: undefined,
                 coordinates,
               },
             },

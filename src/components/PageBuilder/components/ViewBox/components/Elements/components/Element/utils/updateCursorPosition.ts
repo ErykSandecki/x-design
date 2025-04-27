@@ -1,4 +1,3 @@
-import { Dispatch } from 'redux';
 import { RefObject } from 'react';
 
 // store
@@ -10,7 +9,6 @@ import { T2DCoordinates, T3DCoordinates, TElement } from 'types';
 
 // utils
 import { getAbsolutePosition } from 'store/pageBuilder/utils/getAbsolutePosition';
-import { initSetElementsCoordinates } from '../../../../../utils/initSetElementsCoordinates';
 
 export const getPositionXY = (
   alignment: TElement['alignment'],
@@ -39,16 +37,14 @@ export const updateCursorPosition = (
   alignment: TElement['alignment'],
   coordinates: TElement['coordinates'],
   cursorPosition: RefObject<T2DCoordinates>,
-  dispatch: Dispatch,
   event: MouseEvent | React.MouseEvent,
   id: TElement['id'],
-  isMultiple: boolean,
   isSelected: boolean,
   mainParentId: TElement['parentId'],
 ): void => {
   const z = areaAxisSelectorCreator('z')(store.getState());
 
-  if (!isMultiple || !isSelected) {
+  if (!isSelected) {
     cursorPosition.current = getPositionXY(
       alignment,
       coordinates,
@@ -57,8 +53,5 @@ export const updateCursorPosition = (
       mainParentId,
       z,
     );
-  } else {
-    // TODO probalby usuless
-    initSetElementsCoordinates(cursorPosition, dispatch, event, true);
   }
 };

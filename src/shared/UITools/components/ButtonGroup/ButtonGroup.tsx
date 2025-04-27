@@ -16,7 +16,9 @@ import styles from './button-group.scss';
 // types
 import { E2EAttribute } from 'types';
 import { TButtonGroup } from './types';
-import { TE2EDataAttributeProps } from '../../../E2EDataAttributes/E2EDataAttribute';
+import E2EDataAttribute, {
+  TE2EDataAttributeProps,
+} from '../../../E2EDataAttributes/E2EDataAttribute';
 
 export type TSectionProps = TBoxProps & {
   buttons: Array<TButtonGroup>;
@@ -40,26 +42,31 @@ export const ButtonGroup: FC<TSectionProps> = ({
       {...restProps}
     >
       {buttons.map(({ disabled, name, onClick }) => (
-        <div
-          className={cx(classNamesWithTheme.button.name, [
-            classNamesWithTheme.button.modificators.disabled,
-            disabled,
-          ])}
+        <E2EDataAttribute
           key={name}
-          onClick={onClick}
+          type={E2EAttribute.buttonGroupInput}
+          value={name}
         >
-          <Icon
-            classes={{
-              className: cx(classNamesWithTheme.icon.name, [
-                classNamesWithTheme.icon.modificators.disabled,
-                disabled,
-              ]),
-            }}
-            height={12}
-            name={name}
-            width={12}
-          />
-        </div>
+          <div
+            className={cx(classNamesWithTheme.button.name, [
+              classNamesWithTheme.button.modificators.disabled,
+              disabled,
+            ])}
+            onClick={onClick}
+          >
+            <Icon
+              classes={{
+                className: cx(classNamesWithTheme.icon.name, [
+                  classNamesWithTheme.icon.modificators.disabled,
+                  disabled,
+                ]),
+              }}
+              height={12}
+              name={name}
+              width={12}
+            />
+          </div>
+        </E2EDataAttribute>
       ))}
     </Box>
   );
