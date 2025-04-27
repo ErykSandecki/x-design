@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 // hooks
-import { useOnBlurEvent } from './useOnBlurEvent';
-import { useOnChangeEvent } from './useOnChangeEvent';
+import { useBlurEvent } from './useBlurEvent';
+import { useChangeEvent } from './useChangeEvent';
+import { useMouseDownEvent } from './useMouseDownEvent';
 
 // store
 import { mainParentIdSelectorCreator } from 'store/pageBuilder/selectors';
@@ -19,6 +20,7 @@ type TUsePositionEvents = {
   onBlurY: () => void;
   onChangeX: (value: string, isScrubbableInput?: boolean) => void;
   onChangeY: (value: string, isScrubbableInput?: boolean) => void;
+  onMouseDown: () => void;
   x: string;
   y: string;
 };
@@ -34,8 +36,8 @@ export const usePositionEvents = (
   const [x, setX] = useState('');
   const [y, setY] = useState('');
   const mainParentId = useSelector(mainParentIdSelectorCreator(parentId));
-  const onBlurEvents = useOnBlurEvent(element, isMultiple, setX, setY, x, y);
-  const onChangeEvents = useOnChangeEvent(
+  const onBlurEvents = useBlurEvent(element, isMultiple, setX, setY, x, y);
+  const onChangeEvents = useChangeEvent(
     element,
     isMultiple,
     isMixedX,
@@ -61,6 +63,7 @@ export const usePositionEvents = (
   return {
     ...onBlurEvents,
     ...onChangeEvents,
+    onMouseDown: useMouseDownEvent(),
     x,
     y,
   };

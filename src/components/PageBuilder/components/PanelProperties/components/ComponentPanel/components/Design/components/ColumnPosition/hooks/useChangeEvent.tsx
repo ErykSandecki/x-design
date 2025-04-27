@@ -9,12 +9,15 @@ import {
 // types
 import { TElement } from 'types';
 
-export type TUseOnChangeEvent = {
+// utils
+import { canChangeValue } from '../utils/canChangeValue';
+
+export type TUseChangeEvent = {
   onChangeX: (value: string, isScrubbableInput?: boolean) => void;
   onChangeY: (value: string, isScrubbableInput?: boolean) => void;
 };
 
-export const useOnChangeEvent = (
+export const useChangeEvent = (
   element: TElement,
   isMultiple: boolean,
   isMixedX: boolean,
@@ -23,7 +26,7 @@ export const useOnChangeEvent = (
   setY: (value: string) => void,
   x: string,
   y: string,
-): TUseOnChangeEvent => {
+): TUseChangeEvent => {
   const dispatch = useDispatch();
   const { id } = element;
 
@@ -41,16 +44,8 @@ export const useOnChangeEvent = (
     }
   };
 
-  const canChange = (isMixed: boolean, isScrubbableInput: boolean): boolean => {
-    if (isMixed || isMultiple) {
-      return !isScrubbableInput;
-    }
-
-    return true;
-  };
-
   const handleChangeX = (value: string, isScrubbableInput: boolean): void => {
-    if (canChange(isMixedX, isScrubbableInput)) {
+    if (canChangeValue(isMixedX, isMultiple, isScrubbableInput)) {
       setX(value);
     }
 
@@ -61,7 +56,7 @@ export const useOnChangeEvent = (
     );
   };
   const handleChangeY = (value: string, isScrubbableInput: boolean): void => {
-    if (canChange(isMixedY, isScrubbableInput)) {
+    if (canChangeValue(isMixedY, isMultiple, isScrubbableInput)) {
       setY(value);
     }
 

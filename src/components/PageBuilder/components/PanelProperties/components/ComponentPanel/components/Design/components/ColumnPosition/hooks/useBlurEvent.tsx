@@ -9,19 +9,19 @@ import {
 // types
 import { TElement } from 'types';
 
-export type TUseOnBlurEvent = {
+export type TUseBlurEvent = {
   onBlurX: () => void;
   onBlurY: () => void;
 };
 
-export const useOnBlurEvent = (
+export const useBlurEvent = (
   element: TElement,
   isMultiple: boolean,
   setX: (value: string) => void,
   setY: (value: string) => void,
   x: string,
   y: string,
-): TUseOnBlurEvent => {
+): TUseBlurEvent => {
   const dispatch = useDispatch();
   const { id } = element;
 

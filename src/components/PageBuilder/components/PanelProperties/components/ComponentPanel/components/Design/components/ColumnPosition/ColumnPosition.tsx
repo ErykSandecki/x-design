@@ -13,12 +13,12 @@ import { MAX, MIN, translationNameSpace } from './constants';
 import { usePositionEvents } from './hooks/usePositionEvents';
 
 // store
-import { clearPrevState } from 'store/pageBuilder/actions';
 import {
   dynamicDataSelector,
   elementAllDataSelectorCreator,
   selectedElementsSelector,
 } from 'store/pageBuilder/selectors';
+import { updateEventsStatus } from 'store/pageBuilder/actions';
 
 // types
 import { ColorsTheme, KeyboardKeys } from 'types';
@@ -42,13 +42,8 @@ const ColumnPosition: FC = () => {
   const isRelative = selectedElements.some(
     ({ position }) => position === 'relative',
   );
-  const { onBlurX, onBlurY, onChangeX, onChangeY, x, y } = usePositionEvents(
-    element,
-    isMixedX,
-    isMixedY,
-    isMultiple,
-    isRelative,
-  );
+  const { onBlurX, onBlurY, onChangeX, onChangeY, onMouseDown, x, y } =
+    usePositionEvents(element, isMixedX, isMixedY, isMultiple, isRelative);
 
   return (
     <UITools.SectionColumn labels={[t(`${translationNameSpace}.label`)]}>
@@ -67,7 +62,10 @@ const ColumnPosition: FC = () => {
             max={MAX}
             min={MIN}
             onChange={(value) => onChangeX(value.toString(), true)}
-            onMouseDown={() => dispatch(clearPrevState())}
+            onMouseDown={onMouseDown}
+            onMouseUp={() =>
+              dispatch(updateEventsStatus({ isMultipleMoving: false }))
+            }
             value={isMultiple ? 0 : parseFloat(x)}
           >
             <Small color={ColorsTheme.neutral2}>X</Small>
@@ -91,7 +89,10 @@ const ColumnPosition: FC = () => {
             max={MAX}
             min={MIN}
             onChange={(value) => onChangeY(value.toString(), true)}
-            onMouseDown={() => dispatch(clearPrevState())}
+            onMouseDown={onMouseDown}
+            onMouseUp={() =>
+              dispatch(updateEventsStatus({ isMultipleMoving: false }))
+            }
             value={isMultiple ? 0 : parseFloat(y)}
           >
             <Small color={ColorsTheme.neutral2}>Y</Small>
