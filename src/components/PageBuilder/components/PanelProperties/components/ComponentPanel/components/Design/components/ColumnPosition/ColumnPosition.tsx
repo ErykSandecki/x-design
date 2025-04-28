@@ -7,11 +7,11 @@ import { useTranslation } from 'react-i18next';
 import ConstrainsView from '../../../../../../../../shared/ConstrainsView/ConstrainsView';
 import { ScrubbableInput, Small, UITools } from 'shared';
 
-// others
-import { MAX, MIN, translationNameSpace } from './constants';
-
 // hooks
 import { usePositionEvents } from './hooks/usePositionEvents';
+
+// others
+import { MAX, MIN, translationNameSpace } from './constants';
 
 // store
 import {

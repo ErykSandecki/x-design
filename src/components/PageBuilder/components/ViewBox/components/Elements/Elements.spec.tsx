@@ -24,8 +24,8 @@ import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 import { configureStore } from 'store/store';
 
 // types
-import { MouseMode } from 'types/enums/mouseMode';
 import { ElementType } from 'types';
+import { MouseMode } from 'types/enums/mouseMode';
 
 const element = document.createElement('div');
 const overlayContainer = document.createElement('div');

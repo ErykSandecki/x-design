@@ -1,5 +1,5 @@
-import { Provider } from 'react-redux';
 import { fireEvent, render } from '@testing-library/react';
+import { Provider } from 'react-redux';
 
 // components
 import Toolbar from './Toolbar';

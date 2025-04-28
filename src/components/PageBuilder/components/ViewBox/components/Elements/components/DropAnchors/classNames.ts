@@ -1,4 +1,6 @@
 import { mapValues } from 'lodash';
+
+// types
 import { DropAnchorsPosition } from './enums';
 
 export const className = 'DropAnchors';
