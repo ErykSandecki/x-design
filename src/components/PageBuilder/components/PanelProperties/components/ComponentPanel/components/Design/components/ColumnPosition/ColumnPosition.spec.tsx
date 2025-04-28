@@ -20,7 +20,12 @@ import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 import { configureStore } from 'store/store';
 
 // types
-import { E2EAttribute, KeyboardKeys } from 'types';
+import {
+  AlignmentHorizontal,
+  AlignmentVertical,
+  E2EAttribute,
+  KeyboardKeys,
+} from 'types';
 
 // utils
 import { getByE2EAttribute } from 'test';
@@ -116,6 +121,85 @@ describe('ColumnPosition snapshots', () => {
                 },
                 ['2']: {
                   ...elementDynamicDataMock,
+                  coordinates: { x: 100, y: 100 },
+                  id: '2',
+                },
+              },
+              staticData: {
+                ...stateMock[PAGE_BUILDER].pages['0'].elements.staticData,
+                ['-1']: {
+                  ...stateMock[PAGE_BUILDER].pages['0'].elements.staticData[
+                    '-1'
+                  ],
+                  children: ['1', '2'],
+                },
+                ['2']: {
+                  ...elementStaticDataMock,
+                  id: '2',
+                },
+              },
+            },
+            selectedElements: [
+              ...stateMock[PAGE_BUILDER].pages['0'].selectedElements,
+              { ...selectedElementMock, id: '2' },
+            ],
+          },
+        },
+      },
+    });
+
+    // before
+    const { asFragment } = render(
+      <Provider store={store}>
+        <ColumnPosition />
+      </Provider>,
+    );
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('should render when some element has alignment', () => {
+    // mock
+    const store = configureStore({
+      ...stateMock,
+      [PAGE_BUILDER]: {
+        ...stateMock[PAGE_BUILDER],
+        pages: {
+          ['0']: {
+            ...stateMock[PAGE_BUILDER].pages['0'],
+            elements: {
+              ...stateMock[PAGE_BUILDER].pages['0'].elements,
+              allData: {
+                ...stateMock[PAGE_BUILDER].pages['0'].elements.allData,
+                ['-1']: {
+                  ...stateMock[PAGE_BUILDER].pages['0'].elements.allData['-1'],
+                  children: ['1', '2'],
+                },
+                ['2']: {
+                  ...elementAllDataMock,
+                  alignment: {
+                    horizontal: AlignmentHorizontal.center,
+                    vertical: AlignmentVertical.center,
+                  },
+                  coordinates: { x: 100, y: 100 },
+                  id: '2',
+                },
+              },
+              dynamicData: {
+                ...stateMock[PAGE_BUILDER].pages['0'].elements.dynamicData,
+                ['-1']: {
+                  ...stateMock[PAGE_BUILDER].pages['0'].elements.dynamicData[
+                    '-1'
+                  ],
+                  children: ['1', '2'],
+                },
+                ['2']: {
+                  ...elementDynamicDataMock,
+                  alignment: {
+                    horizontal: AlignmentHorizontal.center,
+                    vertical: AlignmentVertical.center,
+                  },
                   coordinates: { x: 100, y: 100 },
                   id: '2',
                 },

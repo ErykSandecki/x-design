@@ -1,19 +1,12 @@
 import { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
 
 // hooks
 import { useBlurEvent } from './useBlurEvent';
 import { useChangeEvent } from './useChangeEvent';
 import { useMouseDownEvent } from './useMouseDownEvent';
 
-// store
-import { mainParentIdSelectorCreator } from 'store/pageBuilder/selectors';
-
 // types
 import { TElement } from 'types';
-
-// utils
-import { getCoordinates } from '../utils/getCoordinates';
 
 type TUsePositionEvents = {
   onBlurX: () => void;
@@ -35,7 +28,6 @@ export const usePositionEvents = (
   const { alignment, coordinates, parentId, position } = element;
   const [x, setX] = useState('');
   const [y, setY] = useState('');
-  const mainParentId = useSelector(mainParentIdSelectorCreator(parentId));
   const onBlurEvents = useBlurEvent(element, isMultiple, setX, setY, x, y);
   const onChangeEvents = useChangeEvent(
     element,
@@ -50,7 +42,7 @@ export const usePositionEvents = (
 
   useEffect(() => {
     if (!isRelative) {
-      const { x, y } = getCoordinates(element, mainParentId);
+      const { x, y } = element.coordinates;
 
       setX(isMixedX ? 'Mixed' : x.toString());
       setY(isMixedY ? 'Mixed' : y.toString());

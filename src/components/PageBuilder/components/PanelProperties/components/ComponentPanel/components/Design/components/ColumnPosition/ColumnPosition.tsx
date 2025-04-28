@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
 // components
+import ConstrainsView from '../../../../../../../../shared/ConstrainsView/ConstrainsView';
 import { ScrubbableInput, Small, UITools } from 'shared';
 
 // others
@@ -25,6 +26,7 @@ import { ColorsTheme, KeyboardKeys } from 'types';
 
 // utils
 import { handleSubmitInput } from 'utils';
+import { hasSomeAlignment } from './utils/hasSomeAlignment';
 import { isMixed } from './utils/isMixed';
 
 const ColumnPosition: FC = () => {
@@ -37,18 +39,32 @@ const ColumnPosition: FC = () => {
   const refInputY = useRef<HTMLInputElement>(null);
   const { t } = useTranslation();
   const isMultiple = size(selectedElements) > 1;
+  const hasAlignment = hasSomeAlignment(dynamicData, selectedElements);
   const isMixedX = isMixed('x', dynamicData, firstElement, selectedElements);
   const isMixedY = isMixed('y', dynamicData, firstElement, selectedElements);
   const isRelative = selectedElements.some(
     ({ position }) => position === 'relative',
   );
+  const disabled = hasAlignment || isRelative;
   const { onBlurX, onBlurY, onChangeX, onChangeY, onMouseDown, x, y } =
     usePositionEvents(element, isMixedX, isMixedY, isMultiple, isRelative);
 
   return (
-    <UITools.SectionColumn labels={[t(`${translationNameSpace}.label`)]}>
+    <UITools.SectionColumn
+      buttonsIcon={
+        hasAlignment
+          ? [
+              <ConstrainsView
+                alignment={dynamicData[firstElement.id].alignment}
+                key={0}
+              />,
+            ]
+          : []
+      }
+      labels={[t(`${translationNameSpace}.label`)]}
+    >
       <UITools.TextField
-        disabled={isRelative}
+        disabled={disabled}
         e2eValue="x"
         onBlur={onBlurX}
         onChange={(event) => onChangeX(event.target.value)}
@@ -59,7 +75,7 @@ const ColumnPosition: FC = () => {
         ref={refInputX}
         startAdornment={
           <ScrubbableInput
-            disabled={isRelative}
+            disabled={disabled}
             e2eValue="x"
             max={MAX}
             min={MIN}
@@ -73,11 +89,11 @@ const ColumnPosition: FC = () => {
             <Small color={ColorsTheme.neutral2}>X</Small>
           </ScrubbableInput>
         }
-        type={isMixedX ? 'text' : 'number'}
-        value={x}
+        type={isMixedX || hasAlignment ? 'text' : 'number'}
+        value={hasAlignment ? 'auto' : x}
       />
       <UITools.TextField
-        disabled={isRelative}
+        disabled={disabled}
         e2eValue="y"
         onBlur={onBlurY}
         onChange={(event) => onChangeY(event.target.value)}
@@ -88,7 +104,7 @@ const ColumnPosition: FC = () => {
         ref={refInputY}
         startAdornment={
           <ScrubbableInput
-            disabled={isRelative}
+            disabled={disabled}
             e2eValue="y"
             max={MAX}
             min={MIN}
@@ -102,8 +118,8 @@ const ColumnPosition: FC = () => {
             <Small color={ColorsTheme.neutral2}>Y</Small>
           </ScrubbableInput>
         }
-        type={isMixedY ? 'text' : 'number'}
-        value={y}
+        type={isMixedX || hasAlignment ? 'text' : 'number'}
+        value={hasAlignment ? 'auto' : y}
       />
     </UITools.SectionColumn>
   );

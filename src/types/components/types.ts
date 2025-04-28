@@ -5,7 +5,7 @@ import { CSSProperties } from 'react';
 import { AlignmentHorizontal, AlignmentVertical, ElementType } from './enums';
 import { T2DCoordinates } from 'types/types';
 
-export type Alignment = {
+export type TAlignment = {
   horizontal?: AlignmentHorizontal;
   vertical?: AlignmentVertical;
 };
@@ -20,7 +20,7 @@ export type TBackground = {
 };
 
 export type TElement = {
-  alignment?: Alignment;
+  alignment?: TAlignment;
   background: TBackground;
   children: Array<string>;
   coordinates: T2DCoordinates;

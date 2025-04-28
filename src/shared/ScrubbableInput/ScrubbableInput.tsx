@@ -21,7 +21,7 @@ import styles from './scrubbable-input.scss';
 // types
 import { E2EAttribute } from 'types';
 
-export type TScrubbableInput = {
+export type TScrubbableInputProps = {
   children: ReactNode;
   disabled?: boolean;
   e2eValue?: TE2EDataAttributeProps['value'];
@@ -33,7 +33,7 @@ export type TScrubbableInput = {
   value: number;
 };
 
-export const ScrubbableInput: FC<TScrubbableInput> = ({
+export const ScrubbableInput: FC<TScrubbableInputProps> = ({
   children,
   disabled = false,
   e2eValue = '',

@@ -82,6 +82,113 @@ exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
 </DocumentFragment>
 `;
 
+exports[`ColumnPosition snapshots should render when some element has alignment 1`] = `
+<DocumentFragment>
+  <div
+    class="css-q0izro SectionColumn SectionColumn--light"
+    data-test-section=""
+  >
+    <div
+      class="SectionColumn__labels SectionColumn__labels--light"
+      style="width: calc(100% - 24px - 0px - 8px);"
+    >
+      <small
+        class="css-q0izro SectionColumn__label SectionColumn__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        data-test-text=""
+        style="text-align: inherit;"
+      >
+        Position
+      </small>
+    </div>
+    <div
+      class="SectionColumn__wrapper SectionColumn__wrapper--light"
+    >
+      <div
+        class="SectionColumn__content SectionColumn__content--light"
+        style="width: calc(100% - 24px - 0px - 8px);"
+      >
+        <div
+          class="css-q0izro TextField TextField--light TextField--disabled TextField--disabled--light"
+          data-test-text-field="x"
+        >
+          <div
+            class="ScrubbableInput ScrubbableInput--light ScrubbableInput--disabled ScrubbableInput--disabled--light"
+            data-test-scrubbable-input="x"
+          >
+            <small
+              class="css-q0izro Typography Typography--light Typography--neutral2 Typography--neutral2--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+              data-test-text=""
+              style="text-align: inherit;"
+            >
+              X
+            </small>
+          </div>
+          <input
+            class="TextField__input TextField__input--light"
+            data-test-text-field-input="x"
+            disabled=""
+            maxlength="6"
+            type="text"
+            value="auto"
+          />
+        </div>
+        <div
+          class="css-q0izro TextField TextField--light TextField--disabled TextField--disabled--light"
+          data-test-text-field="y"
+        >
+          <div
+            class="ScrubbableInput ScrubbableInput--light ScrubbableInput--disabled ScrubbableInput--disabled--light"
+            data-test-scrubbable-input="y"
+          >
+            <small
+              class="css-q0izro Typography Typography--light Typography--neutral2 Typography--neutral2--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+              data-test-text=""
+              style="text-align: inherit;"
+            >
+              Y
+            </small>
+          </div>
+          <input
+            class="TextField__input TextField__input--light"
+            data-test-text-field-input="y"
+            disabled=""
+            maxlength="6"
+            type="text"
+            value="auto"
+          />
+        </div>
+      </div>
+      <div
+        class="SectionColumn__buttons SectionColumn__buttons--light"
+      >
+        <div
+          class="ConstrainsView ConstrainsView--light"
+        >
+          <div
+            class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--bottom ConstrainsView__constrain--bottom--light"
+          />
+          <div
+            class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--center-horizontal ConstrainsView__constrain--center-horizontal--light"
+          />
+          <div
+            class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--center-vertical ConstrainsView__constrain--center-vertical--light"
+          />
+          <div
+            class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--left ConstrainsView__constrain--left--light"
+          />
+          <div
+            class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--right ConstrainsView__constrain--right--light"
+          />
+          <div
+            class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--top ConstrainsView__constrain--top--light"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`ColumnPosition snapshots should render when values are mixed 1`] = `
 <DocumentFragment>
   <div

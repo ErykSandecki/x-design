@@ -10,6 +10,7 @@ import {
 
 export const getHorizontalPosition = (
   aligment: TElement['alignment'],
+  x: T2DCoordinates['x'],
 ): {
   left?: string;
   right?: string;
@@ -31,9 +32,9 @@ export const getHorizontalPosition = (
         right: '0',
         translateX: '0',
       };
-
     default:
       return {
+        left: `${x}px`,
         translateX: '0',
       };
   }
@@ -41,6 +42,7 @@ export const getHorizontalPosition = (
 
 export const getVerticalPosition = (
   aligment: TElement['alignment'],
+  y: T2DCoordinates['y'],
 ): {
   bottom?: string;
   top?: string;
@@ -62,9 +64,9 @@ export const getVerticalPosition = (
         top: '0',
         translateY: '0',
       };
-
     default:
       return {
+        top: `${y}px`,
         translateY: '0',
       };
   }
@@ -77,12 +79,12 @@ export const getPosition = (
   y: T2DCoordinates['y'],
 ): CSSProperties => {
   if (alignment) {
-    const { translateX, ...restHorizontal } = getHorizontalPosition(alignment);
-    const { translateY, ...restVertical } = getVerticalPosition(alignment);
+    const { translateX, ...horizontal } = getHorizontalPosition(alignment, x);
+    const { translateY, ...vertical } = getVerticalPosition(alignment, y);
 
     return {
-      ...restHorizontal,
-      ...restVertical,
+      ...horizontal,
+      ...vertical,
       transform: `rotate(${rotate}deg) translate(${translateX}, ${translateY})`,
     };
   }

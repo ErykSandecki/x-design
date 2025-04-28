@@ -25,6 +25,7 @@ describe('getPosition', () => {
     // result
     expect(result).toStrictEqual({
       left: '0',
+      top: '0px',
       transform: 'rotate(0deg) translate(0, 0)',
     });
   });
@@ -41,6 +42,7 @@ describe('getPosition', () => {
     // result
     expect(result).toStrictEqual({
       left: '50%',
+      top: '0px',
       transform: 'rotate(0deg) translate(-50%, 0)',
     });
   });
@@ -57,6 +59,7 @@ describe('getPosition', () => {
     // result
     expect(result).toStrictEqual({
       right: '0',
+      top: '0px',
       transform: 'rotate(0deg) translate(0, 0)',
     });
   });
@@ -67,6 +70,7 @@ describe('getPosition', () => {
 
     // result
     expect(result).toStrictEqual({
+      left: '0px',
       top: '0',
       transform: 'rotate(0deg) translate(0, 0)',
     });
@@ -78,6 +82,7 @@ describe('getPosition', () => {
 
     // result
     expect(result).toStrictEqual({
+      left: '0px',
       top: '50%',
       transform: 'rotate(0deg) translate(0, -50%)',
     });
@@ -90,6 +95,7 @@ describe('getPosition', () => {
     // result
     expect(result).toStrictEqual({
       bottom: '0',
+      left: '0px',
       transform: 'rotate(0deg) translate(0, 0)',
     });
   });

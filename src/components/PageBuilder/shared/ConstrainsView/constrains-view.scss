@@ -1,0 +1,117 @@
+@mixin apply-selected-background($suffix) {
+  .ConstrainsView__constrain--#{$suffix} {
+    @include theme('blue-1', background-color);
+    @include theme('blue-1', border, '0.75px solid');
+
+    z-index: 2;
+  }
+}
+
+.ConstrainsView {
+  @include theme-selector(
+    'neutral-3',
+    background-color,
+    '&:hover:not(.ConstrainsView--selected)'
+  );
+
+  border-radius: 5px;
+  cursor: pointer;
+  height: 24px;
+  position: relative;
+  width: 24px;
+
+  &__horizontal {
+    &--center {
+      @include apply-selected-background('center-vertical');
+    }
+
+    &--left {
+      @include apply-selected-background('left');
+    }
+
+    &--right {
+      @include apply-selected-background('right');
+    }
+  }
+
+  &__vertical {
+    &--bottom {
+      @include apply-selected-background('bottom');
+    }
+
+    &--center {
+      @include apply-selected-background('center-horizontal');
+    }
+
+    &--top {
+      @include apply-selected-background('top');
+    }
+  }
+
+  &--selected {
+    &--light {
+      background-color: rgba($color: $--rx-blue-1--light, $alpha: 30%);
+    }
+
+    &--dark {
+      background-color: rgba($color: $--rx-blue-1--dark, $alpha: 30%);
+    }
+  }
+
+  &__constrain {
+    @include theme('neutral-2', background-color);
+    $--rx-size: 1px;
+    $--rx-length: 7.5px;
+
+    box-sizing: border-box;
+    position: absolute;
+
+    &--bottom {
+      bottom: 50%;
+      height: $--rx-size;
+      left: 50%;
+      transform: translate(-50%, 7px);
+      width: $--rx-length;
+    }
+
+    &--center-horizontal {
+      height: $--rx-size;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: $--rx-length;
+    }
+
+    &--center-vertical {
+      height: $--rx-length;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: $--rx-size;
+    }
+
+    &--left {
+      height: $--rx-length;
+      left: 50%;
+      top: 50%;
+      transform: translate(-7px, -50%);
+      width: $--rx-size;
+    }
+
+    &--right {
+      height: $--rx-length;
+      right: 50%;
+      top: 50%;
+      transform: translate(7px, -50%);
+      width: $--rx-size;
+    }
+
+    &--top {
+      height: $--rx-size;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -7px);
+      width: $--rx-length;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConstrainsView snapshots should render ConstrainsView 1`] = `
+<DocumentFragment>
+  <div
+    class="ConstrainsView ConstrainsView--light"
+  >
+    <div
+      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--bottom ConstrainsView__constrain--bottom--light"
+    />
+    <div
+      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--center-horizontal ConstrainsView__constrain--center-horizontal--light"
+    />
+    <div
+      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--center-vertical ConstrainsView__constrain--center-vertical--light"
+    />
+    <div
+      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--left ConstrainsView__constrain--left--light"
+    />
+    <div
+      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--right ConstrainsView__constrain--right--light"
+    />
+    <div
+      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--top ConstrainsView__constrain--top--light"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ConstrainsView snapshots should render selected 1`] = `
+<DocumentFragment>
+  <div
+    class="ConstrainsView ConstrainsView--light ConstrainsView--selected ConstrainsView--selected--light"
+  >
+    <div
+      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--bottom ConstrainsView__constrain--bottom--light"
+    />
+    <div
+      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--center-horizontal ConstrainsView__constrain--center-horizontal--light"
+    />
+    <div
+      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--center-vertical ConstrainsView__constrain--center-vertical--light"
+    />
+    <div
+      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--left ConstrainsView__constrain--left--light"
+    />
+    <div
+      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--right ConstrainsView__constrain--right--light"
+    />
+    <div
+      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--top ConstrainsView__constrain--top--light"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ConstrainsView snapshots should render with alignment 1`] = `
+<DocumentFragment>
+  <div
+    class="ConstrainsView ConstrainsView--light ConstrainsView__horizontal--center ConstrainsView__horizontal--center--light ConstrainsView__vertical--center ConstrainsView__vertical--center--light"
+  >
+    <div
+      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--bottom ConstrainsView__constrain--bottom--light"
+    />
+    <div
+      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--center-horizontal ConstrainsView__constrain--center-horizontal--light"
+    />
+    <div
+      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--center-vertical ConstrainsView__constrain--center-vertical--light"
+    />
+    <div
+      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--left ConstrainsView__constrain--left--light"
+    />
+    <div
+      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--right ConstrainsView__constrain--right--light"
+    />
+    <div
+      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--top ConstrainsView__constrain--top--light"
+    />
+  </div>
+</DocumentFragment>
+`;
