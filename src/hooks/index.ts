@@ -1,4 +1,5 @@
 export * from './useDispatchMany/useDispatchMany';
+export * from './useForceRerender/useForceRerender';
 export * from './useKeyboardHandler/useKeyboardHandler';
 export * from './useKeyboardHandler/types';
 export * from './useResizeHandler/useResizeHandler';

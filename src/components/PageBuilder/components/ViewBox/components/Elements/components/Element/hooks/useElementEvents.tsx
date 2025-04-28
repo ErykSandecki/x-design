@@ -2,6 +2,7 @@ import { RefObject, useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 // hooks
+import { useForceRerender } from 'hooks';
 import { useInitializeRef } from './useInitializeRef';
 import { useMouseDownEvent } from './useMouseDownEvent';
 import { useMouseEnterEvent } from './useMouseEnterEvent';
@@ -48,6 +49,7 @@ export const useElementEvents = (
     type,
   };
 
+  useForceRerender([coordinates]);
   useInitializeRef(elementRef, id);
   useMouseMoveEvent(
     coordinates,
