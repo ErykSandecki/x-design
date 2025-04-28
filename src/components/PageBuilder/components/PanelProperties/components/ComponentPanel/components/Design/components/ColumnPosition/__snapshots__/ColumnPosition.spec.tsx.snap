@@ -26,7 +26,7 @@ exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-q0izro TextField TextField--light"
+          class="css-q0izro TextField TextField--light TextField--full-width TextField--full-width--light"
           data-test-text-field="x"
         >
           <div
@@ -50,7 +50,7 @@ exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
           />
         </div>
         <div
-          class="css-q0izro TextField TextField--light"
+          class="css-q0izro TextField TextField--light TextField--full-width TextField--full-width--light"
           data-test-text-field="y"
         >
           <div
@@ -108,7 +108,7 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-q0izro TextField TextField--light TextField--disabled TextField--disabled--light"
+          class="css-q0izro TextField TextField--light TextField--disabled TextField--disabled--light TextField--full-width TextField--full-width--light"
           data-test-text-field="x"
         >
           <div
@@ -133,7 +133,7 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
           />
         </div>
         <div
-          class="css-q0izro TextField TextField--light TextField--disabled TextField--disabled--light"
+          class="css-q0izro TextField TextField--light TextField--disabled TextField--disabled--light TextField--full-width TextField--full-width--light"
           data-test-text-field="y"
         >
           <div
@@ -215,7 +215,7 @@ exports[`ColumnPosition snapshots should render when values are mixed 1`] = `
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-q0izro TextField TextField--light"
+          class="css-q0izro TextField TextField--light TextField--full-width TextField--full-width--light"
           data-test-text-field="x"
         >
           <div
@@ -239,7 +239,7 @@ exports[`ColumnPosition snapshots should render when values are mixed 1`] = `
           />
         </div>
         <div
-          class="css-q0izro TextField TextField--light"
+          class="css-q0izro TextField TextField--light TextField--full-width TextField--full-width--light"
           data-test-text-field="y"
         >
           <div

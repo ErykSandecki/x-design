@@ -213,7 +213,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
           style="width: calc(100% - 24px - 0px - 8px);"
         >
           <div
-            class="css-q0izro TextField TextField--light"
+            class="css-q0izro TextField TextField--light TextField--full-width TextField--full-width--light"
             data-test-text-field="x"
           >
             <div
@@ -237,7 +237,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
             />
           </div>
           <div
-            class="css-q0izro TextField TextField--light"
+            class="css-q0izro TextField TextField--light TextField--full-width TextField--full-width--light"
             data-test-text-field="y"
           >
             <div

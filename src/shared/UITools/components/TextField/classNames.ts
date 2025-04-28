@@ -5,6 +5,7 @@ export const classNames = {
     name: className,
     modificators: {
       disabled: `${className}--disabled`,
+      fullWidth: `${className}--full-width`,
     },
   },
   input: `${className}__input`,

@@ -66,6 +66,7 @@ const ColumnPosition: FC = () => {
       <UITools.TextField
         disabled={disabled}
         e2eValue="x"
+        fullWidth
         onBlur={onBlurX}
         onChange={(event) => onChangeX(event.target.value)}
         onClick={() => refInputX.current.select()}
@@ -95,6 +96,7 @@ const ColumnPosition: FC = () => {
       <UITools.TextField
         disabled={disabled}
         e2eValue="y"
+        fullWidth
         onBlur={onBlurY}
         onChange={(event) => onChangeY(event.target.value)}
         onClick={() => refInputY.current.select()}

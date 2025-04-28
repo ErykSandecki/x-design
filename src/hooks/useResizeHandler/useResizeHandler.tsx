@@ -114,7 +114,7 @@ export const useResizeHandler = (
   useEffect(() => {
     if (isPressingX) {
       document.body.style.cursor = 'ew-resize';
-      document.body.style.userSelect = 'none !important';
+      document.body.style.userSelect = 'none';
     }
 
     return () => {
@@ -126,7 +126,7 @@ export const useResizeHandler = (
   useEffect(() => {
     if (isPressingY) {
       document.body.style.cursor = 'ns-resize';
-      document.body.style.userSelect = 'none !important';
+      document.body.style.userSelect = 'none';
     }
 
     return () => {

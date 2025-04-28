@@ -26,6 +26,7 @@ export type TTextFieldProps = Omit<
   className?: string;
   e2eValue?: TE2EDataAttributeProps['value'];
   endAdorment?: ReactNode;
+  fullWidth?: boolean;
   ref?: Ref<HTMLInputElement>;
   startAdornment?: ReactNode;
 };
@@ -35,6 +36,7 @@ export const TextField: FC<TTextFieldProps> = ({
   disabled,
   e2eValue = '',
   endAdorment,
+  fullWidth = false,
   ref,
   startAdornment,
   ...restProps
@@ -44,10 +46,18 @@ export const TextField: FC<TTextFieldProps> = ({
   return (
     <Box
       classes={{
-        className: cx(className, classNamesWithTheme[textFieldClassName].name, [
-          classNamesWithTheme[textFieldClassName].modificators.disabled,
-          disabled,
-        ]),
+        className: cx(
+          className,
+          classNamesWithTheme[textFieldClassName].name,
+          [
+            classNamesWithTheme[textFieldClassName].modificators.disabled,
+            disabled,
+          ],
+          [
+            classNamesWithTheme[textFieldClassName].modificators.fullWidth,
+            fullWidth,
+          ],
+        ),
       }}
       e2eAttribute={E2EAttribute.textField}
       e2eValue={e2eValue}
