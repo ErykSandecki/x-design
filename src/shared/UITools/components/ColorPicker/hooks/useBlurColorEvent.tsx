@@ -1,3 +1,4 @@
+// utils
 import { isHexColor } from 'utils';
 
 export type TUseBlurColorEvent = () => void;
