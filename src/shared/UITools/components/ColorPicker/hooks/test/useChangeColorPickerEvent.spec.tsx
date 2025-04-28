@@ -2,15 +2,15 @@ import { Color } from 'antd/es/color-picker';
 import { renderHook } from '@testing-library/react';
 
 // hooks
-import { useOnChangeColorPickerEvent } from '../useOnChangeColorPickerEvent';
+import { useChangeColorPickerEvent } from '../useChangeColorPickerEvent';
 
 const mockCallBack = jest.fn();
 
-describe('useOnChangeColorPickerEvent', () => {
+describe('useChangeColorPickerEvent', () => {
   it(`should trigger on change`, () => {
     // before
     const { result } = renderHook(() =>
-      useOnChangeColorPickerEvent(mockCallBack),
+      useChangeColorPickerEvent(mockCallBack),
     );
 
     // action

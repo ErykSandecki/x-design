@@ -1,12 +1,12 @@
 import { ChangeEvent } from 'react';
 
-export type TUseOnChangeAlphaEvent = (
+export type TUseChangeColorEvent = (
   event: ChangeEvent<HTMLInputElement>,
 ) => void;
 
-export const useOnChangeAlphaEvent = (
+export const useChangeColorEvent = (
   setValue: (value: string) => void,
-): TUseOnChangeAlphaEvent => {
+): TUseChangeColorEvent => {
   const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
     const { value } = event.target as HTMLInputElement;
     setValue(value);

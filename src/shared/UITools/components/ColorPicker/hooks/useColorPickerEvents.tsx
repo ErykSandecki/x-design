@@ -3,11 +3,11 @@ import { Color } from 'antd/es/color-picker';
 import { debounce } from 'lodash';
 
 // hooks
-import { useOnBlurAlphaEvent } from './useOnBlurAlphaEvent';
-import { useOnBlurColorEvent } from './useOnBlurColorEvent';
-import { useOnChangeAlphaEvent } from './useOnChangeAlphaEvent';
-import { useOnChangeColorEvent } from './useOnChangeColorEvent';
-import { useOnChangeColorPickerEvent } from './useOnChangeColorPickerEvent';
+import { useBlurAlphaEvent } from './useBlurAlphaEvent';
+import { useBlurColorEvent } from './useBlurColorEvent';
+import { useChangeAlphaEvent } from './useChangeAlphaEvent';
+import { useChangeColorEvent } from './useChangeColorEvent';
+import { useChangeColorPickerEvent } from './useChangeColorPickerEvent';
 
 export type TUseColorPickerEvents = {
   alphaValue: string;
@@ -43,21 +43,21 @@ export const useColorPickerEvents = (
   return {
     alphaValue,
     colorValue,
-    onBlurAlpha: useOnBlurAlphaEvent(
+    onBlurAlpha: useBlurAlphaEvent(
       alpha,
       alphaValue,
       onChangeAlpha,
       setAlphaValue,
     ),
-    onBlurColor: useOnBlurColorEvent(
+    onBlurColor: useBlurColorEvent(
       alpha,
       color,
       colorValue,
       onChangeColor,
       setColorValue,
     ),
-    onChangeAlpha: useOnChangeAlphaEvent(setAlphaValue),
-    onChangeColor: useOnChangeColorEvent(setColorValue),
-    onChangeColorPicker: useOnChangeColorPickerEvent(onChangeColor),
+    onChangeAlpha: useChangeAlphaEvent(setAlphaValue),
+    onChangeColor: useChangeColorEvent(setColorValue),
+    onChangeColorPicker: useChangeColorPickerEvent(onChangeColor),
   };
 };

@@ -1,15 +1,15 @@
 import { renderHook } from '@testing-library/react';
 
 // hooks
-import { useOnBlurAlphaEvent } from '../useOnBlurAlphaEvent';
+import { useBlurAlphaEvent } from '../useBlurAlphaEvent';
 
 const mockCallBack = jest.fn();
 
-describe('useOnBlurAlphaEvent', () => {
+describe('useBlurAlphaEvent', () => {
   it(`should trigger on change when current value is valid`, () => {
     // before
     const { result } = renderHook(() =>
-      useOnBlurAlphaEvent('100', '50', mockCallBack, mockCallBack),
+      useBlurAlphaEvent('100', '50', mockCallBack, mockCallBack),
     );
 
     // action
@@ -22,7 +22,7 @@ describe('useOnBlurAlphaEvent', () => {
   it(`should change on default value`, () => {
     // before
     const { result } = renderHook(() =>
-      useOnBlurAlphaEvent('100', '', mockCallBack, mockCallBack),
+      useBlurAlphaEvent('100', '', mockCallBack, mockCallBack),
     );
 
     // action

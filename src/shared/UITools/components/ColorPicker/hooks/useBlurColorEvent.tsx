@@ -1,14 +1,14 @@
 import { isHexColor } from 'utils';
 
-export type TUseOnBlurColorEvent = () => void;
+export type TUseBlurColorEvent = () => void;
 
-export const useOnBlurColorEvent = (
+export const useBlurColorEvent = (
   alpha: string,
   currentColor: string,
   currentValue: string,
   onChange: (alpha: string, value: string) => void,
   setValue: (value: string) => void,
-): TUseOnBlurColorEvent => {
+): TUseBlurColorEvent => {
   const handleBlur = () => {
     if (isHexColor(currentValue)) {
       onChange(alpha, `#${currentValue}`);

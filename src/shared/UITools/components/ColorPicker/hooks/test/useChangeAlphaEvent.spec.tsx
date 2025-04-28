@@ -2,14 +2,14 @@ import { ChangeEvent } from 'react';
 import { renderHook } from '@testing-library/react';
 
 // hooks
-import { useOnChangeColorEvent } from '../useOnChangeColorEvent';
+import { useChangeAlphaEvent } from '../useChangeAlphaEvent';
 
 const mockCallBack = jest.fn();
 
-describe('useOnChangeColorEvent', () => {
+describe('useChangeAlphaEvent', () => {
   it(`should trigger on change`, () => {
     // before
-    const { result } = renderHook(() => useOnChangeColorEvent(mockCallBack));
+    const { result } = renderHook(() => useChangeAlphaEvent(mockCallBack));
 
     // action
     result.current({
