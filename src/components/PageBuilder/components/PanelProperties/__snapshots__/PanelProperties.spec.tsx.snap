@@ -424,11 +424,11 @@ exports[`PanelProperties snapshots should render when some element is selected 1
             >
               <div
                 class="css-q0izro TextField TextField--light"
-                data-test-text-field=""
+                data-test-text-field="x"
               >
                 <div
                   class="ScrubbableInput ScrubbableInput--light"
-                  data-test-scrubbable-input=""
+                  data-test-scrubbable-input="x"
                 >
                   <small
                     class="css-q0izro Typography Typography--light Typography--neutral2 Typography--neutral2--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
@@ -440,7 +440,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                 </div>
                 <input
                   class="TextField__input TextField__input--light"
-                  data-test-text-field-input=""
+                  data-test-text-field-input="x"
                   maxlength="6"
                   type="number"
                   value="0"
@@ -448,11 +448,11 @@ exports[`PanelProperties snapshots should render when some element is selected 1
               </div>
               <div
                 class="css-q0izro TextField TextField--light"
-                data-test-text-field=""
+                data-test-text-field="y"
               >
                 <div
                   class="ScrubbableInput ScrubbableInput--light"
-                  data-test-scrubbable-input=""
+                  data-test-scrubbable-input="y"
                 >
                   <small
                     class="css-q0izro Typography Typography--light Typography--neutral2 Typography--neutral2--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
@@ -464,7 +464,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                 </div>
                 <input
                   class="TextField__input TextField__input--light"
-                  data-test-text-field-input=""
+                  data-test-text-field-input="y"
                   maxlength="6"
                   type="number"
                   value="0"

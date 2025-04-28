@@ -38,6 +38,7 @@ import {
   reducerHistoryUndo,
   changePosition,
   changeAlignment,
+  clearPrevState,
 } from '../actions';
 
 // types
@@ -683,6 +684,35 @@ describe('PageBuilderReducer', () => {
               },
             },
           },
+        },
+      },
+    });
+  });
+
+  it('should handle CLEAR_PREV_STATE', () => {
+    // mock
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+
+    // before
+    const state = reducer(clearPrevState(), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          prevState: currentPage,
+        },
+      },
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          prevState: undefined,
         },
       },
     });

@@ -59,6 +59,11 @@ const stateMock = {
   },
 };
 
+jest.mock('lodash', () => ({
+  ...(jest.requireActual('lodash') as object),
+  defer: (callback: any) => callback(),
+}));
+
 describe('Element snapshots', () => {
   beforeAll(() => {
     element.style.height = '100px';

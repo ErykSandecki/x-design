@@ -1,5 +1,6 @@
 import { createPortal } from 'react-dom';
 import { FC, ReactNode, useRef } from 'react';
+import { noop } from 'lodash';
 
 // components
 import E2EDataAttribute, {
@@ -19,7 +20,6 @@ import styles from './scrubbable-input.scss';
 
 // types
 import { E2EAttribute } from 'types';
-import { noop } from 'lodash';
 
 export type TScrubbableInput = {
   children: ReactNode;

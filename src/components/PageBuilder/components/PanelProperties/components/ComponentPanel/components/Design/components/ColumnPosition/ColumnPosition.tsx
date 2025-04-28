@@ -49,6 +49,7 @@ const ColumnPosition: FC = () => {
     <UITools.SectionColumn labels={[t(`${translationNameSpace}.label`)]}>
       <UITools.TextField
         disabled={isRelative}
+        e2eValue="x"
         onBlur={onBlurX}
         onChange={(event) => onChangeX(event.target.value)}
         onClick={() => refInputX.current.select()}
@@ -59,6 +60,7 @@ const ColumnPosition: FC = () => {
         startAdornment={
           <ScrubbableInput
             disabled={isRelative}
+            e2eValue="x"
             max={MAX}
             min={MIN}
             onChange={(value) => onChangeX(value.toString(), true)}
@@ -76,6 +78,7 @@ const ColumnPosition: FC = () => {
       />
       <UITools.TextField
         disabled={isRelative}
+        e2eValue="y"
         onBlur={onBlurY}
         onChange={(event) => onChangeY(event.target.value)}
         onClick={() => refInputY.current.select()}
@@ -86,6 +89,7 @@ const ColumnPosition: FC = () => {
         startAdornment={
           <ScrubbableInput
             disabled={isRelative}
+            e2eValue="y"
             max={MAX}
             min={MIN}
             onChange={(value) => onChangeY(value.toString(), true)}
