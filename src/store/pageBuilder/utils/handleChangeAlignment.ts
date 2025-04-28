@@ -2,7 +2,6 @@ import { cloneDeep, first } from 'lodash';
 
 // types
 import { TChangeAlignmentAction, TPageBuilderState } from '../types';
-import { position } from 'html2canvas/dist/types/css/property-descriptors/position';
 
 export const handleChangeAlignment = (
   payload: TChangeAlignmentAction['payload'],
