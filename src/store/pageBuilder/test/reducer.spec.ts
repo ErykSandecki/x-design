@@ -1004,14 +1004,14 @@ describe('PageBuilderReducer', () => {
             allData: {
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
-                alignment: undefined,
+                alignment: {},
                 coordinates,
               },
             },
             dynamicData: {
               [elementDynamicDataMock.id]: {
                 ...elementDynamicDataMock,
-                alignment: undefined,
+                alignment: {},
                 coordinates,
               },
             },

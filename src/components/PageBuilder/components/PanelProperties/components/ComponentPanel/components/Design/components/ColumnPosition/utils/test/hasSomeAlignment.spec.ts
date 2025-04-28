@@ -14,6 +14,7 @@ describe('getCoordinates', () => {
   it(`should return false`, () => {
     // before
     const result = hasSomeAlignment(
+      'horizontal',
       { [elementDynamicDataMock.id]: elementDynamicDataMock },
       [selectedElementMock],
     );
@@ -25,6 +26,7 @@ describe('getCoordinates', () => {
   it(`should return true`, () => {
     // before
     const result = hasSomeAlignment(
+      'horizontal',
       {
         [elementDynamicDataMock.id]: {
           ...elementDynamicDataMock,

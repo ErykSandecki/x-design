@@ -1,5 +1,6 @@
 // mocks
 import {
+  alignmetnMock,
   elementAllDataMock,
   elementDynamicDataMock,
   elementStaticDataMock,
@@ -8,6 +9,7 @@ import {
 } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
+import { BASE_2D } from 'shared';
 import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
 
 // utils
@@ -21,8 +23,8 @@ describe('handleSetElementCoordinates', () => {
 
     // before
     const result = handleSetElementCoordinates(
-      elementAllDataMock.id,
       coordinates,
+      elementAllDataMock.id,
       {
         ...pageBuilderStateMock[PAGE_BUILDER],
         pages: {
@@ -57,15 +59,84 @@ describe('handleSetElementCoordinates', () => {
             allData: {
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
-                alignment: undefined,
+                alignment: {},
                 coordinates,
               },
             },
             dynamicData: {
               [elementDynamicDataMock.id]: {
                 ...elementDynamicDataMock,
-                alignment: undefined,
+                alignment: {},
                 coordinates,
+              },
+            },
+            staticData: {
+              [elementStaticDataMock.id]: elementStaticDataMock,
+            },
+          },
+        },
+      },
+    });
+  });
+
+  it(`should return data with changed element coordinates when x & y are NaN`, () => {
+    // mock
+    const coordinates = { x: NaN, y: NaN };
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+
+    // before
+    const result = handleSetElementCoordinates(
+      coordinates,
+      elementAllDataMock.id,
+      {
+        ...pageBuilderStateMock[PAGE_BUILDER],
+        pages: {
+          ...pageBuilderStateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...currentPage,
+            elements: {
+              allData: {
+                [elementAllDataMock.id]: {
+                  ...elementAllDataMock,
+                  alignment: alignmetnMock,
+                },
+              },
+              dynamicData: {
+                [elementDynamicDataMock.id]: {
+                  ...elementDynamicDataMock,
+                  alignment: alignmetnMock,
+                },
+              },
+              staticData: {
+                [elementStaticDataMock.id]: elementStaticDataMock,
+              },
+            },
+          },
+        },
+      },
+    );
+
+    // result
+    expect(result).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            allData: {
+              [elementAllDataMock.id]: {
+                ...elementAllDataMock,
+                alignment: alignmetnMock,
+                coordinates: BASE_2D,
+              },
+            },
+            dynamicData: {
+              [elementDynamicDataMock.id]: {
+                ...elementDynamicDataMock,
+                alignment: alignmetnMock,
+                coordinates: BASE_2D,
               },
             },
             staticData: {
@@ -84,8 +155,8 @@ describe('handleSetElementCoordinates', () => {
 
     // before
     const result = handleSetElementCoordinates(
-      elementAllDataMock.id,
       coordinates,
+      elementAllDataMock.id,
       {
         ...pageBuilderStateMock[PAGE_BUILDER],
         events: {

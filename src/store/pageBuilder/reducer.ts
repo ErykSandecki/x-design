@@ -180,9 +180,9 @@ const setAreaCoordinates = (
 const setElementCoordinates = (
   state: TPageBuilderState,
   {
-    payload: { id, coordinates: position },
+    payload: { coordinates, id },
   }: TAction<TSetElementCoordinatesAction['payload']>,
-): TPageBuilderState => handleSetElementCoordinates(id, position, state);
+): TPageBuilderState => handleSetElementCoordinates(coordinates, id, state);
 
 const setElementSizes = (
   state: TPageBuilderState,

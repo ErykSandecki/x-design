@@ -30,10 +30,10 @@ const ColumnAlignment: FC = () => {
   const selectedElements = useSelector(selectedElementsSelector);
   const firstElement = first(selectedElements);
   const element = useSelector(elementAllDataSelectorCreator(firstElement.id));
-  const disabled = element.parentId === '-1' || element.position === 'relative';
   const onClickHorizontalAlignment = useClickHorizontalAlignmentEvent();
   const onClickVerticalAlignment = useClickVerticalAlignmentEvent();
   const { t } = useTranslation();
+  const disabled = element.parentId === '-1' || element.position === 'relative';
 
   return (
     <UITools.SectionColumn

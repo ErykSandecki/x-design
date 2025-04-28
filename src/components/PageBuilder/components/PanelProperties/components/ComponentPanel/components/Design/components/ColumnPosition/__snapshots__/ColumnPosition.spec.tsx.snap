@@ -129,7 +129,7 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
             disabled=""
             maxlength="6"
             type="text"
-            value="auto"
+            value="Locked"
           />
         </div>
         <div
@@ -154,7 +154,7 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
             disabled=""
             maxlength="6"
             type="text"
-            value="auto"
+            value="Locked"
           />
         </div>
       </div>

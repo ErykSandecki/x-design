@@ -60,7 +60,7 @@
 
   &__constrain {
     @include theme('neutral-2', background-color);
-    $--rx-size: 1px;
+    $--rx-size: 1.5px;
     $--rx-length: 7.5px;
 
     box-sizing: border-box;

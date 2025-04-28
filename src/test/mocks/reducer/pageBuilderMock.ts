@@ -5,7 +5,14 @@ import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 
 // types
 import { Anchor } from 'store/pageBuilder/enums';
-import { ElementType, KeyboardKeys, TElement } from 'types';
+import {
+  AlignmentHorizontal,
+  AlignmentVertical,
+  ElementType,
+  KeyboardKeys,
+  TAlignment,
+  TElement,
+} from 'types';
 import {
   TElementDynamicData,
   TElementStaticData,
@@ -39,6 +46,10 @@ export const pageBuilderStateMock: Record<
       [BASE_PAGE.id]: BASE_PAGE,
     },
   },
+};
+export const alignmetnMock: TAlignment = {
+  horizontal: AlignmentHorizontal.center,
+  vertical: AlignmentVertical.center,
 };
 
 export const elementDynamicDataMock: TElementDynamicData = {

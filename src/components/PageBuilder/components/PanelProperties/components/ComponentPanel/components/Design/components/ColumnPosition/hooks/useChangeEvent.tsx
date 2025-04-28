@@ -49,22 +49,14 @@ export const useChangeEvent = (
       setX(value);
     }
 
-    updateStore(
-      parseFloat(value),
-      isMultiple ? NaN : parseFloat(y),
-      isScrubbableInput,
-    );
+    updateStore(parseFloat(value), NaN, isScrubbableInput);
   };
   const handleChangeY = (value: string, isScrubbableInput: boolean): void => {
     if (canChangeValue(isMixedY, isMultiple, isScrubbableInput)) {
       setY(value);
     }
 
-    updateStore(
-      isMultiple ? NaN : parseFloat(x),
-      parseFloat(value),
-      isScrubbableInput,
-    );
+    updateStore(NaN, parseFloat(value), isScrubbableInput);
   };
 
   return {

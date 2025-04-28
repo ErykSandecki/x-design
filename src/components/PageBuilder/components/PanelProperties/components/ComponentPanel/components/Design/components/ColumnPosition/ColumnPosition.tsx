@@ -25,6 +25,7 @@ import { updateEventsStatus } from 'store/pageBuilder/actions';
 import { ColorsTheme, KeyboardKeys } from 'types';
 
 // utils
+import { getValue } from './utils/getValue';
 import { handleSubmitInput } from 'utils';
 import { hasSomeAlignment } from './utils/hasSomeAlignment';
 import { isMixed } from './utils/isMixed';
@@ -39,20 +40,33 @@ const ColumnPosition: FC = () => {
   const refInputY = useRef<HTMLInputElement>(null);
   const { t } = useTranslation();
   const isMultiple = size(selectedElements) > 1;
-  const hasAlignment = hasSomeAlignment(dynamicData, selectedElements);
+  const hasAlignmentHorizontal = hasSomeAlignment(
+    'horizontal',
+    dynamicData,
+    selectedElements,
+  );
+  const hasAlignmentVertical = hasSomeAlignment(
+    'vertical',
+    dynamicData,
+    selectedElements,
+  );
   const isMixedX = isMixed('x', dynamicData, firstElement, selectedElements);
   const isMixedY = isMixed('y', dynamicData, firstElement, selectedElements);
   const isRelative = selectedElements.some(
     ({ position }) => position === 'relative',
   );
-  const disabled = hasAlignment || isRelative;
+  const disabledX = hasAlignmentHorizontal || isRelative;
+  const disabledY = hasAlignmentVertical || isRelative;
+  const showConstrains = hasAlignmentHorizontal || hasAlignmentVertical;
+  const disabledAll =
+    (hasAlignmentHorizontal || hasAlignmentVertical) && isMultiple;
   const { onBlurX, onBlurY, onChangeX, onChangeY, onMouseDown, x, y } =
     usePositionEvents(element, isMixedX, isMixedY, isMultiple, isRelative);
 
   return (
     <UITools.SectionColumn
       buttonsIcon={
-        hasAlignment
+        showConstrains
           ? [
               <ConstrainsView
                 alignment={dynamicData[firstElement.id].alignment}
@@ -64,7 +78,7 @@ const ColumnPosition: FC = () => {
       labels={[t(`${translationNameSpace}.label`)]}
     >
       <UITools.TextField
-        disabled={disabled}
+        disabled={disabledX || disabledAll}
         e2eValue="x"
         fullWidth
         onBlur={onBlurX}
@@ -76,7 +90,7 @@ const ColumnPosition: FC = () => {
         ref={refInputX}
         startAdornment={
           <ScrubbableInput
-            disabled={disabled}
+            disabled={disabledX || disabledAll}
             e2eValue="x"
             max={MAX}
             min={MIN}
@@ -90,11 +104,11 @@ const ColumnPosition: FC = () => {
             <Small color={ColorsTheme.neutral2}>X</Small>
           </ScrubbableInput>
         }
-        type={isMixedX || hasAlignment ? 'text' : 'number'}
-        value={hasAlignment ? 'auto' : x}
+        type={isMixedX || hasAlignmentHorizontal ? 'text' : 'number'}
+        value={getValue(disabledAll, hasAlignmentHorizontal, isMultiple, x)}
       />
       <UITools.TextField
-        disabled={disabled}
+        disabled={disabledY || disabledAll}
         e2eValue="y"
         fullWidth
         onBlur={onBlurY}
@@ -106,7 +120,7 @@ const ColumnPosition: FC = () => {
         ref={refInputY}
         startAdornment={
           <ScrubbableInput
-            disabled={disabled}
+            disabled={disabledY || disabledAll}
             e2eValue="y"
             max={MAX}
             min={MIN}
@@ -120,8 +134,8 @@ const ColumnPosition: FC = () => {
             <Small color={ColorsTheme.neutral2}>Y</Small>
           </ScrubbableInput>
         }
-        type={isMixedX || hasAlignment ? 'text' : 'number'}
-        value={hasAlignment ? 'auto' : y}
+        type={isMixedY || hasAlignmentVertical ? 'text' : 'number'}
+        value={getValue(disabledAll, hasAlignmentVertical, isMultiple, y)}
       />
     </UITools.SectionColumn>
   );
