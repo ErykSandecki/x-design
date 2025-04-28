@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
+<DocumentFragment>
+  <div
+    class="css-q0izro SectionColumn SectionColumn--light"
+    data-test-section=""
+  >
+    <div
+      class="SectionColumn__labels SectionColumn__labels--light"
+      style="width: calc(100% - 24px - 0px - 8px);"
+    >
+      <small
+        class="css-q0izro SectionColumn__label SectionColumn__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        data-test-text=""
+        style="text-align: inherit;"
+      >
+        Position
+      </small>
+    </div>
+    <div
+      class="SectionColumn__wrapper SectionColumn__wrapper--light"
+    >
+      <div
+        class="SectionColumn__content SectionColumn__content--light"
+        style="width: calc(100% - 24px - 0px - 8px);"
+      >
+        <div
+          class="css-q0izro TextField TextField--light"
+          data-test-text-field=""
+        >
+          <div
+            class="ScrubbableInput ScrubbableInput--light"
+            data-test-scrubbable-input=""
+          >
+            <small
+              class="css-q0izro Typography Typography--light Typography--neutral2 Typography--neutral2--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+              data-test-text=""
+              style="text-align: inherit;"
+            >
+              X
+            </small>
+          </div>
+          <input
+            class="TextField__input TextField__input--light"
+            data-test-text-field-input=""
+            maxlength="6"
+            type="number"
+            value="0"
+          />
+        </div>
+        <div
+          class="css-q0izro TextField TextField--light"
+          data-test-text-field=""
+        >
+          <div
+            class="ScrubbableInput ScrubbableInput--light"
+            data-test-scrubbable-input=""
+          >
+            <small
+              class="css-q0izro Typography Typography--light Typography--neutral2 Typography--neutral2--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+              data-test-text=""
+              style="text-align: inherit;"
+            >
+              Y
+            </small>
+          </div>
+          <input
+            class="TextField__input TextField__input--light"
+            data-test-text-field-input=""
+            maxlength="6"
+            type="number"
+            value="0"
+          />
+        </div>
+      </div>
+      <div
+        class="SectionColumn__buttons SectionColumn__buttons--light"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

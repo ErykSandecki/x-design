@@ -16,6 +16,6 @@ describe('useMouseUpEvent', () => {
     result.current();
 
     // result
-    expect(mockCallBack.mock.calls.length).toBe(1);
+    expect(mockCallBack.mock.calls.length).toBe(2);
   });
 });

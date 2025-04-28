@@ -434,6 +434,7 @@ describe('PageBuilderReducer', () => {
               },
               ['2']: {
                 ...elementAllDataMock,
+                alignment: undefined,
                 children: [],
                 id: '2',
                 parentId: '1',
@@ -456,6 +457,7 @@ describe('PageBuilderReducer', () => {
               },
               ['2']: {
                 ...elementDynamicDataMock,
+                alignment: undefined,
                 id: '2',
                 position: 'absolute',
               },

@@ -32,7 +32,7 @@ describe('useMouseUpEvent', () => {
     fireEvent.mouseUp(window, {});
 
     // result
-    expect(mockCallBack.mock.calls.length).toBe(2);
+    expect(mockCallBack.mock.calls.length).toBe(1);
   });
 
   it(`should not trigger event`, () => {

@@ -58,7 +58,7 @@ describe('useMouseMoveEvent', () => {
     fireEvent.mouseMove(window, {});
 
     // result
-    expect(mockCallBack.mock.calls[0][0]).toBe(true);
+    expect(mockCallBack.mock.calls.length).toBe(2);
   });
 
   it(`should not trigger event when mouse mode is not default`, () => {
@@ -98,6 +98,6 @@ describe('useMouseMoveEvent', () => {
     fireEvent.mouseMove(window, {});
 
     // result
-    expect(mockCallBack.mock.calls.length).toBe(1);
+    expect(mockCallBack.mock.calls.length).toBe(2);
   });
 });

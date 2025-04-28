@@ -22,7 +22,7 @@ exports[`Element snapshots should render Element when is selected & is multiple 
     style="left: 0px; top: 0px; background-color: rgb(255, 255, 255); height: 100px; position: absolute; width: 100px;"
   >
     <div
-      class="css-ckbv47"
+      class="css-ckbv47 Element__outline Element__outline--light"
       data-test-box=""
       style="left: 0px; top: 0px;"
     >
@@ -115,7 +115,7 @@ exports[`Element snapshots should render Element when is selected 1`] = `
     style="left: 0px; top: 0px; background-color: rgb(255, 255, 255); height: 100px; position: absolute; width: 100px;"
   >
     <div
-      class="css-ckbv47"
+      class="css-ckbv47 Element__outline Element__outline--light"
       data-test-box=""
       style="left: 0px; top: 0px;"
     >

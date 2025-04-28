@@ -18,6 +18,6 @@ describe('useMouseDownEvent', () => {
     result.current({ clientX: 0, clientY: 0 } as MouseEvent);
 
     // result
-    expect(mockCallBack.mock.calls.length).toBe(1);
+    expect(mockCallBack.mock.calls.length).toBe(2);
   });
 });

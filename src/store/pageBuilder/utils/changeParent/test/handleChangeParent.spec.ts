@@ -107,7 +107,7 @@ describe('handleChangeParent', () => {
               },
             },
           },
-          selectedElements: [selectedElementMock],
+          selectedElements: [{ ...selectedElementMock, id: '2' }],
         },
       },
     });
@@ -162,7 +162,9 @@ describe('handleChangeParent', () => {
               },
             },
           },
-          selectedElements: [selectedElementMock],
+          selectedElements: [
+            { ...selectedElementMock, id: '2', parentId: '-1' },
+          ],
         },
       },
     });
@@ -228,7 +230,7 @@ describe('handleChangeParent', () => {
               },
             },
           },
-          selectedElements: [selectedElementMock],
+          selectedElements: [{ ...selectedElementMock, id: '2' }],
         },
       },
     });
@@ -286,7 +288,14 @@ describe('handleChangeParent', () => {
               },
             },
           },
-          selectedElements: [{ ...selectedElementMock, parentId: '1' }],
+          selectedElements: [
+            {
+              ...selectedElementMock,
+              id: '2',
+              parentId: '1',
+              position: 'relative',
+            },
+          ],
         },
       },
     });

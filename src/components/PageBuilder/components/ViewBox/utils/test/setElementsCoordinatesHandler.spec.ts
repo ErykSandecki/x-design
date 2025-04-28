@@ -26,8 +26,8 @@ describe('setElementsCoordinatesHandler', () => {
 
     // result
     expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
-      x: 0,
-      y: 0,
+      coordinates: { x: 0, y: 0 },
+      mode: 'dynamic',
     });
   });
 });
