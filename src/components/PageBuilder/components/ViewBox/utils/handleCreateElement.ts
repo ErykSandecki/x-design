@@ -23,6 +23,7 @@ export const handleCreateElement = (
     const x = x1 < x2 ? x1 : x2;
     const y = y1 < y2 ? y1 : y2;
     const element: TAddELementActionPayload = {
+      alignment: {},
       background: {
         properties: { alpha: '100', color: '#ffffff', format: 'hex' },
         visible: true,

@@ -15,7 +15,7 @@ describe('updateCursorPosition', () => {
   it(`should update cursor position`, () => {
     // before
     updateCursorPosition(
-      undefined,
+      {},
       { x: 0, y: 0 },
       ref,
       {

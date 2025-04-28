@@ -22,11 +22,11 @@ export const handleSetElementCoordinates = (
     y: isNanY ? prevCoordinates.y : coordinates.y,
   };
   const alignment: TAlignment = {
-    ...(isNanX && element.alignment?.horizontal
+    ...(isNanX && element.alignment.horizontal
       ? { horizontal: element.alignment.horizontal }
       : {}),
-    ...(isNanY && element.alignment?.vertical
-      ? { vertical: element.alignment?.vertical }
+    ...(isNanY && element.alignment.vertical
+      ? { vertical: element.alignment.vertical }
       : {}),
   };
 

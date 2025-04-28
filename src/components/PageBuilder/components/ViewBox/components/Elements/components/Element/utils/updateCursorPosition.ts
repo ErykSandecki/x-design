@@ -18,7 +18,7 @@ export const getPositionXY = (
   mainParentId: TElement['parentId'],
   z: T3DCoordinates['z'],
 ) => {
-  if (alignment?.horizontal || alignment?.vertical) {
+  if (alignment.horizontal || alignment.vertical) {
     const { x, y } = getAbsolutePosition(id, mainParentId, z);
 
     return {

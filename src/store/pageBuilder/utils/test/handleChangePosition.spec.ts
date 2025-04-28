@@ -146,7 +146,7 @@ describe('handleChangePosition', () => {
               },
               ['2']: {
                 ...elementAllDataMock,
-                alignment: undefined,
+                alignment: {},
                 children: [],
                 id: '2',
                 parentId: '1',
@@ -169,7 +169,7 @@ describe('handleChangePosition', () => {
               },
               ['2']: {
                 ...elementDynamicDataMock,
-                alignment: undefined,
+                alignment: {},
                 id: '2',
                 position: 'absolute',
               },
@@ -330,7 +330,7 @@ describe('handleChangePosition', () => {
               },
               ['3']: {
                 ...elementAllDataMock,
-                alignment: undefined,
+                alignment: {},
                 children: [],
                 id: '3',
                 parentId: '1',
@@ -351,7 +351,7 @@ describe('handleChangePosition', () => {
               },
               ['3']: {
                 ...elementDynamicDataMock,
-                alignment: undefined,
+                alignment: {},
                 id: '3',
                 position: 'relative',
               },

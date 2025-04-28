@@ -78,19 +78,12 @@ export const getPosition = (
   x: T2DCoordinates['x'],
   y: T2DCoordinates['y'],
 ): CSSProperties => {
-  if (alignment) {
-    const { translateX, ...horizontal } = getHorizontalPosition(alignment, x);
-    const { translateY, ...vertical } = getVerticalPosition(alignment, y);
-
-    return {
-      ...horizontal,
-      ...vertical,
-      transform: `rotate(${rotate}deg) translate(${translateX}, ${translateY})`,
-    };
-  }
+  const { translateX, ...horizontal } = getHorizontalPosition(alignment, x);
+  const { translateY, ...vertical } = getVerticalPosition(alignment, y);
 
   return {
-    left: `${x}px`,
-    top: `${y}px`,
+    ...horizontal,
+    ...vertical,
+    transform: `rotate(${rotate}deg) translate(${translateX}, ${translateY})`,
   };
 };

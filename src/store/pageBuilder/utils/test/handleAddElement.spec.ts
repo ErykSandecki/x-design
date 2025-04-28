@@ -41,6 +41,7 @@ describe('handleAddElement', () => {
                 ...currentPage.elements.dynamicData['-1'],
               },
               [createFrameMock.id]: {
+                alignment: {},
                 background: createFrameMock.background,
                 coordinates: createFrameMock.coordinates,
                 height: createFrameMock.height,

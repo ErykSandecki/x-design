@@ -20,7 +20,7 @@ export type TBackground = {
 };
 
 export type TElement = {
-  alignment?: TAlignment;
+  alignment: TAlignment;
   background: TBackground;
   children: Array<string>;
   coordinates: T2DCoordinates;

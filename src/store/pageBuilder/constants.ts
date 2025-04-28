@@ -32,6 +32,7 @@ const color =
     : THEME_COLORS.light.neutral4;
 
 export const BASE_ALL_DATA: TElement = {
+  alignment: {},
   background: {
     properties: { alpha: '100', color, format: 'hex' },
     visible: true,
@@ -48,6 +49,7 @@ export const BASE_ALL_DATA: TElement = {
 };
 
 export const BASE_DYNAMIC_DATA: TElementDynamicData = {
+  alignment: {},
   background: BASE_ALL_DATA.background,
   coordinates: BASE_ALL_DATA.coordinates,
   height: BASE_ALL_DATA.height,

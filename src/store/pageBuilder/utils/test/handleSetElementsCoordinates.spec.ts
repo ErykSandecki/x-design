@@ -60,14 +60,14 @@ describe('handleSetElementsCoordinates', () => {
             allData: {
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
-                alignment: undefined,
+                alignment: {},
                 coordinates,
               },
             },
             dynamicData: {
               [elementDynamicDataMock.id]: {
                 ...elementDynamicDataMock,
-                alignment: undefined,
+                alignment: {},
                 coordinates,
               },
             },
@@ -113,14 +113,14 @@ describe('handleSetElementsCoordinates', () => {
             allData: {
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
-                alignment: undefined,
+                alignment: {},
                 coordinates: BASE_2D,
               },
             },
             dynamicData: {
               [elementDynamicDataMock.id]: {
                 ...elementDynamicDataMock,
-                alignment: undefined,
+                alignment: {},
                 coordinates: BASE_2D,
               },
             },
@@ -165,14 +165,14 @@ describe('handleSetElementsCoordinates', () => {
             allData: {
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
-                alignment: undefined,
+                alignment: {},
                 coordinates,
               },
             },
             dynamicData: {
               [elementDynamicDataMock.id]: {
                 ...elementDynamicDataMock,
-                alignment: undefined,
+                alignment: {},
                 coordinates,
               },
             },
@@ -217,14 +217,14 @@ describe('handleSetElementsCoordinates', () => {
             allData: {
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
-                alignment: undefined,
+                alignment: {},
                 coordinates: BASE_2D,
               },
             },
             dynamicData: {
               [elementDynamicDataMock.id]: {
                 ...elementDynamicDataMock,
-                alignment: undefined,
+                alignment: {},
                 coordinates: BASE_2D,
               },
             },

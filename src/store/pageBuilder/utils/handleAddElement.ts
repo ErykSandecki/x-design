@@ -29,6 +29,7 @@ export const handleAddElement = (
           ...state.pages[state.currentPage].elements.dynamicData,
           [element.id]: pick(
             element,
+            'alignment',
             'background',
             'coordinates',
             'height',

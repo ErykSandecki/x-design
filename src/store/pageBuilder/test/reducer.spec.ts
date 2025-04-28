@@ -95,6 +95,7 @@ describe('PageBuilderReducer', () => {
                 ...currentPage.elements.dynamicData['-1'],
               },
               [createFrameMock.id]: {
+                alignment: {},
                 background: createFrameMock.background,
                 coordinates: createFrameMock.coordinates,
                 height: createFrameMock.height,
@@ -435,7 +436,7 @@ describe('PageBuilderReducer', () => {
               },
               ['2']: {
                 ...elementAllDataMock,
-                alignment: undefined,
+                alignment: {},
                 children: [],
                 id: '2',
                 parentId: '1',
@@ -458,7 +459,7 @@ describe('PageBuilderReducer', () => {
               },
               ['2']: {
                 ...elementDynamicDataMock,
-                alignment: undefined,
+                alignment: {},
                 id: '2',
                 position: 'absolute',
               },
@@ -1154,14 +1155,14 @@ describe('PageBuilderReducer', () => {
             allData: {
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
-                alignment: undefined,
+                alignment: {},
                 coordinates,
               },
             },
             dynamicData: {
               [elementDynamicDataMock.id]: {
                 ...elementDynamicDataMock,
-                alignment: undefined,
+                alignment: {},
                 coordinates,
               },
             },

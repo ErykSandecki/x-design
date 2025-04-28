@@ -7,10 +7,14 @@ import { getPosition } from '../getPosition';
 describe('getPosition', () => {
   it(`should return default position`, () => {
     // before
-    const result = getPosition(undefined, 0, 0, 0);
+    const result = getPosition({}, 0, 0, 0);
 
     // result
-    expect(result).toStrictEqual({ left: '0px', top: '0px' });
+    expect(result).toStrictEqual({
+      left: '0px',
+      top: '0px',
+      transform: 'rotate(0deg) translate(0, 0)',
+    });
   });
 
   it(`should return horizontal left position`, () => {

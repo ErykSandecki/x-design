@@ -53,6 +53,7 @@ export const alignmetnMock: TAlignment = {
 };
 
 export const elementDynamicDataMock: TElementDynamicData = {
+  alignment: {},
   background: {
     properties: { alpha: '100', color: '#ffffff', format: 'hex' },
     visible: true,
@@ -82,6 +83,7 @@ export const elementAllDataMock: TElement = {
 };
 
 export const createFrameMock: TElement = {
+  alignment: {},
   background: {
     properties: { alpha: '100', color: '#ffffff', format: 'hex' },
     visible: true,

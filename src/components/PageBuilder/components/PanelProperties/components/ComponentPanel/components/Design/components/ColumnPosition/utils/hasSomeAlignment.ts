@@ -8,5 +8,5 @@ export const hasSomeAlignment = (
   selectedElements: TSelectedElements,
 ): boolean =>
   selectedElements.some(
-    ({ id }) => dynamicData[id].alignment?.[direction] !== undefined,
+    ({ id }) => dynamicData[id].alignment[direction] !== undefined,
   );
