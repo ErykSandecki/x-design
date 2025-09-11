@@ -11,6 +11,6 @@
   &__handler {
     position: fixed;
     transform: translate(-50%, -7px);
-    z-index: map.get($map: $--rx-z-indexes, $key: 'overlay');
+    z-index: map.get($map: $--xd-z-indexes, $key: 'overlay');
   }
 }

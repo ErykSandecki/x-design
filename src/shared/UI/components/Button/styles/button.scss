@@ -9,7 +9,7 @@
   @include button-size;
   @include button;
 
-  border-radius: map.get($--rx-button-map, 'btn-border-radius');
+  border-radius: map.get($--xd-button-map, 'btn-border-radius');
   user-select: none;
 
   &--full-width {

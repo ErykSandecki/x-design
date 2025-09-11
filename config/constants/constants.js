@@ -1,3 +1,3 @@
 module.exports = {
-  prefix: '$--rx-',
+  prefix: '$--xd-',
 };

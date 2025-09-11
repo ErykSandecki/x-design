@@ -14,14 +14,14 @@
     overflow: visible;
     position: absolute;
     width: 100%;
-    z-index: $--rx-zindex-element-active;
+    z-index: $--xd-zindex-element-active;
 
     &--light path {
-      fill: rgba($color: $--rx-blue-1--light, $alpha: 20%);
+      fill: rgba($color: $--xd-blue-1--light, $alpha: 20%);
     }
 
     &--dark path {
-      fill: rgba($color: $--rx-blue-1--dark, $alpha: 20%);
+      fill: rgba($color: $--xd-blue-1--dark, $alpha: 20%);
     }
   }
 }

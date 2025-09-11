@@ -1,45 +1,45 @@
 @import '../../typography';
 
-$--rx-font-size-map: (
-  h1: $--rx-typography-font-size-h1,
-  h2: $--rx-typography-font-size-h2,
-  h3: $--rx-typography-font-size-h3,
-  h4: $--rx-typography-font-size-h4,
-  h5: $--rx-typography-font-size-h5,
-  h6: $--rx-typography-font-size-h6,
-  p: $--rx-typography-font-size-p,
-  small: $--rx-typography-font-size-small,
+$--xd-font-size-map: (
+  h1: $--xd-typography-font-size-h1,
+  h2: $--xd-typography-font-size-h2,
+  h3: $--xd-typography-font-size-h3,
+  h4: $--xd-typography-font-size-h4,
+  h5: $--xd-typography-font-size-h5,
+  h6: $--xd-typography-font-size-h6,
+  p: $--xd-typography-font-size-p,
+  small: $--xd-typography-font-size-small,
 );
 
-$--rx-font-styles-map: (
-  normal: $--rx-typography-font-style-normal,
-  italic: $--rx-typography-font-style-italic,
+$--xd-font-styles-map: (
+  normal: $--xd-typography-font-style-normal,
+  italic: $--xd-typography-font-style-italic,
 );
 
-$--rx-font-weights-map: (
-  regular: $--rx-typography-font-weight-regular,
-  medium: $--rx-typography-font-weight-medium,
-  bold: $--rx-typography-font-weight-bold,
+$--xd-font-weights-map: (
+  regular: $--xd-typography-font-weight-regular,
+  medium: $--xd-typography-font-weight-medium,
+  bold: $--xd-typography-font-weight-bold,
 );
 
-$--rx-line-height-map: (
-  h1: $--rx-typography-line-height-h1,
-  h2: $--rx-typography-line-height-h2,
-  h3: $--rx-typography-line-height-h3,
-  h4: $--rx-typography-line-height-h4,
-  h5: $--rx-typography-line-height-h5,
-  h6: $--rx-typography-line-height-h6,
-  p: $--rx-typography-line-height-p,
-  small: $--rx-typography-line-height-small,
+$--xd-line-height-map: (
+  h1: $--xd-typography-line-height-h1,
+  h2: $--xd-typography-line-height-h2,
+  h3: $--xd-typography-line-height-h3,
+  h4: $--xd-typography-line-height-h4,
+  h5: $--xd-typography-line-height-h5,
+  h6: $--xd-typography-line-height-h6,
+  p: $--xd-typography-line-height-p,
+  small: $--xd-typography-line-height-small,
 );
 
-$--rx-margin-bottom-map: (
-  h1: $--rx-typography-margin-bottom-h1,
-  h2: $--rx-typography-margin-bottom-h2,
-  h3: $--rx-typography-margin-bottom-h3,
-  h4: $--rx-typography-margin-bottom-h4,
-  h5: $--rx-typography-margin-bottom-h5,
-  h6: $--rx-typography-margin-bottom-h6,
-  p: $--rx-typography-margin-bottom-p,
-  small: $--rx-typography-margin-bottom-small,
+$--xd-margin-bottom-map: (
+  h1: $--xd-typography-margin-bottom-h1,
+  h2: $--xd-typography-margin-bottom-h2,
+  h3: $--xd-typography-margin-bottom-h3,
+  h4: $--xd-typography-margin-bottom-h4,
+  h5: $--xd-typography-margin-bottom-h5,
+  h6: $--xd-typography-margin-bottom-h6,
+  p: $--xd-typography-margin-bottom-p,
+  small: $--xd-typography-margin-bottom-small,
 );

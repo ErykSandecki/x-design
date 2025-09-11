@@ -56,7 +56,7 @@ checkBrowsers(paths.appPath, isInteractive)
 
       console.log(
         chalk.white(`${logo} \n \n \n`),
-        chalk.white('R|X /Architect: '),
+        chalk.white('X/Design: '),
         chalk.cyan(`Starting the development server...`),
       );
 

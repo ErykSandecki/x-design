@@ -1,4 +1,4 @@
-$--rx-gap: 10px;
+$--xd-gap: 10px;
 
 .SectionColumn {
   &--with-margin {
@@ -6,7 +6,7 @@ $--rx-gap: 10px;
   }
 
   &__labels {
-    column-gap: $--rx-gap;
+    column-gap: $--xd-gap;
     display: flex;
   }
 
@@ -24,7 +24,7 @@ $--rx-gap: 10px;
   }
 
   &__content {
-    column-gap: $--rx-gap;
+    column-gap: $--xd-gap;
     display: flex;
   }
 

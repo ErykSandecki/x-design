@@ -4,7 +4,7 @@
 :global {
   body {
     .ant-popover {
-      z-index: map.get($map: $--rx-z-indexes, $key: 'overlay');
+      z-index: map.get($map: $--xd-z-indexes, $key: 'overlay');
 
       .ant-popover-content {
         border-radius: 5px;
@@ -173,7 +173,7 @@
       .ant-popover-inner {
         @include box-shadow-panel('light');
 
-        background-color: $--rx-neutral-5--light;
+        background-color: $--xd-neutral-5--light;
 
         .ant-color-picker-inner-content {
           .ant-color-picker-slider-container {
@@ -193,11 +193,11 @@
           .ant-color-picker-input-container {
             .ant-select {
               .ant-select-selector {
-                border: 1px solid $--rx-neutral-3--light;
-                color: $--rx-neutral-1--light;
+                border: 1px solid $--xd-neutral-3--light;
+                color: $--xd-neutral-1--light;
 
                 .ant-select-dropdown {
-                  background-color: $--rx-neutral-5--light;
+                  background-color: $--xd-neutral-5--light;
 
                   .ant-select-item {
                     &::before {
@@ -208,11 +208,11 @@
                     }
 
                     &:hover {
-                      background-color: $--rx-blue-2--light;
+                      background-color: $--xd-blue-2--light;
                     }
 
                     .ant-select-item-option-content {
-                      color: $--rx-neutral-1--light;
+                      color: $--xd-neutral-1--light;
                     }
                   }
 
@@ -221,7 +221,7 @@
                   }
 
                   .ant-select-item-option-selected {
-                    background-color: $--rx-blue-2--light;
+                    background-color: $--xd-blue-2--light;
 
                     &::before {
                       opacity: 1;
@@ -230,56 +230,56 @@
                 }
 
                 .ant-select-selection-item {
-                  color: $--rx-neutral-1--light;
+                  color: $--xd-neutral-1--light;
                 }
               }
 
               .ant-select-arrow svg path {
-                fill: $--rx-neutral-1--light;
+                fill: $--xd-neutral-1--light;
               }
             }
 
             .ant-color-picker-input {
               .ant-color-picker-hex-input {
-                background-color: $--rx-neutral-3--light;
-                border: 1px solid $--rx-neutral-3--light;
-                color: $--rx-neutral-1--light;
+                background-color: $--xd-neutral-3--light;
+                border: 1px solid $--xd-neutral-3--light;
+                color: $--xd-neutral-1--light;
               }
 
               .ant-input-prefix {
-                color: $--rx-neutral-1--light;
+                color: $--xd-neutral-1--light;
               }
 
               .ant-input-number.ant-color-picker-hsb-input,
               .ant-input-number.ant-color-picker-rgb-input {
-                background-color: $--rx-neutral-3--light;
-                border: 1px solid $--rx-neutral-3--light;
-                color: $--rx-neutral-1--light;
+                background-color: $--xd-neutral-3--light;
+                border: 1px solid $--xd-neutral-3--light;
+                color: $--xd-neutral-1--light;
 
                 input {
-                  color: $--rx-neutral-1--light;
+                  color: $--xd-neutral-1--light;
                 }
               }
 
               .ant-input-affix-wrapper-focused,
               .ant-input-number-focused {
-                border-color: $--rx-blue-1--light !important;
+                border-color: $--xd-blue-1--light !important;
               }
             }
           }
 
           .ant-color-picker-alpha-input {
-            background-color: $--rx-neutral-3--light;
-            border: 1px solid $--rx-neutral-3--light;
-            color: $--rx-neutral-1--light;
+            background-color: $--xd-neutral-3--light;
+            border: 1px solid $--xd-neutral-3--light;
+            color: $--xd-neutral-1--light;
 
             input {
-              color: $--rx-neutral-1--light;
+              color: $--xd-neutral-1--light;
             }
           }
 
           .ant-input-number-focused {
-            border-color: $--rx-blue-1--light;
+            border-color: $--xd-blue-1--light;
           }
         }
       }
@@ -291,7 +291,7 @@
       .ant-popover-inner {
         @include box-shadow-panel('dark');
 
-        background-color: $--rx-neutral-5--dark;
+        background-color: $--xd-neutral-5--dark;
 
         .ant-color-picker-inner-content {
           .ant-color-picker-slider-container {
@@ -311,11 +311,11 @@
           .ant-color-picker-input-container {
             .ant-select {
               .ant-select-selector {
-                border: 1px solid $--rx-neutral-3--dark;
-                color: $--rx-neutral-1--dark;
+                border: 1px solid $--xd-neutral-3--dark;
+                color: $--xd-neutral-1--dark;
 
                 .ant-select-dropdown {
-                  background-color: $--rx-neutral-5--dark;
+                  background-color: $--xd-neutral-5--dark;
 
                   .ant-select-item {
                     &::before {
@@ -326,11 +326,11 @@
                     }
 
                     &:hover {
-                      background-color: $--rx-blue-2--dark;
+                      background-color: $--xd-blue-2--dark;
                     }
 
                     .ant-select-item-option-content {
-                      color: $--rx-neutral-1--dark;
+                      color: $--xd-neutral-1--dark;
                     }
                   }
 
@@ -339,7 +339,7 @@
                   }
 
                   .ant-select-item-option-selected {
-                    background-color: $--rx-blue-2--dark;
+                    background-color: $--xd-blue-2--dark;
 
                     &::before {
                       opacity: 1;
@@ -348,54 +348,54 @@
                 }
 
                 .ant-select-selection-item {
-                  color: $--rx-neutral-1--dark;
+                  color: $--xd-neutral-1--dark;
                 }
               }
 
               .ant-select-arrow svg path {
-                fill: $--rx-neutral-1--dark;
+                fill: $--xd-neutral-1--dark;
               }
             }
 
             .ant-color-picker-input {
               .ant-color-picker-hex-input {
-                background-color: $--rx-neutral-3--dark;
-                border: 1px solid $--rx-neutral-3--dark;
-                color: $--rx-neutral-1--dark;
+                background-color: $--xd-neutral-3--dark;
+                border: 1px solid $--xd-neutral-3--dark;
+                color: $--xd-neutral-1--dark;
               }
 
               .ant-input-prefix {
-                color: $--rx-neutral-1--dark;
+                color: $--xd-neutral-1--dark;
               }
 
               .ant-input-number.ant-color-picker-hsb-input,
               .ant-input-number.ant-color-picker-rgb-input {
-                background-color: $--rx-neutral-3--dark;
-                border: 1px solid $--rx-neutral-3--dark;
-                color: $--rx-neutral-1--dark;
+                background-color: $--xd-neutral-3--dark;
+                border: 1px solid $--xd-neutral-3--dark;
+                color: $--xd-neutral-1--dark;
 
                 input {
-                  color: $--rx-neutral-1--dark;
+                  color: $--xd-neutral-1--dark;
                 }
               }
 
               .ant-input-affix-wrapper-focused,
               .ant-input-number-focused {
-                border-color: $--rx-blue-1--dark !important;
+                border-color: $--xd-blue-1--dark !important;
               }
             }
 
             .ant-color-picker-alpha-input {
-              background-color: $--rx-neutral-3--dark;
-              border: 1px solid $--rx-neutral-3--dark;
+              background-color: $--xd-neutral-3--dark;
+              border: 1px solid $--xd-neutral-3--dark;
 
               input {
-                color: $--rx-neutral-1--dark;
+                color: $--xd-neutral-1--dark;
               }
             }
 
             .ant-input-number-focused {
-              border-color: $--rx-blue-1--dark;
+              border-color: $--xd-blue-1--dark;
             }
           }
         }

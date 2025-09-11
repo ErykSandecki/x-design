@@ -10,7 +10,7 @@
     height: 2px;
     position: absolute;
     width: calc(90% - 20px);
-    z-index: $--rx-zindex-element-anchor;
+    z-index: $--xd-zindex-element-anchor;
 
     &--top {
       left: 10px;
@@ -25,7 +25,7 @@
 
   &__anchor {
     position: absolute;
-    z-index: $--rx-zindex-element-anchor;
+    z-index: $--xd-zindex-element-anchor;
 
     &--bottom {
       bottom: 0;

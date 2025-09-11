@@ -7,17 +7,17 @@
   top: 0;
 
   &__anchor {
-    $--rx-size: 5px;
+    $--xd-size: 5px;
 
     pointer-events: all;
     position: absolute;
 
     &--east {
       cursor: ew-resize;
-      height: calc(100% - #{$--rx-size});
-      right: calc(-#{$--rx-size} / 2);
-      top: calc(#{$--rx-size} / 2);
-      width: $--rx-size;
+      height: calc(100% - #{$--xd-size});
+      right: calc(-#{$--xd-size} / 2);
+      top: calc(#{$--xd-size} / 2);
+      width: $--xd-size;
     }
 
     &--none {
@@ -26,59 +26,59 @@
 
     &--north {
       cursor: ns-resize;
-      height: $--rx-size;
-      left: calc(#{$--rx-size} / 2);
-      top: calc(-#{$--rx-size} / 2);
-      width: calc(100% - #{$--rx-size});
+      height: $--xd-size;
+      left: calc(#{$--xd-size} / 2);
+      top: calc(-#{$--xd-size} / 2);
+      width: calc(100% - #{$--xd-size});
     }
 
     &--north-east {
       cursor: nesw-resize;
-      height: $--rx-size;
-      right: calc(-#{$--rx-size} / 2);
-      top: calc(-#{$--rx-size} / 2);
-      width: $--rx-size;
+      height: $--xd-size;
+      right: calc(-#{$--xd-size} / 2);
+      top: calc(-#{$--xd-size} / 2);
+      width: $--xd-size;
     }
 
     &--north-west {
       cursor: nwse-resize;
-      height: $--rx-size;
-      left: calc(-#{$--rx-size} / 2);
-      top: calc(-#{$--rx-size} / 2);
-      width: $--rx-size;
+      height: $--xd-size;
+      left: calc(-#{$--xd-size} / 2);
+      top: calc(-#{$--xd-size} / 2);
+      width: $--xd-size;
       z-index: 10;
     }
 
     &--south {
-      bottom: calc(-#{$--rx-size} / 2);
+      bottom: calc(-#{$--xd-size} / 2);
       cursor: ns-resize;
-      height: $--rx-size;
-      left: calc(#{$--rx-size} / 2);
-      width: calc(100% - #{$--rx-size});
+      height: $--xd-size;
+      left: calc(#{$--xd-size} / 2);
+      width: calc(100% - #{$--xd-size});
     }
 
     &--south-east {
-      bottom: calc(-#{$--rx-size} / 2);
+      bottom: calc(-#{$--xd-size} / 2);
       cursor: nwse-resize;
-      height: $--rx-size;
-      right: calc(-#{$--rx-size} / 2);
-      width: $--rx-size;
+      height: $--xd-size;
+      right: calc(-#{$--xd-size} / 2);
+      width: $--xd-size;
     }
 
     &--south-west {
-      bottom: calc(-#{$--rx-size} / 2);
+      bottom: calc(-#{$--xd-size} / 2);
       cursor: nesw-resize;
-      height: $--rx-size;
-      left: calc(-#{$--rx-size} / 2);
-      width: $--rx-size;
+      height: $--xd-size;
+      left: calc(-#{$--xd-size} / 2);
+      width: $--xd-size;
     }
 
     &--west {
       cursor: ew-resize;
-      height: calc(100% - #{$--rx-size});
-      left: calc(-#{$--rx-size} / 2);
-      top: calc(#{$--rx-size} / 2);
-      width: $--rx-size;
+      height: calc(100% - #{$--xd-size});
+      left: calc(-#{$--xd-size} / 2);
+      top: calc(#{$--xd-size} / 2);
+      width: $--xd-size;
     }
   }
 }

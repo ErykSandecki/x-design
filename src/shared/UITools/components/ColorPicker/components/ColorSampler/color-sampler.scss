@@ -12,7 +12,7 @@
   padding: 8px;
   position: fixed;
   width: 260px;
-  z-index: map.get($map: $--rx-z-indexes, $key: 'overlay');
+  z-index: map.get($map: $--xd-z-indexes, $key: 'overlay');
 
   &__prevent-antd-event-mask {
     cursor:

@@ -1,4 +1,4 @@
-# react-x-architect
+# x-design
 
 <p align="center">
   <img height="200" src="src/assets/images/app-initializer/logo--dark.svg" width="200">

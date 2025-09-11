@@ -17,40 +17,40 @@
 @mixin button-icons-state-styles($color, $state, $variant) {
   @if $state == 'idle' {
     @include button-icons-apply-property(
-      map.get($--rx-color-map, $variant + '-' + $color)
+      map.get($--xd-color-map, $variant + '-' + $color)
     );
   } @else if $state == 'disabled' {
     @include button-icons-apply-property(
-      map.get($--rx-color-map, $variant + '-' + $color + '-disabled')
+      map.get($--xd-color-map, $variant + '-' + $color + '-disabled')
     );
   } @else {
     @include button-icons-apply-property(
-      map.get($--rx-color-map, $variant + '-' + $color + '-hover')
+      map.get($--xd-color-map, $variant + '-' + $color + '-hover')
     );
   }
 }
 
 @mixin button-icons-apply-margins {
   &--start {
-    margin-right: map.get($--rx-button-map, 'btn-space-between');
+    margin-right: map.get($--xd-button-map, 'btn-space-between');
   }
 
   &--end {
-    margin-left: map.get($--rx-button-map, 'btn-space-between');
+    margin-left: map.get($--xd-button-map, 'btn-space-between');
   }
 }
 
 @mixin button-icons-apply-sizes {
   &--small {
-    height: map.get($--rx-button-map, 'btn-small-icon-size');
+    height: map.get($--xd-button-map, 'btn-small-icon-size');
   }
 
   &--medium {
-    height: map.get($--rx-button-map, 'btn-medium-icon-size');
+    height: map.get($--xd-button-map, 'btn-medium-icon-size');
   }
 
   &--large {
-    height: map.get($--rx-button-map, 'btn-large-icon-size');
+    height: map.get($--xd-button-map, 'btn-large-icon-size');
   }
 }
 

@@ -4,35 +4,35 @@
 @import '../../../../styles/mixins/typography/typography-map';
 
 .Typography {
-  @each $color in $--rx-font-colors {
+  @each $color in $--xd-font-colors {
     &--#{$color} {
       @include theme($color, color);
     }
   }
 
-  @each $font-type in $--rx-font-types {
+  @each $font-type in $--xd-font-types {
     &--gutter-bottom#{&}--#{$font-type} {
-      $--rx-font-size: map.get($--rx-font-size-map, $font-type);
-      $--rx-line-height: map.get($--rx-line-height-map, $font-type);
-      $--rx-margin-bottom: map.get($--rx-margin-bottom-map, $font-type);
+      $--xd-font-size: map.get($--xd-font-size-map, $font-type);
+      $--xd-line-height: map.get($--xd-line-height-map, $font-type);
+      $--xd-margin-bottom: map.get($--xd-margin-bottom-map, $font-type);
 
       @include typography-styles(
-        $--rx-font-size,
-        $--rx-line-height,
-        $--rx-margin-bottom
+        $--xd-font-size,
+        $--xd-line-height,
+        $--xd-margin-bottom
       );
     }
   }
 
-  @each $font-style in $--rx-font-styles {
+  @each $font-style in $--xd-font-styles {
     &--#{$font-style} {
-      font-style: map.get($--rx-font-styles-map, $font-style);
+      font-style: map.get($--xd-font-styles-map, $font-style);
     }
   }
 
-  @each $font-weight in $--rx-font-weights {
+  @each $font-weight in $--xd-font-weights {
     &--#{$font-weight} {
-      font-weight: map.get($--rx-font-weights-map, $font-weight);
+      font-weight: map.get($--xd-font-weights-map, $font-weight);
     }
   }
 

@@ -1,4 +1,4 @@
-const colorsThemeList = `$--rx-font-colors: 
+const colorsThemeList = `$--xd-font-colors: 
 'blue-1', 
 'green-1', 
 'green-2', 

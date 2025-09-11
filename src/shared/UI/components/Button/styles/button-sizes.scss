@@ -4,23 +4,23 @@
 @import '../../../../../styles/lists/input';
 
 @mixin button-size() {
-  @each $size in $--rx-input-sizes {
+  @each $size in $--xd-input-sizes {
     &--#{$size} {
       padding: map.get(
-          $--rx-button-map,
+          $--xd-button-map,
           'btn' + '-' + $size + '-' + 'padding-tb'
         )
-        map.get($--rx-button-map, 'btn' + '-' + $size + '-' + 'padding-lr');
+        map.get($--xd-button-map, 'btn' + '-' + $size + '-' + 'padding-lr');
 
       @if $size == 'small' {
-        font-size: $--rx-typography-font-size-small;
-        line-height: $--rx-typography-line-height-small;
+        font-size: $--xd-typography-font-size-small;
+        line-height: $--xd-typography-line-height-small;
       } @else if $size == 'medium' {
-        font-size: $--rx-typography-font-size-p;
-        line-height: $--rx-typography-line-height-p;
+        font-size: $--xd-typography-font-size-p;
+        line-height: $--xd-typography-line-height-p;
       } @else {
-        font-size: $--rx-typography-font-size-h6;
-        line-height: $--rx-typography-line-height-h6;
+        font-size: $--xd-typography-font-size-h6;
+        line-height: $--xd-typography-line-height-h6;
       }
     }
   }

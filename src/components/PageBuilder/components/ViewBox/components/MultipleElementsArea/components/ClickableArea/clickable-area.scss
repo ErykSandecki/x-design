@@ -3,7 +3,7 @@
 .ClickableArea {
   overflow: visible;
   position: absolute;
-  z-index: $--rx-zindex-multiple-area;
+  z-index: $--xd-zindex-multiple-area;
 
   &__outline {
     @include theme('blue-1', stroke);

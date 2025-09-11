@@ -3,7 +3,7 @@ const colorsTheme = require('./sass/maps/colorsTheme');
 const zIndex = require('./sass/maps/zIndex');
 
 const interpolateIntoSass = (obj, mapName) => {
-  const prefix = '$--rx-';
+  const prefix = '$--xd-';
   const sufix = '-map';
   const keys = [];
 

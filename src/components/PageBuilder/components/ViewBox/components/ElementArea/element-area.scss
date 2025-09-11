@@ -11,7 +11,7 @@
     font-size: 11px;
     position: absolute;
     transform: translate(1.5px, -20px);
-    z-index: $--rx-zindex-element-active;
+    z-index: $--xd-zindex-element-active;
   }
 
   &__area {
@@ -21,7 +21,7 @@
     overflow: visible;
     position: absolute;
     width: 100%;
-    z-index: $--rx-zindex-element-active;
+    z-index: $--xd-zindex-element-active;
 
     path {
       fill: rgba(#ffffff, $alpha: 0);
