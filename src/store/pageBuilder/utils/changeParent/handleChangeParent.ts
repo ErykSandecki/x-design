@@ -20,7 +20,7 @@ export const handleChangeParent = (
     possibleParent: null,
   };
 
-  if (possibleParent !== null) {
+  if (possibleParent !== null && !draggableElements.includes(possibleParent)) {
     const currentPage = state.pages[state.currentPage];
     const prevParentId = currentPage.elements.allData[id].parentId;
     const parentHasChanged = prevParentId !== possibleParent;
