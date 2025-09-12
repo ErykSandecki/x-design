@@ -12,14 +12,10 @@
   z-index: $--xd-zindex-element;
 
   &--hover {
-    @include theme('blue-1', outline, '1.5px solid');
-
     z-index: $--xd-zindex-element-active;
   }
 
   &--moving {
-    @include theme('blue-1', outline, '1.5px solid');
-
     opacity: 0.5;
     pointer-events: none;
     z-index: $--xd-zindex-element-moving !important;
@@ -30,6 +26,13 @@
   }
 
   &__outline {
+    @include theme('blue-1', outline, '1.5px solid');
+
+    pointer-events: none;
+    position: absolute;
+  }
+
+  &__events-area {
     @include enter-delay(100ms);
   }
 }

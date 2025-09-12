@@ -13,6 +13,6 @@ export const classNames = {
       selected: `${className}--selected`,
     },
   },
+  eventsArea: `${className}__events-area`,
   outline: `${className}__outline`,
-  clickableArea: `${className}__clickable-area`,
 };

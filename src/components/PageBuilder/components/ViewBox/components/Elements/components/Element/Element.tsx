@@ -94,7 +94,9 @@ const Element: FC<TElementProps> = ({
   const isMultipleMoving = useSelector(
     eventSelectorCreator('isMultipleMoving'),
   ) as boolean;
+  const isFocused = isHover || isSelected;
   const displayEventsArea = !isDraggable && !isMultiple && isSelected;
+  const displayOutline = !isDraggable && !isMultiple && isFocused;
   const isMoving = isDraggable || (isMultipleMoving && isSelected);
   const { x1, y1 } = getAbsolutePosition(coordinates, id, parentId, itemsRefs);
 
@@ -131,10 +133,23 @@ const Element: FC<TElementProps> = ({
       {...events}
     >
       {children(coordinates, isHover, isSelected)}
-      {displayEventsArea &&
+      {displayOutline &&
         createPortal(
           <Box
             classes={{ className: cx(classNamesWithTheme.outline) }}
+            style={{
+              height,
+              left: `${x1}px`,
+              top: `${y1}px`,
+              width,
+            }}
+          />,
+          overlayContainerRef.current,
+        )}
+      {displayEventsArea &&
+        createPortal(
+          <Box
+            classes={{ className: cx(classNamesWithTheme.eventsArea) }}
             style={{ left: `${x1}px`, top: `${y1}px` }}
             sx={{ position: 'absolute' }}
           >
