@@ -4,7 +4,7 @@ import { FC, memo, ReactNode, useRef } from 'react';
 import { useSelector } from 'react-redux';
 
 // components
-import ClickableShadowArea from './components/ClickableArea/ClickableShadowArea';
+import ClickableShadowArea from './ClickableShadowArea/ClickableArea/ClickableShadowArea';
 import Corners from '../../../Corners/Corners';
 import TransformArea from '../../../TransformArea/TransformArea';
 import { Box } from 'shared';
