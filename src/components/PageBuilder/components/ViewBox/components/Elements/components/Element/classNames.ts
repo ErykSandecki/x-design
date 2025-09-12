@@ -14,4 +14,5 @@ export const classNames = {
     },
   },
   outline: `${className}__outline`,
+  clickableArea: `${className}__clickable-area`,
 };

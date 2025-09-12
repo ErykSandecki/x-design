@@ -15,6 +15,7 @@ import {
 // utils
 import { findMainParent } from '../findMainParent';
 import { getOffsetXY } from '../getOffsetXY';
+import { reducedData } from './reducedData';
 
 export const calculateCoordinates = (
   currentParentId: TElement['parentId'],
@@ -83,33 +84,6 @@ export const getPartialData = (
   };
 };
 
-export const reduceData = (
-  data: Array<{
-    allData: TElement;
-    dynamicData: TElementDynamicData;
-    staticData: TElementStaticData;
-  }>,
-): TElementsData =>
-  data.reduce(
-    (obj, data) => ({
-      ...obj,
-      allData: { ...obj.allData, [data.allData.id]: data.allData },
-      dynamicData: {
-        ...obj.dynamicData,
-        [data.dynamicData.id]: data.dynamicData,
-      },
-      staticData: {
-        ...obj.staticData,
-        [data.staticData.id]: data.staticData,
-      },
-    }),
-    {
-      allData: {},
-      dynamicData: {},
-      staticData: {},
-    },
-  );
-
 export const getMappedElementsToMove = (
   parentHasChanged: boolean,
   payload: TChangeParentActionPayload,
@@ -119,7 +93,7 @@ export const getMappedElementsToMove = (
   const { elements } = currentPage;
   const { draggableElements, possibleParent } = payload;
 
-  return reduceData(
+  return reducedData(
     draggableElements.map((id) => {
       const data = getPartialData(
         elements.allData[id],
