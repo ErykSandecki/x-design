@@ -5,7 +5,6 @@ import { useSelector } from 'react-redux';
 
 // components
 import Corners from '../../../Corners/Corners';
-import TransformArea from '../../../TransformArea/TransformArea';
 import { Box } from 'shared';
 
 // core
@@ -23,6 +22,7 @@ import {
 } from './classNames';
 import { DATA_STATUS_ATTRIBUTE } from './constants';
 
+import TransformArea from '../TransformArea/TransformArea';
 // store
 import {
   elementDynamicDataSelectorCreator,
@@ -93,7 +93,7 @@ const Element: FC<TElementProps> = ({
   const isMultipleMoving = useSelector(
     eventSelectorCreator('isMultipleMoving'),
   ) as boolean;
-  const displayOutline = !isDraggable && !isMultiple && isSelected;
+  const displayEventsArea = !isDraggable && !isMultiple && isSelected;
   const { x1, y1 } = getAbsolutePosition(coordinates, id, parentId, itemsRefs);
 
   return (
@@ -129,7 +129,7 @@ const Element: FC<TElementProps> = ({
       {...events}
     >
       {children(coordinates, isHover, isSelected)}
-      {displayOutline &&
+      {displayEventsArea &&
         createPortal(
           <Box
             classes={{ className: cx(classNamesWithTheme.outline) }}
