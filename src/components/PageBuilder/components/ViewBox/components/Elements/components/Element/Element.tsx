@@ -22,7 +22,7 @@ import {
 } from './classNames';
 import { DATA_STATUS_ATTRIBUTE } from './constants';
 
-import TransformArea from '../TransformArea/TransformArea';
+import TransformArea from '../../../TransformArea/TransformArea';
 // store
 import {
   elementDynamicDataSelectorCreator,
