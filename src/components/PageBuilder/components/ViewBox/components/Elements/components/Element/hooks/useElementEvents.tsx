@@ -41,6 +41,7 @@ export const useElementEvents = (
 ): TUseElementEvents => {
   const mainParentId = useSelector(mainParentIdSelectorCreator(parentId));
   const cursorPosition = useRef(BASE_2D);
+  const cursorPositionBase = useRef(BASE_2D);
   const [isPressing, setIsPressing] = useState(false);
   const selectedElement = {
     id,
@@ -54,6 +55,7 @@ export const useElementEvents = (
   useMouseMoveEvent(
     coordinates,
     cursorPosition,
+    cursorPositionBase,
     id,
     isMultiple,
     isPressing,
@@ -67,6 +69,7 @@ export const useElementEvents = (
       alignment,
       coordinates,
       cursorPosition,
+      cursorPositionBase,
       id,
       isMultiple,
       isSelected,

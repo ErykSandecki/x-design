@@ -5,9 +5,7 @@ import { BASE_2D } from 'shared';
 import { T2DCoordinates, TElement } from 'types';
 import {
   TChangeParentActionPayload,
-  TElementDynamicData,
   TElementsData,
-  TElementStaticData,
   TEvents,
   TPageBuilderState,
 } from '../../types';
@@ -34,7 +32,10 @@ export const calculateCoordinates = (
     const { z } = currentPage.areaCoordinates;
     const { x, y } = getOffsetXY(id, mainParentId);
 
-    return { x: parentCords.x - x / z, y: parentCords.y - y / z };
+    return {
+      x: Math.floor(parentCords.x - x / z),
+      y: Math.floor(parentCords.y - y / z),
+    };
   }
 
   return { x: 0, y: 0 };

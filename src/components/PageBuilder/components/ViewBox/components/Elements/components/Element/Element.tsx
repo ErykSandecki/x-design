@@ -149,7 +149,6 @@ const Element: FC<TElementProps> = ({
       {displayEventsArea &&
         createPortal(
           <Box
-            classes={{ className: cx(classNamesWithTheme.eventsArea) }}
             style={{ left: `${x1}px`, top: `${y1}px` }}
             sx={{ position: 'absolute' }}
           >

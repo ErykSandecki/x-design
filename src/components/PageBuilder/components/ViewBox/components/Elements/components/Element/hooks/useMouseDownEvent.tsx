@@ -17,6 +17,7 @@ export const useMouseDownEvent = (
   alignment: TElement['alignment'],
   coordinates: T2DCoordinates,
   cursorPosition: RefObject<T2DCoordinates>,
+  cursorPositionBase: RefObject<T2DCoordinates>,
   id: TSelectedElement['id'],
   isMultiple: boolean,
   isSelected: boolean,
@@ -29,6 +30,7 @@ export const useMouseDownEvent = (
 
   const handleMouseDown = (event: MouseEvent): void => {
     if (event.buttons === MouseButton.lmb && mouseMode === MouseMode.default) {
+      cursorPositionBase.current = { x: event.clientX, y: event.clientY };
       event.stopPropagation();
 
       updateCursorPosition(

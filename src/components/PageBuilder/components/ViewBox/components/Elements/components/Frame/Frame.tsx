@@ -48,7 +48,8 @@ const Frame: FC<TFrameProps> = ({
     >
       {(coordinates, hover, selected) => (
         <>
-          {parentId === '-1' &&
+          {overlayContainerRef.current &&
+            parentId === '-1' &&
             createPortal(
               <Small
                 classes={{

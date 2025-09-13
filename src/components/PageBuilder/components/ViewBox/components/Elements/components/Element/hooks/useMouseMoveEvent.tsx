@@ -11,6 +11,7 @@ import { T2DCoordinates } from 'types';
 import { TSelectedElement } from 'store/pageBuilder/types';
 
 // utils
+import { distanceHasChanged } from '../utils/distanceHasChanged';
 import { updateElementPosition } from '../utils/updateElementPosition';
 import { updateEventsStatus } from 'store/pageBuilder/actions';
 
@@ -19,6 +20,7 @@ export type TUseMouseMoveEvent = void;
 export const useMouseMoveEvent = (
   coordinates: T2DCoordinates,
   cursorPosition: RefObject<T2DCoordinates>,
+  cursorPositionBase: RefObject<T2DCoordinates>,
   id: TSelectedElement['id'],
   isMultiple: boolean,
   isPressing: boolean,
@@ -27,7 +29,10 @@ export const useMouseMoveEvent = (
   const dispatch = useDispatch();
 
   const handleMouseMove = throttle((event: MouseEvent): void => {
-    if (mouseMode === MouseMode.default) {
+    if (
+      mouseMode === MouseMode.default &&
+      distanceHasChanged(event, cursorPositionBase)
+    ) {
       updateElementPosition(cursorPosition, dispatch, event, id, isMultiple);
       dispatch(updateEventsStatus({ draggableElements: [id] }));
     }
