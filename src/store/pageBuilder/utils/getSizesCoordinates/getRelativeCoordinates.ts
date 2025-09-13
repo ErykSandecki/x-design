@@ -11,13 +11,14 @@ export const getHeightCoordinates = (
 ): TSizeCoordinates => {
   const { y } = mouseCoordinates;
   const { x1, y1 } = baseCoordinates;
+  const height = baseHeight + y;
 
   return {
     coordinates: {
       x: x1,
       y: y1,
     },
-    height: baseHeight + y,
+    height: height < 0 ? 0 : height,
     width: baseWidth,
   };
 };
@@ -30,6 +31,7 @@ export const getWidthCoordinates = (
 ): TSizeCoordinates => {
   const { x } = mouseCoordinates;
   const { x1, y1 } = baseCoordinates;
+  const width = baseWidth + x;
 
   return {
     coordinates: {
@@ -37,7 +39,7 @@ export const getWidthCoordinates = (
       y: y1,
     },
     height: baseHeight,
-    width: baseWidth + x,
+    width: width < 0 ? 0 : width,
   };
 };
 
