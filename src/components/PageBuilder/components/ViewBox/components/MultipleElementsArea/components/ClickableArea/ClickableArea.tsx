@@ -13,7 +13,10 @@ import { className, classNames } from './classNames';
 import { SW } from './constants';
 
 // store
-import { eventsSelector } from 'store/pageBuilder/selectors';
+import {
+  areParentsTheSameSelector,
+  eventsSelector,
+} from 'store/pageBuilder/selectors';
 
 // styles
 import styles from './clickable-area.scss';
@@ -34,6 +37,7 @@ const ClickableArea: FC<TClickableAreaProps> = ({
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { isMultipleMoving } = useSelector(eventsSelector);
   const { onMouseDown } = useClickableAreaEvents();
+  const areParentsTheSame = useSelector(areParentsTheSameSelector);
   const height = outlineCoordinates.y2 - outlineCoordinates.y1;
   const width = outlineCoordinates.x2 - outlineCoordinates.x1;
 
@@ -43,25 +47,26 @@ const ClickableArea: FC<TClickableAreaProps> = ({
 
   return (
     <>
-      <E2EDataAttribute type={E2EAttribute.outline}>
-        <svg
-          className={cx(classNamesWithTheme[className])}
-          style={{
-            height: `${height}px`,
-            left: `${outlineCoordinates.x1}px`,
-            top: `${outlineCoordinates.y1}px`,
-            width: `${width}px`,
-          }}
-        >
-          <path
-            className={cx(classNamesWithTheme.outline)}
-            d={`M ${0},${0} H ${width} V ${height} H ${0} V ${0}`}
-            strokeWidth={SW}
-            onMouseDown={(event) => onMouseDown(event, '-1')}
-          />
-        </svg>
-      </E2EDataAttribute>
-
+      {areParentsTheSame && (
+        <E2EDataAttribute type={E2EAttribute.outline}>
+          <svg
+            className={cx(classNamesWithTheme[className])}
+            style={{
+              height: `${height}px`,
+              left: `${outlineCoordinates.x1}px`,
+              top: `${outlineCoordinates.y1}px`,
+              width: `${width}px`,
+            }}
+          >
+            <path
+              className={cx(classNamesWithTheme.outline)}
+              d={`M ${0},${0} H ${width} V ${height} H ${0} V ${0}`}
+              strokeWidth={SW}
+              onMouseDown={(event) => onMouseDown(event, '-1')}
+            />
+          </svg>
+        </E2EDataAttribute>
+      )}
       {elementsCordinates.map(({ coordinates: { x1, x2, y1, y2 }, id }) => (
         <E2EDataAttribute key={id} type={E2EAttribute.rect} value={id}>
           <svg

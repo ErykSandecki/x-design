@@ -11,6 +11,7 @@ import {
 import { getMappedElementsToMove } from './getMappedElementsToMove';
 import { getMappedElementsWithResetPosition } from './getMappedElementsWithResetPosition';
 import { getMappedParentsChildren } from './getMappedParentsChildren';
+import { detectIdAnomalies } from './detectIdAnomalies';
 
 export const handleWithPossibleParent = (
   currentPage: TPage,
@@ -110,6 +111,10 @@ export const handleChangeParent = (
   const currentPage = state.pages[state.currentPage];
   const stateCopy = cloneDeep(state);
   const id = first(draggableElements);
+  const hasAnomalies = detectIdAnomalies(
+    draggableElements,
+    currentPage.selectedElements,
+  );
   const events = {
     ...state.events,
     draggableElements: [],
@@ -117,7 +122,11 @@ export const handleChangeParent = (
     possibleParent: null,
   };
 
-  if (possibleParent && !draggableElements.includes(possibleParent)) {
+  if (
+    !hasAnomalies &&
+    possibleParent &&
+    !draggableElements.includes(possibleParent)
+  ) {
     return handleWithPossibleParent(
       currentPage,
       events,

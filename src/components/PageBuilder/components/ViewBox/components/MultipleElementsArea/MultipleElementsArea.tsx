@@ -15,6 +15,7 @@ import { BASE_RECT } from 'shared';
 
 // store
 import {
+  areParentsTheSameSelector,
   eventSelectorCreator,
   multipleSelectedElementsSelector,
   selectedElementsSelector,
@@ -27,6 +28,7 @@ import { TCoordinatesData } from './types';
 import { getCoordinatesData } from './utils/getCoordinatesData';
 
 const MultipleElementsArea: FC = () => {
+  const areParentsTheSame = useSelector(areParentsTheSameSelector);
   const selectedElements = useSelector(selectedElementsSelector);
   const isMultiple = useSelector(multipleSelectedElementsSelector);
   const { itemsRefs, overlayContainerRef } = useRefs();
@@ -60,7 +62,9 @@ const MultipleElementsArea: FC = () => {
         elementsCordinates={coordinatesData.elementsCordinates}
         outlineCoordinates={coordinatesData.outline}
       />
-      {!isMultipleMoving &&
+      {overlayContainerRef.current &&
+        areParentsTheSame &&
+        !isMultipleMoving &&
         createPortal(
           <Corners rectCoordinates={coordinatesData.outline} />,
           overlayContainerRef.current,

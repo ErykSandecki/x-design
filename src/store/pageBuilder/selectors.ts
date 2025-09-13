@@ -153,6 +153,12 @@ export const mainParentIdSelectorCreator = (
   );
 
 export const multipleSelectedElementsSelector: Selector<TMainState, boolean> =
+  createSelector(
+    selectedElementsSelector,
+    (selectedElements) => size(selectedElements) > 1,
+  );
+
+export const areParentsTheSameSelector: Selector<TMainState, boolean> =
   createSelector(selectedElementsSelector, (selectedElements) => {
     if (size(selectedElements) > 1) {
       const baseParentId = selectedElements[0].parentId;
@@ -162,5 +168,5 @@ export const multipleSelectedElementsSelector: Selector<TMainState, boolean> =
       );
     }
 
-    return false;
+    return true;
   });

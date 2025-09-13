@@ -1,5 +1,8 @@
 import { MouseEvent, RefObject } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+
+// selectors
+import { areParentsTheSameSelector } from 'store/pageBuilder/selectors';
 
 // types
 import { MouseButton, T2DCoordinates, TElement } from 'types';
@@ -18,10 +21,12 @@ export const useMouseDownEvent = (
   setIsPressing: (isPressing: boolean) => void,
   setPossibleElementToSelect: (possibleElementToSelect: TElement['id']) => void,
 ): TUseMouseDownEvent => {
+  const areParentsTheSame = useSelector(areParentsTheSameSelector);
+
   const dispatch = useDispatch();
 
   const handleMouseDown = (event: MouseEvent, id: TElement['id']): void => {
-    if (event.buttons === MouseButton.lmb) {
+    if (event.buttons === MouseButton.lmb && areParentsTheSame) {
       event.stopPropagation();
       initSetElementsCoordinates(cursorPosition, dispatch, event, true);
       initStatesOnMouseDown(

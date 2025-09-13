@@ -96,7 +96,7 @@ const Element: FC<TElementProps> = ({
   ) as boolean;
   const isFocused = isHover || isSelected;
   const displayEventsArea = !isDraggable && !isMultiple && isSelected;
-  const displayOutline = !isDraggable && !isMultiple && isFocused;
+  const displayOutline = isFocused;
   const isMoving = isDraggable || (isMultipleMoving && isSelected);
   const { x1, y1 } = getAbsolutePosition(coordinates, id, parentId, itemsRefs);
 
