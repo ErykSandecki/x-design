@@ -31,11 +31,6 @@ module.exports = {
       statements: 100,
     },
   },
-  globals: {
-    'ts-jest': {
-      tsconfig: 'tsconfig.spec.json',
-    },
-  },
   modulePaths: [],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   moduleNameMapper: {
