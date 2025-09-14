@@ -1,4 +1,5 @@
 export * from './common/generateID';
+export * from './common/getCssVariable';
 export * from './dom/createHtmlElement';
 export * from './dom/handleSubmitInput';
 export * from './dom/hasScroll';

@@ -30,6 +30,7 @@ export const handleCreateElement = (
       },
       children: [],
       coordinates: { x, y },
+      deepLevel: 0,
       height: Math.abs(y1 - y2),
       id: generateID(),
       parentId: '-1',

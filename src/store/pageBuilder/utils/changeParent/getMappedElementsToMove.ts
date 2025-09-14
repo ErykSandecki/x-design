@@ -63,10 +63,12 @@ export const getSizes = (
 export const getPartialData = (
   element: TElement,
   id: TElement['id'],
+  parent: TElement,
   parentHasChanged: boolean,
   possibleParent: TEvents['possibleParent'],
   state: TPageBuilderState,
 ): Partial<TElement> => {
+  const deepLevel = possibleParent !== '-1' ? parent.deepLevel + 1 : 0;
   const targetPosition = possibleParent === '-1' ? 'absolute' : 'relative';
   const sizes = getSizes(
     { height: element.height, width: element.width },
@@ -78,6 +80,7 @@ export const getPartialData = (
     coordinates: parentHasChanged
       ? calculateCoordinates(element.parentId, id, possibleParent, state)
       : element.coordinates,
+    deepLevel: parentHasChanged ? deepLevel : element.deepLevel,
     height: parentHasChanged ? sizes.height : element.height,
     parentId: parentHasChanged ? possibleParent : element.parentId,
     position: parentHasChanged ? targetPosition : element.position,
@@ -99,6 +102,7 @@ export const getMappedElementsToMove = (
       const data = getPartialData(
         elements.allData[id],
         id,
+        elements.allData[possibleParent],
         parentHasChanged,
         possibleParent,
         state,
@@ -110,6 +114,7 @@ export const getMappedElementsToMove = (
         allData: {
           ...elements.allData[id],
           coordinates: shouldResetCoordinates ? BASE_2D : data.coordinates,
+          deepLevel: data.deepLevel,
           height: data.height,
           parentId: data.parentId,
           position: data.position,
@@ -118,6 +123,7 @@ export const getMappedElementsToMove = (
         dynamicData: {
           ...elements.dynamicData[id],
           coordinates: shouldResetCoordinates ? BASE_2D : data.coordinates,
+          deepLevel: data.deepLevel,
           height: data.height,
           position: data.position,
           width: data.width,

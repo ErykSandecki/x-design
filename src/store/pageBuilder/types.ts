@@ -42,6 +42,7 @@ export type TElementDynamicData = Pick<
   | 'alignment'
   | 'background'
   | 'coordinates'
+  | 'deepLevel'
   | 'height'
   | 'id'
   | 'position'

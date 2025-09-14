@@ -8,12 +8,8 @@ import MultipleElementsArea from './components/MultipleElementsArea/MultipleElem
 import SelectableArea from './components/SelectableArea/SelectableArea';
 import { ZoomBox } from 'shared';
 
-// core
-import { useRefs } from 'pages/PageBuilderPage/core/RefsProvider';
-
 // others
 import { className, classNames } from './classNames';
-import { OVERLAY_CONTAINER_ID } from './constants';
 
 // hooks
 import { useTheme } from 'hooks';
@@ -32,6 +28,7 @@ import styles from './view-box.scss';
 // types
 import { MouseMode } from 'types/enums/mouseMode';
 import { T3DCoordinates, TColor } from 'types';
+import OverlayContainer from './components/OverlayContainer/OverlayContainer';
 
 export type TViewBoxProps = {
   coordinates: T3DCoordinates;
@@ -51,7 +48,6 @@ const ViewBox: FC<TViewBoxProps> = ({
   const data = background.properties as TColor;
   const dispatch = useDispatch();
   const zoomBoxRef = useRef<HTMLDivElement>(null);
-  const { overlayContainerRef } = useRefs();
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { elementArea, selectableArea, ...events } = useViewBoxEvents(
     coordinates,
@@ -90,11 +86,10 @@ const ViewBox: FC<TViewBoxProps> = ({
       />
       <ElementArea elementArea={elementArea} />
       <SelectableArea selectableArea={selectableArea} />
-      <div
-        className={cx(classNamesWithTheme.overlayContainer)}
-        id={OVERLAY_CONTAINER_ID}
-        ref={overlayContainerRef}
-      />
+      <OverlayContainer />
+      {/* <div style={{ zIndex: 'calc(var(--xd-zindex-overlay-container) + 2)' }}>
+        Overlay++
+      </div> */}
     </ZoomBox>
   );
 };

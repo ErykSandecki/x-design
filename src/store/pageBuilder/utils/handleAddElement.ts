@@ -32,6 +32,7 @@ export const handleAddElement = (
             'alignment',
             'background',
             'coordinates',
+            'deepLevel',
             'height',
             'id',
             'position',

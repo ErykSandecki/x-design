@@ -24,6 +24,7 @@ export type TElement = {
   background: TBackground;
   children: Array<string>;
   coordinates: T2DCoordinates;
+  deepLevel: number;
   height: number | CSSProperties['height'];
   id: string;
   parentId: TElement['id'] | '-1';
