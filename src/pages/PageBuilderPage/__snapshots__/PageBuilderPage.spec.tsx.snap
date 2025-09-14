@@ -255,7 +255,7 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
         style="transform: translate(0px, 0px) scale(1);"
       >
         <div
-          class="css-q0izro OverlayContainer OverlayContainer--light"
+          class="css-1bv6jss"
           data-test-box=""
           id="overlayContainer"
           style="z-index: var(--xd-page-builder-zindex-overlay-container);"

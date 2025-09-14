@@ -5,13 +5,3 @@ $--xd-zindex-element-moving: 4;
 $--xd-zindex-element-anchor: 5;
 $--xd-zindex-multiple-area: 6;
 $--xd-zindex-overlay-container: 7;
-
-:root {
-  --xd-page-builder-zindex-events: #{$--xd-zindex-events};
-  --xd-page-builder-zindex-element: #{$--xd-zindex-element};
-  --xd-page-builder-zindex-element-active: #{$--xd-zindex-element-active};
-  --xd-page-builder-zindex-element-moving: #{$--xd-zindex-element-moving};
-  --xd-page-builder-zindex-element-anchor: #{$--xd-zindex-element-anchor};
-  --xd-page-builder-zindex-multiple-area: #{$--xd-zindex-multiple-area};
-  --xd-page-builder-zindex-overlay-container: #{$--xd-zindex-overlay-container};
-}
