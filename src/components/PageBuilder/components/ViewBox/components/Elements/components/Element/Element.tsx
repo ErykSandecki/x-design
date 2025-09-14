@@ -1,12 +1,10 @@
-import { createPortal } from 'react-dom';
 import { isNumber } from 'lodash';
 import { FC, memo, ReactNode, useRef } from 'react';
 import { useSelector } from 'react-redux';
 
 // components
-import ClickableShadowArea from './ClickableShadowArea/ClickableArea/ClickableShadowArea';
-import Corners from '../../../Corners/Corners';
-import TransformArea from '../../../TransformArea/TransformArea';
+import EventsArea from './components/EventsArea/EventsArea';
+import Outline from './components/Outline/Outline';
 import { Box } from 'shared';
 
 // core
@@ -43,7 +41,6 @@ import { MouseMode } from 'types/enums/mouseMode';
 
 // utils
 import { getAbsolutePosition } from 'components/PageBuilder/components/ViewBox/utils/getAbsolutePosition';
-import { getCornersPosition } from './utils/getCornersPosition';
 import { getPosition } from './utils/getPosition';
 
 type TElementProps = {
@@ -73,12 +70,11 @@ const Element: FC<TElementProps> = ({
   const isMultiple = useSelector(multipleSelectedElementsSelector);
   const elementRef = useRef<HTMLDivElement>(null);
   const elementDynamicData = useSelector(elementDynamicDataSelectorCreator(id));
-  const { itemsRefs, overlayContainerRef } = useRefs();
+  const { itemsRefs } = useRefs();
   const { alignment, coordinates } = elementDynamicData;
   const { background, height, position, rotate, width } = elementDynamicData;
   const { x, y } = coordinates;
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-  const rectCoordinates = getCornersPosition(height, width);
   const { ...events } = useElementEvents(
     alignment,
     coordinates,
@@ -133,38 +129,19 @@ const Element: FC<TElementProps> = ({
       {...events}
     >
       {children(coordinates, isHover, isSelected)}
-      {displayOutline &&
-        createPortal(
-          <Box
-            classes={{ className: cx(classNamesWithTheme.outline) }}
-            style={{
-              height,
-              left: `${x1}px`,
-              top: `${y1}px`,
-              width,
-            }}
-          />,
-          overlayContainerRef.current,
-        )}
-      {displayEventsArea &&
-        createPortal(
-          <Box
-            style={{ left: `${x1}px`, top: `${y1}px` }}
-            sx={{ position: 'absolute' }}
-          >
-            <ClickableShadowArea height={height} width={width} />
-            <Corners rectCoordinates={rectCoordinates} />
-            <TransformArea
-              height={height}
-              id={id}
-              moseMode={mouseMode}
-              x={x}
-              y={y}
-              width={width}
-            />
-          </Box>,
-          overlayContainerRef.current,
-        )}
+      {displayOutline && (
+        <Outline height={height} x={x1} y={y1} width={width} />
+      )}
+      {displayEventsArea && (
+        <EventsArea
+          absoluteCoordinates={{ x: x1, y: y1 }}
+          height={height}
+          id={id}
+          mouseMode={mouseMode}
+          relativeCoordinates={{ x, y }}
+          width={width}
+        />
+      )}
     </Box>
   );
 };

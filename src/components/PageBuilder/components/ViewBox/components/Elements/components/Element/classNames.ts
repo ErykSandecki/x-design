@@ -13,5 +13,4 @@ export const classNames = {
       selected: `${className}--selected`,
     },
   },
-  outline: `${className}__outline`,
 };

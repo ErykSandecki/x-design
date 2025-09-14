@@ -1,4 +1,4 @@
-export const className = 'ClickableShadowArea';
+export const className = 'Outline';
 
 export const classes = {
   className,
