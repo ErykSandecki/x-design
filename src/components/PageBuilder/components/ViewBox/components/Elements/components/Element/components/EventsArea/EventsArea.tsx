@@ -45,7 +45,7 @@ const EventsArea: FC<TOutlineProps> = ({
       }}
       sx={{ position: 'absolute' }}
     >
-      {/* BOX BLANK TO ALLOW TO MOVE BLOCK WHEN NOT VISIBLE */}
+      {/* // Technical note: Box blank to allow move block when overflow */}
       <Box style={{ height, width }} />
       <Corners rectCoordinates={rectCoordinates} />
       <TransformArea

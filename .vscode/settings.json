@@ -118,6 +118,15 @@
       "italic": false
     },
     {
+      "tag": "Technical note:",
+      "color": "#FA5A37",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
       "tag": "services",
       "color": "#FFC107",
       "strikethrough": false,
