@@ -271,8 +271,10 @@ exports[`App snapshots should render router 1`] = `
         style="transform: translate(0px, 0px) scale(1);"
       >
         <div
-          class="ViewBox__overlay-container ViewBox__overlay-container--light"
+          class="css-q0izro OverlayContainer OverlayContainer--light"
+          data-test-box=""
           id="overlayContainer"
+          style="z-index: var(--xd-page-builder-zindex-overlay-container);"
         />
       </div>
     </div>

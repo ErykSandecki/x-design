@@ -27,15 +27,15 @@ export const getMappedElementsWithResetPosition = (
       return {
         ...currentPage.elements,
         allData: {
-          ...element,
+          ...elements.allData[id],
           coordinates: shouldResetCoordinates ? BASE_2D : element.coordinates,
         },
         dynamicData: {
-          ...element,
+          ...elements.dynamicData[id],
           coordinates: shouldResetCoordinates ? BASE_2D : element.coordinates,
         },
         staticData: {
-          ...element,
+          ...elements.staticData[id],
         },
       };
     }),

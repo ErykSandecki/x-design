@@ -24,6 +24,7 @@ import { MouseMode } from 'types/enums/mouseMode';
 import { getProviderWrapper } from 'test';
 
 const mousePosition = { current: BASE_2D } as RefObject<T2DCoordinates>;
+const mousePositionBase = { current: BASE_2D } as RefObject<T2DCoordinates>;
 const mockCallBack = jest.fn();
 const stateMock = {
   ...pageBuilderStateMock,
@@ -41,6 +42,7 @@ describe('useMouseMoveEvent', () => {
           {},
           { x: 0, y: 0 },
           mousePosition,
+          mousePositionBase,
           selectedElementMock.id,
           false,
           true,
@@ -75,6 +77,7 @@ describe('useMouseMoveEvent', () => {
           {},
           { x: 0, y: 0 },
           mousePosition,
+          mousePositionBase,
           selectedElementMock.id,
           false,
           true,

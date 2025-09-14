@@ -22,10 +22,20 @@ exports[`Element snapshots should render Element when is selected & is multiple 
     style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); background-color: rgb(255, 255, 255); height: 100px; position: absolute; width: 100px;"
   >
     <div
-      class="css-ckbv47 Element__outline Element__outline--light"
+      class="css-q0izro Outline Outline--light"
       data-test-box=""
-      style="left: 0px; top: 0px;"
+      style="height: 100px; left: 0px; top: 0px; width: 100px;"
+    />
+    <div
+      class="css-ckbv47"
+      data-test-box=""
+      style="height: 100px; left: 0px; top: 0px; width: 100px;"
     >
+      <div
+        class="css-q0izro"
+        data-test-box=""
+        style="height: 100px; width: 100px;"
+      />
       <svg
         class="Corners Corners--light"
         style="height: 102px; left: -1px; top: -1px; width: 102px;"
@@ -115,10 +125,20 @@ exports[`Element snapshots should render Element when is selected 1`] = `
     style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); background-color: rgb(255, 255, 255); height: 100px; position: absolute; width: 100px;"
   >
     <div
-      class="css-ckbv47 Element__outline Element__outline--light"
+      class="css-q0izro Outline Outline--light"
       data-test-box=""
-      style="left: 0px; top: 0px;"
+      style="height: 100px; left: 0px; top: 0px; width: 100px;"
+    />
+    <div
+      class="css-ckbv47"
+      data-test-box=""
+      style="height: 100px; left: 0px; top: 0px; width: 100px;"
     >
+      <div
+        class="css-q0izro"
+        data-test-box=""
+        style="height: 100px; width: 100px;"
+      />
       <svg
         class="Corners Corners--light"
         style="height: 102px; left: -1px; top: -1px; width: 102px;"

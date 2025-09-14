@@ -32,6 +32,7 @@ describe('handleChangeParent', () => {
 
   it(`should not change parent when possible parent is null`, () => {
     // mock
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
     const payload = {
       draggableElements: ['1'],
       possibleIndexPosition: null,
@@ -39,13 +40,82 @@ describe('handleChangeParent', () => {
     };
 
     // before
-    const result = handleChangeParent(
-      payload,
-      pageBuilderStateMock[PAGE_BUILDER],
-    );
+    const result = handleChangeParent(payload, {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            allData: {
+              ['-1']: {
+                ...currentPage.elements.allData['-1'],
+                children: [elementAllDataMock.id],
+              },
+              [elementAllDataMock.id]: {
+                ...elementAllDataMock,
+              },
+            },
+            dynamicData: {
+              ...currentPage.elements.dynamicData,
+              [elementDynamicDataMock.id]: {
+                ...elementDynamicDataMock,
+              },
+            },
+            staticData: {
+              ['-1']: {
+                ...currentPage.elements.staticData['-1'],
+                children: [elementAllDataMock.id],
+              },
+              [elementStaticDataMock.id]: {
+                ...elementStaticDataMock,
+              },
+            },
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
 
     // result
-    expect(result).toStrictEqual(pageBuilderStateMock[PAGE_BUILDER]);
+    expect(result).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            allData: {
+              ['-1']: {
+                ...currentPage.elements.allData['-1'],
+                children: [elementAllDataMock.id],
+              },
+              [elementAllDataMock.id]: {
+                ...elementAllDataMock,
+              },
+            },
+            dynamicData: {
+              ...currentPage.elements.dynamicData,
+              [elementDynamicDataMock.id]: {
+                ...elementDynamicDataMock,
+              },
+            },
+            staticData: {
+              ['-1']: {
+                ...currentPage.elements.staticData['-1'],
+                children: [elementAllDataMock.id],
+              },
+              [elementStaticDataMock.id]: {
+                ...elementStaticDataMock,
+              },
+            },
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
   });
 
   it(`should change parent`, () => {
@@ -255,6 +325,7 @@ describe('handleChangeParent', () => {
               },
               ['2']: {
                 ...elementAllDataMock,
+                deepLevel: elementAllDataMock.deepLevel + 1,
                 id: '2',
                 parentId: elementAllDataMock.id,
                 position: 'relative',
@@ -267,6 +338,7 @@ describe('handleChangeParent', () => {
               },
               ['2']: {
                 ...elementDynamicDataMock,
+                deepLevel: elementDynamicDataMock.deepLevel + 1,
                 id: '2',
                 position: 'relative',
               },

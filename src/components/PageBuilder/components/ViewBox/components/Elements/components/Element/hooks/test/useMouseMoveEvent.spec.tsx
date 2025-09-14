@@ -22,6 +22,7 @@ import { getProviderWrapper } from 'test';
 
 const mockCallBack = jest.fn();
 const ref = { current: BASE_2D } as RefObject<T2DCoordinates>;
+const refBase = { current: { x: 10, y: 10 } } as RefObject<T2DCoordinates>;
 const stateMock = {
   ...pageBuilderStateMock,
 };
@@ -48,7 +49,15 @@ describe('useMouseMoveEvent', () => {
     // before
     renderHook(
       () =>
-        useMouseMoveEvent(BASE_2D, ref, '-1', false, true, MouseMode.default),
+        useMouseMoveEvent(
+          BASE_2D,
+          ref,
+          refBase,
+          '-1',
+          false,
+          true,
+          MouseMode.default,
+        ),
       {
         wrapper: getProviderWrapper(store),
       },
@@ -68,7 +77,15 @@ describe('useMouseMoveEvent', () => {
     // before
     renderHook(
       () =>
-        useMouseMoveEvent(BASE_2D, ref, '-1', false, true, MouseMode.comment),
+        useMouseMoveEvent(
+          BASE_2D,
+          ref,
+          refBase,
+          '-1',
+          false,
+          true,
+          MouseMode.comment,
+        ),
       {
         wrapper: getProviderWrapper(store),
       },
@@ -81,14 +98,22 @@ describe('useMouseMoveEvent', () => {
     expect(mockCallBack.mock.calls.length).toBe(0);
   });
 
-  it(`should not trigger event when is multiple`, () => {
+  it(`should trigger event when is multiple`, () => {
     // mock
     const store = configureStore(stateMock);
 
     // before
     renderHook(
       () =>
-        useMouseMoveEvent(BASE_2D, ref, '-1', false, true, MouseMode.default),
+        useMouseMoveEvent(
+          BASE_2D,
+          ref,
+          refBase,
+          '-1',
+          false,
+          true,
+          MouseMode.default,
+        ),
       {
         wrapper: getProviderWrapper(store),
       },

@@ -258,6 +258,7 @@ describe('getMappedElementsToMove', () => {
         ['2']: {
           ...elementAllDataMock,
           children: [],
+          deepLevel: elementAllDataMock.deepLevel + 1,
           id: '2',
           parentId: elementStaticDataMock.id,
           position: 'relative',
@@ -266,6 +267,7 @@ describe('getMappedElementsToMove', () => {
       dynamicData: {
         ['2']: {
           ...elementDynamicDataMock,
+          deepLevel: elementAllDataMock.deepLevel + 1,
           id: '2',
           position: 'relative',
         },
