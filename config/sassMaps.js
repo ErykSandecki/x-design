@@ -1,9 +1,10 @@
 const boxShadow = require('./sass/maps/boxShadow');
 const colorsTheme = require('./sass/maps/colorsTheme');
+const constants = require('./constants/constants');
 const zIndex = require('./sass/maps/zIndex');
 
 const interpolateIntoSass = (obj, mapName) => {
-  const prefix = '$--xd-';
+  const prefix = constants.prefix;
   const sufix = '-map';
   const keys = [];
 

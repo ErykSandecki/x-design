@@ -52,6 +52,7 @@ export const Button: FC<TButtonProps> = ({
   children,
   classes = { className: '' },
   color = ButtonColor.primary,
+  depsSx = [],
   disabled = false,
   disabledRippleEffect = false,
   endIcon = null,
@@ -68,7 +69,7 @@ export const Button: FC<TButtonProps> = ({
   variant = ButtonVariant.contained,
   ...restProps
 }) => {
-  const sxClassName = useSX(sx);
+  const sxClassName = useSX(depsSx, sx);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const Icon = useIcon(classNamesWithTheme, cx, size);
   const { rippleEffect, triggerRippleEffect } = useRippleEffect(

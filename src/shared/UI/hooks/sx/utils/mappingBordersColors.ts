@@ -1,4 +1,4 @@
-import { kebabCase } from 'lodash';
+import { isEmpty, kebabCase, pick } from 'lodash';
 
 // others
 import { THEME_COLORS } from 'constant/themeColors';
@@ -6,16 +6,19 @@ import { THEME_COLORS } from 'constant/themeColors';
 // types
 import { BorderColor } from '../enums/borders';
 import { Theme } from 'types';
+import { TSX } from '../types/types';
 import { TSXBorders } from '../types/borders';
 
 // utils
 import { enumToArray } from 'utils';
 
-export const mappingBordersColors = (
-  borderColors: TSXBorders,
-  theme: Theme,
-): string => {
+export const mappingBordersColors = (sx: TSX, theme: Theme): string => {
   const keys = enumToArray<string>(BorderColor);
+  const borderColors = pick(sx, keys) as TSXBorders;
+
+  if (isEmpty(borderColors)) {
+    return '';
+  }
 
   return keys
     .map((key) => {

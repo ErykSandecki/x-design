@@ -1,11 +1,7 @@
 .App {
+  @include theme('neutral-4', background-color);
+  @include theme('neutral-1', color);
+
   min-height: 100%;
   overflow: auto;
-
-  @each $mode in $--xd-theme-list {
-    &--#{$mode} {
-      background-color: map.get($--xd-colors-theme, 'neutral-4' + '--' + $mode);
-      color: map.get($--xd-colors-theme, 'neutral-1' + '--' + $mode);
-    }
-  }
 }

@@ -24,7 +24,7 @@ describe('useSX', () => {
     const store = configureStore();
 
     // before
-    const { result } = renderHook(() => useSX({}), {
+    const { result } = renderHook(() => useSX([], {}), {
       wrapper: ({ children }) => (
         <Provider store={store}>
           <ContextProvider theme={Theme.dark}>{children}</ContextProvider>

@@ -41,6 +41,7 @@ export const Icon: FC<TIconProps> = ({
   clickable = false,
   classes = { className: '' },
   color = ColorsTheme.neutral1,
+  depsSx = [],
   disabled = false,
   e2eAttribute = E2EAttribute.icon,
   e2eValue = '',
@@ -54,7 +55,7 @@ export const Icon: FC<TIconProps> = ({
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const isClickable = clickable && !disabled;
   const SVG = useMemo(() => Icons[name], [name]);
-  const sxClassName = useSX(sx);
+  const sxClassName = useSX(depsSx, sx);
 
   return (
     <E2EDataAttribute type={e2eAttribute} value={e2eValue || name}>

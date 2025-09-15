@@ -53,6 +53,7 @@ export const Typography = ({
   classes = { className: '' },
   color = ColorsTheme.neutral1,
   component = null,
+  depsSx = [],
   e2eAttribute = E2EAttribute.text,
   e2eValue = '',
   fontStyle = TypographyFontStyle.normal,
@@ -68,7 +69,7 @@ export const Typography = ({
   ...restProps
 }: TTypographyProps) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-  const sxClassName = useSX(sx);
+  const sxClassName = useSX(depsSx, sx);
 
   if (!children && !innerHtml) {
     return null;

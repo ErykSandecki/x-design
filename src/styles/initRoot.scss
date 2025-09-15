@@ -1,6 +1,52 @@
 @import '../components/PageBuilder/styles/z-indexes.scss';
 
 :root {
+  // --box-shadows
+  --xd-box-shadow-0: #{$--xd-box-shadow-0};
+  --xd-box-shadow-1: #{$--xd-box-shadow-1};
+  --xd-box-shadow-2: #{$--xd-box-shadow-2};
+  --xd-box-shadow-3: #{$--xd-box-shadow-3};
+  --xd-box-shadow-4: #{$--xd-box-shadow-4};
+  --xd-box-shadow-6: #{$--xd-box-shadow-6};
+  --xd-box-shadow-8: #{$--xd-box-shadow-8};
+  --xd-box-shadow-12: #{$--xd-box-shadow-12};
+  --xd-box-shadow-16: #{$--xd-box-shadow-16};
+  --xd-box-shadow-24: #{$--xd-box-shadow-24};
+
+  // --colors
+  --xd-blue-1--light: #{$--xd-blue-1--light};
+  --xd-blue-2--light: #{$--xd-blue-2--light};
+  --xd-blue-1--dark: #{$--xd-blue-1--dark};
+  --xd-blue-2--dark: #{$--xd-blue-2--dark};
+  --xd-sky-blue-1: #{$--xd-sky-blue-1};
+  --xd-green-1: #{$--xd-green-1};
+  --xd-green-2: #{$--xd-green-2};
+  --xd-red-1: #{$--xd-red-1};
+  --xd-orange-1--light: #{$--xd-orange-1--light};
+  --xd-orange-1--dark: #{$--xd-orange-1--dark};
+  --xd-pink-1: #{$--xd-pink-1};
+  --xd-violet-1: #{$--xd-violet-1};
+  --xd-neutral-1--light: #{$--xd-neutral-1--light};
+  --xd-neutral-2--light: #{$--xd-neutral-2--light};
+  --xd-neutral-3--light: #{$--xd-neutral-3--light};
+  --xd-neutral-4--light: #{$--xd-neutral-4--light};
+  --xd-neutral-5--light: #{$--xd-neutral-5--light};
+  --xd-neutral-1--dark: #{$--xd-neutral-1--dark};
+  --xd-neutral-2--dark: #{$--xd-neutral-2--dark};
+  --xd-neutral-3--dark: #{$--xd-neutral-3--dark};
+  --xd-neutral-4--dark: #{$--xd-neutral-4--dark};
+  --xd-neutral-5--dark: #{$--xd-neutral-5--dark};
+
+  // --zindexes
+  --xd-zindex-standard: #{map.get($map: $--xd-z-indexes-map, $key: 'standard')};
+  --xd-zindex-overlay: #{map.get($map: $--xd-z-indexes-map, $key: 'overlay')};
+  --xd-zindex-dropdown: #{map.get($map: $--xd-z-indexes-map, $key: 'dropdown')};
+  --xd-zindex-menu: #{map.get($map: $--xd-z-indexes-map, $key: 'menu')};
+  --xd-zindex-snackbar: #{map.get($map: $--xd-z-indexes-map, $key: 'snackbar')};
+  --xd-zindex-tooltip: #{map.get($map: $--xd-z-indexes-map, $key: 'tooltip')};
+  --xd-zindex-loader: #{map.get($map: $--xd-z-indexes-map, $key: 'loader')};
+
+  // --page-builder-variables
   --xd-page-builder-zindex-events: #{$--xd-zindex-events};
   --xd-page-builder-zindex-element: #{$--xd-zindex-element};
   --xd-page-builder-zindex-element-active: #{$--xd-zindex-element-active};

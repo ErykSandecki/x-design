@@ -7,5 +7,6 @@ export type TClasses = TObject<string>;
 export type TUIProps<T extends TClasses, K = TSX> = {
   attributes?: TObject<string>;
   classes?: T;
+  depsSx?: Array<TSX>;
   sx?: K;
 };

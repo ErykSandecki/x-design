@@ -30,6 +30,7 @@ export const Box: FC<TBoxProps> = ({
   children,
   classes = { className: '' },
   component = 'div',
+  depsSx = [],
   e2eAttribute = E2EAttribute.box,
   e2eValue = '',
   ref,
@@ -37,7 +38,7 @@ export const Box: FC<TBoxProps> = ({
   sx = {},
   ...restProps
 }) => {
-  const sxClassName = useSX(sx);
+  const sxClassName = useSX(depsSx, sx);
 
   return createElement(
     component,

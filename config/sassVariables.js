@@ -2,26 +2,20 @@ const boxShadows = require('./sass/variables/boxShadows');
 const colors = require('./sass/variables/colors');
 const constants = require('./constants/constants');
 
-const interpolateIntoSass = (obj, isTheme) => {
+const interpolateIntoSass = (obj) => {
   const prefix = constants.prefix;
   const variables = [];
 
   for (const [key, value] of Object.entries(obj)) {
-    const close = isTheme ? ',' : ';';
-    const withPrefix = isTheme ? '' : prefix;
+    const close = ';';
     const unit = value.$type === 'number' ? 'px' : '';
+    const variable = `${prefix}${key}`;
 
-    variables.push(`${withPrefix}${key}: ${value.$value}${unit}${close}`);
+    variables.push(`${variable}: ${value.$value}${unit}${close}`);
   }
 
-  return isTheme
-    ? `${prefix}${isTheme}-theme: (${variables.join(' ')});`
-    : variables.join(' ');
+  return variables.join(' ');
 };
 
 module.exports = () =>
-  [
-    interpolateIntoSass(boxShadows),
-    interpolateIntoSass(colors),
-    interpolateIntoSass(colors, 'colors'),
-  ].join(' ');
+  [interpolateIntoSass(boxShadows), interpolateIntoSass(colors)].join(' ');

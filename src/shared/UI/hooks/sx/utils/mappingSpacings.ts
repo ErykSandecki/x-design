@@ -1,13 +1,21 @@
+import { isEmpty, pick } from 'lodash';
+
 // types
 import { Spacing } from '../enums/spacings';
+import { TSX } from '../types/types';
 import { TSXSpacings } from '../types/spacings';
 
 // utils
 import { enumToArray } from 'utils';
 import { seperateCssProperties } from './utils';
 
-export const mappingSpacings = (spacings: TSXSpacings): string => {
-  const keys = enumToArray(Spacing);
+export const mappingSpacings = (sx: TSX): string => {
+  const keys = enumToArray<string>(Spacing);
+  const spacings = pick(sx, keys) as TSXSpacings;
+
+  if (isEmpty(spacings)) {
+    return '';
+  }
 
   return keys
     .map((key) => {

@@ -1,10 +1,10 @@
 // types
 import { Shadows } from '../enums/shadows';
-import { TSXShadows } from '../types/shadows';
+import { TSX } from '../types/types';
 
 // utils
 import { enumToArray } from 'utils';
 import { getCssStyles } from './utils';
 
-export const mappingShadows = (shadows: TSXShadows): string =>
-  getCssStyles(shadows, enumToArray<string>(Shadows));
+export const mappingShadows = (sx: TSX): string =>
+  getCssStyles(sx, enumToArray<string>(Shadows));

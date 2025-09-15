@@ -1,14 +1,14 @@
 // types
 import { Grid } from '../enums/grid';
-import { TSXGrid } from '../types/grid';
+import { TSX } from '../types/types';
 
 // utils
 import { enumToArray } from 'utils';
 import { getCssStyles } from './utils';
 
-export const mappingGrid = (grid: TSXGrid): string => {
+export const mappingGrid = (sx: TSX): string => {
   const keys = enumToArray<string>(Grid);
-  const cssStyles = getCssStyles(grid, keys);
+  const cssStyles = getCssStyles(sx, keys);
   const hasGridStyle = cssStyles.length;
 
   return hasGridStyle ? `display: grid;\n${cssStyles}` : cssStyles;

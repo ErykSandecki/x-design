@@ -1,5 +1,5 @@
 import { css } from '@emotion/css';
-import { useContext } from 'react';
+import { useContext, useMemo } from 'react';
 
 // core
 import { Context } from 'core';
@@ -22,12 +22,13 @@ import { mappingSpacings } from './utils/mappingSpacings';
 
 export type TUseSX = string;
 
-export const useSX = (sx: TSX): TUseSX => {
+export const useSX = (deps: Array<TSX>, sx: TSX): TUseSX => {
   const { theme } = useContext(Context);
 
-  return css`
-    ${mappingBorders(sx, theme)}
-    ${mappingBordersColors(sx, theme)}
+  return useMemo(
+    () => css`
+      ${mappingBorders(sx, theme)}
+      ${mappingBordersColors(sx, theme)}
     ${mappingBordersRadius(sx)}
     ${mappingDisplay(sx)}
     ${mappingFlex(sx)}
@@ -37,5 +38,7 @@ export const useSX = (sx: TSX): TUseSX => {
     ${mappingShadows(sx)}
     ${mappingSizing(sx)}
     ${mappingSpacings(sx)}
-  `;
+    `,
+    [...deps, theme],
+  );
 };

@@ -1,5 +1,6 @@
 export enum ColorsTheme {
   blue1 = 'blue1',
+  blue2 = 'blue2',
   green1 = 'green1',
   green2 = 'green2',
   neutral1 = 'neutral1',

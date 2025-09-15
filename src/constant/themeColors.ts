@@ -1,6 +1,7 @@
 export const THEME_COLORS = {
   dark: {
     blue1: '#8ab4f8',
+    blue2: '#035afc',
     green1: '#28a745',
     green2: '#a7b45d',
     neutral1: '#ffffff',
@@ -16,6 +17,7 @@ export const THEME_COLORS = {
   },
   light: {
     blue1: '#035afc',
+    blue2: '#bdd6ff',
     green1: '#28a745',
     green2: '#a7b45d',
     neutral1: '#1e2839',

@@ -87,9 +87,6 @@ const ViewBox: FC<TViewBoxProps> = ({
       <ElementArea elementArea={elementArea} />
       <SelectableArea selectableArea={selectableArea} />
       <OverlayContainer />
-      {/* <div style={{ zIndex: 'calc(var(--xd-zindex-overlay-container) + 2)' }}>
-        Overlay++
-      </div> */}
     </ZoomBox>
   );
 };
