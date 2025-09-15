@@ -10,7 +10,7 @@ exports[`Panel snapshots should render Panel 1`] = `
       class="Panel__header Panel__header--light"
     >
       <div
-        class="css-q0izro Tabs Tabs--light"
+        class="css-wcnq0t Tabs Tabs--light"
         data-test-box=""
       >
         <div
@@ -21,7 +21,7 @@ exports[`Panel snapshots should render Panel 1`] = `
         </div>
       </div>
       <div
-        class="css-q0izro Icon Icon--light Icon--clickable Icon--clickable--light"
+        class="css-wcnq0t Icon Icon--light Icon--clickable Icon--clickable--light"
         data-test-icon="Close"
         height="11"
         name="Close"
@@ -35,11 +35,11 @@ exports[`Panel snapshots should render Panel 1`] = `
       class="Panel__sample Panel__sample--light"
     >
       <div
-        class="css-q0izro ButtonIcon ButtonIcon--light"
+        class="css-wcnq0t ButtonIcon ButtonIcon--light"
         data-test-button-icon="sampler"
       >
         <div
-          class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
           data-test-icon="Sample"
           height="14"
           name="Sample"
@@ -61,7 +61,7 @@ exports[`Panel snapshots should render with active sampler 1`] = `
       class="Panel__header Panel__header--light"
     >
       <div
-        class="css-q0izro Tabs Tabs--light"
+        class="css-wcnq0t Tabs Tabs--light"
         data-test-box=""
       >
         <div
@@ -72,7 +72,7 @@ exports[`Panel snapshots should render with active sampler 1`] = `
         </div>
       </div>
       <div
-        class="css-q0izro Icon Icon--light Icon--clickable Icon--clickable--light"
+        class="css-wcnq0t Icon Icon--light Icon--clickable Icon--clickable--light"
         data-test-icon="Close"
         height="11"
         name="Close"
@@ -86,11 +86,11 @@ exports[`Panel snapshots should render with active sampler 1`] = `
       class="Panel__sample Panel__sample--light"
     >
       <div
-        class="css-q0izro ButtonIcon ButtonIcon--light ButtonIcon--selected ButtonIcon--selected--light"
+        class="css-wcnq0t ButtonIcon ButtonIcon--light ButtonIcon--selected ButtonIcon--selected--light"
         data-test-button-icon="sampler"
       >
         <div
-          class="css-q0izro Icon Icon--light Icon--blue1 Icon--blue1--light"
+          class="css-wcnq0t Icon Icon--light Icon--blue1 Icon--blue1--light"
           data-test-icon="Sample"
           height="14"
           name="Sample"
@@ -98,7 +98,7 @@ exports[`Panel snapshots should render with active sampler 1`] = `
         />
       </div>
       <div
-        class="css-cf0e16 ColorSampler ColorSampler--light"
+        class="css-1ur2fx6 ColorSampler ColorSampler--light"
         data-test-box=""
         style="left: 15px; top: 15px;"
       >

@@ -3,7 +3,7 @@
 exports[`ColumnBackground snapshots should render ColumnBackground 1`] = `
 <DocumentFragment>
   <div
-    class="css-q0izro SectionColumn SectionColumn--light"
+    class="css-wcnq0t SectionColumn SectionColumn--light"
     data-test-section=""
   >
     <div
@@ -18,18 +18,18 @@ exports[`ColumnBackground snapshots should render ColumnBackground 1`] = `
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-q0izro FieldGroup FieldGroup--light"
+          class="css-wcnq0t FieldGroup FieldGroup--light"
           data-test-field-group=""
         >
           <div
-            class="css-q0izro ColorPicker__hex-input ColorPicker__hex-input--light TextField TextField--light"
+            class="css-wcnq0t ColorPicker__hex-input ColorPicker__hex-input--light TextField TextField--light"
             data-test-text-field="color"
           >
             <div
               aria-describedby="test-id"
             >
               <div
-                class="css-q0izro Color Color--light"
+                class="css-wcnq0t Color Color--light"
                 data-test-color=""
               >
                 <div
@@ -53,7 +53,7 @@ exports[`ColumnBackground snapshots should render ColumnBackground 1`] = `
             />
           </div>
           <div
-            class="css-q0izro ColorPicker__alpha-input ColorPicker__alpha-input--light TextField TextField--light"
+            class="css-wcnq0t ColorPicker__alpha-input ColorPicker__alpha-input--light TextField TextField--light"
             data-test-text-field="alpha"
           >
             <input
@@ -78,11 +78,11 @@ exports[`ColumnBackground snapshots should render ColumnBackground 1`] = `
         class="SectionColumn__buttons SectionColumn__buttons--light"
       >
         <div
-          class="css-q0izro ButtonIcon ButtonIcon--light"
+          class="css-wcnq0t ButtonIcon ButtonIcon--light"
           data-test-button-icon=""
         >
           <div
-            class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
             data-test-icon="EyesOpened"
             height="14"
             name="EyesOpened"

@@ -3,7 +3,7 @@
 exports[`H1 snapshots should render H1 1`] = `
 <DocumentFragment>
   <h1
-    class="css-q0izro Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--h1 Typography--h1--light"
+    class="css-wcnq0t Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--h1 Typography--h1--light"
     data-test-text=""
     style="text-align: inherit;"
   >

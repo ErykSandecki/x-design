@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EventsArea snapshots should render EventsArea 1`] = `
+<DocumentFragment>
+  <div
+    class="css-u1i9af"
+    data-test-box=""
+    style="height: 100px; left: 0px; top: 0px; width: 100px;"
+  >
+    <div
+      class="css-wcnq0t"
+      data-test-box=""
+      style="height: 100px; width: 100px;"
+    />
+    <svg
+      class="Corners Corners--light"
+      style="height: 102px; left: -1px; top: -1px; width: 102px;"
+    >
+      <rect
+        height="6"
+        rx="1.5"
+        width="6"
+        x="-3"
+        y="-3"
+      />
+      <rect
+        height="6"
+        rx="1.5"
+        width="6"
+        x="-3"
+        y="97.5"
+      />
+      <rect
+        height="6"
+        rx="1.5"
+        width="6"
+        x="97.5"
+        y="-3"
+      />
+      <rect
+        height="6"
+        rx="1.5"
+        width="6"
+        x="97.5"
+        y="97.5"
+      />
+    </svg>
+    <div
+      class="TransformArea TransformArea--light"
+      style="height: 100px; width: 100px;"
+    >
+      <div
+        class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--east TransformArea__anchor--east--light"
+        data-test-anchor="east"
+      />
+      <div
+        class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--none TransformArea__anchor--none--light"
+        data-test-anchor="none"
+      />
+      <div
+        class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--north TransformArea__anchor--north--light"
+        data-test-anchor="north"
+      />
+      <div
+        class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--northEast TransformArea__anchor--northEast--light"
+        data-test-anchor="north-east"
+      />
+      <div
+        class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--northWest TransformArea__anchor--northWest--light"
+        data-test-anchor="north-west"
+      />
+      <div
+        class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--south TransformArea__anchor--south--light"
+        data-test-anchor="south"
+      />
+      <div
+        class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--southEast TransformArea__anchor--southEast--light"
+        data-test-anchor="south-east"
+      />
+      <div
+        class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--southWest TransformArea__anchor--southWest--light"
+        data-test-anchor="south-west"
+      />
+      <div
+        class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--west TransformArea__anchor--west--light"
+        data-test-anchor="west"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

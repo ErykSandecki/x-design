@@ -3,7 +3,7 @@
 exports[`ButtonGroup snapshots should render ButtonGroup 1`] = `
 <DocumentFragment>
   <div
-    class="css-q0izro ButtonGroup ButtonGroup--light"
+    class="css-wcnq0t ButtonGroup ButtonGroup--light"
     data-test-button-group=""
   >
     <div
@@ -11,7 +11,7 @@ exports[`ButtonGroup snapshots should render ButtonGroup 1`] = `
       data-test-button-group-input="AlignHorizontalLeft"
     >
       <div
-        class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+        class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
         data-test-icon="AlignHorizontalLeft"
         height="12"
         name="AlignHorizontalLeft"
@@ -23,7 +23,7 @@ exports[`ButtonGroup snapshots should render ButtonGroup 1`] = `
       data-test-button-group-input="AlignHorizontalCenter"
     >
       <div
-        class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+        class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
         data-test-icon="AlignHorizontalCenter"
         height="12"
         name="AlignHorizontalCenter"
@@ -35,7 +35,7 @@ exports[`ButtonGroup snapshots should render ButtonGroup 1`] = `
       data-test-button-group-input="AlignHorizontalRight"
     >
       <div
-        class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+        class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
         data-test-icon="AlignHorizontalRight"
         height="12"
         name="AlignHorizontalRight"
@@ -49,7 +49,7 @@ exports[`ButtonGroup snapshots should render ButtonGroup 1`] = `
 exports[`ButtonGroup snapshots should render with disabled states 1`] = `
 <DocumentFragment>
   <div
-    class="css-q0izro ButtonGroup ButtonGroup--light"
+    class="css-wcnq0t ButtonGroup ButtonGroup--light"
     data-test-button-group=""
   >
     <div
@@ -57,7 +57,7 @@ exports[`ButtonGroup snapshots should render with disabled states 1`] = `
       data-test-button-group-input="AlignHorizontalLeft"
     >
       <div
-        class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+        class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
         data-test-icon="AlignHorizontalLeft"
         height="12"
         name="AlignHorizontalLeft"
@@ -69,7 +69,7 @@ exports[`ButtonGroup snapshots should render with disabled states 1`] = `
       data-test-button-group-input="AlignHorizontalCenter"
     >
       <div
-        class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+        class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
         data-test-icon="AlignHorizontalCenter"
         height="12"
         name="AlignHorizontalCenter"
@@ -81,7 +81,7 @@ exports[`ButtonGroup snapshots should render with disabled states 1`] = `
       data-test-button-group-input="AlignHorizontalRight"
     >
       <div
-        class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+        class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
         data-test-icon="AlignHorizontalRight"
         height="12"
         name="AlignHorizontalRight"

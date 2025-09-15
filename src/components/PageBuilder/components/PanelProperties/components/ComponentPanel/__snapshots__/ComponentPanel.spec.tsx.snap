@@ -3,11 +3,11 @@
 exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
 <DocumentFragment>
   <div
-    class="css-q0izro Section Section--light"
+    class="css-wcnq0t Section Section--light"
     data-test-section=""
   >
     <div
-      class="css-q0izro SectionColumn SectionColumn--light"
+      class="css-wcnq0t SectionColumn SectionColumn--light"
       data-test-section=""
     >
       <div
@@ -22,7 +22,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
           style="width: calc(100% - 48px - 2.5px - 8px);"
         >
           <small
-            class="css-q0izro Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+            class="css-wcnq0t Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
             data-test-text=""
             style="text-align: inherit;"
           >
@@ -33,11 +33,11 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
           class="SectionColumn__buttons SectionColumn__buttons--light"
         >
           <div
-            class="css-q0izro ButtonIcon ButtonIcon--light"
+            class="css-wcnq0t ButtonIcon ButtonIcon--light"
             data-test-button-icon=""
           >
             <div
-              class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="HtmlTag"
               height="14"
               name="HtmlTag"
@@ -45,11 +45,11 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
             />
           </div>
           <div
-            class="css-q0izro ButtonIcon ButtonIcon--light"
+            class="css-wcnq0t ButtonIcon ButtonIcon--light"
             data-test-button-icon=""
           >
             <div
-              class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="Component"
               height="14"
               name="Component"
@@ -61,14 +61,14 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
     </div>
   </div>
   <div
-    class="css-q0izro Section Section--light"
+    class="css-wcnq0t Section Section--light"
     data-test-section=""
   >
     <div
       class="Section__header Section__header--light"
     >
       <small
-        class="css-q0izro Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-wcnq0t Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -79,7 +79,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
       />
     </div>
     <div
-      class="css-q0izro SectionColumn SectionColumn--light SectionColumn--with-margin SectionColumn--with-margin--light"
+      class="css-wcnq0t SectionColumn SectionColumn--light SectionColumn--with-margin SectionColumn--with-margin--light"
       data-test-section=""
     >
       <div
@@ -87,7 +87,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <small
-          class="css-q0izro SectionColumn__label SectionColumn__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+          class="css-wcnq0t SectionColumn__label SectionColumn__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
           data-test-text=""
           style="text-align: inherit;"
         >
@@ -102,7 +102,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
           style="width: calc(100% - 24px - 0px - 8px);"
         >
           <div
-            class="css-q0izro ButtonGroup ButtonGroup--light"
+            class="css-wcnq0t ButtonGroup ButtonGroup--light"
             data-test-button-group="horizontal-alignment"
           >
             <div
@@ -110,7 +110,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
               data-test-button-group-input="AlignHorizontalLeft"
             >
               <div
-                class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                 data-test-icon="AlignHorizontalLeft"
                 height="12"
                 name="AlignHorizontalLeft"
@@ -122,7 +122,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
               data-test-button-group-input="AlignHorizontalCenter"
             >
               <div
-                class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                 data-test-icon="AlignHorizontalCenter"
                 height="12"
                 name="AlignHorizontalCenter"
@@ -134,7 +134,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
               data-test-button-group-input="AlignHorizontalRight"
             >
               <div
-                class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                 data-test-icon="AlignHorizontalRight"
                 height="12"
                 name="AlignHorizontalRight"
@@ -143,7 +143,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
             </div>
           </div>
           <div
-            class="css-q0izro ButtonGroup ButtonGroup--light"
+            class="css-wcnq0t ButtonGroup ButtonGroup--light"
             data-test-button-group="vertical-alignment"
           >
             <div
@@ -151,7 +151,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
               data-test-button-group-input="AlignVerticalTop"
             >
               <div
-                class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                 data-test-icon="AlignVerticalTop"
                 height="12"
                 name="AlignVerticalTop"
@@ -163,7 +163,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
               data-test-button-group-input="AlignVerticalCenter"
             >
               <div
-                class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                 data-test-icon="AlignVerticalCenter"
                 height="12"
                 name="AlignVerticalCenter"
@@ -175,7 +175,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
               data-test-button-group-input="AlignVerticalBottom"
             >
               <div
-                class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                 data-test-icon="AlignVerticalBottom"
                 height="12"
                 name="AlignVerticalBottom"
@@ -190,7 +190,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
       </div>
     </div>
     <div
-      class="css-q0izro SectionColumn SectionColumn--light"
+      class="css-wcnq0t SectionColumn SectionColumn--light"
       data-test-section=""
     >
       <div
@@ -198,7 +198,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <small
-          class="css-q0izro SectionColumn__label SectionColumn__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+          class="css-wcnq0t SectionColumn__label SectionColumn__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
           data-test-text=""
           style="text-align: inherit;"
         >
@@ -213,7 +213,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
           style="width: calc(100% - 24px - 0px - 8px);"
         >
           <div
-            class="css-q0izro TextField TextField--light TextField--full-width TextField--full-width--light"
+            class="css-wcnq0t TextField TextField--light TextField--full-width TextField--full-width--light"
             data-test-text-field="x"
           >
             <div
@@ -221,7 +221,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
               data-test-scrubbable-input="x"
             >
               <small
-                class="css-q0izro Typography Typography--light Typography--neutral2 Typography--neutral2--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                class="css-wcnq0t Typography Typography--light Typography--neutral2 Typography--neutral2--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
                 data-test-text=""
                 style="text-align: inherit;"
               >
@@ -237,7 +237,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
             />
           </div>
           <div
-            class="css-q0izro TextField TextField--light TextField--full-width TextField--full-width--light"
+            class="css-wcnq0t TextField TextField--light TextField--full-width TextField--full-width--light"
             data-test-text-field="y"
           >
             <div
@@ -245,7 +245,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
               data-test-scrubbable-input="y"
             >
               <small
-                class="css-q0izro Typography Typography--light Typography--neutral2 Typography--neutral2--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                class="css-wcnq0t Typography Typography--light Typography--neutral2 Typography--neutral2--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
                 data-test-text=""
                 style="text-align: inherit;"
               >

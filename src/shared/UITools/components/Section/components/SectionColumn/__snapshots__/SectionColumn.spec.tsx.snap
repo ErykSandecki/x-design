@@ -3,7 +3,7 @@
 exports[`SectionColumn snapshots should render SectionColumn 1`] = `
 <DocumentFragment>
   <div
-    class="css-q0izro SectionColumn SectionColumn--light"
+    class="css-wcnq0t SectionColumn SectionColumn--light"
     data-test-section=""
   >
     <div
@@ -30,7 +30,7 @@ exports[`SectionColumn snapshots should render SectionColumn 1`] = `
 exports[`SectionColumn snapshots should render with buttons & labels 1`] = `
 <DocumentFragment>
   <div
-    class="css-q0izro SectionColumn SectionColumn--light"
+    class="css-wcnq0t SectionColumn SectionColumn--light"
     data-test-section=""
   >
     <div
@@ -38,7 +38,7 @@ exports[`SectionColumn snapshots should render with buttons & labels 1`] = `
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-q0izro SectionColumn__label SectionColumn__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-wcnq0t SectionColumn__label SectionColumn__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -58,11 +58,11 @@ exports[`SectionColumn snapshots should render with buttons & labels 1`] = `
         class="SectionColumn__buttons SectionColumn__buttons--light"
       >
         <div
-          class="css-q0izro ButtonIcon ButtonIcon--light"
+          class="css-wcnq0t ButtonIcon ButtonIcon--light"
           data-test-button-icon=""
         >
           <div
-            class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
             data-test-icon="Close"
             height="14"
             name="Close"
@@ -78,7 +78,7 @@ exports[`SectionColumn snapshots should render with buttons & labels 1`] = `
 exports[`SectionColumn snapshots should render with buttons 1`] = `
 <DocumentFragment>
   <div
-    class="css-q0izro SectionColumn SectionColumn--light"
+    class="css-wcnq0t SectionColumn SectionColumn--light"
     data-test-section=""
   >
     <div
@@ -98,11 +98,11 @@ exports[`SectionColumn snapshots should render with buttons 1`] = `
         class="SectionColumn__buttons SectionColumn__buttons--light"
       >
         <div
-          class="css-q0izro ButtonIcon ButtonIcon--light"
+          class="css-wcnq0t ButtonIcon ButtonIcon--light"
           data-test-button-icon=""
         >
           <div
-            class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
             data-test-icon="Close"
             height="14"
             name="Close"

@@ -3,7 +3,7 @@
 exports[`OverlayContainer snapshots should render OverlayContainer 1`] = `
 <DocumentFragment>
   <div
-    class="css-1bv6jss"
+    class="css-13fj95k"
     data-test-box=""
     id="overlayContainer"
     style="z-index: var(--xd-page-builder-zindex-overlay-container);"

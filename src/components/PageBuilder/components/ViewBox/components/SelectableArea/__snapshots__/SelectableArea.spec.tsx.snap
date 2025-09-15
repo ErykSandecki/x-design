@@ -5,7 +5,7 @@ exports[`SelectableArea snapshots should not render SelectableArea 1`] = `<Docum
 exports[`SelectableArea snapshots should render SelectableArea 1`] = `
 <DocumentFragment>
   <div
-    class="css-q0izro SelectableArea SelectableArea--light"
+    class="css-wcnq0t SelectableArea SelectableArea--light"
     data-test-box=""
   >
     <svg

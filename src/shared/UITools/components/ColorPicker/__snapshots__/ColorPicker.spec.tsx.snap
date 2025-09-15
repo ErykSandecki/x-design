@@ -3,18 +3,18 @@
 exports[`ColorPicker snapshots should render ColorPicker 1`] = `
 <DocumentFragment>
   <div
-    class="css-q0izro FieldGroup FieldGroup--light"
+    class="css-wcnq0t FieldGroup FieldGroup--light"
     data-test-field-group=""
   >
     <div
-      class="css-q0izro ColorPicker__hex-input ColorPicker__hex-input--light TextField TextField--light"
+      class="css-wcnq0t ColorPicker__hex-input ColorPicker__hex-input--light TextField TextField--light"
       data-test-text-field="color"
     >
       <div
         aria-describedby="test-id"
       >
         <div
-          class="css-q0izro Color Color--light"
+          class="css-wcnq0t Color Color--light"
           data-test-color=""
         >
           <div
@@ -38,7 +38,7 @@ exports[`ColorPicker snapshots should render ColorPicker 1`] = `
       />
     </div>
     <div
-      class="css-q0izro ColorPicker__alpha-input ColorPicker__alpha-input--light TextField TextField--light"
+      class="css-wcnq0t ColorPicker__alpha-input ColorPicker__alpha-input--light TextField TextField--light"
       data-test-text-field="alpha"
     >
       <input

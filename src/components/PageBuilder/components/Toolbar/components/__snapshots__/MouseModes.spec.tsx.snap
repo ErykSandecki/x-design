@@ -3,15 +3,15 @@
 exports[`MouseModes snapshots should render MouseModes 1`] = `
 <DocumentFragment>
   <div
-    class="css-q0izro MouseModes MouseModes--light"
+    class="css-wcnq0t MouseModes MouseModes--light"
     data-test-box=""
   >
     <div
-      class="css-q0izro MouseModes__button MouseModes__button--light"
+      class="css-wcnq0t MouseModes__button MouseModes__button--light"
       data-test-box=""
     >
       <div
-        class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+        class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
         data-test-icon="menu"
         height="16"
         name="Logo"
@@ -19,11 +19,11 @@ exports[`MouseModes snapshots should render MouseModes 1`] = `
       />
     </div>
     <div
-      class="css-q0izro MouseModes__button MouseModes__button--light MouseModes__button--active MouseModes__button--active--light"
+      class="css-wcnq0t MouseModes__button MouseModes__button--light MouseModes__button--active MouseModes__button--active--light"
       data-test-box=""
     >
       <div
-        class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+        class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
         data-test-icon="default"
         height="16"
         name="MoveTool"
@@ -31,11 +31,11 @@ exports[`MouseModes snapshots should render MouseModes 1`] = `
       />
     </div>
     <div
-      class="css-q0izro MouseModes__button MouseModes__button--light"
+      class="css-wcnq0t MouseModes__button MouseModes__button--light"
       data-test-box=""
     >
       <div
-        class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+        class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
         data-test-icon="move"
         height="16"
         name="MoveHand"
@@ -43,11 +43,11 @@ exports[`MouseModes snapshots should render MouseModes 1`] = `
       />
     </div>
     <div
-      class="css-q0izro MouseModes__button MouseModes__button--light"
+      class="css-wcnq0t MouseModes__button MouseModes__button--light"
       data-test-box=""
     >
       <div
-        class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+        class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
         data-test-icon="comment"
         height="16"
         name="Comment"
@@ -55,11 +55,11 @@ exports[`MouseModes snapshots should render MouseModes 1`] = `
       />
     </div>
     <div
-      class="css-q0izro MouseModes__button MouseModes__button--light"
+      class="css-wcnq0t MouseModes__button MouseModes__button--light"
       data-test-box=""
     >
       <div
-        class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+        class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
         data-test-icon="toolBeltA"
         height="16"
         name="FrameTool"

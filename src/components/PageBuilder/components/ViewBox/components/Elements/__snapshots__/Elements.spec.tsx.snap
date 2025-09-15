@@ -6,14 +6,14 @@ exports[`Elements snapshots should render Element in relative position 1`] = `
     class="DropAnchors DropAnchors--light"
   >
     <div
-      class="css-q0izro Elements__element Elements__element--light Frame Frame--light Element Element--light"
+      class="css-wcnq0t Elements__element Elements__element--light Frame Frame--light Element Element--light"
       data-status="false"
       data-test-box=""
       id="1"
       style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); background-color: rgb(255, 255, 255); height: 100px; position: relative; width: 100px;"
     >
       <small
-        class="css-q0izro Frame__label Frame__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-wcnq0t Frame__label Frame__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
         data-test-text=""
         style="left: 0px; top: 0px; text-align: inherit;"
       >
@@ -45,14 +45,14 @@ exports[`Elements snapshots should render Elements 1`] = `<DocumentFragment />`;
 exports[`Elements snapshots should render Frame 1`] = `
 <DocumentFragment>
   <div
-    class="css-q0izro Elements__element Elements__element--light Frame Frame--light Element Element--light"
+    class="css-wcnq0t Elements__element Elements__element--light Frame Frame--light Element Element--light"
     data-status="false"
     data-test-box=""
     id="1"
     style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); background-color: rgb(255, 255, 255); height: 100px; position: absolute; width: 100px;"
   >
     <small
-      class="css-q0izro Frame__label Frame__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-wcnq0t Frame__label Frame__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
       data-test-text=""
       style="left: 0px; top: 0px; text-align: inherit;"
     >

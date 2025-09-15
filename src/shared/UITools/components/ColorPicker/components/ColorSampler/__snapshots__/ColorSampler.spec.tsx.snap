@@ -3,7 +3,7 @@
 exports[`ColorSampler snapshots should render ColorSampler 1`] = `
 <DocumentFragment>
   <div
-    class="css-cf0e16 ColorSampler ColorSampler--light"
+    class="css-1ur2fx6 ColorSampler ColorSampler--light"
     data-test-box=""
     style="left: 15px; top: 15px;"
   >
@@ -233,14 +233,14 @@ exports[`ColorSampler snapshots should render ColorSampler 1`] = `
         class="ColorSampler__prompt ColorSampler__prompt--light"
       >
         <div
-          class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
           data-test-icon="EyesDropper"
           height="12"
           name="EyesDropper"
           width="12"
         />
         <small
-          class="css-1abxno2 ColorSampler__prompt-description ColorSampler__prompt-description--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+          class="css-8zgrdl ColorSampler__prompt-description ColorSampler__prompt-description--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
           data-test-text=""
           style="text-align: inherit;"
         >
@@ -255,7 +255,7 @@ exports[`ColorSampler snapshots should render ColorSampler 1`] = `
 exports[`ColorSampler snapshots should render when is pending 1`] = `
 <DocumentFragment>
   <div
-    class="css-cf0e16 ColorSampler ColorSampler--light"
+    class="css-1ur2fx6 ColorSampler ColorSampler--light"
     data-test-box=""
     style="left: 15px; top: 15px;"
   >

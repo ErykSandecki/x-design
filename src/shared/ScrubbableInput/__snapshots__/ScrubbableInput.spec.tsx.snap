@@ -23,7 +23,7 @@ exports[`ScrubbableInput snapshots should render with icon 1`] = `
       child
     </span>
     <div
-      class="css-q0izro ScrubbableInput__handler ScrubbableInput__handler--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-wcnq0t ScrubbableInput__handler ScrubbableInput__handler--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
       data-test-icon="EWResize"
       height="14"
       name="EWResize"

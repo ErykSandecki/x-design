@@ -3,7 +3,7 @@
 exports[`PanelProperties snapshots should render PanelProperties 1`] = `
 <DocumentFragment>
   <div
-    class="css-i7rldk PanelProperties PanelProperties--light"
+    class="css-s50csc PanelProperties PanelProperties--light"
     data-test-box="panel-properties"
   >
     <div
@@ -11,14 +11,14 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
       data-test-resize=""
     />
     <div
-      class="css-q0izro Section Section--light"
+      class="css-wcnq0t Section Section--light"
       data-test-section=""
     >
       <div
         class="Section__header Section__header--light"
       >
         <small
-          class="css-q0izro Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+          class="css-wcnq0t Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
           data-test-text=""
           style="text-align: inherit;"
         >
@@ -29,7 +29,7 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
         />
       </div>
       <div
-        class="css-q0izro Tabs Tabs--light"
+        class="css-wcnq0t Tabs Tabs--light"
         data-test-box=""
       >
         <div
@@ -50,14 +50,14 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
       class="PanelProperties__sections PanelProperties__sections--light"
     >
       <div
-        class="css-q0izro Section Section--light"
+        class="css-wcnq0t Section Section--light"
         data-test-section=""
       >
         <div
           class="Section__header Section__header--light"
         >
           <small
-            class="css-q0izro Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+            class="css-wcnq0t Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
             data-test-text=""
             style="text-align: inherit;"
           >
@@ -68,7 +68,7 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
           />
         </div>
         <div
-          class="css-q0izro SectionColumn SectionColumn--light"
+          class="css-wcnq0t SectionColumn SectionColumn--light"
           data-test-section=""
         >
           <div
@@ -83,18 +83,18 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
               style="width: calc(100% - 24px - 0px - 8px);"
             >
               <div
-                class="css-q0izro FieldGroup FieldGroup--light"
+                class="css-wcnq0t FieldGroup FieldGroup--light"
                 data-test-field-group=""
               >
                 <div
-                  class="css-q0izro ColorPicker__hex-input ColorPicker__hex-input--light TextField TextField--light"
+                  class="css-wcnq0t ColorPicker__hex-input ColorPicker__hex-input--light TextField TextField--light"
                   data-test-text-field="color"
                 >
                   <div
                     aria-describedby="test-id"
                   >
                     <div
-                      class="css-q0izro Color Color--light"
+                      class="css-wcnq0t Color Color--light"
                       data-test-color=""
                     >
                       <div
@@ -118,7 +118,7 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
                   />
                 </div>
                 <div
-                  class="css-q0izro ColorPicker__alpha-input ColorPicker__alpha-input--light TextField TextField--light"
+                  class="css-wcnq0t ColorPicker__alpha-input ColorPicker__alpha-input--light TextField TextField--light"
                   data-test-text-field="alpha"
                 >
                   <input
@@ -143,11 +143,11 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
               class="SectionColumn__buttons SectionColumn__buttons--light"
             >
               <div
-                class="css-q0izro ButtonIcon ButtonIcon--light"
+                class="css-wcnq0t ButtonIcon ButtonIcon--light"
                 data-test-button-icon=""
               >
                 <div
-                  class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                   data-test-icon="EyesOpened"
                   height="14"
                   name="EyesOpened"
@@ -166,7 +166,7 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
 exports[`PanelProperties snapshots should render when some element is selected 1`] = `
 <DocumentFragment>
   <div
-    class="css-i7rldk PanelProperties PanelProperties--light"
+    class="css-s50csc PanelProperties PanelProperties--light"
     data-test-box="panel-properties"
   >
     <div
@@ -174,14 +174,14 @@ exports[`PanelProperties snapshots should render when some element is selected 1
       data-test-resize=""
     />
     <div
-      class="css-q0izro Section Section--light"
+      class="css-wcnq0t Section Section--light"
       data-test-section=""
     >
       <div
         class="Section__header Section__header--light"
       >
         <small
-          class="css-q0izro Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+          class="css-wcnq0t Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
           data-test-text=""
           style="text-align: inherit;"
         >
@@ -192,7 +192,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
         />
       </div>
       <div
-        class="css-q0izro Tabs Tabs--light"
+        class="css-wcnq0t Tabs Tabs--light"
         data-test-box=""
       >
         <div
@@ -213,11 +213,11 @@ exports[`PanelProperties snapshots should render when some element is selected 1
       class="PanelProperties__sections PanelProperties__sections--light"
     >
       <div
-        class="css-q0izro Section Section--light"
+        class="css-wcnq0t Section Section--light"
         data-test-section=""
       >
         <div
-          class="css-q0izro SectionColumn SectionColumn--light"
+          class="css-wcnq0t SectionColumn SectionColumn--light"
           data-test-section=""
         >
           <div
@@ -232,7 +232,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
               style="width: calc(100% - 48px - 2.5px - 8px);"
             >
               <small
-                class="css-q0izro Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                class="css-wcnq0t Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
                 data-test-text=""
                 style="text-align: inherit;"
               >
@@ -243,11 +243,11 @@ exports[`PanelProperties snapshots should render when some element is selected 1
               class="SectionColumn__buttons SectionColumn__buttons--light"
             >
               <div
-                class="css-q0izro ButtonIcon ButtonIcon--light"
+                class="css-wcnq0t ButtonIcon ButtonIcon--light"
                 data-test-button-icon=""
               >
                 <div
-                  class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                   data-test-icon="HtmlTag"
                   height="14"
                   name="HtmlTag"
@@ -255,11 +255,11 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                 />
               </div>
               <div
-                class="css-q0izro ButtonIcon ButtonIcon--light"
+                class="css-wcnq0t ButtonIcon ButtonIcon--light"
                 data-test-button-icon=""
               >
                 <div
-                  class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                   data-test-icon="Component"
                   height="14"
                   name="Component"
@@ -271,14 +271,14 @@ exports[`PanelProperties snapshots should render when some element is selected 1
         </div>
       </div>
       <div
-        class="css-q0izro Section Section--light"
+        class="css-wcnq0t Section Section--light"
         data-test-section=""
       >
         <div
           class="Section__header Section__header--light"
         >
           <small
-            class="css-q0izro Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+            class="css-wcnq0t Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
             data-test-text=""
             style="text-align: inherit;"
           >
@@ -289,7 +289,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
           />
         </div>
         <div
-          class="css-q0izro SectionColumn SectionColumn--light SectionColumn--with-margin SectionColumn--with-margin--light"
+          class="css-wcnq0t SectionColumn SectionColumn--light SectionColumn--with-margin SectionColumn--with-margin--light"
           data-test-section=""
         >
           <div
@@ -297,7 +297,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
             style="width: calc(100% - 24px - 0px - 8px);"
           >
             <small
-              class="css-q0izro SectionColumn__label SectionColumn__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+              class="css-wcnq0t SectionColumn__label SectionColumn__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
               data-test-text=""
               style="text-align: inherit;"
             >
@@ -312,7 +312,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
               style="width: calc(100% - 24px - 0px - 8px);"
             >
               <div
-                class="css-q0izro ButtonGroup ButtonGroup--light"
+                class="css-wcnq0t ButtonGroup ButtonGroup--light"
                 data-test-button-group="horizontal-alignment"
               >
                 <div
@@ -320,7 +320,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                   data-test-button-group-input="AlignHorizontalLeft"
                 >
                   <div
-                    class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                     data-test-icon="AlignHorizontalLeft"
                     height="12"
                     name="AlignHorizontalLeft"
@@ -332,7 +332,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                   data-test-button-group-input="AlignHorizontalCenter"
                 >
                   <div
-                    class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                     data-test-icon="AlignHorizontalCenter"
                     height="12"
                     name="AlignHorizontalCenter"
@@ -344,7 +344,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                   data-test-button-group-input="AlignHorizontalRight"
                 >
                   <div
-                    class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                     data-test-icon="AlignHorizontalRight"
                     height="12"
                     name="AlignHorizontalRight"
@@ -353,7 +353,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                 </div>
               </div>
               <div
-                class="css-q0izro ButtonGroup ButtonGroup--light"
+                class="css-wcnq0t ButtonGroup ButtonGroup--light"
                 data-test-button-group="vertical-alignment"
               >
                 <div
@@ -361,7 +361,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                   data-test-button-group-input="AlignVerticalTop"
                 >
                   <div
-                    class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                     data-test-icon="AlignVerticalTop"
                     height="12"
                     name="AlignVerticalTop"
@@ -373,7 +373,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                   data-test-button-group-input="AlignVerticalCenter"
                 >
                   <div
-                    class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                     data-test-icon="AlignVerticalCenter"
                     height="12"
                     name="AlignVerticalCenter"
@@ -385,7 +385,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                   data-test-button-group-input="AlignVerticalBottom"
                 >
                   <div
-                    class="css-q0izro ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                     data-test-icon="AlignVerticalBottom"
                     height="12"
                     name="AlignVerticalBottom"
@@ -400,7 +400,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
           </div>
         </div>
         <div
-          class="css-q0izro SectionColumn SectionColumn--light"
+          class="css-wcnq0t SectionColumn SectionColumn--light"
           data-test-section=""
         >
           <div
@@ -408,7 +408,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
             style="width: calc(100% - 24px - 0px - 8px);"
           >
             <small
-              class="css-q0izro SectionColumn__label SectionColumn__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+              class="css-wcnq0t SectionColumn__label SectionColumn__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
               data-test-text=""
               style="text-align: inherit;"
             >
@@ -423,7 +423,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
               style="width: calc(100% - 24px - 0px - 8px);"
             >
               <div
-                class="css-q0izro TextField TextField--light TextField--full-width TextField--full-width--light"
+                class="css-wcnq0t TextField TextField--light TextField--full-width TextField--full-width--light"
                 data-test-text-field="x"
               >
                 <div
@@ -431,7 +431,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                   data-test-scrubbable-input="x"
                 >
                   <small
-                    class="css-q0izro Typography Typography--light Typography--neutral2 Typography--neutral2--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    class="css-wcnq0t Typography Typography--light Typography--neutral2 Typography--neutral2--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -447,7 +447,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                 />
               </div>
               <div
-                class="css-q0izro TextField TextField--light TextField--full-width TextField--full-width--light"
+                class="css-wcnq0t TextField TextField--light TextField--full-width TextField--full-width--light"
                 data-test-text-field="y"
               >
                 <div
@@ -455,7 +455,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                   data-test-scrubbable-input="y"
                 >
                   <small
-                    class="css-q0izro Typography Typography--light Typography--neutral2 Typography--neutral2--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    class="css-wcnq0t Typography Typography--light Typography--neutral2 Typography--neutral2--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -485,7 +485,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
 exports[`PanelProperties snapshots should render with changed width 1`] = `
 <DocumentFragment>
   <div
-    class="css-18uqunt PanelProperties PanelProperties--light"
+    class="css-s50csc PanelProperties PanelProperties--light"
     data-test-box="panel-properties"
   >
     <div
@@ -493,14 +493,14 @@ exports[`PanelProperties snapshots should render with changed width 1`] = `
       data-test-resize=""
     />
     <div
-      class="css-q0izro Section Section--light"
+      class="css-wcnq0t Section Section--light"
       data-test-section=""
     >
       <div
         class="Section__header Section__header--light"
       >
         <small
-          class="css-q0izro Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+          class="css-wcnq0t Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
           data-test-text=""
           style="text-align: inherit;"
         >
@@ -511,7 +511,7 @@ exports[`PanelProperties snapshots should render with changed width 1`] = `
         />
       </div>
       <div
-        class="css-q0izro Tabs Tabs--light"
+        class="css-wcnq0t Tabs Tabs--light"
         data-test-box=""
       >
         <div
@@ -532,14 +532,14 @@ exports[`PanelProperties snapshots should render with changed width 1`] = `
       class="PanelProperties__sections PanelProperties__sections--light"
     >
       <div
-        class="css-q0izro Section Section--light"
+        class="css-wcnq0t Section Section--light"
         data-test-section=""
       >
         <div
           class="Section__header Section__header--light"
         >
           <small
-            class="css-q0izro Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+            class="css-wcnq0t Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
             data-test-text=""
             style="text-align: inherit;"
           >
@@ -550,7 +550,7 @@ exports[`PanelProperties snapshots should render with changed width 1`] = `
           />
         </div>
         <div
-          class="css-q0izro SectionColumn SectionColumn--light"
+          class="css-wcnq0t SectionColumn SectionColumn--light"
           data-test-section=""
         >
           <div
@@ -565,18 +565,18 @@ exports[`PanelProperties snapshots should render with changed width 1`] = `
               style="width: calc(100% - 24px - 0px - 8px);"
             >
               <div
-                class="css-q0izro FieldGroup FieldGroup--light"
+                class="css-wcnq0t FieldGroup FieldGroup--light"
                 data-test-field-group=""
               >
                 <div
-                  class="css-q0izro ColorPicker__hex-input ColorPicker__hex-input--light TextField TextField--light"
+                  class="css-wcnq0t ColorPicker__hex-input ColorPicker__hex-input--light TextField TextField--light"
                   data-test-text-field="color"
                 >
                   <div
                     aria-describedby="test-id"
                   >
                     <div
-                      class="css-q0izro Color Color--light"
+                      class="css-wcnq0t Color Color--light"
                       data-test-color=""
                     >
                       <div
@@ -600,7 +600,7 @@ exports[`PanelProperties snapshots should render with changed width 1`] = `
                   />
                 </div>
                 <div
-                  class="css-q0izro ColorPicker__alpha-input ColorPicker__alpha-input--light TextField TextField--light"
+                  class="css-wcnq0t ColorPicker__alpha-input ColorPicker__alpha-input--light TextField TextField--light"
                   data-test-text-field="alpha"
                 >
                   <input
@@ -625,11 +625,11 @@ exports[`PanelProperties snapshots should render with changed width 1`] = `
               class="SectionColumn__buttons SectionColumn__buttons--light"
             >
               <div
-                class="css-q0izro ButtonIcon ButtonIcon--light"
+                class="css-wcnq0t ButtonIcon ButtonIcon--light"
                 data-test-button-icon=""
               >
                 <div
-                  class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                   data-test-icon="EyesOpened"
                   height="14"
                   name="EyesOpened"

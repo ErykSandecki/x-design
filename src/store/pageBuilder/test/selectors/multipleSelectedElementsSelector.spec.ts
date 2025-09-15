@@ -11,12 +11,9 @@ describe('multipleSelectedElementsSelector', () => {
       .resultFunc;
 
     // result
-    expect(
-      selectorFunction({
-        0: selectedElementMock,
-        1: selectedElementMock,
-      }),
-    ).toBe(true);
+    expect(selectorFunction([selectedElementMock, selectedElementMock])).toBe(
+      true,
+    );
   });
 
   it('should not be multiple', () => {
@@ -25,10 +22,6 @@ describe('multipleSelectedElementsSelector', () => {
       .resultFunc;
 
     // result
-    expect(
-      selectorFunction({
-        0: selectedElementMock,
-      }),
-    ).toBe(false);
+    expect(selectorFunction([selectedElementMock])).toBe(false);
   });
 });

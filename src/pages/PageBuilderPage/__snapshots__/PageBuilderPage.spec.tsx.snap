@@ -3,23 +3,23 @@
 exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
 <DocumentFragment>
   <div
-    class="css-q0izro"
+    class="css-wcnq0t"
     data-test-box=""
   >
     <div
-      class="css-1hfqfil"
+      class="css-10h803n"
       data-test-box=""
     >
       <div
-        class="css-q0izro MouseModes MouseModes--light"
+        class="css-wcnq0t MouseModes MouseModes--light"
         data-test-box=""
       >
         <div
-          class="css-q0izro MouseModes__button MouseModes__button--light"
+          class="css-wcnq0t MouseModes__button MouseModes__button--light"
           data-test-box=""
         >
           <div
-            class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
             data-test-icon="menu"
             height="16"
             name="Logo"
@@ -27,11 +27,11 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
           />
         </div>
         <div
-          class="css-q0izro MouseModes__button MouseModes__button--light MouseModes__button--active MouseModes__button--active--light"
+          class="css-wcnq0t MouseModes__button MouseModes__button--light MouseModes__button--active MouseModes__button--active--light"
           data-test-box=""
         >
           <div
-            class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
             data-test-icon="default"
             height="16"
             name="MoveTool"
@@ -39,11 +39,11 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
           />
         </div>
         <div
-          class="css-q0izro MouseModes__button MouseModes__button--light"
+          class="css-wcnq0t MouseModes__button MouseModes__button--light"
           data-test-box=""
         >
           <div
-            class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
             data-test-icon="move"
             height="16"
             name="MoveHand"
@@ -51,11 +51,11 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
           />
         </div>
         <div
-          class="css-q0izro MouseModes__button MouseModes__button--light"
+          class="css-wcnq0t MouseModes__button MouseModes__button--light"
           data-test-box=""
         >
           <div
-            class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
             data-test-icon="comment"
             height="16"
             name="Comment"
@@ -63,11 +63,11 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
           />
         </div>
         <div
-          class="css-q0izro MouseModes__button MouseModes__button--light"
+          class="css-wcnq0t MouseModes__button MouseModes__button--light"
           data-test-box=""
         >
           <div
-            class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
             data-test-icon="toolBeltA"
             height="16"
             name="FrameTool"
@@ -77,7 +77,7 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
       </div>
     </div>
     <div
-      class="css-i7rldk PanelProperties PanelProperties--light"
+      class="css-s50csc PanelProperties PanelProperties--light"
       data-test-box="panel-properties"
     >
       <div
@@ -85,14 +85,14 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
         data-test-resize=""
       />
       <div
-        class="css-q0izro Section Section--light"
+        class="css-wcnq0t Section Section--light"
         data-test-section=""
       >
         <div
           class="Section__header Section__header--light"
         >
           <small
-            class="css-q0izro Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+            class="css-wcnq0t Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
             data-test-text=""
             style="text-align: inherit;"
           >
@@ -103,7 +103,7 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
           />
         </div>
         <div
-          class="css-q0izro Tabs Tabs--light"
+          class="css-wcnq0t Tabs Tabs--light"
           data-test-box=""
         >
           <div
@@ -124,14 +124,14 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
         class="PanelProperties__sections PanelProperties__sections--light"
       >
         <div
-          class="css-q0izro Section Section--light"
+          class="css-wcnq0t Section Section--light"
           data-test-section=""
         >
           <div
             class="Section__header Section__header--light"
           >
             <small
-              class="css-q0izro Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+              class="css-wcnq0t Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
               data-test-text=""
               style="text-align: inherit;"
             >
@@ -142,7 +142,7 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
             />
           </div>
           <div
-            class="css-q0izro SectionColumn SectionColumn--light"
+            class="css-wcnq0t SectionColumn SectionColumn--light"
             data-test-section=""
           >
             <div
@@ -157,18 +157,18 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
                 style="width: calc(100% - 24px - 0px - 8px);"
               >
                 <div
-                  class="css-q0izro FieldGroup FieldGroup--light"
+                  class="css-wcnq0t FieldGroup FieldGroup--light"
                   data-test-field-group=""
                 >
                   <div
-                    class="css-q0izro ColorPicker__hex-input ColorPicker__hex-input--light TextField TextField--light"
+                    class="css-wcnq0t ColorPicker__hex-input ColorPicker__hex-input--light TextField TextField--light"
                     data-test-text-field="color"
                   >
                     <div
                       aria-describedby="test-id"
                     >
                       <div
-                        class="css-q0izro Color Color--light"
+                        class="css-wcnq0t Color Color--light"
                         data-test-color=""
                       >
                         <div
@@ -192,7 +192,7 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
                     />
                   </div>
                   <div
-                    class="css-q0izro ColorPicker__alpha-input ColorPicker__alpha-input--light TextField TextField--light"
+                    class="css-wcnq0t ColorPicker__alpha-input ColorPicker__alpha-input--light TextField TextField--light"
                     data-test-text-field="alpha"
                   >
                     <input
@@ -217,11 +217,11 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
                 class="SectionColumn__buttons SectionColumn__buttons--light"
               >
                 <div
-                  class="css-q0izro ButtonIcon ButtonIcon--light"
+                  class="css-wcnq0t ButtonIcon ButtonIcon--light"
                   data-test-button-icon=""
                 >
                   <div
-                    class="css-q0izro Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                     data-test-icon="EyesOpened"
                     height="14"
                     name="EyesOpened"
@@ -235,27 +235,27 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
       </div>
     </div>
     <div
-      class="css-p683st ViewBox ViewBox--light ZoomBox ZoomBox--light ZoomBox--idle ZoomBox--idle--light ZoomBox--default ZoomBox--default--light"
+      class="css-mu34gm ViewBox ViewBox--light ZoomBox ZoomBox--light ZoomBox--idle ZoomBox--idle--light ZoomBox--default ZoomBox--default--light"
       data-test-box="zoom-box"
       tabindex="0"
     >
       <div
-        class="css-q0izro ZoomBox__background-mask ZoomBox__background-mask--light"
+        class="css-wcnq0t ZoomBox__background-mask ZoomBox__background-mask--light"
         data-test-box=""
         style="background-color: rgb(241, 242, 246); display: initial;"
       />
       <div
-        class="css-q0izro ZoomBox__texture-blank ZoomBox__texture-blank--light"
+        class="css-wcnq0t ZoomBox__texture-blank ZoomBox__texture-blank--light"
         data-test-box=""
         style="transform: translate(0px, 0px) scale(1);"
       />
       <div
-        class="css-qel697 ZoomBox__zoom-content ZoomBox__zoom-content--light"
+        class="css-fw1hyy ZoomBox__zoom-content ZoomBox__zoom-content--light"
         data-test-box=""
         style="transform: translate(0px, 0px) scale(1);"
       >
         <div
-          class="css-1bv6jss"
+          class="css-13fj95k"
           data-test-box=""
           id="overlayContainer"
           style="z-index: var(--xd-page-builder-zindex-overlay-container);"

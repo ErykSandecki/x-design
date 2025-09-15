@@ -3,7 +3,7 @@
 exports[`Element snapshots should render Element 1`] = `
 <DocumentFragment>
   <div
-    class="css-q0izro className Element Element--light"
+    class="css-wcnq0t className Element Element--light"
     data-status="false"
     data-test-box=""
     id="1"
@@ -15,24 +15,24 @@ exports[`Element snapshots should render Element 1`] = `
 exports[`Element snapshots should render Element when is selected & is multiple moving 1`] = `
 <DocumentFragment>
   <div
-    class="css-q0izro className Element Element--light Element--moving Element--moving--light Element--selected Element--selected--light"
+    class="css-wcnq0t className Element Element--light Element--moving Element--moving--light Element--selected Element--selected--light"
     data-status="true"
     data-test-box=""
     id="1"
     style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); background-color: rgb(255, 255, 255); height: 100px; position: absolute; width: 100px;"
   >
     <div
-      class="css-q0izro Outline Outline--light"
+      class="css-wcnq0t Outline Outline--light"
       data-test-box=""
       style="height: 100px; left: 0px; top: 0px; width: 100px;"
     />
     <div
-      class="css-ckbv47"
+      class="css-u1i9af"
       data-test-box=""
       style="height: 100px; left: 0px; top: 0px; width: 100px;"
     >
       <div
-        class="css-q0izro"
+        class="css-wcnq0t"
         data-test-box=""
         style="height: 100px; width: 100px;"
       />
@@ -118,24 +118,24 @@ exports[`Element snapshots should render Element when is selected & is multiple 
 exports[`Element snapshots should render Element when is selected 1`] = `
 <DocumentFragment>
   <div
-    class="css-q0izro className Element Element--light Element--selected Element--selected--light"
+    class="css-wcnq0t className Element Element--light Element--selected Element--selected--light"
     data-status="true"
     data-test-box=""
     id="1"
     style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); background-color: rgb(255, 255, 255); height: 100px; position: absolute; width: 100px;"
   >
     <div
-      class="css-q0izro Outline Outline--light"
+      class="css-wcnq0t Outline Outline--light"
       data-test-box=""
       style="height: 100px; left: 0px; top: 0px; width: 100px;"
     />
     <div
-      class="css-ckbv47"
+      class="css-u1i9af"
       data-test-box=""
       style="height: 100px; left: 0px; top: 0px; width: 100px;"
     >
       <div
-        class="css-q0izro"
+        class="css-wcnq0t"
         data-test-box=""
         style="height: 100px; width: 100px;"
       />
@@ -221,7 +221,7 @@ exports[`Element snapshots should render Element when is selected 1`] = `
 exports[`Element snapshots should render Element when width & height is auto 1`] = `
 <DocumentFragment>
   <div
-    class="css-q0izro className Element Element--light"
+    class="css-wcnq0t className Element Element--light"
     data-status="false"
     data-test-box=""
     id="1"
