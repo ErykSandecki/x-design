@@ -36,8 +36,6 @@ export const usePositionEvents = (
     isMixedY,
     setX,
     setY,
-    x,
-    y,
   );
 
   useEffect(() => {

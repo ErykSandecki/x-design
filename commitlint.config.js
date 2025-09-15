@@ -2,6 +2,7 @@ module.exports = {
   extends: ['@commitlint/config-conventional'],
   plugins: ['commitlint-plugin-function-rules'],
   rules: {
+    'type-case': [0],
     'function-rules/header-max-length': [
       2, // level: error
       'always',

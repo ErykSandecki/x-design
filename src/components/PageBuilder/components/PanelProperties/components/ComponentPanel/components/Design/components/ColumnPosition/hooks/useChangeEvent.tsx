@@ -24,8 +24,6 @@ export const useChangeEvent = (
   isMixedY: boolean,
   setX: (value: string) => void,
   setY: (value: string) => void,
-  x: string,
-  y: string,
 ): TUseChangeEvent => {
   const dispatch = useDispatch();
   const { id } = element;

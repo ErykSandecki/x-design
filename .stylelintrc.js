@@ -9,6 +9,7 @@ module.exports = {
     'color-function-notation': null,
     'color-hex-length': 'long',
     'comment-no-empty': true,
+    'custom-property-pattern': 'xd-.+',
     'declaration-block-no-duplicate-custom-properties': true,
     'declaration-block-no-duplicate-properties': true,
     'declaration-block-no-redundant-longhand-properties': null,

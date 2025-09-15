@@ -15,8 +15,6 @@ import { TSXSpacings } from './spacings';
 
 export type TSXColor = keyof (typeof THEME_COLORS)[Theme];
 
-console.log(THEME_COLORS);
-
 export type TSX = TSXBorders &
   TSXDisplay &
   TSXFlex &

@@ -24,8 +24,6 @@ describe('useChangeEvent', () => {
         false,
         mockCallBack,
         mockCallBack,
-        '0',
-        '0',
       ),
     );
 
@@ -46,8 +44,6 @@ describe('useChangeEvent', () => {
         false,
         mockCallBack,
         mockCallBack,
-        '0',
-        '0',
       ),
     );
 
@@ -72,8 +68,6 @@ describe('useChangeEvent', () => {
         false,
         mockCallBack,
         mockCallBack,
-        '0',
-        '0',
       ),
     );
 
@@ -97,8 +91,6 @@ describe('useChangeEvent', () => {
         false,
         mockCallBack,
         mockCallBack,
-        '0',
-        '0',
       ),
     );
 
@@ -119,8 +111,6 @@ describe('useChangeEvent', () => {
         false,
         mockCallBack,
         mockCallBack,
-        '0',
-        '0',
       ),
     );
 
@@ -145,8 +135,6 @@ describe('useChangeEvent', () => {
         false,
         mockCallBack,
         mockCallBack,
-        '0',
-        '0',
       ),
     );
 
