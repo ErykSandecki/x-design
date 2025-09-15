@@ -18,3 +18,4 @@ src/**/mock
 src/tests/mocks.tsx
 tsconfig.json
 webpack.config.js
+figma
