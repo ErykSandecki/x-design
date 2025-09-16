@@ -19,7 +19,7 @@ import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 import { configureStore } from 'store';
 
 // types
-import { Anchor } from 'store/pageBuilder/enums';
+import { AnchorResize } from 'store/pageBuilder/enums';
 import { T2DCoordinates } from 'types';
 
 // utils
@@ -33,7 +33,7 @@ const stateMock = {
     ...pageBuilderStateMock[PAGE_BUILDER],
     events: {
       ...eventsMock,
-      selectedAnchor: Anchor.east,
+      selectedAnchor: AnchorResize.east,
     },
   },
 };
@@ -90,7 +90,7 @@ describe('useMouseMoveEvent', () => {
         ...pageBuilderStateMock[PAGE_BUILDER],
         events: {
           ...eventsMock,
-          selectedAnchor: Anchor.none,
+          selectedAnchor: AnchorResize.none,
         },
       },
     });

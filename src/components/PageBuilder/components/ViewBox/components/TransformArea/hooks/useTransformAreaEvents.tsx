@@ -9,13 +9,13 @@ import { useMouseUpEvent } from './useMouseUpEvent';
 import { BASE_2D } from 'shared';
 
 // types
-import { Anchor } from 'store/pageBuilder/enums';
+import { AnchorResize } from 'store/pageBuilder/enums';
 import { MouseMode } from 'types/enums/mouseMode';
 import { TElement } from 'types';
 
 export type TUseTransformAreaEvents = {
   onMouseDown: (
-    anchor: Anchor,
+    anchor: AnchorResize,
     event: React.MouseEvent<HTMLElement, MouseEvent>,
   ) => void;
 };

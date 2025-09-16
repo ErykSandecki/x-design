@@ -11,7 +11,7 @@ import {
 import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
 
 // types
-import { Anchor } from 'store/pageBuilder/enums';
+import { AnchorResize } from 'store/pageBuilder/enums';
 
 // utils
 import { handleSetElementSizes } from '../handleSetElementSize';
@@ -35,7 +35,7 @@ describe('handleSetElementSizes', () => {
         ...pageBuilderStateMock[PAGE_BUILDER],
         events: {
           ...pageBuilderStateMock[PAGE_BUILDER].events,
-          selectedAnchor: Anchor.east,
+          selectedAnchor: AnchorResize.east,
         },
         pages: {
           ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -63,7 +63,7 @@ describe('handleSetElementSizes', () => {
       ...pageBuilderStateMock[PAGE_BUILDER],
       events: {
         ...pageBuilderStateMock[PAGE_BUILDER].events,
-        selectedAnchor: Anchor.east,
+        selectedAnchor: AnchorResize.east,
       },
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,

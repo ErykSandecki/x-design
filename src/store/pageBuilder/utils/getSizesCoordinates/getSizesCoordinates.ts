@@ -1,5 +1,5 @@
 // types
-import { Anchor } from '../../enums';
+import { AnchorResize } from '../../enums';
 import { T2DCoordinates, TElement, TRectCoordinates } from 'types';
 import { TSizeCoordinates } from '../../types';
 
@@ -8,7 +8,7 @@ import { getAbsoluteCoordinates } from './getAbsoluteCoordinates';
 import { getRelativeCoordinates } from './getRelativeCoordinates';
 
 export const getSizesCoordinates = (
-  anchor: Anchor,
+  anchor: AnchorResize,
   baseCoordinates: TRectCoordinates,
   baseHeight: number,
   baseWidth: number,

@@ -12,7 +12,7 @@ import { useTheme } from 'hooks';
 import { className, classNames } from './classNames';
 
 // types
-import { Anchor } from 'store/pageBuilder/enums';
+import { AnchorResize } from 'store/pageBuilder/enums';
 import { E2EAttribute, TElement } from 'types';
 import { MouseMode } from 'types/enums/mouseMode';
 
@@ -47,9 +47,9 @@ const TransformArea: FC<TResizeAreaProps> = ({
       className={cx(classNamesWithTheme[className])}
       style={{ height, width }}
     >
-      {enumToArray(Anchor).map((anchor) => (
+      {enumToArray(AnchorResize).map((anchor) => (
         <E2EDataAttribute
-          key={anchor as keyof typeof Anchor}
+          key={anchor as keyof typeof AnchorResize}
           type={E2EAttribute.anchor}
           value={kebabCase(anchor as string)}
         >
@@ -57,10 +57,12 @@ const TransformArea: FC<TResizeAreaProps> = ({
             className={cx(
               classNamesWithTheme.anchor.name,
               classNamesWithTheme.anchor.modificators[
-                anchor as keyof typeof Anchor
+                anchor as keyof typeof AnchorResize
               ],
             )}
-            onMouseDown={(event) => events.onMouseDown(anchor as Anchor, event)}
+            onMouseDown={(event) =>
+              events.onMouseDown(anchor as AnchorResize, event)
+            }
           />
         </E2EDataAttribute>
       ))}

@@ -1,5 +1,5 @@
 // types
-import { Anchor } from 'store/pageBuilder/enums';
+import { AnchorResize } from 'store/pageBuilder/enums';
 
 // utils
 import { getRelativeCoordinates } from '../getRelativeCoordinates';
@@ -11,7 +11,7 @@ describe('getRelativeCoordinates', () => {
   it(`should return cords north`, () => {
     // before
     const result = getRelativeCoordinates(
-      Anchor.north,
+      AnchorResize.north,
       baseCoordinates,
       100,
       100,
@@ -29,7 +29,7 @@ describe('getRelativeCoordinates', () => {
   it(`should return cords south`, () => {
     // before
     const result = getRelativeCoordinates(
-      Anchor.south,
+      AnchorResize.south,
       baseCoordinates,
       100,
       100,
@@ -47,7 +47,7 @@ describe('getRelativeCoordinates', () => {
   it(`should return cords east`, () => {
     // before
     const result = getRelativeCoordinates(
-      Anchor.east,
+      AnchorResize.east,
       baseCoordinates,
       100,
       100,
@@ -65,7 +65,7 @@ describe('getRelativeCoordinates', () => {
   it(`should return cords west`, () => {
     // before
     const result = getRelativeCoordinates(
-      Anchor.west,
+      AnchorResize.west,
       baseCoordinates,
       100,
       100,
@@ -83,7 +83,7 @@ describe('getRelativeCoordinates', () => {
   it(`should return cords for rest cases`, () => {
     // before
     const result = getRelativeCoordinates(
-      Anchor.northEast,
+      AnchorResize.northEast,
       baseCoordinates,
       100,
       100,
@@ -101,7 +101,7 @@ describe('getRelativeCoordinates', () => {
   it(`should return cords with default value 0`, () => {
     // before
     const result = getRelativeCoordinates(
-      Anchor.northEast,
+      AnchorResize.northEast,
       baseCoordinates,
       -1000,
       -1000,

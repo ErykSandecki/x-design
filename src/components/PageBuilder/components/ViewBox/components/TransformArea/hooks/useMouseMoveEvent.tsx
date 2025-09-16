@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { eventSelectorCreator } from 'store/pageBuilder/selectors';
 
 // types
-import { Anchor } from 'store/pageBuilder/enums';
+import { AnchorResize } from 'store/pageBuilder/enums';
 import { T2DCoordinates, TElement } from 'types';
 import { handleResizeElement } from '../utils/handleResizeElement';
 
@@ -37,7 +37,7 @@ export const useMouseMoveEvent = (
   };
 
   useEffect(() => {
-    if (anchor !== Anchor.none) {
+    if (anchor !== AnchorResize.none) {
       window.addEventListener('mousemove', handleMouseMove);
     }
 

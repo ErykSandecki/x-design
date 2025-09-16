@@ -14,7 +14,7 @@ import { BASE_2D } from 'shared';
 import { configureStore } from 'store';
 
 // types
-import { Anchor } from 'store/pageBuilder/enums';
+import { AnchorResize } from 'store/pageBuilder/enums';
 import { MouseButton, T2DCoordinates } from 'types';
 import { MouseMode } from 'types/enums/mouseMode';
 
@@ -41,7 +41,7 @@ describe('useMouseMoveEvent', () => {
     );
 
     // action
-    result.current(Anchor.east, {
+    result.current(AnchorResize.east, {
       buttons: MouseButton.lmb,
       stopPropagation: mockCallBack as any,
     } as MouseEvent);
@@ -63,7 +63,7 @@ describe('useMouseMoveEvent', () => {
     );
 
     // action
-    result.current(Anchor.east, {
+    result.current(AnchorResize.east, {
       buttons: MouseButton.lmb,
       stopPropagation: mockCallBack as any,
     } as MouseEvent);

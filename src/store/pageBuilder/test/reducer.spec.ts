@@ -48,7 +48,7 @@ import {
   TAction,
   TBackground,
 } from 'types';
-import { Anchor } from '../enums';
+import { AnchorResize } from '../enums';
 import { TPageBuilderState } from '../types';
 
 describe('PageBuilderReducer', () => {
@@ -1045,7 +1045,7 @@ describe('PageBuilderReducer', () => {
         ...pageBuilderStateMock[PAGE_BUILDER],
         events: {
           ...pageBuilderStateMock[PAGE_BUILDER].events,
-          selectedAnchor: Anchor.east,
+          selectedAnchor: AnchorResize.east,
         },
         pages: {
           ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -1075,7 +1075,7 @@ describe('PageBuilderReducer', () => {
       ...pageBuilderStateMock[PAGE_BUILDER],
       events: {
         ...pageBuilderStateMock[PAGE_BUILDER].events,
-        selectedAnchor: Anchor.east,
+        selectedAnchor: AnchorResize.east,
       },
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,

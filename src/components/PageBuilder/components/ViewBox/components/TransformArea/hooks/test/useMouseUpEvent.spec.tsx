@@ -10,7 +10,7 @@ import { useMouseUpEvent } from '../useMouseUpEvent';
 import { configureStore } from 'store';
 
 // types
-import { Anchor } from 'store/pageBuilder/enums';
+import { AnchorResize } from 'store/pageBuilder/enums';
 
 // utils
 import { getProviderWrapper } from 'test';
@@ -42,7 +42,7 @@ describe('useMouseUpEvent', () => {
     // result
     expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
       isResizing: false,
-      selectedAnchor: Anchor.none,
+      selectedAnchor: AnchorResize.none,
     });
   });
 });

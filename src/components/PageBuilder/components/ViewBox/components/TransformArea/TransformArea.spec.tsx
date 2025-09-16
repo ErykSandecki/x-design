@@ -13,7 +13,7 @@ import 'test/mocks/sagas/allSagas';
 import { configureStore } from 'store/store';
 
 // types
-import { Anchor } from 'store/pageBuilder/enums';
+import { AnchorResize } from 'store/pageBuilder/enums';
 import { E2EAttribute } from 'types';
 import { MouseMode } from 'types/enums/mouseMode';
 
@@ -72,7 +72,11 @@ describe('TransformArea behaviors', () => {
 
     // action
     fireEvent.mouseDown(
-      getByE2EAttribute(container, E2EAttribute.anchor, kebabCase(Anchor.east)),
+      getByE2EAttribute(
+        container,
+        E2EAttribute.anchor,
+        kebabCase(AnchorResize.east),
+      ),
     );
 
     // result

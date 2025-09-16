@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { updateEventsStatus } from 'store/pageBuilder/actions';
 
 // types
-import { Anchor } from 'store/pageBuilder/enums';
+import { AnchorResize } from 'store/pageBuilder/enums';
 
 export type TUseMouseUpEvent = void;
 
@@ -14,7 +14,10 @@ export const useMouseUpEvent = (): TUseMouseUpEvent => {
 
   const handleMouseUp = (): void => {
     dispatch(
-      updateEventsStatus({ isResizing: false, selectedAnchor: Anchor.none }),
+      updateEventsStatus({
+        isResizing: false,
+        selectedAnchor: AnchorResize.none,
+      }),
     );
   };
 

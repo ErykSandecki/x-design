@@ -22,7 +22,7 @@ import {
 } from './actionsType';
 
 // types
-import { Anchor } from './enums';
+import { AnchorResize } from './enums';
 import {
   AlignmentHorizontal,
   AlignmentVertical,
@@ -71,7 +71,7 @@ export type TEvents = {
   possibleIndexPosition: number | null;
   possibleParent: TElement['id'] | null;
   pressedKey: KeyboardKeys;
-  selectedAnchor: Anchor;
+  selectedAnchor: AnchorResize;
 };
 
 export type TPositions = {

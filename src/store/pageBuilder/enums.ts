@@ -1,4 +1,4 @@
-export enum Anchor {
+export enum AnchorResize {
   east = 'east',
   none = 'none',
   north = 'north',

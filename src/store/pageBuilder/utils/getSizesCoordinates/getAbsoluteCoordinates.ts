@@ -1,5 +1,5 @@
 // types
-import { Anchor } from '../../enums';
+import { AnchorResize } from '../../enums';
 import { T2DCoordinates, TRectCoordinates } from 'types';
 import { TSizeCoordinates } from '../../types';
 
@@ -84,7 +84,7 @@ export const getWestCoordinates = (
 };
 
 export const getAbsoluteCoordinates = (
-  anchor: Anchor,
+  anchor: AnchorResize,
   baseCoordinates: TRectCoordinates,
   baseHeight: number,
   baseWidth: number,
@@ -116,11 +116,11 @@ export const getAbsoluteCoordinates = (
   );
 
   switch (anchor) {
-    case Anchor.east:
+    case AnchorResize.east:
       return eastCoordinates;
-    case Anchor.north:
+    case AnchorResize.north:
       return northCoordinates;
-    case Anchor.northEast:
+    case AnchorResize.northEast:
       return {
         coordinates: {
           x: eastCoordinates.coordinates.x,
@@ -129,7 +129,7 @@ export const getAbsoluteCoordinates = (
         height: northCoordinates.height,
         width: eastCoordinates.width,
       };
-    case Anchor.northWest:
+    case AnchorResize.northWest:
       return {
         coordinates: {
           x: westCoordinates.coordinates.x,
@@ -138,9 +138,9 @@ export const getAbsoluteCoordinates = (
         height: northCoordinates.height,
         width: westCoordinates.width,
       };
-    case Anchor.south:
+    case AnchorResize.south:
       return southCoordinates;
-    case Anchor.southEast:
+    case AnchorResize.southEast:
       return {
         coordinates: {
           x: eastCoordinates.coordinates.x,
@@ -149,7 +149,7 @@ export const getAbsoluteCoordinates = (
         height: southCoordinates.height,
         width: eastCoordinates.width,
       };
-    case Anchor.southWest:
+    case AnchorResize.southWest:
       return {
         coordinates: {
           x: westCoordinates.coordinates.x,

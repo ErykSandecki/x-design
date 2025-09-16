@@ -4,7 +4,7 @@ import { BASE_PAGE, BASE_PAGE_ELEMENTS } from 'store/pageBuilder/constants';
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 
 // types
-import { Anchor } from 'store/pageBuilder/enums';
+import { AnchorResize } from 'store/pageBuilder/enums';
 import {
   AlignmentHorizontal,
   AlignmentVertical,
@@ -38,7 +38,7 @@ export const pageBuilderStateMock: Record<
       possibleIndexPosition: null,
       possibleParent: null,
       pressedKey: KeyboardKeys.none,
-      selectedAnchor: Anchor.none,
+      selectedAnchor: AnchorResize.none,
     },
     isLoading: true,
     isPending: false,
@@ -111,7 +111,7 @@ export const eventsMock: TEvents = {
   possibleIndexPosition: null,
   possibleParent: null,
   pressedKey: KeyboardKeys.none,
-  selectedAnchor: Anchor.none,
+  selectedAnchor: AnchorResize.none,
 };
 
 export const reducerHistoryMock: Array<TReducerHistory> = [

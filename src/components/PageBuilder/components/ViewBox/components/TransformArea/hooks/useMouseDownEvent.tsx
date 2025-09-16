@@ -5,10 +5,13 @@ import { useDispatch } from 'react-redux';
 import { updateEventsStatus } from 'store/pageBuilder/actions';
 
 // types
-import { Anchor } from 'store/pageBuilder/enums';
+import { AnchorResize } from 'store/pageBuilder/enums';
 import { MouseButton, MouseMode, T2DCoordinates } from 'types';
 
-export type TUseMouseDownEvent = (anchor: Anchor, event: MouseEvent) => void;
+export type TUseMouseDownEvent = (
+  anchor: AnchorResize,
+  event: MouseEvent,
+) => void;
 
 export const useMouseDownEvent = (
   cursorPosition: RefObject<T2DCoordinates>,
@@ -16,7 +19,7 @@ export const useMouseDownEvent = (
 ): TUseMouseDownEvent => {
   const dispatch = useDispatch();
 
-  const handleMouseDown = (anchor: Anchor, event: MouseEvent): void => {
+  const handleMouseDown = (anchor: AnchorResize, event: MouseEvent): void => {
     if (event.buttons === MouseButton.lmb && mouseMode === MouseMode.default) {
       event.stopPropagation();
 

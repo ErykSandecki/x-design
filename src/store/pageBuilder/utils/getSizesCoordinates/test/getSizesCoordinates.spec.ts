@@ -1,5 +1,5 @@
 // types
-import { Anchor } from 'store/pageBuilder/enums';
+import { AnchorResize } from 'store/pageBuilder/enums';
 
 // utils
 import { getSizesCoordinates } from '../getSizesCoordinates';
@@ -11,7 +11,7 @@ describe('getSizesCoordinates', () => {
   it(`should return cords for absolute position`, () => {
     // before
     const result = getSizesCoordinates(
-      Anchor.east,
+      AnchorResize.east,
       baseCoordinates,
       100,
       100,
@@ -30,7 +30,7 @@ describe('getSizesCoordinates', () => {
   it(`should return cords for absolute relative`, () => {
     // before
     const result = getSizesCoordinates(
-      Anchor.east,
+      AnchorResize.east,
       baseCoordinates,
       100,
       100,

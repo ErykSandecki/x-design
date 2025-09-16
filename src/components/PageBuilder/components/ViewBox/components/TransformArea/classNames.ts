@@ -1,7 +1,7 @@
 import { mapValues } from 'lodash';
 
 // types
-import { Anchor } from 'store/pageBuilder/enums';
+import { AnchorResize } from 'store/pageBuilder/enums';
 
 export const className = 'TransformArea';
 
@@ -10,7 +10,7 @@ export const classNames = {
   anchor: {
     name: `${className}__anchor`,
     modificators: {
-      ...mapValues(Anchor, (anchor) => `${className}__anchor--${anchor}`),
+      ...mapValues(AnchorResize, (anchor) => `${className}__anchor--${anchor}`),
     },
   },
 };

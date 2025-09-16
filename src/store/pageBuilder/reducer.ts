@@ -23,7 +23,7 @@ import {
 import { BASE_PAGE } from './constants';
 
 // types
-import { Anchor } from './enums';
+import { AnchorResize } from './enums';
 import { KeyboardKeys, TAction } from 'types';
 import {
   TAddELementAction,
@@ -70,12 +70,127 @@ const initialState: TPageBuilderState = {
     possibleIndexPosition: null,
     possibleParent: null,
     pressedKey: KeyboardKeys.none,
-    selectedAnchor: Anchor.none,
+    selectedAnchor: AnchorResize.none,
   },
   isLoading: true,
   isPending: false,
+  // @ts-ignore
   pages: {
-    [BASE_PAGE.id]: BASE_PAGE,
+    [BASE_PAGE.id]: {
+      ...BASE_PAGE,
+      elements: {
+        allData: {
+          '-1': {
+            alignment: {},
+            background: {
+              properties: {
+                alpha: '100',
+                color: '#1e262f',
+                format: 'hex',
+              },
+              visible: true,
+            },
+            children: ['mfmjnwh91758026628908'],
+            coordinates: {
+              x: 0,
+              y: 0,
+            },
+            deepLevel: 0,
+            height: 0,
+            id: '-1',
+            parentId: 'none',
+            position: 'absolute',
+            rotate: 0,
+            type: 'base',
+            width: 0,
+          },
+          mfmjnwh91758026628908: {
+            alignment: {},
+            background: {
+              properties: {
+                alpha: '100',
+                color: '#ffffff',
+                format: 'hex',
+              },
+              visible: true,
+            },
+            children: [],
+            coordinates: {
+              x: 500,
+              y: 299,
+            },
+            deepLevel: 0,
+            height: 272,
+            id: 'mfmjnwh91758026628908',
+            parentId: '-1',
+            position: 'absolute',
+            rotate: 0,
+            type: 'frame',
+            width: 404,
+          },
+        },
+        dynamicData: {
+          '-1': {
+            alignment: {},
+            background: {
+              properties: {
+                alpha: '100',
+                color: '#1e262f',
+                format: 'hex',
+              },
+              visible: true,
+            },
+            coordinates: {
+              x: 0,
+              y: 0,
+            },
+            deepLevel: 0,
+            height: 0,
+            id: '-1',
+            position: 'absolute',
+            rotate: 0,
+            width: 0,
+          },
+          mfmjnwh91758026628908: {
+            alignment: {},
+            background: {
+              properties: {
+                alpha: '100',
+                color: '#ffffff',
+                format: 'hex',
+              },
+              visible: true,
+            },
+            coordinates: {
+              x: 500,
+              y: 299,
+            },
+            deepLevel: 0,
+            height: 272,
+            id: 'mfmjnwh91758026628908',
+            position: 'absolute',
+            rotate: 0,
+            width: 404,
+          },
+        },
+        staticData: {
+          '-1': {
+            children: ['mfmjnwh91758026628908'],
+            id: '-1',
+            parentId: 'none',
+            position: 'absolute',
+            type: 'base',
+          },
+          mfmjnwh91758026628908: {
+            children: [],
+            id: 'mfmjnwh91758026628908',
+            parentId: '-1',
+            position: 'absolute',
+            type: 'frame',
+          },
+        },
+      },
+    },
   },
 };
 
