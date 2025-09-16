@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { RefObject, useRef } from 'react';
 
 // hooks
 import { TUseMouseDownEvent, useMouseDownEvent } from './useMouseDownEvent';
@@ -15,17 +15,35 @@ import { TElement } from 'types';
 export type TUseTransformAreaEvents = TUseMouseDownEvent;
 
 export const useTransformAreaEvents = (
+  elementRef: RefObject<HTMLDivElement>,
   height: TElement['height'],
   id: TElement['id'],
   mouseMode: MouseMode,
+  rotate: TElement['rotate'],
   width: TElement['width'],
   x: TElement['coordinates']['x'],
   y: TElement['coordinates']['y'],
 ): TUseTransformAreaEvents => {
+  const cursorBaseAngle = useRef(0);
   const cursorPosition = useRef(BASE_2D);
-  const events = useMouseDownEvent(cursorPosition, mouseMode);
+  const events = useMouseDownEvent(
+    cursorBaseAngle,
+    cursorPosition,
+    elementRef,
+    mouseMode,
+  );
 
-  useMouseMoveEvent(cursorPosition, height, id, width, x, y);
+  useMouseMoveEvent(
+    cursorBaseAngle,
+    cursorPosition,
+    elementRef,
+    height,
+    id,
+    rotate,
+    width,
+    x,
+    y,
+  );
   useMouseUpEvent();
 
   return events;

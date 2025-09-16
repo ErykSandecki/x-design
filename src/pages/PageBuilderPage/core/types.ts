@@ -6,4 +6,5 @@ import { TObject } from 'types';
 export type TContext = {
   itemsRefs: TObject<HTMLElement | null>;
   overlayContainerRef: RefObject<HTMLDivElement | null>;
+  zoomContentRef: RefObject<HTMLDivElement | null>;
 };

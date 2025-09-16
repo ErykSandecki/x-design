@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 // components
 import EventsArea from './components/EventsArea/EventsArea';
 import Outline from './components/Outline/Outline';
-import { Box } from 'shared';
+import { BASE_RECT, Box } from 'shared';
 
 // core
 import { useRefs } from 'pages/PageBuilderPage/core/RefsProvider';
@@ -24,6 +24,7 @@ import { DATA_STATUS_ATTRIBUTE } from './constants';
 
 // store
 import {
+  areaAxisSelectorCreator,
   elementDynamicDataSelectorCreator,
   eventSelectorCreator,
   isDraggableSelectorCreator,
@@ -40,15 +41,18 @@ import { ElementType, TColor, TElement } from 'types';
 import { MouseMode } from 'types/enums/mouseMode';
 
 // utils
-import { getAbsolutePosition } from 'components/PageBuilder/components/ViewBox/utils/getAbsolutePosition';
+import { getAbsolutePosition } from '../../../../utils/getAbsolutePosition';
 import { getPosition } from './utils/getPosition';
 
 type TElementProps = {
   classes: typeof classes;
   children: (
     coordinates: TElement['coordinates'],
+    height: TElement['height'],
     hover: boolean,
+    rotate: TElement['rotate'],
     selected: boolean,
+    width: TElement['width'],
   ) => ReactNode;
   id: TElement['id'];
   mouseMode: MouseMode;
@@ -70,7 +74,7 @@ const Element: FC<TElementProps> = ({
   const isMultiple = useSelector(multipleSelectedElementsSelector);
   const elementRef = useRef<HTMLDivElement>(null);
   const elementDynamicData = useSelector(elementDynamicDataSelectorCreator(id));
-  const { itemsRefs } = useRefs();
+  const { itemsRefs, zoomContentRef } = useRefs();
   const { alignment, coordinates } = elementDynamicData;
   const { background, height, position, rotate, width } = elementDynamicData;
   const { x, y } = coordinates;
@@ -94,7 +98,13 @@ const Element: FC<TElementProps> = ({
   const displayEventsArea = !isDraggable && !isMultiple && isSelected;
   const displayOutline = isFocused;
   const isMoving = isDraggable || (isMultipleMoving && isSelected);
-  const { x1, y1 } = getAbsolutePosition(coordinates, id, parentId, itemsRefs);
+  const { x1, y1 } = getAbsolutePosition(
+    coordinates,
+    id,
+    parentId,
+    itemsRefs,
+    zoomContentRef,
+  );
 
   return (
     <Box
@@ -128,17 +138,19 @@ const Element: FC<TElementProps> = ({
       }}
       {...events}
     >
-      {children(coordinates, isHover, isSelected)}
+      {children(coordinates, height, isHover, rotate, isSelected, width)}
       {displayOutline && (
-        <Outline height={height} x={x1} y={y1} width={width} />
+        <Outline height={height} rotate={rotate} x={x1} y={y1} width={width} />
       )}
       {displayEventsArea && (
         <EventsArea
           absoluteCoordinates={{ x: x1, y: y1 }}
+          elementRef={elementRef}
           height={height}
           id={id}
           mouseMode={mouseMode}
           relativeCoordinates={{ x, y }}
+          rotate={rotate}
           width={width}
         />
       )}

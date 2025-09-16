@@ -2,10 +2,7 @@
 import { BASE_RECT } from 'shared';
 
 // store
-import {
-  allDataSelector,
-  areaAxisSelectorCreator,
-} from 'store/pageBuilder/selectors';
+import { areaAxisSelectorCreator } from 'store/pageBuilder/selectors';
 import { store } from 'store';
 
 // types
@@ -13,13 +10,14 @@ import { T2DCoordinates, TElement, TRectCoordinates } from 'types';
 import { TContext } from 'pages/PageBuilderPage/core/types';
 
 // utils
-import { findMainParent } from 'store/pageBuilder/utils/findMainParent';
+import { RefObject } from 'react';
 
 export const getAbsolutePosition = (
   coordinates: T2DCoordinates,
   id: TElement['id'],
   parentId: TElement['parentId'],
   sharedRefs: TContext['itemsRefs'],
+  zoomContentRef: RefObject<HTMLDivElement | null>,
 ): TRectCoordinates => {
   if (sharedRefs[id]) {
     const height = parseInt(getComputedStyle(sharedRefs[id]).height);
@@ -27,17 +25,11 @@ export const getAbsolutePosition = (
     const z = areaAxisSelectorCreator('z')(store.getState());
 
     if (parentId !== '-1') {
-      const allData = allDataSelector(store.getState());
-      const mainParentId = findMainParent(parentId, allData);
-      const parentCords = allData[mainParentId].coordinates;
-      const { top: parentTop, left: parentLeft } =
-        sharedRefs[mainParentId].getBoundingClientRect();
-      const { top: childrenTop, left: childrenLeft } =
-        sharedRefs[id].getBoundingClientRect();
-      const offsetX = parentLeft - childrenLeft;
-      const offsetY = parentTop - childrenTop;
-      const x = parentCords.x - offsetX / z;
-      const y = parentCords.y - offsetY / z;
+      const diagramRect = zoomContentRef.current?.getBoundingClientRect();
+      const blockRect = sharedRefs[id]?.getBoundingClientRect();
+
+      const x = (blockRect?.left - diagramRect?.left) / z;
+      const y = (blockRect?.top - diagramRect?.top) / z;
 
       return {
         x1: x,

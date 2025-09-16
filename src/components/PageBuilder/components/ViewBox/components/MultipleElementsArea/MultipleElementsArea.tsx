@@ -31,7 +31,7 @@ const MultipleElementsArea: FC = () => {
   const areParentsTheSame = useSelector(areParentsTheSameSelector);
   const selectedElements = useSelector(selectedElementsSelector);
   const isMultiple = useSelector(multipleSelectedElementsSelector);
-  const { itemsRefs, overlayContainerRef } = useRefs();
+  const { itemsRefs, overlayContainerRef, zoomContentRef } = useRefs();
   const isMultipleMoving = useSelector(
     eventSelectorCreator('isMultipleMoving'),
   ) as boolean;
@@ -46,6 +46,7 @@ const MultipleElementsArea: FC = () => {
         isMultipleMoving,
         selectedElements,
         itemsRefs,
+        zoomContentRef,
       );
 
       setCoordinatesData(coordinates);

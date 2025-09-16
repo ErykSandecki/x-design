@@ -1,4 +1,4 @@
-import React, { FC, KeyboardEvent, ReactNode, RefObject, useRef } from 'react';
+import React, { FC, KeyboardEvent, ReactNode, RefObject } from 'react';
 
 // components
 import Box from '../UI/components/Box/Box';
@@ -40,6 +40,7 @@ export type TZoomBoxProps = {
   onUpdateCoordinates?: (coordinates: T3DCoordinates) => void;
   setCoordinates: (coordinates: T3DCoordinates) => void;
   zoomBoxRef: RefObject<HTMLDivElement>;
+  zoomContentRef: RefObject<HTMLDivElement>;
 };
 
 export const ZoomBox: FC<TZoomBoxProps> = ({
@@ -61,8 +62,8 @@ export const ZoomBox: FC<TZoomBoxProps> = ({
   onUpdateCoordinates = null,
   setCoordinates,
   zoomBoxRef,
+  zoomContentRef,
 }) => {
-  const zoomContentRef = useRef<HTMLDivElement>(null);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { cursorState, ...events } = useZoomBoxEvents(
     coordinates,

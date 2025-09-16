@@ -17,6 +17,7 @@ export const calculateAbsolutePositions = (
   mouseMode: MouseMode,
   rectCoordinates: RefObject<TObject<TRectCoordinates>>,
   sharedRefs: TContext['itemsRefs'],
+  zoomContentRef: TContext['zoomContentRef'],
 ): void => {
   if (event.buttons === MouseButton.lmb && mouseMode === MouseMode.default) {
     const allData = allDataSelector(store.getState());
@@ -31,6 +32,7 @@ export const calculateAbsolutePositions = (
           id,
           parentId,
           sharedRefs,
+          zoomContentRef,
         );
       }
     }

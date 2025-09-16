@@ -111,15 +111,15 @@ const initialState: TPageBuilderState = {
             background: {
               properties: {
                 alpha: '100',
-                color: '#ffffff',
+                color: '#932727ff',
                 format: 'hex',
               },
               visible: true,
             },
-            children: [],
+            children: ['mfmsbjzr1758041169398'],
             coordinates: {
               x: 500,
-              y: 299,
+              y: 500,
             },
             deepLevel: 0,
             height: 272,
@@ -129,6 +129,30 @@ const initialState: TPageBuilderState = {
             rotate: 0,
             type: 'frame',
             width: 404,
+          },
+          mfmsbjzr1758041169398: {
+            alignment: {},
+            background: {
+              properties: {
+                alpha: '100',
+                color: '#1a2c71ff',
+                format: 'hex',
+              },
+              visible: true,
+            },
+            children: [],
+            coordinates: {
+              x: 0,
+              y: 0,
+            },
+            deepLevel: 1,
+            height: 100,
+            id: 'mfmsbjzr1758041169398',
+            parentId: 'mfmjnwh91758026628908',
+            position: 'relative',
+            rotate: 0,
+            type: 'frame',
+            width: 300,
           },
         },
         dynamicData: {
@@ -158,14 +182,14 @@ const initialState: TPageBuilderState = {
             background: {
               properties: {
                 alpha: '100',
-                color: '#ffffff',
+                color: '#932727ff',
                 format: 'hex',
               },
               visible: true,
             },
             coordinates: {
               x: 500,
-              y: 299,
+              y: 500,
             },
             deepLevel: 0,
             height: 272,
@@ -173,6 +197,27 @@ const initialState: TPageBuilderState = {
             position: 'absolute',
             rotate: 0,
             width: 404,
+          },
+          mfmsbjzr1758041169398: {
+            alignment: {},
+            background: {
+              properties: {
+                alpha: '100',
+                color: '#1a2c71ff',
+                format: 'hex',
+              },
+              visible: true,
+            },
+            coordinates: {
+              x: 0,
+              y: 0,
+            },
+            deepLevel: 1,
+            height: 100,
+            id: 'mfmsbjzr1758041169398',
+            position: 'relative',
+            rotate: 0,
+            width: 300,
           },
         },
         staticData: {
@@ -184,10 +229,17 @@ const initialState: TPageBuilderState = {
             type: 'base',
           },
           mfmjnwh91758026628908: {
-            children: [],
+            children: ['mfmsbjzr1758041169398'],
             id: 'mfmjnwh91758026628908',
             parentId: '-1',
             position: 'absolute',
+            type: 'frame',
+          },
+          mfmsbjzr1758041169398: {
+            children: [],
+            id: 'mfmsbjzr1758041169398',
+            parentId: 'mfmjnwh91758026628908',
+            position: 'relative',
             type: 'frame',
           },
         },

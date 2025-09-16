@@ -3,11 +3,17 @@
 .Frame {
   background-color: #ffffff;
 
+  &__wrapper {
+    pointer-events: none;
+    position: absolute;
+  }
+
   &__label {
     @include theme('neutral-2', color);
 
-    font-size: 11px;
     position: absolute;
+    pointer-events: all;
+    font-size: 11px;
     transform: translate(1.5px, -20px);
     user-select: none;
 

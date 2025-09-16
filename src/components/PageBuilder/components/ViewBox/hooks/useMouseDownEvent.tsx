@@ -22,10 +22,16 @@ export const useMouseDownEvent = (
   setElementArea: (elementArea: TRectArea) => void,
   setSelectableArea: (selectableArea: TRectAreaExtended) => void,
 ): TUseMouseDownEvent => {
-  const { itemsRefs } = useRefs();
+  const { itemsRefs, zoomContentRef } = useRefs();
 
   const handleMouseDown = (event: MouseEvent): void => {
-    calculateAbsolutePositions(event, mouseMode, rectCoordinates, itemsRefs);
+    calculateAbsolutePositions(
+      event,
+      mouseMode,
+      rectCoordinates,
+      itemsRefs,
+      zoomContentRef,
+    );
     handleInitElementArea(coordinates, event, mouseMode, setElementArea);
     handleInitSelectableArea(coordinates, event, mouseMode, setSelectableArea);
   };

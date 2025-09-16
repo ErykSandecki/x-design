@@ -18,19 +18,23 @@ export type TRefsProvider = {
   children: ReactNode;
   itemsRefs?: TContext['itemsRefs'];
   overlayContainerRefHtml?: HTMLDivElement;
+  zoomContentRefHtml?: HTMLDivElement;
 };
 
 export const RefsProvider: FC<TRefsProvider> = ({
   children,
   itemsRefs: itemRefsDefault = {},
   overlayContainerRefHtml = null,
+  zoomContentRefHtml = null,
 }) => {
   const itemRefs = useRef(itemRefsDefault);
   const overlayContainerRef = useRef(overlayContainerRefHtml);
+  const zoomContentRef = useRef(zoomContentRefHtml);
   const value = useMemo(
     () => ({
       itemsRefs: itemRefs.current,
       overlayContainerRef: overlayContainerRef,
+      zoomContentRef: zoomContentRef,
     }),
     [],
   );

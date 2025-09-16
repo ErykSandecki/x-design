@@ -8,6 +8,9 @@ import MultipleElementsArea from './components/MultipleElementsArea/MultipleElem
 import SelectableArea from './components/SelectableArea/SelectableArea';
 import { ZoomBox } from 'shared';
 
+// core
+import { useRefs } from 'pages/PageBuilderPage/core/RefsProvider';
+
 // others
 import { className, classNames } from './classNames';
 
@@ -48,6 +51,7 @@ const ViewBox: FC<TViewBoxProps> = ({
   const data = background.properties as TColor;
   const dispatch = useDispatch();
   const zoomBoxRef = useRef<HTMLDivElement>(null);
+  const { zoomContentRef } = useRefs();
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { elementArea, selectableArea, ...events } = useViewBoxEvents(
     coordinates,
@@ -76,6 +80,7 @@ const ViewBox: FC<TViewBoxProps> = ({
       }
       setCoordinates={setCoordinates}
       zoomBoxRef={zoomBoxRef}
+      zoomContentRef={zoomContentRef}
       {...events}
     >
       <MultipleElementsArea />

@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 // components
 import Element from '../Element/Element';
 import Elements from '../../Elements';
-import { Small } from 'shared';
+import { Box, Small } from 'shared';
 
 // core
 import { useRefs } from 'pages/PageBuilderPage/core/RefsProvider';
@@ -46,26 +46,36 @@ const Frame: FC<TFrameProps> = ({
       mouseMode={mouseMode}
       type={type}
     >
-      {(coordinates, hover, selected) => (
+      {(coordinates, height, hover, rotate, selected, width) => (
         <>
           {overlayContainerRef.current &&
             parentId === '-1' &&
             createPortal(
-              <Small
-                classes={{
-                  className: cx(
-                    classNamesWithTheme.label.name,
-                    [classNamesWithTheme.label.modificators.hover, hover],
-                    [classNamesWithTheme.label.modificators.selected, selected],
-                  ),
-                }}
+              <Box
+                classes={{ className: cx(classNamesWithTheme.wrapper) }}
                 style={{
+                  height: `${height}px`,
                   left: `${coordinates.x}px`,
                   top: `${coordinates.y}px`,
+                  transform: `rotate(${rotate}deg)`,
+                  width: `${width}px`,
                 }}
               >
-                {t(`${translationNameSpace}.label.createFrame`)}
-              </Small>,
+                <Small
+                  classes={{
+                    className: cx(
+                      classNamesWithTheme.label.name,
+                      [classNamesWithTheme.label.modificators.hover, hover],
+                      [
+                        classNamesWithTheme.label.modificators.selected,
+                        selected,
+                      ],
+                    ),
+                  }}
+                >
+                  {t(`${translationNameSpace}.label.createFrame`)}
+                </Small>
+              </Box>,
               overlayContainerRef.current,
             )}
           <Elements

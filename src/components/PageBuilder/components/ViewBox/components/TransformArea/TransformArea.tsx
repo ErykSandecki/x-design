@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, RefObject } from 'react';
 import { kebabCase } from 'lodash';
 
 // components
@@ -23,30 +23,37 @@ import styles from './transform-area.scss';
 import { enumToArray } from 'utils';
 
 export type TTransformAreaProps = {
+  elementRef: RefObject<HTMLDivElement>;
   height: TElement['height'];
   id: TElement['id'];
   moseMode: MouseMode;
+  rotate: TElement['rotate'];
   width: TElement['width'];
   x: TElement['coordinates']['x'];
   y: TElement['coordinates']['y'];
 };
 
 const TransformArea: FC<TTransformAreaProps> = ({
+  elementRef,
   height,
   id,
   moseMode,
+  rotate,
   width,
   x,
   y,
 }) => {
-  const { onMouseDownAnchorResize } = useTransformAreaEvents(
-    height,
-    id,
-    moseMode,
-    width,
-    x,
-    y,
-  );
+  const { onMouseDownAnchorResize, onMouseDownAnchorRotate } =
+    useTransformAreaEvents(
+      elementRef,
+      height,
+      id,
+      moseMode,
+      rotate,
+      width,
+      x,
+      y,
+    );
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   return (
@@ -89,9 +96,9 @@ const TransformArea: FC<TTransformAreaProps> = ({
                 anchor as keyof typeof AnchorRotate
               ],
             )}
-            // onMouseDown={(event) =>
-            //   events.onMouseDown(anchor as AnchorResize, event)
-            // }
+            onMouseDown={(event) =>
+              onMouseDownAnchorRotate(anchor as AnchorRotate, event)
+            }
           />
         </E2EDataAttribute>
       ))}

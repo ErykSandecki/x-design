@@ -20,6 +20,7 @@ export const getCoordinatesData = (
   isMultipleMoving: boolean,
   selectedElements: TSelectedElements,
   sharedRefs: TContext['itemsRefs'],
+  zoomContentRef: TContext['zoomContentRef'],
 ): TCoordinatesData => {
   if (!isMultipleMoving && size(selectedElements) > 1) {
     const allData = allDataSelector(store.getState());
@@ -32,6 +33,7 @@ export const getCoordinatesData = (
           id,
           parentId,
           sharedRefs,
+          zoomContentRef,
         );
 
         return {
