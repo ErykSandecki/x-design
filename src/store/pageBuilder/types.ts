@@ -22,7 +22,7 @@ import {
 } from './actionsType';
 
 // types
-import { AnchorResize } from './enums';
+import { AnchorResize, AnchorRotate } from './enums';
 import {
   AlignmentHorizontal,
   AlignmentVertical,
@@ -68,10 +68,12 @@ export type TEvents = {
   hoverOnElement: TElement['id'];
   isMultipleMoving: boolean;
   isResizing: boolean;
+  isRotating: boolean;
   possibleIndexPosition: number | null;
   possibleParent: TElement['id'] | null;
   pressedKey: KeyboardKeys;
   selectedAnchorResize: AnchorResize;
+  selectedAnchorRotate: AnchorRotate;
 };
 
 export type TPositions = {

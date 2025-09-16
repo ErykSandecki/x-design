@@ -43,6 +43,10 @@ exports[`TransformArea snapshots should render TransformArea 1`] = `
       data-test-anchor-resize="west"
     />
     <div
+      class="TransformArea__anchor-rotate TransformArea__anchor-rotate--light TransformArea__anchor-rotate--none TransformArea__anchor-rotate--none--light"
+      data-test-anchor-rotate="none"
+    />
+    <div
       class="TransformArea__anchor-rotate TransformArea__anchor-rotate--light TransformArea__anchor-rotate--northEast TransformArea__anchor-rotate--northEast--light"
       data-test-anchor-rotate="north-east"
     />

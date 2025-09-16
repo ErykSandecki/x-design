@@ -11,6 +11,7 @@ export enum AnchorResize {
 }
 
 export enum AnchorRotate {
+  none = 'none',
   northEast = 'northEast',
   northWest = 'northWest',
   southEast = 'southEast',

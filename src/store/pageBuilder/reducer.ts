@@ -23,7 +23,7 @@ import {
 import { BASE_PAGE } from './constants';
 
 // types
-import { AnchorResize } from './enums';
+import { AnchorResize, AnchorRotate } from './enums';
 import { KeyboardKeys, TAction } from 'types';
 import {
   TAddELementAction,
@@ -67,10 +67,12 @@ const initialState: TPageBuilderState = {
     hoverOnElement: '-1',
     isMultipleMoving: false,
     isResizing: false,
+    isRotating: false,
     possibleIndexPosition: null,
     possibleParent: null,
     pressedKey: KeyboardKeys.none,
     selectedAnchorResize: AnchorResize.none,
+    selectedAnchorRotate: AnchorRotate.none,
   },
   isLoading: true,
   isPending: false,
