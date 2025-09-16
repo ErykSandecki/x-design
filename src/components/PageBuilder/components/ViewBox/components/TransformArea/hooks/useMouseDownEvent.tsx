@@ -8,10 +8,9 @@ import { updateEventsStatus } from 'store/pageBuilder/actions';
 import { AnchorResize } from 'store/pageBuilder/enums';
 import { MouseButton, MouseMode, T2DCoordinates } from 'types';
 
-export type TUseMouseDownEvent = (
-  anchor: AnchorResize,
-  event: MouseEvent,
-) => void;
+export type TUseMouseDownEvent = {
+  onMouseDownAnchorResize: (anchor: AnchorResize, event: MouseEvent) => void;
+};
 
 export const useMouseDownEvent = (
   cursorPosition: RefObject<T2DCoordinates>,
@@ -19,12 +18,15 @@ export const useMouseDownEvent = (
 ): TUseMouseDownEvent => {
   const dispatch = useDispatch();
 
-  const handleMouseDown = (anchor: AnchorResize, event: MouseEvent): void => {
+  const handleMouseDownAchnorResize = (
+    anchor: AnchorResize,
+    event: MouseEvent,
+  ): void => {
     if (event.buttons === MouseButton.lmb && mouseMode === MouseMode.default) {
       event.stopPropagation();
 
       dispatch(
-        updateEventsStatus({ isResizing: true, selectedAnchor: anchor }),
+        updateEventsStatus({ isResizing: true, selectedAnchorResize: anchor }),
       );
       cursorPosition.current = {
         x: Math.round(event.clientX),
@@ -33,5 +35,7 @@ export const useMouseDownEvent = (
     }
   };
 
-  return handleMouseDown;
+  return {
+    onMouseDownAnchorResize: handleMouseDownAchnorResize,
+  };
 };

@@ -33,7 +33,7 @@ const stateMock = {
     ...pageBuilderStateMock[PAGE_BUILDER],
     events: {
       ...eventsMock,
-      selectedAnchor: AnchorResize.east,
+      selectedAnchorResize: AnchorResize.east,
     },
   },
 };
@@ -90,7 +90,7 @@ describe('useMouseMoveEvent', () => {
         ...pageBuilderStateMock[PAGE_BUILDER],
         events: {
           ...eventsMock,
-          selectedAnchor: AnchorResize.none,
+          selectedAnchorResize: AnchorResize.none,
         },
       },
     });

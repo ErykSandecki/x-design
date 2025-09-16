@@ -71,7 +71,7 @@ export type TEvents = {
   possibleIndexPosition: number | null;
   possibleParent: TElement['id'] | null;
   pressedKey: KeyboardKeys;
-  selectedAnchor: AnchorResize;
+  selectedAnchorResize: AnchorResize;
 };
 
 export type TPositions = {

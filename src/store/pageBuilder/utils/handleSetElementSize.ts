@@ -15,7 +15,7 @@ export const handleSetElementSizes = (
   const currentPage = state.pages[state.currentPage];
   const { position } = currentPage.elements.allData[id];
   const { height, coordinates, width } = getSizesCoordinates(
-    state.events.selectedAnchor,
+    state.events.selectedAnchorResize,
     baseCoordinates,
     baseHeight as number,
     baseWidth as number,

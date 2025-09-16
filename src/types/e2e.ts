@@ -1,5 +1,7 @@
 export enum E2EAttribute {
   anchor = 'anchor',
+  anchorResize = 'anchor-resize',
+  anchorRotate = 'anchor-rotate',
   box = 'box',
   button = 'button',
   buttonGroup = 'button-group',

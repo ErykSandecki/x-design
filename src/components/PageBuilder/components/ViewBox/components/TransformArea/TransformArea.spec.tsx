@@ -74,7 +74,7 @@ describe('TransformArea behaviors', () => {
     fireEvent.mouseDown(
       getByE2EAttribute(
         container,
-        E2EAttribute.anchor,
+        E2EAttribute.anchorResize,
         kebabCase(AnchorResize.east),
       ),
     );

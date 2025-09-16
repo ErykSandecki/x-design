@@ -7,6 +7,8 @@ import { eventSelectorCreator } from 'store/pageBuilder/selectors';
 // types
 import { AnchorResize } from 'store/pageBuilder/enums';
 import { T2DCoordinates, TElement } from 'types';
+
+// utils
 import { handleResizeElement } from '../utils/handleResizeElement';
 
 export type TUseMouseMoveEvent = void;
@@ -19,10 +21,12 @@ export const useMouseMoveEvent = (
   x: TElement['coordinates']['x'],
   y: TElement['coordinates']['y'],
 ): TUseMouseMoveEvent => {
-  const anchor = useSelector(eventSelectorCreator('selectedAnchor'));
+  const anchorResize = useSelector(
+    eventSelectorCreator('selectedAnchorResize'),
+  );
   const dispatch = useDispatch();
 
-  const handleMouseMove = (event: MouseEvent): void => {
+  const handleMouseMoveAnchorResize = (event: MouseEvent): void => {
     event.stopPropagation();
     handleResizeElement(
       cursorPosition,
@@ -37,12 +41,12 @@ export const useMouseMoveEvent = (
   };
 
   useEffect(() => {
-    if (anchor !== AnchorResize.none) {
-      window.addEventListener('mousemove', handleMouseMove);
+    if (anchorResize !== AnchorResize.none) {
+      window.addEventListener('mousemove', handleMouseMoveAnchorResize);
     }
 
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mousemove', handleMouseMoveAnchorResize);
     };
-  }, [anchor, cursorPosition.current.x, cursorPosition.current.y]);
+  }, [anchorResize, cursorPosition.current.x, cursorPosition.current.y]);
 };

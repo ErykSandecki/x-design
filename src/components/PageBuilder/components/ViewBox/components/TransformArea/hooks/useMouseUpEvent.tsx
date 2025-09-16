@@ -12,20 +12,20 @@ export type TUseMouseUpEvent = void;
 export const useMouseUpEvent = (): TUseMouseUpEvent => {
   const dispatch = useDispatch();
 
-  const handleMouseUp = (): void => {
+  const handleMouseUpAnchorResize = (): void => {
     dispatch(
       updateEventsStatus({
         isResizing: false,
-        selectedAnchor: AnchorResize.none,
+        selectedAnchorResize: AnchorResize.none,
       }),
     );
   };
 
   useEffect(() => {
-    window.addEventListener('mouseup', handleMouseUp);
+    window.addEventListener('mouseup', handleMouseUpAnchorResize);
 
     return () => {
-      window.removeEventListener('mouseup', handleMouseUp);
+      window.removeEventListener('mouseup', handleMouseUpAnchorResize);
     };
   }, []);
 };

@@ -38,7 +38,7 @@ export const pageBuilderStateMock: Record<
       possibleIndexPosition: null,
       possibleParent: null,
       pressedKey: KeyboardKeys.none,
-      selectedAnchor: AnchorResize.none,
+      selectedAnchorResize: AnchorResize.none,
     },
     isLoading: true,
     isPending: false,
@@ -111,7 +111,7 @@ export const eventsMock: TEvents = {
   possibleIndexPosition: null,
   possibleParent: null,
   pressedKey: KeyboardKeys.none,
-  selectedAnchor: AnchorResize.none,
+  selectedAnchorResize: AnchorResize.none,
 };
 
 export const reducerHistoryMock: Array<TReducerHistory> = [

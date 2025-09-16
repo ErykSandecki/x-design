@@ -70,7 +70,7 @@ const initialState: TPageBuilderState = {
     possibleIndexPosition: null,
     possibleParent: null,
     pressedKey: KeyboardKeys.none,
-    selectedAnchor: AnchorResize.none,
+    selectedAnchorResize: AnchorResize.none,
   },
   isLoading: true,
   isPending: false,

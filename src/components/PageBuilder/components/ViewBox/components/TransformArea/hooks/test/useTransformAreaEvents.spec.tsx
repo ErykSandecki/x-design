@@ -45,7 +45,7 @@ describe('useTransformAreaEvents', () => {
 
     // result
     expect(result.current).toStrictEqual({
-      onMouseDown: expect.any(Function),
+      onMouseDownAnchorResize: expect.any(Function),
     });
   });
 });

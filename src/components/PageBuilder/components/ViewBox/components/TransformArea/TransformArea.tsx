@@ -12,7 +12,7 @@ import { useTheme } from 'hooks';
 import { className, classNames } from './classNames';
 
 // types
-import { AnchorResize } from 'store/pageBuilder/enums';
+import { AnchorResize, AnchorRotate } from 'store/pageBuilder/enums';
 import { E2EAttribute, TElement } from 'types';
 import { MouseMode } from 'types/enums/mouseMode';
 
@@ -22,7 +22,7 @@ import styles from './transform-area.scss';
 // utils
 import { enumToArray } from 'utils';
 
-export type TResizeAreaProps = {
+export type TTransformAreaProps = {
   height: TElement['height'];
   id: TElement['id'];
   moseMode: MouseMode;
@@ -31,7 +31,7 @@ export type TResizeAreaProps = {
   y: TElement['coordinates']['y'];
 };
 
-const TransformArea: FC<TResizeAreaProps> = ({
+const TransformArea: FC<TTransformAreaProps> = ({
   height,
   id,
   moseMode,
@@ -39,7 +39,14 @@ const TransformArea: FC<TResizeAreaProps> = ({
   x,
   y,
 }) => {
-  const events = useTransformAreaEvents(height, id, moseMode, width, x, y);
+  const { onMouseDownAnchorResize } = useTransformAreaEvents(
+    height,
+    id,
+    moseMode,
+    width,
+    x,
+    y,
+  );
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   return (
@@ -47,10 +54,11 @@ const TransformArea: FC<TResizeAreaProps> = ({
       className={cx(classNamesWithTheme[className])}
       style={{ height, width }}
     >
+      {/* RESIZE AREA */}
       {enumToArray(AnchorResize).map((anchor) => (
         <E2EDataAttribute
           key={anchor as keyof typeof AnchorResize}
-          type={E2EAttribute.anchor}
+          type={E2EAttribute.anchorResize}
           value={kebabCase(anchor as string)}
         >
           <div
@@ -61,8 +69,29 @@ const TransformArea: FC<TResizeAreaProps> = ({
               ],
             )}
             onMouseDown={(event) =>
-              events.onMouseDown(anchor as AnchorResize, event)
+              onMouseDownAnchorResize(anchor as AnchorResize, event)
             }
+          />
+        </E2EDataAttribute>
+      ))}
+
+      {/* ROTATE AREA */}
+      {enumToArray(AnchorRotate).map((anchor) => (
+        <E2EDataAttribute
+          key={anchor as keyof typeof AnchorRotate}
+          type={E2EAttribute.anchorRotate}
+          value={kebabCase(anchor as string)}
+        >
+          <div
+            className={cx(
+              classNamesWithTheme.anchorRotate.name,
+              classNamesWithTheme.anchorRotate.modificators[
+                anchor as keyof typeof AnchorRotate
+              ],
+            )}
+            // onMouseDown={(event) =>
+            //   events.onMouseDown(anchor as AnchorResize, event)
+            // }
           />
         </E2EDataAttribute>
       ))}

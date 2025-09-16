@@ -41,7 +41,7 @@ describe('useMouseMoveEvent', () => {
     );
 
     // action
-    result.current(AnchorResize.east, {
+    result.current.onMouseDownAnchorResize(AnchorResize.east, {
       buttons: MouseButton.lmb,
       stopPropagation: mockCallBack as any,
     } as MouseEvent);
@@ -63,7 +63,7 @@ describe('useMouseMoveEvent', () => {
     );
 
     // action
-    result.current(AnchorResize.east, {
+    result.current.onMouseDownAnchorResize(AnchorResize.east, {
       buttons: MouseButton.lmb,
       stopPropagation: mockCallBack as any,
     } as MouseEvent);

@@ -1,5 +1,8 @@
 @import '../../../../../../styles/z-indexes';
 
+$--xd-size: 5px;
+$--xd-offset-rotation: 10px;
+
 .TransformArea {
   left: 0;
   pointer-events: none;
@@ -7,8 +10,6 @@
   top: 0;
 
   &__anchor-resize {
-    $--xd-size: 5px;
-
     pointer-events: all;
     position: absolute;
 
@@ -79,6 +80,35 @@
       left: calc(-#{$--xd-size} / 2);
       top: calc(#{$--xd-size} / 2);
       width: $--xd-size;
+    }
+  }
+
+  &__anchor-rotate {
+    cursor: grab;
+    background-color: red;
+    height: $--xd-size;
+    pointer-events: all;
+    position: absolute;
+    width: $--xd-size;
+
+    &--north-east {
+      right: calc(-#{$--xd-offset-rotation});
+      top: calc(-#{$--xd-offset-rotation});
+    }
+
+    &--north-west {
+      left: calc(-#{$--xd-offset-rotation});
+      top: calc(-#{$--xd-offset-rotation});
+    }
+
+    &--south-east {
+      bottom: calc(-#{$--xd-offset-rotation});
+      right: calc(-#{$--xd-offset-rotation});
+    }
+
+    &--south-west {
+      bottom: calc(-#{$--xd-offset-rotation});
+      left: calc(-#{$--xd-offset-rotation});
     }
   }
 }

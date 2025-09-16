@@ -50,40 +50,56 @@ exports[`EventsArea snapshots should render EventsArea 1`] = `
       style="height: 100px; width: 100px;"
     >
       <div
-        class="TransformArea__anchor--resize TransformArea__anchor--resize--light TransformArea__anchor-resize--east TransformArea__anchor-resize--east--light"
-        data-test-anchor="east"
+        class="TransformArea__anchor-resize TransformArea__anchor-resize--light TransformArea__anchor-resize--east TransformArea__anchor-resize--east--light"
+        data-test-anchor-resize="east"
       />
       <div
-        class="TransformArea__anchor--resize TransformArea__anchor--resize--light TransformArea__anchor-resize--none TransformArea__anchor-resize--none--light"
-        data-test-anchor="none"
+        class="TransformArea__anchor-resize TransformArea__anchor-resize--light TransformArea__anchor-resize--none TransformArea__anchor-resize--none--light"
+        data-test-anchor-resize="none"
       />
       <div
-        class="TransformArea__anchor--resize TransformArea__anchor--resize--light TransformArea__anchor-resize--north TransformArea__anchor-resize--north--light"
-        data-test-anchor="north"
+        class="TransformArea__anchor-resize TransformArea__anchor-resize--light TransformArea__anchor-resize--north TransformArea__anchor-resize--north--light"
+        data-test-anchor-resize="north"
       />
       <div
-        class="TransformArea__anchor--resize TransformArea__anchor--resize--light TransformArea__anchor-resize--northEast TransformArea__anchor-resize--northEast--light"
-        data-test-anchor="north-east"
+        class="TransformArea__anchor-resize TransformArea__anchor-resize--light TransformArea__anchor-resize--northEast TransformArea__anchor-resize--northEast--light"
+        data-test-anchor-resize="north-east"
       />
       <div
-        class="TransformArea__anchor--resize TransformArea__anchor--resize--light TransformArea__anchor-resize--northWest TransformArea__anchor-resize--northWest--light"
-        data-test-anchor="north-west"
+        class="TransformArea__anchor-resize TransformArea__anchor-resize--light TransformArea__anchor-resize--northWest TransformArea__anchor-resize--northWest--light"
+        data-test-anchor-resize="north-west"
       />
       <div
-        class="TransformArea__anchor--resize TransformArea__anchor--resize--light TransformArea__anchor-resize--south TransformArea__anchor-resize--south--light"
-        data-test-anchor="south"
+        class="TransformArea__anchor-resize TransformArea__anchor-resize--light TransformArea__anchor-resize--south TransformArea__anchor-resize--south--light"
+        data-test-anchor-resize="south"
       />
       <div
-        class="TransformArea__anchor--resize TransformArea__anchor--resize--light TransformArea__anchor-resize--southEast TransformArea__anchor-resize--southEast--light"
-        data-test-anchor="south-east"
+        class="TransformArea__anchor-resize TransformArea__anchor-resize--light TransformArea__anchor-resize--southEast TransformArea__anchor-resize--southEast--light"
+        data-test-anchor-resize="south-east"
       />
       <div
-        class="TransformArea__anchor--resize TransformArea__anchor--resize--light TransformArea__anchor-resize--southWest TransformArea__anchor-resize--southWest--light"
-        data-test-anchor="south-west"
+        class="TransformArea__anchor-resize TransformArea__anchor-resize--light TransformArea__anchor-resize--southWest TransformArea__anchor-resize--southWest--light"
+        data-test-anchor-resize="south-west"
       />
       <div
-        class="TransformArea__anchor--resize TransformArea__anchor--resize--light TransformArea__anchor-resize--west TransformArea__anchor-resize--west--light"
-        data-test-anchor="west"
+        class="TransformArea__anchor-resize TransformArea__anchor-resize--light TransformArea__anchor-resize--west TransformArea__anchor-resize--west--light"
+        data-test-anchor-resize="west"
+      />
+      <div
+        class="TransformArea__anchor-rotate TransformArea__anchor-rotate--light TransformArea__anchor-rotate--northEast TransformArea__anchor-rotate--northEast--light"
+        data-test-anchor-rotate="north-east"
+      />
+      <div
+        class="TransformArea__anchor-rotate TransformArea__anchor-rotate--light TransformArea__anchor-rotate--northWest TransformArea__anchor-rotate--northWest--light"
+        data-test-anchor-rotate="north-west"
+      />
+      <div
+        class="TransformArea__anchor-rotate TransformArea__anchor-rotate--light TransformArea__anchor-rotate--southEast TransformArea__anchor-rotate--southEast--light"
+        data-test-anchor-rotate="south-east"
+      />
+      <div
+        class="TransformArea__anchor-rotate TransformArea__anchor-rotate--light TransformArea__anchor-rotate--southWest TransformArea__anchor-rotate--southWest--light"
+        data-test-anchor-rotate="south-west"
       />
     </div>
   </div>

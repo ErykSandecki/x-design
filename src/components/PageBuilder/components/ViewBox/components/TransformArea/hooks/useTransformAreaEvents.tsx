@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 
 // hooks
-import { useMouseDownEvent } from './useMouseDownEvent';
+import { TUseMouseDownEvent, useMouseDownEvent } from './useMouseDownEvent';
 import { useMouseMoveEvent } from './useMouseMoveEvent';
 import { useMouseUpEvent } from './useMouseUpEvent';
 
@@ -9,16 +9,10 @@ import { useMouseUpEvent } from './useMouseUpEvent';
 import { BASE_2D } from 'shared';
 
 // types
-import { AnchorResize } from 'store/pageBuilder/enums';
 import { MouseMode } from 'types/enums/mouseMode';
 import { TElement } from 'types';
 
-export type TUseTransformAreaEvents = {
-  onMouseDown: (
-    anchor: AnchorResize,
-    event: React.MouseEvent<HTMLElement, MouseEvent>,
-  ) => void;
-};
+export type TUseTransformAreaEvents = TUseMouseDownEvent;
 
 export const useTransformAreaEvents = (
   height: TElement['height'],
@@ -29,11 +23,10 @@ export const useTransformAreaEvents = (
   y: TElement['coordinates']['y'],
 ): TUseTransformAreaEvents => {
   const cursorPosition = useRef(BASE_2D);
+  const events = useMouseDownEvent(cursorPosition, mouseMode);
 
   useMouseMoveEvent(cursorPosition, height, id, width, x, y);
   useMouseUpEvent();
 
-  return {
-    onMouseDown: useMouseDownEvent(cursorPosition, mouseMode),
-  };
+  return events;
 };

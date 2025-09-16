@@ -35,7 +35,7 @@ describe('handleSetElementSizes', () => {
         ...pageBuilderStateMock[PAGE_BUILDER],
         events: {
           ...pageBuilderStateMock[PAGE_BUILDER].events,
-          selectedAnchor: AnchorResize.east,
+          selectedAnchorResize: AnchorResize.east,
         },
         pages: {
           ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -63,7 +63,7 @@ describe('handleSetElementSizes', () => {
       ...pageBuilderStateMock[PAGE_BUILDER],
       events: {
         ...pageBuilderStateMock[PAGE_BUILDER].events,
-        selectedAnchor: AnchorResize.east,
+        selectedAnchorResize: AnchorResize.east,
       },
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
