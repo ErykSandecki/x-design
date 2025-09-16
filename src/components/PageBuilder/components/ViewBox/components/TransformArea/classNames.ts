@@ -7,10 +7,13 @@ export const className = 'TransformArea';
 
 export const classNames = {
   [className]: className,
-  anchor: {
-    name: `${className}__anchor`,
+  anchorResize: {
+    name: `${className}__anchor--resize`,
     modificators: {
-      ...mapValues(AnchorResize, (anchor) => `${className}__anchor--${anchor}`),
+      ...mapValues(
+        AnchorResize,
+        (anchor) => `${className}__anchor-resize--${anchor}`,
+      ),
     },
   },
 };

@@ -52,11 +52,11 @@ exports[`MainPanel snapshots should render MainPanel 1`] = `
                 >
                   <div
                     class="Color__picker Color__picker--light"
-                    style="background-color: rgb(241, 242, 246);"
+                    style="background-color: rgb(30, 38, 47);"
                   />
                   <div
                     class="Color__picker-alpha Color__picker-alpha--light"
-                    style="background-color: rgb(241, 242, 246);"
+                    style="background-color: rgb(30, 38, 47);"
                   />
                   <div
                     class="Color__picker-texture Color__picker-texture--light"
@@ -67,7 +67,7 @@ exports[`MainPanel snapshots should render MainPanel 1`] = `
                 class="TextField__input TextField__input--light"
                 data-test-text-field-input="color"
                 maxlength="6"
-                value="f1f2f6"
+                value="1e262f"
               />
             </div>
             <div

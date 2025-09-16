@@ -9,3 +9,10 @@ export enum AnchorResize {
   southWest = 'southWest',
   west = 'west',
 }
+
+export enum AnchorRotate {
+  northEast = 'northEast',
+  northWest = 'northWest',
+  southEast = 'southEast',
+  southWest = 'southWest',
+}

@@ -55,8 +55,8 @@ const TransformArea: FC<TResizeAreaProps> = ({
         >
           <div
             className={cx(
-              classNamesWithTheme.anchor.name,
-              classNamesWithTheme.anchor.modificators[
+              classNamesWithTheme.anchorResize.name,
+              classNamesWithTheme.anchorResize.modificators[
                 anchor as keyof typeof AnchorResize
               ],
             )}

@@ -74,39 +74,39 @@ exports[`Element snapshots should render Element when is selected & is multiple 
         style="height: 100px; width: 100px;"
       >
         <div
-          class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--east TransformArea__anchor--east--light"
+          class="TransformArea__anchor--resize TransformArea__anchor--resize--light TransformArea__anchor-resize--east TransformArea__anchor-resize--east--light"
           data-test-anchor="east"
         />
         <div
-          class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--none TransformArea__anchor--none--light"
+          class="TransformArea__anchor--resize TransformArea__anchor--resize--light TransformArea__anchor-resize--none TransformArea__anchor-resize--none--light"
           data-test-anchor="none"
         />
         <div
-          class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--north TransformArea__anchor--north--light"
+          class="TransformArea__anchor--resize TransformArea__anchor--resize--light TransformArea__anchor-resize--north TransformArea__anchor-resize--north--light"
           data-test-anchor="north"
         />
         <div
-          class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--northEast TransformArea__anchor--northEast--light"
+          class="TransformArea__anchor--resize TransformArea__anchor--resize--light TransformArea__anchor-resize--northEast TransformArea__anchor-resize--northEast--light"
           data-test-anchor="north-east"
         />
         <div
-          class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--northWest TransformArea__anchor--northWest--light"
+          class="TransformArea__anchor--resize TransformArea__anchor--resize--light TransformArea__anchor-resize--northWest TransformArea__anchor-resize--northWest--light"
           data-test-anchor="north-west"
         />
         <div
-          class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--south TransformArea__anchor--south--light"
+          class="TransformArea__anchor--resize TransformArea__anchor--resize--light TransformArea__anchor-resize--south TransformArea__anchor-resize--south--light"
           data-test-anchor="south"
         />
         <div
-          class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--southEast TransformArea__anchor--southEast--light"
+          class="TransformArea__anchor--resize TransformArea__anchor--resize--light TransformArea__anchor-resize--southEast TransformArea__anchor-resize--southEast--light"
           data-test-anchor="south-east"
         />
         <div
-          class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--southWest TransformArea__anchor--southWest--light"
+          class="TransformArea__anchor--resize TransformArea__anchor--resize--light TransformArea__anchor-resize--southWest TransformArea__anchor-resize--southWest--light"
           data-test-anchor="south-west"
         />
         <div
-          class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--west TransformArea__anchor--west--light"
+          class="TransformArea__anchor--resize TransformArea__anchor--resize--light TransformArea__anchor-resize--west TransformArea__anchor-resize--west--light"
           data-test-anchor="west"
         />
       </div>
@@ -177,39 +177,39 @@ exports[`Element snapshots should render Element when is selected 1`] = `
         style="height: 100px; width: 100px;"
       >
         <div
-          class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--east TransformArea__anchor--east--light"
+          class="TransformArea__anchor--resize TransformArea__anchor--resize--light TransformArea__anchor-resize--east TransformArea__anchor-resize--east--light"
           data-test-anchor="east"
         />
         <div
-          class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--none TransformArea__anchor--none--light"
+          class="TransformArea__anchor--resize TransformArea__anchor--resize--light TransformArea__anchor-resize--none TransformArea__anchor-resize--none--light"
           data-test-anchor="none"
         />
         <div
-          class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--north TransformArea__anchor--north--light"
+          class="TransformArea__anchor--resize TransformArea__anchor--resize--light TransformArea__anchor-resize--north TransformArea__anchor-resize--north--light"
           data-test-anchor="north"
         />
         <div
-          class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--northEast TransformArea__anchor--northEast--light"
+          class="TransformArea__anchor--resize TransformArea__anchor--resize--light TransformArea__anchor-resize--northEast TransformArea__anchor-resize--northEast--light"
           data-test-anchor="north-east"
         />
         <div
-          class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--northWest TransformArea__anchor--northWest--light"
+          class="TransformArea__anchor--resize TransformArea__anchor--resize--light TransformArea__anchor-resize--northWest TransformArea__anchor-resize--northWest--light"
           data-test-anchor="north-west"
         />
         <div
-          class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--south TransformArea__anchor--south--light"
+          class="TransformArea__anchor--resize TransformArea__anchor--resize--light TransformArea__anchor-resize--south TransformArea__anchor-resize--south--light"
           data-test-anchor="south"
         />
         <div
-          class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--southEast TransformArea__anchor--southEast--light"
+          class="TransformArea__anchor--resize TransformArea__anchor--resize--light TransformArea__anchor-resize--southEast TransformArea__anchor-resize--southEast--light"
           data-test-anchor="south-east"
         />
         <div
-          class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--southWest TransformArea__anchor--southWest--light"
+          class="TransformArea__anchor--resize TransformArea__anchor--resize--light TransformArea__anchor-resize--southWest TransformArea__anchor-resize--southWest--light"
           data-test-anchor="south-west"
         />
         <div
-          class="TransformArea__anchor TransformArea__anchor--light TransformArea__anchor--west TransformArea__anchor--west--light"
+          class="TransformArea__anchor--resize TransformArea__anchor--resize--light TransformArea__anchor-resize--west TransformArea__anchor-resize--west--light"
           data-test-anchor="west"
         />
       </div>
