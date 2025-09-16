@@ -22,9 +22,7 @@ export const mappingSpacings = (sx: TSX): string => {
       const value = spacings[key as keyof TSXSpacings];
       const keys = seperateCssProperties(Spacing[key as keyof typeof Spacing]);
 
-      return value !== undefined
-        ? keys.map((key) => `${key}: ${value}px;`).join('\n')
-        : '';
+      return keys.map((key) => `${key}: ${value}px;`).join('\n');
     })
     .filter(Boolean)
     .join('\n');

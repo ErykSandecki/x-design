@@ -13,17 +13,17 @@ import { className, classNames } from './classNames';
 import styles from './selectable-area.scss';
 
 // types
-import { TRectCoordinates } from 'types';
+import { TRectAreaExtended } from '../../../../types';
 
 export type TSelectableAreaProps = {
-  selectableArea: TRectCoordinates;
+  selectableArea: TRectAreaExtended;
 };
 
 const SelectableArea: FC<TSelectableAreaProps> = ({ selectableArea }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { x1, x2, y1, y2 } = selectableArea || {};
 
-  if (!selectableArea) {
+  if (!selectableArea || !selectableArea.visible) {
     return null;
   }
 

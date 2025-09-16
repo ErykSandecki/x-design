@@ -13,6 +13,7 @@ export * from './form/inputStates';
 export * from './form/syncValidators';
 export * from './isControlPressed';
 export * from './isJestRunning';
+export * from './math/distanceHasChanged';
 export * from './math/sort';
 export * from './transform/hexToRgb/hexToRgb';
 export * from './transform/enumToArray';

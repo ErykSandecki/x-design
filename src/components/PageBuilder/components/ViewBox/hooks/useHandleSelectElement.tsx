@@ -9,7 +9,7 @@ import { store } from 'store';
 
 // types
 import { TObject, TRectCoordinates } from 'types';
-import { TRectArea } from '../../../../PageBuilder/types';
+import { TRectAreaExtended } from '../../../../PageBuilder/types';
 
 // utils
 import { getCollidedElements } from '../utils/getCollidedElements';
@@ -18,7 +18,7 @@ export type TUseHandleSelectElement = void;
 
 export const useHandleSelectElement = (
   rectCoordinates: RefObject<TObject<TRectCoordinates>>,
-  selectableArea: TRectArea,
+  selectableArea: TRectAreaExtended,
 ): TUseHandleSelectElement => {
   const dispatch = useDispatch();
 
@@ -35,7 +35,7 @@ export const useHandleSelectElement = (
   };
 
   useEffect(() => {
-    if (selectableArea) {
+    if (selectableArea?.visible) {
       handleSelectItems();
     }
   }, [selectableArea]);

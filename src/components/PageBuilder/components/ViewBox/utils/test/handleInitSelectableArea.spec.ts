@@ -24,6 +24,7 @@ describe('handleInitSelectableArea', () => {
 
     // result
     expect(mockCallBack.mock.calls[0][0]).toStrictEqual({
+      visible: false,
       x1: 100,
       x2: 100,
       y1: 100,

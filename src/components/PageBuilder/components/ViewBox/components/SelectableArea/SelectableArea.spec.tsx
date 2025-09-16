@@ -21,7 +21,7 @@ describe('SelectableArea snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <SelectableArea selectableArea={BASE_RECT} />
+        <SelectableArea selectableArea={{ ...BASE_RECT, visible: true }} />
       </Provider>,
     );
 

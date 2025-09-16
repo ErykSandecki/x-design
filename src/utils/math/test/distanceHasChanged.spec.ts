@@ -4,10 +4,10 @@ import { distanceHasChanged } from '../distanceHasChanged';
 describe('distanceHasChanged', () => {
   it(`should distance have been changed`, () => {
     // before
-    const result = distanceHasChanged(
-      { clientX: 10, clientY: 10 } as MouseEvent,
-      { current: { x: 0, y: 0 } },
-    );
+    const result = distanceHasChanged({ x: 0, y: 0 }, 5, {
+      clientX: 10,
+      clientY: 10,
+    } as MouseEvent);
 
     // result
     expect(result).toBe(true);
@@ -15,10 +15,10 @@ describe('distanceHasChanged', () => {
 
   it(`should distance haven't been changed`, () => {
     // before
-    const result = distanceHasChanged(
-      { clientX: 0, clientY: 0 } as MouseEvent,
-      { current: { x: 0, y: 0 } },
-    );
+    const result = distanceHasChanged({ x: 0, y: 0 }, 5, {
+      clientX: 0,
+      clientY: 0,
+    } as MouseEvent);
 
     // result
     expect(result).toBe(false);

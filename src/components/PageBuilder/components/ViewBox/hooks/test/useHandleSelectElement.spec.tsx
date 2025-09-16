@@ -62,6 +62,7 @@ describe('useHandleSelectElement', () => {
     // before
     renderHook(() =>
       useHandleSelectElement(rectCoordinates, {
+        visible: true,
         x1: 0,
         x2: 100,
         y1: 0,
@@ -100,6 +101,7 @@ describe('useHandleSelectElement', () => {
     // before
     renderHook(() =>
       useHandleSelectElement(rectCoordinates, {
+        visible: true,
         x1: 200,
         x2: 300,
         y1: 200,

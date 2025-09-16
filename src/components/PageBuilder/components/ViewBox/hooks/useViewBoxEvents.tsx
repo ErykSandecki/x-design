@@ -11,7 +11,7 @@ import { useMouseUpEvent } from './useMouseUpEvent';
 // types
 import { MouseMode } from 'types/enums/mouseMode';
 import { T3DCoordinates, TObject, TRectCoordinates } from 'types';
-import { TRectArea } from '../../../../PageBuilder/types';
+import { TRectArea, TRectAreaExtended } from '../../../../PageBuilder/types';
 
 export type TUseViewBoxEvents = {
   elementArea: TRectArea;
@@ -20,7 +20,7 @@ export type TUseViewBoxEvents = {
   onMouseDown: (event: React.MouseEvent) => void;
   onMouseMove: (event: MouseEvent) => void;
   onMouseUp: (event: MouseEvent) => void;
-  selectableArea: TRectArea;
+  selectableArea: TRectAreaExtended;
 };
 
 export const useViewBoxEvents = (
@@ -30,7 +30,7 @@ export const useViewBoxEvents = (
 ): TUseViewBoxEvents => {
   const rectCoordinates = useRef<TObject<TRectCoordinates>>({});
   const [elementArea, setElementArea] = useState<TRectArea>(null);
-  const [selectableArea, setSelectableArea] = useState<TRectArea>(null);
+  const [selectableArea, setSelectableArea] = useState<TRectAreaExtended>(null);
 
   useHandleSelectElement(rectCoordinates, selectableArea);
 

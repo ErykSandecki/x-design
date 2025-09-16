@@ -97,4 +97,22 @@ describe('getRelativeCoordinates', () => {
       width: 300,
     });
   });
+
+  it(`should return cords with default value 0`, () => {
+    // before
+    const result = getRelativeCoordinates(
+      Anchor.northEast,
+      baseCoordinates,
+      -1000,
+      -1000,
+      mouseCoordinates,
+    );
+
+    // result
+    expect(result).toStrictEqual({
+      coordinates: { x: 0, y: 0 },
+      height: 0,
+      width: 0,
+    });
+  });
 });

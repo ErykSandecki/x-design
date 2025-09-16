@@ -23,7 +23,7 @@ export const mappingBordersColors = (sx: TSX, theme: Theme): string => {
   return keys
     .map((key) => {
       const color = borderColors[key as keyof TSXBorders];
-      return color ? `${kebabCase(key)}: ${THEME_COLORS[theme][color]};` : '';
+      return `${kebabCase(key)}: ${THEME_COLORS[theme][color]};`;
     })
     .filter(Boolean)
     .join('\n');

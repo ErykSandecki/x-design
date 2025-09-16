@@ -23,6 +23,7 @@ describe('handleResizeSelectableArea', () => {
 
     // result
     expect(mockCallBack.mock.calls[0][0]).toStrictEqual({
+      visible: true,
       x1: 0,
       x2: 100,
       y1: 0,
