@@ -24,13 +24,11 @@ export const calculateAbsolutePositions = (
 
     // eslint-disable-next-line
     for (const [_, value] of Object.entries(allData)) {
-      const { coordinates, id, parentId } = value;
+      const { id } = value;
 
       if (id !== '-1') {
         rectCoordinates.current[id] = getAbsolutePosition(
-          coordinates,
           id,
-          parentId,
           sharedRefs,
           zoomContentRef,
         );

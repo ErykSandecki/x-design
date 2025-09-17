@@ -4,10 +4,6 @@ import { max, min, size } from 'lodash';
 import { BASE_RECT } from 'shared';
 import { SW } from '../components/ClickableArea/constants';
 
-// store
-import { allDataSelector } from 'store/pageBuilder/selectors';
-import { store } from 'store';
-
 // types
 import { TContext } from 'pages/PageBuilderPage/core/types';
 import { TCoordinatesData } from '../types';
@@ -23,15 +19,11 @@ export const getCoordinatesData = (
   zoomContentRef: TContext['zoomContentRef'],
 ): TCoordinatesData => {
   if (!isMultipleMoving && size(selectedElements) > 1) {
-    const allData = allDataSelector(store.getState());
     const offset = SW / 2;
     const setCoordinates = selectedElements.reduce(
-      (obj, { id, parentId }) => {
-        const { coordinates } = allData[id];
+      (obj, { id }) => {
         const { x1, x2, y1, y2 } = getAbsolutePosition(
-          coordinates,
           id,
-          parentId,
           sharedRefs,
           zoomContentRef,
         );

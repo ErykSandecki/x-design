@@ -9,7 +9,7 @@ import {
 import { wholeStateMock } from 'test/mocks/reducer/wholeStateMock';
 
 // others
-import { BASE_2D, BASE_RECT } from 'shared';
+import { BASE_RECT } from 'shared';
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 
 // store
@@ -74,9 +74,7 @@ describe('getAbsolutePosition', () => {
   it(`should return coordinates`, () => {
     // before
     const result = getAbsolutePosition(
-      BASE_2D,
       elementAllDataMock.id,
-      elementAllDataMock.parentId,
       sharedRefs,
       zoomContentRef,
     );
@@ -87,13 +85,7 @@ describe('getAbsolutePosition', () => {
 
   it(`should return coordinates`, () => {
     // before
-    const result = getAbsolutePosition(
-      BASE_2D,
-      '2',
-      elementAllDataMock.id,
-      sharedRefs,
-      zoomContentRef,
-    );
+    const result = getAbsolutePosition('2', sharedRefs, zoomContentRef);
 
     // result
     expect(result).toStrictEqual({ x1: 0, x2: 100, y1: 0, y2: 100 });
@@ -101,13 +93,7 @@ describe('getAbsolutePosition', () => {
 
   it(`should not return coordinates`, () => {
     // before
-    const result = getAbsolutePosition(
-      BASE_2D,
-      '-1',
-      elementAllDataMock.id,
-      sharedRefs,
-      zoomContentRef,
-    );
+    const result = getAbsolutePosition('-1', sharedRefs, zoomContentRef);
 
     // result
     expect(result).toStrictEqual(BASE_RECT);

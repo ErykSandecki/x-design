@@ -99,13 +99,7 @@ const Element: FC<TElementProps> = ({
   const displayEventsArea = !isDraggable && !isMultiple && isSelected;
   const displayOutline = isFocused;
   const isMoving = isDraggable || (isMultipleMoving && isSelected);
-  const { x1, y1 } = getAbsolutePosition(
-    coordinates,
-    id,
-    parentId,
-    itemsRefs,
-    zoomContentRef,
-  );
+  const { x1, y1 } = getAbsolutePosition(id, itemsRefs, zoomContentRef);
 
   return (
     <Box
