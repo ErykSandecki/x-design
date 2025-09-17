@@ -9,3 +9,4 @@ export const BASE_RECT: TRectCoordinates = {
   y1: 0,
   y2: 0,
 };
+export const ZOOM_CONTENT_ID = 'zoomContentId';

@@ -18,11 +18,9 @@ import { updateEventsStatus } from 'store/pageBuilder/actions';
 export type TUseMouseMoveEvent = void;
 
 export const useMouseMoveEvent = (
-  coordinates: T2DCoordinates,
   cursorPosition: RefObject<T2DCoordinates>,
   cursorPositionBase: RefObject<T2DCoordinates>,
   id: TSelectedElement['id'],
-  isMultiple: boolean,
   isPressing: boolean,
   mouseMode: MouseMode,
   parentId: TElement['parentId'],
@@ -34,14 +32,7 @@ export const useMouseMoveEvent = (
       mouseMode === MouseMode.default &&
       distanceHasChanged(cursorPositionBase.current, 5, event)
     ) {
-      updateElementPosition(
-        cursorPosition,
-        dispatch,
-        event,
-        id,
-        isMultiple,
-        parentId,
-      );
+      updateElementPosition(cursorPosition, dispatch, event, parentId);
       dispatch(updateEventsStatus({ draggableElements: [id] }));
     }
   }, THROTTLE_WAIT);
@@ -54,5 +45,5 @@ export const useMouseMoveEvent = (
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
     };
-  }, [isPressing, mouseMode, coordinates.x, coordinates.y]);
+  }, [isPressing, mouseMode]);
 };

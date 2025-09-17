@@ -10,6 +10,7 @@ import { useZoomBoxEvents } from './hooks/useZoomBoxEvents';
 // others
 import { CURSOR_STATES } from 'constant/constants';
 import { classes, className, classNames } from './classNames';
+import { ZOOM_CONTENT_ID } from './constants';
 
 // styles
 import styles from './zoom-box.scss';
@@ -122,6 +123,7 @@ export const ZoomBox: FC<TZoomBoxProps> = ({
       />
       <Box
         classes={{ className: cx(classNamesWithTheme.zoomContent) }}
+        id={ZOOM_CONTENT_ID}
         ref={zoomContentRef}
         sx={{ height: '100vh', position: 'relative' }}
         style={{

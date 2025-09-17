@@ -81,7 +81,6 @@ const Element: FC<TElementProps> = ({
   const { x, y } = coordinates;
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { ...events } = useElementEvents(
-    alignment,
     coordinates,
     elementRef,
     id,

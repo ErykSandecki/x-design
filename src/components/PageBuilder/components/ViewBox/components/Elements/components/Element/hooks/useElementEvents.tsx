@@ -1,5 +1,4 @@
 import { RefObject, useRef, useState } from 'react';
-import { useSelector } from 'react-redux';
 
 // hooks
 import { useForceRerender } from 'hooks';
@@ -14,9 +13,6 @@ import { useOutsideClickElement } from './useOutsideClickElement';
 // others
 import { BASE_2D } from 'shared';
 
-// store
-import { mainParentIdSelectorCreator } from 'store/pageBuilder/selectors';
-
 // types
 import { MouseMode } from 'types/enums/mouseMode';
 import { T2DCoordinates, TElement } from 'types';
@@ -28,7 +24,6 @@ export type TUseElementEvents = {
 };
 
 export const useElementEvents = (
-  alignment: TElement['alignment'],
   coordinates: T2DCoordinates,
   elementRef: RefObject<any>,
   id: TElement['id'],
@@ -39,7 +34,6 @@ export const useElementEvents = (
   position: TElement['position'],
   type: TElement['type'],
 ): TUseElementEvents => {
-  const mainParentId = useSelector(mainParentIdSelectorCreator(parentId));
   const cursorPosition = useRef(BASE_2D);
   const cursorPositionBase = useRef(BASE_2D);
   const [isPressing, setIsPressing] = useState(false);
@@ -53,11 +47,9 @@ export const useElementEvents = (
   useForceRerender([coordinates]);
   useInitializeRef(elementRef, id);
   useMouseMoveEvent(
-    coordinates,
     cursorPosition,
     cursorPositionBase,
     id,
-    isMultiple,
     isPressing,
     mouseMode,
     parentId,
@@ -67,14 +59,10 @@ export const useElementEvents = (
 
   return {
     onMouseDown: useMouseDownEvent(
-      alignment,
-      coordinates,
       cursorPosition,
       cursorPositionBase,
-      id,
       isMultiple,
       isSelected,
-      mainParentId,
       mouseMode,
       selectedElement,
       setIsPressing,
