@@ -6,14 +6,9 @@
   @include enter-delay;
 
   animation-delay: 100ms;
-  overflow: hidden;
   position: absolute;
   user-select: none;
   z-index: $--xd-zindex-element;
-
-  &--hover {
-    z-index: $--xd-zindex-element-active;
-  }
 
   &--moving {
     opacity: 0.5;
@@ -23,5 +18,13 @@
 
   &:has([data-status='true']) {
     z-index: $--xd-zindex-element-moving;
+  }
+
+  &__wrapper {
+    overflow: hidden;
+
+    &--hover {
+      z-index: $--xd-zindex-element-active;
+    }
   }
 }

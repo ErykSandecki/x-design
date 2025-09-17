@@ -8,9 +8,13 @@ export const classNames = {
   [className]: {
     name: className,
     modificators: {
-      hover: `${className}--hover`,
       moving: `${className}--moving`,
-      selected: `${className}--selected`,
+    },
+  },
+  wrapper: {
+    name: `${className}__wrapper`,
+    modificators: {
+      hover: `${className}__wrapper--hover`,
     },
   },
 };

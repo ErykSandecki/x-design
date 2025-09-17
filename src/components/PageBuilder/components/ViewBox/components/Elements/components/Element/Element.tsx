@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 // components
 import EventsArea from './components/EventsArea/EventsArea';
 import Outline from './components/Outline/Outline';
-import { BASE_RECT, Box } from 'shared';
+import { Box } from 'shared';
 
 // core
 import { useRefs } from 'pages/PageBuilderPage/core/RefsProvider';
@@ -16,7 +16,7 @@ import { useTheme } from 'hooks';
 
 // others
 import {
-  className as classNameMoveableELement,
+  className as classNameElement,
   classNames,
   classes,
 } from './classNames';
@@ -24,13 +24,13 @@ import { DATA_STATUS_ATTRIBUTE } from './constants';
 
 // store
 import {
-  areaAxisSelectorCreator,
   elementDynamicDataSelectorCreator,
   eventSelectorCreator,
   isDraggableSelectorCreator,
   isHoverSelectorCreator,
   isSelectedElementSelectorCreator,
   multipleSelectedElementsSelector,
+  counterAngleSelectorCreator,
 } from 'store/pageBuilder/selectors';
 
 // styles
@@ -68,6 +68,7 @@ const Element: FC<TElementProps> = ({
   parentId,
   type,
 }) => {
+  const counterAngle = useSelector(counterAngleSelectorCreator(parentId));
   const isDraggable = useSelector(isDraggableSelectorCreator(id));
   const isHover = useSelector(isHoverSelectorCreator(id));
   const isSelected = useSelector(isSelectedElementSelectorCreator(id));
@@ -108,52 +109,63 @@ const Element: FC<TElementProps> = ({
 
   return (
     <Box
-      attributes={{ [DATA_STATUS_ATTRIBUTE]: isSelected ? 'true' : 'false' }}
       classes={{
         className: cx(
           classes.className,
-          classNamesWithTheme[classNameMoveableELement].name,
-          [
-            classNamesWithTheme[classNameMoveableELement].modificators.hover,
-            isHover,
-          ],
-          [
-            classNamesWithTheme[classNameMoveableELement].modificators.moving,
-            isMoving,
-          ],
-          [
-            classNamesWithTheme[classNameMoveableELement].modificators.selected,
-            isSelected,
-          ],
+          classNamesWithTheme[classNameElement].name,
+          [classNamesWithTheme[classNameElement].modificators.moving, isMoving],
         ),
       }}
       id={id}
       ref={elementRef}
       style={{
-        ...getPosition(alignment, rotate, x, y),
-        backgroundColor: (background.properties as TColor).color,
+        ...getPosition(alignment, counterAngle, x, y),
+        backgroundColor: 'unset',
         height: isNumber(height) ? `${height}px` : height,
         position,
         width: isNumber(width) ? `${width}px` : width,
       }}
-      {...events}
     >
-      {children(coordinates, height, isHover, rotate, isSelected, width)}
-      {displayOutline && (
-        <Outline height={height} rotate={rotate} x={x1} y={y1} width={width} />
-      )}
-      {displayEventsArea && (
-        <EventsArea
-          absoluteCoordinates={{ x: x1, y: y1 }}
-          elementRef={elementRef}
-          height={height}
-          id={id}
-          mouseMode={mouseMode}
-          relativeCoordinates={{ x, y }}
-          rotate={rotate}
-          width={width}
-        />
-      )}
+      <Box
+        attributes={{ [DATA_STATUS_ATTRIBUTE]: isSelected ? 'true' : 'false' }}
+        classes={{
+          className: cx(classes.className, classNamesWithTheme.wrapper.name, [
+            classNamesWithTheme.wrapper.modificators.hover,
+            isHover,
+          ]),
+        }}
+        style={{
+          backgroundColor: (background.properties as TColor).color,
+          height: '100%',
+          transform: `rotate(${rotate - counterAngle}deg)`,
+          width: '100%',
+        }}
+        {...events}
+      >
+        {children(coordinates, height, isHover, rotate, isSelected, width)}
+        {displayOutline && (
+          <Outline
+            height={height}
+            rotate={rotate - counterAngle}
+            x={x1}
+            y={y1}
+            width={width}
+          />
+        )}
+        {displayEventsArea && (
+          <EventsArea
+            absoluteCoordinates={{ x: x1, y: y1 }}
+            counterAngle={counterAngle}
+            elementRef={elementRef}
+            height={height}
+            id={id}
+            mouseMode={mouseMode}
+            relativeCoordinates={{ x, y }}
+            rotate={rotate}
+            width={width}
+          />
+        )}
+      </Box>
     </Box>
   );
 };

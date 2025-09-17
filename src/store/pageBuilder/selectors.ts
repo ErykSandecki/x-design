@@ -19,7 +19,9 @@ import {
 import { TMainState } from 'types/reducers';
 
 // utils
+import { computeCounterRotation } from 'utils';
 import { findMainParent } from './utils/findMainParent';
+import { getParentsAngles } from './utils/getParentsAngles';
 
 export const pageBuilderStateSelector: Selector<TMainState, TPageBuilderState> =
   getFp(REDUCER_KEY);
@@ -170,3 +172,13 @@ export const areParentsTheSameSelector: Selector<TMainState, boolean> =
 
     return true;
   });
+
+export const counterAngleSelectorCreator = (
+  parentId: TElement['parentId'],
+): Selector<TMainState, number> =>
+  createSelector(
+    allDataSelector,
+    (allData) =>
+      computeCounterRotation(getParentsAngles(allData, [], parentId))
+        .counterAngle,
+  );

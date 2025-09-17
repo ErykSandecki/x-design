@@ -17,6 +17,7 @@ import { getCornersPosition } from '../../utils/getCornersPosition';
 
 type TOutlineProps = {
   absoluteCoordinates?: T2DCoordinates;
+  counterAngle: number;
   elementRef: RefObject<HTMLDivElement>;
   height: TElement['height'];
   id: TElement['id'];
@@ -28,6 +29,7 @@ type TOutlineProps = {
 
 const EventsArea: FC<TOutlineProps> = ({
   absoluteCoordinates,
+  counterAngle,
   elementRef,
   height,
   id,
@@ -45,7 +47,7 @@ const EventsArea: FC<TOutlineProps> = ({
         height,
         left: `${absoluteCoordinates.x}px`,
         top: `${absoluteCoordinates.y}px`,
-        transform: `rotate(${rotate}deg)`,
+        transform: `rotate(${rotate - counterAngle}deg)`,
         transformOrigin: 'center center',
         width,
       }}
