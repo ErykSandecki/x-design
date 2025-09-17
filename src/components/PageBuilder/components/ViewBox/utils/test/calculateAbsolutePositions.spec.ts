@@ -23,6 +23,7 @@ import { MouseMode } from 'types/enums/mouseMode';
 import { calculateAbsolutePositions } from '../calculateAbsolutePositions';
 
 const element = document.createElement('div');
+const zoomContent = document.createElement('div');
 const currentPage =
   pageBuilderStateMock[PAGE_BUILDER].pages[
     pageBuilderStateMock[PAGE_BUILDER].currentPage
@@ -52,6 +53,8 @@ describe('calculateAbsolutePositions', () => {
     // mock
     element.style.height = '500px';
     element.style.width = '500px';
+    zoomContent.style.height = '1000px';
+    zoomContent.style.width = '1000px';
     storeToMock.getState = () =>
       ({
         ...wholeStateMock,
@@ -90,6 +93,7 @@ describe('calculateAbsolutePositions', () => {
       MouseMode.default,
       clonedRectCoordinates,
       sharedRefs,
+      { current: zoomContent },
     );
 
     // result
@@ -109,6 +113,7 @@ describe('calculateAbsolutePositions', () => {
       MouseMode.comment,
       clonedRectCoordinates,
       sharedRefs,
+      { current: zoomContent },
     );
 
     // result

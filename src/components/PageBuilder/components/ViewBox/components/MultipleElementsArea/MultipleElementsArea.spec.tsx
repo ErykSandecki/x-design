@@ -27,6 +27,7 @@ const currentPage =
     pageBuilderStateMock[PAGE_BUILDER].currentPage
   ];
 const overlayContainer = document.createElement('div');
+const zoomContent = document.createElement('div');
 
 const sharedRefs = {
   [elementAllDataMock.id]: element,
@@ -75,6 +76,9 @@ describe('MultipleElementsArea snapshots', () => {
     // mock
     element.style.height = '100px';
     element.style.width = '100px';
+    zoomContent.style.height = '1000px';
+    zoomContent.style.width = '1000px';
+    document.body.appendChild(zoomContent);
     document.body.appendChild(overlayContainer);
     storeToMock.getState = () =>
       ({
@@ -114,6 +118,7 @@ describe('MultipleElementsArea snapshots', () => {
         <RefsProvider
           itemsRefs={sharedRefs}
           overlayContainerRefHtml={overlayContainer}
+          zoomContentRefHtml={zoomContent}
         >
           <MultipleElementsArea />
         </RefsProvider>
@@ -139,6 +144,7 @@ describe('MultipleElementsArea snapshots', () => {
         <RefsProvider
           itemsRefs={sharedRefs}
           overlayContainerRefHtml={overlayContainer}
+          zoomContentRefHtml={zoomContent}
         >
           <MultipleElementsArea />
         </RefsProvider>

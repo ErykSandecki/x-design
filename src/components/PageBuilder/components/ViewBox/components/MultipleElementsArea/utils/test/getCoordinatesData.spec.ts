@@ -17,6 +17,7 @@ import { store as storeToMock } from 'store/store';
 import { getCoordinatesData } from '../getCoordinatesData';
 
 const element = document.createElement('div');
+const zoomContent = document.createElement('div');
 const currentPage =
   pageBuilderStateMock[PAGE_BUILDER].pages[
     pageBuilderStateMock[PAGE_BUILDER].currentPage
@@ -32,6 +33,8 @@ describe('calculateBoxSize', () => {
     // mock
     element.style.height = '100px';
     element.style.width = '100px';
+    zoomContent.style.height = '1000px';
+    zoomContent.style.width = '1000px';
     storeToMock.getState = () =>
       ({
         ...wholeStateMock,
@@ -66,6 +69,7 @@ describe('calculateBoxSize', () => {
       false,
       [selectedElementMock, { ...selectedElementMock, id: '2' }],
       sharedRefs,
+      { current: zoomContent },
     );
 
     // result
@@ -80,7 +84,9 @@ describe('calculateBoxSize', () => {
 
   it(`should return default data`, () => {
     // before
-    const result = getCoordinatesData(true, [selectedElementMock], sharedRefs);
+    const result = getCoordinatesData(true, [selectedElementMock], sharedRefs, {
+      current: zoomContent,
+    });
 
     // result
     expect(result).toStrictEqual({
