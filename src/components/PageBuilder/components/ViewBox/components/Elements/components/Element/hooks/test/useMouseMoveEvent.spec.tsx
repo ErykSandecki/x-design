@@ -57,6 +57,7 @@ describe('useMouseMoveEvent', () => {
           false,
           true,
           MouseMode.default,
+          '-1',
         ),
       {
         wrapper: getProviderWrapper(store),
@@ -85,6 +86,7 @@ describe('useMouseMoveEvent', () => {
           false,
           true,
           MouseMode.comment,
+          '-1',
         ),
       {
         wrapper: getProviderWrapper(store),
@@ -113,6 +115,7 @@ describe('useMouseMoveEvent', () => {
           false,
           true,
           MouseMode.default,
+          '-1',
         ),
       {
         wrapper: getProviderWrapper(store),

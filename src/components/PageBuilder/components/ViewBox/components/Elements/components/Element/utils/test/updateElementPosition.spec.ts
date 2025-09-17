@@ -41,6 +41,7 @@ describe('updateElementPosition', () => {
       { clientX: 0, clientY: 0 } as MouseEvent,
       selectedElementMock.id,
       false,
+      '-1',
     );
 
     // result
@@ -58,6 +59,7 @@ describe('updateElementPosition', () => {
       { clientX: 0, clientY: 0 } as MouseEvent,
       selectedElementMock.id,
       true,
+      '-1',
     );
 
     // result

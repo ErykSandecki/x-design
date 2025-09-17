@@ -19,16 +19,15 @@ import { store as storeToMock } from 'store/store';
 import { T2DCoordinates } from 'types';
 
 // utils
-import { setElementsCoordinatesHandler } from '../setElementsCoordinatesHandler';
+import { caculateMovePosition } from '../caculateMovePosition';
 
 const cursorPosition = { current: BASE_2D } as RefObject<T2DCoordinates>;
-const mockCallBack = jest.fn();
 const currentPage =
   pageBuilderStateMock[PAGE_BUILDER].pages[
     pageBuilderStateMock[PAGE_BUILDER].currentPage
   ];
 
-describe('setElementsCoordinatesHandler', () => {
+describe('caculateMovePosition', () => {
   beforeAll(() => {
     // mock
     storeToMock.getState = () =>
@@ -53,24 +52,21 @@ describe('setElementsCoordinatesHandler', () => {
                   },
                 },
               },
-              selectedElements: [selectedElementMock],
             },
           },
         },
       }) as any;
   });
 
-  it(`should set coordinates`, () => {
+  it(`should calculate coordinates`, () => {
     // before
-    setElementsCoordinatesHandler(cursorPosition, mockCallBack, {
-      clientX: 0,
-      clientY: 0,
-    } as MouseEvent);
+    const result = caculateMovePosition(
+      cursorPosition,
+      { clientX: 0, clientY: 0 } as MouseEvent,
+      '1',
+    );
 
     // result
-    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
-      coordinates: { x: 0, y: 0 },
-      mode: 'dynamic',
-    });
+    expect(result).toStrictEqual({ x: 0, y: 0 });
   });
 });

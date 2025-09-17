@@ -7,7 +7,7 @@ import { THROTTLE_WAIT } from '../constants';
 
 // types
 import { MouseMode } from 'types/enums/mouseMode';
-import { T2DCoordinates } from 'types';
+import { T2DCoordinates, TElement } from 'types';
 import { TSelectedElement } from 'store/pageBuilder/types';
 
 // utils
@@ -25,6 +25,7 @@ export const useMouseMoveEvent = (
   isMultiple: boolean,
   isPressing: boolean,
   mouseMode: MouseMode,
+  parentId: TElement['parentId'],
 ): TUseMouseMoveEvent => {
   const dispatch = useDispatch();
 
@@ -33,7 +34,14 @@ export const useMouseMoveEvent = (
       mouseMode === MouseMode.default &&
       distanceHasChanged(cursorPositionBase.current, 5, event)
     ) {
-      updateElementPosition(cursorPosition, dispatch, event, id, isMultiple);
+      updateElementPosition(
+        cursorPosition,
+        dispatch,
+        event,
+        id,
+        isMultiple,
+        parentId,
+      );
       dispatch(updateEventsStatus({ draggableElements: [id] }));
     }
   }, THROTTLE_WAIT);

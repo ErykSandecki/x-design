@@ -176,9 +176,9 @@ export const areParentsTheSameSelector: Selector<TMainState, boolean> =
 export const counterAngleSelectorCreator = (
   parentId: TElement['parentId'],
 ): Selector<TMainState, number> =>
-  createSelector(
-    allDataSelector,
-    (allData) =>
-      computeCounterRotation(getParentsAngles(allData, [], parentId))
-        .counterAngle,
+  createSelector(allDataSelector, (allData) =>
+    parentId === '-1'
+      ? 0
+      : computeCounterRotation(getParentsAngles(allData, [], parentId))
+          .counterAngle,
   );

@@ -2,25 +2,27 @@ import { Dispatch } from 'redux';
 import { RefObject } from 'react';
 
 // store
-import { areaAxisSelectorCreator } from 'store/pageBuilder/selectors';
+import { selectedElementsSelector } from 'store/pageBuilder/selectors';
 import { setElementsCoordinates } from 'store/pageBuilder/actions';
 import { store } from 'store';
 
 // types
 import { T2DCoordinates } from 'types';
 
+// utils
+import { caculateMovePosition } from './caculateMovePosition';
+
 export const setElementsCoordinatesHandler = (
   cursorPosition: RefObject<T2DCoordinates>,
   dispatch: Dispatch,
   event: MouseEvent,
 ): void => {
-  const z = areaAxisSelectorCreator('z')(store.getState());
-  const { x, y } = cursorPosition.current;
-
-  const coordinates = {
-    x: Math.round(event.clientX / z - x / z),
-    y: Math.round(event.clientY / z - y / z),
-  };
+  const [first] = selectedElementsSelector(store.getState());
+  const coordinates = caculateMovePosition(
+    cursorPosition,
+    event,
+    first.parentId,
+  );
 
   dispatch(setElementsCoordinates(coordinates, 'dynamic'));
 };

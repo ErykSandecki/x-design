@@ -42,7 +42,7 @@ export const BASE_ALL_DATA: TElement = {
   deepLevel: 0,
   height: 0,
   id: '-1',
-  parentId: 'none',
+  parentId: '-1',
   position: 'absolute',
   rotate: 0,
   type: ElementType.base,

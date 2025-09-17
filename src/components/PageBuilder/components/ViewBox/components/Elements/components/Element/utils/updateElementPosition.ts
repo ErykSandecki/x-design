@@ -2,16 +2,17 @@ import { Dispatch } from 'redux';
 import { RefObject } from 'react';
 
 // store
-import { areaAxisSelectorCreator } from 'store/pageBuilder/selectors';
-import { setElementCoordinates } from 'store/pageBuilder/actions';
-import { store } from 'store';
+import {
+  setElementCoordinates,
+  setElementsCoordinates,
+} from 'store/pageBuilder/actions';
 
 // types
-import { T2DCoordinates } from 'types';
+import { T2DCoordinates, TElement } from 'types';
 import { TSelectedElement } from 'store/pageBuilder/types';
 
 // utils
-import { setElementsCoordinatesHandler } from '../../../../../utils/setElementsCoordinatesHandler';
+import { caculateMovePosition } from '../../../../../utils/caculateMovePosition';
 
 export const updateElementPosition = (
   cursorPosition: RefObject<T2DCoordinates>,
@@ -19,17 +20,13 @@ export const updateElementPosition = (
   event: MouseEvent,
   id: TSelectedElement['id'],
   isMultiple: boolean,
+  parentId: TElement['parentId'],
 ) => {
-  if (!isMultiple) {
-    const z = areaAxisSelectorCreator('z')(store.getState());
-    const { x, y } = cursorPosition.current;
-    const coordinates = {
-      x: Math.round(event.clientX / z - x / z),
-      y: Math.round(event.clientY / z - y / z),
-    };
+  const coordinates = caculateMovePosition(cursorPosition, event, parentId);
 
-    dispatch(setElementCoordinates(coordinates, id));
+  if (isMultiple) {
+    dispatch(setElementsCoordinates(coordinates, 'dynamic'));
   } else {
-    setElementsCoordinatesHandler(cursorPosition, dispatch, event);
+    dispatch(setElementCoordinates(coordinates, id));
   }
 };

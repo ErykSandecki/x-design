@@ -32,4 +32,13 @@ describe('counterAngleSelectorCreator', () => {
       }),
     ).toBe(-0);
   });
+
+  it('should return default angle', () => {
+    // before
+    const selectorFunction = (counterAngleSelectorCreator('-1') as any)
+      .resultFunc;
+
+    // result
+    expect(selectorFunction({})).toBe(0);
+  });
 });

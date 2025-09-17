@@ -60,6 +60,7 @@ export const useElementEvents = (
     isMultiple,
     isPressing,
     mouseMode,
+    parentId,
   );
   useMouseUpEvent(isPressing, setIsPressing);
   useOutsideClickElement(elementRef, id, isSelected);
