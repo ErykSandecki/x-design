@@ -1,7 +1,6 @@
 import { RefObject, useRef } from 'react';
 
 // hooks
-import { TUseMouseDownEvent, useMouseDownEvent } from './useMouseDownEvent';
 import { useMouseMoveEvent } from './useMouseMoveEvent';
 import { useMouseUpEvent } from './useMouseUpEvent';
 
@@ -11,6 +10,7 @@ import { BASE_2D } from 'shared';
 // types
 import { MouseMode } from 'types/enums/mouseMode';
 import { TElement } from 'types';
+import { TUseMouseDownEvent, useMouseDownEvent } from './useMouseDownEvent';
 
 export type TUseTransformAreaEvents = TUseMouseDownEvent;
 

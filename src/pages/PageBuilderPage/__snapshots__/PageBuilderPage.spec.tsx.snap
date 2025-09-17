@@ -173,11 +173,11 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
                       >
                         <div
                           class="Color__picker Color__picker--light"
-                          style="background-color: rgb(30, 38, 47);"
+                          style="background-color: rgb(241, 242, 246);"
                         />
                         <div
                           class="Color__picker-alpha Color__picker-alpha--light"
-                          style="background-color: rgb(30, 38, 47);"
+                          style="background-color: rgb(241, 242, 246);"
                         />
                         <div
                           class="Color__picker-texture Color__picker-texture--light"
@@ -188,7 +188,7 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
                       class="TextField__input TextField__input--light"
                       data-test-text-field-input="color"
                       maxlength="6"
-                      value="1e262f"
+                      value="f1f2f6"
                     />
                   </div>
                   <div
@@ -242,7 +242,7 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
       <div
         class="css-wcnq0t ZoomBox__background-mask ZoomBox__background-mask--light"
         data-test-box=""
-        style="background-color: rgb(30, 38, 47); display: initial;"
+        style="background-color: rgb(241, 242, 246); display: initial;"
       />
       <div
         class="css-wcnq0t ZoomBox__texture-blank ZoomBox__texture-blank--light"
@@ -254,21 +254,6 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
         data-test-box=""
         style="transform: translate(0px, 0px) scale(1);"
       >
-        <div
-          class="css-wcnq0t Elements__element Elements__element--light Frame Frame--light Element Element--light"
-          data-status="false"
-          data-test-box=""
-          id="mfmjnwh91758026628908"
-          style="left: 500px; top: 299px; transform: rotate(0deg) translate(0, 0); background-color: rgb(255, 255, 255); height: 272px; position: absolute; width: 404px;"
-        >
-          <small
-            class="css-wcnq0t Frame__label Frame__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
-            data-test-text=""
-            style="left: 500px; top: 299px; text-align: inherit;"
-          >
-            Frame
-          </small>
-        </div>
         <div
           class="css-13fj95k"
           data-test-box=""

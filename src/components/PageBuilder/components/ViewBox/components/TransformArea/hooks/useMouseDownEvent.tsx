@@ -25,11 +25,14 @@ export const useMouseDownEvent = (
 ): TUseMouseDownEvent => {
   const dispatch = useDispatch();
 
+  const canTriggerEvent = (event: MouseEvent): boolean =>
+    event.buttons === MouseButton.lmb && mouseMode === MouseMode.default;
+
   const handleMouseDownAchnorResize = (
     anchor: AnchorResize,
     event: MouseEvent,
   ): void => {
-    if (event.buttons === MouseButton.lmb && mouseMode === MouseMode.default) {
+    if (canTriggerEvent(event)) {
       event.stopPropagation();
 
       handleInitResizeElement(cursorPosition, event);
@@ -43,7 +46,7 @@ export const useMouseDownEvent = (
     anchor: AnchorRotate,
     event: MouseEvent,
   ): void => {
-    if (event.buttons === MouseButton.lmb && mouseMode === MouseMode.default) {
+    if (canTriggerEvent(event)) {
       event.stopPropagation();
 
       handleInitRotateElement(cursorBaseAngle, elementRef, event);

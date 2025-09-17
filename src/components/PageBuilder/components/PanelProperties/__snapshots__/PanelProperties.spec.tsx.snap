@@ -99,11 +99,11 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
                     >
                       <div
                         class="Color__picker Color__picker--light"
-                        style="background-color: rgb(30, 38, 47);"
+                        style="background-color: rgb(241, 242, 246);"
                       />
                       <div
                         class="Color__picker-alpha Color__picker-alpha--light"
-                        style="background-color: rgb(30, 38, 47);"
+                        style="background-color: rgb(241, 242, 246);"
                       />
                       <div
                         class="Color__picker-texture Color__picker-texture--light"
@@ -114,7 +114,7 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
                     class="TextField__input TextField__input--light"
                     data-test-text-field-input="color"
                     maxlength="6"
-                    value="1e262f"
+                    value="f1f2f6"
                   />
                 </div>
                 <div
@@ -581,11 +581,11 @@ exports[`PanelProperties snapshots should render with changed width 1`] = `
                     >
                       <div
                         class="Color__picker Color__picker--light"
-                        style="background-color: rgb(30, 38, 47);"
+                        style="background-color: rgb(241, 242, 246);"
                       />
                       <div
                         class="Color__picker-alpha Color__picker-alpha--light"
-                        style="background-color: rgb(30, 38, 47);"
+                        style="background-color: rgb(241, 242, 246);"
                       />
                       <div
                         class="Color__picker-texture Color__picker-texture--light"
@@ -596,7 +596,7 @@ exports[`PanelProperties snapshots should render with changed width 1`] = `
                     class="TextField__input TextField__input--light"
                     data-test-text-field-input="color"
                     maxlength="6"
-                    value="1e262f"
+                    value="f1f2f6"
                   />
                 </div>
                 <div

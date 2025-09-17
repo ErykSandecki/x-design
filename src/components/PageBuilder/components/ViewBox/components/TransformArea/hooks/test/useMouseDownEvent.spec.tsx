@@ -14,27 +14,39 @@ import { BASE_2D } from 'shared';
 import { configureStore } from 'store';
 
 // types
-import { AnchorResize } from 'store/pageBuilder/enums';
+import { AnchorResize, AnchorRotate } from 'store/pageBuilder/enums';
 import { MouseButton, T2DCoordinates } from 'types';
 import { MouseMode } from 'types/enums/mouseMode';
 
 // utils
 import { getProviderWrapper } from 'test';
 
+const cursorBaseAngle = { current: 0 } as RefObject<number>;
 const cursorPosition = { current: BASE_2D } as RefObject<T2DCoordinates>;
+const elementRef = {
+  current: {
+    getBoundingClientRect: () => ({ height: 100, left: 0, top: 0, width: 100 }),
+  },
+} as RefObject<HTMLDivElement>;
 const mockCallBack = jest.fn();
 const stateMock = {
   ...pageBuilderStateMock,
 };
 
 describe('useMouseMoveEvent', () => {
-  it(`should trigger event`, () => {
+  it(`should trigger event resize`, () => {
     // mock
     const store = configureStore(stateMock);
 
     // before
     const { result } = renderHook(
-      () => useMouseDownEvent(cursorPosition, MouseMode.default),
+      () =>
+        useMouseDownEvent(
+          cursorBaseAngle,
+          cursorPosition,
+          elementRef,
+          MouseMode.default,
+        ),
       {
         wrapper: getProviderWrapper(store),
       },
@@ -50,13 +62,47 @@ describe('useMouseMoveEvent', () => {
     expect(mockCallBack.mock.calls.length).toBe(1);
   });
 
+  it(`should trigger event rotate`, () => {
+    // mock
+    const store = configureStore(stateMock);
+
+    // before
+    const { result } = renderHook(
+      () =>
+        useMouseDownEvent(
+          cursorBaseAngle,
+          cursorPosition,
+          elementRef,
+          MouseMode.default,
+        ),
+      {
+        wrapper: getProviderWrapper(store),
+      },
+    );
+
+    // action
+    result.current.onMouseDownAnchorRotate(AnchorRotate.northEast, {
+      buttons: MouseButton.lmb,
+      stopPropagation: mockCallBack as any,
+    } as MouseEvent);
+
+    // result
+    expect(mockCallBack.mock.calls.length).toBe(1);
+  });
+
   it(`should not trigger event`, () => {
     // mock
     const store = configureStore(stateMock);
 
     // before
     const { result } = renderHook(
-      () => useMouseDownEvent(cursorPosition, MouseMode.comment),
+      () =>
+        useMouseDownEvent(
+          cursorBaseAngle,
+          cursorPosition,
+          elementRef,
+          MouseMode.comment,
+        ),
       {
         wrapper: getProviderWrapper(store),
       },
@@ -64,6 +110,34 @@ describe('useMouseMoveEvent', () => {
 
     // action
     result.current.onMouseDownAnchorResize(AnchorResize.east, {
+      buttons: MouseButton.lmb,
+      stopPropagation: mockCallBack as any,
+    } as MouseEvent);
+
+    // result
+    expect(mockCallBack.mock.calls.length).toBe(0);
+  });
+
+  it(`should not trigger event`, () => {
+    // mock
+    const store = configureStore(stateMock);
+
+    // before
+    const { result } = renderHook(
+      () =>
+        useMouseDownEvent(
+          cursorBaseAngle,
+          cursorPosition,
+          elementRef,
+          MouseMode.comment,
+        ),
+      {
+        wrapper: getProviderWrapper(store),
+      },
+    );
+
+    // action
+    result.current.onMouseDownAnchorRotate(AnchorRotate.none, {
       buttons: MouseButton.lmb,
       stopPropagation: mockCallBack as any,
     } as MouseEvent);

@@ -8,7 +8,7 @@
     "outDir": "./dist",
     "resolveJsonModule": true
   },
-  "exclude": ["**/*.spec.ts", "**/*.spec.tsx"],
+  // "exclude": ["**/*.spec.ts", "**/*.spec.tsx"],
   "include": [
     "cypress",
     "src",

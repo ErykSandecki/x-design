@@ -19,22 +19,25 @@ import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 import { configureStore } from 'store';
 
 // types
-import { AnchorResize } from 'store/pageBuilder/enums';
+import { AnchorResize, AnchorRotate } from 'store/pageBuilder/enums';
 import { T2DCoordinates } from 'types';
 
 // utils
 import { getProviderWrapper } from 'test';
 
+const cursorBaseAngle = { current: 0 } as RefObject<number>;
 const cursorPosition = { current: BASE_2D } as RefObject<T2DCoordinates>;
+const elementRef = {
+  current: {
+    getBoundingClientRect: () => ({ height: 100, left: 0, top: 0, width: 100 }),
+  },
+} as RefObject<HTMLDivElement>;
 const mockCallBack = jest.fn();
 const stateMock = {
   ...pageBuilderStateMock,
   [PAGE_BUILDER]: {
     ...pageBuilderStateMock[PAGE_BUILDER],
-    events: {
-      ...eventsMock,
-      selectedAnchorResize: AnchorResize.east,
-    },
+    events: eventsMock,
   },
 };
 
@@ -49,17 +52,29 @@ jest.mock('react-redux', () => ({
 }));
 
 describe('useMouseMoveEvent', () => {
-  it(`should trigger event`, () => {
+  it(`should trigger event resize`, () => {
     // mock
-    const store = configureStore(stateMock);
+    const store = configureStore({
+      ...stateMock,
+      [PAGE_BUILDER]: {
+        ...pageBuilderStateMock[PAGE_BUILDER],
+        events: {
+          ...eventsMock,
+          selectedAnchorResize: AnchorResize.east,
+        },
+      },
+    });
 
     // before
     renderHook(
       () =>
         useMouseMoveEvent(
+          cursorBaseAngle,
           cursorPosition,
+          elementRef,
           100,
           selectedElementMock.id,
+          0,
           100,
           0,
           0,
@@ -82,15 +97,15 @@ describe('useMouseMoveEvent', () => {
     });
   });
 
-  it(`should not trigger event`, () => {
+  it(`should trigger event rotate`, () => {
     // mock
     const store = configureStore({
-      ...pageBuilderStateMock,
+      ...stateMock,
       [PAGE_BUILDER]: {
         ...pageBuilderStateMock[PAGE_BUILDER],
         events: {
           ...eventsMock,
-          selectedAnchorResize: AnchorResize.none,
+          selectedAnchorRotate: AnchorRotate.northEast,
         },
       },
     });
@@ -99,9 +114,45 @@ describe('useMouseMoveEvent', () => {
     renderHook(
       () =>
         useMouseMoveEvent(
+          cursorBaseAngle,
           cursorPosition,
+          elementRef,
           100,
           selectedElementMock.id,
+          0,
+          100,
+          0,
+          0,
+        ),
+      {
+        wrapper: getProviderWrapper(store),
+      },
+    );
+
+    // action
+    fireEvent.mouseMove(window, {});
+
+    // result
+    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
+      id: '1',
+      rotate: -135,
+    });
+  });
+
+  it(`should not trigger event`, () => {
+    // mock
+    const store = configureStore(stateMock);
+
+    // before
+    renderHook(
+      () =>
+        useMouseMoveEvent(
+          cursorBaseAngle,
+          cursorPosition,
+          elementRef,
+          100,
+          selectedElementMock.id,
+          0,
           100,
           0,
           0,

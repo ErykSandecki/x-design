@@ -1,3 +1,4 @@
+import { RefObject } from 'react';
 import { renderHook } from '@testing-library/react';
 
 // hooks
@@ -18,6 +19,12 @@ import { MouseMode } from 'types/enums/mouseMode';
 // utils
 import { getProviderWrapper } from 'test';
 
+const elementRef = {
+  current: {
+    getBoundingClientRect: () => ({ height: 100, left: 0, top: 0, width: 100 }),
+  },
+} as RefObject<HTMLDivElement>;
+
 const stateMock = {
   ...pageBuilderStateMock,
 };
@@ -31,9 +38,11 @@ describe('useTransformAreaEvents', () => {
     const { result } = renderHook(
       () =>
         useTransformAreaEvents(
+          elementRef,
           100,
           selectedElementMock.id,
           MouseMode.default,
+          0,
           100,
           100,
           100,
@@ -46,6 +55,7 @@ describe('useTransformAreaEvents', () => {
     // result
     expect(result.current).toStrictEqual({
       onMouseDownAnchorResize: expect.any(Function),
+      onMouseDownAnchorRotate: expect.any(Function),
     });
   });
 });

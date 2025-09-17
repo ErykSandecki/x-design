@@ -114,6 +114,9 @@ module.exports = {
       {
         test: /\.(ts|tsx)$/,
         loader: 'ts-loader',
+        options: {
+          configFile: 'tsconfig.base.json',
+        },
       },
     ],
   },

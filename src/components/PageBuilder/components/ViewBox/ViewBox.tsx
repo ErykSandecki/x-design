@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Elements from './components/Elements/Elements';
 import ElementArea from './components/ElementArea/ElementArea';
 import MultipleElementsArea from './components/MultipleElementsArea/MultipleElementsArea';
+import OverlayContainer from './components/OverlayContainer/OverlayContainer';
 import SelectableArea from './components/SelectableArea/SelectableArea';
 import { ZoomBox } from 'shared';
 
@@ -31,7 +32,6 @@ import styles from './view-box.scss';
 // types
 import { MouseMode } from 'types/enums/mouseMode';
 import { T3DCoordinates, TColor } from 'types';
-import OverlayContainer from './components/OverlayContainer/OverlayContainer';
 
 export type TViewBoxProps = {
   coordinates: T3DCoordinates;

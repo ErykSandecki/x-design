@@ -5,7 +5,7 @@ exports[`Outline snapshots should render OverlayContainer 1`] = `
   <div
     class="css-wcnq0t Outline Outline--light"
     data-test-box=""
-    style="height: 100px; left: 0px; top: 0px; width: 100px;"
+    style="height: 100px; left: 0px; top: 0px; transform: rotate(undefineddeg); width: 100px;"
   />
 </DocumentFragment>
 `;

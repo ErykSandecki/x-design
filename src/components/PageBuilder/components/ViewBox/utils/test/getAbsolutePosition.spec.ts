@@ -1,3 +1,5 @@
+import { RefObject } from 'react';
+
 // mocks
 import {
   elementAllDataMock,
@@ -16,6 +18,11 @@ import { store as storeToMock } from 'store/store';
 // utils
 import { getAbsolutePosition } from '../getAbsolutePosition';
 
+const zoomContentRef = {
+  current: {
+    getBoundingClientRect: () => ({ height: 100, left: 0, top: 0, width: 100 }),
+  },
+} as RefObject<HTMLDivElement>;
 const element = document.createElement('div');
 const currentPage =
   pageBuilderStateMock[PAGE_BUILDER].pages[
@@ -71,6 +78,7 @@ describe('getAbsolutePosition', () => {
       elementAllDataMock.id,
       elementAllDataMock.parentId,
       sharedRefs,
+      zoomContentRef,
     );
 
     // result
@@ -84,6 +92,7 @@ describe('getAbsolutePosition', () => {
       '2',
       elementAllDataMock.id,
       sharedRefs,
+      zoomContentRef,
     );
 
     // result
@@ -97,6 +106,7 @@ describe('getAbsolutePosition', () => {
       '-1',
       elementAllDataMock.id,
       sharedRefs,
+      zoomContentRef,
     );
 
     // result

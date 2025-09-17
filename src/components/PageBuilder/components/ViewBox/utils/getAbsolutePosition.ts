@@ -1,3 +1,5 @@
+import { RefObject } from 'react';
+
 // others
 import { BASE_RECT } from 'shared';
 
@@ -8,9 +10,6 @@ import { store } from 'store';
 // types
 import { T2DCoordinates, TElement, TRectCoordinates } from 'types';
 import { TContext } from 'pages/PageBuilderPage/core/types';
-
-// utils
-import { RefObject } from 'react';
 
 export const getAbsolutePosition = (
   coordinates: T2DCoordinates,

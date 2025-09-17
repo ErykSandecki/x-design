@@ -2,7 +2,7 @@ import { kebabCase, mapValues } from 'lodash';
 
 // types
 import { AlignmentHorizontal, AlignmentVertical } from 'types';
-import { Constrain } from 'components/PageBuilder/enums';
+import { Constrain } from '../../enums';
 
 export const className = 'ConstrainsView';
 

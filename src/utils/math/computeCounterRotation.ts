@@ -1,5 +1,5 @@
 export const computeCounterRotation = (
-  angles,
+  angles: number | Array<number>,
 ): { counterAngle: number; sumAngle: number } => {
   const arr = Array.isArray(angles) ? angles : [angles];
   const rawSum = arr.reduce((acc, v) => acc + Number(v || 0), 0);

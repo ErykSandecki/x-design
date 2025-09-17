@@ -11,9 +11,9 @@
   &__label {
     @include theme('neutral-2', color);
 
-    position: absolute;
-    pointer-events: all;
     font-size: 11px;
+    pointer-events: all;
+    position: absolute;
     transform: translate(1.5px, -20px);
     user-select: none;
 
