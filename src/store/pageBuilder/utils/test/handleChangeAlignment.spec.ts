@@ -14,7 +14,7 @@ import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
 import { AlignmentHorizontal, AlignmentVertical } from 'types';
 
 // utils
-import { handleChangeAlignment } from '../handleChangeAlignment';
+import { handleChangeAlignment } from '../changeAligment/handleChangeAlignment';
 
 describe('handleChangeAlignment', () => {
   beforeEach(() => {

@@ -28,7 +28,7 @@ export const usePositionEvents = (
   const { alignment, coordinates, parentId, position } = element;
   const [x, setX] = useState('');
   const [y, setY] = useState('');
-  const onBlurEvents = useBlurEvent(element, isMultiple, setX, setY, x, y);
+  const onBlurEvents = useBlurEvent(element, setX, setY, x, y);
   const onChangeEvents = useChangeEvent(
     isMultiple,
     isMixedX,

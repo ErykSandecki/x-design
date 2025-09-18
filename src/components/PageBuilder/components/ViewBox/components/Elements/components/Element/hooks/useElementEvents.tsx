@@ -2,7 +2,6 @@ import { RefObject, useRef, useState } from 'react';
 
 // hooks
 import { useForceRerender } from 'hooks';
-import { useHandleUpdateCoordinates } from './useHandleUpdateCoordinates';
 import { useInitializeRef } from './useInitializeRef';
 import { useMouseDownEvent } from './useMouseDownEvent';
 import { useMouseEnterEvent } from './useMouseEnterEvent';
@@ -57,7 +56,6 @@ export const useElementEvents = (
   );
   useMouseUpEvent(isPressing, setIsPressing);
   useOutsideClickElement(elementRef, id, isSelected);
-  useHandleUpdateCoordinates(id, parentId);
 
   return {
     onMouseDown: useMouseDownEvent(

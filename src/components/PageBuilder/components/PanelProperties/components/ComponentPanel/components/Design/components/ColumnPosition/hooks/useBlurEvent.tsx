@@ -13,7 +13,6 @@ export type TUseBlurEvent = {
 
 export const useBlurEvent = (
   element: TElement,
-  isMultiple: boolean,
   setX: (value: string) => void,
   setY: (value: string) => void,
   x: string,
@@ -23,12 +22,7 @@ export const useBlurEvent = (
 
   const handleBlur = () => {
     const coordinates = { x: parseFloat(x), y: parseFloat(y) };
-
-    if (isMultiple) {
-      dispatch(setElementsCoordinates(coordinates, 'static'));
-    } else {
-      dispatch(setElementsCoordinates(coordinates, 'dynamic'));
-    }
+    dispatch(setElementsCoordinates(coordinates, 'static'));
   };
 
   const handleBlurX = (): void => {

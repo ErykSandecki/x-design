@@ -1,7 +1,8 @@
 import { cloneDeep, first } from 'lodash';
 
 // types
-import { TChangeAlignmentAction, TPageBuilderState } from '../types';
+import { TChangeAlignmentAction, TPageBuilderState } from '../../types';
+import { getDefaultCoordinates } from './getDefaultCoordinates';
 
 export const handleChangeAlignment = (
   payload: TChangeAlignmentAction['payload'],
@@ -16,14 +17,15 @@ export const handleChangeAlignment = (
     parentId
   ].children.filter((id) => !allId.includes(id));
 
-  selectedElements.forEach(({ id }) => {
+  selectedElements.forEach(({ id, parentId }) => {
     const { alignment } = currentPage.elements.allData[id];
+    const targetAlignment = { ...alignment, ...payload };
+    const coordinates = getDefaultCoordinates(targetAlignment, id, parentId);
 
-    clonedElements.allData[id].alignment = { ...alignment, ...payload };
-    clonedElements.allData[id].position = 'absolute';
-    clonedElements.dynamicData[id].alignment = { ...alignment, ...payload };
-    clonedElements.dynamicData[id].position = 'absolute';
-    clonedElements.staticData[id].position = 'absolute';
+    clonedElements.allData[id].alignment = targetAlignment;
+    clonedElements.allData[id].coordinates = coordinates;
+    clonedElements.dynamicData[id].alignment = targetAlignment;
+    clonedElements.dynamicData[id].coordinates = coordinates;
   });
 
   return {

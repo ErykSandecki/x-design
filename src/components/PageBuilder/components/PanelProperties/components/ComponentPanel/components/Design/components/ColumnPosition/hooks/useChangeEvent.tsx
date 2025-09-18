@@ -26,11 +26,7 @@ export const useChangeEvent = (
     isScrubbableInput: boolean,
   ): void => {
     if (isScrubbableInput) {
-      if (isMultiple) {
-        dispatch(setElementsCoordinates({ x, y }, 'dynamic'));
-      } else {
-        dispatch(setElementsCoordinates({ x, y }, 'static'));
-      }
+      dispatch(setElementsCoordinates({ x, y }, 'dynamic'));
     }
   };
 
