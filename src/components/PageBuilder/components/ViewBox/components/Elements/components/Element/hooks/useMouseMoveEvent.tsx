@@ -5,6 +5,9 @@ import { useDispatch } from 'react-redux';
 // others
 import { THROTTLE_WAIT } from '../constants';
 
+// store
+import { updateEventsStatus } from 'store/pageBuilder/actions';
+
 // types
 import { MouseMode } from 'types/enums/mouseMode';
 import { T2DCoordinates, TElement } from 'types';
@@ -13,7 +16,6 @@ import { TSelectedElement } from 'store/pageBuilder/types';
 // utils
 import { distanceHasChanged } from 'utils';
 import { updateElementPosition } from '../utils/updateElementPosition';
-import { updateEventsStatus } from 'store/pageBuilder/actions';
 
 export type TUseMouseMoveEvent = void;
 

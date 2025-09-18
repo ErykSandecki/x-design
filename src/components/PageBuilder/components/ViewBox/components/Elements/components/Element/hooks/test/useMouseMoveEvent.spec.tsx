@@ -82,7 +82,7 @@ describe('useMouseMoveEvent', () => {
           cursorPosition,
           cursorPositionBase,
           '-1',
-          false,
+          true,
           MouseMode.comment,
           '-1',
         ),

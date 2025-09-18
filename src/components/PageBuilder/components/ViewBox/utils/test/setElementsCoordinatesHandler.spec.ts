@@ -71,7 +71,6 @@ describe('setElementsCoordinatesHandler', () => {
     expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
       coordinates: { x: 0, y: 0 },
       mode: 'dynamic',
-      resetAlignment: undefined,
     });
   });
 });

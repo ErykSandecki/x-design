@@ -214,7 +214,6 @@ export type TSetElementSizesAction = {
 export type TSetElementsCoordinatesActionPayload = {
   coordinates: T2DCoordinates;
   mode: 'dynamic' | 'static';
-  resetAlignment?: boolean;
 };
 
 export type TSetElementsCoordinatesAction = {

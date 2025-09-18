@@ -1,5 +1,6 @@
 import { fireEvent, render } from '@testing-library/react';
 import { noop } from 'lodash';
+import { RefObject } from 'react';
 
 // components
 import ZoomBox from './ZoomBox';
@@ -13,7 +14,6 @@ import { MouseMode } from 'types/enums/mouseMode';
 
 // utils
 import { getByE2EAttribute } from 'test';
-import { RefObject } from 'react';
 
 const mockCallBack = jest.fn();
 const ref = { current: null };

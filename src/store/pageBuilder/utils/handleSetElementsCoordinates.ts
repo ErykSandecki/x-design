@@ -28,7 +28,6 @@ export const getPositions = (
   {
     coordinates: currentCoordinates,
     mode,
-    resetAlignment = true,
   }: TSetElementsCoordinatesAction['payload'],
   prevPageState: TPage['prevState'],
   currentPage: TPage,
@@ -44,7 +43,7 @@ export const getPositions = (
   };
 
   selectedElements.forEach(({ id, ...restData }) => {
-    const alignment = resetAlignment ? {} : elements.allData[id].alignment;
+    const alignment = elements.allData[id].alignment;
     const { coordinates: prevCoordinates } = allData[id];
     const coordinates = getCoordinates(
       currentCoordinates,

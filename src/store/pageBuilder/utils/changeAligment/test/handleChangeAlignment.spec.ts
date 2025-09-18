@@ -8,13 +8,13 @@ import {
 } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
-import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
+import { REDUCER_KEY as PAGE_BUILDER } from '../../../actionsType';
 
 // types
 import { AlignmentHorizontal, AlignmentVertical } from 'types';
 
 // utils
-import { handleChangeAlignment } from '../changeAligment/handleChangeAlignment';
+import { handleChangeAlignment } from '../handleChangeAlignment';
 
 describe('handleChangeAlignment', () => {
   beforeEach(() => {

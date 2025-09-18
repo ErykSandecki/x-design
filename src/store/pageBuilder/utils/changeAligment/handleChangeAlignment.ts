@@ -2,6 +2,8 @@ import { cloneDeep, first } from 'lodash';
 
 // types
 import { TChangeAlignmentAction, TPageBuilderState } from '../../types';
+
+// utils
 import { getDefaultCoordinates } from './getDefaultCoordinates';
 
 export const handleChangeAlignment = (

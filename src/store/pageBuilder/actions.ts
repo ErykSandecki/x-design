@@ -145,9 +145,8 @@ export const setElementSizes = (
 export const setElementsCoordinates = (
   coordinates: TSetElementsCoordinatesActionPayload['coordinates'],
   mode: TSetElementsCoordinatesActionPayload['mode'],
-  resetAlignment?: TSetElementsCoordinatesActionPayload['resetAlignment'],
 ): TSetElementsCoordinatesAction => ({
-  payload: { coordinates, mode, resetAlignment },
+  payload: { coordinates, mode },
   type: SET_ELEMENTS_COORDINATES,
 });
 
