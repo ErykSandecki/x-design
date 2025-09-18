@@ -25,7 +25,7 @@ const ElementsWrapper: FC<TElementsWrapperProps> = ({
   parentId,
   position,
 }) => {
-  if (!isSelected && position) {
+  if (!isSelected && position === 'relative') {
     return (
       <DropAnchors
         id={id}

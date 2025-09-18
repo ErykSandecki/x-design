@@ -39,7 +39,6 @@ import {
   TSelectElementAction,
   TSelectElementsAction,
   TSetAreaCoordinatesAction,
-  TSetElementCoordinatesActionPayload,
   TSetElementsCoordinatesAction,
   TSetElementsCoordinatesActionPayload,
   TSetElementSizesAction,

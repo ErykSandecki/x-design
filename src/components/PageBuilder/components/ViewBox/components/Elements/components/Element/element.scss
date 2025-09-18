@@ -22,6 +22,7 @@
 
   &__wrapper {
     overflow: hidden;
+    position: relative;
 
     &--hover {
       z-index: $--xd-zindex-element-active;

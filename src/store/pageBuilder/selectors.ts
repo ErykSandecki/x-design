@@ -1,6 +1,6 @@
 import { createSelector, Selector } from 'reselect';
 import { compose, get as getFp } from 'lodash/fp';
-import { get, map, memoize, size } from 'lodash';
+import { get, map, size } from 'lodash';
 
 // others
 import { REDUCER_KEY } from './actionsType';

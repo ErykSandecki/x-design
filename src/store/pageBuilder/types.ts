@@ -198,11 +198,6 @@ export type TSetAreaCoordinatesAction = {
   type: typeof SET_AREA_COORDINATES;
 };
 
-export type TSetElementCoordinatesActionPayload = Pick<
-  TElement,
-  'coordinates' | 'id'
->;
-
 export type TSetElementSizesActionPayload = Pick<
   TElement,
   'height' | 'id' | 'width'
