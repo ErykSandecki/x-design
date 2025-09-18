@@ -47,7 +47,12 @@ const ElementArea: FC<TElementAreaProps> = ({ elementArea }) => {
     >
       <Small
         classes={{ className: cx(classNamesWithTheme.label) }}
-        sx={{ cl: 'blue1', left: `${labelX}px`, top: `${labelY}px` }}
+        style={{
+          left: `${labelX}px`,
+          top: `${labelY}px`,
+          width: Math.abs(x1 - x2),
+        }}
+        sx={{ cl: 'blue1' }}
       >
         {t(`${translationNameSpace}.label.createFrame`)}
       </Small>

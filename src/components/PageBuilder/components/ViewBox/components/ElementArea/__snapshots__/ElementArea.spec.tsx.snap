@@ -11,7 +11,7 @@ exports[`ElementArea snapshots should render ElementArea 1`] = `
     <small
       class="css-14e5ozw ElementArea__label ElementArea__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
       data-test-text=""
-      style="text-align: inherit;"
+      style="left: 0px; top: 0px; width: 100px; text-align: inherit;"
     >
       Frame
     </small>
@@ -68,7 +68,7 @@ exports[`ElementArea snapshots should render with label when x2 i y2 is less tha
     <small
       class="css-14e5ozw ElementArea__label ElementArea__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
       data-test-text=""
-      style="text-align: inherit;"
+      style="left: -100px; top: -100px; width: 100px; text-align: inherit;"
     >
       Frame
     </small>
