@@ -1,10 +1,7 @@
 import { useDispatch } from 'react-redux';
 
 // store
-import {
-  setElementCoordinates,
-  setElementsCoordinates,
-} from 'store/pageBuilder/actions';
+import { setElementsCoordinates } from 'store/pageBuilder/actions';
 
 // types
 import { TElement } from 'types';
@@ -23,7 +20,6 @@ export const useBlurEvent = (
   y: string,
 ): TUseBlurEvent => {
   const dispatch = useDispatch();
-  const { id } = element;
 
   const handleBlur = () => {
     const coordinates = { x: parseFloat(x), y: parseFloat(y) };
@@ -31,7 +27,7 @@ export const useBlurEvent = (
     if (isMultiple) {
       dispatch(setElementsCoordinates(coordinates, 'static'));
     } else {
-      dispatch(setElementCoordinates(coordinates, id));
+      dispatch(setElementsCoordinates(coordinates, 'dynamic'));
     }
   };
 

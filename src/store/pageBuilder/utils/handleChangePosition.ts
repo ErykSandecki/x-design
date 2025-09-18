@@ -6,32 +6,23 @@ import { BASE_2D } from 'shared';
 // types
 import { TPageBuilderState } from '../types';
 
-// utils
-import { findMainParent } from './findMainParent';
-import { getAbsolutePosition } from './getAbsolutePosition';
-
 export const handleChangePosition = (
   state: TPageBuilderState,
 ): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];
   const { elements, selectedElements } = currentPage;
-  const { z } = currentPage.areaCoordinates;
-  const allId = selectedElements.map(({ id }) => id);
+  const ids = selectedElements.map(({ id }) => id);
   const clonedElements = cloneDeep(elements);
   const { id, parentId } = first(selectedElements);
-  const mainParent = findMainParent(parentId, currentPage.elements.staticData);
   const currentPosition = elements.allData[id].position;
   const reversePosition =
     currentPosition === 'relative' ? 'absolute' : 'relative';
-  const isRelative = reversePosition === 'relative';
   const filteredChildren = currentPage.elements.allData[
     parentId
-  ].children.filter((id) => !allId.includes(id));
+  ].children.filter((id) => !ids.includes(id));
 
   selectedElements.forEach(({ id }) => {
-    const targetCoordinates = isRelative
-      ? BASE_2D
-      : getAbsolutePosition(id, mainParent, z);
+    const targetCoordinates = BASE_2D;
 
     clonedElements.allData[id].alignment = {};
     clonedElements.allData[id].position = reversePosition;
@@ -55,7 +46,7 @@ export const handleChangePosition = (
             ...clonedElements.allData,
             [parentId]: {
               ...currentPage.elements.allData[parentId],
-              children: [...filteredChildren, ...allId],
+              children: [...filteredChildren, ...ids],
             },
           },
           dynamicData: {
@@ -67,7 +58,7 @@ export const handleChangePosition = (
             ...clonedElements.staticData,
             [parentId]: {
               ...currentPage.elements.staticData[parentId],
-              children: [...filteredChildren, ...allId],
+              children: [...filteredChildren, ...ids],
             },
           },
         },

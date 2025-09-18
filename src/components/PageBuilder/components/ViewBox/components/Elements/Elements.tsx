@@ -1,4 +1,4 @@
-import { FC, memo } from 'react';
+import { FC, memo, useMemo } from 'react';
 import { useSelector } from 'react-redux';
 
 // components
@@ -20,6 +20,7 @@ import styles from './elements.scss';
 // types
 import { ElementType, TElement } from 'types';
 import { MouseMode } from 'types/enums/mouseMode';
+import ElementsWrapper from './ElementsWrapper';
 
 export type TElementsProps = {
   eventsDisabled: boolean;
@@ -38,24 +39,18 @@ const Elements: FC<TElementsProps> = ({
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   return staticData.map(({ id, parentId, position, type }, index) => {
-    const Wrapper =
-      !isSelected && position === 'relative'
-        ? ({ children }) => (
-            <DropAnchors
-              id={id}
-              index={index}
-              mouseMode={mouseMode}
-              parentId={parentId}
-            >
-              {children}
-            </DropAnchors>
-          )
-        : ({ children }) => <>{children}</>;
-
     switch (type) {
       case ElementType.frame:
         return (
-          <Wrapper key={id}>
+          <ElementsWrapper
+            id={id}
+            index={index}
+            isSelected={isSelected}
+            key={id}
+            mouseMode={mouseMode}
+            parentId={parentId}
+            position={position}
+          >
             <Frame
               className={cx(classNamesWithTheme.element.name, [
                 classNamesWithTheme.element.modificators.eventsDisabled,
@@ -66,7 +61,7 @@ const Elements: FC<TElementsProps> = ({
               parentId={parentId}
               type={type}
             />
-          </Wrapper>
+          </ElementsWrapper>
         );
       default:
         return <></>;

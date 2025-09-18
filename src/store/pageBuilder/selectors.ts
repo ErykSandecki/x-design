@@ -1,6 +1,6 @@
 import { createSelector, Selector } from 'reselect';
 import { compose, get as getFp } from 'lodash/fp';
-import { get, map, size } from 'lodash';
+import { get, map, memoize, size } from 'lodash';
 
 // others
 import { REDUCER_KEY } from './actionsType';
@@ -89,6 +89,12 @@ export const elementDynamicDataSelectorCreator = (
   elementId: TElement['id'],
 ): Selector<TMainState, TElementDynamicData | undefined> =>
   createSelector(dynamicDataSelector, getFp(elementId));
+
+export const elementAttributeSelectorCreator = (
+  attribute: keyof TElement,
+  elementId: TElement['id'],
+): Selector<TMainState, TElementDynamicData | undefined> =>
+  createSelector(allDataSelector, getFp(`${elementId}.${attribute}`));
 
 export const staticDataSelector: Selector<
   TMainState,

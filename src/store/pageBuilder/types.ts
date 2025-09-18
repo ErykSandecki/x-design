@@ -13,7 +13,6 @@ import {
   SELECT_ELEMENT,
   SELECT_ELEMENTS,
   SET_AREA_COORDINATES,
-  SET_ELEMENT_COORDINATES,
   SET_ELEMENT_SIZES,
   SET_ELEMENTS_COORDINATES,
   UNSELECT_ELEMENT,
@@ -204,11 +203,6 @@ export type TSetElementCoordinatesActionPayload = Pick<
   'coordinates' | 'id'
 >;
 
-export type TSetElementCoordinatesAction = {
-  payload: TSetElementCoordinatesActionPayload;
-  type: typeof SET_ELEMENT_COORDINATES;
-};
-
 export type TSetElementSizesActionPayload = Pick<
   TElement,
   'height' | 'id' | 'width'
@@ -225,6 +219,7 @@ export type TSetElementSizesAction = {
 export type TSetElementsCoordinatesActionPayload = {
   coordinates: T2DCoordinates;
   mode: 'dynamic' | 'static';
+  resetAlignment?: boolean;
 };
 
 export type TSetElementsCoordinatesAction = {

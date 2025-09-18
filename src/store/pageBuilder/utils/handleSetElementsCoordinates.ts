@@ -7,11 +7,33 @@ import {
   TPositions,
   TSetElementsCoordinatesAction,
 } from '../types';
+import { T2DCoordinates } from 'types';
+
+export const getCoordinates = (
+  coordinates: T2DCoordinates,
+  isDynamic: boolean,
+  prevCoordinates: T2DCoordinates,
+) => {
+  const { x, y } = coordinates;
+  const { x: prevX, y: prevY } = prevCoordinates;
+
+  if (isDynamic) {
+    return { x: prevX + (isNaN(x) ? 0 : x), y: prevY + (isNaN(y) ? 0 : y) };
+  }
+
+  return { x: isNaN(x) ? prevX : x, y: isNaN(y) ? prevY : y };
+};
 
 export const getPositions = (
-  { coordinates: { x, y }, mode }: TSetElementsCoordinatesAction['payload'],
+  {
+    coordinates: currentCoordinates,
+    mode,
+    resetAlignment = true,
+  }: TSetElementsCoordinatesAction['payload'],
   prevPageState: TPage['prevState'],
+  currentPage: TPage,
 ): TPositions => {
+  const elements = currentPage.elements;
   const isDynamic = mode === 'dynamic';
   const { allData, dynamicData } = prevPageState.elements;
   const selectedElements = prevPageState.selectedElements;
@@ -22,22 +44,23 @@ export const getPositions = (
   };
 
   selectedElements.forEach(({ id, ...restData }) => {
-    const {
-      coordinates: { x: prevX, y: prevY },
-    } = allData[id];
-    const coordinates = isDynamic
-      ? { x: prevX + (isNaN(x) ? 0 : x), y: prevY + (isNaN(y) ? 0 : y) }
-      : { x: isNaN(x) ? prevX : x, y: isNaN(y) ? prevY : y };
+    const alignment = resetAlignment ? {} : elements.allData[id].alignment;
+    const { coordinates: prevCoordinates } = allData[id];
+    const coordinates = getCoordinates(
+      currentCoordinates,
+      isDynamic,
+      prevCoordinates,
+    );
 
     positions.allData = {
       ...positions.allData,
-      [id]: { ...allData[id], alignment: {}, coordinates },
+      [id]: { ...allData[id], alignment, coordinates },
     };
     positions.dynamicData = {
       ...positions.dynamicData,
       [id]: {
         ...dynamicData[id],
-        alignment: {},
+        alignment,
         coordinates,
       },
     };
@@ -58,7 +81,11 @@ export const handleSetElementsCoordinates = (
   const { canMoveElements } = state.events;
   const currentPage = state.pages[state.currentPage];
   const positions = canMoveElements
-    ? getPositions(coordinates, currentPage.prevState || currentPage)
+    ? getPositions(
+        coordinates,
+        currentPage.prevState || currentPage,
+        currentPage,
+      )
     : {
         allData: {},
         dynamicData: {},

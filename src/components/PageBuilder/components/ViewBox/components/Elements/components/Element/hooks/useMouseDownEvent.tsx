@@ -1,6 +1,9 @@
 import { MouseEvent, RefObject } from 'react';
 import { useDispatch } from 'react-redux';
 
+// store
+import { updatePrevState } from 'store/pageBuilder/actions';
+
 // types
 import { MouseButton, T2DCoordinates } from 'types';
 import { MouseMode } from '../../../../../../../../../types/enums/mouseMode';
@@ -10,7 +13,6 @@ import { TSelectedElement } from 'store/pageBuilder/types';
 import { handlePressing } from '../utils/handlePressing';
 import { handleSelectElement } from '../utils/handleSelectElement';
 import { updateCursorPosition } from '../utils/updateCursorPosition';
-import { updatePrevState } from 'store/pageBuilder/actions';
 
 export type TUseMouseDownEvent = (event: MouseEvent) => void;
 

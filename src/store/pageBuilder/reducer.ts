@@ -13,7 +13,6 @@ import {
   SELECT_ELEMENT,
   SELECT_ELEMENTS,
   SET_AREA_COORDINATES,
-  SET_ELEMENT_COORDINATES,
   SET_ELEMENT_SIZES,
   SET_ELEMENTS_COORDINATES,
   UNSELECT_ELEMENT,
@@ -32,7 +31,6 @@ import {
   TUnselectElementAction,
   TSelectElementsAction,
   TSetAreaCoordinatesAction,
-  TSetElementCoordinatesAction,
   TSetElementsCoordinatesAction,
   TUpdateEventsStatusAction,
   TSetElementSizesAction,
@@ -54,7 +52,6 @@ import { handleReducerHistoryRedo } from './utils/reducerHistory/handleReducerHi
 import { handleReducerHistorySave } from './utils/reducerHistory/handleReducerHistorySave';
 import { handleReducerHistoryUndo } from './utils/reducerHistory/handleReducerHistoryUndo';
 import { handleRotateElement } from './utils/handleRotateElement';
-import { handleSetElementCoordinates } from './utils/handleSetElementCoordinates';
 import { handleSetElementsCoordinates } from './utils/handleSetElementsCoordinates';
 import { handleSetElementSizes } from './utils/handleSetElementSize';
 
@@ -80,222 +77,222 @@ const initialState: TPageBuilderState = {
   pages: {
     [BASE_PAGE.id]: {
       ...BASE_PAGE,
-      // elements: {
-      //   allData: {
-      //     '1': {
-      //       alignment: {},
-      //       background: {
-      //         properties: {
-      //           alpha: '100',
-      //           color: '#180000ff',
-      //           format: 'hex',
-      //         },
-      //         visible: true,
-      //       },
-      //       children: ['2'],
-      //       coordinates: {
-      //         x: 696,
-      //         y: 363,
-      //       },
-      //       deepLevel: 0,
-      //       height: 239,
-      //       id: '1',
-      //       parentId: '-1',
-      //       position: 'absolute',
-      //       rotate: -30,
-      //       type: 'frame',
-      //       width: 478,
-      //     },
-      //     '2': {
-      //       alignment: {},
-      //       background: {
-      //         properties: {
-      //           alpha: '100',
-      //           color: '#1bff9cff',
-      //           format: 'hex',
-      //         },
-      //         visible: true,
-      //       },
-      //       children: ['mfo87nr91758128327684'],
-      //       coordinates: {
-      //         x: 0,
-      //         y: 0,
-      //       },
-      //       deepLevel: 1,
-      //       height: 124,
-      //       id: '2',
-      //       parentId: '1',
-      //       position: 'relative',
-      //       rotate: -38.979430805141874,
-      //       type: 'frame',
-      //       width: 404,
-      //     },
-      //     '-1': {
-      //       alignment: {},
-      //       background: {
-      //         properties: {
-      //           alpha: '100',
-      //           color: '#1e262f',
-      //           format: 'hex',
-      //         },
-      //         visible: true,
-      //       },
-      //       children: ['1'],
-      //       coordinates: {
-      //         x: 0,
-      //         y: 0,
-      //       },
-      //       deepLevel: 0,
-      //       height: 0,
-      //       id: '-1',
-      //       parentId: '-1',
-      //       position: 'absolute',
-      //       rotate: 0,
-      //       type: 'base',
-      //       width: 0,
-      //     },
-      //     mfo87nr91758128327684: {
-      //       alignment: {},
-      //       background: {
-      //         properties: {
-      //           alpha: '100',
-      //           color: '#ffffff',
-      //           format: 'hex',
-      //         },
-      //         visible: true,
-      //       },
-      //       children: [],
-      //       coordinates: {
-      //         x: 0,
-      //         y: 0,
-      //       },
-      //       deepLevel: 2,
-      //       height: 76,
-      //       id: 'mfo87nr91758128327684',
-      //       parentId: '2',
-      //       position: 'absolute',
-      //       rotate: 0,
-      //       type: 'frame',
-      //       width: 89,
-      //     },
-      //   },
-      //   dynamicData: {
-      //     '1': {
-      //       alignment: {},
-      //       background: {
-      //         properties: {
-      //           alpha: '100',
-      //           color: '#180000ff',
-      //           format: 'hex',
-      //         },
-      //         visible: true,
-      //       },
-      //       coordinates: {
-      //         x: 696,
-      //         y: 363,
-      //       },
-      //       deepLevel: 0,
-      //       height: 239,
-      //       id: '1',
-      //       position: 'absolute',
-      //       rotate: -30,
-      //       width: 478,
-      //     },
-      //     '2': {
-      //       alignment: {},
-      //       background: {
-      //         properties: {
-      //           alpha: '100',
-      //           color: '#1bff9cff',
-      //           format: 'hex',
-      //         },
-      //         visible: true,
-      //       },
-      //       coordinates: {
-      //         x: 0,
-      //         y: 0,
-      //       },
-      //       deepLevel: 1,
-      //       height: 124,
-      //       id: '2',
-      //       position: 'relative',
-      //       rotate: -38.979430805141874,
-      //       width: 404,
-      //     },
-      //     '-1': {
-      //       alignment: {},
-      //       background: {
-      //         properties: {
-      //           alpha: '100',
-      //           color: '#1e262f',
-      //           format: 'hex',
-      //         },
-      //         visible: true,
-      //       },
-      //       coordinates: {
-      //         x: 0,
-      //         y: 0,
-      //       },
-      //       deepLevel: 0,
-      //       height: 0,
-      //       id: '-1',
-      //       position: 'absolute',
-      //       rotate: 0,
-      //       width: 0,
-      //     },
-      //     mfo87nr91758128327684: {
-      //       alignment: {},
-      //       background: {
-      //         properties: {
-      //           alpha: '100',
-      //           color: '#ffffff',
-      //           format: 'hex',
-      //         },
-      //         visible: true,
-      //       },
-      //       coordinates: {
-      //         x: 0,
-      //         y: 0,
-      //       },
-      //       deepLevel: 2,
-      //       height: 76,
-      //       id: 'mfo87nr91758128327684',
-      //       position: 'absolute',
-      //       rotate: 0,
-      //       width: 89,
-      //     },
-      //   },
-      //   staticData: {
-      //     '1': {
-      //       children: ['2'],
-      //       id: '1',
-      //       parentId: '-1',
-      //       position: 'absolute',
-      //       type: 'frame',
-      //     },
-      //     '2': {
-      //       children: ['mfo87nr91758128327684'],
-      //       id: '2',
-      //       parentId: '1',
-      //       position: 'relative',
-      //       type: 'frame',
-      //     },
-      //     '-1': {
-      //       children: ['1'],
-      //       id: '-1',
-      //       parentId: '-1',
-      //       position: 'absolute',
-      //       type: 'base',
-      //     },
-      //     mfo87nr91758128327684: {
-      //       children: [],
-      //       id: 'mfo87nr91758128327684',
-      //       parentId: '2',
-      //       position: 'absolute',
-      //       type: 'frame',
-      //     },
-      //   },
-      // },
+      elements: {
+        allData: {
+          '1': {
+            alignment: {},
+            background: {
+              properties: {
+                alpha: '100',
+                color: '#180000ff',
+                format: 'hex',
+              },
+              visible: true,
+            },
+            children: ['2'],
+            coordinates: {
+              x: 696,
+              y: 363,
+            },
+            deepLevel: 0,
+            height: 239,
+            id: '1',
+            parentId: '-1',
+            position: 'absolute',
+            rotate: -30,
+            type: 'frame',
+            width: 478,
+          },
+          '2': {
+            alignment: {},
+            background: {
+              properties: {
+                alpha: '100',
+                color: '#1bff9cff',
+                format: 'hex',
+              },
+              visible: true,
+            },
+            children: ['mfo87nr91758128327684'],
+            coordinates: {
+              x: 0,
+              y: 0,
+            },
+            deepLevel: 1,
+            height: 124,
+            id: '2',
+            parentId: '1',
+            position: 'relative',
+            rotate: -38.979430805141874,
+            type: 'frame',
+            width: 404,
+          },
+          '-1': {
+            alignment: {},
+            background: {
+              properties: {
+                alpha: '100',
+                color: '#1e262f',
+                format: 'hex',
+              },
+              visible: true,
+            },
+            children: ['1'],
+            coordinates: {
+              x: 0,
+              y: 0,
+            },
+            deepLevel: 0,
+            height: 0,
+            id: '-1',
+            parentId: '-1',
+            position: 'absolute',
+            rotate: 0,
+            type: 'base',
+            width: 0,
+          },
+          mfo87nr91758128327684: {
+            alignment: {},
+            background: {
+              properties: {
+                alpha: '100',
+                color: '#ffffff',
+                format: 'hex',
+              },
+              visible: true,
+            },
+            children: [],
+            coordinates: {
+              x: 0,
+              y: 0,
+            },
+            deepLevel: 2,
+            height: 76,
+            id: 'mfo87nr91758128327684',
+            parentId: '2',
+            position: 'absolute',
+            rotate: 0,
+            type: 'frame',
+            width: 89,
+          },
+        },
+        dynamicData: {
+          '1': {
+            alignment: {},
+            background: {
+              properties: {
+                alpha: '100',
+                color: '#180000ff',
+                format: 'hex',
+              },
+              visible: true,
+            },
+            coordinates: {
+              x: 696,
+              y: 363,
+            },
+            deepLevel: 0,
+            height: 239,
+            id: '1',
+            position: 'absolute',
+            rotate: -30,
+            width: 478,
+          },
+          '2': {
+            alignment: {},
+            background: {
+              properties: {
+                alpha: '100',
+                color: '#1bff9cff',
+                format: 'hex',
+              },
+              visible: true,
+            },
+            coordinates: {
+              x: 0,
+              y: 0,
+            },
+            deepLevel: 1,
+            height: 124,
+            id: '2',
+            position: 'relative',
+            rotate: -38.979430805141874,
+            width: 404,
+          },
+          '-1': {
+            alignment: {},
+            background: {
+              properties: {
+                alpha: '100',
+                color: '#1e262f',
+                format: 'hex',
+              },
+              visible: true,
+            },
+            coordinates: {
+              x: 0,
+              y: 0,
+            },
+            deepLevel: 0,
+            height: 0,
+            id: '-1',
+            position: 'absolute',
+            rotate: 0,
+            width: 0,
+          },
+          mfo87nr91758128327684: {
+            alignment: {},
+            background: {
+              properties: {
+                alpha: '100',
+                color: '#ffffff',
+                format: 'hex',
+              },
+              visible: true,
+            },
+            coordinates: {
+              x: 0,
+              y: 0,
+            },
+            deepLevel: 2,
+            height: 76,
+            id: 'mfo87nr91758128327684',
+            position: 'absolute',
+            rotate: 0,
+            width: 89,
+          },
+        },
+        staticData: {
+          '1': {
+            children: ['2'],
+            id: '1',
+            parentId: '-1',
+            position: 'absolute',
+            type: 'frame',
+          },
+          '2': {
+            children: ['mfo87nr91758128327684'],
+            id: '2',
+            parentId: '1',
+            position: 'relative',
+            type: 'frame',
+          },
+          '-1': {
+            children: ['1'],
+            id: '-1',
+            parentId: '-1',
+            position: 'absolute',
+            type: 'base',
+          },
+          mfo87nr91758128327684: {
+            children: [],
+            id: 'mfo87nr91758128327684',
+            parentId: '2',
+            position: 'absolute',
+            type: 'frame',
+          },
+        },
+      },
     },
   },
 };
@@ -398,13 +395,6 @@ const setAreaCoordinates = (
   },
 });
 
-const setElementCoordinates = (
-  state: TPageBuilderState,
-  {
-    payload: { coordinates, id },
-  }: TAction<TSetElementCoordinatesAction['payload']>,
-): TPageBuilderState => handleSetElementCoordinates(coordinates, id, state);
-
 const setElementSizes = (
   state: TPageBuilderState,
   {
@@ -494,8 +484,6 @@ const pageBuilder = (
       return selectElements(state, action);
     case SET_AREA_COORDINATES:
       return setAreaCoordinates(state, action);
-    case SET_ELEMENT_COORDINATES:
-      return setElementCoordinates(state, action);
     case SET_ELEMENT_SIZES:
       return setElementSizes(state, action);
     case SET_ELEMENTS_COORDINATES:

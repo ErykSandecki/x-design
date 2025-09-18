@@ -13,7 +13,6 @@ import {
   SELECT_ELEMENT,
   SELECT_ELEMENTS,
   SET_AREA_COORDINATES,
-  SET_ELEMENT_COORDINATES,
   SET_ELEMENT_SIZES,
   SET_ELEMENTS_COORDINATES,
   UNSELECT_ELEMENT,
@@ -40,7 +39,6 @@ import {
   TSelectElementAction,
   TSelectElementsAction,
   TSetAreaCoordinatesAction,
-  TSetElementCoordinatesAction,
   TSetElementCoordinatesActionPayload,
   TSetElementsCoordinatesAction,
   TSetElementsCoordinatesActionPayload,
@@ -134,14 +132,6 @@ export const setAreCoordinates = (
   type: SET_AREA_COORDINATES,
 });
 
-export const setElementCoordinates = (
-  coordinates: TSetElementCoordinatesActionPayload['coordinates'],
-  id: TSetElementCoordinatesActionPayload['id'],
-): TSetElementCoordinatesAction => ({
-  payload: { coordinates, id },
-  type: SET_ELEMENT_COORDINATES,
-});
-
 export const setElementSizes = (
   baseCoordinates: TSetElementSizesActionPayload['baseCoordinates'],
   height: TSetElementSizesActionPayload['height'],
@@ -156,8 +146,9 @@ export const setElementSizes = (
 export const setElementsCoordinates = (
   coordinates: TSetElementsCoordinatesActionPayload['coordinates'],
   mode: TSetElementsCoordinatesActionPayload['mode'],
+  resetAlignment?: TSetElementsCoordinatesActionPayload['resetAlignment'],
 ): TSetElementsCoordinatesAction => ({
-  payload: { coordinates, mode },
+  payload: { coordinates, mode, resetAlignment },
   type: SET_ELEMENTS_COORDINATES,
 });
 

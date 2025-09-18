@@ -8,8 +8,8 @@ import { areaAxisSelectorCreator } from 'store/pageBuilder/selectors';
 import { store } from 'store';
 
 // types
-import { TElement, TRectCoordinates } from 'types';
 import { TContext } from 'pages/PageBuilderPage/core/types';
+import { TElement, TRectCoordinates } from 'types';
 
 export const getAbsolutePosition = (
   id: TElement['id'],

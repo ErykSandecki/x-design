@@ -1,5 +1,5 @@
 import { isNumber } from 'lodash';
-import { FC, memo, ReactNode, useRef } from 'react';
+import { FC, memo, ReactNode, useEffect, useRef } from 'react';
 import { useSelector } from 'react-redux';
 
 // components

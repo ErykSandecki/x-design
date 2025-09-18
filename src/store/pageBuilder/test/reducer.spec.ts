@@ -25,7 +25,6 @@ import {
   unselectElement,
   selectElements,
   setAreCoordinates,
-  setElementCoordinates,
   setElementsCoordinates,
   updateEventsStatus,
   setElementSizes,
@@ -959,68 +958,6 @@ describe('PageBuilderReducer', () => {
         ['0']: {
           ...currentPage,
           areaCoordinates,
-        },
-      },
-    });
-  });
-
-  it('should handle SET_ELEMENT_COORDINATES', () => {
-    // mock
-    const coordinates = { x: 100, y: 100 };
-    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-
-    // before
-    const state = reducer(
-      setElementCoordinates(coordinates, elementAllDataMock.id),
-      {
-        ...pageBuilderStateMock[PAGE_BUILDER],
-        pages: {
-          ...pageBuilderStateMock[PAGE_BUILDER].pages,
-          ['0']: {
-            ...currentPage,
-            elements: {
-              allData: {
-                [elementAllDataMock.id]: elementAllDataMock,
-              },
-              dynamicData: {
-                [elementDynamicDataMock.id]: elementDynamicDataMock,
-              },
-              staticData: {
-                [elementStaticDataMock.id]: elementStaticDataMock,
-              },
-            },
-          },
-        },
-      },
-    );
-
-    // result
-    expect(state).toStrictEqual({
-      ...pageBuilderStateMock[PAGE_BUILDER],
-      pages: {
-        ...pageBuilderStateMock[PAGE_BUILDER].pages,
-        ['0']: {
-          ...currentPage,
-          elements: {
-            ...currentPage.elements,
-            allData: {
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
-                alignment: {},
-                coordinates,
-              },
-            },
-            dynamicData: {
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                alignment: {},
-                coordinates,
-              },
-            },
-            staticData: {
-              [elementStaticDataMock.id]: elementStaticDataMock,
-            },
-          },
         },
       },
     });

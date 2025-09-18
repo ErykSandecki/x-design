@@ -30,7 +30,6 @@ export const usePositionEvents = (
   const [y, setY] = useState('');
   const onBlurEvents = useBlurEvent(element, isMultiple, setX, setY, x, y);
   const onChangeEvents = useChangeEvent(
-    element,
     isMultiple,
     isMixedX,
     isMixedY,

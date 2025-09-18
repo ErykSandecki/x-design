@@ -44,8 +44,8 @@ const MultipleElementsArea: FC = () => {
     defer(() => {
       const coordinates = getCoordinatesData(
         isMultipleMoving,
-        selectedElements,
         itemsRefs,
+        selectedElements,
         zoomContentRef,
       );
 

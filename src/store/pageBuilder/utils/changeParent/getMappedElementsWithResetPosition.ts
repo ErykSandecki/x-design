@@ -25,7 +25,6 @@ export const getMappedElementsWithResetPosition = (
       const shouldResetCoordinates = element.position === 'relative';
 
       return {
-        ...currentPage.elements,
         allData: {
           ...elements.allData[id],
           coordinates: shouldResetCoordinates ? BASE_2D : element.coordinates,

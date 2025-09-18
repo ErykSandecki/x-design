@@ -1,13 +1,7 @@
 import { useDispatch } from 'react-redux';
 
 // store
-import {
-  setElementCoordinates,
-  setElementsCoordinates,
-} from 'store/pageBuilder/actions';
-
-// types
-import { TElement } from 'types';
+import { setElementsCoordinates } from 'store/pageBuilder/actions';
 
 // utils
 import { canChangeValue } from '../utils/canChangeValue';
@@ -18,7 +12,6 @@ export type TUseChangeEvent = {
 };
 
 export const useChangeEvent = (
-  element: TElement,
   isMultiple: boolean,
   isMixedX: boolean,
   isMixedY: boolean,
@@ -26,7 +19,6 @@ export const useChangeEvent = (
   setY: (value: string) => void,
 ): TUseChangeEvent => {
   const dispatch = useDispatch();
-  const { id } = element;
 
   const updateStore = (
     x: number,
@@ -37,7 +29,7 @@ export const useChangeEvent = (
       if (isMultiple) {
         dispatch(setElementsCoordinates({ x, y }, 'dynamic'));
       } else {
-        dispatch(setElementCoordinates({ x, y }, id));
+        dispatch(setElementsCoordinates({ x, y }, 'static'));
       }
     }
   };

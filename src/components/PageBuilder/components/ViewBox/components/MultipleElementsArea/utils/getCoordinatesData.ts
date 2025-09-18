@@ -22,8 +22,8 @@ import { getCornerBounds } from 'utils';
 
 export const getCoordinatesData = (
   isMultipleMoving: boolean,
+  itemsRefs: TContext['itemsRefs'],
   selectedElements: TSelectedElements,
-  sharedRefs: TContext['itemsRefs'],
   zoomContentRef: TContext['zoomContentRef'],
 ): TCoordinatesData => {
   if (!isMultipleMoving && size(selectedElements) > 1) {
@@ -34,7 +34,7 @@ export const getCoordinatesData = (
         const counterAngle = counterAngleSelectorCreator(parentId)(state);
         const element = elementAllDataSelectorCreator(id)(state);
         const rotate = element.rotate - counterAngle;
-        const cords = getAbsolutePosition(id, sharedRefs, zoomContentRef);
+        const cords = getAbsolutePosition(id, itemsRefs, zoomContentRef);
         const height = cords.y2 - cords.y1;
         const width = cords.x2 - cords.x1;
         const { x1, x2, y1, y2 } = getCornerBounds(
