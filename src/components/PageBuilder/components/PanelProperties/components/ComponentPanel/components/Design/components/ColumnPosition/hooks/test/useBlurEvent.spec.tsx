@@ -17,37 +17,7 @@ describe('useBlurEvent', () => {
   it(`should trigger blur x`, () => {
     // before
     const { result } = renderHook(() =>
-      useBlurEvent(
-        elementAllDataMock,
-        false,
-        mockCallBack,
-        mockCallBack,
-        '0',
-        '0',
-      ),
-    );
-
-    // action
-    result.current.onBlurX();
-
-    // result
-    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
-      coordinates: { x: 0, y: 0 },
-      id: '1',
-    });
-  });
-
-  it(`should trigger blur x multiple`, () => {
-    // before
-    const { result } = renderHook(() =>
-      useBlurEvent(
-        elementAllDataMock,
-        true,
-        mockCallBack,
-        mockCallBack,
-        '0',
-        '0',
-      ),
+      useBlurEvent(elementAllDataMock, mockCallBack, mockCallBack, '0', '0'),
     );
 
     // action
@@ -57,20 +27,31 @@ describe('useBlurEvent', () => {
     expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
       coordinates: { x: 0, y: 0 },
       mode: 'static',
+      resetAlignment: undefined,
+    });
+  });
+
+  it(`should trigger blur x multiple`, () => {
+    // before
+    const { result } = renderHook(() =>
+      useBlurEvent(elementAllDataMock, mockCallBack, mockCallBack, '0', '0'),
+    );
+
+    // action
+    result.current.onBlurX();
+
+    // result
+    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
+      coordinates: { x: 0, y: 0 },
+      mode: 'static',
+      resetAlignment: undefined,
     });
   });
 
   it(`should reset value x`, () => {
     // before
     const { result } = renderHook(() =>
-      useBlurEvent(
-        elementAllDataMock,
-        true,
-        mockCallBack,
-        mockCallBack,
-        '',
-        '0',
-      ),
+      useBlurEvent(elementAllDataMock, mockCallBack, mockCallBack, '', '0'),
     );
 
     // action
@@ -83,37 +64,7 @@ describe('useBlurEvent', () => {
   it(`should trigger blur y`, () => {
     // before
     const { result } = renderHook(() =>
-      useBlurEvent(
-        elementAllDataMock,
-        false,
-        mockCallBack,
-        mockCallBack,
-        '0',
-        '0',
-      ),
-    );
-
-    // action
-    result.current.onBlurY();
-
-    // result
-    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
-      coordinates: { x: 0, y: 0 },
-      id: '1',
-    });
-  });
-
-  it(`should trigger blur y multiple`, () => {
-    // before
-    const { result } = renderHook(() =>
-      useBlurEvent(
-        elementAllDataMock,
-        true,
-        mockCallBack,
-        mockCallBack,
-        '0',
-        '0',
-      ),
+      useBlurEvent(elementAllDataMock, mockCallBack, mockCallBack, '0', '0'),
     );
 
     // action
@@ -123,20 +74,31 @@ describe('useBlurEvent', () => {
     expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
       coordinates: { x: 0, y: 0 },
       mode: 'static',
+      resetAlignment: undefined,
+    });
+  });
+
+  it(`should trigger blur y multiple`, () => {
+    // before
+    const { result } = renderHook(() =>
+      useBlurEvent(elementAllDataMock, mockCallBack, mockCallBack, '0', '0'),
+    );
+
+    // action
+    result.current.onBlurY();
+
+    // result
+    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
+      coordinates: { x: 0, y: 0 },
+      mode: 'static',
+      resetAlignment: undefined,
     });
   });
 
   it(`should reset value y`, () => {
     // before
     const { result } = renderHook(() =>
-      useBlurEvent(
-        elementAllDataMock,
-        true,
-        mockCallBack,
-        mockCallBack,
-        '0',
-        '',
-      ),
+      useBlurEvent(elementAllDataMock, mockCallBack, mockCallBack, '0', ''),
     );
 
     // action

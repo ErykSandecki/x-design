@@ -20,6 +20,7 @@ exports[`ViewBox snapshots should render ViewBox 1`] = `
     <div
       class="css-fw1hyy ZoomBox__zoom-content ZoomBox__zoom-content--light"
       data-test-box=""
+      id="zoomContentId"
       style="transform: translate(0px, 0px) scale(1);"
     >
       <div

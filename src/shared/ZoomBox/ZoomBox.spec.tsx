@@ -13,6 +13,7 @@ import { MouseMode } from 'types/enums/mouseMode';
 
 // utils
 import { getByE2EAttribute } from 'test';
+import { RefObject } from 'react';
 
 const mockCallBack = jest.fn();
 const ref = { current: null };
@@ -35,6 +36,7 @@ describe('ZoomBox snapshots', () => {
         onMouseUp={mockCallBack}
         setCoordinates={noop}
         zoomBoxRef={ref}
+        zoomContentRef={{ current: null } as RefObject<HTMLDivElement>}
       >
         children
       </ZoomBox>,
@@ -61,6 +63,7 @@ describe('ZoomBox snapshots', () => {
         onMouseUp={mockCallBack}
         setCoordinates={noop}
         zoomBoxRef={ref}
+        zoomContentRef={{ current: null } as RefObject<HTMLDivElement>}
       >
         children
       </ZoomBox>,
@@ -95,6 +98,7 @@ describe('ZoomBox snapshots', () => {
         onMouseUp={mockCallBack}
         setCoordinates={noop}
         zoomBoxRef={ref}
+        zoomContentRef={{ current: null } as RefObject<HTMLDivElement>}
       >
         children
       </ZoomBox>,

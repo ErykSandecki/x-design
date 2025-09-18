@@ -1,10 +1,7 @@
 import { RefObject } from 'react';
 
 // mocks
-import {
-  pageBuilderStateMock,
-  selectedElementMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { BASE_2D } from 'shared';
@@ -18,8 +15,8 @@ import { T2DCoordinates } from 'types';
 // utils
 import { updateElementPosition } from '../updateElementPosition';
 
+const cursorPosition = { current: BASE_2D } as RefObject<T2DCoordinates>;
 const mockCallBack = jest.fn();
-const ref = { current: BASE_2D } as RefObject<T2DCoordinates>;
 const stateMock = {
   ...pageBuilderStateMock,
 };
@@ -36,11 +33,9 @@ describe('updateElementPosition', () => {
   it(`should update positions`, () => {
     // before
     updateElementPosition(
-      ref,
+      cursorPosition,
       mockCallBack,
       { clientX: 0, clientY: 0 } as MouseEvent,
-      selectedElementMock.id,
-      false,
       '-1',
     );
 
@@ -54,11 +49,9 @@ describe('updateElementPosition', () => {
   it(`should set elements coordinates`, () => {
     // before
     updateElementPosition(
-      ref,
+      cursorPosition,
       mockCallBack,
       { clientX: 0, clientY: 0 } as MouseEvent,
-      selectedElementMock.id,
-      true,
       '-1',
     );
 

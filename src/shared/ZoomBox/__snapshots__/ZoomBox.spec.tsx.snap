@@ -20,6 +20,7 @@ exports[`ZoomBox snapshots should render Zoombox 1`] = `
     <div
       class="css-fw1hyy ZoomBox__zoom-content ZoomBox__zoom-content--light"
       data-test-box=""
+      id="zoomContentId"
       style="transform: translate(0px, 0px) scale(1);"
     >
       children
@@ -48,6 +49,7 @@ exports[`ZoomBox snapshots should render when background is hidden 1`] = `
     <div
       class="css-fw1hyy ZoomBox__zoom-content ZoomBox__zoom-content--light"
       data-test-box=""
+      id="zoomContentId"
       style="transform: translate(0px, 0px) scale(1);"
     >
       children
@@ -76,6 +78,7 @@ exports[`ZoomBox snapshots should render when mouse mode is move & cursor state 
     <div
       class="css-fw1hyy ZoomBox__zoom-content ZoomBox__zoom-content--light"
       data-test-box=""
+      id="zoomContentId"
       style="transform: translate(0px, 0px) scale(1);"
     >
       children

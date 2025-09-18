@@ -23,9 +23,12 @@ export const handleChangeAlignment = (
     const coordinates = getDefaultCoordinates(targetAlignment, id, parentId);
 
     clonedElements.allData[id].alignment = targetAlignment;
+    clonedElements.allData[id].position = 'absolute';
     clonedElements.allData[id].coordinates = coordinates;
     clonedElements.dynamicData[id].alignment = targetAlignment;
+    clonedElements.dynamicData[id].position = 'absolute';
     clonedElements.dynamicData[id].coordinates = coordinates;
+    clonedElements.staticData[id].position = 'absolute';
   });
 
   return {

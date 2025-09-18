@@ -23,7 +23,7 @@ const currentPage =
     pageBuilderStateMock[PAGE_BUILDER].currentPage
   ];
 
-const sharedRefs = {
+const itemsRefs = {
   [selectedElementMock.id]: element,
   ['2']: element,
 };
@@ -67,8 +67,8 @@ describe('calculateBoxSize', () => {
     // before
     const result = getCoordinatesData(
       false,
+      itemsRefs,
       [selectedElementMock, { ...selectedElementMock, id: '2' }],
-      sharedRefs,
       { current: zoomContent },
     );
 
@@ -84,7 +84,7 @@ describe('calculateBoxSize', () => {
 
   it(`should return default data`, () => {
     // before
-    const result = getCoordinatesData(true, [selectedElementMock], sharedRefs, {
+    const result = getCoordinatesData(true, itemsRefs, [selectedElementMock], {
       current: zoomContent,
     });
 

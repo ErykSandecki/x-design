@@ -170,6 +170,22 @@ describe('ColumnAlignment snapshots', () => {
 describe('ColumnAlignment behaviors', () => {
   it('should change alignments', () => {
     // mock
+    const el1 = document.createElement('div');
+    const el2 = document.createElement('div');
+    const parentId = '1';
+    const childrenId = '2';
+
+    // before
+    el1.setAttribute('id', parentId);
+    el1.style.height = '100px';
+    el1.style.width = '100px';
+    el2.setAttribute('id', childrenId);
+    el2.style.height = '100px';
+    el2.style.width = '100px';
+    document.body.appendChild(el1);
+    document.body.appendChild(el2);
+
+    // mock
     const store = configureStore({
       ...stateMock,
       [PAGE_BUILDER]: {
@@ -232,7 +248,7 @@ describe('ColumnAlignment behaviors', () => {
               },
             },
             selectedElements: [
-              { ...selectedElementMock, id: '2', parentId: '1' },
+              { ...selectedElementMock, id: childrenId, parentId },
             ],
           },
         },

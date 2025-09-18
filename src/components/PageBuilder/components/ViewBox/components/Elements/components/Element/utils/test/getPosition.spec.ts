@@ -14,6 +14,7 @@ describe('getPosition', () => {
       left: '0px',
       top: '0px',
       transform: 'rotate(0deg) translate(0, 0)',
+      transformOrigin: 'center center',
     });
   });
 
@@ -31,6 +32,7 @@ describe('getPosition', () => {
       left: '0',
       top: '0px',
       transform: 'rotate(0deg) translate(0, 0)',
+      transformOrigin: 'center center',
     });
   });
 
@@ -48,6 +50,7 @@ describe('getPosition', () => {
       left: '50%',
       top: '0px',
       transform: 'rotate(0deg) translate(-50%, 0)',
+      transformOrigin: '0 center',
     });
   });
 
@@ -65,6 +68,7 @@ describe('getPosition', () => {
       right: '0',
       top: '0px',
       transform: 'rotate(0deg) translate(0, 0)',
+      transformOrigin: 'center center',
     });
   });
 
@@ -77,6 +81,7 @@ describe('getPosition', () => {
       left: '0px',
       top: '0',
       transform: 'rotate(0deg) translate(0, 0)',
+      transformOrigin: 'center center',
     });
   });
 
@@ -89,6 +94,7 @@ describe('getPosition', () => {
       left: '0px',
       top: '50%',
       transform: 'rotate(0deg) translate(0, -50%)',
+      transformOrigin: 'center 0',
     });
   });
 
@@ -101,6 +107,7 @@ describe('getPosition', () => {
       bottom: '0',
       left: '0px',
       transform: 'rotate(0deg) translate(0, 0)',
+      transformOrigin: 'center center',
     });
   });
 });

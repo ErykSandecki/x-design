@@ -13,16 +13,16 @@ import { TElement, TRectCoordinates } from 'types';
 
 export const getAbsolutePosition = (
   id: TElement['id'],
-  sharedRefs: TContext['itemsRefs'],
+  itemsRefs: TContext['itemsRefs'],
   zoomContentRef: RefObject<HTMLDivElement | null>,
 ): TRectCoordinates => {
-  if (sharedRefs[id]) {
-    const height = parseInt(getComputedStyle(sharedRefs[id]).height);
-    const width = parseInt(getComputedStyle(sharedRefs[id]).width);
+  if (itemsRefs[id]) {
+    const height = parseInt(getComputedStyle(itemsRefs[id]).height);
+    const width = parseInt(getComputedStyle(itemsRefs[id]).width);
     const z = areaAxisSelectorCreator('z')(store.getState());
 
     const diagramRect = zoomContentRef.current?.getBoundingClientRect();
-    const blockRect = sharedRefs[id]?.getBoundingClientRect();
+    const blockRect = itemsRefs[id]?.getBoundingClientRect();
 
     const x = (blockRect?.left - diagramRect?.left) / z;
     const y = (blockRect?.top - diagramRect?.top) / z;

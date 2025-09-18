@@ -6,7 +6,7 @@ exports[`Element snapshots should render Element 1`] = `
     class="css-wcnq0t className Element Element--light"
     data-test-box=""
     id="1"
-    style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); height: 100px; position: absolute; width: 100px;"
+    style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; height: 100px; position: absolute; width: 100px;"
   >
     <div
       class="css-wcnq0t className Element__wrapper Element__wrapper--light"
@@ -24,7 +24,7 @@ exports[`Element snapshots should render Element when is selected & is multiple 
     class="css-wcnq0t className Element Element--light Element--moving Element--moving--light"
     data-test-box=""
     id="1"
-    style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); height: 100px; position: absolute; width: 100px;"
+    style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; height: 100px; position: absolute; width: 100px;"
   >
     <div
       class="css-wcnq0t className Element__wrapper Element__wrapper--light"
@@ -153,7 +153,7 @@ exports[`Element snapshots should render Element when is selected 1`] = `
     class="css-wcnq0t className Element Element--light"
     data-test-box=""
     id="1"
-    style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); height: 100px; position: absolute; width: 100px;"
+    style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; height: 100px; position: absolute; width: 100px;"
   >
     <div
       class="css-wcnq0t className Element__wrapper Element__wrapper--light"
@@ -282,7 +282,7 @@ exports[`Element snapshots should render Element when width & height is auto 1`]
     class="css-wcnq0t className Element Element--light"
     data-test-box=""
     id="1"
-    style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); height: auto; position: absolute; width: auto;"
+    style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; height: auto; position: absolute; width: auto;"
   >
     <div
       class="css-wcnq0t className Element__wrapper Element__wrapper--light"

@@ -131,6 +131,28 @@ describe('PageBuilderReducer', () => {
     };
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
+    // mock
+    const el1 = document.createElement('div');
+    const el2 = document.createElement('div');
+    const el3 = document.createElement('div');
+    const parentId = '1';
+    const childrenId1 = '2';
+    const childrenId2 = '3';
+
+    // before
+    el1.setAttribute('id', parentId);
+    el1.style.height = '100px';
+    el1.style.width = '100px';
+    el2.setAttribute('id', childrenId1);
+    el2.style.height = '100px';
+    el2.style.width = '100px';
+    el3.setAttribute('id', childrenId2);
+    el3.style.height = '100px';
+    el3.style.width = '100px';
+    document.body.appendChild(el1);
+    document.body.appendChild(el2);
+    document.body.appendChild(el3);
+
     // before
     const state = reducer(changeAlignment(alignment), {
       ...pageBuilderStateMock[PAGE_BUILDER],
