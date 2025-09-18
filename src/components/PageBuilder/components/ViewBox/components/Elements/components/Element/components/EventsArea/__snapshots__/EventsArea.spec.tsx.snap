@@ -54,10 +54,6 @@ exports[`EventsArea snapshots should render EventsArea 1`] = `
         data-test-anchor-resize="east"
       />
       <div
-        class="TransformArea__anchor-resize TransformArea__anchor-resize--light TransformArea__anchor-resize--none TransformArea__anchor-resize--none--light"
-        data-test-anchor-resize="none"
-      />
-      <div
         class="TransformArea__anchor-resize TransformArea__anchor-resize--light TransformArea__anchor-resize--north TransformArea__anchor-resize--north--light"
         data-test-anchor-resize="north"
       />
@@ -84,10 +80,6 @@ exports[`EventsArea snapshots should render EventsArea 1`] = `
       <div
         class="TransformArea__anchor-resize TransformArea__anchor-resize--light TransformArea__anchor-resize--west TransformArea__anchor-resize--west--light"
         data-test-anchor-resize="west"
-      />
-      <div
-        class="TransformArea__anchor-rotate TransformArea__anchor-rotate--light TransformArea__anchor-rotate--none TransformArea__anchor-rotate--none--light"
-        data-test-anchor-rotate="none"
       />
       <div
         class="TransformArea__anchor-rotate TransformArea__anchor-rotate--light TransformArea__anchor-rotate--northEast TransformArea__anchor-rotate--northEast--light"
