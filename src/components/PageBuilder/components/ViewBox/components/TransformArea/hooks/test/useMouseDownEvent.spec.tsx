@@ -46,6 +46,8 @@ describe('useMouseMoveEvent', () => {
           cursorPosition,
           elementRef,
           MouseMode.default,
+          mockCallBack,
+          mockCallBack,
         ),
       {
         wrapper: getProviderWrapper(store),
@@ -59,7 +61,7 @@ describe('useMouseMoveEvent', () => {
     } as MouseEvent);
 
     // result
-    expect(mockCallBack.mock.calls.length).toBe(1);
+    expect(mockCallBack.mock.calls.length).toBe(2);
   });
 
   it(`should trigger event rotate`, () => {
@@ -74,6 +76,8 @@ describe('useMouseMoveEvent', () => {
           cursorPosition,
           elementRef,
           MouseMode.default,
+          mockCallBack,
+          mockCallBack,
         ),
       {
         wrapper: getProviderWrapper(store),
@@ -87,7 +91,7 @@ describe('useMouseMoveEvent', () => {
     } as MouseEvent);
 
     // result
-    expect(mockCallBack.mock.calls.length).toBe(1);
+    expect(mockCallBack.mock.calls.length).toBe(2);
   });
 
   it(`should not trigger event`, () => {
@@ -102,6 +106,8 @@ describe('useMouseMoveEvent', () => {
           cursorPosition,
           elementRef,
           MouseMode.comment,
+          mockCallBack,
+          mockCallBack,
         ),
       {
         wrapper: getProviderWrapper(store),
@@ -130,6 +136,8 @@ describe('useMouseMoveEvent', () => {
           cursorPosition,
           elementRef,
           MouseMode.comment,
+          mockCallBack,
+          mockCallBack,
         ),
       {
         wrapper: getProviderWrapper(store),

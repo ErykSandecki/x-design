@@ -1,6 +1,9 @@
 import { RefObject } from 'react';
 import { renderHook } from '@testing-library/react';
 
+// core
+import { RefsProvider } from 'pages/PageBuilderPage/core/RefsProvider';
+
 // hooks
 import { useTransformAreaEvents } from '../useTransformAreaEvents';
 
@@ -30,7 +33,7 @@ const stateMock = {
 };
 
 describe('useTransformAreaEvents', () => {
-  it(`should return view moveable events and data`, () => {
+  it(`should return events`, () => {
     // mock
     const store = configureStore(stateMock);
 
@@ -38,6 +41,7 @@ describe('useTransformAreaEvents', () => {
     const { result } = renderHook(
       () =>
         useTransformAreaEvents(
+          0,
           elementRef,
           100,
           selectedElementMock.id,
@@ -48,7 +52,9 @@ describe('useTransformAreaEvents', () => {
           100,
         ),
       {
-        wrapper: getProviderWrapper(store),
+        wrapper: (children) => (
+          <RefsProvider>{getProviderWrapper(store)(children)}</RefsProvider>
+        ),
       },
     );
 
@@ -56,6 +62,10 @@ describe('useTransformAreaEvents', () => {
     expect(result.current).toStrictEqual({
       onMouseDownAnchorResize: expect.any(Function),
       onMouseDownAnchorRotate: expect.any(Function),
+      onMouseEnterAnchorResize: expect.any(Function),
+      onMouseEnterAnchorRotate: expect.any(Function),
+      onMouseLeaveAnchorResize: expect.any(Function),
+      onMouseLeaveAnchorRotate: expect.any(Function),
     });
   });
 });

@@ -7,6 +7,7 @@ import { updateEventsStatus } from 'store/pageBuilder/actions';
 // types
 import { AnchorResize, AnchorRotate } from 'store/pageBuilder/enums';
 import { MouseButton, MouseMode, T2DCoordinates } from 'types';
+import { TUseChangeCursor } from 'hooks/useChangeCursor/useChangeCursor';
 
 // utils
 import { handleInitResizeElement } from '../utils/handleInitResizeElement';
@@ -22,6 +23,8 @@ export const useMouseDownEvent = (
   cursorPosition: RefObject<T2DCoordinates>,
   elementRef: RefObject<HTMLDivElement>,
   mouseMode: MouseMode,
+  onMouseDownCursorResize: TUseChangeCursor['onMouseDown'],
+  onMouseDownCursorRotate: TUseChangeCursor['onMouseDown'],
 ): TUseMouseDownEvent => {
   const dispatch = useDispatch();
 
@@ -35,6 +38,7 @@ export const useMouseDownEvent = (
     if (canTriggerEvent(event)) {
       event.stopPropagation();
 
+      onMouseDownCursorResize();
       handleInitResizeElement(cursorPosition, event);
       dispatch(
         updateEventsStatus({ isResizing: true, selectedAnchorResize: anchor }),
@@ -49,6 +53,7 @@ export const useMouseDownEvent = (
     if (canTriggerEvent(event)) {
       event.stopPropagation();
 
+      onMouseDownCursorRotate();
       handleInitRotateElement(cursorBaseAngle, elementRef, event);
       dispatch(
         updateEventsStatus({ isRotating: true, selectedAnchorRotate: anchor }),

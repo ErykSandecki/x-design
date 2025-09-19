@@ -57,6 +57,7 @@ const EventsArea: FC<TOutlineProps> = ({
       <Box style={{ height, width }} />
       <Corners rectCoordinates={rectCoordinates} />
       <TransformArea
+        counterAngle={counterAngle}
         elementRef={elementRef}
         height={height}
         id={id}

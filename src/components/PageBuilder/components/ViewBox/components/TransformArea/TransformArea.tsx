@@ -23,6 +23,7 @@ import styles from './transform-area.scss';
 import { enumToArray } from 'utils';
 
 export type TTransformAreaProps = {
+  counterAngle: number;
   elementRef: RefObject<HTMLDivElement>;
   height: TElement['height'];
   id: TElement['id'];
@@ -34,6 +35,7 @@ export type TTransformAreaProps = {
 };
 
 const TransformArea: FC<TTransformAreaProps> = ({
+  counterAngle,
   elementRef,
   height,
   id,
@@ -43,18 +45,26 @@ const TransformArea: FC<TTransformAreaProps> = ({
   x,
   y,
 }) => {
-  const { onMouseDownAnchorResize, onMouseDownAnchorRotate } =
-    useTransformAreaEvents(
-      elementRef,
-      height,
-      id,
-      moseMode,
-      rotate,
-      width,
-      x,
-      y,
-    );
+  const cursorAngle = rotate - counterAngle;
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
+  const {
+    onMouseDownAnchorResize,
+    onMouseDownAnchorRotate,
+    onMouseEnterAnchorResize,
+    onMouseEnterAnchorRotate,
+    onMouseLeaveAnchorResize,
+    onMouseLeaveAnchorRotate,
+  } = useTransformAreaEvents(
+    cursorAngle,
+    elementRef,
+    height,
+    id,
+    moseMode,
+    rotate,
+    width,
+    x,
+    y,
+  );
 
   return (
     <div
@@ -80,6 +90,10 @@ const TransformArea: FC<TTransformAreaProps> = ({
               onMouseDown={(event) =>
                 onMouseDownAnchorResize(anchor as AnchorResize, event)
               }
+              onMouseEnter={() =>
+                onMouseEnterAnchorResize(anchor as AnchorResize)
+              }
+              onMouseLeave={onMouseLeaveAnchorResize}
             />
           </E2EDataAttribute>
         ))}
@@ -103,6 +117,10 @@ const TransformArea: FC<TTransformAreaProps> = ({
               onMouseDown={(event) =>
                 onMouseDownAnchorRotate(anchor as AnchorRotate, event)
               }
+              onMouseEnter={() =>
+                onMouseEnterAnchorRotate(anchor as AnchorRotate)
+              }
+              onMouseLeave={onMouseLeaveAnchorRotate}
             />
           </E2EDataAttribute>
         ))}

@@ -1,4 +1,4 @@
-import { FC, useRef } from 'react';
+import { FC } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 // components
@@ -50,8 +50,7 @@ const ViewBox: FC<TViewBoxProps> = ({
   const background = useSelector(pageBackgroundSelectorCreator('-1'));
   const data = background.properties as TColor;
   const dispatch = useDispatch();
-  const zoomBoxRef = useRef<HTMLDivElement>(null);
-  const { zoomContentRef } = useRefs();
+  const { zoomBoxRef, zoomContentRef } = useRefs();
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { elementArea, selectableArea, ...events } = useViewBoxEvents(
     coordinates,

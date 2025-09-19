@@ -1,7 +1,7 @@
 @import '../../../../../../styles/z-indexes';
 
 $--xd-size: 5px;
-$--xd-offset-rotation: 10px;
+$--xd-offset-rotation: 7.5px;
 
 .TransformArea {
   left: 0;
@@ -14,7 +14,6 @@ $--xd-offset-rotation: 10px;
     position: absolute;
 
     &--east {
-      cursor: ew-resize;
       height: calc(100% - #{$--xd-size});
       right: calc(-#{$--xd-size} / 2);
       top: calc(#{$--xd-size} / 2);
@@ -26,7 +25,6 @@ $--xd-offset-rotation: 10px;
     }
 
     &--north {
-      cursor: ns-resize;
       height: $--xd-size;
       left: calc(#{$--xd-size} / 2);
       top: calc(-#{$--xd-size} / 2);
@@ -34,7 +32,6 @@ $--xd-offset-rotation: 10px;
     }
 
     &--north-east {
-      cursor: nesw-resize;
       height: $--xd-size;
       right: calc(-#{$--xd-size} / 2);
       top: calc(-#{$--xd-size} / 2);
@@ -42,7 +39,6 @@ $--xd-offset-rotation: 10px;
     }
 
     &--north-west {
-      cursor: nwse-resize;
       height: $--xd-size;
       left: calc(-#{$--xd-size} / 2);
       top: calc(-#{$--xd-size} / 2);
@@ -52,7 +48,6 @@ $--xd-offset-rotation: 10px;
 
     &--south {
       bottom: calc(-#{$--xd-size} / 2);
-      cursor: ns-resize;
       height: $--xd-size;
       left: calc(#{$--xd-size} / 2);
       width: calc(100% - #{$--xd-size});
@@ -60,7 +55,6 @@ $--xd-offset-rotation: 10px;
 
     &--south-east {
       bottom: calc(-#{$--xd-size} / 2);
-      cursor: nwse-resize;
       height: $--xd-size;
       right: calc(-#{$--xd-size} / 2);
       width: $--xd-size;
@@ -68,14 +62,12 @@ $--xd-offset-rotation: 10px;
 
     &--south-west {
       bottom: calc(-#{$--xd-size} / 2);
-      cursor: nesw-resize;
       height: $--xd-size;
       left: calc(-#{$--xd-size} / 2);
       width: $--xd-size;
     }
 
     &--west {
-      cursor: ew-resize;
       height: calc(100% - #{$--xd-size});
       left: calc(-#{$--xd-size} / 2);
       top: calc(#{$--xd-size} / 2);
@@ -84,7 +76,6 @@ $--xd-offset-rotation: 10px;
   }
 
   &__anchor-rotate {
-    cursor: grab;
     height: $--xd-size;
     pointer-events: all;
     position: absolute;

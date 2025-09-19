@@ -1,6 +1,15 @@
 import { RefObject, useRef } from 'react';
 
+// assets
+import IconDefault from 'assets/icons/cursors/default.png';
+import IconResize from 'assets/icons/cursors/resize.png';
+import IconRotate from 'assets/icons/cursors/rotate.png';
+
+// core
+import { useRefs } from 'pages/PageBuilderPage/core/RefsProvider';
+
 // hooks
+import { useChangeCursor } from 'hooks';
 import { useMouseMoveEvent } from './useMouseMoveEvent';
 import { useMouseUpEvent } from './useMouseUpEvent';
 
@@ -11,10 +20,15 @@ import { BASE_2D } from 'shared';
 import { MouseMode } from 'types/enums/mouseMode';
 import { TElement } from 'types';
 import { TUseMouseDownEvent, useMouseDownEvent } from './useMouseDownEvent';
+import { TUseMouseEnterEvent, useMouseEnterEvent } from './useMouseEnterEvent';
+import { TUseMouseLeaveEvent, useMouseLeaveEvent } from './useMouseLeaveEvent';
 
-export type TUseTransformAreaEvents = TUseMouseDownEvent;
+export type TUseTransformAreaEvents = TUseMouseDownEvent &
+  TUseMouseEnterEvent &
+  TUseMouseLeaveEvent;
 
 export const useTransformAreaEvents = (
+  cursorAngle: number,
   elementRef: RefObject<HTMLDivElement>,
   height: TElement['height'],
   id: TElement['id'],
@@ -24,13 +38,41 @@ export const useTransformAreaEvents = (
   x: TElement['coordinates']['x'],
   y: TElement['coordinates']['y'],
 ): TUseTransformAreaEvents => {
+  const { zoomBoxRef } = useRefs();
   const cursorBaseAngle = useRef(0);
   const cursorPosition = useRef(BASE_2D);
-  const events = useMouseDownEvent(
+  const cursorResize = useChangeCursor(
+    zoomBoxRef,
+    cursorAngle,
+    IconResize,
+    IconDefault,
+  );
+  const cursorRotate = useChangeCursor(
+    zoomBoxRef,
+    cursorAngle,
+    IconRotate,
+    IconDefault,
+  );
+  const eventsMouseDown = useMouseDownEvent(
     cursorBaseAngle,
     cursorPosition,
     elementRef,
     mouseMode,
+    cursorResize.onMouseDown,
+    cursorRotate.onMouseDown,
+  );
+  const eventsMouseEnter = useMouseEnterEvent(
+    cursorAngle,
+    cursorResize.isPressing,
+    cursorRotate.isPressing,
+    cursorResize.onMouseEnter,
+    cursorRotate.onMouseEnter,
+  );
+  const eventsMouseLeave = useMouseLeaveEvent(
+    cursorResize.isPressing,
+    cursorRotate.isPressing,
+    cursorResize.onMouseLeave,
+    cursorRotate.onMouseLeave,
   );
 
   useMouseMoveEvent(
@@ -46,5 +88,9 @@ export const useTransformAreaEvents = (
   );
   useMouseUpEvent();
 
-  return events;
+  return {
+    ...eventsMouseDown,
+    ...eventsMouseEnter,
+    ...eventsMouseLeave,
+  };
 };

@@ -1,3 +1,4 @@
+export * from './useChangeCursor/useChangeCursor';
 export * from './useDispatchMany/useDispatchMany';
 export * from './useForceRerender/useForceRerender';
 export * from './useKeyboardHandler/useKeyboardHandler';
