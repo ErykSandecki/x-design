@@ -8,21 +8,18 @@ import { rotateElement } from 'store/pageBuilder/actions';
 import { TElement } from 'types';
 
 // utils
-import { getDeltaAngle } from './getDeltaAngle';
 import { getElementAngle } from './getElementAngle';
 
 export const handleRotateElement = (
-  cursorBaseAngleRef: RefObject<number>,
+  cursorOffsetAngle: RefObject<number>,
   dispatch: Dispatch,
   elementRef: RefObject<HTMLDivElement>,
   event: MouseEvent,
   id: TElement['id'],
-  rotate: TElement['rotate'],
 ): void => {
-  const cursorBaseAngle = cursorBaseAngleRef.current;
   const cursorCurrentAngle = getElementAngle(elementRef, event);
-  const totalRotation =
-    rotate + getDeltaAngle(cursorBaseAngle, cursorCurrentAngle);
+  const angle = cursorCurrentAngle + cursorOffsetAngle.current;
+  const rotate = ((((angle + 180) % 360) + 360) % 360) - 180;
 
-  dispatch(rotateElement(id, totalRotation));
+  dispatch(rotateElement(id, rotate));
 };

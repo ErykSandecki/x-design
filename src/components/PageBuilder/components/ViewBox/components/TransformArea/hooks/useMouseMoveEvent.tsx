@@ -16,11 +16,11 @@ export type TUseMouseMoveEvent = void;
 
 export const useMouseMoveEvent = (
   cursorBaseAngle: RefObject<number>,
+  cursorOffsetAngle: RefObject<number>,
   cursorPosition: RefObject<T2DCoordinates>,
   elementRef: RefObject<HTMLDivElement>,
   height: TElement['height'],
   id: TElement['id'],
-  rotate: TElement['rotate'],
   width: TElement['width'],
   x: TElement['coordinates']['x'],
   y: TElement['coordinates']['y'],
@@ -51,14 +51,7 @@ export const useMouseMoveEvent = (
   const handleMouseMoveAnchorRotate = (event: MouseEvent): void => {
     event.stopPropagation();
 
-    handleRotateElement(
-      cursorBaseAngle,
-      dispatch,
-      elementRef,
-      event,
-      id,
-      rotate,
-    );
+    handleRotateElement(cursorOffsetAngle, dispatch, elementRef, event, id);
   };
 
   useEffect(() => {

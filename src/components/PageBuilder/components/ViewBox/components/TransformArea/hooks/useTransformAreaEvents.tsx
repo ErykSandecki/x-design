@@ -40,6 +40,7 @@ export const useTransformAreaEvents = (
 ): TUseTransformAreaEvents => {
   const { zoomBoxRef } = useRefs();
   const cursorBaseAngle = useRef(0);
+  const cursorOffsetAngle = useRef(0);
   const cursorPosition = useRef(BASE_2D);
   const cursorResize = useChangeCursor(
     zoomBoxRef,
@@ -55,11 +56,13 @@ export const useTransformAreaEvents = (
   );
   const eventsMouseDown = useMouseDownEvent(
     cursorBaseAngle,
+    cursorOffsetAngle,
     cursorPosition,
     elementRef,
     mouseMode,
     cursorResize.onMouseDown,
     cursorRotate.onMouseDown,
+    rotate,
   );
   const eventsMouseEnter = useMouseEnterEvent(
     cursorAngle,
@@ -77,11 +80,11 @@ export const useTransformAreaEvents = (
 
   useMouseMoveEvent(
     cursorBaseAngle,
+    cursorOffsetAngle,
     cursorPosition,
     elementRef,
     height,
     id,
-    rotate,
     width,
     x,
     y,

@@ -3,7 +3,7 @@ import { RefObject } from 'react';
 // utils
 import { handleRotateElement } from '../handleRotateElement';
 
-const cursorBaseAngle = { current: 0 } as RefObject<number>;
+const cursorOffsetAngle = { current: 0 } as RefObject<number>;
 const elementRef = {
   current: {
     getBoundingClientRect: () => ({ height: 100, left: 0, top: 0, width: 100 }),
@@ -15,7 +15,7 @@ describe('handleRotateElement', () => {
   it(`should rotate element`, () => {
     // before
     handleRotateElement(
-      cursorBaseAngle,
+      cursorOffsetAngle,
       mockCallBack,
       elementRef,
       {
@@ -23,7 +23,6 @@ describe('handleRotateElement', () => {
         clientY: 100,
       } as MouseEvent,
       '1',
-      0,
     );
 
     // result

@@ -22,6 +22,7 @@ import { MouseMode } from 'types/enums/mouseMode';
 import { getProviderWrapper } from 'test';
 
 const cursorBaseAngle = { current: 0 } as RefObject<number>;
+const cursorOffsetAngle = { current: 0 } as RefObject<number>;
 const cursorPosition = { current: BASE_2D } as RefObject<T2DCoordinates>;
 const elementRef = {
   current: {
@@ -43,11 +44,13 @@ describe('useMouseMoveEvent', () => {
       () =>
         useMouseDownEvent(
           cursorBaseAngle,
+          cursorOffsetAngle,
           cursorPosition,
           elementRef,
           MouseMode.default,
           mockCallBack,
           mockCallBack,
+          0,
         ),
       {
         wrapper: getProviderWrapper(store),
@@ -73,11 +76,13 @@ describe('useMouseMoveEvent', () => {
       () =>
         useMouseDownEvent(
           cursorBaseAngle,
+          cursorOffsetAngle,
           cursorPosition,
           elementRef,
           MouseMode.default,
           mockCallBack,
           mockCallBack,
+          0,
         ),
       {
         wrapper: getProviderWrapper(store),
@@ -102,12 +107,14 @@ describe('useMouseMoveEvent', () => {
     const { result } = renderHook(
       () =>
         useMouseDownEvent(
+          cursorOffsetAngle,
           cursorBaseAngle,
           cursorPosition,
           elementRef,
           MouseMode.comment,
           mockCallBack,
           mockCallBack,
+          0,
         ),
       {
         wrapper: getProviderWrapper(store),
@@ -132,12 +139,14 @@ describe('useMouseMoveEvent', () => {
     const { result } = renderHook(
       () =>
         useMouseDownEvent(
+          cursorOffsetAngle,
           cursorBaseAngle,
           cursorPosition,
           elementRef,
           MouseMode.comment,
           mockCallBack,
           mockCallBack,
+          0,
         ),
       {
         wrapper: getProviderWrapper(store),

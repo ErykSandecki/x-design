@@ -26,6 +26,7 @@ import { T2DCoordinates } from 'types';
 import { getProviderWrapper } from 'test';
 
 const cursorBaseAngle = { current: 0 } as RefObject<number>;
+const cursorOffsetAngle = { current: 0 } as RefObject<number>;
 const cursorPosition = { current: BASE_2D } as RefObject<T2DCoordinates>;
 const elementRef = {
   current: {
@@ -70,13 +71,13 @@ describe('useMouseMoveEvent', () => {
       () =>
         useMouseMoveEvent(
           cursorBaseAngle,
+          cursorOffsetAngle,
           cursorPosition,
           elementRef,
           100,
           selectedElementMock.id,
           0,
           100,
-          0,
           0,
         ),
       {
@@ -89,11 +90,11 @@ describe('useMouseMoveEvent', () => {
 
     // result
     expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
-      baseCoordinates: { x1: 0, x2: 100, y1: 0, y2: 100 },
+      baseCoordinates: { x1: 100, x2: 100, y1: 0, y2: 100 },
       height: 100,
       id: '1',
       mouseCoordinates: { x: 0, y: 0 },
-      width: 100,
+      width: 0,
     });
   });
 
@@ -115,13 +116,13 @@ describe('useMouseMoveEvent', () => {
       () =>
         useMouseMoveEvent(
           cursorBaseAngle,
+          cursorOffsetAngle,
           cursorPosition,
           elementRef,
           100,
           selectedElementMock.id,
           0,
           100,
-          0,
           0,
         ),
       {
@@ -148,13 +149,13 @@ describe('useMouseMoveEvent', () => {
       () =>
         useMouseMoveEvent(
           cursorBaseAngle,
+          cursorOffsetAngle,
           cursorPosition,
           elementRef,
           100,
           selectedElementMock.id,
           0,
           100,
-          0,
           0,
         ),
       {

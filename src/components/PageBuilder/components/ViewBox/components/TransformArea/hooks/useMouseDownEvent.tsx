@@ -6,7 +6,7 @@ import { updateEventsStatus } from 'store/pageBuilder/actions';
 
 // types
 import { AnchorResize, AnchorRotate } from 'store/pageBuilder/enums';
-import { MouseButton, MouseMode, T2DCoordinates } from 'types';
+import { MouseButton, MouseMode, T2DCoordinates, TElement } from 'types';
 import { TUseChangeCursor } from 'hooks/useChangeCursor/useChangeCursor';
 
 // utils
@@ -20,11 +20,13 @@ export type TUseMouseDownEvent = {
 
 export const useMouseDownEvent = (
   cursorBaseAngle: RefObject<number>,
+  cursorOffsetAngle: RefObject<number>,
   cursorPosition: RefObject<T2DCoordinates>,
   elementRef: RefObject<HTMLDivElement>,
   mouseMode: MouseMode,
   onMouseDownCursorResize: TUseChangeCursor['onMouseDown'],
   onMouseDownCursorRotate: TUseChangeCursor['onMouseDown'],
+  rotate: TElement['rotate'],
 ): TUseMouseDownEvent => {
   const dispatch = useDispatch();
 
@@ -54,7 +56,13 @@ export const useMouseDownEvent = (
       event.stopPropagation();
 
       onMouseDownCursorRotate();
-      handleInitRotateElement(cursorBaseAngle, elementRef, event);
+      handleInitRotateElement(
+        cursorBaseAngle,
+        cursorOffsetAngle,
+        elementRef,
+        event,
+        rotate,
+      );
       dispatch(
         updateEventsStatus({ isRotating: true, selectedAnchorRotate: anchor }),
       );
