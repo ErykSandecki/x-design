@@ -1,5 +1,5 @@
 import { createPortal } from 'react-dom';
-import { FC, memo } from 'react';
+import { FC, memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
 // components
@@ -22,6 +22,9 @@ import styles from './frame.scss';
 
 // types
 import { TElementProps } from '../../types';
+
+// utils
+import { getElementStickWallPosition } from 'components/PageBuilder/components/ViewBox/utils/getElementStickWallPosition';
 
 export type TFrameProps = TElementProps;
 
@@ -46,46 +49,54 @@ const Frame: FC<TFrameProps> = ({
       mouseMode={mouseMode}
       type={type}
     >
-      {(coordinates, height, hover, rotate, selected, width) => (
-        <>
-          {overlayContainerRef.current &&
-            parentId === '-1' &&
-            createPortal(
-              <Box
-                classes={{ className: cx(classNamesWithTheme.wrapper) }}
-                style={{
-                  height: `${height}px`,
-                  left: `${coordinates.x}px`,
-                  top: `${coordinates.y}px`,
-                  transform: `rotate(${rotate}deg)`,
-                  width: `${width}px`,
-                }}
-              >
-                <Small
-                  classes={{
-                    className: cx(
-                      classNamesWithTheme.label.name,
-                      [classNamesWithTheme.label.modificators.hover, hover],
-                      [
-                        classNamesWithTheme.label.modificators.selected,
-                        selected,
-                      ],
-                    ),
+      {(coordinates, height, hover, rotate, selected, width) => {
+        const stickWall = useMemo(
+          () => getElementStickWallPosition(rotate),
+          [rotate],
+        );
+
+        return (
+          <>
+            {overlayContainerRef.current &&
+              parentId === '-1' &&
+              createPortal(
+                <Box
+                  classes={{ className: cx(classNamesWithTheme.wrapper) }}
+                  style={{
+                    height: `${height}px`,
+                    left: `${coordinates.x}px`,
+                    top: `${coordinates.y}px`,
+                    transform: `rotate(${rotate}deg)`,
+                    width: `${width}px`,
                   }}
                 >
-                  {t(`${translationNameSpace}.label.createFrame`)}
-                </Small>
-              </Box>,
-              overlayContainerRef.current,
-            )}
-          <Elements
-            eventsDisabled={false}
-            isSelected={selected}
-            mouseMode={mouseMode}
-            parentId={id}
-          />
-        </>
-      )}
+                  <Small
+                    classes={{
+                      className: cx(
+                        classNamesWithTheme.label.name,
+                        [classNamesWithTheme.label.modificators.hover, hover],
+                        [
+                          classNamesWithTheme.label.modificators.selected,
+                          selected,
+                        ],
+                        classNamesWithTheme.label.modificators[stickWall],
+                      ),
+                    }}
+                  >
+                    {t(`${translationNameSpace}.label.createFrame`)}
+                  </Small>
+                </Box>,
+                overlayContainerRef.current,
+              )}
+            <Elements
+              eventsDisabled={false}
+              isSelected={selected}
+              mouseMode={mouseMode}
+              parentId={id}
+            />
+          </>
+        );
+      }}
     </Element>
   );
 };

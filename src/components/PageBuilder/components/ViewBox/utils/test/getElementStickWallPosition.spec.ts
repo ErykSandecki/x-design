@@ -18,12 +18,12 @@ describe('getElementStickWallPosition', () => {
     expect(result).toBe(ElementStickWallPosition.top);
   });
 
-  it(`should return right wall`, () => {
+  it(`should return left wall`, () => {
     // before
     const result = getElementStickWallPosition(90);
 
     // result
-    expect(result).toBe(ElementStickWallPosition.right);
+    expect(result).toBe(ElementStickWallPosition.left);
   });
 
   it(`should return bottom wall`, () => {
@@ -34,11 +34,11 @@ describe('getElementStickWallPosition', () => {
     expect(result).toBe(ElementStickWallPosition.bottom);
   });
 
-  it(`should return left wall`, () => {
+  it(`should return right wall`, () => {
     // before
     const result = getElementStickWallPosition(-90);
 
     // result
-    expect(result).toBe(ElementStickWallPosition.left);
+    expect(result).toBe(ElementStickWallPosition.right);
   });
 });

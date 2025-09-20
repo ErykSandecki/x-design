@@ -1,3 +1,8 @@
+import { mapValues } from 'lodash';
+
+// types
+import { ElementStickWallPosition } from 'components/PageBuilder/components/ViewBox/types/enums';
+
 export const className = 'Frame';
 
 export const classNames = {
@@ -8,6 +13,10 @@ export const classNames = {
     modificators: {
       hover: `${className}__label--hover`,
       selected: `${className}__label--selected`,
+      ...mapValues(
+        ElementStickWallPosition,
+        (stickWall) => `${className}__label--${stickWall}`,
+      ),
     },
   },
 };

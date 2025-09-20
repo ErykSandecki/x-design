@@ -24,5 +24,25 @@
     &--selected {
       @include theme('blue-1', color);
     }
+
+    &--bottom {
+      left: 100%;
+      top: 100%;
+      transform: rotate(180deg) translate(1.5px, -20px);
+      transform-origin: left top;
+    }
+
+    &--left {
+      left: 0;
+      top: 100%;
+      transform: rotate(270deg) translate(1.5px, -20px);
+      transform-origin: left top;
+    }
+
+    &--right {
+      left: 100%;
+      transform: rotate(90deg) translate(1.5px, -20px);
+      transform-origin: left top;
+    }
   }
 }

@@ -9,10 +9,10 @@ export const getElementStickWallPosition = (
     case rotate >= -45 && rotate <= 45:
       return ElementStickWallPosition.top;
     case rotate >= 45 && rotate <= 135:
-      return ElementStickWallPosition.right;
+      return ElementStickWallPosition.left;
     case (rotate >= 135 && rotate <= 180) || (rotate >= -180 && rotate <= -135):
       return ElementStickWallPosition.bottom;
     default:
-      return ElementStickWallPosition.left;
+      return ElementStickWallPosition.right;
   }
 };

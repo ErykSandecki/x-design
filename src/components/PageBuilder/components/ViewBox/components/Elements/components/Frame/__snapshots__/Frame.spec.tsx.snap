@@ -20,7 +20,7 @@ exports[`Frame snapshots should render Frame 1`] = `
         style="height: 100px; left: 0px; top: 0px; transform: rotate(0deg); width: 100px;"
       >
         <small
-          class="css-wcnq0t Frame__label Frame__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+          class="css-wcnq0t Frame__label Frame__label--light Frame__label--top Frame__label--top--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
           data-test-text=""
           style="text-align: inherit;"
         >
