@@ -41,34 +41,37 @@ const EventsArea: FC<TOutlineProps> = ({
   const rectCoordinates = getCornersPosition(height, width);
   const { overlayContainerRef } = useRefs();
 
-  return createPortal(
-    <Box
-      style={{
-        height,
-        left: `${absoluteCoordinates.x}px`,
-        top: `${absoluteCoordinates.y}px`,
-        transform: `rotate(${rotate - counterAngle}deg)`,
-        transformOrigin: 'center center',
-        width,
-      }}
-      sx={{ position: 'absolute' }}
-    >
-      {/* // Technical note: Box blank to allow move block when overflow */}
-      <Box style={{ height, width }} />
-      <Corners rectCoordinates={rectCoordinates} />
-      <TransformArea
-        counterAngle={counterAngle}
-        elementRef={elementRef}
-        height={height}
-        id={id}
-        moseMode={mouseMode}
-        rotate={rotate}
-        x={relativeCoordinates.x}
-        y={relativeCoordinates.y}
-        width={width}
-      />
-    </Box>,
-    overlayContainerRef.current,
+  return (
+    overlayContainerRef.current &&
+    createPortal(
+      <Box
+        style={{
+          height,
+          left: `${absoluteCoordinates.x}px`,
+          top: `${absoluteCoordinates.y}px`,
+          transform: `rotate(${rotate - counterAngle}deg)`,
+          transformOrigin: 'center center',
+          width,
+        }}
+        sx={{ position: 'absolute' }}
+      >
+        {/* // Technical note: Box blank to allow move block when overflow */}
+        <Box style={{ height, width }} />
+        <Corners rectCoordinates={rectCoordinates} />
+        <TransformArea
+          counterAngle={counterAngle}
+          elementRef={elementRef}
+          height={height}
+          id={id}
+          moseMode={mouseMode}
+          rotate={rotate}
+          x={relativeCoordinates.x}
+          y={relativeCoordinates.y}
+          width={width}
+        />
+      </Box>,
+      overlayContainerRef.current,
+    )
   );
 };
 

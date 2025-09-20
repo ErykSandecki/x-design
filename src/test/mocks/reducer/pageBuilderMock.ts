@@ -15,6 +15,7 @@ import {
 } from 'types';
 import {
   TElementDynamicData,
+  TElementsData,
   TElementStaticData,
   TEvents,
   TPageBuilderState,
@@ -162,4 +163,124 @@ export const selectedElementMock: TSelectedElement = {
   parentId: '-1',
   position: 'absolute',
   type: ElementType.frame,
+};
+
+export const oneElementMock: TElementsData = {
+  allData: {
+    '-1': {
+      alignment: {},
+      background: {
+        properties: {
+          alpha: '100',
+          color: '#1e262f',
+          format: 'hex',
+        },
+        visible: true,
+      },
+      children: ['1'],
+      coordinates: {
+        x: 0,
+        y: 0,
+      },
+      deepLevel: 0,
+      height: 0,
+      id: '-1',
+      parentId: '-1',
+      position: 'absolute',
+      rotate: 0,
+      type: ElementType.base,
+      width: 0,
+    },
+    1: {
+      alignment: {},
+      background: {
+        properties: {
+          alpha: '100',
+          color: '#ffffff',
+          format: 'hex',
+        },
+        visible: true,
+      },
+      children: [],
+      coordinates: {
+        x: 500,
+        y: 500,
+      },
+      deepLevel: 0,
+      height: 500,
+      id: '1',
+      parentId: '-1',
+      position: 'absolute',
+      rotate: 0,
+      type: ElementType.frame,
+      width: 500,
+    },
+  },
+  dynamicData: {
+    '-1': {
+      alignment: {},
+      background: {
+        properties: {
+          alpha: '100',
+          color: '#1e262f',
+          format: 'hex',
+        },
+        visible: true,
+      },
+      coordinates: {
+        x: 0,
+        y: 0,
+      },
+      deepLevel: 0,
+      height: 0,
+      id: '-1',
+      position: 'absolute',
+      rotate: 0,
+      width: 0,
+    },
+    1: {
+      alignment: {},
+      background: {
+        properties: {
+          alpha: '100',
+          color: '#ffffff',
+          format: 'hex',
+        },
+        visible: true,
+      },
+      coordinates: {
+        x: 500,
+        y: 500,
+      },
+      deepLevel: 0,
+      height: 500,
+      id: '1',
+      position: 'absolute',
+      rotate: 0,
+      width: 500,
+    },
+  },
+  staticData: {
+    '-1': {
+      children: ['1'],
+      id: '-1',
+      parentId: '-1',
+      position: 'absolute',
+      type: ElementType.base,
+    },
+    1: {
+      children: [],
+      id: '1',
+      parentId: '-1',
+      position: 'absolute',
+      type: ElementType.frame,
+    },
+  },
+};
+
+export const oneElementSelectedMock: TSelectedElement = {
+  id: oneElementMock.allData['1'].id,
+  parentId: oneElementMock.allData['1'].parentId,
+  position: oneElementMock.allData['1'].position,
+  type: oneElementMock.allData['1'].type,
 };
