@@ -19,6 +19,7 @@ import { ReactComponent as MoveHand } from './svg/move-hand.svg';
 import { ReactComponent as MoveTool } from './svg/move-tool.svg';
 import { ReactComponent as PlusOutlined } from './svg/plus-outlined.svg';
 import { ReactComponent as PositionSwitcher } from './svg/position-switcher.svg';
+import { ReactComponent as Protractor } from './svg/protractor.svg';
 import { ReactComponent as Sample } from './svg/sample.svg';
 import { ReactComponent as StepBackwardOutlined } from './svg/step-backward-outlined.svg';
 
@@ -44,6 +45,7 @@ export const Icons = {
   MoveTool,
   PlusOutlined,
   PositionSwitcher,
+  Protractor,
   Sample,
   StepBackwardOutlined,
 };

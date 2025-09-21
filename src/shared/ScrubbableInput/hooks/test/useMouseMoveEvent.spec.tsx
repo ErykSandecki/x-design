@@ -18,7 +18,7 @@ describe('useMouseMoveEvent', () => {
   it(`should triger event`, () => {
     // before
     renderHook(() =>
-      useMouseMoveEvent(100, 0, BASE_2D, mockCallBack, mockCallBack, 0),
+      useMouseMoveEvent(100, 0, false, BASE_2D, mockCallBack, mockCallBack, 0),
     );
 
     // action
@@ -31,7 +31,7 @@ describe('useMouseMoveEvent', () => {
   it(`should triger event with bigger speed`, () => {
     // before
     renderHook(() =>
-      useMouseMoveEvent(100, 0, BASE_2D, mockCallBack, mockCallBack, 0),
+      useMouseMoveEvent(100, 0, false, BASE_2D, mockCallBack, mockCallBack, 0),
     );
 
     // action
@@ -44,7 +44,7 @@ describe('useMouseMoveEvent', () => {
   it(`should not triger event`, () => {
     // before
     renderHook(() =>
-      useMouseMoveEvent(100, 0, null, mockCallBack, mockCallBack, 0),
+      useMouseMoveEvent(100, 0, false, null, mockCallBack, mockCallBack, 0),
     );
 
     // action
@@ -52,5 +52,27 @@ describe('useMouseMoveEvent', () => {
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(0);
+  });
+
+  it(`should return min when max`, () => {
+    // mock
+    const mouseMoveEvent = new MouseEvent('mousemove', {
+      bubbles: true,
+      cancelable: true,
+      shiftKey: false,
+      view: window,
+    });
+    Object.defineProperty(mouseMoveEvent, 'movementX', { value: 100 });
+
+    // before
+    renderHook(() =>
+      useMouseMoveEvent(100, 0, true, BASE_2D, mockCallBack, mockCallBack, 100),
+    );
+
+    // action
+    window.dispatchEvent(mouseMoveEvent);
+
+    // result
+    expect(mockCallBack.mock.calls[1][0]).toBe(0);
   });
 });

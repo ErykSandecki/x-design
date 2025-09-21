@@ -54,10 +54,10 @@ import { handleReducerHistoryUndo } from './utils/reducerHistory/handleReducerHi
 import { handleRotateElement } from './utils/handleRotateElement';
 import { handleSetElementsCoordinates } from './utils/handleSetElementsCoordinates';
 import { handleSetElementSizes } from './utils/handleSetElementSize';
-import {
-  oneElementMock,
-  oneElementSelectedMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+// import {
+//   oneElementMock,
+//   oneElementSelectedMock,
+// } from 'test/mocks/reducer/pageBuilderMock';
 
 const initialState: TPageBuilderState = {
   currentPage: '0',

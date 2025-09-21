@@ -5,6 +5,7 @@
   "pageBuilder.panelProperties.componentPanel.design.columnHeader.header.frame": "Frame",
   "pageBuilder.panelProperties.componentPanel.design.columnHeader.header_other": "{{ amount }} selected",
   "pageBuilder.panelProperties.componentPanel.design.columnPosition.label": "Position",
+  "pageBuilder.panelProperties.componentPanel.design.columnRotation.label": "Rotation",
   "pageBuilder.panelProperties.componentPanel.design.section.2.label": "Position",
   "pageBuilder.panelProperties.mainPanel.design.section.1.label": "Page",
   "pageBuilder.panelProperties.section.label": "Mode",

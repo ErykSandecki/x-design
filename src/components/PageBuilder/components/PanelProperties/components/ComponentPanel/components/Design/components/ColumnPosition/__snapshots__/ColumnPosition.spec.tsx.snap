@@ -3,7 +3,7 @@
 exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
 <DocumentFragment>
   <div
-    class="css-wcnq0t SectionColumn SectionColumn--light"
+    class="css-wcnq0t SectionColumn SectionColumn--light SectionColumn--with-margin SectionColumn--with-margin--light"
     data-test-section=""
   >
     <div
@@ -85,7 +85,7 @@ exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
 exports[`ColumnPosition snapshots should render when some element has alignment 1`] = `
 <DocumentFragment>
   <div
-    class="css-wcnq0t SectionColumn SectionColumn--light"
+    class="css-wcnq0t SectionColumn SectionColumn--light SectionColumn--with-margin SectionColumn--with-margin--light"
     data-test-section=""
   >
     <div
@@ -192,7 +192,7 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
 exports[`ColumnPosition snapshots should render when values are mixed 1`] = `
 <DocumentFragment>
   <div
-    class="css-wcnq0t SectionColumn SectionColumn--light"
+    class="css-wcnq0t SectionColumn SectionColumn--light SectionColumn--with-margin SectionColumn--with-margin--light"
     data-test-section=""
   >
     <div

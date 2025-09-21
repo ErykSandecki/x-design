@@ -16,6 +16,7 @@ export type TUseScrubbableInputEvents = {
 
 export const useScrubbableInputEvents = (
   inputRef: RefObject<HTMLDivElement>,
+  loop: boolean,
   max: number,
   min: number,
   onChange: (value: number) => void,
@@ -25,7 +26,15 @@ export const useScrubbableInputEvents = (
 ): TUseScrubbableInputEvents => {
   const [mousePosition, setMousePosition] = useState(null);
 
-  useMouseMoveEvent(max, min, mousePosition, onChange, setMousePosition, value);
+  useMouseMoveEvent(
+    max,
+    min,
+    loop,
+    mousePosition,
+    onChange,
+    setMousePosition,
+    value,
+  );
 
   return {
     mousePosition,

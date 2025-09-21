@@ -6,7 +6,7 @@ import { noop } from 'lodash';
 import E2EDataAttribute, {
   TE2EDataAttributeProps,
 } from 'shared/E2EDataAttributes/E2EDataAttribute';
-import Icon from 'shared/UI/components/Icon/Icon';
+import Icon, { TIconProps } from 'shared/UI/components/Icon/Icon';
 
 // hooks
 import { useScrubbableInputEvents } from './hooks/useScrubbableInputEvents';
@@ -19,12 +19,14 @@ import { className, classNames } from './classNames';
 import styles from './scrubbable-input.scss';
 
 // types
-import { E2EAttribute } from 'types';
+import { ColorsTheme, E2EAttribute } from 'types';
 
 export type TScrubbableInputProps = {
-  children: ReactNode;
+  children?: ReactNode;
   disabled?: boolean;
   e2eValue?: TE2EDataAttributeProps['value'];
+  icon?: TIconProps['name'];
+  loop?: boolean;
   max: number;
   min: number;
   onChange: (value: number) => void;
@@ -37,6 +39,8 @@ export const ScrubbableInput: FC<TScrubbableInputProps> = ({
   children,
   disabled = false,
   e2eValue = '',
+  icon,
+  loop,
   max,
   min,
   onChange,
@@ -48,6 +52,7 @@ export const ScrubbableInput: FC<TScrubbableInputProps> = ({
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { mousePosition, ...events } = useScrubbableInputEvents(
     inputRef,
+    loop,
     max,
     min,
     onChange,
@@ -67,6 +72,14 @@ export const ScrubbableInput: FC<TScrubbableInputProps> = ({
         {...events}
       >
         {children}
+        {icon && (
+          <Icon
+            classes={{ className: cx(classNamesWithTheme.icon) }}
+            color={ColorsTheme.neutral2}
+            disabled={disabled}
+            name={icon}
+          />
+        )}
         {mousePosition &&
           createPortal(
             <Icon

@@ -28,7 +28,7 @@ import { ColorsTheme, KeyboardKeys } from 'types';
 import { getValue } from './utils/getValue';
 import { handleSubmitInput } from 'utils';
 import { hasSomeAlignment } from './utils/hasSomeAlignment';
-import { isMixed } from './utils/isMixed';
+import { isMixed } from '../../utils/isMixed';
 
 const ColumnPosition: FC = () => {
   const dispatch = useDispatch();
@@ -50,8 +50,18 @@ const ColumnPosition: FC = () => {
     dynamicData,
     selectedElements,
   );
-  const isMixedX = isMixed('x', dynamicData, firstElement, selectedElements);
-  const isMixedY = isMixed('y', dynamicData, firstElement, selectedElements);
+  const isMixedX = isMixed(
+    dynamicData,
+    firstElement,
+    'coordinates.x',
+    selectedElements,
+  );
+  const isMixedY = isMixed(
+    dynamicData,
+    firstElement,
+    'coordinates.y',
+    selectedElements,
+  );
   const isRelative = selectedElements.some(
     ({ position }) => position === 'relative',
   );
@@ -76,6 +86,7 @@ const ColumnPosition: FC = () => {
           : []
       }
       labels={[t(`${translationNameSpace}.label`)]}
+      withMargin
     >
       <UITools.TextField
         disabled={disabledX || disabledAll}

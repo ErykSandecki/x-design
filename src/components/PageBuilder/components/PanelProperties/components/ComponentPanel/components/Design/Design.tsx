@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next';
 import ColumnAlignment from './components/ColumnAlignment/ColumnAlignment';
 import ColumnHeader from './components/ColumnHeader/ColumnHeader';
 import ColumnPosition from './components/ColumnPosition/ColumnPosition';
+import ColumnRotation from './components/ColumnRotation/ColumnRotation';
 import { UITools } from 'shared';
 
 // others
@@ -50,6 +51,7 @@ const Design: FC = () => {
       >
         <ColumnAlignment />
         <ColumnPosition />
+        <ColumnRotation />
       </UITools.Section>
     </>
   );

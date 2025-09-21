@@ -11,9 +11,9 @@ describe('isMixed', () => {
   it(`should not be mixed`, () => {
     // before
     const result = isMixed(
-      'x',
       { [elementDynamicDataMock.id]: elementDynamicDataMock },
       selectedElementMock,
+      'coordinates.x',
       [selectedElementMock],
     );
 
@@ -24,7 +24,6 @@ describe('isMixed', () => {
   it(`should be mixed`, () => {
     // before
     const result = isMixed(
-      'x',
       {
         [elementDynamicDataMock.id]: elementDynamicDataMock,
         ['2']: {
@@ -34,6 +33,7 @@ describe('isMixed', () => {
         },
       },
       selectedElementMock,
+      'coordinates.y',
       [selectedElementMock, { ...selectedElementMock, id: '2' }],
     );
 

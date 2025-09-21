@@ -1,19 +1,21 @@
+import { get } from 'lodash';
+
 // types
-import { T2DCoordinates } from 'types';
 import {
+  TElementDynamicData,
   TElementsData,
   TSelectedElement,
   TSelectedElements,
 } from 'store/pageBuilder/types';
+import { TNestedKeyOf } from 'types';
 
 export const isMixed = (
-  axis: keyof T2DCoordinates,
   dynamicData: TElementsData['dynamicData'],
   firstElement: TSelectedElement,
+  key: TNestedKeyOf<TElementDynamicData>,
   selectedElements: TSelectedElements,
 ): boolean =>
   selectedElements.some(
     ({ id }) =>
-      dynamicData[id].coordinates[axis] !==
-      dynamicData[firstElement.id].coordinates[axis],
+      get(dynamicData[id], key) !== get(dynamicData[firstElement.id], key),
   );

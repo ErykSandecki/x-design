@@ -7,5 +7,6 @@ export const classNames = {
       disabled: `${className}--disabled`,
     },
   },
+  icon: `${className}__icon`,
   handler: `${className}__handler`,
 };
