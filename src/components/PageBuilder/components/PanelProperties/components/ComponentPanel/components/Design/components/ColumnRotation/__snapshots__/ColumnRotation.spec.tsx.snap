@@ -55,7 +55,7 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
         >
           <div
             class="ButtonGroup__button ButtonGroup__button--light"
-            data-test-button-group-input="ToggleRotate"
+            data-test-button-group-input="toggle-rotate"
           >
             <div
               class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -67,7 +67,7 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
           </div>
           <div
             class="ButtonGroup__button ButtonGroup__button--light"
-            data-test-button-group-input="FlipHorizontal"
+            data-test-button-group-input="flip-horizontal"
           >
             <div
               class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -79,7 +79,7 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
           </div>
           <div
             class="ButtonGroup__button ButtonGroup__button--light"
-            data-test-button-group-input="FlipVertical"
+            data-test-button-group-input="flip-vertical"
           >
             <div
               class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -154,7 +154,7 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
         >
           <div
             class="ButtonGroup__button ButtonGroup__button--light"
-            data-test-button-group-input="ToggleRotate"
+            data-test-button-group-input="toggle-rotate"
           >
             <div
               class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -166,7 +166,7 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
           </div>
           <div
             class="ButtonGroup__button ButtonGroup__button--light"
-            data-test-button-group-input="FlipHorizontal"
+            data-test-button-group-input="flip-horizontal"
           >
             <div
               class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -178,7 +178,7 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
           </div>
           <div
             class="ButtonGroup__button ButtonGroup__button--light"
-            data-test-button-group-input="FlipVertical"
+            data-test-button-group-input="flip-vertical"
           >
             <div
               class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"

@@ -6,6 +6,7 @@ import {
   CHANGE_PARENT,
   CHANGE_POSITION,
   CLEAR_PREV_STATE,
+  FLIP_ELEMENTS,
   REDUCER_HISTORY_REDO,
   REDUCER_HISTORY_SAVE,
   REDUCER_HISTORY_UNDO,
@@ -31,6 +32,7 @@ import {
   TChangeParentActionPayload,
   TChangePositionAction,
   TClearPrevStateAction,
+  TFlipElementsAction,
   TReducerHistoryRedoAction,
   TReducerHistorySaveAction,
   TReducerHistoryUndoAction,
@@ -84,6 +86,13 @@ export const changePosition = (): TChangePositionAction => ({
 
 export const clearPrevState = (): TClearPrevStateAction => ({
   type: CLEAR_PREV_STATE,
+});
+
+export const flipElements = (
+  axis: TFlipElementsAction['payload'],
+): TFlipElementsAction => ({
+  payload: axis,
+  type: FLIP_ELEMENTS,
 });
 
 export const reducerHistoryRedo = (): TReducerHistoryRedoAction => ({

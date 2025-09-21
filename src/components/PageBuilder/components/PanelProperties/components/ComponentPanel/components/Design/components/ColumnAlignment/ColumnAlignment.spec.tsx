@@ -274,7 +274,7 @@ describe('ColumnAlignment behaviors', () => {
       getByE2EAttribute(
         horizontalButtonGroup,
         E2EAttribute.buttonGroupInput,
-        'AlignHorizontalLeft',
+        'align-horizontal-left',
       ),
     );
 
@@ -290,7 +290,7 @@ describe('ColumnAlignment behaviors', () => {
       getByE2EAttribute(
         verticalButtonGroup,
         E2EAttribute.buttonGroupInput,
-        'AlignVerticalTop',
+        'align-vertical-top',
       ),
     );
 

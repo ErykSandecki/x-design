@@ -20,7 +20,7 @@ import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 import { configureStore } from 'store/store';
 
 // types
-import { E2EAttribute, KeyboardKeys } from 'types';
+import { E2EAttribute, KeyboardKeys, LayoutType } from 'types';
 
 // utils
 import { getByE2EAttribute } from 'test';
@@ -245,7 +245,7 @@ describe('ColumnRotation behaviors', () => {
       getByE2EAttribute(
         verticalButtonGroup,
         E2EAttribute.buttonGroupInput,
-        'ToggleRotate',
+        'toggle-rotate',
       ),
     );
 
@@ -253,5 +253,219 @@ describe('ColumnRotation behaviors', () => {
     expect(
       store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].angle,
     ).toBe(90);
+  });
+
+  it('should flip x', () => {
+    // mock
+    const store = configureStore({
+      ...stateMock,
+      ...stateMock,
+      [PAGE_BUILDER]: {
+        ...stateMock[PAGE_BUILDER],
+        pages: {
+          ...pageBuilderStateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...currentPage,
+            elements: {
+              allData: {
+                ['-1']: {
+                  ...currentPage.elements.allData['-1'],
+                  children: [elementAllDataMock.id],
+                },
+                [elementAllDataMock.id]: {
+                  ...elementAllDataMock,
+                  children: ['2', '3'],
+                  layout: {
+                    type: LayoutType.horizontal,
+                  },
+                },
+                ['2']: {
+                  ...elementAllDataMock,
+                  id: '2',
+                  parentId: '1',
+                },
+                ['3']: {
+                  ...elementAllDataMock,
+                  id: '3',
+                  parentId: '1',
+                },
+              },
+              dynamicData: {
+                ['-1']: {
+                  ...currentPage.elements.dynamicData['-1'],
+                },
+                [elementDynamicDataMock.id]: {
+                  ...elementDynamicDataMock,
+                  layout: {
+                    type: LayoutType.horizontal,
+                  },
+                },
+                ['2']: {
+                  ...elementDynamicDataMock,
+                  id: '2',
+                },
+                ['3']: {
+                  ...elementDynamicDataMock,
+                  id: '3',
+                },
+              },
+              staticData: {
+                ['-1']: {
+                  ...currentPage.elements.staticData['-1'],
+                  children: [elementStaticDataMock.id],
+                },
+                [elementStaticDataMock.id]: {
+                  ...elementStaticDataMock,
+                  children: ['2', '3'],
+                },
+                ['2']: {
+                  ...elementStaticDataMock,
+                  id: '2',
+                  parentId: '1',
+                },
+                ['3']: {
+                  ...elementStaticDataMock,
+                  id: '3',
+                  parentId: '1',
+                },
+              },
+            },
+            selectedElements: [selectedElementMock],
+          },
+        },
+      },
+    });
+
+    // before
+    const { container } = render(
+      <Provider store={store}>
+        <ColumnRotation />
+      </Provider>,
+    );
+
+    // find
+    const verticalButtonGroup = getByE2EAttribute(
+      container,
+      E2EAttribute.buttonGroup,
+      'layout-position',
+    );
+
+    // action
+    fireEvent.click(
+      getByE2EAttribute(
+        verticalButtonGroup,
+        E2EAttribute.buttonGroupInput,
+        'flip-horizontal',
+      ),
+    );
+
+    // result
+    expect(
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].children,
+    ).toStrictEqual(['3', '2']);
+  });
+
+  it('should flip y', () => {
+    // mock
+    const store = configureStore({
+      ...stateMock,
+      ...stateMock,
+      [PAGE_BUILDER]: {
+        ...stateMock[PAGE_BUILDER],
+        pages: {
+          ...pageBuilderStateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...currentPage,
+            elements: {
+              allData: {
+                ['-1']: {
+                  ...currentPage.elements.allData['-1'],
+                  children: [elementAllDataMock.id],
+                },
+                [elementAllDataMock.id]: {
+                  ...elementAllDataMock,
+                  children: ['2', '3'],
+                },
+                ['2']: {
+                  ...elementAllDataMock,
+                  id: '2',
+                  parentId: '1',
+                },
+                ['3']: {
+                  ...elementAllDataMock,
+                  id: '3',
+                  parentId: '1',
+                },
+              },
+              dynamicData: {
+                ['-1']: {
+                  ...currentPage.elements.dynamicData['-1'],
+                },
+                [elementDynamicDataMock.id]: {
+                  ...elementDynamicDataMock,
+                },
+                ['2']: {
+                  ...elementDynamicDataMock,
+                  id: '2',
+                },
+                ['3']: {
+                  ...elementDynamicDataMock,
+                  id: '3',
+                },
+              },
+              staticData: {
+                ['-1']: {
+                  ...currentPage.elements.staticData['-1'],
+                  children: [elementStaticDataMock.id],
+                },
+                [elementStaticDataMock.id]: {
+                  ...elementStaticDataMock,
+                  children: ['2', '3'],
+                },
+                ['2']: {
+                  ...elementStaticDataMock,
+                  id: '2',
+                  parentId: '1',
+                },
+                ['3']: {
+                  ...elementStaticDataMock,
+                  id: '3',
+                  parentId: '1',
+                },
+              },
+            },
+            selectedElements: [selectedElementMock],
+          },
+        },
+      },
+    });
+
+    // before
+    const { container } = render(
+      <Provider store={store}>
+        <ColumnRotation />
+      </Provider>,
+    );
+
+    // find
+    const verticalButtonGroup = getByE2EAttribute(
+      container,
+      E2EAttribute.buttonGroup,
+      'layout-position',
+    );
+
+    // action
+    fireEvent.click(
+      getByE2EAttribute(
+        verticalButtonGroup,
+        E2EAttribute.buttonGroupInput,
+        'flip-vertical',
+      ),
+    );
+
+    // result
+    expect(
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].children,
+    ).toStrictEqual(['3', '2']);
   });
 });

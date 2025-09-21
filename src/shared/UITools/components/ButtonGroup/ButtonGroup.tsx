@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { kebabCase } from 'lodash';
 
 // components
 import Box, { TBoxProps } from '../../../UI/components/Box/Box';
@@ -48,9 +49,9 @@ export const ButtonGroup: FC<TSectionProps> = ({
     >
       {buttons.map(({ disabled, name, onClick }) => (
         <E2EDataAttribute
-          key={name}
+          key={kebabCase(name)}
           type={E2EAttribute.buttonGroupInput}
-          value={name}
+          value={kebabCase(name)}
         >
           <div
             className={cx(classNamesWithTheme.button.name, [

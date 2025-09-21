@@ -6,6 +6,7 @@ import {
   CHANGE_PARENT,
   CHANGE_POSITION,
   CLEAR_PREV_STATE,
+  FLIP_ELEMENTS,
   REDUCER_HISTORY_REDO,
   REDUCER_HISTORY_SAVE,
   REDUCER_HISTORY_UNDO,
@@ -162,6 +163,11 @@ export type TChangePositionAction = {
 
 export type TClearPrevStateAction = {
   type: typeof CLEAR_PREV_STATE;
+};
+
+export type TFlipElementsAction = {
+  payload: keyof T2DCoordinates;
+  type: typeof FLIP_ELEMENTS;
 };
 
 export type TReducerHistoryRedoAction = {

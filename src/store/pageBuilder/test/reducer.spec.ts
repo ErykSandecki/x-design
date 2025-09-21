@@ -38,6 +38,7 @@ import {
   changePosition,
   changeAlignment,
   clearPrevState,
+  flipElements,
 } from '../actions';
 
 // types
@@ -49,6 +50,9 @@ import {
 } from 'types';
 import { AnchorResize } from '../enums';
 import { TPageBuilderState } from '../types';
+
+// utils
+import { negateValue } from 'utils/math/negateValue';
 
 describe('PageBuilderReducer', () => {
   const reducer = (action: TAction, initialState = {}): TPageBuilderState =>
@@ -737,6 +741,156 @@ describe('PageBuilderReducer', () => {
         ['0']: {
           ...currentPage,
           prevState: undefined,
+        },
+      },
+    });
+  });
+
+  it('should handle FLIP_ELEMENTS', () => {
+    // mock
+    const angle = 45;
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+
+    // before
+    const state = reducer(flipElements('y'), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            allData: {
+              ['-1']: {
+                ...currentPage.elements.allData['-1'],
+                children: [elementAllDataMock.id],
+              },
+              [elementAllDataMock.id]: {
+                ...elementAllDataMock,
+                angle,
+                children: ['2', '3'],
+              },
+              ['2']: {
+                ...elementAllDataMock,
+                id: '2',
+                parentId: '1',
+              },
+              ['3']: {
+                ...elementAllDataMock,
+                id: '3',
+                parentId: '1',
+              },
+            },
+            dynamicData: {
+              ['-1']: {
+                ...currentPage.elements.dynamicData['-1'],
+              },
+              [elementDynamicDataMock.id]: {
+                ...elementDynamicDataMock,
+                angle,
+              },
+              ['2']: {
+                ...elementDynamicDataMock,
+                id: '2',
+              },
+              ['3']: {
+                ...elementDynamicDataMock,
+                id: '3',
+              },
+            },
+            staticData: {
+              ['-1']: {
+                ...currentPage.elements.staticData['-1'],
+                children: [elementStaticDataMock.id],
+              },
+              [elementStaticDataMock.id]: {
+                ...elementStaticDataMock,
+                children: ['2', '3'],
+              },
+              ['2']: {
+                ...elementStaticDataMock,
+                id: '2',
+                parentId: '1',
+              },
+              ['3']: {
+                ...elementStaticDataMock,
+                id: '3',
+                parentId: '1',
+              },
+            },
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            allData: {
+              ['-1']: {
+                ...currentPage.elements.allData['-1'],
+                children: [elementAllDataMock.id],
+              },
+              [elementAllDataMock.id]: {
+                ...elementAllDataMock,
+                angle: negateValue(angle),
+                children: ['3', '2'],
+              },
+              ['2']: {
+                ...elementAllDataMock,
+                id: '2',
+                parentId: '1',
+              },
+              ['3']: {
+                ...elementAllDataMock,
+                id: '3',
+                parentId: '1',
+              },
+            },
+            dynamicData: {
+              ['-1']: {
+                ...currentPage.elements.dynamicData['-1'],
+              },
+              [elementDynamicDataMock.id]: {
+                ...elementDynamicDataMock,
+                angle: negateValue(angle),
+              },
+              ['2']: {
+                ...elementDynamicDataMock,
+                id: '2',
+              },
+              ['3']: {
+                ...elementDynamicDataMock,
+                id: '3',
+              },
+            },
+            staticData: {
+              ['-1']: {
+                ...currentPage.elements.staticData['-1'],
+                children: [elementStaticDataMock.id],
+              },
+              [elementStaticDataMock.id]: {
+                ...elementStaticDataMock,
+                children: ['3', '2'],
+              },
+              ['2']: {
+                ...elementStaticDataMock,
+                id: '2',
+                parentId: '1',
+              },
+              ['3']: {
+                ...elementStaticDataMock,
+                id: '3',
+                parentId: '1',
+              },
+            },
+          },
+          selectedElements: [selectedElementMock],
         },
       },
     });

@@ -319,7 +319,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
               >
                 <div
                   class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
-                  data-test-button-group-input="AlignHorizontalLeft"
+                  data-test-button-group-input="align-horizontal-left"
                 >
                   <div
                     class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -331,7 +331,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                 </div>
                 <div
                   class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
-                  data-test-button-group-input="AlignHorizontalCenter"
+                  data-test-button-group-input="align-horizontal-center"
                 >
                   <div
                     class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -343,7 +343,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                 </div>
                 <div
                   class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
-                  data-test-button-group-input="AlignHorizontalRight"
+                  data-test-button-group-input="align-horizontal-right"
                 >
                   <div
                     class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -360,7 +360,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
               >
                 <div
                   class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
-                  data-test-button-group-input="AlignVerticalTop"
+                  data-test-button-group-input="align-vertical-top"
                 >
                   <div
                     class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -372,7 +372,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                 </div>
                 <div
                   class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
-                  data-test-button-group-input="AlignVerticalCenter"
+                  data-test-button-group-input="align-vertical-center"
                 >
                   <div
                     class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -384,7 +384,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                 </div>
                 <div
                   class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
-                  data-test-button-group-input="AlignVerticalBottom"
+                  data-test-button-group-input="align-vertical-bottom"
                 >
                   <div
                     class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -531,7 +531,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
               >
                 <div
                   class="ButtonGroup__button ButtonGroup__button--light"
-                  data-test-button-group-input="ToggleRotate"
+                  data-test-button-group-input="toggle-rotate"
                 >
                   <div
                     class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -543,7 +543,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                 </div>
                 <div
                   class="ButtonGroup__button ButtonGroup__button--light"
-                  data-test-button-group-input="FlipHorizontal"
+                  data-test-button-group-input="flip-horizontal"
                 >
                   <div
                     class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -555,7 +555,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                 </div>
                 <div
                   class="ButtonGroup__button ButtonGroup__button--light"
-                  data-test-button-group-input="FlipVertical"
+                  data-test-button-group-input="flip-vertical"
                 >
                   <div
                     class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"

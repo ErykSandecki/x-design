@@ -110,7 +110,6 @@ export const getMappedElementsToMove = (
       const shouldResetCoordinates = data.position === 'relative';
 
       return {
-        ...currentPage.elements,
         allData: {
           ...elements.allData[id],
           coordinates: shouldResetCoordinates ? BASE_2D : data.coordinates,

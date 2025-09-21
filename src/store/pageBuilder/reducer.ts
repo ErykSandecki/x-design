@@ -6,6 +6,7 @@ import {
   CHANGE_PARENT,
   CHANGE_POSITION,
   CLEAR_PREV_STATE,
+  FLIP_ELEMENTS,
   REDUCER_HISTORY_REDO,
   REDUCER_HISTORY_SAVE,
   REDUCER_HISTORY_UNDO,
@@ -39,6 +40,7 @@ import {
   TChangeBackgroundAction,
   TReducerHistorySaveAction,
   TChangeAlignmentAction,
+  TFlipElementsAction,
 } from './types';
 
 // utils
@@ -54,10 +56,7 @@ import { handleReducerHistoryUndo } from './utils/reducerHistory/handleReducerHi
 import { handleRotateElements } from './utils/handleRotateElements';
 import { handleSetElementsCoordinates } from './utils/handleSetElementsCoordinates';
 import { handleSetElementSizes } from './utils/handleSetElementSize';
-// import {
-//   oneElementMock,
-//   oneElementSelectedMock,
-// } from 'test/mocks/reducer/pageBuilderMock';
+import { handleFlipElements } from './utils/handleFlipElements';
 
 const initialState: TPageBuilderState = {
   currentPage: '0',
@@ -78,13 +77,7 @@ const initialState: TPageBuilderState = {
   isLoading: true,
   isPending: false,
   pages: {
-    [BASE_PAGE.id]: {
-      ...BASE_PAGE,
-      // elements: {
-      //   ...oneElementMock,
-      // },
-      // selectedElements: [oneElementSelectedMock],
-    },
+    [BASE_PAGE.id]: BASE_PAGE,
   },
 };
 
@@ -121,6 +114,11 @@ const clearPrevState = (state: TPageBuilderState): TPageBuilderState => ({
     },
   },
 });
+
+const flipElements = (
+  state: TPageBuilderState,
+  { payload }: TAction<TFlipElementsAction['payload']>,
+): TPageBuilderState => handleFlipElements(payload, state);
 
 const reducerHistoryRedo = (state: TPageBuilderState): TPageBuilderState =>
   handleReducerHistoryRedo(state);
@@ -261,6 +259,8 @@ const pageBuilder = (
       return changePosition(state);
     case CLEAR_PREV_STATE:
       return clearPrevState(state);
+    case FLIP_ELEMENTS:
+      return flipElements(state, action);
     case REDUCER_HISTORY_REDO:
       return reducerHistoryRedo(state);
     case REDUCER_HISTORY_SAVE:
