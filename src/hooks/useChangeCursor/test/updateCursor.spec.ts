@@ -10,7 +10,7 @@ const contentRef = {
 describe('updateCursor', () => {
   it(`should update cursor`, () => {
     // before
-    updateCursor(contentRef, 'cursor', 360);
+    updateCursor(360, contentRef, 'cursor');
 
     // result
     expect(contentRef.current).toStrictEqual({

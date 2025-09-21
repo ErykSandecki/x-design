@@ -39,13 +39,13 @@ import {
 export type TElementDynamicData = Pick<
   TElement,
   | 'alignment'
+  | 'angle'
   | 'background'
   | 'coordinates'
   | 'deepLevel'
   | 'height'
   | 'id'
   | 'position'
-  | 'rotate'
   | 'width'
 >;
 
@@ -177,7 +177,7 @@ export type TReducerHistoryUndoAction = {
 };
 
 export type TRotateElementsAction = {
-  payload: TElement['rotate'];
+  payload: TElement['angle'];
   type: typeof ROTATE_ELEMENTS;
 };
 

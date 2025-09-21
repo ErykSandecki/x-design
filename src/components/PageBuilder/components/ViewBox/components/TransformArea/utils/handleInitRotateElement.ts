@@ -7,14 +7,14 @@ import { TElement } from 'types';
 import { getElementAngle } from './getElementAngle';
 
 export const handleInitRotateElement = (
+  angle: TElement['angle'],
   cursorBaseAngle: RefObject<number>,
   cursorOffsetAngle: RefObject<number>,
   elementRef: RefObject<HTMLDivElement>,
   event: MouseEvent,
-  rotate: TElement['rotate'],
 ): void => {
-  const angle = getElementAngle(elementRef, event);
+  const targetAngle = getElementAngle(elementRef, event);
 
-  cursorBaseAngle.current = angle;
-  cursorOffsetAngle.current = rotate - angle;
+  cursorBaseAngle.current = targetAngle;
+  cursorOffsetAngle.current = angle - targetAngle;
 };

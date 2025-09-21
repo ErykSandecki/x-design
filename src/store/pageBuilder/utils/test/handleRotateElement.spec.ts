@@ -17,10 +17,10 @@ describe('handleRotateElement', () => {
   it(`should return data with rotated element`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-    const rotate = 180;
+    const angle = 180;
 
     // before
-    const result = handleRotateElements(rotate, {
+    const result = handleRotateElements(angle, {
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -65,14 +65,14 @@ describe('handleRotateElement', () => {
               ...currentPage.elements.allData,
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
-                rotate,
+                angle,
               },
             },
             dynamicData: {
               ...currentPage.elements.dynamicData,
               [elementDynamicDataMock.id]: {
                 ...elementDynamicDataMock,
-                rotate,
+                angle,
               },
             },
             staticData: {

@@ -32,6 +32,7 @@ const color =
 
 export const BASE_ALL_DATA: TElement = {
   alignment: {},
+  angle: 0,
   background: {
     properties: { alpha: '100', color, format: 'hex' },
     visible: true,
@@ -43,20 +44,19 @@ export const BASE_ALL_DATA: TElement = {
   id: '-1',
   parentId: '-1',
   position: 'absolute',
-  rotate: 0,
   type: ElementType.base,
   width: 0,
 };
 
 export const BASE_DYNAMIC_DATA: TElementDynamicData = {
   alignment: {},
+  angle: BASE_ALL_DATA.angle,
   background: BASE_ALL_DATA.background,
   coordinates: BASE_ALL_DATA.coordinates,
   deepLevel: 0,
   height: BASE_ALL_DATA.height,
   id: BASE_ALL_DATA.id,
   position: BASE_ALL_DATA.position,
-  rotate: BASE_ALL_DATA.rotate,
   width: BASE_ALL_DATA.width,
 };
 

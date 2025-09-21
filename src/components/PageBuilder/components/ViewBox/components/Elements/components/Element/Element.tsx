@@ -47,10 +47,10 @@ import { getPosition } from './utils/getPosition';
 type TElementProps = {
   classes: typeof classes;
   children: (
+    anlge: TElement['angle'],
     coordinates: TElement['coordinates'],
     height: TElement['height'],
     hover: boolean,
-    rotate: TElement['rotate'],
     selected: boolean,
     width: TElement['width'],
   ) => ReactNode;
@@ -77,7 +77,7 @@ const Element: FC<TElementProps> = ({
   const elementDynamicData = useSelector(elementDynamicDataSelectorCreator(id));
   const { itemsRefs, zoomContentRef } = useRefs();
   const { alignment, coordinates } = elementDynamicData;
-  const { background, height, position, rotate, width } = elementDynamicData;
+  const { angle, background, height, position, width } = elementDynamicData;
   const { x, y } = coordinates;
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { ...events } = useElementEvents(
@@ -130,16 +130,16 @@ const Element: FC<TElementProps> = ({
         style={{
           backgroundColor: (background.properties as TColor).color,
           height: '100%',
-          transform: `rotate(${rotate - counterAngle}deg)`,
+          transform: `rotate(${angle - counterAngle}deg)`,
           width: '100%',
         }}
         {...events}
       >
-        {children(coordinates, height, isHover, rotate, isSelected, width)}
+        {children(angle, coordinates, height, isHover, isSelected, width)}
         {displayOutline && (
           <Outline
+            angle={angle - counterAngle}
             height={height}
-            rotate={rotate - counterAngle}
             x={x1}
             y={y1}
             width={width}
@@ -147,6 +147,7 @@ const Element: FC<TElementProps> = ({
         )}
         {displayEventsArea && (
           <EventsArea
+            angle={angle}
             absoluteCoordinates={{ x: x1, y: y1 }}
             counterAngle={counterAngle}
             elementRef={elementRef}
@@ -154,7 +155,6 @@ const Element: FC<TElementProps> = ({
             id={id}
             mouseMode={mouseMode}
             relativeCoordinates={{ x, y }}
-            rotate={rotate}
             width={width}
           />
         )}

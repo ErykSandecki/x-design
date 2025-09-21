@@ -4,17 +4,17 @@ import { cloneDeep } from 'lodash';
 import { TPageBuilderState, TRotateElementsAction } from '../types';
 
 export const handleRotateElements = (
-  rotate: TRotateElementsAction['payload'],
+  angle: TRotateElementsAction['payload'],
   state: TPageBuilderState,
 ): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];
   const { elements, selectedElements } = currentPage;
   const clonedElements = cloneDeep(elements);
-  const fixedAngle = parseFloat(rotate.toFixed(2));
+  const fixedAngle = parseFloat(angle.toFixed(2));
 
   selectedElements.forEach(({ id }) => {
-    clonedElements.allData[id].rotate = fixedAngle;
-    clonedElements.dynamicData[id].rotate = fixedAngle;
+    clonedElements.allData[id].angle = fixedAngle;
+    clonedElements.dynamicData[id].angle = fixedAngle;
   });
 
   return {

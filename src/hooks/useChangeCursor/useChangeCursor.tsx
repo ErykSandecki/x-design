@@ -6,13 +6,13 @@ import { resetCursor, updateCursor } from './utils';
 export type TUseChangeCursor = {
   isPressing: boolean;
   onMouseDown: () => void;
-  onMouseEnter: (rotate: number, counterAngle: number) => void;
+  onMouseEnter: (angle: number, counterAngle: number) => void;
   onMouseLeave: () => void;
 };
 
 export const useChangeCursor = (
+  currentAngle: number,
   contentRef: RefObject<HTMLElement>,
-  currentRotate: number,
   cursor: string,
   cursorDefault: string,
 ): TUseChangeCursor => {
@@ -23,9 +23,9 @@ export const useChangeCursor = (
     setIsPressing(true);
   };
 
-  const handleMouseEnter = (rotate: number, counterAngle: number): void => {
+  const handleMouseEnter = (angle: number, counterAngle: number): void => {
     if (!isPressing) {
-      updateCursor(contentRef, cursor, rotate);
+      updateCursor(angle, contentRef, cursor);
       setCounterAngle(counterAngle);
     }
   };
@@ -43,9 +43,9 @@ export const useChangeCursor = (
 
   useEffect(() => {
     if (isPressing) {
-      updateCursor(contentRef, cursor, counterAngle + currentRotate);
+      updateCursor(counterAngle + currentAngle, contentRef, cursor);
     }
-  }, [currentRotate]);
+  }, [currentAngle]);
 
   useEffect(() => {
     if (isPressing) {

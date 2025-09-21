@@ -24,6 +24,7 @@ export const handleCreateElement = (
     const y = y1 < y2 ? y1 : y2;
     const element: TAddELementActionPayload = {
       alignment: {},
+      angle: 0,
       background: {
         properties: { alpha: '100', color: '#ffffff', format: 'hex' },
         visible: true,
@@ -35,7 +36,6 @@ export const handleCreateElement = (
       id: generateID(),
       parentId: '-1',
       position: 'absolute',
-      rotate: 0,
       type: ElementType.frame,
       width: Math.abs(x1 - x2),
     };

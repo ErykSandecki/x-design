@@ -20,7 +20,7 @@ export const useBlurEvent = (
 
   const handleBlur = (): void => {
     if (angle === '') {
-      setAngle(element.rotate.toString());
+      setAngle(element.angle.toString());
     } else {
       dispatch(rotateElements(clampAngle(parseInt(angle))));
     }

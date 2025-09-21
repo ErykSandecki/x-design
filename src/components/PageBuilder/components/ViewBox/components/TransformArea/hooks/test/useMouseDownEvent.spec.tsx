@@ -43,6 +43,7 @@ describe('useMouseMoveEvent', () => {
     const { result } = renderHook(
       () =>
         useMouseDownEvent(
+          0,
           cursorBaseAngle,
           cursorOffsetAngle,
           cursorPosition,
@@ -50,7 +51,6 @@ describe('useMouseMoveEvent', () => {
           MouseMode.default,
           mockCallBack,
           mockCallBack,
-          0,
         ),
       {
         wrapper: getProviderWrapper(store),
@@ -75,6 +75,7 @@ describe('useMouseMoveEvent', () => {
     const { result } = renderHook(
       () =>
         useMouseDownEvent(
+          0,
           cursorBaseAngle,
           cursorOffsetAngle,
           cursorPosition,
@@ -82,7 +83,6 @@ describe('useMouseMoveEvent', () => {
           MouseMode.default,
           mockCallBack,
           mockCallBack,
-          0,
         ),
       {
         wrapper: getProviderWrapper(store),
@@ -107,6 +107,7 @@ describe('useMouseMoveEvent', () => {
     const { result } = renderHook(
       () =>
         useMouseDownEvent(
+          0,
           cursorOffsetAngle,
           cursorBaseAngle,
           cursorPosition,
@@ -114,7 +115,6 @@ describe('useMouseMoveEvent', () => {
           MouseMode.comment,
           mockCallBack,
           mockCallBack,
-          0,
         ),
       {
         wrapper: getProviderWrapper(store),
@@ -139,6 +139,7 @@ describe('useMouseMoveEvent', () => {
     const { result } = renderHook(
       () =>
         useMouseDownEvent(
+          0,
           cursorOffsetAngle,
           cursorBaseAngle,
           cursorPosition,
@@ -146,7 +147,6 @@ describe('useMouseMoveEvent', () => {
           MouseMode.comment,
           mockCallBack,
           mockCallBack,
-          0,
         ),
       {
         wrapper: getProviderWrapper(store),

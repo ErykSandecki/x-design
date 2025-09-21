@@ -4,7 +4,7 @@ import { getSVGUrl } from '../utils';
 describe('getSVGUrl', () => {
   it(`should return url`, () => {
     // before
-    const result = getSVGUrl('cursor', 0);
+    const result = getSVGUrl(0, 'cursor');
 
     // result
     expect(result).toBe(

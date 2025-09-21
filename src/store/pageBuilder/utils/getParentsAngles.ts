@@ -3,15 +3,15 @@ import { TElement, TObject } from 'types';
 
 export const getParentsAngles = (
   allData: TObject<TElement>,
-  angles: Array<TElement['rotate']>,
+  angles: Array<TElement['angle']>,
   parentId: TElement['id'],
-): Array<TElement['rotate']> => {
+): Array<TElement['angle']> => {
   if (parentId !== '-1') {
     const parent = allData[parentId];
 
     return getParentsAngles(
       allData,
-      [...angles, parent.rotate],
+      [...angles, parent.angle],
       parent.parentId,
     );
   }

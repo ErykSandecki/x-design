@@ -20,14 +20,14 @@ import styles from './outline.scss';
 import { TElement } from 'types';
 
 type TOutlineProps = {
+  angle: TElement['angle'];
   height: TElement['height'];
-  rotate: TElement['rotate'];
   width: TElement['width'];
   x: TElement['coordinates']['x'];
   y: TElement['coordinates']['y'];
 };
 
-const Outline: FC<TOutlineProps> = ({ height, rotate, width, x, y }) => {
+const Outline: FC<TOutlineProps> = ({ angle, height, width, x, y }) => {
   const { overlayContainerRef } = useRefs();
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
@@ -40,7 +40,7 @@ const Outline: FC<TOutlineProps> = ({ height, rotate, width, x, y }) => {
           height,
           left: `${x}px`,
           top: `${y}px`,
-          transform: `rotate(${rotate}deg)`,
+          transform: `rotate(${angle}deg)`,
           width,
         }}
       />,

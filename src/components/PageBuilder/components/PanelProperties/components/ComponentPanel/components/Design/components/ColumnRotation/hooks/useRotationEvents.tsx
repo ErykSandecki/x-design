@@ -20,7 +20,7 @@ export const useRotationEvents = (
   isMixed: boolean,
   isMultiple: boolean,
 ): TUseRotationEvents => {
-  const { rotate: currentAngle } = element;
+  const { angle: currentAngle } = element;
   const [angle, setAngle] = useState('');
   const onBlur = useBlurEvent(angle, element, setAngle);
   const onChange = useChangeEvent(setAngle);

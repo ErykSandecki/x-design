@@ -38,7 +38,7 @@ const MultipleElementsArea: FC = () => {
     eventSelectorCreator('isMultipleMoving'),
   ) as boolean;
   const angle = useSelector(
-    elementAttributeSelectorCreator('rotate', firstElement?.id),
+    elementAttributeSelectorCreator('angle', firstElement?.id),
   );
   const [coordinatesData, setCoordinatesData] = useState<TCoordinatesData>({
     elementsCordinates: [],

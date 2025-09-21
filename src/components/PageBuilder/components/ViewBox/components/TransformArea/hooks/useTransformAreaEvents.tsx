@@ -28,12 +28,12 @@ export type TUseTransformAreaEvents = TUseMouseDownEvent &
   TUseMouseLeaveEvent;
 
 export const useTransformAreaEvents = (
+  angle: TElement['angle'],
   cursorAngle: number,
   elementRef: RefObject<HTMLDivElement>,
   height: TElement['height'],
   id: TElement['id'],
   mouseMode: MouseMode,
-  rotate: TElement['rotate'],
   width: TElement['width'],
   x: TElement['coordinates']['x'],
   y: TElement['coordinates']['y'],
@@ -43,18 +43,19 @@ export const useTransformAreaEvents = (
   const cursorOffsetAngle = useRef(0);
   const cursorPosition = useRef(BASE_2D);
   const cursorResize = useChangeCursor(
-    zoomBoxRef,
     cursorAngle,
+    zoomBoxRef,
     IconResize,
     IconDefault,
   );
   const cursorRotate = useChangeCursor(
-    zoomBoxRef,
     cursorAngle,
+    zoomBoxRef,
     IconRotate,
     IconDefault,
   );
   const eventsMouseDown = useMouseDownEvent(
+    angle,
     cursorBaseAngle,
     cursorOffsetAngle,
     cursorPosition,
@@ -62,7 +63,6 @@ export const useTransformAreaEvents = (
     mouseMode,
     cursorResize.onMouseDown,
     cursorRotate.onMouseDown,
-    rotate,
   );
   const eventsMouseEnter = useMouseEnterEvent(
     cursorAngle,

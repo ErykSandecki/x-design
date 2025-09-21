@@ -102,8 +102,8 @@ describe('ColumnRotation snapshots', () => {
                 },
                 ['2']: {
                   ...elementAllDataMock,
+                  angle: 100,
                   id: '2',
-                  rotate: 100,
                 },
               },
               dynamicData: {
@@ -116,8 +116,8 @@ describe('ColumnRotation snapshots', () => {
                 },
                 ['2']: {
                   ...elementDynamicDataMock,
+                  angle: 100,
                   id: '2',
-                  rotate: 100,
                 },
               },
               staticData: {
@@ -182,7 +182,7 @@ describe('ColumnRotation behaviors', () => {
 
     // result
     expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].rotate,
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].angle,
     ).toBe(100);
   });
 
@@ -218,7 +218,7 @@ describe('ColumnRotation behaviors', () => {
 
     // result
     expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].rotate,
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].angle,
     ).toBe(-100);
   });
 });

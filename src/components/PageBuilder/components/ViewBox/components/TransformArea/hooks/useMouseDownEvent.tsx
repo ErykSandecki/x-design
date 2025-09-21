@@ -19,6 +19,7 @@ export type TUseMouseDownEvent = {
 };
 
 export const useMouseDownEvent = (
+  angle: TElement['angle'],
   cursorBaseAngle: RefObject<number>,
   cursorOffsetAngle: RefObject<number>,
   cursorPosition: RefObject<T2DCoordinates>,
@@ -26,7 +27,6 @@ export const useMouseDownEvent = (
   mouseMode: MouseMode,
   onMouseDownCursorResize: TUseChangeCursor['onMouseDown'],
   onMouseDownCursorRotate: TUseChangeCursor['onMouseDown'],
-  rotate: TElement['rotate'],
 ): TUseMouseDownEvent => {
   const dispatch = useDispatch();
 
@@ -57,11 +57,11 @@ export const useMouseDownEvent = (
 
       onMouseDownCursorRotate();
       handleInitRotateElement(
+        angle,
         cursorBaseAngle,
         cursorOffsetAngle,
         elementRef,
         event,
-        rotate,
       );
       dispatch(
         updateEventsStatus({ isRotating: true, selectedAnchorRotate: anchor }),

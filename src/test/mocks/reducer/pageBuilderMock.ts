@@ -57,6 +57,7 @@ export const alignmetnMock: TAlignment = {
 
 export const elementDynamicDataMock: TElementDynamicData = {
   alignment: {},
+  angle: 0,
   background: {
     properties: { alpha: '100', color: '#ffffff', format: 'hex' },
     visible: true,
@@ -69,7 +70,6 @@ export const elementDynamicDataMock: TElementDynamicData = {
   height: 100,
   id: '1',
   position: 'absolute',
-  rotate: 0,
   width: 100,
 };
 
@@ -88,6 +88,7 @@ export const elementAllDataMock: TElement = {
 
 export const createFrameMock: TElement = {
   alignment: {},
+  angle: 0,
   background: {
     properties: { alpha: '100', color: '#ffffff', format: 'hex' },
     visible: true,
@@ -99,7 +100,6 @@ export const createFrameMock: TElement = {
   id: '1',
   parentId: '-1',
   position: 'absolute',
-  rotate: 0,
   type: ElementType.frame,
   width: 0,
 };
@@ -169,6 +169,7 @@ export const oneElementMock: TElementsData = {
   allData: {
     '-1': {
       alignment: {},
+      angle: 0,
       background: {
         properties: {
           alpha: '100',
@@ -187,12 +188,12 @@ export const oneElementMock: TElementsData = {
       id: '-1',
       parentId: '-1',
       position: 'absolute',
-      rotate: 0,
       type: ElementType.base,
       width: 0,
     },
     1: {
       alignment: {},
+      angle: 0,
       background: {
         properties: {
           alpha: '100',
@@ -211,7 +212,6 @@ export const oneElementMock: TElementsData = {
       id: '1',
       parentId: '-1',
       position: 'absolute',
-      rotate: 0,
       type: ElementType.frame,
       width: 500,
     },
@@ -219,6 +219,7 @@ export const oneElementMock: TElementsData = {
   dynamicData: {
     '-1': {
       alignment: {},
+      angle: 0,
       background: {
         properties: {
           alpha: '100',
@@ -235,11 +236,11 @@ export const oneElementMock: TElementsData = {
       height: 0,
       id: '-1',
       position: 'absolute',
-      rotate: 0,
       width: 0,
     },
     1: {
       alignment: {},
+      angle: 0,
       background: {
         properties: {
           alpha: '100',
@@ -256,7 +257,6 @@ export const oneElementMock: TElementsData = {
       height: 500,
       id: '1',
       position: 'absolute',
-      rotate: 0,
       width: 500,
     },
   },

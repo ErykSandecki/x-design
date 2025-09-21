@@ -84,7 +84,7 @@ export const getVerticalPosition = (
 
 export const getPosition = (
   alignment: TElement['alignment'],
-  rotate: number,
+  angle: number,
   x: T2DCoordinates['x'],
   y: T2DCoordinates['y'],
 ): CSSProperties => {
@@ -100,7 +100,7 @@ export const getPosition = (
   return {
     ...horizontal,
     ...vertical,
-    transform: `rotate(${rotate}deg) translate(${translateX}, ${translateY})`,
+    transform: `rotate(${angle}deg) translate(${translateX}, ${translateY})`,
     transformOrigin: `${originX} ${originY}`,
   };
 };

@@ -49,10 +49,10 @@ const Frame: FC<TFrameProps> = ({
       mouseMode={mouseMode}
       type={type}
     >
-      {(coordinates, height, hover, rotate, selected, width) => {
+      {(angle, coordinates, height, hover, selected, width) => {
         const stickWall = useMemo(
-          () => getElementStickWallPosition(rotate),
-          [rotate],
+          () => getElementStickWallPosition(angle),
+          [angle],
         );
 
         return (
@@ -66,7 +66,7 @@ const Frame: FC<TFrameProps> = ({
                     height: `${height}px`,
                     left: `${coordinates.x}px`,
                     top: `${coordinates.y}px`,
-                    transform: `rotate(${rotate}deg)`,
+                    transform: `rotate(${angle}deg)`,
                     width: `${width}px`,
                   }}
                 >

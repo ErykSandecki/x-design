@@ -3,14 +3,14 @@ import { ElementStickWallPosition } from '../types/enums';
 import { TElement } from 'types';
 
 export const getElementStickWallPosition = (
-  rotate: TElement['rotate'],
+  angle: TElement['angle'],
 ): ElementStickWallPosition => {
   switch (true) {
-    case rotate >= -45 && rotate <= 45:
+    case angle >= -45 && angle <= 45:
       return ElementStickWallPosition.top;
-    case rotate >= 45 && rotate <= 135:
+    case angle >= 45 && angle <= 135:
       return ElementStickWallPosition.left;
-    case (rotate >= 135 && rotate <= 180) || (rotate >= -180 && rotate <= -135):
+    case (angle >= 135 && angle <= 180) || (angle >= -180 && angle <= -135):
       return ElementStickWallPosition.bottom;
     default:
       return ElementStickWallPosition.right;

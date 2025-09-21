@@ -102,9 +102,9 @@ export const reducerHistoryUndo = (): TReducerHistoryUndoAction => ({
 });
 
 export const rotateElements = (
-  rotate: TRotateElementsAction['payload'],
+  angle: TRotateElementsAction['payload'],
 ): TRotateElementsAction => ({
-  payload: rotate,
+  payload: angle,
   type: ROTATE_ELEMENTS,
 });
 

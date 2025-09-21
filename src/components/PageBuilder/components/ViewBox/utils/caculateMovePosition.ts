@@ -18,17 +18,17 @@ export const caculateMovePosition = (
 ): T2DCoordinates => {
   const state = store.getState();
   const z = areaAxisSelectorCreator('z')(state);
-  const { parentId: _parentId, rotate } =
+  const { angle, parentId: _parentId } =
     elementAllDataSelectorCreator(parentId)(state);
   const counterAngle = counterAngleSelectorCreator(_parentId)(state);
-  const totalRotate = rotate - counterAngle;
-  const angle = -totalRotate * (Math.PI / 180);
+  const totalAngle = angle - counterAngle;
+  const targetAngle = -totalAngle * (Math.PI / 180);
   const { x, y } = cursorPosition.current;
   const deltaX = event.clientX / z - x / z;
   const deltaY = event.clientY / z - y / z;
 
   return {
-    x: deltaX * Math.cos(angle) - deltaY * Math.sin(angle),
-    y: deltaX * Math.sin(angle) + deltaY * Math.cos(angle),
+    x: deltaX * Math.cos(targetAngle) - deltaY * Math.sin(targetAngle),
+    y: deltaX * Math.sin(targetAngle) + deltaY * Math.cos(targetAngle),
   };
 };

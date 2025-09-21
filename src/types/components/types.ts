@@ -21,6 +21,7 @@ export type TBackground = {
 
 export type TElement = {
   alignment: TAlignment;
+  angle: number;
   background: TBackground;
   children: Array<string>;
   coordinates: T2DCoordinates;
@@ -29,7 +30,6 @@ export type TElement = {
   id: string;
   parentId: TElement['id'] | '-1';
   position: CSSProperties['position'];
-  rotate: number;
   type: ElementType;
   width: number | CSSProperties['width'];
 };

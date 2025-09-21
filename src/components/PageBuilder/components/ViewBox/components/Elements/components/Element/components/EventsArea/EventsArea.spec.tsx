@@ -47,7 +47,7 @@ describe('EventsArea snapshots', () => {
             id="1"
             mouseMode={MouseMode.default}
             relativeCoordinates={BASE_2D}
-            rotate={0}
+            angle={0}
             width={100}
           />
         </RefsProvider>

@@ -14,16 +14,10 @@ const elementRef = {
 describe('handleInitRotateElement', () => {
   it(`should init current angle`, () => {
     // before
-    handleInitRotateElement(
-      cursorBaseAngle,
-      cursorOffsetAngle,
-      elementRef,
-      {
-        clientX: 100,
-        clientY: 100,
-      } as MouseEvent,
-      0,
-    );
+    handleInitRotateElement(0, cursorBaseAngle, cursorOffsetAngle, elementRef, {
+      clientX: 100,
+      clientY: 100,
+    } as MouseEvent);
 
     // result
     expect(cursorBaseAngle).toStrictEqual({ current: 45 });

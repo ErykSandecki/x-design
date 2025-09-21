@@ -15,7 +15,7 @@ export const handleRotateElement = (
 ): void => {
   const cursorCurrentAngle = getElementAngle(elementRef, event);
   const angle = cursorCurrentAngle + cursorOffsetAngle.current;
-  const rotate = ((((angle + 180) % 360) + 360) % 360) - 180;
+  const targetAngle = ((((angle + 180) % 360) + 360) % 360) - 180;
 
-  dispatch(rotateElements(rotate));
+  dispatch(rotateElements(targetAngle));
 };

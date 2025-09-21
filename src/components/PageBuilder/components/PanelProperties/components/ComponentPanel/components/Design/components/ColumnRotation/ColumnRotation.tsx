@@ -38,7 +38,7 @@ const ColumnRotation: FC = () => {
   const isMixedAngle = isMixed(
     dynamicData,
     firstElement,
-    'rotate',
+    'angle',
     selectedElements,
   );
   const { t } = useTranslation();

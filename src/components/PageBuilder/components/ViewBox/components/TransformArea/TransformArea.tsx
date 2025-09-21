@@ -23,29 +23,29 @@ import styles from './transform-area.scss';
 import { enumToArray } from 'utils';
 
 export type TTransformAreaProps = {
+  angle: TElement['angle'];
   counterAngle: number;
   elementRef: RefObject<HTMLDivElement>;
   height: TElement['height'];
   id: TElement['id'];
   moseMode: MouseMode;
-  rotate: TElement['rotate'];
   width: TElement['width'];
   x: TElement['coordinates']['x'];
   y: TElement['coordinates']['y'];
 };
 
 const TransformArea: FC<TTransformAreaProps> = ({
+  angle,
   counterAngle,
   elementRef,
   height,
   id,
   moseMode,
-  rotate,
   width,
   x,
   y,
 }) => {
-  const cursorAngle = rotate - counterAngle;
+  const cursorAngle = angle - counterAngle;
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const {
     onMouseDownAnchorResize,
@@ -55,12 +55,12 @@ const TransformArea: FC<TTransformAreaProps> = ({
     onMouseLeaveAnchorResize,
     onMouseLeaveAnchorRotate,
   } = useTransformAreaEvents(
+    angle,
     cursorAngle,
     elementRef,
     height,
     id,
     moseMode,
-    rotate,
     width,
     x,
     y,

@@ -17,25 +17,25 @@ import { getCornersPosition } from '../../utils/getCornersPosition';
 
 type TOutlineProps = {
   absoluteCoordinates?: T2DCoordinates;
+  angle: TElement['angle'];
   counterAngle: number;
   elementRef: RefObject<HTMLDivElement>;
   height: TElement['height'];
   id: TElement['id'];
   mouseMode: MouseMode;
   relativeCoordinates?: TElement['coordinates'];
-  rotate: TElement['rotate'];
   width: TElement['width'];
 };
 
 const EventsArea: FC<TOutlineProps> = ({
   absoluteCoordinates,
+  angle,
   counterAngle,
   elementRef,
   height,
   id,
   mouseMode,
   relativeCoordinates,
-  rotate,
   width,
 }) => {
   const rectCoordinates = getCornersPosition(height, width);
@@ -49,7 +49,7 @@ const EventsArea: FC<TOutlineProps> = ({
           height,
           left: `${absoluteCoordinates.x}px`,
           top: `${absoluteCoordinates.y}px`,
-          transform: `rotate(${rotate - counterAngle}deg)`,
+          transform: `rotate(${angle - counterAngle}deg)`,
           transformOrigin: 'center center',
           width,
         }}
@@ -59,12 +59,12 @@ const EventsArea: FC<TOutlineProps> = ({
         <Box style={{ height, width }} />
         <Corners rectCoordinates={rectCoordinates} />
         <TransformArea
+          angle={angle}
           counterAngle={counterAngle}
           elementRef={elementRef}
           height={height}
           id={id}
           moseMode={mouseMode}
-          rotate={rotate}
           x={relativeCoordinates.x}
           y={relativeCoordinates.y}
           width={width}

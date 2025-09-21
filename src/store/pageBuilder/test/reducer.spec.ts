@@ -95,13 +95,13 @@ describe('PageBuilderReducer', () => {
               },
               [createFrameMock.id]: {
                 alignment: {},
+                angle: createFrameMock.angle,
                 background: createFrameMock.background,
                 coordinates: createFrameMock.coordinates,
                 deepLevel: createFrameMock.deepLevel,
                 height: createFrameMock.height,
                 id: createFrameMock.id,
                 position: createFrameMock.position,
-                rotate: createFrameMock.rotate,
                 width: createFrameMock.width,
               },
             },
@@ -849,10 +849,10 @@ describe('PageBuilderReducer', () => {
   it('should handle ROTATE_ELEMENT', () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-    const rotate = 180;
+    const angle = 180;
 
     // before
-    const state = reducer(rotateElements(rotate), {
+    const state = reducer(rotateElements(angle), {
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -897,14 +897,14 @@ describe('PageBuilderReducer', () => {
               ...currentPage.elements.allData,
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
-                rotate,
+                angle,
               },
             },
             dynamicData: {
               ...currentPage.elements.dynamicData,
               [elementDynamicDataMock.id]: {
                 ...elementDynamicDataMock,
-                rotate,
+                angle,
               },
             },
             staticData: {

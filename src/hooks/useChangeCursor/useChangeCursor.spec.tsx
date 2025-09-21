@@ -27,7 +27,7 @@ describe('useMouseDownEvent', () => {
   it(`should change state pressing`, async () => {
     // before
     const { result } = renderHook(() =>
-      useChangeCursor(contentRef, 0, 'cursor', 'cursorDefault'),
+      useChangeCursor(0, contentRef, 'cursor', 'cursorDefault'),
     );
 
     // action
@@ -42,7 +42,7 @@ describe('useMouseDownEvent', () => {
   it(`should change cursor on mouse enter event`, async () => {
     // before
     const { result } = renderHook(() =>
-      useChangeCursor(contentRef, 0, 'cursor', 'cursorDefault'),
+      useChangeCursor(0, contentRef, 'cursor', 'cursorDefault'),
     );
 
     // action
@@ -51,17 +51,17 @@ describe('useMouseDownEvent', () => {
     });
 
     // result
-    expect(mockCallBack.mock.calls[0][0]).toStrictEqual({
+    expect(mockCallBack.mock.calls[0][0]).toBe(360);
+    expect(mockCallBack.mock.calls[0][1]).toStrictEqual({
       current: { style: { cursor: '' } },
     });
-    expect(mockCallBack.mock.calls[0][1]).toBe('cursor');
-    expect(mockCallBack.mock.calls[0][2]).toBe(360);
+    expect(mockCallBack.mock.calls[0][2]).toBe('cursor');
   });
 
   it(`should not trigger mouse enter event`, async () => {
     // before
     const { result } = renderHook(() =>
-      useChangeCursor(contentRef, 0, 'cursor', 'cursorDefault'),
+      useChangeCursor(0, contentRef, 'cursor', 'cursorDefault'),
     );
 
     // action
@@ -81,7 +81,7 @@ describe('useMouseDownEvent', () => {
   it(`should change cursor on mouse leave event`, async () => {
     // before
     const { result } = renderHook(() =>
-      useChangeCursor(contentRef, 0, 'cursor', 'cursorDefault'),
+      useChangeCursor(0, contentRef, 'cursor', 'cursorDefault'),
     );
 
     // action
@@ -99,7 +99,7 @@ describe('useMouseDownEvent', () => {
   it(`should not triiger mouse leave event`, async () => {
     // before
     const { result } = renderHook(() =>
-      useChangeCursor(contentRef, 0, 'cursor', 'cursorDefault'),
+      useChangeCursor(0, contentRef, 'cursor', 'cursorDefault'),
     );
 
     // action
@@ -119,7 +119,7 @@ describe('useMouseDownEvent', () => {
   it(`should revert default cursor`, async () => {
     // before
     const { result } = renderHook(() =>
-      useChangeCursor(contentRef, 0, 'cursor', 'cursorDefault'),
+      useChangeCursor(0, contentRef, 'cursor', 'cursorDefault'),
     );
 
     // action
@@ -143,8 +143,8 @@ describe('useMouseDownEvent', () => {
   it(`should trigger update cursor after change angle`, async () => {
     // before
     const { rerender, result } = renderHook((props: any) => {
-      const rotate = props?.currentRotate || 0;
-      return useChangeCursor(contentRef, rotate, 'cursor', 'cursorDefault');
+      const angle = props?.currentAngle || 0;
+      return useChangeCursor(angle, contentRef, 'cursor', 'cursorDefault');
     });
 
     // action
@@ -153,13 +153,13 @@ describe('useMouseDownEvent', () => {
     });
 
     // action
-    rerender({ currentRotate: 180 });
+    rerender({ currentAngle: 180 });
 
     // result
-    expect(mockCallBack.mock.calls[0][0]).toStrictEqual({
+    expect(mockCallBack.mock.calls[0][0]).toBe(180);
+    expect(mockCallBack.mock.calls[0][1]).toStrictEqual({
       current: { style: { cursor: '' } },
     });
-    expect(mockCallBack.mock.calls[0][1]).toBe('cursor');
-    expect(mockCallBack.mock.calls[0][2]).toBe(180);
+    expect(mockCallBack.mock.calls[0][2]).toBe('cursor');
   });
 });

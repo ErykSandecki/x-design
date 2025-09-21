@@ -4,19 +4,19 @@ import { TElement } from 'types';
 
 export const getAnchorResizeCursorAngle = (
   anchor: AnchorResize,
-  rotate: TElement['rotate'],
+  angle: TElement['angle'],
 ) => {
   switch (anchor) {
     case AnchorResize.east:
     case AnchorResize.west:
-      return 0 + rotate;
+      return 0 + angle;
     case AnchorResize.north:
     case AnchorResize.south:
-      return 90 + rotate;
+      return 90 + angle;
     case AnchorResize.northEast:
     case AnchorResize.southWest:
-      return -45 + rotate;
+      return -45 + angle;
     default:
-      return 45 + rotate;
+      return 45 + angle;
   }
 };
