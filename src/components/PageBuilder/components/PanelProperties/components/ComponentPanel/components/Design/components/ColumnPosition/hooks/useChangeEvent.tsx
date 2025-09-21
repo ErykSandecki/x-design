@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { setElementsCoordinates } from 'store/pageBuilder/actions';
 
 // utils
-import { canChangeValue } from '../../../utils/canChangeValue';
+import { canChangeValue } from '../utils/canChangeValue';
 
 export type TUseChangeEvent = {
   onChangeX: (value: string, isScrubbableInput?: boolean) => void;
