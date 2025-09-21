@@ -1,5 +1,5 @@
 import { createPortal } from 'react-dom';
-import { defer } from 'lodash';
+import { defer, first } from 'lodash';
 import { FC, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
@@ -16,6 +16,7 @@ import { BASE_RECT } from 'shared';
 // store
 import {
   areParentsTheSameSelector,
+  elementAttributeSelectorCreator,
   eventSelectorCreator,
   multipleSelectedElementsSelector,
   selectedElementsSelector,
@@ -30,11 +31,15 @@ import { getCoordinatesData } from './utils/getCoordinatesData';
 const MultipleElementsArea: FC = () => {
   const areParentsTheSame = useSelector(areParentsTheSameSelector);
   const selectedElements = useSelector(selectedElementsSelector);
+  const firstElement = first(selectedElements);
   const isMultiple = useSelector(multipleSelectedElementsSelector);
   const { itemsRefs, overlayContainerRef, zoomContentRef } = useRefs();
   const isMultipleMoving = useSelector(
     eventSelectorCreator('isMultipleMoving'),
   ) as boolean;
+  const angle = useSelector(
+    elementAttributeSelectorCreator('rotate', firstElement?.id),
+  );
   const [coordinatesData, setCoordinatesData] = useState<TCoordinatesData>({
     elementsCordinates: [],
     outline: BASE_RECT,
@@ -51,7 +56,7 @@ const MultipleElementsArea: FC = () => {
 
       setCoordinatesData(coordinates);
     });
-  }, [isMultipleMoving, selectedElements]);
+  }, [angle, isMultipleMoving, selectedElements]);
 
   if (!isMultiple) {
     return null;

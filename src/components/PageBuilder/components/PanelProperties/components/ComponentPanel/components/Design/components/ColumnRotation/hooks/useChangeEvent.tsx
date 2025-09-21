@@ -1,10 +1,7 @@
 import { useDispatch } from 'react-redux';
 
 // store
-import { rotateElement } from 'store/pageBuilder/actions';
-
-// utils
-import { canChangeValue } from '../../../utils/canChangeValue';
+import { rotateElements } from 'store/pageBuilder/actions';
 
 export type TUseChangeEvent = (
   value: string,
@@ -12,23 +9,18 @@ export type TUseChangeEvent = (
 ) => void;
 
 export const useChangeEvent = (
-  isMixed: boolean,
-  isMultiple: boolean,
   setAngle: (angle: string) => void,
 ): TUseChangeEvent => {
   const dispatch = useDispatch();
 
   const updateStore = (angle: number, isScrubbableInput: boolean): void => {
     if (isScrubbableInput) {
-      dispatch(rotateElement('1', angle));
+      dispatch(rotateElements(angle));
     }
   };
 
   const handleChange = (value: string, isScrubbableInput: boolean): void => {
-    if (canChangeValue(isMixed, isMultiple, isScrubbableInput)) {
-      setAngle(value);
-    }
-
+    setAngle(value);
     updateStore(parseFloat(value), isScrubbableInput);
   };
 

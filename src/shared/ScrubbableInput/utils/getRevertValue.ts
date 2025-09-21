@@ -1,4 +1,5 @@
 export const getRevertValue = (
+  defaultValue: number,
   max: number,
   min: number,
   value: number,
@@ -9,6 +10,6 @@ export const getRevertValue = (
     case min:
       return max;
     default:
-      return value;
+      return defaultValue;
   }
 };

@@ -51,7 +51,7 @@ export const useMouseMoveEvent = (
   const handleMouseMoveAnchorRotate = (event: MouseEvent): void => {
     event.stopPropagation();
 
-    handleRotateElement(cursorOffsetAngle, dispatch, elementRef, event, id);
+    handleRotateElement(cursorOffsetAngle, dispatch, elementRef, event);
   };
 
   useEffect(() => {

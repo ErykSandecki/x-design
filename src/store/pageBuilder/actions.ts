@@ -9,7 +9,7 @@ import {
   REDUCER_HISTORY_REDO,
   REDUCER_HISTORY_SAVE,
   REDUCER_HISTORY_UNDO,
-  ROTATE_ELEMENT,
+  ROTATE_ELEMENTS,
   SELECT_ELEMENT,
   SELECT_ELEMENTS,
   SET_AREA_COORDINATES,
@@ -34,8 +34,7 @@ import {
   TReducerHistoryRedoAction,
   TReducerHistorySaveAction,
   TReducerHistoryUndoAction,
-  TRotateElementAction,
-  TRotateElementActionPayload,
+  TRotateElementsAction,
   TSelectElementAction,
   TSelectElementsAction,
   TSetAreaCoordinatesAction,
@@ -102,12 +101,11 @@ export const reducerHistoryUndo = (): TReducerHistoryUndoAction => ({
   type: REDUCER_HISTORY_UNDO,
 });
 
-export const rotateElement = (
-  id: TRotateElementActionPayload['id'],
-  rotate: TRotateElementActionPayload['rotate'],
-): TRotateElementAction => ({
-  payload: { id, rotate },
-  type: ROTATE_ELEMENT,
+export const rotateElements = (
+  rotate: TRotateElementsAction['payload'],
+): TRotateElementsAction => ({
+  payload: rotate,
+  type: ROTATE_ELEMENTS,
 });
 
 export const selectElement = (

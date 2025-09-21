@@ -72,7 +72,7 @@ const ColumnRotation: FC = () => {
             onMouseUp={() =>
               dispatch(updateEventsStatus({ isRotating: false }))
             }
-            value={isMultiple ? 0 : parseFloat(angle)}
+            value={isMixedAngle ? 0 : parseFloat(angle)}
           />
         }
         type={isMixedAngle ? 'text' : 'number'}

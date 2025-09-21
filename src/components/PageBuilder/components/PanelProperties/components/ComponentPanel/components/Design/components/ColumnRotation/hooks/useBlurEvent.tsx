@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 
 // store
-import { rotateElement } from 'store/pageBuilder/actions';
+import { rotateElements } from 'store/pageBuilder/actions';
 
 // types
 import { TElement } from 'types';
@@ -22,7 +22,7 @@ export const useBlurEvent = (
     if (angle === '') {
       setAngle(element.rotate.toString());
     } else {
-      dispatch(rotateElement(element.id, clampAngle(parseInt(angle))));
+      dispatch(rotateElements(clampAngle(parseInt(angle))));
     }
   };
 

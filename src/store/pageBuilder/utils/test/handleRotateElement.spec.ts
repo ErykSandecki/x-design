@@ -1,17 +1,17 @@
 // mocks
 import {
   elementAllDataMock,
-  createFrameMock,
   elementDynamicDataMock,
   elementStaticDataMock,
   pageBuilderStateMock,
+  selectedElementMock,
 } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
 
 // utils
-import { handleRotateElement } from '../handleRotateElement';
+import { handleRotateElements } from '../handleRotateElements';
 
 describe('handleRotateElement', () => {
   it(`should return data with rotated element`, () => {
@@ -20,39 +20,37 @@ describe('handleRotateElement', () => {
     const rotate = 180;
 
     // before
-    const result = handleRotateElement(
-      { id: createFrameMock.id, rotate },
-      {
-        ...pageBuilderStateMock[PAGE_BUILDER],
-        pages: {
-          ...pageBuilderStateMock[PAGE_BUILDER].pages,
-          ['0']: {
-            ...currentPage,
-            elements: {
-              ...currentPage.elements,
-              allData: {
-                ...currentPage.elements.allData,
-                [elementAllDataMock.id]: {
-                  ...elementAllDataMock,
-                },
+    const result = handleRotateElements(rotate, {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            allData: {
+              ...currentPage.elements.allData,
+              [elementAllDataMock.id]: {
+                ...elementAllDataMock,
               },
-              dynamicData: {
-                ...currentPage.elements.dynamicData,
-                [elementDynamicDataMock.id]: {
-                  ...elementDynamicDataMock,
-                },
+            },
+            dynamicData: {
+              ...currentPage.elements.dynamicData,
+              [elementDynamicDataMock.id]: {
+                ...elementDynamicDataMock,
               },
-              staticData: {
-                ...currentPage.elements.staticData,
-                [elementStaticDataMock.id]: {
-                  ...elementStaticDataMock,
-                },
+            },
+            staticData: {
+              ...currentPage.elements.staticData,
+              [elementStaticDataMock.id]: {
+                ...elementStaticDataMock,
               },
             },
           },
+          selectedElements: [selectedElementMock],
         },
       },
-    );
+    });
 
     // result
     expect(result).toStrictEqual({
@@ -84,6 +82,7 @@ describe('handleRotateElement', () => {
               },
             },
           },
+          selectedElements: [selectedElementMock],
         },
       },
     });

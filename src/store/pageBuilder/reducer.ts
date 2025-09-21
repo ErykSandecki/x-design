@@ -9,7 +9,7 @@ import {
   REDUCER_HISTORY_REDO,
   REDUCER_HISTORY_SAVE,
   REDUCER_HISTORY_UNDO,
-  ROTATE_ELEMENT,
+  ROTATE_ELEMENTS,
   SELECT_ELEMENT,
   SELECT_ELEMENTS,
   SET_AREA_COORDINATES,
@@ -34,7 +34,7 @@ import {
   TSetElementsCoordinatesAction,
   TUpdateEventsStatusAction,
   TSetElementSizesAction,
-  TRotateElementAction,
+  TRotateElementsAction,
   TChangeParentAction,
   TChangeBackgroundAction,
   TReducerHistorySaveAction,
@@ -51,7 +51,7 @@ import { handleChangePosition } from './utils/handleChangePosition';
 import { handleReducerHistoryRedo } from './utils/reducerHistory/handleReducerHistoryRedo';
 import { handleReducerHistorySave } from './utils/reducerHistory/handleReducerHistorySave';
 import { handleReducerHistoryUndo } from './utils/reducerHistory/handleReducerHistoryUndo';
-import { handleRotateElement } from './utils/handleRotateElement';
+import { handleRotateElements } from './utils/handleRotateElements';
 import { handleSetElementsCoordinates } from './utils/handleSetElementsCoordinates';
 import { handleSetElementSizes } from './utils/handleSetElementSize';
 // import {
@@ -133,10 +133,10 @@ const reducerHistorySave = (
 const reducerHistoryUndo = (state: TPageBuilderState): TPageBuilderState =>
   handleReducerHistoryUndo(state);
 
-const rotateElement = (
+const rotateElements = (
   state: TPageBuilderState,
-  { payload }: TAction<TRotateElementAction['payload']>,
-): TPageBuilderState => handleRotateElement(payload, state);
+  { payload }: TAction<TRotateElementsAction['payload']>,
+): TPageBuilderState => handleRotateElements(payload, state);
 
 const selectElement = (
   state: TPageBuilderState,
@@ -267,8 +267,8 @@ const pageBuilder = (
       return reducerHistorySave(state, action);
     case REDUCER_HISTORY_UNDO:
       return reducerHistoryUndo(state);
-    case ROTATE_ELEMENT:
-      return rotateElement(state, action);
+    case ROTATE_ELEMENTS:
+      return rotateElements(state, action);
     case SELECT_ELEMENT:
       return selectElement(state, action);
     case SELECT_ELEMENTS:

@@ -14,21 +14,12 @@ const mockCallBack = jest.fn();
 describe('handleRotateElement', () => {
   it(`should rotate element`, () => {
     // before
-    handleRotateElement(
-      cursorOffsetAngle,
-      mockCallBack,
-      elementRef,
-      {
-        clientX: 100,
-        clientY: 100,
-      } as MouseEvent,
-      '1',
-    );
+    handleRotateElement(cursorOffsetAngle, mockCallBack, elementRef, {
+      clientX: 100,
+      clientY: 100,
+    } as MouseEvent);
 
     // result
-    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
-      id: '1',
-      rotate: 45,
-    });
+    expect(mockCallBack.mock.calls[0][0].payload).toBe(45);
   });
 });

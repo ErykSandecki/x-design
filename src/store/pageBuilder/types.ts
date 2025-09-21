@@ -9,7 +9,7 @@ import {
   REDUCER_HISTORY_REDO,
   REDUCER_HISTORY_SAVE,
   REDUCER_HISTORY_UNDO,
-  ROTATE_ELEMENT,
+  ROTATE_ELEMENTS,
   SELECT_ELEMENT,
   SELECT_ELEMENTS,
   SET_AREA_COORDINATES,
@@ -176,11 +176,9 @@ export type TReducerHistoryUndoAction = {
   type: typeof REDUCER_HISTORY_UNDO;
 };
 
-export type TRotateElementActionPayload = Pick<TElement, 'id' | 'rotate'>;
-
-export type TRotateElementAction = {
-  payload: TRotateElementActionPayload;
-  type: typeof ROTATE_ELEMENT;
+export type TRotateElementsAction = {
+  payload: TElement['rotate'];
+  type: typeof ROTATE_ELEMENTS;
 };
 
 export type TSelectElementAction = {

@@ -26,7 +26,7 @@ export const useMouseMoveEvent = (
 
     const shouldUseRevertValue = convertedValue === value && loop;
     const targetValue = shouldUseRevertValue
-      ? getRevertValue(max, min, value)
+      ? getRevertValue(convertedValue, max, min, value)
       : convertedValue;
 
     handleUpdateMousePosition(event, mousePosition, setMousePosition);

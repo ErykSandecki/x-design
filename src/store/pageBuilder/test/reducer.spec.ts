@@ -28,7 +28,7 @@ import {
   setElementsCoordinates,
   updateEventsStatus,
   setElementSizes,
-  rotateElement,
+  rotateElements,
   changeParent,
   updatePrevState,
   changeBackground,
@@ -852,7 +852,7 @@ describe('PageBuilderReducer', () => {
     const rotate = 180;
 
     // before
-    const state = reducer(rotateElement(selectedElementMock.id, rotate), {
+    const state = reducer(rotateElements(rotate), {
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -879,6 +879,7 @@ describe('PageBuilderReducer', () => {
               },
             },
           },
+          selectedElements: [selectedElementMock],
         },
       },
     });
@@ -913,6 +914,7 @@ describe('PageBuilderReducer', () => {
               },
             },
           },
+          selectedElements: [selectedElementMock],
         },
       },
     });

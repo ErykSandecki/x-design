@@ -134,10 +134,7 @@ describe('useMouseMoveEvent', () => {
     fireEvent.mouseMove(window, {});
 
     // result
-    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
-      id: '1',
-      rotate: -135,
-    });
+    expect(mockCallBack.mock.calls[0][0].payload).toBe(-135);
   });
 
   it(`should not trigger event`, () => {

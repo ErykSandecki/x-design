@@ -23,7 +23,7 @@ export const useRotationEvents = (
   const { rotate: currentAngle } = element;
   const [angle, setAngle] = useState('');
   const onBlur = useBlurEvent(angle, element, setAngle);
-  const onChange = useChangeEvent(isMixed, isMultiple, setAngle);
+  const onChange = useChangeEvent(setAngle);
 
   useEffect(() => {
     setAngle(isMixed ? 'Mixed' : currentAngle.toString());
