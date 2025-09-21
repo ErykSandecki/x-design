@@ -3,8 +3,9 @@
 exports[`PanelProperties snapshots should render PanelProperties 1`] = `
 <DocumentFragment>
   <div
-    class="css-s50csc PanelProperties PanelProperties--light"
+    class="css-1nlc499 PanelProperties PanelProperties--light"
     data-test-box="panel-properties"
+    style="width: 240px;"
   >
     <div
       class="PanelProperties__area-handle-resize PanelProperties__area-handle-resize--light"
@@ -166,8 +167,9 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
 exports[`PanelProperties snapshots should render when some element is selected 1`] = `
 <DocumentFragment>
   <div
-    class="css-s50csc PanelProperties PanelProperties--light"
+    class="css-1nlc499 PanelProperties PanelProperties--light"
     data-test-box="panel-properties"
+    style="width: 240px;"
   >
     <div
       class="PanelProperties__area-handle-resize PanelProperties__area-handle-resize--light"
@@ -524,7 +526,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                 />
               </div>
               <div
-                class="css-wcnq0t ButtonGroup ButtonGroup--light"
+                class="css-wcnq0t ButtonGroup ButtonGroup--light ButtonGroup--full-width ButtonGroup--full-width--light"
                 data-test-button-group="layout-position"
               >
                 <div
@@ -579,8 +581,9 @@ exports[`PanelProperties snapshots should render when some element is selected 1
 exports[`PanelProperties snapshots should render with changed width 1`] = `
 <DocumentFragment>
   <div
-    class="css-s50csc PanelProperties PanelProperties--light"
+    class="css-1nlc499 PanelProperties PanelProperties--light"
     data-test-box="panel-properties"
+    style="width: 500px;"
   >
     <div
       class="PanelProperties__area-handle-resize PanelProperties__area-handle-resize--light"

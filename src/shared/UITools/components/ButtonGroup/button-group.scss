@@ -6,6 +6,10 @@
   height: 24px;
   justify-content: space-between;
 
+  &--full-width {
+    width: 100%;
+  }
+
   &__button {
     @include theme('neutral-3', background-color);
 

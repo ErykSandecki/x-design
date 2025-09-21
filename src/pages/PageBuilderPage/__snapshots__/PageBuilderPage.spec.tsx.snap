@@ -77,8 +77,9 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
       </div>
     </div>
     <div
-      class="css-s50csc PanelProperties PanelProperties--light"
+      class="css-1nlc499 PanelProperties PanelProperties--light"
       data-test-box="panel-properties"
+      style="width: 240px;"
     >
       <div
         class="PanelProperties__area-handle-resize PanelProperties__area-handle-resize--light"

@@ -81,6 +81,7 @@ const ColumnRotation: FC = () => {
       <UITools.ButtonGroup
         buttons={OPTIONS_BUTTONS(element.angle, dispatch)}
         e2eValue="layout-position"
+        fullWidth
       />
     </UITools.SectionColumn>
   );

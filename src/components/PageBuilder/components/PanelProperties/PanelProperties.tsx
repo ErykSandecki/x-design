@@ -50,7 +50,7 @@ const PanelProperties: FC<TPanelPropertiesProps> = () => {
       onMouseDown={(event) => event.stopPropagation()}
       onKeyDown={(event) => event.stopPropagation()}
       ref={boxRef}
-      style={{ touchAction: 'manipulation' }}
+      style={{ touchAction: 'manipulation', width }}
       sx={{
         bg: 'neutral5',
         borderLeft: 1,
@@ -59,7 +59,6 @@ const PanelProperties: FC<TPanelPropertiesProps> = () => {
         position: 'absolute',
         right: 0,
         top: `${TOOLBAR_HEIGHT}px`,
-        width: `${width}px`,
         zIndex: ZIndex.standard,
       }}
     >

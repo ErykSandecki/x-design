@@ -50,7 +50,7 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
           />
         </div>
         <div
-          class="css-wcnq0t ButtonGroup ButtonGroup--light"
+          class="css-wcnq0t ButtonGroup ButtonGroup--light ButtonGroup--full-width ButtonGroup--full-width--light"
           data-test-button-group="layout-position"
         >
           <div
@@ -149,7 +149,7 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
           />
         </div>
         <div
-          class="css-wcnq0t ButtonGroup ButtonGroup--light"
+          class="css-wcnq0t ButtonGroup ButtonGroup--light ButtonGroup--full-width ButtonGroup--full-width--light"
           data-test-button-group="layout-position"
         >
           <div

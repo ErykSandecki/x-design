@@ -314,7 +314,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
             />
           </div>
           <div
-            class="css-wcnq0t ButtonGroup ButtonGroup--light"
+            class="css-wcnq0t ButtonGroup ButtonGroup--light ButtonGroup--full-width ButtonGroup--full-width--light"
             data-test-button-group="layout-position"
           >
             <div

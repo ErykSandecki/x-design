@@ -23,11 +23,13 @@ import E2EDataAttribute, {
 export type TSectionProps = TBoxProps & {
   buttons: Array<TButtonGroup>;
   e2eValue?: TE2EDataAttributeProps['value'];
+  fullWidth?: boolean;
 };
 
 export const ButtonGroup: FC<TSectionProps> = ({
   buttons,
   e2eValue = '',
+  fullWidth = false,
   ...restProps
 }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
@@ -35,7 +37,10 @@ export const ButtonGroup: FC<TSectionProps> = ({
   return (
     <Box
       classes={{
-        className: cx(classNamesWithTheme[className]),
+        className: cx(classNamesWithTheme[className].name, [
+          classNamesWithTheme[className].modificators.fullWidth,
+          fullWidth,
+        ]),
       }}
       e2eAttribute={E2EAttribute.buttonGroup}
       e2eValue={e2eValue}

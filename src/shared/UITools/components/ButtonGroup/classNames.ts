@@ -1,7 +1,12 @@
 export const className = 'ButtonGroup';
 
 export const classNames = {
-  [className]: className,
+  [className]: {
+    name: className,
+    modificators: {
+      fullWidth: `${className}--full-width`,
+    },
+  },
   button: {
     name: `${className}__button`,
     modificators: {

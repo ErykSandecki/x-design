@@ -25,7 +25,8 @@ $--xd-gap: 10px;
 
   &__content {
     column-gap: $--xd-gap;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   &__buttons {
