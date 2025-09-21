@@ -2,7 +2,12 @@ import { ColorFormatType } from 'antd/es/color-picker/interface';
 import { CSSProperties } from 'react';
 
 // types
-import { AlignmentHorizontal, AlignmentVertical, ElementType } from './enums';
+import {
+  AlignmentHorizontal,
+  AlignmentVertical,
+  ElementType,
+  LayoutType,
+} from './enums';
 import { T2DCoordinates } from 'types/types';
 
 export type TAlignment = {
@@ -19,6 +24,10 @@ export type TBackground = {
   visible: boolean;
 };
 
+export type TLayout = {
+  type: LayoutType;
+};
+
 export type TElement = {
   alignment: TAlignment;
   angle: number;
@@ -28,6 +37,7 @@ export type TElement = {
   deepLevel: number;
   height: number | CSSProperties['height'];
   id: string;
+  layout: TLayout;
   parentId: TElement['id'] | '-1';
   position: CSSProperties['position'];
   type: ElementType;

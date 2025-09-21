@@ -45,6 +45,7 @@ export type TElementDynamicData = Pick<
   | 'deepLevel'
   | 'height'
   | 'id'
+  | 'layout'
   | 'position'
   | 'width'
 >;

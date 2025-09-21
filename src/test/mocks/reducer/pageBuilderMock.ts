@@ -1,6 +1,10 @@
 // others
 import { BASE_3D } from 'shared';
-import { BASE_PAGE, BASE_PAGE_ELEMENTS } from 'store/pageBuilder/constants';
+import {
+  BASE_PAGE,
+  BASE_PAGE_ELEMENTS,
+  layoutMock,
+} from 'store/pageBuilder/constants';
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 
 // types
@@ -69,6 +73,7 @@ export const elementDynamicDataMock: TElementDynamicData = {
   deepLevel: 0,
   height: 100,
   id: '1',
+  layout: layoutMock,
   position: 'absolute',
   width: 100,
 };
@@ -98,6 +103,7 @@ export const createFrameMock: TElement = {
   deepLevel: 0,
   height: 0,
   id: '1',
+  layout: layoutMock,
   parentId: '-1',
   position: 'absolute',
   type: ElementType.frame,
@@ -186,6 +192,7 @@ export const oneElementMock: TElementsData = {
       deepLevel: 0,
       height: 0,
       id: '-1',
+      layout: layoutMock,
       parentId: '-1',
       position: 'absolute',
       type: ElementType.base,
@@ -210,6 +217,7 @@ export const oneElementMock: TElementsData = {
       deepLevel: 0,
       height: 500,
       id: '1',
+      layout: layoutMock,
       parentId: '-1',
       position: 'absolute',
       type: ElementType.frame,
@@ -235,6 +243,7 @@ export const oneElementMock: TElementsData = {
       deepLevel: 0,
       height: 0,
       id: '-1',
+      layout: layoutMock,
       position: 'absolute',
       width: 0,
     },
@@ -256,6 +265,7 @@ export const oneElementMock: TElementsData = {
       deepLevel: 0,
       height: 500,
       id: '1',
+      layout: layoutMock,
       position: 'absolute',
       width: 500,
     },

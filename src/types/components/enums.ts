@@ -16,3 +16,10 @@ export enum ElementType {
   none = 'none',
   rect = 'rect',
 }
+
+export enum LayoutType {
+  default = 'default',
+  grid = 'grid',
+  horizontal = 'horizontal',
+  vertical = 'vertical',
+}

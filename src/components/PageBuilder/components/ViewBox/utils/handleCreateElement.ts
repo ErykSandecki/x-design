@@ -4,7 +4,7 @@ import { Dispatch } from 'redux';
 import { addElement } from 'store/pageBuilder/actions';
 
 // types
-import { ElementType, TRectCoordinates } from 'types';
+import { ElementType, LayoutType, TRectCoordinates } from 'types';
 import { MouseMode } from '../../../../../types/enums/mouseMode';
 import { TAddELementActionPayload } from 'store/pageBuilder/types';
 
@@ -22,6 +22,8 @@ export const handleCreateElement = (
     const { x1, x2, y1, y2 } = elementArea;
     const x = x1 < x2 ? x1 : x2;
     const y = y1 < y2 ? y1 : y2;
+    const layout = { type: LayoutType.default };
+
     const element: TAddELementActionPayload = {
       alignment: {},
       angle: 0,
@@ -34,6 +36,7 @@ export const handleCreateElement = (
       deepLevel: 0,
       height: Math.abs(y1 - y2),
       id: generateID(),
+      layout,
       parentId: '-1',
       position: 'absolute',
       type: ElementType.frame,

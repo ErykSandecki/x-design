@@ -36,6 +36,7 @@ export const handleAddElement = (
             'deepLevel',
             'height',
             'id',
+            'layout',
             'position',
             'width',
           ),

@@ -48,6 +48,7 @@ describe('handleAddElement', () => {
                 deepLevel: createFrameMock.deepLevel,
                 height: createFrameMock.height,
                 id: createFrameMock.id,
+                layout: createFrameMock.layout,
                 position: createFrameMock.position,
                 width: createFrameMock.width,
               },
