@@ -27,7 +27,7 @@ export const useRotationEvents = (
 
   useEffect(() => {
     setAngle(isMixed ? 'Mixed' : currentAngle.toString());
-  }, [currentAngle]);
+  }, [currentAngle, isMultiple]);
 
   return {
     angle,

@@ -24,7 +24,6 @@ import { updateEventsStatus } from 'store/pageBuilder/actions';
 import { KeyboardKeys } from 'types';
 
 // utils
-import { getValue } from './utils/getValue';
 import { handleSubmitInput } from 'utils';
 import { isMixed } from '../../utils/isMixed';
 
@@ -77,7 +76,7 @@ const ColumnRotation: FC = () => {
           />
         }
         type={isMixedAngle ? 'text' : 'number'}
-        value={getValue(isMultiple, angle)}
+        value={angle}
       />
     </UITools.SectionColumn>
   );

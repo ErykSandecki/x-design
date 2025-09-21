@@ -104,7 +104,7 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
             data-test-text-field-input="angle"
             maxlength="6"
             type="text"
-            value="mixed"
+            value="Mixed"
           />
         </div>
       </div>
