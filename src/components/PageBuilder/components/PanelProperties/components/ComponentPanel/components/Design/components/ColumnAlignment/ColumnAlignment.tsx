@@ -25,6 +25,7 @@ import {
 } from 'store/pageBuilder/selectors';
 
 // types
+import { GridColumnType } from 'shared/UITools/components/Section/components/SectionColumn/enums';
 import { TButtonGroup } from 'shared/UITools/components/ButtonGroup/types';
 
 const ColumnAlignment: FC = () => {
@@ -42,6 +43,7 @@ const ColumnAlignment: FC = () => {
 
   return (
     <UITools.SectionColumn
+      gridColumnType={GridColumnType.twoInputs}
       labels={[t(`${translationNameSpace}.label`)]}
       withMargin
     >

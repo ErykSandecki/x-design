@@ -26,7 +26,14 @@ $--xd-gap: 10px;
   &__content {
     column-gap: $--xd-gap;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+
+    &--single {
+      grid-template-columns: 1fr;
+    }
+
+    &--two-inputs {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &__buttons {

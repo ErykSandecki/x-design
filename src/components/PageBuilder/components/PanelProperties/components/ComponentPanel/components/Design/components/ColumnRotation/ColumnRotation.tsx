@@ -21,6 +21,7 @@ import {
 import { updateEventsStatus } from 'store/pageBuilder/actions';
 
 // types
+import { GridColumnType } from 'shared/UITools/components/Section/components/SectionColumn/enums';
 import { KeyboardKeys } from 'types';
 
 // utils
@@ -49,7 +50,10 @@ const ColumnRotation: FC = () => {
   );
 
   return (
-    <UITools.SectionColumn labels={[t(`${translationNameSpace}.label`)]}>
+    <UITools.SectionColumn
+      gridColumnType={GridColumnType.twoInputs}
+      labels={[t(`${translationNameSpace}.label`)]}
+    >
       <UITools.TextField
         e2eValue="angle"
         fullWidth

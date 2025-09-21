@@ -16,10 +16,12 @@ import styles from './section-column.scss';
 
 // types
 import { E2EAttribute } from 'types';
+import { GridColumnType } from './enums';
 
 export type TSectionColumnProps = {
   buttonsIcon?: Array<ReactNode>;
   children: ReactNode;
+  gridColumnType?: GridColumnType;
   labels?: [string] | [string, string];
   withMargin?: boolean;
 };
@@ -27,6 +29,7 @@ export type TSectionColumnProps = {
 export const SectionColumn: FC<TSectionColumnProps> = ({
   buttonsIcon = [],
   children,
+  gridColumnType = GridColumnType.single,
   labels = [],
   withMargin = false,
 }) => {
@@ -57,7 +60,13 @@ export const SectionColumn: FC<TSectionColumnProps> = ({
           ))}
       </div>
       <div className={cx(classNamesWithTheme.wrapper)}>
-        <div className={cx(classNamesWithTheme.content)} style={{ width }}>
+        <div
+          className={cx(
+            classNamesWithTheme.content.name,
+            classNamesWithTheme.content.modificators[gridColumnType],
+          )}
+          style={{ width }}
+        >
           {children}
         </div>
         <div className={cx(classNamesWithTheme.buttons)}>

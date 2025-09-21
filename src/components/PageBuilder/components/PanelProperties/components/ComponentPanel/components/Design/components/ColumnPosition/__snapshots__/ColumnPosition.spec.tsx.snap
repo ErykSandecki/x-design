@@ -22,7 +22,7 @@ exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
       class="SectionColumn__wrapper SectionColumn__wrapper--light"
     >
       <div
-        class="SectionColumn__content SectionColumn__content--light"
+        class="SectionColumn__content SectionColumn__content--light SectionColumn__content--two-inputs SectionColumn__content--two-inputs--light"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
@@ -104,7 +104,7 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
       class="SectionColumn__wrapper SectionColumn__wrapper--light"
     >
       <div
-        class="SectionColumn__content SectionColumn__content--light"
+        class="SectionColumn__content SectionColumn__content--light SectionColumn__content--two-inputs SectionColumn__content--two-inputs--light"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
@@ -211,7 +211,7 @@ exports[`ColumnPosition snapshots should render when values are mixed 1`] = `
       class="SectionColumn__wrapper SectionColumn__wrapper--light"
     >
       <div
-        class="SectionColumn__content SectionColumn__content--light"
+        class="SectionColumn__content SectionColumn__content--light SectionColumn__content--two-inputs SectionColumn__content--two-inputs--light"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div

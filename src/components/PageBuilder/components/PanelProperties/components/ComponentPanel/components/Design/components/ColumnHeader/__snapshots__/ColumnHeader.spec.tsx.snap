@@ -14,7 +14,7 @@ exports[`ColumnHeader snapshots should render ColumnHeader 1`] = `
       class="SectionColumn__wrapper SectionColumn__wrapper--light"
     >
       <div
-        class="SectionColumn__content SectionColumn__content--light"
+        class="SectionColumn__content SectionColumn__content--light SectionColumn__content--single SectionColumn__content--single--light"
         style="width: calc(100% - 48px - 2.5px - 8px);"
       >
         <small
@@ -72,7 +72,7 @@ exports[`ColumnHeader snapshots should render with multiple selects 1`] = `
       class="SectionColumn__wrapper SectionColumn__wrapper--light"
     >
       <div
-        class="SectionColumn__content SectionColumn__content--light"
+        class="SectionColumn__content SectionColumn__content--light SectionColumn__content--single SectionColumn__content--single--light"
         style="width: calc(100% - 48px - 2.5px - 8px);"
       >
         <small

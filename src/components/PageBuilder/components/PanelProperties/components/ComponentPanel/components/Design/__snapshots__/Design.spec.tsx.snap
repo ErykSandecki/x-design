@@ -18,7 +18,7 @@ exports[`Design snapshots should render Design 1`] = `
         class="SectionColumn__wrapper SectionColumn__wrapper--light"
       >
         <div
-          class="SectionColumn__content SectionColumn__content--light"
+          class="SectionColumn__content SectionColumn__content--light SectionColumn__content--single SectionColumn__content--single--light"
           style="width: calc(100% - 48px - 2.5px - 8px);"
         >
           <small
@@ -98,7 +98,7 @@ exports[`Design snapshots should render Design 1`] = `
         class="SectionColumn__wrapper SectionColumn__wrapper--light"
       >
         <div
-          class="SectionColumn__content SectionColumn__content--light"
+          class="SectionColumn__content SectionColumn__content--light SectionColumn__content--two-inputs SectionColumn__content--two-inputs--light"
           style="width: calc(100% - 24px - 0px - 8px);"
         >
           <div
@@ -209,7 +209,7 @@ exports[`Design snapshots should render Design 1`] = `
         class="SectionColumn__wrapper SectionColumn__wrapper--light"
       >
         <div
-          class="SectionColumn__content SectionColumn__content--light"
+          class="SectionColumn__content SectionColumn__content--light SectionColumn__content--two-inputs SectionColumn__content--two-inputs--light"
           style="width: calc(100% - 24px - 0px - 8px);"
         >
           <div
@@ -286,7 +286,7 @@ exports[`Design snapshots should render Design 1`] = `
         class="SectionColumn__wrapper SectionColumn__wrapper--light"
       >
         <div
-          class="SectionColumn__content SectionColumn__content--light"
+          class="SectionColumn__content SectionColumn__content--light SectionColumn__content--two-inputs SectionColumn__content--two-inputs--light"
           style="width: calc(100% - 24px - 0px - 8px);"
         >
           <div

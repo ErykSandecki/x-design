@@ -24,6 +24,7 @@ import { updateEventsStatus } from 'store/pageBuilder/actions';
 
 // types
 import { ColorsTheme, KeyboardKeys } from 'types';
+import { GridColumnType } from 'shared/UITools/components/Section/components/SectionColumn/enums';
 
 // utils
 import { getValue } from './utils/getValue';
@@ -88,6 +89,7 @@ const ColumnPosition: FC = () => {
             ]
           : []
       }
+      gridColumnType={GridColumnType.twoInputs}
       labels={[t(`${translationNameSpace}.label`)]}
       withMargin
     >

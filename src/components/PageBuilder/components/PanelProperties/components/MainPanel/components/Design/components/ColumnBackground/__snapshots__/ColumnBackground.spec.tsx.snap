@@ -14,7 +14,7 @@ exports[`ColumnBackground snapshots should render ColumnBackground 1`] = `
       class="SectionColumn__wrapper SectionColumn__wrapper--light"
     >
       <div
-        class="SectionColumn__content SectionColumn__content--light"
+        class="SectionColumn__content SectionColumn__content--light SectionColumn__content--single SectionColumn__content--single--light"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
