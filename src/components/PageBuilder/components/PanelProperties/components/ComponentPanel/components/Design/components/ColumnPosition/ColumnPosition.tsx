@@ -15,6 +15,7 @@ import { MAX, MIN, translationNameSpace } from './constants';
 
 // store
 import {
+  areParentsTheSameSelector,
   dynamicDataSelector,
   elementAllDataSelectorCreator,
   selectedElementsSelector,
@@ -65,9 +66,11 @@ const ColumnPosition: FC = () => {
   const isRelative = selectedElements.some(
     ({ position }) => position === 'relative',
   );
+  const areParentsTheSame = useSelector(areParentsTheSameSelector);
   const disabledX = hasAlignmentHorizontal || isRelative;
   const disabledY = hasAlignmentVertical || isRelative;
-  const showConstrains = hasAlignmentHorizontal || hasAlignmentVertical;
+  const showConstrains =
+    (hasAlignmentHorizontal || hasAlignmentVertical) && areParentsTheSame;
   const disabledAll =
     (hasAlignmentHorizontal || hasAlignmentVertical) && isMultiple;
   const { onBlurX, onBlurY, onChangeX, onChangeY, onMouseDown, x, y } =

@@ -19,6 +19,7 @@ import {
 
 // store
 import {
+  areParentsTheSameSelector,
   elementAllDataSelectorCreator,
   selectedElementsSelector,
 } from 'store/pageBuilder/selectors';
@@ -27,13 +28,17 @@ import {
 import { TButtonGroup } from 'shared/UITools/components/ButtonGroup/types';
 
 const ColumnAlignment: FC = () => {
+  const areParentsTheSame = useSelector(areParentsTheSameSelector);
   const selectedElements = useSelector(selectedElementsSelector);
   const firstElement = first(selectedElements);
   const element = useSelector(elementAllDataSelectorCreator(firstElement.id));
   const onClickHorizontalAlignment = useClickHorizontalAlignmentEvent();
   const onClickVerticalAlignment = useClickVerticalAlignmentEvent();
   const { t } = useTranslation();
-  const disabled = element.parentId === '-1' || element.position === 'relative';
+  const disabled =
+    element.parentId === '-1' ||
+    element.position === 'relative' ||
+    !areParentsTheSame;
 
   return (
     <UITools.SectionColumn

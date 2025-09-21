@@ -16,12 +16,14 @@ import { translationNameSpace } from './constants';
 // store
 import { changePosition } from 'store/pageBuilder/actions';
 import {
+  areParentsTheSameSelector,
   elementAllDataSelectorCreator,
   selectedElementsSelector,
 } from 'store/pageBuilder/selectors';
 
 const Design: FC = () => {
   const dispatch = useDispatch();
+  const areParentsTheSame = useSelector(areParentsTheSameSelector);
   const selectedElements = useSelector(selectedElementsSelector);
   const firstElement = first(selectedElements);
   const { t } = useTranslation();
@@ -36,7 +38,7 @@ const Design: FC = () => {
       </UITools.Section>
       <UITools.Section
         buttonsIcon={
-          firstElement.parentId !== '-1'
+          firstElement.parentId !== '-1' && areParentsTheSame
             ? [
                 <UITools.ButtonIcon
                   key={0}
