@@ -22,7 +22,7 @@ exports[`Panel snapshots should render Panel 1`] = `
       </div>
       <div
         class="css-wcnq0t Icon Icon--light Icon--clickable Icon--clickable--light"
-        data-test-icon="Close"
+        data-test-icon="close"
         height="11"
         name="Close"
         width="11"
@@ -40,7 +40,7 @@ exports[`Panel snapshots should render Panel 1`] = `
       >
         <div
           class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-          data-test-icon="Sample"
+          data-test-icon="sample"
           height="14"
           name="Sample"
           width="14"
@@ -73,7 +73,7 @@ exports[`Panel snapshots should render with active sampler 1`] = `
       </div>
       <div
         class="css-wcnq0t Icon Icon--light Icon--clickable Icon--clickable--light"
-        data-test-icon="Close"
+        data-test-icon="close"
         height="11"
         name="Close"
         width="11"
@@ -91,7 +91,7 @@ exports[`Panel snapshots should render with active sampler 1`] = `
       >
         <div
           class="css-wcnq0t Icon Icon--light Icon--blue1 Icon--blue1--light"
-          data-test-icon="Sample"
+          data-test-icon="sample"
           height="14"
           name="Sample"
           width="14"

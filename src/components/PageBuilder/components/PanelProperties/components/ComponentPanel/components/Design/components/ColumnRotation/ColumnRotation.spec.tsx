@@ -221,4 +221,37 @@ describe('ColumnRotation behaviors', () => {
       store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].angle,
     ).toBe(-100);
   });
+
+  it('should change angle another 90 degress', () => {
+    // mock
+    const store = configureStore(stateMock);
+
+    // before
+    const { container } = render(
+      <Provider store={store}>
+        <ColumnRotation />
+      </Provider>,
+    );
+
+    // find
+    const verticalButtonGroup = getByE2EAttribute(
+      container,
+      E2EAttribute.buttonGroup,
+      'layout-position',
+    );
+
+    // action
+    fireEvent.click(
+      getByE2EAttribute(
+        verticalButtonGroup,
+        E2EAttribute.buttonGroupInput,
+        'ToggleRotate',
+      ),
+    );
+
+    // result
+    expect(
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].angle,
+    ).toBe(90);
+  });
 });

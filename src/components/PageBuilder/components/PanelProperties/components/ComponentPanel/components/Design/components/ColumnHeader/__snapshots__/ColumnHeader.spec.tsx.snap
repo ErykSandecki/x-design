@@ -34,7 +34,7 @@ exports[`ColumnHeader snapshots should render ColumnHeader 1`] = `
         >
           <div
             class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-            data-test-icon="HtmlTag"
+            data-test-icon="html-tag"
             height="14"
             name="HtmlTag"
             width="14"
@@ -46,7 +46,7 @@ exports[`ColumnHeader snapshots should render ColumnHeader 1`] = `
         >
           <div
             class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-            data-test-icon="Component"
+            data-test-icon="component"
             height="14"
             name="Component"
             width="14"
@@ -92,7 +92,7 @@ exports[`ColumnHeader snapshots should render with multiple selects 1`] = `
         >
           <div
             class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-            data-test-icon="HtmlTag"
+            data-test-icon="html-tag"
             height="14"
             name="HtmlTag"
             width="14"
@@ -104,7 +104,7 @@ exports[`ColumnHeader snapshots should render with multiple selects 1`] = `
         >
           <div
             class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-            data-test-icon="Component"
+            data-test-icon="component"
             height="14"
             name="Component"
             width="14"

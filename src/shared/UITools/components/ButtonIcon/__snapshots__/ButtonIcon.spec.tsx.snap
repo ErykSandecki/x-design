@@ -8,7 +8,7 @@ exports[`ButtonIcon snapshots should render ButtonIcon 1`] = `
   >
     <div
       class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-      data-test-icon="Close"
+      data-test-icon="close"
       height="14"
       name="Close"
       width="14"
@@ -25,7 +25,7 @@ exports[`ButtonIcon snapshots should render when is selected 1`] = `
   >
     <div
       class="css-wcnq0t Icon Icon--light Icon--blue1 Icon--blue1--light"
-      data-test-icon="Close"
+      data-test-icon="close"
       height="14"
       name="Close"
       width="14"

@@ -70,7 +70,7 @@ describe('Panel behaviors', () => {
     );
 
     // action
-    fireEvent.click(getByE2EAttribute(container, E2EAttribute.icon, 'Close'));
+    fireEvent.click(getByE2EAttribute(container, E2EAttribute.icon, 'close'));
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(1);

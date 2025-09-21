@@ -1,4 +1,5 @@
 import { FC, HTMLAttributes, Ref, useMemo } from 'react';
+import { kebabCase } from 'lodash';
 
 // assets
 import { Icons } from 'assets/svg';
@@ -58,7 +59,7 @@ export const Icon: FC<TIconProps> = ({
   const sxClassName = useSX(depsSx, sx);
 
   return (
-    <E2EDataAttribute type={e2eAttribute} value={e2eValue || name}>
+    <E2EDataAttribute type={e2eAttribute} value={e2eValue || kebabCase(name)}>
       <SVG
         className={cx(
           sxClassName,

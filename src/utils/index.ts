@@ -16,6 +16,7 @@ export * from './isJestRunning';
 export * from './math/computeCounterRotation';
 export * from './math/distanceHasChanged';
 export * from './math/getCornerBounds';
+export * from './math/normalizeAngle';
 export * from './math/sort';
 export * from './transform/hexToRgb/hexToRgb';
 export * from './transform/enumToArray';

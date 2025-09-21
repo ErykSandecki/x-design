@@ -234,7 +234,7 @@ exports[`ColorSampler snapshots should render ColorSampler 1`] = `
       >
         <div
           class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-          data-test-icon="EyesDropper"
+          data-test-icon="eyes-dropper"
           height="12"
           name="EyesDropper"
           width="12"

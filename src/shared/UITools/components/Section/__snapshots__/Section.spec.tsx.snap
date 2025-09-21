@@ -50,7 +50,7 @@ exports[`Section snapshots should render with buttons 1`] = `
         >
           <div
             class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-            data-test-icon="Close"
+            data-test-icon="close"
             height="14"
             name="Close"
             width="14"

@@ -83,7 +83,7 @@ exports[`ColumnBackground snapshots should render ColumnBackground 1`] = `
         >
           <div
             class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-            data-test-icon="EyesOpened"
+            data-test-icon="eyes-opened"
             height="14"
             name="EyesOpened"
             width="14"

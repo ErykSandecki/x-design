@@ -10,7 +10,7 @@ import { ScrubbableInput, UITools } from 'shared';
 import { useRotationEvents } from './hooks/useRotationEvents';
 
 // others
-import { translationNameSpace } from './constants';
+import { OPTIONS_BUTTONS, translationNameSpace } from './constants';
 
 // store
 import {
@@ -77,6 +77,10 @@ const ColumnRotation: FC = () => {
         }
         type={isMixedAngle ? 'text' : 'number'}
         value={angle}
+      />
+      <UITools.ButtonGroup
+        buttons={OPTIONS_BUTTONS(element.angle, dispatch)}
+        e2eValue="layout-position"
       />
     </UITools.SectionColumn>
   );

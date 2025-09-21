@@ -128,7 +128,7 @@ describe('Design behaviors', () => {
 
     // action
     fireEvent.click(
-      getByE2EAttribute(container, E2EAttribute.icon, 'PositionSwitcher'),
+      getByE2EAttribute(container, E2EAttribute.icon, 'position-switcher'),
     );
 
     // result

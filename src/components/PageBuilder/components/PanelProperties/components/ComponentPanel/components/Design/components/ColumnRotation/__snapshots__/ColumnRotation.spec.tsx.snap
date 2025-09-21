@@ -35,7 +35,7 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
           >
             <div
               class="css-wcnq0t ScrubbableInput__icon ScrubbableInput__icon--light Icon Icon--light Icon--neutral2 Icon--neutral2--light"
-              data-test-icon="Protractor"
+              data-test-icon="protractor"
               height="16"
               name="Protractor"
               width="16"
@@ -48,6 +48,47 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
             type="number"
             value="0"
           />
+        </div>
+        <div
+          class="css-wcnq0t ButtonGroup ButtonGroup--light"
+          data-test-button-group="layout-position"
+        >
+          <div
+            class="ButtonGroup__button ButtonGroup__button--light"
+            data-test-button-group-input="ToggleRotate"
+          >
+            <div
+              class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="toggle-rotate"
+              height="12"
+              name="ToggleRotate"
+              width="12"
+            />
+          </div>
+          <div
+            class="ButtonGroup__button ButtonGroup__button--light"
+            data-test-button-group-input="FlipHorizontal"
+          >
+            <div
+              class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="flip-horizontal"
+              height="12"
+              name="FlipHorizontal"
+              width="12"
+            />
+          </div>
+          <div
+            class="ButtonGroup__button ButtonGroup__button--light"
+            data-test-button-group-input="FlipVertical"
+          >
+            <div
+              class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="flip-vertical"
+              height="12"
+              name="FlipVertical"
+              width="12"
+            />
+          </div>
         </div>
       </div>
       <div
@@ -93,7 +134,7 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
           >
             <div
               class="css-wcnq0t ScrubbableInput__icon ScrubbableInput__icon--light Icon Icon--light Icon--neutral2 Icon--neutral2--light"
-              data-test-icon="Protractor"
+              data-test-icon="protractor"
               height="16"
               name="Protractor"
               width="16"
@@ -106,6 +147,47 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
             type="text"
             value="Mixed"
           />
+        </div>
+        <div
+          class="css-wcnq0t ButtonGroup ButtonGroup--light"
+          data-test-button-group="layout-position"
+        >
+          <div
+            class="ButtonGroup__button ButtonGroup__button--light"
+            data-test-button-group-input="ToggleRotate"
+          >
+            <div
+              class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="toggle-rotate"
+              height="12"
+              name="ToggleRotate"
+              width="12"
+            />
+          </div>
+          <div
+            class="ButtonGroup__button ButtonGroup__button--light"
+            data-test-button-group-input="FlipHorizontal"
+          >
+            <div
+              class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="flip-horizontal"
+              height="12"
+              name="FlipHorizontal"
+              width="12"
+            />
+          </div>
+          <div
+            class="ButtonGroup__button ButtonGroup__button--light"
+            data-test-button-group-input="FlipVertical"
+          >
+            <div
+              class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="flip-vertical"
+              height="12"
+              name="FlipVertical"
+              width="12"
+            />
+          </div>
         </div>
       </div>
       <div

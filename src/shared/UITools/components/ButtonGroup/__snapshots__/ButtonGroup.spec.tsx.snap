@@ -12,7 +12,7 @@ exports[`ButtonGroup snapshots should render ButtonGroup 1`] = `
     >
       <div
         class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-        data-test-icon="AlignHorizontalLeft"
+        data-test-icon="align-horizontal-left"
         height="12"
         name="AlignHorizontalLeft"
         width="12"
@@ -24,7 +24,7 @@ exports[`ButtonGroup snapshots should render ButtonGroup 1`] = `
     >
       <div
         class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-        data-test-icon="AlignHorizontalCenter"
+        data-test-icon="align-horizontal-center"
         height="12"
         name="AlignHorizontalCenter"
         width="12"
@@ -36,7 +36,7 @@ exports[`ButtonGroup snapshots should render ButtonGroup 1`] = `
     >
       <div
         class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-        data-test-icon="AlignHorizontalRight"
+        data-test-icon="align-horizontal-right"
         height="12"
         name="AlignHorizontalRight"
         width="12"
@@ -58,7 +58,7 @@ exports[`ButtonGroup snapshots should render with disabled states 1`] = `
     >
       <div
         class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-        data-test-icon="AlignHorizontalLeft"
+        data-test-icon="align-horizontal-left"
         height="12"
         name="AlignHorizontalLeft"
         width="12"
@@ -70,7 +70,7 @@ exports[`ButtonGroup snapshots should render with disabled states 1`] = `
     >
       <div
         class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-        data-test-icon="AlignHorizontalCenter"
+        data-test-icon="align-horizontal-center"
         height="12"
         name="AlignHorizontalCenter"
         width="12"
@@ -82,7 +82,7 @@ exports[`ButtonGroup snapshots should render with disabled states 1`] = `
     >
       <div
         class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-        data-test-icon="AlignHorizontalRight"
+        data-test-icon="align-horizontal-right"
         height="12"
         name="AlignHorizontalRight"
         width="12"

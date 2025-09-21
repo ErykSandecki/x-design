@@ -6,6 +6,7 @@ import { rotateElements } from 'store/pageBuilder/actions';
 
 // utils
 import { getElementAngle } from './getElementAngle';
+import { normalizeAngle } from 'utils';
 
 export const handleRotateElement = (
   cursorOffsetAngle: RefObject<number>,
@@ -15,7 +16,7 @@ export const handleRotateElement = (
 ): void => {
   const cursorCurrentAngle = getElementAngle(elementRef, event);
   const angle = cursorCurrentAngle + cursorOffsetAngle.current;
-  const targetAngle = ((((angle + 180) % 360) + 360) % 360) - 180;
+  const targetAngle = normalizeAngle(angle);
 
   dispatch(rotateElements(targetAngle));
 };

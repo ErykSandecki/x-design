@@ -4,7 +4,7 @@ exports[`Icon snapshots should render Icon 1`] = `
 <DocumentFragment>
   <div
     class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-    data-test-icon="StepBackwardOutlined"
+    data-test-icon="step-backward-outlined"
     height="16"
     name="StepBackwardOutlined"
     width="16"

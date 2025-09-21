@@ -59,7 +59,7 @@ describe('ColumnBackground behaviors', () => {
 
     // action
     fireEvent.click(
-      getByE2EAttribute(container, E2EAttribute.icon, 'EyesOpened'),
+      getByE2EAttribute(container, E2EAttribute.icon, 'eyes-opened'),
     );
 
     // result

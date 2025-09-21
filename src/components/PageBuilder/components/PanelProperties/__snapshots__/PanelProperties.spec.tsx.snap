@@ -148,7 +148,7 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
               >
                 <div
                   class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-                  data-test-icon="EyesOpened"
+                  data-test-icon="eyes-opened"
                   height="14"
                   name="EyesOpened"
                   width="14"
@@ -248,7 +248,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
               >
                 <div
                   class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-                  data-test-icon="HtmlTag"
+                  data-test-icon="html-tag"
                   height="14"
                   name="HtmlTag"
                   width="14"
@@ -260,7 +260,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
               >
                 <div
                   class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-                  data-test-icon="Component"
+                  data-test-icon="component"
                   height="14"
                   name="Component"
                   width="14"
@@ -321,7 +321,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                 >
                   <div
                     class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-                    data-test-icon="AlignHorizontalLeft"
+                    data-test-icon="align-horizontal-left"
                     height="12"
                     name="AlignHorizontalLeft"
                     width="12"
@@ -333,7 +333,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                 >
                   <div
                     class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-                    data-test-icon="AlignHorizontalCenter"
+                    data-test-icon="align-horizontal-center"
                     height="12"
                     name="AlignHorizontalCenter"
                     width="12"
@@ -345,7 +345,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                 >
                   <div
                     class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-                    data-test-icon="AlignHorizontalRight"
+                    data-test-icon="align-horizontal-right"
                     height="12"
                     name="AlignHorizontalRight"
                     width="12"
@@ -362,7 +362,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                 >
                   <div
                     class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-                    data-test-icon="AlignVerticalTop"
+                    data-test-icon="align-vertical-top"
                     height="12"
                     name="AlignVerticalTop"
                     width="12"
@@ -374,7 +374,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                 >
                   <div
                     class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-                    data-test-icon="AlignVerticalCenter"
+                    data-test-icon="align-vertical-center"
                     height="12"
                     name="AlignVerticalCenter"
                     width="12"
@@ -386,7 +386,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                 >
                   <div
                     class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-                    data-test-icon="AlignVerticalBottom"
+                    data-test-icon="align-vertical-bottom"
                     height="12"
                     name="AlignVerticalBottom"
                     width="12"
@@ -509,7 +509,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                 >
                   <div
                     class="css-wcnq0t ScrubbableInput__icon ScrubbableInput__icon--light Icon Icon--light Icon--neutral2 Icon--neutral2--light"
-                    data-test-icon="Protractor"
+                    data-test-icon="protractor"
                     height="16"
                     name="Protractor"
                     width="16"
@@ -522,6 +522,47 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                   type="number"
                   value="0"
                 />
+              </div>
+              <div
+                class="css-wcnq0t ButtonGroup ButtonGroup--light"
+                data-test-button-group="layout-position"
+              >
+                <div
+                  class="ButtonGroup__button ButtonGroup__button--light"
+                  data-test-button-group-input="ToggleRotate"
+                >
+                  <div
+                    class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="toggle-rotate"
+                    height="12"
+                    name="ToggleRotate"
+                    width="12"
+                  />
+                </div>
+                <div
+                  class="ButtonGroup__button ButtonGroup__button--light"
+                  data-test-button-group-input="FlipHorizontal"
+                >
+                  <div
+                    class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="flip-horizontal"
+                    height="12"
+                    name="FlipHorizontal"
+                    width="12"
+                  />
+                </div>
+                <div
+                  class="ButtonGroup__button ButtonGroup__button--light"
+                  data-test-button-group-input="FlipVertical"
+                >
+                  <div
+                    class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="flip-vertical"
+                    height="12"
+                    name="FlipVertical"
+                    width="12"
+                  />
+                </div>
               </div>
             </div>
             <div
@@ -683,7 +724,7 @@ exports[`PanelProperties snapshots should render with changed width 1`] = `
               >
                 <div
                   class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-                  data-test-icon="EyesOpened"
+                  data-test-icon="eyes-opened"
                   height="14"
                   name="EyesOpened"
                   width="14"
