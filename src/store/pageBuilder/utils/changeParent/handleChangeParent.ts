@@ -8,10 +8,10 @@ import {
 } from '../../types';
 
 // utils
+import { detectIdAnomalies } from './detectIdAnomalies';
 import { getMappedElementsToMove } from './getMappedElementsToMove';
 import { getMappedElementsWithResetPosition } from './getMappedElementsWithResetPosition';
 import { getMappedParentsChildren } from './getMappedParentsChildren';
-import { detectIdAnomalies } from './detectIdAnomalies';
 
 export const handleWithPossibleParent = (
   currentPage: TPage,
@@ -92,10 +92,6 @@ export const handleWithResetPosition = (
           dynamicData: {
             ...currentPage.elements.dynamicData,
             ...children.dynamicData,
-          },
-          staticData: {
-            ...currentPage.elements.staticData,
-            ...children.staticData,
           },
         },
       },
