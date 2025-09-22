@@ -2,6 +2,7 @@ import { FC, memo } from 'react';
 import { useSelector } from 'react-redux';
 
 // components
+import ElementsWrapper from './ElementsWrapper';
 import Frame from './components/Frame/Frame';
 
 // hooks
@@ -19,7 +20,6 @@ import styles from './elements.scss';
 // types
 import { ElementType, TElement } from 'types';
 import { MouseMode } from 'types/enums/mouseMode';
-import ElementsWrapper from './ElementsWrapper';
 
 export type TElementsProps = {
   eventsDisabled: boolean;
