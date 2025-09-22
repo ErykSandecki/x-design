@@ -90,10 +90,10 @@ export const elementDynamicDataSelectorCreator = (
 ): Selector<TMainState, TElementDynamicData | undefined> =>
   createSelector(dynamicDataSelector, getFp(elementId));
 
-export const elementAttributeSelectorCreator = (
-  attribute: keyof TElement,
+export const elementAttributeSelectorCreator = <K extends keyof TElement>(
+  attribute: K,
   elementId: TElement['id'],
-): Selector<TMainState, TElementDynamicData | undefined> =>
+): Selector<TMainState, TElement[K]> =>
   createSelector(allDataSelector, getFp(`${elementId}.${attribute}`));
 
 export const staticDataSelector: Selector<
