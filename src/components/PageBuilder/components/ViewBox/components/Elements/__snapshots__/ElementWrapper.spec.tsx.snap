@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ElementsWrapper snapshots should render ElementsWrapper 1`] = `
+exports[`ElementWrapper snapshots should render ElementWrapper 1`] = `
 <DocumentFragment>
   children
 </DocumentFragment>
 `;
 
-exports[`ElementsWrapper snapshots should render with drop anchors 1`] = `
+exports[`ElementWrapper snapshots should render with drop anchors 1`] = `
 <DocumentFragment>
   <div
     class="drop-anchors"

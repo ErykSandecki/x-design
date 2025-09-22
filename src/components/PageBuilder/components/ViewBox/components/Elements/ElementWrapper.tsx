@@ -10,7 +10,7 @@ import { elementAttributeSelectorCreator } from 'store/pageBuilder/selectors';
 // types
 import { MouseMode, TElement } from 'types';
 
-export type TElementsWrapperProps = {
+export type TElementWrapperProps = {
   children: ReactNode;
   id: TElement['id'];
   index: number;
@@ -19,7 +19,7 @@ export type TElementsWrapperProps = {
   parentId: TElement['parentId'];
 };
 
-const ElementsWrapper: FC<TElementsWrapperProps> = ({
+const ElementWrapper: FC<TElementWrapperProps> = ({
   children,
   id,
   index,
@@ -45,4 +45,4 @@ const ElementsWrapper: FC<TElementsWrapperProps> = ({
   return children;
 };
 
-export default memo(ElementsWrapper);
+export default memo(ElementWrapper);

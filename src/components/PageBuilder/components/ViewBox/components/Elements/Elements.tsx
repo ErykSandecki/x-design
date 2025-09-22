@@ -2,7 +2,7 @@ import { FC, memo } from 'react';
 import { useSelector } from 'react-redux';
 
 // components
-import ElementsWrapper from './ElementsWrapper';
+import ElementWrapper from './ElementWrapper';
 import Frame from './components/Frame/Frame';
 
 // hooks
@@ -41,7 +41,7 @@ const Elements: FC<TElementsProps> = ({
     switch (type) {
       case ElementType.frame:
         return (
-          <ElementsWrapper
+          <ElementWrapper
             id={id}
             index={index}
             isSelected={isSelected}
@@ -59,7 +59,7 @@ const Elements: FC<TElementsProps> = ({
               parentId={parentId}
               type={type}
             />
-          </ElementsWrapper>
+          </ElementWrapper>
         );
       default:
         return <></>;

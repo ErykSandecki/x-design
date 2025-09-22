@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 import { useSelector } from 'react-redux';
 
 // components
-import ElementsWrapper from './ElementsWrapper';
+import ElementWrapper from './ElementWrapper';
 
 // types
 import { MouseMode } from 'types/enums/mouseMode';
@@ -15,14 +15,14 @@ jest.mock('react-redux', () => ({
   useSelector: jest.fn(),
 }));
 
-describe('ElementsWrapper snapshots', () => {
-  it('should render ElementsWrapper', () => {
+describe('ElementWrapper snapshots', () => {
+  it('should render ElementWrapper', () => {
     // mock
     (useSelector as unknown as jest.Mock).mockImplementation(() => 'absolute');
 
     // before
     const { asFragment } = render(
-      <ElementsWrapper
+      <ElementWrapper
         id="-1"
         index={0}
         isSelected={false}
@@ -30,7 +30,7 @@ describe('ElementsWrapper snapshots', () => {
         parentId="-1"
       >
         children
-      </ElementsWrapper>,
+      </ElementWrapper>,
     );
 
     // result
@@ -43,7 +43,7 @@ describe('ElementsWrapper snapshots', () => {
 
     // before
     const { asFragment } = render(
-      <ElementsWrapper
+      <ElementWrapper
         id="-1"
         index={0}
         isSelected={false}
@@ -51,7 +51,7 @@ describe('ElementsWrapper snapshots', () => {
         parentId="-1"
       >
         children
-      </ElementsWrapper>,
+      </ElementWrapper>,
     );
 
     // result
