@@ -130,7 +130,6 @@ export const getMappedElementsToMove = (
         staticData: {
           ...elements.staticData[id],
           parentId: data.parentId,
-          position: data.position,
         },
       };
     }),

@@ -101,19 +101,16 @@ describe('handleChangePosition', () => {
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
                 children: ['2', '3'],
-                position: 'absolute',
               },
               ['2']: {
                 ...elementStaticDataMock,
                 children: [],
                 id: '2',
-                position: 'relative',
               },
               ['3']: {
                 ...elementStaticDataMock,
                 children: [],
                 id: '3',
-                position: 'relative',
               },
             },
           },
@@ -188,19 +185,16 @@ describe('handleChangePosition', () => {
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
                 children: ['3', '2'],
-                position: 'absolute',
               },
               ['2']: {
                 ...elementStaticDataMock,
                 children: [],
                 id: '2',
-                position: 'absolute',
               },
               ['3']: {
                 ...elementStaticDataMock,
                 children: [],
                 id: '3',
-                position: 'relative',
               },
             },
           },
@@ -278,19 +272,16 @@ describe('handleChangePosition', () => {
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
                 children: ['2', '3'],
-                position: 'absolute',
               },
               ['2']: {
                 ...elementStaticDataMock,
                 children: [],
                 id: '2',
-                position: 'relative',
               },
               ['3']: {
                 ...elementStaticDataMock,
                 children: [],
                 id: '3',
-                position: 'absolute',
               },
             },
           },
@@ -365,19 +356,16 @@ describe('handleChangePosition', () => {
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
                 children: ['2', '3'],
-                position: 'absolute',
               },
               ['2']: {
                 ...elementStaticDataMock,
                 children: [],
                 id: '2',
-                position: 'relative',
               },
               ['3']: {
                 ...elementStaticDataMock,
                 children: [],
                 id: '3',
-                position: 'relative',
               },
             },
           },

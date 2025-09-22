@@ -30,7 +30,6 @@ export const handleChangePosition = (
     clonedElements.dynamicData[id].alignment = {};
     clonedElements.dynamicData[id].position = reversePosition;
     clonedElements.dynamicData[id].coordinates = targetCoordinates;
-    clonedElements.staticData[id].position = reversePosition;
   });
 
   return {
@@ -55,7 +54,6 @@ export const handleChangePosition = (
           },
           staticData: {
             ...currentPage.elements.staticData,
-            ...clonedElements.staticData,
             [parentId]: {
               ...currentPage.elements.staticData[parentId],
               children: [...filteredChildren, ...ids],

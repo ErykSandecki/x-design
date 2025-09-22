@@ -278,7 +278,6 @@ describe('getMappedElementsToMove', () => {
           children: [],
           id: '2',
           parentId: elementStaticDataMock.id,
-          position: 'relative',
         },
       },
     });

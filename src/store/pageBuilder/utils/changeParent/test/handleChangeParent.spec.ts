@@ -356,7 +356,6 @@ describe('handleChangeParent', () => {
                 ...elementStaticDataMock,
                 id: '2',
                 parentId: elementStaticDataMock.id,
-                position: 'relative',
               },
             },
           },

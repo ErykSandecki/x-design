@@ -53,7 +53,7 @@ export type TElementDynamicData = Pick<
 
 export type TElementStaticData = Pick<
   TElement,
-  'children' | 'id' | 'parentId' | 'position' | 'type'
+  'children' | 'id' | 'parentId' | 'type'
 >;
 
 export type TElementsData = {

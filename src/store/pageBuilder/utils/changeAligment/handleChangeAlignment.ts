@@ -30,7 +30,6 @@ export const handleChangeAlignment = (
     clonedElements.dynamicData[id].alignment = targetAlignment;
     clonedElements.dynamicData[id].position = 'absolute';
     clonedElements.dynamicData[id].coordinates = coordinates;
-    clonedElements.staticData[id].position = 'absolute';
   });
 
   return {
@@ -55,7 +54,6 @@ export const handleChangeAlignment = (
           },
           staticData: {
             ...currentPage.elements.staticData,
-            ...clonedElements.staticData,
             [parentId]: {
               ...currentPage.elements.staticData[parentId],
               children: [...filteredChildren, ...allId],

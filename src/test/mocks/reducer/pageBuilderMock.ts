@@ -82,7 +82,6 @@ export const elementStaticDataMock: TElementStaticData = {
   children: [],
   id: '1',
   parentId: '-1',
-  position: 'absolute',
   type: ElementType.frame,
 };
 
@@ -275,14 +274,12 @@ export const oneElementMock: TElementsData = {
       children: ['1'],
       id: '-1',
       parentId: '-1',
-      position: 'absolute',
       type: ElementType.base,
     },
     1: {
       children: [],
       id: '1',
       parentId: '-1',
-      position: 'absolute',
       type: ElementType.frame,
     },
   },

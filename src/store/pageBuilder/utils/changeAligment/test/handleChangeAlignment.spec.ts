@@ -113,19 +113,16 @@ describe('handleChangeAlignment', () => {
                 [elementStaticDataMock.id]: {
                   ...elementStaticDataMock,
                   children: ['2', '3'],
-                  position: 'absolute',
                 },
                 ['2']: {
                   ...elementStaticDataMock,
                   children: [],
                   id: '2',
-                  position: 'absolute',
                 },
                 ['3']: {
                   ...elementStaticDataMock,
                   children: [],
                   id: '3',
-                  position: 'relative',
                 },
               },
             },
@@ -204,19 +201,16 @@ describe('handleChangeAlignment', () => {
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
                 children: ['2', '3'],
-                position: 'absolute',
               },
               ['2']: {
                 ...elementStaticDataMock,
                 children: [],
                 id: '2',
-                position: 'absolute',
               },
               ['3']: {
                 ...elementStaticDataMock,
                 children: [],
                 id: '3',
-                position: 'absolute',
               },
             },
           },

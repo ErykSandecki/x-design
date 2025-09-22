@@ -70,7 +70,6 @@ export const BASE_STATIC_DATA: TElementStaticData = {
   children: BASE_ALL_DATA.children,
   id: BASE_ALL_DATA.id,
   parentId: BASE_ALL_DATA.parentId,
-  position: BASE_ALL_DATA.position,
   type: BASE_ALL_DATA.type,
 };
 

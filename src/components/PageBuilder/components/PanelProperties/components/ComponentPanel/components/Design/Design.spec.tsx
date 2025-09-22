@@ -135,9 +135,5 @@ describe('Design behaviors', () => {
     expect(
       store.getState()[PAGE_BUILDER].pages['0'].elements.allData['2'].position,
     ).toBe('relative');
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.staticData['2']
-        .position,
-    ).toBe('relative');
   });
 });
