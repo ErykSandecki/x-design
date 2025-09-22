@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, memo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 // components
@@ -95,4 +95,4 @@ const ViewBox: FC<TViewBoxProps> = ({
   );
 };
 
-export default ViewBox;
+export default memo(ViewBox);

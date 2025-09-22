@@ -34,7 +34,10 @@ const Elements: FC<TElementsProps> = ({
   mouseMode,
   parentId,
 }) => {
-  const staticData = useSelector(filtredStaticDataSelectorCreator(parentId));
+  const staticData = useSelector(
+    filtredStaticDataSelectorCreator(parentId),
+    (prev, next) => prev.length === next.length,
+  );
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   return staticData.map(({ id, parentId, type }, index) => {
