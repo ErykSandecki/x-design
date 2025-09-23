@@ -3,6 +3,7 @@ import {
   ADD_ELEMENT,
   CHANGE_ALIGNMENT,
   CHANGE_BACKGROUND,
+  CHANGE_LAYOUT,
   CHANGE_PARENT,
   CHANGE_POSITION,
   CLEAR_PREV_STATE,
@@ -41,6 +42,7 @@ import {
   TReducerHistorySaveAction,
   TChangeAlignmentAction,
   TFlipElementsAction,
+  TChangeLayoutAction,
 } from './types';
 
 // utils
@@ -48,15 +50,16 @@ import { filterSelectedElements } from './utils/filterSelectedElements';
 import { handleAddElement } from './utils/handleAddElement';
 import { handleChangeAlignment } from './utils/changeAligment/handleChangeAlignment';
 import { handleChangeBackground } from './utils/handleChangeBackground';
+import { handleChangeLayout } from './utils/handleChangeLayout';
 import { handleChangeParent } from './utils/changeParent/handleChangeParent';
 import { handleChangePosition } from './utils/handleChangePosition';
+import { handleFlipElements } from './utils/handleFlipElements';
 import { handleReducerHistoryRedo } from './utils/reducerHistory/handleReducerHistoryRedo';
 import { handleReducerHistorySave } from './utils/reducerHistory/handleReducerHistorySave';
 import { handleReducerHistoryUndo } from './utils/reducerHistory/handleReducerHistoryUndo';
 import { handleRotateElements } from './utils/handleRotateElements';
 import { handleSetElementsCoordinates } from './utils/handleSetElementsCoordinates';
 import { handleSetElementSizes } from './utils/handleSetElementSize';
-import { handleFlipElements } from './utils/handleFlipElements';
 
 const initialState: TPageBuilderState = {
   currentPage: '0',
@@ -95,6 +98,11 @@ const changeBackground = (
   state: TPageBuilderState,
   { payload }: TAction<TChangeBackgroundAction['payload']>,
 ): TPageBuilderState => handleChangeBackground(payload, state);
+
+const changeLayout = (
+  state: TPageBuilderState,
+  { payload }: TAction<TChangeLayoutAction['payload']>,
+): TPageBuilderState => handleChangeLayout(payload, state);
 
 const changeParent = (
   state: TPageBuilderState,
@@ -253,6 +261,8 @@ const pageBuilder = (
       return changeAlignment(state, action);
     case CHANGE_BACKGROUND:
       return changeBackground(state, action);
+    case CHANGE_LAYOUT:
+      return changeLayout(state, action);
     case CHANGE_PARENT:
       return changeParent(state, action);
     case CHANGE_POSITION:

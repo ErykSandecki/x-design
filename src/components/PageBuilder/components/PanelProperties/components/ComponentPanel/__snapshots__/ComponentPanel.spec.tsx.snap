@@ -361,6 +361,38 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
       </div>
     </div>
   </div>
+  <div
+    class="css-wcnq0t Section Section--light"
+    data-test-section=""
+  >
+    <div
+      class="Section__header Section__header--light"
+    >
+      <small
+        class="css-wcnq0t Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        data-test-text=""
+        style="text-align: inherit;"
+      >
+        Layout
+      </small>
+      <div
+        class="Section__buttons Section__buttons--light"
+      >
+        <div
+          class="css-wcnq0t ButtonIcon ButtonIcon--light"
+          data-test-button-icon=""
+        >
+          <div
+            class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            data-test-icon="auto-layout"
+            height="14"
+            name="AutoLayout"
+            width="14"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
 </DocumentFragment>
 `;
 

@@ -1,10 +1,6 @@
 // others
 import { BASE_3D } from 'shared';
-import {
-  BASE_PAGE,
-  BASE_PAGE_ELEMENTS,
-  layoutMock,
-} from 'store/pageBuilder/constants';
+import { BASE_PAGE, BASE_PAGE_ELEMENTS } from 'store/pageBuilder/constants';
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 
 // types
@@ -14,8 +10,10 @@ import {
   AlignmentVertical,
   ElementType,
   KeyboardKeys,
+  LayoutType,
   TAlignment,
   TElement,
+  TLayout,
 } from 'types';
 import {
   TElementDynamicData,
@@ -57,6 +55,10 @@ export const pageBuilderStateMock: Record<
 export const alignmetnMock: TAlignment = {
   horizontal: AlignmentHorizontal.center,
   vertical: AlignmentVertical.center,
+};
+
+export const layoutMock: TLayout = {
+  type: LayoutType.default,
 };
 
 export const elementDynamicDataMock: TElementDynamicData = {

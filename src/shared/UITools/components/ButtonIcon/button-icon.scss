@@ -22,4 +22,9 @@
       background-color: rgba($color: $--xd-blue-1--dark, $alpha: 30%);
     }
   }
+
+  & svg {
+    height: 12px;
+    width: 12px;
+  }
 }

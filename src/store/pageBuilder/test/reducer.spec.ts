@@ -9,6 +9,7 @@ import {
   pageBuilderStateMock,
   selectedElementMock,
   reducerHistoryMock,
+  layoutMock,
 } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
@@ -39,12 +40,14 @@ import {
   changeAlignment,
   clearPrevState,
   flipElements,
+  changeLayout,
 } from '../actions';
 
 // types
 import {
   AlignmentHorizontal,
   AlignmentVertical,
+  LayoutType,
   TAction,
   TBackground,
 } from 'types';
@@ -570,6 +573,112 @@ describe('PageBuilderReducer', () => {
               },
             },
           },
+        },
+      },
+    });
+  });
+
+  it('should handle CHANGE_LAYOUT', () => {
+    // mock
+    const layoutType = LayoutType.vertical;
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+
+    // before
+    const state = reducer(changeLayout(layoutType), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            allData: {
+              ...currentPage.elements.allData,
+              ['-1']: {
+                ...currentPage.elements.allData['-1'],
+                children: [selectedElementMock.id, '2'],
+              },
+              [elementAllDataMock.id]: {
+                ...elementAllDataMock,
+                layout: {
+                  ...layoutMock,
+                  type: LayoutType.default,
+                },
+              },
+            },
+            dynamicData: {
+              ...currentPage.elements.dynamicData,
+              ['-1']: {
+                ...currentPage.elements.dynamicData['-1'],
+              },
+              [elementDynamicDataMock.id]: {
+                ...elementDynamicDataMock,
+                layout: {
+                  ...layoutMock,
+                  type: LayoutType.default,
+                },
+              },
+            },
+            staticData: {
+              ...currentPage.elements.staticData,
+              ['-1']: {
+                ...currentPage.elements.staticData['-1'],
+                children: [elementStaticDataMock.id],
+              },
+              [elementStaticDataMock.id]: elementStaticDataMock,
+            },
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            allData: {
+              ...currentPage.elements.allData,
+              ['-1']: {
+                ...currentPage.elements.allData['-1'],
+                children: [selectedElementMock.id, '2'],
+              },
+              [elementAllDataMock.id]: {
+                ...elementAllDataMock,
+                layout: {
+                  ...layoutMock,
+                  type: layoutType,
+                },
+              },
+            },
+            dynamicData: {
+              ...currentPage.elements.dynamicData,
+              ['-1']: {
+                ...currentPage.elements.dynamicData['-1'],
+              },
+              [elementDynamicDataMock.id]: {
+                ...elementDynamicDataMock,
+                layout: {
+                  ...layoutMock,
+                  type: layoutType,
+                },
+              },
+            },
+            staticData: {
+              ...currentPage.elements.staticData,
+              ['-1']: {
+                ...currentPage.elements.staticData['-1'],
+                children: [elementStaticDataMock.id],
+              },
+              [elementStaticDataMock.id]: elementStaticDataMock,
+            },
+          },
+          selectedElements: [selectedElementMock],
         },
       },
     });

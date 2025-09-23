@@ -2,6 +2,7 @@
 import {
   ADD_ELEMENT,
   CHANGE_BACKGROUND,
+  CHANGE_LAYOUT,
   CHANGE_PARENT,
   CHANGE_POSITION,
   ROTATE_ELEMENTS,
@@ -17,7 +18,7 @@ import { THEME } from 'constant/localStorageKeys';
 import { THEME_COLORS } from 'constant/themeColors';
 
 // types
-import { ElementType, LayoutType, TElement, Theme, TLayout } from 'types';
+import { ElementType, LayoutType, TElement, Theme } from 'types';
 import {
   TElementDynamicData,
   TElementsData,
@@ -29,10 +30,6 @@ const color =
   localStorage.getItem(THEME) === Theme.dark
     ? THEME_COLORS.dark.neutral4
     : THEME_COLORS.light.neutral4;
-
-export const layoutMock: TLayout = {
-  type: LayoutType.default,
-};
 
 export const BASE_ALL_DATA: TElement = {
   alignment: {},
@@ -46,7 +43,7 @@ export const BASE_ALL_DATA: TElement = {
   deepLevel: 0,
   height: 0,
   id: '-1',
-  layout: layoutMock,
+  layout: { type: LayoutType.default },
   parentId: '-1',
   position: 'absolute',
   type: ElementType.base,
@@ -61,7 +58,7 @@ export const BASE_DYNAMIC_DATA: TElementDynamicData = {
   deepLevel: 0,
   height: BASE_ALL_DATA.height,
   id: BASE_ALL_DATA.id,
-  layout: layoutMock,
+  layout: { type: LayoutType.default },
   position: BASE_ALL_DATA.position,
   width: BASE_ALL_DATA.width,
 };
@@ -106,6 +103,7 @@ export const MAX_LENGTH_HISTORY = 50;
 
 export const REDUCER_HISTORY_SAVE_ACTIONS = [
   ADD_ELEMENT,
+  CHANGE_LAYOUT,
   CHANGE_PARENT,
   CHANGE_POSITION,
   SELECT_ELEMENT,

@@ -3,6 +3,7 @@ import {
   ADD_ELEMENT,
   CHANGE_ALIGNMENT,
   CHANGE_BACKGROUND,
+  CHANGE_LAYOUT,
   CHANGE_PARENT,
   CHANGE_POSITION,
   CLEAR_PREV_STATE,
@@ -28,6 +29,7 @@ import {
   TChangeAlignmentAction,
   TChangeBackgroundAction,
   TChangeBackgroundActionPayload,
+  TChangeLayoutAction,
   TChangeParentAction,
   TChangeParentActionPayload,
   TChangePositionAction,
@@ -69,6 +71,13 @@ export const changeBackground = (
 ): TChangeBackgroundAction => ({
   payload: { background, id },
   type: CHANGE_BACKGROUND,
+});
+
+export const changeLayout = (
+  layout: TChangeLayoutAction['payload'],
+): TChangeLayoutAction => ({
+  payload: layout,
+  type: CHANGE_LAYOUT,
 });
 
 export const changeParent = (

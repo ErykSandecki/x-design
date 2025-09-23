@@ -3,6 +3,7 @@ import {
   ADD_ELEMENT,
   CHANGE_ALIGNMENT,
   CHANGE_BACKGROUND,
+  CHANGE_LAYOUT,
   CHANGE_PARENT,
   CHANGE_POSITION,
   CLEAR_PREV_STATE,
@@ -145,6 +146,11 @@ export type TChangeBackgroundActionPayload = Pick<TElement, 'id'> & {
 export type TChangeBackgroundAction = {
   payload: TChangeBackgroundActionPayload;
   type: typeof CHANGE_BACKGROUND;
+};
+
+export type TChangeLayoutAction = {
+  payload: TElement['layout']['type'];
+  type: typeof CHANGE_LAYOUT;
 };
 
 export type TChangeParentActionPayload = Pick<

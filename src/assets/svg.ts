@@ -4,6 +4,7 @@ import { ReactComponent as AlignHorizontalRight } from './svg/align-horizontal-r
 import { ReactComponent as AlignVerticalBottom } from './svg/align-vertical-bottom.svg';
 import { ReactComponent as AlignVerticalCenter } from './svg/align-vertical-center.svg';
 import { ReactComponent as AlignVerticalTop } from './svg/align-vertical-top.svg';
+import { ReactComponent as AutoLayout } from './svg/auto-layout.svg';
 import { ReactComponent as Check } from './svg/check.svg';
 import { ReactComponent as Close } from './svg/close.svg';
 import { ReactComponent as Comment } from './svg/comment.svg';
@@ -33,6 +34,7 @@ export const Icons = {
   AlignVerticalBottom,
   AlignVerticalCenter,
   AlignVerticalTop,
+  AutoLayout,
   Check,
   Close,
   Comment,

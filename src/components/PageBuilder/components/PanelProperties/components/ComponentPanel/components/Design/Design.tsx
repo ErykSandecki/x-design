@@ -10,26 +10,31 @@ import ColumnPosition from './components/ColumnPosition/ColumnPosition';
 import ColumnRotation from './components/ColumnRotation/ColumnRotation';
 import { UITools } from 'shared';
 
+// hooks
+import { useDesignData } from './hooks/useDesignData';
+
 // others
 import { translationNameSpace } from './constants';
 
 // store
 import { changePosition } from 'store/pageBuilder/actions';
-import {
-  areParentsTheSameSelector,
-  elementAllDataSelectorCreator,
-  selectedElementsSelector,
-} from 'store/pageBuilder/selectors';
+import { selectedElementsSelector } from 'store/pageBuilder/selectors';
+
+// types
+import { LayoutType } from 'types';
 
 const Design: FC = () => {
   const dispatch = useDispatch();
-  const areParentsTheSame = useSelector(areParentsTheSameSelector);
   const selectedElements = useSelector(selectedElementsSelector);
   const firstElement = first(selectedElements);
   const { t } = useTranslation();
-  const { position } = useSelector(
-    elementAllDataSelectorCreator(firstElement.id),
-  );
+  const {
+    areParentsTheSame,
+    isMixedLayoutType,
+    layoutType,
+    onChangeLayoutType,
+    position,
+  } = useDesignData();
 
   return (
     <>
@@ -54,6 +59,27 @@ const Design: FC = () => {
         <ColumnAlignment />
         <ColumnPosition />
         <ColumnRotation />
+      </UITools.Section>
+      <UITools.Section
+        buttonsIcon={
+          areParentsTheSame
+            ? [
+                <UITools.ButtonIcon
+                  key={0}
+                  name="AutoLayout"
+                  onClick={onChangeLayoutType}
+                  selected={
+                    isMixedLayoutType
+                      ? false
+                      : layoutType !== LayoutType.default
+                  }
+                />,
+              ]
+            : []
+        }
+        label={t(`${translationNameSpace}.section.3.label`)}
+      >
+        <></>
       </UITools.Section>
     </>
   );
