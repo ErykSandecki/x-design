@@ -61,22 +61,16 @@ const Design: FC = () => {
         <ColumnRotation />
       </UITools.Section>
       <UITools.Section
-        buttonsIcon={
-          areParentsTheSame
-            ? [
-                <UITools.ButtonIcon
-                  key={0}
-                  name="AutoLayout"
-                  onClick={onChangeLayoutType}
-                  selected={
-                    isMixedLayoutType
-                      ? false
-                      : layoutType !== LayoutType.default
-                  }
-                />,
-              ]
-            : []
-        }
+        buttonsIcon={[
+          <UITools.ButtonIcon
+            key={0}
+            name="AutoLayout"
+            onClick={onChangeLayoutType}
+            selected={
+              isMixedLayoutType ? false : layoutType !== LayoutType.default
+            }
+          />,
+        ]}
         label={t(`${translationNameSpace}.section.3.label`)}
       >
         <></>

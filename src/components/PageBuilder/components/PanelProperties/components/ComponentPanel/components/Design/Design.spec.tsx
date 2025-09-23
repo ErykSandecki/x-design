@@ -109,36 +109,6 @@ describe('Design snapshots', () => {
     // result
     expect(asFragment()).toMatchSnapshot();
   });
-
-  it('should render when parents are not the same', () => {
-    // mock
-    const store = configureStore({
-      ...stateMock,
-      [PAGE_BUILDER]: {
-        ...stateMock[PAGE_BUILDER],
-        pages: {
-          ...stateMock[PAGE_BUILDER].pages,
-          ['0']: {
-            ...stateMock[PAGE_BUILDER].pages['0'],
-            selectedElements: [
-              selectedElementMock,
-              { ...selectedElementMock, id: '2', parentId: '1' },
-            ],
-          },
-        },
-      },
-    });
-
-    // before
-    const { asFragment } = render(
-      <Provider store={store}>
-        <Design />
-      </Provider>,
-    );
-
-    // result
-    expect(asFragment()).toMatchSnapshot();
-  });
 });
 
 describe('Design behaviors', () => {
