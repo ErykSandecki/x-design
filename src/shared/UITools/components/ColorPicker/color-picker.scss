@@ -6,4 +6,8 @@
   &__alpha-input {
     flex-shrink: 0;
   }
+
+  &__alpha-input-unit {
+    @include theme('neutral-1', color);
+  }
 }

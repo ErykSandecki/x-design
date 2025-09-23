@@ -54,7 +54,11 @@ exports[`ColorPicker snapshots should render ColorPicker 1`] = `
         class="ScrubbableInput ScrubbableInput--light"
         data-test-scrubbable-input=""
       >
-        %
+        <div
+          class="ColorPicker__alpha-input-unit ColorPicker__alpha-input-unit--light"
+        >
+          %
+        </div>
       </div>
     </div>
   </div>

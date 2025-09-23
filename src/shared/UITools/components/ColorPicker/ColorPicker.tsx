@@ -120,7 +120,7 @@ export const ColorPicker: FC<TColorPickerProps> = ({
             onChange={(value) => onChangeAlphaHandler(value.toString())}
             value={parseInt(alphaValue)}
           >
-            %
+            <div className={cx(classNamesWithTheme.alphaInputUnit)}>%</div>
           </ScrubbableInput>
         }
         max={100}
