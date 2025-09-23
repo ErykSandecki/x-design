@@ -3,7 +3,6 @@ import {
   elementAllDataMock,
   elementDynamicDataMock,
   elementStaticDataMock,
-  layoutMock,
   pageBuilderStateMock,
   selectedElementMock,
 } from 'test/mocks/reducer/pageBuilderMock';
@@ -11,11 +10,8 @@ import {
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
 
-// types
-import { LayoutType } from 'types';
-
 // utils
-import { handleChangeLayout } from '../handleChangeLayout';
+import { handleFitLayout } from '../handleFitLayout';
 
 describe('handleChangeLayout', () => {
   it(`should return data with changed layout type`, () => {
@@ -23,7 +19,7 @@ describe('handleChangeLayout', () => {
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
     // before
-    const result = handleChangeLayout(LayoutType.horizontal, {
+    const result = handleFitLayout({
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -33,21 +29,15 @@ describe('handleChangeLayout', () => {
             ...currentPage.elements,
             allData: {
               ...currentPage.elements.allData,
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
-              },
+              [elementAllDataMock.id]: elementAllDataMock,
             },
             dynamicData: {
               ...currentPage.elements.dynamicData,
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-              },
+              [elementDynamicDataMock.id]: elementDynamicDataMock,
             },
             staticData: {
               ...currentPage.elements.staticData,
-              [elementStaticDataMock.id]: {
-                ...elementStaticDataMock,
-              },
+              [elementStaticDataMock.id]: elementStaticDataMock,
             },
           },
           selectedElements: [selectedElementMock],
@@ -68,20 +58,16 @@ describe('handleChangeLayout', () => {
               ...currentPage.elements.allData,
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
-                layout: {
-                  ...layoutMock,
-                  type: LayoutType.horizontal,
-                },
+                height: 'auto',
+                width: 'auto',
               },
             },
             dynamicData: {
               ...currentPage.elements.dynamicData,
               [elementDynamicDataMock.id]: {
                 ...elementDynamicDataMock,
-                layout: {
-                  ...layoutMock,
-                  type: LayoutType.horizontal,
-                },
+                height: 'auto',
+                width: 'auto',
               },
             },
             staticData: {

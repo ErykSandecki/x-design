@@ -7,6 +7,7 @@ import {
   CHANGE_PARENT,
   CHANGE_POSITION,
   CLEAR_PREV_STATE,
+  FIT_LAYOUT,
   FLIP_ELEMENTS,
   REDUCER_HISTORY_REDO,
   REDUCER_HISTORY_SAVE,
@@ -60,6 +61,7 @@ import { handleReducerHistoryUndo } from './utils/reducerHistory/handleReducerHi
 import { handleRotateElements } from './utils/handleRotateElements';
 import { handleSetElementsCoordinates } from './utils/handleSetElementsCoordinates';
 import { handleSetElementSizes } from './utils/handleSetElementSize';
+import { handleFitLayout } from './utils/handleFitLayout';
 
 const initialState: TPageBuilderState = {
   currentPage: '0',
@@ -122,6 +124,9 @@ const clearPrevState = (state: TPageBuilderState): TPageBuilderState => ({
     },
   },
 });
+
+const fitLayout = (state: TPageBuilderState): TPageBuilderState =>
+  handleFitLayout(state);
 
 const flipElements = (
   state: TPageBuilderState,
@@ -269,6 +274,8 @@ const pageBuilder = (
       return changePosition(state);
     case CLEAR_PREV_STATE:
       return clearPrevState(state);
+    case FIT_LAYOUT:
+      return fitLayout(state);
     case FLIP_ELEMENTS:
       return flipElements(state, action);
     case REDUCER_HISTORY_REDO:

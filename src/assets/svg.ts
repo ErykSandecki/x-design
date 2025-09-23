@@ -13,6 +13,7 @@ import { ReactComponent as EWResize } from './svg/ew-resize.svg';
 import { ReactComponent as EyesClosed } from './svg/eyes-closed.svg';
 import { ReactComponent as EyesDropper } from './svg/eyes-dropper.svg';
 import { ReactComponent as EyesOpened } from './svg/eyes-opened.svg';
+import { ReactComponent as FitLayout } from './svg/fit-layout.svg';
 import { ReactComponent as FlipHorizontal } from './svg/flip-horizontal.svg';
 import { ReactComponent as FlipVertical } from './svg/flip-vertical.svg';
 import { ReactComponent as FrameTool } from './svg/frame-tool.svg';
@@ -43,6 +44,7 @@ export const Icons = {
   EyesClosed,
   EyesDropper,
   EyesOpened,
+  FitLayout,
   FlipHorizontal,
   FlipVertical,
   FrameTool,

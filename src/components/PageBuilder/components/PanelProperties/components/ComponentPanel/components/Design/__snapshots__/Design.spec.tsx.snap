@@ -379,6 +379,18 @@ exports[`Design snapshots should render Design 1`] = `
         class="Section__buttons Section__buttons--light"
       >
         <div
+          class="css-wcnq0t ButtonIcon ButtonIcon--light"
+          data-test-button-icon=""
+        >
+          <div
+            class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            data-test-icon="fit-layout"
+            height="14"
+            name="FitLayout"
+            width="14"
+          />
+        </div>
+        <div
           class="css-wcnq0t ButtonIcon ButtonIcon--light ButtonIcon--selected ButtonIcon--selected--light"
           data-test-button-icon=""
         >

@@ -7,6 +7,7 @@ import {
   CHANGE_PARENT,
   CHANGE_POSITION,
   CLEAR_PREV_STATE,
+  FIT_LAYOUT,
   FLIP_ELEMENTS,
   REDUCER_HISTORY_REDO,
   REDUCER_HISTORY_SAVE,
@@ -169,6 +170,10 @@ export type TChangePositionAction = {
 
 export type TClearPrevStateAction = {
   type: typeof CLEAR_PREV_STATE;
+};
+
+export type TFitLayoutAction = {
+  type: typeof FIT_LAYOUT;
 };
 
 export type TFlipElementsAction = {

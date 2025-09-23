@@ -17,7 +17,7 @@ import { useDesignData } from './hooks/useDesignData';
 import { translationNameSpace } from './constants';
 
 // store
-import { changePosition } from 'store/pageBuilder/actions';
+import { changePosition, fitLayout } from 'store/pageBuilder/actions';
 import { selectedElementsSelector } from 'store/pageBuilder/selectors';
 
 // types
@@ -64,6 +64,12 @@ const Design: FC = () => {
         buttonsIcon={[
           <UITools.ButtonIcon
             key={0}
+            name="FitLayout"
+            onClick={() => dispatch(fitLayout())}
+            selected={false}
+          />,
+          <UITools.ButtonIcon
+            key={1}
             name="AutoLayout"
             onClick={onChangeLayoutType}
             selected={

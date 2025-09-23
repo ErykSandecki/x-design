@@ -41,6 +41,7 @@ import {
   clearPrevState,
   flipElements,
   changeLayout,
+  fitLayout,
 } from '../actions';
 
 // types
@@ -573,6 +574,75 @@ describe('PageBuilderReducer', () => {
               },
             },
           },
+        },
+      },
+    });
+  });
+
+  it('should handle CHANGE_LAYOUT', () => {
+    // mock
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+
+    // before
+    const state = reducer(fitLayout(), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            allData: {
+              ...currentPage.elements.allData,
+              [elementAllDataMock.id]: elementAllDataMock,
+            },
+            dynamicData: {
+              ...currentPage.elements.dynamicData,
+              [elementDynamicDataMock.id]: elementDynamicDataMock,
+            },
+            staticData: {
+              ...currentPage.elements.staticData,
+              [elementStaticDataMock.id]: elementStaticDataMock,
+            },
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            allData: {
+              ...currentPage.elements.allData,
+              [elementAllDataMock.id]: {
+                ...elementAllDataMock,
+                height: 'auto',
+                width: 'auto',
+              },
+            },
+            dynamicData: {
+              ...currentPage.elements.dynamicData,
+              [elementDynamicDataMock.id]: {
+                ...elementDynamicDataMock,
+                height: 'auto',
+                width: 'auto',
+              },
+            },
+            staticData: {
+              ...currentPage.elements.staticData,
+              [elementStaticDataMock.id]: {
+                ...elementStaticDataMock,
+              },
+            },
+          },
+          selectedElements: [selectedElementMock],
         },
       },
     });
