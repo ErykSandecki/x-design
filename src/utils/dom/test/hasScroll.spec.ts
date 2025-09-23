@@ -1,4 +1,4 @@
-import { MutableRefObject } from 'react';
+import { RefObject } from 'react';
 
 // utils
 import { hasScroll } from '../hasScroll';
@@ -40,7 +40,7 @@ describe('hasScroll', () => {
       ({ height: '100px' }) as CSSStyleDeclaration;
 
     // before
-    const result = hasScroll(ref as MutableRefObject<any>);
+    const result = hasScroll(ref as RefObject<any>);
 
     // result
     expect(result).toBe(false);

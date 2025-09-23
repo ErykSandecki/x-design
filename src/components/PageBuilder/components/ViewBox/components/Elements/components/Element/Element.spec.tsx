@@ -141,6 +141,10 @@ describe('Element snapshots', () => {
 
   it('should render Element when width & height is auto', () => {
     // mock
+    window.getComputedStyle = () =>
+      ({ height: '100px', width: '100px' }) as CSSStyleDeclaration;
+
+    // mock
     const store = configureStore({
       ...stateMock,
       [PAGE_BUILDER]: {

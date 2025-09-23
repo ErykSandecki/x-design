@@ -1,5 +1,6 @@
 export * from './common/generateID';
 export * from './common/getCssVariable';
+export * from './common/isPureNumber';
 export * from './dom/createHtmlElement';
 export * from './dom/handleSubmitInput';
 export * from './dom/hasScroll';

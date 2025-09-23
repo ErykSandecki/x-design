@@ -1,5 +1,5 @@
-import { isNumber } from 'lodash';
 import { FC, memo, ReactNode, useRef } from 'react';
+import { isNumber } from 'lodash';
 import { useSelector } from 'react-redux';
 
 // components
@@ -43,6 +43,7 @@ import { MouseMode } from 'types/enums/mouseMode';
 // utils
 import { getAbsolutePosition } from '../../../../utils/getAbsolutePosition';
 import { getPosition } from './utils/getPosition';
+import { isPureNumber } from 'utils';
 
 type TElementProps = {
   classes: typeof classes;
@@ -77,9 +78,31 @@ const Element: FC<TElementProps> = ({
   const elementDynamicData = useSelector(elementDynamicDataSelectorCreator(id));
   const { itemsRefs, zoomContentRef } = useRefs();
   const { alignment, coordinates } = elementDynamicData;
-  const { angle, background, height, position, width } = elementDynamicData;
+  const {
+    angle,
+    background,
+    height: cssHeight,
+    position,
+    width: cssWidth,
+  } = elementDynamicData;
   const { x, y } = coordinates;
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
+  const isMultipleMoving = useSelector(
+    eventSelectorCreator('isMultipleMoving'),
+  ) as boolean;
+  const isFocused = isHover || isSelected;
+  const displayEventsArea = !isDraggable && !isMultiple && isSelected;
+  const displayOutline = isFocused;
+  const isMoving = isDraggable || (isMultipleMoving && isSelected);
+  const { x1, y1 } = getAbsolutePosition(id, itemsRefs, zoomContentRef);
+  const height =
+    isPureNumber(cssHeight) || !itemsRefs[id]
+      ? cssHeight
+      : parseInt(getComputedStyle(itemsRefs[id]).height);
+  const width =
+    isPureNumber(cssWidth) || !itemsRefs[id]
+      ? cssWidth
+      : parseInt(getComputedStyle(itemsRefs[id]).width);
   const { ...events } = useElementEvents(
     coordinates,
     elementRef,
@@ -91,14 +114,6 @@ const Element: FC<TElementProps> = ({
     position,
     type,
   );
-  const isMultipleMoving = useSelector(
-    eventSelectorCreator('isMultipleMoving'),
-  ) as boolean;
-  const isFocused = isHover || isSelected;
-  const displayEventsArea = !isDraggable && !isMultiple && isSelected;
-  const displayOutline = isFocused;
-  const isMoving = isDraggable || (isMultipleMoving && isSelected);
-  const { x1, y1 } = getAbsolutePosition(id, itemsRefs, zoomContentRef);
 
   return (
     <Box
@@ -114,9 +129,9 @@ const Element: FC<TElementProps> = ({
       style={{
         ...getPosition(alignment, counterAngle, x, y),
         backgroundColor: 'unset',
-        height: isNumber(height) ? `${height}px` : height,
+        height: isNumber(cssHeight) ? `${cssHeight}px` : cssHeight,
         position,
-        width: isNumber(width) ? `${width}px` : width,
+        width: isNumber(cssWidth) ? `${cssWidth}px` : cssWidth,
       }}
     >
       <Box
