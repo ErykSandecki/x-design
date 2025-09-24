@@ -16,6 +16,10 @@ import { ReactComponent as EyesOpened } from './svg/eyes-opened.svg';
 import { ReactComponent as FitLayout } from './svg/fit-layout.svg';
 import { ReactComponent as FlipHorizontal } from './svg/flip-horizontal.svg';
 import { ReactComponent as FlipVertical } from './svg/flip-vertical.svg';
+import { ReactComponent as FlowDefault } from './svg/flow-default.svg';
+import { ReactComponent as FlowGrid } from './svg/flow-grid.svg';
+import { ReactComponent as FlowHorizontal } from './svg/flow-horizontal.svg';
+import { ReactComponent as FlowVertical } from './svg/flow-vertical.svg';
 import { ReactComponent as FrameTool } from './svg/frame-tool.svg';
 import { ReactComponent as HtmlTag } from './svg/html-tag.svg';
 import { ReactComponent as Logo } from './svg/logo.svg';
@@ -47,6 +51,10 @@ export const Icons = {
   FitLayout,
   FlipHorizontal,
   FlipVertical,
+  FlowDefault,
+  FlowGrid,
+  FlowHorizontal,
+  FlowVertical,
   FrameTool,
   HtmlTag,
   Logo,
