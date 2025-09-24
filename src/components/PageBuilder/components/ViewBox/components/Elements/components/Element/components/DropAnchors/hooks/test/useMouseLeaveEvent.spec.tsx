@@ -45,7 +45,9 @@ describe('useMouseLeaveEvent', () => {
       }) as any;
 
     // before
-    const { result } = renderHook(() => useMouseLeaveEvent(MouseMode.default));
+    const { result } = renderHook(() =>
+      useMouseLeaveEvent('1', MouseMode.default),
+    );
 
     // action
     result.current({} as MouseEvent);
@@ -54,6 +56,7 @@ describe('useMouseLeaveEvent', () => {
     expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
       possibleAnchorElementId: '-1',
       possibleAnchorPosition: null,
+      possibleIndexPosition: null,
     });
   });
 
@@ -71,7 +74,9 @@ describe('useMouseLeaveEvent', () => {
       }) as any;
 
     // before
-    const { result } = renderHook(() => useMouseLeaveEvent(MouseMode.default));
+    const { result } = renderHook(() =>
+      useMouseLeaveEvent('1', MouseMode.default),
+    );
 
     // action
     result.current({} as MouseEvent);
@@ -94,7 +99,9 @@ describe('useMouseLeaveEvent', () => {
       }) as any;
 
     // before
-    const { result } = renderHook(() => useMouseLeaveEvent(MouseMode.comment));
+    const { result } = renderHook(() =>
+      useMouseLeaveEvent('1', MouseMode.comment),
+    );
 
     // action
     result.current({} as MouseEvent);

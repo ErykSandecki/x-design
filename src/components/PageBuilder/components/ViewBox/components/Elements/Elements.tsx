@@ -38,7 +38,7 @@ const Elements: FC<TElementsProps> = ({
   );
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
-  return staticData.map(({ id, parentId, type }) => {
+  return staticData.map(({ id, parentId, type }, index) => {
     switch (type) {
       case ElementType.frame:
         return (
@@ -48,6 +48,8 @@ const Elements: FC<TElementsProps> = ({
               eventsDisabled,
             ])}
             id={id}
+            index={index}
+            key={id}
             mouseMode={mouseMode}
             parentId={parentId}
             type={type}

@@ -45,6 +45,7 @@ type TElementProps = {
     width: TElement['width'],
   ) => ReactNode;
   id: TElement['id'];
+  index: number;
   mouseMode: MouseMode;
   parentId: TElement['parentId'];
   type: ElementType;
@@ -54,6 +55,7 @@ const Element: FC<TElementProps> = ({
   classes,
   children,
   id,
+  index,
   mouseMode,
   parentId,
   type,
@@ -123,7 +125,12 @@ const Element: FC<TElementProps> = ({
         {...events}
       >
         {!isSelected && position === 'relative' && (
-          <DropAnchors id={id} mouseMode={mouseMode} parentId={parentId} />
+          <DropAnchors
+            id={id}
+            index={index}
+            mouseMode={mouseMode}
+            parentId={parentId}
+          />
         )}
         {children(angle, coordinates, height, isHover, isSelected, width)}
         {displayOutline && (

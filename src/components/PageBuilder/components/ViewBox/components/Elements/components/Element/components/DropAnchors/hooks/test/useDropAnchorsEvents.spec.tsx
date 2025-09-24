@@ -78,7 +78,7 @@ describe('useDropAnchorsEvents', () => {
 
     // before
     const { result } = renderHook(
-      () => useDropAnchorsEvents('1', MouseMode.default, '-1'),
+      () => useDropAnchorsEvents('1', 0, MouseMode.default, '-1'),
       {
         wrapper: getProviderWrapper(store),
       },

@@ -24,11 +24,17 @@ import { enumToArray } from 'utils';
 
 export type TDropAnchorsProps = {
   id: TElement['id'];
+  index: number;
   mouseMode: MouseMode;
   parentId: TElement['parentId'];
 };
 
-const DropAnchors: FC<TDropAnchorsProps> = ({ id, mouseMode, parentId }) => {
+const DropAnchors: FC<TDropAnchorsProps> = ({
+  id,
+  index,
+  mouseMode,
+  parentId,
+}) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const {
     anchorPos,
@@ -38,7 +44,7 @@ const DropAnchors: FC<TDropAnchorsProps> = ({ id, mouseMode, parentId }) => {
     isGrid,
     onMouseEnter,
     ...events
-  } = useDropAnchorsEvents(id, mouseMode, parentId);
+  } = useDropAnchorsEvents(id, index, mouseMode, parentId);
   const dropAnchorsPosition = isFlowVertical
     ? VERTICAL_ANCHORS
     : HORIZONTAL_ANCHORS;

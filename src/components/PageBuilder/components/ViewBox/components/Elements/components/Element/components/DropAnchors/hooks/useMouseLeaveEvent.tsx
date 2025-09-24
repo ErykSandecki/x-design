@@ -2,19 +2,20 @@ import { isEmpty } from 'lodash';
 import { MouseEvent } from 'react';
 import { useDispatch } from 'react-redux';
 
-// types
-import { MouseMode } from 'types/enums/mouseMode';
-
 // store
 import { store } from 'store';
 import { updateEventsStatus } from 'store/pageBuilder/actions';
 
+// types
+import { MouseMode } from 'types/enums/mouseMode';
+import { TElement } from 'types';
 // utils
 import { eventSelectorCreator } from 'store/pageBuilder/selectors';
 
 export type TUseMouseLeaveEvent = (event: MouseEvent) => void;
 
 export const useMouseLeaveEvent = (
+  id: TElement['id'],
   mouseMode: MouseMode,
 ): TUseMouseLeaveEvent => {
   const dispatch = useDispatch();
@@ -30,6 +31,7 @@ export const useMouseLeaveEvent = (
           updateEventsStatus({
             possibleAnchorElementId: '-1',
             possibleAnchorPosition: null,
+            possibleIndexPosition: null,
           }),
         );
       }

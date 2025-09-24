@@ -46,7 +46,7 @@ describe('useMouseEnterEvent', () => {
 
     // before
     const { result } = renderHook(() =>
-      useMouseEnterEvent('1', MouseMode.default),
+      useMouseEnterEvent('1', 0, MouseMode.default, '-1'),
     );
 
     // action
@@ -56,6 +56,8 @@ describe('useMouseEnterEvent', () => {
     expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
       possibleAnchorElementId: '1',
       possibleAnchorPosition: DropAnchorsPosition.top,
+      possibleIndexPosition: 0,
+      possibleParent: '-1',
     });
   });
 
@@ -75,7 +77,7 @@ describe('useMouseEnterEvent', () => {
 
     // before
     const { result } = renderHook(() =>
-      useMouseEnterEvent('1', MouseMode.default),
+      useMouseEnterEvent('1', 0, MouseMode.default, '-1'),
     );
 
     // action
@@ -85,6 +87,8 @@ describe('useMouseEnterEvent', () => {
     expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
       possibleAnchorElementId: '1',
       possibleAnchorPosition: DropAnchorsPosition.bottom,
+      possibleIndexPosition: 1,
+      possibleParent: '-1',
     });
   });
 
@@ -103,7 +107,7 @@ describe('useMouseEnterEvent', () => {
 
     // before
     const { result } = renderHook(() =>
-      useMouseEnterEvent('1', MouseMode.default),
+      useMouseEnterEvent('1', 0, MouseMode.default, '-1'),
     );
 
     // action
@@ -128,7 +132,7 @@ describe('useMouseEnterEvent', () => {
 
     // before
     const { result } = renderHook(() =>
-      useMouseEnterEvent('1', MouseMode.comment),
+      useMouseEnterEvent('1', 0, MouseMode.comment, '-1'),
     );
 
     // action

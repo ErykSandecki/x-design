@@ -2,7 +2,7 @@ import { RefObject, useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 // hooks
-import { useElementSizes } from '../../../../../../../hooks/useElementSizes';
+import { useElementSizes } from './useElementSizes';
 import { useForceRerender } from 'hooks';
 import { useInitializeRef } from './useInitializeRef';
 import { useMouseDownEvent } from './useMouseDownEvent';

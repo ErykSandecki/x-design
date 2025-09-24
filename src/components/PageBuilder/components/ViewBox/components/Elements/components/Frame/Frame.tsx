@@ -31,6 +31,7 @@ export type TFrameProps = TElementProps;
 const Frame: FC<TFrameProps> = ({
   className,
   id,
+  index,
   mouseMode,
   parentId,
   type,
@@ -45,6 +46,7 @@ const Frame: FC<TFrameProps> = ({
         className: cx(className, classNamesWithTheme[classNameFrame]),
       }}
       id={id}
+      index={index}
       parentId={parentId}
       mouseMode={mouseMode}
       type={type}

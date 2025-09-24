@@ -27,6 +27,7 @@ export type TUseDropAnchorsEvents = {
 
 export const useDropAnchorsEvents = (
   id: TElement['id'],
+  index: number,
   mouseMode: MouseMode,
   parentId: TElement['parentId'],
 ): TUseDropAnchorsEvents => {
@@ -51,7 +52,7 @@ export const useDropAnchorsEvents = (
     displayPrevPrompt,
     isFlowVertical,
     isGrid,
-    onMouseEnter: useMouseEnterEvent(id, mouseMode),
-    onMouseLeave: useMouseLeaveEvent(mouseMode),
+    onMouseEnter: useMouseEnterEvent(id, index, mouseMode, parentId),
+    onMouseLeave: useMouseLeaveEvent(id, mouseMode),
   };
 };

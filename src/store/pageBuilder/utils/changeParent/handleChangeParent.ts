@@ -3,6 +3,7 @@ import { cloneDeep, first } from 'lodash';
 // types
 import {
   TChangeParentActionPayload,
+  TEvents,
   TPage,
   TPageBuilderState,
 } from '../../types';
@@ -111,9 +112,11 @@ export const handleChangeParent = (
     draggableElements,
     currentPage.selectedElements,
   );
-  const events = {
+  const events: TEvents = {
     ...state.events,
     draggableElements: [],
+    possibleAnchorElementId: null,
+    possibleAnchorPosition: null,
     possibleIndexPosition: null,
     possibleParent: null,
   };
