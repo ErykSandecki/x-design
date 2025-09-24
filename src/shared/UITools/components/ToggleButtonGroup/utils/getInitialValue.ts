@@ -1,5 +1,5 @@
 // types
-import { TToggleButtonGroupValue } from './types';
+import { TToggleButtonGroupValue } from '../types';
 
 export const getInitialValue = <V extends TToggleButtonGroupValue>(
   multiple: boolean,

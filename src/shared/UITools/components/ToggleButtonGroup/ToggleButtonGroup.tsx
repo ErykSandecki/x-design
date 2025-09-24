@@ -21,7 +21,7 @@ import { E2EAttribute } from 'types';
 import { TToggleButton, TToggleButtonGroupValue } from './types';
 
 // utils
-import { getInitialValue } from './utils';
+import { getInitialValue } from './utils/getInitialValue';
 
 export type TToggleButtonGroupProps<V> = {
   alwaysSelected?: boolean;
@@ -38,7 +38,7 @@ export const ToggleButtonGroup = <V extends TToggleButtonGroupValue>({
   alwaysSelected = false,
   className = '',
   defaultValue = null,
-  e2eValue = '',
+  e2eValue,
   fullWidth,
   multiple = false,
   onChange = null,
