@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 import { UITools } from 'shared';
 
 // others
-import { toggleButtons, translationNameSpace } from './constants';
+import { translationNameSpace } from './constants';
 
 // store
 import { changeLayout } from 'store/pageBuilder/actions';
@@ -24,37 +24,34 @@ import { LayoutType } from 'types';
 // utils
 import { isMixed } from '../../utils/isMixed';
 
-const ColumnFlow: FC = () => {
+const ColumnResizing: FC = () => {
   const dispatch = useDispatch();
   const dynamicData = useSelector(dynamicDataSelector);
   const selectedElements = useSelector(selectedElementsSelector);
   const firstElement = first(selectedElements);
   const element = useSelector(elementAllDataSelectorCreator(firstElement.id));
-  const isMixedLayoutType = isMixed(
+  const isMixedHeight = isMixed(
     dynamicData,
     firstElement,
-    'layout.type',
+    'height',
+    selectedElements,
+  );
+  const isMixedWidth = isMixed(
+    dynamicData,
+    firstElement,
+    'width',
     selectedElements,
   );
   const { t } = useTranslation();
 
   return (
     <UITools.SectionColumn
-      gridColumnType={GridColumnType.single}
+      gridColumnType={GridColumnType.twoInputs}
       labels={[t(`${translationNameSpace}.label`)]}
-      withMargin
     >
-      <UITools.ToggleButtonGroup
-        defaultValue={isMixedLayoutType ? '' : element.layout.type}
-        e2eValue="flow"
-        fullWidth
-        onChange={(layoutType) =>
-          dispatch(changeLayout(layoutType as LayoutType))
-        }
-        toggleButtons={toggleButtons}
-      />
+      <></>
     </UITools.SectionColumn>
   );
 };
 
-export default ColumnFlow;
+export default ColumnResizing;

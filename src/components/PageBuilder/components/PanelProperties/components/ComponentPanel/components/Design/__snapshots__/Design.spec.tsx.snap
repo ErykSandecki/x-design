@@ -405,7 +405,7 @@ exports[`Design snapshots should render Design 1`] = `
       </div>
     </div>
     <div
-      class="css-wcnq0t SectionColumn SectionColumn--light"
+      class="css-wcnq0t SectionColumn SectionColumn--light SectionColumn--with-margin SectionColumn--with-margin--light"
       data-test-section=""
     >
       <div
@@ -485,6 +485,34 @@ exports[`Design snapshots should render Design 1`] = `
             </button>
           </div>
         </div>
+        <div
+          class="SectionColumn__buttons SectionColumn__buttons--light"
+        />
+      </div>
+    </div>
+    <div
+      class="css-wcnq0t SectionColumn SectionColumn--light"
+      data-test-section=""
+    >
+      <div
+        class="SectionColumn__labels SectionColumn__labels--light"
+        style="width: calc(100% - 24px - 0px - 8px);"
+      >
+        <small
+          class="css-wcnq0t SectionColumn__label SectionColumn__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+          data-test-text=""
+          style="text-align: inherit;"
+        >
+          Resizing
+        </small>
+      </div>
+      <div
+        class="SectionColumn__wrapper SectionColumn__wrapper--light"
+      >
+        <div
+          class="SectionColumn__content SectionColumn__content--light SectionColumn__content--two-inputs SectionColumn__content--two-inputs--light"
+          style="width: calc(100% - 24px - 0px - 8px);"
+        />
         <div
           class="SectionColumn__buttons SectionColumn__buttons--light"
         />

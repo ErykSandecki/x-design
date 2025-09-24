@@ -7,6 +7,7 @@
   "pageBuilder.panelProperties.componentPanel.design.columnHeader.header_few": "{{ amount }} zaznaczone",
   "pageBuilder.panelProperties.componentPanel.design.columnHeader.header_many": "{{ amount }} zaznaczonych",
   "pageBuilder.panelProperties.componentPanel.design.columnPosition.label": "Pozycja",
+  "pageBuilder.panelProperties.componentPanel.design.columnResizing.label": "Rozmiar",
   "pageBuilder.panelProperties.componentPanel.design.columnRotation.label": "Obrót",
   "pageBuilder.panelProperties.componentPanel.design.section.2.label": "Pozycja",
   "pageBuilder.panelProperties.componentPanel.design.section.3.label": "Układ",
