@@ -12,6 +12,7 @@ import {
   elementAllDataMock,
   elementDynamicDataMock,
   elementStaticDataMock,
+  layoutMock,
   pageBuilderStateMock,
   selectedElementMock,
 } from 'test/mocks/reducer/pageBuilderMock';
@@ -121,6 +122,7 @@ describe('useElementEvents', () => {
       isHover: false,
       isMoving: false,
       isSelected: true,
+      layout: layoutMock,
       onMouseDown: expect.any(Function),
       onMouseEnter: expect.any(Function),
       onMouseLeave: expect.any(Function),

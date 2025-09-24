@@ -49,6 +49,7 @@ export type TUseElementEvents = {
   isHover: boolean;
   isMoving: boolean;
   isSelected: boolean;
+  layout: TElement['layout'];
   onMouseDown: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
   onMouseEnter: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
   onMouseLeave: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
@@ -88,6 +89,7 @@ export const useElementEvents = (
     background,
     coordinates,
     height: cssHeight,
+    layout,
     position,
     width: cssWidth,
   } = elementDynamicData;
@@ -134,6 +136,7 @@ export const useElementEvents = (
     isHover,
     isMoving,
     isSelected,
+    layout,
     onMouseDown: useMouseDownEvent(
       cursorPosition,
       cursorPositionBase,

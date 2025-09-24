@@ -31,6 +31,7 @@ import { MouseMode } from 'types/enums/mouseMode';
 // utils
 import { getAbsolutePosition } from '../../../../utils/getAbsolutePosition';
 import { getPosition } from './utils/getPosition';
+import { getLayout } from './utils/getLayout';
 
 type TElementProps = {
   classes: typeof classes;
@@ -75,6 +76,7 @@ const Element: FC<TElementProps> = ({
     isHover,
     isMoving,
     isSelected,
+    layout,
     position,
     width,
     x,
@@ -110,6 +112,7 @@ const Element: FC<TElementProps> = ({
           ]),
         }}
         style={{
+          ...getLayout(layout),
           backgroundColor: (background.properties as TColor).color,
           height: '100%',
           transform: `rotate(${angle - counterAngle}deg)`,
