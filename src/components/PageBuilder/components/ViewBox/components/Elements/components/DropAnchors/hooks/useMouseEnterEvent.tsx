@@ -17,7 +17,6 @@ export type TUseMouseEnterEvent = (
 
 export const useMouseEnterEvent = (
   id: TElement['id'],
-  index: number,
   mouseMode: MouseMode,
 ): TUseMouseEnterEvent => {
   const dispatch = useDispatch();
@@ -27,18 +26,12 @@ export const useMouseEnterEvent = (
       const draggableElements = eventSelectorCreator('draggableElements')(
         store.getState(),
       );
-      const targetIndex =
-        dropAnchorPosition === DropAnchorsPosition.top ||
-        dropAnchorPosition === DropAnchorsPosition.left
-          ? index
-          : index + 1;
 
       if (!isEmpty(draggableElements)) {
         dispatch(
           updateEventsStatus({
-            possibleAcnhorElementId: id,
+            possibleAnchorElementId: id,
             possibleAnchorPosition: dropAnchorPosition,
-            possibleIndexPosition: targetIndex,
           }),
         );
       }

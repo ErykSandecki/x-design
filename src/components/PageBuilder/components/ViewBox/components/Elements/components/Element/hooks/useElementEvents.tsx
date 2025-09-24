@@ -1,10 +1,8 @@
 import { RefObject, useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
 
-// core
-import { useRefs } from 'pages/PageBuilderPage/core/RefsProvider';
-
 // hooks
+import { useElementSizes } from '../../../../../../../hooks/useElementSizes';
 import { useForceRerender } from 'hooks';
 import { useInitializeRef } from './useInitializeRef';
 import { useMouseDownEvent } from './useMouseDownEvent';
@@ -31,9 +29,6 @@ import {
 // types
 import { MouseMode } from 'types/enums/mouseMode';
 import { TElement } from 'types';
-
-// utils
-import { isPureNumber } from 'utils';
 
 export type TUseElementEvents = {
   alignment: TElement['alignment'];
@@ -66,7 +61,6 @@ export const useElementEvents = (
   parentId: TElement['parentId'],
   type: TElement['type'],
 ): TUseElementEvents => {
-  const { itemsRefs } = useRefs();
   const elementDynamicData = useSelector(elementDynamicDataSelectorCreator(id));
   const counterAngle = useSelector(counterAngleSelectorCreator(parentId));
   const cursorPosition = useRef(BASE_2D);
@@ -83,16 +77,8 @@ export const useElementEvents = (
   const displayEventsArea = !isDraggable && !isMultiple && isSelected;
   const displayOutline = isFocused;
   const [isPressing, setIsPressing] = useState(false);
-  const {
-    alignment,
-    angle,
-    background,
-    coordinates,
-    height: cssHeight,
-    layout,
-    position,
-    width: cssWidth,
-  } = elementDynamicData;
+  const { alignment, angle, background, coordinates, layout, position } =
+    elementDynamicData;
   const { x, y } = coordinates;
   const selectedElement = {
     id,
@@ -100,14 +86,7 @@ export const useElementEvents = (
     position,
     type,
   };
-  const height =
-    isPureNumber(cssHeight) || !itemsRefs[id]
-      ? cssHeight
-      : parseInt(getComputedStyle(itemsRefs[id]).height);
-  const width =
-    isPureNumber(cssWidth) || !itemsRefs[id]
-      ? cssWidth
-      : parseInt(getComputedStyle(itemsRefs[id]).width);
+  const sizes = useElementSizes(id);
 
   useForceRerender([coordinates]);
   useInitializeRef(elementRef, id);
@@ -123,16 +102,14 @@ export const useElementEvents = (
   useOutsideClickElement(elementRef, id, isSelected);
 
   return {
+    ...sizes,
     alignment,
     angle,
     background,
     coordinates,
     counterAngle,
-    cssHeight,
-    cssWidth,
     displayEventsArea,
     displayOutline,
-    height,
     isHover,
     isMoving,
     isSelected,
@@ -149,7 +126,6 @@ export const useElementEvents = (
     onMouseEnter: useMouseEnterEvent(id, isSelected, mouseMode),
     onMouseLeave: useMouseLeaveEvent(mouseMode, parentId),
     position,
-    width,
     x,
     y,
   };

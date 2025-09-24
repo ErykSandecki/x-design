@@ -25,7 +25,6 @@ import { enumToArray } from 'utils';
 export type TDropAnchorsProps = {
   children: ReactNode;
   id: TElement['id'];
-  index: number;
   mouseMode: MouseMode;
   parentId: TElement['parentId'];
 };
@@ -33,7 +32,6 @@ export type TDropAnchorsProps = {
 const DropAnchors: FC<TDropAnchorsProps> = ({
   children,
   id,
-  index,
   mouseMode,
   parentId,
 }) => {
@@ -46,7 +44,7 @@ const DropAnchors: FC<TDropAnchorsProps> = ({
     isGrid,
     onMouseEnter,
     ...events
-  } = useDropAnchorsEvents(id, index, mouseMode, parentId);
+  } = useDropAnchorsEvents(id, mouseMode, parentId);
   const dropAnchorsPosition = isFlowVertical
     ? VERTICAL_ANCHORS
     : HORIZONTAL_ANCHORS;

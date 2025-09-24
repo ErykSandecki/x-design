@@ -13,7 +13,6 @@ import { MouseMode, TElement } from 'types';
 export type TElementWrapperProps = {
   children: ReactNode;
   id: TElement['id'];
-  index: number;
   isSelected: boolean;
   mouseMode: MouseMode;
   parentId: TElement['parentId'];
@@ -22,7 +21,6 @@ export type TElementWrapperProps = {
 const ElementWrapper: FC<TElementWrapperProps> = ({
   children,
   id,
-  index,
   isSelected,
   mouseMode,
   parentId,
@@ -31,12 +29,7 @@ const ElementWrapper: FC<TElementWrapperProps> = ({
 
   if (!isSelected && position === 'relative') {
     return (
-      <DropAnchors
-        id={id}
-        index={index}
-        mouseMode={mouseMode}
-        parentId={parentId}
-      >
+      <DropAnchors id={id} mouseMode={mouseMode} parentId={parentId}>
         {children}
       </DropAnchors>
     );

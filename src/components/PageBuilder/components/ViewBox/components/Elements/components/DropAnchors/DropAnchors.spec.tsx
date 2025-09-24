@@ -87,7 +87,6 @@ describe('DropAnchors snapshots', () => {
       <Provider store={store}>
         <DropAnchors
           id={elementDynamicDataMock.id}
-          index={0}
           mouseMode={MouseMode.default}
           parentId={elementStaticDataMock.parentId}
         >
@@ -109,9 +108,8 @@ describe('DropAnchors snapshots', () => {
         events: {
           ...eventsMock,
           draggableElements: [],
-          possibleAcnhorElementId: '1',
+          possibleAnchorElementId: '1',
           possibleAnchorPosition: DropAnchorsPosition.top,
-          possibleIndexPosition: 0,
           possibleParent: elementStaticDataMock.parentId,
         },
       },
@@ -122,7 +120,6 @@ describe('DropAnchors snapshots', () => {
       <Provider store={store}>
         <DropAnchors
           id={elementDynamicDataMock.id}
-          index={0}
           mouseMode={MouseMode.default}
           parentId={elementStaticDataMock.parentId}
         >
@@ -144,9 +141,8 @@ describe('DropAnchors snapshots', () => {
         events: {
           ...eventsMock,
           draggableElements: [],
-          possibleAcnhorElementId: '1',
+          possibleAnchorElementId: '1',
           possibleAnchorPosition: DropAnchorsPosition.left,
-          possibleIndexPosition: 0,
           possibleParent: elementStaticDataMock.parentId,
         },
         pages: {
@@ -194,7 +190,6 @@ describe('DropAnchors snapshots', () => {
       <Provider store={store}>
         <DropAnchors
           id={elementDynamicDataMock.id}
-          index={0}
           mouseMode={MouseMode.default}
           parentId={elementStaticDataMock.parentId}
         >
@@ -216,9 +211,8 @@ describe('DropAnchors snapshots', () => {
         events: {
           ...eventsMock,
           draggableElements: [],
-          possibleAcnhorElementId: '1',
+          possibleAnchorElementId: '1',
           possibleAnchorPosition: DropAnchorsPosition.bottom,
-          possibleIndexPosition: 1,
           possibleParent: elementStaticDataMock.parentId,
         },
       },
@@ -229,7 +223,6 @@ describe('DropAnchors snapshots', () => {
       <Provider store={store}>
         <DropAnchors
           id={elementDynamicDataMock.id}
-          index={0}
           mouseMode={MouseMode.default}
           parentId={elementStaticDataMock.parentId}
         >
@@ -251,9 +244,8 @@ describe('DropAnchors snapshots', () => {
         events: {
           ...eventsMock,
           draggableElements: [],
-          possibleAcnhorElementId: '1',
+          possibleAnchorElementId: '1',
           possibleAnchorPosition: DropAnchorsPosition.right,
-          possibleIndexPosition: 1,
           possibleParent: elementStaticDataMock.parentId,
         },
         pages: {
@@ -301,7 +293,6 @@ describe('DropAnchors snapshots', () => {
       <Provider store={store}>
         <DropAnchors
           id={elementDynamicDataMock.id}
-          index={0}
           mouseMode={MouseMode.default}
           parentId={elementStaticDataMock.parentId}
         >
@@ -323,9 +314,8 @@ describe('DropAnchors snapshots', () => {
         events: {
           ...eventsMock,
           draggableElements: [],
-          possibleAcnhorElementId: '1',
+          possibleAnchorElementId: '1',
           possibleAnchorPosition: DropAnchorsPosition.top,
-          possibleIndexPosition: 0,
           possibleParent: elementStaticDataMock.parentId,
         },
         pages: {
@@ -373,7 +363,6 @@ describe('DropAnchors snapshots', () => {
       <Provider store={store}>
         <DropAnchors
           id={elementDynamicDataMock.id}
-          index={0}
           mouseMode={MouseMode.default}
           parentId={elementStaticDataMock.parentId}
         >
@@ -395,9 +384,8 @@ describe('DropAnchors snapshots', () => {
         events: {
           ...eventsMock,
           draggableElements: [],
-          possibleAcnhorElementId: '1',
+          possibleAnchorElementId: '1',
           possibleAnchorPosition: DropAnchorsPosition.left,
-          possibleIndexPosition: 0,
           possibleParent: elementStaticDataMock.parentId,
         },
         pages: {
@@ -445,7 +433,6 @@ describe('DropAnchors snapshots', () => {
       <Provider store={store}>
         <DropAnchors
           id={elementDynamicDataMock.id}
-          index={0}
           mouseMode={MouseMode.default}
           parentId={elementStaticDataMock.parentId}
         >
@@ -467,9 +454,8 @@ describe('DropAnchors snapshots', () => {
         events: {
           ...eventsMock,
           draggableElements: [],
-          possibleAcnhorElementId: '1',
+          possibleAnchorElementId: '1',
           possibleAnchorPosition: DropAnchorsPosition.bottom,
-          possibleIndexPosition: 1,
           possibleParent: elementStaticDataMock.parentId,
         },
         pages: {
@@ -517,7 +503,6 @@ describe('DropAnchors snapshots', () => {
       <Provider store={store}>
         <DropAnchors
           id={elementDynamicDataMock.id}
-          index={0}
           mouseMode={MouseMode.default}
           parentId={elementStaticDataMock.parentId}
         >
@@ -539,9 +524,8 @@ describe('DropAnchors snapshots', () => {
         events: {
           ...eventsMock,
           draggableElements: [],
-          possibleAcnhorElementId: '1',
+          possibleAnchorElementId: '1',
           possibleAnchorPosition: DropAnchorsPosition.right,
-          possibleIndexPosition: 1,
           possibleParent: elementStaticDataMock.parentId,
         },
         pages: {
@@ -589,7 +573,6 @@ describe('DropAnchors snapshots', () => {
       <Provider store={store}>
         <DropAnchors
           id={elementDynamicDataMock.id}
-          index={0}
           mouseMode={MouseMode.default}
           parentId={elementStaticDataMock.parentId}
         >
@@ -624,7 +607,6 @@ describe('DropAnchors behaviors', () => {
       <Provider store={store}>
         <DropAnchors
           id={elementDynamicDataMock.id}
-          index={0}
           mouseMode={MouseMode.default}
           parentId={elementStaticDataMock.parentId}
         >
@@ -644,9 +626,8 @@ describe('DropAnchors behaviors', () => {
 
     // result
     expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
-      possibleAcnhorElementId: '1',
+      possibleAnchorElementId: '1',
       possibleAnchorPosition: DropAnchorsPosition.top,
-      possibleIndexPosition: 0,
     });
   });
 });

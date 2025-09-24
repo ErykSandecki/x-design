@@ -24,7 +24,6 @@ describe('ElementWrapper snapshots', () => {
     const { asFragment } = render(
       <ElementWrapper
         id="-1"
-        index={0}
         isSelected={false}
         mouseMode={MouseMode.default}
         parentId="-1"
@@ -45,7 +44,6 @@ describe('ElementWrapper snapshots', () => {
     const { asFragment } = render(
       <ElementWrapper
         id="-1"
-        index={0}
         isSelected={false}
         mouseMode={MouseMode.default}
         parentId="-1"

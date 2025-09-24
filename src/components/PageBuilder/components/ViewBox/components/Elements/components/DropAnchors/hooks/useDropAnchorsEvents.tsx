@@ -27,17 +27,19 @@ export type TUseDropAnchorsEvents = {
 
 export const useDropAnchorsEvents = (
   id: TElement['id'],
-  index: number,
   mouseMode: MouseMode,
   parentId: TElement['parentId'],
 ): TUseDropAnchorsEvents => {
   const parentData = useSelector(elementAllDataSelectorCreator(parentId));
-  const elId = useSelector(eventSelectorCreator('possibleAcnhorElementId'));
+  const elId = useSelector(eventSelectorCreator('possibleAnchorElementId'));
   const anchorPos = useSelector(eventSelectorCreator('possibleAnchorPosition'));
-  const indexPos = useSelector(eventSelectorCreator('possibleIndexPosition'));
+  const isBottom = anchorPos === DropAnchorsPosition.bottom;
+  const isLeft = anchorPos === DropAnchorsPosition.left;
+  const isRight = anchorPos === DropAnchorsPosition.right;
+  const isTop = anchorPos === DropAnchorsPosition.top;
   const isDraggingOn = elId === id;
-  const displayPrevPrompt = isDraggingOn && indexPos === index;
-  const displayNextPrompt = isDraggingOn && (indexPos as number) - 1 === index;
+  const displayPrevPrompt = isDraggingOn && (isTop || isLeft);
+  const displayNextPrompt = isDraggingOn && (isBottom || isRight);
   const isDefault = parentData.layout.type === LayoutType.default;
   const isVertical = parentData.layout.type === LayoutType.vertical;
   const isFlowVertical = isVertical || isDefault;
@@ -49,7 +51,7 @@ export const useDropAnchorsEvents = (
     displayPrevPrompt,
     isFlowVertical,
     isGrid,
-    onMouseEnter: useMouseEnterEvent(id, index, mouseMode),
+    onMouseEnter: useMouseEnterEvent(id, mouseMode),
     onMouseLeave: useMouseLeaveEvent(mouseMode),
   };
 };

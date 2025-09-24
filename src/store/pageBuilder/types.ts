@@ -72,7 +72,7 @@ export type TEvents = {
   isMultipleMoving: boolean;
   isResizing: boolean;
   isRotating: boolean;
-  possibleAcnhorElementId: TElement['id'];
+  possibleAnchorElementId: TElement['id'];
   possibleAnchorPosition: DropAnchorsPosition;
   possibleIndexPosition: number | null;
   possibleParent: TElement['id'] | null;

@@ -40,13 +40,12 @@ const Elements: FC<TElementsProps> = ({
   );
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
-  return staticData.map(({ id, parentId, type }, index) => {
+  return staticData.map(({ id, parentId, type }) => {
     switch (type) {
       case ElementType.frame:
         return (
           <ElementWrapper
             id={id}
-            index={index}
             isSelected={isSelected}
             key={id}
             mouseMode={mouseMode}

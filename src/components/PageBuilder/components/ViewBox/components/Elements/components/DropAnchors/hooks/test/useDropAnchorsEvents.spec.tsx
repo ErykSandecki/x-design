@@ -23,6 +23,7 @@ import { MouseMode } from 'types/enums/mouseMode';
 
 // utils
 import { getProviderWrapper } from 'test';
+import { DropAnchorsPosition } from 'store/pageBuilder/enums';
 
 const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 const stateMock = {
@@ -31,8 +32,8 @@ const stateMock = {
     ...pageBuilderStateMock[PAGE_BUILDER],
     events: {
       ...eventsMock,
-      possibleAcnhorElementId: '1',
-      possibleIndexPosition: 0,
+      possibleAnchorElementId: '1',
+      possibleAnchorPosition: DropAnchorsPosition.top,
     },
     pages: {
       ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -77,7 +78,7 @@ describe('useDropAnchorsEvents', () => {
 
     // before
     const { result } = renderHook(
-      () => useDropAnchorsEvents('1', 0, MouseMode.default, '-1'),
+      () => useDropAnchorsEvents('1', MouseMode.default, '-1'),
       {
         wrapper: getProviderWrapper(store),
       },
@@ -85,7 +86,7 @@ describe('useDropAnchorsEvents', () => {
 
     // result
     expect(result.current).toStrictEqual({
-      anchorPos: null,
+      anchorPos: DropAnchorsPosition.top,
       displayNextPrompt: false,
       displayPrevPrompt: true,
       isFlowVertical: true,
