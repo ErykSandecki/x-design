@@ -89,9 +89,7 @@ describe('DropAnchors snapshots', () => {
           id={elementDynamicDataMock.id}
           mouseMode={MouseMode.default}
           parentId={elementStaticDataMock.parentId}
-        >
-          element
-        </DropAnchors>
+        />
       </Provider>,
     );
 
@@ -122,9 +120,7 @@ describe('DropAnchors snapshots', () => {
           id={elementDynamicDataMock.id}
           mouseMode={MouseMode.default}
           parentId={elementStaticDataMock.parentId}
-        >
-          element
-        </DropAnchors>
+        />
       </Provider>,
     );
 
@@ -192,9 +188,7 @@ describe('DropAnchors snapshots', () => {
           id={elementDynamicDataMock.id}
           mouseMode={MouseMode.default}
           parentId={elementStaticDataMock.parentId}
-        >
-          element
-        </DropAnchors>
+        />
       </Provider>,
     );
 
@@ -225,9 +219,7 @@ describe('DropAnchors snapshots', () => {
           id={elementDynamicDataMock.id}
           mouseMode={MouseMode.default}
           parentId={elementStaticDataMock.parentId}
-        >
-          element
-        </DropAnchors>
+        />
       </Provider>,
     );
 
@@ -295,9 +287,7 @@ describe('DropAnchors snapshots', () => {
           id={elementDynamicDataMock.id}
           mouseMode={MouseMode.default}
           parentId={elementStaticDataMock.parentId}
-        >
-          element
-        </DropAnchors>
+        />
       </Provider>,
     );
 
@@ -365,9 +355,7 @@ describe('DropAnchors snapshots', () => {
           id={elementDynamicDataMock.id}
           mouseMode={MouseMode.default}
           parentId={elementStaticDataMock.parentId}
-        >
-          element
-        </DropAnchors>
+        />
       </Provider>,
     );
 
@@ -435,9 +423,7 @@ describe('DropAnchors snapshots', () => {
           id={elementDynamicDataMock.id}
           mouseMode={MouseMode.default}
           parentId={elementStaticDataMock.parentId}
-        >
-          element
-        </DropAnchors>
+        />
       </Provider>,
     );
 
@@ -505,9 +491,7 @@ describe('DropAnchors snapshots', () => {
           id={elementDynamicDataMock.id}
           mouseMode={MouseMode.default}
           parentId={elementStaticDataMock.parentId}
-        >
-          element
-        </DropAnchors>
+        />
       </Provider>,
     );
 
@@ -575,9 +559,7 @@ describe('DropAnchors snapshots', () => {
           id={elementDynamicDataMock.id}
           mouseMode={MouseMode.default}
           parentId={elementStaticDataMock.parentId}
-        >
-          element
-        </DropAnchors>
+        />
       </Provider>,
     );
 
@@ -609,9 +591,7 @@ describe('DropAnchors behaviors', () => {
           id={elementDynamicDataMock.id}
           mouseMode={MouseMode.default}
           parentId={elementStaticDataMock.parentId}
-        >
-          element
-        </DropAnchors>
+        />
       </Provider>,
     );
 

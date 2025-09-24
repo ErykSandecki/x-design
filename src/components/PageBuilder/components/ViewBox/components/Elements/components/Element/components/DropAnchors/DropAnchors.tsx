@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react';
+import { FC } from 'react';
 
 // components
 import { E2EDataAttribute } from 'shared';
@@ -23,18 +23,12 @@ import { MouseMode } from 'types/enums/mouseMode';
 import { enumToArray } from 'utils';
 
 export type TDropAnchorsProps = {
-  children: ReactNode;
   id: TElement['id'];
   mouseMode: MouseMode;
   parentId: TElement['parentId'];
 };
 
-const DropAnchors: FC<TDropAnchorsProps> = ({
-  children,
-  id,
-  mouseMode,
-  parentId,
-}) => {
+const DropAnchors: FC<TDropAnchorsProps> = ({ id, mouseMode, parentId }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const {
     anchorPos,
@@ -51,6 +45,7 @@ const DropAnchors: FC<TDropAnchorsProps> = ({
 
   return (
     <div className={cx(classNamesWithTheme[className])}>
+      {/* PROMPTS */}
       {promptsData(
         anchorPos,
         displayNextPrompt,
@@ -66,7 +61,8 @@ const DropAnchors: FC<TDropAnchorsProps> = ({
           key={key}
         />
       ))}
-      {children}
+
+      {/* ANCHORS */}
       {enumToArray(DropAnchorsPosition)
         .filter(
           (dropAnchor) =>

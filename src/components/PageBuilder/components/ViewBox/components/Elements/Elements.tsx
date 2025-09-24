@@ -2,7 +2,6 @@ import { FC, memo } from 'react';
 import { useSelector } from 'react-redux';
 
 // components
-import ElementWrapper from './ElementWrapper';
 import Frame from './components/Frame/Frame';
 
 // hooks
@@ -30,7 +29,6 @@ export type TElementsProps = {
 
 const Elements: FC<TElementsProps> = ({
   eventsDisabled,
-  isSelected = false,
   mouseMode,
   parentId,
 }) => {
@@ -44,24 +42,16 @@ const Elements: FC<TElementsProps> = ({
     switch (type) {
       case ElementType.frame:
         return (
-          <ElementWrapper
+          <Frame
+            className={cx(classNamesWithTheme.element.name, [
+              classNamesWithTheme.element.modificators.eventsDisabled,
+              eventsDisabled,
+            ])}
             id={id}
-            isSelected={isSelected}
-            key={id}
             mouseMode={mouseMode}
             parentId={parentId}
-          >
-            <Frame
-              className={cx(classNamesWithTheme.element.name, [
-                classNamesWithTheme.element.modificators.eventsDisabled,
-                eventsDisabled,
-              ])}
-              id={id}
-              mouseMode={mouseMode}
-              parentId={parentId}
-              type={type}
-            />
-          </ElementWrapper>
+            type={type}
+          />
         );
       default:
         return <></>;

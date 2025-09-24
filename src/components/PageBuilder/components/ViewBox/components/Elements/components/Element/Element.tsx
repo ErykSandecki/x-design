@@ -2,6 +2,7 @@ import { FC, memo, ReactNode, useRef } from 'react';
 import { isNumber } from 'lodash';
 
 // components
+import DropAnchors from './components/DropAnchors/DropAnchors';
 import EventsArea from './components/EventsArea/EventsArea';
 import Outline from './components/Outline/Outline';
 import { Box } from 'shared';
@@ -121,6 +122,9 @@ const Element: FC<TElementProps> = ({
         }}
         {...events}
       >
+        {!isSelected && position === 'relative' && (
+          <DropAnchors id={id} mouseMode={mouseMode} parentId={parentId} />
+        )}
         {children(angle, coordinates, height, isHover, isSelected, width)}
         {displayOutline && (
           <Outline

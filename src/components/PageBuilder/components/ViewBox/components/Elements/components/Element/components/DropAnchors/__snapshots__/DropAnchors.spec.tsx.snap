@@ -17,7 +17,6 @@ exports[`DropAnchors snapshots should render DropAnchors 1`] = `
     <div
       class="DropAnchors__prompt DropAnchors__prompt--light"
     />
-    element
     <div
       class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--top DropAnchors__anchor--top--light"
       data-test-anchor="top"
@@ -47,7 +46,6 @@ exports[`DropAnchors snapshots should render some prompt when grid for bottom 1`
     <div
       class="DropAnchors__prompt DropAnchors__prompt--light"
     />
-    element
     <div
       class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--top DropAnchors__anchor--top--light"
       data-test-anchor="top"
@@ -85,7 +83,6 @@ exports[`DropAnchors snapshots should render some prompt when grid for left 1`] 
     <div
       class="DropAnchors__prompt DropAnchors__prompt--light"
     />
-    element
     <div
       class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--top DropAnchors__anchor--top--light"
       data-test-anchor="top"
@@ -123,7 +120,6 @@ exports[`DropAnchors snapshots should render some prompt when grid for right 1`]
     <div
       class="DropAnchors__prompt DropAnchors__prompt--light DropAnchors__prompt--right DropAnchors__prompt--right--light"
     />
-    element
     <div
       class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--top DropAnchors__anchor--top--light"
       data-test-anchor="top"
@@ -161,7 +157,6 @@ exports[`DropAnchors snapshots should render some prompt when grid for top 1`] =
     <div
       class="DropAnchors__prompt DropAnchors__prompt--light"
     />
-    element
     <div
       class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--top DropAnchors__anchor--top--light"
       data-test-anchor="top"
@@ -199,7 +194,6 @@ exports[`DropAnchors snapshots should render with next prompt for bottom 1`] = `
     <div
       class="DropAnchors__prompt DropAnchors__prompt--light"
     />
-    element
     <div
       class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--top DropAnchors__anchor--top--light"
       data-test-anchor="top"
@@ -229,7 +223,6 @@ exports[`DropAnchors snapshots should render with next prompt for right 1`] = `
     <div
       class="DropAnchors__prompt DropAnchors__prompt--light DropAnchors__prompt--right DropAnchors__prompt--right--light"
     />
-    element
     <div
       class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--left DropAnchors__anchor--left--light"
       data-test-anchor="left"
@@ -259,7 +252,6 @@ exports[`DropAnchors snapshots should render with prev prompt for left 1`] = `
     <div
       class="DropAnchors__prompt DropAnchors__prompt--light"
     />
-    element
     <div
       class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--left DropAnchors__anchor--left--light"
       data-test-anchor="left"
@@ -289,7 +281,6 @@ exports[`DropAnchors snapshots should render with prev prompt for top 1`] = `
     <div
       class="DropAnchors__prompt DropAnchors__prompt--light"
     />
-    element
     <div
       class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--top DropAnchors__anchor--top--light"
       data-test-anchor="top"

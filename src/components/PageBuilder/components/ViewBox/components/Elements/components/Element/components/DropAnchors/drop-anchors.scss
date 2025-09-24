@@ -1,7 +1,11 @@
-@import '../../../../../../styles/z-indexes';
+@import '../../../../../../../../styles/z-indexes';
 
 .DropAnchors {
-  position: relative;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 
   &__prompt {
     background-color: #0b99ff;
