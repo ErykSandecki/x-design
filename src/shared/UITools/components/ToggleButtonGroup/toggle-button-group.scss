@@ -1,0 +1,13 @@
+.ToggleButtonGroup {
+  @include theme('neutral-3', background-color);
+  @include theme('neutral-3', border, '1px solid');
+
+  align-items: center;
+  border-radius: 5px;
+  display: flex;
+  height: 24px;
+
+  &--full-width {
+    width: 100%;
+  }
+}

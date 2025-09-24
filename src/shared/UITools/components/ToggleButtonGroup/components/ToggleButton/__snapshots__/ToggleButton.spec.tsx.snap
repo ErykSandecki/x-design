@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToggleButton snapshots should render ToggleButton 1`] = `
+<DocumentFragment>
+  <button
+    class="ToggleButton ToggleButton--light ToggleButton--selected ToggleButton--selected--light"
+    data-test-toggle-button=""
+    type="button"
+  >
+    <div
+      class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      data-test-icon="align-horizontal-center"
+      height="12"
+      name="AlignHorizontalCenter"
+      width="12"
+    />
+  </button>
+</DocumentFragment>
+`;

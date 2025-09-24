@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToggleButtonGroup snapshots should render ToggleButtonGroup 1`] = `
+<DocumentFragment>
+  <div
+    class="ToggleButtonGroup ToggleButtonGroup--light"
+    data-test-toggle-button-group="test"
+  >
+    <button
+      class="ToggleButton ToggleButton--light"
+      data-test-toggle-button="0"
+      type="button"
+    >
+      <div
+        class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+        data-test-icon="align-horizontal-center"
+        height="12"
+        name="AlignHorizontalCenter"
+        width="12"
+      />
+    </button>
+    <button
+      class="ToggleButton ToggleButton--light"
+      data-test-toggle-button="1"
+      type="button"
+    >
+      <div
+        class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+        data-test-icon="align-horizontal-center"
+        height="12"
+        name="AlignHorizontalCenter"
+        width="12"
+      />
+    </button>
+    <button
+      class="ToggleButton ToggleButton--light"
+      data-test-toggle-button="2"
+      type="button"
+    >
+      <div
+        class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+        data-test-icon="align-horizontal-center"
+        height="12"
+        name="AlignHorizontalCenter"
+        width="12"
+      />
+    </button>
+  </div>
+</DocumentFragment>
+`;

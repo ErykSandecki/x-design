@@ -8,6 +8,7 @@ import SectionColumn from './components/Section/components/SectionColumn/Section
 import Section from './components/Section/Section';
 import Tabs, { TTabsProps } from './components/Tabs/Tabs';
 import TextField from './components/TextField/TextField';
+import ToggleButtonGroup from './components/ToggleButtonGroup/ToggleButtonGroup';
 
 export const UITools = {
   ButtonGroup,
@@ -19,6 +20,7 @@ export const UITools = {
   SectionColumn,
   Tabs,
   TextField,
+  ToggleButtonGroup,
 };
 
 export type TUITypes = {

@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 // components
 import ColumnAlignment from './components/ColumnAlignment/ColumnAlignment';
+import ColumnFlow from './components/ColumnFlow/ColumnFlow';
 import ColumnHeader from './components/ColumnHeader/ColumnHeader';
 import ColumnPosition from './components/ColumnPosition/ColumnPosition';
 import ColumnRotation from './components/ColumnRotation/ColumnRotation';
@@ -79,7 +80,7 @@ const Design: FC = () => {
         ]}
         label={t(`${translationNameSpace}.section.3.label`)}
       >
-        <></>
+        <ColumnFlow />
       </UITools.Section>
     </>
   );

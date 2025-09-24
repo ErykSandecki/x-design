@@ -26,5 +26,7 @@ export enum E2EAttribute {
   text = 'text',
   textField = 'text-field',
   textFieldInput = 'text-field-input',
+  toggleButton = 'toggle-button',
+  toggleButtonGroup = 'toggle-button-group',
   unset = 'unset',
 }

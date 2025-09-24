@@ -76,9 +76,9 @@ export const changeBackground = (
 });
 
 export const changeLayout = (
-  layout: TChangeLayoutAction['payload'],
+  layoutType: TChangeLayoutAction['payload'],
 ): TChangeLayoutAction => ({
-  payload: layout,
+  payload: layoutType,
   type: CHANGE_LAYOUT,
 });
 
