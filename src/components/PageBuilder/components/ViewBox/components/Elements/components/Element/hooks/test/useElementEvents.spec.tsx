@@ -9,12 +9,15 @@ import { useElementEvents } from '../useElementEvents';
 
 // mocks
 import {
+  elementAllDataMock,
+  elementDynamicDataMock,
+  elementStaticDataMock,
   pageBuilderStateMock,
   selectedElementMock,
 } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
-import { BASE_2D } from 'shared/ZoomBox/constants';
+import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 
 // store
 import { configureStore } from 'store';
@@ -27,8 +30,42 @@ import { MouseMode } from 'types/enums/mouseMode';
 import { getProviderWrapper } from 'test';
 
 const ref = { current: { contains: () => false } } as RefObject<any>;
+const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 const stateMock = {
   ...pageBuilderStateMock,
+  [PAGE_BUILDER]: {
+    ...pageBuilderStateMock[PAGE_BUILDER],
+    pages: {
+      ...pageBuilderStateMock[PAGE_BUILDER].pages,
+      ['0']: {
+        ...currentPage,
+        elements: {
+          allData: {
+            ['-1']: {
+              ...currentPage.elements.allData['-1'],
+              children: [elementAllDataMock.id],
+            },
+            [elementAllDataMock.id]: elementAllDataMock,
+          },
+          dynamicData: {
+            ['-1']: {
+              ...currentPage.elements.dynamicData['-1'],
+              children: [elementDynamicDataMock.id],
+            },
+            [elementDynamicDataMock.id]: elementDynamicDataMock,
+          },
+          staticData: {
+            ['-1']: {
+              ...currentPage.elements.staticData['-1'],
+              children: [elementStaticDataMock.id],
+            },
+            [elementStaticDataMock.id]: elementStaticDataMock,
+          },
+        },
+        selectedElements: [selectedElementMock],
+      },
+    },
+  },
 };
 
 describe('useElementEvents', () => {
@@ -40,14 +77,10 @@ describe('useElementEvents', () => {
     const { result } = renderHook(
       () =>
         useElementEvents(
-          BASE_2D,
           ref,
           selectedElementMock.id,
-          false,
-          true,
           MouseMode.default,
           selectedElementMock.parentId,
-          'absolute',
           ElementType.frame,
         ),
       {
@@ -65,9 +98,36 @@ describe('useElementEvents', () => {
 
     // result
     expect(result.current).toStrictEqual({
+      alignment: {},
+      angle: 0,
+      background: {
+        properties: {
+          alpha: '100',
+          color: '#ffffff',
+          format: 'hex',
+        },
+        visible: true,
+      },
+      coordinates: {
+        x: 0,
+        y: 0,
+      },
+      counterAngle: 0,
+      cssHeight: 100,
+      cssWidth: 100,
+      displayEventsArea: true,
+      displayOutline: true,
+      height: 100,
+      isHover: false,
+      isMoving: false,
+      isSelected: true,
       onMouseDown: expect.any(Function),
       onMouseEnter: expect.any(Function),
       onMouseLeave: expect.any(Function),
+      position: 'absolute',
+      width: 100,
+      x: 0,
+      y: 0,
     });
   });
 });

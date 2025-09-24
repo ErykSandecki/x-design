@@ -1,6 +1,5 @@
 import { FC, memo, ReactNode, useRef } from 'react';
 import { isNumber } from 'lodash';
-import { useSelector } from 'react-redux';
 
 // components
 import EventsArea from './components/EventsArea/EventsArea';
@@ -22,17 +21,6 @@ import {
 } from './classNames';
 import { DATA_STATUS_ATTRIBUTE } from './constants';
 
-// store
-import {
-  elementDynamicDataSelectorCreator,
-  eventSelectorCreator,
-  isDraggableSelectorCreator,
-  isHoverSelectorCreator,
-  isSelectedElementSelectorCreator,
-  multipleSelectedElementsSelector,
-  counterAngleSelectorCreator,
-} from 'store/pageBuilder/selectors';
-
 // styles
 import styles from './element.scss';
 
@@ -43,7 +31,6 @@ import { MouseMode } from 'types/enums/mouseMode';
 // utils
 import { getAbsolutePosition } from '../../../../utils/getAbsolutePosition';
 import { getPosition } from './utils/getPosition';
-import { isPureNumber } from 'utils';
 
 type TElementProps = {
   classes: typeof classes;
@@ -69,51 +56,31 @@ const Element: FC<TElementProps> = ({
   parentId,
   type,
 }) => {
-  const counterAngle = useSelector(counterAngleSelectorCreator(parentId));
-  const isDraggable = useSelector(isDraggableSelectorCreator(id));
-  const isHover = useSelector(isHoverSelectorCreator(id));
-  const isSelected = useSelector(isSelectedElementSelectorCreator(id));
-  const isMultiple = useSelector(multipleSelectedElementsSelector);
   const elementRef = useRef<HTMLDivElement>(null);
-  const elementDynamicData = useSelector(elementDynamicDataSelectorCreator(id));
   const { itemsRefs, zoomContentRef } = useRefs();
-  const { alignment, coordinates } = elementDynamicData;
+  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
+  const { x1, y1 } = getAbsolutePosition(id, itemsRefs, zoomContentRef);
+  const element = useElementEvents(elementRef, id, mouseMode, parentId, type);
   const {
+    alignment,
     angle,
     background,
-    height: cssHeight,
-    position,
-    width: cssWidth,
-  } = elementDynamicData;
-  const { x, y } = coordinates;
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-  const isMultipleMoving = useSelector(
-    eventSelectorCreator('isMultipleMoving'),
-  ) as boolean;
-  const isFocused = isHover || isSelected;
-  const displayEventsArea = !isDraggable && !isMultiple && isSelected;
-  const displayOutline = isFocused;
-  const isMoving = isDraggable || (isMultipleMoving && isSelected);
-  const { x1, y1 } = getAbsolutePosition(id, itemsRefs, zoomContentRef);
-  const height =
-    isPureNumber(cssHeight) || !itemsRefs[id]
-      ? cssHeight
-      : parseInt(getComputedStyle(itemsRefs[id]).height);
-  const width =
-    isPureNumber(cssWidth) || !itemsRefs[id]
-      ? cssWidth
-      : parseInt(getComputedStyle(itemsRefs[id]).width);
-  const { ...events } = useElementEvents(
     coordinates,
-    elementRef,
-    id,
-    isMultiple,
+    counterAngle,
+    cssHeight,
+    cssWidth,
+    displayEventsArea,
+    height,
+    displayOutline,
+    isHover,
+    isMoving,
     isSelected,
-    mouseMode,
-    parentId,
     position,
-    type,
-  );
+    width,
+    x,
+    y,
+    ...events
+  } = element;
 
   return (
     <Box
