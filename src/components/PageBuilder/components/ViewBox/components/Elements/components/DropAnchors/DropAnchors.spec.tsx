@@ -9,6 +9,7 @@ import {
   elementDynamicDataMock,
   elementStaticDataMock,
   eventsMock,
+  layoutMock,
   pageBuilderStateMock,
 } from 'test/mocks/reducer/pageBuilderMock';
 import { wholeStateMock } from 'test/mocks/reducer/wholeStateMock';
@@ -22,7 +23,7 @@ import { configureStore, store as storeToMock } from 'store/store';
 
 // types
 import { DropAnchorsPosition } from './enums';
-import { E2EAttribute } from 'types';
+import { E2EAttribute, LayoutType } from 'types';
 import { MouseMode } from 'types/enums/mouseMode';
 
 // utils
@@ -62,6 +63,7 @@ describe('DropAnchors snapshots', () => {
         <DropAnchors
           id={elementDynamicDataMock.id}
           index={0}
+          layoutParent={layoutMock}
           mouseMode={MouseMode.default}
           parentId={elementStaticDataMock.parentId}
         >
@@ -86,17 +88,39 @@ describe('DropAnchors snapshots', () => {
           possibleIndexPosition: 0,
           possibleParent: elementStaticDataMock.parentId,
         },
-        pages: {
-          ...pageBuilderStateMock[PAGE_BUILDER].pages,
-          ['0']: {
-            ...pageBuilderStateMock[PAGE_BUILDER].pages['0'],
-            elements: {
-              dynamicData: {
-                [elementDynamicDataMock.id]: elementDynamicDataMock,
-              },
-              staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
-            },
-          },
+      },
+    });
+
+    // before
+    const { asFragment } = render(
+      <Provider store={store}>
+        <DropAnchors
+          id={elementDynamicDataMock.id}
+          index={0}
+          layoutParent={layoutMock}
+          mouseMode={MouseMode.default}
+          parentId={elementStaticDataMock.parentId}
+        >
+          element
+        </DropAnchors>
+      </Provider>,
+    );
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('should render with prev prompt', () => {
+    // mock
+    const store = configureStore({
+      ...stateMock,
+      [PAGE_BUILDER]: {
+        ...pageBuilderStateMock[PAGE_BUILDER],
+        events: {
+          ...eventsMock,
+          draggableElements: [],
+          possibleIndexPosition: 0,
+          possibleParent: elementStaticDataMock.parentId,
         },
       },
     });
@@ -107,6 +131,7 @@ describe('DropAnchors snapshots', () => {
         <DropAnchors
           id={elementDynamicDataMock.id}
           index={0}
+          layoutParent={{ ...layoutMock, type: LayoutType.horizontal }}
           mouseMode={MouseMode.default}
           parentId={elementStaticDataMock.parentId}
         >
@@ -131,17 +156,39 @@ describe('DropAnchors snapshots', () => {
           possibleIndexPosition: 1,
           possibleParent: elementStaticDataMock.parentId,
         },
-        pages: {
-          ...pageBuilderStateMock[PAGE_BUILDER].pages,
-          ['0']: {
-            ...pageBuilderStateMock[PAGE_BUILDER].pages['0'],
-            elements: {
-              dynamicData: {
-                [elementDynamicDataMock.id]: elementDynamicDataMock,
-              },
-              staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
-            },
-          },
+      },
+    });
+
+    // before
+    const { asFragment } = render(
+      <Provider store={store}>
+        <DropAnchors
+          id={elementDynamicDataMock.id}
+          index={0}
+          layoutParent={layoutMock}
+          mouseMode={MouseMode.default}
+          parentId={elementStaticDataMock.parentId}
+        >
+          element
+        </DropAnchors>
+      </Provider>,
+    );
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('should render with next prompt', () => {
+    // mock
+    const store = configureStore({
+      ...stateMock,
+      [PAGE_BUILDER]: {
+        ...pageBuilderStateMock[PAGE_BUILDER],
+        events: {
+          ...eventsMock,
+          draggableElements: [],
+          possibleIndexPosition: 1,
+          possibleParent: elementStaticDataMock.parentId,
         },
       },
     });
@@ -152,6 +199,7 @@ describe('DropAnchors snapshots', () => {
         <DropAnchors
           id={elementDynamicDataMock.id}
           index={0}
+          layoutParent={{ ...layoutMock, type: LayoutType.horizontal }}
           mouseMode={MouseMode.default}
           parentId={elementStaticDataMock.parentId}
         >
@@ -166,7 +214,7 @@ describe('DropAnchors snapshots', () => {
 });
 
 describe('DropAnchors behaviors', () => {
-  it('should triiger event mouse enter', () => {
+  it('should triger event mouse enter', () => {
     // mock
     const store = configureStore(stateMock);
     storeToMock.getState = () =>
@@ -187,6 +235,7 @@ describe('DropAnchors behaviors', () => {
         <DropAnchors
           id={elementDynamicDataMock.id}
           index={0}
+          layoutParent={layoutMock}
           mouseMode={MouseMode.default}
           parentId={elementStaticDataMock.parentId}
         >

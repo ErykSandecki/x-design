@@ -10,6 +10,7 @@ import { useTheme } from 'hooks';
 
 // others
 import { className, classNames } from './classNames';
+import { HORIZONTAL_ANCHORS, VERTICAL_ANCHORS } from './constants';
 
 // store
 import {
@@ -22,7 +23,7 @@ import styles from './drop-anchors.scss';
 
 // types
 import { DropAnchorsPosition } from './enums';
-import { E2EAttribute, TElement } from 'types';
+import { E2EAttribute, LayoutType, TElement } from 'types';
 import { MouseMode } from 'types/enums/mouseMode';
 
 // utils
@@ -33,6 +34,7 @@ export type TDropAnchorsProps = {
   id: TElement['id'];
   index: number;
   mouseMode: MouseMode;
+  layoutParent: TElement['layout'];
   parentId: TElement['parentId'];
 };
 
@@ -41,8 +43,10 @@ const DropAnchors: FC<TDropAnchorsProps> = ({
   id,
   index,
   mouseMode,
+  layoutParent,
   parentId,
 }) => {
+  const { type } = layoutParent;
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { onMouseEnter, ...events } = useDropAnchorsEvents(index, mouseMode);
   const isDraggable = useSelector(isDraggableSelectorCreator(id));
@@ -56,6 +60,11 @@ const DropAnchors: FC<TDropAnchorsProps> = ({
     !isDraggable && isParent && isFirst && possibleIndexPosition === index;
   const displayNextPrompt =
     !isDraggable && isParent && possibleIndexPosition - 1 === index;
+  const isVertical =
+    type === LayoutType.default || type === LayoutType.vertical;
+  const dropAnchorsPosition = isVertical
+    ? VERTICAL_ANCHORS
+    : HORIZONTAL_ANCHORS;
 
   return (
     <div className={cx(classNamesWithTheme[className])}>
@@ -63,7 +72,8 @@ const DropAnchors: FC<TDropAnchorsProps> = ({
         <div
           className={cx(
             classNamesWithTheme.prompt.name,
-            classNamesWithTheme.prompt.modificators.top,
+            [classNamesWithTheme.prompt.modificators.top, isVertical],
+            [classNamesWithTheme.prompt.modificators.left, !isVertical],
           )}
         />
       )}
@@ -72,34 +82,39 @@ const DropAnchors: FC<TDropAnchorsProps> = ({
         <div
           className={cx(
             classNamesWithTheme.prompt.name,
-            classNamesWithTheme.prompt.modificators.bottom,
+            [classNamesWithTheme.prompt.modificators.bottom, isVertical],
+            [classNamesWithTheme.prompt.modificators.right, !isVertical],
           )}
         />
       )}
-      {enumToArray(DropAnchorsPosition).map((position) => (
-        <E2EDataAttribute
-          key={position as keyof typeof DropAnchorsPosition}
-          type={E2EAttribute.anchor}
-          value={position as string}
-        >
-          <div
-            className={cx(
-              classNamesWithTheme.anchor.name,
-              classNamesWithTheme.anchor.modificators[
-                position as keyof typeof DropAnchorsPosition
-              ],
-            )}
-            onMouseEnter={() =>
-              onMouseEnter(
-                DropAnchorsPosition[
+      {enumToArray(DropAnchorsPosition)
+        .filter((dropAnchor) =>
+          dropAnchorsPosition.includes(dropAnchor as DropAnchorsPosition),
+        )
+        .map((position) => (
+          <E2EDataAttribute
+            key={position as keyof typeof DropAnchorsPosition}
+            type={E2EAttribute.anchor}
+            value={position as string}
+          >
+            <div
+              className={cx(
+                classNamesWithTheme.anchor.name,
+                classNamesWithTheme.anchor.modificators[
                   position as keyof typeof DropAnchorsPosition
                 ],
-              )
-            }
-            {...events}
-          />
-        </E2EDataAttribute>
-      ))}
+              )}
+              onMouseEnter={() =>
+                onMouseEnter(
+                  DropAnchorsPosition[
+                    position as keyof typeof DropAnchorsPosition
+                  ],
+                )
+              }
+              {...events}
+            />
+          </E2EDataAttribute>
+        ))}
     </div>
   );
 };

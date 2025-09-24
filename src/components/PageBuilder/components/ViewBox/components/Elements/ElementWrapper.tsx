@@ -27,6 +27,9 @@ const ElementWrapper: FC<TElementWrapperProps> = ({
   mouseMode,
   parentId,
 }) => {
+  const layoutParent = useSelector(
+    elementAttributeSelectorCreator('layout', parentId),
+  );
   const position = useSelector(elementAttributeSelectorCreator('position', id));
 
   if (!isSelected && position === 'relative') {
@@ -35,6 +38,7 @@ const ElementWrapper: FC<TElementWrapperProps> = ({
         id={id}
         index={index}
         mouseMode={mouseMode}
+        layoutParent={layoutParent}
         parentId={parentId}
       >
         {children}

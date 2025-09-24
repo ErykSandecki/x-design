@@ -106,10 +106,11 @@ const Element: FC<TElementProps> = ({
       <Box
         attributes={{ [DATA_STATUS_ATTRIBUTE]: isSelected ? 'true' : 'false' }}
         classes={{
-          className: cx(classes.className, classNamesWithTheme.wrapper.name, [
-            classNamesWithTheme.wrapper.modificators.hover,
-            isHover,
-          ]),
+          className: cx(
+            classNamesWithTheme.wrapper.name,
+            [classNamesWithTheme.wrapper.modificators.hover, isHover],
+            [classNamesWithTheme.wrapper.modificators.moving, isMoving],
+          ),
         }}
         style={{
           ...getLayout(layout),

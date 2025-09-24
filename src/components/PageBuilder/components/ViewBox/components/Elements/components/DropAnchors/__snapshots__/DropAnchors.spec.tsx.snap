@@ -14,14 +14,6 @@ exports[`DropAnchors snapshots should render DropAnchors 1`] = `
       class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--bottom DropAnchors__anchor--bottom--light"
       data-test-anchor="bottom"
     />
-    <div
-      class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--left DropAnchors__anchor--left--light"
-      data-test-anchor="left"
-    />
-    <div
-      class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--right DropAnchors__anchor--right--light"
-      data-test-anchor="right"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -42,6 +34,19 @@ exports[`DropAnchors snapshots should render with next prompt 1`] = `
     <div
       class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--bottom DropAnchors__anchor--bottom--light"
       data-test-anchor="bottom"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DropAnchors snapshots should render with next prompt 2`] = `
+<DocumentFragment>
+  <div
+    class="DropAnchors DropAnchors--light"
+  >
+    element
+    <div
+      class="DropAnchors__prompt DropAnchors__prompt--light DropAnchors__prompt--right DropAnchors__prompt--right--light"
     />
     <div
       class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--left DropAnchors__anchor--left--light"
@@ -72,6 +77,19 @@ exports[`DropAnchors snapshots should render with prev prompt 1`] = `
       class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--bottom DropAnchors__anchor--bottom--light"
       data-test-anchor="bottom"
     />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DropAnchors snapshots should render with prev prompt 2`] = `
+<DocumentFragment>
+  <div
+    class="DropAnchors DropAnchors--light"
+  >
+    <div
+      class="DropAnchors__prompt DropAnchors__prompt--light DropAnchors__prompt--left DropAnchors__prompt--left--light"
+    />
+    element
     <div
       class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--left DropAnchors__anchor--left--light"
       data-test-anchor="left"

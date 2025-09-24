@@ -12,7 +12,7 @@ exports[`Elements snapshots should render Element in relative position 1`] = `
       style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; height: 100px; position: relative; width: 100px;"
     >
       <div
-        class="css-wcnq0t Elements__element Elements__element--light Frame Frame--light Element__wrapper Element__wrapper--light"
+        class="css-wcnq0t Element__wrapper Element__wrapper--light"
         data-status="false"
         data-test-box=""
         style="background-color: rgb(255, 255, 255); height: 100%; transform: rotate(0deg); width: 100%;"
@@ -40,14 +40,6 @@ exports[`Elements snapshots should render Element in relative position 1`] = `
       class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--bottom DropAnchors__anchor--bottom--light"
       data-test-anchor="bottom"
     />
-    <div
-      class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--left DropAnchors__anchor--left--light"
-      data-test-anchor="left"
-    />
-    <div
-      class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--right DropAnchors__anchor--right--light"
-      data-test-anchor="right"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -63,7 +55,7 @@ exports[`Elements snapshots should render Frame 1`] = `
     style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; height: 100px; position: absolute; width: 100px;"
   >
     <div
-      class="css-wcnq0t Elements__element Elements__element--light Frame Frame--light Element__wrapper Element__wrapper--light"
+      class="css-wcnq0t Element__wrapper Element__wrapper--light"
       data-status="false"
       data-test-box=""
       style="background-color: rgb(255, 255, 255); height: 100%; transform: rotate(0deg); width: 100%;"

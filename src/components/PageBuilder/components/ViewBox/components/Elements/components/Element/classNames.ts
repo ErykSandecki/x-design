@@ -15,6 +15,7 @@ export const classNames = {
     name: `${className}__wrapper`,
     modificators: {
       hover: `${className}__wrapper--hover`,
+      moving: `${className}__wrapper--moving`,
     },
   },
 };
