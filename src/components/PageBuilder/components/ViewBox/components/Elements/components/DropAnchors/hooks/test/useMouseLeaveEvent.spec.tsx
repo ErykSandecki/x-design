@@ -52,6 +52,8 @@ describe('useMouseLeaveEvent', () => {
 
     // result
     expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
+      possibleAcnhorElementId: '-1',
+      possibleAnchorPosition: null,
       possibleIndexPosition: null,
     });
   });

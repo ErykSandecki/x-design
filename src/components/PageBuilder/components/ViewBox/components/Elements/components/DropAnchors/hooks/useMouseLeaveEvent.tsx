@@ -26,7 +26,13 @@ export const useMouseLeaveEvent = (
       );
 
       if (!isEmpty(draggableElements)) {
-        dispatch(updateEventsStatus({ possibleIndexPosition: null }));
+        dispatch(
+          updateEventsStatus({
+            possibleAcnhorElementId: '-1',
+            possibleAnchorPosition: null,
+            possibleIndexPosition: null,
+          }),
+        );
       }
     }
   };

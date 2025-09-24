@@ -1,5 +1,4 @@
 import { FC, ReactNode } from 'react';
-import { useSelector } from 'react-redux';
 
 // components
 import { E2EDataAttribute } from 'shared';
@@ -10,20 +9,14 @@ import { useTheme } from 'hooks';
 
 // others
 import { className, classNames } from './classNames';
-import { HORIZONTAL_ANCHORS, VERTICAL_ANCHORS } from './constants';
-
-// store
-import {
-  eventSelectorCreator,
-  isDraggableSelectorCreator,
-} from 'store/pageBuilder/selectors';
+import { HORIZONTAL_ANCHORS, promptsData, VERTICAL_ANCHORS } from './constants';
 
 // styles
 import styles from './drop-anchors.scss';
 
 // types
-import { DropAnchorsPosition } from './enums';
-import { E2EAttribute, LayoutType, TElement } from 'types';
+import { DropAnchorsPosition } from 'store/pageBuilder/enums';
+import { E2EAttribute, TElement } from 'types';
 import { MouseMode } from 'types/enums/mouseMode';
 
 // utils
@@ -34,7 +27,6 @@ export type TDropAnchorsProps = {
   id: TElement['id'];
   index: number;
   mouseMode: MouseMode;
-  layoutParent: TElement['layout'];
   parentId: TElement['parentId'];
 };
 
@@ -43,53 +35,45 @@ const DropAnchors: FC<TDropAnchorsProps> = ({
   id,
   index,
   mouseMode,
-  layoutParent,
   parentId,
 }) => {
-  const { type } = layoutParent;
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-  const { onMouseEnter, ...events } = useDropAnchorsEvents(index, mouseMode);
-  const isDraggable = useSelector(isDraggableSelectorCreator(id));
-  const possibleIndexPosition = useSelector(
-    eventSelectorCreator('possibleIndexPosition'),
-  ) as number;
-  const possibleParent = useSelector(eventSelectorCreator('possibleParent'));
-  const isFirst = index === 0;
-  const isParent = possibleParent === parentId;
-  const displayPrevPrompt =
-    !isDraggable && isParent && isFirst && possibleIndexPosition === index;
-  const displayNextPrompt =
-    !isDraggable && isParent && possibleIndexPosition - 1 === index;
-  const isVertical =
-    type === LayoutType.default || type === LayoutType.vertical;
-  const dropAnchorsPosition = isVertical
+  const {
+    anchorPos,
+    displayNextPrompt,
+    displayPrevPrompt,
+    isFlowVertical,
+    isGrid,
+    onMouseEnter,
+    ...events
+  } = useDropAnchorsEvents(id, index, mouseMode, parentId);
+  const dropAnchorsPosition = isFlowVertical
     ? VERTICAL_ANCHORS
     : HORIZONTAL_ANCHORS;
 
   return (
     <div className={cx(classNamesWithTheme[className])}>
-      {displayPrevPrompt && (
+      {promptsData(
+        anchorPos,
+        displayNextPrompt,
+        displayPrevPrompt,
+        isFlowVertical,
+        isGrid,
+      ).map(({ key, visible }) => (
         <div
-          className={cx(
-            classNamesWithTheme.prompt.name,
-            [classNamesWithTheme.prompt.modificators.top, isVertical],
-            [classNamesWithTheme.prompt.modificators.left, !isVertical],
-          )}
+          className={cx(classNamesWithTheme.prompt.name, [
+            classNamesWithTheme.prompt.modificators[key],
+            visible,
+          ])}
+          key={key}
         />
-      )}
+      ))}
       {children}
-      {displayNextPrompt && (
-        <div
-          className={cx(
-            classNamesWithTheme.prompt.name,
-            [classNamesWithTheme.prompt.modificators.bottom, isVertical],
-            [classNamesWithTheme.prompt.modificators.right, !isVertical],
-          )}
-        />
-      )}
       {enumToArray(DropAnchorsPosition)
-        .filter((dropAnchor) =>
-          dropAnchorsPosition.includes(dropAnchor as DropAnchorsPosition),
+        .filter(
+          (dropAnchor) =>
+            isGrid ||
+            dropAnchorsPosition.includes(dropAnchor as DropAnchorsPosition),
         )
         .map((position) => (
           <E2EDataAttribute

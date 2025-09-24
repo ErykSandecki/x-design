@@ -24,7 +24,7 @@ import {
 } from './actionsType';
 
 // types
-import { AnchorResize, AnchorRotate } from './enums';
+import { AnchorResize, AnchorRotate, DropAnchorsPosition } from './enums';
 import {
   AlignmentHorizontal,
   AlignmentVertical,
@@ -72,6 +72,8 @@ export type TEvents = {
   isMultipleMoving: boolean;
   isResizing: boolean;
   isRotating: boolean;
+  possibleAcnhorElementId: TElement['id'];
+  possibleAnchorPosition: DropAnchorsPosition;
   possibleIndexPosition: number | null;
   possibleParent: TElement['id'] | null;
   pressedKey: KeyboardKeys;

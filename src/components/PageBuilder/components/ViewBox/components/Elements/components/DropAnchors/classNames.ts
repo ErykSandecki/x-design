@@ -1,7 +1,7 @@
 import { mapValues } from 'lodash';
 
 // types
-import { DropAnchorsPosition } from './enums';
+import { DropAnchorsPosition } from 'store/pageBuilder/enums';
 
 export const className = 'DropAnchors';
 

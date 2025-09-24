@@ -6,6 +6,18 @@ exports[`Elements snapshots should render Element in relative position 1`] = `
     class="DropAnchors DropAnchors--light"
   >
     <div
+      class="DropAnchors__prompt DropAnchors__prompt--light"
+    />
+    <div
+      class="DropAnchors__prompt DropAnchors__prompt--light"
+    />
+    <div
+      class="DropAnchors__prompt DropAnchors__prompt--light"
+    />
+    <div
+      class="DropAnchors__prompt DropAnchors__prompt--light"
+    />
+    <div
       class="css-wcnq0t Elements__element Elements__element--light Frame Frame--light Element Element--light"
       data-test-box=""
       id="1"

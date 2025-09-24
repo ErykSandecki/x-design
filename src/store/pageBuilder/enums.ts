@@ -17,3 +17,10 @@ export enum AnchorRotate {
   southEast = 'southEast',
   southWest = 'southWest',
 }
+
+export enum DropAnchorsPosition {
+  top = 'top',
+  bottom = 'bottom',
+  left = 'left',
+  right = 'right',
+}

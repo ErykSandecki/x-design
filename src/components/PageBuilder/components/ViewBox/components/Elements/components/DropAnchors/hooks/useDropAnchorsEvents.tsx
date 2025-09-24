@@ -1,20 +1,55 @@
+import { useSelector } from 'react-redux';
+
 // hooks
 import { useMouseEnterEvent } from './useMouseEnterEvent';
 import { useMouseLeaveEvent } from './useMouseLeaveEvent';
 
+// store
+import {
+  elementAllDataSelectorCreator,
+  eventSelectorCreator,
+} from 'store/pageBuilder/selectors';
+
 // types
-import { DropAnchorsPosition } from '../enums';
+import { DropAnchorsPosition } from 'store/pageBuilder/enums';
+import { LayoutType, TElement } from 'types';
 import { MouseMode } from 'types/enums/mouseMode';
 
 export type TUseDropAnchorsEvents = {
+  anchorPos: DropAnchorsPosition;
+  displayNextPrompt: boolean;
+  displayPrevPrompt: boolean;
+  isFlowVertical: boolean;
+  isGrid: boolean;
   onMouseEnter: (dropAreaPosition: DropAnchorsPosition) => void;
   onMouseLeave: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
 };
 
 export const useDropAnchorsEvents = (
+  id: TElement['id'],
   index: number,
   mouseMode: MouseMode,
-): TUseDropAnchorsEvents => ({
-  onMouseEnter: useMouseEnterEvent(index, mouseMode),
-  onMouseLeave: useMouseLeaveEvent(mouseMode),
-});
+  parentId: TElement['parentId'],
+): TUseDropAnchorsEvents => {
+  const parentData = useSelector(elementAllDataSelectorCreator(parentId));
+  const elId = useSelector(eventSelectorCreator('possibleAcnhorElementId'));
+  const anchorPos = useSelector(eventSelectorCreator('possibleAnchorPosition'));
+  const indexPos = useSelector(eventSelectorCreator('possibleIndexPosition'));
+  const isDraggingOn = elId === id;
+  const displayPrevPrompt = isDraggingOn && indexPos === index;
+  const displayNextPrompt = isDraggingOn && (indexPos as number) - 1 === index;
+  const isDefault = parentData.layout.type === LayoutType.default;
+  const isVertical = parentData.layout.type === LayoutType.vertical;
+  const isFlowVertical = isVertical || isDefault;
+  const isGrid = parentData.layout.type === LayoutType.grid;
+
+  return {
+    anchorPos: anchorPos as DropAnchorsPosition,
+    displayNextPrompt,
+    displayPrevPrompt,
+    isFlowVertical,
+    isGrid,
+    onMouseEnter: useMouseEnterEvent(id, index, mouseMode),
+    onMouseLeave: useMouseLeaveEvent(mouseMode),
+  };
+};

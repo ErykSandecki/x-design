@@ -6,6 +6,7 @@ import DropAnchors from './DropAnchors';
 
 // mocks
 import {
+  elementAllDataMock,
   elementDynamicDataMock,
   elementStaticDataMock,
   eventsMock,
@@ -22,7 +23,7 @@ import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 import { configureStore, store as storeToMock } from 'store/store';
 
 // types
-import { DropAnchorsPosition } from './enums';
+import { DropAnchorsPosition } from 'store/pageBuilder/enums';
 import { E2EAttribute, LayoutType } from 'types';
 import { MouseMode } from 'types/enums/mouseMode';
 
@@ -30,6 +31,7 @@ import { MouseMode } from 'types/enums/mouseMode';
 import { getByE2EAttribute } from 'test';
 
 const mockCallBack = jest.fn();
+const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 const stateMock = {
   ...wholeStateMock,
   [PAGE_BUILDER]: {
@@ -37,10 +39,33 @@ const stateMock = {
     pages: {
       ...pageBuilderStateMock[PAGE_BUILDER].pages,
       ['0']: {
-        ...pageBuilderStateMock[PAGE_BUILDER].pages['0'],
+        ...currentPage,
         elements: {
-          dynamicData: { [elementDynamicDataMock.id]: elementDynamicDataMock },
-          staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
+          allData: {
+            ['-1']: {
+              ...currentPage.elements.allData['-1'],
+              children: [elementAllDataMock.id],
+            },
+            [elementAllDataMock.id]: {
+              ...elementAllDataMock,
+            },
+          },
+          dynamicData: {
+            ['-1']: {
+              ...currentPage.elements.dynamicData['-1'],
+              children: [elementDynamicDataMock.id],
+            },
+            [elementDynamicDataMock.id]: elementDynamicDataMock,
+          },
+          staticData: {
+            ['-1']: {
+              ...currentPage.elements.staticData['-1'],
+              children: [elementStaticDataMock.id],
+            },
+            [elementStaticDataMock.id]: {
+              ...elementStaticDataMock,
+            },
+          },
         },
       },
     },
@@ -63,7 +88,6 @@ describe('DropAnchors snapshots', () => {
         <DropAnchors
           id={elementDynamicDataMock.id}
           index={0}
-          layoutParent={layoutMock}
           mouseMode={MouseMode.default}
           parentId={elementStaticDataMock.parentId}
         >
@@ -76,7 +100,7 @@ describe('DropAnchors snapshots', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('should render with prev prompt', () => {
+  it('should render with prev prompt for top', () => {
     // mock
     const store = configureStore({
       ...stateMock,
@@ -85,6 +109,8 @@ describe('DropAnchors snapshots', () => {
         events: {
           ...eventsMock,
           draggableElements: [],
+          possibleAcnhorElementId: '1',
+          possibleAnchorPosition: DropAnchorsPosition.top,
           possibleIndexPosition: 0,
           possibleParent: elementStaticDataMock.parentId,
         },
@@ -97,7 +123,6 @@ describe('DropAnchors snapshots', () => {
         <DropAnchors
           id={elementDynamicDataMock.id}
           index={0}
-          layoutParent={layoutMock}
           mouseMode={MouseMode.default}
           parentId={elementStaticDataMock.parentId}
         >
@@ -110,7 +135,7 @@ describe('DropAnchors snapshots', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('should render with prev prompt', () => {
+  it('should render with prev prompt for left', () => {
     // mock
     const store = configureStore({
       ...stateMock,
@@ -119,9 +144,48 @@ describe('DropAnchors snapshots', () => {
         events: {
           ...eventsMock,
           draggableElements: [],
+          possibleAcnhorElementId: '1',
+          possibleAnchorPosition: DropAnchorsPosition.left,
           possibleIndexPosition: 0,
           possibleParent: elementStaticDataMock.parentId,
         },
+        pages: {
+          ...pageBuilderStateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...currentPage,
+            elements: {
+              allData: {
+                ['-1']: {
+                  ...currentPage.elements.allData['-1'],
+                  children: [elementAllDataMock.id],
+                  layout: {
+                    ...layoutMock,
+                    type: LayoutType.horizontal,
+                  },
+                },
+                [elementAllDataMock.id]: elementAllDataMock,
+              },
+              dynamicData: {
+                ['-1']: {
+                  ...currentPage.elements.dynamicData['-1'],
+                  children: [elementDynamicDataMock.id],
+                  layout: {
+                    ...layoutMock,
+                    type: LayoutType.horizontal,
+                  },
+                },
+                [elementDynamicDataMock.id]: elementDynamicDataMock,
+              },
+              staticData: {
+                ['-1']: {
+                  ...currentPage.elements.staticData['-1'],
+                  children: [elementStaticDataMock.id],
+                },
+                [elementStaticDataMock.id]: elementStaticDataMock,
+              },
+            },
+          },
+        },
       },
     });
 
@@ -131,7 +195,6 @@ describe('DropAnchors snapshots', () => {
         <DropAnchors
           id={elementDynamicDataMock.id}
           index={0}
-          layoutParent={{ ...layoutMock, type: LayoutType.horizontal }}
           mouseMode={MouseMode.default}
           parentId={elementStaticDataMock.parentId}
         >
@@ -144,7 +207,7 @@ describe('DropAnchors snapshots', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('should render with next prompt', () => {
+  it('should render with next prompt for bottom', () => {
     // mock
     const store = configureStore({
       ...stateMock,
@@ -153,6 +216,8 @@ describe('DropAnchors snapshots', () => {
         events: {
           ...eventsMock,
           draggableElements: [],
+          possibleAcnhorElementId: '1',
+          possibleAnchorPosition: DropAnchorsPosition.bottom,
           possibleIndexPosition: 1,
           possibleParent: elementStaticDataMock.parentId,
         },
@@ -165,7 +230,6 @@ describe('DropAnchors snapshots', () => {
         <DropAnchors
           id={elementDynamicDataMock.id}
           index={0}
-          layoutParent={layoutMock}
           mouseMode={MouseMode.default}
           parentId={elementStaticDataMock.parentId}
         >
@@ -178,7 +242,7 @@ describe('DropAnchors snapshots', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('should render with next prompt', () => {
+  it('should render with next prompt for right', () => {
     // mock
     const store = configureStore({
       ...stateMock,
@@ -187,8 +251,47 @@ describe('DropAnchors snapshots', () => {
         events: {
           ...eventsMock,
           draggableElements: [],
+          possibleAcnhorElementId: '1',
+          possibleAnchorPosition: DropAnchorsPosition.right,
           possibleIndexPosition: 1,
           possibleParent: elementStaticDataMock.parentId,
+        },
+        pages: {
+          ...pageBuilderStateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...currentPage,
+            elements: {
+              allData: {
+                ['-1']: {
+                  ...currentPage.elements.allData['-1'],
+                  children: [elementAllDataMock.id],
+                  layout: {
+                    ...layoutMock,
+                    type: LayoutType.horizontal,
+                  },
+                },
+                [elementAllDataMock.id]: elementAllDataMock,
+              },
+              dynamicData: {
+                ['-1']: {
+                  ...currentPage.elements.dynamicData['-1'],
+                  children: [elementDynamicDataMock.id],
+                  layout: {
+                    ...layoutMock,
+                    type: LayoutType.horizontal,
+                  },
+                },
+                [elementDynamicDataMock.id]: elementDynamicDataMock,
+              },
+              staticData: {
+                ['-1']: {
+                  ...currentPage.elements.staticData['-1'],
+                  children: [elementStaticDataMock.id],
+                },
+                [elementStaticDataMock.id]: elementStaticDataMock,
+              },
+            },
+          },
         },
       },
     });
@@ -199,7 +302,294 @@ describe('DropAnchors snapshots', () => {
         <DropAnchors
           id={elementDynamicDataMock.id}
           index={0}
-          layoutParent={{ ...layoutMock, type: LayoutType.horizontal }}
+          mouseMode={MouseMode.default}
+          parentId={elementStaticDataMock.parentId}
+        >
+          element
+        </DropAnchors>
+      </Provider>,
+    );
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('should render some prompt when grid for top', () => {
+    // mock
+    const store = configureStore({
+      ...stateMock,
+      [PAGE_BUILDER]: {
+        ...pageBuilderStateMock[PAGE_BUILDER],
+        events: {
+          ...eventsMock,
+          draggableElements: [],
+          possibleAcnhorElementId: '1',
+          possibleAnchorPosition: DropAnchorsPosition.top,
+          possibleIndexPosition: 0,
+          possibleParent: elementStaticDataMock.parentId,
+        },
+        pages: {
+          ...pageBuilderStateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...currentPage,
+            elements: {
+              allData: {
+                ['-1']: {
+                  ...currentPage.elements.allData['-1'],
+                  children: [elementAllDataMock.id],
+                  layout: {
+                    ...layoutMock,
+                    type: LayoutType.grid,
+                  },
+                },
+                [elementAllDataMock.id]: elementAllDataMock,
+              },
+              dynamicData: {
+                ['-1']: {
+                  ...currentPage.elements.dynamicData['-1'],
+                  children: [elementDynamicDataMock.id],
+                  layout: {
+                    ...layoutMock,
+                    type: LayoutType.grid,
+                  },
+                },
+                [elementDynamicDataMock.id]: elementDynamicDataMock,
+              },
+              staticData: {
+                ['-1']: {
+                  ...currentPage.elements.staticData['-1'],
+                  children: [elementStaticDataMock.id],
+                },
+                [elementStaticDataMock.id]: elementStaticDataMock,
+              },
+            },
+          },
+        },
+      },
+    });
+
+    // before
+    const { asFragment } = render(
+      <Provider store={store}>
+        <DropAnchors
+          id={elementDynamicDataMock.id}
+          index={0}
+          mouseMode={MouseMode.default}
+          parentId={elementStaticDataMock.parentId}
+        >
+          element
+        </DropAnchors>
+      </Provider>,
+    );
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('should render some prompt when grid for left', () => {
+    // mock
+    const store = configureStore({
+      ...stateMock,
+      [PAGE_BUILDER]: {
+        ...pageBuilderStateMock[PAGE_BUILDER],
+        events: {
+          ...eventsMock,
+          draggableElements: [],
+          possibleAcnhorElementId: '1',
+          possibleAnchorPosition: DropAnchorsPosition.left,
+          possibleIndexPosition: 0,
+          possibleParent: elementStaticDataMock.parentId,
+        },
+        pages: {
+          ...pageBuilderStateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...currentPage,
+            elements: {
+              allData: {
+                ['-1']: {
+                  ...currentPage.elements.allData['-1'],
+                  children: [elementAllDataMock.id],
+                  layout: {
+                    ...layoutMock,
+                    type: LayoutType.grid,
+                  },
+                },
+                [elementAllDataMock.id]: elementAllDataMock,
+              },
+              dynamicData: {
+                ['-1']: {
+                  ...currentPage.elements.dynamicData['-1'],
+                  children: [elementDynamicDataMock.id],
+                  layout: {
+                    ...layoutMock,
+                    type: LayoutType.grid,
+                  },
+                },
+                [elementDynamicDataMock.id]: elementDynamicDataMock,
+              },
+              staticData: {
+                ['-1']: {
+                  ...currentPage.elements.staticData['-1'],
+                  children: [elementStaticDataMock.id],
+                },
+                [elementStaticDataMock.id]: elementStaticDataMock,
+              },
+            },
+          },
+        },
+      },
+    });
+
+    // before
+    const { asFragment } = render(
+      <Provider store={store}>
+        <DropAnchors
+          id={elementDynamicDataMock.id}
+          index={0}
+          mouseMode={MouseMode.default}
+          parentId={elementStaticDataMock.parentId}
+        >
+          element
+        </DropAnchors>
+      </Provider>,
+    );
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('should render some prompt when grid for bottom', () => {
+    // mock
+    const store = configureStore({
+      ...stateMock,
+      [PAGE_BUILDER]: {
+        ...pageBuilderStateMock[PAGE_BUILDER],
+        events: {
+          ...eventsMock,
+          draggableElements: [],
+          possibleAcnhorElementId: '1',
+          possibleAnchorPosition: DropAnchorsPosition.bottom,
+          possibleIndexPosition: 1,
+          possibleParent: elementStaticDataMock.parentId,
+        },
+        pages: {
+          ...pageBuilderStateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...currentPage,
+            elements: {
+              allData: {
+                ['-1']: {
+                  ...currentPage.elements.allData['-1'],
+                  children: [elementAllDataMock.id],
+                  layout: {
+                    ...layoutMock,
+                    type: LayoutType.grid,
+                  },
+                },
+                [elementAllDataMock.id]: elementAllDataMock,
+              },
+              dynamicData: {
+                ['-1']: {
+                  ...currentPage.elements.dynamicData['-1'],
+                  children: [elementDynamicDataMock.id],
+                  layout: {
+                    ...layoutMock,
+                    type: LayoutType.grid,
+                  },
+                },
+                [elementDynamicDataMock.id]: elementDynamicDataMock,
+              },
+              staticData: {
+                ['-1']: {
+                  ...currentPage.elements.staticData['-1'],
+                  children: [elementStaticDataMock.id],
+                },
+                [elementStaticDataMock.id]: elementStaticDataMock,
+              },
+            },
+          },
+        },
+      },
+    });
+
+    // before
+    const { asFragment } = render(
+      <Provider store={store}>
+        <DropAnchors
+          id={elementDynamicDataMock.id}
+          index={0}
+          mouseMode={MouseMode.default}
+          parentId={elementStaticDataMock.parentId}
+        >
+          element
+        </DropAnchors>
+      </Provider>,
+    );
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('should render some prompt when grid for right', () => {
+    // mock
+    const store = configureStore({
+      ...stateMock,
+      [PAGE_BUILDER]: {
+        ...pageBuilderStateMock[PAGE_BUILDER],
+        events: {
+          ...eventsMock,
+          draggableElements: [],
+          possibleAcnhorElementId: '1',
+          possibleAnchorPosition: DropAnchorsPosition.right,
+          possibleIndexPosition: 1,
+          possibleParent: elementStaticDataMock.parentId,
+        },
+        pages: {
+          ...pageBuilderStateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...currentPage,
+            elements: {
+              allData: {
+                ['-1']: {
+                  ...currentPage.elements.allData['-1'],
+                  children: [elementAllDataMock.id],
+                  layout: {
+                    ...layoutMock,
+                    type: LayoutType.grid,
+                  },
+                },
+                [elementAllDataMock.id]: elementAllDataMock,
+              },
+              dynamicData: {
+                ['-1']: {
+                  ...currentPage.elements.dynamicData['-1'],
+                  children: [elementDynamicDataMock.id],
+                  layout: {
+                    ...layoutMock,
+                    type: LayoutType.grid,
+                  },
+                },
+                [elementDynamicDataMock.id]: elementDynamicDataMock,
+              },
+              staticData: {
+                ['-1']: {
+                  ...currentPage.elements.staticData['-1'],
+                  children: [elementStaticDataMock.id],
+                },
+                [elementStaticDataMock.id]: elementStaticDataMock,
+              },
+            },
+          },
+        },
+      },
+    });
+
+    // before
+    const { asFragment } = render(
+      <Provider store={store}>
+        <DropAnchors
+          id={elementDynamicDataMock.id}
+          index={0}
           mouseMode={MouseMode.default}
           parentId={elementStaticDataMock.parentId}
         >
@@ -235,7 +625,6 @@ describe('DropAnchors behaviors', () => {
         <DropAnchors
           id={elementDynamicDataMock.id}
           index={0}
-          layoutParent={layoutMock}
           mouseMode={MouseMode.default}
           parentId={elementStaticDataMock.parentId}
         >
@@ -255,6 +644,8 @@ describe('DropAnchors behaviors', () => {
 
     // result
     expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
+      possibleAcnhorElementId: '1',
+      possibleAnchorPosition: DropAnchorsPosition.top,
       possibleIndexPosition: 0,
     });
   });
