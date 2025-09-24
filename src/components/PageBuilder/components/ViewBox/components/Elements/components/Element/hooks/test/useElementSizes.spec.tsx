@@ -22,8 +22,8 @@ import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 import { configureStore } from 'store';
 
 // utils
-import { getProviderWrapper } from 'test';
 import { createHtmlElement } from 'utils';
+import { getProviderWrapper } from 'test';
 
 const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 const stateMock = {
