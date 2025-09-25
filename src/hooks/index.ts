@@ -3,6 +3,7 @@ export * from './useDispatchMany/useDispatchMany';
 export * from './useForceRerender/useForceRerender';
 export * from './useKeyboardHandler/useKeyboardHandler';
 export * from './useKeyboardHandler/types';
+export * from './useOutsideClick/useOutsideClick';
 export * from './useResizeHandler/useResizeHandler';
 export * from './useScrollLock/useScrollLock';
 export * from './useScrollLock/constants';

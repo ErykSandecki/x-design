@@ -8,7 +8,7 @@ import { useRefs } from 'pages/PageBuilderPage/core/RefsProvider';
 
 // others
 import { cssVariables } from 'constant/cssVariables';
-import { OVERLAY_CONTAINER_ID } from '../../constants';
+import { OVERLAY_CONTAINER_ID } from '../../../../constants';
 
 // utils
 import { getCssVariable } from 'utils';

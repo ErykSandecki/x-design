@@ -10,8 +10,12 @@ import { ScrubbableInput, Small, UITools } from 'shared';
 import { useResizingEvents } from './hooks/useResizingEvents';
 
 // others
-import { MAX } from '../../../../../../../../constants';
-import { translationNameSpace } from './constants';
+import { MAX, PANEL_PROPERTIES_ID } from '../../../../../../../../constants';
+import {
+  heightPopoverData,
+  translationNameSpace,
+  widthPopoverData,
+} from './constants';
 
 // store
 import {
@@ -68,6 +72,7 @@ const ColumnResizing: FC = () => {
       <UITools.TextField
         e2eValue="width"
         fullWidth
+        idContainer={PANEL_PROPERTIES_ID}
         onBlur={onBlurWidth}
         onChange={(event) =>
           onChangeWidth(sanitizeNumberInput(event.target.value))
@@ -76,6 +81,7 @@ const ColumnResizing: FC = () => {
         onKeyDown={(event) =>
           handleSubmitInput(KeyboardKeys.enter, refInputWidth.current)(event)
         }
+        popover={{ data: widthPopoverData(t) }}
         ref={refInputWidth}
         startAdornment={
           <>
@@ -98,6 +104,7 @@ const ColumnResizing: FC = () => {
       <UITools.TextField
         e2eValue="height"
         fullWidth
+        idContainer={PANEL_PROPERTIES_ID}
         onBlur={onBlurHeight}
         onChange={(event) =>
           onChangeHeight(sanitizeNumberInput(event.target.value))
@@ -106,6 +113,7 @@ const ColumnResizing: FC = () => {
         onKeyDown={(event) =>
           handleSubmitInput(KeyboardKeys.enter, refInputHeight.current)(event)
         }
+        popover={{ data: heightPopoverData(t) }}
         ref={refInputHeight}
         startAdornment={
           <>

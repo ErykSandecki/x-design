@@ -14,3 +14,75 @@ exports[`TextField snapshots should render TextField 1`] = `
   </div>
 </DocumentFragment>
 `;
+
+exports[`TextField snapshots should render wiht popover 1`] = `
+<DocumentFragment>
+  <div
+    class="css-wcnq0t TextField TextField--light"
+    data-test-text-field=""
+  >
+    <input
+      class="TextField__input TextField__input--light"
+      data-test-text-field-input=""
+      maxlength="6"
+    />
+    <div
+      class="TextField__icon-wrapper TextField__icon-wrapper--light"
+    >
+      <div
+        class="css-wcnq0t TextField__icon TextField__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+        data-test-icon="variant"
+        height="12"
+        name="Variant"
+        width="12"
+      />
+      <div
+        class="Popover Popover--light"
+        data-test-dropdown="dropdown"
+        data-test-popover=""
+        style="left: 0px; top: 0px;"
+      >
+        <div
+          class="Popover__separator Popover__separator--light"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TextField snapshots should render with opened popover 1`] = `
+<DocumentFragment>
+  <div
+    class="css-wcnq0t TextField TextField--light"
+    data-test-text-field=""
+  >
+    <input
+      class="TextField__input TextField__input--light"
+      data-test-text-field-input=""
+      maxlength="6"
+    />
+    <div
+      class="TextField__icon-wrapper TextField__icon-wrapper--light"
+    >
+      <div
+        class="css-wcnq0t TextField__icon TextField__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+        data-test-icon="variant"
+        height="12"
+        name="Variant"
+        width="12"
+      />
+      <div
+        class="Popover Popover--light Popover--selected Popover--selected--light"
+        data-test-dropdown="dropdown"
+        data-test-popover=""
+        style="left: 0px; top: 0px;"
+      >
+        <div
+          class="Popover__separator Popover__separator--light"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

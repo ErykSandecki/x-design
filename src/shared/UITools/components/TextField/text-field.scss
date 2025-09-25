@@ -26,6 +26,7 @@ $--xd-font-size: 11px;
   font-size: $--xd-font-size;
   height: 24px;
   padding: 0 5px;
+  position: relative;
 
   & * {
     font-family: $--xd-font-family;
@@ -38,6 +39,10 @@ $--xd-font-size: 11px;
 
   &--full-width {
     width: 100%;
+  }
+
+  &:hover &__icon {
+    opacity: 1;
   }
 
   &__input {
@@ -61,5 +66,16 @@ $--xd-font-size: 11px;
     &[type='number'] {
       -moz-appearance: textfield;
     }
+  }
+
+  &__icon-wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  &__icon {
+    opacity: 0;
   }
 }

@@ -536,6 +536,131 @@ exports[`Design snapshots should render Design 1`] = `
               type="number"
               value="100"
             />
+            <div
+              class="TextField__icon-wrapper TextField__icon-wrapper--light"
+            >
+              <div
+                class="css-wcnq0t TextField__icon TextField__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                data-test-icon="variant"
+                height="12"
+                name="Variant"
+                width="12"
+              />
+              <div
+                class="Popover Popover--light"
+                data-test-dropdown="dropdown"
+                data-test-popover=""
+                style="left: 0px; top: 0px;"
+              >
+                <div
+                  class="Popover__item Popover__item--light"
+                  data-test-popover-item="0"
+                >
+                  <div
+                    class="css-wcnq0t Popover__check-icon Popover__check-icon--light Popover__check-icon--selected Popover__check-icon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="check"
+                    height="12"
+                    name="Check"
+                    width="12"
+                  />
+                  <div
+                    class="css-wcnq0t Popover__item-icon Popover__item-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="fixed-width"
+                    height="12"
+                    name="FixedWidth"
+                    width="12"
+                  />
+                  <small
+                    class="css-wcnq0t Popover__item-text Popover__item-text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    data-test-text=""
+                    style="text-align: inherit;"
+                  >
+                    Fixed width
+                  </small>
+                </div>
+                <div
+                  class="Popover__item Popover__item--light"
+                  data-test-popover-item="1"
+                >
+                  <div
+                    class="css-wcnq0t Popover__check-icon Popover__check-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="check"
+                    height="12"
+                    name="Check"
+                    width="12"
+                  />
+                  <div
+                    class="css-wcnq0t Popover__item-icon Popover__item-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="auto-width"
+                    height="12"
+                    name="AutoWidth"
+                    width="12"
+                  />
+                  <small
+                    class="css-wcnq0t Popover__item-text Popover__item-text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    data-test-text=""
+                    style="text-align: inherit;"
+                  >
+                    Auto width
+                  </small>
+                </div>
+                <div
+                  class="Popover__separator Popover__separator--light"
+                />
+                <div
+                  class="Popover__item Popover__item--light"
+                  data-test-popover-item="3"
+                >
+                  <div
+                    class="css-wcnq0t Popover__check-icon Popover__check-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="check"
+                    height="12"
+                    name="Check"
+                    width="12"
+                  />
+                  <div
+                    class="css-wcnq0t Popover__item-icon Popover__item-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="min-width"
+                    height="12"
+                    name="MinWidth"
+                    width="12"
+                  />
+                  <small
+                    class="css-wcnq0t Popover__item-text Popover__item-text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    data-test-text=""
+                    style="text-align: inherit;"
+                  >
+                    Add min width...
+                  </small>
+                </div>
+                <div
+                  class="Popover__item Popover__item--light"
+                  data-test-popover-item="4"
+                >
+                  <div
+                    class="css-wcnq0t Popover__check-icon Popover__check-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="check"
+                    height="12"
+                    name="Check"
+                    width="12"
+                  />
+                  <div
+                    class="css-wcnq0t Popover__item-icon Popover__item-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="max-width"
+                    height="12"
+                    name="MaxWidth"
+                    width="12"
+                  />
+                  <small
+                    class="css-wcnq0t Popover__item-text Popover__item-text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    data-test-text=""
+                    style="text-align: inherit;"
+                  >
+                    Add max width...
+                  </small>
+                </div>
+              </div>
+            </div>
           </div>
           <div
             class="css-wcnq0t TextField TextField--light TextField--full-width TextField--full-width--light"
@@ -560,6 +685,131 @@ exports[`Design snapshots should render Design 1`] = `
               type="number"
               value="100"
             />
+            <div
+              class="TextField__icon-wrapper TextField__icon-wrapper--light"
+            >
+              <div
+                class="css-wcnq0t TextField__icon TextField__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                data-test-icon="variant"
+                height="12"
+                name="Variant"
+                width="12"
+              />
+              <div
+                class="Popover Popover--light"
+                data-test-dropdown="dropdown"
+                data-test-popover=""
+                style="left: 0px; top: 0px;"
+              >
+                <div
+                  class="Popover__item Popover__item--light"
+                  data-test-popover-item="0"
+                >
+                  <div
+                    class="css-wcnq0t Popover__check-icon Popover__check-icon--light Popover__check-icon--selected Popover__check-icon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="check"
+                    height="12"
+                    name="Check"
+                    width="12"
+                  />
+                  <div
+                    class="css-wcnq0t Popover__item-icon Popover__item-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="fixed-height"
+                    height="12"
+                    name="FixedHeight"
+                    width="12"
+                  />
+                  <small
+                    class="css-wcnq0t Popover__item-text Popover__item-text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    data-test-text=""
+                    style="text-align: inherit;"
+                  >
+                    Fixed height
+                  </small>
+                </div>
+                <div
+                  class="Popover__item Popover__item--light"
+                  data-test-popover-item="1"
+                >
+                  <div
+                    class="css-wcnq0t Popover__check-icon Popover__check-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="check"
+                    height="12"
+                    name="Check"
+                    width="12"
+                  />
+                  <div
+                    class="css-wcnq0t Popover__item-icon Popover__item-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="auto-height"
+                    height="12"
+                    name="AutoHeight"
+                    width="12"
+                  />
+                  <small
+                    class="css-wcnq0t Popover__item-text Popover__item-text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    data-test-text=""
+                    style="text-align: inherit;"
+                  >
+                    Auto height
+                  </small>
+                </div>
+                <div
+                  class="Popover__separator Popover__separator--light"
+                />
+                <div
+                  class="Popover__item Popover__item--light"
+                  data-test-popover-item="3"
+                >
+                  <div
+                    class="css-wcnq0t Popover__check-icon Popover__check-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="check"
+                    height="12"
+                    name="Check"
+                    width="12"
+                  />
+                  <div
+                    class="css-wcnq0t Popover__item-icon Popover__item-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="min-height"
+                    height="12"
+                    name="MinHeight"
+                    width="12"
+                  />
+                  <small
+                    class="css-wcnq0t Popover__item-text Popover__item-text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    data-test-text=""
+                    style="text-align: inherit;"
+                  >
+                    Add min height...
+                  </small>
+                </div>
+                <div
+                  class="Popover__item Popover__item--light"
+                  data-test-popover-item="4"
+                >
+                  <div
+                    class="css-wcnq0t Popover__check-icon Popover__check-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="check"
+                    height="12"
+                    name="Check"
+                    width="12"
+                  />
+                  <div
+                    class="css-wcnq0t Popover__item-icon Popover__item-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="max-height"
+                    height="12"
+                    name="MaxHeight"
+                    width="12"
+                  />
+                  <small
+                    class="css-wcnq0t Popover__item-text Popover__item-text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    data-test-text=""
+                    style="text-align: inherit;"
+                  >
+                    Add max height...
+                  </small>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div

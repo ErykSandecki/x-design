@@ -95,6 +95,7 @@ exports[`App snapshots should render router 1`] = `
     <div
       class="css-1nlc499 PanelProperties PanelProperties--light"
       data-test-box="panel-properties"
+      id="panelProperties"
       style="width: 240px;"
     >
       <div

@@ -13,7 +13,7 @@ import { useResizeHandler, useTheme } from 'hooks';
 // others
 import { className, classNames } from './classNames';
 import { TABS, translationNameSpace } from './constants';
-import { TOOLBAR_HEIGHT } from '../../constants';
+import { PANEL_PROPERTIES_ID, TOOLBAR_HEIGHT } from '../../constants';
 
 // store
 import { selectedElementsSelector } from 'store/pageBuilder/selectors';
@@ -47,6 +47,7 @@ const PanelProperties: FC<TPanelPropertiesProps> = () => {
     <Box
       classes={{ className: cx(classNamesWithTheme[className]) }}
       e2eValue="panel-properties"
+      id={PANEL_PROPERTIES_ID}
       onMouseDown={(event) => event.stopPropagation()}
       onKeyDown={(event) => event.stopPropagation()}
       ref={boxRef}

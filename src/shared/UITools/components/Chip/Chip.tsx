@@ -33,7 +33,7 @@ export const Chip: FC<TChipProps> = ({ children, e2eValue = '' }) => {
       classes={{
         className: cx(classNamesWithTheme[className]),
       }}
-      e2eAttribute={E2EAttribute.buttonIcon}
+      e2eAttribute={E2EAttribute.chip}
       e2eValue={e2eValue}
     >
       {children}

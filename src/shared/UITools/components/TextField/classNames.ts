@@ -9,4 +9,6 @@ export const classNames = {
     },
   },
   input: `${className}__input`,
+  iconWrapper: `${className}__icon-wrapper`,
+  icon: `${className}__icon`,
 };

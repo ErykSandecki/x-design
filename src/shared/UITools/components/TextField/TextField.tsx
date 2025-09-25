@@ -1,10 +1,13 @@
-import { FC, InputHTMLAttributes, ReactNode, Ref } from 'react';
+import { FC, InputHTMLAttributes, ReactNode, Ref, useRef } from 'react';
+import { noop } from 'lodash';
 
 // components
 import Box from '../../../UI/components/Box/Box';
+import Icon from 'shared/UI/components/Icon/Icon';
+import Popover from '../Popover/Popover';
 
 // hooks
-import { useTheme } from 'hooks';
+import { useOutsideClick, useTheme } from 'hooks';
 
 // others
 import { className as textFieldClassName, classNames } from './classNames';
@@ -15,18 +18,21 @@ import styles from './text-field.scss';
 // types
 import { E2EAttribute } from 'types';
 import { TE2EDataAttributeProps } from '../../../E2EDataAttributes/E2EDataAttribute';
+import { TPopover } from '../Popover/types';
 
 // utils
 import { getAttributes } from 'shared/E2EDataAttributes/utils';
 
 export type TTextFieldProps = Omit<
   InputHTMLAttributes<HTMLInputElement>,
-  'className' | 'color' | 'style'
+  'className' | 'color' | 'popover' | 'style'
 > & {
   className?: string;
   e2eValue?: TE2EDataAttributeProps['value'];
   endAdorment?: ReactNode;
   fullWidth?: boolean;
+  idContainer?: string;
+  popover?: TPopover;
   ref?: Ref<HTMLInputElement>;
   startAdornment?: ReactNode;
 };
@@ -37,11 +43,20 @@ export const TextField: FC<TTextFieldProps> = ({
   e2eValue = '',
   endAdorment,
   fullWidth = false,
+  idContainer = undefined,
+  popover,
   ref,
   startAdornment,
   ...restProps
 }) => {
+  const refItem = useRef(null);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
+  const { selected, setSelected } = useOutsideClick(
+    [],
+    refItem,
+    noop,
+    idContainer,
+  );
 
   return (
     <Box
@@ -71,7 +86,27 @@ export const TextField: FC<TTextFieldProps> = ({
         {...getAttributes(E2EAttribute.textFieldInput, e2eValue)}
         {...restProps}
       />
-      {endAdorment}
+      {popover ? (
+        <div className={cx(classNamesWithTheme.iconWrapper)} ref={refItem}>
+          <Icon
+            classes={{ className: cx(classNamesWithTheme.icon) }}
+            clickable
+            height={12}
+            name="Variant"
+            onClick={() => setSelected(!selected)}
+            width={12}
+          />
+          <Popover
+            e2eValue="dropdown"
+            popover={popover}
+            refItem={refItem}
+            selected={selected}
+            setSelected={setSelected}
+          />
+        </div>
+      ) : (
+        endAdorment
+      )}
     </Box>
   );
 };
