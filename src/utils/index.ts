@@ -4,6 +4,7 @@ export * from './common/isPureNumber';
 export * from './dom/createHtmlElement';
 export * from './dom/handleSubmitInput';
 export * from './dom/hasScroll';
+export * from './dom/sanitizeNumberInput';
 export * from './dom/scrollIntoView';
 export * from './dom/toggleBodyScroll';
 export * from './dom/toggleBodyUserSelect';

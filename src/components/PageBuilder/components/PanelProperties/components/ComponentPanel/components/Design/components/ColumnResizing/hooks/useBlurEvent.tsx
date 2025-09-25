@@ -6,6 +6,9 @@ import { setElementsSizes } from 'store/pageBuilder/actions';
 // types
 import { TElement } from 'types';
 
+// utils
+import { isPureNumber } from 'utils';
+
 export type TUseBlurEvent = {
   onBlurHeight: () => void;
   onBlurWidth: () => void;
@@ -24,7 +27,8 @@ export const useBlurEvent = (
     if (height === '') {
       setHeight(element.height.toString());
     } else {
-      dispatch(setElementsSizes('height', parseFloat(height)));
+      const targetHeight = isPureNumber(height) ? parseFloat(height) : height;
+      dispatch(setElementsSizes('height', targetHeight));
     }
   };
 
@@ -32,7 +36,8 @@ export const useBlurEvent = (
     if (width === '') {
       setWidth(element.width.toString());
     } else {
-      dispatch(setElementsSizes('width', parseFloat(width)));
+      const targetWidth = isPureNumber(width) ? parseFloat(width) : width;
+      dispatch(setElementsSizes('width', targetWidth));
     }
   };
 

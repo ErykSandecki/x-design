@@ -242,7 +242,7 @@ export type TSetElementsCoordinatesAction = {
 
 export type TSetElementsSizesActionPayload = {
   sizeType: keyof Pick<TElement, 'height' | 'width'>;
-  value: number;
+  value: TElement['height'] | TElement['width'];
 };
 
 export type TSetElementsSizesAction = {

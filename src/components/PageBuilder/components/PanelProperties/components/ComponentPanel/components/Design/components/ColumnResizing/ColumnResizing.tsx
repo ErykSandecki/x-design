@@ -25,7 +25,7 @@ import { GridColumnType } from 'shared/UITools/components/Section/components/Sec
 import { ColorsTheme, KeyboardKeys } from 'types';
 
 // utils
-import { handleSubmitInput, isPureNumber } from 'utils';
+import { handleSubmitInput, isPureNumber, sanitizeNumberInput } from 'utils';
 import { isMixed } from '../../utils/isMixed';
 
 const ColumnResizing: FC = () => {
@@ -57,6 +57,8 @@ const ColumnResizing: FC = () => {
     width,
   } = useResizingEvents(element, isMixedHeight, isMixedWidth, isMultiple);
   const { t } = useTranslation();
+  const isPureHeight = isPureNumber(height);
+  const isPureWidth = isPureNumber(width);
 
   return (
     <UITools.SectionColumn
@@ -67,51 +69,61 @@ const ColumnResizing: FC = () => {
         e2eValue="width"
         fullWidth
         onBlur={onBlurWidth}
-        onChange={(event) => onChangeWidth(event.target.value)}
+        onChange={(event) =>
+          onChangeWidth(sanitizeNumberInput(event.target.value))
+        }
         onClick={() => refInputWidth.current.select()}
         onKeyDown={(event) =>
           handleSubmitInput(KeyboardKeys.enter, refInputWidth.current)(event)
         }
         ref={refInputWidth}
         startAdornment={
-          <ScrubbableInput
-            disabled={!isPureNumber(width)}
-            e2eValue="width"
-            max={MAX}
-            min={0}
-            onChange={(value) => onChangeWidth(value.toString(), true)}
-            value={isMultiple ? 0 : parseFloat(width)}
-          >
-            <Small color={ColorsTheme.neutral2}>W</Small>
-          </ScrubbableInput>
+          <>
+            <ScrubbableInput
+              disabled={!isPureWidth}
+              e2eValue="width"
+              max={MAX}
+              min={0}
+              onChange={(value) => onChangeWidth(value.toString(), true)}
+              value={isMultiple ? 0 : parseFloat(width)}
+            >
+              <Small color={ColorsTheme.neutral2}>W</Small>
+            </ScrubbableInput>
+            {!isPureWidth && <UITools.Chip>{width}</UITools.Chip>}
+          </>
         }
-        type={isMixedWidth || !isPureNumber(width) ? 'text' : 'number'}
-        value={width}
+        type={isMixedWidth || !isPureWidth ? 'text' : 'number'}
+        value={isPureWidth ? width : ''}
       />
       <UITools.TextField
         e2eValue="height"
         fullWidth
         onBlur={onBlurHeight}
-        onChange={(event) => onChangeHeight(event.target.value)}
+        onChange={(event) =>
+          onChangeHeight(sanitizeNumberInput(event.target.value))
+        }
         onClick={() => refInputHeight.current.select()}
         onKeyDown={(event) =>
           handleSubmitInput(KeyboardKeys.enter, refInputHeight.current)(event)
         }
         ref={refInputHeight}
         startAdornment={
-          <ScrubbableInput
-            disabled={!isPureNumber(height)}
-            e2eValue="height"
-            max={MAX}
-            min={0}
-            onChange={(value) => onChangeHeight(value.toString(), true)}
-            value={isMultiple ? 0 : parseFloat(height)}
-          >
-            <Small color={ColorsTheme.neutral2}>H</Small>
-          </ScrubbableInput>
+          <>
+            <ScrubbableInput
+              disabled={!isPureHeight}
+              e2eValue="height"
+              max={MAX}
+              min={0}
+              onChange={(value) => onChangeHeight(value.toString(), true)}
+              value={isMultiple ? 0 : parseFloat(height)}
+            >
+              <Small color={ColorsTheme.neutral2}>H</Small>
+            </ScrubbableInput>
+            {!isPureHeight && <UITools.Chip>{height}</UITools.Chip>}
+          </>
         }
-        type={isMixedHeight || !isPureNumber(height) ? 'text' : 'number'}
-        value={height}
+        type={isMixedHeight || !isPureHeight ? 'text' : 'number'}
+        value={isPureHeight ? height : ''}
       />
     </UITools.SectionColumn>
   );

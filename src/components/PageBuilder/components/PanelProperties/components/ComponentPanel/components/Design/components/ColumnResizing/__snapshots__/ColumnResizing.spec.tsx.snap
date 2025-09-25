@@ -123,12 +123,18 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
               W
             </small>
           </div>
+          <div
+            class="css-wcnq0t Chip Chip--light"
+            data-test-button-icon=""
+          >
+            Mixed
+          </div>
           <input
             class="TextField__input TextField__input--light"
             data-test-text-field-input="width"
             maxlength="6"
             type="text"
-            value="Mixed"
+            value=""
           />
         </div>
         <div
@@ -147,12 +153,18 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
               H
             </small>
           </div>
+          <div
+            class="css-wcnq0t Chip Chip--light"
+            data-test-button-icon=""
+          >
+            Mixed
+          </div>
           <input
             class="TextField__input TextField__input--light"
             data-test-text-field-input="height"
             maxlength="6"
             type="text"
-            value="Mixed"
+            value=""
           />
         </div>
       </div>

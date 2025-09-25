@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chip snapshots should render Chip 1`] = `
+<DocumentFragment>
+  <div
+    class="css-wcnq0t Chip Chip--light"
+    data-test-button-icon="chip"
+  >
+    chip
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Chip snapshots should render with empty children 1`] = `<DocumentFragment />`;
