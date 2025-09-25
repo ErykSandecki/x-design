@@ -25,6 +25,7 @@ import { ReactComponent as FlowGrid } from './svg/flow-grid.svg';
 import { ReactComponent as FlowHorizontal } from './svg/flow-horizontal.svg';
 import { ReactComponent as FlowVertical } from './svg/flow-vertical.svg';
 import { ReactComponent as FrameTool } from './svg/frame-tool.svg';
+import { ReactComponent as HeightRestricted } from './svg/height-restricted.svg';
 import { ReactComponent as HtmlTag } from './svg/html-tag.svg';
 import { ReactComponent as Logo } from './svg/logo.svg';
 import { ReactComponent as MaxHeight } from './svg/max-height.svg';
@@ -40,6 +41,7 @@ import { ReactComponent as Sample } from './svg/sample.svg';
 import { ReactComponent as StepBackwardOutlined } from './svg/step-backward-outlined.svg';
 import { ReactComponent as ToggleRotate } from './svg/toggle-rotate.svg';
 import { ReactComponent as Variant } from './svg/variant.svg';
+import { ReactComponent as WidthRestricted } from './svg/width-restricted.svg';
 
 export const Icons = {
   AlignHorizontalCenter,
@@ -69,6 +71,7 @@ export const Icons = {
   FlowHorizontal,
   FlowVertical,
   FrameTool,
+  HeightRestricted,
   HtmlTag,
   Logo,
   MaxHeight,
@@ -84,4 +87,5 @@ export const Icons = {
   StepBackwardOutlined,
   ToggleRotate,
   Variant,
+  WidthRestricted,
 };
