@@ -17,6 +17,7 @@ import {
   REDUCER_KEY as PAGE_BUILDER,
   SET_AREA_COORDINATES,
 } from '../actionsType';
+import { ZOOM_CONTENT_ID } from 'shared';
 
 // store
 import pageBuilder from '../reducer';
@@ -43,6 +44,7 @@ import {
   changeLayout,
   fitLayout,
   setElementsSizes,
+  applyElementsSizeType,
 } from '../actions';
 
 // types
@@ -52,16 +54,25 @@ import {
   LayoutType,
   TAction,
   TBackground,
+  Unit,
 } from 'types';
 import { AnchorResize } from '../enums';
 import { TPageBuilderState } from '../types';
 
 // utils
 import { negateValue } from 'utils/math/negateValue';
+import { createHtmlElement } from 'utils';
+
+const zoomContent = createHtmlElement('div', { id: ZOOM_CONTENT_ID });
 
 describe('PageBuilderReducer', () => {
   const reducer = (action: TAction, initialState = {}): TPageBuilderState =>
     pageBuilder(initialState as TPageBuilderState, action);
+
+  beforeAll(() => {
+    // mock
+    document.body.appendChild(zoomContent);
+  });
 
   it('should return default state', () => {
     // before
@@ -129,6 +140,87 @@ describe('PageBuilderReducer', () => {
               },
             },
           },
+        },
+      },
+    });
+  });
+
+  it('should handle APPLY_ELEMENTS_SIZE_TYPE', () => {
+    // mock
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+    window.getComputedStyle = () =>
+      ({ height: '100px', width: '100px' }) as CSSStyleDeclaration;
+
+    // before
+    const state = reducer(applyElementsSizeType('height', 'unit'), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            allData: {
+              ...currentPage.elements.allData,
+              ['id']: {
+                ...elementAllDataMock,
+                id: 'id',
+              },
+            },
+            dynamicData: {
+              ...currentPage.elements.dynamicData,
+              ['id']: {
+                ...elementDynamicDataMock,
+                id: 'id',
+              },
+            },
+            staticData: {
+              ...currentPage.elements.staticData,
+              ['id']: {
+                ...elementStaticDataMock,
+                id: 'id',
+              },
+            },
+          },
+          selectedElements: [{ ...selectedElementMock, id: 'id' }],
+        },
+      },
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            allData: {
+              ...currentPage.elements.allData,
+              ['id']: {
+                ...elementAllDataMock,
+                height: { unit: Unit.percentage, value: 100 },
+                id: 'id',
+              },
+            },
+            dynamicData: {
+              ...currentPage.elements.dynamicData,
+              ['id']: {
+                ...elementDynamicDataMock,
+                height: { unit: Unit.percentage, value: 100 },
+                id: 'id',
+              },
+            },
+            staticData: {
+              ...currentPage.elements.staticData,
+              ['id']: {
+                ...elementStaticDataMock,
+                id: 'id',
+              },
+            },
+          },
+          selectedElements: [{ ...selectedElementMock, id: 'id' }],
         },
       },
     });

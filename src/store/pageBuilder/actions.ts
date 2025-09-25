@@ -1,6 +1,7 @@
 // others
 import {
   ADD_ELEMENT,
+  APPLY_ELEMENTS_SIZE_TYPE,
   CHANGE_ALIGNMENT,
   CHANGE_BACKGROUND,
   CHANGE_LAYOUT,
@@ -28,6 +29,8 @@ import {
 import {
   TAddELementAction,
   TAddELementActionPayload,
+  TApplyElementsSizeTypeAction,
+  TApplyElementsSizeTypeActionPaylad,
   TChangeAlignmentAction,
   TChangeBackgroundAction,
   TChangeBackgroundActionPayload,
@@ -41,19 +44,19 @@ import {
   TReducerHistoryRedoAction,
   TReducerHistorySaveAction,
   TReducerHistoryUndoAction,
+  TResizeElementAction,
+  TResizeElementActionPayload,
   TRotateElementsAction,
   TSelectElementAction,
   TSelectElementsAction,
   TSetAreaCoordinatesAction,
+  TSetElementsCoordinatesAction,
   TSetElementsCoordinatesActionPayload,
-  TResizeElementAction,
-  TResizeElementActionPayload,
+  TSetElementsSizesAction,
+  TSetElementsSizesActionPayload,
   TUnselectElementAction,
   TUpdateEventsStatusAction,
   TUpdatePrevStateAction,
-  TSetElementsCoordinatesAction,
-  TSetElementsSizesActionPayload,
-  TSetElementsSizesAction,
 } from './types';
 
 export const addElement = (
@@ -61,6 +64,14 @@ export const addElement = (
 ): TAddELementAction => ({
   payload,
   type: ADD_ELEMENT,
+});
+
+export const applyElementsSizeType = (
+  sizeType: TApplyElementsSizeTypeActionPaylad['sizeType'],
+  type: TApplyElementsSizeTypeActionPaylad['type'],
+): TApplyElementsSizeTypeAction => ({
+  payload: { sizeType, type },
+  type: APPLY_ELEMENTS_SIZE_TYPE,
 });
 
 export const changeAlignment = (

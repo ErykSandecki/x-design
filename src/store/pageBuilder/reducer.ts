@@ -22,6 +22,7 @@ import {
   UPDATE_EVENTS_STATUS,
   UPDATE_PREV_STATE,
   SET_ELEMENTS_SIZES,
+  APPLY_ELEMENTS_SIZE_TYPE,
 } from './actionsType';
 import { BASE_PAGE } from './constants';
 
@@ -46,11 +47,13 @@ import {
   TChangeLayoutAction,
   TSetElementsCoordinatesAction,
   TSetElementsSizesAction,
+  TApplyElementsSizeTypeAction,
 } from './types';
 
 // utils
 import { filterSelectedElements } from './utils/filterSelectedElements';
 import { handleAddElement } from './utils/handleAddElement';
+import { handleApplyElementSizeType } from './utils/applyElementsSizeType/handleApplyElementSizeType';
 import { handleChangeAlignment } from './utils/changeAligment/handleChangeAlignment';
 import { handleChangeBackground } from './utils/handleChangeBackground';
 import { handleChangeLayout } from './utils/handleChangeLayout';
@@ -95,6 +98,11 @@ const addElement = (
   state: TPageBuilderState,
   { payload: element }: TAction<TAddELementAction['payload']>,
 ): TPageBuilderState => handleAddElement(element, state);
+
+const applyElementsSizeType = (
+  state: TPageBuilderState,
+  { payload }: TAction<TApplyElementsSizeTypeAction['payload']>,
+): TPageBuilderState => handleApplyElementSizeType(payload, state);
 
 const changeAlignment = (
   state: TPageBuilderState,
@@ -272,6 +280,8 @@ const pageBuilder = (
   switch (action.type) {
     case ADD_ELEMENT:
       return addElement(state, action);
+    case APPLY_ELEMENTS_SIZE_TYPE:
+      return applyElementsSizeType(state, action);
     case CHANGE_ALIGNMENT:
       return changeAlignment(state, action);
     case CHANGE_BACKGROUND:

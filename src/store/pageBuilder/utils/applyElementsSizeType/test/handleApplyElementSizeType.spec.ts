@@ -1,3 +1,5 @@
+import { noop } from 'lodash';
+
 // mocks
 import {
   elementAllDataMock,
@@ -8,19 +10,29 @@ import {
 } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
-import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
+import { REDUCER_KEY as PAGE_BUILDER } from '../../../actionsType';
+
+// types
+import { Unit } from 'types';
 
 // utils
-import { handleSetElementsSizes } from '../handleSetElementsSizes';
+import { handleApplyElementSizeType } from '../handleApplyElementSizeType';
 
-describe('handleSetElementsSizes', () => {
-  it(`should change height`, () => {
+describe('handleApplyElementSizeType', () => {
+  beforeAll(() => {
+    // mock
+    document.getElementById = () => ({ querySelector: noop }) as any;
+    window.getComputedStyle = () =>
+      ({ height: '100px', width: '100px' }) as CSSStyleDeclaration;
+  });
+
+  it(`should apply unit`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
     // before
-    const result = handleSetElementsSizes(
-      'height',
+    const result = handleApplyElementSizeType(
+      { sizeType: 'height', type: 'unit' },
       {
         ...pageBuilderStateMock[PAGE_BUILDER],
         pages: {
@@ -46,7 +58,6 @@ describe('handleSetElementsSizes', () => {
           },
         },
       },
-      'auto',
     );
 
     // result
@@ -62,14 +73,14 @@ describe('handleSetElementsSizes', () => {
               ...currentPage.elements.allData,
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
-                height: { value: 'auto' },
+                height: { unit: Unit.percentage, value: 100 },
               },
             },
             dynamicData: {
               ...currentPage.elements.dynamicData,
               [elementDynamicDataMock.id]: {
                 ...elementDynamicDataMock,
-                height: { value: 'auto' },
+                height: { unit: Unit.percentage, value: 100 },
               },
             },
             staticData: {

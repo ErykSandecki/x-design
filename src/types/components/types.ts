@@ -30,6 +30,8 @@ export type TLayout = {
 };
 
 export type TSize = {
+  max?: number;
+  min?: number;
   unit?: Unit;
   value: number | CSSProperties['height'] | CSSProperties['width'];
 };

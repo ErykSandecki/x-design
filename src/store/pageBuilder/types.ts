@@ -22,6 +22,7 @@ import {
   UPDATE_EVENTS_STATUS,
   UPDATE_PREV_STATE,
   SET_ELEMENTS_SIZES,
+  APPLY_ELEMENTS_SIZE_TYPE,
 } from './actionsType';
 
 // types
@@ -132,6 +133,16 @@ export type TAddELementActionPayload = Omit<TElement, 'index'>;
 export type TAddELementAction = {
   payload: TAddELementActionPayload;
   type: typeof ADD_ELEMENT;
+};
+
+export type TApplyElementsSizeTypeActionPaylad = {
+  sizeType: keyof Pick<TElement, 'height' | 'width'>;
+  type: 'auto' | 'fixed' | 'max' | 'min' | 'unit';
+};
+
+export type TApplyElementsSizeTypeAction = {
+  payload: TApplyElementsSizeTypeActionPaylad;
+  type: typeof APPLY_ELEMENTS_SIZE_TYPE;
 };
 
 export type TChangeAlignmentActionPayload = {
