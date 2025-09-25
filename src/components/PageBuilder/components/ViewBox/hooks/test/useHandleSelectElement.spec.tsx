@@ -25,9 +25,9 @@ const rectCoordinates = {
   current: {
     [elementAllDataMock.id]: {
       x1: elementAllDataMock.coordinates.x,
-      x2: elementAllDataMock.width,
+      x2: elementAllDataMock.width.value,
       y1: elementAllDataMock.coordinates.y,
-      y2: elementAllDataMock.height,
+      y2: elementAllDataMock.height.value,
     },
   },
 } as RefObject<TObject<TRectCoordinates>>;

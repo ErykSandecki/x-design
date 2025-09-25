@@ -51,7 +51,12 @@ export const getSizes = (
     const height = parseInt(getComputedStyle(element).height);
     const width = parseInt(getComputedStyle(element).width);
 
-    return { height, width };
+    return {
+      height: { value: height },
+      width: {
+        value: width,
+      },
+    };
   }
 
   return {

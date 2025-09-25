@@ -23,3 +23,7 @@ export enum LayoutType {
   horizontal = 'horizontal',
   vertical = 'vertical',
 }
+
+export enum Unit {
+  percentage = '%',
+}

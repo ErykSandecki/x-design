@@ -624,16 +624,16 @@ describe('PageBuilderReducer', () => {
               ...currentPage.elements.allData,
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
-                height: 'auto',
-                width: 'auto',
+                height: { value: 'auto' },
+                width: { value: 'auto' },
               },
             },
             dynamicData: {
               ...currentPage.elements.dynamicData,
               [elementDynamicDataMock.id]: {
                 ...elementDynamicDataMock,
-                height: 'auto',
-                width: 'auto',
+                height: { value: 'auto' },
+                width: { value: 'auto' },
               },
             },
             staticData: {
@@ -1229,16 +1229,16 @@ describe('PageBuilderReducer', () => {
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
                 coordinates: { x: 0, y: 0 },
-                height: 100,
-                width: 300,
+                height: { value: 100 },
+                width: { value: 300 },
               },
             },
             dynamicData: {
               [elementDynamicDataMock.id]: {
                 ...elementDynamicDataMock,
                 coordinates: { x: 0, y: 0 },
-                height: 100,
-                width: 300,
+                height: { value: 100 },
+                width: { value: 300 },
               },
             },
             staticData: {
@@ -1504,14 +1504,14 @@ describe('PageBuilderReducer', () => {
               ...currentPage.elements.allData,
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
-                height: 'auto',
+                height: { value: 'auto' },
               },
             },
             dynamicData: {
               ...currentPage.elements.dynamicData,
               [elementDynamicDataMock.id]: {
                 ...elementDynamicDataMock,
-                height: 'auto',
+                height: { value: 'auto' },
               },
             },
             staticData: {

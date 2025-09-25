@@ -17,7 +17,10 @@ export const useResizingEvents = (
   isMixedWidth: boolean,
   isMultiple: boolean,
 ): TUseResizingEvents => {
-  const { height: currentHeight, width: currentWidth } = element;
+  const {
+    height: { value: currentHeight },
+    width: { value: currentWidth },
+  } = element;
   const [height, setHeight] = useState('');
   const [width, setWidth] = useState('');
   const onBlurEvents = useBlurEvent(

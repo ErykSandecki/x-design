@@ -34,13 +34,17 @@ export const handleCreateElement = (
       children: [],
       coordinates: { x, y },
       deepLevel: 0,
-      height: Math.abs(y1 - y2),
+      height: {
+        value: Math.abs(y1 - y2),
+      },
       id: generateID(),
       layout,
       parentId: '-1',
       position: 'absolute',
       type: ElementType.frame,
-      width: Math.abs(x1 - x2),
+      width: {
+        value: Math.abs(x1 - x2),
+      },
     };
 
     dispatch(addElement(element));

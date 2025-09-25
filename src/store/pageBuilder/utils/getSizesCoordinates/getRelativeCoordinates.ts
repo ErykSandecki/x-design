@@ -18,8 +18,8 @@ export const getHeightCoordinates = (
       x: x1,
       y: y1,
     },
-    height: height < 0 ? 0 : height,
-    width: baseWidth,
+    height: { value: height < 0 ? 0 : height },
+    width: { value: baseWidth },
   };
 };
 
@@ -38,8 +38,8 @@ export const getWidthCoordinates = (
       x: x1,
       y: y1,
     },
-    height: baseHeight,
-    width: width < 0 ? 0 : width,
+    height: { value: baseHeight },
+    width: { value: width < 0 ? 0 : width },
   };
 };
 

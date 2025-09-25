@@ -20,11 +20,11 @@ type TOutlineProps = {
   angle: TElement['angle'];
   counterAngle: number;
   elementRef: RefObject<HTMLDivElement>;
-  height: TElement['height'];
+  height: TElement['height']['value'];
   id: TElement['id'];
   mouseMode: MouseMode;
   relativeCoordinates?: TElement['coordinates'];
-  width: TElement['width'];
+  width: TElement['width']['value'];
 };
 
 const EventsArea: FC<TOutlineProps> = ({

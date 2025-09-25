@@ -26,10 +26,10 @@ export type TTransformAreaProps = {
   angle: TElement['angle'];
   counterAngle: number;
   elementRef: RefObject<HTMLDivElement>;
-  height: TElement['height'];
+  height: TElement['height']['value'];
   id: TElement['id'];
   moseMode: MouseMode;
-  width: TElement['width'];
+  width: TElement['width']['value'];
   x: TElement['coordinates']['x'];
   y: TElement['coordinates']['y'];
 };

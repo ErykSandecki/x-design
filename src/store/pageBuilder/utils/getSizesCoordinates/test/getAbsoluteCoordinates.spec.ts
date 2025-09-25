@@ -21,8 +21,8 @@ describe('getAbsoluteCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       coordinates: { x: 0, y: 0 },
-      height: 100,
-      width: 300,
+      height: { value: 100 },
+      width: { value: 300 },
     });
   });
 
@@ -42,8 +42,8 @@ describe('getAbsoluteCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       coordinates: { x: -200, y: 0 },
-      height: 100,
-      width: 200,
+      height: { value: 100 },
+      width: { value: 200 },
     });
   });
 
@@ -60,8 +60,8 @@ describe('getAbsoluteCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       coordinates: { x: 0, y: 100 },
-      height: 0,
-      width: 100,
+      height: { value: 0 },
+      width: { value: 100 },
     });
   });
 
@@ -78,8 +78,8 @@ describe('getAbsoluteCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       coordinates: { x: 0, y: -300 },
-      height: 400,
-      width: 100,
+      height: { value: 400 },
+      width: { value: 100 },
     });
   });
 
@@ -96,8 +96,8 @@ describe('getAbsoluteCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       coordinates: { x: 0, y: 100 },
-      height: 0,
-      width: 300,
+      height: { value: 0 },
+      width: { value: 300 },
     });
   });
 
@@ -114,8 +114,8 @@ describe('getAbsoluteCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       coordinates: { x: 100, y: 100 },
-      height: 0,
-      width: 100,
+      height: { value: 0 },
+      width: { value: 100 },
     });
   });
 
@@ -132,8 +132,8 @@ describe('getAbsoluteCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       coordinates: { x: 0, y: 0 },
-      height: 200,
-      width: 100,
+      height: { value: 200 },
+      width: { value: 100 },
     });
   });
 
@@ -150,8 +150,8 @@ describe('getAbsoluteCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       coordinates: { x: 0, y: 0 },
-      height: 200,
-      width: 300,
+      height: { value: 200 },
+      width: { value: 300 },
     });
   });
 
@@ -168,8 +168,8 @@ describe('getAbsoluteCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       coordinates: { x: 100, y: 0 },
-      height: 200,
-      width: 100,
+      height: { value: 200 },
+      width: { value: 100 },
     });
   });
 
@@ -186,8 +186,8 @@ describe('getAbsoluteCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       coordinates: { x: 100, y: 0 },
-      height: 100,
-      width: 100,
+      height: { value: 100 },
+      width: { value: 100 },
     });
   });
 });

@@ -75,11 +75,15 @@ export const elementDynamicDataMock: TElementDynamicData = {
     y: 0,
   },
   deepLevel: 0,
-  height: 100,
+  height: {
+    value: 100,
+  },
   id: '1',
   layout: layoutMock,
   position: 'absolute',
-  width: 100,
+  width: {
+    value: 100,
+  },
 };
 
 export const elementStaticDataMock: TElementStaticData = {
@@ -104,13 +108,17 @@ export const createFrameMock: TElement = {
   children: [],
   coordinates: { x: 0, y: 0 },
   deepLevel: 0,
-  height: 0,
+  height: {
+    value: 0,
+  },
   id: '1',
   layout: layoutMock,
   parentId: '-1',
   position: 'absolute',
   type: ElementType.frame,
-  width: 0,
+  width: {
+    value: 0,
+  },
 };
 
 export const eventsMock: TEvents = {
@@ -195,13 +203,17 @@ export const oneElementMock: TElementsData = {
         y: 0,
       },
       deepLevel: 0,
-      height: 0,
+      height: {
+        value: 0,
+      },
       id: '-1',
       layout: layoutMock,
       parentId: '-1',
       position: 'absolute',
       type: ElementType.base,
-      width: 0,
+      width: {
+        value: 0,
+      },
     },
     1: {
       alignment: {},
@@ -220,13 +232,17 @@ export const oneElementMock: TElementsData = {
         y: 500,
       },
       deepLevel: 0,
-      height: 500,
+      height: {
+        value: 500,
+      },
       id: '1',
       layout: layoutMock,
       parentId: '-1',
       position: 'absolute',
       type: ElementType.frame,
-      width: 500,
+      width: {
+        value: 500,
+      },
     },
   },
   dynamicData: {
@@ -246,11 +262,15 @@ export const oneElementMock: TElementsData = {
         y: 0,
       },
       deepLevel: 0,
-      height: 0,
+      height: {
+        value: 0,
+      },
       id: '-1',
       layout: layoutMock,
       position: 'absolute',
-      width: 0,
+      width: {
+        value: 0,
+      },
     },
     1: {
       alignment: {},
@@ -268,11 +288,15 @@ export const oneElementMock: TElementsData = {
         y: 500,
       },
       deepLevel: 0,
-      height: 500,
+      height: {
+        value: 500,
+      },
       id: '1',
       layout: layoutMock,
       position: 'absolute',
-      width: 500,
+      width: {
+        value: 500,
+      },
     },
   },
   staticData: {

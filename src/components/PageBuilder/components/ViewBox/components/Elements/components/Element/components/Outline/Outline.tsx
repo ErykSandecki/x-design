@@ -21,8 +21,8 @@ import { TElement } from 'types';
 
 type TOutlineProps = {
   angle: TElement['angle'];
-  height: TElement['height'];
-  width: TElement['width'];
+  height: TElement['height']['value'];
+  width: TElement['width']['value'];
   x: TElement['coordinates']['x'];
   y: TElement['coordinates']['y'];
 };

@@ -25,7 +25,7 @@ export const useBlurEvent = (
 
   const handleBlurHeight = (): void => {
     if (height === '') {
-      setHeight(element.height.toString());
+      setHeight(element.height.value.toString());
     } else {
       const targetHeight = isPureNumber(height) ? parseFloat(height) : height;
       dispatch(setElementsSizes('height', targetHeight));
@@ -34,7 +34,7 @@ export const useBlurEvent = (
 
   const handleBlurWidth = (): void => {
     if (width === '') {
-      setWidth(element.width.toString());
+      setWidth(element.width.value.toString());
     } else {
       const targetWidth = isPureNumber(width) ? parseFloat(width) : width;
       dispatch(setElementsSizes('width', targetWidth));

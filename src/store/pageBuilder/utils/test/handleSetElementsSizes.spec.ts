@@ -62,14 +62,14 @@ describe('handleChangeLayout', () => {
               ...currentPage.elements.allData,
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
-                height: 'auto',
+                height: { value: 'auto' },
               },
             },
             dynamicData: {
               ...currentPage.elements.dynamicData,
               [elementDynamicDataMock.id]: {
                 ...elementDynamicDataMock,
-                height: 'auto',
+                height: { value: 'auto' },
               },
             },
             staticData: {

@@ -42,13 +42,13 @@ export const BASE_ALL_DATA: TElement = {
   children: [],
   coordinates: BASE_2D,
   deepLevel: 0,
-  height: 0,
+  height: { value: 0 },
   id: '-1',
   layout: { type: LayoutType.default },
   parentId: '-1',
   position: 'absolute',
   type: ElementType.base,
-  width: 0,
+  width: { value: 0 },
 };
 
 export const BASE_DYNAMIC_DATA: TElementDynamicData = {

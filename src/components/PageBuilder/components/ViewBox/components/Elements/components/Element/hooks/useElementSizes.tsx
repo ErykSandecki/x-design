@@ -13,16 +13,19 @@ import { TElement } from 'types';
 import { isPureNumber } from 'utils';
 
 export type TUseElementSizes = {
-  cssHeight: TElement['height'];
-  cssWidth: TElement['height'];
-  height: TElement['height'];
-  width: TElement['width'];
+  cssHeight: TElement['height']['value'];
+  cssWidth: TElement['height']['value'];
+  height: TElement['height']['value'];
+  width: TElement['width']['value'];
 };
 
 export const useElementSizes = (id: TElement['id']): TUseElementSizes => {
   const { itemsRefs } = useRefs();
   const elementDynamicData = useSelector(elementDynamicDataSelectorCreator(id));
-  const { height: cssHeight, width: cssWidth } = elementDynamicData;
+  const {
+    height: { value: cssHeight },
+    width: { value: cssWidth },
+  } = elementDynamicData;
 
   const height =
     isPureNumber(cssHeight) || !itemsRefs[id]

@@ -74,17 +74,17 @@ describe('handleResizeElement', () => {
             allData: {
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
-                height: 100,
+                height: { value: 100 },
                 position: 'absolute',
-                width: 300,
+                width: { value: 300 },
               },
             },
             dynamicData: {
               [elementDynamicDataMock.id]: {
                 ...elementDynamicDataMock,
-                height: 100,
+                height: { value: 100 },
                 position: 'absolute',
-                width: 300,
+                width: { value: 300 },
               },
             },
             staticData: {

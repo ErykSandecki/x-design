@@ -85,6 +85,7 @@ describe('Element snapshots', () => {
           <Element
             classes={{ className: 'className' }}
             id={selectedElementMock.id}
+            index={0}
             mouseMode={MouseMode.default}
             parentId={selectedElementMock.parentId}
             type={ElementType.frame}
@@ -125,6 +126,7 @@ describe('Element snapshots', () => {
           <Element
             classes={{ className: 'className' }}
             id={selectedElementMock.id}
+            index={0}
             mouseMode={MouseMode.default}
             parentId={selectedElementMock.parentId}
             type={ElementType.frame}
@@ -159,8 +161,8 @@ describe('Element snapshots', () => {
                 ...stateMock[PAGE_BUILDER].pages['0'].elements.dynamicData,
                 [elementDynamicDataMock.id]: {
                   ...elementDynamicDataMock,
-                  height: 'auto',
-                  width: 'auto',
+                  height: { value: 'auto' },
+                  width: { value: 'auto' },
                 },
               },
               staticData: {
@@ -183,6 +185,7 @@ describe('Element snapshots', () => {
           <Element
             classes={{ className: 'className' }}
             id={selectedElementMock.id}
+            index={0}
             mouseMode={MouseMode.default}
             parentId={selectedElementMock.parentId}
             type={ElementType.frame}
@@ -227,6 +230,7 @@ describe('Element snapshots', () => {
           <Element
             classes={{ className: 'className' }}
             id={selectedElementMock.id}
+            index={0}
             mouseMode={MouseMode.default}
             parentId={selectedElementMock.parentId}
             type={ElementType.frame}

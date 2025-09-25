@@ -31,10 +31,10 @@ export const useTransformAreaEvents = (
   angle: TElement['angle'],
   cursorAngle: number,
   elementRef: RefObject<HTMLDivElement>,
-  height: TElement['height'],
+  height: TElement['height']['value'],
   id: TElement['id'],
   mouseMode: MouseMode,
-  width: TElement['width'],
+  width: TElement['width']['value'],
   x: TElement['coordinates']['x'],
   y: TElement['coordinates']['y'],
 ): TUseTransformAreaEvents => {

@@ -2,7 +2,6 @@ import { RefObject, useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 // hooks
-import { useElementSizes } from './useElementSizes';
 import { useForceRerender } from 'hooks';
 import { useInitializeRef } from './useInitializeRef';
 import { useMouseDownEvent } from './useMouseDownEvent';
@@ -29,18 +28,16 @@ import {
 // types
 import { MouseMode } from 'types/enums/mouseMode';
 import { TElement } from 'types';
+import { TUseElementSizes, useElementSizes } from './useElementSizes';
 
-export type TUseElementEvents = {
+export type TUseElementEvents = TUseElementSizes & {
   alignment: TElement['alignment'];
   angle: TElement['angle'];
   background: TElement['background'];
   coordinates: TElement['coordinates'];
   counterAngle: number;
-  cssHeight: TElement['height'];
-  cssWidth: TElement['height'];
   displayEventsArea: boolean;
   displayOutline: boolean;
-  height: TElement['height'];
   isHover: boolean;
   isMoving: boolean;
   isSelected: boolean;
@@ -49,7 +46,6 @@ export type TUseElementEvents = {
   onMouseEnter: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
   onMouseLeave: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
   position: TElement['position'];
-  width: TElement['width'];
   x: TElement['coordinates']['x'];
   y: TElement['coordinates']['y'];
 };

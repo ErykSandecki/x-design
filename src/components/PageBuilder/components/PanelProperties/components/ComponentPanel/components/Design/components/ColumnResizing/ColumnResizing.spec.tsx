@@ -172,10 +172,12 @@ describe('ColumnResizing behaviors', () => {
 
     // result
     expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].height,
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].height
+        .value,
     ).toBe(10000);
     expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].width,
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].width
+        .value,
     ).toBe(10000);
   });
 
@@ -219,10 +221,12 @@ describe('ColumnResizing behaviors', () => {
 
     // result
     expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].height,
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].height
+        .value,
     ).toBe(50);
     expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].width,
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].width
+        .value,
     ).toBe(50);
   });
 });

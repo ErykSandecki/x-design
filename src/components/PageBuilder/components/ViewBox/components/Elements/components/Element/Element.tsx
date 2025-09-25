@@ -39,10 +39,10 @@ type TElementProps = {
   children: (
     anlge: TElement['angle'],
     coordinates: TElement['coordinates'],
-    height: TElement['height'],
+    height: TElement['height']['value'],
     hover: boolean,
     selected: boolean,
-    width: TElement['width'],
+    width: TElement['width']['value'],
   ) => ReactNode;
   id: TElement['id'];
   index: number;

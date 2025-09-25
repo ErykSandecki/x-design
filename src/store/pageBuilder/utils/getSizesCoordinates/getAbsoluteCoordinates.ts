@@ -18,8 +18,8 @@ export const getEastCoordinates = (
       x: reverse ? x2 + x : x1,
       y: y1,
     },
-    height: baseHeight,
-    width: reverse ? x1 - (x2 + x) : baseWidth + x,
+    height: { value: baseHeight },
+    width: { value: reverse ? x1 - (x2 + x) : baseWidth + x },
   };
 };
 
@@ -38,8 +38,8 @@ export const getNorthCoordinates = (
       x: x1,
       y: reverseY ? y2 : y1 + y,
     },
-    height: reverseY ? y - baseHeight : y2 - (y1 + y),
-    width: baseWidth,
+    height: { value: reverseY ? y - baseHeight : y2 - (y1 + y) },
+    width: { value: baseWidth },
   };
 };
 
@@ -58,8 +58,8 @@ export const getSouthCoordinates = (
       x: x1,
       y: reverseY ? y2 + y : y1,
     },
-    height: reverseY ? y1 - (y2 + y) : baseHeight + y,
-    width: baseWidth,
+    height: { value: reverseY ? y1 - (y2 + y) : baseHeight + y },
+    width: { value: baseWidth },
   };
 };
 
@@ -78,8 +78,8 @@ export const getWestCoordinates = (
       x: reverseX ? x2 : x1 + x,
       y: y1,
     },
-    height: baseHeight,
-    width: reverseX ? x - baseWidth : x2 - (x1 + x),
+    height: { value: baseHeight },
+    width: { value: reverseX ? x - baseWidth : x2 - (x1 + x) },
   };
 };
 

@@ -38,6 +38,7 @@ import {
   TElement,
   TObject,
   TRectCoordinates,
+  TSize,
 } from 'types';
 
 export type TElementDynamicData = Pick<
@@ -197,12 +198,11 @@ export type TReducerHistoryUndoAction = {
   type: typeof REDUCER_HISTORY_UNDO;
 };
 
-export type TResizeElementActionPayload = Pick<
-  TElement,
-  'height' | 'id' | 'width'
-> & {
+export type TResizeElementActionPayload = Pick<TElement, 'id'> & {
   baseCoordinates: TRectCoordinates;
+  height: TSize['value'];
   mouseCoordinates: T2DCoordinates;
+  width: TSize['value'];
 };
 
 export type TResizeElementAction = {
@@ -242,7 +242,7 @@ export type TSetElementsCoordinatesAction = {
 
 export type TSetElementsSizesActionPayload = {
   sizeType: keyof Pick<TElement, 'height' | 'width'>;
-  value: TElement['height'] | TElement['width'];
+  value: TElement['height']['value'] | TElement['width']['value'];
 };
 
 export type TSetElementsSizesAction = {

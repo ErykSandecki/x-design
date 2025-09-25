@@ -117,8 +117,8 @@ describe('useElementEvents', () => {
                 },
                 [elementAllDataMock.id]: {
                   ...elementAllDataMock,
-                  height: 'auto',
-                  width: 'auto',
+                  height: { value: 'auto' },
+                  width: { value: 'auto' },
                 },
               },
               dynamicData: {
@@ -128,8 +128,8 @@ describe('useElementEvents', () => {
                 },
                 [elementDynamicDataMock.id]: {
                   ...elementDynamicDataMock,
-                  height: 'auto',
-                  width: 'auto',
+                  height: { value: 'auto' },
+                  width: { value: 'auto' },
                 },
               },
               staticData: {

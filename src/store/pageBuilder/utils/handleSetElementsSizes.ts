@@ -13,8 +13,8 @@ export const handleSetElementsSizes = (
   const clonedElements = cloneDeep(elements);
 
   selectedElements.forEach(({ id }) => {
-    clonedElements.allData[id][sizeType] = value;
-    clonedElements.dynamicData[id][sizeType] = value;
+    clonedElements.allData[id][sizeType].value = value;
+    clonedElements.dynamicData[id][sizeType].value = value;
   });
 
   return {

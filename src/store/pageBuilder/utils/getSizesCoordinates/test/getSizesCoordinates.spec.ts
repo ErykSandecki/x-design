@@ -22,8 +22,8 @@ describe('getSizesCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       coordinates: { x: 0, y: 0 },
-      height: 100,
-      width: 300,
+      height: { value: 100 },
+      width: { value: 300 },
     });
   });
 
@@ -41,8 +41,8 @@ describe('getSizesCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       coordinates: { x: 0, y: 0 },
-      height: 100,
-      width: 300,
+      height: { value: 100 },
+      width: { value: 300 },
     });
   });
 });

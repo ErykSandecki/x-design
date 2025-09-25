@@ -11,10 +11,10 @@ export const handleFitLayout = (
   const clonedElements = cloneDeep(elements);
 
   selectedElements.forEach(({ id }) => {
-    clonedElements.allData[id].height = 'auto';
-    clonedElements.allData[id].width = 'auto';
-    clonedElements.dynamicData[id].height = 'auto';
-    clonedElements.dynamicData[id].width = 'auto';
+    clonedElements.allData[id].height = { value: 'auto' };
+    clonedElements.allData[id].width = { value: 'auto' };
+    clonedElements.dynamicData[id].height = { value: 'auto' };
+    clonedElements.dynamicData[id].width = { value: 'auto' };
   });
 
   return {

@@ -19,9 +19,9 @@ export const useMouseMoveEvent = (
   cursorOffsetAngle: RefObject<number>,
   cursorPosition: RefObject<T2DCoordinates>,
   elementRef: RefObject<HTMLDivElement>,
-  height: TElement['height'],
+  height: TElement['height']['value'],
   id: TElement['id'],
-  width: TElement['width'],
+  width: TElement['width']['value'],
   x: TElement['coordinates']['x'],
   y: TElement['coordinates']['y'],
 ): TUseMouseMoveEvent => {

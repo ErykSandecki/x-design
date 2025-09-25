@@ -7,6 +7,7 @@ import {
   AlignmentVertical,
   ElementType,
   LayoutType,
+  Unit,
 } from './enums';
 import { T2DCoordinates } from 'types/types';
 
@@ -28,6 +29,11 @@ export type TLayout = {
   type: LayoutType;
 };
 
+export type TSize = {
+  unit?: Unit;
+  value: number | CSSProperties['height'] | CSSProperties['width'];
+};
+
 export type TElement = {
   alignment: TAlignment;
   angle: number;
@@ -35,11 +41,11 @@ export type TElement = {
   children: Array<string>;
   coordinates: T2DCoordinates;
   deepLevel: number;
-  height: number | CSSProperties['height'];
+  height: TSize;
   id: string;
   layout: TLayout;
   parentId: TElement['id'] | '-1';
   position: CSSProperties['position'];
   type: ElementType;
-  width: number | CSSProperties['width'];
+  width: TSize;
 };

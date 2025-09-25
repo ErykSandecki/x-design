@@ -398,10 +398,12 @@ describe('Design behaviors', () => {
 
     // result
     expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].height,
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].height
+        .value,
     ).toBe('auto');
     expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].width,
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].width
+        .value,
     ).toBe('auto');
   });
 });

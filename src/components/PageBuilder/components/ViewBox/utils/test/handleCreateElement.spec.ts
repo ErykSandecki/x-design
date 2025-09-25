@@ -49,8 +49,8 @@ describe('handleCreateElement', () => {
     // result
     expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
       ...createFrameMock,
-      height: 100,
-      width: 100,
+      height: { value: 100 },
+      width: { value: 100 },
     });
     expect(mockCallBack.mock.calls[1][0]).toBe(null);
     expect(mockCallBack.mock.calls[2][0]).toBe(MouseMode.default);
