@@ -4,7 +4,7 @@ import { RefObject } from 'react';
 import { BASE_2D } from 'shared';
 
 // types
-import { AlignmentHorizontal, AlignmentVertical, T2DCoordinates } from 'types';
+import { T2DCoordinates } from 'types';
 
 // utils
 import { updateCursorPosition } from '../updateCursorPosition';
@@ -14,17 +14,10 @@ const ref = { current: BASE_2D } as RefObject<T2DCoordinates>;
 describe('updateCursorPosition', () => {
   it(`should update cursor position`, () => {
     // before
-    updateCursorPosition(
-      {},
-      { x: 0, y: 0 },
-      ref,
-      {
-        clientX: 0,
-        clientY: 0,
-      } as MouseEvent,
-      '1',
-      '-1',
-    );
+    updateCursorPosition(ref, {
+      clientX: 0,
+      clientY: 0,
+    } as MouseEvent);
 
     // result
     expect(ref.current).toStrictEqual({ x: 0, y: 0 });
@@ -46,20 +39,10 @@ describe('updateCursorPosition', () => {
     document.body.appendChild(el2);
 
     // before
-    updateCursorPosition(
-      {
-        horizontal: AlignmentHorizontal.center,
-        vertical: AlignmentVertical.center,
-      },
-      { x: 0, y: 0 },
-      ref,
-      {
-        clientX: 0,
-        clientY: 0,
-      } as MouseEvent,
-      '1',
-      '-1',
-    );
+    updateCursorPosition(ref, {
+      clientX: 0,
+      clientY: 0,
+    } as MouseEvent);
 
     // result
     expect(ref.current).toStrictEqual({ x: 0, y: 0 });

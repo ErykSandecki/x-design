@@ -80,6 +80,7 @@ describe('Frame snapshots', () => {
           <Frame
             className="className"
             id={elementDynamicDataMock.id}
+            index={0}
             mouseMode={MouseMode.default}
             parentId={elementStaticDataMock.parentId}
             type={elementStaticDataMock.type}

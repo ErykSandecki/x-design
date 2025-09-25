@@ -78,7 +78,6 @@ describe('getMappedElementsWithResetPosition', () => {
                 children: [],
                 id: '2',
                 parentId: elementStaticDataMock.id,
-                position: 'relative',
               },
             },
           },
@@ -113,7 +112,6 @@ describe('getMappedElementsWithResetPosition', () => {
           children: [],
           id: '2',
           parentId: elementStaticDataMock.id,
-          position: 'relative',
         },
       },
     });
@@ -183,7 +181,6 @@ describe('getMappedElementsWithResetPosition', () => {
                 children: [],
                 id: '2',
                 parentId: elementStaticDataMock.id,
-                position: 'absolute',
               },
             },
           },
@@ -218,7 +215,6 @@ describe('getMappedElementsWithResetPosition', () => {
           children: [],
           id: '2',
           parentId: elementStaticDataMock.id,
-          position: 'absolute',
         },
       },
     });

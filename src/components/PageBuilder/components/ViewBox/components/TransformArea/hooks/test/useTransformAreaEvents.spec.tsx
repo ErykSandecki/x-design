@@ -42,11 +42,11 @@ describe('useTransformAreaEvents', () => {
       () =>
         useTransformAreaEvents(
           0,
+          0,
           elementRef,
           100,
           selectedElementMock.id,
           MouseMode.default,
-          0,
           100,
           100,
           100,

@@ -13,6 +13,7 @@ describe('useScrubbableInputEvents', () => {
     const { result } = renderHook(() =>
       useScrubbableInputEvents(
         ref,
+        false,
         100,
         0,
         mockCallBack,

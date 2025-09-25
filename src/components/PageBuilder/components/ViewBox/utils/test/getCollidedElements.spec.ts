@@ -190,9 +190,9 @@ describe('getCollidedElements', () => {
           },
           ['2']: {
             x1: elementAllDataMock.coordinates.x,
-            x2: elementAllDataMock.width as number,
+            x2: elementAllDataMock.width.value as number,
             y1: elementAllDataMock.coordinates.y,
-            y2: elementAllDataMock.height as number,
+            y2: elementAllDataMock.height.value as number,
           },
         },
       } as RefObject<TObject<TRectCoordinates>>,

@@ -18,7 +18,7 @@ describe('Outline snapshots', () => {
     // before
     const { asFragment } = render(
       <RefsProvider overlayContainerRefHtml={overlayContainer}>
-        <Outline height={100} width={100} x={0} y={0} />
+        <Outline angle={0} height={100} width={100} x={0} y={0} />
       </RefsProvider>,
     );
 
