@@ -124,7 +124,6 @@ export const handleChangeParent = (
   if (
     !hasAnomalies &&
     possibleParent &&
-    possibleParent !== currentPage.elements.allData[id].parentId &&
     !draggableElements.includes(possibleParent)
   ) {
     return handleWithPossibleParent(

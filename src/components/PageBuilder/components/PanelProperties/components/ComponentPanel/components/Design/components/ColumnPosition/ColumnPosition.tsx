@@ -11,7 +11,8 @@ import { ScrubbableInput, Small, UITools } from 'shared';
 import { usePositionEvents } from './hooks/usePositionEvents';
 
 // others
-import { MAX, MIN, translationNameSpace } from './constants';
+import { MAX, MIN } from '../../../../../../../../constants';
+import { translationNameSpace } from './constants';
 
 // store
 import {

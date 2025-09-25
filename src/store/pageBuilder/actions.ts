@@ -12,12 +12,13 @@ import {
   REDUCER_HISTORY_REDO,
   REDUCER_HISTORY_SAVE,
   REDUCER_HISTORY_UNDO,
+  RESIZE_ELEMENT,
   ROTATE_ELEMENTS,
   SELECT_ELEMENT,
   SELECT_ELEMENTS,
   SET_AREA_COORDINATES,
-  SET_ELEMENT_SIZES,
   SET_ELEMENTS_COORDINATES,
+  SET_ELEMENTS_SIZES,
   UNSELECT_ELEMENT,
   UPDATE_EVENTS_STATUS,
   UPDATE_PREV_STATE,
@@ -44,13 +45,15 @@ import {
   TSelectElementAction,
   TSelectElementsAction,
   TSetAreaCoordinatesAction,
-  TSetElementsCoordinatesAction,
   TSetElementsCoordinatesActionPayload,
-  TSetElementSizesAction,
-  TSetElementSizesActionPayload,
+  TResizeElementAction,
+  TResizeElementActionPayload,
   TUnselectElementAction,
   TUpdateEventsStatusAction,
   TUpdatePrevStateAction,
+  TSetElementsCoordinatesAction,
+  TSetElementsSizesActionPayload,
+  TSetElementsSizesAction,
 } from './types';
 
 export const addElement = (
@@ -124,6 +127,16 @@ export const reducerHistorySave = (
 export const reducerHistoryUndo = (): TReducerHistoryUndoAction => ({
   type: REDUCER_HISTORY_UNDO,
 });
+export const resizeElement = (
+  baseCoordinates: TResizeElementActionPayload['baseCoordinates'],
+  height: TResizeElementActionPayload['height'],
+  id: TResizeElementActionPayload['id'],
+  mouseCoordinates: TResizeElementActionPayload['mouseCoordinates'],
+  width: TResizeElementActionPayload['width'],
+): TResizeElementAction => ({
+  payload: { baseCoordinates, height, id, mouseCoordinates, width },
+  type: RESIZE_ELEMENT,
+});
 
 export const rotateElements = (
   angle: TRotateElementsAction['payload'],
@@ -153,23 +166,20 @@ export const setAreCoordinates = (
   type: SET_AREA_COORDINATES,
 });
 
-export const setElementSizes = (
-  baseCoordinates: TSetElementSizesActionPayload['baseCoordinates'],
-  height: TSetElementSizesActionPayload['height'],
-  id: TSetElementSizesActionPayload['id'],
-  mouseCoordinates: TSetElementSizesActionPayload['mouseCoordinates'],
-  width: TSetElementSizesActionPayload['width'],
-): TSetElementSizesAction => ({
-  payload: { baseCoordinates, height, id, mouseCoordinates, width },
-  type: SET_ELEMENT_SIZES,
-});
-
 export const setElementsCoordinates = (
   coordinates: TSetElementsCoordinatesActionPayload['coordinates'],
   mode: TSetElementsCoordinatesActionPayload['mode'],
 ): TSetElementsCoordinatesAction => ({
   payload: { coordinates, mode },
   type: SET_ELEMENTS_COORDINATES,
+});
+
+export const setElementsSizes = (
+  sizeType: TSetElementsSizesActionPayload['sizeType'],
+  value: TSetElementsSizesActionPayload['value'],
+): TSetElementsSizesAction => ({
+  payload: { sizeType, value },
+  type: SET_ELEMENTS_SIZES,
 });
 
 export const updateEventsStatus = (

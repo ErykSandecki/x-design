@@ -16,11 +16,12 @@ import {
   SELECT_ELEMENT,
   SELECT_ELEMENTS,
   SET_AREA_COORDINATES,
-  SET_ELEMENT_SIZES,
+  RESIZE_ELEMENT,
   SET_ELEMENTS_COORDINATES,
   UNSELECT_ELEMENT,
   UPDATE_EVENTS_STATUS,
   UPDATE_PREV_STATE,
+  SET_ELEMENTS_SIZES,
 } from './actionsType';
 
 // types
@@ -196,6 +197,19 @@ export type TReducerHistoryUndoAction = {
   type: typeof REDUCER_HISTORY_UNDO;
 };
 
+export type TResizeElementActionPayload = Pick<
+  TElement,
+  'height' | 'id' | 'width'
+> & {
+  baseCoordinates: TRectCoordinates;
+  mouseCoordinates: T2DCoordinates;
+};
+
+export type TResizeElementAction = {
+  payload: TResizeElementActionPayload;
+  type: typeof RESIZE_ELEMENT;
+};
+
 export type TRotateElementsAction = {
   payload: TElement['angle'];
   type: typeof ROTATE_ELEMENTS;
@@ -216,19 +230,6 @@ export type TSetAreaCoordinatesAction = {
   type: typeof SET_AREA_COORDINATES;
 };
 
-export type TSetElementSizesActionPayload = Pick<
-  TElement,
-  'height' | 'id' | 'width'
-> & {
-  baseCoordinates: TRectCoordinates;
-  mouseCoordinates: T2DCoordinates;
-};
-
-export type TSetElementSizesAction = {
-  payload: TSetElementSizesActionPayload;
-  type: typeof SET_ELEMENT_SIZES;
-};
-
 export type TSetElementsCoordinatesActionPayload = {
   coordinates: T2DCoordinates;
   mode: 'dynamic' | 'static';
@@ -237,6 +238,16 @@ export type TSetElementsCoordinatesActionPayload = {
 export type TSetElementsCoordinatesAction = {
   payload: TSetElementsCoordinatesActionPayload;
   type: typeof SET_ELEMENTS_COORDINATES;
+};
+
+export type TSetElementsSizesActionPayload = {
+  sizeType: keyof Pick<TElement, 'height' | 'width'>;
+  value: number;
+};
+
+export type TSetElementsSizesAction = {
+  payload: TSetElementsSizesActionPayload;
+  type: typeof SET_ELEMENTS_SIZES;
 };
 
 export type TUpdateEventsStatusAction = {

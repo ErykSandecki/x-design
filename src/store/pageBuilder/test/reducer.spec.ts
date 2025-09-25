@@ -28,7 +28,7 @@ import {
   setAreCoordinates,
   setElementsCoordinates,
   updateEventsStatus,
-  setElementSizes,
+  resizeElement,
   rotateElements,
   changeParent,
   updatePrevState,
@@ -42,6 +42,7 @@ import {
   flipElements,
   changeLayout,
   fitLayout,
+  setElementsSizes,
 } from '../actions';
 
 // types
@@ -579,7 +580,7 @@ describe('PageBuilderReducer', () => {
     });
   });
 
-  it('should handle CHANGE_LAYOUT', () => {
+  it('should handle FIT_LAYOUT', () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
@@ -1168,6 +1169,90 @@ describe('PageBuilderReducer', () => {
     });
   });
 
+  it('should handle RESIZE_ELEMENT', () => {
+    // mock
+    const baseCoordinates = { x1: 0, x2: 100, y1: 0, y2: 100 };
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+    const mouseCoordinates = { x: 200, y: 100 };
+
+    // before
+    const state = reducer(
+      resizeElement(
+        baseCoordinates,
+        100,
+        selectedElementMock.id,
+        mouseCoordinates,
+        100,
+      ),
+      {
+        ...pageBuilderStateMock[PAGE_BUILDER],
+        events: {
+          ...pageBuilderStateMock[PAGE_BUILDER].events,
+          selectedAnchorResize: AnchorResize.east,
+        },
+        pages: {
+          ...pageBuilderStateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...currentPage,
+            elements: {
+              allData: {
+                [elementAllDataMock.id]: elementAllDataMock,
+              },
+              dynamicData: {
+                [elementDynamicDataMock.id]: elementDynamicDataMock,
+              },
+              staticData: {
+                [elementStaticDataMock.id]: elementStaticDataMock,
+              },
+            },
+            selectedElements: {
+              [selectedElementMock.id]: selectedElementMock,
+            },
+          },
+        },
+      },
+    );
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      events: {
+        ...pageBuilderStateMock[PAGE_BUILDER].events,
+        selectedAnchorResize: AnchorResize.east,
+      },
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            allData: {
+              [elementAllDataMock.id]: {
+                ...elementAllDataMock,
+                coordinates: { x: 0, y: 0 },
+                height: 100,
+                width: 300,
+              },
+            },
+            dynamicData: {
+              [elementDynamicDataMock.id]: {
+                ...elementDynamicDataMock,
+                coordinates: { x: 0, y: 0 },
+                height: 100,
+                width: 300,
+              },
+            },
+            staticData: {
+              [elementStaticDataMock.id]: elementStaticDataMock,
+            },
+          },
+          selectedElements: {
+            [selectedElementMock.id]: selectedElementMock,
+          },
+        },
+      },
+    });
+  });
+
   it('should handle ROTATE_ELEMENT', () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
@@ -1309,90 +1394,6 @@ describe('PageBuilderReducer', () => {
     });
   });
 
-  it('should handle SET_ELEMENT_SIZES', () => {
-    // mock
-    const baseCoordinates = { x1: 0, x2: 100, y1: 0, y2: 100 };
-    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-    const mouseCoordinates = { x: 200, y: 100 };
-
-    // before
-    const state = reducer(
-      setElementSizes(
-        baseCoordinates,
-        100,
-        selectedElementMock.id,
-        mouseCoordinates,
-        100,
-      ),
-      {
-        ...pageBuilderStateMock[PAGE_BUILDER],
-        events: {
-          ...pageBuilderStateMock[PAGE_BUILDER].events,
-          selectedAnchorResize: AnchorResize.east,
-        },
-        pages: {
-          ...pageBuilderStateMock[PAGE_BUILDER].pages,
-          ['0']: {
-            ...currentPage,
-            elements: {
-              allData: {
-                [elementAllDataMock.id]: elementAllDataMock,
-              },
-              dynamicData: {
-                [elementDynamicDataMock.id]: elementDynamicDataMock,
-              },
-              staticData: {
-                [elementStaticDataMock.id]: elementStaticDataMock,
-              },
-            },
-            selectedElements: {
-              [selectedElementMock.id]: selectedElementMock,
-            },
-          },
-        },
-      },
-    );
-
-    // result
-    expect(state).toStrictEqual({
-      ...pageBuilderStateMock[PAGE_BUILDER],
-      events: {
-        ...pageBuilderStateMock[PAGE_BUILDER].events,
-        selectedAnchorResize: AnchorResize.east,
-      },
-      pages: {
-        ...pageBuilderStateMock[PAGE_BUILDER].pages,
-        ['0']: {
-          ...currentPage,
-          elements: {
-            allData: {
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
-                coordinates: { x: 0, y: 0 },
-                height: 100,
-                width: 300,
-              },
-            },
-            dynamicData: {
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                coordinates: { x: 0, y: 0 },
-                height: 100,
-                width: 300,
-              },
-            },
-            staticData: {
-              [elementStaticDataMock.id]: elementStaticDataMock,
-            },
-          },
-          selectedElements: {
-            [selectedElementMock.id]: selectedElementMock,
-          },
-        },
-      },
-    });
-  });
-
   it('should handle SET_ELEMENTS_COORDINATES', () => {
     // mock
     const coordinates = { x: 100, y: 100 };
@@ -1453,6 +1454,73 @@ describe('PageBuilderReducer', () => {
             staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
           },
           prevState,
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+  });
+
+  it('should handle FIT_LAYOUT', () => {
+    // mock
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+
+    // before
+    const state = reducer(setElementsSizes('height', 'auto'), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            allData: {
+              ...currentPage.elements.allData,
+              [elementAllDataMock.id]: elementAllDataMock,
+            },
+            dynamicData: {
+              ...currentPage.elements.dynamicData,
+              [elementDynamicDataMock.id]: elementDynamicDataMock,
+            },
+            staticData: {
+              ...currentPage.elements.staticData,
+              [elementStaticDataMock.id]: elementStaticDataMock,
+            },
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            allData: {
+              ...currentPage.elements.allData,
+              [elementAllDataMock.id]: {
+                ...elementAllDataMock,
+                height: 'auto',
+              },
+            },
+            dynamicData: {
+              ...currentPage.elements.dynamicData,
+              [elementDynamicDataMock.id]: {
+                ...elementDynamicDataMock,
+                height: 'auto',
+              },
+            },
+            staticData: {
+              ...currentPage.elements.staticData,
+              [elementStaticDataMock.id]: {
+                ...elementStaticDataMock,
+              },
+            },
+          },
           selectedElements: [selectedElementMock],
         },
       },

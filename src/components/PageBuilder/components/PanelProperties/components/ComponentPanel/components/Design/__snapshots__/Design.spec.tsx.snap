@@ -512,7 +512,56 @@ exports[`Design snapshots should render Design 1`] = `
         <div
           class="SectionColumn__content SectionColumn__content--light SectionColumn__content--two-inputs SectionColumn__content--two-inputs--light"
           style="width: calc(100% - 24px - 0px - 8px);"
-        />
+        >
+          <div
+            class="css-wcnq0t TextField TextField--light TextField--full-width TextField--full-width--light"
+            data-test-text-field="width"
+          >
+            <div
+              class="ScrubbableInput ScrubbableInput--light"
+              data-test-scrubbable-input="width"
+            >
+              <small
+                class="css-wcnq0t Typography Typography--light Typography--neutral2 Typography--neutral2--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                data-test-text=""
+                style="text-align: inherit;"
+              >
+                W
+              </small>
+            </div>
+            <input
+              class="TextField__input TextField__input--light"
+              data-test-text-field-input="width"
+              maxlength="6"
+              type="number"
+              value="100"
+            />
+          </div>
+          <div
+            class="css-wcnq0t TextField TextField--light TextField--full-width TextField--full-width--light"
+            data-test-text-field="height"
+          >
+            <div
+              class="ScrubbableInput ScrubbableInput--light"
+              data-test-scrubbable-input="height"
+            >
+              <small
+                class="css-wcnq0t Typography Typography--light Typography--neutral2 Typography--neutral2--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                data-test-text=""
+                style="text-align: inherit;"
+              >
+                H
+              </small>
+            </div>
+            <input
+              class="TextField__input TextField__input--light"
+              data-test-text-field-input="height"
+              maxlength="6"
+              type="number"
+              value="100"
+            />
+          </div>
+        </div>
         <div
           class="SectionColumn__buttons SectionColumn__buttons--light"
         />

@@ -9,7 +9,6 @@ import {
   elementAllDataMock,
   elementDynamicDataMock,
   elementStaticDataMock,
-  layoutMock,
   pageBuilderStateMock,
   selectedElementMock,
 } from 'test/mocks/reducer/pageBuilderMock';
@@ -21,7 +20,7 @@ import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 import { configureStore } from 'store/store';
 
 // types
-import { E2EAttribute, LayoutType } from 'types';
+import { E2EAttribute, KeyboardKeys } from 'types';
 
 // utils
 import { getByE2EAttribute } from 'test';
@@ -101,22 +100,18 @@ describe('ColumnResizing snapshots', () => {
                 ...stateMock[PAGE_BUILDER].pages['0'].elements.allData,
                 ['2']: {
                   ...elementAllDataMock,
+                  height: '1000',
                   id: '2',
-                  layout: {
-                    ...layoutMock,
-                    type: LayoutType.grid,
-                  },
+                  width: '1000',
                 },
               },
               dynamicData: {
                 ...stateMock[PAGE_BUILDER].pages['0'].elements.dynamicData,
                 ['2']: {
                   ...elementDynamicDataMock,
+                  height: '1000',
                   id: '2',
-                  layout: {
-                    ...layoutMock,
-                    type: LayoutType.grid,
-                  },
+                  width: '1000',
                 },
               },
             },
@@ -138,5 +133,96 @@ describe('ColumnResizing snapshots', () => {
 
     // result
     expect(asFragment()).toMatchSnapshot();
+  });
+});
+
+describe('ColumnResizing behaviors', () => {
+  it('should change width & height when enter value on input', () => {
+    // mock
+    const store = configureStore(stateMock);
+
+    // before
+    const { container } = render(
+      <Provider store={store}>
+        <ColumnResizing />
+      </Provider>,
+    );
+
+    // find
+    const inputHeight = getByE2EAttribute(
+      container,
+      E2EAttribute.textFieldInput,
+      'height',
+    );
+    const inputWidth = getByE2EAttribute(
+      container,
+      E2EAttribute.textFieldInput,
+      'width',
+    );
+
+    // action
+    fireEvent.click(inputHeight);
+    fireEvent.change(inputHeight, { target: { value: '10000' } });
+    fireEvent.keyDown(inputHeight, { key: KeyboardKeys.enter });
+    fireEvent.blur(inputHeight);
+    fireEvent.click(inputWidth);
+    fireEvent.change(inputWidth, { target: { value: '10000' } });
+    fireEvent.keyDown(inputWidth, { key: KeyboardKeys.enter });
+    fireEvent.blur(inputWidth);
+
+    // result
+    expect(
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].height,
+    ).toBe(10000);
+    expect(
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].width,
+    ).toBe(10000);
+  });
+
+  it('should change width & height when triger ScrubbableInput', () => {
+    // mock
+    const store = configureStore(stateMock);
+    const mouseMoveEvent = new MouseEvent('mousemove', {
+      bubbles: true,
+      cancelable: true,
+      shiftKey: false,
+      view: window,
+    });
+    Object.defineProperty(mouseMoveEvent, 'movementX', { value: -100 });
+
+    // before
+    const { container } = render(
+      <Provider store={store}>
+        <ColumnResizing />
+      </Provider>,
+    );
+
+    // find
+    const scrubbableInputHeight = getByE2EAttribute(
+      container,
+      E2EAttribute.scrubbableInput,
+      'height',
+    );
+    const scrubbableInputWidth = getByE2EAttribute(
+      container,
+      E2EAttribute.scrubbableInput,
+      'width',
+    );
+
+    // action
+    fireEvent.mouseDown(scrubbableInputHeight, { clientX: 0, clientY: 0 });
+    window.dispatchEvent(mouseMoveEvent);
+    fireEvent.mouseUp(scrubbableInputHeight);
+    fireEvent.mouseDown(scrubbableInputWidth, { clientX: 0, clientY: 0 });
+    window.dispatchEvent(mouseMoveEvent);
+    fireEvent.mouseUp(scrubbableInputWidth);
+
+    // result
+    expect(
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].height,
+    ).toBe(50);
+    expect(
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].width,
+    ).toBe(50);
   });
 });

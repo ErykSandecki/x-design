@@ -1,15 +1,15 @@
 // types
-import { TPageBuilderState, TSetElementSizesActionPayload } from '../types';
+import { TPageBuilderState, TResizeElementActionPayload } from '../types';
 
 // utils
 import { getSizesCoordinates } from './getSizesCoordinates/getSizesCoordinates';
 
-export const handleSetElementSizes = (
-  baseCoordinates: TSetElementSizesActionPayload['baseCoordinates'],
-  baseHeight: TSetElementSizesActionPayload['height'],
-  baseWidth: TSetElementSizesActionPayload['width'],
-  id: TSetElementSizesActionPayload['id'],
-  mouseCoordinates: TSetElementSizesActionPayload['mouseCoordinates'],
+export const handleResizeElement = (
+  baseCoordinates: TResizeElementActionPayload['baseCoordinates'],
+  baseHeight: TResizeElementActionPayload['height'],
+  baseWidth: TResizeElementActionPayload['width'],
+  id: TResizeElementActionPayload['id'],
+  mouseCoordinates: TResizeElementActionPayload['mouseCoordinates'],
   state: TPageBuilderState,
 ): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];

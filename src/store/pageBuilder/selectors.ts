@@ -103,11 +103,17 @@ export const staticDataSelector: Selector<
 
 export const filtredStaticDataSelectorCreator = (
   parentId: TElement['parentId'],
-): Selector<TMainState, Array<TElementStaticData>> =>
+): Selector<
+  TMainState,
+  { children: TElement['children']; data: Array<TElementStaticData> }
+> =>
   createSelector(
     childrenSelectorCreator(parentId),
     staticDataSelector,
-    (children, staticData) => map(children, (id) => staticData[id]),
+    (children, staticData) => ({
+      children,
+      data: map(children, (id) => staticData[id]),
+    }),
   );
 
 export const eventsSelector: Selector<TMainState, TEvents> = createSelector(

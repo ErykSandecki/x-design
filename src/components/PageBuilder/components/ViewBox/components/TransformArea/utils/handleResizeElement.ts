@@ -3,7 +3,7 @@ import { RefObject } from 'react';
 
 // store
 import { areaAxisSelectorCreator } from 'store/pageBuilder/selectors';
-import { setElementSizes } from 'store/pageBuilder/actions';
+import { resizeElement } from 'store/pageBuilder/actions';
 import { store } from 'store';
 
 // types
@@ -32,5 +32,5 @@ export const handleResizeElement = (
     y: Math.round(event.clientY / z - current.y / z),
   };
 
-  dispatch(setElementSizes(baseCoordinates, height, id, mousePosition, width));
+  dispatch(resizeElement(baseCoordinates, height, id, mousePosition, width));
 };

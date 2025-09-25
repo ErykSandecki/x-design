@@ -57,6 +57,7 @@ describe('useMouseLeaveEvent', () => {
       possibleAnchorElementId: '-1',
       possibleAnchorPosition: null,
       possibleIndexPosition: null,
+      possibleParent: '1',
     });
   });
 

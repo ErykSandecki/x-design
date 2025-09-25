@@ -1,4 +1,5 @@
 import { FC, memo } from 'react';
+import { isEqual } from 'lodash';
 import { useSelector } from 'react-redux';
 
 // components
@@ -32,13 +33,15 @@ const Elements: FC<TElementsProps> = ({
   mouseMode,
   parentId,
 }) => {
+  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const staticData = useSelector(
     filtredStaticDataSelectorCreator(parentId),
-    (prev, next) => prev.length === next.length,
+    (prev, next) =>
+      prev.data.length === next.data.length &&
+      isEqual(prev.children, next.children),
   );
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
-  return staticData.map(({ id, parentId, type }, index) => {
+  return staticData.data.map(({ id, parentId, type }, index) => {
     switch (type) {
       case ElementType.frame:
         return (

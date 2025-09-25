@@ -16,11 +16,12 @@ import {
   SELECT_ELEMENT,
   SELECT_ELEMENTS,
   SET_AREA_COORDINATES,
-  SET_ELEMENT_SIZES,
+  RESIZE_ELEMENT,
   SET_ELEMENTS_COORDINATES,
   UNSELECT_ELEMENT,
   UPDATE_EVENTS_STATUS,
   UPDATE_PREV_STATE,
+  SET_ELEMENTS_SIZES,
 } from './actionsType';
 import { BASE_PAGE } from './constants';
 
@@ -34,9 +35,8 @@ import {
   TUnselectElementAction,
   TSelectElementsAction,
   TSetAreaCoordinatesAction,
-  TSetElementsCoordinatesAction,
   TUpdateEventsStatusAction,
-  TSetElementSizesAction,
+  TResizeElementAction,
   TRotateElementsAction,
   TChangeParentAction,
   TChangeBackgroundAction,
@@ -44,6 +44,8 @@ import {
   TChangeAlignmentAction,
   TFlipElementsAction,
   TChangeLayoutAction,
+  TSetElementsCoordinatesAction,
+  TSetElementsSizesAction,
 } from './types';
 
 // utils
@@ -58,10 +60,11 @@ import { handleFlipElements } from './utils/handleFlipElements';
 import { handleReducerHistoryRedo } from './utils/reducerHistory/handleReducerHistoryRedo';
 import { handleReducerHistorySave } from './utils/reducerHistory/handleReducerHistorySave';
 import { handleReducerHistoryUndo } from './utils/reducerHistory/handleReducerHistoryUndo';
+import { handleResizeElement } from './utils/handleResizeElement';
 import { handleRotateElements } from './utils/handleRotateElements';
 import { handleSetElementsCoordinates } from './utils/handleSetElementsCoordinates';
-import { handleSetElementSizes } from './utils/handleSetElementSize';
 import { handleFitLayout } from './utils/handleFitLayout';
+import { handleSetElementsSizes } from './utils/handleSetElementsSizes';
 
 const initialState: TPageBuilderState = {
   currentPage: '0',
@@ -146,6 +149,21 @@ const reducerHistorySave = (
 const reducerHistoryUndo = (state: TPageBuilderState): TPageBuilderState =>
   handleReducerHistoryUndo(state);
 
+const resizeElement = (
+  state: TPageBuilderState,
+  {
+    payload: { baseCoordinates, height, id, mouseCoordinates, width },
+  }: TAction<TResizeElementAction['payload']>,
+): TPageBuilderState =>
+  handleResizeElement(
+    baseCoordinates,
+    height,
+    width,
+    id,
+    mouseCoordinates,
+    state,
+  );
+
 const rotateElements = (
   state: TPageBuilderState,
   { payload }: TAction<TRotateElementsAction['payload']>,
@@ -199,25 +217,15 @@ const setAreaCoordinates = (
   },
 });
 
-const setElementSizes = (
-  state: TPageBuilderState,
-  {
-    payload: { baseCoordinates, height, id, mouseCoordinates, width },
-  }: TAction<TSetElementSizesAction['payload']>,
-): TPageBuilderState =>
-  handleSetElementSizes(
-    baseCoordinates,
-    height,
-    width,
-    id,
-    mouseCoordinates,
-    state,
-  );
-
 const setElementsCoordinates = (
   state: TPageBuilderState,
   { payload: coordinates }: TAction<TSetElementsCoordinatesAction['payload']>,
 ): TPageBuilderState => handleSetElementsCoordinates(coordinates, state);
+
+const setElementsSizes = (
+  state: TPageBuilderState,
+  { payload: { sizeType, value } }: TAction<TSetElementsSizesAction['payload']>,
+): TPageBuilderState => handleSetElementsSizes(sizeType, state, value);
 
 const updateEventsStatus = (
   state: TPageBuilderState,
@@ -286,6 +294,8 @@ const pageBuilder = (
       return reducerHistorySave(state, action);
     case REDUCER_HISTORY_UNDO:
       return reducerHistoryUndo(state);
+    case RESIZE_ELEMENT:
+      return resizeElement(state, action);
     case ROTATE_ELEMENTS:
       return rotateElements(state, action);
     case SELECT_ELEMENT:
@@ -294,10 +304,10 @@ const pageBuilder = (
       return selectElements(state, action);
     case SET_AREA_COORDINATES:
       return setAreaCoordinates(state, action);
-    case SET_ELEMENT_SIZES:
-      return setElementSizes(state, action);
     case SET_ELEMENTS_COORDINATES:
       return setElementsCoordinates(state, action);
+    case SET_ELEMENTS_SIZES:
+      return setElementsSizes(state, action);
     case UPDATE_EVENTS_STATUS:
       return updateEventsStatus(state, action);
     case UPDATE_PREV_STATE:

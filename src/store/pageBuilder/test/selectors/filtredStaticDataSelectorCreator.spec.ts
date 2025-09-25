@@ -24,6 +24,6 @@ describe('filtredStaticDataSelectorCreator', () => {
           ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements.staticData,
         },
       }),
-    ).toStrictEqual([]);
+    ).toStrictEqual({ children: [], data: [] });
   });
 });

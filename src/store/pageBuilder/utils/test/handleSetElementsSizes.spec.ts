@@ -10,45 +10,35 @@ import {
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
 
-// types
-import { AnchorResize } from 'store/pageBuilder/enums';
-
 // utils
-import { handleSetElementSizes } from '../handleSetElementSize';
+import { handleSetElementsSizes } from '../handleSetElementsSizes';
 
-const baseCoordinates = { x1: 0, x2: 100, y1: 0, y2: 100 };
-const mouseCoordinates = { x: 200, y: 100 };
-
-describe('handleSetElementSizes', () => {
-  it(`should handle set element sizes`, () => {
+describe('handleChangeLayout', () => {
+  it(`should change height`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
     // before
-    const result = handleSetElementSizes(
-      baseCoordinates,
-      100,
-      100,
-      selectedElementMock.id,
-      mouseCoordinates,
+    const result = handleSetElementsSizes(
+      'height',
       {
         ...pageBuilderStateMock[PAGE_BUILDER],
-        events: {
-          ...pageBuilderStateMock[PAGE_BUILDER].events,
-          selectedAnchorResize: AnchorResize.east,
-        },
         pages: {
           ...pageBuilderStateMock[PAGE_BUILDER].pages,
           ['0']: {
             ...currentPage,
             elements: {
+              ...currentPage.elements,
               allData: {
+                ...currentPage.elements.allData,
                 [elementAllDataMock.id]: elementAllDataMock,
               },
               dynamicData: {
+                ...currentPage.elements.dynamicData,
                 [elementDynamicDataMock.id]: elementDynamicDataMock,
               },
               staticData: {
+                ...currentPage.elements.staticData,
                 [elementStaticDataMock.id]: elementStaticDataMock,
               },
             },
@@ -56,39 +46,37 @@ describe('handleSetElementSizes', () => {
           },
         },
       },
+      'auto',
     );
 
     // result
     expect(result).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
-      events: {
-        ...pageBuilderStateMock[PAGE_BUILDER].events,
-        selectedAnchorResize: AnchorResize.east,
-      },
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
-
         ['0']: {
           ...currentPage,
           elements: {
+            ...currentPage.elements,
             allData: {
+              ...currentPage.elements.allData,
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
-                height: 100,
-                position: 'absolute',
-                width: 300,
+                height: 'auto',
               },
             },
             dynamicData: {
+              ...currentPage.elements.dynamicData,
               [elementDynamicDataMock.id]: {
                 ...elementDynamicDataMock,
-                height: 100,
-                position: 'absolute',
-                width: 300,
+                height: 'auto',
               },
             },
             staticData: {
-              [elementStaticDataMock.id]: elementStaticDataMock,
+              ...currentPage.elements.staticData,
+              [elementStaticDataMock.id]: {
+                ...elementStaticDataMock,
+              },
             },
           },
           selectedElements: [selectedElementMock],

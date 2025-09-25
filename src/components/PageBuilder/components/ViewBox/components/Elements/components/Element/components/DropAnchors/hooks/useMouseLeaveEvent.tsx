@@ -32,6 +32,7 @@ export const useMouseLeaveEvent = (
             possibleAnchorElementId: '-1',
             possibleAnchorPosition: null,
             possibleIndexPosition: null,
+            possibleParent: id,
           }),
         );
       }
