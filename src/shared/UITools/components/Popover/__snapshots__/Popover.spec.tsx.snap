@@ -4,8 +4,7 @@ exports[`Popover snapshots should render Popover 1`] = `
 <DocumentFragment>
   <div
     class="Popover Popover--light"
-    data-test-dropdown="popover"
-    data-test-popover=""
+    data-test-popover="popover"
     style="left: 0px; top: 0px;"
   >
     <div
@@ -71,8 +70,7 @@ exports[`Popover snapshots should render selected 1`] = `
 <DocumentFragment>
   <div
     class="Popover Popover--light Popover--selected Popover--selected--light"
-    data-test-dropdown="popover"
-    data-test-popover=""
+    data-test-popover="popover"
     style="left: 0px; top: 0px;"
   >
     <div

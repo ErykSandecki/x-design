@@ -548,8 +548,7 @@ exports[`Design snapshots should render Design 1`] = `
               />
               <div
                 class="Popover Popover--light"
-                data-test-dropdown="popover"
-                data-test-popover=""
+                data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
@@ -697,8 +696,7 @@ exports[`Design snapshots should render Design 1`] = `
               />
               <div
                 class="Popover Popover--light"
-                data-test-dropdown="popover"
-                data-test-popover=""
+                data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div

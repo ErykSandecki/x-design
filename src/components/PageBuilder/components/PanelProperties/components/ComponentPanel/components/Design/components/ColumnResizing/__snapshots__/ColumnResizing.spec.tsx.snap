@@ -60,8 +60,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
             />
             <div
               class="Popover Popover--light"
-              data-test-dropdown="popover"
-              data-test-popover=""
+              data-test-popover="popover"
               style="left: 0px; top: 0px;"
             >
               <div
@@ -209,8 +208,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
             />
             <div
               class="Popover Popover--light"
-              data-test-dropdown="popover"
-              data-test-popover=""
+              data-test-popover="popover"
               style="left: 0px; top: 0px;"
             >
               <div
@@ -392,8 +390,7 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
             />
             <div
               class="Popover Popover--light"
-              data-test-dropdown="popover"
-              data-test-popover=""
+              data-test-popover="popover"
               style="left: 0px; top: 0px;"
             >
               <div
@@ -541,8 +538,7 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
             />
             <div
               class="Popover Popover--light"
-              data-test-dropdown="popover"
-              data-test-popover=""
+              data-test-popover="popover"
               style="left: 0px; top: 0px;"
             >
               <div

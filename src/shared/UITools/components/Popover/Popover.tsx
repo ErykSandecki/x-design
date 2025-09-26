@@ -5,6 +5,7 @@ import { FC, RefObject, useRef } from 'react';
 import E2EDataAttribute, {
   TE2EDataAttributeProps,
 } from '../../../E2EDataAttributes/E2EDataAttribute';
+import { Icon, Small } from 'shared';
 
 // hooks
 import { useTheme } from 'hooks';
@@ -20,7 +21,6 @@ import { E2EAttribute } from 'types';
 import { TPopover } from './types';
 
 // utils
-import { getAttributes, Icon, Small } from 'shared';
 import { getPosition } from './utils/getPosition';
 
 export type TPopoverProps = {
@@ -48,7 +48,7 @@ export const Popover: FC<TPopoverProps> = ({
   };
 
   return createPortal(
-    <E2EDataAttribute type={E2EAttribute.popover}>
+    <E2EDataAttribute type={E2EAttribute.popover} value={e2eValue}>
       <div
         className={cx(classNamesWithTheme[className].name, [
           classNamesWithTheme[className].modificators.selected,
@@ -56,7 +56,6 @@ export const Popover: FC<TPopoverProps> = ({
         ])}
         ref={refPopover}
         style={{ left, top }}
-        {...getAttributes(E2EAttribute.dropdown, e2eValue)}
       >
         {popover.data.map((item, index) =>
           'separator' in item ? (
