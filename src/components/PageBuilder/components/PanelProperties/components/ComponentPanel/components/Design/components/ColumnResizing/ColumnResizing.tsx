@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 // components
 import HeightPopoverHeight from './components/HeightPopoverHeight/HeightPopoverHeight';
 import HeightPopoverWidth from './components/HeightPopoverWidth/HeightPopoverWidth';
-import { ScrubbableInput, Small, UITools } from 'shared';
+import { Icon, ScrubbableInput, Small, UITools } from 'shared';
 
 // hooks
 import { useResizingEvents } from './hooks/useResizingEvents';
@@ -96,7 +96,16 @@ const ColumnResizing: FC = () => {
               onChange={(value) => onChangeWidth(value.toString(), true)}
               value={isMultiple ? 0 : parseFloat(width)}
             >
-              <Small color={ColorsTheme.neutral2}>W</Small>
+              {isPureWidth ? (
+                <Small color={ColorsTheme.neutral2}>W</Small>
+              ) : (
+                <Icon
+                  color={ColorsTheme.neutral2}
+                  height={12}
+                  name="WidthRestricted"
+                  width={12}
+                />
+              )}
             </ScrubbableInput>
             {!isPureWidth && !isMixedWidth && (
               <UITools.Chip>{width}</UITools.Chip>
@@ -135,7 +144,16 @@ const ColumnResizing: FC = () => {
               onChange={(value) => onChangeHeight(value.toString(), true)}
               value={isMultiple ? 0 : parseFloat(height)}
             >
-              <Small color={ColorsTheme.neutral2}>H</Small>
+              {isPureHeight ? (
+                <Small color={ColorsTheme.neutral2}>H</Small>
+              ) : (
+                <Icon
+                  color={ColorsTheme.neutral2}
+                  height={12}
+                  name="HeightRestricted"
+                  width={12}
+                />
+              )}
             </ScrubbableInput>
             {!isPureHeight && !isMixedHeight && (
               <UITools.Chip>{height}</UITools.Chip>

@@ -1,7 +1,9 @@
 @import '../../styles/z-indexes';
 
 .ScrubbableInput {
+  align-items: center;
   cursor: ew-resize;
+  display: flex;
   user-select: none;
 
   &--disabled {
@@ -9,8 +11,8 @@
   }
 
   &__icon {
-    height: 8px;
-    width: 8px;
+    height: 12px;
+    width: 12px;
   }
 
   &__handler {
