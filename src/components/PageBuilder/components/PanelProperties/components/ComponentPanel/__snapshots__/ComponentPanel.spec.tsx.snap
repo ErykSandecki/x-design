@@ -548,7 +548,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
               />
               <div
                 class="Popover Popover--light"
-                data-test-dropdown="dropdown"
+                data-test-dropdown="popover"
                 data-test-popover=""
                 style="left: 0px; top: 0px;"
               >
@@ -697,7 +697,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
               />
               <div
                 class="Popover Popover--light"
-                data-test-dropdown="dropdown"
+                data-test-dropdown="popover"
                 data-test-popover=""
                 style="left: 0px; top: 0px;"
               >

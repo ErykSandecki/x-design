@@ -766,7 +766,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                   />
                   <div
                     class="Popover Popover--light"
-                    data-test-dropdown="dropdown"
+                    data-test-dropdown="popover"
                     data-test-popover=""
                     style="left: 0px; top: 0px;"
                   >
@@ -915,7 +915,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                   />
                   <div
                     class="Popover Popover--light"
-                    data-test-dropdown="dropdown"
+                    data-test-dropdown="popover"
                     data-test-popover=""
                     style="left: 0px; top: 0px;"
                   >

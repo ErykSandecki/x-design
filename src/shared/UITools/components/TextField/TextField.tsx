@@ -97,7 +97,7 @@ export const TextField: FC<TTextFieldProps> = ({
             width={12}
           />
           <Popover
-            e2eValue="dropdown"
+            e2eValue="popover"
             popover={popover}
             refItem={refItem}
             selected={selected}

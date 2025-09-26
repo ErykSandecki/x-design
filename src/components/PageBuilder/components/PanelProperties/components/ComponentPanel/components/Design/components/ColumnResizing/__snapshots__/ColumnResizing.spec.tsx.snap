@@ -60,7 +60,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
             />
             <div
               class="Popover Popover--light"
-              data-test-dropdown="dropdown"
+              data-test-dropdown="popover"
               data-test-popover=""
               style="left: 0px; top: 0px;"
             >
@@ -209,7 +209,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
             />
             <div
               class="Popover Popover--light"
-              data-test-dropdown="dropdown"
+              data-test-dropdown="popover"
               data-test-popover=""
               style="left: 0px; top: 0px;"
             >
@@ -373,18 +373,12 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
               W
             </small>
           </div>
-          <div
-            class="css-wcnq0t Chip Chip--light"
-            data-test-chip=""
-          >
-            Mixed
-          </div>
           <input
             class="TextField__input TextField__input--light"
             data-test-text-field-input="width"
             maxlength="6"
             type="text"
-            value=""
+            value="Mixed"
           />
           <div
             class="TextField__icon-wrapper TextField__icon-wrapper--light"
@@ -398,7 +392,7 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
             />
             <div
               class="Popover Popover--light"
-              data-test-dropdown="dropdown"
+              data-test-dropdown="popover"
               data-test-popover=""
               style="left: 0px; top: 0px;"
             >
@@ -407,7 +401,7 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
                 data-test-popover-item="0"
               >
                 <div
-                  class="css-wcnq0t Popover__check-icon Popover__check-icon--light Popover__check-icon--selected Popover__check-icon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-wcnq0t Popover__check-icon Popover__check-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                   data-test-icon="check"
                   height="12"
                   name="Check"
@@ -528,18 +522,12 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
               H
             </small>
           </div>
-          <div
-            class="css-wcnq0t Chip Chip--light"
-            data-test-chip=""
-          >
-            Mixed
-          </div>
           <input
             class="TextField__input TextField__input--light"
             data-test-text-field-input="height"
             maxlength="6"
             type="text"
-            value=""
+            value="Mixed"
           />
           <div
             class="TextField__icon-wrapper TextField__icon-wrapper--light"
@@ -553,7 +541,7 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
             />
             <div
               class="Popover Popover--light"
-              data-test-dropdown="dropdown"
+              data-test-dropdown="popover"
               data-test-popover=""
               style="left: 0px; top: 0px;"
             >
@@ -562,7 +550,7 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
                 data-test-popover-item="0"
               >
                 <div
-                  class="css-wcnq0t Popover__check-icon Popover__check-icon--light Popover__check-icon--selected Popover__check-icon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-wcnq0t Popover__check-icon Popover__check-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                   data-test-icon="check"
                   height="12"
                   name="Check"

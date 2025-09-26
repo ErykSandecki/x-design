@@ -1,6 +1,5 @@
 // types
 import { TFields } from '../../store/reduxHookForm/types';
-import { TT } from 'types';
 
 export type TFieldValue = boolean | number | string | Array<boolean | string>;
 

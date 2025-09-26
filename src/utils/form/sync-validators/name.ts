@@ -1,6 +1,5 @@
 // types
 import { TFieldValue } from 'core';
-import { TT } from 'types';
 
 export const name = (t: TT, value: TFieldValue): string => {
   const error = t('formValidators.name');

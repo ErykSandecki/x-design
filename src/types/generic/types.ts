@@ -1,5 +1,3 @@
-import { TFunction } from 'i18next';
-
 export type ArrayMinLength<
   T,
   N extends number,
@@ -25,8 +23,6 @@ export type TPickAliases<
       : never
     : never]: K extends keyof T ? T[K] : never;
 };
-
-export type TT = TFunction;
 
 export type TValueObj<T> = T[keyof T];
 

@@ -42,7 +42,8 @@ export const Popover: FC<TPopoverProps> = ({
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { left, top } = getPosition(refItem, refPopover);
 
-  const onClickHandler = () => {
+  const onClickHandler = (onClick?: TFuncion) => {
+    onClick?.();
     setSelected(false);
   };
 
@@ -59,10 +60,7 @@ export const Popover: FC<TPopoverProps> = ({
       >
         {popover.data.map((item, index) =>
           'separator' in item ? (
-            <div
-              className={cx(classNamesWithTheme.separator)}
-              key={index}
-            ></div>
+            <div className={cx(classNamesWithTheme.separator)} key={index} />
           ) : (
             <E2EDataAttribute
               key={index}
@@ -71,7 +69,7 @@ export const Popover: FC<TPopoverProps> = ({
             >
               <div
                 className={cx(classNamesWithTheme.item)}
-                onClick={onClickHandler}
+                onClick={() => onClickHandler(item.onClick)}
               >
                 <Icon
                   classes={{

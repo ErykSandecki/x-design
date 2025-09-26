@@ -1,6 +1,5 @@
 // types
 import { TFields } from 'store/reduxHookForm/types';
-import { TT } from 'types';
 
 export const lessThanOther =
   (fieldName: string, translatedField: string) =>

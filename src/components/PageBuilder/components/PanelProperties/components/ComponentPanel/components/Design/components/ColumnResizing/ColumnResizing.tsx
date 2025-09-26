@@ -1,6 +1,6 @@
 import { FC, useRef } from 'react';
 import { first, size } from 'lodash';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
 // components
@@ -10,12 +10,12 @@ import { ScrubbableInput, Small, UITools } from 'shared';
 import { useResizingEvents } from './hooks/useResizingEvents';
 
 // others
-import { MAX, PANEL_PROPERTIES_ID } from '../../../../../../../../constants';
 import {
   heightPopoverData,
   translationNameSpace,
   widthPopoverData,
 } from './constants';
+import { MAX, PANEL_PROPERTIES_ID } from '../../../../../../../../constants';
 
 // store
 import {
@@ -33,6 +33,7 @@ import { handleSubmitInput, isPureNumber, sanitizeNumberInput } from 'utils';
 import { isMixed } from '../../utils/isMixed';
 
 const ColumnResizing: FC = () => {
+  const dispatch = useDispatch();
   const dynamicData = useSelector(dynamicDataSelector);
   const refInputHeight = useRef<HTMLInputElement>(null);
   const refInputWidth = useRef<HTMLInputElement>(null);
@@ -43,13 +44,13 @@ const ColumnResizing: FC = () => {
   const isMixedHeight = isMixed(
     dynamicData,
     firstElement,
-    'height',
+    'height.value',
     selectedElements,
   );
   const isMixedWidth = isMixed(
     dynamicData,
     firstElement,
-    'width',
+    'width.value',
     selectedElements,
   );
   const {
@@ -81,7 +82,14 @@ const ColumnResizing: FC = () => {
         onKeyDown={(event) =>
           handleSubmitInput(KeyboardKeys.enter, refInputWidth.current)(event)
         }
-        popover={{ data: widthPopoverData(t) }}
+        popover={{
+          data: widthPopoverData(
+            dispatch,
+            isMixedWidth,
+            t,
+            dynamicData[firstElement.id].width,
+          ),
+        }}
         ref={refInputWidth}
         startAdornment={
           <>
@@ -95,11 +103,13 @@ const ColumnResizing: FC = () => {
             >
               <Small color={ColorsTheme.neutral2}>W</Small>
             </ScrubbableInput>
-            {!isPureWidth && <UITools.Chip>{width}</UITools.Chip>}
+            {!isPureWidth && !isMixedWidth && (
+              <UITools.Chip>{width}</UITools.Chip>
+            )}
           </>
         }
         type={isMixedWidth || !isPureWidth ? 'text' : 'number'}
-        value={isPureWidth ? width : ''}
+        value={isPureWidth || isMixedWidth ? width : ''}
       />
       <UITools.TextField
         e2eValue="height"
@@ -113,7 +123,14 @@ const ColumnResizing: FC = () => {
         onKeyDown={(event) =>
           handleSubmitInput(KeyboardKeys.enter, refInputHeight.current)(event)
         }
-        popover={{ data: heightPopoverData(t) }}
+        popover={{
+          data: heightPopoverData(
+            dispatch,
+            dynamicData[firstElement.id].height,
+            isMixedHeight,
+            t,
+          ),
+        }}
         ref={refInputHeight}
         startAdornment={
           <>
@@ -127,11 +144,13 @@ const ColumnResizing: FC = () => {
             >
               <Small color={ColorsTheme.neutral2}>H</Small>
             </ScrubbableInput>
-            {!isPureHeight && <UITools.Chip>{height}</UITools.Chip>}
+            {!isPureHeight && !isMixedHeight && (
+              <UITools.Chip>{height}</UITools.Chip>
+            )}
           </>
         }
         type={isMixedHeight || !isPureHeight ? 'text' : 'number'}
-        value={isPureHeight ? height : ''}
+        value={isPureHeight || isMixedHeight ? height : ''}
       />
     </UITools.SectionColumn>
   );
