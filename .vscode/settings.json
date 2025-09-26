@@ -203,6 +203,9 @@
     "**/*.spec.tsx.snap": true,
     "build": true,
     "dist": true,
+    "package-lock.json": true,
+    "package.json": true,
+    "README.md": true,
     "src/library": true
   },
   "typescript.tsdk": "node_modules/typescript/lib"
