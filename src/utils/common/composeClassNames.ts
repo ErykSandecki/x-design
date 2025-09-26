@@ -12,17 +12,16 @@ const buildParent = <Name extends string, Mods extends readonly string[]>(
 ): TClassEntry<Name, Mods> => {
   if (mods.length === 0) {
     return { [name]: name } as TClassEntry<Name, Mods>;
-  } else {
-    return {
-      [name]: {
-        name,
-        modificators: mods.reduce(
-          (obj, m) => ({ ...obj, [m]: `${name}--${m}` }),
-          {},
-        ),
-      },
-    } as unknown as TClassEntry<Name, Mods>;
   }
+  return {
+    [name]: {
+      modificators: mods.reduce(
+        (obj, m) => ({ ...obj, [m]: `${name}--${m}` }),
+        {},
+      ),
+      name,
+    },
+  } as unknown as TClassEntry<Name, Mods>;
 };
 
 const buildChild = <
@@ -38,17 +37,16 @@ const buildChild = <
 
   if (mods.length === 0) {
     return { [name]: fullName } as TClassEntry<`${Parent}__${Child}`, Mods>;
-  } else {
-    return {
-      [name]: {
-        name: fullName,
-        modificators: mods.reduce(
-          (obj, m) => ({ ...obj, [m]: `${fullName}--${m}` }),
-          {},
-        ),
-      },
-    } as unknown as TClassEntry<`${Parent}__${Child}`, Mods>;
   }
+  return {
+    [name]: {
+      modificators: mods.reduce(
+        (obj, m) => ({ ...obj, [m]: `${fullName}--${m}` }),
+        {},
+      ),
+      name: fullName,
+    },
+  } as unknown as TClassEntry<`${Parent}__${Child}`, Mods>;
 };
 
 export function composeClassNames<Parent extends string>(
