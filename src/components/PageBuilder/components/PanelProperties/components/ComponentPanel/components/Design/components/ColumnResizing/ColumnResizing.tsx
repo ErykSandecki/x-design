@@ -82,14 +82,12 @@ const ColumnResizing: FC = () => {
         onKeyDown={(event) =>
           handleSubmitInput(KeyboardKeys.enter, refInputWidth.current)(event)
         }
-        popover={{
-          data: widthPopoverData(
-            dispatch,
-            isMixedWidth,
-            t,
-            dynamicData[firstElement.id].width,
-          ),
-        }}
+        popoverChildren={widthPopoverData(
+          dispatch,
+          isMixedWidth,
+          t,
+          dynamicData[firstElement.id].width,
+        )}
         ref={refInputWidth}
         startAdornment={
           <>
@@ -123,14 +121,12 @@ const ColumnResizing: FC = () => {
         onKeyDown={(event) =>
           handleSubmitInput(KeyboardKeys.enter, refInputHeight.current)(event)
         }
-        popover={{
-          data: heightPopoverData(
-            dispatch,
-            dynamicData[firstElement.id].height,
-            isMixedHeight,
-            t,
-          ),
-        }}
+        popoverChildren={heightPopoverData(
+          dispatch,
+          dynamicData[firstElement.id].height,
+          isMixedHeight,
+          t,
+        )}
         ref={refInputHeight}
         startAdornment={
           <>

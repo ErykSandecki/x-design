@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PopoverRoot snapshots should render PopoverRoot 1`] = `
+<DocumentFragment>
+  children
+</DocumentFragment>
+`;

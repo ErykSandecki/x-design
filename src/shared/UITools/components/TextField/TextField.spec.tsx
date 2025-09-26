@@ -2,6 +2,7 @@ import { fireEvent, render } from '@testing-library/react';
 
 // components
 import TextField from './TextField';
+import { PopoverCompound } from '../Popover/Popover';
 
 // types
 import { E2EAttribute } from 'types';
@@ -30,7 +31,10 @@ describe('TextField snapshots', () => {
   it('should render wiht popover', () => {
     // before
     const { asFragment } = render(
-      <TextField idContainer={id} popover={{ data: [{ separator: true }] }} />,
+      <TextField
+        idContainer={id}
+        popoverChildren={<PopoverCompound.PopoverSeparator />}
+      />,
     );
 
     // result
@@ -40,7 +44,10 @@ describe('TextField snapshots', () => {
   it('should render with opened popover', () => {
     // before
     const { asFragment, container } = render(
-      <TextField idContainer={id} popover={{ data: [{ separator: true }] }} />,
+      <TextField
+        idContainer={id}
+        popoverChildren={<PopoverCompound.PopoverSeparator />}
+      />,
     );
 
     // find

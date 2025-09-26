@@ -826,7 +826,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                     />
                     <div
                       class="PopoverItem PopoverItem--light"
-                      data-test-popover-item="3"
+                      data-test-popover-item="2"
                     >
                       <div
                         class="css-wcnq0t PopoverItem__check-icon PopoverItem__check-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -852,7 +852,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                     </div>
                     <div
                       class="PopoverItem PopoverItem--light"
-                      data-test-popover-item="4"
+                      data-test-popover-item="3"
                     >
                       <div
                         class="css-wcnq0t PopoverItem__check-icon PopoverItem__check-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -974,7 +974,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                     />
                     <div
                       class="PopoverItem PopoverItem--light"
-                      data-test-popover-item="3"
+                      data-test-popover-item="2"
                     >
                       <div
                         class="css-wcnq0t PopoverItem__check-icon PopoverItem__check-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -1000,7 +1000,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                     </div>
                     <div
                       class="PopoverItem PopoverItem--light"
-                      data-test-popover-item="4"
+                      data-test-popover-item="3"
                     >
                       <div
                         class="css-wcnq0t PopoverItem__check-icon PopoverItem__check-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"

@@ -4,6 +4,9 @@ import { FC } from 'react';
 import E2EDataAttribute from '../../../../../E2EDataAttributes/E2EDataAttribute';
 import { Icon, Small } from 'shared';
 
+// core
+import { usePopoverRoot } from '../PopoverRoot/core/PopoverRootProvider';
+
 // hooks
 import { useTheme } from 'hooks';
 
@@ -21,7 +24,6 @@ import { TPopoverData } from '../../types';
 
 export type TPopoverItemProps = TPopoverData & {
   index: number;
-  setSelected: TFuncion<[boolean]>;
 };
 
 export const PopoverItem: FC<TPopoverItemProps> = ({
@@ -29,10 +31,10 @@ export const PopoverItem: FC<TPopoverItemProps> = ({
   index,
   onClick,
   selected,
-  setSelected,
   text,
 }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
+  const { setSelected } = usePopoverRoot();
 
   const onClickHandler = (): void => {
     onClick?.();

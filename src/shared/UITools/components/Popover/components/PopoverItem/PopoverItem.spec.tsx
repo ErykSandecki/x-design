@@ -2,6 +2,7 @@ import { fireEvent, render } from '@testing-library/react';
 
 // components
 import PopoverItem from './PopoverItem';
+import PopoverRoot from '../PopoverRoot/PopoverRoot';
 
 // types
 import { E2EAttribute } from 'types';
@@ -15,14 +16,15 @@ describe('PopoverItem snapshots', () => {
   it('should render PopoverItem', () => {
     // before
     const { asFragment } = render(
-      <PopoverItem
-        icon="AlignHorizontalCenter"
-        index={0}
-        onClick={mockCallBack}
-        selected={false}
-        setSelected={mockCallBack}
-        text="text"
-      />,
+      <PopoverRoot setSelected={mockCallBack}>
+        <PopoverItem
+          icon="AlignHorizontalCenter"
+          index={0}
+          onClick={mockCallBack}
+          selected={false}
+          text="text"
+        />
+      </PopoverRoot>,
     );
 
     // result
@@ -32,14 +34,15 @@ describe('PopoverItem snapshots', () => {
   it('should render selected', () => {
     // before
     const { asFragment } = render(
-      <PopoverItem
-        icon="AlignHorizontalCenter"
-        index={0}
-        onClick={mockCallBack}
-        selected
-        setSelected={mockCallBack}
-        text="text"
-      />,
+      <PopoverRoot setSelected={mockCallBack}>
+        <PopoverItem
+          icon="AlignHorizontalCenter"
+          index={0}
+          onClick={mockCallBack}
+          selected
+          text="text"
+        />
+      </PopoverRoot>,
     );
 
     // result
@@ -51,14 +54,15 @@ describe('PopoverItem behaviors', () => {
   it('should click item', () => {
     // before
     const { container } = render(
-      <PopoverItem
-        icon="AlignHorizontalCenter"
-        index={0}
-        onClick={mockCallBack}
-        selected={false}
-        setSelected={mockCallBack}
-        text="text"
-      />,
+      <PopoverRoot setSelected={mockCallBack}>
+        <PopoverItem
+          icon="AlignHorizontalCenter"
+          index={0}
+          onClick={mockCallBack}
+          selected={false}
+          text="text"
+        />
+      </PopoverRoot>,
     );
 
     // find

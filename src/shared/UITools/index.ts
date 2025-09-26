@@ -5,6 +5,7 @@ import Chip from './components/Chip/Chip';
 import Color from './components/Color/Color';
 import ColorPicker from './components/ColorPicker/ColorPicker';
 import FieldGroup from './components/FieldGroup/FieldGroup';
+import Popover, { PopoverCompound } from './components/Popover/Popover';
 import SectionColumn from './components/Section/components/SectionColumn/SectionColumn';
 import Section from './components/Section/Section';
 import Tabs, { TTabsProps } from './components/Tabs/Tabs';
@@ -18,6 +19,8 @@ export const UITools = {
   Color,
   ColorPicker,
   FieldGroup,
+  Popover,
+  PopoverCompound,
   Section,
   SectionColumn,
   Tabs,

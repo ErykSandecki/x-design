@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PopoverRootProvider snapshots should redner PopoverRootProvider 1`] = `
+<DocumentFragment>
+  children
+</DocumentFragment>
+`;

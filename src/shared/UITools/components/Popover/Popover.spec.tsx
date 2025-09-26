@@ -1,34 +1,36 @@
+import { noop } from 'lodash';
 import { RefObject } from 'react';
 import { render } from '@testing-library/react';
 
 // components
-import Popover from './Popover';
-
-// types
-import { TPopover } from './types';
+import Popover, { PopoverCompound } from './Popover';
 
 // utils
 import { createHtmlElement } from 'utils';
 
-const mockCallBack = jest.fn();
 const refItem = { current: createHtmlElement('div') } as RefObject<HTMLElement>;
-const data: TPopover['data'] = [
-  { icon: 'AlignHorizontalCenter', text: 'text' },
-  { icon: 'AlignHorizontalCenter', selected: true, text: 'text' },
-  { separator: true },
-];
 
 describe('Popover snapshots', () => {
   it('should render Popover', () => {
     // before
     const { asFragment } = render(
-      <Popover
-        e2eValue="popover"
-        popover={{ data: data }}
-        refItem={refItem}
-        selected={false}
-        setSelected={mockCallBack}
-      />,
+      <Popover e2eValue="popover" refItem={refItem} selected={false}>
+        <PopoverCompound.PopoverRoot setSelected={noop}>
+          <PopoverCompound.PopoverItem
+            icon="AlignHorizontalCenter"
+            index={0}
+            selected={false}
+            text="text"
+          />
+          <PopoverCompound.PopoverItem
+            icon="AlignHorizontalCenter"
+            index={1}
+            selected
+            text="text"
+          />
+        </PopoverCompound.PopoverRoot>
+        <PopoverCompound.PopoverSeparator />
+      </Popover>,
     );
 
     // result
@@ -38,13 +40,23 @@ describe('Popover snapshots', () => {
   it('should render selected', () => {
     // before
     const { asFragment } = render(
-      <Popover
-        e2eValue="popover"
-        popover={{ data: data }}
-        refItem={refItem}
-        selected
-        setSelected={mockCallBack}
-      />,
+      <Popover e2eValue="popover" refItem={refItem} selected>
+        <PopoverCompound.PopoverRoot setSelected={noop}>
+          <PopoverCompound.PopoverItem
+            icon="AlignHorizontalCenter"
+            index={0}
+            selected={false}
+            text="text"
+          />
+          <PopoverCompound.PopoverItem
+            icon="AlignHorizontalCenter"
+            index={1}
+            selected
+            text="text"
+          />
+          <PopoverCompound.PopoverSeparator />
+        </PopoverCompound.PopoverRoot>
+      </Popover>,
     );
 
     // result

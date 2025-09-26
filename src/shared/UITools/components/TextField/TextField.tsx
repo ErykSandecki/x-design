@@ -4,7 +4,7 @@ import { noop } from 'lodash';
 // components
 import Box from '../../../UI/components/Box/Box';
 import Icon from 'shared/UI/components/Icon/Icon';
-import Popover from '../Popover/Popover';
+import Popover, { PopoverCompound, TPopoverProps } from '../Popover/Popover';
 
 // hooks
 import { useOutsideClick, useTheme } from 'hooks';
@@ -18,7 +18,6 @@ import styles from './text-field.scss';
 // types
 import { E2EAttribute } from 'types';
 import { TE2EDataAttributeProps } from '../../../E2EDataAttributes/E2EDataAttribute';
-import { TPopover } from '../Popover/types';
 
 // utils
 import { getAttributes } from 'shared/E2EDataAttributes/utils';
@@ -32,7 +31,7 @@ export type TTextFieldProps = Omit<
   endAdorment?: ReactNode;
   fullWidth?: boolean;
   idContainer?: string;
-  popover?: TPopover;
+  popoverChildren?: TPopoverProps['children'];
   ref?: Ref<HTMLInputElement>;
   startAdornment?: ReactNode;
 };
@@ -44,7 +43,7 @@ export const TextField: FC<TTextFieldProps> = ({
   endAdorment,
   fullWidth = false,
   idContainer = undefined,
-  popover,
+  popoverChildren,
   ref,
   startAdornment,
   ...restProps
@@ -86,7 +85,7 @@ export const TextField: FC<TTextFieldProps> = ({
         {...getAttributes(E2EAttribute.textFieldInput, e2eValue)}
         {...restProps}
       />
-      {popover ? (
+      {popoverChildren ? (
         <div className={cx(classNamesWithTheme.iconWrapper)} ref={refItem}>
           <Icon
             classes={{ className: cx(classNamesWithTheme.icon) }}
@@ -96,13 +95,11 @@ export const TextField: FC<TTextFieldProps> = ({
             onClick={() => setSelected(!selected)}
             width={12}
           />
-          <Popover
-            e2eValue="popover"
-            popover={popover}
-            refItem={refItem}
-            selected={selected}
-            setSelected={setSelected}
-          />
+          <Popover e2eValue="popover" refItem={refItem} selected={selected}>
+            <PopoverCompound.PopoverRoot setSelected={setSelected}>
+              {popoverChildren}
+            </PopoverCompound.PopoverRoot>
+          </Popover>
         </div>
       ) : (
         endAdorment
