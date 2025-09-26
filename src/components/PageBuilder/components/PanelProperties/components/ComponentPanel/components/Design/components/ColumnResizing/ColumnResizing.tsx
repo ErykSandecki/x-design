@@ -11,9 +11,9 @@ import { useResizingEvents } from './hooks/useResizingEvents';
 
 // others
 import {
-  heightPopoverData,
+  heightPopoverHeight,
   translationNameSpace,
-  widthPopoverData,
+  widthPopoverChildren,
 } from './constants';
 import { MAX, PANEL_PROPERTIES_ID } from '../../../../../../../../constants';
 
@@ -82,7 +82,7 @@ const ColumnResizing: FC = () => {
         onKeyDown={(event) =>
           handleSubmitInput(KeyboardKeys.enter, refInputWidth.current)(event)
         }
-        popoverChildren={widthPopoverData(
+        popoverChildren={widthPopoverChildren(
           dispatch,
           isMixedWidth,
           t,
@@ -121,7 +121,7 @@ const ColumnResizing: FC = () => {
         onKeyDown={(event) =>
           handleSubmitInput(KeyboardKeys.enter, refInputHeight.current)(event)
         }
-        popoverChildren={heightPopoverData(
+        popoverChildren={heightPopoverHeight(
           dispatch,
           dynamicData[firstElement.id].height,
           isMixedHeight,

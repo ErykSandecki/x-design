@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 // components
 import E2EDataAttribute from '../../../../../E2EDataAttributes/E2EDataAttribute';
-import { Icon, Small } from 'shared';
+import { Icon, Small, TIconProps } from 'shared';
 
 // core
 import { usePopoverRoot } from '../PopoverRoot/core/PopoverRootProvider';
@@ -19,11 +19,12 @@ import styles from './popover-item.scss';
 // types
 import { E2EAttribute } from 'types';
 
-// utils
-import { TPopoverData } from '../../types';
-
-export type TPopoverItemProps = TPopoverData & {
+export type TPopoverItemProps = {
+  icon?: TIconProps['name'];
   index: number;
+  onClick?: () => void;
+  selected?: boolean;
+  text: string;
 };
 
 export const PopoverItem: FC<TPopoverItemProps> = ({

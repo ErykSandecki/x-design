@@ -20,7 +20,7 @@ const { PopoverCompound } = UITools;
 
 export const translationNameSpace = `${parentNameSpace}.columnResizing`;
 
-export const heightPopoverData = (
+export const heightPopoverHeight = (
   dispatch: Dispatch,
   height: TElement['height'],
   isMixed: boolean,
@@ -57,7 +57,7 @@ export const heightPopoverData = (
   </>
 );
 
-export const widthPopoverData = (
+export const widthPopoverChildren = (
   dispatch: Dispatch,
   isMixed: boolean,
   t: TT,
