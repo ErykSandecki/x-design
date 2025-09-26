@@ -42,7 +42,7 @@ exports[`TextField snapshots should render wiht popover 1`] = `
         style="left: 0px; top: 0px;"
       >
         <div
-          class="Popover__separator Popover__separator--light"
+          class="PopoverSeparator PopoverSeparator--light"
         />
       </div>
     </div>
@@ -77,7 +77,7 @@ exports[`TextField snapshots should render with opened popover 1`] = `
         style="left: 0px; top: 0px;"
       >
         <div
-          class="Popover__separator Popover__separator--light"
+          class="PopoverSeparator PopoverSeparator--light"
         />
       </div>
     </div>

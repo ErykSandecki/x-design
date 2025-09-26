@@ -5,7 +5,8 @@ import { FC, RefObject, useRef } from 'react';
 import E2EDataAttribute, {
   TE2EDataAttributeProps,
 } from '../../../E2EDataAttributes/E2EDataAttribute';
-import { Icon, Small } from 'shared';
+import PopoverItem from './components/PopoverItem/PopoverItem';
+import PopoverSeparator from './components/PopoverSeparator/PopoverSeparator';
 
 // hooks
 import { useTheme } from 'hooks';
@@ -42,11 +43,6 @@ export const Popover: FC<TPopoverProps> = ({
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { left, top } = getPosition(refItem, refPopover);
 
-  const onClickHandler = (onClick?: TFuncion): void => {
-    onClick?.();
-    setSelected(false);
-  };
-
   return createPortal(
     <E2EDataAttribute type={E2EAttribute.popover} value={e2eValue}>
       <div
@@ -59,43 +55,17 @@ export const Popover: FC<TPopoverProps> = ({
       >
         {popover.data.map((item, index) =>
           'separator' in item ? (
-            <div className={cx(classNamesWithTheme.separator)} key={index} />
+            <PopoverSeparator key={index} />
           ) : (
-            <E2EDataAttribute
+            <PopoverItem
+              icon={item.icon}
+              index={index}
               key={index}
-              type={E2EAttribute.popoverItem}
-              value={index}
-            >
-              <div
-                className={cx(classNamesWithTheme.item)}
-                onClick={() => onClickHandler(item.onClick)}
-              >
-                <Icon
-                  classes={{
-                    className: cx(classNamesWithTheme.checkIcon.name, [
-                      classNamesWithTheme.checkIcon.modificators.selected,
-                      item.selected,
-                    ]),
-                  }}
-                  height={12}
-                  name="Check"
-                  width={12}
-                />
-                {item.icon && (
-                  <Icon
-                    classes={{ className: cx(classNamesWithTheme.itemIcon) }}
-                    height={12}
-                    name={item.icon}
-                    width={12}
-                  />
-                )}
-                <Small
-                  classes={{ className: cx(classNamesWithTheme.itemText) }}
-                >
-                  {item.text}
-                </Small>
-              </div>
-            </E2EDataAttribute>
+              onClick={item.onClick}
+              selected={item.selected}
+              setSelected={setSelected}
+              text={item.text}
+            />
           ),
         )}
       </div>
