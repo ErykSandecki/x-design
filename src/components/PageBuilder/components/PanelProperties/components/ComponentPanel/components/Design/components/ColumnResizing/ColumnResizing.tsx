@@ -1,21 +1,19 @@
 import { FC, useRef } from 'react';
 import { first, size } from 'lodash';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
 // components
+import HeightPopoverHeight from './components/HeightPopoverHeight/HeightPopoverHeight';
+import HeightPopoverWidth from './components/HeightPopoverWidth/HeightPopoverWidth';
 import { ScrubbableInput, Small, UITools } from 'shared';
 
 // hooks
 import { useResizingEvents } from './hooks/useResizingEvents';
 
 // others
-import {
-  heightPopoverHeight,
-  translationNameSpace,
-  widthPopoverChildren,
-} from './constants';
 import { MAX, PANEL_PROPERTIES_ID } from '../../../../../../../../constants';
+import { translationNameSpace } from './constants';
 
 // store
 import {
@@ -33,7 +31,6 @@ import { handleSubmitInput, isPureNumber, sanitizeNumberInput } from 'utils';
 import { isMixed } from '../../utils/isMixed';
 
 const ColumnResizing: FC = () => {
-  const dispatch = useDispatch();
   const dynamicData = useSelector(dynamicDataSelector);
   const refInputHeight = useRef<HTMLInputElement>(null);
   const refInputWidth = useRef<HTMLInputElement>(null);
@@ -82,12 +79,12 @@ const ColumnResizing: FC = () => {
         onKeyDown={(event) =>
           handleSubmitInput(KeyboardKeys.enter, refInputWidth.current)(event)
         }
-        popoverChildren={widthPopoverChildren(
-          dispatch,
-          isMixedWidth,
-          t,
-          dynamicData[firstElement.id].width,
-        )}
+        popoverChildren={
+          <HeightPopoverWidth
+            isMixed={isMixedWidth}
+            width={dynamicData[firstElement.id].width}
+          />
+        }
         ref={refInputWidth}
         startAdornment={
           <>
@@ -121,12 +118,12 @@ const ColumnResizing: FC = () => {
         onKeyDown={(event) =>
           handleSubmitInput(KeyboardKeys.enter, refInputHeight.current)(event)
         }
-        popoverChildren={heightPopoverHeight(
-          dispatch,
-          dynamicData[firstElement.id].height,
-          isMixedHeight,
-          t,
-        )}
+        popoverChildren={
+          <HeightPopoverHeight
+            height={dynamicData[firstElement.id].height}
+            isMixed={isMixedHeight}
+          />
+        }
         ref={refInputHeight}
         startAdornment={
           <>
