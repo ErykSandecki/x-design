@@ -13,11 +13,15 @@ const mockCallBack = jest.fn();
 
 jest.mock('lodash', () => ({
   ...jest.requireActual('lodash'),
-  throttle: (callback: any) => (value: any) => callback(value),
+  throttle:
+    (callback: any) =>
+    (value: any): any =>
+      callback(value),
 }));
 
 jest.mock('../../utils/extractColors', () => ({
-  extractColors: async () => new Promise((resolve) => resolve([])),
+  extractColors: async (): Promise<any> =>
+    new Promise((resolve) => resolve([])),
 }));
 
 describe('useMouseMoveEvent', () => {

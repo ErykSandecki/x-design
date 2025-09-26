@@ -16,7 +16,7 @@ export const getElementCenter = (
 export const getElementAngle = (
   elementRef: RefObject<HTMLElement>,
   event: MouseEvent | React.MouseEvent,
-) => {
+): number => {
   const { x, y } = getElementCenter(elementRef);
   const { clientX, clientY } = event;
 

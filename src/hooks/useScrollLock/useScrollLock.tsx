@@ -13,7 +13,7 @@ export const useScrollLock = (): TUseScrollLock => {
       document.getElementsByTagName('html')[0].style.overflow = 'hidden';
     }
 
-    return () => {
+    return (): void => {
       document.getElementsByTagName('html')[0].style.overflow = 'initial';
     };
   }, [scrollLock]);

@@ -15,7 +15,7 @@ import { Theme } from 'types';
 
 jest.mock('@emotion/css', () => ({
   ...(jest.requireActual('@emotion/css') as object),
-  css: (data) => data,
+  css: (data): any => data,
 }));
 
 describe('useSX', () => {

@@ -42,7 +42,7 @@ export const Popover: FC<TPopoverProps> = ({
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { left, top } = getPosition(refItem, refPopover);
 
-  const onClickHandler = (onClick?: TFuncion) => {
+  const onClickHandler = (onClick?: TFuncion): void => {
     onClick?.();
     setSelected(false);
   };

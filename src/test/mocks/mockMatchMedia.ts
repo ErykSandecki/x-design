@@ -1,4 +1,4 @@
-export const mockMatchMedia = (matches: boolean) => {
+export const mockMatchMedia = (matches: boolean): void => {
   global.window = Object.create(window);
 
   Object.defineProperty(window, 'matchMedia', {

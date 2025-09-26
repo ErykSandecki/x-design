@@ -20,7 +20,7 @@ export const useBlurEvent = (
 ): TUseBlurEvent => {
   const dispatch = useDispatch();
 
-  const handleBlur = () => {
+  const handleBlur = (): void => {
     const coordinates = { x: parseFloat(x), y: parseFloat(y) };
     dispatch(setElementsCoordinates(coordinates, 'static'));
   };

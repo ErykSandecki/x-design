@@ -53,7 +53,7 @@ export const Form = <T extends {}>({
   isValid: isValidInitial = false,
   onSubmit,
   validate = defaultFormValidator,
-}: TFormProps<T>) => {
+}: TFormProps<T>): ReactNode => {
   const dispatch = useDispatch();
   const form = useSelector(formSelectorCreator(formName));
   const fields = useSelector(fieldsSelectorCreator(formName));
@@ -105,7 +105,7 @@ export const Form = <T extends {}>({
       );
     }
 
-    return () => {
+    return (): void => {
       dispatch(destroyForm(formName));
     };
   }, []);

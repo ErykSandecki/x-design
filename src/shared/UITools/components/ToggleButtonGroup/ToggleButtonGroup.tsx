@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 
 // components
 import E2EDataAttribute, {
@@ -44,7 +44,7 @@ export const ToggleButtonGroup = <V extends TToggleButtonGroupValue>({
   onChange = null,
   toggleButtons,
   ...buttonProps
-}: TToggleButtonGroupProps<V>) => {
+}: TToggleButtonGroupProps<V>): ReactNode => {
   const [value, setValue] = useState(getInitialValue(multiple, defaultValue));
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 

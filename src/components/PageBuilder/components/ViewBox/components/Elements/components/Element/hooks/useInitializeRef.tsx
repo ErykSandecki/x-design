@@ -17,7 +17,7 @@ export const useInitializeRef = (
   useEffect(() => {
     itemsRefs[id] = elementRef.current;
 
-    return () => {
+    return (): void => {
       delete itemsRefs?.[id];
     };
   }, [elementRef]);

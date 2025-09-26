@@ -1,13 +1,10 @@
-// types
-import { TT } from 'types';
-
 // utils
 import { password } from '../../syncValidators';
 
 describe('password', () => {
   it('should be valid', () => {
     // before
-    const t = (key: string) => key;
+    const t = (key: string): any => key;
     const result = password(t as TT, '!Password123456');
 
     // result
@@ -16,7 +13,7 @@ describe('password', () => {
 
   it('should not be valid', () => {
     // before
-    const t = (key: string) => key;
+    const t = (key: string): any => key;
     const result = password(t as TT, '');
 
     // result

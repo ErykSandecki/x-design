@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 // components
 import E2EDataAttribute, {
   TE2EDataAttributeProps,
@@ -36,7 +38,7 @@ const ToggleButton = <V extends TToggleButtonGroupValue>({
   icon,
   onChange,
   value,
-}: TToggleButtonProps<V>) => {
+}: TToggleButtonProps<V>): ReactNode => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const selected = isSelected<V>(currentValue, value);
 

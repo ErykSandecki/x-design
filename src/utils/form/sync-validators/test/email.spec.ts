@@ -1,13 +1,10 @@
-// types
-import { TT } from 'types';
-
 // utils
 import { email } from '../../syncValidators';
 
 describe('email', () => {
   it('should be valid', () => {
     // before
-    const t = (key: string) => key;
+    const t = (key: string): any => key;
     const result = email(t as TT, 'email@email.com');
 
     // result
@@ -16,7 +13,7 @@ describe('email', () => {
 
   it('should not be valid', () => {
     // before
-    const t = (key: string) => key;
+    const t = (key: string): any => key;
     const result = email(t as TT, '');
 
     // result

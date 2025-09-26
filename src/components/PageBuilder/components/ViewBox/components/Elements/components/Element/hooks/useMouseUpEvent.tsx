@@ -22,7 +22,7 @@ export const useMouseUpEvent = (
       window.addEventListener('mouseup', handleMouseUp);
     }
 
-    return () => {
+    return (): void => {
       window.removeEventListener('mouseup', handleMouseUp);
     };
   }, [isPressing]);

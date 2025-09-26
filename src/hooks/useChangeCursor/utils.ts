@@ -14,7 +14,7 @@ export const getSVGUrl = (angle: number, cursor: string): string => {
 export const toggleCursor = (
   contentRef: RefObject<HTMLElement>,
   url: string,
-) => {
+): void => {
   contentRef.current.style.cursor = url;
 };
 

@@ -21,11 +21,11 @@ const stateMock = {
   ...reduxHookFormStateMock,
 };
 
-const Button = () => {
+const Button = (): any => {
   return <button type="submit">Click</button>;
 };
 
-const TextField = () => {
+const TextField = (): any => {
   return <input type="text" />;
 };
 

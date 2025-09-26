@@ -38,7 +38,7 @@ const stateMock = {
 
 jest.mock('lodash', () => ({
   ...jest.requireActual('lodash'),
-  defer: (callback: any) => callback(),
+  defer: (callback: any): any => callback(),
 }));
 
 describe('useOutsideClickElement', () => {

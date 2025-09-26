@@ -30,7 +30,7 @@ const currentPage =
 describe('caculateMovePosition', () => {
   beforeAll(() => {
     // mock
-    storeToMock.getState = () =>
+    storeToMock.getState = (): any =>
       ({
         ...wholeStateMock,
         [PAGE_BUILDER]: {

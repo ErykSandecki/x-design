@@ -31,12 +31,12 @@ const stateMock = {
 
 jest.mock('lodash', () => ({
   ...jest.requireActual('lodash'),
-  throttle: (callback) => callback,
+  throttle: (callback): any => callback,
 }));
 
 jest.mock('react-redux', () => ({
   ...jest.requireActual('react-redux'),
-  useDispatch: () => mockCallBack,
+  useDispatch: (): any => mockCallBack,
 }));
 
 describe('useMouseMoveEvent', () => {

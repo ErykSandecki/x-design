@@ -32,7 +32,7 @@ export const getOffset = (
     | TElement['alignment']['horizontal']
     | TElement['alignment']['vertical'],
   size: number,
-) => {
+): number => {
   switch (alignment) {
     case AlignmentHorizontal.center:
     case AlignmentVertical.center:

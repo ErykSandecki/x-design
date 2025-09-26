@@ -22,12 +22,12 @@ const stateMock = {
 };
 
 jest.mock('../../../../../../utils/setElementsCoordinatesHandler', () => ({
-  setElementsCoordinatesHandler: () => mockCallBack(),
+  setElementsCoordinatesHandler: (): any => mockCallBack(),
 }));
 
 describe('updateElementPosition', () => {
   beforeAll(() => {
-    storeToMock.getState = () => stateMock as any;
+    storeToMock.getState = (): any => stateMock as any;
   });
 
   it(`should update positions`, () => {

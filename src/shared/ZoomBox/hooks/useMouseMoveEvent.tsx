@@ -46,7 +46,7 @@ export const useMouseMoveEvent = (
   useEffect(() => {
     window.addEventListener('mousemove', handleMouseMove);
 
-    return () => {
+    return (): void => {
       window.removeEventListener('mousemove', handleMouseMove);
     };
   }, [

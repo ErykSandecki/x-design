@@ -1,6 +1,3 @@
-// types
-import { TT } from 'types';
-
 // utils
 import { name } from '../../syncValidators';
 
@@ -32,7 +29,7 @@ describe('name', () => {
   testCases.forEach(({ args, description, expectedResult }) => {
     it(description, () => {
       // before
-      const t = (key: string) => key;
+      const t = (key: string): any => key;
       const { value } = args;
       const result = name(t as TT, value);
 

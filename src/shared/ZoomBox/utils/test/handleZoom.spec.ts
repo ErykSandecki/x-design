@@ -9,7 +9,9 @@ import { handleZoom } from '../handleZoom';
 
 const lastWheelTime = { current: 0 };
 const mockCallBack = jest.fn();
-const ref = { current: { getBoundingClientRect: () => ({ left: 0, top: 0 }) } };
+const ref = {
+  current: { getBoundingClientRect: (): any => ({ left: 0, top: 0 }) },
+};
 
 describe('handleZoom', () => {
   it('should not trigger event when is no contol pressed', () => {

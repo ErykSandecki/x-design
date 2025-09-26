@@ -10,7 +10,7 @@ export const useBlurColorEvent = (
   onChange: (alpha: string, value: string) => void,
   setValue: (value: string) => void,
 ): TUseBlurColorEvent => {
-  const handleBlur = () => {
+  const handleBlur = (): void => {
     if (isHexColor(currentValue)) {
       onChange(alpha, `#${currentValue}`);
     } else {

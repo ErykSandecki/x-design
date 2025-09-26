@@ -36,7 +36,7 @@ export const useMouseMoveEvent = (
   useEffect(() => {
     window.addEventListener('mousemove', handleMouseMove);
 
-    return () => {
+    return (): void => {
       window.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
@@ -44,7 +44,7 @@ export const useMouseMoveEvent = (
   useEffect(() => {
     updateColor(initialMousePosition.x, initialMousePosition.y);
 
-    return () => {
+    return (): void => {
       clearTimeout(timeout);
     };
   }, []);

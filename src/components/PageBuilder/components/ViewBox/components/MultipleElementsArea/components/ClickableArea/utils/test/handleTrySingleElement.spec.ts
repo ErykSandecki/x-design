@@ -25,7 +25,7 @@ const mockCallBack = jest.fn();
 describe('handleTrySingleElement', () => {
   beforeAll(() => {
     // mock
-    storeToMock.getState = () =>
+    storeToMock.getState = (): any =>
       ({
         ...wholeStateMock,
         [PAGE_BUILDER]: {

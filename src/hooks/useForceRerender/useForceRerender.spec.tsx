@@ -7,7 +7,7 @@ const mockCallBack = jest.fn();
 
 jest.mock('react', () => ({
   ...(jest.requireActual('react') as object),
-  useState: () => [false, mockCallBack],
+  useState: (): any => [false, mockCallBack],
 }));
 
 describe('useForceRerender', () => {

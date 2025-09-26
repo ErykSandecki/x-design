@@ -39,7 +39,7 @@ const rectCoordinates = {
 
 describe('getCollidedElements', () => {
   beforeAll(() => {
-    storeToMock.getState = () =>
+    storeToMock.getState = (): any =>
       ({
         ...wholeStateMock,
         [PAGE_BUILDER]: {
@@ -108,7 +108,7 @@ describe('getCollidedElements', () => {
 
   it(`should return collided elements which are inside area`, () => {
     // mock
-    storeToMock.getState = () =>
+    storeToMock.getState = (): any =>
       ({
         ...wholeStateMock,
         [PAGE_BUILDER]: {
@@ -150,7 +150,7 @@ describe('getCollidedElements', () => {
 
   it(`should return collided elements in the same structure when new one was added`, () => {
     // mock
-    storeToMock.getState = () =>
+    storeToMock.getState = (): any =>
       ({
         ...wholeStateMock,
         [PAGE_BUILDER]: {

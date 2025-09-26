@@ -1,6 +1,7 @@
 import {
   FC,
   ForwardRefExoticComponent,
+  ReactNode,
   RefObject,
   useContext,
   useEffect,
@@ -67,7 +68,7 @@ export const Field = <T, V extends TFieldValue>({
   touched: initialTouched = false,
   visited: initialVisited = false,
   ...restProps
-}: TFieldProps<T, V>) => {
+}: TFieldProps<T, V>): ReactNode => {
   const formName = useContext(FormContext);
   const field = useSelector(fieldSelectorCreator(formName, name));
   const inputProps = useInputProps<V>(formName, name);

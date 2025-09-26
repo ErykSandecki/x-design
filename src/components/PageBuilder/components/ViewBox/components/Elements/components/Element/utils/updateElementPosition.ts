@@ -15,7 +15,7 @@ export const updateElementPosition = (
   dispatch: Dispatch,
   event: MouseEvent,
   parentId: TElement['parentId'],
-) => {
+): void => {
   const coordinates = caculateMovePosition(cursorPosition, event, parentId);
 
   dispatch(setElementsCoordinates(coordinates, 'dynamic'));

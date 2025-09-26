@@ -16,7 +16,7 @@ import { appInitSaga, initLanguageSaga } from '../../saga';
 
 jest.mock('utils', () => ({
   ...jest.requireActual('utils'),
-  getFormattedDate: (key: string) => key,
+  getFormattedDate: (key: string): any => key,
 }));
 
 describe('appInitSaga', () => {

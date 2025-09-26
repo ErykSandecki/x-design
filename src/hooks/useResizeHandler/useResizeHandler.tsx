@@ -104,7 +104,7 @@ export const useResizeHandler = (
     document.addEventListener('mousemove', handleMouseMoveY);
     document.addEventListener('mouseup', handleMouseUp);
 
-    return () => {
+    return (): void => {
       document.removeEventListener('mousemove', handleMouseMoveX);
       document.removeEventListener('mousemove', handleMouseMoveY);
       document.removeEventListener('mouseup', handleMouseUp);
@@ -117,7 +117,7 @@ export const useResizeHandler = (
       document.body.style.userSelect = 'none';
     }
 
-    return () => {
+    return (): void => {
       document.body.style.cursor = 'initial';
       document.body.style.userSelect = 'initial';
     };
@@ -129,7 +129,7 @@ export const useResizeHandler = (
       document.body.style.userSelect = 'none';
     }
 
-    return () => {
+    return (): void => {
       document.body.style.cursor = 'initial';
       document.body.style.userSelect = 'initial';
     };

@@ -22,7 +22,7 @@ const stateMock = {
 const mockCallBack = jest.fn();
 
 jest.mock('../../../../utils/dispatchFieldHandler', () => ({
-  dispatchFieldHandler: () => mockCallBack,
+  dispatchFieldHandler: (): any => mockCallBack,
 }));
 
 describe('useInputProps behaviors', () => {

@@ -25,7 +25,7 @@ const stateMock = {
 
 jest.mock('utils', () => ({
   ...jest.requireActual('utils'),
-  rgbToHex: () => '#ffffff',
+  rgbToHex: (): any => '#ffffff',
 }));
 
 describe('ColumnBackground snapshots', () => {

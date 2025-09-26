@@ -8,7 +8,7 @@ import { updateField } from 'store/reduxHookForm/actions';
 
 export const dispatchFieldHandler =
   (dispatch: Dispatch, formName: string, name: string) =>
-  (field: Partial<TField>, actionType: TUpdateFieldActions) =>
+  (field: Partial<TField>, actionType: TUpdateFieldActions): void => {
     dispatch(
       updateField(
         {
@@ -21,3 +21,4 @@ export const dispatchFieldHandler =
         actionType,
       ),
     );
+  };

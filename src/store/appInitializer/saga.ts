@@ -14,7 +14,7 @@ import { resources } from 'translations/resources';
 // store
 import { initLanguageSuccess, setIsAppLoaded } from './actions';
 
-export function* appInitSaga() {
+export function* appInitSaga(): any {
   yield take(INIT_LANGUAGE_SUCCESS);
 
   try {
@@ -25,7 +25,7 @@ export function* appInitSaga() {
   }
 }
 
-export function* initLanguageSaga() {
+export function* initLanguageSaga(): any {
   let language = localStorage.getItem(LANGUAGE) || '';
 
   if (!language) {

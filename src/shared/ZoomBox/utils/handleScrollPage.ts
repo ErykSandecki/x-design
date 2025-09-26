@@ -11,7 +11,7 @@ export const handleScrollPage = (
   event: WheelEvent,
   onUpdateCoordinates: ((coordinates: T3DCoordinates) => void) | null,
   setCoordinates: (coordinates: T3DCoordinates) => void,
-) => {
+): void => {
   const { buttons, deltaY, deltaX } = event;
   const x = coordinates.x - deltaX;
   const y = coordinates.y - deltaY;

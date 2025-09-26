@@ -22,11 +22,11 @@ const mockAction3 = (): TAction => ({
 });
 
 jest.mock('react', () => ({
-  useCallback: (args: any) => args,
+  useCallback: (args: any): any => args,
 }));
 
 jest.mock('react-redux', () => ({
-  useDispatch: () => mockDispatch,
+  useDispatch: (): any => mockDispatch,
 }));
 
 describe('useDispatchMany', () => {

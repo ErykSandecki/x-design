@@ -22,7 +22,7 @@ export type TContextProviderProps = {
 const defaultState = {
   scrollLock: false,
   setScrollLock: noop,
-  setTheme: (theme: Theme) => localStorage.setItem(THEME, theme),
+  setTheme: (theme: Theme): void => localStorage.setItem(THEME, theme),
   theme: getThemePreferences(),
 };
 
@@ -38,12 +38,12 @@ export const ContextProvider: FC<TContextProviderProps> = ({
   const [theme, setTheme] = useState(defaultTheme || defaultState.theme);
   const [scrollLock, setScrollLock] = useState(defaultScrollLock);
 
-  const setScrollLockHandler = (scrollLock: boolean) => {
+  const setScrollLockHandler = (scrollLock: boolean): void => {
     defaultState.setScrollLock(scrollLock);
     setScrollLock(scrollLock);
   };
 
-  const setThemeHandler = (theme: Theme) => {
+  const setThemeHandler = (theme: Theme): void => {
     defaultState.setTheme(theme);
     setTheme(theme);
 

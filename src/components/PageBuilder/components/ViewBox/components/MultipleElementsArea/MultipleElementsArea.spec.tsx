@@ -68,7 +68,7 @@ const stateMock = {
 
 jest.mock('lodash', () => ({
   ...(jest.requireActual('lodash') as object),
-  defer: (callback: any) => callback(),
+  defer: (callback: any): any => callback(),
 }));
 
 describe('MultipleElementsArea snapshots', () => {
@@ -80,7 +80,7 @@ describe('MultipleElementsArea snapshots', () => {
     zoomContent.style.width = '1000px';
     document.body.appendChild(zoomContent);
     document.body.appendChild(overlayContainer);
-    storeToMock.getState = () =>
+    storeToMock.getState = (): any =>
       ({
         ...wholeStateMock,
         [PAGE_BUILDER]: {

@@ -12,7 +12,7 @@ export const useWheelEvent = (): TUseWheelEvent => {
   useEffect(() => {
     document.addEventListener('wheel', handleWheel, { passive: false });
 
-    return () => {
+    return (): void => {
       document.removeEventListener('wheel', handleWheel);
     };
   }, []);

@@ -35,7 +35,7 @@ const sharedRefs = {
 
 jest.mock('lodash', () => ({
   ...jest.requireActual('lodash'),
-  defer: (callback: any) => callback(),
+  defer: (callback: any): any => callback(),
 }));
 
 describe('getAbsolutePosition', () => {
@@ -43,7 +43,7 @@ describe('getAbsolutePosition', () => {
     // mock
     element.style.height = '100px';
     element.style.width = '100px';
-    storeToMock.getState = () =>
+    storeToMock.getState = (): any =>
       ({
         ...wholeStateMock,
         [PAGE_BUILDER]: {

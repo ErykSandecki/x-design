@@ -1,18 +1,17 @@
 // types
 import { TSyncValidator } from '../../types';
-import { TT } from 'types';
 
 // utils
 import { getErrorsFromSyncValidators } from '../validators';
 
 describe('getErrorsFromSyncValidators', () => {
-  const syncValidator = (value: any) => (value ? 'Success' : 'Error');
+  const syncValidator = (value: any): any => (value ? 'Success' : 'Error');
 
   it('should trigger validators & return errors', () => {
     // before
     const validators = [
-      () => syncValidator(''),
-      () => syncValidator('value'),
+      (): any => syncValidator(''),
+      (): any => syncValidator('value'),
     ] as Array<TSyncValidator>;
 
     // action

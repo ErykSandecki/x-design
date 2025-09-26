@@ -30,7 +30,7 @@ export const useMouseUpEvent = (
   useEffect(() => {
     window.addEventListener('mouseup', handleMouseUp);
 
-    return () => {
+    return (): void => {
       window.removeEventListener('mouseup', handleMouseUp);
     };
   }, [isMoving, possibleElementToSelect, setIsPressing]);

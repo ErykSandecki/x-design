@@ -13,7 +13,9 @@ import { MouseButton } from 'types';
 import { MouseMode } from 'types/enums/mouseMode';
 
 const mockCallBack = jest.fn();
-const ref = { current: { getBoundingClientRect: () => ({ left: 0, top: 0 }) } };
+const ref = {
+  current: { getBoundingClientRect: (): any => ({ left: 0, top: 0 }) },
+};
 
 describe('useZoomBoxEvents', () => {
   it(`should return zoom events and data`, () => {

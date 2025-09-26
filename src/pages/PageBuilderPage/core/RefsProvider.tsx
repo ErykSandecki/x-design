@@ -12,7 +12,7 @@ import { TContext } from './types';
 
 const RefsContext: React.Context<TContext> = createContext(null);
 
-export const useRefs = () => useContext(RefsContext);
+export const useRefs = (): TContext => useContext(RefsContext);
 
 export type TRefsProvider = {
   children: ReactNode;

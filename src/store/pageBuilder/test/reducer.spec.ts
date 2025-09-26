@@ -148,7 +148,7 @@ describe('PageBuilderReducer', () => {
   it('should handle APPLY_ELEMENTS_SIZE_TYPE', () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-    window.getComputedStyle = () =>
+    window.getComputedStyle = (): any =>
       ({ height: '100px', width: '100px' }) as CSSStyleDeclaration;
 
     // before

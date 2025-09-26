@@ -23,7 +23,7 @@ const stateMock = {
 
 jest.mock('react-redux', () => ({
   ...jest.requireActual('react-redux'),
-  useDispatch: () => mockCallBack,
+  useDispatch: (): any => mockCallBack,
 }));
 
 describe('useMouseUpEvent', () => {

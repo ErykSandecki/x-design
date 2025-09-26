@@ -19,7 +19,7 @@ export const useWindowSize = (): TUseWindowSize => {
   useLayoutEffect(() => {
     window.addEventListener('resize', updateSize);
 
-    return () => {
+    return (): void => {
       window.removeEventListener('resize', updateSize);
     };
   }, []);

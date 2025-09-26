@@ -14,7 +14,7 @@ const mockCallBack = jest.fn();
 
 jest.mock('utils', () => ({
   ...jest.requireActual('utils'),
-  generateID: () => 'test-1',
+  generateID: (): any => 'test-1',
 }));
 
 describe('handleCreateElement', () => {

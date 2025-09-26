@@ -27,7 +27,7 @@ export const handleZoom = (
   onUpdateCoordinates: ((coordinates: T3DCoordinates) => void) | null,
   setCoordinates: (coordinates: T3DCoordinates) => void,
   zoomBoxRef: RefObject<HTMLDivElement>,
-) => {
+): void => {
   if (isControlPressed(event)) {
     const { x, y, z } = coordinates;
     const { left, top } = zoomBoxRef.current.getBoundingClientRect();

@@ -1,6 +1,5 @@
 // types
 import { TField } from 'store/reduxHookForm/types';
-import { TT } from 'types';
 
 // utils
 import { biggerThanOther } from '../../syncValidators';
@@ -26,7 +25,7 @@ describe('biggerThanOther', () => {
   testCases.forEach(({ args, description, expectedResult }) => {
     it(description, () => {
       // before
-      const t = (key: string) => key;
+      const t = (key: string): any => key;
       const { value } = args;
 
       const result = biggerThanOther('field', 'translatedField')(

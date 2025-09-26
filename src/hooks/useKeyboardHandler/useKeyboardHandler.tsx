@@ -61,7 +61,7 @@ export const useKeyboardHandler = (
       updateEventHandler(handleKeyDown, 'addEventListener', 'keydown');
     }
 
-    return () => {
+    return (): void => {
       updateEventHandler(handleKeyDown, 'removeEventListener', 'keydown');
     };
   }, [id, ...dependencies]); // drawerId, id, modalId, ...dependencies

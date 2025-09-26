@@ -8,7 +8,7 @@ describe('hasScroll', () => {
     // mock
     const ref = { current: {} };
 
-    window.getComputedStyle = () =>
+    window.getComputedStyle = (): any =>
       ({ height: '1000px' }) as CSSStyleDeclaration;
 
     // before
@@ -22,7 +22,7 @@ describe('hasScroll', () => {
     // mock
     const ref = { current: {} };
 
-    window.getComputedStyle = () =>
+    window.getComputedStyle = (): any =>
       ({ height: '100px' }) as CSSStyleDeclaration;
 
     // before
@@ -36,7 +36,7 @@ describe('hasScroll', () => {
     // mock
     const ref = {};
 
-    window.getComputedStyle = () =>
+    window.getComputedStyle = (): any =>
       ({ height: '100px' }) as CSSStyleDeclaration;
 
     // before

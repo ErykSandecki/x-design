@@ -50,12 +50,12 @@ const stateMock = {
 
 jest.mock('react-redux', () => ({
   ...jest.requireActual('react-redux'),
-  useDispatch: () => mockCallBack,
+  useDispatch: (): any => mockCallBack,
 }));
 
 describe('useHandleSelectElement', () => {
   beforeAll(() => {
-    storeToMock.getState = () => stateMock as any;
+    storeToMock.getState = (): any => stateMock as any;
   });
 
   it(`should select items`, () => {
@@ -78,7 +78,7 @@ describe('useHandleSelectElement', () => {
 
   it(`should not select items when list is empty`, () => {
     // mock
-    storeToMock.getState = () =>
+    storeToMock.getState = (): any =>
       ({
         ...stateMock,
         [PAGE_BUILDER]: {

@@ -8,7 +8,7 @@ export type TUseMouseDownEvent = () => void;
 export const useMouseDownEvent = (): TUseMouseDownEvent => {
   const dispatch = useDispatch();
 
-  const handleMouseDown = () => {
+  const handleMouseDown = (): void => {
     dispatch(updateEventsStatus({ isRotating: true }));
   };
 

@@ -1,6 +1,5 @@
 // types
 import { TField } from 'store/reduxHookForm/types';
-import { TT } from 'types';
 
 // utils
 import { stepBetweenNumbers } from '../../syncValidators';
@@ -26,7 +25,7 @@ describe('stepBetweenNumbers', () => {
   testCases.forEach(({ args, description, expectedResult }) => {
     it(description, () => {
       // before
-      const t = (key: string) => key;
+      const t = (key: string): any => key;
       const { value } = args;
 
       const result = stepBetweenNumbers('field1', 'field2')(t as TT, value, {

@@ -23,7 +23,7 @@ export const getByE2EAttribute = (
 
 export const getProviderWrapper =
   (store: TStore, history?: History) =>
-  ({ children }) =>
+  ({ children }): any =>
     history ? (
       <Provider store={store}>
         <Router location={history.location} navigator={history}>

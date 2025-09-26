@@ -15,7 +15,7 @@ export const handleMoveArea = (
   mouseMode: MouseMode,
   onUpdateCoordinates: ((coordinates: T3DCoordinates) => void) | null,
   setCoordinates: (coordinates: T3DCoordinates) => void,
-) => {
+): void => {
   const { x, y } = cursorPosition.current;
   const cursor = cursorState as (typeof CURSOR_STATES)[number];
 

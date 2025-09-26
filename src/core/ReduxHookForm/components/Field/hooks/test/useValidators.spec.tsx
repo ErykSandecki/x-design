@@ -24,14 +24,15 @@ import { TFields } from 'store/reduxHookForm/types';
 // utils
 import { getProviderWrapper } from 'test/testHelpers';
 
-const asyncValidator = (value: TFieldValue) =>
+const asyncValidator = (value: TFieldValue): any =>
   new Promise((resolve) => resolve(value ? 'Success' : 'Error'));
 
-const syncValidator = (value: TFieldValue) => (value ? 'Success' : 'Error');
+const syncValidator = (value: TFieldValue): any =>
+  value ? 'Success' : 'Error';
 
 const asyncValidators = [
-  () => asyncValidator(''),
-  () => asyncValidator('value'),
+  (): any => asyncValidator(''),
+  (): any => asyncValidator('value'),
 ] as Array<TAsyncValidator>;
 
 const compareValidator: TSyncValidator = (
@@ -41,8 +42,8 @@ const compareValidator: TSyncValidator = (
 ) => (value === fields.testField2.value ? 'Equal' : 'Not Equal');
 
 const syncValidators = [
-  () => syncValidator(''),
-  () => syncValidator('value'),
+  (): any => syncValidator(''),
+  (): any => syncValidator('value'),
 ] as Array<TSyncValidator>;
 
 const mockCallBack = jest.fn();
@@ -63,12 +64,12 @@ const stateMock = {
 };
 
 jest.mock('../../../../utils/dispatchFieldHandler', () => ({
-  dispatchFieldHandler: () => mockCallBack,
+  dispatchFieldHandler: (): any => mockCallBack,
 }));
 
 jest.mock('lodash', () => ({
   ...(jest.requireActual('lodash') as object),
-  debounce: async (callback: any) => await callback(),
+  debounce: async (callback: any): Promise<any> => await callback(),
 }));
 
 describe('useValidators', () => {

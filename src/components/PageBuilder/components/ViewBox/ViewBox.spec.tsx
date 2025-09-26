@@ -34,7 +34,10 @@ const sharedRefs = {
 
 jest.mock('lodash', () => ({
   ...jest.requireActual('lodash'),
-  debounce: (callback: any) => (value: any) => callback(value),
+  debounce:
+    (callback: any) =>
+    (value: any): any =>
+      callback(value),
 }));
 
 describe('ViewBox snapshots', () => {

@@ -74,7 +74,7 @@ const stateMock = {
 
 jest.mock('react-redux', () => ({
   ...jest.requireActual('react-redux'),
-  useDispatch: () => mockCallBack,
+  useDispatch: (): any => mockCallBack,
 }));
 
 describe('DropAnchors snapshots', () => {
@@ -581,7 +581,7 @@ describe('DropAnchors behaviors', () => {
   it('should triger event mouse enter', () => {
     // mock
     const store = configureStore(stateMock);
-    storeToMock.getState = () =>
+    storeToMock.getState = (): any =>
       ({
         ...stateMock,
         [PAGE_BUILDER]: {

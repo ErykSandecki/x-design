@@ -24,7 +24,9 @@ export const useRippleEffect = (
   const [coords, setCoords] = useState({ x: -1, y: -1 });
   const [isRippling, setIsRippling] = useState(false);
   /* istanbul ignore next */
-  const transform = isJestRunning() ? (value: string) => value : camelCase;
+  const transform = isJestRunning()
+    ? (value: string): string => value
+    : camelCase;
 
   const rippleEffect = isRippling ? (
     <span
@@ -64,7 +66,7 @@ export const useRippleEffect = (
       timeout = setTimeout(() => setIsRippling(false), delay);
     }
 
-    return () => {
+    return (): void => {
       if (timeout) {
         clearTimeout(timeout);
       }

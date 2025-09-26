@@ -34,7 +34,7 @@ export const useOutsideClick = (
     }
   };
 
-  const handleKeyDown = (event: KeyboardEvent) => {
+  const handleKeyDown = (event: KeyboardEvent): void => {
     const { key } = event;
 
     if (key === KeyboardKeys.escape) {
@@ -57,7 +57,7 @@ export const useOutsideClick = (
       window.addEventListener('keydown', handleKeyDown);
     }
 
-    return () => {
+    return (): void => {
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [disabledEscapeKeyDown, selected, ...dependencies]);
@@ -65,7 +65,7 @@ export const useOutsideClick = (
   useEffect(() => {
     updateEventHandler('addEventListener');
 
-    return () => {
+    return (): void => {
       updateEventHandler('removeEventListener');
     };
   }, [callback, selected, ref, ...dependencies]);

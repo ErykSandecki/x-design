@@ -35,7 +35,7 @@ describe('calculateBoxSize', () => {
     element.style.width = '100px';
     zoomContent.style.height = '1000px';
     zoomContent.style.width = '1000px';
-    storeToMock.getState = () =>
+    storeToMock.getState = (): any =>
       ({
         ...wholeStateMock,
         [PAGE_BUILDER]: {

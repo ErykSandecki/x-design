@@ -3,11 +3,11 @@ import { extractColors } from '../extractColors';
 
 jest.mock('html2canvas', () => ({
   __esModule: true,
-  default: async () =>
+  default: async (): Promise<any> =>
     new Promise((resolve) =>
       resolve({
         getContext: () => ({
-          getImageData: () => ({
+          getImageData: (): any => ({
             data: Array.from(Array(49 * 4), () => 0),
           }),
         }),

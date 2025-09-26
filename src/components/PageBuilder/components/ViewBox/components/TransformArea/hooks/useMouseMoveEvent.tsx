@@ -63,7 +63,7 @@ export const useMouseMoveEvent = (
       window.addEventListener('mousemove', handleMouseMoveAnchorRotate);
     }
 
-    return () => {
+    return (): void => {
       window.removeEventListener('mousemove', handleMouseMoveAnchorResize);
       window.removeEventListener('mousemove', handleMouseMoveAnchorRotate);
     };

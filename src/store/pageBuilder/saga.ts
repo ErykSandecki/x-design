@@ -11,26 +11,30 @@ import { reducerHistorySave, updateEventsStatus } from './actions';
 import { TAction } from 'types';
 import { TReducerHistorySaveAction } from './types';
 
-export function* freezeEventMoveElements() {
+export function* freezeEventMoveElements(): any {
   yield put(updateEventsStatus({ canMoveElements: false }));
   yield delay(100);
   yield put(updateEventsStatus({ canMoveElements: true }));
 }
 
-export function* reducerHistorySaveSaga({ type }: TReducerHistorySaveAction) {
+export function* reducerHistorySaveSaga({
+  type,
+}: TReducerHistorySaveAction): any {
   yield put(reducerHistorySave(type));
 }
 
 export function* reducerHistorySaveWithDelaySaga({
   type,
-}: TReducerHistorySaveAction) {
+}: TReducerHistorySaveAction): any {
   const task: Task = yield fork(reducerHistorySaveWithDelayForkedSaga, type);
 
   yield take(REDUCER_HISTORY_SAVE_WITH_DELAY_ACTIONS);
   yield cancel(task);
 }
 
-export function* reducerHistorySaveWithDelayForkedSaga(type: TAction['type']) {
+export function* reducerHistorySaveWithDelayForkedSaga(
+  type: TAction['type'],
+): any {
   yield delay(500);
   yield put(reducerHistorySave(type));
 }

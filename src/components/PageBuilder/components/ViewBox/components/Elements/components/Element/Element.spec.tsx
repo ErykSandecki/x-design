@@ -61,7 +61,7 @@ const stateMock = {
 
 jest.mock('lodash', () => ({
   ...(jest.requireActual('lodash') as object),
-  defer: (callback: any) => callback(),
+  defer: (callback: any): any => callback(),
 }));
 
 describe('Element snapshots', () => {
@@ -143,7 +143,7 @@ describe('Element snapshots', () => {
 
   it('should render Element when width & height is auto', () => {
     // mock
-    window.getComputedStyle = () =>
+    window.getComputedStyle = (): any =>
       ({ height: '100px', width: '100px' }) as CSSStyleDeclaration;
 
     // mock

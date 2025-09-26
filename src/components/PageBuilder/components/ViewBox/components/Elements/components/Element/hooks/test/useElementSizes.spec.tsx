@@ -66,7 +66,7 @@ const stateMock = {
 describe('useElementEvents', () => {
   beforeAll(() => {
     // mock
-    window.getComputedStyle = () =>
+    window.getComputedStyle = (): any =>
       ({ height: '100px', width: '100px' }) as CSSStyleDeclaration;
   });
 

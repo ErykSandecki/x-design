@@ -38,7 +38,7 @@ const mockCallBack = jest.fn();
 
 jest.mock('react-redux', () => ({
   ...jest.requireActual('react-redux'),
-  useDispatch: () => mockCallBack,
+  useDispatch: (): any => mockCallBack,
 }));
 
 jest.mock('./hooks/useTransformAreaEvents', () => ({

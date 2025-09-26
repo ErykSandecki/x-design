@@ -31,7 +31,7 @@ const currentPage =
 describe('setElementsCoordinatesHandler', () => {
   beforeAll(() => {
     // mock
-    storeToMock.getState = () =>
+    storeToMock.getState = (): any =>
       ({
         ...wholeStateMock,
         [PAGE_BUILDER]: {

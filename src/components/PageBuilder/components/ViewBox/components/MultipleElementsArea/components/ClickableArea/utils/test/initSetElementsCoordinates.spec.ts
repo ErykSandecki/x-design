@@ -28,7 +28,7 @@ const stateMock = {
 describe('initSetElementsCoordinates', () => {
   it(`should trigger event`, () => {
     // mock
-    storeToMock.getState = () =>
+    storeToMock.getState = (): any =>
       ({
         ...stateMock,
         [PAGE_BUILDER]: {

@@ -30,7 +30,7 @@ export const useColorSamplerEvents = (
   useEffect(() => {
     document.body.style.pointerEvents = 'none';
 
-    return () => {
+    return (): void => {
       document.body.style.pointerEvents = 'all';
     };
   }, []);

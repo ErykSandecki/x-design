@@ -67,7 +67,7 @@ export const Typography = ({
   variant = TypographyVariant.p,
   variantMapping = {},
   ...restProps
-}: TTypographyProps) => {
+}: TTypographyProps): ReactNode => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const sxClassName = useSX(depsSx, sx);
 

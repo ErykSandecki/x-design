@@ -13,7 +13,7 @@ export const getCoordinates = (
   coordinates: T2DCoordinates,
   isDynamic: boolean,
   prevCoordinates: T2DCoordinates,
-) => {
+): T2DCoordinates => {
   const { x, y } = coordinates;
   const { x: prevX, y: prevY } = prevCoordinates;
 

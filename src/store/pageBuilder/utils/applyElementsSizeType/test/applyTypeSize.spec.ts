@@ -37,8 +37,8 @@ const clonedElements = {
 describe('applyTypeSize', () => {
   beforeAll(() => {
     // mock
-    document.getElementById = () => ({ querySelector: noop }) as any;
-    window.getComputedStyle = () =>
+    document.getElementById = (): any => ({ querySelector: noop }) as any;
+    window.getComputedStyle = (): any =>
       ({ height: '100px', width: '100px' }) as CSSStyleDeclaration;
   });
 

@@ -26,13 +26,13 @@ const stateMock = {
 
 jest.mock('react-redux', () => ({
   ...jest.requireActual('react-redux'),
-  useDispatch: () => mockCallBack,
+  useDispatch: (): any => mockCallBack,
 }));
 
 describe('useMouseLeaveEvent', () => {
   it(`should trigger event`, () => {
     // mock
-    storeToMock.getState = () =>
+    storeToMock.getState = (): any =>
       ({
         ...stateMock,
         [PAGE_BUILDER]: {
@@ -63,7 +63,7 @@ describe('useMouseLeaveEvent', () => {
 
   it(`should not trigger event when empty selected elements`, () => {
     // mock
-    storeToMock.getState = () =>
+    storeToMock.getState = (): any =>
       ({
         ...stateMock,
         [PAGE_BUILDER]: {
@@ -88,7 +88,7 @@ describe('useMouseLeaveEvent', () => {
 
   it(`should not trigger when mouse mode is different`, () => {
     // mock
-    storeToMock.getState = () =>
+    storeToMock.getState = (): any =>
       ({
         ...stateMock,
         [PAGE_BUILDER]: {

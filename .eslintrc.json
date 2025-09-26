@@ -42,7 +42,13 @@
     "sort-keys": 1,
     "@typescript-eslint/ban-types": "off",
     "@typescript-eslint/ban-ts-comment": 0,
-    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-function-return-type": [
+      "error",
+      {
+        "allowExpressions": false,
+        "allowTypedFunctionExpressions": true
+      }
+    ],
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-empty-function": "off",
     "@typescript-eslint/no-empty-object-type": "off",

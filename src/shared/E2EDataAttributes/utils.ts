@@ -13,7 +13,7 @@ export const getDataTestAttribute = (type?: E2EAttribute | string): string =>
 export const getAttributes = (
   type: E2EType | Array<E2EType>,
   value: E2EValue | Array<E2EValue>,
-) =>
+): {} =>
   isArray(type) && isArray(value)
     ? zip(type, value).reduce(
         (obj, [type, value]) => ({

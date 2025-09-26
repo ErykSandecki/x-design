@@ -12,7 +12,7 @@ export const handleTrySingleElement = (
   dispatch: Dispatch,
   isMoving: boolean,
   possibleElementToSelect: TElement['id'],
-) => {
+): void => {
   if (!isMoving && possibleElementToSelect !== '-1') {
     const { parentId, position, type } = allDataSelector(store.getState())[
       possibleElementToSelect

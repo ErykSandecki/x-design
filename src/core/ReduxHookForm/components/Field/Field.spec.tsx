@@ -21,17 +21,17 @@ const stateMock = {
   ...reduxHookFormStateMock,
 };
 
-const Checkbox = () => {
+const Checkbox = (): any => {
   return <input type="checkbox" />;
 };
 
-const TextField = () => {
+const TextField = (): any => {
   return <input type="text" />;
 };
 
 jest.mock('lodash', () => ({
   ...(jest.requireActual('lodash') as object),
-  defer: (callback: any) => callback(),
+  defer: (callback: any): any => callback(),
 }));
 
 describe('Field snapshots', () => {

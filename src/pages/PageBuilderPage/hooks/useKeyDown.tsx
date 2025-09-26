@@ -35,38 +35,38 @@ export const useKeyDown = (
     [canRedo, canUndo],
     [
       {
-        action: () => dispatch(reducerHistoryRedo()),
+        action: (): any => dispatch(reducerHistoryRedo()),
         conditions: [canRedo],
         primaryKeys: [CONTROL, 'shift'],
         secondaryKey: KeyboardKeys.z,
       },
       {
-        action: () => dispatch(reducerHistoryUndo()),
+        action: (): any => dispatch(reducerHistoryUndo()),
         conditions: [canUndo],
         primaryKeys: [CONTROL],
         secondaryKey: KeyboardKeys.z,
       },
       {
-        action: () => setMouseMode(MouseMode.comment),
+        action: (): any => setMouseMode(MouseMode.comment),
         secondaryKey: KeyboardKeys.e,
       },
       {
-        action: () => {
+        action: (): any => {
           setMouseMode(MouseMode.default);
           dispatch(updateEventsStatus({ colorSampler: false }));
         },
         secondaryKey: KeyboardKeys.escape,
       },
       {
-        action: () => setMouseMode(MouseMode.default),
+        action: (): any => setMouseMode(MouseMode.default),
         secondaryKey: KeyboardKeys.q,
       },
       {
-        action: () => setMouseMode(MouseMode.move),
+        action: (): any => setMouseMode(MouseMode.move),
         secondaryKey: KeyboardKeys.w,
       },
       {
-        action: () => setMouseMode(MouseMode.toolBeltA),
+        action: (): any => setMouseMode(MouseMode.toolBeltA),
         secondaryKey: KeyboardKeys.f,
       },
     ],

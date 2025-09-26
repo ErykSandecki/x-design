@@ -18,7 +18,7 @@ const stateMock = {};
 
 jest.mock('react-redux', () => ({
   ...(jest.requireActual('react-redux') as object),
-  useDispatch: () => () => {},
+  useDispatch: () => (): any => {},
 }));
 
 describe('ContextProvider behaviors', () => {
