@@ -4,7 +4,6 @@ import { BASE_PAGE, BASE_PAGE_ELEMENTS } from 'store/pageBuilder/constants';
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 
 // types
-import { AnchorResize, AnchorRotate } from 'store/pageBuilder/enums';
 import {
   AlignmentHorizontal,
   AlignmentVertical,
@@ -15,9 +14,9 @@ import {
   TElement,
   TLayout,
 } from 'types';
+import { AnchorResize, AnchorRotate } from 'store/pageBuilder/enums';
 import {
   TElementDynamicData,
-  TElementsData,
   TElementStaticData,
   TEvents,
   TPageBuilderState,
@@ -54,6 +53,7 @@ export const pageBuilderStateMock: Record<
     },
   },
 };
+
 export const alignmetnMock: TAlignment = {
   horizontal: AlignmentHorizontal.center,
   vertical: AlignmentVertical.center,
@@ -78,7 +78,7 @@ export const elementDynamicDataMock: TElementDynamicData = {
   height: {
     value: 100,
   },
-  id: '1',
+  id: 'test-1',
   layout: layoutMock,
   position: 'absolute',
   width: {
@@ -88,7 +88,7 @@ export const elementDynamicDataMock: TElementDynamicData = {
 
 export const elementStaticDataMock: TElementStaticData = {
   children: [],
-  id: '1',
+  id: 'test-1',
   parentId: '-1',
   type: ElementType.frame,
 };
@@ -111,7 +111,7 @@ export const createFrameMock: TElement = {
   height: {
     value: 0,
   },
-  id: '1',
+  id: 'test-1',
   layout: layoutMock,
   parentId: '-1',
   position: 'absolute',
@@ -150,26 +150,26 @@ export const reducerHistoryMock: Array<TReducerHistory> = [
       ...BASE_PAGE_ELEMENTS,
       allData: {
         ...BASE_PAGE_ELEMENTS.allData,
-        ['1']: elementAllDataMock,
-        ['2']: {
+        ['test-1']: elementAllDataMock,
+        ['test-2']: {
           ...elementAllDataMock,
-          id: '2',
+          id: 'test-2',
         },
       },
       dynamicData: {
         ...BASE_PAGE_ELEMENTS.dynamicData,
-        ['1']: elementDynamicDataMock,
-        ['2']: {
+        ['test-1']: elementDynamicDataMock,
+        ['test-2']: {
           ...elementDynamicDataMock,
-          id: '2',
+          id: 'test-2',
         },
       },
       staticData: {
         ...BASE_PAGE_ELEMENTS.staticData,
-        ['1']: elementStaticDataMock,
-        ['2']: {
+        ['test-1']: elementStaticDataMock,
+        ['test-2']: {
           ...elementStaticDataMock,
-          id: '2',
+          id: 'test-2',
         },
       },
     },
@@ -178,146 +178,8 @@ export const reducerHistoryMock: Array<TReducerHistory> = [
 ];
 
 export const selectedElementMock: TSelectedElement = {
-  id: '1',
+  id: 'test-1',
   parentId: '-1',
   position: 'absolute',
   type: ElementType.frame,
-};
-
-export const oneElementMock: TElementsData = {
-  allData: {
-    '-1': {
-      alignment: {},
-      angle: 0,
-      background: {
-        properties: {
-          alpha: '100',
-          color: '#1e262f',
-          format: 'hex',
-        },
-        visible: true,
-      },
-      children: ['1'],
-      coordinates: {
-        x: 0,
-        y: 0,
-      },
-      deepLevel: 0,
-      height: {
-        value: 0,
-      },
-      id: '-1',
-      layout: layoutMock,
-      parentId: '-1',
-      position: 'absolute',
-      type: ElementType.base,
-      width: {
-        value: 0,
-      },
-    },
-    1: {
-      alignment: {},
-      angle: 0,
-      background: {
-        properties: {
-          alpha: '100',
-          color: '#ffffff',
-          format: 'hex',
-        },
-        visible: true,
-      },
-      children: [],
-      coordinates: {
-        x: 500,
-        y: 500,
-      },
-      deepLevel: 0,
-      height: {
-        value: 500,
-      },
-      id: '1',
-      layout: layoutMock,
-      parentId: '-1',
-      position: 'absolute',
-      type: ElementType.frame,
-      width: {
-        value: 500,
-      },
-    },
-  },
-  dynamicData: {
-    '-1': {
-      alignment: {},
-      angle: 0,
-      background: {
-        properties: {
-          alpha: '100',
-          color: '#1e262f',
-          format: 'hex',
-        },
-        visible: true,
-      },
-      coordinates: {
-        x: 0,
-        y: 0,
-      },
-      deepLevel: 0,
-      height: {
-        value: 0,
-      },
-      id: '-1',
-      layout: layoutMock,
-      position: 'absolute',
-      width: {
-        value: 0,
-      },
-    },
-    1: {
-      alignment: {},
-      angle: 0,
-      background: {
-        properties: {
-          alpha: '100',
-          color: '#ffffff',
-          format: 'hex',
-        },
-        visible: true,
-      },
-      coordinates: {
-        x: 500,
-        y: 500,
-      },
-      deepLevel: 0,
-      height: {
-        value: 500,
-      },
-      id: '1',
-      layout: layoutMock,
-      position: 'absolute',
-      width: {
-        value: 500,
-      },
-    },
-  },
-  staticData: {
-    '-1': {
-      children: ['1'],
-      id: '-1',
-      parentId: '-1',
-      type: ElementType.base,
-    },
-    1: {
-      children: [],
-      id: '1',
-      parentId: '-1',
-      type: ElementType.frame,
-    },
-  },
-};
-
-export const oneElementSelectedMock: TSelectedElement = {
-  id: oneElementMock.allData['1'].id,
-  parentId: oneElementMock.allData['1'].parentId,
-  position: oneElementMock.allData['1'].position,
-  type: oneElementMock.allData['1'].type,
 };

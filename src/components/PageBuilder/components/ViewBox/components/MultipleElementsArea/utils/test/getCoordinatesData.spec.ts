@@ -25,7 +25,7 @@ const currentPage =
 
 const itemsRefs = {
   [selectedElementMock.id]: element,
-  ['2']: element,
+  ['test-2']: element,
 };
 
 describe('calculateBoxSize', () => {
@@ -51,9 +51,9 @@ describe('calculateBoxSize', () => {
                   [selectedElementMock.id]: {
                     ...elementAllDataMock,
                   },
-                  ['2']: {
+                  ['test-2']: {
                     ...elementAllDataMock,
-                    id: '2',
+                    id: 'test-2',
                   },
                 },
               },
@@ -68,15 +68,15 @@ describe('calculateBoxSize', () => {
     const result = getCoordinatesData(
       false,
       itemsRefs,
-      [selectedElementMock, { ...selectedElementMock, id: '2' }],
+      [selectedElementMock, { ...selectedElementMock, id: 'test-2' }],
       { current: zoomContent },
     );
 
     // result
     expect(result).toStrictEqual({
       elementsCordinates: [
-        { coordinates: { x1: 0, x2: 100, y1: 0, y2: 100 }, id: '1' },
-        { coordinates: { x1: 0, x2: 100, y1: 0, y2: 100 }, id: '2' },
+        { coordinates: { x1: 0, x2: 100, y1: 0, y2: 100 }, id: 'test-1' },
+        { coordinates: { x1: 0, x2: 100, y1: 0, y2: 100 }, id: 'test-2' },
       ],
       outline: { x1: -0.75, x2: 100.75, y1: -0.75, y2: 100.75 },
     });

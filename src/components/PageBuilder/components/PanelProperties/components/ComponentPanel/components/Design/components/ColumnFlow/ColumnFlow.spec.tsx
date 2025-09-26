@@ -39,10 +39,10 @@ const stateMock = {
           allData: {
             ['-1']: {
               ...currentPage.elements.allData['-1'],
-              children: [elementAllDataMock.id, '2'],
+              children: [elementAllDataMock.id, 'test-1'],
             },
             [elementAllDataMock.id]: elementAllDataMock,
-            ['2']: { ...elementAllDataMock, id: '2' },
+            ['test-1']: { ...elementAllDataMock, id: 'test-1' },
           },
           dynamicData: {
             ['-1']: {
@@ -50,17 +50,17 @@ const stateMock = {
               children: [elementDynamicDataMock.id],
             },
             [elementDynamicDataMock.id]: elementDynamicDataMock,
-            ['2']: elementDynamicDataMock,
+            ['test-1']: elementDynamicDataMock,
           },
           staticData: {
             ['-1']: {
               ...currentPage.elements.staticData['-1'],
-              children: [elementStaticDataMock.id, '2'],
+              children: [elementStaticDataMock.id, 'test-1'],
             },
             [elementStaticDataMock.id]: elementStaticDataMock,
-            ['2']: {
+            ['test-1']: {
               ...elementStaticDataMock,
-              id: '2',
+              id: 'test-1',
             },
           },
         },
@@ -99,9 +99,9 @@ describe('ColumnFlow snapshots', () => {
               ...stateMock[PAGE_BUILDER].pages['0'].elements,
               allData: {
                 ...stateMock[PAGE_BUILDER].pages['0'].elements.allData,
-                ['2']: {
+                ['test-1']: {
                   ...elementAllDataMock,
-                  id: '2',
+                  id: 'test-1',
                   layout: {
                     ...layoutMock,
                     type: LayoutType.grid,
@@ -110,9 +110,9 @@ describe('ColumnFlow snapshots', () => {
               },
               dynamicData: {
                 ...stateMock[PAGE_BUILDER].pages['0'].elements.dynamicData,
-                ['2']: {
+                ['test-1']: {
                   ...elementDynamicDataMock,
-                  id: '2',
+                  id: 'test-1',
                   layout: {
                     ...layoutMock,
                     type: LayoutType.grid,
@@ -122,7 +122,7 @@ describe('ColumnFlow snapshots', () => {
             },
             selectedElements: [
               ...stateMock[PAGE_BUILDER].pages['0'].selectedElements,
-              { ...selectedElementMock, id: '2' },
+              { ...selectedElementMock, id: 'test-2' },
             ],
           },
         },
@@ -170,8 +170,8 @@ describe('ColumnFlow behaviors', () => {
 
     // result
     expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].layout
-        .type,
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1']
+        .layout.type,
     ).toBe(LayoutType.grid);
   });
 });

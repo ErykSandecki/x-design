@@ -44,66 +44,68 @@ describe('applyTypeSize', () => {
 
   it(`should apply auto`, () => {
     // before
-    applyTypeSize(clonedElements, '1', 100, 'height', 'auto');
+    applyTypeSize(clonedElements, 'test-1', 100, 'height', 'auto');
 
     // result
-    expect(clonedElements.allData['1'].height.unit).toBe(undefined);
-    expect(clonedElements.allData['1'].height.value).toBe('auto');
-    expect(clonedElements.dynamicData['1'].height.unit).toBe(undefined);
-    expect(clonedElements.dynamicData['1'].height.value).toBe('auto');
+    expect(clonedElements.allData['test-1'].height.unit).toBe(undefined);
+    expect(clonedElements.allData['test-1'].height.value).toBe('auto');
+    expect(clonedElements.dynamicData['test-1'].height.unit).toBe(undefined);
+    expect(clonedElements.dynamicData['test-1'].height.value).toBe('auto');
   });
 
   it(`should apply fixed`, () => {
     // before
-    applyTypeSize(clonedElements, '1', 100, 'height', 'fixed');
+    applyTypeSize(clonedElements, 'test-1', 100, 'height', 'fixed');
 
     // result
-    expect(clonedElements.allData['1'].height.unit).toBe(undefined);
-    expect(clonedElements.allData['1'].height.value).toBe(100);
-    expect(clonedElements.dynamicData['1'].height.unit).toBe(undefined);
-    expect(clonedElements.dynamicData['1'].height.value).toBe(100);
+    expect(clonedElements.allData['test-1'].height.unit).toBe(undefined);
+    expect(clonedElements.allData['test-1'].height.value).toBe(100);
+    expect(clonedElements.dynamicData['test-1'].height.unit).toBe(undefined);
+    expect(clonedElements.dynamicData['test-1'].height.value).toBe(100);
   });
 
   it(`should apply max and remove`, () => {
     // before
-    applyTypeSize(clonedElements, '1', 100, 'height', 'max');
+    applyTypeSize(clonedElements, 'test-1', 100, 'height', 'max');
 
     // result
-    expect(clonedElements.allData['1'].height.max).toBe(100);
-    expect(clonedElements.dynamicData['1'].height.max).toBe(100);
+    expect(clonedElements.allData['test-1'].height.max).toBe(100);
+    expect(clonedElements.dynamicData['test-1'].height.max).toBe(100);
 
     // before
-    applyTypeSize(clonedElements, '1', 100, 'height', 'max');
+    applyTypeSize(clonedElements, 'test-1', 100, 'height', 'max');
 
     // result
-    expect(clonedElements.allData['1'].height.max).toBe(undefined);
-    expect(clonedElements.dynamicData['1'].height.max).toBe(undefined);
+    expect(clonedElements.allData['test-1'].height.max).toBe(undefined);
+    expect(clonedElements.dynamicData['test-1'].height.max).toBe(undefined);
   });
 
   it(`should apply min and remove`, () => {
     // before
-    applyTypeSize(clonedElements, '1', 100, 'height', 'min');
+    applyTypeSize(clonedElements, 'test-1', 100, 'height', 'min');
 
     // result
-    expect(clonedElements.allData['1'].height.min).toBe(100);
-    expect(clonedElements.dynamicData['1'].height.min).toBe(100);
+    expect(clonedElements.allData['test-1'].height.min).toBe(100);
+    expect(clonedElements.dynamicData['test-1'].height.min).toBe(100);
 
     // before
-    applyTypeSize(clonedElements, '1', 100, 'height', 'min');
+    applyTypeSize(clonedElements, 'test-1', 100, 'height', 'min');
 
     // result
-    expect(clonedElements.allData['1'].height.min).toBe(undefined);
-    expect(clonedElements.dynamicData['1'].height.min).toBe(undefined);
+    expect(clonedElements.allData['test-1'].height.min).toBe(undefined);
+    expect(clonedElements.dynamicData['test-1'].height.min).toBe(undefined);
   });
 
   it(`should apply unit`, () => {
     // before
-    applyTypeSize(clonedElements, '1', 100, 'height', 'unit');
+    applyTypeSize(clonedElements, 'test-1', 100, 'height', 'unit');
 
     // result
-    expect(clonedElements.allData['1'].height.unit).toBe(Unit.percentage);
-    expect(clonedElements.allData['1'].height.value).toBe(100);
-    expect(clonedElements.dynamicData['1'].height.unit).toBe(Unit.percentage);
-    expect(clonedElements.dynamicData['1'].height.value).toBe(100);
+    expect(clonedElements.allData['test-1'].height.unit).toBe(Unit.percentage);
+    expect(clonedElements.allData['test-1'].height.value).toBe(100);
+    expect(clonedElements.dynamicData['test-1'].height.unit).toBe(
+      Unit.percentage,
+    );
+    expect(clonedElements.dynamicData['test-1'].height.value).toBe(100);
   });
 });

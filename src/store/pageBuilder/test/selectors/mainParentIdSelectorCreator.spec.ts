@@ -13,7 +13,7 @@ import { mainParentIdSelectorCreator } from '../../selectors';
 describe('mainParentIdSelectorCreator', () => {
   it('should return main id', () => {
     // before
-    const selectorFunction = (mainParentIdSelectorCreator('2') as any)
+    const selectorFunction = (mainParentIdSelectorCreator('test-2') as any)
       .resultFunc;
 
     // result
@@ -22,14 +22,14 @@ describe('mainParentIdSelectorCreator', () => {
         [BASE_STATIC_DATA.id]: BASE_STATIC_DATA,
         [elementStaticDataMock.id]: {
           ...elementStaticDataMock,
-          children: ['2'],
+          children: ['test-2'],
         },
-        ['2']: {
+        ['test-2']: {
           ...elementStaticDataMock,
-          id: '2',
+          id: 'test-2',
           parentId: selectedElementMock.id,
         },
       }),
-    ).toBe('1');
+    ).toBe('test-1');
   });
 });

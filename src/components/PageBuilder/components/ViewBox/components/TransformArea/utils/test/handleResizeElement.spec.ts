@@ -33,7 +33,7 @@ describe('handleResizeElement', () => {
     expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
       baseCoordinates: { x1: 0, x2: 100, y1: 0, y2: 100 },
       height: 100,
-      id: '1',
+      id: 'test-1',
       mouseCoordinates: { x: 0, y: 0 },
       width: 100,
     });

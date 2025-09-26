@@ -5,7 +5,7 @@ exports[`Element snapshots should render Element 1`] = `
   <div
     class="css-wcnq0t className Element Element--light"
     data-test-box=""
-    id="1"
+    id="test-1"
     style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; height: 100px; position: absolute; width: 100px;"
   >
     <div
@@ -23,7 +23,7 @@ exports[`Element snapshots should render Element when is selected & is multiple 
   <div
     class="css-wcnq0t className Element Element--light Element--moving Element--moving--light"
     data-test-box=""
-    id="1"
+    id="test-1"
     style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; height: 100px; position: absolute; width: 100px;"
   >
     <div
@@ -144,7 +144,7 @@ exports[`Element snapshots should render Element when is selected 1`] = `
   <div
     class="css-wcnq0t className Element Element--light"
     data-test-box=""
-    id="1"
+    id="test-1"
     style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; height: 100px; position: absolute; width: 100px;"
   >
     <div
@@ -265,7 +265,7 @@ exports[`Element snapshots should render Element when width & height is auto 1`]
   <div
     class="css-wcnq0t className Element Element--light"
     data-test-box=""
-    id="1"
+    id="test-1"
     style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; height: auto; position: absolute; width: auto;"
   >
     <div

@@ -103,12 +103,12 @@ describe('ColumnPosition snapshots', () => {
                 ...stateMock[PAGE_BUILDER].pages['0'].elements.allData,
                 ['-1']: {
                   ...stateMock[PAGE_BUILDER].pages['0'].elements.allData['-1'],
-                  children: ['1', '2'],
+                  children: ['test-1', 'test-2'],
                 },
-                ['2']: {
+                ['test-2']: {
                   ...elementAllDataMock,
                   coordinates: { x: 100, y: 100 },
-                  id: '2',
+                  id: 'test-2',
                 },
               },
               dynamicData: {
@@ -117,12 +117,12 @@ describe('ColumnPosition snapshots', () => {
                   ...stateMock[PAGE_BUILDER].pages['0'].elements.dynamicData[
                     '-1'
                   ],
-                  children: ['1', '2'],
+                  children: ['test-1', 'test-2'],
                 },
-                ['2']: {
+                ['test-2']: {
                   ...elementDynamicDataMock,
                   coordinates: { x: 100, y: 100 },
-                  id: '2',
+                  id: 'test-2',
                 },
               },
               staticData: {
@@ -131,17 +131,17 @@ describe('ColumnPosition snapshots', () => {
                   ...stateMock[PAGE_BUILDER].pages['0'].elements.staticData[
                     '-1'
                   ],
-                  children: ['1', '2'],
+                  children: ['test-1', 'test-2'],
                 },
-                ['2']: {
+                ['test-2']: {
                   ...elementStaticDataMock,
-                  id: '2',
+                  id: 'test-2',
                 },
               },
             },
             selectedElements: [
               ...stateMock[PAGE_BUILDER].pages['0'].selectedElements,
-              { ...selectedElementMock, id: '2' },
+              { ...selectedElementMock, id: 'test-2' },
             ],
           },
         },
@@ -174,16 +174,16 @@ describe('ColumnPosition snapshots', () => {
                 ...stateMock[PAGE_BUILDER].pages['0'].elements.allData,
                 ['-1']: {
                   ...stateMock[PAGE_BUILDER].pages['0'].elements.allData['-1'],
-                  children: ['1', '2'],
+                  children: ['test-1', 'test-2'],
                 },
-                ['2']: {
+                ['test-2']: {
                   ...elementAllDataMock,
                   alignment: {
                     horizontal: AlignmentHorizontal.center,
                     vertical: AlignmentVertical.center,
                   },
                   coordinates: { x: 100, y: 100 },
-                  id: '2',
+                  id: 'test-2',
                 },
               },
               dynamicData: {
@@ -192,16 +192,16 @@ describe('ColumnPosition snapshots', () => {
                   ...stateMock[PAGE_BUILDER].pages['0'].elements.dynamicData[
                     '-1'
                   ],
-                  children: ['1', '2'],
+                  children: ['test-1', 'test-2'],
                 },
-                ['2']: {
+                ['test-2']: {
                   ...elementDynamicDataMock,
                   alignment: {
                     horizontal: AlignmentHorizontal.center,
                     vertical: AlignmentVertical.center,
                   },
                   coordinates: { x: 100, y: 100 },
-                  id: '2',
+                  id: 'test-2',
                 },
               },
               staticData: {
@@ -210,17 +210,17 @@ describe('ColumnPosition snapshots', () => {
                   ...stateMock[PAGE_BUILDER].pages['0'].elements.staticData[
                     '-1'
                   ],
-                  children: ['1', '2'],
+                  children: ['test-1', 'test-2'],
                 },
-                ['2']: {
+                ['test-2']: {
                   ...elementStaticDataMock,
-                  id: '2',
+                  id: 'test-2',
                 },
               },
             },
             selectedElements: [
               ...stateMock[PAGE_BUILDER].pages['0'].selectedElements,
-              { ...selectedElementMock, id: '2' },
+              { ...selectedElementMock, id: 'test-2' },
             ],
           },
         },
@@ -275,7 +275,7 @@ describe('ColumnPosition behaviors', () => {
 
     // result
     expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1']
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1']
         .coordinates,
     ).toStrictEqual({ x: 100, y: 100 });
   });
@@ -320,7 +320,7 @@ describe('ColumnPosition behaviors', () => {
 
     // result
     expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1']
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1']
         .coordinates,
     ).toStrictEqual({ x: -50, y: -50 });
   });

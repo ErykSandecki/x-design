@@ -43,15 +43,15 @@ const stateMock = {
             },
             [elementAllDataMock.id]: {
               ...elementAllDataMock,
-              children: ['2'],
+              children: ['test-2'],
               layout: {
                 ...layoutMock,
                 type: LayoutType.grid,
               },
             },
-            ['2']: {
+            ['test-2']: {
               ...elementAllDataMock,
-              id: '2',
+              id: 'test-2',
               parentId: elementAllDataMock.id,
             },
           },
@@ -67,9 +67,9 @@ const stateMock = {
                 type: LayoutType.grid,
               },
             },
-            ['2']: {
+            ['test-2']: {
               ...elementDynamicDataMock,
-              id: '2',
+              id: 'test-2',
             },
           },
           staticData: {
@@ -79,11 +79,11 @@ const stateMock = {
             },
             [elementStaticDataMock.id]: {
               ...elementStaticDataMock,
-              children: ['2'],
+              children: ['test-2'],
             },
-            ['2']: {
+            ['test-2']: {
               ...elementStaticDataMock,
-              id: '2',
+              id: 'test-2',
               parentId: elementStaticDataMock.id,
             },
           },
@@ -123,7 +123,7 @@ describe('Design behaviors', () => {
           ['0']: {
             ...stateMock[PAGE_BUILDER].pages['0'],
             selectedElements: [
-              { ...selectedElementMock, id: '2', parentId: '1' },
+              { ...selectedElementMock, id: 'test-2', parentId: 'test-1' },
             ],
           },
         },
@@ -144,7 +144,8 @@ describe('Design behaviors', () => {
 
     // result
     expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['2'].position,
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-2']
+        .position,
     ).toBe('relative');
   });
 
@@ -159,7 +160,7 @@ describe('Design behaviors', () => {
           ['0']: {
             ...stateMock[PAGE_BUILDER].pages['0'],
             selectedElements: [
-              { ...selectedElementMock, id: '2', parentId: '1' },
+              { ...selectedElementMock, id: 'test-2', parentId: 'test-1' },
             ],
           },
         },
@@ -180,8 +181,8 @@ describe('Design behaviors', () => {
 
     // result
     expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['2'].layout
-        .type,
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-2']
+        .layout.type,
     ).toBe(LayoutType.vertical);
   });
 
@@ -199,7 +200,7 @@ describe('Design behaviors', () => {
               allData: {
                 ['-1']: {
                   ...currentPage.elements.allData['-1'],
-                  children: [elementAllDataMock.id, '2'],
+                  children: [elementAllDataMock.id, 'test-2'],
                 },
                 [elementAllDataMock.id]: {
                   ...elementAllDataMock,
@@ -209,9 +210,9 @@ describe('Design behaviors', () => {
                     type: LayoutType.grid,
                   },
                 },
-                ['2']: {
+                ['test-2']: {
                   ...elementAllDataMock,
-                  id: '2',
+                  id: 'test-2',
                   parentId: '-1',
                 },
               },
@@ -226,30 +227,30 @@ describe('Design behaviors', () => {
                     type: LayoutType.grid,
                   },
                 },
-                ['2']: {
+                ['test-2']: {
                   ...elementDynamicDataMock,
-                  id: '2',
+                  id: 'test-2',
                 },
               },
               staticData: {
                 ['-1']: {
                   ...currentPage.elements.staticData['-1'],
-                  children: [elementStaticDataMock.id, '2'],
+                  children: [elementStaticDataMock.id, 'test-2'],
                 },
                 [elementStaticDataMock.id]: {
                   ...elementStaticDataMock,
                   children: [],
                 },
-                ['2']: {
+                ['test-2']: {
                   ...elementStaticDataMock,
-                  id: '2',
+                  id: 'test-2',
                   parentId: '-1',
                 },
               },
             },
             selectedElements: [
               selectedElementMock,
-              { ...selectedElementMock, id: '2', parentId: '-1' },
+              { ...selectedElementMock, id: 'test-2', parentId: '-1' },
             ],
           },
         },
@@ -270,12 +271,12 @@ describe('Design behaviors', () => {
 
     // result
     expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].layout
-        .type,
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1']
+        .layout.type,
     ).toBe(LayoutType.vertical);
     expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['2'].layout
-        .type,
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-2']
+        .layout.type,
     ).toBe(LayoutType.vertical);
   });
 
@@ -293,15 +294,15 @@ describe('Design behaviors', () => {
               allData: {
                 ['-1']: {
                   ...currentPage.elements.allData['-1'],
-                  children: [elementAllDataMock.id, '2'],
+                  children: [elementAllDataMock.id, 'test-2'],
                 },
                 [elementAllDataMock.id]: {
                   ...elementAllDataMock,
                   children: [],
                 },
-                ['2']: {
+                ['test-2']: {
                   ...elementAllDataMock,
-                  id: '2',
+                  id: 'test-2',
                   layout: {
                     ...layoutMock,
                     type: LayoutType.vertical,
@@ -316,9 +317,9 @@ describe('Design behaviors', () => {
                 [elementDynamicDataMock.id]: {
                   ...elementDynamicDataMock,
                 },
-                ['2']: {
+                ['test-2']: {
                   ...elementDynamicDataMock,
-                  id: '2',
+                  id: 'test-2',
                   layout: {
                     ...layoutMock,
                     type: LayoutType.vertical,
@@ -328,21 +329,21 @@ describe('Design behaviors', () => {
               staticData: {
                 ['-1']: {
                   ...currentPage.elements.staticData['-1'],
-                  children: [elementStaticDataMock.id, '2'],
+                  children: [elementStaticDataMock.id, 'test-2'],
                 },
                 [elementStaticDataMock.id]: {
                   ...elementStaticDataMock,
                   children: [],
                 },
-                ['2']: {
+                ['test-2']: {
                   ...elementStaticDataMock,
-                  id: '2',
+                  id: 'test-2',
                   parentId: '-1',
                 },
               },
             },
             selectedElements: [
-              { ...selectedElementMock, id: '2', parentId: '-1' },
+              { ...selectedElementMock, id: 'test-2', parentId: '-1' },
             ],
           },
         },
@@ -363,8 +364,8 @@ describe('Design behaviors', () => {
 
     // result
     expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['2'].layout
-        .type,
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-2']
+        .layout.type,
     ).toBe(LayoutType.default);
   });
 
@@ -398,11 +399,11 @@ describe('Design behaviors', () => {
 
     // result
     expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].height
-        .value,
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1']
+        .height.value,
     ).toBe('auto');
     expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].width
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].width
         .value,
     ).toBe('auto');
   });

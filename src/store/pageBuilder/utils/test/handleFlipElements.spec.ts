@@ -39,20 +39,20 @@ describe('handleFlipElements', () => {
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
                 angle,
-                children: ['2', '3'],
+                children: ['test-2', 'test-3'],
                 layout: {
                   type: LayoutType.horizontal,
                 },
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementAllDataMock,
-                id: '2',
-                parentId: '1',
+                id: 'test-2',
+                parentId: 'test-1',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementAllDataMock,
-                id: '3',
-                parentId: '1',
+                id: 'test-3',
+                parentId: 'test-1',
               },
             },
             dynamicData: {
@@ -66,13 +66,13 @@ describe('handleFlipElements', () => {
                   type: LayoutType.horizontal,
                 },
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementDynamicDataMock,
-                id: '2',
+                id: 'test-2',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementDynamicDataMock,
-                id: '3',
+                id: 'test-3',
               },
             },
             staticData: {
@@ -82,17 +82,17 @@ describe('handleFlipElements', () => {
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['2', '3'],
+                children: ['test-2', 'test-3'],
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementStaticDataMock,
-                id: '2',
-                parentId: '1',
+                id: 'test-2',
+                parentId: 'test-1',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementStaticDataMock,
-                id: '3',
-                parentId: '1',
+                id: 'test-3',
+                parentId: 'test-1',
               },
             },
           },
@@ -117,20 +117,20 @@ describe('handleFlipElements', () => {
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
                 angle: negateValue(angle),
-                children: ['3', '2'],
+                children: ['test-3', 'test-2'],
                 layout: {
                   type: LayoutType.horizontal,
                 },
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementAllDataMock,
-                id: '2',
-                parentId: '1',
+                id: 'test-2',
+                parentId: 'test-1',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementAllDataMock,
-                id: '3',
-                parentId: '1',
+                id: 'test-3',
+                parentId: 'test-1',
               },
             },
             dynamicData: {
@@ -144,13 +144,13 @@ describe('handleFlipElements', () => {
                   type: LayoutType.horizontal,
                 },
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementDynamicDataMock,
-                id: '2',
+                id: 'test-2',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementDynamicDataMock,
-                id: '3',
+                id: 'test-3',
               },
             },
             staticData: {
@@ -160,17 +160,17 @@ describe('handleFlipElements', () => {
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['3', '2'],
+                children: ['test-3', 'test-2'],
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementStaticDataMock,
-                id: '2',
-                parentId: '1',
+                id: 'test-2',
+                parentId: 'test-1',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementStaticDataMock,
-                id: '3',
-                parentId: '1',
+                id: 'test-3',
+                parentId: 'test-1',
               },
             },
           },
@@ -201,20 +201,20 @@ describe('handleFlipElements', () => {
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
                 angle,
-                children: ['2', '3'],
+                children: ['test-2', 'test-3'],
                 layout: {
                   type: LayoutType.grid,
                 },
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementAllDataMock,
-                id: '2',
-                parentId: '1',
+                id: 'test-2',
+                parentId: 'test-1',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementAllDataMock,
-                id: '3',
-                parentId: '1',
+                id: 'test-3',
+                parentId: 'test-1',
               },
             },
             dynamicData: {
@@ -228,13 +228,13 @@ describe('handleFlipElements', () => {
                   type: LayoutType.grid,
                 },
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementDynamicDataMock,
-                id: '2',
+                id: 'test-2',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementDynamicDataMock,
-                id: '3',
+                id: 'test-3',
               },
             },
             staticData: {
@@ -244,17 +244,17 @@ describe('handleFlipElements', () => {
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['2', '3'],
+                children: ['test-2', 'test-3'],
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementStaticDataMock,
-                id: '2',
-                parentId: '1',
+                id: 'test-2',
+                parentId: 'test-1',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementStaticDataMock,
-                id: '3',
-                parentId: '1',
+                id: 'test-3',
+                parentId: 'test-1',
               },
             },
           },
@@ -279,20 +279,20 @@ describe('handleFlipElements', () => {
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
                 angle: negateValue(angle),
-                children: ['3', '2'],
+                children: ['test-3', 'test-2'],
                 layout: {
                   type: LayoutType.grid,
                 },
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementAllDataMock,
-                id: '2',
-                parentId: '1',
+                id: 'test-2',
+                parentId: 'test-1',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementAllDataMock,
-                id: '3',
-                parentId: '1',
+                id: 'test-3',
+                parentId: 'test-1',
               },
             },
             dynamicData: {
@@ -306,13 +306,13 @@ describe('handleFlipElements', () => {
                   type: LayoutType.grid,
                 },
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementDynamicDataMock,
-                id: '2',
+                id: 'test-2',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementDynamicDataMock,
-                id: '3',
+                id: 'test-3',
               },
             },
             staticData: {
@@ -322,17 +322,17 @@ describe('handleFlipElements', () => {
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['3', '2'],
+                children: ['test-3', 'test-2'],
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementStaticDataMock,
-                id: '2',
-                parentId: '1',
+                id: 'test-2',
+                parentId: 'test-1',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementStaticDataMock,
-                id: '3',
-                parentId: '1',
+                id: 'test-3',
+                parentId: 'test-1',
               },
             },
           },
@@ -363,17 +363,17 @@ describe('handleFlipElements', () => {
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
                 angle,
-                children: ['2', '3'],
+                children: ['test-2', 'test-3'],
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementAllDataMock,
-                id: '2',
-                parentId: '1',
+                id: 'test-2',
+                parentId: 'test-1',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementAllDataMock,
-                id: '3',
-                parentId: '1',
+                id: 'test-3',
+                parentId: 'test-1',
               },
             },
             dynamicData: {
@@ -384,13 +384,13 @@ describe('handleFlipElements', () => {
                 ...elementDynamicDataMock,
                 angle,
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementDynamicDataMock,
-                id: '2',
+                id: 'test-2',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementDynamicDataMock,
-                id: '3',
+                id: 'test-3',
               },
             },
             staticData: {
@@ -400,17 +400,17 @@ describe('handleFlipElements', () => {
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['2', '3'],
+                children: ['test-2', 'test-3'],
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementStaticDataMock,
-                id: '2',
-                parentId: '1',
+                id: 'test-2',
+                parentId: 'test-1',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementStaticDataMock,
-                id: '3',
-                parentId: '1',
+                id: 'test-3',
+                parentId: 'test-1',
               },
             },
           },
@@ -435,17 +435,17 @@ describe('handleFlipElements', () => {
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
                 angle: negateValue(angle),
-                children: ['3', '2'],
+                children: ['test-3', 'test-2'],
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementAllDataMock,
-                id: '2',
-                parentId: '1',
+                id: 'test-2',
+                parentId: 'test-1',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementAllDataMock,
-                id: '3',
-                parentId: '1',
+                id: 'test-3',
+                parentId: 'test-1',
               },
             },
             dynamicData: {
@@ -456,13 +456,13 @@ describe('handleFlipElements', () => {
                 ...elementDynamicDataMock,
                 angle: negateValue(angle),
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementDynamicDataMock,
-                id: '2',
+                id: 'test-2',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementDynamicDataMock,
-                id: '3',
+                id: 'test-3',
               },
             },
             staticData: {
@@ -472,17 +472,17 @@ describe('handleFlipElements', () => {
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['3', '2'],
+                children: ['test-3', 'test-2'],
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementStaticDataMock,
-                id: '2',
-                parentId: '1',
+                id: 'test-2',
+                parentId: 'test-1',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementStaticDataMock,
-                id: '3',
-                parentId: '1',
+                id: 'test-3',
+                parentId: 'test-1',
               },
             },
           },
@@ -513,20 +513,20 @@ describe('handleFlipElements', () => {
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
                 angle,
-                children: ['2', '3'],
+                children: ['test-2', 'test-3'],
                 layout: {
                   type: LayoutType.grid,
                 },
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementAllDataMock,
-                id: '2',
-                parentId: '1',
+                id: 'test-2',
+                parentId: 'test-1',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementAllDataMock,
-                id: '3',
-                parentId: '1',
+                id: 'test-3',
+                parentId: 'test-1',
               },
             },
             dynamicData: {
@@ -540,13 +540,13 @@ describe('handleFlipElements', () => {
                   type: LayoutType.grid,
                 },
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementDynamicDataMock,
-                id: '2',
+                id: 'test-2',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementDynamicDataMock,
-                id: '3',
+                id: 'test-3',
               },
             },
             staticData: {
@@ -556,17 +556,17 @@ describe('handleFlipElements', () => {
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['2', '3'],
+                children: ['test-2', 'test-3'],
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementStaticDataMock,
-                id: '2',
-                parentId: '1',
+                id: 'test-2',
+                parentId: 'test-1',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementStaticDataMock,
-                id: '3',
-                parentId: '1',
+                id: 'test-3',
+                parentId: 'test-1',
               },
             },
           },
@@ -591,20 +591,20 @@ describe('handleFlipElements', () => {
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
                 angle: negateValue(angle),
-                children: ['3', '2'],
+                children: ['test-3', 'test-2'],
                 layout: {
                   type: LayoutType.grid,
                 },
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementAllDataMock,
-                id: '2',
-                parentId: '1',
+                id: 'test-2',
+                parentId: 'test-1',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementAllDataMock,
-                id: '3',
-                parentId: '1',
+                id: 'test-3',
+                parentId: 'test-1',
               },
             },
             dynamicData: {
@@ -618,13 +618,13 @@ describe('handleFlipElements', () => {
                   type: LayoutType.grid,
                 },
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementDynamicDataMock,
-                id: '2',
+                id: 'test-2',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementDynamicDataMock,
-                id: '3',
+                id: 'test-3',
               },
             },
             staticData: {
@@ -634,17 +634,17 @@ describe('handleFlipElements', () => {
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['3', '2'],
+                children: ['test-3', 'test-2'],
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementStaticDataMock,
-                id: '2',
-                parentId: '1',
+                id: 'test-2',
+                parentId: 'test-1',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementStaticDataMock,
-                id: '3',
-                parentId: '1',
+                id: 'test-3',
+                parentId: 'test-1',
               },
             },
           },
@@ -675,20 +675,20 @@ describe('handleFlipElements', () => {
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
                 angle,
-                children: ['2', '3'],
+                children: ['test-2', 'test-3'],
                 layout: {
                   type: LayoutType.horizontal,
                 },
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementAllDataMock,
-                id: '2',
-                parentId: '1',
+                id: 'test-2',
+                parentId: 'test-1',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementAllDataMock,
-                id: '3',
-                parentId: '1',
+                id: 'test-3',
+                parentId: 'test-1',
               },
             },
             dynamicData: {
@@ -702,13 +702,13 @@ describe('handleFlipElements', () => {
                   type: LayoutType.horizontal,
                 },
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementDynamicDataMock,
-                id: '2',
+                id: 'test-2',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementDynamicDataMock,
-                id: '3',
+                id: 'test-3',
               },
             },
             staticData: {
@@ -718,17 +718,17 @@ describe('handleFlipElements', () => {
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['2', '3'],
+                children: ['test-2', 'test-3'],
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementStaticDataMock,
-                id: '2',
-                parentId: '1',
+                id: 'test-2',
+                parentId: 'test-1',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementStaticDataMock,
-                id: '3',
-                parentId: '1',
+                id: 'test-3',
+                parentId: 'test-1',
               },
             },
           },
@@ -753,20 +753,20 @@ describe('handleFlipElements', () => {
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
                 angle: negateValue(angle),
-                children: ['2', '3'],
+                children: ['test-2', 'test-3'],
                 layout: {
                   type: LayoutType.horizontal,
                 },
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementAllDataMock,
-                id: '2',
-                parentId: '1',
+                id: 'test-2',
+                parentId: 'test-1',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementAllDataMock,
-                id: '3',
-                parentId: '1',
+                id: 'test-3',
+                parentId: 'test-1',
               },
             },
             dynamicData: {
@@ -780,13 +780,13 @@ describe('handleFlipElements', () => {
                   type: LayoutType.horizontal,
                 },
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementDynamicDataMock,
-                id: '2',
+                id: 'test-2',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementDynamicDataMock,
-                id: '3',
+                id: 'test-3',
               },
             },
             staticData: {
@@ -796,17 +796,17 @@ describe('handleFlipElements', () => {
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['2', '3'],
+                children: ['test-2', 'test-3'],
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementStaticDataMock,
-                id: '2',
-                parentId: '1',
+                id: 'test-2',
+                parentId: 'test-1',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementStaticDataMock,
-                id: '3',
-                parentId: '1',
+                id: 'test-3',
+                parentId: 'test-1',
               },
             },
           },

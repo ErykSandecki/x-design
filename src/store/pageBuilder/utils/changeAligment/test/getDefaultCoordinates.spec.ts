@@ -8,7 +8,7 @@ import { AlignmentHorizontal, AlignmentVertical } from 'types';
 import { getDefaultCoordinates } from '../getDefaultCoordinates';
 
 const parentId = selectedElementMock.id;
-const childrenId = '2';
+const childrenId = 'test-2';
 
 describe('getDefaultCoordinates', () => {
   beforeEach(() => {

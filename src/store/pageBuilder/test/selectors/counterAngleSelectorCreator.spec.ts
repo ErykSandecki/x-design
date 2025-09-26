@@ -13,7 +13,7 @@ import { counterAngleSelectorCreator } from '../../selectors';
 describe('counterAngleSelectorCreator', () => {
   it('should return counter angle', () => {
     // before
-    const selectorFunction = (counterAngleSelectorCreator('2') as any)
+    const selectorFunction = (counterAngleSelectorCreator('test-2') as any)
       .resultFunc;
 
     // result
@@ -22,11 +22,11 @@ describe('counterAngleSelectorCreator', () => {
         [BASE_STATIC_DATA.id]: BASE_STATIC_DATA,
         [elementStaticDataMock.id]: {
           ...elementStaticDataMock,
-          children: ['2'],
+          children: ['test-2'],
         },
-        ['2']: {
+        ['test-2']: {
           ...elementStaticDataMock,
-          id: '2',
+          id: 'test-2',
           parentId: selectedElementMock.id,
         },
       }),

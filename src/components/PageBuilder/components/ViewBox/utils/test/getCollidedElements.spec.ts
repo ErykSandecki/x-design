@@ -55,9 +55,9 @@ describe('getCollidedElements', () => {
                   [selectedElementMock.id]: {
                     ...elementAllDataMock,
                   },
-                  ['2']: {
+                  ['test-2']: {
                     ...elementAllDataMock,
-                    id: '2',
+                    id: 'test-2',
                   },
                 },
               },
@@ -125,9 +125,9 @@ describe('getCollidedElements', () => {
                   [selectedElementMock.id]: {
                     ...elementAllDataMock,
                   },
-                  ['2']: {
+                  ['test-2']: {
                     ...elementAllDataMock,
-                    id: '2',
+                    id: 'test-2',
                   },
                 },
               },
@@ -166,13 +166,13 @@ describe('getCollidedElements', () => {
                   [selectedElementMock.id]: {
                     ...elementAllDataMock,
                   },
-                  ['2']: {
+                  ['test-2']: {
                     ...elementAllDataMock,
-                    id: '2',
+                    id: 'test-2',
                   },
                 },
               },
-              selectedElements: [{ ...selectedElementMock, id: '2' }],
+              selectedElements: [{ ...selectedElementMock, id: 'test-2' }],
             },
           },
         },
@@ -188,7 +188,7 @@ describe('getCollidedElements', () => {
             y1: elementAllDataMock.coordinates.y,
             y2: elementAllDataMock.height,
           },
-          ['2']: {
+          ['test-2']: {
             x1: elementAllDataMock.coordinates.x,
             x2: elementAllDataMock.width.value as number,
             y1: elementAllDataMock.coordinates.y,
@@ -206,7 +206,7 @@ describe('getCollidedElements', () => {
 
     // result
     expect(result).toStrictEqual([
-      { ...selectedElementMock, id: '2' },
+      { ...selectedElementMock, id: 'test-2' },
       selectedElementMock,
     ]);
   });

@@ -23,7 +23,7 @@ describe('handleChangeParent', () => {
     el1.setAttribute('id', selectedElementMock.id);
     el1.style.height = '100px';
     el1.style.width = '100px';
-    el2.setAttribute('id', '2');
+    el2.setAttribute('id', 'test-2');
     el2.style.height = '100px';
     el2.style.width = '100px';
     document.body.appendChild(el1);
@@ -34,7 +34,7 @@ describe('handleChangeParent', () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
     const payload = {
-      draggableElements: ['1'],
+      draggableElements: ['test-1'],
       possibleIndexPosition: null,
       possibleParent: null,
     };
@@ -122,7 +122,7 @@ describe('handleChangeParent', () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
     const payload = {
-      draggableElements: ['2'],
+      draggableElements: ['test-2'],
       possibleIndexPosition: null,
       possibleParent: '-1',
     };
@@ -143,11 +143,11 @@ describe('handleChangeParent', () => {
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
-                children: ['2'],
+                children: ['test-2'],
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementAllDataMock,
-                id: '2',
+                id: 'test-2',
                 parentId: elementStaticDataMock.id,
               },
             },
@@ -156,9 +156,9 @@ describe('handleChangeParent', () => {
               [elementDynamicDataMock.id]: {
                 ...elementDynamicDataMock,
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementDynamicDataMock,
-                id: '2',
+                id: 'test-2',
               },
             },
             staticData: {
@@ -168,16 +168,16 @@ describe('handleChangeParent', () => {
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['2'],
+                children: ['test-2'],
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementStaticDataMock,
-                id: '2',
+                id: 'test-2',
                 parentId: elementStaticDataMock.id,
               },
             },
           },
-          selectedElements: [{ ...selectedElementMock, id: '2' }],
+          selectedElements: [{ ...selectedElementMock, id: 'test-2' }],
         },
       },
     });
@@ -194,15 +194,15 @@ describe('handleChangeParent', () => {
             allData: {
               ['-1']: {
                 ...currentPage.elements.allData['-1'],
-                children: [elementAllDataMock.id, '2'],
+                children: [elementAllDataMock.id, 'test-2'],
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
                 children: [],
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementAllDataMock,
-                id: '2',
+                id: 'test-2',
                 parentId: '-1',
               },
             },
@@ -211,29 +211,29 @@ describe('handleChangeParent', () => {
               [elementDynamicDataMock.id]: {
                 ...elementDynamicDataMock,
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementDynamicDataMock,
-                id: '2',
+                id: 'test-2',
               },
             },
             staticData: {
               ['-1']: {
                 ...currentPage.elements.staticData['-1'],
-                children: [elementAllDataMock.id, '2'],
+                children: [elementAllDataMock.id, 'test-2'],
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
                 children: [],
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementStaticDataMock,
-                id: '2',
+                id: 'test-2',
                 parentId: '-1',
               },
             },
           },
           selectedElements: [
-            { ...selectedElementMock, id: '2', parentId: '-1' },
+            { ...selectedElementMock, id: 'test-2', parentId: '-1' },
           ],
         },
       },
@@ -244,9 +244,9 @@ describe('handleChangeParent', () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
     const payload = {
-      draggableElements: ['2'],
+      draggableElements: ['test-2'],
       possibleIndexPosition: null,
-      possibleParent: '1',
+      possibleParent: 'test-1',
     };
 
     // before
@@ -258,19 +258,18 @@ describe('handleChangeParent', () => {
           ...currentPage,
           elements: {
             ...currentPage.elements,
-
             allData: {
               ['-1']: {
                 ...currentPage.elements.allData['-1'],
-                children: [elementAllDataMock.id, '2'],
+                children: [elementAllDataMock.id, 'test-2'],
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
                 children: [],
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementAllDataMock,
-                id: '2',
+                id: 'test-2',
                 parentId: '-1',
               },
             },
@@ -279,28 +278,28 @@ describe('handleChangeParent', () => {
               [elementDynamicDataMock.id]: {
                 ...elementDynamicDataMock,
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementDynamicDataMock,
-                id: '2',
+                id: 'test-2',
               },
             },
             staticData: {
               ['-1']: {
                 ...currentPage.elements.staticData['-1'],
-                children: [elementAllDataMock.id, '2'],
+                children: [elementAllDataMock.id, 'test-2'],
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
                 children: [],
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementStaticDataMock,
-                id: '2',
+                id: 'test-2',
                 parentId: '-1',
               },
             },
           },
-          selectedElements: [{ ...selectedElementMock, id: '2' }],
+          selectedElements: [{ ...selectedElementMock, id: 'test-2' }],
         },
       },
     });
@@ -321,12 +320,12 @@ describe('handleChangeParent', () => {
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
-                children: ['2'],
+                children: ['test-2'],
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementAllDataMock,
                 deepLevel: elementAllDataMock.deepLevel + 1,
-                id: '2',
+                id: 'test-2',
                 parentId: elementAllDataMock.id,
                 position: 'relative',
               },
@@ -336,10 +335,10 @@ describe('handleChangeParent', () => {
               [elementDynamicDataMock.id]: {
                 ...elementDynamicDataMock,
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementDynamicDataMock,
                 deepLevel: elementDynamicDataMock.deepLevel + 1,
-                id: '2',
+                id: 'test-2',
                 position: 'relative',
               },
             },
@@ -350,11 +349,11 @@ describe('handleChangeParent', () => {
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['2'],
+                children: ['test-2'],
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementStaticDataMock,
-                id: '2',
+                id: 'test-2',
                 parentId: elementStaticDataMock.id,
               },
             },
@@ -362,8 +361,8 @@ describe('handleChangeParent', () => {
           selectedElements: [
             {
               ...selectedElementMock,
-              id: '2',
-              parentId: '1',
+              id: 'test-2',
+              parentId: 'test-1',
               position: 'relative',
             },
           ],

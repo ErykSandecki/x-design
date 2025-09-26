@@ -162,27 +162,18 @@ describe('PageBuilderReducer', () => {
             ...currentPage.elements,
             allData: {
               ...currentPage.elements.allData,
-              ['id']: {
-                ...elementAllDataMock,
-                id: 'id',
-              },
+              [elementAllDataMock.id]: elementAllDataMock,
             },
             dynamicData: {
               ...currentPage.elements.dynamicData,
-              ['id']: {
-                ...elementDynamicDataMock,
-                id: 'id',
-              },
+              [elementDynamicDataMock.id]: elementDynamicDataMock,
             },
             staticData: {
               ...currentPage.elements.staticData,
-              ['id']: {
-                ...elementStaticDataMock,
-                id: 'id',
-              },
+              [elementStaticDataMock.id]: elementStaticDataMock,
             },
           },
-          selectedElements: [{ ...selectedElementMock, id: 'id' }],
+          selectedElements: [selectedElementMock],
         },
       },
     });
@@ -198,29 +189,24 @@ describe('PageBuilderReducer', () => {
             ...currentPage.elements,
             allData: {
               ...currentPage.elements.allData,
-              ['id']: {
+              [elementAllDataMock.id]: {
                 ...elementAllDataMock,
                 height: { unit: Unit.percentage, value: 100 },
-                id: 'id',
               },
             },
             dynamicData: {
               ...currentPage.elements.dynamicData,
-              ['id']: {
+              [elementDynamicDataMock.id]: {
                 ...elementDynamicDataMock,
                 height: { unit: Unit.percentage, value: 100 },
-                id: 'id',
               },
             },
             staticData: {
               ...currentPage.elements.staticData,
-              ['id']: {
-                ...elementStaticDataMock,
-                id: 'id',
-              },
+              [elementStaticDataMock.id]: elementStaticDataMock,
             },
           },
-          selectedElements: [{ ...selectedElementMock, id: 'id' }],
+          selectedElements: [selectedElementMock],
         },
       },
     });
@@ -237,9 +223,9 @@ describe('PageBuilderReducer', () => {
     const el1 = document.createElement('div');
     const el2 = document.createElement('div');
     const el3 = document.createElement('div');
-    const parentId = '1';
-    const childrenId1 = '2';
-    const childrenId2 = '3';
+    const parentId = 'test-1';
+    const childrenId1 = 'test-2';
+    const childrenId2 = 'test-3';
 
     // before
     el1.setAttribute('id', parentId);
@@ -272,21 +258,21 @@ describe('PageBuilderReducer', () => {
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
-                children: ['2', '3'],
+                children: ['test-2', 'test-3'],
                 position: 'absolute',
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementAllDataMock,
                 children: [],
-                id: '2',
-                parentId: '1',
+                id: 'test-2',
+                parentId: 'test-1',
                 position: 'absolute',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementAllDataMock,
                 children: [],
-                id: '3',
-                parentId: '1',
+                id: 'test-3',
+                parentId: 'test-1',
                 position: 'relative',
               },
             },
@@ -297,14 +283,14 @@ describe('PageBuilderReducer', () => {
                 ...elementDynamicDataMock,
                 position: 'absolute',
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementDynamicDataMock,
-                id: '2',
+                id: 'test-2',
                 position: 'absolute',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementDynamicDataMock,
-                id: '3',
+                id: 'test-3',
                 position: 'relative',
               },
             },
@@ -316,23 +302,23 @@ describe('PageBuilderReducer', () => {
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['2', '3'],
+                children: ['test-2', 'test-3'],
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementStaticDataMock,
                 children: [],
-                id: '2',
+                id: 'test-2',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementStaticDataMock,
                 children: [],
-                id: '3',
+                id: 'test-3',
               },
             },
           },
           selectedElements: [
-            { ...selectedElementMock, id: '2', parentId: '1' },
-            { ...selectedElementMock, id: '3', parentId: '1' },
+            { ...selectedElementMock, id: 'test-2', parentId: 'test-1' },
+            { ...selectedElementMock, id: 'test-3', parentId: 'test-1' },
           ],
         },
       },
@@ -355,23 +341,23 @@ describe('PageBuilderReducer', () => {
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
-                children: ['2', '3'],
+                children: ['test-2', 'test-3'],
                 position: 'absolute',
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementAllDataMock,
                 alignment,
                 children: [],
-                id: '2',
-                parentId: '1',
+                id: 'test-2',
+                parentId: 'test-1',
                 position: 'absolute',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementAllDataMock,
                 alignment,
                 children: [],
-                id: '3',
-                parentId: '1',
+                id: 'test-3',
+                parentId: 'test-1',
                 position: 'absolute',
               },
             },
@@ -382,16 +368,16 @@ describe('PageBuilderReducer', () => {
                 ...elementDynamicDataMock,
                 position: 'absolute',
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementDynamicDataMock,
                 alignment,
-                id: '2',
+                id: 'test-2',
                 position: 'absolute',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementDynamicDataMock,
                 alignment,
-                id: '3',
+                id: 'test-3',
                 position: 'absolute',
               },
             },
@@ -403,23 +389,23 @@ describe('PageBuilderReducer', () => {
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['2', '3'],
+                children: ['test-2', 'test-3'],
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementStaticDataMock,
                 children: [],
-                id: '2',
+                id: 'test-2',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementStaticDataMock,
                 children: [],
-                id: '3',
+                id: 'test-3',
               },
             },
           },
           selectedElements: [
-            { ...selectedElementMock, id: '2', parentId: '1' },
-            { ...selectedElementMock, id: '3', parentId: '1' },
+            { ...selectedElementMock, id: 'test-2', parentId: 'test-1' },
+            { ...selectedElementMock, id: 'test-3', parentId: 'test-1' },
           ],
         },
       },
@@ -437,10 +423,10 @@ describe('PageBuilderReducer', () => {
     el1.setAttribute('id', selectedElementMock.id);
     el1.style.height = '100px';
     el1.style.width = '100px';
-    el2.setAttribute('id', '2');
+    el2.setAttribute('id', 'test-2');
     el2.style.height = '100px';
     el2.style.width = '100px';
-    el3.setAttribute('id', '3');
+    el3.setAttribute('id', 'test-3');
     el3.style.height = '100px';
     el3.style.width = '100px';
     document.body.appendChild(el1);
@@ -464,21 +450,21 @@ describe('PageBuilderReducer', () => {
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
-                children: ['2', '3'],
+                children: ['test-2', 'test-3'],
                 position: 'absolute',
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementAllDataMock,
                 children: [],
-                id: '2',
-                parentId: '1',
+                id: 'test-2',
+                parentId: 'test-1',
                 position: 'relative',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementAllDataMock,
                 children: [],
-                id: '3',
-                parentId: '1',
+                id: 'test-3',
+                parentId: 'test-1',
                 position: 'relative',
               },
             },
@@ -489,14 +475,14 @@ describe('PageBuilderReducer', () => {
                 ...elementDynamicDataMock,
                 position: 'absolute',
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementDynamicDataMock,
-                id: '2',
+                id: 'test-2',
                 position: 'relative',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementDynamicDataMock,
-                id: '3',
+                id: 'test-3',
                 position: 'relative',
               },
             },
@@ -508,22 +494,22 @@ describe('PageBuilderReducer', () => {
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['2', '3'],
+                children: ['test-2', 'test-3'],
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementStaticDataMock,
                 children: [],
-                id: '2',
+                id: 'test-2',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementStaticDataMock,
                 children: [],
-                id: '3',
+                id: 'test-3',
               },
             },
           },
           selectedElements: [
-            { ...selectedElementMock, id: '2', parentId: '1' },
+            { ...selectedElementMock, id: 'test-2', parentId: 'test-1' },
           ],
         },
       },
@@ -546,22 +532,22 @@ describe('PageBuilderReducer', () => {
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
-                children: ['3', '2'],
+                children: ['test-3', 'test-2'],
                 position: 'absolute',
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementAllDataMock,
                 alignment: {},
                 children: [],
-                id: '2',
-                parentId: '1',
+                id: 'test-2',
+                parentId: 'test-1',
                 position: 'absolute',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementAllDataMock,
                 children: [],
-                id: '3',
-                parentId: '1',
+                id: 'test-3',
+                parentId: 'test-1',
                 position: 'relative',
               },
             },
@@ -572,15 +558,15 @@ describe('PageBuilderReducer', () => {
                 ...elementDynamicDataMock,
                 position: 'absolute',
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementDynamicDataMock,
                 alignment: {},
-                id: '2',
+                id: 'test-2',
                 position: 'absolute',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementDynamicDataMock,
-                id: '3',
+                id: 'test-3',
                 position: 'relative',
               },
             },
@@ -592,22 +578,22 @@ describe('PageBuilderReducer', () => {
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['3', '2'],
+                children: ['test-3', 'test-2'],
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementStaticDataMock,
                 children: [],
-                id: '2',
+                id: 'test-2',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementStaticDataMock,
                 children: [],
-                id: '3',
+                id: 'test-3',
               },
             },
           },
           selectedElements: [
-            { ...selectedElementMock, id: '2', parentId: '1' },
+            { ...selectedElementMock, id: 'test-2', parentId: 'test-1' },
           ],
         },
       },
@@ -759,7 +745,7 @@ describe('PageBuilderReducer', () => {
               ...currentPage.elements.allData,
               ['-1']: {
                 ...currentPage.elements.allData['-1'],
-                children: [selectedElementMock.id, '2'],
+                children: [selectedElementMock.id, 'test-2'],
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
@@ -809,7 +795,7 @@ describe('PageBuilderReducer', () => {
               ...currentPage.elements.allData,
               ['-1']: {
                 ...currentPage.elements.allData['-1'],
-                children: [selectedElementMock.id, '2'],
+                children: [selectedElementMock.id, 'test-2'],
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
@@ -850,7 +836,7 @@ describe('PageBuilderReducer', () => {
   it('should handle CHANGE_PARENT', () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-    const draggableElements = ['2'];
+    const draggableElements = ['test-2'];
     const possibleIndexPosition = null;
     const possibleParent = '-1';
     const el1 = document.createElement('div');
@@ -860,7 +846,7 @@ describe('PageBuilderReducer', () => {
     el1.setAttribute('id', selectedElementMock.id);
     el1.style.height = '100px';
     el1.style.width = '100px';
-    el2.setAttribute('id', '2');
+    el2.setAttribute('id', 'test-2');
     el2.style.height = '100px';
     el2.style.width = '100px';
     document.body.appendChild(el1);
@@ -884,11 +870,11 @@ describe('PageBuilderReducer', () => {
                 },
                 [elementAllDataMock.id]: {
                   ...elementAllDataMock,
-                  children: ['2'],
+                  children: ['test-2'],
                 },
-                ['2']: {
+                ['test-2']: {
                   ...elementAllDataMock,
-                  id: '2',
+                  id: 'test-2',
                   parentId: selectedElementMock.id,
                 },
               },
@@ -897,9 +883,9 @@ describe('PageBuilderReducer', () => {
                 [elementDynamicDataMock.id]: {
                   ...elementDynamicDataMock,
                 },
-                ['2']: {
+                ['test-2']: {
                   ...elementDynamicDataMock,
-                  id: '2',
+                  id: 'test-2',
                 },
               },
               staticData: {
@@ -910,11 +896,11 @@ describe('PageBuilderReducer', () => {
 
                 [elementStaticDataMock.id]: {
                   ...elementStaticDataMock,
-                  children: ['2'],
+                  children: ['test-2'],
                 },
-                ['2']: {
+                ['test-2']: {
                   ...elementStaticDataMock,
-                  id: '2',
+                  id: 'test-2',
                   parentId: selectedElementMock.id,
                 },
               },
@@ -936,14 +922,14 @@ describe('PageBuilderReducer', () => {
             allData: {
               ['-1']: {
                 ...currentPage.elements.allData['-1'],
-                children: [selectedElementMock.id, '2'],
+                children: [selectedElementMock.id, 'test-2'],
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementAllDataMock,
-                id: '2',
+                id: 'test-2',
                 parentId: '-1',
               },
             },
@@ -952,22 +938,22 @@ describe('PageBuilderReducer', () => {
               [elementDynamicDataMock.id]: {
                 ...elementDynamicDataMock,
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementDynamicDataMock,
-                id: '2',
+                id: 'test-2',
               },
             },
             staticData: {
               ['-1']: {
                 ...currentPage.elements.staticData['-1'],
-                children: [selectedElementMock.id, '2'],
+                children: [selectedElementMock.id, 'test-2'],
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementStaticDataMock,
-                id: '2',
+                id: 'test-2',
                 parentId: '-1',
               },
             },
@@ -1027,17 +1013,17 @@ describe('PageBuilderReducer', () => {
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
                 angle,
-                children: ['2', '3'],
+                children: ['test-2', 'test-3'],
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementAllDataMock,
-                id: '2',
-                parentId: '1',
+                id: 'test-2',
+                parentId: 'test-1',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementAllDataMock,
-                id: '3',
-                parentId: '1',
+                id: 'test-3',
+                parentId: 'test-1',
               },
             },
             dynamicData: {
@@ -1048,13 +1034,13 @@ describe('PageBuilderReducer', () => {
                 ...elementDynamicDataMock,
                 angle,
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementDynamicDataMock,
-                id: '2',
+                id: 'test-2',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementDynamicDataMock,
-                id: '3',
+                id: 'test-3',
               },
             },
             staticData: {
@@ -1064,17 +1050,17 @@ describe('PageBuilderReducer', () => {
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['2', '3'],
+                children: ['test-2', 'test-3'],
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementStaticDataMock,
-                id: '2',
-                parentId: '1',
+                id: 'test-2',
+                parentId: 'test-1',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementStaticDataMock,
-                id: '3',
-                parentId: '1',
+                id: 'test-3',
+                parentId: 'test-1',
               },
             },
           },
@@ -1099,17 +1085,17 @@ describe('PageBuilderReducer', () => {
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
                 angle: negateValue(angle),
-                children: ['3', '2'],
+                children: ['test-3', 'test-2'],
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementAllDataMock,
-                id: '2',
-                parentId: '1',
+                id: 'test-2',
+                parentId: 'test-1',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementAllDataMock,
-                id: '3',
-                parentId: '1',
+                id: 'test-3',
+                parentId: 'test-1',
               },
             },
             dynamicData: {
@@ -1120,13 +1106,13 @@ describe('PageBuilderReducer', () => {
                 ...elementDynamicDataMock,
                 angle: negateValue(angle),
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementDynamicDataMock,
-                id: '2',
+                id: 'test-2',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementDynamicDataMock,
-                id: '3',
+                id: 'test-3',
               },
             },
             staticData: {
@@ -1136,17 +1122,17 @@ describe('PageBuilderReducer', () => {
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['3', '2'],
+                children: ['test-3', 'test-2'],
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementStaticDataMock,
-                id: '2',
-                parentId: '1',
+                id: 'test-2',
+                parentId: 'test-1',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementStaticDataMock,
-                id: '3',
-                parentId: '1',
+                id: 'test-3',
+                parentId: 'test-1',
               },
             },
           },

@@ -107,7 +107,7 @@ describe('DropAnchors snapshots', () => {
         events: {
           ...eventsMock,
           draggableElements: [],
-          possibleAnchorElementId: '1',
+          possibleAnchorElementId: 'test-1',
           possibleAnchorPosition: DropAnchorsPosition.top,
           possibleParent: elementStaticDataMock.parentId,
         },
@@ -139,7 +139,7 @@ describe('DropAnchors snapshots', () => {
         events: {
           ...eventsMock,
           draggableElements: [],
-          possibleAnchorElementId: '1',
+          possibleAnchorElementId: 'test-1',
           possibleAnchorPosition: DropAnchorsPosition.left,
           possibleParent: elementStaticDataMock.parentId,
         },
@@ -208,7 +208,7 @@ describe('DropAnchors snapshots', () => {
         events: {
           ...eventsMock,
           draggableElements: [],
-          possibleAnchorElementId: '1',
+          possibleAnchorElementId: 'test-1',
           possibleAnchorPosition: DropAnchorsPosition.bottom,
           possibleParent: elementStaticDataMock.parentId,
         },
@@ -240,7 +240,7 @@ describe('DropAnchors snapshots', () => {
         events: {
           ...eventsMock,
           draggableElements: [],
-          possibleAnchorElementId: '1',
+          possibleAnchorElementId: 'test-1',
           possibleAnchorPosition: DropAnchorsPosition.right,
           possibleParent: elementStaticDataMock.parentId,
         },
@@ -309,7 +309,7 @@ describe('DropAnchors snapshots', () => {
         events: {
           ...eventsMock,
           draggableElements: [],
-          possibleAnchorElementId: '1',
+          possibleAnchorElementId: 'test-1',
           possibleAnchorPosition: DropAnchorsPosition.top,
           possibleParent: elementStaticDataMock.parentId,
         },
@@ -378,7 +378,7 @@ describe('DropAnchors snapshots', () => {
         events: {
           ...eventsMock,
           draggableElements: [],
-          possibleAnchorElementId: '1',
+          possibleAnchorElementId: 'test-1',
           possibleAnchorPosition: DropAnchorsPosition.left,
           possibleParent: elementStaticDataMock.parentId,
         },
@@ -447,7 +447,7 @@ describe('DropAnchors snapshots', () => {
         events: {
           ...eventsMock,
           draggableElements: [],
-          possibleAnchorElementId: '1',
+          possibleAnchorElementId: 'test-1',
           possibleAnchorPosition: DropAnchorsPosition.bottom,
           possibleParent: elementStaticDataMock.parentId,
         },
@@ -516,7 +516,7 @@ describe('DropAnchors snapshots', () => {
         events: {
           ...eventsMock,
           draggableElements: [],
-          possibleAnchorElementId: '1',
+          possibleAnchorElementId: 'test-1',
           possibleAnchorPosition: DropAnchorsPosition.right,
           possibleParent: elementStaticDataMock.parentId,
         },
@@ -588,7 +588,7 @@ describe('DropAnchors behaviors', () => {
           ...stateMock[PAGE_BUILDER],
           events: {
             ...eventsMock,
-            draggableElements: ['1'],
+            draggableElements: ['test-1'],
           },
         },
       }) as any;
@@ -616,7 +616,7 @@ describe('DropAnchors behaviors', () => {
 
     // result
     expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
-      possibleAnchorElementId: '1',
+      possibleAnchorElementId: 'test-1',
       possibleAnchorPosition: DropAnchorsPosition.top,
       possibleIndexPosition: 0,
       possibleParent: '-1',

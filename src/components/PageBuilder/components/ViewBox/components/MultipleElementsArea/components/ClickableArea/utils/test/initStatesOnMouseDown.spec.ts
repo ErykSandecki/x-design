@@ -11,7 +11,7 @@ describe('initStatesOnMouseDown', () => {
     initStatesOnMouseDown(
       mockCallBack,
       { shiftKey: false } as MouseEvent,
-      '1',
+      'test-1',
       mockCallBack,
       mockCallBack,
     );
@@ -25,7 +25,7 @@ describe('initStatesOnMouseDown', () => {
     initStatesOnMouseDown(
       mockCallBack,
       { shiftKey: true } as MouseEvent,
-      '1',
+      'test-1',
       mockCallBack,
       mockCallBack,
     );

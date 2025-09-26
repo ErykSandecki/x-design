@@ -32,7 +32,7 @@ describe('updateCursorPosition', () => {
     el1.setAttribute('id', '-1');
     el1.style.height = '100px';
     el1.style.width = '100px';
-    el2.setAttribute('id', '1');
+    el2.setAttribute('id', 'test-1');
     el2.style.height = '100px';
     el2.style.width = '100px';
     document.body.appendChild(el1);

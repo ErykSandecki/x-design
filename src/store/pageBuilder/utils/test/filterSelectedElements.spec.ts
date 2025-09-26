@@ -31,7 +31,11 @@ describe('filterSelectedElements', () => {
     const result = filterSelectedElements(
       [
         selectedElementMock,
-        { ...selectedElementMock, id: '2', parentId: selectedElementMock.id },
+        {
+          ...selectedElementMock,
+          id: 'test-2',
+          parentId: selectedElementMock.id,
+        },
       ],
       {
         ...pageBuilderStateMock[PAGE_BUILDER],
@@ -45,12 +49,12 @@ describe('filterSelectedElements', () => {
                 ...currentPage.elements.allData,
                 [elementAllDataMock.id]: {
                   ...elementAllDataMock,
-                  children: ['2'],
+                  children: ['test-2'],
                 },
-                ['2']: {
+                ['test-2']: {
                   ...elementAllDataMock,
                   children: [],
-                  id: '2',
+                  id: 'test-2',
                   parentId: elementAllDataMock.id,
                 },
               },

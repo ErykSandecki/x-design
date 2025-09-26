@@ -26,15 +26,15 @@ describe('isMixed', () => {
     const result = isMixed(
       {
         [elementDynamicDataMock.id]: elementDynamicDataMock,
-        ['2']: {
+        ['test-2']: {
           ...elementDynamicDataMock,
           coordinates: { x: 100, y: 100 },
-          id: '2',
+          id: 'test-2',
         },
       },
       selectedElementMock,
       'coordinates.y',
-      [selectedElementMock, { ...selectedElementMock, id: '2' }],
+      [selectedElementMock, { ...selectedElementMock, id: 'test-2' }],
     );
 
     // result

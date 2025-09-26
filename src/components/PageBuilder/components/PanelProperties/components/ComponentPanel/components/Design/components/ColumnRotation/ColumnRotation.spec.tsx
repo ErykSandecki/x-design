@@ -98,12 +98,12 @@ describe('ColumnRotation snapshots', () => {
                 ...stateMock[PAGE_BUILDER].pages['0'].elements.allData,
                 ['-1']: {
                   ...stateMock[PAGE_BUILDER].pages['0'].elements.allData['-1'],
-                  children: ['1', '2'],
+                  children: ['test-1', 'test-2'],
                 },
-                ['2']: {
+                ['test-2']: {
                   ...elementAllDataMock,
                   angle: 100,
-                  id: '2',
+                  id: 'test-2',
                 },
               },
               dynamicData: {
@@ -112,12 +112,12 @@ describe('ColumnRotation snapshots', () => {
                   ...stateMock[PAGE_BUILDER].pages['0'].elements.dynamicData[
                     '-1'
                   ],
-                  children: ['1', '2'],
+                  children: ['test-1', 'test-2'],
                 },
-                ['2']: {
+                ['test-2']: {
                   ...elementDynamicDataMock,
                   angle: 100,
-                  id: '2',
+                  id: 'test-2',
                 },
               },
               staticData: {
@@ -126,17 +126,17 @@ describe('ColumnRotation snapshots', () => {
                   ...stateMock[PAGE_BUILDER].pages['0'].elements.staticData[
                     '-1'
                   ],
-                  children: ['1', '2'],
+                  children: ['test-1', 'test-2'],
                 },
-                ['2']: {
+                ['test-2']: {
                   ...elementStaticDataMock,
-                  id: '2',
+                  id: 'test-2',
                 },
               },
             },
             selectedElements: [
               ...stateMock[PAGE_BUILDER].pages['0'].selectedElements,
-              { ...selectedElementMock, id: '2' },
+              { ...selectedElementMock, id: 'test-2' },
             ],
           },
         },
@@ -182,7 +182,8 @@ describe('ColumnRotation behaviors', () => {
 
     // result
     expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].angle,
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1']
+        .angle,
     ).toBe(100);
   });
 
@@ -218,7 +219,8 @@ describe('ColumnRotation behaviors', () => {
 
     // result
     expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].angle,
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1']
+        .angle,
     ).toBe(-100);
   });
 
@@ -251,7 +253,8 @@ describe('ColumnRotation behaviors', () => {
 
     // result
     expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].angle,
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1']
+        .angle,
     ).toBe(90);
   });
 
@@ -274,20 +277,20 @@ describe('ColumnRotation behaviors', () => {
                 },
                 [elementAllDataMock.id]: {
                   ...elementAllDataMock,
-                  children: ['2', '3'],
+                  children: ['test-2', 'test-3'],
                   layout: {
                     type: LayoutType.horizontal,
                   },
                 },
-                ['2']: {
+                ['test-2']: {
                   ...elementAllDataMock,
-                  id: '2',
-                  parentId: '1',
+                  id: 'test-2',
+                  parentId: 'test-1',
                 },
-                ['3']: {
+                ['test-3']: {
                   ...elementAllDataMock,
-                  id: '3',
-                  parentId: '1',
+                  id: 'test-3',
+                  parentId: 'test-1',
                 },
               },
               dynamicData: {
@@ -300,13 +303,13 @@ describe('ColumnRotation behaviors', () => {
                     type: LayoutType.horizontal,
                   },
                 },
-                ['2']: {
+                ['test-2']: {
                   ...elementDynamicDataMock,
-                  id: '2',
+                  id: 'test-2',
                 },
-                ['3']: {
+                ['test-3']: {
                   ...elementDynamicDataMock,
-                  id: '3',
+                  id: 'test-3',
                 },
               },
               staticData: {
@@ -316,17 +319,17 @@ describe('ColumnRotation behaviors', () => {
                 },
                 [elementStaticDataMock.id]: {
                   ...elementStaticDataMock,
-                  children: ['2', '3'],
+                  children: ['test-2', 'test-3'],
                 },
-                ['2']: {
+                ['test-2']: {
                   ...elementStaticDataMock,
-                  id: '2',
-                  parentId: '1',
+                  id: 'test-2',
+                  parentId: 'test-1',
                 },
-                ['3']: {
+                ['test-3']: {
                   ...elementStaticDataMock,
-                  id: '3',
-                  parentId: '1',
+                  id: 'test-3',
+                  parentId: 'test-1',
                 },
               },
             },
@@ -361,8 +364,9 @@ describe('ColumnRotation behaviors', () => {
 
     // result
     expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].children,
-    ).toStrictEqual(['3', '2']);
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1']
+        .children,
+    ).toStrictEqual(['test-3', 'test-2']);
   });
 
   it('should flip y', () => {
@@ -384,17 +388,17 @@ describe('ColumnRotation behaviors', () => {
                 },
                 [elementAllDataMock.id]: {
                   ...elementAllDataMock,
-                  children: ['2', '3'],
+                  children: ['test-2', 'test-3'],
                 },
-                ['2']: {
+                ['test-2']: {
                   ...elementAllDataMock,
-                  id: '2',
-                  parentId: '1',
+                  id: 'test-2',
+                  parentId: 'test-1',
                 },
-                ['3']: {
+                ['test-3']: {
                   ...elementAllDataMock,
-                  id: '3',
-                  parentId: '1',
+                  id: 'test-3',
+                  parentId: 'test-1',
                 },
               },
               dynamicData: {
@@ -404,13 +408,13 @@ describe('ColumnRotation behaviors', () => {
                 [elementDynamicDataMock.id]: {
                   ...elementDynamicDataMock,
                 },
-                ['2']: {
+                ['test-2']: {
                   ...elementDynamicDataMock,
-                  id: '2',
+                  id: 'test-2',
                 },
-                ['3']: {
+                ['test-3']: {
                   ...elementDynamicDataMock,
-                  id: '3',
+                  id: 'test-3',
                 },
               },
               staticData: {
@@ -420,17 +424,17 @@ describe('ColumnRotation behaviors', () => {
                 },
                 [elementStaticDataMock.id]: {
                   ...elementStaticDataMock,
-                  children: ['2', '3'],
+                  children: ['test-2', 'test-3'],
                 },
-                ['2']: {
+                ['test-2']: {
                   ...elementStaticDataMock,
-                  id: '2',
-                  parentId: '1',
+                  id: 'test-2',
+                  parentId: 'test-1',
                 },
-                ['3']: {
+                ['test-3']: {
                   ...elementStaticDataMock,
-                  id: '3',
-                  parentId: '1',
+                  id: 'test-3',
+                  parentId: 'test-1',
                 },
               },
             },
@@ -465,7 +469,8 @@ describe('ColumnRotation behaviors', () => {
 
     // result
     expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].children,
-    ).toStrictEqual(['3', '2']);
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1']
+        .children,
+    ).toStrictEqual(['test-3', 'test-2']);
   });
 });

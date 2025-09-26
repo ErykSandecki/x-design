@@ -47,9 +47,9 @@ describe('setElementsCoordinatesHandler', () => {
                   [selectedElementMock.id]: {
                     ...elementAllDataMock,
                   },
-                  ['2']: {
+                  ['test-2']: {
                     ...elementAllDataMock,
-                    id: '2',
+                    id: 'test-2',
                   },
                 },
               },

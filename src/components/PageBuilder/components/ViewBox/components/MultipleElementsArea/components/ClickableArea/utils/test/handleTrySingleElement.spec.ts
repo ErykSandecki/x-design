@@ -51,7 +51,7 @@ describe('handleTrySingleElement', () => {
 
   it('should select element', () => {
     // before
-    handleTrySingleElement(mockCallBack, false, '1');
+    handleTrySingleElement(mockCallBack, false, 'test-1');
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(1);
@@ -59,7 +59,7 @@ describe('handleTrySingleElement', () => {
 
   it('should not select element', () => {
     // before
-    handleTrySingleElement(mockCallBack, true, '1');
+    handleTrySingleElement(mockCallBack, true, 'test-1');
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(0);

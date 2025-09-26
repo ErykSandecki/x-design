@@ -84,7 +84,7 @@ describe('getMappedParentsChildren', () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
     const payload = {
-      draggableElements: ['2'],
+      draggableElements: ['test-2'],
       possibleIndexPosition: null,
       possibleParent: '-1',
     };
@@ -105,12 +105,12 @@ describe('getMappedParentsChildren', () => {
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
-                children: ['2'],
+                children: ['test-2'],
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementAllDataMock,
                 children: [],
-                id: '2',
+                id: 'test-2',
                 parentId: elementStaticDataMock.id,
               },
             },
@@ -119,9 +119,9 @@ describe('getMappedParentsChildren', () => {
               [elementDynamicDataMock.id]: {
                 ...elementDynamicDataMock,
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementDynamicDataMock,
-                id: '2',
+                id: 'test-2',
               },
             },
             staticData: {
@@ -131,12 +131,12 @@ describe('getMappedParentsChildren', () => {
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['2'],
+                children: ['test-2'],
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementStaticDataMock,
                 children: [],
-                id: '2',
+                id: 'test-2',
                 parentId: elementStaticDataMock.id,
               },
             },
@@ -150,7 +150,7 @@ describe('getMappedParentsChildren', () => {
       allData: {
         ['-1']: {
           ...currentPage.elements.allData['-1'],
-          children: [elementAllDataMock.id, '2'],
+          children: [elementAllDataMock.id, 'test-2'],
         },
         [elementAllDataMock.id]: {
           ...elementAllDataMock,
@@ -161,7 +161,7 @@ describe('getMappedParentsChildren', () => {
       staticData: {
         ['-1']: {
           ...currentPage.elements.staticData['-1'],
-          children: [elementAllDataMock.id, '2'],
+          children: [elementAllDataMock.id, 'test-2'],
         },
         [elementStaticDataMock.id]: {
           ...elementStaticDataMock,
@@ -175,7 +175,7 @@ describe('getMappedParentsChildren', () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
     const payload = {
-      draggableElements: ['3'],
+      draggableElements: ['test-3'],
       possibleIndexPosition: 0,
       possibleParent: elementAllDataMock.id,
     };
@@ -196,18 +196,18 @@ describe('getMappedParentsChildren', () => {
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
-                children: ['2', '3'],
+                children: ['test-2', 'test-3'],
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementAllDataMock,
                 children: [],
-                id: '2',
+                id: 'test-2',
                 parentId: elementStaticDataMock.id,
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementAllDataMock,
                 children: [],
-                id: '3',
+                id: 'test-3',
                 parentId: elementStaticDataMock.id,
               },
             },
@@ -216,13 +216,13 @@ describe('getMappedParentsChildren', () => {
               [elementDynamicDataMock.id]: {
                 ...elementDynamicDataMock,
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementDynamicDataMock,
-                id: '2',
+                id: 'test-2',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementDynamicDataMock,
-                id: '3',
+                id: 'test-3',
               },
             },
             staticData: {
@@ -232,18 +232,18 @@ describe('getMappedParentsChildren', () => {
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['2', '3'],
+                children: ['test-2', 'test-3'],
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementStaticDataMock,
                 children: [],
-                id: '2',
+                id: 'test-2',
                 parentId: elementStaticDataMock.id,
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementStaticDataMock,
                 children: [],
-                id: '3',
+                id: 'test-3',
                 parentId: elementStaticDataMock.id,
               },
             },
@@ -257,14 +257,14 @@ describe('getMappedParentsChildren', () => {
       allData: {
         [elementAllDataMock.id]: {
           ...elementAllDataMock,
-          children: ['3', '2'],
+          children: ['test-3', 'test-2'],
         },
       },
       dynamicData: {},
       staticData: {
         [elementStaticDataMock.id]: {
           ...elementStaticDataMock,
-          children: ['3', '2'],
+          children: ['test-3', 'test-2'],
         },
       },
     });
@@ -274,7 +274,7 @@ describe('getMappedParentsChildren', () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
     const payload = {
-      draggableElements: ['3'],
+      draggableElements: ['test-3'],
       possibleIndexPosition: 0,
       possibleParent: elementAllDataMock.id,
     };
@@ -291,22 +291,22 @@ describe('getMappedParentsChildren', () => {
             allData: {
               ['-1']: {
                 ...currentPage.elements.allData['-1'],
-                children: [elementAllDataMock.id, '3'],
+                children: [elementAllDataMock.id, 'test-3'],
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
-                children: ['2'],
+                children: ['test-2'],
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementAllDataMock,
                 children: [],
-                id: '2',
+                id: 'test-2',
                 parentId: elementStaticDataMock.id,
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementAllDataMock,
                 children: [],
-                id: '3',
+                id: 'test-3',
                 parentId: '-1',
               },
             },
@@ -315,34 +315,34 @@ describe('getMappedParentsChildren', () => {
               [elementDynamicDataMock.id]: {
                 ...elementDynamicDataMock,
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementDynamicDataMock,
-                id: '2',
+                id: 'test-2',
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementDynamicDataMock,
-                id: '3',
+                id: 'test-3',
               },
             },
             staticData: {
               ['-1']: {
                 ...currentPage.elements.staticData['-1'],
-                children: [elementAllDataMock.id, '3'],
+                children: [elementAllDataMock.id, 'test-3'],
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['2'],
+                children: ['test-2'],
               },
-              ['2']: {
+              ['test-2']: {
                 ...elementStaticDataMock,
                 children: [],
-                id: '2',
+                id: 'test-2',
                 parentId: elementStaticDataMock.id,
               },
-              ['3']: {
+              ['test-3']: {
                 ...elementStaticDataMock,
                 children: [],
-                id: '3',
+                id: 'test-3',
                 parentId: '-1',
               },
             },
@@ -360,7 +360,7 @@ describe('getMappedParentsChildren', () => {
         },
         [elementAllDataMock.id]: {
           ...elementAllDataMock,
-          children: ['3', '2'],
+          children: ['test-3', 'test-2'],
         },
       },
       dynamicData: {},
@@ -371,7 +371,7 @@ describe('getMappedParentsChildren', () => {
         },
         [elementStaticDataMock.id]: {
           ...elementStaticDataMock,
-          children: ['3', '2'],
+          children: ['test-3', 'test-2'],
         },
       },
     });

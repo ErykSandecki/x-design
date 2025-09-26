@@ -7,21 +7,21 @@ import { findMainParent } from '../findMainParent';
 describe('findMainParent', () => {
   it(`should find main parent`, () => {
     // before
-    const result = findMainParent('2', {
+    const result = findMainParent('test-2', {
       [elementStaticDataMock.id]: elementStaticDataMock,
-      ['2']: {
+      ['test-2']: {
         ...elementStaticDataMock,
-        id: '2',
+        id: 'test-2',
         parentId: elementStaticDataMock.id,
       },
-      ['3']: {
+      ['test-3']: {
         ...elementStaticDataMock,
-        id: '3',
-        parentId: '2',
+        id: 'test-3',
+        parentId: 'test-2',
       },
     });
 
     // result
-    expect(result).toBe('1');
+    expect(result).toBe('test-1');
   });
 });

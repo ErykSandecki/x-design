@@ -38,10 +38,10 @@ const stateMock = {
           allData: {
             ['-1']: {
               ...currentPage.elements.allData['-1'],
-              children: [elementAllDataMock.id, '2'],
+              children: [elementAllDataMock.id, 'test-2'],
             },
             [elementAllDataMock.id]: elementAllDataMock,
-            ['2']: { ...elementAllDataMock, id: '2' },
+            ['test-2']: { ...elementAllDataMock, id: 'test-2' },
           },
           dynamicData: {
             ['-1']: {
@@ -49,17 +49,17 @@ const stateMock = {
               children: [elementDynamicDataMock.id],
             },
             [elementDynamicDataMock.id]: elementDynamicDataMock,
-            ['2']: elementDynamicDataMock,
+            ['test-2']: elementDynamicDataMock,
           },
           staticData: {
             ['-1']: {
               ...currentPage.elements.staticData['-1'],
-              children: [elementStaticDataMock.id, '2'],
+              children: [elementStaticDataMock.id, 'test-2'],
             },
             [elementStaticDataMock.id]: elementStaticDataMock,
-            ['2']: {
+            ['test-2']: {
               ...elementStaticDataMock,
-              id: '2',
+              id: 'test-2',
             },
           },
         },
@@ -98,26 +98,26 @@ describe('ColumnResizing snapshots', () => {
               ...stateMock[PAGE_BUILDER].pages['0'].elements,
               allData: {
                 ...stateMock[PAGE_BUILDER].pages['0'].elements.allData,
-                ['2']: {
+                ['test-2']: {
                   ...elementAllDataMock,
                   height: '1000',
-                  id: '2',
+                  id: 'test-2',
                   width: '1000',
                 },
               },
               dynamicData: {
                 ...stateMock[PAGE_BUILDER].pages['0'].elements.dynamicData,
-                ['2']: {
+                ['test-2']: {
                   ...elementDynamicDataMock,
                   height: '1000',
-                  id: '2',
+                  id: 'test-2',
                   width: '1000',
                 },
               },
             },
             selectedElements: [
               ...stateMock[PAGE_BUILDER].pages['0'].selectedElements,
-              { ...selectedElementMock, id: '2' },
+              { ...selectedElementMock, id: 'test-2' },
             ],
           },
         },
@@ -172,11 +172,11 @@ describe('ColumnResizing behaviors', () => {
 
     // result
     expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].height
-        .value,
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1']
+        .height.value,
     ).toBe(10000);
     expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].width
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].width
         .value,
     ).toBe(10000);
   });
@@ -221,11 +221,11 @@ describe('ColumnResizing behaviors', () => {
 
     // result
     expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].height
-        .value,
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1']
+        .height.value,
     ).toBe(50);
     expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['1'].width
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].width
         .value,
     ).toBe(50);
   });

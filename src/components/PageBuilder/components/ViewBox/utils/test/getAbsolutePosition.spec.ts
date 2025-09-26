@@ -30,7 +30,7 @@ const currentPage =
   ];
 const sharedRefs = {
   [elementAllDataMock.id]: element,
-  ['2']: element,
+  ['test-2']: element,
 };
 
 jest.mock('lodash', () => ({
@@ -59,9 +59,9 @@ describe('getAbsolutePosition', () => {
                   [selectedElementMock.id]: {
                     ...elementAllDataMock,
                   },
-                  ['2']: {
+                  ['test-2']: {
                     ...elementAllDataMock,
-                    id: '2',
+                    id: 'test-2',
                   },
                 },
               },
@@ -85,7 +85,7 @@ describe('getAbsolutePosition', () => {
 
   it(`should return coordinates`, () => {
     // before
-    const result = getAbsolutePosition('2', sharedRefs, zoomContentRef);
+    const result = getAbsolutePosition('test-2', sharedRefs, zoomContentRef);
 
     // result
     expect(result).toStrictEqual({ x1: 0, x2: 100, y1: 0, y2: 100 });

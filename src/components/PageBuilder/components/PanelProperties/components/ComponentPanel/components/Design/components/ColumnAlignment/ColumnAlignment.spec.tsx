@@ -103,14 +103,14 @@ describe('ColumnAlignment snapshots', () => {
                 },
                 [elementAllDataMock.id]: {
                   ...elementAllDataMock,
-                  children: ['2'],
+                  children: ['test-2'],
                   position: 'absolute',
                 },
-                ['2']: {
+                ['test-2']: {
                   ...elementAllDataMock,
                   children: [],
-                  id: '2',
-                  parentId: '1',
+                  id: 'test-2',
+                  parentId: 'test-1',
                   position: 'relative',
                 },
               },
@@ -121,9 +121,9 @@ describe('ColumnAlignment snapshots', () => {
                   ...elementDynamicDataMock,
                   position: 'absolute',
                 },
-                ['2']: {
+                ['test-2']: {
                   ...elementDynamicDataMock,
-                  id: '2',
+                  id: 'test-2',
                   position: 'relative',
                 },
               },
@@ -135,20 +135,20 @@ describe('ColumnAlignment snapshots', () => {
                 },
                 [elementStaticDataMock.id]: {
                   ...elementStaticDataMock,
-                  children: ['2'],
+                  children: ['test-2'],
                   position: 'absolute',
                 },
-                ['2']: {
+                ['test-2']: {
                   ...elementStaticDataMock,
                   children: [],
-                  id: '2',
+                  id: 'test-2',
                   position: 'relative',
                 },
               },
             },
             selectElements: [
               selectedElementMock,
-              { ...selectedElementMock, id: '2' },
+              { ...selectedElementMock, id: 'test-2' },
             ],
           },
         },
@@ -172,8 +172,8 @@ describe('ColumnAlignment behaviors', () => {
     // mock
     const el1 = document.createElement('div');
     const el2 = document.createElement('div');
-    const parentId = '1';
-    const childrenId = '2';
+    const parentId = 'test-1';
+    const childrenId = 'test-2';
 
     // before
     el1.setAttribute('id', parentId);
@@ -204,14 +204,14 @@ describe('ColumnAlignment behaviors', () => {
                 },
                 [elementAllDataMock.id]: {
                   ...elementAllDataMock,
-                  children: ['2'],
+                  children: ['test-2'],
                   position: 'absolute',
                 },
-                ['2']: {
+                ['test-2']: {
                   ...elementAllDataMock,
                   children: [],
-                  id: '2',
-                  parentId: '1',
+                  id: 'test-2',
+                  parentId: 'test-1',
                   position: 'absolute',
                 },
               },
@@ -222,9 +222,9 @@ describe('ColumnAlignment behaviors', () => {
                   ...elementDynamicDataMock,
                   position: 'absolute',
                 },
-                ['2']: {
+                ['test-2']: {
                   ...elementDynamicDataMock,
-                  id: '2',
+                  id: 'test-2',
                   position: 'absolute',
                 },
               },
@@ -236,13 +236,13 @@ describe('ColumnAlignment behaviors', () => {
                 },
                 [elementStaticDataMock.id]: {
                   ...elementStaticDataMock,
-                  children: ['2'],
+                  children: ['test-2'],
                   position: 'absolute',
                 },
-                ['2']: {
+                ['test-2']: {
                   ...elementStaticDataMock,
                   children: [],
-                  id: '2',
+                  id: 'test-2',
                   position: 'absolute',
                 },
               },
@@ -296,7 +296,8 @@ describe('ColumnAlignment behaviors', () => {
 
     // result
     expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['2'].alignment,
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-2']
+        .alignment,
     ).toStrictEqual({ horizontal: 'left', vertical: 'top' });
   });
 });

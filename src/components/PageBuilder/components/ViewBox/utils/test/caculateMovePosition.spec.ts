@@ -46,9 +46,9 @@ describe('caculateMovePosition', () => {
                   [selectedElementMock.id]: {
                     ...elementAllDataMock,
                   },
-                  ['2']: {
+                  ['test-2']: {
                     ...elementAllDataMock,
-                    id: '2',
+                    id: 'test-2',
                   },
                 },
               },
@@ -63,7 +63,7 @@ describe('caculateMovePosition', () => {
     const result = caculateMovePosition(
       cursorPosition,
       { clientX: 0, clientY: 0 } as MouseEvent,
-      '1',
+      'test-1',
     );
 
     // result

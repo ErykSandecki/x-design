@@ -17,7 +17,7 @@ exports[`MultipleElementsArea snapshots should render MultipleElementsArea 1`] =
   </svg>
   <svg
     class="ClickableArea ClickableArea--light"
-    data-test-rect="1"
+    data-test-rect="test-1"
     style="height: 100px; left: 0px; pointer-events: all; top: 0px; width: 100px;"
   >
     <rect

@@ -13,26 +13,26 @@ describe('findAllChildren', () => {
     const allData: TElementsData['allData'] = {
       [elementAllDataMock.id]: {
         ...elementAllDataMock,
-        children: ['2'],
+        children: ['test-2'],
       },
-      ['2']: {
+      ['test-2']: {
         ...elementAllDataMock,
-        children: ['3'],
-        id: '2',
-        parentId: '1',
+        children: ['test-3'],
+        id: 'test-2',
+        parentId: 'test-1',
       },
-      ['3']: {
+      ['test-3']: {
         ...elementAllDataMock,
         children: [],
-        id: '3',
-        parentId: '2',
+        id: 'test-3',
+        parentId: 'test-2',
       },
     };
 
     // before
-    const result = findAllChildren(allData, allData['1'].children);
+    const result = findAllChildren(allData, allData['test-1'].children);
 
     // result
-    expect(result).toStrictEqual(['2', '3']);
+    expect(result).toStrictEqual(['test-2', 'test-3']);
   });
 });

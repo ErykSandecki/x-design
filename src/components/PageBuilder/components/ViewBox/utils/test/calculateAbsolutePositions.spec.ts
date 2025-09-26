@@ -30,7 +30,7 @@ const currentPage =
   ];
 const sharedRefs = {
   [elementAllDataMock.id]: element,
-  ['2']: element,
+  ['test-2']: element,
 };
 const rectCoordinates = {
   current: {
@@ -71,9 +71,9 @@ describe('calculateAbsolutePositions', () => {
                   [selectedElementMock.id]: {
                     ...elementAllDataMock,
                   },
-                  ['2']: {
+                  ['test-2']: {
                     ...elementAllDataMock,
-                    id: '2',
+                    id: 'test-2',
                   },
                 },
               },
@@ -98,8 +98,8 @@ describe('calculateAbsolutePositions', () => {
 
     // result
     expect(clonedRectCoordinates.current).toStrictEqual({
-      '1': { x1: 0, x2: 500, y1: 0, y2: 500 },
-      '2': { x1: 0, x2: 500, y1: 0, y2: 500 },
+      'test-1': { x1: 0, x2: 500, y1: 0, y2: 500 },
+      'test-2': { x1: 0, x2: 500, y1: 0, y2: 500 },
     });
   });
 
@@ -118,7 +118,7 @@ describe('calculateAbsolutePositions', () => {
 
     // result
     expect(clonedRectCoordinates.current).toStrictEqual({
-      '1': { x1: 0, x2: 100, y1: 0, y2: 100 },
+      'test-1': { x1: 0, x2: 100, y1: 0, y2: 100 },
     });
   });
 });

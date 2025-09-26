@@ -65,7 +65,13 @@ describe('useMouseMoveEvent', () => {
     // before
     renderHook(
       () =>
-        useMouseUpEvent(false, '1', mockCallBack, mockCallBack, mockCallBack),
+        useMouseUpEvent(
+          false,
+          'test-1',
+          mockCallBack,
+          mockCallBack,
+          mockCallBack,
+        ),
       {
         wrapper: getProviderWrapper(store),
       },
