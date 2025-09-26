@@ -37,7 +37,7 @@ const HeightPopoverHeight: FC<THeightPopoverHeightProps> = ({
         icon="FixedHeight"
         index={0}
         onClick={() => dispatch(applyElementsSizeType('height', 'fixed'))}
-        selected={!isMixed && isPureNumber(height.value)}
+        selected={!isMixed && !height.unit && isPureNumber(height.value)}
         text={t(`${translationNameSpace}.1`)}
       />
       <PopoverCompound.PopoverItem
@@ -47,16 +47,23 @@ const HeightPopoverHeight: FC<THeightPopoverHeightProps> = ({
         selected={!isMixed && height.value === 'auto'}
         text={t(`${translationNameSpace}.2`)}
       />
+      <PopoverCompound.PopoverItem
+        icon="Percentage"
+        index={2}
+        onClick={() => dispatch(applyElementsSizeType('height', 'unit'))}
+        selected={!isMixed && !!height.unit}
+        text={t(`${translationNameSpace}.3`)}
+      />
       <PopoverCompound.PopoverSeparator />
       <PopoverCompound.PopoverItem
         icon="MinHeight"
-        index={2}
+        index={3}
         selected={false}
         text={t(`${translationNameSpace}.3`)}
       />
       <PopoverCompound.PopoverItem
         icon="MaxHeight"
-        index={3}
+        index={4}
         selected={false}
         text={t(`${translationNameSpace}.4`)}
       />

@@ -38,8 +38,8 @@ export const useElementSizes = (id: TElement['id']): TUseElementSizes => {
       : parseInt(getComputedStyle(itemsRefs[id]).width);
 
   return {
-    cssHeight,
-    cssWidth,
+    cssHeight: `${cssHeight}${unitHeight ?? ''}`,
+    cssWidth: `${cssWidth}${unitWidth ?? ''}`,
     height,
     width,
   };

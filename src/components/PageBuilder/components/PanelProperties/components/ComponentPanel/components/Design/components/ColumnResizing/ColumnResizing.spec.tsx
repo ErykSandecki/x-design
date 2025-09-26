@@ -21,7 +21,7 @@ import { ZOOM_CONTENT_ID } from 'shared';
 import { configureStore } from 'store/store';
 
 // types
-import { E2EAttribute, KeyboardKeys } from 'types';
+import { E2EAttribute, KeyboardKeys, Unit } from 'types';
 import { PopoverItem } from './enums';
 
 // utils
@@ -178,10 +178,12 @@ describe('ColumnResizing behaviors', () => {
     );
 
     // action
+    fireEvent.focus(inputHeight);
     fireEvent.click(inputHeight);
     fireEvent.change(inputHeight, { target: { value: '10000' } });
     fireEvent.keyDown(inputHeight, { key: KeyboardKeys.enter });
     fireEvent.blur(inputHeight);
+    fireEvent.focus(inputWidth);
     fireEvent.click(inputWidth);
     fireEvent.change(inputWidth, { target: { value: '10000' } });
     fireEvent.keyDown(inputWidth, { key: KeyboardKeys.enter });
@@ -694,5 +696,81 @@ describe('ColumnResizing behaviors', () => {
       store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-2'].width
         .value,
     ).toBe('auto');
+  });
+
+  it('should apply unit value for height & width', () => {
+    // mock
+    const store = configureStore(stateMock);
+
+    // before
+    const { container } = render(
+      <Provider store={store}>
+        <ColumnResizing />
+      </Provider>,
+    );
+
+    // find { inputs }
+    const inputHeight = getByE2EAttribute(
+      container,
+      E2EAttribute.textField,
+      'height',
+    );
+    const inputWidth = getByE2EAttribute(
+      container,
+      E2EAttribute.textField,
+      'width',
+    );
+
+    // find { icons }
+    const iconHeight = getByE2EAttribute(
+      inputHeight,
+      E2EAttribute.icon,
+      'variant',
+    );
+    const iconWidth = getByE2EAttribute(
+      inputWidth,
+      E2EAttribute.icon,
+      'variant',
+    );
+
+    // find { popovers }
+    const popoverHeight = getByE2EAttribute(
+      inputHeight,
+      E2EAttribute.popover,
+      'popover',
+    );
+    const popoverWidth = getByE2EAttribute(
+      inputWidth,
+      E2EAttribute.popover,
+      'popover',
+    );
+
+    // find { popover items }
+    const popoverHeightItem = getByE2EAttribute(
+      popoverHeight,
+      E2EAttribute.popoverItem,
+      PopoverItem.unit,
+    );
+    const popoverWidthItem = getByE2EAttribute(
+      popoverWidth,
+      E2EAttribute.popoverItem,
+      PopoverItem.unit,
+    );
+
+    // action
+    fireEvent.click(iconHeight);
+    fireEvent.click(popoverHeightItem);
+    fireEvent.click(iconWidth);
+    fireEvent.click(popoverWidthItem);
+
+    // result
+    expect(
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1']
+        .height.unit,
+    ).toBe(Unit.percentage);
+    expect(
+      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].width
+        .unit,
+    ).toBe(Unit.percentage);
   });
 });

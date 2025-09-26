@@ -1,5 +1,4 @@
 import { FC, memo, ReactNode, useRef } from 'react';
-import { isNumber } from 'lodash';
 
 // components
 import DropAnchors from './components/DropAnchors/DropAnchors';
@@ -33,6 +32,7 @@ import { MouseMode } from 'types/enums/mouseMode';
 import { getAbsolutePosition } from '../../../../utils/getAbsolutePosition';
 import { getPosition } from './utils/getPosition';
 import { getLayout } from './utils/getLayout';
+import { isPureNumber } from 'utils';
 
 type TElementProps = {
   classes: typeof classes;
@@ -101,9 +101,9 @@ const Element: FC<TElementProps> = ({
       style={{
         ...getPosition(alignment, counterAngle, x, y),
         backgroundColor: 'unset',
-        height: isNumber(cssHeight) ? `${cssHeight}px` : cssHeight,
+        height: isPureNumber(cssHeight) ? `${cssHeight}px` : cssHeight,
         position,
-        width: isNumber(cssWidth) ? `${cssWidth}px` : cssWidth,
+        width: isPureNumber(cssWidth) ? `${cssWidth}px` : cssWidth,
       }}
     >
       <Box

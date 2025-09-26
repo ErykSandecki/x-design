@@ -55,11 +55,37 @@ exports[`HeightPopoverWidth snapshots should render HeightPopoverWidth 1`] = `
     </small>
   </div>
   <div
+    class="PopoverItem PopoverItem--light"
+    data-test-popover-item="2"
+  >
+    <div
+      class="css-wcnq0t PopoverItem__check-icon PopoverItem__check-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      data-test-icon="check"
+      height="12"
+      name="Check"
+      width="12"
+    />
+    <div
+      class="css-wcnq0t PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      data-test-icon="percentage"
+      height="12"
+      name="Percentage"
+      width="12"
+    />
+    <small
+      class="css-wcnq0t PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      data-test-text=""
+      style="text-align: inherit;"
+    >
+      Percentage
+    </small>
+  </div>
+  <div
     class="PopoverSeparator PopoverSeparator--light"
   />
   <div
     class="PopoverItem PopoverItem--light"
-    data-test-popover-item="2"
+    data-test-popover-item="3"
   >
     <div
       class="css-wcnq0t PopoverItem__check-icon PopoverItem__check-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -80,12 +106,12 @@ exports[`HeightPopoverWidth snapshots should render HeightPopoverWidth 1`] = `
       data-test-text=""
       style="text-align: inherit;"
     >
-      Add min width...
+      Percentage
     </small>
   </div>
   <div
     class="PopoverItem PopoverItem--light"
-    data-test-popover-item="3"
+    data-test-popover-item="4"
   >
     <div
       class="css-wcnq0t PopoverItem__check-icon PopoverItem__check-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -106,7 +132,7 @@ exports[`HeightPopoverWidth snapshots should render HeightPopoverWidth 1`] = `
       data-test-text=""
       style="text-align: inherit;"
     >
-      Add max width...
+      Add min width...
     </small>
   </div>
 </DocumentFragment>
@@ -167,11 +193,37 @@ exports[`HeightPopoverWidth snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
+    class="PopoverItem PopoverItem--light"
+    data-test-popover-item="2"
+  >
+    <div
+      class="css-wcnq0t PopoverItem__check-icon PopoverItem__check-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      data-test-icon="check"
+      height="12"
+      name="Check"
+      width="12"
+    />
+    <div
+      class="css-wcnq0t PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      data-test-icon="percentage"
+      height="12"
+      name="Percentage"
+      width="12"
+    />
+    <small
+      class="css-wcnq0t PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      data-test-text=""
+      style="text-align: inherit;"
+    >
+      Percentage
+    </small>
+  </div>
+  <div
     class="PopoverSeparator PopoverSeparator--light"
   />
   <div
     class="PopoverItem PopoverItem--light"
-    data-test-popover-item="2"
+    data-test-popover-item="3"
   >
     <div
       class="css-wcnq0t PopoverItem__check-icon PopoverItem__check-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -192,12 +244,12 @@ exports[`HeightPopoverWidth snapshots should render wiht mixed value 1`] = `
       data-test-text=""
       style="text-align: inherit;"
     >
-      Add min width...
+      Percentage
     </small>
   </div>
   <div
     class="PopoverItem PopoverItem--light"
-    data-test-popover-item="3"
+    data-test-popover-item="4"
   >
     <div
       class="css-wcnq0t PopoverItem__check-icon PopoverItem__check-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -218,7 +270,7 @@ exports[`HeightPopoverWidth snapshots should render wiht mixed value 1`] = `
       data-test-text=""
       style="text-align: inherit;"
     >
-      Add max width...
+      Add min width...
     </small>
   </div>
 </DocumentFragment>

@@ -52,10 +52,14 @@ const ColumnResizing: FC = () => {
   );
   const {
     height,
+    isFocused,
     onBlurHeight,
     onBlurWidth,
     onChangeHeight,
     onChangeWidth,
+    onFocus,
+    unitHeight,
+    unitWidth,
     width,
   } = useResizingEvents(element, isMixedHeight, isMixedWidth, isMultiple);
   const { t } = useTranslation();
@@ -76,6 +80,7 @@ const ColumnResizing: FC = () => {
           onChangeWidth(sanitizeNumberInput(event.target.value))
         }
         onClick={() => refInputWidth.current.select()}
+        onFocus={() => onFocus('width')}
         onKeyDown={(event) =>
           handleSubmitInput(KeyboardKeys.enter, refInputWidth.current)(event)
         }
@@ -107,13 +112,22 @@ const ColumnResizing: FC = () => {
                 />
               )}
             </ScrubbableInput>
-            {!isPureWidth && !isMixedWidth && (
-              <UITools.Chip>{width}</UITools.Chip>
-            )}
+            {isFocused !== 'width' &&
+              (!isPureWidth || unitWidth) &&
+              !isMixedWidth && (
+                <UITools.Chip>
+                  {width}
+                  {unitWidth ?? ''}
+                </UITools.Chip>
+              )}
           </>
         }
         type={isMixedWidth || !isPureWidth ? 'text' : 'number'}
-        value={isPureWidth || isMixedWidth ? width : ''}
+        value={
+          (isPureWidth && (!unitWidth || isFocused === 'width')) || isMixedWidth
+            ? width
+            : ''
+        }
       />
       <UITools.TextField
         e2eValue="height"
@@ -124,6 +138,7 @@ const ColumnResizing: FC = () => {
           onChangeHeight(sanitizeNumberInput(event.target.value))
         }
         onClick={() => refInputHeight.current.select()}
+        onFocus={() => onFocus('height')}
         onKeyDown={(event) =>
           handleSubmitInput(KeyboardKeys.enter, refInputHeight.current)(event)
         }
@@ -155,13 +170,23 @@ const ColumnResizing: FC = () => {
                 />
               )}
             </ScrubbableInput>
-            {!isPureHeight && !isMixedHeight && (
-              <UITools.Chip>{height}</UITools.Chip>
-            )}
+            {isFocused !== 'height' &&
+              (!isPureHeight || unitHeight) &&
+              !isMixedHeight && (
+                <UITools.Chip>
+                  {height}
+                  {unitHeight ?? ''}
+                </UITools.Chip>
+              )}
           </>
         }
         type={isMixedHeight || !isPureHeight ? 'text' : 'number'}
-        value={isPureHeight || isMixedHeight ? height : ''}
+        value={
+          (isPureHeight && (!unitHeight || isFocused === 'height')) ||
+          isMixedHeight
+            ? height
+            : ''
+        }
       />
     </UITools.SectionColumn>
   );

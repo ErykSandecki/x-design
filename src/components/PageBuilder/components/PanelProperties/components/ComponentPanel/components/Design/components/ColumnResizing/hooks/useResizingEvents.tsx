@@ -2,12 +2,18 @@ import { useEffect, useState } from 'react';
 
 // types
 import { TElement } from 'types';
+import { TFocusElement } from '../types';
 import { TUseBlurEvent, useBlurEvent } from './useBlurEvent';
 import { TUseChangeEvent, useChangeEvent } from './useChangeEvent';
+import { TUseFocusEvent, useFocusEvent } from './useFocusEvent';
 
 type TUseResizingEvents = TUseChangeEvent &
   TUseBlurEvent & {
     height: string;
+    isFocused: TFocusElement;
+    onFocus: TUseFocusEvent;
+    unitHeight: TElement['height']['unit'];
+    unitWidth: TElement['width']['unit'];
     width: string;
   };
 
@@ -17,9 +23,10 @@ export const useResizingEvents = (
   isMixedWidth: boolean,
   isMultiple: boolean,
 ): TUseResizingEvents => {
+  const [isFocused, setIsFocused] = useState<TFocusElement>('');
   const {
-    height: { value: currentHeight },
-    width: { value: currentWidth },
+    height: { unit: unitHeight, value: currentHeight },
+    width: { unit: unitWidth, value: currentWidth },
   } = element;
   const [height, setHeight] = useState('');
   const [width, setWidth] = useState('');
@@ -27,10 +34,12 @@ export const useResizingEvents = (
     element,
     height,
     setHeight,
+    setIsFocused,
     setWidth,
     width,
   );
   const onChangeEvents = useChangeEvent(setHeight, setWidth);
+  const onFocusEvents = useFocusEvent(setIsFocused);
 
   useEffect(() => {
     setHeight(isMixedHeight ? 'Mixed' : currentHeight.toString());
@@ -41,6 +50,10 @@ export const useResizingEvents = (
     ...onBlurEvents,
     ...onChangeEvents,
     height,
+    isFocused,
+    onFocus: onFocusEvents,
+    unitHeight,
+    unitWidth,
     width,
   };
 };

@@ -24,10 +24,14 @@ describe('useResizingEvents', () => {
     // result
     expect(result.current).toStrictEqual({
       height: '100',
+      isFocused: '',
       onBlurHeight: expect.any(Function),
       onBlurWidth: expect.any(Function),
       onChangeHeight: expect.any(Function),
       onChangeWidth: expect.any(Function),
+      onFocus: expect.any(Function),
+      unitHeight: undefined,
+      unitWidth: undefined,
       width: '100',
     });
   });
