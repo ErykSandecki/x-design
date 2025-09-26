@@ -29,15 +29,15 @@ export const useSX = (deps: Array<TSX>, sx: TSX): TUseSX => {
     () => css`
       ${mappingBorders(sx, theme)}
       ${mappingBordersColors(sx, theme)}
-    ${mappingBordersRadius(sx)}
-    ${mappingDisplay(sx)}
-    ${mappingFlex(sx)}
-    ${mappingGrid(sx)}
-    ${mappingPallete(sx, theme)}
-    ${mappingPositions(sx)}
-    ${mappingShadows(sx)}
-    ${mappingSizing(sx)}
-    ${mappingSpacings(sx)}
+      ${mappingBordersRadius(sx)}
+      ${mappingDisplay(sx)}
+      ${mappingFlex(sx)}
+      ${mappingGrid(sx)}
+      ${mappingPallete(sx, theme)}
+      ${mappingPositions(sx)}
+      ${mappingShadows(sx)}
+      ${mappingSizing(sx)}
+      ${mappingSpacings(sx)}
     `,
     [...deps, theme],
   );

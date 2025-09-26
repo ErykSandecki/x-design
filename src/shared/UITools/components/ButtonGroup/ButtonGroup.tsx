@@ -3,6 +3,9 @@ import { kebabCase } from 'lodash';
 
 // components
 import Box, { TBoxProps } from '../../../UI/components/Box/Box';
+import E2EDataAttribute, {
+  TE2EDataAttributeProps,
+} from '../../../E2EDataAttributes/E2EDataAttribute';
 import Icon from '../../../UI/components/Icon/Icon';
 
 // hooks
@@ -17,9 +20,6 @@ import styles from './button-group.scss';
 // types
 import { E2EAttribute } from 'types';
 import { TButtonGroup } from './types';
-import E2EDataAttribute, {
-  TE2EDataAttributeProps,
-} from '../../../E2EDataAttributes/E2EDataAttribute';
 
 export type TSectionProps = TBoxProps & {
   buttons: Array<TButtonGroup>;
