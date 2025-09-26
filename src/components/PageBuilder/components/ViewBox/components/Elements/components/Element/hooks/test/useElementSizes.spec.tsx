@@ -26,42 +26,6 @@ import { createHtmlElement } from 'utils';
 import { getProviderWrapper } from 'test';
 
 const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-const stateMock = {
-  ...pageBuilderStateMock,
-  [PAGE_BUILDER]: {
-    ...pageBuilderStateMock[PAGE_BUILDER],
-    pages: {
-      ...pageBuilderStateMock[PAGE_BUILDER].pages,
-      ['0']: {
-        ...currentPage,
-        elements: {
-          allData: {
-            ['-1']: {
-              ...currentPage.elements.allData['-1'],
-              children: [elementAllDataMock.id],
-            },
-            [elementAllDataMock.id]: elementAllDataMock,
-          },
-          dynamicData: {
-            ['-1']: {
-              ...currentPage.elements.dynamicData['-1'],
-              children: [elementDynamicDataMock.id],
-            },
-            [elementDynamicDataMock.id]: elementDynamicDataMock,
-          },
-          staticData: {
-            ['-1']: {
-              ...currentPage.elements.staticData['-1'],
-              children: [elementStaticDataMock.id],
-            },
-            [elementStaticDataMock.id]: elementStaticDataMock,
-          },
-        },
-        selectedElements: [selectedElementMock],
-      },
-    },
-  },
-};
 
 describe('useElementEvents', () => {
   beforeAll(() => {
@@ -70,9 +34,44 @@ describe('useElementEvents', () => {
       ({ height: '100px', width: '100px' }) as CSSStyleDeclaration;
   });
 
-  it(`should return sizes from html data`, () => {
+  it(`should return sizes from html`, () => {
     // mock
-    const store = configureStore(stateMock);
+    const store = configureStore({
+      ...pageBuilderStateMock,
+      [PAGE_BUILDER]: {
+        ...pageBuilderStateMock[PAGE_BUILDER],
+        pages: {
+          ...pageBuilderStateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...currentPage,
+            elements: {
+              allData: {
+                ['-1']: {
+                  ...currentPage.elements.allData['-1'],
+                  children: [elementAllDataMock.id],
+                },
+                [elementAllDataMock.id]: elementAllDataMock,
+              },
+              dynamicData: {
+                ['-1']: {
+                  ...currentPage.elements.dynamicData['-1'],
+                  children: [elementDynamicDataMock.id],
+                },
+                [elementDynamicDataMock.id]: elementDynamicDataMock,
+              },
+              staticData: {
+                ['-1']: {
+                  ...currentPage.elements.staticData['-1'],
+                  children: [elementStaticDataMock.id],
+                },
+                [elementStaticDataMock.id]: elementStaticDataMock,
+              },
+            },
+            selectedElements: [selectedElementMock],
+          },
+        },
+      },
+    });
 
     // before
     const { result } = renderHook(
@@ -99,7 +98,7 @@ describe('useElementEvents', () => {
     });
   });
 
-  it(`should return sizes`, () => {
+  it(`should return sizes from store`, () => {
     // mock
     const store = configureStore({
       ...pageBuilderStateMock,

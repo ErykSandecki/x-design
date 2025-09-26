@@ -23,16 +23,17 @@ export const useElementSizes = (id: TElement['id']): TUseElementSizes => {
   const { itemsRefs } = useRefs();
   const elementDynamicData = useSelector(elementDynamicDataSelectorCreator(id));
   const {
-    height: { value: cssHeight },
-    width: { value: cssWidth },
+    height: { unit: unitHeight, value: cssHeight },
+    width: { unit: unitWidth, value: cssWidth },
   } = elementDynamicData;
 
   const height =
-    isPureNumber(cssHeight) || !itemsRefs[id]
+    (isPureNumber(cssHeight) || !itemsRefs[id]) && !unitHeight
       ? cssHeight
       : parseInt(getComputedStyle(itemsRefs[id]).height);
+
   const width =
-    isPureNumber(cssWidth) || !itemsRefs[id]
+    (isPureNumber(cssWidth) || !itemsRefs[id]) && !unitWidth
       ? cssWidth
       : parseInt(getComputedStyle(itemsRefs[id]).width);
 
