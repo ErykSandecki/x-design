@@ -34,6 +34,7 @@ import { ReactComponent as MinHeight } from './svg/min-height.svg';
 import { ReactComponent as MinWidth } from './svg/min-width.svg';
 import { ReactComponent as MoveHand } from './svg/move-hand.svg';
 import { ReactComponent as MoveTool } from './svg/move-tool.svg';
+import { ReactComponent as Percentage } from './svg/percentage.svg';
 import { ReactComponent as PlusOutlined } from './svg/plus-outlined.svg';
 import { ReactComponent as PositionSwitcher } from './svg/position-switcher.svg';
 import { ReactComponent as Protractor } from './svg/protractor.svg';
@@ -80,6 +81,7 @@ export const Icons = {
   MinWidth,
   MoveHand,
   MoveTool,
+  Percentage,
   PlusOutlined,
   PositionSwitcher,
   Protractor,
