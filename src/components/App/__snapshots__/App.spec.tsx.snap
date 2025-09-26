@@ -19,23 +19,23 @@ exports[`App snapshots should render initializer 1`] = `
 exports[`App snapshots should render router 1`] = `
 <DocumentFragment>
   <div
-    class="css-wcnq0t"
+    class="css-1jnxvbp"
     data-test-box=""
   >
     <div
-      class="css-10h803n"
+      class="css-1rzc7eb"
       data-test-box=""
     >
       <div
-        class="css-wcnq0t MouseModes MouseModes--light"
+        class="css-1jnxvbp MouseModes MouseModes--light"
         data-test-box=""
       >
         <div
-          class="css-wcnq0t MouseModes__button MouseModes__button--light"
+          class="css-1jnxvbp MouseModes__button MouseModes__button--light"
           data-test-box=""
         >
           <div
-            class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
             data-test-icon="menu"
             height="16"
             name="Logo"
@@ -43,11 +43,11 @@ exports[`App snapshots should render router 1`] = `
           />
         </div>
         <div
-          class="css-wcnq0t MouseModes__button MouseModes__button--light MouseModes__button--active MouseModes__button--active--light"
+          class="css-1jnxvbp MouseModes__button MouseModes__button--light MouseModes__button--active MouseModes__button--active--light"
           data-test-box=""
         >
           <div
-            class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
             data-test-icon="default"
             height="16"
             name="MoveTool"
@@ -55,11 +55,11 @@ exports[`App snapshots should render router 1`] = `
           />
         </div>
         <div
-          class="css-wcnq0t MouseModes__button MouseModes__button--light"
+          class="css-1jnxvbp MouseModes__button MouseModes__button--light"
           data-test-box=""
         >
           <div
-            class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
             data-test-icon="move"
             height="16"
             name="MoveHand"
@@ -67,11 +67,11 @@ exports[`App snapshots should render router 1`] = `
           />
         </div>
         <div
-          class="css-wcnq0t MouseModes__button MouseModes__button--light"
+          class="css-1jnxvbp MouseModes__button MouseModes__button--light"
           data-test-box=""
         >
           <div
-            class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
             data-test-icon="comment"
             height="16"
             name="Comment"
@@ -79,11 +79,11 @@ exports[`App snapshots should render router 1`] = `
           />
         </div>
         <div
-          class="css-wcnq0t MouseModes__button MouseModes__button--light"
+          class="css-1jnxvbp MouseModes__button MouseModes__button--light"
           data-test-box=""
         >
           <div
-            class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
             data-test-icon="toolBeltA"
             height="16"
             name="FrameTool"
@@ -93,7 +93,7 @@ exports[`App snapshots should render router 1`] = `
       </div>
     </div>
     <div
-      class="css-1nlc499 PanelProperties PanelProperties--light"
+      class="css-w7unf8 PanelProperties PanelProperties--light"
       data-test-box="panel-properties"
       id="panelProperties"
       style="width: 240px;"
@@ -103,14 +103,14 @@ exports[`App snapshots should render router 1`] = `
         data-test-resize=""
       />
       <div
-        class="css-wcnq0t Section Section--light"
+        class="css-1jnxvbp Section Section--light"
         data-test-section=""
       >
         <div
           class="Section__header Section__header--light"
         >
           <small
-            class="css-wcnq0t Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+            class="css-1jnxvbp Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
             data-test-text=""
             style="text-align: inherit;"
           >
@@ -121,7 +121,7 @@ exports[`App snapshots should render router 1`] = `
           />
         </div>
         <div
-          class="css-wcnq0t Tabs Tabs--light"
+          class="css-1jnxvbp Tabs Tabs--light"
           data-test-box=""
         >
           <div
@@ -142,14 +142,14 @@ exports[`App snapshots should render router 1`] = `
         class="PanelProperties__sections PanelProperties__sections--light"
       >
         <div
-          class="css-wcnq0t Section Section--light"
+          class="css-1jnxvbp Section Section--light"
           data-test-section=""
         >
           <div
             class="Section__header Section__header--light"
           >
             <small
-              class="css-wcnq0t Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+              class="css-1jnxvbp Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
               data-test-text=""
               style="text-align: inherit;"
             >
@@ -160,7 +160,7 @@ exports[`App snapshots should render router 1`] = `
             />
           </div>
           <div
-            class="css-wcnq0t SectionColumn SectionColumn--light"
+            class="css-1jnxvbp SectionColumn SectionColumn--light"
             data-test-section=""
           >
             <div
@@ -175,18 +175,18 @@ exports[`App snapshots should render router 1`] = `
                 style="width: calc(100% - 24px - 0px - 8px);"
               >
                 <div
-                  class="css-wcnq0t FieldGroup FieldGroup--light"
+                  class="css-1jnxvbp FieldGroup FieldGroup--light"
                   data-test-field-group=""
                 >
                   <div
-                    class="css-wcnq0t ColorPicker__hex-input ColorPicker__hex-input--light TextField TextField--light"
+                    class="css-1jnxvbp ColorPicker__hex-input ColorPicker__hex-input--light TextField TextField--light"
                     data-test-text-field="color"
                   >
                     <div
                       aria-describedby="test-id"
                     >
                       <div
-                        class="css-wcnq0t Color Color--light"
+                        class="css-1jnxvbp Color Color--light"
                         data-test-color=""
                       >
                         <div
@@ -210,7 +210,7 @@ exports[`App snapshots should render router 1`] = `
                     />
                   </div>
                   <div
-                    class="css-wcnq0t ColorPicker__alpha-input ColorPicker__alpha-input--light TextField TextField--light"
+                    class="css-1jnxvbp ColorPicker__alpha-input ColorPicker__alpha-input--light TextField TextField--light"
                     data-test-text-field="alpha"
                   >
                     <input
@@ -239,11 +239,11 @@ exports[`App snapshots should render router 1`] = `
                 class="SectionColumn__buttons SectionColumn__buttons--light"
               >
                 <div
-                  class="css-wcnq0t ButtonIcon ButtonIcon--light"
+                  class="css-1jnxvbp ButtonIcon ButtonIcon--light"
                   data-test-button-icon=""
                 >
                   <div
-                    class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                     data-test-icon="eyes-opened"
                     height="14"
                     name="EyesOpened"
@@ -257,28 +257,28 @@ exports[`App snapshots should render router 1`] = `
       </div>
     </div>
     <div
-      class="css-mu34gm ViewBox ViewBox--light ZoomBox ZoomBox--light ZoomBox--idle ZoomBox--idle--light ZoomBox--default ZoomBox--default--light"
+      class="css-117yijb ViewBox ViewBox--light ZoomBox ZoomBox--light ZoomBox--idle ZoomBox--idle--light ZoomBox--default ZoomBox--default--light"
       data-test-box="zoom-box"
       tabindex="0"
     >
       <div
-        class="css-wcnq0t ZoomBox__background-mask ZoomBox__background-mask--light"
+        class="css-1jnxvbp ZoomBox__background-mask ZoomBox__background-mask--light"
         data-test-box=""
         style="background-color: rgb(241, 242, 246); display: initial;"
       />
       <div
-        class="css-wcnq0t ZoomBox__texture-blank ZoomBox__texture-blank--light"
+        class="css-1jnxvbp ZoomBox__texture-blank ZoomBox__texture-blank--light"
         data-test-box=""
         style="transform: translate(0px, 0px) scale(1);"
       />
       <div
-        class="css-fw1hyy ZoomBox__zoom-content ZoomBox__zoom-content--light"
+        class="css-1j4c14e ZoomBox__zoom-content ZoomBox__zoom-content--light"
         data-test-box=""
         id="zoomContentId"
         style="transform: translate(0px, 0px) scale(1);"
       >
         <div
-          class="css-13fj95k"
+          class="css-u5h2b"
           data-test-box=""
           id="overlayContainer"
           style="z-index: var(--xd-page-builder-zindex-overlay-container);"

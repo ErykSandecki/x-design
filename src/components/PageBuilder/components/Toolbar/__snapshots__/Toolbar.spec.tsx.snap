@@ -3,19 +3,19 @@
 exports[`Toolbar snapshots should render Toolbar 1`] = `
 <DocumentFragment>
   <div
-    class="css-10h803n"
+    class="css-1rzc7eb"
     data-test-box=""
   >
     <div
-      class="css-wcnq0t MouseModes MouseModes--light"
+      class="css-1jnxvbp MouseModes MouseModes--light"
       data-test-box=""
     >
       <div
-        class="css-wcnq0t MouseModes__button MouseModes__button--light"
+        class="css-1jnxvbp MouseModes__button MouseModes__button--light"
         data-test-box=""
       >
         <div
-          class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
           data-test-icon="menu"
           height="16"
           name="Logo"
@@ -23,11 +23,11 @@ exports[`Toolbar snapshots should render Toolbar 1`] = `
         />
       </div>
       <div
-        class="css-wcnq0t MouseModes__button MouseModes__button--light MouseModes__button--active MouseModes__button--active--light"
+        class="css-1jnxvbp MouseModes__button MouseModes__button--light MouseModes__button--active MouseModes__button--active--light"
         data-test-box=""
       >
         <div
-          class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
           data-test-icon="default"
           height="16"
           name="MoveTool"
@@ -35,11 +35,11 @@ exports[`Toolbar snapshots should render Toolbar 1`] = `
         />
       </div>
       <div
-        class="css-wcnq0t MouseModes__button MouseModes__button--light"
+        class="css-1jnxvbp MouseModes__button MouseModes__button--light"
         data-test-box=""
       >
         <div
-          class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
           data-test-icon="move"
           height="16"
           name="MoveHand"
@@ -47,11 +47,11 @@ exports[`Toolbar snapshots should render Toolbar 1`] = `
         />
       </div>
       <div
-        class="css-wcnq0t MouseModes__button MouseModes__button--light"
+        class="css-1jnxvbp MouseModes__button MouseModes__button--light"
         data-test-box=""
       >
         <div
-          class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
           data-test-icon="comment"
           height="16"
           name="Comment"
@@ -59,11 +59,11 @@ exports[`Toolbar snapshots should render Toolbar 1`] = `
         />
       </div>
       <div
-        class="css-wcnq0t MouseModes__button MouseModes__button--light"
+        class="css-1jnxvbp MouseModes__button MouseModes__button--light"
         data-test-box=""
       >
         <div
-          class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
           data-test-icon="toolBeltA"
           height="16"
           name="FrameTool"

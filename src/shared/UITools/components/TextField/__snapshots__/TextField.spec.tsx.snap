@@ -3,7 +3,7 @@
 exports[`TextField snapshots should render TextField 1`] = `
 <DocumentFragment>
   <div
-    class="css-wcnq0t TextField TextField--light"
+    class="css-1jnxvbp TextField TextField--light"
     data-test-text-field=""
   >
     <input
@@ -18,7 +18,7 @@ exports[`TextField snapshots should render TextField 1`] = `
 exports[`TextField snapshots should render wiht popover 1`] = `
 <DocumentFragment>
   <div
-    class="css-wcnq0t TextField TextField--light"
+    class="css-1jnxvbp TextField TextField--light"
     data-test-text-field=""
   >
     <input
@@ -30,7 +30,7 @@ exports[`TextField snapshots should render wiht popover 1`] = `
       class="TextField__icon-wrapper TextField__icon-wrapper--light"
     >
       <div
-        class="css-wcnq0t TextField__icon TextField__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+        class="css-1jnxvbp TextField__icon TextField__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
         data-test-icon="variant"
         height="12"
         name="Variant"
@@ -53,7 +53,7 @@ exports[`TextField snapshots should render wiht popover 1`] = `
 exports[`TextField snapshots should render with opened popover 1`] = `
 <DocumentFragment>
   <div
-    class="css-wcnq0t TextField TextField--light"
+    class="css-1jnxvbp TextField TextField--light"
     data-test-text-field=""
   >
     <input
@@ -65,7 +65,7 @@ exports[`TextField snapshots should render with opened popover 1`] = `
       class="TextField__icon-wrapper TextField__icon-wrapper--light"
     >
       <div
-        class="css-wcnq0t TextField__icon TextField__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+        class="css-1jnxvbp TextField__icon TextField__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
         data-test-icon="variant"
         height="12"
         name="Variant"

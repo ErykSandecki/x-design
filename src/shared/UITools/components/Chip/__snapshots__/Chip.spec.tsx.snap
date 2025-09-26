@@ -3,7 +3,7 @@
 exports[`Chip snapshots should render Chip 1`] = `
 <DocumentFragment>
   <div
-    class="css-wcnq0t Chip Chip--light"
+    class="css-1jnxvbp Chip Chip--light"
     data-test-chip="chip"
   >
     chip

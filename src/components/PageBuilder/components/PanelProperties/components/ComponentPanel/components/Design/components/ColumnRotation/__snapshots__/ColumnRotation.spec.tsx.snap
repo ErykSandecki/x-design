@@ -3,7 +3,7 @@
 exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
 <DocumentFragment>
   <div
-    class="css-wcnq0t SectionColumn SectionColumn--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--light"
     data-test-section=""
   >
     <div
@@ -11,7 +11,7 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-wcnq0t SectionColumn__label SectionColumn__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp SectionColumn__label SectionColumn__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -26,7 +26,7 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-wcnq0t TextField TextField--light TextField--full-width TextField--full-width--light"
+          class="css-1jnxvbp TextField TextField--light TextField--full-width TextField--full-width--light"
           data-test-text-field="angle"
         >
           <div
@@ -34,7 +34,7 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
             data-test-scrubbable-input="angle"
           >
             <div
-              class="css-wcnq0t ScrubbableInput__icon ScrubbableInput__icon--light Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+              class="css-1jnxvbp ScrubbableInput__icon ScrubbableInput__icon--light Icon Icon--light Icon--neutral2 Icon--neutral2--light"
               data-test-icon="protractor"
               height="16"
               name="Protractor"
@@ -50,7 +50,7 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
           />
         </div>
         <div
-          class="css-wcnq0t ButtonGroup ButtonGroup--light ButtonGroup--full-width ButtonGroup--full-width--light"
+          class="css-1jnxvbp ButtonGroup ButtonGroup--light ButtonGroup--full-width ButtonGroup--full-width--light"
           data-test-button-group="layout-position"
         >
           <div
@@ -58,7 +58,7 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
             data-test-button-group-input="toggle-rotate"
           >
             <div
-              class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="toggle-rotate"
               height="12"
               name="ToggleRotate"
@@ -70,7 +70,7 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
             data-test-button-group-input="flip-horizontal"
           >
             <div
-              class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="flip-horizontal"
               height="12"
               name="FlipHorizontal"
@@ -82,7 +82,7 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
             data-test-button-group-input="flip-vertical"
           >
             <div
-              class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="flip-vertical"
               height="12"
               name="FlipVertical"
@@ -102,7 +102,7 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
 exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
 <DocumentFragment>
   <div
-    class="css-wcnq0t SectionColumn SectionColumn--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--light"
     data-test-section=""
   >
     <div
@@ -110,7 +110,7 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-wcnq0t SectionColumn__label SectionColumn__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp SectionColumn__label SectionColumn__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -125,7 +125,7 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-wcnq0t TextField TextField--light TextField--full-width TextField--full-width--light"
+          class="css-1jnxvbp TextField TextField--light TextField--full-width TextField--full-width--light"
           data-test-text-field="angle"
         >
           <div
@@ -133,7 +133,7 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
             data-test-scrubbable-input="angle"
           >
             <div
-              class="css-wcnq0t ScrubbableInput__icon ScrubbableInput__icon--light Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+              class="css-1jnxvbp ScrubbableInput__icon ScrubbableInput__icon--light Icon Icon--light Icon--neutral2 Icon--neutral2--light"
               data-test-icon="protractor"
               height="16"
               name="Protractor"
@@ -149,7 +149,7 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
           />
         </div>
         <div
-          class="css-wcnq0t ButtonGroup ButtonGroup--light ButtonGroup--full-width ButtonGroup--full-width--light"
+          class="css-1jnxvbp ButtonGroup ButtonGroup--light ButtonGroup--full-width ButtonGroup--full-width--light"
           data-test-button-group="layout-position"
         >
           <div
@@ -157,7 +157,7 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
             data-test-button-group-input="toggle-rotate"
           >
             <div
-              class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="toggle-rotate"
               height="12"
               name="ToggleRotate"
@@ -169,7 +169,7 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
             data-test-button-group-input="flip-horizontal"
           >
             <div
-              class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="flip-horizontal"
               height="12"
               name="FlipHorizontal"
@@ -181,7 +181,7 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
             data-test-button-group-input="flip-vertical"
           >
             <div
-              class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="flip-vertical"
               height="12"
               name="FlipVertical"

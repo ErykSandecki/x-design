@@ -1,12 +1,11 @@
+// utils
+import { composeClassNames } from 'utils';
+
 export const className = 'ScrubbableInput';
 
-export const classNames = {
-  [className]: {
-    name: className,
-    modificators: {
-      disabled: `${className}--disabled`,
-    },
-  },
-  icon: `${className}__icon`,
-  handler: `${className}__handler`,
-};
+export const classNames = composeClassNames(
+  className,
+  [className, 'disabled'] as const,
+  ['handler'] as const,
+  ['icon'] as const,
+);

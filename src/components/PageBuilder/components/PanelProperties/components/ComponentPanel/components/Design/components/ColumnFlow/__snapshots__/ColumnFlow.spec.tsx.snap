@@ -3,7 +3,7 @@
 exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
 <DocumentFragment>
   <div
-    class="css-wcnq0t SectionColumn SectionColumn--light SectionColumn--with-margin SectionColumn--with-margin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--with-margin SectionColumn--with-margin--light"
     data-test-section=""
   >
     <div
@@ -11,7 +11,7 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-wcnq0t SectionColumn__label SectionColumn__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp SectionColumn__label SectionColumn__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -35,7 +35,7 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
             type="button"
           >
             <div
-              class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="flow-default"
               height="12"
               name="FlowDefault"
@@ -48,7 +48,7 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
             type="button"
           >
             <div
-              class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="flow-vertical"
               height="12"
               name="FlowVertical"
@@ -61,7 +61,7 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
             type="button"
           >
             <div
-              class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="flow-horizontal"
               height="12"
               name="FlowHorizontal"
@@ -74,7 +74,7 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
             type="button"
           >
             <div
-              class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="flow-grid"
               height="12"
               name="FlowGrid"
@@ -94,7 +94,7 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
 exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
 <DocumentFragment>
   <div
-    class="css-wcnq0t SectionColumn SectionColumn--light SectionColumn--with-margin SectionColumn--with-margin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--with-margin SectionColumn--with-margin--light"
     data-test-section=""
   >
     <div
@@ -102,7 +102,7 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-wcnq0t SectionColumn__label SectionColumn__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp SectionColumn__label SectionColumn__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -126,7 +126,7 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
             type="button"
           >
             <div
-              class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="flow-default"
               height="12"
               name="FlowDefault"
@@ -139,7 +139,7 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
             type="button"
           >
             <div
-              class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="flow-vertical"
               height="12"
               name="FlowVertical"
@@ -152,7 +152,7 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
             type="button"
           >
             <div
-              class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="flow-horizontal"
               height="12"
               name="FlowHorizontal"
@@ -165,7 +165,7 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
             type="button"
           >
             <div
-              class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="flow-grid"
               height="12"
               name="FlowGrid"

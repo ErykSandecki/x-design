@@ -3,7 +3,7 @@
 exports[`ColumnAlignment snapshots should render ColumnAlignment 1`] = `
 <DocumentFragment>
   <div
-    class="css-wcnq0t SectionColumn SectionColumn--light SectionColumn--with-margin SectionColumn--with-margin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--with-margin SectionColumn--with-margin--light"
     data-test-section=""
   >
     <div
@@ -11,7 +11,7 @@ exports[`ColumnAlignment snapshots should render ColumnAlignment 1`] = `
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-wcnq0t SectionColumn__label SectionColumn__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp SectionColumn__label SectionColumn__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -26,7 +26,7 @@ exports[`ColumnAlignment snapshots should render ColumnAlignment 1`] = `
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-wcnq0t ButtonGroup ButtonGroup--light"
+          class="css-1jnxvbp ButtonGroup ButtonGroup--light"
           data-test-button-group="horizontal-alignment"
         >
           <div
@@ -34,7 +34,7 @@ exports[`ColumnAlignment snapshots should render ColumnAlignment 1`] = `
             data-test-button-group-input="align-horizontal-left"
           >
             <div
-              class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="align-horizontal-left"
               height="12"
               name="AlignHorizontalLeft"
@@ -46,7 +46,7 @@ exports[`ColumnAlignment snapshots should render ColumnAlignment 1`] = `
             data-test-button-group-input="align-horizontal-center"
           >
             <div
-              class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="align-horizontal-center"
               height="12"
               name="AlignHorizontalCenter"
@@ -58,7 +58,7 @@ exports[`ColumnAlignment snapshots should render ColumnAlignment 1`] = `
             data-test-button-group-input="align-horizontal-right"
           >
             <div
-              class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="align-horizontal-right"
               height="12"
               name="AlignHorizontalRight"
@@ -67,7 +67,7 @@ exports[`ColumnAlignment snapshots should render ColumnAlignment 1`] = `
           </div>
         </div>
         <div
-          class="css-wcnq0t ButtonGroup ButtonGroup--light"
+          class="css-1jnxvbp ButtonGroup ButtonGroup--light"
           data-test-button-group="vertical-alignment"
         >
           <div
@@ -75,7 +75,7 @@ exports[`ColumnAlignment snapshots should render ColumnAlignment 1`] = `
             data-test-button-group-input="align-vertical-top"
           >
             <div
-              class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="align-vertical-top"
               height="12"
               name="AlignVerticalTop"
@@ -87,7 +87,7 @@ exports[`ColumnAlignment snapshots should render ColumnAlignment 1`] = `
             data-test-button-group-input="align-vertical-center"
           >
             <div
-              class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="align-vertical-center"
               height="12"
               name="AlignVerticalCenter"
@@ -99,7 +99,7 @@ exports[`ColumnAlignment snapshots should render ColumnAlignment 1`] = `
             data-test-button-group-input="align-vertical-bottom"
           >
             <div
-              class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="align-vertical-bottom"
               height="12"
               name="AlignVerticalBottom"
@@ -119,7 +119,7 @@ exports[`ColumnAlignment snapshots should render ColumnAlignment 1`] = `
 exports[`ColumnAlignment snapshots should render when element is on position relative 1`] = `
 <DocumentFragment>
   <div
-    class="css-wcnq0t SectionColumn SectionColumn--light SectionColumn--with-margin SectionColumn--with-margin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--with-margin SectionColumn--with-margin--light"
     data-test-section=""
   >
     <div
@@ -127,7 +127,7 @@ exports[`ColumnAlignment snapshots should render when element is on position rel
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-wcnq0t SectionColumn__label SectionColumn__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp SectionColumn__label SectionColumn__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -142,7 +142,7 @@ exports[`ColumnAlignment snapshots should render when element is on position rel
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-wcnq0t ButtonGroup ButtonGroup--light"
+          class="css-1jnxvbp ButtonGroup ButtonGroup--light"
           data-test-button-group="horizontal-alignment"
         >
           <div
@@ -150,7 +150,7 @@ exports[`ColumnAlignment snapshots should render when element is on position rel
             data-test-button-group-input="align-horizontal-left"
           >
             <div
-              class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="align-horizontal-left"
               height="12"
               name="AlignHorizontalLeft"
@@ -162,7 +162,7 @@ exports[`ColumnAlignment snapshots should render when element is on position rel
             data-test-button-group-input="align-horizontal-center"
           >
             <div
-              class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="align-horizontal-center"
               height="12"
               name="AlignHorizontalCenter"
@@ -174,7 +174,7 @@ exports[`ColumnAlignment snapshots should render when element is on position rel
             data-test-button-group-input="align-horizontal-right"
           >
             <div
-              class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="align-horizontal-right"
               height="12"
               name="AlignHorizontalRight"
@@ -183,7 +183,7 @@ exports[`ColumnAlignment snapshots should render when element is on position rel
           </div>
         </div>
         <div
-          class="css-wcnq0t ButtonGroup ButtonGroup--light"
+          class="css-1jnxvbp ButtonGroup ButtonGroup--light"
           data-test-button-group="vertical-alignment"
         >
           <div
@@ -191,7 +191,7 @@ exports[`ColumnAlignment snapshots should render when element is on position rel
             data-test-button-group-input="align-vertical-top"
           >
             <div
-              class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="align-vertical-top"
               height="12"
               name="AlignVerticalTop"
@@ -203,7 +203,7 @@ exports[`ColumnAlignment snapshots should render when element is on position rel
             data-test-button-group-input="align-vertical-center"
           >
             <div
-              class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="align-vertical-center"
               height="12"
               name="AlignVerticalCenter"
@@ -215,7 +215,7 @@ exports[`ColumnAlignment snapshots should render when element is on position rel
             data-test-button-group-input="align-vertical-bottom"
           >
             <div
-              class="css-wcnq0t ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="align-vertical-bottom"
               height="12"
               name="AlignVerticalBottom"

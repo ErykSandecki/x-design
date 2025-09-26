@@ -3,7 +3,7 @@
 exports[`ColumnHeader snapshots should render ColumnHeader 1`] = `
 <DocumentFragment>
   <div
-    class="css-wcnq0t SectionColumn SectionColumn--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--light"
     data-test-section=""
   >
     <div
@@ -18,7 +18,7 @@ exports[`ColumnHeader snapshots should render ColumnHeader 1`] = `
         style="width: calc(100% - 48px - 2.5px - 8px);"
       >
         <small
-          class="css-wcnq0t Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+          class="css-1jnxvbp Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
           data-test-text=""
           style="text-align: inherit;"
         >
@@ -29,11 +29,11 @@ exports[`ColumnHeader snapshots should render ColumnHeader 1`] = `
         class="SectionColumn__buttons SectionColumn__buttons--light"
       >
         <div
-          class="css-wcnq0t ButtonIcon ButtonIcon--light"
+          class="css-1jnxvbp ButtonIcon ButtonIcon--light"
           data-test-button-icon=""
         >
           <div
-            class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
             data-test-icon="html-tag"
             height="14"
             name="HtmlTag"
@@ -41,11 +41,11 @@ exports[`ColumnHeader snapshots should render ColumnHeader 1`] = `
           />
         </div>
         <div
-          class="css-wcnq0t ButtonIcon ButtonIcon--light"
+          class="css-1jnxvbp ButtonIcon ButtonIcon--light"
           data-test-button-icon=""
         >
           <div
-            class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
             data-test-icon="component"
             height="14"
             name="Component"
@@ -61,7 +61,7 @@ exports[`ColumnHeader snapshots should render ColumnHeader 1`] = `
 exports[`ColumnHeader snapshots should render with multiple selects 1`] = `
 <DocumentFragment>
   <div
-    class="css-wcnq0t SectionColumn SectionColumn--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--light"
     data-test-section=""
   >
     <div
@@ -76,7 +76,7 @@ exports[`ColumnHeader snapshots should render with multiple selects 1`] = `
         style="width: calc(100% - 48px - 2.5px - 8px);"
       >
         <small
-          class="css-wcnq0t Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+          class="css-1jnxvbp Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
           data-test-text=""
           style="text-align: inherit;"
         >
@@ -87,11 +87,11 @@ exports[`ColumnHeader snapshots should render with multiple selects 1`] = `
         class="SectionColumn__buttons SectionColumn__buttons--light"
       >
         <div
-          class="css-wcnq0t ButtonIcon ButtonIcon--light"
+          class="css-1jnxvbp ButtonIcon ButtonIcon--light"
           data-test-button-icon=""
         >
           <div
-            class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
             data-test-icon="html-tag"
             height="14"
             name="HtmlTag"
@@ -99,11 +99,11 @@ exports[`ColumnHeader snapshots should render with multiple selects 1`] = `
           />
         </div>
         <div
-          class="css-wcnq0t ButtonIcon ButtonIcon--light"
+          class="css-1jnxvbp ButtonIcon ButtonIcon--light"
           data-test-button-icon=""
         >
           <div
-            class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
             data-test-icon="component"
             height="14"
             name="Component"

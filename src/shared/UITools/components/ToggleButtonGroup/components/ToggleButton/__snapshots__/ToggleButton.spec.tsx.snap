@@ -8,7 +8,7 @@ exports[`ToggleButton snapshots should render ToggleButton 1`] = `
     type="button"
   >
     <div
-      class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
       data-test-icon="align-horizontal-center"
       height="12"
       name="AlignHorizontalCenter"

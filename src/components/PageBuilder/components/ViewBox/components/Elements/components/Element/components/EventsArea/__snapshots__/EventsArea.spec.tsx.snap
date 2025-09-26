@@ -3,12 +3,12 @@
 exports[`EventsArea snapshots should render EventsArea 1`] = `
 <DocumentFragment>
   <div
-    class="css-u1i9af"
+    class="css-1xpffs9"
     data-test-box=""
     style="height: 100px; left: 0px; top: 0px; transform: rotate(0deg); transform-origin: center center; width: 100px;"
   >
     <div
-      class="css-wcnq0t"
+      class="css-1jnxvbp"
       data-test-box=""
       style="height: 100px; width: 100px;"
     />

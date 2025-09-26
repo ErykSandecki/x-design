@@ -3,7 +3,7 @@
 exports[`Tabs snapshots should render Tabs 1`] = `
 <DocumentFragment>
   <div
-    class="css-wcnq0t Tabs Tabs--light"
+    class="css-1jnxvbp Tabs Tabs--light"
     data-test-box=""
   >
     <div

@@ -3,7 +3,7 @@
 exports[`Button snapshots should render Button 1`] = `
 <DocumentFragment>
   <button
-    class="css-wcnq0t Button Button--light Button--primary Button--primary--light Button--medium Button--medium--light Button--contained Button--contained--light"
+    class="css-1jnxvbp Button Button--light Button--primary Button--primary--light Button--medium Button--medium--light Button--contained Button--contained--light"
     data-test-button=""
     type="button"
   >

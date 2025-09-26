@@ -3,11 +3,11 @@
 exports[`ButtonIcon snapshots should render ButtonIcon 1`] = `
 <DocumentFragment>
   <div
-    class="css-wcnq0t ButtonIcon ButtonIcon--light"
+    class="css-1jnxvbp ButtonIcon ButtonIcon--light"
     data-test-button-icon=""
   >
     <div
-      class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
       data-test-icon="close"
       height="14"
       name="Close"
@@ -20,11 +20,11 @@ exports[`ButtonIcon snapshots should render ButtonIcon 1`] = `
 exports[`ButtonIcon snapshots should render when is selected 1`] = `
 <DocumentFragment>
   <div
-    class="css-wcnq0t ButtonIcon ButtonIcon--light ButtonIcon--selected ButtonIcon--selected--light"
+    class="css-1jnxvbp ButtonIcon ButtonIcon--light ButtonIcon--selected ButtonIcon--selected--light"
     data-test-button-icon=""
   >
     <div
-      class="css-wcnq0t Icon Icon--light Icon--blue1 Icon--blue1--light"
+      class="css-1jnxvbp Icon Icon--light Icon--blue1 Icon--blue1--light"
       data-test-icon="close"
       height="14"
       name="Close"

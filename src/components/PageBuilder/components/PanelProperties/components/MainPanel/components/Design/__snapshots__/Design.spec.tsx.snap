@@ -3,14 +3,14 @@
 exports[`Design snapshots should render Design 1`] = `
 <DocumentFragment>
   <div
-    class="css-wcnq0t Section Section--light"
+    class="css-1jnxvbp Section Section--light"
     data-test-section=""
   >
     <div
       class="Section__header Section__header--light"
     >
       <small
-        class="css-wcnq0t Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -21,7 +21,7 @@ exports[`Design snapshots should render Design 1`] = `
       />
     </div>
     <div
-      class="css-wcnq0t SectionColumn SectionColumn--light"
+      class="css-1jnxvbp SectionColumn SectionColumn--light"
       data-test-section=""
     >
       <div
@@ -36,18 +36,18 @@ exports[`Design snapshots should render Design 1`] = `
           style="width: calc(100% - 24px - 0px - 8px);"
         >
           <div
-            class="css-wcnq0t FieldGroup FieldGroup--light"
+            class="css-1jnxvbp FieldGroup FieldGroup--light"
             data-test-field-group=""
           >
             <div
-              class="css-wcnq0t ColorPicker__hex-input ColorPicker__hex-input--light TextField TextField--light"
+              class="css-1jnxvbp ColorPicker__hex-input ColorPicker__hex-input--light TextField TextField--light"
               data-test-text-field="color"
             >
               <div
                 aria-describedby="test-id"
               >
                 <div
-                  class="css-wcnq0t Color Color--light"
+                  class="css-1jnxvbp Color Color--light"
                   data-test-color=""
                 >
                   <div
@@ -71,7 +71,7 @@ exports[`Design snapshots should render Design 1`] = `
               />
             </div>
             <div
-              class="css-wcnq0t ColorPicker__alpha-input ColorPicker__alpha-input--light TextField TextField--light"
+              class="css-1jnxvbp ColorPicker__alpha-input ColorPicker__alpha-input--light TextField TextField--light"
               data-test-text-field="alpha"
             >
               <input
@@ -100,11 +100,11 @@ exports[`Design snapshots should render Design 1`] = `
           class="SectionColumn__buttons SectionColumn__buttons--light"
         >
           <div
-            class="css-wcnq0t ButtonIcon ButtonIcon--light"
+            class="css-1jnxvbp ButtonIcon ButtonIcon--light"
             data-test-button-icon=""
           >
             <div
-              class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="eyes-opened"
               height="14"
               name="EyesOpened"

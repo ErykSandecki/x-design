@@ -3,13 +3,13 @@
 exports[`Element snapshots should render Element 1`] = `
 <DocumentFragment>
   <div
-    class="css-wcnq0t className Element Element--light"
+    class="css-1jnxvbp className Element Element--light"
     data-test-box=""
     id="test-1"
     style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; height: 100px; position: absolute; width: 100px;"
   >
     <div
-      class="css-wcnq0t Element__wrapper Element__wrapper--light"
+      class="css-1jnxvbp Element__wrapper Element__wrapper--light"
       data-status="false"
       data-test-box=""
       style="background-color: rgb(255, 255, 255); height: 100%; transform: rotate(0deg); width: 100%;"
@@ -21,29 +21,29 @@ exports[`Element snapshots should render Element 1`] = `
 exports[`Element snapshots should render Element when is selected & is multiple moving 1`] = `
 <DocumentFragment>
   <div
-    class="css-wcnq0t className Element Element--light Element--moving Element--moving--light"
+    class="css-1jnxvbp className Element Element--light Element--moving Element--moving--light"
     data-test-box=""
     id="test-1"
     style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; height: 100px; position: absolute; width: 100px;"
   >
     <div
-      class="css-wcnq0t Element__wrapper Element__wrapper--light Element__wrapper--moving Element__wrapper--moving--light"
+      class="css-1jnxvbp Element__wrapper Element__wrapper--light Element__wrapper--moving Element__wrapper--moving--light"
       data-status="true"
       data-test-box=""
       style="background-color: rgb(255, 255, 255); height: 100%; transform: rotate(0deg); width: 100%;"
     >
       <div
-        class="css-wcnq0t Outline Outline--light"
+        class="css-1jnxvbp Outline Outline--light"
         data-test-box=""
         style="height: 100px; left: 0px; top: 0px; transform: rotate(0deg); width: 100px;"
       />
       <div
-        class="css-u1i9af"
+        class="css-1xpffs9"
         data-test-box=""
         style="height: 100px; left: 0px; top: 0px; transform: rotate(0deg); transform-origin: center center; width: 100px;"
       >
         <div
-          class="css-wcnq0t"
+          class="css-1jnxvbp"
           data-test-box=""
           style="height: 100px; width: 100px;"
         />
@@ -142,29 +142,29 @@ exports[`Element snapshots should render Element when is selected & is multiple 
 exports[`Element snapshots should render Element when is selected 1`] = `
 <DocumentFragment>
   <div
-    class="css-wcnq0t className Element Element--light"
+    class="css-1jnxvbp className Element Element--light"
     data-test-box=""
     id="test-1"
     style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; height: 100px; position: absolute; width: 100px;"
   >
     <div
-      class="css-wcnq0t Element__wrapper Element__wrapper--light"
+      class="css-1jnxvbp Element__wrapper Element__wrapper--light"
       data-status="true"
       data-test-box=""
       style="background-color: rgb(255, 255, 255); height: 100%; transform: rotate(0deg); width: 100%;"
     >
       <div
-        class="css-wcnq0t Outline Outline--light"
+        class="css-1jnxvbp Outline Outline--light"
         data-test-box=""
         style="height: 100px; left: 0px; top: 0px; transform: rotate(0deg); width: 100px;"
       />
       <div
-        class="css-u1i9af"
+        class="css-1xpffs9"
         data-test-box=""
         style="height: 100px; left: 0px; top: 0px; transform: rotate(0deg); transform-origin: center center; width: 100px;"
       >
         <div
-          class="css-wcnq0t"
+          class="css-1jnxvbp"
           data-test-box=""
           style="height: 100px; width: 100px;"
         />
@@ -263,13 +263,13 @@ exports[`Element snapshots should render Element when is selected 1`] = `
 exports[`Element snapshots should render Element when width & height is auto 1`] = `
 <DocumentFragment>
   <div
-    class="css-wcnq0t className Element Element--light"
+    class="css-1jnxvbp className Element Element--light"
     data-test-box=""
     id="test-1"
     style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; height: auto; position: absolute; width: auto;"
   >
     <div
-      class="css-wcnq0t Element__wrapper Element__wrapper--light"
+      class="css-1jnxvbp Element__wrapper Element__wrapper--light"
       data-status="false"
       data-test-box=""
       style="background-color: rgb(255, 255, 255); height: 100%; transform: rotate(0deg); width: 100%;"

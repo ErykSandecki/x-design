@@ -3,14 +3,14 @@
 exports[`Section snapshots should render Section 1`] = `
 <DocumentFragment>
   <div
-    class="css-wcnq0t Section Section--light"
+    class="css-1jnxvbp Section Section--light"
     data-test-section=""
   >
     <div
       class="Section__header Section__header--light"
     >
       <small
-        class="css-wcnq0t Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -28,14 +28,14 @@ exports[`Section snapshots should render Section 1`] = `
 exports[`Section snapshots should render with buttons 1`] = `
 <DocumentFragment>
   <div
-    class="css-wcnq0t Section Section--light"
+    class="css-1jnxvbp Section Section--light"
     data-test-section=""
   >
     <div
       class="Section__header Section__header--light"
     >
       <small
-        class="css-wcnq0t Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -45,11 +45,11 @@ exports[`Section snapshots should render with buttons 1`] = `
         class="Section__buttons Section__buttons--light"
       >
         <div
-          class="css-wcnq0t ButtonIcon ButtonIcon--light"
+          class="css-1jnxvbp ButtonIcon ButtonIcon--light"
           data-test-button-icon=""
         >
           <div
-            class="css-wcnq0t Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
             data-test-icon="close"
             height="14"
             name="Close"
