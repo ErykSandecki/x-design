@@ -1,6 +1,5 @@
-import { ChangeEvent, useCallback, useEffect, useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import { Color } from 'antd/es/color-picker';
-import { debounce } from 'lodash';
 
 // hooks
 import { useBlurAlphaEvent } from './useBlurAlphaEvent';
@@ -8,37 +7,28 @@ import { useBlurColorEvent } from './useBlurColorEvent';
 import { useChangeAlphaEvent } from './useChangeAlphaEvent';
 import { useChangeColorEvent } from './useChangeColorEvent';
 import { useChangeColorPickerEvent } from './useChangeColorPickerEvent';
+import { useHandleUpdateColorStates } from './useHandleUpdateColorStates';
 
 export type TUseColorPickerEvents = {
   alphaValue: string;
   colorValue: string;
-  onBlurAlpha: () => void;
-  onBlurColor: () => void;
-  onChangeAlpha: (event: ChangeEvent<HTMLInputElement>) => void;
-  onChangeColor: (event: ChangeEvent<HTMLInputElement>) => void;
-  onChangeColorPicker: (value: Color) => void;
+  onBlurAlpha: TFunc;
+  onBlurColor: TFunc;
+  onChangeAlpha: TFunc<[ChangeEvent<HTMLInputElement>]>;
+  onChangeColor: TFunc<[ChangeEvent<HTMLInputElement>]>;
+  onChangeColorPicker: TFunc<[Color]>;
 };
 
 export const useColorPickerEvents = (
   alpha: string,
   color: string,
-  onChangeAlpha: (value: string) => void,
-  onChangeColor: (alpha: string, value: string) => void,
+  onChangeAlpha: TFunc<[string]>,
+  onChangeColor: TFunc<[string, string]>,
 ): TUseColorPickerEvents => {
   const [alphaValue, setAlphaValue] = useState<string>(alpha);
   const [colorValue, setColorValue] = useState<string>(color.substring(1));
 
-  const updateStates = useCallback(
-    debounce((alpha: string, color: string) => {
-      setAlphaValue(alpha);
-      setColorValue(color.substring(1));
-    }),
-    [],
-  );
-
-  useEffect(() => {
-    updateStates(alpha, color);
-  }, [alpha, color]);
+  useHandleUpdateColorStates(alpha, color, setAlphaValue, setColorValue);
 
   return {
     alphaValue,

@@ -8,6 +8,7 @@ import { Icon, Small, TIconProps } from 'shared';
 import { usePopoverRoot } from '../PopoverRoot/core/PopoverRootProvider';
 
 // hooks
+import { useClickEvent } from './hooks/useClickEvent';
 import { useTheme } from 'hooks';
 
 // others
@@ -22,7 +23,7 @@ import { E2EAttribute } from 'types';
 export type TPopoverItemProps = {
   icon?: TIconProps['name'];
   index: number;
-  onClick?: () => void;
+  onClick?: TFunc;
   selected?: boolean;
   text: string;
 };
@@ -30,11 +31,7 @@ export type TPopoverItemProps = {
 export const PopoverItem: FC<TPopoverItemProps> = ({ icon, index, onClick, selected, text }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { setSelected } = usePopoverRoot();
-
-  const onClickHandler = (): void => {
-    onClick?.();
-    setSelected(false);
-  };
+  const onClickHandler = useClickEvent(onClick, setSelected);
 
   return (
     <E2EDataAttribute type={E2EAttribute.popoverItem} value={index}>

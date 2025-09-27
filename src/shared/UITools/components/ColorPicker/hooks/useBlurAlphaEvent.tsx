@@ -1,10 +1,10 @@
-export type TUseBlurAlphaEvent = () => void;
+export type TUseBlurAlphaEvent = TFunc;
 
 export const useBlurAlphaEvent = (
   currentAlpha: string,
   currentValue: string,
-  onChange: (value: string) => void,
-  setValue: (value: string) => void,
+  onChange: TFunc<[string]>,
+  setValue: TFunc<[string]>,
 ): TUseBlurAlphaEvent => {
   const handleBlur = (): void => {
     if (currentValue) {

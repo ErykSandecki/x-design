@@ -1,12 +1,16 @@
+// utils
+import { composeClassNames } from 'utils';
+
 export const className = 'ColorPicker';
 
 export const classes = {
   className,
 };
 
-export const classNames = {
-  [className]: className,
-  hexInput: `${className}__hex-input`,
-  alphaInput: `${className}__alpha-input`,
-  alphaInputUnit: `${className}__alpha-input-unit`,
-};
+export const classNames = composeClassNames(
+  className,
+  [className] as const,
+  ['hexInput'] as const,
+  ['alphaInput'] as const,
+  ['alphaInputUnit'] as const,
+);

@@ -1,8 +1,9 @@
 @import '../../../../styles/mixins/overlay-menu';
 
 .Popover {
-  @include theme('neutral-4', background-color);
   @include overlay-menu;
+  @include theme('neutral-3', border, '1px solid');
+  @include theme('neutral-4', background-color);
 
   border-radius: 10px;
   display: flex;

@@ -27,9 +27,9 @@ import { Tab } from './enums';
 export type TPanelProps = {
   activeSampler: boolean;
   children: ReactNode;
-  onClickColorSampler: (color: string) => void;
-  onClickSampler: () => void;
-  setVisible: (vissible: boolean) => void;
+  onClickColorSampler: TFunc<[string]>;
+  onClickSampler: TFunc;
+  setVisible: TFunc<[boolean]>;
 };
 
 export const Panel: FC<TPanelProps> = ({
@@ -44,7 +44,7 @@ export const Panel: FC<TPanelProps> = ({
   const [activeTab, setActiveTab] = useState(Tab.custom);
   const [sampleContainer, setSampleContainer] = useState<HTMLDivElement>(null);
   const ref = useRef<HTMLDivElement>(null);
-  const onClick = useClickEvent(mousePosition, onClickSampler);
+  const onClickHandler = useClickEvent(mousePosition, onClickSampler);
 
   useEffect(() => {
     /* istanbul ignore next */
@@ -66,7 +66,7 @@ export const Panel: FC<TPanelProps> = ({
         {sampleContainer &&
           createPortal(
             <div className={cx(classNamesWithTheme.sample)}>
-              <ButtonIcon e2eValue="sampler" name="Sample" onClick={onClick} selected={activeSampler} />
+              <ButtonIcon e2eValue="sampler" name="Sample" onClick={onClickHandler} selected={activeSampler} />
               {activeSampler && (
                 <ColorSampler initialMousePosition={mousePosition.current} onClickColorSampler={onClickColorSampler} />
               )}

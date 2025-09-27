@@ -1,16 +1,20 @@
+// utils
+import { composeClassNames } from 'utils';
+
 export const className = 'ColorSampler';
 
-export const classNames = {
-  [className]: className,
-  preventAntdEventMask: `${className}__prevent-antd-event-mask`,
-  pickerWrapper: `${className}__picker-wrapper`,
-  picker: `${className}__picker`,
-  pickerGrid: `${className}__picker-grid`,
-  pickerTargetColor: `${className}__picker-target-color`,
-  pickerLoader: `${className}__picker-loader`,
-  data: `${className}__data`,
-  header: `${className}__header`,
-  selectedColor: `${className}__selected-color`,
-  prompt: `${className}__prompt`,
-  promptDescription: `${className}__prompt-description`,
-};
+export const classNames = composeClassNames(
+  className,
+  [className] as const,
+  ['preventAntdEventMask'] as const,
+  ['pickerWrapper'] as const,
+  ['picker'] as const,
+  ['pickerGrid'] as const,
+  ['pickerTargetColor'] as const,
+  ['pickerLoader'] as const,
+  ['data'] as const,
+  ['header'] as const,
+  ['selectedColor'] as const,
+  ['prompt'] as const,
+  ['promptDescription'] as const,
+);

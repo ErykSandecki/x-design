@@ -1,13 +1,12 @@
+// utils
+import { composeClassNames } from 'utils';
+
 export const className = 'PopoverItem';
 
-export const classNames = {
-  [className]: className,
-  checkIcon: {
-    name: `${className}__check-icon`,
-    modificators: {
-      selected: `${className}__check-icon--selected`,
-    },
-  },
-  icon: `${className}__icon`,
-  text: `${className}__text`,
-};
+export const classNames = composeClassNames(
+  className,
+  [className] as const,
+  ['checkIcon', 'selected'] as const,
+  ['icon'] as const,
+  ['text'] as const,
+);

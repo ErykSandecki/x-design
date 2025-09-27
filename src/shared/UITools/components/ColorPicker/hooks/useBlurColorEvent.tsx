@@ -7,8 +7,8 @@ export const useBlurColorEvent = (
   alpha: string,
   currentColor: string,
   currentValue: string,
-  onChange: (alpha: string, value: string) => void,
-  setValue: (value: string) => void,
+  onChange: TFunc<[string, string]>,
+  setValue: TFunc<[string]>,
 ): TUseBlurColorEvent => {
   const handleBlur = (): void => {
     if (isHexColor(currentValue)) {

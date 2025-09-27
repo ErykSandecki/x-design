@@ -11,8 +11,8 @@ export type TUseMouseMoveEvent = void;
 
 export const useMouseMoveEvent = (
   initialMousePosition: T2DCoordinates,
-  setColors: (colors: Array<TRGBA>) => void,
-  setMousePosition: (mousePosition: T2DCoordinates) => void,
+  setColors: TFunc<[Array<TRGBA>]>,
+  setMousePosition: TFunc<[T2DCoordinates]>,
   setIsPending: (isPending: boolean) => void,
 ): TUseMouseMoveEvent => {
   let timeout: NodeJS.Timeout;

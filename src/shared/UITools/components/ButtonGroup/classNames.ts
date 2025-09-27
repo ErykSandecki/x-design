@@ -1,22 +1,11 @@
+// utils
+import { composeClassNames } from 'utils';
+
 export const className = 'ButtonGroup';
 
-export const classNames = {
-  [className]: {
-    name: className,
-    modificators: {
-      fullWidth: `${className}--full-width`,
-    },
-  },
-  button: {
-    name: `${className}__button`,
-    modificators: {
-      disabled: `${className}__button--disabled`,
-    },
-  },
-  icon: {
-    name: `${className}__icon`,
-    modificators: {
-      disabled: `${className}__icon--disabled`,
-    },
-  },
-};
+export const classNames = composeClassNames(
+  className,
+  [className, 'fullWidth'] as const,
+  ['button', 'disabled'] as const,
+  ['icon', 'disabled'] as const,
+);

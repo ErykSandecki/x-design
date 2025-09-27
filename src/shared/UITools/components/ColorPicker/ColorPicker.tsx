@@ -33,8 +33,8 @@ export type TColorPickerProps = Pick<TPanelProps, 'activeSampler' | 'onClickColo
     alpha: TColor['alpha'];
     color: string;
     e2eValue?: TE2EDataAttributeProps['value'];
-    onChangeAlpha: (value: string) => void;
-    onChangeColor: (alpha: string, value: string) => void;
+    onChangeAlpha: TFunc<[string]>;
+    onChangeColor: TFunc<[string, string]>;
   };
 
 export const ColorPicker: FC<TColorPickerProps> = ({
@@ -50,11 +50,12 @@ export const ColorPicker: FC<TColorPickerProps> = ({
   ...restProps
 }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-  const { alphaValue, colorValue, onBlurAlpha, onBlurColor, onChangeAlpha, onChangeColor, onChangeColorPicker } =
-    useColorPickerEvents(alpha, color, onChangeAlphaHandler, onChangeColorHandler);
   const inputAlpha = useRef(null);
   const inputColor = useRef(null);
   const [visible, setVisible] = useState(false);
+
+  const { alphaValue, colorValue, onBlurAlpha, onBlurColor, onChangeAlpha, onChangeColor, onChangeColorPicker } =
+    useColorPickerEvents(alpha, color, onChangeAlphaHandler, onChangeColorHandler);
 
   return (
     <FieldGroup>

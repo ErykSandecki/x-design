@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 // components
 import Box from '../../../../../UI/components/Box/Box';
-import E2EDataAttribute from 'shared/E2EDataAttributes/E2EDataAttribute';
+import E2EDataAttribute from '../../../../../E2EDataAttributes/E2EDataAttribute';
 import Icon from '../../../../../UI/components/Icon/Icon';
 import { Small } from '../../../../../UI/components/Typography';
 
@@ -28,7 +28,7 @@ import { rgbToHex } from 'utils';
 
 export type TColorSamplerProps = {
   initialMousePosition: T2DCoordinates;
-  onClickColorSampler: (color: string) => void;
+  onClickColorSampler: TFunc<[string]>;
 };
 
 export const ColorSampler: FC<TColorSamplerProps> = ({ initialMousePosition, onClickColorSampler }) => {

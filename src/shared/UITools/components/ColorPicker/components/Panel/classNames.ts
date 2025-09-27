@@ -1,7 +1,6 @@
+// utils
+import { composeClassNames } from 'utils';
+
 export const className = 'Panel';
 
-export const classNames = {
-  [className]: className,
-  header: `${className}__header`,
-  sample: `${className}__sample`,
-};
+export const classNames = composeClassNames(className, [className] as const, ['header'] as const, ['sample'] as const);

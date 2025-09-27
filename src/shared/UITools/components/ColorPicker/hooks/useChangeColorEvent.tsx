@@ -1,6 +1,6 @@
 import { ChangeEvent } from 'react';
 
-export type TUseChangeColorEvent = (event: ChangeEvent<HTMLInputElement>) => void;
+export type TUseChangeColorEvent = TFunc<[ChangeEvent<HTMLInputElement>]>;
 
 export const useChangeColorEvent = (setValue: (value: string) => void): TUseChangeColorEvent => {
   const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {

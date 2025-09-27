@@ -8,6 +8,7 @@ const buildParent = <Name extends string, Mods extends readonly string[]>(
   if (mods.length === 0) {
     return { [name]: name } as TClassEntry<Name, Mods>;
   }
+
   return {
     [name]: {
       modificators: mods.reduce((obj, m) => ({ ...obj, [m]: `${name}--${m}` }), {}),
@@ -26,6 +27,7 @@ const buildChild = <Parent extends string, Child extends string, Mods extends re
   if (mods.length === 0) {
     return { [name]: fullName } as TClassEntry<`${Parent}__${Child}`, Mods>;
   }
+
   return {
     [name]: {
       modificators: mods.reduce((obj, m) => ({ ...obj, [m]: `${fullName}--${m}` }), {}),
