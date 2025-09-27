@@ -27,9 +27,9 @@ export type TScrubbableInputProps = {
   loop?: boolean;
   max: number;
   min: number;
-  onChange: TFuncion<[number]>;
-  onMouseDown?: TFuncion;
-  onMouseUp?: TFuncion;
+  onChange: TFunc<[number]>;
+  onMouseDown?: TFunc;
+  onMouseUp?: TFunc;
   value: number;
 };
 

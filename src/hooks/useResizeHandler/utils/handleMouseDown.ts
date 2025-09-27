@@ -6,8 +6,8 @@ import { MouseButton } from 'types';
 export const handleMouseDown = (
   event: MouseEvent<HTMLElement>,
   isInverted: boolean,
-  setIsInverted: (isInverted: boolean) => void,
-  setIsPressing: (flag: boolean) => void,
+  setIsInverted: TFunc<[boolean]>,
+  setIsPressing: TFunc<[boolean]>,
 ): void => {
   if (event.buttons === MouseButton.lmb) {
     setIsInverted(isInverted);

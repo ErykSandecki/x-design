@@ -6,8 +6,8 @@ import { isControlPressed } from 'utils';
 export const handleScrollPage = (
   coordinates: T3DCoordinates,
   event: WheelEvent,
-  onUpdateCoordinates: ((coordinates: T3DCoordinates) => void) | null,
-  setCoordinates: (coordinates: T3DCoordinates) => void,
+  onUpdateCoordinates: TFunc<[T3DCoordinates]> | null,
+  setCoordinates: TFunc<[T3DCoordinates]>,
 ): void => {
   const { buttons, deltaY, deltaX } = event;
   const x = coordinates.x - deltaX;

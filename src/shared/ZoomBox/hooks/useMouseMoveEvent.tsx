@@ -4,9 +4,11 @@ import { RefObject, useCallback, useEffect } from 'react';
 // others
 import { DEBOUNCE_TIME } from 'constant/constants';
 
+// types
+import { MouseMode } from 'types/enums/mouseMode';
+
 // utils
 import { handleMoveArea } from '../utils/handleMoveArea';
-import { MouseMode } from 'types/enums/mouseMode';
 
 export type TUseMouseMoveEvent = void;
 
@@ -16,9 +18,9 @@ export const useMouseMoveEvent = (
   cursorState: string,
   depedencies: Array<any>,
   mouseMode: MouseMode,
-  onMouseMove: (event: MouseEvent) => void,
-  onUpdateCoordinates: ((coordinates: T3DCoordinates) => void) | null,
-  setCoordinates: (coordinates: T3DCoordinates) => void,
+  onMouseMove: TFunc<[MouseEvent]>,
+  onUpdateCoordinates: TFunc<[T3DCoordinates]> | null,
+  setCoordinates: TFunc<[T3DCoordinates]>,
 ): TUseMouseMoveEvent => {
   const onUpdateCoordinatesDelay = useCallback(
     debounce((coordinates: T3DCoordinates) => {

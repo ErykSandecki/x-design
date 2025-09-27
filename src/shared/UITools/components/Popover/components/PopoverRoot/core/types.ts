@@ -1,3 +1,3 @@
 export type TContext = {
-  setSelected: TFuncion<[boolean]>;
+  setSelected: TFunc<[boolean]>;
 };

@@ -6,7 +6,7 @@ import { KeyboardKeys } from '../../types/enums';
 export type TPrimaryKey = 'alt' | 'control' | 'meta' | 'shift';
 
 export type TKeyMap = {
-  action: (event: KeyboardEvent | React.KeyboardEvent<HTMLElement>, secondaryKey: string) => void;
+  action: TFunc<[KeyboardEvent | React.KeyboardEvent<HTMLElement>, string]>;
   anyKey?: boolean;
   conditions?: Array<boolean>;
   primaryKeys?: [] | [TPrimaryKey] | [TPrimaryKey, TPrimaryKey] | [TPrimaryKey, TPrimaryKey, TPrimaryKey];

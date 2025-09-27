@@ -12,7 +12,7 @@ import { TKeysMap } from './types';
 import { triggerActions } from './utils/triggerActions';
 
 export type TUseKeyboardHandler = {
-  onKeyDown: (event: KeyboardEvent | React.KeyboardEvent<HTMLElement>) => void;
+  onKeyDown: TFunc<[KeyboardEvent | React.KeyboardEvent]>;
 };
 
 export const useKeyboardHandler = (

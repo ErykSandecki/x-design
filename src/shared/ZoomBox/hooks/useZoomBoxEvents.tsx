@@ -15,20 +15,20 @@ import { MouseMode } from 'types/enums/mouseMode';
 
 export type TUseZoomBoxEvents = {
   cursorState: string;
-  onMouseDown: (event: React.MouseEvent) => void;
-  onWheel: (event: WheelEvent) => void;
+  onMouseDown: TFunc<[React.MouseEvent]>;
+  onWheel: TFunc<[WheelEvent]>;
 };
 
 export const useZoomBoxEvents = (
   coordinates: T3DCoordinates,
   mouseMode: MouseMode,
-  onMouseDown: (event: React.MouseEvent) => void,
-  onMouseMove: (event: MouseEvent) => void,
+  onMouseDown: TFunc<[React.MouseEvent]>,
+  onMouseMove: TFunc<[MouseEvent]>,
   onMouseMoveDepedencies: Array<any>,
-  onMouseUp: (event: MouseEvent) => void,
+  onMouseUp: TFunc<[MouseEvent]>,
   onMouseUpDepedencies: Array<any>,
-  onUpdateCoordinates: ((coordinates: T3DCoordinates) => void) | null,
-  setCoordinates: (coordinates: T3DCoordinates) => void,
+  onUpdateCoordinates: TFunc<T3DCoordinates[]> | null,
+  setCoordinates: TFunc<[T3DCoordinates]>,
   zoomBoxRef: RefObject<HTMLDivElement>,
 ): TUseZoomBoxEvents => {
   const cursorPosition = useRef(BASE_2D);

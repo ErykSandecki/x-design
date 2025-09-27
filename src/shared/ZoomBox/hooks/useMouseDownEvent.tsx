@@ -3,7 +3,7 @@ import { MouseEvent, RefObject } from 'react';
 // others
 import { CURSOR_STATES } from 'constant/constants';
 
-export type TUseMouseDownEvent = (event: MouseEvent) => void;
+export type TUseMouseDownEvent = TFunc<[MouseEvent]>;
 
 export const useMouseDownEvent = (
   coordinates: T3DCoordinates,

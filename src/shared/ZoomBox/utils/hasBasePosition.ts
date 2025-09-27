@@ -1,8 +1,6 @@
 // others
 import { BASE_RECT } from '../constants';
 
-// types
-
 export const hasBasePosition = (coordinates: TRectCoordinates): boolean =>
   coordinates.x1 === BASE_RECT.x1 &&
   coordinates.x2 === BASE_RECT.x2 &&

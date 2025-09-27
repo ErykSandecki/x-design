@@ -19,7 +19,7 @@ export const useBlurEvent = (
   element: TElement,
   height: string,
   setHeight: (height: string) => void,
-  setIsFocused: TFuncion<[TFocusElement]>,
+  setIsFocused: TFunc<[TFocusElement]>,
   setWidth: (width: string) => void,
   width: string,
 ): TUseBlurEvent => {

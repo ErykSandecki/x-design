@@ -9,7 +9,7 @@ import { BASE_2D, BASE_3D } from 'shared/ZoomBox/constants';
 import { CURSOR_STATES } from 'constant/constants';
 
 // types
-import { MouseButton, T2DCoordinates } from 'types';
+import { MouseButton } from 'types';
 import { MouseMode } from 'types/enums/mouseMode';
 
 const cursorPosition = { current: BASE_2D } as RefObject<T2DCoordinates>;

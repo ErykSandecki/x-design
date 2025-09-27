@@ -31,15 +31,15 @@ export type TZoomBoxProps = {
   colorSampler: boolean;
   coordinates: T3DCoordinates;
   mouseMode: MouseMode;
-  onKeyDown: (event: KeyboardEvent) => void;
-  onKeyUp: () => void;
-  onMouseDown: (event: React.MouseEvent) => void;
-  onMouseMove: (event: MouseEvent) => void;
+  onKeyDown: TFunc<[KeyboardEvent]>;
+  onKeyUp: TFunc;
+  onMouseDown: TFunc<[React.MouseEvent]>;
+  onMouseMove: TFunc<[MouseEvent]>;
   onMouseMoveDepedencies?: Array<any>;
-  onMouseUp: (event: MouseEvent) => void;
+  onMouseUp: TFunc<[MouseEvent]>;
   onMouseUpDepedencies?: Array<any>;
-  onUpdateCoordinates?: (coordinates: T3DCoordinates) => void;
-  setCoordinates: (coordinates: T3DCoordinates) => void;
+  onUpdateCoordinates?: TFunc<[T3DCoordinates]>;
+  setCoordinates: TFunc<[T3DCoordinates]>;
   zoomBoxRef: RefObject<HTMLDivElement>;
   zoomContentRef: RefObject<HTMLDivElement>;
 };
@@ -66,6 +66,7 @@ export const ZoomBox: FC<TZoomBoxProps> = ({
   zoomContentRef,
 }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
+
   const { cursorState, ...events } = useZoomBoxEvents(
     coordinates,
     mouseMode,

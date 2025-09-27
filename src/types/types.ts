@@ -20,7 +20,7 @@ declare global {
     y2: number;
   };
 
-  type TFuncion<A extends any[] = [], T = void> = (...args: A) => T;
+  type TFunc<A extends any[] = [], T = void> = (...args: A) => T;
   type TT = TFunction;
 
   interface Window {

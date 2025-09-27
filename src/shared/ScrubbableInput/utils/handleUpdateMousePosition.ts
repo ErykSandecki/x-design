@@ -1,7 +1,7 @@
 export const handleUpdateMousePosition = (
   event: MouseEvent,
   mousePosition: T2DCoordinates | null,
-  setMousePosition: TFuncion<[T2DCoordinates]>,
+  setMousePosition: TFunc<[T2DCoordinates]>,
 ): void => {
   switch (true) {
     case mousePosition.x < 0:

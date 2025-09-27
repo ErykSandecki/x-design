@@ -5,9 +5,9 @@ import { resetCursor, updateCursor } from './utils';
 
 export type TUseChangeCursor = {
   isPressing: boolean;
-  onMouseDown: () => void;
-  onMouseEnter: (angle: number, counterAngle: number) => void;
-  onMouseLeave: () => void;
+  onMouseDown: TFunc;
+  onMouseEnter: TFunc<[number, number]>;
+  onMouseLeave: TFunc;
 };
 
 export const useChangeCursor = (

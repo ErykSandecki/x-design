@@ -1,9 +1,9 @@
 // types
 import { TFocusElement } from '../types';
 
-export type TUseFocusEvent = TFuncion<[TFocusElement]>;
+export type TUseFocusEvent = TFunc<[TFocusElement]>;
 
-export const useFocusEvent = (setIsFocused: TFuncion<[TFocusElement]>): TUseFocusEvent => {
+export const useFocusEvent = (setIsFocused: TFunc<[TFocusElement]>): TUseFocusEvent => {
   const handleFocus = (sizeType): void => {
     setIsFocused(sizeType);
   };

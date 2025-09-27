@@ -12,8 +12,8 @@ export type TUseWheelEvent = (event: WheelEvent) => void;
 
 export const useWheelEvent = (
   coordinates: T3DCoordinates,
-  onUpdateCoordinates: ((coordinates: T3DCoordinates) => void) | null,
-  setCoordinates: (coordinates: T3DCoordinates) => void,
+  onUpdateCoordinates: TFunc<[T3DCoordinates]> | null,
+  setCoordinates: TFunc<[T3DCoordinates]>,
   zoomBoxRef: RefObject<HTMLDivElement>,
 ): TUseWheelEvent => {
   const lastWheelTime = useRef(0);

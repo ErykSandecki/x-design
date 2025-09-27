@@ -7,10 +7,10 @@ type TUseResizeHandler = {
   height: number;
   isPressingX: boolean;
   isPressingY: boolean;
-  onMouseDownX: (event: React.MouseEvent<HTMLElement>, isInverted: boolean) => void;
-  onMouseDownY: (event: React.MouseEvent<HTMLElement>, isInverted: boolean) => void;
-  setHeight: (height: number) => void;
-  setWidth: (width: number) => void;
+  onMouseDownX: TFunc<[React.MouseEvent<HTMLElement>, boolean]>;
+  onMouseDownY: TFunc<[React.MouseEvent<HTMLElement>, boolean]>;
+  setHeight: TFunc<[number]>;
+  setWidth: TFunc<[number]>;
   width: number;
 };
 
@@ -41,7 +41,6 @@ export const useResizeHandler = (
   const handleMouseMoveX = (event: MouseEvent): void => {
     if (isPressingX) {
       const { left, right } = ref.current.getBoundingClientRect();
-
       const position = isInvertedX ? Math.abs(event.clientX - right) : event.clientX - left;
 
       switch (true) {
@@ -61,7 +60,6 @@ export const useResizeHandler = (
   const handleMouseMoveY = (event: MouseEvent): void => {
     if (isPressingY) {
       const { top, bottom } = ref.current.getBoundingClientRect();
-
       const position = isInvertedY ? event.clientY - bottom : event.clientY - top;
 
       switch (true) {

@@ -10,8 +10,8 @@ export type TUseMouseUpEvent = void;
 
 export const useMouseUpEvent = (
   depedencies: Array<any>,
-  onMouseUp: (event: MouseEvent) => void,
-  setCursorState: (cursorState: string) => void,
+  onMouseUp: TFunc<[MouseEvent]>,
+  setCursorState: TFunc<[string]>,
 ): TUseMouseUpEvent => {
   const handleMouseUp = (event: MouseEvent): void => {
     onMouseUp(event);

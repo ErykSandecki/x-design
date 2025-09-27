@@ -13,7 +13,7 @@ import { isJestRunning } from 'utils';
 
 type TUseRippleEffect = {
   rippleEffect: JSX.Element | null;
-  triggerRippleEffect: (event: MouseEvent) => void;
+  triggerRippleEffect: TFunc<[MouseEvent]>;
 };
 
 export const useRippleEffect = (className: string, styles: TObject<string>, delay = 300): TUseRippleEffect => {

@@ -1,6 +1,6 @@
 // types
 
-export type TUseMouseUpEvent = TFuncion;
+export type TUseMouseUpEvent = TFunc;
 
 export const useMouseUpEvent = (
   onMouseUp: () => void,

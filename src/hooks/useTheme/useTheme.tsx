@@ -5,8 +5,8 @@ import { Context } from 'core';
 
 // types
 import { Theme } from 'types/enums/theme';
-import { TThemeClassNames, TThemeClassNamesApplier } from './types';
 import { TObject } from 'types';
+import { TThemeClassNames, TThemeClassNamesApplier } from './types';
 
 // utils
 import { getClassNamesWithTheme } from './utils/getClassNamesWithTheme';

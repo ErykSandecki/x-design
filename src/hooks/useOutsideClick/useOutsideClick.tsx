@@ -5,13 +5,13 @@ import { KeyboardKeys } from '../../types';
 
 export type TUseOutsideClick = {
   selected: boolean;
-  setSelected: (flag: boolean) => void;
+  setSelected: TFunc<[boolean]>;
 };
 
 export const useOutsideClick = (
   dependencies: Array<any>,
   ref?: RefObject<any>,
-  callback?: (event: MouseEvent) => void,
+  callback?: TFunc<[MouseEvent]>,
   id?: string,
   ignoreLastCondition = false,
   disabledEscapeKeyDown = true,

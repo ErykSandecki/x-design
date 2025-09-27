@@ -17,8 +17,8 @@ export const handleZoom = (
   coordinates: T3DCoordinates,
   event: WheelEvent,
   lastWheelTime: RefObject<number>,
-  onUpdateCoordinates: ((coordinates: T3DCoordinates) => void) | null,
-  setCoordinates: (coordinates: T3DCoordinates) => void,
+  onUpdateCoordinates: TFunc<[T3DCoordinates]> | null,
+  setCoordinates: TFunc<[T3DCoordinates]>,
   zoomBoxRef: RefObject<HTMLDivElement>,
 ): void => {
   if (isControlPressed(event)) {
