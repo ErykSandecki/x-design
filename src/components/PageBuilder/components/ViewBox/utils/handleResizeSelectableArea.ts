@@ -12,7 +12,7 @@ export const handleResizeSelectableArea = (
   event: MouseEvent,
   mouseMode: MouseMode,
   selectableArea: TRectAreaExtended,
-  setSelectableArea: (selectableArea: TRectAreaExtended) => void,
+  setSelectableArea: TFunc<[TRectAreaExtended]>,
 ): void => {
   if (selectableArea && event.buttons === MouseButton.lmb && mouseMode === MouseMode.default) {
     const { x, y } = mousePositionRelative(coordinates, event);

@@ -9,7 +9,7 @@ import { KeyboardKeys, TObject } from 'types';
 import { TRectArea } from '../../../../PageBuilder/types';
 import { TSelectedElements } from 'store/pageBuilder/types';
 
-const getBaseCoordinatesTopLeft = (selectableArea: TRectArea): TRectArea => {
+export const getBaseCoordinatesTopLeft = (selectableArea: TRectArea): TRectArea => {
   const { x1, x2, y1, y2 } = selectableArea;
   const xRect = x1 < x2 ? { x1: x1, x2: x2 } : { x1: x2, x2: x1 };
   const yRect = y1 < y2 ? { y1: y1, y2: y2 } : { y1: y2, y2: y1 };
@@ -23,11 +23,11 @@ export const getCollidedElements = (
 ): TSelectedElements => {
   const allData = allDataSelector(store.getState());
   const { pressedKey } = eventsSelector(store.getState());
+  const { x1, x2, y1, y2 } = getBaseCoordinatesTopLeft(selectableArea);
   const prevCollidedElementsId = [];
   const selectedElements = selectedElementsSelector(store.getState());
   const prevIds = selectedElements.map(({ id }) => id);
   const collidedElements: TSelectedElements = [];
-  const { x1, x2, y1, y2 } = getBaseCoordinatesTopLeft(selectableArea);
   const isControlPressed = [KeyboardKeys.meta, KeyboardKeys.control].includes(pressedKey);
 
   for (const [id, coordinates] of Object.entries(rectCoordinates.current)) {

@@ -21,14 +21,14 @@ import { enumToArray } from 'utils';
 
 export type TMouseModeProps = {
   mouseMode: MouseMode;
-  setMouseMode: (mouseMode: MouseMode) => void;
+  setMouseMode: TFunc<[MouseMode]>;
 };
 
 const MouseModes: FC<TMouseModeProps> = ({ mouseMode, setMouseMode }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   return (
-    <Box classes={{ className: cx(classNamesWithTheme[className]) }}>
+    <Box classes={{ className: cx(classNamesWithTheme[className]) }} sx={{ display: 'flex', height: '100%' }}>
       {enumToArray<string>(MouseMode).map((name) => (
         <Box
           classes={{
@@ -39,6 +39,7 @@ const MouseModes: FC<TMouseModeProps> = ({ mouseMode, setMouseMode }) => {
           }}
           key={name}
           onClick={() => setMouseMode(name as MouseMode)}
+          sx={{ alignItems: 'center', display: 'flex', height: '100%', justifyContent: 'center', width: '55px' }}
         >
           <Icon e2eValue={name} name={MOUSE_MODE_ICON[name]} />
         </Box>

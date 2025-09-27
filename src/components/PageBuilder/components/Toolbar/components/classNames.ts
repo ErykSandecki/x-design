@@ -1,15 +1,10 @@
+// utils
+import { composeClassNames } from 'utils';
+
 export const className = 'MouseModes';
 
 export const classes = {
   className,
 };
 
-export const classNames = {
-  [className]: className,
-  button: {
-    name: `${className}__button`,
-    modificators: {
-      active: `${className}__button--active`,
-    },
-  },
-};
+export const classNames = composeClassNames(className, [className] as const, ['button', 'active'] as const);

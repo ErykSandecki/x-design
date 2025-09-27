@@ -22,24 +22,24 @@ export type TUseElementSizes = {
 export const useElementSizes = (id: TElement['id']): TUseElementSizes => {
   const { itemsRefs } = useRefs();
   const elementDynamicData = useSelector(elementDynamicDataSelectorCreator(id));
-  const {
-    height: { unit: unitHeight, value: cssHeight },
-    width: { unit: unitWidth, value: cssWidth },
-  } = elementDynamicData;
+  const { unit: unitHeight, value: relativeHeight } = elementDynamicData.height;
+  const { unit: unitWidth, value: relativeWidth } = elementDynamicData.width;
+  const cssHeight = `${relativeHeight}${unitHeight ?? ''}`;
+  const cssWidth = `${relativeWidth}${unitWidth ?? ''}`;
 
   const height =
-    (isPureNumber(cssHeight) || !itemsRefs[id]) && !unitHeight
-      ? cssHeight
+    (isPureNumber(relativeHeight) || !itemsRefs[id]) && !unitHeight
+      ? relativeHeight
       : parseInt(getComputedStyle(itemsRefs[id]).height);
 
   const width =
-    (isPureNumber(cssWidth) || !itemsRefs[id]) && !unitWidth
-      ? cssWidth
+    (isPureNumber(relativeWidth) || !itemsRefs[id]) && !unitWidth
+      ? relativeWidth
       : parseInt(getComputedStyle(itemsRefs[id]).width);
 
   return {
-    cssHeight: `${cssHeight}${unitHeight ?? ''}`,
-    cssWidth: `${cssWidth}${unitWidth ?? ''}`,
+    cssHeight: isPureNumber(cssHeight) ? `${cssHeight}px` : cssHeight,
+    cssWidth: isPureNumber(cssWidth) ? `${cssWidth}px` : cssWidth,
     height,
     width,
   };

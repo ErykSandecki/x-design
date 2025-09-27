@@ -1,7 +1,5 @@
 import { RefObject } from 'react';
 
-// types
-
 export const updateCursorPosition = (
   cursorPosition: RefObject<T2DCoordinates>,
   event: MouseEvent | React.MouseEvent,

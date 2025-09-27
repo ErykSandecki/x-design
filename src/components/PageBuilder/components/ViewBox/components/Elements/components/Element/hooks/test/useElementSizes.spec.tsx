@@ -87,8 +87,8 @@ describe('useElementEvents', () => {
 
     // result
     expect(result.current).toStrictEqual({
-      cssHeight: '100',
-      cssWidth: '100',
+      cssHeight: '100px',
+      cssWidth: '100px',
       height: 100,
       width: 100,
     });

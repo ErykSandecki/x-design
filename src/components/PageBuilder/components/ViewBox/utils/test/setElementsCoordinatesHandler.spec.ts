@@ -11,8 +11,6 @@ import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 // store
 import { store as storeToMock } from 'store/store';
 
-// types
-
 // utils
 import { setElementsCoordinatesHandler } from '../setElementsCoordinatesHandler';
 

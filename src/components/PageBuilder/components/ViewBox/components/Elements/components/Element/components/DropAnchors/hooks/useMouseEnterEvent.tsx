@@ -11,7 +11,7 @@ import { DropAnchorsPosition } from 'store/pageBuilder/enums';
 import { MouseMode } from 'types/enums/mouseMode';
 import { TElement } from 'types';
 
-export type TUseMouseEnterEvent = (dropAreaPosition: DropAnchorsPosition) => void;
+export type TUseMouseEnterEvent = TFunc<[DropAnchorsPosition]>;
 
 export const useMouseEnterEvent = (
   id: TElement['id'],
@@ -24,10 +24,9 @@ export const useMouseEnterEvent = (
   const handleMouseEnter = (dropAnchorPosition: DropAnchorsPosition): void => {
     if (mouseMode === MouseMode.default) {
       const draggableElements = eventSelectorCreator('draggableElements')(store.getState());
-      const targetIndex =
-        dropAnchorPosition === DropAnchorsPosition.top || dropAnchorPosition === DropAnchorsPosition.left
-          ? index
-          : index + 1;
+      const isTop = dropAnchorPosition === DropAnchorsPosition.top;
+      const isLeft = dropAnchorPosition === DropAnchorsPosition.left;
+      const targetIndex = isTop || isLeft ? index : index + 1;
 
       if (!isEmpty(draggableElements)) {
         dispatch(

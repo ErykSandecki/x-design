@@ -2,17 +2,12 @@
 @import '../../../../../../styles/mixins/text-ellipsis';
 
 .ElementArea {
-  height: 100%;
-  overflow: visible;
   pointer-events: none;
-  position: absolute;
-  width: 100%;
 
   &__label {
     @include text-ellipsis;
 
     font-size: 11px;
-    position: absolute;
     transform: translate(1.5px, -20px);
     z-index: $--xd-zindex-element-active;
   }

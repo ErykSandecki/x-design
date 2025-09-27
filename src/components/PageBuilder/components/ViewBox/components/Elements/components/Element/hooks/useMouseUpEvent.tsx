@@ -6,10 +6,7 @@ import { handleTriggerEvents } from '../utils/handleTriggerEvents';
 
 export type TUseMouseUpEvent = void;
 
-export const useMouseUpEvent = (
-  isPressing: boolean,
-  setIsPressing: (isPressing: boolean) => void,
-): TUseMouseUpEvent => {
+export const useMouseUpEvent = (isPressing: boolean, setIsPressing: TFunc<[boolean]>): TUseMouseUpEvent => {
   const dispatch = useDispatch();
 
   const handleMouseUp = (): void => {

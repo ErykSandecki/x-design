@@ -1,9 +1,5 @@
 import { useSelector } from 'react-redux';
 
-// hooks
-import { useMouseEnterEvent } from './useMouseEnterEvent';
-import { useMouseLeaveEvent } from './useMouseLeaveEvent';
-
 // store
 import { elementAllDataSelectorCreator, eventSelectorCreator } from 'store/pageBuilder/selectors';
 
@@ -11,6 +7,8 @@ import { elementAllDataSelectorCreator, eventSelectorCreator } from 'store/pageB
 import { DropAnchorsPosition } from 'store/pageBuilder/enums';
 import { LayoutType, TElement } from 'types';
 import { MouseMode } from 'types/enums/mouseMode';
+import { TUseMouseEnterEvent, useMouseEnterEvent } from './useMouseEnterEvent';
+import { TUseMouseLeaveEvent, useMouseLeaveEvent } from './useMouseLeaveEvent';
 
 export type TUseDropAnchorsEvents = {
   anchorPos: DropAnchorsPosition;
@@ -18,8 +16,8 @@ export type TUseDropAnchorsEvents = {
   displayPrevPrompt: boolean;
   isFlowVertical: boolean;
   isGrid: boolean;
-  onMouseEnter: (dropAreaPosition: DropAnchorsPosition) => void;
-  onMouseLeave: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
+  onMouseEnter: TUseMouseEnterEvent;
+  onMouseLeave: TUseMouseLeaveEvent;
 };
 
 export const useDropAnchorsEvents = (

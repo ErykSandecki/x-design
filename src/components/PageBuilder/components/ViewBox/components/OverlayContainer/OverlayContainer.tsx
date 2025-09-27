@@ -20,10 +20,10 @@ const OverlayContainer: FC = () => {
     <Box
       id={OVERLAY_CONTAINER_ID}
       ref={overlayContainerRef}
-      sx={{ left: 0, position: 'absolute', top: 0 }}
       style={{
         zIndex: getCssVariable(cssVariables.XD_PAGE_BUILDER_ZINDEX_OVERLAY_CONTAINER),
       }}
+      sx={{ left: 0, position: 'absolute', top: 0 }}
     />
   );
 };

@@ -162,16 +162,17 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
         class="SectionColumn__buttons SectionColumn__buttons--light"
       >
         <div
-          class="ConstrainsView ConstrainsView--light"
+          class="css-1jnxvbp ConstrainsView ConstrainsView--light"
+          data-test-box=""
         >
           <div
             class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--bottom ConstrainsView__constrain--bottom--light"
           />
           <div
-            class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--center-horizontal ConstrainsView__constrain--center-horizontal--light"
+            class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--centerHorizontal ConstrainsView__constrain--centerHorizontal--light"
           />
           <div
-            class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--center-vertical ConstrainsView__constrain--center-vertical--light"
+            class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--centerVertical ConstrainsView__constrain--centerVertical--light"
           />
           <div
             class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--left ConstrainsView__constrain--left--light"

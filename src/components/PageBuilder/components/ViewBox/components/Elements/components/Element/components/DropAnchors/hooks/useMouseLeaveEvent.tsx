@@ -9,10 +9,11 @@ import { updateEventsStatus } from 'store/pageBuilder/actions';
 // types
 import { MouseMode } from 'types/enums/mouseMode';
 import { TElement } from 'types';
+
 // utils
 import { eventSelectorCreator } from 'store/pageBuilder/selectors';
 
-export type TUseMouseLeaveEvent = (event: MouseEvent) => void;
+export type TUseMouseLeaveEvent = TFunc<[MouseEvent]>;
 
 export const useMouseLeaveEvent = (id: TElement['id'], mouseMode: MouseMode): TUseMouseLeaveEvent => {
   const dispatch = useDispatch();

@@ -3,27 +3,32 @@
 exports[`DropAnchors snapshots should render DropAnchors 1`] = `
 <DocumentFragment>
   <div
-    class="DropAnchors DropAnchors--light"
+    class="css-hnxq09"
+    data-test-box=""
   >
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light"
+      class="css-9ljzna Prompts Prompts--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light"
+      class="css-9ljzna Prompts Prompts--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light"
+      class="css-9ljzna Prompts Prompts--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light"
+      class="css-9ljzna Prompts Prompts--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--top DropAnchors__anchor--top--light"
-      data-test-anchor="top"
-    />
-    <div
-      class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--bottom DropAnchors__anchor--bottom--light"
+      class="css-1xpffs9 Anchors Anchors--light Anchors--bottom Anchors--bottom--light"
       data-test-anchor="bottom"
+    />
+    <div
+      class="css-1xpffs9 Anchors Anchors--light Anchors--top Anchors--top--light"
+      data-test-anchor="top"
     />
   </div>
 </DocumentFragment>
@@ -32,35 +37,40 @@ exports[`DropAnchors snapshots should render DropAnchors 1`] = `
 exports[`DropAnchors snapshots should render some prompt when grid for bottom 1`] = `
 <DocumentFragment>
   <div
-    class="DropAnchors DropAnchors--light"
+    class="css-hnxq09"
+    data-test-box=""
   >
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light"
+      class="css-9ljzna Prompts Prompts--light Prompts--bottom Prompts--bottom--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light"
+      class="css-9ljzna Prompts Prompts--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light DropAnchors__prompt--bottom DropAnchors__prompt--bottom--light"
+      class="css-9ljzna Prompts Prompts--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light"
+      class="css-9ljzna Prompts Prompts--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--top DropAnchors__anchor--top--light"
-      data-test-anchor="top"
-    />
-    <div
-      class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--bottom DropAnchors__anchor--bottom--light"
-      data-test-anchor="bottom"
-    />
-    <div
-      class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--left DropAnchors__anchor--left--light"
+      class="css-1xpffs9 Anchors Anchors--light Anchors--left Anchors--left--light"
       data-test-anchor="left"
     />
     <div
-      class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--right DropAnchors__anchor--right--light"
+      class="css-1xpffs9 Anchors Anchors--light Anchors--right Anchors--right--light"
       data-test-anchor="right"
+    />
+    <div
+      class="css-1xpffs9 Anchors Anchors--light Anchors--bottom Anchors--bottom--light"
+      data-test-anchor="bottom"
+    />
+    <div
+      class="css-1xpffs9 Anchors Anchors--light Anchors--top Anchors--top--light"
+      data-test-anchor="top"
     />
   </div>
 </DocumentFragment>
@@ -69,35 +79,40 @@ exports[`DropAnchors snapshots should render some prompt when grid for bottom 1`
 exports[`DropAnchors snapshots should render some prompt when grid for left 1`] = `
 <DocumentFragment>
   <div
-    class="DropAnchors DropAnchors--light"
+    class="css-hnxq09"
+    data-test-box=""
   >
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light"
+      class="css-9ljzna Prompts Prompts--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light DropAnchors__prompt--left DropAnchors__prompt--left--light"
+      class="css-9ljzna Prompts Prompts--light Prompts--left Prompts--left--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light"
+      class="css-9ljzna Prompts Prompts--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light"
+      class="css-9ljzna Prompts Prompts--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--top DropAnchors__anchor--top--light"
-      data-test-anchor="top"
-    />
-    <div
-      class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--bottom DropAnchors__anchor--bottom--light"
-      data-test-anchor="bottom"
-    />
-    <div
-      class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--left DropAnchors__anchor--left--light"
+      class="css-1xpffs9 Anchors Anchors--light Anchors--left Anchors--left--light"
       data-test-anchor="left"
     />
     <div
-      class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--right DropAnchors__anchor--right--light"
+      class="css-1xpffs9 Anchors Anchors--light Anchors--right Anchors--right--light"
       data-test-anchor="right"
+    />
+    <div
+      class="css-1xpffs9 Anchors Anchors--light Anchors--bottom Anchors--bottom--light"
+      data-test-anchor="bottom"
+    />
+    <div
+      class="css-1xpffs9 Anchors Anchors--light Anchors--top Anchors--top--light"
+      data-test-anchor="top"
     />
   </div>
 </DocumentFragment>
@@ -106,35 +121,40 @@ exports[`DropAnchors snapshots should render some prompt when grid for left 1`] 
 exports[`DropAnchors snapshots should render some prompt when grid for right 1`] = `
 <DocumentFragment>
   <div
-    class="DropAnchors DropAnchors--light"
+    class="css-hnxq09"
+    data-test-box=""
   >
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light"
+      class="css-9ljzna Prompts Prompts--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light"
+      class="css-9ljzna Prompts Prompts--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light"
+      class="css-9ljzna Prompts Prompts--light Prompts--right Prompts--right--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light DropAnchors__prompt--right DropAnchors__prompt--right--light"
+      class="css-9ljzna Prompts Prompts--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--top DropAnchors__anchor--top--light"
-      data-test-anchor="top"
-    />
-    <div
-      class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--bottom DropAnchors__anchor--bottom--light"
-      data-test-anchor="bottom"
-    />
-    <div
-      class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--left DropAnchors__anchor--left--light"
+      class="css-1xpffs9 Anchors Anchors--light Anchors--left Anchors--left--light"
       data-test-anchor="left"
     />
     <div
-      class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--right DropAnchors__anchor--right--light"
+      class="css-1xpffs9 Anchors Anchors--light Anchors--right Anchors--right--light"
       data-test-anchor="right"
+    />
+    <div
+      class="css-1xpffs9 Anchors Anchors--light Anchors--bottom Anchors--bottom--light"
+      data-test-anchor="bottom"
+    />
+    <div
+      class="css-1xpffs9 Anchors Anchors--light Anchors--top Anchors--top--light"
+      data-test-anchor="top"
     />
   </div>
 </DocumentFragment>
@@ -143,35 +163,40 @@ exports[`DropAnchors snapshots should render some prompt when grid for right 1`]
 exports[`DropAnchors snapshots should render some prompt when grid for top 1`] = `
 <DocumentFragment>
   <div
-    class="DropAnchors DropAnchors--light"
+    class="css-hnxq09"
+    data-test-box=""
   >
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light DropAnchors__prompt--top DropAnchors__prompt--top--light"
+      class="css-9ljzna Prompts Prompts--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light"
+      class="css-9ljzna Prompts Prompts--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light"
+      class="css-9ljzna Prompts Prompts--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light"
+      class="css-9ljzna Prompts Prompts--light Prompts--top Prompts--top--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--top DropAnchors__anchor--top--light"
-      data-test-anchor="top"
-    />
-    <div
-      class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--bottom DropAnchors__anchor--bottom--light"
-      data-test-anchor="bottom"
-    />
-    <div
-      class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--left DropAnchors__anchor--left--light"
+      class="css-1xpffs9 Anchors Anchors--light Anchors--left Anchors--left--light"
       data-test-anchor="left"
     />
     <div
-      class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--right DropAnchors__anchor--right--light"
+      class="css-1xpffs9 Anchors Anchors--light Anchors--right Anchors--right--light"
       data-test-anchor="right"
+    />
+    <div
+      class="css-1xpffs9 Anchors Anchors--light Anchors--bottom Anchors--bottom--light"
+      data-test-anchor="bottom"
+    />
+    <div
+      class="css-1xpffs9 Anchors Anchors--light Anchors--top Anchors--top--light"
+      data-test-anchor="top"
     />
   </div>
 </DocumentFragment>
@@ -180,27 +205,32 @@ exports[`DropAnchors snapshots should render some prompt when grid for top 1`] =
 exports[`DropAnchors snapshots should render with next prompt for bottom 1`] = `
 <DocumentFragment>
   <div
-    class="DropAnchors DropAnchors--light"
+    class="css-hnxq09"
+    data-test-box=""
   >
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light"
+      class="css-9ljzna Prompts Prompts--light Prompts--bottom Prompts--bottom--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light"
+      class="css-9ljzna Prompts Prompts--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light DropAnchors__prompt--bottom DropAnchors__prompt--bottom--light"
+      class="css-9ljzna Prompts Prompts--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light"
+      class="css-9ljzna Prompts Prompts--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--top DropAnchors__anchor--top--light"
-      data-test-anchor="top"
-    />
-    <div
-      class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--bottom DropAnchors__anchor--bottom--light"
+      class="css-1xpffs9 Anchors Anchors--light Anchors--bottom Anchors--bottom--light"
       data-test-anchor="bottom"
+    />
+    <div
+      class="css-1xpffs9 Anchors Anchors--light Anchors--top Anchors--top--light"
+      data-test-anchor="top"
     />
   </div>
 </DocumentFragment>
@@ -209,26 +239,31 @@ exports[`DropAnchors snapshots should render with next prompt for bottom 1`] = `
 exports[`DropAnchors snapshots should render with next prompt for right 1`] = `
 <DocumentFragment>
   <div
-    class="DropAnchors DropAnchors--light"
+    class="css-hnxq09"
+    data-test-box=""
   >
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light"
+      class="css-9ljzna Prompts Prompts--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light"
+      class="css-9ljzna Prompts Prompts--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light"
+      class="css-9ljzna Prompts Prompts--light Prompts--right Prompts--right--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light DropAnchors__prompt--right DropAnchors__prompt--right--light"
+      class="css-9ljzna Prompts Prompts--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--left DropAnchors__anchor--left--light"
+      class="css-1xpffs9 Anchors Anchors--light Anchors--left Anchors--left--light"
       data-test-anchor="left"
     />
     <div
-      class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--right DropAnchors__anchor--right--light"
+      class="css-1xpffs9 Anchors Anchors--light Anchors--right Anchors--right--light"
       data-test-anchor="right"
     />
   </div>
@@ -238,26 +273,31 @@ exports[`DropAnchors snapshots should render with next prompt for right 1`] = `
 exports[`DropAnchors snapshots should render with prev prompt for left 1`] = `
 <DocumentFragment>
   <div
-    class="DropAnchors DropAnchors--light"
+    class="css-hnxq09"
+    data-test-box=""
   >
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light"
+      class="css-9ljzna Prompts Prompts--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light DropAnchors__prompt--left DropAnchors__prompt--left--light"
+      class="css-9ljzna Prompts Prompts--light Prompts--left Prompts--left--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light"
+      class="css-9ljzna Prompts Prompts--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light"
+      class="css-9ljzna Prompts Prompts--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--left DropAnchors__anchor--left--light"
+      class="css-1xpffs9 Anchors Anchors--light Anchors--left Anchors--left--light"
       data-test-anchor="left"
     />
     <div
-      class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--right DropAnchors__anchor--right--light"
+      class="css-1xpffs9 Anchors Anchors--light Anchors--right Anchors--right--light"
       data-test-anchor="right"
     />
   </div>
@@ -267,27 +307,32 @@ exports[`DropAnchors snapshots should render with prev prompt for left 1`] = `
 exports[`DropAnchors snapshots should render with prev prompt for top 1`] = `
 <DocumentFragment>
   <div
-    class="DropAnchors DropAnchors--light"
+    class="css-hnxq09"
+    data-test-box=""
   >
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light DropAnchors__prompt--top DropAnchors__prompt--top--light"
+      class="css-9ljzna Prompts Prompts--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light"
+      class="css-9ljzna Prompts Prompts--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light"
+      class="css-9ljzna Prompts Prompts--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__prompt DropAnchors__prompt--light"
+      class="css-9ljzna Prompts Prompts--light Prompts--top Prompts--top--light"
+      data-test-box=""
     />
     <div
-      class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--top DropAnchors__anchor--top--light"
-      data-test-anchor="top"
-    />
-    <div
-      class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--bottom DropAnchors__anchor--bottom--light"
+      class="css-1xpffs9 Anchors Anchors--light Anchors--bottom Anchors--bottom--light"
       data-test-anchor="bottom"
+    />
+    <div
+      class="css-1xpffs9 Anchors Anchors--light Anchors--top Anchors--top--light"
+      data-test-anchor="top"
     />
   </div>
 </DocumentFragment>

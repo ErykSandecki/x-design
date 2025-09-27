@@ -33,8 +33,8 @@ import { TColor } from 'types';
 export type TViewBoxProps = {
   coordinates: T3DCoordinates;
   mouseMode: MouseMode;
-  setCoordinates: (coordinates: T3DCoordinates) => void;
-  setMouseMode: (mouseMode: MouseMode) => void;
+  setCoordinates: TFunc<[T3DCoordinates]>;
+  setMouseMode: TFunc<[MouseMode]>;
 };
 
 const ViewBox: FC<TViewBoxProps> = ({ coordinates, mouseMode, setCoordinates, setMouseMode }) => {

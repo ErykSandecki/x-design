@@ -15,14 +15,14 @@ export const handleCreateElement = (
   dispatch: Dispatch,
   elementArea: TRectCoordinates,
   mouseMode: MouseMode,
-  setElementArea: (elementArea: TRectCoordinates) => void,
-  setMouseMode: (mouseMode: MouseMode) => void,
+  setElementArea: TFunc<[TRectCoordinates]>,
+  setMouseMode: TFunc<[MouseMode]>,
 ): void => {
   if (elementArea && mouseMode === MouseMode.toolBeltA) {
     const { x1, x2, y1, y2 } = elementArea;
+    const layout = { type: LayoutType.default };
     const x = x1 < x2 ? x1 : x2;
     const y = y1 < y2 ? y1 : y2;
-    const layout = { type: LayoutType.default };
 
     const element: TAddELementActionPayload = {
       alignment: {},

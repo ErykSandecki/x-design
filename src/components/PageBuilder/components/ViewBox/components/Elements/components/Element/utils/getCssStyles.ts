@@ -77,7 +77,7 @@ export const getVerticalPosition = (
   }
 };
 
-export const getPosition = (
+export const getCssStyles = (
   alignment: TElement['alignment'],
   angle: number,
   x: T2DCoordinates['x'],

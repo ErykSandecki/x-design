@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Prompts snapshots should render Prompts 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xpffs9 Anchors Anchors--light Anchors--bottom Anchors--bottom--light"
+    data-test-anchor="bottom"
+  />
+  <div
+    class="css-1xpffs9 Anchors Anchors--light Anchors--top Anchors--top--light"
+    data-test-anchor="top"
+  />
+</DocumentFragment>
+`;
+
+exports[`Prompts snapshots should render all anchors 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xpffs9 Anchors Anchors--light Anchors--left Anchors--left--light"
+    data-test-anchor="left"
+  />
+  <div
+    class="css-1xpffs9 Anchors Anchors--light Anchors--right Anchors--right--light"
+    data-test-anchor="right"
+  />
+  <div
+    class="css-1xpffs9 Anchors Anchors--light Anchors--bottom Anchors--bottom--light"
+    data-test-anchor="bottom"
+  />
+  <div
+    class="css-1xpffs9 Anchors Anchors--light Anchors--top Anchors--top--light"
+    data-test-anchor="top"
+  />
+</DocumentFragment>
+`;

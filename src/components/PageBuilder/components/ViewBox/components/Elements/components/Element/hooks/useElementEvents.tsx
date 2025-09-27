@@ -4,9 +4,6 @@ import { useSelector } from 'react-redux';
 // hooks
 import { useForceRerender } from 'hooks';
 import { useInitializeRef } from './useInitializeRef';
-import { useMouseDownEvent } from './useMouseDownEvent';
-import { useMouseEnterEvent } from './useMouseEnterEvent';
-import { useMouseLeaveEvent } from './useMouseLeaveEvent';
 import { useMouseMoveEvent } from './useMouseMoveEvent';
 import { useMouseUpEvent } from './useMouseUpEvent';
 import { useOutsideClickElement } from './useOutsideClickElement';
@@ -29,6 +26,9 @@ import {
 import { MouseMode } from 'types/enums/mouseMode';
 import { TElement } from 'types';
 import { TUseElementSizes, useElementSizes } from './useElementSizes';
+import { TUseMouseDownEvent, useMouseDownEvent } from './useMouseDownEvent';
+import { TUseMouseEnterEvent, useMouseEnterEvent } from './useMouseEnterEvent';
+import { TUseMouseLeaveEvent, useMouseLeaveEvent } from './useMouseLeaveEvent';
 
 export type TUseElementEvents = TUseElementSizes & {
   alignment: TElement['alignment'];
@@ -42,10 +42,11 @@ export type TUseElementEvents = TUseElementSizes & {
   isMoving: boolean;
   isSelected: boolean;
   layout: TElement['layout'];
-  onMouseDown: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
-  onMouseEnter: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
-  onMouseLeave: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
+  onMouseDown: TUseMouseDownEvent;
+  onMouseEnter: TUseMouseEnterEvent;
+  onMouseLeave: TUseMouseLeaveEvent;
   position: TElement['position'];
+  showDropAnchors: boolean;
   x: TElement['coordinates']['x'];
   y: TElement['coordinates']['y'];
 };
@@ -73,13 +74,8 @@ export const useElementEvents = (
   const [isPressing, setIsPressing] = useState(false);
   const { alignment, angle, background, coordinates, layout, position } = elementDynamicData;
   const { x, y } = coordinates;
-  const selectedElement = {
-    id,
-    parentId,
-    position,
-    type,
-  };
   const sizes = useElementSizes(id);
+  const showDropAnchors = !isSelected && position === 'relative';
 
   useForceRerender([coordinates]);
   useInitializeRef(elementRef, id);
@@ -106,12 +102,18 @@ export const useElementEvents = (
       isMultiple,
       isSelected,
       mouseMode,
-      selectedElement,
+      {
+        id,
+        parentId,
+        position,
+        type,
+      },
       setIsPressing,
     ),
     onMouseEnter: useMouseEnterEvent(id, isSelected, mouseMode),
     onMouseLeave: useMouseLeaveEvent(mouseMode, parentId),
     position,
+    showDropAnchors,
     x,
     y,
   };

@@ -1,11 +1,6 @@
+// utils
+import { composeClassNames } from 'utils';
+
 export const className = 'ViewBox';
 
-export const classNames = {
-  [className]: {
-    name: className,
-    modificators: {
-      createFrame: `${className}--create-frame`,
-    },
-  },
-  overlayContainer: `${className}__overlay-container`,
-};
+export const classNames = composeClassNames(className, [className, 'createFrame'] as const);

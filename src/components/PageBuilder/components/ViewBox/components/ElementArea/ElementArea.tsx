@@ -43,6 +43,7 @@ const ElementArea: FC<TElementAreaProps> = ({ elementArea }) => {
       classes={{
         className: cx(classNamesWithTheme[className]),
       }}
+      sx={{ height: '100%', overflow: 'visible', position: 'absolute', width: '100%' }}
     >
       <Small
         classes={{ className: cx(classNamesWithTheme.label) }}
@@ -51,7 +52,7 @@ const ElementArea: FC<TElementAreaProps> = ({ elementArea }) => {
           top: `${labelY}px`,
           width: Math.abs(x1 - x2),
         }}
-        sx={{ cl: 'blue1' }}
+        sx={{ cl: 'blue1', position: 'absolute' }}
       >
         {t(`${translationNameSpace}.label.createFrame`)}
       </Small>

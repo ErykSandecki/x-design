@@ -1,25 +1,25 @@
-import { KeyboardEvent, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 
 // hooks
 import { useHandleSelectElement } from './useHandleSelectElement';
-import { useKeyDownEvent } from './useKeyDownEvent';
-import { useKeyUpEvent } from './useKeyUpEvent';
-import { useMouseDownEvent } from './useMouseDownEvent';
-import { useMouseMoveEvent } from './useMouseMoveEvent';
-import { useMouseUpEvent } from './useMouseUpEvent';
 
 // types
 import { MouseMode } from 'types/enums/mouseMode';
 import { TObject } from 'types';
 import { TRectArea, TRectAreaExtended } from '../../../../PageBuilder/types';
+import { TUseKeyDownEvent, useKeyDownEvent } from './useKeyDownEvent';
+import { TUseKeyUpEvent, useKeyUpEvent } from './useKeyUpEvent';
+import { TUseMouseDownEvent, useMouseDownEvent } from './useMouseDownEvent';
+import { TUseMouseMoveEvent, useMouseMoveEvent } from './useMouseMoveEvent';
+import { TUseMouseUpEvent, useMouseUpEvent } from './useMouseUpEvent';
 
 export type TUseViewBoxEvents = {
   elementArea: TRectArea;
-  onKeyDown: (event: KeyboardEvent) => void;
-  onKeyUp: () => void;
-  onMouseDown: (event: React.MouseEvent) => void;
-  onMouseMove: (event: MouseEvent) => void;
-  onMouseUp: (event: MouseEvent) => void;
+  onKeyDown: TUseKeyDownEvent;
+  onKeyUp: TUseKeyUpEvent;
+  onMouseDown: TUseMouseDownEvent;
+  onMouseMove: TUseMouseMoveEvent;
+  onMouseUp: TUseMouseUpEvent;
   selectableArea: TRectAreaExtended;
 };
 

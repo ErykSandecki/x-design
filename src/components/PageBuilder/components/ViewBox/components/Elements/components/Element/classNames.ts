@@ -1,21 +1,14 @@
+// utils
+import { composeClassNames } from 'utils';
+
 export const className = 'Element';
 
 export const classes = {
   className,
 };
 
-export const classNames = {
-  [className]: {
-    name: className,
-    modificators: {
-      moving: `${className}--moving`,
-    },
-  },
-  wrapper: {
-    name: `${className}__wrapper`,
-    modificators: {
-      hover: `${className}__wrapper--hover`,
-      moving: `${className}__wrapper--moving`,
-    },
-  },
-};
+export const classNames = composeClassNames(
+  className,
+  [className, 'moving'] as const,
+  ['wrapper', 'hover', 'moving'] as const,
+);

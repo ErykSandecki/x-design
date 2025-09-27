@@ -12,7 +12,7 @@ export const handleInitSelectableArea = (
   coordinates: T3DCoordinates,
   event: MouseEvent,
   mouseMode: MouseMode,
-  setSelectableArea: (elementArea: TRectAreaExtended) => void,
+  setSelectableArea: TFunc<[TRectAreaExtended]>,
 ): void => {
   if (!event.shiftKey && event.buttons === MouseButton.lmb && mouseMode === MouseMode.default) {
     const { x, y } = mousePositionRelative(coordinates, event);

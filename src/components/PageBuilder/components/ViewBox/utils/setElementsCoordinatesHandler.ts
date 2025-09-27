@@ -6,8 +6,6 @@ import { selectedElementsSelector } from 'store/pageBuilder/selectors';
 import { setElementsCoordinates } from 'store/pageBuilder/actions';
 import { store } from 'store';
 
-// types
-
 // utils
 import { caculateMovePosition } from './caculateMovePosition';
 

@@ -1,12 +1,39 @@
 {
   "ComposeClassNames": {
-    "prefix": "composeClassNames",
-    "body": ["composeClassNames(className, [className] as const)"],
+    "prefix": "clParent",
+    "body": [
+      "// utils",
+      "import { composeClassNames } from 'utils';",
+      "composeClassNames(className, [className] as const)",
+    ],
     "description": "Snippet dla composeClassNames",
   },
   "ComposeClassNamesChildren": {
-    "prefix": "composeClassNamesChildren",
-    "body": ["composeClassNames(className, [className] as const, ['$1'] as const)"],
+    "prefix": "clChildren",
+    "body": [
+      "// utils",
+      "import { composeClassNames } from 'utils';",
+      "composeClassNames(className, [className] as const, ['$1'] as const)",
+    ],
+    "description": "Snippet dla composeClassNamesChildren",
+  },
+  "ComposeClassNamesChildrenTwo": {
+    "prefix": "clChildrenTwo",
+    "body": [
+      "// utils",
+      "import { composeClassNames } from 'utils';",
+      "composeClassNames(className, [className] as const, ['$1'] as const, ['$2'] as const)",
+    ],
+    "description": "Snippet dla composeClassNamesChildren",
+  },
+
+  "ComposeClassNamesChildrenThree": {
+    "prefix": "clChildrenThree",
+    "body": [
+      "// utils",
+      "import { composeClassNames } from 'utils';",
+      "composeClassNames(className, [className] as const, ['$1'] as const, ['$2'] as const, ['$3'] as const)",
+    ],
     "description": "Snippet dla composeClassNamesChildren",
   },
 }

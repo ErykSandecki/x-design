@@ -11,10 +11,11 @@ export const handleResizeElementArea = (
   elementArea: TRectArea,
   event: MouseEvent,
   mouseMode: MouseMode,
-  setElementArea: (elementArea: TRectArea) => void,
+  setElementArea: TFunc<[TRectArea]>,
 ): void => {
   if (elementArea && event.buttons === MouseButton.lmb && mouseMode === MouseMode.toolBeltA) {
     const { x, y } = mousePositionRelative(coordinates, event);
+
     setElementArea({ ...elementArea, x2: x, y2: y });
   }
 };

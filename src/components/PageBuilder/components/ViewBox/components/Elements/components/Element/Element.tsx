@@ -26,11 +26,10 @@ import { MouseMode } from 'types/enums/mouseMode';
 
 // utils
 import { getAbsolutePosition } from '../../../../utils/getAbsolutePosition';
-import { getPosition } from './utils/getPosition';
+import { getCssStyles } from './utils/getCssStyles';
 import { getLayout } from './utils/getLayout';
-import { isPureNumber } from 'utils';
 
-type TElementProps = {
+export type TElementProps = {
   classes: typeof classes;
   children: (
     anlge: TElement['angle'],
@@ -52,7 +51,7 @@ const Element: FC<TElementProps> = ({ classes, children, id, index, mouseMode, p
   const { itemsRefs, zoomContentRef } = useRefs();
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { x1, y1 } = getAbsolutePosition(id, itemsRefs, zoomContentRef);
-  const element = useElementEvents(elementRef, id, mouseMode, parentId, type);
+
   const {
     alignment,
     angle,
@@ -62,18 +61,19 @@ const Element: FC<TElementProps> = ({ classes, children, id, index, mouseMode, p
     cssHeight,
     cssWidth,
     displayEventsArea,
-    height,
     displayOutline,
+    height,
     isHover,
     isMoving,
     isSelected,
     layout,
     position,
+    showDropAnchors,
     width,
     x,
     y,
     ...events
-  } = element;
+  } = useElementEvents(elementRef, id, mouseMode, parentId, type);
 
   return (
     <Box
@@ -86,11 +86,11 @@ const Element: FC<TElementProps> = ({ classes, children, id, index, mouseMode, p
       id={id}
       ref={elementRef}
       style={{
-        ...getPosition(alignment, counterAngle, x, y),
+        ...getCssStyles(alignment, counterAngle, x, y),
         backgroundColor: 'unset',
-        height: isPureNumber(cssHeight) ? `${cssHeight}px` : cssHeight,
+        height: cssHeight,
         position,
-        width: isPureNumber(cssWidth) ? `${cssWidth}px` : cssWidth,
+        width: cssWidth,
       }}
     >
       <Box
@@ -109,11 +109,10 @@ const Element: FC<TElementProps> = ({ classes, children, id, index, mouseMode, p
           transform: `rotate(${angle - counterAngle}deg)`,
           width: '100%',
         }}
+        sx={{ overflow: 'hidden', position: 'relative' }}
         {...events}
       >
-        {!isSelected && position === 'relative' && (
-          <DropAnchors id={id} index={index} mouseMode={mouseMode} parentId={parentId} />
-        )}
+        {showDropAnchors && <DropAnchors id={id} index={index} mouseMode={mouseMode} parentId={parentId} />}
         {children(angle, coordinates, height, isHover, isSelected, width)}
         {displayOutline && <Outline angle={angle - counterAngle} height={height} x={x1} y={y1} width={width} />}
         {displayEventsArea && (

@@ -13,7 +13,7 @@ import { updateEventsStatus } from 'store/pageBuilder/actions';
 // utils
 import { eventSelectorCreator } from 'store/pageBuilder/selectors';
 
-export type TUseMouseLeaveEvent = (event: MouseEvent) => void;
+export type TUseMouseLeaveEvent = TFunc<[MouseEvent]>;
 
 export const useMouseLeaveEvent = (mouseMode: MouseMode, parentId: TElement['parentId']): TUseMouseLeaveEvent => {
   const dispatch = useDispatch();

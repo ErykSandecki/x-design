@@ -1,5 +1,5 @@
-import { MouseEvent } from 'react';
 import { isEmpty } from 'lodash';
+import { MouseEvent } from 'react';
 import { useDispatch } from 'react-redux';
 
 // types
@@ -13,7 +13,7 @@ import { updateEventsStatus } from 'store/pageBuilder/actions';
 // utils
 import { eventSelectorCreator } from 'store/pageBuilder/selectors';
 
-export type TUseMouseEnterEvent = (event: MouseEvent) => void;
+export type TUseMouseEnterEvent = TFunc<[MouseEvent]>;
 
 export const useMouseEnterEvent = (
   id: TElement['id'],

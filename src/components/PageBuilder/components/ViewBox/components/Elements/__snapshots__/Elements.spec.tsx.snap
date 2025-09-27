@@ -9,33 +9,38 @@ exports[`Elements snapshots should render Element in relative position 1`] = `
     style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; height: 100px; position: relative; width: 100px;"
   >
     <div
-      class="css-1jnxvbp Element__wrapper Element__wrapper--light"
+      class="css-1yvp3ly Element__wrapper Element__wrapper--light"
       data-status="false"
       data-test-box=""
       style="background-color: rgb(255, 255, 255); height: 100%; transform: rotate(0deg); width: 100%;"
     >
       <div
-        class="DropAnchors DropAnchors--light"
+        class="css-hnxq09"
+        data-test-box=""
       >
         <div
-          class="DropAnchors__prompt DropAnchors__prompt--light"
+          class="css-9ljzna Prompts Prompts--light"
+          data-test-box=""
         />
         <div
-          class="DropAnchors__prompt DropAnchors__prompt--light"
+          class="css-9ljzna Prompts Prompts--light"
+          data-test-box=""
         />
         <div
-          class="DropAnchors__prompt DropAnchors__prompt--light"
+          class="css-9ljzna Prompts Prompts--light"
+          data-test-box=""
         />
         <div
-          class="DropAnchors__prompt DropAnchors__prompt--light"
+          class="css-9ljzna Prompts Prompts--light"
+          data-test-box=""
         />
         <div
-          class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--top DropAnchors__anchor--top--light"
-          data-test-anchor="top"
-        />
-        <div
-          class="DropAnchors__anchor DropAnchors__anchor--light DropAnchors__anchor--bottom DropAnchors__anchor--bottom--light"
+          class="css-1xpffs9 Anchors Anchors--light Anchors--bottom Anchors--bottom--light"
           data-test-anchor="bottom"
+        />
+        <div
+          class="css-1xpffs9 Anchors Anchors--light Anchors--top Anchors--top--light"
+          data-test-anchor="top"
         />
       </div>
       <div
@@ -67,7 +72,7 @@ exports[`Elements snapshots should render Frame 1`] = `
     style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; height: 100px; position: absolute; width: 100px;"
   >
     <div
-      class="css-1jnxvbp Element__wrapper Element__wrapper--light"
+      class="css-1yvp3ly Element__wrapper Element__wrapper--light"
       data-status="false"
       data-test-box=""
       style="background-color: rgb(255, 255, 255); height: 100%; transform: rotate(0deg); width: 100%;"

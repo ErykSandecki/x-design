@@ -14,7 +14,7 @@ import { handlePressing } from '../utils/handlePressing';
 import { handleSelectElement } from '../utils/handleSelectElement';
 import { updateCursorPosition } from '../utils/updateCursorPosition';
 
-export type TUseMouseDownEvent = (event: MouseEvent) => void;
+export type TUseMouseDownEvent = TFunc<[MouseEvent]>;
 
 export const useMouseDownEvent = (
   cursorPosition: RefObject<T2DCoordinates>,
@@ -23,7 +23,7 @@ export const useMouseDownEvent = (
   isSelected: boolean,
   mouseMode: MouseMode,
   selectedElement: TSelectedElement,
-  setIsPressing: (isPressing: boolean) => void,
+  setIsPressing: TFunc<[boolean]>,
 ): TUseMouseDownEvent => {
   const dispatch = useDispatch();
 

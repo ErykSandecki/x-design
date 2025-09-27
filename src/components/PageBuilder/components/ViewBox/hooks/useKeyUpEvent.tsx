@@ -6,7 +6,7 @@ import { updateEventsStatus } from 'store/pageBuilder/actions';
 // types
 import { KeyboardKeys } from 'types';
 
-export type TUseKeyUpEvent = () => void;
+export type TUseKeyUpEvent = TFunc;
 
 export const useKeyUpEvent = (): TUseKeyUpEvent => {
   const dispatch = useDispatch();

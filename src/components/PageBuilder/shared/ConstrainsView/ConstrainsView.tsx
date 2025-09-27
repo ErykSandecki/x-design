@@ -1,5 +1,8 @@
 import { FC } from 'react';
 
+// components
+import { Box } from 'shared';
+
 // hooks
 import { useTheme } from 'hooks';
 
@@ -25,13 +28,15 @@ export const ConstrainsView: FC<TConstrainsViewProps> = ({ alignment, selected }
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   return (
-    <div
-      className={cx(
-        classNamesWithTheme[className].name,
-        [classNamesWithTheme[className].modificators.selected, selected],
-        [classNamesWithTheme.horizontal.modificators[alignment?.horizontal], !!alignment?.horizontal],
-        [classNamesWithTheme.vertical.modificators[alignment?.vertical], !!alignment?.vertical],
-      )}
+    <Box
+      classes={{
+        className: cx(
+          classNamesWithTheme[className].name,
+          [classNamesWithTheme[className].modificators.selected, selected],
+          [classNamesWithTheme.horizontal.modificators[alignment?.horizontal], !!alignment?.horizontal],
+          [classNamesWithTheme.vertical.modificators[alignment?.vertical], !!alignment?.vertical],
+        ),
+      }}
     >
       {enumToArray(Constrain).map((key) => (
         <div
@@ -42,7 +47,7 @@ export const ConstrainsView: FC<TConstrainsViewProps> = ({ alignment, selected }
           key={key as string}
         />
       ))}
-    </div>
+    </Box>
   );
 };
 

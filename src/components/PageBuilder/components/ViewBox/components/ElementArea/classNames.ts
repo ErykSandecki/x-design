@@ -1,7 +1,6 @@
+// utils
+import { composeClassNames } from 'utils';
+
 export const className = 'ElementArea';
 
-export const classNames = {
-  [className]: className,
-  label: `${className}__label`,
-  area: `${className}__area`,
-};
+export const classNames = composeClassNames(className, [className] as const, ['label'] as const, ['area'] as const);

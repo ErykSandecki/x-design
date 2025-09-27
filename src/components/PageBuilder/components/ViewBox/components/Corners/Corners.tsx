@@ -4,14 +4,11 @@ import { FC } from 'react';
 import { useTheme } from 'hooks';
 
 // others
-import { className, classNames } from './classNames';
-
 import { BORDER, HHW, RX, SHW } from './constants';
+import { className, classNames } from './classNames';
 
 // styles
 import styles from './corners.scss';
-
-// types
 
 export type TCornersProps = {
   rectCoordinates: TRectCoordinates;

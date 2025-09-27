@@ -19,11 +19,11 @@ import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 import { configureStore } from 'store';
 
 // types
+import { DropAnchorsPosition } from 'store/pageBuilder/enums';
 import { MouseMode } from 'types/enums/mouseMode';
 
 // utils
 import { getProviderWrapper } from 'test';
-import { DropAnchorsPosition } from 'store/pageBuilder/enums';
 
 const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 const stateMock = {

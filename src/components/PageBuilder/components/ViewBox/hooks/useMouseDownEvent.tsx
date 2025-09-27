@@ -13,14 +13,14 @@ import { calculateAbsolutePositions } from '../utils/calculateAbsolutePositions'
 import { handleInitElementArea } from '../utils/handleInitElementArea';
 import { handleInitSelectableArea } from '../utils/handleInitSelectableArea';
 
-export type TUseMouseDownEvent = (event: MouseEvent) => void;
+export type TUseMouseDownEvent = TFunc<[MouseEvent]>;
 
 export const useMouseDownEvent = (
   coordinates: T3DCoordinates,
   mouseMode: MouseMode,
   rectCoordinates: RefObject<TObject<TRectCoordinates>>,
-  setElementArea: (elementArea: TRectArea) => void,
-  setSelectableArea: (selectableArea: TRectAreaExtended) => void,
+  setElementArea: TFunc<[TRectArea]>,
+  setSelectableArea: TFunc<[TRectAreaExtended]>,
 ): TUseMouseDownEvent => {
   const { itemsRefs, zoomContentRef } = useRefs();
 

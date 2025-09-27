@@ -6,7 +6,6 @@
   @include enter-delay;
 
   animation-delay: 100ms;
-  position: absolute;
   user-select: none;
   z-index: $--xd-zindex-element;
 
@@ -20,9 +19,6 @@
   }
 
   &__wrapper {
-    overflow: hidden;
-    position: relative;
-
     &--hover {
       z-index: $--xd-zindex-element-active;
     }

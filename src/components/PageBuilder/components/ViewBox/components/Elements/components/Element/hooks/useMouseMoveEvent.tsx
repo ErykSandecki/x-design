@@ -30,7 +30,9 @@ export const useMouseMoveEvent = (
   const dispatch = useDispatch();
 
   const handleMouseMove = throttle((event: MouseEvent): void => {
-    if (mouseMode === MouseMode.default && distanceHasChanged(cursorPositionBase.current, 5, event)) {
+    const distanceChanged = distanceHasChanged(cursorPositionBase.current, 5, event);
+
+    if (mouseMode === MouseMode.default && distanceChanged) {
       updateElementPosition(cursorPosition, dispatch, event, parentId);
       dispatch(updateEventsStatus({ draggableElements: [id] }));
     }

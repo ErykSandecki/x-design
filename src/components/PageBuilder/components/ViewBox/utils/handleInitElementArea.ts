@@ -12,10 +12,11 @@ export const handleInitElementArea = (
   coordinates: T3DCoordinates,
   event: MouseEvent,
   mouseMode: MouseMode,
-  setElementArea: (elementArea: TRectArea) => void,
+  setElementArea: TFunc<[TRectArea]>,
 ): void => {
   if (event.buttons === MouseButton.lmb && mouseMode === MouseMode.toolBeltA) {
     const { x, y } = mousePositionRelative(coordinates, event);
+
     setElementArea({ x1: x, x2: x, y1: y, y2: y });
   }
 };

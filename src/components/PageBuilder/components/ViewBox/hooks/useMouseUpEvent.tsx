@@ -7,14 +7,14 @@ import { TRectArea, TRectAreaExtended } from '../../../../PageBuilder/types';
 // utils
 import { handleCreateElement } from '../utils/handleCreateElement';
 
-export type TUseMouseUpEvent = (event: MouseEvent) => void;
+export type TUseMouseUpEvent = TFunc<[MouseEvent]>;
 
 export const useMouseUpEvent = (
   elementArea: TRectArea,
   mouseMode: MouseMode,
-  setElementArea: (elementArea: TRectArea) => void,
-  setMouseMode: (mouseMode: MouseMode) => void,
-  setSelectableArea: (elementArea: TRectAreaExtended) => void,
+  setElementArea: TFunc<[TRectArea]>,
+  setMouseMode: TFunc<[MouseMode]>,
+  setSelectableArea: TFunc<[TRectAreaExtended]>,
 ): TUseMouseUpEvent => {
   const dispatch = useDispatch();
 

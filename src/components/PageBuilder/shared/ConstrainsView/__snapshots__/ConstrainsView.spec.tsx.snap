@@ -3,16 +3,17 @@
 exports[`ConstrainsView snapshots should render ConstrainsView 1`] = `
 <DocumentFragment>
   <div
-    class="ConstrainsView ConstrainsView--light"
+    class="css-1jnxvbp ConstrainsView ConstrainsView--light"
+    data-test-box=""
   >
     <div
       class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--bottom ConstrainsView__constrain--bottom--light"
     />
     <div
-      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--center-horizontal ConstrainsView__constrain--center-horizontal--light"
+      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--centerHorizontal ConstrainsView__constrain--centerHorizontal--light"
     />
     <div
-      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--center-vertical ConstrainsView__constrain--center-vertical--light"
+      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--centerVertical ConstrainsView__constrain--centerVertical--light"
     />
     <div
       class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--left ConstrainsView__constrain--left--light"
@@ -30,16 +31,17 @@ exports[`ConstrainsView snapshots should render ConstrainsView 1`] = `
 exports[`ConstrainsView snapshots should render selected 1`] = `
 <DocumentFragment>
   <div
-    class="ConstrainsView ConstrainsView--light ConstrainsView--selected ConstrainsView--selected--light"
+    class="css-1jnxvbp ConstrainsView ConstrainsView--light ConstrainsView--selected ConstrainsView--selected--light"
+    data-test-box=""
   >
     <div
       class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--bottom ConstrainsView__constrain--bottom--light"
     />
     <div
-      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--center-horizontal ConstrainsView__constrain--center-horizontal--light"
+      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--centerHorizontal ConstrainsView__constrain--centerHorizontal--light"
     />
     <div
-      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--center-vertical ConstrainsView__constrain--center-vertical--light"
+      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--centerVertical ConstrainsView__constrain--centerVertical--light"
     />
     <div
       class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--left ConstrainsView__constrain--left--light"
@@ -57,16 +59,17 @@ exports[`ConstrainsView snapshots should render selected 1`] = `
 exports[`ConstrainsView snapshots should render with alignment 1`] = `
 <DocumentFragment>
   <div
-    class="ConstrainsView ConstrainsView--light ConstrainsView__horizontal--center ConstrainsView__horizontal--center--light ConstrainsView__vertical--center ConstrainsView__vertical--center--light"
+    class="css-1jnxvbp ConstrainsView ConstrainsView--light ConstrainsView__horizontal--center ConstrainsView__horizontal--center--light ConstrainsView__vertical--center ConstrainsView__vertical--center--light"
+    data-test-box=""
   >
     <div
       class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--bottom ConstrainsView__constrain--bottom--light"
     />
     <div
-      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--center-horizontal ConstrainsView__constrain--center-horizontal--light"
+      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--centerHorizontal ConstrainsView__constrain--centerHorizontal--light"
     />
     <div
-      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--center-vertical ConstrainsView__constrain--center-vertical--light"
+      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--centerVertical ConstrainsView__constrain--centerVertical--light"
     />
     <div
       class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--left ConstrainsView__constrain--left--light"

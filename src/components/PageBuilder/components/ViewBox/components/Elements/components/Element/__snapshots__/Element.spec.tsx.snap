@@ -9,7 +9,7 @@ exports[`Element snapshots should render Element 1`] = `
     style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; height: 100px; position: absolute; width: 100px;"
   >
     <div
-      class="css-1jnxvbp Element__wrapper Element__wrapper--light"
+      class="css-1yvp3ly Element__wrapper Element__wrapper--light"
       data-status="false"
       data-test-box=""
       style="background-color: rgb(255, 255, 255); height: 100%; transform: rotate(0deg); width: 100%;"
@@ -27,7 +27,7 @@ exports[`Element snapshots should render Element when is selected & is multiple 
     style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; height: 100px; position: absolute; width: 100px;"
   >
     <div
-      class="css-1jnxvbp Element__wrapper Element__wrapper--light Element__wrapper--moving Element__wrapper--moving--light"
+      class="css-1yvp3ly Element__wrapper Element__wrapper--light Element__wrapper--moving Element__wrapper--moving--light"
       data-status="true"
       data-test-box=""
       style="background-color: rgb(255, 255, 255); height: 100%; transform: rotate(0deg); width: 100%;"
@@ -148,7 +148,7 @@ exports[`Element snapshots should render Element when is selected 1`] = `
     style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; height: 100px; position: absolute; width: 100px;"
   >
     <div
-      class="css-1jnxvbp Element__wrapper Element__wrapper--light"
+      class="css-1yvp3ly Element__wrapper Element__wrapper--light"
       data-status="true"
       data-test-box=""
       style="background-color: rgb(255, 255, 255); height: 100%; transform: rotate(0deg); width: 100%;"
@@ -269,7 +269,7 @@ exports[`Element snapshots should render Element when width & height is auto 1`]
     style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; height: auto; position: absolute; width: auto;"
   >
     <div
-      class="css-1jnxvbp Element__wrapper Element__wrapper--light"
+      class="css-1yvp3ly Element__wrapper Element__wrapper--light"
       data-status="false"
       data-test-box=""
       style="background-color: rgb(255, 255, 255); height: 100%; transform: rotate(0deg); width: 100%;"
