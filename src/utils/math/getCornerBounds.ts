@@ -4,7 +4,7 @@ export const getFourCorners = (
   width: number,
   x: number,
   y: number,
-): [T2DCoordinates, T2DCoordinates, T2DCoordinates] => {
+): [T2DCoordinates] => {
   const cx = x + width / 2;
   const cy = y + height / 2;
   const angle = (angleDeg * Math.PI) / 180;
@@ -25,7 +25,7 @@ export const getFourCorners = (
       x: cx + dx * cos - dy * sin,
       y: cy + dx * sin + dy * cos,
     };
-  }) as [T2DCoordinates, T2DCoordinates, T2DCoordinates];
+  }) as [T2DCoordinates];
 };
 
 export const getCornerBounds = (

@@ -15,7 +15,7 @@ import { configureStore } from 'store';
 
 // types
 import { AnchorResize, AnchorRotate } from 'store/pageBuilder/enums';
-import { MouseButton, T2DCoordinates } from 'types';
+import { MouseButton } from 'types';
 import { MouseMode } from 'types/enums/mouseMode';
 
 // utils
