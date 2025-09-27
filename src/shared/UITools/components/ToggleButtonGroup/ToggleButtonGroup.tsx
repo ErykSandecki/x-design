@@ -1,12 +1,12 @@
-import { ReactNode, useEffect, useState } from 'react';
+import { ReactNode } from 'react';
 
 // components
 import E2EDataAttribute, { TE2EDataAttributeProps } from '../../../E2EDataAttributes/E2EDataAttribute';
 import ToggleButton from './components/ToggleButton/ToggleButton';
 
 // hooks
-import { useEvents } from './hooks/useEvents';
 import { useTheme } from '../../../../hooks/useTheme/useTheme';
+import { useToggleButtonGroupEvents } from './hooks/useToggleButtonGroupEvents';
 
 // others
 import { className as classNameToggleButton, classNames } from './classNames';
@@ -18,9 +18,6 @@ import styles from './toggle-button-group.scss';
 import { E2EAttribute } from 'types';
 import { TToggleButton, TToggleButtonGroupValue } from './types';
 
-// utils
-import { getInitialValue } from './utils/getInitialValue';
-
 export type TToggleButtonGroupProps<V> = {
   alwaysSelected?: boolean;
   className?: string;
@@ -28,7 +25,7 @@ export type TToggleButtonGroupProps<V> = {
   e2eValue: TE2EDataAttributeProps['value'];
   fullWidth?: boolean;
   multiple?: boolean;
-  onChange?: (value: V) => void;
+  onChange?: TFunc<[V]>;
   toggleButtons: Array<TToggleButton<V>>;
 };
 
@@ -43,14 +40,13 @@ export const ToggleButtonGroup = <V extends TToggleButtonGroupValue>({
   toggleButtons,
   ...buttonProps
 }: TToggleButtonGroupProps<V>): ReactNode => {
-  const [value, setValue] = useState(getInitialValue(multiple, defaultValue));
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-
-  const onChangeHandler = useEvents<V>(alwaysSelected, multiple, onChange, setValue, value);
-
-  useEffect(() => {
-    setValue(getInitialValue(multiple, defaultValue));
-  }, [defaultValue]);
+  const { onChange: onChangeHandler, value } = useToggleButtonGroupEvents(
+    alwaysSelected,
+    defaultValue,
+    multiple,
+    onChange,
+  );
 
   return (
     <E2EDataAttribute type={E2EAttribute.toggleButtonGroup} value={e2eValue}>

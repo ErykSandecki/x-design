@@ -3,7 +3,7 @@
 exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--with-margin SectionColumn--with-margin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
     data-test-section=""
   >
     <div
@@ -26,7 +26,7 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="ToggleButtonGroup ToggleButtonGroup--light ToggleButtonGroup--full-width ToggleButtonGroup--full-width--light"
+          class="ToggleButtonGroup ToggleButtonGroup--light ToggleButtonGroup--fullWidth ToggleButtonGroup--fullWidth--light"
           data-test-toggle-button-group="flow"
         >
           <button
@@ -94,7 +94,7 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
 exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--with-margin SectionColumn--with-margin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
     data-test-section=""
   >
     <div
@@ -117,7 +117,7 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="ToggleButtonGroup ToggleButtonGroup--light ToggleButtonGroup--full-width ToggleButtonGroup--full-width--light"
+          class="ToggleButtonGroup ToggleButtonGroup--light ToggleButtonGroup--fullWidth ToggleButtonGroup--fullWidth--light"
           data-test-toggle-button-group="flow"
         >
           <button

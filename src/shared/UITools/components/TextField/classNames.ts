@@ -1,14 +1,11 @@
+// utils
+import { composeClassNames } from 'utils';
+
 export const className = 'TextField';
 
-export const classNames = {
-  [className]: {
-    name: className,
-    modificators: {
-      disabled: `${className}--disabled`,
-      fullWidth: `${className}--full-width`,
-    },
-  },
-  input: `${className}__input`,
-  iconWrapper: `${className}__icon-wrapper`,
-  icon: `${className}__icon`,
-};
+export const classNames = composeClassNames(
+  className,
+  [className, 'disabled', 'fullWidth'] as const,
+  ['input'] as const,
+  ['icon'] as const,
+);

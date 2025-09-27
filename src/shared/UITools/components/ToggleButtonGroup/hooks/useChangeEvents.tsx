@@ -1,15 +1,15 @@
 // types
 import { TToggleButtonGroupValue } from '../types';
 
-type TUseEvents = (valueFromToggleButton: string) => void;
+export type TUseChangeEvents = TFunc<[string]>;
 
-export const useEvents = <V extends TToggleButtonGroupValue>(
+export const useChangeEvents = <V extends TToggleButtonGroupValue>(
   alwaysSelected: boolean,
   multiple: boolean,
-  onChange: ((value: V) => void) | null,
-  setValue: (value: V) => void,
+  onChange: TFunc<[V]> | null,
+  setValue: TFunc<[V]>,
   value: V,
-): TUseEvents => {
+): TUseChangeEvents => {
   const onChangeMultipleValue = (value: Array<string>, valueToggleButton: string): Array<string> => {
     const includeValue = value.includes(valueToggleButton);
 

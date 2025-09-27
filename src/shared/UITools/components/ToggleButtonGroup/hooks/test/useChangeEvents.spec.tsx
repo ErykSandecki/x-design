@@ -1,7 +1,7 @@
 import { renderHook } from '@testing-library/react';
 
 // hooks
-import { useEvents } from '../useEvents';
+import { useChangeEvents } from '../useChangeEvents';
 
 const mockCallBack = jest.fn();
 
@@ -10,10 +10,10 @@ jest.mock('react-redux', () => ({
   useDispatch: (): any => mockCallBack,
 }));
 
-describe('useBlurEvent', () => {
+describe('useChangeEvents', () => {
   it(`should trigger events once`, () => {
     // before
-    const { result } = renderHook(() => useEvents(false, false, null, mockCallBack, ''));
+    const { result } = renderHook(() => useChangeEvents(false, false, null, mockCallBack, ''));
 
     // action
     result.current('value');
@@ -24,7 +24,7 @@ describe('useBlurEvent', () => {
 
   it(`should select value for single`, () => {
     // before
-    const { result } = renderHook(() => useEvents(false, false, mockCallBack, mockCallBack, ''));
+    const { result } = renderHook(() => useChangeEvents(false, false, mockCallBack, mockCallBack, ''));
 
     // action
     result.current('value');
@@ -35,7 +35,7 @@ describe('useBlurEvent', () => {
 
   it(`should unselect value for single`, () => {
     // before
-    const { result } = renderHook(() => useEvents(false, false, mockCallBack, mockCallBack, 'value'));
+    const { result } = renderHook(() => useChangeEvents(false, false, mockCallBack, mockCallBack, 'value'));
 
     // action
     result.current('value');
@@ -46,7 +46,7 @@ describe('useBlurEvent', () => {
 
   it(`should select value for multiple`, () => {
     // before
-    const { result } = renderHook(() => useEvents(false, true, mockCallBack, mockCallBack, []));
+    const { result } = renderHook(() => useChangeEvents(false, true, mockCallBack, mockCallBack, []));
 
     // action
     result.current('value');
@@ -57,7 +57,7 @@ describe('useBlurEvent', () => {
 
   it(`should unselect value for multiple`, () => {
     // before
-    const { result } = renderHook(() => useEvents(false, true, mockCallBack, mockCallBack, ['value']));
+    const { result } = renderHook(() => useChangeEvents(false, true, mockCallBack, mockCallBack, ['value']));
 
     // action
     result.current('value');
@@ -68,7 +68,7 @@ describe('useBlurEvent', () => {
 
   it(`should not unselect value for multiple`, () => {
     // before
-    const { result } = renderHook(() => useEvents(true, true, mockCallBack, mockCallBack, ['value']));
+    const { result } = renderHook(() => useChangeEvents(true, true, mockCallBack, mockCallBack, ['value']));
 
     // action
     result.current('value');

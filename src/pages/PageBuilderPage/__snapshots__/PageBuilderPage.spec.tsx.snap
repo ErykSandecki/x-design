@@ -163,7 +163,7 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
                   data-test-field-group=""
                 >
                   <div
-                    class="css-1jnxvbp ColorPicker__hex-input ColorPicker__hex-input--light TextField TextField--light"
+                    class="css-1jnxvbp ColorPicker__hexInput ColorPicker__hexInput--light TextField TextField--light"
                     data-test-text-field="color"
                   >
                     <div
@@ -194,7 +194,7 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
                     />
                   </div>
                   <div
-                    class="css-1jnxvbp ColorPicker__alpha-input ColorPicker__alpha-input--light TextField TextField--light"
+                    class="css-1jnxvbp ColorPicker__alphaInput ColorPicker__alphaInput--light TextField TextField--light"
                     data-test-text-field="alpha"
                   >
                     <input
@@ -211,7 +211,7 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
                       data-test-scrubbable-input=""
                     >
                       <div
-                        class="ColorPicker__alpha-input-unit ColorPicker__alpha-input-unit--light"
+                        class="ColorPicker__alphaInputUnit ColorPicker__alphaInputUnit--light"
                       >
                         %
                       </div>
@@ -246,17 +246,17 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
       tabindex="0"
     >
       <div
-        class="css-1jnxvbp ZoomBox__background-mask ZoomBox__background-mask--light"
+        class="css-1jnxvbp ZoomBox__backgroundMask ZoomBox__backgroundMask--light"
         data-test-box=""
         style="background-color: rgb(241, 242, 246); display: initial;"
       />
       <div
-        class="css-1jnxvbp ZoomBox__texture-blank ZoomBox__texture-blank--light"
+        class="css-1jnxvbp ZoomBox__textureBlank ZoomBox__textureBlank--light"
         data-test-box=""
         style="transform: translate(0px, 0px) scale(1);"
       />
       <div
-        class="css-1j4c14e ZoomBox__zoom-content ZoomBox__zoom-content--light"
+        class="css-1j4c14e ZoomBox__zoomContent ZoomBox__zoomContent--light"
         data-test-box=""
         id="zoomContentId"
         style="transform: translate(0px, 0px) scale(1);"

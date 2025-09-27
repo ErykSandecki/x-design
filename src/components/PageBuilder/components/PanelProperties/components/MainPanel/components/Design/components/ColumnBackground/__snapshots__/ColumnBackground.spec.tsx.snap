@@ -22,7 +22,7 @@ exports[`ColumnBackground snapshots should render ColumnBackground 1`] = `
           data-test-field-group=""
         >
           <div
-            class="css-1jnxvbp ColorPicker__hex-input ColorPicker__hex-input--light TextField TextField--light"
+            class="css-1jnxvbp ColorPicker__hexInput ColorPicker__hexInput--light TextField TextField--light"
             data-test-text-field="color"
           >
             <div
@@ -53,7 +53,7 @@ exports[`ColumnBackground snapshots should render ColumnBackground 1`] = `
             />
           </div>
           <div
-            class="css-1jnxvbp ColorPicker__alpha-input ColorPicker__alpha-input--light TextField TextField--light"
+            class="css-1jnxvbp ColorPicker__alphaInput ColorPicker__alphaInput--light TextField TextField--light"
             data-test-text-field="alpha"
           >
             <input
@@ -70,7 +70,7 @@ exports[`ColumnBackground snapshots should render ColumnBackground 1`] = `
               data-test-scrubbable-input=""
             >
               <div
-                class="ColorPicker__alpha-input-unit ColorPicker__alpha-input-unit--light"
+                class="ColorPicker__alphaInputUnit ColorPicker__alphaInputUnit--light"
               >
                 %
               </div>

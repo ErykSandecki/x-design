@@ -19,7 +19,12 @@ declare global {
     y1: number;
     y2: number;
   };
-
+  type TOffsets = {
+    bottom: number;
+    left: number;
+    right: number;
+    top: number;
+  };
   type TFunc<A extends any[] = [], T = void> = (...args: A) => T;
   type TT = TFunction;
 

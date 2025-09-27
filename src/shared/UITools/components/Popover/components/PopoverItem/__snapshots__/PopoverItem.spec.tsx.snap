@@ -7,7 +7,7 @@ exports[`PopoverItem snapshots should render PopoverItem 1`] = `
     data-test-popover-item="0"
   >
     <div
-      class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
       data-test-icon="check"
       height="12"
       name="Check"
@@ -38,7 +38,7 @@ exports[`PopoverItem snapshots should render selected 1`] = `
     data-test-popover-item="0"
   >
     <div
-      class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--light PopoverItem__check-icon--selected PopoverItem__check-icon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
       data-test-icon="check"
       height="12"
       name="Check"

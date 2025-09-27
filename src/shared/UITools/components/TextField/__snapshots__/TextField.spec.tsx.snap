@@ -27,10 +27,11 @@ exports[`TextField snapshots should render wiht popover 1`] = `
       maxlength="6"
     />
     <div
-      class="TextField__icon-wrapper TextField__icon-wrapper--light"
+      class="css-1jnxvbp TextFieldPopover TextFieldPopover--light"
+      data-test-box=""
     >
       <div
-        class="css-1jnxvbp TextField__icon TextField__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+        class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextField__icon TextField__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
         data-test-icon="variant"
         height="12"
         name="Variant"
@@ -38,41 +39,6 @@ exports[`TextField snapshots should render wiht popover 1`] = `
       />
       <div
         class="Popover Popover--light"
-        data-test-popover="popover"
-        style="left: 0px; top: 0px;"
-      >
-        <div
-          class="PopoverSeparator PopoverSeparator--light"
-        />
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`TextField snapshots should render with opened popover 1`] = `
-<DocumentFragment>
-  <div
-    class="css-1jnxvbp TextField TextField--light"
-    data-test-text-field=""
-  >
-    <input
-      class="TextField__input TextField__input--light"
-      data-test-text-field-input=""
-      maxlength="6"
-    />
-    <div
-      class="TextField__icon-wrapper TextField__icon-wrapper--light"
-    >
-      <div
-        class="css-1jnxvbp TextField__icon TextField__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
-        data-test-icon="variant"
-        height="12"
-        name="Variant"
-        width="12"
-      />
-      <div
-        class="Popover Popover--light Popover--selected Popover--selected--light"
         data-test-popover="popover"
         style="left: 0px; top: 0px;"
       >

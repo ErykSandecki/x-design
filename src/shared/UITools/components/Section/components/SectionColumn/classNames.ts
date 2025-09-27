@@ -1,25 +1,19 @@
-import { kebabCase, mapValues } from 'lodash';
+import { values } from 'lodash';
 
 // types
 import { GridColumnType } from './enums';
 
+// utils
+import { composeClassNames } from 'utils';
+
 export const className = 'SectionColumn';
 
-export const classNames = {
-  [className]: {
-    name: className,
-    modificators: {
-      withMargin: `${className}--with-margin`,
-    },
-  },
-  labels: `${className}__labels`,
-  label: `${className}__label`,
-  wrapper: `${className}__wrapper`,
-  content: {
-    name: `${className}__content`,
-    modificators: {
-      ...mapValues(GridColumnType, (gridColumnType) => `${className}__content--${kebabCase(gridColumnType)}`),
-    },
-  },
-  buttons: `${className}__buttons`,
-};
+export const classNames = composeClassNames(
+  className,
+  [className, 'withMargin'] as const,
+  ['labels'] as const,
+  ['label'] as const,
+  ['wrapper'] as const,
+  ['content', ...values(GridColumnType)] as const,
+  ['buttons'] as const,
+);

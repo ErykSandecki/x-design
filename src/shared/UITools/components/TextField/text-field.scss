@@ -67,15 +67,4 @@ $--xd-font-size: 11px;
       -moz-appearance: textfield;
     }
   }
-
-  &__icon-wrapper {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    position: relative;
-  }
-
-  &__icon {
-    opacity: 0;
-  }
 }

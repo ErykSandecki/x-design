@@ -1,13 +1,12 @@
-import { FC, InputHTMLAttributes, ReactNode, Ref, useRef } from 'react';
-import { noop } from 'lodash';
+import { FC, InputHTMLAttributes, ReactNode, Ref } from 'react';
 
 // components
 import Box from '../../../UI/components/Box/Box';
-import Icon from 'shared/UI/components/Icon/Icon';
-import Popover, { PopoverCompound, TPopoverProps } from '../Popover/Popover';
+import TextFieldPopover from './components/TextFieldPopover/TextFieldPopover';
+import { TPopoverProps } from '../Popover/Popover';
 
 // hooks
-import { useOutsideClick, useTheme } from 'hooks';
+import { useTheme } from 'hooks';
 
 // others
 import { className as textFieldClassName, classNames } from './classNames';
@@ -48,9 +47,7 @@ export const TextField: FC<TTextFieldProps> = ({
   startAdornment,
   ...restProps
 }) => {
-  const refItem = useRef(null);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-  const { selected, setSelected } = useOutsideClick([], refItem, noop, idContainer);
 
   return (
     <Box
@@ -75,19 +72,9 @@ export const TextField: FC<TTextFieldProps> = ({
         {...restProps}
       />
       {popoverChildren ? (
-        <div className={cx(classNamesWithTheme.iconWrapper)} ref={refItem}>
-          <Icon
-            classes={{ className: cx(classNamesWithTheme.icon) }}
-            clickable
-            height={12}
-            name="Variant"
-            onClick={() => setSelected(!selected)}
-            width={12}
-          />
-          <Popover e2eValue="popover" refItem={refItem} selected={selected}>
-            <PopoverCompound.PopoverRoot setSelected={setSelected}>{popoverChildren}</PopoverCompound.PopoverRoot>
-          </Popover>
-        </div>
+        <TextFieldPopover classNameIcon={cx(classNamesWithTheme.icon)} idContainer={idContainer}>
+          {popoverChildren}
+        </TextFieldPopover>
       ) : (
         endAdorment
       )}

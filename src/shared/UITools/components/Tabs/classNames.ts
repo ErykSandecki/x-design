@@ -1,12 +1,6 @@
+// utils
+import { composeClassNames } from 'utils';
+
 export const className = 'Tabs';
 
-export const classNames = {
-  [className]: className,
-  tab: {
-    name: `${className}__tab`,
-    modificators: {
-      active: `${className}__tab--active`,
-      disabled: `${className}__tab--disabled`,
-    },
-  },
-};
+export const classNames = composeClassNames(className, [className] as const, ['tab', 'active', 'disabled'] as const);

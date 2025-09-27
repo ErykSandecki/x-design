@@ -3,7 +3,7 @@
 exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--with-margin SectionColumn--with-margin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
     data-test-section=""
   >
     <div
@@ -22,11 +22,11 @@ exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
       class="SectionColumn__wrapper SectionColumn__wrapper--light"
     >
       <div
-        class="SectionColumn__content SectionColumn__content--light SectionColumn__content--two-inputs SectionColumn__content--two-inputs--light"
+        class="SectionColumn__content SectionColumn__content--light SectionColumn__content--twoInputs SectionColumn__content--twoInputs--light"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp TextField TextField--light TextField--full-width TextField--full-width--light"
+          class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
           data-test-text-field="x"
         >
           <div
@@ -50,7 +50,7 @@ exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
           />
         </div>
         <div
-          class="css-1jnxvbp TextField TextField--light TextField--full-width TextField--full-width--light"
+          class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
           data-test-text-field="y"
         >
           <div
@@ -85,7 +85,7 @@ exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
 exports[`ColumnPosition snapshots should render when some element has alignment 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--with-margin SectionColumn--with-margin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
     data-test-section=""
   >
     <div
@@ -104,11 +104,11 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
       class="SectionColumn__wrapper SectionColumn__wrapper--light"
     >
       <div
-        class="SectionColumn__content SectionColumn__content--light SectionColumn__content--two-inputs SectionColumn__content--two-inputs--light"
+        class="SectionColumn__content SectionColumn__content--light SectionColumn__content--twoInputs SectionColumn__content--twoInputs--light"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp TextField TextField--light TextField--disabled TextField--disabled--light TextField--full-width TextField--full-width--light"
+          class="css-1jnxvbp TextField TextField--light TextField--disabled TextField--disabled--light TextField--fullWidth TextField--fullWidth--light"
           data-test-text-field="x"
         >
           <div
@@ -133,7 +133,7 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
           />
         </div>
         <div
-          class="css-1jnxvbp TextField TextField--light TextField--disabled TextField--disabled--light TextField--full-width TextField--full-width--light"
+          class="css-1jnxvbp TextField TextField--light TextField--disabled TextField--disabled--light TextField--fullWidth TextField--fullWidth--light"
           data-test-text-field="y"
         >
           <div
@@ -192,7 +192,7 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
 exports[`ColumnPosition snapshots should render when values are mixed 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--with-margin SectionColumn--with-margin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
     data-test-section=""
   >
     <div
@@ -211,11 +211,11 @@ exports[`ColumnPosition snapshots should render when values are mixed 1`] = `
       class="SectionColumn__wrapper SectionColumn__wrapper--light"
     >
       <div
-        class="SectionColumn__content SectionColumn__content--light SectionColumn__content--two-inputs SectionColumn__content--two-inputs--light"
+        class="SectionColumn__content SectionColumn__content--light SectionColumn__content--twoInputs SectionColumn__content--twoInputs--light"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp TextField TextField--light TextField--full-width TextField--full-width--light"
+          class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
           data-test-text-field="x"
         >
           <div
@@ -239,7 +239,7 @@ exports[`ColumnPosition snapshots should render when values are mixed 1`] = `
           />
         </div>
         <div
-          class="css-1jnxvbp TextField TextField--light TextField--full-width TextField--full-width--light"
+          class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
           data-test-text-field="y"
         >
           <div

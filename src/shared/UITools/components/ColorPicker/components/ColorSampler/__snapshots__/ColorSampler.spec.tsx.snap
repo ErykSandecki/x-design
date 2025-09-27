@@ -8,214 +8,214 @@ exports[`ColorSampler snapshots should render ColorSampler 1`] = `
     style="left: 15px; top: 15px;"
   >
     <div
-      class="ColorSampler__prevent-antd-event-mask ColorSampler__prevent-antd-event-mask--light"
+      class="ColorSampler__preventAntdEventMask ColorSampler__preventAntdEventMask--light"
       data-test-button="color-sampler"
     />
     <div
-      class="ColorSampler__picker-wrapper ColorSampler__picker-wrapper--light"
+      class="ColorSampler__pickerWrapper ColorSampler__pickerWrapper--light"
     >
       <div
         class="ColorSampler__picker ColorSampler__picker--light"
       >
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__picker-grid ColorSampler__picker-grid--light"
+          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
       </div>
       <div
-        class="ColorSampler__picker-target-color ColorSampler__picker-target-color--light"
+        class="ColorSampler__pickerTargetColor ColorSampler__pickerTargetColor--light"
       />
     </div>
     <div
@@ -225,7 +225,7 @@ exports[`ColorSampler snapshots should render ColorSampler 1`] = `
         class="ColorSampler__header ColorSampler__header--light"
       >
         <div
-          class="ColorSampler__selected-color ColorSampler__selected-color--light"
+          class="ColorSampler__selectedColor ColorSampler__selectedColor--light"
           style="background-color: rgba(0, 0, 0, 0);"
         />
       </div>
@@ -240,7 +240,7 @@ exports[`ColorSampler snapshots should render ColorSampler 1`] = `
           width="12"
         />
         <small
-          class="css-3thidm ColorSampler__prompt-description ColorSampler__prompt-description--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+          class="css-3thidm ColorSampler__promptDescription ColorSampler__promptDescription--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
           data-test-text=""
           style="text-align: inherit;"
         >
@@ -260,20 +260,20 @@ exports[`ColorSampler snapshots should render when is pending 1`] = `
     style="left: 15px; top: 15px;"
   >
     <div
-      class="ColorSampler__prevent-antd-event-mask ColorSampler__prevent-antd-event-mask--light"
+      class="ColorSampler__preventAntdEventMask ColorSampler__preventAntdEventMask--light"
       data-test-button="color-sampler"
     />
     <div
-      class="ColorSampler__picker-wrapper ColorSampler__picker-wrapper--light"
+      class="ColorSampler__pickerWrapper ColorSampler__pickerWrapper--light"
     >
       <div
         class="ColorSampler__picker ColorSampler__picker--light"
       />
       <div
-        class="ColorSampler__picker-target-color ColorSampler__picker-target-color--light"
+        class="ColorSampler__pickerTargetColor ColorSampler__pickerTargetColor--light"
       />
       <div
-        class="ColorSampler__picker-loader ColorSampler__picker-loader--light"
+        class="ColorSampler__pickerLoader ColorSampler__pickerLoader--light"
       >
         <div
           aria-busy="true"

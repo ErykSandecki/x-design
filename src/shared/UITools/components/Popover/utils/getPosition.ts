@@ -3,7 +3,7 @@ import { RefObject } from 'react';
 export const getPosition = (
   refItem: RefObject<HTMLElement>,
   refPopover: RefObject<HTMLElement>,
-): { top: number; left: number } => {
+): Pick<TOffsets, 'left' | 'top'> => {
   if (!refItem.current || !refPopover.current) {
     return { left: 0, top: 0 };
   }

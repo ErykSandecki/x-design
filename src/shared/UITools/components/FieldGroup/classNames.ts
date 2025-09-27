@@ -1,5 +1,6 @@
+// utils
+import { composeClassNames } from 'utils';
+
 export const className = 'FieldGroup';
 
-export const classNames = {
-  [className]: className,
-};
+export const classNames = composeClassNames(className, [className] as const);

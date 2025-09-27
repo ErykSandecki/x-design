@@ -1,0 +1,10 @@
+.TextFieldPopover {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  &__icon {
+    opacity: 0;
+  }
+}

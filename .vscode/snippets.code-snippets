@@ -1,0 +1,12 @@
+{
+  "ComposeClassNames": {
+    "prefix": "composeClassNames",
+    "body": ["composeClassNames(className, [className] as const)"],
+    "description": "Snippet dla composeClassNames",
+  },
+  "ComposeClassNamesChildren": {
+    "prefix": "composeClassNamesChildren",
+    "body": ["composeClassNames(className, [className] as const, ['$1'] as const)"],
+    "description": "Snippet dla composeClassNamesChildren",
+  },
+}

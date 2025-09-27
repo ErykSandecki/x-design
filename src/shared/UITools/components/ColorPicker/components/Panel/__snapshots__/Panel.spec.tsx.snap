@@ -103,20 +103,20 @@ exports[`Panel snapshots should render with active sampler 1`] = `
         style="left: 15px; top: 15px;"
       >
         <div
-          class="ColorSampler__prevent-antd-event-mask ColorSampler__prevent-antd-event-mask--light"
+          class="ColorSampler__preventAntdEventMask ColorSampler__preventAntdEventMask--light"
           data-test-button="color-sampler"
         />
         <div
-          class="ColorSampler__picker-wrapper ColorSampler__picker-wrapper--light"
+          class="ColorSampler__pickerWrapper ColorSampler__pickerWrapper--light"
         >
           <div
             class="ColorSampler__picker ColorSampler__picker--light"
           />
           <div
-            class="ColorSampler__picker-target-color ColorSampler__picker-target-color--light"
+            class="ColorSampler__pickerTargetColor ColorSampler__pickerTargetColor--light"
           />
           <div
-            class="ColorSampler__picker-loader ColorSampler__picker-loader--light"
+            class="ColorSampler__pickerLoader ColorSampler__pickerLoader--light"
           >
             <div
               aria-busy="true"

@@ -1,8 +1,12 @@
+//
+import { composeClassNames } from 'utils';
+
 export const className = 'Section';
 
-export const classNames = {
-  [className]: className,
-  header: `${className}__header`,
-  label: `${className}__label`,
-  buttons: `${className}__buttons`,
-};
+export const classNames = composeClassNames(
+  className,
+  [className] as const,
+  ['header'] as const,
+  ['label'] as const,
+  ['buttons'] as const,
+);

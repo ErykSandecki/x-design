@@ -89,7 +89,7 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
                 data-test-field-group=""
               >
                 <div
-                  class="css-1jnxvbp ColorPicker__hex-input ColorPicker__hex-input--light TextField TextField--light"
+                  class="css-1jnxvbp ColorPicker__hexInput ColorPicker__hexInput--light TextField TextField--light"
                   data-test-text-field="color"
                 >
                   <div
@@ -120,7 +120,7 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
                   />
                 </div>
                 <div
-                  class="css-1jnxvbp ColorPicker__alpha-input ColorPicker__alpha-input--light TextField TextField--light"
+                  class="css-1jnxvbp ColorPicker__alphaInput ColorPicker__alphaInput--light TextField TextField--light"
                   data-test-text-field="alpha"
                 >
                   <input
@@ -137,7 +137,7 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
                     data-test-scrubbable-input=""
                   >
                     <div
-                      class="ColorPicker__alpha-input-unit ColorPicker__alpha-input-unit--light"
+                      class="ColorPicker__alphaInputUnit ColorPicker__alphaInputUnit--light"
                     >
                       %
                     </div>
@@ -297,7 +297,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
           />
         </div>
         <div
-          class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--with-margin SectionColumn--with-margin--light"
+          class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
           data-test-section=""
         >
           <div
@@ -316,7 +316,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
             class="SectionColumn__wrapper SectionColumn__wrapper--light"
           >
             <div
-              class="SectionColumn__content SectionColumn__content--light SectionColumn__content--two-inputs SectionColumn__content--two-inputs--light"
+              class="SectionColumn__content SectionColumn__content--light SectionColumn__content--twoInputs SectionColumn__content--twoInputs--light"
               style="width: calc(100% - 24px - 0px - 8px);"
             >
               <div
@@ -408,7 +408,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
           </div>
         </div>
         <div
-          class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--with-margin SectionColumn--with-margin--light"
+          class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
           data-test-section=""
         >
           <div
@@ -427,11 +427,11 @@ exports[`PanelProperties snapshots should render when some element is selected 1
             class="SectionColumn__wrapper SectionColumn__wrapper--light"
           >
             <div
-              class="SectionColumn__content SectionColumn__content--light SectionColumn__content--two-inputs SectionColumn__content--two-inputs--light"
+              class="SectionColumn__content SectionColumn__content--light SectionColumn__content--twoInputs SectionColumn__content--twoInputs--light"
               style="width: calc(100% - 24px - 0px - 8px);"
             >
               <div
-                class="css-1jnxvbp TextField TextField--light TextField--full-width TextField--full-width--light"
+                class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
                 data-test-text-field="x"
               >
                 <div
@@ -455,7 +455,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                 />
               </div>
               <div
-                class="css-1jnxvbp TextField TextField--light TextField--full-width TextField--full-width--light"
+                class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
                 data-test-text-field="y"
               >
                 <div
@@ -504,11 +504,11 @@ exports[`PanelProperties snapshots should render when some element is selected 1
             class="SectionColumn__wrapper SectionColumn__wrapper--light"
           >
             <div
-              class="SectionColumn__content SectionColumn__content--light SectionColumn__content--two-inputs SectionColumn__content--two-inputs--light"
+              class="SectionColumn__content SectionColumn__content--light SectionColumn__content--twoInputs SectionColumn__content--twoInputs--light"
               style="width: calc(100% - 24px - 0px - 8px);"
             >
               <div
-                class="css-1jnxvbp TextField TextField--light TextField--full-width TextField--full-width--light"
+                class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
                 data-test-text-field="angle"
               >
                 <div
@@ -532,7 +532,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                 />
               </div>
               <div
-                class="css-1jnxvbp ButtonGroup ButtonGroup--light ButtonGroup--full-width ButtonGroup--full-width--light"
+                class="css-1jnxvbp ButtonGroup ButtonGroup--light ButtonGroup--fullWidth ButtonGroup--fullWidth--light"
                 data-test-button-group="layout-position"
               >
                 <div
@@ -623,7 +623,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
           </div>
         </div>
         <div
-          class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--with-margin SectionColumn--with-margin--light"
+          class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
           data-test-section=""
         >
           <div
@@ -646,7 +646,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
               style="width: calc(100% - 24px - 0px - 8px);"
             >
               <div
-                class="ToggleButtonGroup ToggleButtonGroup--light ToggleButtonGroup--full-width ToggleButtonGroup--full-width--light"
+                class="ToggleButtonGroup ToggleButtonGroup--light ToggleButtonGroup--fullWidth ToggleButtonGroup--fullWidth--light"
                 data-test-toggle-button-group="flow"
               >
                 <button
@@ -728,11 +728,11 @@ exports[`PanelProperties snapshots should render when some element is selected 1
             class="SectionColumn__wrapper SectionColumn__wrapper--light"
           >
             <div
-              class="SectionColumn__content SectionColumn__content--light SectionColumn__content--two-inputs SectionColumn__content--two-inputs--light"
+              class="SectionColumn__content SectionColumn__content--light SectionColumn__content--twoInputs SectionColumn__content--twoInputs--light"
               style="width: calc(100% - 24px - 0px - 8px);"
             >
               <div
-                class="css-1jnxvbp TextField TextField--light TextField--full-width TextField--full-width--light"
+                class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
                 data-test-text-field="width"
               >
                 <div
@@ -755,10 +755,11 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                   value="100"
                 />
                 <div
-                  class="TextField__icon-wrapper TextField__icon-wrapper--light"
+                  class="css-1jnxvbp TextFieldPopover TextFieldPopover--light"
+                  data-test-box=""
                 >
                   <div
-                    class="css-1jnxvbp TextField__icon TextField__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                    class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextField__icon TextField__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
                     data-test-icon="variant"
                     height="12"
                     name="Variant"
@@ -774,7 +775,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                       data-test-popover-item="0"
                     >
                       <div
-                        class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--light PopoverItem__check-icon--selected PopoverItem__check-icon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                        class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                         data-test-icon="check"
                         height="12"
                         name="Check"
@@ -800,7 +801,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                       data-test-popover-item="1"
                     >
                       <div
-                        class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                        class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                         data-test-icon="check"
                         height="12"
                         name="Check"
@@ -826,7 +827,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                       data-test-popover-item="2"
                     >
                       <div
-                        class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                        class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                         data-test-icon="check"
                         height="12"
                         name="Check"
@@ -855,7 +856,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                       data-test-popover-item="3"
                     >
                       <div
-                        class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                        class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                         data-test-icon="check"
                         height="12"
                         name="Check"
@@ -881,7 +882,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                       data-test-popover-item="4"
                     >
                       <div
-                        class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                        class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                         data-test-icon="check"
                         height="12"
                         name="Check"
@@ -906,7 +907,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                 </div>
               </div>
               <div
-                class="css-1jnxvbp TextField TextField--light TextField--full-width TextField--full-width--light"
+                class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
                 data-test-text-field="height"
               >
                 <div
@@ -929,10 +930,11 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                   value="100"
                 />
                 <div
-                  class="TextField__icon-wrapper TextField__icon-wrapper--light"
+                  class="css-1jnxvbp TextFieldPopover TextFieldPopover--light"
+                  data-test-box=""
                 >
                   <div
-                    class="css-1jnxvbp TextField__icon TextField__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                    class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextField__icon TextField__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
                     data-test-icon="variant"
                     height="12"
                     name="Variant"
@@ -948,7 +950,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                       data-test-popover-item="0"
                     >
                       <div
-                        class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--light PopoverItem__check-icon--selected PopoverItem__check-icon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                        class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                         data-test-icon="check"
                         height="12"
                         name="Check"
@@ -974,7 +976,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                       data-test-popover-item="1"
                     >
                       <div
-                        class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                        class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                         data-test-icon="check"
                         height="12"
                         name="Check"
@@ -1000,7 +1002,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                       data-test-popover-item="2"
                     >
                       <div
-                        class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                        class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                         data-test-icon="check"
                         height="12"
                         name="Check"
@@ -1029,7 +1031,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                       data-test-popover-item="3"
                     >
                       <div
-                        class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                        class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                         data-test-icon="check"
                         height="12"
                         name="Check"
@@ -1055,7 +1057,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                       data-test-popover-item="4"
                     >
                       <div
-                        class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                        class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                         data-test-icon="check"
                         height="12"
                         name="Check"
@@ -1180,7 +1182,7 @@ exports[`PanelProperties snapshots should render with changed width 1`] = `
                 data-test-field-group=""
               >
                 <div
-                  class="css-1jnxvbp ColorPicker__hex-input ColorPicker__hex-input--light TextField TextField--light"
+                  class="css-1jnxvbp ColorPicker__hexInput ColorPicker__hexInput--light TextField TextField--light"
                   data-test-text-field="color"
                 >
                   <div
@@ -1211,7 +1213,7 @@ exports[`PanelProperties snapshots should render with changed width 1`] = `
                   />
                 </div>
                 <div
-                  class="css-1jnxvbp ColorPicker__alpha-input ColorPicker__alpha-input--light TextField TextField--light"
+                  class="css-1jnxvbp ColorPicker__alphaInput ColorPicker__alphaInput--light TextField TextField--light"
                   data-test-text-field="alpha"
                 >
                   <input
@@ -1228,7 +1230,7 @@ exports[`PanelProperties snapshots should render with changed width 1`] = `
                     data-test-scrubbable-input=""
                   >
                     <div
-                      class="ColorPicker__alpha-input-unit ColorPicker__alpha-input-unit--light"
+                      class="ColorPicker__alphaInputUnit ColorPicker__alphaInputUnit--light"
                     >
                       %
                     </div>

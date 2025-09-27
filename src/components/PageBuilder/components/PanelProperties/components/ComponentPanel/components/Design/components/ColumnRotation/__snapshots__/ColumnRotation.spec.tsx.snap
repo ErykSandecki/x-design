@@ -22,11 +22,11 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
       class="SectionColumn__wrapper SectionColumn__wrapper--light"
     >
       <div
-        class="SectionColumn__content SectionColumn__content--light SectionColumn__content--two-inputs SectionColumn__content--two-inputs--light"
+        class="SectionColumn__content SectionColumn__content--light SectionColumn__content--twoInputs SectionColumn__content--twoInputs--light"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp TextField TextField--light TextField--full-width TextField--full-width--light"
+          class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
           data-test-text-field="angle"
         >
           <div
@@ -50,7 +50,7 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
           />
         </div>
         <div
-          class="css-1jnxvbp ButtonGroup ButtonGroup--light ButtonGroup--full-width ButtonGroup--full-width--light"
+          class="css-1jnxvbp ButtonGroup ButtonGroup--light ButtonGroup--fullWidth ButtonGroup--fullWidth--light"
           data-test-button-group="layout-position"
         >
           <div
@@ -121,11 +121,11 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
       class="SectionColumn__wrapper SectionColumn__wrapper--light"
     >
       <div
-        class="SectionColumn__content SectionColumn__content--light SectionColumn__content--two-inputs SectionColumn__content--two-inputs--light"
+        class="SectionColumn__content SectionColumn__content--light SectionColumn__content--twoInputs SectionColumn__content--twoInputs--light"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp TextField TextField--light TextField--full-width TextField--full-width--light"
+          class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
           data-test-text-field="angle"
         >
           <div
@@ -149,7 +149,7 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
           />
         </div>
         <div
-          class="css-1jnxvbp ButtonGroup ButtonGroup--light ButtonGroup--full-width ButtonGroup--full-width--light"
+          class="css-1jnxvbp ButtonGroup ButtonGroup--light ButtonGroup--fullWidth ButtonGroup--fullWidth--light"
           data-test-button-group="layout-position"
         >
           <div

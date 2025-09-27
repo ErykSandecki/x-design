@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextFieldPopover snapshots should render TextFieldPopover 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1jnxvbp TextFieldPopover TextFieldPopover--light"
+    data-test-box=""
+  >
+    <div
+      class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light classNameIcon Icon Icon--light Icon--clickable Icon--clickable--light"
+      data-test-icon="variant"
+      height="12"
+      name="Variant"
+      width="12"
+    />
+    <div
+      class="Popover Popover--light"
+      data-test-popover="popover"
+      style="left: 0px; top: 0px;"
+    >
+      children
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TextFieldPopover snapshots should render with opened popover 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1jnxvbp TextFieldPopover TextFieldPopover--light"
+    data-test-box=""
+  >
+    <div
+      class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light classNameIcon Icon Icon--light Icon--clickable Icon--clickable--light"
+      data-test-icon="variant"
+      height="12"
+      name="Variant"
+      width="12"
+    />
+    <div
+      class="Popover Popover--light Popover--selected Popover--selected--light"
+      data-test-popover="popover"
+      style="left: 0px; top: 0px;"
+    >
+      children
+    </div>
+  </div>
+</DocumentFragment>
+`;
