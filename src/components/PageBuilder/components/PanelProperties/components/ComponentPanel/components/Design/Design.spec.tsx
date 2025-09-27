@@ -122,9 +122,7 @@ describe('Design behaviors', () => {
           ...stateMock[PAGE_BUILDER].pages,
           ['0']: {
             ...stateMock[PAGE_BUILDER].pages['0'],
-            selectedElements: [
-              { ...selectedElementMock, id: 'test-2', parentId: 'test-1' },
-            ],
+            selectedElements: [{ ...selectedElementMock, id: 'test-2', parentId: 'test-1' }],
           },
         },
       },
@@ -138,15 +136,10 @@ describe('Design behaviors', () => {
     );
 
     // action
-    fireEvent.click(
-      getByE2EAttribute(container, E2EAttribute.icon, 'position-switcher'),
-    );
+    fireEvent.click(getByE2EAttribute(container, E2EAttribute.icon, 'position-switcher'));
 
     // result
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-2']
-        .position,
-    ).toBe('relative');
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-2'].position).toBe('relative');
   });
 
   it('should change layout', () => {
@@ -159,9 +152,7 @@ describe('Design behaviors', () => {
           ...stateMock[PAGE_BUILDER].pages,
           ['0']: {
             ...stateMock[PAGE_BUILDER].pages['0'],
-            selectedElements: [
-              { ...selectedElementMock, id: 'test-2', parentId: 'test-1' },
-            ],
+            selectedElements: [{ ...selectedElementMock, id: 'test-2', parentId: 'test-1' }],
           },
         },
       },
@@ -175,15 +166,10 @@ describe('Design behaviors', () => {
     );
 
     // action
-    fireEvent.click(
-      getByE2EAttribute(container, E2EAttribute.icon, 'auto-layout'),
-    );
+    fireEvent.click(getByE2EAttribute(container, E2EAttribute.icon, 'auto-layout'));
 
     // result
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-2']
-        .layout.type,
-    ).toBe(LayoutType.vertical);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-2'].layout.type).toBe(LayoutType.vertical);
   });
 
   it('should change layout to vertical when mixed', () => {
@@ -248,10 +234,7 @@ describe('Design behaviors', () => {
                 },
               },
             },
-            selectedElements: [
-              selectedElementMock,
-              { ...selectedElementMock, id: 'test-2', parentId: '-1' },
-            ],
+            selectedElements: [selectedElementMock, { ...selectedElementMock, id: 'test-2', parentId: '-1' }],
           },
         },
       },
@@ -265,19 +248,11 @@ describe('Design behaviors', () => {
     );
 
     // action
-    fireEvent.click(
-      getByE2EAttribute(container, E2EAttribute.icon, 'auto-layout'),
-    );
+    fireEvent.click(getByE2EAttribute(container, E2EAttribute.icon, 'auto-layout'));
 
     // result
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1']
-        .layout.type,
-    ).toBe(LayoutType.vertical);
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-2']
-        .layout.type,
-    ).toBe(LayoutType.vertical);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].layout.type).toBe(LayoutType.vertical);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-2'].layout.type).toBe(LayoutType.vertical);
   });
 
   it('should change layout to default when vertical', () => {
@@ -342,9 +317,7 @@ describe('Design behaviors', () => {
                 },
               },
             },
-            selectedElements: [
-              { ...selectedElementMock, id: 'test-2', parentId: '-1' },
-            ],
+            selectedElements: [{ ...selectedElementMock, id: 'test-2', parentId: '-1' }],
           },
         },
       },
@@ -358,15 +331,10 @@ describe('Design behaviors', () => {
     );
 
     // action
-    fireEvent.click(
-      getByE2EAttribute(container, E2EAttribute.icon, 'auto-layout'),
-    );
+    fireEvent.click(getByE2EAttribute(container, E2EAttribute.icon, 'auto-layout'));
 
     // result
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-2']
-        .layout.type,
-    ).toBe(LayoutType.default);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-2'].layout.type).toBe(LayoutType.default);
   });
 
   it('should fit layout', () => {
@@ -393,18 +361,10 @@ describe('Design behaviors', () => {
     );
 
     // action
-    fireEvent.click(
-      getByE2EAttribute(container, E2EAttribute.icon, 'fit-layout'),
-    );
+    fireEvent.click(getByE2EAttribute(container, E2EAttribute.icon, 'fit-layout'));
 
     // result
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1']
-        .height.value,
-    ).toBe('auto');
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].width
-        .value,
-    ).toBe('auto');
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].height.value).toBe('auto');
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].width.value).toBe('auto');
   });
 });

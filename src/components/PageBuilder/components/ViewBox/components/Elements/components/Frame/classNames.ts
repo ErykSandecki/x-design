@@ -13,10 +13,7 @@ export const classNames = {
     modificators: {
       hover: `${className}__label--hover`,
       selected: `${className}__label--selected`,
-      ...mapValues(
-        ElementStickWallPosition,
-        (stickWall) => `${className}__label--${stickWall}`,
-      ),
+      ...mapValues(ElementStickWallPosition, (stickWall) => `${className}__label--${stickWall}`),
     },
   },
 };

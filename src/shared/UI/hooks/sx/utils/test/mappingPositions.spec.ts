@@ -18,9 +18,7 @@ describe('mappingPositions', () => {
     });
 
     // result
-    expect(result).toBe(
-      `bottom: 0;\nleft: 0;\nposition: absolute;\noverflow: auto;\nright: 0;\ntop: 0;\nz-index: 4;`,
-    );
+    expect(result).toBe(`bottom: 0;\nleft: 0;\nposition: absolute;\noverflow: auto;\nright: 0;\ntop: 0;\nz-index: 4;`);
   });
 
   it('should return add position relative when zIndex passed', () => {

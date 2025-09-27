@@ -59,8 +59,7 @@ describe('useMetaProps', () => {
           fields: {
             ...reduxHookFormStateMock[REDUX_HOOK_FORM].testForm.fields,
             testField: {
-              ...reduxHookFormStateMock[REDUX_HOOK_FORM].testForm.fields
-                .testField,
+              ...reduxHookFormStateMock[REDUX_HOOK_FORM].testForm.fields.testField,
               data: undefined,
             },
           },

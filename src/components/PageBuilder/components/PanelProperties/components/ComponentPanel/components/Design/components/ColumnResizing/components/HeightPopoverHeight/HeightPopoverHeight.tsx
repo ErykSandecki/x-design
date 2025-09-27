@@ -24,10 +24,7 @@ export type THeightPopoverHeightProps = {
   isMixed: boolean;
 };
 
-const HeightPopoverHeight: FC<THeightPopoverHeightProps> = ({
-  height,
-  isMixed,
-}) => {
+const HeightPopoverHeight: FC<THeightPopoverHeightProps> = ({ height, isMixed }) => {
   const dispatch = useDispatch();
   const { t } = useTranslation();
 
@@ -55,18 +52,8 @@ const HeightPopoverHeight: FC<THeightPopoverHeightProps> = ({
         text={t(`${translationNameSpace}.3`)}
       />
       <PopoverCompound.PopoverSeparator />
-      <PopoverCompound.PopoverItem
-        icon="MinHeight"
-        index={3}
-        selected={false}
-        text={t(`${translationNameSpace}.3`)}
-      />
-      <PopoverCompound.PopoverItem
-        icon="MaxHeight"
-        index={4}
-        selected={false}
-        text={t(`${translationNameSpace}.4`)}
-      />
+      <PopoverCompound.PopoverItem icon="MinHeight" index={3} selected={false} text={t(`${translationNameSpace}.3`)} />
+      <PopoverCompound.PopoverItem icon="MaxHeight" index={4} selected={false} text={t(`${translationNameSpace}.4`)} />
     </>
   );
 };

@@ -20,12 +20,9 @@ describe('formSelectorCreator', () => {
 
   it('should return form data', () => {
     // before
-    const selectorFunction = (formSelectorCreator('testForm') as any)
-      .resultFunc;
+    const selectorFunction = (formSelectorCreator('testForm') as any).resultFunc;
 
     // result
-    expect(selectorFunction(state)).toStrictEqual(
-      reduxHookFormStateMock[REDUCER_KEY].testForm,
-    );
+    expect(selectorFunction(state)).toStrictEqual(reduxHookFormStateMock[REDUCER_KEY].testForm);
   });
 });

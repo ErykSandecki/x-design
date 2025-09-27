@@ -50,12 +50,7 @@ export const TextField: FC<TTextFieldProps> = ({
 }) => {
   const refItem = useRef(null);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-  const { selected, setSelected } = useOutsideClick(
-    [],
-    refItem,
-    noop,
-    idContainer,
-  );
+  const { selected, setSelected } = useOutsideClick([], refItem, noop, idContainer);
 
   return (
     <Box
@@ -63,14 +58,8 @@ export const TextField: FC<TTextFieldProps> = ({
         className: cx(
           className,
           classNamesWithTheme[textFieldClassName].name,
-          [
-            classNamesWithTheme[textFieldClassName].modificators.disabled,
-            disabled,
-          ],
-          [
-            classNamesWithTheme[textFieldClassName].modificators.fullWidth,
-            fullWidth,
-          ],
+          [classNamesWithTheme[textFieldClassName].modificators.disabled, disabled],
+          [classNamesWithTheme[textFieldClassName].modificators.fullWidth, fullWidth],
         ),
       }}
       e2eAttribute={E2EAttribute.textField}
@@ -96,9 +85,7 @@ export const TextField: FC<TTextFieldProps> = ({
             width={12}
           />
           <Popover e2eValue="popover" refItem={refItem} selected={selected}>
-            <PopoverCompound.PopoverRoot setSelected={setSelected}>
-              {popoverChildren}
-            </PopoverCompound.PopoverRoot>
+            <PopoverCompound.PopoverRoot setSelected={setSelected}>{popoverChildren}</PopoverCompound.PopoverRoot>
           </Popover>
         </div>
       ) : (

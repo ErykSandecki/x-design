@@ -42,9 +42,7 @@ export const useOutsideClick = (
     }
   };
 
-  const updateEventHandler = (
-    key: 'addEventListener' | 'removeEventListener',
-  ): void => {
+  const updateEventHandler = (key: 'addEventListener' | 'removeEventListener'): void => {
     if (id) {
       document.getElementById(id)?.[key]('mousedown', handleClickOutside);
     } else {

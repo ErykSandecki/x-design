@@ -12,8 +12,7 @@ const state = reduxHookFormStateMock[REDUCER_KEY].testForm;
 describe('formAttributesSelectorCreator', () => {
   it('should return nothing', () => {
     // before
-    const selectorFunction = (formAttributesSelectorCreator('', '') as any)
-      .resultFunc;
+    const selectorFunction = (formAttributesSelectorCreator('', '') as any).resultFunc;
 
     // result
     expect(selectorFunction(state)).toStrictEqual(undefined);
@@ -21,9 +20,7 @@ describe('formAttributesSelectorCreator', () => {
 
   it('should return single attribute', () => {
     // before
-    const selectorFunction = (
-      formAttributesSelectorCreator('asyncTimeDelay', 'testForm') as any
-    ).resultFunc;
+    const selectorFunction = (formAttributesSelectorCreator('asyncTimeDelay', 'testForm') as any).resultFunc;
 
     // result
     expect(selectorFunction(state)).toStrictEqual(0);
@@ -31,12 +28,7 @@ describe('formAttributesSelectorCreator', () => {
 
   it('should return set of attributes', () => {
     // before
-    const selectorFunction = (
-      formAttributesSelectorCreator(
-        ['asyncTimeDelay', 'error'],
-        'testForm',
-      ) as any
-    ).resultFunc;
+    const selectorFunction = (formAttributesSelectorCreator(['asyncTimeDelay', 'error'], 'testForm') as any).resultFunc;
 
     // result
     expect(selectorFunction(state)).toStrictEqual({

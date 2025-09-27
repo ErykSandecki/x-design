@@ -33,10 +33,7 @@ export const Color: FC<TColorProps> = ({ alpha, color }) => {
       }}
       e2eAttribute={E2EAttribute.color}
     >
-      <div
-        className={cx(classNamesWithTheme.picker)}
-        style={{ backgroundColor: hexToRgb(color, 100) }}
-      />
+      <div className={cx(classNamesWithTheme.picker)} style={{ backgroundColor: hexToRgb(color, 100) }} />
       <div
         className={cx(classNamesWithTheme.pickerAlpha)}
         style={{ backgroundColor: hexToRgb(color, parseInt(alpha)) }}

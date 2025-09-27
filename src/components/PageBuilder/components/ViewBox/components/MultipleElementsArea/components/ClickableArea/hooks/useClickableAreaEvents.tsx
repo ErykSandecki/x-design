@@ -22,19 +22,9 @@ export const useClickableAreaEvents = (): TUseClickableAreaEvents => {
   const [isPressing, setIsPressing] = useState(false);
 
   useMouseMoveEvent(cursorPosition, isPressing, setIsMoving);
-  useMouseUpEvent(
-    isMoving,
-    possibleElementToSelect,
-    setIsMoving,
-    setIsPressing,
-    setPossibleElementToSelect,
-  );
+  useMouseUpEvent(isMoving, possibleElementToSelect, setIsMoving, setIsPressing, setPossibleElementToSelect);
 
   return {
-    onMouseDown: useMouseDownEvent(
-      cursorPosition,
-      setIsPressing,
-      setPossibleElementToSelect,
-    ),
+    onMouseDown: useMouseDownEvent(cursorPosition, setIsPressing, setPossibleElementToSelect),
   };
 };

@@ -14,7 +14,6 @@ import { BASE_2D } from 'shared';
 import { configureStore } from 'store';
 
 // types
-import { T2DCoordinates } from 'types';
 
 // utils
 import { getProviderWrapper } from 'test';

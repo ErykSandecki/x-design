@@ -51,9 +51,7 @@ describe('Toolbar behaviors', () => {
     );
 
     // action
-    fireEvent.mouseDown(
-      getByE2EAttribute(container, E2EAttribute.icon, MouseMode.comment),
-    );
+    fireEvent.mouseDown(getByE2EAttribute(container, E2EAttribute.icon, MouseMode.comment));
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(0);

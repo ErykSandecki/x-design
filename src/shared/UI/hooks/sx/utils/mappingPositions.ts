@@ -11,7 +11,5 @@ export const mappingPositions = (sx: TSX): string => {
   const zIndex = sx[Position.zIndex];
   const position = !anyPosition && zIndex ? 'relative' : anyPosition;
 
-  return position
-    ? getCssStyles({ ...sx, position }, enumToArray<string>(Position))
-    : '';
+  return position ? getCssStyles({ ...sx, position }, enumToArray<string>(Position)) : '';
 };

@@ -114,9 +114,7 @@ describe('handleChangePosition', () => {
               },
             },
           },
-          selectedElements: [
-            { ...selectedElementMock, id: 'test-2', parentId: 'test-1' },
-          ],
+          selectedElements: [{ ...selectedElementMock, id: 'test-2', parentId: 'test-1' }],
         },
       },
     });
@@ -198,9 +196,7 @@ describe('handleChangePosition', () => {
               },
             },
           },
-          selectedElements: [
-            { ...selectedElementMock, id: 'test-2', parentId: 'test-1' },
-          ],
+          selectedElements: [{ ...selectedElementMock, id: 'test-2', parentId: 'test-1' }],
         },
       },
     });
@@ -285,9 +281,7 @@ describe('handleChangePosition', () => {
               },
             },
           },
-          selectedElements: [
-            { ...selectedElementMock, id: 'test-3', parentId: 'test-1' },
-          ],
+          selectedElements: [{ ...selectedElementMock, id: 'test-3', parentId: 'test-1' }],
         },
       },
     });

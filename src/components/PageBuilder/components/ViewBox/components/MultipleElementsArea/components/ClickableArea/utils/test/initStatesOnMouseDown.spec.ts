@@ -8,13 +8,7 @@ const mockCallBack = jest.fn();
 describe('initStatesOnMouseDown', () => {
   it('should trigger events', () => {
     // before
-    initStatesOnMouseDown(
-      mockCallBack,
-      { shiftKey: false } as MouseEvent,
-      'test-1',
-      mockCallBack,
-      mockCallBack,
-    );
+    initStatesOnMouseDown(mockCallBack, { shiftKey: false } as MouseEvent, 'test-1', mockCallBack, mockCallBack);
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(2);
@@ -22,13 +16,7 @@ describe('initStatesOnMouseDown', () => {
 
   it('should not trigger events but unselect item', () => {
     // before
-    initStatesOnMouseDown(
-      mockCallBack,
-      { shiftKey: true } as MouseEvent,
-      'test-1',
-      mockCallBack,
-      mockCallBack,
-    );
+    initStatesOnMouseDown(mockCallBack, { shiftKey: true } as MouseEvent, 'test-1', mockCallBack, mockCallBack);
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(1);

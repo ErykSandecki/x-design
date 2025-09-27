@@ -2,11 +2,7 @@ import { Dispatch } from 'redux';
 import { MouseEvent } from 'react';
 
 // store
-import {
-  selectElement,
-  unselectElement,
-  selectElements,
-} from 'store/pageBuilder/actions';
+import { selectElement, unselectElement, selectElements } from 'store/pageBuilder/actions';
 
 // types
 import { TSelectedElement } from 'store/pageBuilder/types';

@@ -5,14 +5,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { UITools } from 'shared';
 
 // store
-import {
-  changeBackground,
-  updateEventsStatus,
-} from 'store/pageBuilder/actions';
-import {
-  eventSelectorCreator,
-  pageBackgroundSelectorCreator,
-} from 'store/pageBuilder/selectors';
+import { changeBackground, updateEventsStatus } from 'store/pageBuilder/actions';
+import { eventSelectorCreator, pageBackgroundSelectorCreator } from 'store/pageBuilder/selectors';
 
 // types
 import { TColor } from 'types';
@@ -30,9 +24,7 @@ const ColumnBackground: FC = () => {
         <UITools.ButtonIcon
           key={0}
           name={visible ? 'EyesOpened' : 'EyesClosed'}
-          onClick={() =>
-            dispatch(changeBackground({ visible: !visible }, '-1'))
-          }
+          onClick={() => dispatch(changeBackground({ visible: !visible }, '-1'))}
         />,
       ]}
     >
@@ -41,29 +33,13 @@ const ColumnBackground: FC = () => {
         alpha={alpha}
         color={color}
         format={format}
-        onChangeAlpha={(alpha) =>
-          dispatch(
-            changeBackground({ properties: { alpha, color, format } }, '-1'),
-          )
-        }
-        onChangeColor={(alpha, color) =>
-          dispatch(
-            changeBackground({ properties: { alpha, color, format } }, '-1'),
-          )
-        }
-        onFormatChange={(format) =>
-          dispatch(
-            changeBackground({ properties: { alpha, color, format } }, '-1'),
-          )
-        }
+        onChangeAlpha={(alpha) => dispatch(changeBackground({ properties: { alpha, color, format } }, '-1'))}
+        onChangeColor={(alpha, color) => dispatch(changeBackground({ properties: { alpha, color, format } }, '-1'))}
+        onFormatChange={(format) => dispatch(changeBackground({ properties: { alpha, color, format } }, '-1'))}
         onClickColorSampler={(color) => {
-          dispatch(
-            changeBackground({ properties: { alpha, color, format } }, '-1'),
-          );
+          dispatch(changeBackground({ properties: { alpha, color, format } }, '-1'));
         }}
-        onClickSampler={() =>
-          dispatch(updateEventsStatus({ colorSampler: true }))
-        }
+        onClickSampler={() => dispatch(updateEventsStatus({ colorSampler: true }))}
         placement="leftBottom"
       />
     </UITools.SectionColumn>

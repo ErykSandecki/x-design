@@ -54,23 +54,10 @@ const TransformArea: FC<TTransformAreaProps> = ({
     onMouseEnterAnchorRotate,
     onMouseLeaveAnchorResize,
     onMouseLeaveAnchorRotate,
-  } = useTransformAreaEvents(
-    angle,
-    cursorAngle,
-    elementRef,
-    height,
-    id,
-    moseMode,
-    width,
-    x,
-    y,
-  );
+  } = useTransformAreaEvents(angle, cursorAngle, elementRef, height, id, moseMode, width, x, y);
 
   return (
-    <div
-      className={cx(classNamesWithTheme[className])}
-      style={{ height, width }}
-    >
+    <div className={cx(classNamesWithTheme[className])} style={{ height, width }}>
       {/* RESIZE AREA */}
       {enumToArray(AnchorResize)
         .filter((anchor) => anchor !== AnchorRotate.none)
@@ -83,16 +70,10 @@ const TransformArea: FC<TTransformAreaProps> = ({
             <div
               className={cx(
                 classNamesWithTheme.anchorResize.name,
-                classNamesWithTheme.anchorResize.modificators[
-                  anchor as keyof typeof AnchorResize
-                ],
+                classNamesWithTheme.anchorResize.modificators[anchor as keyof typeof AnchorResize],
               )}
-              onMouseDown={(event) =>
-                onMouseDownAnchorResize(anchor as AnchorResize, event)
-              }
-              onMouseEnter={() =>
-                onMouseEnterAnchorResize(anchor as AnchorResize)
-              }
+              onMouseDown={(event) => onMouseDownAnchorResize(anchor as AnchorResize, event)}
+              onMouseEnter={() => onMouseEnterAnchorResize(anchor as AnchorResize)}
               onMouseLeave={onMouseLeaveAnchorResize}
             />
           </E2EDataAttribute>
@@ -110,16 +91,10 @@ const TransformArea: FC<TTransformAreaProps> = ({
             <div
               className={cx(
                 classNamesWithTheme.anchorRotate.name,
-                classNamesWithTheme.anchorRotate.modificators[
-                  anchor as keyof typeof AnchorRotate
-                ],
+                classNamesWithTheme.anchorRotate.modificators[anchor as keyof typeof AnchorRotate],
               )}
-              onMouseDown={(event) =>
-                onMouseDownAnchorRotate(anchor as AnchorRotate, event)
-              }
-              onMouseEnter={() =>
-                onMouseEnterAnchorRotate(anchor as AnchorRotate)
-              }
+              onMouseDown={(event) => onMouseDownAnchorRotate(anchor as AnchorRotate, event)}
+              onMouseEnter={() => onMouseEnterAnchorRotate(anchor as AnchorRotate)}
               onMouseLeave={onMouseLeaveAnchorRotate}
             />
           </E2EDataAttribute>

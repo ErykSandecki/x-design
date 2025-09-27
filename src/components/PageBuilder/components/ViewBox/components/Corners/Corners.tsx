@@ -12,7 +12,6 @@ import { BORDER, HHW, RX, SHW } from './constants';
 import styles from './corners.scss';
 
 // types
-import { TRectCoordinates } from 'types';
 
 export type TCornersProps = {
   rectCoordinates: TRectCoordinates;
@@ -36,27 +35,9 @@ const Corners: FC<TCornersProps> = ({ rectCoordinates }) => {
       }}
     >
       <rect x={0 - HHW} y={0 - HHW} width={SHW} height={SHW} rx={RX} />
-      <rect
-        x={0 - HHW}
-        y={height - HHW - BORDER}
-        width={SHW}
-        height={SHW}
-        rx={RX}
-      />
-      <rect
-        x={width - HHW - BORDER}
-        y={0 - HHW}
-        width={SHW}
-        height={SHW}
-        rx={RX}
-      />
-      <rect
-        x={width - HHW - BORDER}
-        y={height - HHW - BORDER}
-        width={SHW}
-        height={SHW}
-        rx={RX}
-      />
+      <rect x={0 - HHW} y={height - HHW - BORDER} width={SHW} height={SHW} rx={RX} />
+      <rect x={width - HHW - BORDER} y={0 - HHW} width={SHW} height={SHW} rx={RX} />
+      <rect x={width - HHW - BORDER} y={height - HHW - BORDER} width={SHW} height={SHW} rx={RX} />
     </svg>
   );
 };

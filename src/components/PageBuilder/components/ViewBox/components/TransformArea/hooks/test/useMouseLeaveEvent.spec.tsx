@@ -8,9 +8,7 @@ const mockCallBack = jest.fn();
 describe('useMouseLeaveEvent', () => {
   it(`should trigger event on resize`, () => {
     // before
-    const { result } = renderHook(() =>
-      useMouseLeaveEvent(false, false, mockCallBack, mockCallBack),
-    );
+    const { result } = renderHook(() => useMouseLeaveEvent(false, false, mockCallBack, mockCallBack));
 
     // action
     result.current.onMouseLeaveAnchorResize();
@@ -21,9 +19,7 @@ describe('useMouseLeaveEvent', () => {
 
   it(`should trigger event on rotate`, () => {
     // before
-    const { result } = renderHook(() =>
-      useMouseLeaveEvent(false, false, mockCallBack, mockCallBack),
-    );
+    const { result } = renderHook(() => useMouseLeaveEvent(false, false, mockCallBack, mockCallBack));
 
     // action
     result.current.onMouseLeaveAnchorRotate();
@@ -34,9 +30,7 @@ describe('useMouseLeaveEvent', () => {
 
   it(`should not trigger any events`, () => {
     // before
-    const { result } = renderHook(() =>
-      useMouseLeaveEvent(true, true, mockCallBack, mockCallBack),
-    );
+    const { result } = renderHook(() => useMouseLeaveEvent(true, true, mockCallBack, mockCallBack));
 
     // action
     result.current.onMouseLeaveAnchorResize();

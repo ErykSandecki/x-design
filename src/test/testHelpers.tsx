@@ -16,9 +16,7 @@ export const getByE2EAttribute = (
   e2eValue?: TE2EDataAttributeProps['value'],
 ): HTMLElement =>
   e2eValue
-    ? container.querySelector(
-        `[${getDataTestAttribute(e2eAttribute)}="${e2eValue}"]`,
-      )!
+    ? container.querySelector(`[${getDataTestAttribute(e2eAttribute)}="${e2eValue}"]`)!
     : container.querySelector(`[${getDataTestAttribute(e2eAttribute)}]`)!;
 
 export const getProviderWrapper =
@@ -37,10 +35,5 @@ export const getProviderWrapper =
 export const sleep = async (time = 0): Promise<NodeJS.Timeout> =>
   await new Promise((resolve) => setTimeout(resolve, time));
 
-export const matchClassName = (
-  htmlElement: HTMLElement,
-  targetClassName: string,
-): boolean =>
-  values(htmlElement.classList).some((className) =>
-    className.includes(targetClassName),
-  );
+export const matchClassName = (htmlElement: HTMLElement, targetClassName: string): boolean =>
+  values(htmlElement.classList).some((className) => className.includes(targetClassName));

@@ -10,7 +10,6 @@ import { BASE_2D } from 'shared';
 import { store as storeToMock } from 'store/store';
 
 // types
-import { T2DCoordinates } from 'types';
 
 // utils
 import { updateElementPosition } from '../updateElementPosition';
@@ -32,12 +31,7 @@ describe('updateElementPosition', () => {
 
   it(`should update positions`, () => {
     // before
-    updateElementPosition(
-      cursorPosition,
-      mockCallBack,
-      { clientX: 0, clientY: 0 } as MouseEvent,
-      '-1',
-    );
+    updateElementPosition(cursorPosition, mockCallBack, { clientX: 0, clientY: 0 } as MouseEvent, '-1');
 
     // result
     expect(mockCallBack.mock.calls[0][0].payload.coordinates).toStrictEqual({
@@ -48,12 +42,7 @@ describe('updateElementPosition', () => {
 
   it(`should set elements coordinates`, () => {
     // before
-    updateElementPosition(
-      cursorPosition,
-      mockCallBack,
-      { clientX: 0, clientY: 0 } as MouseEvent,
-      '-1',
-    );
+    updateElementPosition(cursorPosition, mockCallBack, { clientX: 0, clientY: 0 } as MouseEvent, '-1');
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(1);

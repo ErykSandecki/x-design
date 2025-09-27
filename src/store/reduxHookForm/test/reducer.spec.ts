@@ -1,9 +1,5 @@
 // mocks
-import {
-  fieldMock,
-  formMock,
-  reduxHookFormStateMock,
-} from 'test/mocks/reducer/reduxHookFormMock';
+import { fieldMock, formMock, reduxHookFormStateMock } from 'test/mocks/reducer/reduxHookFormMock';
 
 // others
 import {
@@ -43,10 +39,7 @@ describe('ReduxHookForm', () => {
 
   it('should return default state', () => {
     // before
-    const state = reduxHookForm(
-      { ...reduxHookFormStateMock[REDUCER_KEY] },
-      { type: '' },
-    );
+    const state = reduxHookForm({ ...reduxHookFormStateMock[REDUCER_KEY] }, { type: '' });
 
     // result
     expect(state).toEqual(reduxHookFormStateMock[REDUCER_KEY]);

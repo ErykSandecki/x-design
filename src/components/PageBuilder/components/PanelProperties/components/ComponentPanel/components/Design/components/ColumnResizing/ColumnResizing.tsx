@@ -38,18 +38,8 @@ const ColumnResizing: FC = () => {
   const firstElement = first(selectedElements);
   const element = useSelector(elementAllDataSelectorCreator(firstElement.id));
   const isMultiple = size(selectedElements) > 1;
-  const isMixedHeight = isMixed(
-    dynamicData,
-    firstElement,
-    'height.value',
-    selectedElements,
-  );
-  const isMixedWidth = isMixed(
-    dynamicData,
-    firstElement,
-    'width.value',
-    selectedElements,
-  );
+  const isMixedHeight = isMixed(dynamicData, firstElement, 'height.value', selectedElements);
+  const isMixedWidth = isMixed(dynamicData, firstElement, 'width.value', selectedElements);
   const {
     height,
     isFocused,
@@ -67,29 +57,17 @@ const ColumnResizing: FC = () => {
   const isPureWidth = isPureNumber(width);
 
   return (
-    <UITools.SectionColumn
-      gridColumnType={GridColumnType.twoInputs}
-      labels={[t(`${translationNameSpace}.label`)]}
-    >
+    <UITools.SectionColumn gridColumnType={GridColumnType.twoInputs} labels={[t(`${translationNameSpace}.label`)]}>
       <UITools.TextField
         e2eValue="width"
         fullWidth
         idContainer={PANEL_PROPERTIES_ID}
         onBlur={onBlurWidth}
-        onChange={(event) =>
-          onChangeWidth(sanitizeNumberInput(event.target.value))
-        }
+        onChange={(event) => onChangeWidth(sanitizeNumberInput(event.target.value))}
         onClick={() => refInputWidth.current.select()}
         onFocus={() => onFocus('width')}
-        onKeyDown={(event) =>
-          handleSubmitInput(KeyboardKeys.enter, refInputWidth.current)(event)
-        }
-        popoverChildren={
-          <HeightPopoverWidth
-            isMixed={isMixedWidth}
-            width={dynamicData[firstElement.id].width}
-          />
-        }
+        onKeyDown={(event) => handleSubmitInput(KeyboardKeys.enter, refInputWidth.current)(event)}
+        popoverChildren={<HeightPopoverWidth isMixed={isMixedWidth} width={dynamicData[firstElement.id].width} />}
         ref={refInputWidth}
         startAdornment={
           <>
@@ -104,50 +82,30 @@ const ColumnResizing: FC = () => {
               {isPureWidth ? (
                 <Small color={ColorsTheme.neutral2}>W</Small>
               ) : (
-                <Icon
-                  color={ColorsTheme.neutral2}
-                  height={12}
-                  name="WidthRestricted"
-                  width={12}
-                />
+                <Icon color={ColorsTheme.neutral2} height={12} name="WidthRestricted" width={12} />
               )}
             </ScrubbableInput>
-            {isFocused !== 'width' &&
-              (!isPureWidth || unitWidth) &&
-              !isMixedWidth && (
-                <UITools.Chip>
-                  {width}
-                  {unitWidth ?? ''}
-                </UITools.Chip>
-              )}
+            {isFocused !== 'width' && (!isPureWidth || unitWidth) && !isMixedWidth && (
+              <UITools.Chip>
+                {width}
+                {unitWidth ?? ''}
+              </UITools.Chip>
+            )}
           </>
         }
         type={isMixedWidth || !isPureWidth ? 'text' : 'number'}
-        value={
-          (isPureWidth && (!unitWidth || isFocused === 'width')) || isMixedWidth
-            ? width
-            : ''
-        }
+        value={(isPureWidth && (!unitWidth || isFocused === 'width')) || isMixedWidth ? width : ''}
       />
       <UITools.TextField
         e2eValue="height"
         fullWidth
         idContainer={PANEL_PROPERTIES_ID}
         onBlur={onBlurHeight}
-        onChange={(event) =>
-          onChangeHeight(sanitizeNumberInput(event.target.value))
-        }
+        onChange={(event) => onChangeHeight(sanitizeNumberInput(event.target.value))}
         onClick={() => refInputHeight.current.select()}
         onFocus={() => onFocus('height')}
-        onKeyDown={(event) =>
-          handleSubmitInput(KeyboardKeys.enter, refInputHeight.current)(event)
-        }
-        popoverChildren={
-          <HeightPopoverHeight
-            height={dynamicData[firstElement.id].height}
-            isMixed={isMixedHeight}
-          />
-        }
+        onKeyDown={(event) => handleSubmitInput(KeyboardKeys.enter, refInputHeight.current)(event)}
+        popoverChildren={<HeightPopoverHeight height={dynamicData[firstElement.id].height} isMixed={isMixedHeight} />}
         ref={refInputHeight}
         startAdornment={
           <>
@@ -162,31 +120,19 @@ const ColumnResizing: FC = () => {
               {isPureHeight ? (
                 <Small color={ColorsTheme.neutral2}>H</Small>
               ) : (
-                <Icon
-                  color={ColorsTheme.neutral2}
-                  height={12}
-                  name="HeightRestricted"
-                  width={12}
-                />
+                <Icon color={ColorsTheme.neutral2} height={12} name="HeightRestricted" width={12} />
               )}
             </ScrubbableInput>
-            {isFocused !== 'height' &&
-              (!isPureHeight || unitHeight) &&
-              !isMixedHeight && (
-                <UITools.Chip>
-                  {height}
-                  {unitHeight ?? ''}
-                </UITools.Chip>
-              )}
+            {isFocused !== 'height' && (!isPureHeight || unitHeight) && !isMixedHeight && (
+              <UITools.Chip>
+                {height}
+                {unitHeight ?? ''}
+              </UITools.Chip>
+            )}
           </>
         }
         type={isMixedHeight || !isPureHeight ? 'text' : 'number'}
-        value={
-          (isPureHeight && (!unitHeight || isFocused === 'height')) ||
-          isMixedHeight
-            ? height
-            : ''
-        }
+        value={(isPureHeight && (!unitHeight || isFocused === 'height')) || isMixedHeight ? height : ''}
       />
     </UITools.SectionColumn>
   );

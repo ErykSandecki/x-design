@@ -1,10 +1,7 @@
-// types
-import { T2DCoordinates } from 'types';
-
 export const handleUpdateMousePosition = (
   event: MouseEvent,
   mousePosition: T2DCoordinates | null,
-  setMousePosition: (mousePosition: T2DCoordinates) => void,
+  setMousePosition: TFuncion<[T2DCoordinates]>,
 ): void => {
   switch (true) {
     case mousePosition.x < 0:

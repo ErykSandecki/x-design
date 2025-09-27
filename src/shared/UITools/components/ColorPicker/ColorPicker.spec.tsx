@@ -47,11 +47,7 @@ describe('ColorPicker behaviors', () => {
     );
 
     // find
-    const input = getByE2EAttribute(
-      container,
-      E2EAttribute.textFieldInput,
-      'alpha',
-    );
+    const input = getByE2EAttribute(container, E2EAttribute.textFieldInput, 'alpha');
 
     // action
     fireEvent.change(input, { target: { value: '50' } });
@@ -86,10 +82,7 @@ describe('ColorPicker behaviors', () => {
     );
 
     // find
-    const scrubbableInput = getByE2EAttribute(
-      container,
-      E2EAttribute.scrubbableInput,
-    );
+    const scrubbableInput = getByE2EAttribute(container, E2EAttribute.scrubbableInput);
 
     // action
     fireEvent.mouseDown(scrubbableInput, { clientX: 0, clientY: 0 });
@@ -115,11 +108,7 @@ describe('ColorPicker behaviors', () => {
     );
 
     // find
-    const input = getByE2EAttribute(
-      container,
-      E2EAttribute.textFieldInput,
-      'color',
-    );
+    const input = getByE2EAttribute(container, E2EAttribute.textFieldInput, 'color');
 
     // action
     fireEvent.change(input, { target: { value: '000000' } });

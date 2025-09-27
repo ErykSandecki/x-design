@@ -6,7 +6,7 @@ import { get, map, size } from 'lodash';
 import { REDUCER_KEY } from './actionsType';
 
 // types
-import { T3DCoordinates, TElement } from 'types';
+import { TElement } from 'types';
 import {
   TElementDynamicData,
   TElementsData,
@@ -23,120 +23,99 @@ import { computeCounterRotation } from 'utils';
 import { findMainParent } from './utils/findMainParent';
 import { getParentsAngles } from './utils/getParentsAngles';
 
-export const pageBuilderStateSelector: Selector<TMainState, TPageBuilderState> =
-  getFp(REDUCER_KEY);
+export const pageBuilderStateSelector: Selector<TMainState, TPageBuilderState> = getFp(REDUCER_KEY);
 
 export const pageSelector: Selector<TMainState, TPage> = createSelector(
   pageBuilderStateSelector,
   (state) => state.pages[state.currentPage],
 );
 
-export const areaCoordinatesSelector: Selector<TMainState, T3DCoordinates> =
-  createSelector(pageSelector, getFp('areaCoordinates'));
+export const areaCoordinatesSelector: Selector<TMainState, T3DCoordinates> = createSelector(
+  pageSelector,
+  getFp('areaCoordinates'),
+);
 
 export const areaAxisSelectorCreator = (
   axis: keyof T3DCoordinates,
-): Selector<TMainState, T3DCoordinates[typeof axis]> =>
-  createSelector(areaCoordinatesSelector, getFp(axis));
+): Selector<TMainState, T3DCoordinates[typeof axis]> => createSelector(areaCoordinatesSelector, getFp(axis));
 
-export const elementsSelector: Selector<TMainState, TElementsData> =
-  createSelector(pageSelector, getFp('elements'));
+export const elementsSelector: Selector<TMainState, TElementsData> = createSelector(pageSelector, getFp('elements'));
 
-export const allDataSelector: Selector<TMainState, TElementsData['allData']> =
-  createSelector(elementsSelector, getFp('allData'));
+export const allDataSelector: Selector<TMainState, TElementsData['allData']> = createSelector(
+  elementsSelector,
+  getFp('allData'),
+);
 
-export const elementAllDataSelectorCreator = (
-  elementId: TElement['id'],
-): Selector<TMainState, TElement | undefined> =>
+export const elementAllDataSelectorCreator = (elementId: TElement['id']): Selector<TMainState, TElement | undefined> =>
   createSelector(allDataSelector, getFp(elementId));
 
-export const canRedoReduxHistorySelector: Selector<TMainState, boolean> =
-  createSelector(pageSelector, ({ reducerHistory, reducerHistoryIndex }) => {
+export const canRedoReduxHistorySelector: Selector<TMainState, boolean> = createSelector(
+  pageSelector,
+  ({ reducerHistory, reducerHistoryIndex }) => {
     if (reducerHistory[reducerHistoryIndex - 1]) {
       return true;
     }
 
     return false;
-  });
+  },
+);
 
-export const canUndoReduxHistorySelector: Selector<TMainState, boolean> =
-  createSelector(pageSelector, ({ reducerHistory, reducerHistoryIndex }) => {
+export const canUndoReduxHistorySelector: Selector<TMainState, boolean> = createSelector(
+  pageSelector,
+  ({ reducerHistory, reducerHistoryIndex }) => {
     if (reducerHistory[reducerHistoryIndex + 1]) {
       return true;
     }
 
     return false;
-  });
+  },
+);
 
 export const pageBackgroundSelectorCreator = (
   id: TElement['id'] | '-1',
 ): Selector<TMainState, TElement['background']> =>
   createSelector(allDataSelector, compose(getFp('background'), getFp(id)));
 
-export const childrenSelectorCreator = (
-  id: TElement['id'] | '-1',
-): Selector<TMainState, TElement['children']> =>
-  createSelector(elementsSelector, (elements) =>
-    get(elements, `allData.${id}.children`),
-  );
+export const childrenSelectorCreator = (id: TElement['id'] | '-1'): Selector<TMainState, TElement['children']> =>
+  createSelector(elementsSelector, (elements) => get(elements, `allData.${id}.children`));
 
-export const dynamicDataSelector: Selector<
-  TMainState,
-  TElementsData['dynamicData']
-> = createSelector(elementsSelector, getFp('dynamicData'));
+export const dynamicDataSelector: Selector<TMainState, TElementsData['dynamicData']> = createSelector(
+  elementsSelector,
+  getFp('dynamicData'),
+);
 
 export const elementDynamicDataSelectorCreator = (
   elementId: TElement['id'],
-): Selector<TMainState, TElementDynamicData | undefined> =>
-  createSelector(dynamicDataSelector, getFp(elementId));
+): Selector<TMainState, TElementDynamicData | undefined> => createSelector(dynamicDataSelector, getFp(elementId));
 
 export const elementAttributeSelectorCreator = <K extends keyof TElement>(
   attribute: K,
   elementId: TElement['id'],
-): Selector<TMainState, TElement[K]> =>
-  createSelector(allDataSelector, getFp(`${elementId}.${attribute}`));
+): Selector<TMainState, TElement[K]> => createSelector(allDataSelector, getFp(`${elementId}.${attribute}`));
 
-export const staticDataSelector: Selector<
-  TMainState,
-  TElementsData['staticData']
-> = createSelector(elementsSelector, getFp('staticData'));
+export const staticDataSelector: Selector<TMainState, TElementsData['staticData']> = createSelector(
+  elementsSelector,
+  getFp('staticData'),
+);
 
 export const filtredStaticDataSelectorCreator = (
   parentId: TElement['parentId'],
-): Selector<
-  TMainState,
-  { children: TElement['children']; data: Array<TElementStaticData> }
-> =>
-  createSelector(
-    childrenSelectorCreator(parentId),
-    staticDataSelector,
-    (children, staticData) => ({
-      children,
-      data: map(children, (id) => staticData[id]),
-    }),
-  );
+): Selector<TMainState, { children: TElement['children']; data: Array<TElementStaticData> }> =>
+  createSelector(childrenSelectorCreator(parentId), staticDataSelector, (children, staticData) => ({
+    children,
+    data: map(children, (id) => staticData[id]),
+  }));
 
-export const eventsSelector: Selector<TMainState, TEvents> = createSelector(
-  pageBuilderStateSelector,
-  getFp('events'),
-);
+export const eventsSelector: Selector<TMainState, TEvents> = createSelector(pageBuilderStateSelector, getFp('events'));
 
-export const eventSelectorCreator = (
-  key: keyof TEvents,
-): Selector<TMainState, TEvents[typeof key]> =>
+export const eventSelectorCreator = (key: keyof TEvents): Selector<TMainState, TEvents[typeof key]> =>
   createSelector(eventsSelector, getFp(key));
 
-export const isHoverSelectorCreator = (
-  id: TElement['id'],
-): Selector<TMainState, boolean> =>
+export const isHoverSelectorCreator = (id: TElement['id']): Selector<TMainState, boolean> =>
   createSelector(eventsSelector, ({ hoverOnElement }) => hoverOnElement === id);
 
-export const isDraggableSelectorCreator = (
-  id: TElement['id'],
-): Selector<TMainState, boolean> =>
-  createSelector(eventsSelector, ({ draggableElements }) =>
-    draggableElements.includes(id),
-  );
+export const isDraggableSelectorCreator = (id: TElement['id']): Selector<TMainState, boolean> =>
+  createSelector(eventsSelector, ({ draggableElements }) => draggableElements.includes(id));
 
 export const isLoadingSelector: Selector<TMainState, boolean> = createSelector(
   pageBuilderStateSelector,
@@ -148,49 +127,36 @@ export const isPendingSelector: Selector<TMainState, boolean> = createSelector(
   getFp('isPending'),
 );
 
-export const selectedElementsSelector: Selector<TMainState, TSelectedElements> =
-  createSelector(pageSelector, getFp('selectedElements'));
+export const selectedElementsSelector: Selector<TMainState, TSelectedElements> = createSelector(
+  pageSelector,
+  getFp('selectedElements'),
+);
 
-export const isSelectedElementSelectorCreator = (
-  elementId: TElement['id'],
-): Selector<TMainState, boolean> =>
-  createSelector(
-    selectedElementsSelector,
-    (selectedElements) => !!selectedElements.find(({ id }) => id === elementId),
-  );
+export const isSelectedElementSelectorCreator = (elementId: TElement['id']): Selector<TMainState, boolean> =>
+  createSelector(selectedElementsSelector, (selectedElements) => !!selectedElements.find(({ id }) => id === elementId));
 
-export const mainParentIdSelectorCreator = (
-  parentId: TElement['parentId'],
-): Selector<TMainState, TElement['id']> =>
-  createSelector(staticDataSelector, (staticData) =>
-    findMainParent(parentId, staticData),
-  );
+export const mainParentIdSelectorCreator = (parentId: TElement['parentId']): Selector<TMainState, TElement['id']> =>
+  createSelector(staticDataSelector, (staticData) => findMainParent(parentId, staticData));
 
-export const multipleSelectedElementsSelector: Selector<TMainState, boolean> =
-  createSelector(
-    selectedElementsSelector,
-    (selectedElements) => size(selectedElements) > 1,
-  );
+export const multipleSelectedElementsSelector: Selector<TMainState, boolean> = createSelector(
+  selectedElementsSelector,
+  (selectedElements) => size(selectedElements) > 1,
+);
 
-export const areParentsTheSameSelector: Selector<TMainState, boolean> =
-  createSelector(selectedElementsSelector, (selectedElements) => {
+export const areParentsTheSameSelector: Selector<TMainState, boolean> = createSelector(
+  selectedElementsSelector,
+  (selectedElements) => {
     if (size(selectedElements) > 1) {
       const baseParentId = selectedElements[0].parentId;
 
-      return selectedElements.every(
-        ({ parentId }) => parentId === baseParentId,
-      );
+      return selectedElements.every(({ parentId }) => parentId === baseParentId);
     }
 
     return true;
-  });
+  },
+);
 
-export const counterAngleSelectorCreator = (
-  parentId: TElement['parentId'],
-): Selector<TMainState, number> =>
+export const counterAngleSelectorCreator = (parentId: TElement['parentId']): Selector<TMainState, number> =>
   createSelector(allDataSelector, (allData) =>
-    parentId === '-1'
-      ? 0
-      : computeCounterRotation(getParentsAngles(allData, [], parentId))
-          .counterAngle,
+    parentId === '-1' ? 0 : computeCounterRotation(getParentsAngles(allData, [], parentId)).counterAngle,
   );

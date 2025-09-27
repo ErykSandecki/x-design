@@ -1,9 +1,5 @@
 // mocks
-import {
-  elementAllDataMock,
-  pageBuilderStateMock,
-  selectedElementMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { elementAllDataMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 import { wholeStateMock } from 'test/mocks/reducer/wholeStateMock';
 
 // others
@@ -15,10 +11,7 @@ import { store as storeToMock } from 'store';
 // utils
 import { handleTrySingleElement } from '../handleTrySingleElement';
 
-const currentPage =
-  pageBuilderStateMock[PAGE_BUILDER].pages[
-    pageBuilderStateMock[PAGE_BUILDER].currentPage
-  ];
+const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages[pageBuilderStateMock[PAGE_BUILDER].currentPage];
 
 const mockCallBack = jest.fn();
 

@@ -3,10 +3,7 @@ import { head, isArray } from 'lodash';
 // types
 import { TFieldValue } from '../../../types';
 
-export const getComplexInitalValue = <V>(
-  initValue: Array<boolean | string>,
-  shouldBeEmpty: boolean,
-): V => {
+export const getComplexInitalValue = <V>(initValue: Array<boolean | string>, shouldBeEmpty: boolean): V => {
   const length = initValue.length;
   const isBoolean = typeof head(initValue) === 'boolean';
   const values = Array.from(Array(length), () => (isBoolean ? false : ''));
@@ -19,9 +16,7 @@ export const getInitialValue = <V extends TFieldValue>(
   formatOnInit: (value: V) => V,
   shouldBeEmpty: boolean,
 ): V => {
-  const initValue = formatOnInit
-    ? formatOnInit((defaultValue as V) || ('' as V))
-    : (defaultValue as V);
+  const initValue = formatOnInit ? formatOnInit((defaultValue as V) || ('' as V)) : (defaultValue as V);
 
   switch (true) {
     case typeof initValue === 'boolean':

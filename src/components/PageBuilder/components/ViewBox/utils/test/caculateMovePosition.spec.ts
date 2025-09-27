@@ -1,11 +1,7 @@
 import { RefObject } from 'react';
 
 // mocks
-import {
-  elementAllDataMock,
-  pageBuilderStateMock,
-  selectedElementMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { elementAllDataMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 import { wholeStateMock } from 'test/mocks/reducer/wholeStateMock';
 
 // others
@@ -16,16 +12,12 @@ import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 import { store as storeToMock } from 'store/store';
 
 // types
-import { T2DCoordinates } from 'types';
 
 // utils
 import { caculateMovePosition } from '../caculateMovePosition';
 
 const cursorPosition = { current: BASE_2D } as RefObject<T2DCoordinates>;
-const currentPage =
-  pageBuilderStateMock[PAGE_BUILDER].pages[
-    pageBuilderStateMock[PAGE_BUILDER].currentPage
-  ];
+const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages[pageBuilderStateMock[PAGE_BUILDER].currentPage];
 
 describe('caculateMovePosition', () => {
   beforeAll(() => {
@@ -60,11 +52,7 @@ describe('caculateMovePosition', () => {
 
   it(`should calculate coordinates`, () => {
     // before
-    const result = caculateMovePosition(
-      cursorPosition,
-      { clientX: 0, clientY: 0 } as MouseEvent,
-      'test-1',
-    );
+    const result = caculateMovePosition(cursorPosition, { clientX: 0, clientY: 0 } as MouseEvent, 'test-1');
 
     // result
     expect(result).toStrictEqual({ x: 0, y: 0 });

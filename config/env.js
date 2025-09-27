@@ -10,9 +10,7 @@ const NODE_ENV = process.env.NODE_ENV;
 delete require.cache[require.resolve('./paths')];
 
 if (!NODE_ENV) {
-  throw new Error(
-    'The NODE_ENV environment variable is required but was not specified.',
-  );
+  throw new Error('The NODE_ENV environment variable is required but was not specified.');
 }
 
 const appDirectory = fs.realpathSync(process.cwd());

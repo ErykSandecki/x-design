@@ -5,11 +5,7 @@ import { renderHook } from '@testing-library/react';
 import { useHandleSelectElement } from '../useHandleSelectElement';
 
 // mocks
-import {
-  elementAllDataMock,
-  pageBuilderStateMock,
-  selectedElementMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { elementAllDataMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
@@ -18,7 +14,7 @@ import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 import { store as storeToMock } from 'store/store';
 
 // types
-import { TObject, TRectCoordinates } from 'types';
+import { TObject } from 'types';
 
 const mockCallBack = jest.fn();
 const rectCoordinates = {
@@ -71,9 +67,7 @@ describe('useHandleSelectElement', () => {
     );
 
     // result
-    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual([
-      selectedElementMock,
-    ]);
+    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual([selectedElementMock]);
   });
 
   it(`should not select items when list is empty`, () => {

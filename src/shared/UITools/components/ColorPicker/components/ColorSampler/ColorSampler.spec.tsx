@@ -36,12 +36,7 @@ describe('ColorSampler snapshots', () => {
     }));
 
     // before
-    const { asFragment } = render(
-      <ColorSampler
-        initialMousePosition={BASE_2D}
-        onClickColorSampler={mockCallBack}
-      />,
-    );
+    const { asFragment } = render(<ColorSampler initialMousePosition={BASE_2D} onClickColorSampler={mockCallBack} />);
 
     // result
     expect(asFragment()).toMatchSnapshot();
@@ -56,12 +51,7 @@ describe('ColorSampler snapshots', () => {
     }));
 
     // before
-    const { asFragment } = render(
-      <ColorSampler
-        initialMousePosition={BASE_2D}
-        onClickColorSampler={mockCallBack}
-      />,
-    );
+    const { asFragment } = render(<ColorSampler initialMousePosition={BASE_2D} onClickColorSampler={mockCallBack} />);
 
     // result
     expect(asFragment()).toMatchSnapshot();
@@ -82,17 +72,10 @@ describe('ColorSampler behaviors', () => {
     }));
 
     // before
-    const { container } = render(
-      <ColorSampler
-        initialMousePosition={BASE_2D}
-        onClickColorSampler={mockCallBack}
-      />,
-    );
+    const { container } = render(<ColorSampler initialMousePosition={BASE_2D} onClickColorSampler={mockCallBack} />);
 
     // action
-    fireEvent.click(
-      getByE2EAttribute(container, E2EAttribute.button, 'color-sampler'),
-    );
+    fireEvent.click(getByE2EAttribute(container, E2EAttribute.button, 'color-sampler'));
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(1);

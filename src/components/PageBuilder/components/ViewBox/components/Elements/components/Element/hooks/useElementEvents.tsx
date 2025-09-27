@@ -66,15 +66,12 @@ export const useElementEvents = (
   const isHover = useSelector(isHoverSelectorCreator(id));
   const isMultiple = useSelector(multipleSelectedElementsSelector);
   const isFocused = isHover || isSelected;
-  const isMultipleMoving = useSelector(
-    eventSelectorCreator('isMultipleMoving'),
-  );
+  const isMultipleMoving = useSelector(eventSelectorCreator('isMultipleMoving'));
   const isMoving = isDraggable || (isMultipleMoving && isSelected);
   const displayEventsArea = !isDraggable && !isMultiple && isSelected;
   const displayOutline = isFocused;
   const [isPressing, setIsPressing] = useState(false);
-  const { alignment, angle, background, coordinates, layout, position } =
-    elementDynamicData;
+  const { alignment, angle, background, coordinates, layout, position } = elementDynamicData;
   const { x, y } = coordinates;
   const selectedElement = {
     id,
@@ -86,14 +83,7 @@ export const useElementEvents = (
 
   useForceRerender([coordinates]);
   useInitializeRef(elementRef, id);
-  useMouseMoveEvent(
-    cursorPosition,
-    cursorPositionBase,
-    id,
-    isPressing,
-    mouseMode,
-    parentId,
-  );
+  useMouseMoveEvent(cursorPosition, cursorPositionBase, id, isPressing, mouseMode, parentId);
   useMouseUpEvent(isPressing, setIsPressing);
   useOutsideClickElement(elementRef, id, isSelected);
 

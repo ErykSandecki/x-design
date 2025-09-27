@@ -11,11 +11,7 @@ import { clampAngle } from 'utils/math/clampAngle';
 
 export type TUseBlurEvent = () => void;
 
-export const useBlurEvent = (
-  angle: string,
-  element: TElement,
-  setAngle: (angle: string) => void,
-): TUseBlurEvent => {
+export const useBlurEvent = (angle: string, element: TElement, setAngle: (angle: string) => void): TUseBlurEvent => {
   const dispatch = useDispatch();
 
   const handleBlur = (): void => {

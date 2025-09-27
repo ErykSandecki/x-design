@@ -21,9 +21,7 @@ describe('Box props', () => {
     const { container } = render(<Box>{children}</Box>);
 
     // result
-    expect(getByE2EAttribute(container, E2EAttribute.box)).toHaveTextContent(
-      children,
-    );
+    expect(getByE2EAttribute(container, E2EAttribute.box)).toHaveTextContent(children);
   });
 
   it('should pass classes', () => {
@@ -48,14 +46,10 @@ describe('Box props', () => {
 
   it('should pass e2eAttribute', () => {
     // before
-    const { container } = render(
-      <Box e2eAttribute={E2EAttribute.box}>children</Box>,
-    );
+    const { container } = render(<Box e2eAttribute={E2EAttribute.box}>children</Box>);
 
     // result
-    expect(getByE2EAttribute(container, E2EAttribute.box)).toHaveAttribute(
-      getDataTestAttribute(E2EAttribute.box),
-    );
+    expect(getByE2EAttribute(container, E2EAttribute.box)).toHaveAttribute(getDataTestAttribute(E2EAttribute.box));
   });
 
   it('should pass e2eValue', () => {

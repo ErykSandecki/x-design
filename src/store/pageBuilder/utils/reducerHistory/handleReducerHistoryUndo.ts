@@ -1,9 +1,7 @@
 // types
 import { TPageBuilderState } from '../../types';
 
-export const handleReducerHistoryUndo = (
-  state: TPageBuilderState,
-): TPageBuilderState => {
+export const handleReducerHistoryUndo = (state: TPageBuilderState): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];
   const { reducerHistory } = currentPage;
   const reducerHistoryIndex = currentPage.reducerHistoryIndex + 1;

@@ -1,7 +1,6 @@
 import { RefObject } from 'react';
 
 // types
-import { T2DCoordinates } from 'types';
 
 export const updateCursorPosition = (
   cursorPosition: RefObject<T2DCoordinates>,

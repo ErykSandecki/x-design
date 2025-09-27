@@ -15,9 +15,7 @@ export const handleChangeAlignment = (
   const { parentId } = first(selectedElements);
   const clonedElements = cloneDeep(elements);
   const allId = selectedElements.map(({ id }) => id);
-  const filteredChildren = currentPage.elements.allData[
-    parentId
-  ].children.filter((id) => !allId.includes(id));
+  const filteredChildren = currentPage.elements.allData[parentId].children.filter((id) => !allId.includes(id));
 
   selectedElements.forEach(({ id, parentId }) => {
     const { alignment } = currentPage.elements.allData[id];

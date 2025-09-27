@@ -8,13 +8,12 @@ import { AlignmentVertical } from 'types';
 
 type TUseClickVerticalAlignmentEvent = (vertical: AlignmentVertical) => void;
 
-export const useClickVerticalAlignmentEvent =
-  (): TUseClickVerticalAlignmentEvent => {
-    const dispatch = useDispatch();
+export const useClickVerticalAlignmentEvent = (): TUseClickVerticalAlignmentEvent => {
+  const dispatch = useDispatch();
 
-    const handleClick = (vertical: AlignmentVertical): void => {
-      dispatch(changeAlignment({ vertical }));
-    };
-
-    return handleClick;
+  const handleClick = (vertical: AlignmentVertical): void => {
+    dispatch(changeAlignment({ vertical }));
   };
+
+  return handleClick;
+};

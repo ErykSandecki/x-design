@@ -20,22 +20,14 @@ describe('getUpdatedFieldsState', () => {
         fields: {
           ...reduxHookFormStateMock[REDUX_HOOK_FORM].testForm.fields,
           testField: {
-            ...reduxHookFormStateMock[REDUX_HOOK_FORM].testForm.fields
-              .testField,
+            ...reduxHookFormStateMock[REDUX_HOOK_FORM].testForm.fields.testField,
           },
         },
       },
     } as TReduxHookFormState;
 
     // result
-    expect(
-      getUpdatedFieldsState(
-        { value: '' } as Partial<TField>,
-        'testForm',
-        'testField',
-        stateMock,
-      ),
-    ).toStrictEqual({
+    expect(getUpdatedFieldsState({ value: '' } as Partial<TField>, 'testForm', 'testField', stateMock)).toStrictEqual({
       testField: {
         ...reduxHookFormStateMock[REDUX_HOOK_FORM].testForm.fields.testField,
         value: '',

@@ -6,23 +6,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { UPDATE_FORM_VALIDATOR } from '../../../../store/reduxHookForm/actionsType';
 
 // store
-import {
-  destroyForm,
-  mountForm,
-  submit,
-  updateForm,
-} from '../../../../store/reduxHookForm/actions';
-import {
-  fieldsSelectorCreator,
-  formSelectorCreator,
-} from '../../../../store/reduxHookForm/selectors';
+import { destroyForm, mountForm, submit, updateForm } from '../../../../store/reduxHookForm/actions';
+import { fieldsSelectorCreator, formSelectorCreator } from '../../../../store/reduxHookForm/selectors';
 
 // types
 import { E2EAttribute } from 'types/e2e';
-import {
-  E2EDataAttribute,
-  TE2EDataAttributeProps,
-} from 'shared/E2EDataAttributes/E2EDataAttribute';
+import { E2EDataAttribute, TE2EDataAttributeProps } from 'shared/E2EDataAttributes/E2EDataAttribute';
 import { TField, TFields } from '../../../../store/reduxHookForm/types';
 
 // utils
@@ -77,9 +66,7 @@ export const Form = <T extends {}>({
       onSubmit(getFieldsValues());
     }
 
-    dispatch(
-      updateForm({ form: { isValid }, formName }, UPDATE_FORM_VALIDATOR),
-    );
+    dispatch(updateForm({ form: { isValid }, formName }, UPDATE_FORM_VALIDATOR));
   };
 
   const onSubmitHandler = (event: FormEvent): void => {
@@ -111,12 +98,7 @@ export const Form = <T extends {}>({
   }, []);
 
   return (
-    <E2EDataAttribute
-      type={e2eAttribute}
-      value={
-        e2eValue ? `${kebabCase(formName)}-${e2eValue}` : kebabCase(formName)
-      }
-    >
+    <E2EDataAttribute type={e2eAttribute} value={e2eValue ? `${kebabCase(formName)}-${e2eValue}` : kebabCase(formName)}>
       <form className={className} onSubmit={onSubmitHandler}>
         <FormContext.Provider value={formName}>{children}</FormContext.Provider>
       </form>

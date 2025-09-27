@@ -24,12 +24,7 @@ describe('useWheelEvent', () => {
   it(`should trigger handle zoom`, () => {
     // before
     const { result } = renderHook(() =>
-      useWheelEvent(
-        BASE_3D,
-        mockCallBack,
-        mockCallBack,
-        ref as RefObject<HTMLDivElement>,
-      ),
+      useWheelEvent(BASE_3D, mockCallBack, mockCallBack, ref as RefObject<HTMLDivElement>),
     );
 
     // action
@@ -47,12 +42,7 @@ describe('useWheelEvent', () => {
   it(`should trigger handle scroll page`, () => {
     // before
     const { result } = renderHook(() =>
-      useWheelEvent(
-        BASE_3D,
-        mockCallBack,
-        mockCallBack,
-        ref as RefObject<HTMLDivElement>,
-      ),
+      useWheelEvent(BASE_3D, mockCallBack, mockCallBack, ref as RefObject<HTMLDivElement>),
     );
 
     // action

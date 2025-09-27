@@ -1,13 +1,7 @@
 import { put, take } from 'redux-saga/effects';
 
 // others
-import {
-  AVAILABLE_LANGUAGES,
-  DEFAULT_LANGUAGE,
-  initI18n,
-  LANGUAGE,
-  LOCATION_API,
-} from 'translations';
+import { AVAILABLE_LANGUAGES, DEFAULT_LANGUAGE, initI18n, LANGUAGE, LOCATION_API } from 'translations';
 import { INIT_LANGUAGE_SUCCESS } from './actionsType';
 import { resources } from 'translations/resources';
 
@@ -34,9 +28,7 @@ export function* initLanguageSaga(): any {
         const data = await response.json();
         const language = data?.languages.substring(0, 2);
 
-        return AVAILABLE_LANGUAGES.includes(language)
-          ? language
-          : DEFAULT_LANGUAGE;
+        return AVAILABLE_LANGUAGES.includes(language) ? language : DEFAULT_LANGUAGE;
       })
       .catch(() => DEFAULT_LANGUAGE);
 

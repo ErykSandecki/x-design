@@ -1,6 +1,6 @@
 // types
 import { AnchorResize } from '../../enums';
-import { T2DCoordinates, TRectCoordinates } from 'types';
+
 import { TSizeCoordinates } from '../../types';
 
 export const getEastCoordinates = (
@@ -90,30 +90,10 @@ export const getAbsoluteCoordinates = (
   baseWidth: number,
   mouseCoordinates: T2DCoordinates,
 ): TSizeCoordinates => {
-  const eastCoordinates = getEastCoordinates(
-    baseCoordinates,
-    baseHeight,
-    baseWidth,
-    mouseCoordinates,
-  );
-  const northCoordinates = getNorthCoordinates(
-    baseCoordinates,
-    baseHeight,
-    baseWidth,
-    mouseCoordinates,
-  );
-  const southCoordinates = getSouthCoordinates(
-    baseCoordinates,
-    baseHeight,
-    baseWidth,
-    mouseCoordinates,
-  );
-  const westCoordinates = getWestCoordinates(
-    baseCoordinates,
-    baseHeight,
-    baseWidth,
-    mouseCoordinates,
-  );
+  const eastCoordinates = getEastCoordinates(baseCoordinates, baseHeight, baseWidth, mouseCoordinates);
+  const northCoordinates = getNorthCoordinates(baseCoordinates, baseHeight, baseWidth, mouseCoordinates);
+  const southCoordinates = getSouthCoordinates(baseCoordinates, baseHeight, baseWidth, mouseCoordinates);
+  const westCoordinates = getWestCoordinates(baseCoordinates, baseHeight, baseWidth, mouseCoordinates);
 
   switch (anchor) {
     case AnchorResize.east:

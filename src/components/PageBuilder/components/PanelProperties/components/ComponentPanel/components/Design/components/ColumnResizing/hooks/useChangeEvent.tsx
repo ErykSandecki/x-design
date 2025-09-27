@@ -27,18 +27,12 @@ export const useChangeEvent = (
     }
   };
 
-  const handleChangeHeight = (
-    value: string,
-    isScrubbableInput: boolean,
-  ): void => {
+  const handleChangeHeight = (value: string, isScrubbableInput: boolean): void => {
     setHeight(value);
     updateStore(value, isScrubbableInput, 'height');
   };
 
-  const handleChangeWidth = (
-    value: string,
-    isScrubbableInput: boolean,
-  ): void => {
+  const handleChangeWidth = (value: string, isScrubbableInput: boolean): void => {
     setWidth(value);
     updateStore(value, isScrubbableInput, 'width');
   };

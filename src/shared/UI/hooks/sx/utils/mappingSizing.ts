@@ -6,5 +6,4 @@ import { TSX } from '../types/types';
 import { enumToArray } from 'utils';
 import { getCssStyles } from './utils';
 
-export const mappingSizing = (sx: TSX): string =>
-  getCssStyles(sx, enumToArray<string>(Sizing));
+export const mappingSizing = (sx: TSX): string => getCssStyles(sx, enumToArray<string>(Sizing));

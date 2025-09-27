@@ -8,9 +8,7 @@ const mockCallBack = jest.fn();
 describe('useBlurColorEvent', () => {
   it(`should trigger on change when current value is valid`, () => {
     // before
-    const { result } = renderHook(() =>
-      useBlurColorEvent('100', 'ffffff', '000000', mockCallBack, mockCallBack),
-    );
+    const { result } = renderHook(() => useBlurColorEvent('100', 'ffffff', '000000', mockCallBack, mockCallBack));
 
     // action
     result.current();
@@ -22,9 +20,7 @@ describe('useBlurColorEvent', () => {
 
   it(`should use default value when hex is not valid`, () => {
     // before
-    const { result } = renderHook(() =>
-      useBlurColorEvent('100', 'ffffff', '', mockCallBack, mockCallBack),
-    );
+    const { result } = renderHook(() => useBlurColorEvent('100', 'ffffff', '', mockCallBack, mockCallBack));
 
     // action
     result.current();

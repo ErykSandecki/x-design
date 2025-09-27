@@ -1,8 +1,5 @@
 // types
-import {
-  TApplyElementsSizeTypeActionPaylad,
-  TElementsData,
-} from 'store/pageBuilder/types';
+import { TApplyElementsSizeTypeActionPaylad, TElementsData } from 'store/pageBuilder/types';
 import { TElement, Unit } from 'types';
 
 export const applyTypeSize = (

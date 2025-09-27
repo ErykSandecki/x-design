@@ -10,9 +10,7 @@ describe('areParentsTheSameSelector', () => {
     const selectorFunction = (areParentsTheSameSelector as any).resultFunc;
 
     // result
-    expect(selectorFunction([selectedElementMock, selectedElementMock])).toBe(
-      true,
-    );
+    expect(selectorFunction([selectedElementMock, selectedElementMock])).toBe(true);
   });
 
   it('should parents not be the same', () => {
@@ -20,12 +18,7 @@ describe('areParentsTheSameSelector', () => {
     const selectorFunction = (areParentsTheSameSelector as any).resultFunc;
 
     // result
-    expect(
-      selectorFunction([
-        selectedElementMock,
-        { ...selectedElementMock, parentId: '0' },
-      ]),
-    ).toBe(false);
+    expect(selectorFunction([selectedElementMock, { ...selectedElementMock, parentId: '0' }])).toBe(false);
   });
 
   it('should return true default', () => {

@@ -2,9 +2,7 @@
 import { ElementStickWallPosition } from '../types/enums';
 import { TElement } from 'types';
 
-export const getElementStickWallPosition = (
-  angle: TElement['angle'],
-): ElementStickWallPosition => {
+export const getElementStickWallPosition = (angle: TElement['angle']): ElementStickWallPosition => {
   switch (true) {
     case angle >= -45 && angle <= 45:
       return ElementStickWallPosition.top;

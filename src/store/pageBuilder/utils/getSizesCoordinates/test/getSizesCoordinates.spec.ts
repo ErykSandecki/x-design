@@ -10,14 +10,7 @@ const mouseCoordinates = { x: 200, y: 100 };
 describe('getSizesCoordinates', () => {
   it(`should return cords for absolute position`, () => {
     // before
-    const result = getSizesCoordinates(
-      AnchorResize.east,
-      baseCoordinates,
-      100,
-      100,
-      mouseCoordinates,
-      'absolute',
-    );
+    const result = getSizesCoordinates(AnchorResize.east, baseCoordinates, 100, 100, mouseCoordinates, 'absolute');
 
     // result
     expect(result).toStrictEqual({
@@ -29,14 +22,7 @@ describe('getSizesCoordinates', () => {
 
   it(`should return cords for absolute relative`, () => {
     // before
-    const result = getSizesCoordinates(
-      AnchorResize.east,
-      baseCoordinates,
-      100,
-      100,
-      mouseCoordinates,
-      'relative',
-    );
+    const result = getSizesCoordinates(AnchorResize.east, baseCoordinates, 100, 100, mouseCoordinates, 'relative');
 
     // result
     expect(result).toStrictEqual({

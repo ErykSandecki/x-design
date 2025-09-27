@@ -38,23 +38,17 @@ export const clearFields = (
   type: CLEAR_FIELDS,
 });
 
-export const destroyForm = (
-  formName: TDestroyFormAction['payload'],
-): TDestroyFormAction => ({
+export const destroyForm = (formName: TDestroyFormAction['payload']): TDestroyFormAction => ({
   payload: formName,
   type: DESTROY_FORM,
 });
 
-export const initField = (
-  payload: TInitFieldActionPayload,
-): TInitFieldAction => ({
+export const initField = (payload: TInitFieldActionPayload): TInitFieldAction => ({
   payload,
   type: INIT_FIELD,
 });
 
-export const mountForm = (
-  payload: TMountFormActionPayload,
-): TMountFormAction => ({
+export const mountForm = (payload: TMountFormActionPayload): TMountFormAction => ({
   payload,
   type: MOUNT_FORM,
 });
@@ -72,25 +66,17 @@ export const submitError = (payload: {
   type: SUBMIT_ERROR,
 });
 
-export const submitSuccess = (
-  formName: TSubmitSuccessAction['payload'],
-): TSubmitSuccessAction => ({
+export const submitSuccess = (formName: TSubmitSuccessAction['payload']): TSubmitSuccessAction => ({
   payload: formName,
   type: SUBMIT_SUCCESS,
 });
 
-export const updateField = (
-  payload: TUpdateFieldActionPayload,
-  type: TUpdateFieldActions,
-): TUpdateFieldAction => ({
+export const updateField = (payload: TUpdateFieldActionPayload, type: TUpdateFieldActions): TUpdateFieldAction => ({
   payload,
   type,
 });
 
-export const updateForm = (
-  payload: TUpdateFormActionPayload,
-  type: TUpdateFormActions,
-): TUpdateFormAction => ({
+export const updateForm = (payload: TUpdateFormActionPayload, type: TUpdateFormActions): TUpdateFormAction => ({
   payload,
   type,
 });

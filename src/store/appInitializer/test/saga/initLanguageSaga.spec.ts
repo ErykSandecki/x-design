@@ -5,10 +5,7 @@ import { appInitializerStateMock } from 'test/mocks/reducer/appInitializerMock';
 
 // others
 import { AVAILABLE_LANGUAGES, LANGUAGE } from 'translations';
-import {
-  INIT_LANGUAGE_SUCCESS,
-  REDUCER_KEY as APP_INITIALIZER,
-} from '../../actionsType';
+import { INIT_LANGUAGE_SUCCESS, REDUCER_KEY as APP_INITIALIZER } from '../../actionsType';
 
 // store
 import appInitializer from '../../reducer';
@@ -97,9 +94,7 @@ describe('initLanguageSaga', () => {
 
   it('should set default language', async () => {
     // mock
-    jest
-      .spyOn(global, 'fetch')
-      .mockImplementation(() => new Promise((_, reject) => reject('error')));
+    jest.spyOn(global, 'fetch').mockImplementation(() => new Promise((_, reject) => reject('error')));
 
     // before
     const sagaTester = new SagaTester({

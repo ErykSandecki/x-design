@@ -7,12 +7,7 @@ import { eventsSelector } from 'store/pageBuilder/selectors';
 import { store } from 'store';
 
 export const handleTriggerEvents = (dispatch: Dispatch): void => {
-  const { draggableElements, possibleIndexPosition, possibleParent } =
-    eventsSelector(store.getState());
+  const { draggableElements, possibleIndexPosition, possibleParent } = eventsSelector(store.getState());
 
-  defer(() =>
-    dispatch(
-      changeParent(draggableElements, possibleIndexPosition, possibleParent),
-    ),
-  );
+  defer(() => dispatch(changeParent(draggableElements, possibleIndexPosition, possibleParent)));
 };

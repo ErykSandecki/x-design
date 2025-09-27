@@ -34,12 +34,8 @@ const MultipleElementsArea: FC = () => {
   const firstElement = first(selectedElements);
   const isMultiple = useSelector(multipleSelectedElementsSelector);
   const { itemsRefs, overlayContainerRef, zoomContentRef } = useRefs();
-  const isMultipleMoving = useSelector(
-    eventSelectorCreator('isMultipleMoving'),
-  ) as boolean;
-  const angle = useSelector(
-    elementAttributeSelectorCreator('angle', firstElement?.id),
-  );
+  const isMultipleMoving = useSelector(eventSelectorCreator('isMultipleMoving')) as boolean;
+  const angle = useSelector(elementAttributeSelectorCreator('angle', firstElement?.id));
   const [coordinatesData, setCoordinatesData] = useState<TCoordinatesData>({
     elementsCordinates: [],
     outline: BASE_RECT,
@@ -47,12 +43,7 @@ const MultipleElementsArea: FC = () => {
 
   useEffect(() => {
     defer(() => {
-      const coordinates = getCoordinatesData(
-        isMultipleMoving,
-        itemsRefs,
-        selectedElements,
-        zoomContentRef,
-      );
+      const coordinates = getCoordinatesData(isMultipleMoving, itemsRefs, selectedElements, zoomContentRef);
 
       setCoordinatesData(coordinates);
     });
@@ -71,10 +62,7 @@ const MultipleElementsArea: FC = () => {
       {overlayContainerRef.current &&
         areParentsTheSame &&
         !isMultipleMoving &&
-        createPortal(
-          <Corners rectCoordinates={coordinatesData.outline} />,
-          overlayContainerRef.current,
-        )}
+        createPortal(<Corners rectCoordinates={coordinatesData.outline} />, overlayContainerRef.current)}
     </>
   );
 };

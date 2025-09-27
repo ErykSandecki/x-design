@@ -20,12 +20,9 @@ describe('formsSelectorCreator', () => {
 
   it('should return set of forms', () => {
     // before
-    const selectorFunction = (formsSelectorCreator(['testForm']) as any)
-      .resultFunc;
+    const selectorFunction = (formsSelectorCreator(['testForm']) as any).resultFunc;
 
     // result
-    expect(selectorFunction(state)).toStrictEqual([
-      reduxHookFormStateMock[REDUCER_KEY].testForm,
-    ]);
+    expect(selectorFunction(state)).toStrictEqual([reduxHookFormStateMock[REDUCER_KEY].testForm]);
   });
 });

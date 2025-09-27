@@ -4,7 +4,6 @@ import { RefObject } from 'react';
 import { BASE_2D } from 'shared';
 
 // types
-import { T2DCoordinates } from 'types';
 
 // utils
 import { updateCursorPosition } from '../updateCursorPosition';

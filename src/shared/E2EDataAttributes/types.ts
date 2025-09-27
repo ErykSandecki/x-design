@@ -1,5 +1,5 @@
 // types
 import { E2EAttribute } from 'types/e2e';
 
-export type E2EType = E2EAttribute;
-export type E2EValue = number | string;
+export type TE2EType = E2EAttribute;
+export type TE2EValue = number | string;

@@ -20,10 +20,7 @@ describe('getAttributes', () => {
 
   it('should return multiple attributes', () => {
     // before
-    const result = getAttributes(
-      [E2EAttribute.test1, E2EAttribute.test2],
-      ['test-1', 'test-2'],
-    );
+    const result = getAttributes([E2EAttribute.test1, E2EAttribute.test2], ['test-1', 'test-2']);
 
     // result
     expect(result).toStrictEqual({

@@ -4,10 +4,7 @@ import { cloneDeep } from 'lodash';
 import { ZOOM_CONTENT_ID } from 'shared';
 
 // types
-import {
-  TApplyElementsSizeTypeActionPaylad,
-  TPageBuilderState,
-} from '../../types';
+import { TApplyElementsSizeTypeActionPaylad, TPageBuilderState } from '../../types';
 
 // utils
 import { applyTypeSize } from './applyTypeSize';

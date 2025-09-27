@@ -24,10 +24,7 @@ import {
   TSelectedElement,
 } from 'store/pageBuilder/types';
 
-export const pageBuilderStateMock: Record<
-  typeof PAGE_BUILDER,
-  TPageBuilderState
-> = {
+export const pageBuilderStateMock: Record<typeof PAGE_BUILDER, TPageBuilderState> = {
   [PAGE_BUILDER]: {
     currentPage: '0',
     events: {

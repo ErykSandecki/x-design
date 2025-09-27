@@ -16,15 +16,12 @@ import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 import { store as storeToMock } from 'store/store';
 
 // types
-import { KeyboardKeys, TObject, TRectCoordinates } from 'types';
+import { KeyboardKeys, TObject } from 'types';
 
 // utils
 import { getCollidedElements } from '../getCollidedElements';
 
-const currentPage =
-  pageBuilderStateMock[PAGE_BUILDER].pages[
-    pageBuilderStateMock[PAGE_BUILDER].currentPage
-  ];
+const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages[pageBuilderStateMock[PAGE_BUILDER].currentPage];
 
 const rectCoordinates = {
   current: {
@@ -205,9 +202,6 @@ describe('getCollidedElements', () => {
     );
 
     // result
-    expect(result).toStrictEqual([
-      { ...selectedElementMock, id: 'test-2' },
-      selectedElementMock,
-    ]);
+    expect(result).toStrictEqual([{ ...selectedElementMock, id: 'test-2' }, selectedElementMock]);
   });
 });

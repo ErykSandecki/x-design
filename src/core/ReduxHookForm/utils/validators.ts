@@ -6,23 +6,14 @@ import { TFields } from 'store/reduxHookForm/types';
 import { TFileData } from 'types/types';
 
 export const defaultFormValidator = (fields: TFields): boolean =>
-  every(
-    fields,
-    (field) => !(field.asyncErrors.length || field.syncErrors.length),
-  );
+  every(fields, (field) => !(field.asyncErrors.length || field.syncErrors.length));
 
 export const formValidatorWithFileUploader =
   (files: Array<TFileData>, setTouched: (touched: boolean) => void) =>
   (fields: TFields): boolean => {
     setTouched(true);
 
-    return (
-      files.length !== 0 &&
-      every(
-        fields,
-        (field) => !(field.asyncErrors.length || field.syncErrors.length),
-      )
-    );
+    return files.length !== 0 && every(fields, (field) => !(field.asyncErrors.length || field.syncErrors.length));
   };
 
 export const getErrorsFromAsyncValidators = async (
@@ -45,7 +36,4 @@ export const getErrorsFromSyncValidators = (
   value: TFieldValue,
   subscribedFields: TFields | undefined,
   t: TT,
-): Array<string> =>
-  validators
-    .map((validator) => validator(t, value, subscribedFields))
-    .filter(Boolean);
+): Array<string> => validators.map((validator) => validator(t, value, subscribedFields)).filter(Boolean);

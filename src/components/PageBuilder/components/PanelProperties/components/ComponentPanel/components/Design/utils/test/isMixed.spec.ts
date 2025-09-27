@@ -1,8 +1,5 @@
 // mocks
-import {
-  elementDynamicDataMock,
-  selectedElementMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { elementDynamicDataMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // utils
 import { isMixed } from '../isMixed';

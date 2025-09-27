@@ -36,33 +36,19 @@ const ColumnRotation: FC = () => {
   const element = useSelector(elementAllDataSelectorCreator(firstElement.id));
   const refInputAngle = useRef<HTMLInputElement>(null);
   const isMultiple = size(selectedElements) > 1;
-  const isMixedAngle = isMixed(
-    dynamicData,
-    firstElement,
-    'angle',
-    selectedElements,
-  );
+  const isMixedAngle = isMixed(dynamicData, firstElement, 'angle', selectedElements);
   const { t } = useTranslation();
-  const { angle, onBlur, onChange, onMouseDown } = useRotationEvents(
-    element,
-    isMixedAngle,
-    isMultiple,
-  );
+  const { angle, onBlur, onChange, onMouseDown } = useRotationEvents(element, isMixedAngle, isMultiple);
 
   return (
-    <UITools.SectionColumn
-      gridColumnType={GridColumnType.twoInputs}
-      labels={[t(`${translationNameSpace}.label`)]}
-    >
+    <UITools.SectionColumn gridColumnType={GridColumnType.twoInputs} labels={[t(`${translationNameSpace}.label`)]}>
       <UITools.TextField
         e2eValue="angle"
         fullWidth
         onBlur={onBlur}
         onChange={(event) => onChange(event.target.value)}
         onClick={() => refInputAngle.current.select()}
-        onKeyDown={(event) =>
-          handleSubmitInput(KeyboardKeys.enter, refInputAngle.current)(event)
-        }
+        onKeyDown={(event) => handleSubmitInput(KeyboardKeys.enter, refInputAngle.current)(event)}
         ref={refInputAngle}
         startAdornment={
           <ScrubbableInput
@@ -73,20 +59,14 @@ const ColumnRotation: FC = () => {
             min={-180}
             onChange={(value) => onChange(value.toString(), true)}
             onMouseDown={onMouseDown}
-            onMouseUp={() =>
-              dispatch(updateEventsStatus({ isRotating: false }))
-            }
+            onMouseUp={() => dispatch(updateEventsStatus({ isRotating: false }))}
             value={isMixedAngle ? 0 : parseFloat(angle)}
           />
         }
         type={isMixedAngle ? 'text' : 'number'}
         value={angle}
       />
-      <UITools.ButtonGroup
-        buttons={OPTIONS_BUTTONS(element.angle, dispatch)}
-        e2eValue="layout-position"
-        fullWidth
-      />
+      <UITools.ButtonGroup buttons={OPTIONS_BUTTONS(element.angle, dispatch)} e2eValue="layout-position" fullWidth />
     </UITools.SectionColumn>
   );
 };

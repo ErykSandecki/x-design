@@ -1,7 +1,7 @@
 import { MouseEvent } from 'react';
 
 // types
-import { MouseButton, T3DCoordinates } from 'types';
+import { MouseButton } from 'types';
 import { MouseMode } from '../../../../../types/enums/mouseMode';
 import { TRectArea } from '../../../../PageBuilder/types';
 

@@ -13,9 +13,7 @@ jest.mock('react-redux', () => ({
 describe('useChangeEvent', () => {
   it(`should trigger change x from text field`, () => {
     // before
-    const { result } = renderHook(() =>
-      useChangeEvent(false, false, false, mockCallBack, mockCallBack),
-    );
+    const { result } = renderHook(() => useChangeEvent(false, false, false, mockCallBack, mockCallBack));
 
     // action
     result.current.onChangeX('100', false);
@@ -26,9 +24,7 @@ describe('useChangeEvent', () => {
 
   it(`should trigger change x from scrubbable input`, () => {
     // before
-    const { result } = renderHook(() =>
-      useChangeEvent(false, false, false, mockCallBack, mockCallBack),
-    );
+    const { result } = renderHook(() => useChangeEvent(false, false, false, mockCallBack, mockCallBack));
 
     // action
     result.current.onChangeX('100', true);
@@ -43,9 +39,7 @@ describe('useChangeEvent', () => {
 
   it(`should trigger change x from scrubbable input when is multiple`, () => {
     // before
-    const { result } = renderHook(() =>
-      useChangeEvent(true, false, false, mockCallBack, mockCallBack),
-    );
+    const { result } = renderHook(() => useChangeEvent(true, false, false, mockCallBack, mockCallBack));
 
     // action
     result.current.onChangeX('100', true);
@@ -59,9 +53,7 @@ describe('useChangeEvent', () => {
 
   it(`should trigger change y from text field`, () => {
     // before
-    const { result } = renderHook(() =>
-      useChangeEvent(false, false, false, mockCallBack, mockCallBack),
-    );
+    const { result } = renderHook(() => useChangeEvent(false, false, false, mockCallBack, mockCallBack));
 
     // action
     result.current.onChangeY('100', false);
@@ -72,9 +64,7 @@ describe('useChangeEvent', () => {
 
   it(`should trigger change y from scrubbable input`, () => {
     // before
-    const { result } = renderHook(() =>
-      useChangeEvent(false, false, false, mockCallBack, mockCallBack),
-    );
+    const { result } = renderHook(() => useChangeEvent(false, false, false, mockCallBack, mockCallBack));
 
     // action
     result.current.onChangeY('100', true);
@@ -89,9 +79,7 @@ describe('useChangeEvent', () => {
 
   it(`should trigger change y from scrubbable input when is multiple`, () => {
     // before
-    const { result } = renderHook(() =>
-      useChangeEvent(true, false, false, mockCallBack, mockCallBack),
-    );
+    const { result } = renderHook(() => useChangeEvent(true, false, false, mockCallBack, mockCallBack));
 
     // action
     result.current.onChangeY('100', true);

@@ -154,24 +154,13 @@ describe('ColumnFlow behaviors', () => {
     );
 
     // find
-    const toggleButtonGroup = getByE2EAttribute(
-      container,
-      E2EAttribute.toggleButtonGroup,
-      'flow',
-    );
-    const toggleButton = getByE2EAttribute(
-      toggleButtonGroup,
-      E2EAttribute.toggleButton,
-      3,
-    );
+    const toggleButtonGroup = getByE2EAttribute(container, E2EAttribute.toggleButtonGroup, 'flow');
+    const toggleButton = getByE2EAttribute(toggleButtonGroup, E2EAttribute.toggleButton, 3);
 
     // action
     fireEvent.click(toggleButton);
 
     // result
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1']
-        .layout.type,
-    ).toBe(LayoutType.grid);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].layout.type).toBe(LayoutType.grid);
   });
 });

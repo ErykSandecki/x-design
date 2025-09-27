@@ -121,13 +121,7 @@ describe('TransformArea behaviors', () => {
     );
 
     // action
-    fireEvent.mouseDown(
-      getByE2EAttribute(
-        container,
-        E2EAttribute.anchorResize,
-        kebabCase(AnchorResize.east),
-      ),
-    );
+    fireEvent.mouseDown(getByE2EAttribute(container, E2EAttribute.anchorResize, kebabCase(AnchorResize.east)));
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(1);
@@ -157,13 +151,7 @@ describe('TransformArea behaviors', () => {
     );
 
     // action
-    fireEvent.mouseEnter(
-      getByE2EAttribute(
-        container,
-        E2EAttribute.anchorResize,
-        kebabCase(AnchorResize.northEast),
-      ),
-    );
+    fireEvent.mouseEnter(getByE2EAttribute(container, E2EAttribute.anchorResize, kebabCase(AnchorResize.northEast)));
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(1);
@@ -193,13 +181,7 @@ describe('TransformArea behaviors', () => {
     );
 
     // action
-    fireEvent.mouseLeave(
-      getByE2EAttribute(
-        container,
-        E2EAttribute.anchorRotate,
-        kebabCase(AnchorRotate.northEast),
-      ),
-    );
+    fireEvent.mouseLeave(getByE2EAttribute(container, E2EAttribute.anchorRotate, kebabCase(AnchorRotate.northEast)));
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(1);
@@ -229,13 +211,7 @@ describe('TransformArea behaviors', () => {
     );
 
     // action
-    fireEvent.mouseDown(
-      getByE2EAttribute(
-        container,
-        E2EAttribute.anchorRotate,
-        kebabCase(AnchorRotate.northEast),
-      ),
-    );
+    fireEvent.mouseDown(getByE2EAttribute(container, E2EAttribute.anchorRotate, kebabCase(AnchorRotate.northEast)));
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(1);
@@ -265,13 +241,7 @@ describe('TransformArea behaviors', () => {
     );
 
     // action
-    fireEvent.mouseEnter(
-      getByE2EAttribute(
-        container,
-        E2EAttribute.anchorRotate,
-        kebabCase(AnchorRotate.northEast),
-      ),
-    );
+    fireEvent.mouseEnter(getByE2EAttribute(container, E2EAttribute.anchorRotate, kebabCase(AnchorRotate.northEast)));
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(1);
@@ -301,13 +271,7 @@ describe('TransformArea behaviors', () => {
     );
 
     // action
-    fireEvent.mouseLeave(
-      getByE2EAttribute(
-        container,
-        E2EAttribute.anchorRotate,
-        kebabCase(AnchorRotate.northEast),
-      ),
-    );
+    fireEvent.mouseLeave(getByE2EAttribute(container, E2EAttribute.anchorRotate, kebabCase(AnchorRotate.northEast)));
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(1);

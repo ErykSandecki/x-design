@@ -1,9 +1,4 @@
-export const getRevertValue = (
-  defaultValue: number,
-  max: number,
-  min: number,
-  value: number,
-): number => {
+export const getRevertValue = (defaultValue: number, max: number, min: number, value: number): number => {
   switch (value) {
     case max:
       return min;

@@ -5,10 +5,7 @@ import { useMouseEnterEvent } from './useMouseEnterEvent';
 import { useMouseLeaveEvent } from './useMouseLeaveEvent';
 
 // store
-import {
-  elementAllDataSelectorCreator,
-  eventSelectorCreator,
-} from 'store/pageBuilder/selectors';
+import { elementAllDataSelectorCreator, eventSelectorCreator } from 'store/pageBuilder/selectors';
 
 // types
 import { DropAnchorsPosition } from 'store/pageBuilder/enums';

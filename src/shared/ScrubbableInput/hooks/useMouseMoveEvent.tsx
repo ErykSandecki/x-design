@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 
 // types
-import { T2DCoordinates } from 'types';
 
 // utils
 import { handleUpdateMousePosition } from '../utils/handleUpdateMousePosition';
@@ -14,20 +13,16 @@ export const useMouseMoveEvent = (
   min: number,
   loop: boolean,
   mousePosition: T2DCoordinates | null,
-  onChange: (value: number) => void,
+  onChange: TFuncion<[number]>,
   setMousePosition: (mousePosition: T2DCoordinates) => void,
   value: number,
 ): TUseMouseMoveEvent => {
   const handleMouseMove = (event: MouseEvent): void => {
     const speed = event.shiftKey ? 2 : 0.5;
-    const convertedValue = Math.round(
-      Math.max(min, Math.min(max, value + event.movementX * speed)),
-    );
+    const convertedValue = Math.round(Math.max(min, Math.min(max, value + event.movementX * speed)));
 
     const shouldUseRevertValue = convertedValue === value && loop;
-    const targetValue = shouldUseRevertValue
-      ? getRevertValue(convertedValue, max, min, value)
-      : convertedValue;
+    const targetValue = shouldUseRevertValue ? getRevertValue(convertedValue, max, min, value) : convertedValue;
 
     handleUpdateMousePosition(event, mousePosition, setMousePosition);
     onChange(targetValue);

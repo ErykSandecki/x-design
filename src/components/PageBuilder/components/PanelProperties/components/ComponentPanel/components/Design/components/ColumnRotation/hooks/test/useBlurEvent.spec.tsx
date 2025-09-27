@@ -16,9 +16,7 @@ jest.mock('react-redux', () => ({
 describe('useBlurEvent', () => {
   it(`should trigger blur`, () => {
     // before
-    const { result } = renderHook(() =>
-      useBlurEvent('0', elementAllDataMock, mockCallBack),
-    );
+    const { result } = renderHook(() => useBlurEvent('0', elementAllDataMock, mockCallBack));
 
     // action
     result.current();
@@ -29,9 +27,7 @@ describe('useBlurEvent', () => {
 
   it(`should reset angle`, () => {
     // before
-    const { result } = renderHook(() =>
-      useBlurEvent('', elementAllDataMock, mockCallBack),
-    );
+    const { result } = renderHook(() => useBlurEvent('', elementAllDataMock, mockCallBack));
 
     // action
     result.current();

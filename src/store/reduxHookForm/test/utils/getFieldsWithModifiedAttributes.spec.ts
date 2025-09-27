@@ -20,8 +20,7 @@ describe('getFieldsWithModifiedAttributes', () => {
         fields: {
           ...reduxHookFormStateMock[REDUX_HOOK_FORM].testForm.fields,
           testField: {
-            ...reduxHookFormStateMock[REDUX_HOOK_FORM].testForm.fields
-              .testField,
+            ...reduxHookFormStateMock[REDUX_HOOK_FORM].testForm.fields.testField,
             value: '',
           },
         },
@@ -29,9 +28,7 @@ describe('getFieldsWithModifiedAttributes', () => {
     } as TReduxHookFormState;
 
     // result
-    expect(
-      getFieldsWithModifiedAttributes('testForm', stateMock),
-    ).toStrictEqual({
+    expect(getFieldsWithModifiedAttributes('testForm', stateMock)).toStrictEqual({
       testField: {
         ...reduxHookFormStateMock[REDUX_HOOK_FORM].testForm.fields.testField,
         modifiedSinceLastSubmit: false,

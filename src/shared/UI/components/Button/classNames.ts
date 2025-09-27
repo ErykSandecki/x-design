@@ -1,8 +1,11 @@
-import { mapValues } from 'lodash';
+import { values } from 'lodash';
 
 // types
 import { ButtonColor, ButtonVariant } from './enums';
 import { InputSize } from '../../enums';
+
+// utils
+import { composeClassNames } from 'utils';
 
 export const className = 'Button';
 
@@ -10,23 +13,15 @@ export const classes = {
   className,
 };
 
-export const classNames = {
-  [className]: {
-    name: className,
-    modificators: {
-      forcedHover: `${className}--forced-hover`,
-      fullwidth: `${className}--full-width`,
-      ...mapValues(ButtonColor, (color) => `${className}--${color}`),
-      ...mapValues(InputSize, (size) => `${className}--${size}`),
-      ...mapValues(ButtonVariant, (variant) => `${className}--${variant}`),
-    },
-  },
-  icon: {
-    name: `${className}__icon`,
-    modificators: {
-      end: `${className}__icon--end`,
-      start: `${className}__icon--start`,
-      ...mapValues(InputSize, (size) => `${className}__icon--${size}`),
-    },
-  },
-};
+export const classNames = composeClassNames(
+  className,
+  [
+    className,
+    'forcedHover',
+    'fullwidth',
+    ...values(ButtonColor),
+    ...values(InputSize),
+    ...values(ButtonVariant),
+  ] as const,
+  ['icon', 'end', 'start', ...values(InputSize)] as const,
+);

@@ -20,13 +20,7 @@ jest.mock('utils', () => ({
 describe('handleCreateElement', () => {
   it(`should create element and reset data`, () => {
     // before
-    handleCreateElement(
-      mockCallBack,
-      BASE_RECT,
-      MouseMode.toolBeltA,
-      mockCallBack,
-      mockCallBack,
-    );
+    handleCreateElement(mockCallBack, BASE_RECT, MouseMode.toolBeltA, mockCallBack, mockCallBack);
 
     // result
     expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
@@ -58,13 +52,7 @@ describe('handleCreateElement', () => {
 
   it(`should not create element`, () => {
     // before
-    handleCreateElement(
-      mockCallBack,
-      null,
-      MouseMode.toolBeltA,
-      mockCallBack,
-      mockCallBack,
-    );
+    handleCreateElement(mockCallBack, null, MouseMode.toolBeltA, mockCallBack, mockCallBack);
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(0);

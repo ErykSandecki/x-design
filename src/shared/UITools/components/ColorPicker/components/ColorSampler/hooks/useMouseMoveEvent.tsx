@@ -2,7 +2,7 @@ import { throttle } from 'lodash';
 import { useEffect } from 'react';
 
 // types
-import { T2DCoordinates, TRGBA } from 'types';
+import { TRGBA } from 'types';
 
 // utils
 import { extractColors } from '../utils/extractColors';

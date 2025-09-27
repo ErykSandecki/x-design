@@ -19,12 +19,7 @@ describe('Panel snapshots', () => {
   it('should render Panel', () => {
     // before
     const { asFragment } = render(
-      <Panel
-        activeSampler={false}
-        onClickColorSampler={mockCallBack}
-        onClickSampler={mockCallBack}
-        setVisible={noop}
-      >
+      <Panel activeSampler={false} onClickColorSampler={mockCallBack} onClickSampler={mockCallBack} setVisible={noop}>
         <div className={antColorPickerSliderContainerClassName}></div>
       </Panel>,
     );
@@ -36,12 +31,7 @@ describe('Panel snapshots', () => {
   it('should render with active sampler', () => {
     // before
     const { asFragment } = render(
-      <Panel
-        activeSampler
-        onClickColorSampler={mockCallBack}
-        onClickSampler={mockCallBack}
-        setVisible={noop}
-      >
+      <Panel activeSampler onClickColorSampler={mockCallBack} onClickSampler={mockCallBack} setVisible={noop}>
         <div className={antColorPickerSliderContainerClassName}></div>
       </Panel>,
     );
@@ -80,12 +70,7 @@ describe('Panel behaviors', () => {
     // before
     const { container } = render(
       <div id="test" onKeyDown={mockCallBack}>
-        <Panel
-          activeSampler={false}
-          onClickColorSampler={mockCallBack}
-          onClickSampler={mockCallBack}
-          setVisible={noop}
-        >
+        <Panel activeSampler={false} onClickColorSampler={mockCallBack} onClickSampler={mockCallBack} setVisible={noop}>
           children
         </Panel>
         ,
@@ -93,10 +78,7 @@ describe('Panel behaviors', () => {
     );
 
     // action
-    fireEvent.keyDown(
-      getByE2EAttribute(container, E2EAttribute.colorPickerPanel),
-      {},
-    );
+    fireEvent.keyDown(getByE2EAttribute(container, E2EAttribute.colorPickerPanel), {});
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(0);

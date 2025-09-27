@@ -6,10 +6,7 @@ import { BLUR, CHANGE, FOCUS } from 'store/reduxHookForm/actionsType';
 
 // store
 import { clearFields } from 'store/reduxHookForm/actions';
-import {
-  fieldAttributesSelectorCreator,
-  fieldSelectorCreator,
-} from 'store/reduxHookForm/selectors';
+import { fieldAttributesSelectorCreator, fieldSelectorCreator } from 'store/reduxHookForm/selectors';
 
 // types
 import { TFieldValue } from '../../../types';
@@ -25,10 +22,7 @@ export type TUseInputProps<V> = {
   value: V;
 };
 
-export const useInputProps = <V extends TFieldValue>(
-  formName: string,
-  name: string,
-): TUseInputProps<V> => {
+export const useInputProps = <V extends TFieldValue>(formName: string, name: string): TUseInputProps<V> => {
   const dispatch = useDispatch();
   const dispatchField = dispatchFieldHandler(dispatch, formName, name);
 
@@ -36,27 +30,19 @@ export const useInputProps = <V extends TFieldValue>(
     fieldAttributesSelectorCreator('fieldsToClearOnChange', formName, name)!,
   ) as Array<string>;
 
-  const value = useSelector(
-    fieldAttributesSelectorCreator('value', formName, name)!,
-  ) as V;
+  const value = useSelector(fieldAttributesSelectorCreator('value', formName, name)!) as V;
 
   const isValueSinceLastSubmit =
-    useSelector(
-      fieldAttributesSelectorCreator('valueSinceLastSubmit', formName, name)!,
-    ) !== undefined;
+    useSelector(fieldAttributesSelectorCreator('valueSinceLastSubmit', formName, name)!) !== undefined;
 
-  const { formatOnBlur, formatOnChange, formatOnFocus } = useSelector(
-    fieldSelectorCreator(formName, name),
-  );
+  const { formatOnBlur, formatOnChange, formatOnFocus } = useSelector(fieldSelectorCreator(formName, name));
 
   const handleClearFields = (nextValue: V): void => {
     const previousValue = value;
 
     if (fieldsToClearOnChange.length) {
       if (isArray(previousValue) && isArray(nextValue)) {
-        const someValueHasChanged = !nextValue.every((value) =>
-          previousValue.includes(value),
-        );
+        const someValueHasChanged = !nextValue.every((value) => previousValue.includes(value));
 
         if (someValueHasChanged) {
           dispatch(clearFields(formName, fieldsToClearOnChange));
@@ -79,9 +65,7 @@ export const useInputProps = <V extends TFieldValue>(
   };
 
   const onChangeHandler = (nextValue: V): void => {
-    const targetValue = formatOnChange
-      ? formatOnChange(nextValue, name)
-      : nextValue;
+    const targetValue = formatOnChange ? formatOnChange(nextValue, name) : nextValue;
 
     dispatchField(
       {

@@ -10,9 +10,7 @@ const ref = { current: {} } as RefObject<HTMLDivElement>;
 describe('useMouseDownEvent', () => {
   it(`should triiger event`, () => {
     // before
-    const { result } = renderHook(() =>
-      useMouseDownEvent(ref, mockCallBack, mockCallBack),
-    );
+    const { result } = renderHook(() => useMouseDownEvent(ref, mockCallBack, mockCallBack));
 
     // action
     result.current({ clientX: 0, clientY: 0 } as MouseEvent);

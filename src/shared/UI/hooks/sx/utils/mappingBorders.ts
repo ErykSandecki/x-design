@@ -26,9 +26,7 @@ export const getBorderValue = (
       (border) => border !== Border.border && border !== selectedBorder,
     );
 
-    return borders
-      .map((border) => `${kebabCase(border)}: ${cssValue};`)
-      .join('\n');
+    return borders.map((border) => `${kebabCase(border)}: ${cssValue};`).join('\n');
   }
 
   return `${kebabCase(selectedBorder)}: ${cssValue};`;
@@ -45,12 +43,9 @@ export const mappingBorders = (sx: TSX, theme: Theme): string => {
   return keys
     .map((key: string) => {
       const value = borders[key as keyof TSXBorders];
-      const isSubtractive =
-        (value === 0 || value === '0') && key !== Border.border;
+      const isSubtractive = (value === 0 || value === '0') && key !== Border.border;
 
-      return value !== undefined
-        ? getBorderValue(isSubtractive, key, theme, value)
-        : '';
+      return value !== undefined ? getBorderValue(isSubtractive, key, theme, value) : '';
     })
     .filter(Boolean)
     .join('\n');

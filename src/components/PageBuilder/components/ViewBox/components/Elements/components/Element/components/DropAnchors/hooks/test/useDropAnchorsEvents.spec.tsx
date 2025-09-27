@@ -77,12 +77,9 @@ describe('useDropAnchorsEvents', () => {
     const store = configureStore(stateMock);
 
     // before
-    const { result } = renderHook(
-      () => useDropAnchorsEvents('1', 0, MouseMode.default, '-1'),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    const { result } = renderHook(() => useDropAnchorsEvents('1', 0, MouseMode.default, '-1'), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // result
     expect(result.current).toStrictEqual({

@@ -20,13 +20,9 @@ describe('fieldSelectorCreator', () => {
 
   it('should return field', () => {
     // before
-    const selectorFunction = (
-      fieldSelectorCreator('testForm', 'testField') as any
-    ).resultFunc;
+    const selectorFunction = (fieldSelectorCreator('testForm', 'testField') as any).resultFunc;
 
     // result
-    expect(selectorFunction(state)).toStrictEqual(
-      reduxHookFormStateMock[REDUCER_KEY].testForm.fields.testField,
-    );
+    expect(selectorFunction(state)).toStrictEqual(reduxHookFormStateMock[REDUCER_KEY].testForm.fields.testField);
   });
 });

@@ -18,10 +18,7 @@ export const classNames = {
     modificators: {
       colorSampler: `${className}--color-sampler`,
       pressing: `${className}--pressing`,
-      ...CURSOR_STATES.reduce(
-        (obj, key) => ({ ...obj, [key]: `${className}--${key}` }),
-        {},
-      ),
+      ...CURSOR_STATES.reduce((obj, key) => ({ ...obj, [key]: `${className}--${key}` }), {}),
       ...mapValues(MouseMode, (mode) => `${className}--${mode}`),
     },
   },

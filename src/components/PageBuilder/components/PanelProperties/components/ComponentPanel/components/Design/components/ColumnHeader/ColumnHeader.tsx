@@ -15,16 +15,12 @@ import { selectedElementsSelector } from 'store/pageBuilder/selectors';
 const ColumnHeader: FC = () => {
   const selectedElements = useSelector(selectedElementsSelector);
   const amountElements = size(selectedElements);
-  const text =
-    amountElements === 1 ? `header.${head(selectedElements).type}` : `header`;
+  const text = amountElements === 1 ? `header.${head(selectedElements).type}` : `header`;
   const { t } = useTranslation();
 
   return (
     <UITools.SectionColumn
-      buttonsIcon={[
-        <UITools.ButtonIcon key={0} name="HtmlTag" />,
-        <UITools.ButtonIcon key={1} name="Component" />,
-      ]}
+      buttonsIcon={[<UITools.ButtonIcon key={0} name="HtmlTag" />, <UITools.ButtonIcon key={1} name="Component" />]}
     >
       <Small>
         {t(`${translationNameSpace}.${text}`, {

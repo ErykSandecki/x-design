@@ -1,11 +1,4 @@
-import {
-  FC,
-  ForwardRefExoticComponent,
-  ReactNode,
-  RefObject,
-  useContext,
-  useEffect,
-} from 'react';
+import { FC, ForwardRefExoticComponent, ReactNode, RefObject, useContext, useEffect } from 'react';
 import { isEmpty } from 'lodash';
 import { useSelector } from 'react-redux';
 
@@ -29,9 +22,7 @@ export type TFieldProps<T, V> = {
   afterSubmit?: () => void;
   asyncValidators?: Array<TAsyncValidator>;
   beforeSubmit?: () => void;
-  Component:
-    | FC<TFieldComponentProps<T, V>>
-    | ForwardRefExoticComponent<TFieldComponentProps<T, V>>;
+  Component: FC<TFieldComponentProps<T, V>> | ForwardRefExoticComponent<TFieldComponentProps<T, V>>;
   data?: TObject<any>;
   defaultValue?: TFieldValue;
   fieldsToClearOnChange?: Array<string>;
@@ -75,11 +66,7 @@ export const Field = <T, V extends TFieldValue>({
   const metaProps = useMetaProps<V>(formName, name);
   const { touched, value = '', visited } = field;
 
-  const {
-    subscriptionFieldsValues,
-    updateAsyncValidators,
-    updateSyncValidators,
-  } = useInitField(
+  const { subscriptionFieldsValues, updateAsyncValidators, updateSyncValidators } = useInitField(
     afterSubmit,
     asyncValidators,
     beforeSubmit,
@@ -105,14 +92,7 @@ export const Field = <T, V extends TFieldValue>({
     }
   }, [touched, value, visited, ...subscriptionFieldsValues]);
 
-  return (
-    <Component
-      meta={metaProps}
-      {...inputProps}
-      {...(restProps as T)}
-      {...(ref ? { ref: ref } : {})}
-    />
-  );
+  return <Component meta={metaProps} {...inputProps} {...(restProps as T)} {...(ref ? { ref: ref } : {})} />;
 };
 
 export default Field;

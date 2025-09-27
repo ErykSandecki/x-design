@@ -7,7 +7,6 @@ import { setElementsCoordinates } from 'store/pageBuilder/actions';
 import { store } from 'store';
 
 // types
-import { T2DCoordinates } from 'types';
 
 // utils
 import { caculateMovePosition } from './caculateMovePosition';
@@ -18,11 +17,7 @@ export const setElementsCoordinatesHandler = (
   event: MouseEvent,
 ): void => {
   const [first] = selectedElementsSelector(store.getState());
-  const coordinates = caculateMovePosition(
-    cursorPosition,
-    event,
-    first.parentId,
-  );
+  const coordinates = caculateMovePosition(cursorPosition, event, first.parentId);
 
   dispatch(setElementsCoordinates(coordinates, 'dynamic'));
 };

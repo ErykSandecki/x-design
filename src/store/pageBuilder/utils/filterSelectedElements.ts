@@ -11,10 +11,7 @@ export const getAllParents = (
 ): Array<TElement['id']> =>
   allData[id].parentId === '-1'
     ? parent
-    : getAllParents(allData, allData[id].parentId, [
-        ...parent,
-        allData[id].parentId,
-      ]);
+    : getAllParents(allData, allData[id].parentId, [...parent, allData[id].parentId]);
 
 export const filterSelectedElements = (
   selectedElements: TSelectedElements,
@@ -27,9 +24,7 @@ export const filterSelectedElements = (
     ? selectedElements
     : selectedElements.filter(({ id }) => {
         const parents = getAllParents(allData, id);
-        const isParentSelected = parents.some((id) =>
-          selectedElementsId.includes(id),
-        );
+        const isParentSelected = parents.some((id) => selectedElementsId.includes(id));
 
         return !isParentSelected;
       });

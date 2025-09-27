@@ -5,7 +5,7 @@ import { useRefs } from 'pages/PageBuilderPage/core/RefsProvider';
 
 // types
 import { MouseMode } from '../../../../../types/enums/mouseMode';
-import { T3DCoordinates, TObject, TRectCoordinates } from 'types';
+import { TObject } from 'types';
 import { TRectArea, TRectAreaExtended } from '../../../../PageBuilder/types';
 
 // utils
@@ -25,13 +25,7 @@ export const useMouseDownEvent = (
   const { itemsRefs, zoomContentRef } = useRefs();
 
   const handleMouseDown = (event: MouseEvent): void => {
-    calculateAbsolutePositions(
-      event,
-      mouseMode,
-      rectCoordinates,
-      itemsRefs,
-      zoomContentRef,
-    );
+    calculateAbsolutePositions(event, mouseMode, rectCoordinates, itemsRefs, zoomContentRef);
     handleInitElementArea(coordinates, event, mouseMode, setElementArea);
     handleInitSelectableArea(coordinates, event, mouseMode, setSelectableArea);
   };

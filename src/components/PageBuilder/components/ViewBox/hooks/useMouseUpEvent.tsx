@@ -19,13 +19,7 @@ export const useMouseUpEvent = (
   const dispatch = useDispatch();
 
   const handleMouseUp = (): void => {
-    handleCreateElement(
-      dispatch,
-      elementArea,
-      mouseMode,
-      setElementArea,
-      setMouseMode,
-    );
+    handleCreateElement(dispatch, elementArea, mouseMode, setElementArea, setMouseMode);
     setSelectableArea(null);
   };
 

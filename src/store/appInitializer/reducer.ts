@@ -1,19 +1,10 @@
 // others
 import { DEFAULT_LANGUAGE } from 'translations';
-import {
-  INIT_LANGUAGE_SUCCESS,
-  SET_IS_APP_LOADED,
-  SET_THEME,
-} from './actionsType';
+import { INIT_LANGUAGE_SUCCESS, SET_IS_APP_LOADED, SET_THEME } from './actionsType';
 
 // types
 import { TAction } from 'types';
-import {
-  TAppInitializerState,
-  TInitLanguageSuccessAction,
-  TSetIsAppLoadedAction,
-  TSetThemeAction,
-} from './types';
+import { TAppInitializerState, TInitLanguageSuccessAction, TSetIsAppLoadedAction, TSetThemeAction } from './types';
 
 // utils
 import { getThemePreferences } from 'utils';
@@ -50,10 +41,7 @@ const setTheme = (
   theme,
 });
 
-const appInitializer = (
-  state: TAppInitializerState = initialState,
-  action: TAction,
-): TAppInitializerState => {
+const appInitializer = (state: TAppInitializerState = initialState, action: TAction): TAppInitializerState => {
   switch (action.type) {
     case INIT_LANGUAGE_SUCCESS:
       return initLanguageSuccess(state, action);

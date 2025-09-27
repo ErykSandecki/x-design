@@ -1,14 +1,10 @@
 import { MouseEvent, RefObject } from 'react';
 
 // types
-import { T2DCoordinates } from 'types';
 
 export type TUseClickEvent = (event: MouseEvent) => void;
 
-export const useClickEvent = (
-  mousePosition: RefObject<T2DCoordinates>,
-  onClick: () => void,
-): TUseClickEvent => {
+export const useClickEvent = (mousePosition: RefObject<T2DCoordinates>, onClick: () => void): TUseClickEvent => {
   const handleClick = (event: MouseEvent): void => {
     mousePosition.current = { x: event.clientX, y: event.clientY };
     onClick();

@@ -2,9 +2,7 @@ import { createPortal } from 'react-dom';
 import { FC, ReactNode, RefObject, useRef } from 'react';
 
 // components
-import E2EDataAttribute, {
-  TE2EDataAttributeProps,
-} from '../../../E2EDataAttributes/E2EDataAttribute';
+import E2EDataAttribute, { TE2EDataAttributeProps } from '../../../E2EDataAttributes/E2EDataAttribute';
 import PopoverItem from './components/PopoverItem/PopoverItem';
 import PopoverRoot from './components/PopoverRoot/PopoverRoot';
 import PopoverSeparator from './components/PopoverSeparator/PopoverSeparator';
@@ -31,12 +29,7 @@ export type TPopoverProps = {
   selected: boolean;
 };
 
-export const Popover: FC<TPopoverProps> = ({
-  children,
-  e2eValue,
-  refItem,
-  selected,
-}) => {
+export const Popover: FC<TPopoverProps> = ({ children, e2eValue, refItem, selected }) => {
   const refPopover = useRef(null);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { left, top } = getPosition(refItem, refPopover);

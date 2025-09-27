@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useMouseMoveEvent } from './useMouseMoveEvent';
 
 // types
-import { T2DCoordinates, TRGBA } from 'types';
+import { TRGBA } from 'types';
 
 export type TUseColorSamplerEvents = {
   colors: Array<TRGBA>;
@@ -12,20 +12,12 @@ export type TUseColorSamplerEvents = {
   isPending: boolean;
 };
 
-export const useColorSamplerEvents = (
-  initialMousePosition: T2DCoordinates,
-): TUseColorSamplerEvents => {
+export const useColorSamplerEvents = (initialMousePosition: T2DCoordinates): TUseColorSamplerEvents => {
   const [gridColors, setGridColors] = useState<Array<TRGBA>>([]);
   const [isPending, setIsPending] = useState(true);
-  const [mousePosition, setMousePosition] =
-    useState<T2DCoordinates>(initialMousePosition);
+  const [mousePosition, setMousePosition] = useState<T2DCoordinates>(initialMousePosition);
 
-  useMouseMoveEvent(
-    initialMousePosition,
-    setGridColors,
-    setMousePosition,
-    setIsPending,
-  );
+  useMouseMoveEvent(initialMousePosition, setGridColors, setMousePosition, setIsPending);
 
   useEffect(() => {
     document.body.style.pointerEvents = 'none';

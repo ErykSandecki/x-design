@@ -30,12 +30,7 @@ const ColumnFlow: FC = () => {
   const selectedElements = useSelector(selectedElementsSelector);
   const firstElement = first(selectedElements);
   const element = useSelector(elementAllDataSelectorCreator(firstElement.id));
-  const isMixedLayoutType = isMixed(
-    dynamicData,
-    firstElement,
-    'layout.type',
-    selectedElements,
-  );
+  const isMixedLayoutType = isMixed(dynamicData, firstElement, 'layout.type', selectedElements);
   const { t } = useTranslation();
 
   return (
@@ -48,9 +43,7 @@ const ColumnFlow: FC = () => {
         defaultValue={isMixedLayoutType ? '' : element.layout.type}
         e2eValue="flow"
         fullWidth
-        onChange={(layoutType) =>
-          dispatch(changeLayout(layoutType as LayoutType))
-        }
+        onChange={(layoutType) => dispatch(changeLayout(layoutType as LayoutType))}
         toggleButtons={toggleButtons}
       />
     </UITools.SectionColumn>

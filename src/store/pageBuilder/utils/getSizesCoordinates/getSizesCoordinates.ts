@@ -1,6 +1,6 @@
 // types
 import { AnchorResize } from '../../enums';
-import { T2DCoordinates, TElement, TRectCoordinates } from 'types';
+import { TElement } from 'types';
 import { TSizeCoordinates } from '../../types';
 
 // utils
@@ -16,20 +16,8 @@ export const getSizesCoordinates = (
   position: TElement['position'],
 ): TSizeCoordinates => {
   if (position === 'absolute') {
-    return getAbsoluteCoordinates(
-      anchor,
-      baseCoordinates,
-      baseHeight,
-      baseWidth,
-      mouseCoordinates,
-    );
+    return getAbsoluteCoordinates(anchor, baseCoordinates, baseHeight, baseWidth, mouseCoordinates);
   }
 
-  return getRelativeCoordinates(
-    anchor,
-    baseCoordinates,
-    baseHeight,
-    baseWidth,
-    mouseCoordinates,
-  );
+  return getRelativeCoordinates(anchor, baseCoordinates, baseHeight, baseWidth, mouseCoordinates);
 };

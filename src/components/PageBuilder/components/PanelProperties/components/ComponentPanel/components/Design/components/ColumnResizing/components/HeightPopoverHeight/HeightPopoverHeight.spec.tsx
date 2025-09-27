@@ -18,10 +18,7 @@ describe('HeightPopoverHeight snapshots', () => {
     // before
     const { asFragment } = render(
       <UITools.PopoverCompound.PopoverRoot setSelected={noop}>
-        <HeightPopoverHeight
-          height={elementAllDataMock.height}
-          isMixed={false}
-        />
+        <HeightPopoverHeight height={elementAllDataMock.height} isMixed={false} />
       </UITools.PopoverCompound.PopoverRoot>,
     );
 

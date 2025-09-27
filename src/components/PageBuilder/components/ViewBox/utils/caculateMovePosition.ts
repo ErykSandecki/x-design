@@ -9,7 +9,7 @@ import {
 import { store } from 'store';
 
 // types
-import { T2DCoordinates, TElement } from 'types';
+import { TElement } from 'types';
 
 export const caculateMovePosition = (
   cursorPosition: RefObject<T2DCoordinates>,
@@ -18,8 +18,7 @@ export const caculateMovePosition = (
 ): T2DCoordinates => {
   const state = store.getState();
   const z = areaAxisSelectorCreator('z')(state);
-  const { angle, parentId: _parentId } =
-    elementAllDataSelectorCreator(parentId)(state);
+  const { angle, parentId: _parentId } = elementAllDataSelectorCreator(parentId)(state);
   const counterAngle = counterAngleSelectorCreator(_parentId)(state);
   const totalAngle = angle - counterAngle;
   const targetAngle = -totalAngle * (Math.PI / 180);

@@ -2,10 +2,7 @@ import { MouseEvent } from 'react';
 import { renderHook } from '@testing-library/react';
 
 // mocks
-import {
-  eventsMock,
-  pageBuilderStateMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { eventsMock, pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // hooks
 import { useMouseLeaveEvent } from '../useMouseLeaveEvent';
@@ -45,9 +42,7 @@ describe('useMouseLeaveEvent', () => {
       }) as any;
 
     // before
-    const { result } = renderHook(() =>
-      useMouseLeaveEvent(MouseMode.default, '-1'),
-    );
+    const { result } = renderHook(() => useMouseLeaveEvent(MouseMode.default, '-1'));
 
     // action
     result.current({} as MouseEvent);
@@ -73,9 +68,7 @@ describe('useMouseLeaveEvent', () => {
       }) as any;
 
     // before
-    const { result } = renderHook(() =>
-      useMouseLeaveEvent(MouseMode.default, '-1'),
-    );
+    const { result } = renderHook(() => useMouseLeaveEvent(MouseMode.default, '-1'));
 
     // action
     result.current({} as MouseEvent);
@@ -100,9 +93,7 @@ describe('useMouseLeaveEvent', () => {
       }) as any;
 
     // before
-    const { result } = renderHook(() =>
-      useMouseLeaveEvent(MouseMode.comment, '-1'),
-    );
+    const { result } = renderHook(() => useMouseLeaveEvent(MouseMode.comment, '-1'));
 
     // action
     result.current({} as MouseEvent);

@@ -10,31 +10,19 @@ export const useEvents = <V extends TToggleButtonGroupValue>(
   setValue: (value: V) => void,
   value: V,
 ): TUseEvents => {
-  const onChangeMultipleValue = (
-    value: Array<string>,
-    valueToggleButton: string,
-  ): Array<string> => {
+  const onChangeMultipleValue = (value: Array<string>, valueToggleButton: string): Array<string> => {
     const includeValue = value.includes(valueToggleButton);
 
-    if (
-      !alwaysSelected ||
-      !includeValue ||
-      (includeValue && value.length > 1)
-    ) {
+    if (!alwaysSelected || !includeValue || (includeValue && value.length > 1)) {
       return includeValue
-        ? (value as Array<string>).filter(
-            (value) => value !== valueToggleButton,
-          )
+        ? (value as Array<string>).filter((value) => value !== valueToggleButton)
         : [...(value as Array<string>), valueToggleButton];
     }
 
     return value;
   };
 
-  const onChangeSingleValue = (
-    value: string,
-    valueFromToggleButton: string,
-  ): string => {
+  const onChangeSingleValue = (value: string, valueFromToggleButton: string): string => {
     if (!alwaysSelected && value === valueFromToggleButton) {
       return '';
     }

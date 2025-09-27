@@ -17,24 +17,18 @@ export function* freezeEventMoveElements(): any {
   yield put(updateEventsStatus({ canMoveElements: true }));
 }
 
-export function* reducerHistorySaveSaga({
-  type,
-}: TReducerHistorySaveAction): any {
+export function* reducerHistorySaveSaga({ type }: TReducerHistorySaveAction): any {
   yield put(reducerHistorySave(type));
 }
 
-export function* reducerHistorySaveWithDelaySaga({
-  type,
-}: TReducerHistorySaveAction): any {
+export function* reducerHistorySaveWithDelaySaga({ type }: TReducerHistorySaveAction): any {
   const task: Task = yield fork(reducerHistorySaveWithDelayForkedSaga, type);
 
   yield take(REDUCER_HISTORY_SAVE_WITH_DELAY_ACTIONS);
   yield cancel(task);
 }
 
-export function* reducerHistorySaveWithDelayForkedSaga(
-  type: TAction['type'],
-): any {
+export function* reducerHistorySaveWithDelayForkedSaga(type: TAction['type']): any {
   yield delay(500);
   yield put(reducerHistorySave(type));
 }

@@ -4,12 +4,7 @@ import { composeClassNames } from '../composeClassNames';
 describe('composeClassNames', () => {
   it('should compose classNames', () => {
     // before
-    const result = composeClassNames(
-      'A',
-      ['A', 'a'] as const,
-      ['B', 'b'] as const,
-      ['C'] as const,
-    );
+    const result = composeClassNames('A', ['A', 'a'] as const, ['B', 'b'] as const, ['C'] as const);
 
     // result
     expect(result).toStrictEqual({
@@ -29,12 +24,7 @@ describe('composeClassNames', () => {
 
   it('should compose without parent mofificators', () => {
     // before
-    const result = composeClassNames(
-      'A',
-      ['A'] as const,
-      ['B', 'b'] as const,
-      ['C'] as const,
-    );
+    const result = composeClassNames('A', ['A'] as const, ['B', 'b'] as const, ['C'] as const);
 
     // result
     expect(result).toStrictEqual({

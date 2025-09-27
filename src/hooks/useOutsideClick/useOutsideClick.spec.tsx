@@ -86,9 +86,7 @@ describe('useOutsideClick', () => {
 
   it('should trigger outside on element passed by id', async () => {
     // before
-    const { result } = renderHook(() =>
-      useOutsideClick([], ref, mockCallBack, 'id'),
-    );
+    const { result } = renderHook(() => useOutsideClick([], ref, mockCallBack, 'id'));
 
     // action
     act(() => {
@@ -105,9 +103,7 @@ describe('useOutsideClick', () => {
 
   it('should be unselected after keydown escape', () => {
     // before
-    const { result } = renderHook(() =>
-      useOutsideClick([], ref, undefined, '', false, false),
-    );
+    const { result } = renderHook(() => useOutsideClick([], ref, undefined, '', false, false));
 
     // action
     act(() => {
@@ -137,9 +133,7 @@ describe('useOutsideClick', () => {
 
   it('should not be unselected after keydown wrong key', () => {
     // before
-    const { result } = renderHook(() =>
-      useOutsideClick([], ref, undefined, '', false, false),
-    );
+    const { result } = renderHook(() => useOutsideClick([], ref, undefined, '', false, false));
 
     // action
     act(() => {

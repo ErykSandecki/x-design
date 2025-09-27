@@ -21,10 +21,7 @@ export type TFieldGroupProps = {
   e2eValue?: TE2EDataAttributeProps['value'];
 };
 
-export const FieldGroup: FC<TFieldGroupProps> = ({
-  children,
-  e2eValue = '',
-}) => {
+export const FieldGroup: FC<TFieldGroupProps> = ({ children, e2eValue = '' }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   return (

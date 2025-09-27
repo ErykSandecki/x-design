@@ -6,12 +6,11 @@ import { useMouseMoveEvent } from './useMouseMoveEvent';
 import { useMouseUpEvent } from './useMouseUpEvent';
 
 // types
-import { T2DCoordinates } from 'types';
 
 export type TUseScrubbableInputEvents = {
   mousePosition: T2DCoordinates;
-  onMouseDown: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
-  onMouseUp: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
+  onMouseDown: TFuncion<[React.MouseEvent<HTMLElement, MouseEvent>]>;
+  onMouseUp: TFuncion<[React.MouseEvent<HTMLElement, MouseEvent>]>;
 };
 
 export const useScrubbableInputEvents = (
@@ -26,15 +25,7 @@ export const useScrubbableInputEvents = (
 ): TUseScrubbableInputEvents => {
   const [mousePosition, setMousePosition] = useState(null);
 
-  useMouseMoveEvent(
-    max,
-    min,
-    loop,
-    mousePosition,
-    onChange,
-    setMousePosition,
-    value,
-  );
+  useMouseMoveEvent(max, min, loop, mousePosition, onChange, setMousePosition, value);
 
   return {
     mousePosition,

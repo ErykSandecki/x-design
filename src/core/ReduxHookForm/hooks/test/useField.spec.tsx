@@ -22,12 +22,9 @@ describe('useField', () => {
     const store = configureStore(stateMock);
 
     // before
-    const { result } = renderHook(
-      () => useField<string>('testForm', 'testField'),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    const { result } = renderHook(() => useField<string>('testForm', 'testField'), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // mock
     const expectedResult = {

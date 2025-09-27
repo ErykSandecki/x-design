@@ -1,5 +1,5 @@
-import { camelCase } from 'lodash';
 import { CSSProperties, HTMLAttributes, ReactNode, Ref } from 'react';
+import { camelCase } from 'lodash';
 
 // hooks
 import { useSX } from '../../hooks/sx/useSX';
@@ -15,21 +15,14 @@ import styles from './typography.scss';
 import { ColorsTheme, E2EAttribute } from 'types';
 import { TE2EDataAttributeProps } from '../../../E2EDataAttributes/E2EDataAttribute';
 import { TTypograpghyComponent, TTypograpghyVariantMapping } from './types';
-import {
-  TypographyFontStyle,
-  TypographyFontWeight,
-  TypographyVariant,
-} from './enums';
+import { TypographyFontStyle, TypographyFontWeight, TypographyVariant } from './enums';
 import { TUIProps } from '../../types';
 
 // utils
 import { getAttributes } from '../../../E2EDataAttributes/utils';
 import { renderElement } from './utils/renderElement';
 
-export type TTypographyProps = Omit<
-  HTMLAttributes<HTMLElement>,
-  'className' | 'color'
-> &
+export type TTypographyProps = Omit<HTMLAttributes<HTMLElement>, 'className' | 'color'> &
   TUIProps<typeof classes> & {
     align?: CSSProperties['textAlign'];
     children?: ReactNode;
@@ -88,10 +81,7 @@ export const Typography = ({
         classNamesWithTheme[className].modificators[camelCase(fontWeight)],
         classNamesWithTheme[className].modificators[fontStyle],
         classNamesWithTheme[className].modificators[variant],
-        [
-          classNamesWithTheme[className].modificators.gutterBottom,
-          gutterBottom,
-        ],
+        [classNamesWithTheme[className].modificators.gutterBottom, gutterBottom],
         [classNamesWithTheme[className].modificators.noWrap, noWrap],
       ),
       ...getAttributes(e2eAttribute, e2eValue),

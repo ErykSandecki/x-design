@@ -1,11 +1,4 @@
-import {
-  createContext,
-  useRef,
-  useContext,
-  FC,
-  ReactNode,
-  useMemo,
-} from 'react';
+import { createContext, useRef, useContext, FC, ReactNode, useMemo } from 'react';
 
 // types
 import { TContext } from './types';

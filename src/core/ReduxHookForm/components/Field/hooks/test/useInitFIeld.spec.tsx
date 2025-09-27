@@ -52,9 +52,7 @@ describe('useInitField behaviors', () => {
         ),
       {
         wrapper: (children) => (
-          <FormContext.Provider value={formName}>
-            {getProviderWrapper(store)(children)}
-          </FormContext.Provider>
+          <FormContext.Provider value={formName}>{getProviderWrapper(store)(children)}</FormContext.Provider>
         ),
       },
     );
@@ -69,8 +67,6 @@ describe('useInitField behaviors', () => {
       updateSyncValidators: expect.any(Function),
     });
 
-    expect(
-      store.getState()[REDUX_HOOK_FORM][formName].fields[fieldName],
-    ).not.toBeNull();
+    expect(store.getState()[REDUX_HOOK_FORM][formName].fields[fieldName]).not.toBeNull();
   });
 });

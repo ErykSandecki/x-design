@@ -2,10 +2,7 @@ import { isEmpty } from 'lodash';
 import { useSelector } from 'react-redux';
 
 // store
-import {
-  fieldSelectorCreator,
-  formAttributesSelectorCreator,
-} from 'store/reduxHookForm/selectors';
+import { fieldSelectorCreator, formAttributesSelectorCreator } from 'store/reduxHookForm/selectors';
 
 // types
 import { TFieldValue } from '../../../types';
@@ -29,10 +26,7 @@ export type TUseMetaProps<V> = {
   visited: boolean;
 };
 
-export const useMetaProps = <V extends TFieldValue>(
-  formName: string,
-  name: string,
-): Partial<TUseMetaProps<V>> => {
+export const useMetaProps = <V extends TFieldValue>(formName: string, name: string): Partial<TUseMetaProps<V>> => {
   const field = useSelector(fieldSelectorCreator<V>(formName, name));
 
   const {
@@ -51,13 +45,9 @@ export const useMetaProps = <V extends TFieldValue>(
   } = field;
 
   const isDirtyLastSinceLastSubmit =
-    valueSinceLastSubmit !== undefined
-      ? { dirtyLastSinceLastSubmit: value !== valueSinceLastSubmit }
-      : {};
+    valueSinceLastSubmit !== undefined ? { dirtyLastSinceLastSubmit: value !== valueSinceLastSubmit } : {};
 
-  const isPendingForm = useSelector(
-    formAttributesSelectorCreator('isPending', formName),
-  ) as boolean;
+  const isPendingForm = useSelector(formAttributesSelectorCreator('isPending', formName)) as boolean;
 
   if (isEmpty(field)) {
     return {};
@@ -72,9 +62,7 @@ export const useMetaProps = <V extends TFieldValue>(
     initialValue,
     invalid: !isEmpty([...asyncErrors, ...syncErrors]),
     modified,
-    ...(modifiedSinceLastSubmit !== undefined
-      ? { modifiedSinceLastSubmit: modifiedSinceLastSubmit }
-      : {}),
+    ...(modifiedSinceLastSubmit !== undefined ? { modifiedSinceLastSubmit: modifiedSinceLastSubmit } : {}),
     pristine: value === initialValue,
     submitting: isPendingForm,
     touched,

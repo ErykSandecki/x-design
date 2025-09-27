@@ -18,11 +18,7 @@ export const classNames = {
   content: {
     name: `${className}__content`,
     modificators: {
-      ...mapValues(
-        GridColumnType,
-        (gridColumnType) =>
-          `${className}__content--${kebabCase(gridColumnType)}`,
-      ),
+      ...mapValues(GridColumnType, (gridColumnType) => `${className}__content--${kebabCase(gridColumnType)}`),
     },
   },
   buttons: `${className}__buttons`,

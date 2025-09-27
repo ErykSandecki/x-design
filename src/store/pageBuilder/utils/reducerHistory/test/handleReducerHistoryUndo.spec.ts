@@ -1,8 +1,5 @@
 // mocks
-import {
-  pageBuilderStateMock,
-  reducerHistoryMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { pageBuilderStateMock, reducerHistoryMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from '../../../actionsType';
@@ -16,10 +13,7 @@ import { handleReducerHistoryUndo } from '../handleReducerHistoryUndo';
 describe('handleReducerHistoryUndo', () => {
   it('should handle undo history', () => {
     // mock
-    const currentPage =
-      pageBuilderStateMock[PAGE_BUILDER].pages[
-        pageBuilderStateMock[PAGE_BUILDER].currentPage
-      ];
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages[pageBuilderStateMock[PAGE_BUILDER].currentPage];
     const state = {
       ...pageBuilderStateMock[PAGE_BUILDER],
 

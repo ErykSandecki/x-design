@@ -30,13 +30,7 @@ const Design: FC = () => {
   const selectedElements = useSelector(selectedElementsSelector);
   const firstElement = first(selectedElements);
   const { t } = useTranslation();
-  const {
-    areParentsTheSame,
-    isMixedLayoutType,
-    layoutType,
-    onChangeLayoutType,
-    position,
-  } = useDesignData();
+  const { areParentsTheSame, isMixedLayoutType, layoutType, onChangeLayoutType, position } = useDesignData();
 
   return (
     <>
@@ -64,19 +58,12 @@ const Design: FC = () => {
       </UITools.Section>
       <UITools.Section
         buttonsIcon={[
-          <UITools.ButtonIcon
-            key={0}
-            name="FitLayout"
-            onClick={() => dispatch(fitLayout())}
-            selected={false}
-          />,
+          <UITools.ButtonIcon key={0} name="FitLayout" onClick={() => dispatch(fitLayout())} selected={false} />,
           <UITools.ButtonIcon
             key={1}
             name="AutoLayout"
             onClick={onChangeLayoutType}
-            selected={
-              isMixedLayoutType ? false : layoutType !== LayoutType.default
-            }
+            selected={isMixedLayoutType ? false : layoutType !== LayoutType.default}
           />,
         ]}
         label={t(`${translationNameSpace}.section.3.label`)}

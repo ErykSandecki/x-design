@@ -1,8 +1,5 @@
 // mocks
-import {
-  elementStaticDataMock,
-  selectedElementMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { elementStaticDataMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { BASE_STATIC_DATA } from '../../constants';
@@ -13,8 +10,7 @@ import { mainParentIdSelectorCreator } from '../../selectors';
 describe('mainParentIdSelectorCreator', () => {
   it('should return main id', () => {
     // before
-    const selectorFunction = (mainParentIdSelectorCreator('test-2') as any)
-      .resultFunc;
+    const selectorFunction = (mainParentIdSelectorCreator('test-2') as any).resultFunc;
 
     // result
     expect(

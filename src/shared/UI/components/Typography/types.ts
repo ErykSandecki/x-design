@@ -5,19 +5,16 @@ import { THTMLTag, TObject } from 'types';
 import { TTypographyProps } from './Typography';
 import { TypographyVariant } from './enums';
 
-export type TOmittedTypographyProps = Omit<
-  TTypographyProps,
-  'component' | 'fontType'
-> & { component?: TTypograpghyElement };
+export type TOmittedTypographyProps = Omit<TTypographyProps, 'component' | 'fontType'> & {
+  component?: TTypograpghyElement;
+};
 
 export type TTypograpghyComponentProps = TTypographyProps & {
   className: string;
   style: CSSProperties;
 };
 
-export type TTypograpghyElement = (
-  props: TTypograpghyComponentProps,
-) => JSX.Element;
+export type TTypograpghyElement = (props: TTypograpghyComponentProps) => JSX.Element;
 
 export type TTypograpghyComponent = TTypograpghyElement | TTypograpghyHTMLTag;
 
@@ -52,8 +49,4 @@ export type TTypograpghyHTMLTag = Exclude<
   | 'track'
 >;
 
-export type TTypograpghyVariantMapping = TObject<
-  TTypograpghyHTMLTag,
-  typeof TypographyVariant,
-  'optional'
->;
+export type TTypograpghyVariantMapping = TObject<TTypograpghyHTMLTag, typeof TypographyVariant, 'optional'>;

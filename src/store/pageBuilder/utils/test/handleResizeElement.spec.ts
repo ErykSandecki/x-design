@@ -25,38 +25,31 @@ describe('handleResizeElement', () => {
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
     // before
-    const result = handleResizeElement(
-      baseCoordinates,
-      100,
-      100,
-      selectedElementMock.id,
-      mouseCoordinates,
-      {
-        ...pageBuilderStateMock[PAGE_BUILDER],
-        events: {
-          ...pageBuilderStateMock[PAGE_BUILDER].events,
-          selectedAnchorResize: AnchorResize.east,
-        },
-        pages: {
-          ...pageBuilderStateMock[PAGE_BUILDER].pages,
-          ['0']: {
-            ...currentPage,
-            elements: {
-              allData: {
-                [elementAllDataMock.id]: elementAllDataMock,
-              },
-              dynamicData: {
-                [elementDynamicDataMock.id]: elementDynamicDataMock,
-              },
-              staticData: {
-                [elementStaticDataMock.id]: elementStaticDataMock,
-              },
+    const result = handleResizeElement(baseCoordinates, 100, 100, selectedElementMock.id, mouseCoordinates, {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      events: {
+        ...pageBuilderStateMock[PAGE_BUILDER].events,
+        selectedAnchorResize: AnchorResize.east,
+      },
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            allData: {
+              [elementAllDataMock.id]: elementAllDataMock,
             },
-            selectedElements: [selectedElementMock],
+            dynamicData: {
+              [elementDynamicDataMock.id]: elementDynamicDataMock,
+            },
+            staticData: {
+              [elementStaticDataMock.id]: elementStaticDataMock,
+            },
           },
+          selectedElements: [selectedElementMock],
         },
       },
-    );
+    });
 
     // result
     expect(result).toStrictEqual({

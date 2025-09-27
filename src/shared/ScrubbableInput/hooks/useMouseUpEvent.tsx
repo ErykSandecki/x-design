@@ -1,7 +1,6 @@
 // types
-import { T2DCoordinates } from 'types';
 
-export type TUseMouseUpEvent = () => void;
+export type TUseMouseUpEvent = TFuncion;
 
 export const useMouseUpEvent = (
   onMouseUp: () => void,

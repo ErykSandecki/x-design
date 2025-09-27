@@ -32,34 +32,19 @@ import {
   AlignmentVertical,
   ElementType,
   KeyboardKeys,
-  T2DCoordinates,
-  T3DCoordinates,
   TAction,
   TBackground,
   TElement,
   TObject,
-  TRectCoordinates,
   TSize,
 } from 'types';
 
 export type TElementDynamicData = Pick<
   TElement,
-  | 'alignment'
-  | 'angle'
-  | 'background'
-  | 'coordinates'
-  | 'deepLevel'
-  | 'height'
-  | 'id'
-  | 'layout'
-  | 'position'
-  | 'width'
+  'alignment' | 'angle' | 'background' | 'coordinates' | 'deepLevel' | 'height' | 'id' | 'layout' | 'position' | 'width'
 >;
 
-export type TElementStaticData = Pick<
-  TElement,
-  'children' | 'id' | 'parentId' | 'type'
->;
+export type TElementStaticData = Pick<TElement, 'children' | 'id' | 'parentId' | 'type'>;
 
 export type TElementsData = {
   allData: TObject<TElement>;
@@ -90,10 +75,7 @@ export type TPositions = {
   selectedElements: TSelectedElements;
 };
 
-export type TReducerHistory = Pick<
-  TPage,
-  'areaCoordinates' | 'elements' | 'selectedElements'
->;
+export type TReducerHistory = Pick<TPage, 'areaCoordinates' | 'elements' | 'selectedElements'>;
 
 export type TSelectedElement = {
   id: TElement['id'];
@@ -104,10 +86,7 @@ export type TSelectedElement = {
 
 export type TSelectedElements = Array<TSelectedElement>;
 
-export type TSizeCoordinates = Pick<
-  TElement,
-  'coordinates' | 'height' | 'width'
->;
+export type TSizeCoordinates = Pick<TElement, 'coordinates' | 'height' | 'width'>;
 
 export type TPage = {
   areaCoordinates: T3DCoordinates;

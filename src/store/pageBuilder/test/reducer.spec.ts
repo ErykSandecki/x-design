@@ -13,10 +13,7 @@ import {
 } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
-import {
-  REDUCER_KEY as PAGE_BUILDER,
-  SET_AREA_COORDINATES,
-} from '../actionsType';
+import { REDUCER_KEY as PAGE_BUILDER, SET_AREA_COORDINATES } from '../actionsType';
 import { ZOOM_CONTENT_ID } from 'shared';
 
 // store
@@ -48,14 +45,7 @@ import {
 } from '../actions';
 
 // types
-import {
-  AlignmentHorizontal,
-  AlignmentVertical,
-  LayoutType,
-  TAction,
-  TBackground,
-  Unit,
-} from 'types';
+import { AlignmentHorizontal, AlignmentVertical, LayoutType, TAction, TBackground, Unit } from 'types';
 import { AnchorResize } from '../enums';
 import { TPageBuilderState } from '../types';
 
@@ -76,10 +66,7 @@ describe('PageBuilderReducer', () => {
 
   it('should return default state', () => {
     // before
-    const state = pageBuilder(
-      { ...pageBuilderStateMock[PAGE_BUILDER] },
-      { type: '' },
-    );
+    const state = pageBuilder({ ...pageBuilderStateMock[PAGE_BUILDER] }, { type: '' });
 
     // result
     expect(state).toEqual(pageBuilderStateMock[PAGE_BUILDER]);
@@ -148,8 +135,7 @@ describe('PageBuilderReducer', () => {
   it('should handle APPLY_ELEMENTS_SIZE_TYPE', () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-    window.getComputedStyle = (): any =>
-      ({ height: '100px', width: '100px' }) as CSSStyleDeclaration;
+    window.getComputedStyle = (): any => ({ height: '100px', width: '100px' }) as CSSStyleDeclaration;
 
     // before
     const state = reducer(applyElementsSizeType('height', 'unit'), {
@@ -508,9 +494,7 @@ describe('PageBuilderReducer', () => {
               },
             },
           },
-          selectedElements: [
-            { ...selectedElementMock, id: 'test-2', parentId: 'test-1' },
-          ],
+          selectedElements: [{ ...selectedElementMock, id: 'test-2', parentId: 'test-1' }],
         },
       },
     });
@@ -592,9 +576,7 @@ describe('PageBuilderReducer', () => {
               },
             },
           },
-          selectedElements: [
-            { ...selectedElementMock, id: 'test-2', parentId: 'test-1' },
-          ],
+          selectedElements: [{ ...selectedElementMock, id: 'test-2', parentId: 'test-1' }],
         },
       },
     });
@@ -853,62 +835,59 @@ describe('PageBuilderReducer', () => {
     document.body.appendChild(el2);
 
     // before
-    const state = reducer(
-      changeParent(draggableElements, possibleIndexPosition, possibleParent),
-      {
-        ...pageBuilderStateMock[PAGE_BUILDER],
-        pages: {
-          ...pageBuilderStateMock[PAGE_BUILDER].pages,
-          ['0']: {
-            ...currentPage,
-            elements: {
-              ...currentPage.elements,
-              allData: {
-                ['-1']: {
-                  ...currentPage.elements.allData['-1'],
-                  children: [selectedElementMock.id],
-                },
-                [elementAllDataMock.id]: {
-                  ...elementAllDataMock,
-                  children: ['test-2'],
-                },
-                ['test-2']: {
-                  ...elementAllDataMock,
-                  id: 'test-2',
-                  parentId: selectedElementMock.id,
-                },
+    const state = reducer(changeParent(draggableElements, possibleIndexPosition, possibleParent), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            allData: {
+              ['-1']: {
+                ...currentPage.elements.allData['-1'],
+                children: [selectedElementMock.id],
               },
-              dynamicData: {
-                ...currentPage.elements.dynamicData,
-                [elementDynamicDataMock.id]: {
-                  ...elementDynamicDataMock,
-                },
-                ['test-2']: {
-                  ...elementDynamicDataMock,
-                  id: 'test-2',
-                },
+              [elementAllDataMock.id]: {
+                ...elementAllDataMock,
+                children: ['test-2'],
               },
-              staticData: {
-                ['-1']: {
-                  ...currentPage.elements.staticData['-1'],
-                  children: [selectedElementMock.id],
-                },
+              ['test-2']: {
+                ...elementAllDataMock,
+                id: 'test-2',
+                parentId: selectedElementMock.id,
+              },
+            },
+            dynamicData: {
+              ...currentPage.elements.dynamicData,
+              [elementDynamicDataMock.id]: {
+                ...elementDynamicDataMock,
+              },
+              ['test-2']: {
+                ...elementDynamicDataMock,
+                id: 'test-2',
+              },
+            },
+            staticData: {
+              ['-1']: {
+                ...currentPage.elements.staticData['-1'],
+                children: [selectedElementMock.id],
+              },
 
-                [elementStaticDataMock.id]: {
-                  ...elementStaticDataMock,
-                  children: ['test-2'],
-                },
-                ['test-2']: {
-                  ...elementStaticDataMock,
-                  id: 'test-2',
-                  parentId: selectedElementMock.id,
-                },
+              [elementStaticDataMock.id]: {
+                ...elementStaticDataMock,
+                children: ['test-2'],
+              },
+              ['test-2']: {
+                ...elementStaticDataMock,
+                id: 'test-2',
+                parentId: selectedElementMock.id,
               },
             },
           },
         },
       },
-    );
+    });
 
     // result
     expect(state).toStrictEqual({
@@ -1144,10 +1123,7 @@ describe('PageBuilderReducer', () => {
 
   it('should handle REDUCER_HISTORY_REDO', () => {
     // mock
-    const currentPage =
-      pageBuilderStateMock[PAGE_BUILDER].pages[
-        pageBuilderStateMock[PAGE_BUILDER].currentPage
-      ];
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages[pageBuilderStateMock[PAGE_BUILDER].currentPage];
 
     // before
     const state = reducer(reducerHistoryRedo(), {
@@ -1180,10 +1156,7 @@ describe('PageBuilderReducer', () => {
 
   it('should handle REDUCER_HISTORY_SAVE', () => {
     // mock
-    const currentPage =
-      pageBuilderStateMock[PAGE_BUILDER].pages[
-        pageBuilderStateMock[PAGE_BUILDER].currentPage
-      ];
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages[pageBuilderStateMock[PAGE_BUILDER].currentPage];
 
     // before
     const state = reducer(reducerHistorySave(SET_AREA_COORDINATES), {
@@ -1214,10 +1187,7 @@ describe('PageBuilderReducer', () => {
 
   it('should handle REDUCER_HISTORY_UNDO', () => {
     // mock
-    const currentPage =
-      pageBuilderStateMock[PAGE_BUILDER].pages[
-        pageBuilderStateMock[PAGE_BUILDER].currentPage
-      ];
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages[pageBuilderStateMock[PAGE_BUILDER].currentPage];
 
     // before
     const state = reducer(reducerHistoryUndo(), {
@@ -1254,42 +1224,33 @@ describe('PageBuilderReducer', () => {
     const mouseCoordinates = { x: 200, y: 100 };
 
     // before
-    const state = reducer(
-      resizeElement(
-        baseCoordinates,
-        100,
-        selectedElementMock.id,
-        mouseCoordinates,
-        100,
-      ),
-      {
-        ...pageBuilderStateMock[PAGE_BUILDER],
-        events: {
-          ...pageBuilderStateMock[PAGE_BUILDER].events,
-          selectedAnchorResize: AnchorResize.east,
-        },
-        pages: {
-          ...pageBuilderStateMock[PAGE_BUILDER].pages,
-          ['0']: {
-            ...currentPage,
-            elements: {
-              allData: {
-                [elementAllDataMock.id]: elementAllDataMock,
-              },
-              dynamicData: {
-                [elementDynamicDataMock.id]: elementDynamicDataMock,
-              },
-              staticData: {
-                [elementStaticDataMock.id]: elementStaticDataMock,
-              },
+    const state = reducer(resizeElement(baseCoordinates, 100, selectedElementMock.id, mouseCoordinates, 100), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      events: {
+        ...pageBuilderStateMock[PAGE_BUILDER].events,
+        selectedAnchorResize: AnchorResize.east,
+      },
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            allData: {
+              [elementAllDataMock.id]: elementAllDataMock,
             },
-            selectedElements: {
-              [selectedElementMock.id]: selectedElementMock,
+            dynamicData: {
+              [elementDynamicDataMock.id]: elementDynamicDataMock,
             },
+            staticData: {
+              [elementStaticDataMock.id]: elementStaticDataMock,
+            },
+          },
+          selectedElements: {
+            [selectedElementMock.id]: selectedElementMock,
           },
         },
       },
-    );
+    });
 
     // result
     expect(state).toStrictEqual({

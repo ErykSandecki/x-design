@@ -17,7 +17,7 @@ import styles from './zoom-box.scss';
 
 // types
 import { MouseMode } from 'types/enums/mouseMode';
-import { T3DCoordinates, TColor } from 'types';
+import { TColor } from 'types';
 
 // utils
 import { hexToRgb } from 'utils';
@@ -85,10 +85,7 @@ export const ZoomBox: FC<TZoomBoxProps> = ({
         className: cx(
           classes.className,
           classNamesWithTheme[className].name,
-          [
-            classNamesWithTheme[className].modificators.colorSampler,
-            colorSampler,
-          ],
+          [classNamesWithTheme[className].modificators.colorSampler, colorSampler],
           classNamesWithTheme[className].modificators[cursorState],
           classNamesWithTheme[className].modificators[mouseMode],
           [

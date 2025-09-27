@@ -20,9 +20,7 @@ const emitErrorsAsWarnings = process.env.ESLINT_NO_DEV_ERRORS === 'true';
 const env = getClientEnvironment(paths.publicUrlOrPath.slice(0, -1));
 const isDevelopment = process.env.NODE_ENV === 'development';
 
-const imageInlineSizeLimit = parseInt(
-  process.env.IMAGE_INLINE_SIZE_LIMIT || '10000',
-);
+const imageInlineSizeLimit = parseInt(process.env.IMAGE_INLINE_SIZE_LIMIT || '10000');
 
 module.exports = {
   mode: process.env.NODE_ENV,
@@ -77,18 +75,14 @@ module.exports = {
         test: /\.scss$/i,
         use: [
           {
-            loader: isDevelopment
-              ? 'style-loader'
-              : MiniCssExtractPlugin.loader,
+            loader: isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
           },
           {
             loader: 'css-loader',
             options: {
               modules: {
                 exportOnlyLocals: false,
-                localIdentName: `${
-                  isDevelopment ? '' : 'cl__'
-                }[local]__[contenthash:base64:5]`,
+                localIdentName: `${isDevelopment ? '' : 'cl__'}[local]__[contenthash:base64:5]`,
                 namedExport: false,
               },
             },
@@ -97,14 +91,7 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               additionalData: async (content) => {
-                return (
-                  sassImports +
-                  sassList +
-                  sassVariables() +
-                  sassMaps() +
-                  sassMixins +
-                  content
-                );
+                return sassImports + sassList + sassVariables() + sassMaps() + sassMixins + content;
               },
               sourceMap: isDevelopment,
             },
@@ -138,10 +125,7 @@ module.exports = {
         failOnError: !(isDevelopment && emitErrorsAsWarnings),
         context: paths.appSrc,
         cache: true,
-        cacheLocation: path.resolve(
-          paths.appNodeModules,
-          '.cache/.eslintcache',
-        ),
+        cacheLocation: path.resolve(paths.appNodeModules, '.cache/.eslintcache'),
         // ESLint class options
         cwd: paths.appPath,
         resolvePluginsRelativeTo: __dirname,

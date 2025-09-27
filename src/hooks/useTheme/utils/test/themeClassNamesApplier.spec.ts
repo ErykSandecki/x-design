@@ -20,21 +20,11 @@ describe('themeClassNamesApplier', () => {
     };
 
     // before
-    const result = themeClassNamesApplier(styles, Theme.light)(
-      className,
-      themeModificator,
-      themeModificator,
-    );
+    const result = themeClassNamesApplier(styles, Theme.light)(className, themeModificator, themeModificator);
 
     // result
     expect(result).toBe(
-      [
-        className,
-        className,
-        `${className}--${Theme.light}`,
-        className,
-        `${className}--${Theme.light}`,
-      ].join(' '),
+      [className, className, `${className}--${Theme.light}`, className, `${className}--${Theme.light}`].join(' '),
     );
   });
 
@@ -53,21 +43,11 @@ describe('themeClassNamesApplier', () => {
     };
 
     // before
-    const result = themeClassNamesApplier(styles, Theme.dark)(
-      className,
-      themeModificator,
-      themeModificator,
-    );
+    const result = themeClassNamesApplier(styles, Theme.dark)(className, themeModificator, themeModificator);
 
     // result
     expect(result).toBe(
-      [
-        className,
-        className,
-        `${className}--${Theme.dark}`,
-        className,
-        `${className}--${Theme.dark}`,
-      ].join(' '),
+      [className, className, `${className}--${Theme.dark}`, className, `${className}--${Theme.dark}`].join(' '),
     );
   });
 
@@ -86,10 +66,7 @@ describe('themeClassNamesApplier', () => {
     };
 
     // before
-    const result = themeClassNamesApplier(
-      styles,
-      Theme.dark,
-    )([themeModificator, true]);
+    const result = themeClassNamesApplier(styles, Theme.dark)([themeModificator, true]);
 
     // result
     expect(result).toBe([className, `${className}--${Theme.dark}`].join(' '));
@@ -110,10 +87,7 @@ describe('themeClassNamesApplier', () => {
     };
 
     // before
-    const result = themeClassNamesApplier(
-      styles,
-      Theme.dark,
-    )([themeModificator, false]);
+    const result = themeClassNamesApplier(styles, Theme.dark)([themeModificator, false]);
 
     // result
     expect(result).toBe([''].join(' '));
@@ -126,10 +100,7 @@ describe('themeClassNamesApplier', () => {
     const styles = {};
 
     // before
-    const result = themeClassNamesApplier(
-      styles,
-      Theme.dark,
-    )([className, true]);
+    const result = themeClassNamesApplier(styles, Theme.dark)([className, true]);
 
     // result
     expect(result).toBe([className].join(' '));
@@ -142,10 +113,7 @@ describe('themeClassNamesApplier', () => {
     const styles = {};
 
     // before
-    const result = themeClassNamesApplier(
-      styles,
-      Theme.dark,
-    )([className, false]);
+    const result = themeClassNamesApplier(styles, Theme.dark)([className, false]);
 
     // result
     expect(result).toBe([''].join(' '));

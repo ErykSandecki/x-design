@@ -6,20 +6,15 @@ import { BASE_2D } from 'shared';
 // types
 import { TPageBuilderState } from '../types';
 
-export const handleChangePosition = (
-  state: TPageBuilderState,
-): TPageBuilderState => {
+export const handleChangePosition = (state: TPageBuilderState): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];
   const { elements, selectedElements } = currentPage;
   const ids = selectedElements.map(({ id }) => id);
   const clonedElements = cloneDeep(elements);
   const { id, parentId } = first(selectedElements);
   const currentPosition = elements.allData[id].position;
-  const reversePosition =
-    currentPosition === 'relative' ? 'absolute' : 'relative';
-  const filteredChildren = currentPage.elements.allData[
-    parentId
-  ].children.filter((id) => !ids.includes(id));
+  const reversePosition = currentPosition === 'relative' ? 'absolute' : 'relative';
+  const filteredChildren = currentPage.elements.allData[parentId].children.filter((id) => !ids.includes(id));
 
   selectedElements.forEach(({ id }) => {
     const targetCoordinates = BASE_2D;

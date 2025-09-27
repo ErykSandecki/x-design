@@ -1,17 +1,10 @@
 import SagaTester from 'redux-saga-tester';
 
 // mocks
-import {
-  pageBuilderStateMock,
-  reducerHistoryMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { pageBuilderStateMock, reducerHistoryMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
-import {
-  ADD_ELEMENT,
-  REDUCER_KEY as PAGE_BUILDER,
-  REDUCER_HISTORY_SAVE,
-} from '../../actionsType';
+import { ADD_ELEMENT, REDUCER_KEY as PAGE_BUILDER, REDUCER_HISTORY_SAVE } from '../../actionsType';
 
 // store
 import pageBuilder from '../../reducer';
@@ -20,10 +13,7 @@ import { reducerHistorySaveSaga } from '../../saga';
 describe('reducerHistorySaveSaga', () => {
   it('should save new history', async () => {
     // mock
-    const currentPage =
-      pageBuilderStateMock[PAGE_BUILDER].pages[
-        pageBuilderStateMock[PAGE_BUILDER].currentPage
-      ];
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages[pageBuilderStateMock[PAGE_BUILDER].currentPage];
 
     // before
     const sagaTester = new SagaTester({
@@ -50,8 +40,6 @@ describe('reducerHistorySaveSaga', () => {
     await sagaTester.waitFor(REDUCER_HISTORY_SAVE);
 
     // result
-    expect(
-      sagaTester.getState()[PAGE_BUILDER].pages['0'].reducerHistory.length,
-    ).toEqual(3);
+    expect(sagaTester.getState()[PAGE_BUILDER].pages['0'].reducerHistory.length).toEqual(3);
   });
 });

@@ -29,52 +29,25 @@ export type TDropAnchorsProps = {
   parentId: TElement['parentId'];
 };
 
-const DropAnchors: FC<TDropAnchorsProps> = ({
-  id,
-  index,
-  mouseMode,
-  parentId,
-}) => {
+const DropAnchors: FC<TDropAnchorsProps> = ({ id, index, mouseMode, parentId }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-  const {
-    anchorPos,
-    displayNextPrompt,
-    displayPrevPrompt,
-    isFlowVertical,
-    isGrid,
-    onMouseEnter,
-    ...events
-  } = useDropAnchorsEvents(id, index, mouseMode, parentId);
-  const dropAnchorsPosition = isFlowVertical
-    ? VERTICAL_ANCHORS
-    : HORIZONTAL_ANCHORS;
+  const { anchorPos, displayNextPrompt, displayPrevPrompt, isFlowVertical, isGrid, onMouseEnter, ...events } =
+    useDropAnchorsEvents(id, index, mouseMode, parentId);
+  const dropAnchorsPosition = isFlowVertical ? VERTICAL_ANCHORS : HORIZONTAL_ANCHORS;
 
   return (
     <div className={cx(classNamesWithTheme[className])}>
       {/* PROMPTS */}
-      {promptsData(
-        anchorPos,
-        displayNextPrompt,
-        displayPrevPrompt,
-        isFlowVertical,
-        isGrid,
-      ).map(({ key, visible }) => (
+      {promptsData(anchorPos, displayNextPrompt, displayPrevPrompt, isFlowVertical, isGrid).map(({ key, visible }) => (
         <div
-          className={cx(classNamesWithTheme.prompt.name, [
-            classNamesWithTheme.prompt.modificators[key],
-            visible,
-          ])}
+          className={cx(classNamesWithTheme.prompt.name, [classNamesWithTheme.prompt.modificators[key], visible])}
           key={key}
         />
       ))}
 
       {/* ANCHORS */}
       {enumToArray(DropAnchorsPosition)
-        .filter(
-          (dropAnchor) =>
-            isGrid ||
-            dropAnchorsPosition.includes(dropAnchor as DropAnchorsPosition),
-        )
+        .filter((dropAnchor) => isGrid || dropAnchorsPosition.includes(dropAnchor as DropAnchorsPosition))
         .map((position) => (
           <E2EDataAttribute
             key={position as keyof typeof DropAnchorsPosition}
@@ -84,17 +57,9 @@ const DropAnchors: FC<TDropAnchorsProps> = ({
             <div
               className={cx(
                 classNamesWithTheme.anchor.name,
-                classNamesWithTheme.anchor.modificators[
-                  position as keyof typeof DropAnchorsPosition
-                ],
+                classNamesWithTheme.anchor.modificators[position as keyof typeof DropAnchorsPosition],
               )}
-              onMouseEnter={() =>
-                onMouseEnter(
-                  DropAnchorsPosition[
-                    position as keyof typeof DropAnchorsPosition
-                  ],
-                )
-              }
+              onMouseEnter={() => onMouseEnter(DropAnchorsPosition[position as keyof typeof DropAnchorsPosition])}
               {...events}
             />
           </E2EDataAttribute>

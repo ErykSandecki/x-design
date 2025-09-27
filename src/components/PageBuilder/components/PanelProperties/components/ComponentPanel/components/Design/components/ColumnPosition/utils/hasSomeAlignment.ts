@@ -6,7 +6,4 @@ export const hasSomeAlignment = (
   direction: keyof TAlignment,
   dynamicData: TElementsData['dynamicData'],
   selectedElements: TSelectedElements,
-): boolean =>
-  selectedElements.some(
-    ({ id }) => dynamicData[id].alignment[direction] !== undefined,
-  );
+): boolean => selectedElements.some(({ id }) => dynamicData[id].alignment[direction] !== undefined);

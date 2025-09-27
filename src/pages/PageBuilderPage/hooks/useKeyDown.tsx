@@ -7,15 +7,8 @@ import { useKeyboardHandler } from 'hooks';
 import { CONTROL } from 'constant/constants';
 
 // store
-import {
-  canRedoReduxHistorySelector,
-  canUndoReduxHistorySelector,
-} from 'store/pageBuilder/selectors';
-import {
-  reducerHistoryRedo,
-  reducerHistoryUndo,
-  updateEventsStatus,
-} from 'store/pageBuilder/actions';
+import { canRedoReduxHistorySelector, canUndoReduxHistorySelector } from 'store/pageBuilder/selectors';
+import { reducerHistoryRedo, reducerHistoryUndo, updateEventsStatus } from 'store/pageBuilder/actions';
 
 // types
 import { KeyboardKeys } from 'types';
@@ -23,9 +16,7 @@ import { MouseMode } from 'types/enums/mouseMode';
 
 type TUseKeyDown = void;
 
-export const useKeyDown = (
-  setMouseMode: (mouseMode: MouseMode) => void,
-): TUseKeyDown => {
+export const useKeyDown = (setMouseMode: (mouseMode: MouseMode) => void): TUseKeyDown => {
   const canRedo = useSelector(canRedoReduxHistorySelector);
   const canUndo = useSelector(canUndoReduxHistorySelector);
   const dispatch = useDispatch();

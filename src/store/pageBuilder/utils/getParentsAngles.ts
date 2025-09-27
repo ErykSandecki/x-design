@@ -9,11 +9,7 @@ export const getParentsAngles = (
   if (parentId !== '-1') {
     const parent = allData[parentId];
 
-    return getParentsAngles(
-      allData,
-      [...angles, parent.angle],
-      parent.parentId,
-    );
+    return getParentsAngles(allData, [...angles, parent.angle], parent.parentId);
   }
 
   return angles;

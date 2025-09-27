@@ -34,11 +34,7 @@ describe('useDispatchMany', () => {
     jest.clearAllMocks();
   });
 
-  [
-    [mockAction()],
-    [mockAction(), mockAction2()],
-    [mockAction(), mockAction2(), mockAction3()],
-  ].forEach((actions) => {
+  [[mockAction()], [mockAction(), mockAction2()], [mockAction(), mockAction2(), mockAction3()]].forEach((actions) => {
     it(`call dispatch with actions count: ${actions.length}`, () => {
       // before
       const expectedToBeCalledTimes = actions.length;

@@ -2,10 +2,7 @@ import { MouseEvent } from 'react';
 import { renderHook } from '@testing-library/react';
 
 // mocks
-import {
-  eventsMock,
-  pageBuilderStateMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { eventsMock, pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // hooks
 import { useMouseEnterEvent } from '../useMouseEnterEvent';
@@ -45,9 +42,7 @@ describe('useMouseEnterEvent', () => {
       }) as any;
 
     // before
-    const { result } = renderHook(() =>
-      useMouseEnterEvent('1', false, MouseMode.default),
-    );
+    const { result } = renderHook(() => useMouseEnterEvent('1', false, MouseMode.default));
 
     // action
     result.current({} as MouseEvent);
@@ -74,9 +69,7 @@ describe('useMouseEnterEvent', () => {
       }) as any;
 
     // before
-    const { result } = renderHook(() =>
-      useMouseEnterEvent('1', false, MouseMode.default),
-    );
+    const { result } = renderHook(() => useMouseEnterEvent('1', false, MouseMode.default));
 
     // action
     result.current({} as MouseEvent);
@@ -102,9 +95,7 @@ describe('useMouseEnterEvent', () => {
       }) as any;
 
     // before
-    const { result } = renderHook(() =>
-      useMouseEnterEvent('1', false, MouseMode.comment),
-    );
+    const { result } = renderHook(() => useMouseEnterEvent('1', false, MouseMode.comment));
 
     // action
     result.current({} as MouseEvent);

@@ -60,11 +60,7 @@ describe('Field snapshots', () => {
     const { asFragment } = render(
       <Provider store={store}>
         <FormContext.Provider value="formName">
-          <Field
-            Component={TextField}
-            name="testField"
-            ref={{} as RefObject<any>}
-          />
+          <Field Component={TextField} name="testField" ref={{} as RefObject<any>} />
         </FormContext.Provider>
       </Provider>,
     );
@@ -103,11 +99,7 @@ describe('Field snapshots', () => {
     const { asFragment } = render(
       <Provider store={store}>
         <FormContext.Provider value="formName">
-          <Field
-            Component={TextField}
-            formatOnInit={(value: string) => value}
-            name="testField"
-          />
+          <Field Component={TextField} formatOnInit={(value: string) => value} name="testField" />
         </FormContext.Provider>
       </Provider>,
     );

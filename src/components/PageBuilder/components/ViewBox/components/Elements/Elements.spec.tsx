@@ -49,15 +49,8 @@ describe('Elements snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <RefsProvider
-          itemsRefs={sharedRefs}
-          overlayContainerRefHtml={overlayContainer}
-        >
-          <Elements
-            eventsDisabled={false}
-            mouseMode={MouseMode.default}
-            parentId="-1"
-          />
+        <RefsProvider itemsRefs={sharedRefs} overlayContainerRefHtml={overlayContainer}>
+          <Elements eventsDisabled={false} mouseMode={MouseMode.default} parentId="-1" />
         </RefsProvider>
       </Provider>,
     );
@@ -116,15 +109,8 @@ describe('Elements snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <RefsProvider
-          itemsRefs={sharedRefs}
-          overlayContainerRefHtml={overlayContainer}
-        >
-          <Elements
-            eventsDisabled={false}
-            mouseMode={MouseMode.default}
-            parentId="-1"
-          />
+        <RefsProvider itemsRefs={sharedRefs} overlayContainerRefHtml={overlayContainer}>
+          <Elements eventsDisabled={false} mouseMode={MouseMode.default} parentId="-1" />
         </RefsProvider>
       </Provider>,
     );
@@ -174,15 +160,8 @@ describe('Elements snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <RefsProvider
-          itemsRefs={sharedRefs}
-          overlayContainerRefHtml={overlayContainer}
-        >
-          <Elements
-            eventsDisabled={false}
-            mouseMode={MouseMode.default}
-            parentId="-1"
-          />
+        <RefsProvider itemsRefs={sharedRefs} overlayContainerRefHtml={overlayContainer}>
+          <Elements eventsDisabled={false} mouseMode={MouseMode.default} parentId="-1" />
         </RefsProvider>
       </Provider>,
     );
@@ -238,15 +217,8 @@ describe('Elements snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <RefsProvider
-          itemsRefs={sharedRefs}
-          overlayContainerRefHtml={overlayContainer}
-        >
-          <Elements
-            eventsDisabled={false}
-            mouseMode={MouseMode.default}
-            parentId="-1"
-          />
+        <RefsProvider itemsRefs={sharedRefs} overlayContainerRefHtml={overlayContainer}>
+          <Elements eventsDisabled={false} mouseMode={MouseMode.default} parentId="-1" />
         </RefsProvider>
       </Provider>,
     );

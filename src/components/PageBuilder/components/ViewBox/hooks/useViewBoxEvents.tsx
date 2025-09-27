@@ -10,7 +10,7 @@ import { useMouseUpEvent } from './useMouseUpEvent';
 
 // types
 import { MouseMode } from 'types/enums/mouseMode';
-import { T3DCoordinates, TObject, TRectCoordinates } from 'types';
+import { TObject } from 'types';
 import { TRectArea, TRectAreaExtended } from '../../../../PageBuilder/types';
 
 export type TUseViewBoxEvents = {
@@ -38,13 +38,7 @@ export const useViewBoxEvents = (
     elementArea,
     onKeyDown: useKeyDownEvent(),
     onKeyUp: useKeyUpEvent(),
-    onMouseDown: useMouseDownEvent(
-      coordinates,
-      mouseMode,
-      rectCoordinates,
-      setElementArea,
-      setSelectableArea,
-    ),
+    onMouseDown: useMouseDownEvent(coordinates, mouseMode, rectCoordinates, setElementArea, setSelectableArea),
     onMouseMove: useMouseMoveEvent(
       coordinates,
       elementArea,
@@ -53,13 +47,7 @@ export const useViewBoxEvents = (
       setElementArea,
       setSelectableArea,
     ),
-    onMouseUp: useMouseUpEvent(
-      elementArea,
-      mouseMode,
-      setElementArea,
-      setMouseMode,
-      setSelectableArea,
-    ),
+    onMouseUp: useMouseUpEvent(elementArea, mouseMode, setElementArea, setMouseMode, setSelectableArea),
     selectableArea,
   };
 };

@@ -5,10 +5,7 @@ import { BASE_RECT } from 'shared';
 import { SW } from '../components/ClickableArea/constants';
 
 // store
-import {
-  counterAngleSelectorCreator,
-  elementAllDataSelectorCreator,
-} from 'store/pageBuilder/selectors';
+import { counterAngleSelectorCreator, elementAllDataSelectorCreator } from 'store/pageBuilder/selectors';
 import { store } from 'store';
 
 // types
@@ -37,19 +34,10 @@ export const getCoordinatesData = (
         const cords = getAbsolutePosition(id, itemsRefs, zoomContentRef);
         const height = cords.y2 - cords.y1;
         const width = cords.x2 - cords.x1;
-        const { x1, x2, y1, y2 } = getCornerBounds(
-          angle,
-          height,
-          width,
-          cords.x1,
-          cords.y1,
-        );
+        const { x1, x2, y1, y2 } = getCornerBounds(angle, height, width, cords.x1, cords.y1);
 
         return {
-          elementsCordinates: [
-            ...obj.elementsCordinates,
-            { coordinates: cords, id },
-          ],
+          elementsCordinates: [...obj.elementsCordinates, { coordinates: cords, id }],
           x1: [...obj.x1, x1],
           x2: [...obj.x2, x2],
           y1: [...obj.y1, y1],

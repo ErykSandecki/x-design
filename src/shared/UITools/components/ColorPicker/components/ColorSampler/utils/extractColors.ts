@@ -6,10 +6,7 @@ import { SAMPLE_OFFSET } from '../constants';
 // types
 import { TRGBA } from 'types';
 
-export const getCanvas = async (
-  x: number,
-  y: number,
-): Promise<HTMLCanvasElement> =>
+export const getCanvas = async (x: number, y: number): Promise<HTMLCanvasElement> =>
   await html2canvas(document.body, {
     height: 7,
     width: 7,
@@ -19,10 +16,7 @@ export const getCanvas = async (
     y: y - SAMPLE_OFFSET,
   });
 
-export const extractColors = async (
-  x: number,
-  y: number,
-): Promise<Array<TRGBA>> => {
+export const extractColors = async (x: number, y: number): Promise<Array<TRGBA>> => {
   const canvas = await getCanvas(x, y);
   const ctx = canvas.getContext('2d');
   const pixel = ctx.getImageData(0, 0, 7, 7).data;

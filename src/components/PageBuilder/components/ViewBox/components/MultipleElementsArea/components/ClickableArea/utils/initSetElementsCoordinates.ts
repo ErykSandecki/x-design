@@ -7,7 +7,6 @@ import { store } from 'store';
 import { updateEventsStatus, updatePrevState } from 'store/pageBuilder/actions';
 
 // types
-import { T2DCoordinates } from 'types';
 
 export const initSetElementsCoordinates = (
   cursorPosition: RefObject<T2DCoordinates>,
@@ -20,9 +19,7 @@ export const initSetElementsCoordinates = (
       x: Math.round(event.clientX),
       y: Math.round(event.clientY),
     };
-    const selectedElementsId = selectedElementsSelector(store.getState()).map(
-      ({ id }) => id,
-    );
+    const selectedElementsId = selectedElementsSelector(store.getState()).map(({ id }) => id);
 
     dispatch(updatePrevState());
     dispatch(

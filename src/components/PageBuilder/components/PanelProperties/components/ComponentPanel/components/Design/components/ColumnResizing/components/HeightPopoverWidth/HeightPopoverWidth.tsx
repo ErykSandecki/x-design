@@ -24,10 +24,7 @@ export type THeightPopoverWidthProps = {
   width: TElement['width'];
 };
 
-const HeightPopoverWidth: FC<THeightPopoverWidthProps> = ({
-  width,
-  isMixed,
-}) => {
+const HeightPopoverWidth: FC<THeightPopoverWidthProps> = ({ width, isMixed }) => {
   const dispatch = useDispatch();
   const { t } = useTranslation();
 
@@ -55,18 +52,8 @@ const HeightPopoverWidth: FC<THeightPopoverWidthProps> = ({
         text={t(`${translationNameSpace}.3`)}
       />
       <PopoverCompound.PopoverSeparator />
-      <PopoverCompound.PopoverItem
-        icon="MinWidth"
-        index={3}
-        selected={false}
-        text={t(`${translationNameSpace}.3`)}
-      />
-      <PopoverCompound.PopoverItem
-        icon="MaxWidth"
-        index={4}
-        selected={false}
-        text={t(`${translationNameSpace}.4`)}
-      />
+      <PopoverCompound.PopoverItem icon="MinWidth" index={3} selected={false} text={t(`${translationNameSpace}.3`)} />
+      <PopoverCompound.PopoverItem icon="MaxWidth" index={4} selected={false} text={t(`${translationNameSpace}.4`)} />
     </>
   );
 };

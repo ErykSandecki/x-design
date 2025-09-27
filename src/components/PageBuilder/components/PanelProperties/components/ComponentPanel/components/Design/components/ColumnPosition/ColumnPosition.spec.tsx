@@ -20,12 +20,7 @@ import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 import { configureStore } from 'store/store';
 
 // types
-import {
-  AlignmentHorizontal,
-  AlignmentVertical,
-  E2EAttribute,
-  KeyboardKeys,
-} from 'types';
+import { AlignmentHorizontal, AlignmentVertical, E2EAttribute, KeyboardKeys } from 'types';
 
 // utils
 import { getByE2EAttribute } from 'test';
@@ -114,9 +109,7 @@ describe('ColumnPosition snapshots', () => {
               dynamicData: {
                 ...stateMock[PAGE_BUILDER].pages['0'].elements.dynamicData,
                 ['-1']: {
-                  ...stateMock[PAGE_BUILDER].pages['0'].elements.dynamicData[
-                    '-1'
-                  ],
+                  ...stateMock[PAGE_BUILDER].pages['0'].elements.dynamicData['-1'],
                   children: ['test-1', 'test-2'],
                 },
                 ['test-2']: {
@@ -128,9 +121,7 @@ describe('ColumnPosition snapshots', () => {
               staticData: {
                 ...stateMock[PAGE_BUILDER].pages['0'].elements.staticData,
                 ['-1']: {
-                  ...stateMock[PAGE_BUILDER].pages['0'].elements.staticData[
-                    '-1'
-                  ],
+                  ...stateMock[PAGE_BUILDER].pages['0'].elements.staticData['-1'],
                   children: ['test-1', 'test-2'],
                 },
                 ['test-2']: {
@@ -189,9 +180,7 @@ describe('ColumnPosition snapshots', () => {
               dynamicData: {
                 ...stateMock[PAGE_BUILDER].pages['0'].elements.dynamicData,
                 ['-1']: {
-                  ...stateMock[PAGE_BUILDER].pages['0'].elements.dynamicData[
-                    '-1'
-                  ],
+                  ...stateMock[PAGE_BUILDER].pages['0'].elements.dynamicData['-1'],
                   children: ['test-1', 'test-2'],
                 },
                 ['test-2']: {
@@ -207,9 +196,7 @@ describe('ColumnPosition snapshots', () => {
               staticData: {
                 ...stateMock[PAGE_BUILDER].pages['0'].elements.staticData,
                 ['-1']: {
-                  ...stateMock[PAGE_BUILDER].pages['0'].elements.staticData[
-                    '-1'
-                  ],
+                  ...stateMock[PAGE_BUILDER].pages['0'].elements.staticData['-1'],
                   children: ['test-1', 'test-2'],
                 },
                 ['test-2']: {
@@ -252,16 +239,8 @@ describe('ColumnPosition behaviors', () => {
     );
 
     // find
-    const inputX = getByE2EAttribute(
-      container,
-      E2EAttribute.textFieldInput,
-      'x',
-    );
-    const inputY = getByE2EAttribute(
-      container,
-      E2EAttribute.textFieldInput,
-      'y',
-    );
+    const inputX = getByE2EAttribute(container, E2EAttribute.textFieldInput, 'x');
+    const inputY = getByE2EAttribute(container, E2EAttribute.textFieldInput, 'y');
 
     // action
     fireEvent.click(inputX);
@@ -274,10 +253,10 @@ describe('ColumnPosition behaviors', () => {
     fireEvent.blur(inputY);
 
     // result
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1']
-        .coordinates,
-    ).toStrictEqual({ x: 100, y: 100 });
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].coordinates).toStrictEqual({
+      x: 100,
+      y: 100,
+    });
   });
 
   it('should change positions X & Y when triger ScrubbableInput', () => {
@@ -299,16 +278,8 @@ describe('ColumnPosition behaviors', () => {
     );
 
     // find
-    const scrubbableInputX = getByE2EAttribute(
-      container,
-      E2EAttribute.scrubbableInput,
-      'x',
-    );
-    const scrubbableInputY = getByE2EAttribute(
-      container,
-      E2EAttribute.scrubbableInput,
-      'y',
-    );
+    const scrubbableInputX = getByE2EAttribute(container, E2EAttribute.scrubbableInput, 'x');
+    const scrubbableInputY = getByE2EAttribute(container, E2EAttribute.scrubbableInput, 'y');
 
     // action
     fireEvent.mouseDown(scrubbableInputX, { clientX: 0, clientY: 0 });
@@ -319,9 +290,9 @@ describe('ColumnPosition behaviors', () => {
     fireEvent.mouseUp(scrubbableInputY);
 
     // result
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1']
-        .coordinates,
-    ).toStrictEqual({ x: -50, y: -50 });
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].coordinates).toStrictEqual({
+      x: -50,
+      y: -50,
+    });
   });
 });

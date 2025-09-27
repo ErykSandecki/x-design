@@ -166,16 +166,8 @@ describe('ColumnResizing behaviors', () => {
     );
 
     // find
-    const inputHeight = getByE2EAttribute(
-      container,
-      E2EAttribute.textFieldInput,
-      'height',
-    );
-    const inputWidth = getByE2EAttribute(
-      container,
-      E2EAttribute.textFieldInput,
-      'width',
-    );
+    const inputHeight = getByE2EAttribute(container, E2EAttribute.textFieldInput, 'height');
+    const inputWidth = getByE2EAttribute(container, E2EAttribute.textFieldInput, 'width');
 
     // action
     fireEvent.focus(inputHeight);
@@ -190,14 +182,8 @@ describe('ColumnResizing behaviors', () => {
     fireEvent.blur(inputWidth);
 
     // result
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1']
-        .height.value,
-    ).toBe(10000);
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].width
-        .value,
-    ).toBe(10000);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].height.value).toBe(10000);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].width.value).toBe(10000);
   });
 
   it('should change width & height when triger ScrubbableInput', () => {
@@ -219,16 +205,8 @@ describe('ColumnResizing behaviors', () => {
     );
 
     // find
-    const scrubbableInputHeight = getByE2EAttribute(
-      container,
-      E2EAttribute.scrubbableInput,
-      'height',
-    );
-    const scrubbableInputWidth = getByE2EAttribute(
-      container,
-      E2EAttribute.scrubbableInput,
-      'width',
-    );
+    const scrubbableInputHeight = getByE2EAttribute(container, E2EAttribute.scrubbableInput, 'height');
+    const scrubbableInputWidth = getByE2EAttribute(container, E2EAttribute.scrubbableInput, 'width');
 
     // action
     fireEvent.mouseDown(scrubbableInputHeight, { clientX: 0, clientY: 0 });
@@ -239,14 +217,8 @@ describe('ColumnResizing behaviors', () => {
     fireEvent.mouseUp(scrubbableInputWidth);
 
     // result
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1']
-        .height.value,
-    ).toBe(50);
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].width
-        .value,
-    ).toBe(50);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].height.value).toBe(50);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].width.value).toBe(50);
   });
 
   it('should apply fixed value for height & width', () => {
@@ -298,52 +270,20 @@ describe('ColumnResizing behaviors', () => {
     );
 
     // find { inputs }
-    const inputHeight = getByE2EAttribute(
-      container,
-      E2EAttribute.textField,
-      'height',
-    );
-    const inputWidth = getByE2EAttribute(
-      container,
-      E2EAttribute.textField,
-      'width',
-    );
+    const inputHeight = getByE2EAttribute(container, E2EAttribute.textField, 'height');
+    const inputWidth = getByE2EAttribute(container, E2EAttribute.textField, 'width');
 
     // find { icons }
-    const iconHeight = getByE2EAttribute(
-      inputHeight,
-      E2EAttribute.icon,
-      'variant',
-    );
-    const iconWidth = getByE2EAttribute(
-      inputWidth,
-      E2EAttribute.icon,
-      'variant',
-    );
+    const iconHeight = getByE2EAttribute(inputHeight, E2EAttribute.icon, 'variant');
+    const iconWidth = getByE2EAttribute(inputWidth, E2EAttribute.icon, 'variant');
 
     // find { popovers }
-    const popoverHeight = getByE2EAttribute(
-      inputHeight,
-      E2EAttribute.popover,
-      'popover',
-    );
-    const popoverWidth = getByE2EAttribute(
-      inputWidth,
-      E2EAttribute.popover,
-      'popover',
-    );
+    const popoverHeight = getByE2EAttribute(inputHeight, E2EAttribute.popover, 'popover');
+    const popoverWidth = getByE2EAttribute(inputWidth, E2EAttribute.popover, 'popover');
 
     // find { popover items }
-    const popoverHeightItem = getByE2EAttribute(
-      popoverHeight,
-      E2EAttribute.popoverItem,
-      PopoverItem.fixed,
-    );
-    const popoverWidthItem = getByE2EAttribute(
-      popoverWidth,
-      E2EAttribute.popoverItem,
-      PopoverItem.fixed,
-    );
+    const popoverHeightItem = getByE2EAttribute(popoverHeight, E2EAttribute.popoverItem, PopoverItem.fixed);
+    const popoverWidthItem = getByE2EAttribute(popoverWidth, E2EAttribute.popoverItem, PopoverItem.fixed);
 
     // action
     fireEvent.click(iconHeight);
@@ -352,14 +292,8 @@ describe('ColumnResizing behaviors', () => {
     fireEvent.click(popoverWidthItem);
 
     // result
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1']
-        .height.value,
-    ).toBe(100);
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].width
-        .value,
-    ).toBe(100);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].height.value).toBe(100);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].width.value).toBe(100);
   });
 
   it('should apply fixed value for height & width when mixed', () => {
@@ -416,10 +350,7 @@ describe('ColumnResizing behaviors', () => {
                 },
               },
             },
-            selectedElements: [
-              selectedElementMock,
-              { ...selectedElementMock, id: 'test-2' },
-            ],
+            selectedElements: [selectedElementMock, { ...selectedElementMock, id: 'test-2' }],
           },
         },
       },
@@ -433,52 +364,20 @@ describe('ColumnResizing behaviors', () => {
     );
 
     // find { inputs }
-    const inputHeight = getByE2EAttribute(
-      container,
-      E2EAttribute.textField,
-      'height',
-    );
-    const inputWidth = getByE2EAttribute(
-      container,
-      E2EAttribute.textField,
-      'width',
-    );
+    const inputHeight = getByE2EAttribute(container, E2EAttribute.textField, 'height');
+    const inputWidth = getByE2EAttribute(container, E2EAttribute.textField, 'width');
 
     // find { icons }
-    const iconHeight = getByE2EAttribute(
-      inputHeight,
-      E2EAttribute.icon,
-      'variant',
-    );
-    const iconWidth = getByE2EAttribute(
-      inputWidth,
-      E2EAttribute.icon,
-      'variant',
-    );
+    const iconHeight = getByE2EAttribute(inputHeight, E2EAttribute.icon, 'variant');
+    const iconWidth = getByE2EAttribute(inputWidth, E2EAttribute.icon, 'variant');
 
     // find { popovers }
-    const popoverHeight = getByE2EAttribute(
-      inputHeight,
-      E2EAttribute.popover,
-      'popover',
-    );
-    const popoverWidth = getByE2EAttribute(
-      inputWidth,
-      E2EAttribute.popover,
-      'popover',
-    );
+    const popoverHeight = getByE2EAttribute(inputHeight, E2EAttribute.popover, 'popover');
+    const popoverWidth = getByE2EAttribute(inputWidth, E2EAttribute.popover, 'popover');
 
     // find { popover items }
-    const popoverHeightItem = getByE2EAttribute(
-      popoverHeight,
-      E2EAttribute.popoverItem,
-      PopoverItem.fixed,
-    );
-    const popoverWidthItem = getByE2EAttribute(
-      popoverWidth,
-      E2EAttribute.popoverItem,
-      PopoverItem.fixed,
-    );
+    const popoverHeightItem = getByE2EAttribute(popoverHeight, E2EAttribute.popoverItem, PopoverItem.fixed);
+    const popoverWidthItem = getByE2EAttribute(popoverWidth, E2EAttribute.popoverItem, PopoverItem.fixed);
 
     // action
     fireEvent.click(iconHeight);
@@ -487,22 +386,10 @@ describe('ColumnResizing behaviors', () => {
     fireEvent.click(popoverWidthItem);
 
     // result
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1']
-        .height.value,
-    ).toBe(100);
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].width
-        .value,
-    ).toBe(100);
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-2']
-        .height.value,
-    ).toBe(100);
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-2'].width
-        .value,
-    ).toBe(100);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].height.value).toBe(100);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].width.value).toBe(100);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-2'].height.value).toBe(100);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-2'].width.value).toBe(100);
   });
 
   it('should apply auto value for height & width', () => {
@@ -517,52 +404,20 @@ describe('ColumnResizing behaviors', () => {
     );
 
     // find { inputs }
-    const inputHeight = getByE2EAttribute(
-      container,
-      E2EAttribute.textField,
-      'height',
-    );
-    const inputWidth = getByE2EAttribute(
-      container,
-      E2EAttribute.textField,
-      'width',
-    );
+    const inputHeight = getByE2EAttribute(container, E2EAttribute.textField, 'height');
+    const inputWidth = getByE2EAttribute(container, E2EAttribute.textField, 'width');
 
     // find { icons }
-    const iconHeight = getByE2EAttribute(
-      inputHeight,
-      E2EAttribute.icon,
-      'variant',
-    );
-    const iconWidth = getByE2EAttribute(
-      inputWidth,
-      E2EAttribute.icon,
-      'variant',
-    );
+    const iconHeight = getByE2EAttribute(inputHeight, E2EAttribute.icon, 'variant');
+    const iconWidth = getByE2EAttribute(inputWidth, E2EAttribute.icon, 'variant');
 
     // find { popovers }
-    const popoverHeight = getByE2EAttribute(
-      inputHeight,
-      E2EAttribute.popover,
-      'popover',
-    );
-    const popoverWidth = getByE2EAttribute(
-      inputWidth,
-      E2EAttribute.popover,
-      'popover',
-    );
+    const popoverHeight = getByE2EAttribute(inputHeight, E2EAttribute.popover, 'popover');
+    const popoverWidth = getByE2EAttribute(inputWidth, E2EAttribute.popover, 'popover');
 
     // find { popover items }
-    const popoverHeightItem = getByE2EAttribute(
-      popoverHeight,
-      E2EAttribute.popoverItem,
-      PopoverItem.auto,
-    );
-    const popoverWidthItem = getByE2EAttribute(
-      popoverWidth,
-      E2EAttribute.popoverItem,
-      PopoverItem.auto,
-    );
+    const popoverHeightItem = getByE2EAttribute(popoverHeight, E2EAttribute.popoverItem, PopoverItem.auto);
+    const popoverWidthItem = getByE2EAttribute(popoverWidth, E2EAttribute.popoverItem, PopoverItem.auto);
 
     // action
     fireEvent.click(iconHeight);
@@ -571,14 +426,8 @@ describe('ColumnResizing behaviors', () => {
     fireEvent.click(popoverWidthItem);
 
     // result
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1']
-        .height.value,
-    ).toBe('auto');
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].width
-        .value,
-    ).toBe('auto');
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].height.value).toBe('auto');
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].width.value).toBe('auto');
   });
 
   it('should apply auto value for height & width when mixed', () => {
@@ -609,10 +458,7 @@ describe('ColumnResizing behaviors', () => {
                 },
               },
             },
-            selectedElements: [
-              selectedElementMock,
-              { ...selectedElementMock, id: 'test-2' },
-            ],
+            selectedElements: [selectedElementMock, { ...selectedElementMock, id: 'test-2' }],
           },
         },
       },
@@ -626,52 +472,20 @@ describe('ColumnResizing behaviors', () => {
     );
 
     // find { inputs }
-    const inputHeight = getByE2EAttribute(
-      container,
-      E2EAttribute.textField,
-      'height',
-    );
-    const inputWidth = getByE2EAttribute(
-      container,
-      E2EAttribute.textField,
-      'width',
-    );
+    const inputHeight = getByE2EAttribute(container, E2EAttribute.textField, 'height');
+    const inputWidth = getByE2EAttribute(container, E2EAttribute.textField, 'width');
 
     // find { icons }
-    const iconHeight = getByE2EAttribute(
-      inputHeight,
-      E2EAttribute.icon,
-      'variant',
-    );
-    const iconWidth = getByE2EAttribute(
-      inputWidth,
-      E2EAttribute.icon,
-      'variant',
-    );
+    const iconHeight = getByE2EAttribute(inputHeight, E2EAttribute.icon, 'variant');
+    const iconWidth = getByE2EAttribute(inputWidth, E2EAttribute.icon, 'variant');
 
     // find { popovers }
-    const popoverHeight = getByE2EAttribute(
-      inputHeight,
-      E2EAttribute.popover,
-      'popover',
-    );
-    const popoverWidth = getByE2EAttribute(
-      inputWidth,
-      E2EAttribute.popover,
-      'popover',
-    );
+    const popoverHeight = getByE2EAttribute(inputHeight, E2EAttribute.popover, 'popover');
+    const popoverWidth = getByE2EAttribute(inputWidth, E2EAttribute.popover, 'popover');
 
     // find { popover items }
-    const popoverHeightItem = getByE2EAttribute(
-      popoverHeight,
-      E2EAttribute.popoverItem,
-      PopoverItem.auto,
-    );
-    const popoverWidthItem = getByE2EAttribute(
-      popoverWidth,
-      E2EAttribute.popoverItem,
-      PopoverItem.auto,
-    );
+    const popoverHeightItem = getByE2EAttribute(popoverHeight, E2EAttribute.popoverItem, PopoverItem.auto);
+    const popoverWidthItem = getByE2EAttribute(popoverWidth, E2EAttribute.popoverItem, PopoverItem.auto);
 
     // action
     fireEvent.click(iconHeight);
@@ -680,22 +494,10 @@ describe('ColumnResizing behaviors', () => {
     fireEvent.click(popoverWidthItem);
 
     // result
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1']
-        .height.value,
-    ).toBe('auto');
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].width
-        .value,
-    ).toBe('auto');
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-2']
-        .height.value,
-    ).toBe('auto');
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-2'].width
-        .value,
-    ).toBe('auto');
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].height.value).toBe('auto');
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].width.value).toBe('auto');
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-2'].height.value).toBe('auto');
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-2'].width.value).toBe('auto');
   });
 
   it('should apply unit value for height & width', () => {
@@ -710,52 +512,20 @@ describe('ColumnResizing behaviors', () => {
     );
 
     // find { inputs }
-    const inputHeight = getByE2EAttribute(
-      container,
-      E2EAttribute.textField,
-      'height',
-    );
-    const inputWidth = getByE2EAttribute(
-      container,
-      E2EAttribute.textField,
-      'width',
-    );
+    const inputHeight = getByE2EAttribute(container, E2EAttribute.textField, 'height');
+    const inputWidth = getByE2EAttribute(container, E2EAttribute.textField, 'width');
 
     // find { icons }
-    const iconHeight = getByE2EAttribute(
-      inputHeight,
-      E2EAttribute.icon,
-      'variant',
-    );
-    const iconWidth = getByE2EAttribute(
-      inputWidth,
-      E2EAttribute.icon,
-      'variant',
-    );
+    const iconHeight = getByE2EAttribute(inputHeight, E2EAttribute.icon, 'variant');
+    const iconWidth = getByE2EAttribute(inputWidth, E2EAttribute.icon, 'variant');
 
     // find { popovers }
-    const popoverHeight = getByE2EAttribute(
-      inputHeight,
-      E2EAttribute.popover,
-      'popover',
-    );
-    const popoverWidth = getByE2EAttribute(
-      inputWidth,
-      E2EAttribute.popover,
-      'popover',
-    );
+    const popoverHeight = getByE2EAttribute(inputHeight, E2EAttribute.popover, 'popover');
+    const popoverWidth = getByE2EAttribute(inputWidth, E2EAttribute.popover, 'popover');
 
     // find { popover items }
-    const popoverHeightItem = getByE2EAttribute(
-      popoverHeight,
-      E2EAttribute.popoverItem,
-      PopoverItem.unit,
-    );
-    const popoverWidthItem = getByE2EAttribute(
-      popoverWidth,
-      E2EAttribute.popoverItem,
-      PopoverItem.unit,
-    );
+    const popoverHeightItem = getByE2EAttribute(popoverHeight, E2EAttribute.popoverItem, PopoverItem.unit);
+    const popoverWidthItem = getByE2EAttribute(popoverWidth, E2EAttribute.popoverItem, PopoverItem.unit);
 
     // action
     fireEvent.click(iconHeight);
@@ -764,13 +534,7 @@ describe('ColumnResizing behaviors', () => {
     fireEvent.click(popoverWidthItem);
 
     // result
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1']
-        .height.unit,
-    ).toBe(Unit.percentage);
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].width
-        .unit,
-    ).toBe(Unit.percentage);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].height.unit).toBe(Unit.percentage);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].width.unit).toBe(Unit.percentage);
   });
 });

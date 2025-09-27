@@ -27,11 +27,7 @@ export type TElementsProps = {
   parentId: TElement['parentId'];
 };
 
-const Elements: FC<TElementsProps> = ({
-  eventsDisabled,
-  mouseMode,
-  parentId,
-}) => {
+const Elements: FC<TElementsProps> = ({ eventsDisabled, mouseMode, parentId }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const staticData = useSelector(filtredStaticDataSelectorCreator(parentId));
 

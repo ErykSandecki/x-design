@@ -20,11 +20,7 @@ export const useChangeEvent = (
 ): TUseChangeEvent => {
   const dispatch = useDispatch();
 
-  const updateStore = (
-    x: number,
-    y: number,
-    isScrubbableInput: boolean,
-  ): void => {
+  const updateStore = (x: number, y: number, isScrubbableInput: boolean): void => {
     if (isScrubbableInput) {
       dispatch(setElementsCoordinates({ x, y }, 'dynamic'));
     }

@@ -2,14 +2,7 @@ import { ColorFormatType } from 'antd/es/color-picker/interface';
 import { CSSProperties } from 'react';
 
 // types
-import {
-  AlignmentHorizontal,
-  AlignmentVertical,
-  ElementType,
-  LayoutType,
-  Unit,
-} from './enums';
-import { T2DCoordinates } from 'types/types';
+import { AlignmentHorizontal, AlignmentVertical, ElementType, LayoutType, Unit } from './enums';
 
 export type TAlignment = {
   horizontal?: AlignmentHorizontal;

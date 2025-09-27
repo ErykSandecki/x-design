@@ -7,24 +7,19 @@ import { elementDynamicDataSelectorCreator } from '../../selectors';
 describe('elementDynamicDataSelectorCreator', () => {
   it('should find item', () => {
     // before
-    const selectorFunction = (
-      elementDynamicDataSelectorCreator(elementDynamicDataMock.id) as any
-    ).resultFunc;
+    const selectorFunction = (elementDynamicDataSelectorCreator(elementDynamicDataMock.id) as any).resultFunc;
 
     // result
-    expect(
-      selectorFunction({ [elementDynamicDataMock.id]: elementDynamicDataMock }),
-    ).toStrictEqual(elementDynamicDataMock);
+    expect(selectorFunction({ [elementDynamicDataMock.id]: elementDynamicDataMock })).toStrictEqual(
+      elementDynamicDataMock,
+    );
   });
 
   it('should not find item', () => {
     // before
-    const selectorFunction = (elementDynamicDataSelectorCreator('-1') as any)
-      .resultFunc;
+    const selectorFunction = (elementDynamicDataSelectorCreator('-1') as any).resultFunc;
 
     // result
-    expect(
-      selectorFunction({ [elementDynamicDataMock.id]: elementDynamicDataMock }),
-    ).toBe(undefined);
+    expect(selectorFunction({ [elementDynamicDataMock.id]: elementDynamicDataMock })).toBe(undefined);
   });
 });

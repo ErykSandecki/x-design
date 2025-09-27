@@ -4,9 +4,6 @@ import { RefObject, useCallback, useRef, WheelEvent } from 'react';
 // others
 import { DEBOUNCE_TIME } from 'constant/constants';
 
-// types
-import { T3DCoordinates } from 'types';
-
 // utils
 import { handleScrollPage } from '../utils/handleScrollPage';
 import { handleZoom } from '../utils/handleZoom';
@@ -28,20 +25,8 @@ export const useWheelEvent = (
   );
 
   const handleWheel = (event: WheelEvent): void => {
-    handleScrollPage(
-      coordinates,
-      event,
-      onUpdateCoordinatesDelay,
-      setCoordinates,
-    );
-    handleZoom(
-      coordinates,
-      event,
-      lastWheelTime,
-      onUpdateCoordinatesDelay,
-      setCoordinates,
-      zoomBoxRef,
-    );
+    handleScrollPage(coordinates, event, onUpdateCoordinatesDelay, setCoordinates);
+    handleZoom(coordinates, event, lastWheelTime, onUpdateCoordinatesDelay, setCoordinates, zoomBoxRef);
   };
 
   return handleWheel;

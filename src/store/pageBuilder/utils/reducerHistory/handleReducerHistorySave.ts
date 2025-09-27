@@ -10,10 +10,7 @@ import { TReducerHistory, TPageBuilderState } from '../../types';
 // utils
 import { isRepeatedStateInHistory } from './isRepeatedStateInHistory';
 
-export const handleReducerHistorySave = (
-  state: TPageBuilderState,
-  type: TAction['type'],
-): TPageBuilderState => {
+export const handleReducerHistorySave = (state: TPageBuilderState, type: TAction['type']): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];
   const { reducerHistoryIndex } = currentPage;
 
@@ -32,10 +29,7 @@ export const handleReducerHistorySave = (
             ...state.pages,
             [state.currentPage]: {
               ...currentPage,
-              reducerHistory: [
-                newReducerHistory,
-                ...currentPage.reducerHistory.slice(reducerHistoryIndex),
-              ],
+              reducerHistory: [newReducerHistory, ...currentPage.reducerHistory.slice(reducerHistoryIndex)],
               reducerHistoryIndex: 0,
             },
           },
@@ -61,10 +55,7 @@ export const handleReducerHistorySave = (
             ...state.pages,
             [state.currentPage]: {
               ...currentPage,
-              reducerHistory: [
-                newReducerHistory,
-                ...currentPage.reducerHistory,
-              ],
+              reducerHistory: [newReducerHistory, ...currentPage.reducerHistory],
               reducerHistoryIndex: 0,
             },
           },

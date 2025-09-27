@@ -2,11 +2,7 @@ import { cloneDeep } from 'lodash';
 import { RefObject } from 'react';
 
 // mocks
-import {
-  elementAllDataMock,
-  pageBuilderStateMock,
-  selectedElementMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { elementAllDataMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 import { wholeStateMock } from 'test/mocks/reducer/wholeStateMock';
 
 // others
@@ -16,7 +12,7 @@ import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 import { store as storeToMock } from 'store/store';
 
 // types
-import { MouseButton, TObject, TRectCoordinates } from 'types';
+import { MouseButton, TObject } from 'types';
 import { MouseMode } from 'types/enums/mouseMode';
 
 // utils
@@ -24,10 +20,7 @@ import { calculateAbsolutePositions } from '../calculateAbsolutePositions';
 
 const element = document.createElement('div');
 const zoomContent = document.createElement('div');
-const currentPage =
-  pageBuilderStateMock[PAGE_BUILDER].pages[
-    pageBuilderStateMock[PAGE_BUILDER].currentPage
-  ];
+const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages[pageBuilderStateMock[PAGE_BUILDER].currentPage];
 const sharedRefs = {
   [elementAllDataMock.id]: element,
   ['test-2']: element,

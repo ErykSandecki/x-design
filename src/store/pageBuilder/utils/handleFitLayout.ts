@@ -3,9 +3,7 @@ import { cloneDeep } from 'lodash';
 // types
 import { TPageBuilderState } from '../types';
 
-export const handleFitLayout = (
-  state: TPageBuilderState,
-): TPageBuilderState => {
+export const handleFitLayout = (state: TPageBuilderState): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];
   const { elements, selectedElements } = currentPage;
   const clonedElements = cloneDeep(elements);

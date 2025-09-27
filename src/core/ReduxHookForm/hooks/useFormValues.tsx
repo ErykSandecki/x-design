@@ -21,9 +21,7 @@ export const useFormValues = <T,>(formName: string): TUseFormValues<T> => {
       const { parse, previousValue, value } = field;
       const targetValue = previous ? previousValue : value;
 
-      formData[name] = parse
-        ? (parse(targetValue, name) as T)
-        : (targetValue as T);
+      formData[name] = parse ? (parse(targetValue, name) as T) : (targetValue as T);
     });
 
     return formData as T;

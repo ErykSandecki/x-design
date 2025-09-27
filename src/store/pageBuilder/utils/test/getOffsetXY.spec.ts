@@ -23,10 +23,7 @@ describe('getOffsetXY', () => {
 
   it(`should return offset x & y`, () => {
     // before
-    const result = getOffsetXY(
-      selectedElementMock.id,
-      selectedElementMock.parentId,
-    );
+    const result = getOffsetXY(selectedElementMock.id, selectedElementMock.parentId);
 
     // result
     expect(result).toStrictEqual({ x: 0, y: 0 });

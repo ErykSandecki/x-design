@@ -1,9 +1,5 @@
 // mocks
-import {
-  elementAllDataMock,
-  pageBuilderStateMock,
-  selectedElementMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { elementAllDataMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
@@ -14,10 +10,7 @@ import { filterSelectedElements } from '../filterSelectedElements';
 describe('filterSelectedElements', () => {
   it(`should not filter when single element`, () => {
     // before
-    const result = filterSelectedElements(
-      [selectedElementMock],
-      pageBuilderStateMock[PAGE_BUILDER],
-    );
+    const result = filterSelectedElements([selectedElementMock], pageBuilderStateMock[PAGE_BUILDER]);
 
     // result
     expect(result).toStrictEqual([selectedElementMock]);

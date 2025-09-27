@@ -8,10 +8,7 @@ import { resources } from './resources';
 // types
 import { TObject } from 'types';
 
-export const initI18n = async (
-  language: string,
-  resource: TObject<string>,
-): Promise<{ i18n: i18nInterface }> => {
+export const initI18n = async (language: string, resource: TObject<string>): Promise<{ i18n: i18nInterface }> => {
   i18n.use(initReactI18next).init({
     fallbackLng: DEFAULT_LANGUAGE,
     interpolation: {

@@ -15,17 +15,12 @@ import { eventSelectorCreator } from 'store/pageBuilder/selectors';
 
 export type TUseMouseLeaveEvent = (event: MouseEvent) => void;
 
-export const useMouseLeaveEvent = (
-  mouseMode: MouseMode,
-  parentId: TElement['parentId'],
-): TUseMouseLeaveEvent => {
+export const useMouseLeaveEvent = (mouseMode: MouseMode, parentId: TElement['parentId']): TUseMouseLeaveEvent => {
   const dispatch = useDispatch();
 
   const handleMouseLeave = (): void => {
     if (mouseMode === MouseMode.default) {
-      const draggableElements = eventSelectorCreator('draggableElements')(
-        store.getState(),
-      );
+      const draggableElements = eventSelectorCreator('draggableElements')(store.getState());
 
       if (!isEmpty(draggableElements)) {
         dispatch(

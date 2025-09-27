@@ -20,12 +20,7 @@ describe('getPosition', () => {
 
   it(`should return horizontal left position`, () => {
     // before
-    const result = getPosition(
-      { horizontal: AlignmentHorizontal.left },
-      0,
-      0,
-      0,
-    );
+    const result = getPosition({ horizontal: AlignmentHorizontal.left }, 0, 0, 0);
 
     // result
     expect(result).toStrictEqual({
@@ -38,12 +33,7 @@ describe('getPosition', () => {
 
   it(`should return horizontal center position`, () => {
     // before
-    const result = getPosition(
-      { horizontal: AlignmentHorizontal.center },
-      0,
-      0,
-      0,
-    );
+    const result = getPosition({ horizontal: AlignmentHorizontal.center }, 0, 0, 0);
 
     // result
     expect(result).toStrictEqual({
@@ -56,12 +46,7 @@ describe('getPosition', () => {
 
   it(`should return horizontal right position`, () => {
     // before
-    const result = getPosition(
-      { horizontal: AlignmentHorizontal.right },
-      0,
-      0,
-      0,
-    );
+    const result = getPosition({ horizontal: AlignmentHorizontal.right }, 0, 0, 0);
 
     // result
     expect(result).toStrictEqual({

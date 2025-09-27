@@ -23,9 +23,7 @@ import { TUseMouseDownEvent, useMouseDownEvent } from './useMouseDownEvent';
 import { TUseMouseEnterEvent, useMouseEnterEvent } from './useMouseEnterEvent';
 import { TUseMouseLeaveEvent, useMouseLeaveEvent } from './useMouseLeaveEvent';
 
-export type TUseTransformAreaEvents = TUseMouseDownEvent &
-  TUseMouseEnterEvent &
-  TUseMouseLeaveEvent;
+export type TUseTransformAreaEvents = TUseMouseDownEvent & TUseMouseEnterEvent & TUseMouseLeaveEvent;
 
 export const useTransformAreaEvents = (
   angle: TElement['angle'],
@@ -42,18 +40,8 @@ export const useTransformAreaEvents = (
   const cursorBaseAngle = useRef(0);
   const cursorOffsetAngle = useRef(0);
   const cursorPosition = useRef(BASE_2D);
-  const cursorResize = useChangeCursor(
-    cursorAngle,
-    zoomBoxRef,
-    IconResize,
-    IconDefault,
-  );
-  const cursorRotate = useChangeCursor(
-    cursorAngle,
-    zoomBoxRef,
-    IconRotate,
-    IconDefault,
-  );
+  const cursorResize = useChangeCursor(cursorAngle, zoomBoxRef, IconResize, IconDefault);
+  const cursorRotate = useChangeCursor(cursorAngle, zoomBoxRef, IconRotate, IconDefault);
   const eventsMouseDown = useMouseDownEvent(
     angle,
     cursorBaseAngle,
@@ -78,17 +66,7 @@ export const useTransformAreaEvents = (
     cursorRotate.onMouseLeave,
   );
 
-  useMouseMoveEvent(
-    cursorBaseAngle,
-    cursorOffsetAngle,
-    cursorPosition,
-    elementRef,
-    height,
-    id,
-    width,
-    x,
-    y,
-  );
+  useMouseMoveEvent(cursorBaseAngle, cursorOffsetAngle, cursorPosition, elementRef, height, id, width, x, y);
   useMouseUpEvent();
 
   return {

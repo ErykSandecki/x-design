@@ -1,9 +1,5 @@
 // mocks
-import {
-  classNames,
-  classNamesWithThemeDark,
-  classNamesWithThemeLight,
-} from '../../mock/classNames';
+import { classNames, classNamesWithThemeDark, classNamesWithThemeLight } from '../../mock/classNames';
 
 // types
 import { Theme } from 'types/enums/theme';

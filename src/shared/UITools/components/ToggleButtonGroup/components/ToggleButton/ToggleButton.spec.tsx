@@ -8,12 +8,7 @@ describe('ToggleButton snapshots', () => {
   it('should render ToggleButton', () => {
     // before
     const { asFragment } = render(
-      <ToggleButton<any>
-        currentValue=""
-        icon="AlignHorizontalCenter"
-        onChange={noop}
-        value=""
-      />,
+      <ToggleButton<any> currentValue="" icon="AlignHorizontalCenter" onChange={noop} value="" />,
     );
 
     // result

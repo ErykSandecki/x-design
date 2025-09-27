@@ -5,7 +5,7 @@ import { allDataSelector } from 'store/pageBuilder/selectors';
 import { store } from 'store';
 
 // types
-import { MouseButton, TObject, TRectCoordinates } from 'types';
+import { MouseButton, TObject } from 'types';
 import { MouseMode } from '../../../../../types/enums/mouseMode';
 import { TContext } from 'pages/PageBuilderPage/core/types';
 
@@ -27,11 +27,7 @@ export const calculateAbsolutePositions = (
       const { id } = value;
 
       if (id !== '-1') {
-        rectCoordinates.current[id] = getAbsolutePosition(
-          id,
-          sharedRefs,
-          zoomContentRef,
-        );
+        rectCoordinates.current[id] = getAbsolutePosition(id, sharedRefs, zoomContentRef);
       }
     }
   }

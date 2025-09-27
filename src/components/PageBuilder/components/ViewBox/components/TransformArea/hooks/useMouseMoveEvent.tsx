@@ -6,7 +6,7 @@ import { eventSelectorCreator } from 'store/pageBuilder/selectors';
 
 // types
 import { AnchorResize, AnchorRotate } from 'store/pageBuilder/enums';
-import { T2DCoordinates, TElement } from 'types';
+import { TElement } from 'types';
 
 // utils
 import { handleResizeElement } from '../utils/handleResizeElement';
@@ -25,27 +25,14 @@ export const useMouseMoveEvent = (
   x: TElement['coordinates']['x'],
   y: TElement['coordinates']['y'],
 ): TUseMouseMoveEvent => {
-  const anchorResize = useSelector(
-    eventSelectorCreator('selectedAnchorResize'),
-  );
-  const anchorRotate = useSelector(
-    eventSelectorCreator('selectedAnchorRotate'),
-  );
+  const anchorResize = useSelector(eventSelectorCreator('selectedAnchorResize'));
+  const anchorRotate = useSelector(eventSelectorCreator('selectedAnchorRotate'));
   const dispatch = useDispatch();
 
   const handleMouseMoveAnchorResize = (event: MouseEvent): void => {
     event.stopPropagation();
 
-    handleResizeElement(
-      cursorPosition,
-      dispatch,
-      event,
-      height,
-      id,
-      width,
-      x,
-      y,
-    );
+    handleResizeElement(cursorPosition, dispatch, event, height, id, width, x, y);
   };
 
   const handleMouseMoveAnchorRotate = (event: MouseEvent): void => {
@@ -67,11 +54,5 @@ export const useMouseMoveEvent = (
       window.removeEventListener('mousemove', handleMouseMoveAnchorResize);
       window.removeEventListener('mousemove', handleMouseMoveAnchorRotate);
     };
-  }, [
-    anchorResize,
-    anchorRotate,
-    cursorBaseAngle,
-    cursorPosition.current.x,
-    cursorPosition.current.y,
-  ]);
+  }, [anchorResize, anchorRotate, cursorBaseAngle, cursorPosition.current.x, cursorPosition.current.y]);
 };

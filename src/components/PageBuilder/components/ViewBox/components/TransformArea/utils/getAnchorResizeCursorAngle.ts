@@ -2,10 +2,7 @@
 import { AnchorResize } from 'store/pageBuilder/enums';
 import { TElement } from 'types';
 
-export const getAnchorResizeCursorAngle = (
-  anchor: AnchorResize,
-  angle: TElement['angle'],
-): number => {
+export const getAnchorResizeCursorAngle = (anchor: AnchorResize, angle: TElement['angle']): number => {
   switch (anchor) {
     case AnchorResize.east:
     case AnchorResize.west:

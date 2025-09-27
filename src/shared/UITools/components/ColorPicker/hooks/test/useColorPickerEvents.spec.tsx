@@ -7,9 +7,7 @@ import { useColorPickerEvents } from '../useColorPickerEvents';
 describe('useColorPickerEvents', () => {
   it(`should return view moveable events and data`, () => {
     // before
-    const { result } = renderHook(() =>
-      useColorPickerEvents('100', '#ffffff', noop, noop),
-    );
+    const { result } = renderHook(() => useColorPickerEvents('100', '#ffffff', noop, noop));
 
     // result
     expect(result.current).toStrictEqual({

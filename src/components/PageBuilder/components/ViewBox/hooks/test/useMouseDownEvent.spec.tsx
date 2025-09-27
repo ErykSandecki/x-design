@@ -14,7 +14,7 @@ import { elementAllDataMock } from 'test/mocks/reducer/pageBuilderMock';
 import { BASE_3D } from 'shared/ZoomBox/constants';
 
 // types
-import { MouseButton, TObject, TRectCoordinates } from 'types';
+import { MouseButton, TObject } from 'types';
 import { MouseMode } from 'types/enums/mouseMode';
 
 const mockCallBack = jest.fn();
@@ -37,14 +37,7 @@ describe('useMouseMoveEvent', () => {
   it(`should trigger event for toolBeltA`, () => {
     // before
     const { result } = renderHook(
-      () =>
-        useMouseDownEvent(
-          BASE_3D,
-          MouseMode.toolBeltA,
-          rectCoordinates,
-          mockCallBack,
-          mockCallBack,
-        ),
+      () => useMouseDownEvent(BASE_3D, MouseMode.toolBeltA, rectCoordinates, mockCallBack, mockCallBack),
       {
         wrapper: ({ children }) => <RefsProvider>{children}</RefsProvider>,
       },
@@ -60,14 +53,7 @@ describe('useMouseMoveEvent', () => {
   it(`should trigger event for default`, () => {
     // before
     const { result } = renderHook(
-      () =>
-        useMouseDownEvent(
-          BASE_3D,
-          MouseMode.default,
-          rectCoordinates,
-          mockCallBack,
-          mockCallBack,
-        ),
+      () => useMouseDownEvent(BASE_3D, MouseMode.default, rectCoordinates, mockCallBack, mockCallBack),
       {
         wrapper: ({ children }) => <RefsProvider>{children}</RefsProvider>,
       },

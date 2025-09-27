@@ -10,7 +10,7 @@ import { updateEventsStatus } from 'store/pageBuilder/actions';
 
 // types
 import { MouseMode } from 'types/enums/mouseMode';
-import { T2DCoordinates, TElement } from 'types';
+import { TElement } from 'types';
 import { TSelectedElement } from 'store/pageBuilder/types';
 
 // utils
@@ -30,10 +30,7 @@ export const useMouseMoveEvent = (
   const dispatch = useDispatch();
 
   const handleMouseMove = throttle((event: MouseEvent): void => {
-    if (
-      mouseMode === MouseMode.default &&
-      distanceHasChanged(cursorPositionBase.current, 5, event)
-    ) {
+    if (mouseMode === MouseMode.default && distanceHasChanged(cursorPositionBase.current, 5, event)) {
       updateElementPosition(cursorPosition, dispatch, event, parentId);
       dispatch(updateEventsStatus({ draggableElements: [id] }));
     }

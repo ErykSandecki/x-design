@@ -5,11 +5,7 @@ import { useContext } from 'react';
 import { useTheme } from './useTheme';
 
 // mocks
-import {
-  classNames,
-  classNamesWithThemeDark,
-  classNamesWithThemeLight,
-} from './mock/classNames';
+import { classNames, classNamesWithThemeDark, classNamesWithThemeLight } from './mock/classNames';
 
 // types
 import { Theme } from 'types/enums/theme';
@@ -33,9 +29,7 @@ describe('useTheme', () => {
     result.current.forceUpdateClassNames();
 
     // result
-    expect(result.current.classNamesWithTheme).toEqual(
-      classNamesWithThemeLight,
-    );
+    expect(result.current.classNamesWithTheme).toEqual(classNamesWithThemeLight);
   });
 
   it(`should append dark theme modificator for every className`, () => {

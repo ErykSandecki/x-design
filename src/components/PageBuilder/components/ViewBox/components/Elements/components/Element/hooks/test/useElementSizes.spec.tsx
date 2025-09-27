@@ -30,8 +30,7 @@ const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 describe('useElementEvents', () => {
   beforeAll(() => {
     // mock
-    window.getComputedStyle = (): any =>
-      ({ height: '100px', width: '100px' }) as CSSStyleDeclaration;
+    window.getComputedStyle = (): any => ({ height: '100px', width: '100px' }) as CSSStyleDeclaration;
   });
 
   it(`should return sizes from html`, () => {
@@ -74,20 +73,17 @@ describe('useElementEvents', () => {
     });
 
     // before
-    const { result } = renderHook(
-      () => useElementSizes(selectedElementMock.id),
-      {
-        wrapper: ({ children }) => {
-          const Wrapper = getProviderWrapper(store);
+    const { result } = renderHook(() => useElementSizes(selectedElementMock.id), {
+      wrapper: ({ children }) => {
+        const Wrapper = getProviderWrapper(store);
 
-          return (
-            <Wrapper>
-              <RefsProvider>{children}</RefsProvider>
-            </Wrapper>
-          );
-        },
+        return (
+          <Wrapper>
+            <RefsProvider>{children}</RefsProvider>
+          </Wrapper>
+        );
       },
-    );
+    });
 
     // result
     expect(result.current).toStrictEqual({
@@ -146,26 +142,23 @@ describe('useElementEvents', () => {
     });
 
     // before
-    const { result } = renderHook(
-      () => useElementSizes(selectedElementMock.id),
-      {
-        wrapper: ({ children }) => {
-          const Wrapper = getProviderWrapper(store);
+    const { result } = renderHook(() => useElementSizes(selectedElementMock.id), {
+      wrapper: ({ children }) => {
+        const Wrapper = getProviderWrapper(store);
 
-          return (
-            <Wrapper>
-              <RefsProvider
-                itemsRefs={{
-                  [elementAllDataMock.id]: createHtmlElement('div'),
-                }}
-              >
-                {children}
-              </RefsProvider>
-            </Wrapper>
-          );
-        },
+        return (
+          <Wrapper>
+            <RefsProvider
+              itemsRefs={{
+                [elementAllDataMock.id]: createHtmlElement('div'),
+              }}
+            >
+              {children}
+            </RefsProvider>
+          </Wrapper>
+        );
       },
-    );
+    });
 
     // result
     expect(result.current).toStrictEqual({

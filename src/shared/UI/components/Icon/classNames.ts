@@ -1,7 +1,10 @@
-import { mapValues } from 'lodash';
+import { values } from 'lodash';
 
 // types
 import { ColorsTheme } from 'types';
+
+// utils
+import { composeClassNames } from 'utils';
 
 export const className = 'Icon';
 
@@ -9,13 +12,9 @@ export const classes = {
   className,
 };
 
-export const classNames = {
-  [className]: {
-    name: className,
-    modificators: {
-      clickable: `${className}--clickable`,
-      disabled: `${className}--disabled`,
-      ...mapValues(ColorsTheme, (color) => `${className}--${color}`),
-    },
-  },
-};
+export const classNames = composeClassNames(className, [
+  className,
+  'clickable',
+  'disabled',
+  ...values(ColorsTheme),
+] as const);

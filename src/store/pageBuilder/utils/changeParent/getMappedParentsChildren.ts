@@ -2,12 +2,7 @@ import { cloneDeep, first } from 'lodash';
 
 // types
 import { TElement } from 'types';
-import {
-  TChangeParentActionPayload,
-  TElementsData,
-  TEvents,
-  TPageBuilderState,
-} from 'store/pageBuilder/types';
+import { TChangeParentActionPayload, TElementsData, TEvents, TPageBuilderState } from 'store/pageBuilder/types';
 
 export const getTargetIndex = (
   nextParent: TElement,
@@ -35,22 +30,13 @@ export const replaceChildrenPosition = (
   parentHasChanged: boolean,
   prevParent: TElement,
 ): void => {
-  const prevParentChildren = filterDraggableElements(
-    prevParent.children,
-    draggableElements,
-  );
-  const nextParentChildren = parentHasChanged
-    ? nextParent.children
-    : [...prevParentChildren];
+  const prevParentChildren = filterDraggableElements(prevParent.children, draggableElements);
+  const nextParentChildren = parentHasChanged ? nextParent.children : [...prevParentChildren];
 
   prevParent.children = prevParentChildren;
   nextParent.children =
     index !== -1
-      ? [
-          ...nextParentChildren.slice(0, index),
-          ...draggableElements,
-          ...nextParentChildren.slice(index),
-        ]
+      ? [...nextParentChildren.slice(0, index), ...draggableElements, ...nextParentChildren.slice(index)]
       : nextParent.children;
 };
 
@@ -65,19 +51,9 @@ export const getMappedParentsChildren = (
   const id = first(draggableElements);
   const prevParent = cloneDeep(allData[allData[id].parentId]);
   const nextParent = cloneDeep(allData[possibleParent]);
-  const index = getTargetIndex(
-    nextParent,
-    parentHasChanged,
-    possibleIndexPosition,
-  );
+  const index = getTargetIndex(nextParent, parentHasChanged, possibleIndexPosition);
 
-  replaceChildrenPosition(
-    draggableElements,
-    nextParent,
-    index,
-    parentHasChanged,
-    prevParent,
-  );
+  replaceChildrenPosition(draggableElements, nextParent, index, parentHasChanged, prevParent);
 
   return {
     allData: {

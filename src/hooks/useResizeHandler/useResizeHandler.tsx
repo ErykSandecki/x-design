@@ -7,14 +7,8 @@ type TUseResizeHandler = {
   height: number;
   isPressingX: boolean;
   isPressingY: boolean;
-  onMouseDownX: (
-    event: React.MouseEvent<HTMLElement>,
-    isInverted: boolean,
-  ) => void;
-  onMouseDownY: (
-    event: React.MouseEvent<HTMLElement>,
-    isInverted: boolean,
-  ) => void;
+  onMouseDownX: (event: React.MouseEvent<HTMLElement>, isInverted: boolean) => void;
+  onMouseDownY: (event: React.MouseEvent<HTMLElement>, isInverted: boolean) => void;
   setHeight: (height: number) => void;
   setWidth: (width: number) => void;
   width: number;
@@ -36,17 +30,11 @@ export const useResizeHandler = (
   const [isInvertedY, setIsInvertedY] = useState(false);
   const [width, setWidth] = useState(initialWidth);
 
-  const handleMouseDownX = (
-    event: React.MouseEvent<HTMLElement>,
-    isInverted: boolean,
-  ): void => {
+  const handleMouseDownX = (event: React.MouseEvent<HTMLElement>, isInverted: boolean): void => {
     handleMouseDown(event, isInverted, setIsInvertedX, setIsPressingX);
   };
 
-  const handleMouseDownY = (
-    event: React.MouseEvent<HTMLElement>,
-    isInverted: boolean,
-  ): void => {
+  const handleMouseDownY = (event: React.MouseEvent<HTMLElement>, isInverted: boolean): void => {
     handleMouseDown(event, isInverted, setIsInvertedY, setIsPressingY);
   };
 
@@ -54,9 +42,7 @@ export const useResizeHandler = (
     if (isPressingX) {
       const { left, right } = ref.current.getBoundingClientRect();
 
-      const position = isInvertedX
-        ? Math.abs(event.clientX - right)
-        : event.clientX - left;
+      const position = isInvertedX ? Math.abs(event.clientX - right) : event.clientX - left;
 
       switch (true) {
         case position < minWidth:
@@ -76,9 +62,7 @@ export const useResizeHandler = (
     if (isPressingY) {
       const { top, bottom } = ref.current.getBoundingClientRect();
 
-      const position = isInvertedY
-        ? event.clientY - bottom
-        : event.clientY - top;
+      const position = isInvertedY ? event.clientY - bottom : event.clientY - top;
 
       switch (true) {
         case position < minHeight:

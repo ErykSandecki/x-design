@@ -9,10 +9,7 @@ import { useDispatchMany } from 'hooks';
 
 // store
 import { appInit, initLanguage } from 'store/appInitializer/actions';
-import {
-  isAppLoadedSelector,
-  isPendingSelector,
-} from 'store/appInitializer/selectors';
+import { isAppLoadedSelector, isPendingSelector } from 'store/appInitializer/selectors';
 
 const App: FC = () => {
   const dispatchMany = useDispatchMany();

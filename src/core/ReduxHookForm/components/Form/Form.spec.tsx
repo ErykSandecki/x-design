@@ -80,12 +80,7 @@ describe('Form snapshots', () => {
     const { asFragment, getByText } = render(
       <Provider store={store}>
         <Form onSubmit={() => {}} formName="testForm">
-          <Field
-            Component={TextField}
-            name="testField"
-            parse={(value: string) => value}
-            syncValidators={[required]}
-          />
+          <Field Component={TextField} name="testField" parse={(value: string) => value} syncValidators={[required]} />
           <Button />
         </Form>
       </Provider>,
@@ -108,12 +103,7 @@ describe('Form snapshots', () => {
     const { asFragment, getByText } = render(
       <Provider store={store}>
         <Form onSubmit={() => {}} formName="testForm">
-          <Field
-            Component={TextField}
-            name="testField"
-            parse={(value: string) => value}
-            syncValidators={[required]}
-          />
+          <Field Component={TextField} name="testField" parse={(value: string) => value} syncValidators={[required]} />
           <Button />
         </Form>
       </Provider>,
@@ -136,8 +126,7 @@ describe('Form snapshots', () => {
           fields: {
             ...reduxHookFormStateMock[REDUX_HOOK_FORM].testForm.fields,
             testField: {
-              ...reduxHookFormStateMock[REDUX_HOOK_FORM].testForm.fields
-                .testField,
+              ...reduxHookFormStateMock[REDUX_HOOK_FORM].testForm.fields.testField,
               parse: undefined,
             },
           },
@@ -149,11 +138,7 @@ describe('Form snapshots', () => {
     const { asFragment, getByText } = render(
       <Provider store={store}>
         <Form onSubmit={() => {}} formName="testForm">
-          <Field
-            Component={TextField}
-            name="testField"
-            parse={(value: string) => value}
-          />
+          <Field Component={TextField} name="testField" parse={(value: string) => value} />
           <Button />
         </Form>
       </Provider>,

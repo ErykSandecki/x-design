@@ -606,13 +606,7 @@ describe('DropAnchors behaviors', () => {
     );
 
     // action
-    fireEvent.mouseEnter(
-      getByE2EAttribute(
-        container,
-        E2EAttribute.anchor,
-        DropAnchorsPosition.top,
-      ),
-    );
+    fireEvent.mouseEnter(getByE2EAttribute(container, E2EAttribute.anchor, DropAnchorsPosition.top));
 
     // result
     expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({

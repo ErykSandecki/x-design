@@ -1,9 +1,7 @@
 import { ButtonHTMLAttributes, FC, ReactNode, Ref } from 'react';
 
 // components
-import E2EDataAttribute, {
-  TE2EDataAttributeProps,
-} from '../../../E2EDataAttributes/E2EDataAttribute';
+import E2EDataAttribute, { TE2EDataAttributeProps } from '../../../E2EDataAttributes/E2EDataAttribute';
 
 // hooks
 import { useClickEvent } from './hooks/useClickEvent';
@@ -13,11 +11,7 @@ import { useSX } from '../../hooks/sx/useSX';
 import { useTheme } from 'hooks';
 
 // others
-import {
-  classes,
-  className as classNameButton,
-  classNames,
-} from './classNames';
+import { classes, className as classNameButton, classNames } from './classNames';
 
 // styles
 import styles from './styles/button.scss';
@@ -29,10 +23,7 @@ import { InputSize } from '../../enums';
 import { TButtonIcon } from './types';
 import { TUIProps } from '../../types';
 
-export type TButtonProps = Omit<
-  ButtonHTMLAttributes<HTMLElement>,
-  'className' | 'color' | 'style'
-> &
+export type TButtonProps = Omit<ButtonHTMLAttributes<HTMLElement>, 'className' | 'color' | 'style'> &
   TUIProps<typeof classes> & {
     children?: ReactNode;
     color?: ButtonColor;
@@ -69,18 +60,11 @@ export const Button: FC<TButtonProps> = ({
   variant = ButtonVariant.contained,
   ...restProps
 }) => {
-  const sxClassName = useSX(depsSx, sx);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
+  const { rippleEffect, triggerRippleEffect } = useRippleEffect(classNames[classNameButton].name, styles);
   const Icon = useIcon(classNamesWithTheme, cx, size);
-  const { rippleEffect, triggerRippleEffect } = useRippleEffect(
-    classNames[classNameButton].name,
-    styles,
-  );
-  const onClickHandler = useClickEvent(
-    disabledRippleEffect,
-    onClick,
-    triggerRippleEffect,
-  );
+  const onClickHandler = useClickEvent(disabledRippleEffect, onClick, triggerRippleEffect);
+  const sxClassName = useSX(depsSx, sx);
 
   return (
     <E2EDataAttribute type={e2eAttribute} value={e2eValue}>
@@ -89,14 +73,8 @@ export const Button: FC<TButtonProps> = ({
           sxClassName,
           classes.className,
           classNamesWithTheme[classNameButton].name,
-          [
-            classNamesWithTheme[classNameButton].modificators.fullwidth,
-            fullWidth,
-          ],
-          [
-            classNamesWithTheme[classNameButton].modificators.forcedHover,
-            forcedHover,
-          ],
+          [classNamesWithTheme[classNameButton].modificators.fullwidth, fullWidth],
+          [classNamesWithTheme[classNameButton].modificators.forcedHover, forcedHover],
           classNamesWithTheme[classNameButton].modificators[color],
           classNamesWithTheme[classNameButton].modificators[size],
           classNamesWithTheme[classNameButton].modificators[variant],

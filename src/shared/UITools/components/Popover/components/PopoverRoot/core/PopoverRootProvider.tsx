@@ -12,10 +12,7 @@ export type TPopoverRootProvider = {
   setSelected: TContext['setSelected'];
 };
 
-export const PopoverRootProvider: FC<TPopoverRootProvider> = ({
-  children,
-  setSelected,
-}) => {
+export const PopoverRootProvider: FC<TPopoverRootProvider> = ({ children, setSelected }) => {
   const value = useMemo(
     () =>
       ({
@@ -24,9 +21,5 @@ export const PopoverRootProvider: FC<TPopoverRootProvider> = ({
     [],
   );
 
-  return (
-    <PopoverRootContent.Provider value={value}>
-      {children}
-    </PopoverRootContent.Provider>
-  );
+  return <PopoverRootContent.Provider value={value}>{children}</PopoverRootContent.Provider>;
 };

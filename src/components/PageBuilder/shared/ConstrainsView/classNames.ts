@@ -16,28 +16,19 @@ export const classNames = {
   horizontal: {
     name: `${className}__horizontal`,
     modificators: {
-      ...mapValues(
-        AlignmentHorizontal,
-        (alignment) => `${className}__horizontal--${kebabCase(alignment)}`,
-      ),
+      ...mapValues(AlignmentHorizontal, (alignment) => `${className}__horizontal--${kebabCase(alignment)}`),
     },
   },
   vertical: {
     name: `${className}__vertical`,
     modificators: {
-      ...mapValues(
-        AlignmentVertical,
-        (alignment) => `${className}__vertical--${kebabCase(alignment)}`,
-      ),
+      ...mapValues(AlignmentVertical, (alignment) => `${className}__vertical--${kebabCase(alignment)}`),
     },
   },
   constrain: {
     name: `${className}__constrain`,
     modificators: {
-      ...mapValues(
-        Constrain,
-        (position) => `${className}__constrain--${kebabCase(position)}`,
-      ),
+      ...mapValues(Constrain, (position) => `${className}__constrain--${kebabCase(position)}`),
     },
   },
 };

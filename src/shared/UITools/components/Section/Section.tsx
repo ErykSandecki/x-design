@@ -22,26 +22,15 @@ export type TSectionProps = {
   label?: string;
 };
 
-export const Section: FC<TSectionProps> = ({
-  buttonsIcon = [],
-  children,
-  label,
-}) => {
+export const Section: FC<TSectionProps> = ({ buttonsIcon = [], children, label }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   return (
-    <Box
-      classes={{ className: cx(classNamesWithTheme[className]) }}
-      e2eAttribute={E2EAttribute.section}
-    >
+    <Box classes={{ className: cx(classNamesWithTheme[className]) }} e2eAttribute={E2EAttribute.section}>
       {label && (
         <div className={cx(classNamesWithTheme.header)}>
-          <Small classes={{ className: cx(classNamesWithTheme.label) }}>
-            {label}
-          </Small>
-          <div className={cx(classNamesWithTheme.buttons)}>
-            {buttonsIcon.map((buttonIcon) => buttonIcon)}
-          </div>
+          <Small classes={{ className: cx(classNamesWithTheme.label) }}>{label}</Small>
+          <div className={cx(classNamesWithTheme.buttons)}>{buttonsIcon.map((buttonIcon) => buttonIcon)}</div>
         </div>
       )}
       {children}

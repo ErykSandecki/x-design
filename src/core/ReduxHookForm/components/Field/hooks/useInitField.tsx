@@ -44,12 +44,7 @@ export const useInitField = <V extends TFieldValue>(
   const formName = useContext(FormContext);
   const field = useSelector(fieldSelectorCreator(formName, name));
 
-  const {
-    getSyncErrors,
-    subscriptionFieldsValues,
-    updateAsyncValidators,
-    updateSyncValidators,
-  } = useValidators(
+  const { getSyncErrors, subscriptionFieldsValues, updateAsyncValidators, updateSyncValidators } = useValidators(
     asyncValidators,
     formName,
     name,

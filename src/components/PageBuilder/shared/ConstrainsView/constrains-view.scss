@@ -8,11 +8,7 @@
 }
 
 .ConstrainsView {
-  @include theme-selector(
-    'neutral-3',
-    background-color,
-    '&:hover:not(.ConstrainsView--selected)'
-  );
+  @include theme-selector('neutral-3', background-color, '&:hover:not(.ConstrainsView--selected)');
 
   border-radius: 5px;
   cursor: pointer;

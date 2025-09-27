@@ -25,9 +25,7 @@ export const mappingPallete = (sx: TSX, theme: Theme): string => {
       const property = Pallete[key];
       const value = pallete[key as keyof TSXPallete];
 
-      return value
-        ? `${kebabCase(property)}: ${THEME_COLORS[theme][value]};`
-        : '';
+      return value ? `${kebabCase(property)}: ${THEME_COLORS[theme][value]};` : '';
     })
     .filter(Boolean)
     .join('\n');

@@ -7,5 +7,4 @@ export type TFieldRestProps<T, V> = TUseInputProps<V> &
     ref?: any;
   };
 
-export type TFieldComponentProps<T, V> = Partial<TUseMetaProps<V>> &
-  TFieldRestProps<T, V>;
+export type TFieldComponentProps<T, V> = Partial<TUseMetaProps<V>> & TFieldRestProps<T, V>;

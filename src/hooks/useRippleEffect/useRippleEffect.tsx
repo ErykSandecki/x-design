@@ -16,30 +16,18 @@ type TUseRippleEffect = {
   triggerRippleEffect: (event: MouseEvent) => void;
 };
 
-export const useRippleEffect = (
-  className: string,
-  styles: TObject<string>,
-  delay = 300,
-): TUseRippleEffect => {
+export const useRippleEffect = (className: string, styles: TObject<string>, delay = 300): TUseRippleEffect => {
   const [coords, setCoords] = useState({ x: -1, y: -1 });
   const [isRippling, setIsRippling] = useState(false);
   /* istanbul ignore next */
-  const transform = isJestRunning()
-    ? (value: string): string => value
-    : camelCase;
+  const transform = isJestRunning() ? (value: string): string => value : camelCase;
 
   const rippleEffect = isRippling ? (
     <span
       className={cx(
         styles[transform(`${className}--${RIPPLE_EFFECT_MODIFICATOR}`)],
-        styles[
-          transform(
-            `${className}--${RIPPLE_EFFECT_MODIFICATOR}--${Theme.light}`,
-          )
-        ],
-        styles[
-          transform(`${className}--${RIPPLE_EFFECT_MODIFICATOR}--${Theme.dark}`)
-        ],
+        styles[transform(`${className}--${RIPPLE_EFFECT_MODIFICATOR}--${Theme.light}`)],
+        styles[transform(`${className}--${RIPPLE_EFFECT_MODIFICATOR}--${Theme.dark}`)],
       )}
       style={{
         left: coords.x,

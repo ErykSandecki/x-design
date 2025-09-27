@@ -1,11 +1,5 @@
 // others
-import {
-  APP_INIT,
-  INIT_LANGUAGE,
-  INIT_LANGUAGE_SUCCESS,
-  SET_IS_APP_LOADED,
-  SET_THEME,
-} from './actionsType';
+import { APP_INIT, INIT_LANGUAGE, INIT_LANGUAGE_SUCCESS, SET_IS_APP_LOADED, SET_THEME } from './actionsType';
 
 // types
 import { Theme } from 'types';

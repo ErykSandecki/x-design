@@ -20,17 +20,9 @@ import { THEME_COLORS } from 'constant/themeColors';
 
 // types
 import { ElementType, LayoutType, TElement, Theme } from 'types';
-import {
-  TElementDynamicData,
-  TElementsData,
-  TElementStaticData,
-  TPage,
-} from './types';
+import { TElementDynamicData, TElementsData, TElementStaticData, TPage } from './types';
 
-const color =
-  localStorage.getItem(THEME) === Theme.dark
-    ? THEME_COLORS.dark.neutral4
-    : THEME_COLORS.light.neutral4;
+const color = localStorage.getItem(THEME) === Theme.dark ? THEME_COLORS.dark.neutral4 : THEME_COLORS.light.neutral4;
 
 export const BASE_ALL_DATA: TElement = {
   alignment: {},

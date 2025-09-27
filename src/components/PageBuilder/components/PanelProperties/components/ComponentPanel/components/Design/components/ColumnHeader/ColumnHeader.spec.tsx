@@ -87,10 +87,7 @@ describe('ColumnHeader snapshots', () => {
           ...pageBuilderStateMock[PAGE_BUILDER].pages,
           ['0']: {
             ...stateMock[PAGE_BUILDER].pages['0'],
-            selectedElements: [
-              selectedElementMock,
-              { ...selectedElementMock, id: '2' },
-            ],
+            selectedElements: [selectedElementMock, { ...selectedElementMock, id: '2' }],
           },
         },
       },

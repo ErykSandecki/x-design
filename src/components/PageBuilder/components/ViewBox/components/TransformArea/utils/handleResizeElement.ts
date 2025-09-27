@@ -7,7 +7,7 @@ import { resizeElement } from 'store/pageBuilder/actions';
 import { store } from 'store';
 
 // types
-import { T2DCoordinates, TElement } from 'types';
+import { TElement } from 'types';
 
 export const handleResizeElement = (
   cursorPosition: RefObject<T2DCoordinates>,

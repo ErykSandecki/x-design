@@ -17,14 +17,7 @@ describe('useBlurEvent', () => {
   it(`should trigger blur height`, () => {
     // before
     const { result } = renderHook(() =>
-      useBlurEvent(
-        elementAllDataMock,
-        '0',
-        mockCallBack,
-        mockCallBack,
-        mockCallBack,
-        '0',
-      ),
+      useBlurEvent(elementAllDataMock, '0', mockCallBack, mockCallBack, mockCallBack, '0'),
     );
 
     // action
@@ -40,14 +33,7 @@ describe('useBlurEvent', () => {
   it(`should trigger blur height`, () => {
     // before
     const { result } = renderHook(() =>
-      useBlurEvent(
-        elementAllDataMock,
-        'auto',
-        mockCallBack,
-        mockCallBack,
-        mockCallBack,
-        '0',
-      ),
+      useBlurEvent(elementAllDataMock, 'auto', mockCallBack, mockCallBack, mockCallBack, '0'),
     );
 
     // action
@@ -63,14 +49,7 @@ describe('useBlurEvent', () => {
   it(`should reset value height`, () => {
     // before
     const { result } = renderHook(() =>
-      useBlurEvent(
-        elementAllDataMock,
-        '',
-        mockCallBack,
-        mockCallBack,
-        mockCallBack,
-        '0',
-      ),
+      useBlurEvent(elementAllDataMock, '', mockCallBack, mockCallBack, mockCallBack, '0'),
     );
 
     // action
@@ -83,14 +62,7 @@ describe('useBlurEvent', () => {
   it(`should trigger blur width`, () => {
     // before
     const { result } = renderHook(() =>
-      useBlurEvent(
-        elementAllDataMock,
-        '0',
-        mockCallBack,
-        mockCallBack,
-        mockCallBack,
-        '0',
-      ),
+      useBlurEvent(elementAllDataMock, '0', mockCallBack, mockCallBack, mockCallBack, '0'),
     );
 
     // action
@@ -106,14 +78,7 @@ describe('useBlurEvent', () => {
   it(`should trigger blur width`, () => {
     // before
     const { result } = renderHook(() =>
-      useBlurEvent(
-        elementAllDataMock,
-        '0',
-        mockCallBack,
-        mockCallBack,
-        mockCallBack,
-        'auto',
-      ),
+      useBlurEvent(elementAllDataMock, '0', mockCallBack, mockCallBack, mockCallBack, 'auto'),
     );
 
     // action
@@ -129,14 +94,7 @@ describe('useBlurEvent', () => {
   it(`should reset value width`, () => {
     // before
     const { result } = renderHook(() =>
-      useBlurEvent(
-        elementAllDataMock,
-        '0',
-        mockCallBack,
-        mockCallBack,
-        mockCallBack,
-        '',
-      ),
+      useBlurEvent(elementAllDataMock, '0', mockCallBack, mockCallBack, mockCallBack, ''),
     );
 
     // action

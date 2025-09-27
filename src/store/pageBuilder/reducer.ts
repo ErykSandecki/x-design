@@ -124,8 +124,7 @@ const changeParent = (
   { payload }: TAction<TChangeParentAction['payload']>,
 ): TPageBuilderState => handleChangeParent(payload, state);
 
-const changePosition = (state: TPageBuilderState): TPageBuilderState =>
-  handleChangePosition(state);
+const changePosition = (state: TPageBuilderState): TPageBuilderState => handleChangePosition(state);
 
 const clearPrevState = (state: TPageBuilderState): TPageBuilderState => ({
   ...state,
@@ -138,39 +137,26 @@ const clearPrevState = (state: TPageBuilderState): TPageBuilderState => ({
   },
 });
 
-const fitLayout = (state: TPageBuilderState): TPageBuilderState =>
-  handleFitLayout(state);
+const fitLayout = (state: TPageBuilderState): TPageBuilderState => handleFitLayout(state);
 
 const flipElements = (
   state: TPageBuilderState,
   { payload }: TAction<TFlipElementsAction['payload']>,
 ): TPageBuilderState => handleFlipElements(payload, state);
 
-const reducerHistoryRedo = (state: TPageBuilderState): TPageBuilderState =>
-  handleReducerHistoryRedo(state);
+const reducerHistoryRedo = (state: TPageBuilderState): TPageBuilderState => handleReducerHistoryRedo(state);
 
 const reducerHistorySave = (
   state: TPageBuilderState,
   { payload }: TAction<TReducerHistorySaveAction['payload']>,
 ): TPageBuilderState => handleReducerHistorySave(state, payload);
 
-const reducerHistoryUndo = (state: TPageBuilderState): TPageBuilderState =>
-  handleReducerHistoryUndo(state);
+const reducerHistoryUndo = (state: TPageBuilderState): TPageBuilderState => handleReducerHistoryUndo(state);
 
 const resizeElement = (
   state: TPageBuilderState,
-  {
-    payload: { baseCoordinates, height, id, mouseCoordinates, width },
-  }: TAction<TResizeElementAction['payload']>,
-): TPageBuilderState =>
-  handleResizeElement(
-    baseCoordinates,
-    height,
-    width,
-    id,
-    mouseCoordinates,
-    state,
-  );
+  { payload: { baseCoordinates, height, id, mouseCoordinates, width } }: TAction<TResizeElementAction['payload']>,
+): TPageBuilderState => handleResizeElement(baseCoordinates, height, width, id, mouseCoordinates, state);
 
 const rotateElements = (
   state: TPageBuilderState,
@@ -266,17 +252,12 @@ const unselectElement = (
     ...state.pages,
     [state.currentPage]: {
       ...state.pages[state.currentPage],
-      selectedElements: state.pages[state.currentPage].selectedElements.filter(
-        (element) => element.id !== id,
-      ),
+      selectedElements: state.pages[state.currentPage].selectedElements.filter((element) => element.id !== id),
     },
   },
 });
 
-const pageBuilder = (
-  state: TPageBuilderState = initialState,
-  action: TAction,
-): TPageBuilderState => {
+const pageBuilder = (state: TPageBuilderState = initialState, action: TAction): TPageBuilderState => {
   switch (action.type) {
     case ADD_ELEMENT:
       return addElement(state, action);

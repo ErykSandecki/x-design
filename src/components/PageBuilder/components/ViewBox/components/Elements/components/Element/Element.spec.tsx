@@ -44,13 +44,11 @@ const stateMock = {
         elements: {
           ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements,
           dynamicData: {
-            ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements
-              .dynamicData,
+            ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements.dynamicData,
             [elementDynamicDataMock.id]: elementDynamicDataMock,
           },
           staticData: {
-            ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements
-              .staticData,
+            ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements.staticData,
             [elementStaticDataMock.id]: elementStaticDataMock,
           },
         },
@@ -78,10 +76,7 @@ describe('Element snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <RefsProvider
-          itemsRefs={sharedRefs}
-          overlayContainerRefHtml={overlayContainer}
-        >
+        <RefsProvider itemsRefs={sharedRefs} overlayContainerRefHtml={overlayContainer}>
           <Element
             classes={{ className: 'className' }}
             id={selectedElementMock.id}
@@ -119,10 +114,7 @@ describe('Element snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <RefsProvider
-          itemsRefs={sharedRefs}
-          overlayContainerRefHtml={overlayContainer}
-        >
+        <RefsProvider itemsRefs={sharedRefs} overlayContainerRefHtml={overlayContainer}>
           <Element
             classes={{ className: 'className' }}
             id={selectedElementMock.id}
@@ -143,8 +135,7 @@ describe('Element snapshots', () => {
 
   it('should render Element when width & height is auto', () => {
     // mock
-    window.getComputedStyle = (): any =>
-      ({ height: '100px', width: '100px' }) as CSSStyleDeclaration;
+    window.getComputedStyle = (): any => ({ height: '100px', width: '100px' }) as CSSStyleDeclaration;
 
     // mock
     const store = configureStore({
@@ -178,10 +169,7 @@ describe('Element snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <RefsProvider
-          itemsRefs={sharedRefs}
-          overlayContainerRefHtml={overlayContainer}
-        >
+        <RefsProvider itemsRefs={sharedRefs} overlayContainerRefHtml={overlayContainer}>
           <Element
             classes={{ className: 'className' }}
             id={selectedElementMock.id}
@@ -223,10 +211,7 @@ describe('Element snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <RefsProvider
-          itemsRefs={sharedRefs}
-          overlayContainerRefHtml={overlayContainer}
-        >
+        <RefsProvider itemsRefs={sharedRefs} overlayContainerRefHtml={overlayContainer}>
           <Element
             classes={{ className: 'className' }}
             id={selectedElementMock.id}

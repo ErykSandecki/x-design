@@ -15,9 +15,7 @@ const toggleButtons: Array<TToggleButton<any>> = [
 describe('ToggleButtonGroup snapshots', () => {
   it('should render ToggleButtonGroup', () => {
     // before
-    const { asFragment } = render(
-      <ToggleButtonGroup e2eValue="test" toggleButtons={toggleButtons} />,
-    );
+    const { asFragment } = render(<ToggleButtonGroup e2eValue="test" toggleButtons={toggleButtons} />);
 
     // result
     expect(asFragment()).toMatchSnapshot();

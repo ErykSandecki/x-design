@@ -26,9 +26,7 @@ describe('useMouseDownEvent', () => {
 
   it(`should change state pressing`, async () => {
     // before
-    const { result } = renderHook(() =>
-      useChangeCursor(0, contentRef, 'cursor', 'cursorDefault'),
-    );
+    const { result } = renderHook(() => useChangeCursor(0, contentRef, 'cursor', 'cursorDefault'));
 
     // action
     await act(() => {
@@ -41,9 +39,7 @@ describe('useMouseDownEvent', () => {
 
   it(`should change cursor on mouse enter event`, async () => {
     // before
-    const { result } = renderHook(() =>
-      useChangeCursor(0, contentRef, 'cursor', 'cursorDefault'),
-    );
+    const { result } = renderHook(() => useChangeCursor(0, contentRef, 'cursor', 'cursorDefault'));
 
     // action
     await act(() => {
@@ -60,9 +56,7 @@ describe('useMouseDownEvent', () => {
 
   it(`should not trigger mouse enter event`, async () => {
     // before
-    const { result } = renderHook(() =>
-      useChangeCursor(0, contentRef, 'cursor', 'cursorDefault'),
-    );
+    const { result } = renderHook(() => useChangeCursor(0, contentRef, 'cursor', 'cursorDefault'));
 
     // action
     await act(() => {
@@ -80,9 +74,7 @@ describe('useMouseDownEvent', () => {
 
   it(`should change cursor on mouse leave event`, async () => {
     // before
-    const { result } = renderHook(() =>
-      useChangeCursor(0, contentRef, 'cursor', 'cursorDefault'),
-    );
+    const { result } = renderHook(() => useChangeCursor(0, contentRef, 'cursor', 'cursorDefault'));
 
     // action
     await act(() => {
@@ -98,9 +90,7 @@ describe('useMouseDownEvent', () => {
 
   it(`should not triiger mouse leave event`, async () => {
     // before
-    const { result } = renderHook(() =>
-      useChangeCursor(0, contentRef, 'cursor', 'cursorDefault'),
-    );
+    const { result } = renderHook(() => useChangeCursor(0, contentRef, 'cursor', 'cursorDefault'));
 
     // action
     await act(() => {
@@ -118,9 +108,7 @@ describe('useMouseDownEvent', () => {
 
   it(`should revert default cursor`, async () => {
     // before
-    const { result } = renderHook(() =>
-      useChangeCursor(0, contentRef, 'cursor', 'cursorDefault'),
-    );
+    const { result } = renderHook(() => useChangeCursor(0, contentRef, 'cursor', 'cursorDefault'));
 
     // action
     await act(() => {

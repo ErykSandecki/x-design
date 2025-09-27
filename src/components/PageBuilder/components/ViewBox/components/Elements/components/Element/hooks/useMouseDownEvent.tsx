@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { updatePrevState } from 'store/pageBuilder/actions';
 
 // types
-import { MouseButton, T2DCoordinates } from 'types';
+import { MouseButton } from 'types';
 import { MouseMode } from '../../../../../../../../../types/enums/mouseMode';
 import { TSelectedElement } from 'store/pageBuilder/types';
 
@@ -33,13 +33,7 @@ export const useMouseDownEvent = (
       event.stopPropagation();
 
       updateCursorPosition(cursorPosition, event);
-      handleSelectElement(
-        dispatch,
-        event,
-        isMultiple,
-        isSelected,
-        selectedElement,
-      );
+      handleSelectElement(dispatch, event, isMultiple, isSelected, selectedElement);
       handlePressing(event, setIsPressing);
       dispatch(updatePrevState());
     }

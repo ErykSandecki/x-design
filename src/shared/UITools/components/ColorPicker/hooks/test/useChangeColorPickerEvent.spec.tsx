@@ -9,9 +9,7 @@ const mockCallBack = jest.fn();
 describe('useChangeColorPickerEvent', () => {
   it(`should trigger on change`, () => {
     // before
-    const { result } = renderHook(() =>
-      useChangeColorPickerEvent(mockCallBack),
-    );
+    const { result } = renderHook(() => useChangeColorPickerEvent(mockCallBack));
 
     // action
     result.current({

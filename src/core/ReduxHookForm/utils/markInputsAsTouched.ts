@@ -10,11 +10,7 @@ import { updateField } from 'store/reduxHookForm/actions';
 // types
 import { TFields } from 'store/reduxHookForm/types';
 
-export const markInputsAsTouched = (
-  dispatch: Dispatch,
-  formName: string,
-  fields: TFields,
-): void => {
+export const markInputsAsTouched = (dispatch: Dispatch, formName: string, fields: TFields): void => {
   const fieldNames = keys(fields);
 
   fieldNames.forEach((fieldName) => {

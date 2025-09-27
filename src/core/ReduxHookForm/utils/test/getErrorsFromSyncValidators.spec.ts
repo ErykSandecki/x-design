@@ -9,18 +9,10 @@ describe('getErrorsFromSyncValidators', () => {
 
   it('should trigger validators & return errors', () => {
     // before
-    const validators = [
-      (): any => syncValidator(''),
-      (): any => syncValidator('value'),
-    ] as Array<TSyncValidator>;
+    const validators = [(): any => syncValidator(''), (): any => syncValidator('value')] as Array<TSyncValidator>;
 
     // action
-    const result = getErrorsFromSyncValidators(
-      validators,
-      '',
-      undefined,
-      ((value: string) => value) as TT,
-    );
+    const result = getErrorsFromSyncValidators(validators, '', undefined, ((value: string) => value) as TT);
 
     // result
     expect(result).toStrictEqual(['Error', 'Success']);

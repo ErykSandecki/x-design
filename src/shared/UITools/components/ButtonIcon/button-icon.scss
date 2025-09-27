@@ -1,9 +1,5 @@
 .ButtonIcon {
-  @include theme-selector(
-    'neutral-3',
-    background-color,
-    '&:hover:not(.ButtonIcon--selected)'
-  );
+  @include theme-selector('neutral-3', background-color, '&:hover:not(.ButtonIcon--selected)');
 
   align-items: center;
   border-radius: 5px;

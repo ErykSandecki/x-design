@@ -16,11 +16,7 @@
       $--xd-line-height: map.get($--xd-line-height-map, $font-type);
       $--xd-margin-bottom: map.get($--xd-margin-bottom-map, $font-type);
 
-      @include typography-styles(
-        $--xd-font-size,
-        $--xd-line-height,
-        $--xd-margin-bottom
-      );
+      @include typography-styles($--xd-font-size, $--xd-line-height, $--xd-margin-bottom);
     }
   }
 

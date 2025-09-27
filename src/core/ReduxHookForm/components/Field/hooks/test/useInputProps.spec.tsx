@@ -31,12 +31,9 @@ describe('useInputProps behaviors', () => {
     const store = configureStore(stateMock);
 
     // before
-    const { result } = renderHook(
-      () => useInputProps('testForm', 'testField'),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    const { result } = renderHook(() => useInputProps('testForm', 'testField'), {
+      wrapper: getProviderWrapper(store),
+    });
     const { name, onBlur, onChange, onFocus, value } = result.current;
 
     // action
@@ -49,9 +46,7 @@ describe('useInputProps behaviors', () => {
     expect(value).toBe('');
     expect(mockCallBack.mock.calls.length).toBe(3);
 
-    expect(
-      store.getState()[REDUX_HOOK_FORM].testForm.fields.testField,
-    ).toStrictEqual({
+    expect(store.getState()[REDUX_HOOK_FORM].testForm.fields.testField).toStrictEqual({
       active: false,
       asyncErrors: [],
       data: {},
@@ -78,8 +73,7 @@ describe('useInputProps behaviors', () => {
           fields: {
             ...reduxHookFormStateMock[REDUX_HOOK_FORM].testForm.fields,
             testField: {
-              ...reduxHookFormStateMock[REDUX_HOOK_FORM].testForm.fields
-                .testField,
+              ...reduxHookFormStateMock[REDUX_HOOK_FORM].testForm.fields.testField,
               formatOnBlur: () => 'formatOnBlur',
             },
           },
@@ -88,12 +82,9 @@ describe('useInputProps behaviors', () => {
     });
 
     // before
-    const { result } = renderHook(
-      () => useInputProps('testForm', 'testField'),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    const { result } = renderHook(() => useInputProps('testForm', 'testField'), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // mock
     const { name, onBlur, value } = result.current;
@@ -106,9 +97,7 @@ describe('useInputProps behaviors', () => {
     expect(value).toBe('');
     expect(mockCallBack.mock.calls.length).toBe(1);
 
-    expect(
-      store.getState()[REDUX_HOOK_FORM].testForm.fields.testField,
-    ).toStrictEqual({
+    expect(store.getState()[REDUX_HOOK_FORM].testForm.fields.testField).toStrictEqual({
       active: false,
       asyncErrors: [],
       data: {},
@@ -136,8 +125,7 @@ describe('useInputProps behaviors', () => {
           fields: {
             ...reduxHookFormStateMock[REDUX_HOOK_FORM].testForm.fields,
             testField: {
-              ...reduxHookFormStateMock[REDUX_HOOK_FORM].testForm.fields
-                .testField,
+              ...reduxHookFormStateMock[REDUX_HOOK_FORM].testForm.fields.testField,
               formatOnChange: () => 'formatOnChange',
               valueSinceLastSubmit: true,
             },
@@ -147,12 +135,9 @@ describe('useInputProps behaviors', () => {
     });
 
     // before
-    const { result } = renderHook(
-      () => useInputProps('testForm', 'testField'),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    const { result } = renderHook(() => useInputProps('testForm', 'testField'), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // mock
     const { name, onChange, value } = result.current;
@@ -165,9 +150,7 @@ describe('useInputProps behaviors', () => {
     expect(value).toBe('');
     expect(mockCallBack.mock.calls.length).toBe(1);
 
-    expect(
-      store.getState()[REDUX_HOOK_FORM].testForm.fields.testField,
-    ).toStrictEqual({
+    expect(store.getState()[REDUX_HOOK_FORM].testForm.fields.testField).toStrictEqual({
       active: false,
       asyncErrors: [],
       data: {},
@@ -196,8 +179,7 @@ describe('useInputProps behaviors', () => {
           fields: {
             ...reduxHookFormStateMock[REDUX_HOOK_FORM].testForm.fields,
             testField: {
-              ...reduxHookFormStateMock[REDUX_HOOK_FORM].testForm.fields
-                .testField,
+              ...reduxHookFormStateMock[REDUX_HOOK_FORM].testForm.fields.testField,
               formatOnFocus: () => 'formatOnFocus',
             },
           },
@@ -206,12 +188,9 @@ describe('useInputProps behaviors', () => {
     });
 
     // before
-    const { result } = renderHook(
-      () => useInputProps('testForm', 'testField'),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    const { result } = renderHook(() => useInputProps('testForm', 'testField'), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // mock
     const { name, onFocus, value } = result.current;
@@ -224,9 +203,7 @@ describe('useInputProps behaviors', () => {
     expect(value).toBe('');
     expect(mockCallBack.mock.calls.length).toBe(1);
 
-    expect(
-      store.getState()[REDUX_HOOK_FORM].testForm.fields.testField,
-    ).toStrictEqual({
+    expect(store.getState()[REDUX_HOOK_FORM].testForm.fields.testField).toStrictEqual({
       active: false,
       asyncErrors: [],
       data: {},
@@ -266,12 +243,9 @@ describe('useInputProps behaviors', () => {
     });
 
     // before
-    const { result } = renderHook(
-      () => useInputProps('testForm', 'testField1'),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    const { result } = renderHook(() => useInputProps('testForm', 'testField1'), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // mock
     const { onChange } = result.current;
@@ -280,9 +254,7 @@ describe('useInputProps behaviors', () => {
     onChange('value');
 
     // result
-    expect(
-      store.getState()[REDUX_HOOK_FORM].testForm.fields.testField2.value,
-    ).toBe('');
+    expect(store.getState()[REDUX_HOOK_FORM].testForm.fields.testField2.value).toBe('');
   });
 
   it('should not clear value when value was not changed', () => {
@@ -307,12 +279,9 @@ describe('useInputProps behaviors', () => {
     });
 
     // before
-    const { result } = renderHook(
-      () => useInputProps('testForm', 'testField1'),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    const { result } = renderHook(() => useInputProps('testForm', 'testField1'), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // mock
     const { onChange } = result.current;
@@ -321,9 +290,7 @@ describe('useInputProps behaviors', () => {
     onChange('');
 
     // result
-    expect(
-      store.getState()[REDUX_HOOK_FORM].testForm.fields.testField2.value,
-    ).toBe('value');
+    expect(store.getState()[REDUX_HOOK_FORM].testForm.fields.testField2.value).toBe('value');
   });
 
   it('should clear value when value from array was changed ', () => {
@@ -348,12 +315,9 @@ describe('useInputProps behaviors', () => {
     });
 
     // before
-    const { result } = renderHook(
-      () => useInputProps('testForm', 'testField1'),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    const { result } = renderHook(() => useInputProps('testForm', 'testField1'), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // mock
     const { onChange } = result.current;
@@ -362,9 +326,7 @@ describe('useInputProps behaviors', () => {
     onChange(['value', 'value', 'value']);
 
     // result
-    expect(
-      store.getState()[REDUX_HOOK_FORM].testForm.fields.testField2.value,
-    ).toBe('');
+    expect(store.getState()[REDUX_HOOK_FORM].testForm.fields.testField2.value).toBe('');
   });
 
   it('should not clear value when value from array was not changed ', () => {
@@ -389,12 +351,9 @@ describe('useInputProps behaviors', () => {
     });
 
     // before
-    const { result } = renderHook(
-      () => useInputProps('testForm', 'testField1'),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    const { result } = renderHook(() => useInputProps('testForm', 'testField1'), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // mock
     const { onChange } = result.current;
@@ -403,8 +362,6 @@ describe('useInputProps behaviors', () => {
     onChange(['', '', '']);
 
     // result
-    expect(
-      store.getState()[REDUX_HOOK_FORM].testForm.fields.testField2.value,
-    ).toBe('value');
+    expect(store.getState()[REDUX_HOOK_FORM].testForm.fields.testField2.value).toBe('value');
   });
 });

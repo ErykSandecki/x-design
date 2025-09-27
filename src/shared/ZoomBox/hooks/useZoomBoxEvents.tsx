@@ -12,7 +12,6 @@ import { CURSOR_STATES } from 'constant/constants';
 
 // types
 import { MouseMode } from 'types/enums/mouseMode';
-import { T3DCoordinates } from 'types';
 
 export type TUseZoomBoxEvents = {
   cursorState: string;
@@ -49,17 +48,7 @@ export const useZoomBoxEvents = (
 
   return {
     cursorState,
-    onMouseDown: useMouseDownEvent(
-      coordinates,
-      cursorPosition,
-      onMouseDown,
-      setCursorState,
-    ),
-    onWheel: useWheelEvent(
-      coordinates,
-      onUpdateCoordinates,
-      setCoordinates,
-      zoomBoxRef,
-    ),
+    onMouseDown: useMouseDownEvent(coordinates, cursorPosition, onMouseDown, setCursorState),
+    onWheel: useWheelEvent(coordinates, onUpdateCoordinates, setCoordinates, zoomBoxRef),
   };
 };

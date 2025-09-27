@@ -2,10 +2,7 @@ import { MouseEvent, RefObject } from 'react';
 import { renderHook } from '@testing-library/react';
 
 // mocks
-import {
-  pageBuilderStateMock,
-  selectedElementMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // hooks
 import { useMouseDownEvent } from '../useMouseDownEvent';

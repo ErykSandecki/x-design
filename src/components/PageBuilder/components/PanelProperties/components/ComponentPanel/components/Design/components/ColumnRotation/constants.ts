@@ -15,10 +15,7 @@ import { normalizeAngle } from 'utils';
 
 export const translationNameSpace = `${parentNameSpace}.columnRotation`;
 
-export const OPTIONS_BUTTONS = (
-  angle: TElement['angle'],
-  dispatch: Dispatch,
-): Array<TButtonGroup> => [
+export const OPTIONS_BUTTONS = (angle: TElement['angle'], dispatch: Dispatch): Array<TButtonGroup> => [
   {
     name: 'ToggleRotate',
     onClick: () => dispatch(rotateElements(normalizeAngle(angle + 90))),

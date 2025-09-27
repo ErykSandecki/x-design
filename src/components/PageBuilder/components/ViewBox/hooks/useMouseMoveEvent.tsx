@@ -1,6 +1,5 @@
 // types
 import { MouseMode } from '../../../../../types/enums/mouseMode';
-import { T3DCoordinates } from 'types';
 import { TRectArea, TRectAreaExtended } from '../../../../PageBuilder/types';
 
 // utils
@@ -18,20 +17,8 @@ export const useMouseMoveEvent = (
   setSelectableArea: (elementArea: TRectAreaExtended) => void,
 ): TUseMouseMoveEvent => {
   const handleMouseMove = (event: MouseEvent): void => {
-    handleResizeElementArea(
-      coordinates,
-      elementArea,
-      event,
-      mouseMode,
-      setElementArea,
-    );
-    handleResizeSelectableArea(
-      coordinates,
-      event,
-      mouseMode,
-      selectableArea,
-      setSelectableArea,
-    );
+    handleResizeElementArea(coordinates, elementArea, event, mouseMode, setElementArea);
+    handleResizeSelectableArea(coordinates, event, mouseMode, selectableArea, setSelectableArea);
   };
 
   return handleMouseMove;

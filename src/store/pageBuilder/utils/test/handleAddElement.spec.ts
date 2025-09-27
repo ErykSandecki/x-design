@@ -1,8 +1,5 @@
 // mocks
-import {
-  createFrameMock,
-  pageBuilderStateMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { createFrameMock, pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
@@ -16,10 +13,7 @@ describe('handleAddElement', () => {
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
     // before
-    const result = handleAddElement(
-      createFrameMock,
-      pageBuilderStateMock[PAGE_BUILDER],
-    );
+    const result = handleAddElement(createFrameMock, pageBuilderStateMock[PAGE_BUILDER]);
 
     // result
     expect(result).toStrictEqual({

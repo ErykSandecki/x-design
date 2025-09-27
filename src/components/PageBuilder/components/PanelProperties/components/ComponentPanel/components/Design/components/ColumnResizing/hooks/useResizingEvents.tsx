@@ -30,14 +30,7 @@ export const useResizingEvents = (
   } = element;
   const [height, setHeight] = useState('');
   const [width, setWidth] = useState('');
-  const onBlurEvents = useBlurEvent(
-    element,
-    height,
-    setHeight,
-    setIsFocused,
-    setWidth,
-    width,
-  );
+  const onBlurEvents = useBlurEvent(element, height, setHeight, setIsFocused, setWidth, width);
   const onChangeEvents = useChangeEvent(setHeight, setWidth);
   const onFocusEvents = useFocusEvent(setIsFocused);
 

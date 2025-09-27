@@ -20,10 +20,7 @@ import { useTheme } from 'hooks';
 import { useViewBoxEvents } from './hooks/useViewBoxEvents';
 
 // store
-import {
-  eventSelectorCreator,
-  pageBackgroundSelectorCreator,
-} from 'store/pageBuilder/selectors';
+import { eventSelectorCreator, pageBackgroundSelectorCreator } from 'store/pageBuilder/selectors';
 import { setAreCoordinates } from 'store/pageBuilder/actions';
 
 // styles
@@ -31,7 +28,7 @@ import styles from './view-box.scss';
 
 // types
 import { MouseMode } from 'types/enums/mouseMode';
-import { T3DCoordinates, TColor } from 'types';
+import { TColor } from 'types';
 
 export type TViewBoxProps = {
   coordinates: T3DCoordinates;
@@ -40,23 +37,14 @@ export type TViewBoxProps = {
   setMouseMode: (mouseMode: MouseMode) => void;
 };
 
-const ViewBox: FC<TViewBoxProps> = ({
-  coordinates,
-  mouseMode,
-  setCoordinates,
-  setMouseMode,
-}) => {
+const ViewBox: FC<TViewBoxProps> = ({ coordinates, mouseMode, setCoordinates, setMouseMode }) => {
   const colorSampler = useSelector(eventSelectorCreator('colorSampler'));
   const background = useSelector(pageBackgroundSelectorCreator('-1'));
   const data = background.properties as TColor;
   const dispatch = useDispatch();
   const { zoomBoxRef, zoomContentRef } = useRefs();
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-  const { elementArea, selectableArea, ...events } = useViewBoxEvents(
-    coordinates,
-    mouseMode,
-    setMouseMode,
-  );
+  const { elementArea, selectableArea, ...events } = useViewBoxEvents(coordinates, mouseMode, setMouseMode);
 
   return (
     <ZoomBox
@@ -74,9 +62,7 @@ const ViewBox: FC<TViewBoxProps> = ({
       mouseMode={mouseMode}
       onMouseMoveDepedencies={[elementArea, mouseMode]}
       onMouseUpDepedencies={[elementArea, mouseMode]}
-      onUpdateCoordinates={(coordinates) =>
-        dispatch(setAreCoordinates(coordinates))
-      }
+      onUpdateCoordinates={(coordinates) => dispatch(setAreCoordinates(coordinates))}
       setCoordinates={setCoordinates}
       zoomBoxRef={zoomBoxRef}
       zoomContentRef={zoomContentRef}

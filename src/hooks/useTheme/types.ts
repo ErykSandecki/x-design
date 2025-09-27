@@ -25,15 +25,8 @@ export type TThemeClassNames<T> = {
     : TThemeModificator;
 };
 
-export type TThemeModificatorConditional = [
-  TThemeModificator | string,
-  boolean,
-];
+export type TThemeModificatorConditional = [TThemeModificator | string, boolean];
 
-export type TThemeClassNamesApplierArgs = Array<
-  TThemeModificator | TThemeModificatorConditional | string
->;
+export type TThemeClassNamesApplierArgs = Array<TThemeModificator | TThemeModificatorConditional | string>;
 
-export type TThemeClassNamesApplier = (
-  ...args: TThemeClassNamesApplierArgs
-) => string;
+export type TThemeClassNamesApplier = (...args: TThemeClassNamesApplierArgs) => string;

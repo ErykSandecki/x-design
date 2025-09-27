@@ -32,9 +32,7 @@ describe('ConstrainsView snapshots', () => {
 
   it('should render selected', () => {
     // before
-    const { asFragment } = render(
-      <ConstrainsView alignment={undefined} selected />,
-    );
+    const { asFragment } = render(<ConstrainsView alignment={undefined} selected />);
 
     // result
     expect(asFragment()).toMatchSnapshot();

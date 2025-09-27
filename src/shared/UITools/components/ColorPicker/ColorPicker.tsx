@@ -27,10 +27,7 @@ import { TUIProps } from '../../../UI/types';
 import { getAttributes } from '../../../E2EDataAttributes/utils';
 import { handleSubmitInput, hexToRgb } from 'utils';
 
-export type TColorPickerProps = Pick<
-  TPanelProps,
-  'activeSampler' | 'onClickColorSampler' | 'onClickSampler'
-> &
+export type TColorPickerProps = Pick<TPanelProps, 'activeSampler' | 'onClickColorSampler' | 'onClickSampler'> &
   TUIProps<typeof classes> &
   Omit<ColorPickerProps, 'arrow' | 'onOpenChange' | 'open' | 'panelRender'> & {
     alpha: TColor['alpha'];
@@ -53,20 +50,8 @@ export const ColorPicker: FC<TColorPickerProps> = ({
   ...restProps
 }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-  const {
-    alphaValue,
-    colorValue,
-    onBlurAlpha,
-    onBlurColor,
-    onChangeAlpha,
-    onChangeColor,
-    onChangeColorPicker,
-  } = useColorPickerEvents(
-    alpha,
-    color,
-    onChangeAlphaHandler,
-    onChangeColorHandler,
-  );
+  const { alphaValue, colorValue, onBlurAlpha, onBlurColor, onChangeAlpha, onChangeColor, onChangeColorPicker } =
+    useColorPickerEvents(alpha, color, onChangeAlphaHandler, onChangeColorHandler);
   const inputAlpha = useRef(null);
   const inputColor = useRef(null);
   const [visible, setVisible] = useState(false);
@@ -78,9 +63,7 @@ export const ColorPicker: FC<TColorPickerProps> = ({
         e2eValue="color"
         onBlur={onBlurColor}
         onChange={onChangeColor}
-        onKeyDown={(event) =>
-          handleSubmitInput(KeyboardKeys.enter, inputColor.current)(event)
-        }
+        onKeyDown={(event) => handleSubmitInput(KeyboardKeys.enter, inputColor.current)(event)}
         ref={inputColor}
         startAdornment={
           <ColorPickerAntd
@@ -127,9 +110,7 @@ export const ColorPicker: FC<TColorPickerProps> = ({
         min={0}
         onBlur={onBlurAlpha}
         onChange={onChangeAlpha}
-        onKeyDown={(event) =>
-          handleSubmitInput(KeyboardKeys.enter, inputAlpha.current)(event)
-        }
+        onKeyDown={(event) => handleSubmitInput(KeyboardKeys.enter, inputAlpha.current)(event)}
         ref={inputAlpha}
         type="number"
         value={alphaValue}

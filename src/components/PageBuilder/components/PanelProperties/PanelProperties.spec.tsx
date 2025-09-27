@@ -141,9 +141,7 @@ describe('PanelProperties behaviors', () => {
     );
 
     // action
-    fireEvent.keyDown(
-      getByE2EAttribute(container, E2EAttribute.box, 'panel-properties'),
-    );
+    fireEvent.keyDown(getByE2EAttribute(container, E2EAttribute.box, 'panel-properties'));
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(0);

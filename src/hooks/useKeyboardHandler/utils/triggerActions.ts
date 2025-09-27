@@ -19,37 +19,29 @@ export const triggerActions = (
 ): void => {
   const { key } = event;
 
-  keysMap.forEach(
-    ({
-      action,
-      anyKey = false,
-      conditions = [],
-      primaryKeys = [],
-      secondaryKey,
-    }) => {
-      const { altKey, ctrlKey, metaKey, shiftKey } = event;
-      const primaryKeysLength = getPressedKeys(event);
-      const withAlt = primaryKeys.includes('alt' as never);
-      const withControl = primaryKeys.includes('control' as never);
-      const withMeta = primaryKeys.includes('meta' as never);
-      const withShift = primaryKeys.includes('shift' as never);
+  keysMap.forEach(({ action, anyKey = false, conditions = [], primaryKeys = [], secondaryKey }) => {
+    const { altKey, ctrlKey, metaKey, shiftKey } = event;
+    const primaryKeysLength = getPressedKeys(event);
+    const withAlt = primaryKeys.includes('alt' as never);
+    const withControl = primaryKeys.includes('control' as never);
+    const withMeta = primaryKeys.includes('meta' as never);
+    const withShift = primaryKeys.includes('shift' as never);
 
-      if (lockBrowserEvents) {
-        handleLockBrowserEvents(ctrlKey || metaKey, event, key);
-      }
+    if (lockBrowserEvents) {
+      handleLockBrowserEvents(ctrlKey || metaKey, event, key);
+    }
 
-      if (
-        anyKey ||
-        (key.toLowerCase() === secondaryKey.toLowerCase() &&
-          primaryKeysLength === primaryKeys.length &&
-          (!withAlt || altKey) &&
-          (!withControl || ctrlKey) &&
-          (!withMeta || metaKey) &&
-          (!withShift || shiftKey) &&
-          conditions.every(Boolean))
-      ) {
-        action(event, key);
-      }
-    },
-  );
+    if (
+      anyKey ||
+      (key.toLowerCase() === secondaryKey.toLowerCase() &&
+        primaryKeysLength === primaryKeys.length &&
+        (!withAlt || altKey) &&
+        (!withControl || ctrlKey) &&
+        (!withMeta || metaKey) &&
+        (!withShift || shiftKey) &&
+        conditions.every(Boolean))
+    ) {
+      action(event, key);
+    }
+  });
 };

@@ -1,9 +1,7 @@
 import { ReactNode } from 'react';
 
 // components
-import E2EDataAttribute, {
-  TE2EDataAttributeProps,
-} from '../../../../../E2EDataAttributes/E2EDataAttribute';
+import E2EDataAttribute, { TE2EDataAttributeProps } from '../../../../../E2EDataAttributes/E2EDataAttribute';
 import Icon, { TIconProps } from 'shared/UI/components/Icon/Icon';
 
 // hooks

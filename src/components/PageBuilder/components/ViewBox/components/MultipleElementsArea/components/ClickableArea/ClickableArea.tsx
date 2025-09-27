@@ -13,16 +13,13 @@ import { className, classNames } from './classNames';
 import { SW } from './constants';
 
 // store
-import {
-  areParentsTheSameSelector,
-  eventsSelector,
-} from 'store/pageBuilder/selectors';
+import { areParentsTheSameSelector, eventsSelector } from 'store/pageBuilder/selectors';
 
 // styles
 import styles from './clickable-area.scss';
 
 // types
-import { E2EAttribute, TRectCoordinates } from 'types';
+import { E2EAttribute } from 'types';
 import { TCoordinatesData } from '../../types';
 
 export type TClickableAreaProps = {
@@ -30,10 +27,7 @@ export type TClickableAreaProps = {
   outlineCoordinates: TRectCoordinates;
 };
 
-const ClickableArea: FC<TClickableAreaProps> = ({
-  elementsCordinates,
-  outlineCoordinates,
-}) => {
+const ClickableArea: FC<TClickableAreaProps> = ({ elementsCordinates, outlineCoordinates }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { isMultipleMoving } = useSelector(eventsSelector);
   const { onMouseDown } = useClickableAreaEvents();

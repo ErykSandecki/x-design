@@ -24,14 +24,10 @@ export const useMouseEnterEvent = (
 
   const handleMouseEnter = (): void => {
     if (mouseMode === MouseMode.default) {
-      const draggableElements = eventSelectorCreator('draggableElements')(
-        store.getState(),
-      );
+      const draggableElements = eventSelectorCreator('draggableElements')(store.getState());
 
       if (!isEmpty(draggableElements) && !isSelected) {
-        dispatch(
-          updateEventsStatus({ hoverOnElement: id, possibleParent: id }),
-        );
+        dispatch(updateEventsStatus({ hoverOnElement: id, possibleParent: id }));
       } else {
         dispatch(updateEventsStatus({ hoverOnElement: id }));
       }

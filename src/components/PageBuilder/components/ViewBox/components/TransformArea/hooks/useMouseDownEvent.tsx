@@ -6,7 +6,7 @@ import { updateEventsStatus } from 'store/pageBuilder/actions';
 
 // types
 import { AnchorResize, AnchorRotate } from 'store/pageBuilder/enums';
-import { MouseButton, MouseMode, T2DCoordinates, TElement } from 'types';
+import { MouseButton, MouseMode, TElement } from 'types';
 import { TUseChangeCursor } from 'hooks/useChangeCursor/useChangeCursor';
 
 // utils
@@ -33,39 +33,23 @@ export const useMouseDownEvent = (
   const canTriggerEvent = (event: MouseEvent): boolean =>
     event.buttons === MouseButton.lmb && mouseMode === MouseMode.default;
 
-  const handleMouseDownAchnorResize = (
-    anchor: AnchorResize,
-    event: MouseEvent,
-  ): void => {
+  const handleMouseDownAchnorResize = (anchor: AnchorResize, event: MouseEvent): void => {
     if (canTriggerEvent(event)) {
       event.stopPropagation();
 
       onMouseDownCursorResize();
       handleInitResizeElement(cursorPosition, event);
-      dispatch(
-        updateEventsStatus({ isResizing: true, selectedAnchorResize: anchor }),
-      );
+      dispatch(updateEventsStatus({ isResizing: true, selectedAnchorResize: anchor }));
     }
   };
 
-  const handleMouseDownAnchorRotate = (
-    anchor: AnchorRotate,
-    event: MouseEvent,
-  ): void => {
+  const handleMouseDownAnchorRotate = (anchor: AnchorRotate, event: MouseEvent): void => {
     if (canTriggerEvent(event)) {
       event.stopPropagation();
 
       onMouseDownCursorRotate();
-      handleInitRotateElement(
-        angle,
-        cursorBaseAngle,
-        cursorOffsetAngle,
-        elementRef,
-        event,
-      );
-      dispatch(
-        updateEventsStatus({ isRotating: true, selectedAnchorRotate: anchor }),
-      );
+      handleInitRotateElement(angle, cursorBaseAngle, cursorOffsetAngle, elementRef, event);
+      dispatch(updateEventsStatus({ isRotating: true, selectedAnchorRotate: anchor }));
     }
   };
 

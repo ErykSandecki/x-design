@@ -23,12 +23,7 @@ export type TSectionProps = Pick<TIconProps, 'name'> &
     selected?: boolean;
   };
 
-export const ButtonIcon: FC<TSectionProps> = ({
-  e2eValue = '',
-  name,
-  selected = false,
-  ...restProps
-}) => {
+export const ButtonIcon: FC<TSectionProps> = ({ e2eValue = '', name, selected = false, ...restProps }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   return (
@@ -43,12 +38,7 @@ export const ButtonIcon: FC<TSectionProps> = ({
       e2eValue={e2eValue}
       {...restProps}
     >
-      <Icon
-        color={selected ? ColorsTheme.blue1 : ColorsTheme.neutral1}
-        height={14}
-        name={name}
-        width={14}
-      />
+      <Icon color={selected ? ColorsTheme.blue1 : ColorsTheme.neutral1} height={14} name={name} width={14} />
     </Box>
   );
 };

@@ -56,12 +56,9 @@ describe('useKeyboardHandler', () => {
     const store = configureStore(stateMock);
 
     // before
-    renderHook(
-      () => useKeyboardHandler(true, [], [{ ...keyMap, anyKey: true }]),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    renderHook(() => useKeyboardHandler(true, [], [{ ...keyMap, anyKey: true }]), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // action
     fireEvent.keyDown(window, { key: KeyboardKeys.A });
@@ -75,12 +72,9 @@ describe('useKeyboardHandler', () => {
     const store = configureStore(stateMock);
 
     // before
-    renderHook(
-      () => useKeyboardHandler(false, [], [{ ...keyMap, anyKey: true }]),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    renderHook(() => useKeyboardHandler(false, [], [{ ...keyMap, anyKey: true }]), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // action
     fireEvent.keyDown(window, { key: KeyboardKeys.A });
@@ -143,13 +137,9 @@ describe('useKeyboardHandler', () => {
     element.setAttribute('id', id);
     document.body.appendChild(element);
 
-    renderHook(
-      () =>
-        useKeyboardHandler(true, [], [{ ...keyMap, primaryKeys: ['alt'] }], id),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    renderHook(() => useKeyboardHandler(true, [], [{ ...keyMap, primaryKeys: ['alt'] }], id), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // action
     fireEvent.keyDown(document.getElementById(id), {
@@ -171,18 +161,9 @@ describe('useKeyboardHandler', () => {
     element.setAttribute('id', id);
     document.body.appendChild(element);
 
-    renderHook(
-      () =>
-        useKeyboardHandler(
-          true,
-          [],
-          [{ ...keyMap, primaryKeys: ['shift'] }],
-          id,
-        ),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    renderHook(() => useKeyboardHandler(true, [], [{ ...keyMap, primaryKeys: ['shift'] }], id), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // action
     fireEvent.keyDown(document.getElementById(id), {
@@ -204,18 +185,9 @@ describe('useKeyboardHandler', () => {
     element.setAttribute('id', id);
     document.body.appendChild(element);
 
-    renderHook(
-      () =>
-        useKeyboardHandler(
-          true,
-          [],
-          [{ ...keyMap, primaryKeys: ['meta'] }],
-          id,
-        ),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    renderHook(() => useKeyboardHandler(true, [], [{ ...keyMap, primaryKeys: ['meta'] }], id), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // action
     fireEvent.keyDown(document.getElementById(id), {
@@ -237,13 +209,9 @@ describe('useKeyboardHandler', () => {
     element.setAttribute('id', id);
     document.body.appendChild(element);
 
-    renderHook(
-      () =>
-        useKeyboardHandler(true, [], [{ ...keyMap, action: noop }], id, true),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    renderHook(() => useKeyboardHandler(true, [], [{ ...keyMap, action: noop }], id, true), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // action
     fireEvent.keyDown(document.getElementById(id), {
@@ -266,13 +234,9 @@ describe('useKeyboardHandler', () => {
     element.setAttribute('id', id);
     document.body.appendChild(element);
 
-    renderHook(
-      () =>
-        useKeyboardHandler(true, [], [{ ...keyMap, action: noop }], id, true),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    renderHook(() => useKeyboardHandler(true, [], [{ ...keyMap, action: noop }], id, true), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // action
     fireEvent.keyDown(document.getElementById(id), {
@@ -290,13 +254,9 @@ describe('useKeyboardHandler', () => {
     const store = configureStore(stateMock);
 
     // before
-    renderHook(
-      () =>
-        useKeyboardHandler(true, [], [{ ...keyMap, primaryKeys: ['control'] }]),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    renderHook(() => useKeyboardHandler(true, [], [{ ...keyMap, primaryKeys: ['control'] }]), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // action
     fireEvent.keyDown(window, { ctrlKey: true, key: KeyboardKeys.C });
@@ -310,13 +270,9 @@ describe('useKeyboardHandler', () => {
     const store = configureStore(stateMock);
 
     // before
-    renderHook(
-      () =>
-        useKeyboardHandler(true, [], [{ ...keyMap, primaryKeys: ['control'] }]),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    renderHook(() => useKeyboardHandler(true, [], [{ ...keyMap, primaryKeys: ['control'] }]), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // action
     fireEvent.keyDown(window, {
@@ -334,12 +290,9 @@ describe('useKeyboardHandler', () => {
     const store = configureStore(stateMock);
 
     // before
-    renderHook(
-      () => useKeyboardHandler(true, [], [{ ...keyMap, conditions: [true] }]),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    renderHook(() => useKeyboardHandler(true, [], [{ ...keyMap, conditions: [true] }]), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // action
     fireEvent.keyDown(window, { key: KeyboardKeys.C });
@@ -353,12 +306,9 @@ describe('useKeyboardHandler', () => {
     const store = configureStore(stateMock);
 
     // before
-    renderHook(
-      () => useKeyboardHandler(true, [], [{ ...keyMap, conditions: [false] }]),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    renderHook(() => useKeyboardHandler(true, [], [{ ...keyMap, conditions: [false] }]), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // action
     fireEvent.keyDown(window, { key: KeyboardKeys.C });

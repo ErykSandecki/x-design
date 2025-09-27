@@ -6,7 +6,5 @@ export const findAllChildren = (
   children: TElementStaticData['children'],
 ): TElementStaticData['children'] => [
   ...children,
-  ...children
-    .map((id) => findAllChildren(allData, allData[id].children))
-    .flat(),
+  ...children.map((id) => findAllChildren(allData, allData[id].children)).flat(),
 ];

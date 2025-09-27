@@ -3,11 +3,7 @@ import { isString } from 'lodash';
 
 // types
 import { TObject } from 'types';
-import {
-  TTypograpghyComponent,
-  TTypograpghyComponentProps,
-  TTypograpghyVariantMapping,
-} from '../types';
+import { TTypograpghyComponent, TTypograpghyComponentProps, TTypograpghyVariantMapping } from '../types';
 import { TypographyVariant } from '../enums';
 
 export const renderElement = (
@@ -18,9 +14,7 @@ export const renderElement = (
   variantMapping: TTypograpghyVariantMapping,
 ): DetailedReactHTMLElement<TObject<any>, HTMLElement> | JSX.Element => {
   if (component) {
-    return isString(component)
-      ? createElement(component, props, children)
-      : component({ ...props, children });
+    return isString(component) ? createElement(component, props, children) : component({ ...props, children });
   }
 
   return createElement(variantMapping[variant] || variant, props, children);

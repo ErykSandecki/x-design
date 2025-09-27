@@ -10,7 +10,7 @@ import { Box } from 'shared';
 import { useRefs } from 'pages/PageBuilderPage/core/RefsProvider';
 
 // types
-import { MouseMode, T2DCoordinates, TElement } from 'types';
+import { MouseMode, TElement } from 'types';
 
 // utils
 import { getCornersPosition } from '../../utils/getCornersPosition';

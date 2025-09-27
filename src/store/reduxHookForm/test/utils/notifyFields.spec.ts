@@ -69,11 +69,7 @@ describe('notifyFields', () => {
       // before
       const { stateMock, when } = args;
 
-      notifyFields(
-        'testForm',
-        stateMock as TReduxHookFormState,
-        when as 'after' | 'before',
-      );
+      notifyFields('testForm', stateMock as TReduxHookFormState, when as 'after' | 'before');
 
       // result
       expect(mockCallBack.mock.calls.length).toBe(expectedResult);

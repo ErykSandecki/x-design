@@ -1,11 +1,8 @@
 import { RefObject } from 'react';
 
 // types
-import { T2DCoordinates } from 'types';
 
-export const getElementCenter = (
-  elementRef: RefObject<HTMLElement>,
-): T2DCoordinates => {
+export const getElementCenter = (elementRef: RefObject<HTMLElement>): T2DCoordinates => {
   const rect = elementRef.current.getBoundingClientRect();
   const x = rect.left + rect.width / 2;
   const y = rect.top + rect.height / 2;
@@ -13,10 +10,7 @@ export const getElementCenter = (
   return { x, y };
 };
 
-export const getElementAngle = (
-  elementRef: RefObject<HTMLElement>,
-  event: MouseEvent | React.MouseEvent,
-): number => {
+export const getElementAngle = (elementRef: RefObject<HTMLElement>, event: MouseEvent | React.MouseEvent): number => {
   const { x, y } = getElementCenter(elementRef);
   const { clientX, clientY } = event;
 

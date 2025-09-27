@@ -1,15 +1,8 @@
 // types
-import {
-  AlignmentHorizontal,
-  AlignmentVertical,
-  T2DCoordinates,
-  TElement,
-} from 'types';
+import { AlignmentHorizontal, AlignmentVertical, TElement } from 'types';
 
 export const getDefaultAligmnentAxisValue = (
-  alignment:
-    | TElement['alignment']['horizontal']
-    | TElement['alignment']['vertical'],
+  alignment: TElement['alignment']['horizontal'] | TElement['alignment']['vertical'],
   size: number,
 ): number => {
   switch (alignment) {
@@ -28,9 +21,7 @@ export const getDefaultAligmnentAxisValue = (
 };
 
 export const getOffset = (
-  alignment:
-    | TElement['alignment']['horizontal']
-    | TElement['alignment']['vertical'],
+  alignment: TElement['alignment']['horizontal'] | TElement['alignment']['vertical'],
   size: number,
 ): number => {
   switch (alignment) {
@@ -61,11 +52,7 @@ export const getDefaultCoordinates = (
   const parentWidth = parseInt(getComputedStyle(parent).width);
 
   return {
-    x:
-      getDefaultAligmnentAxisValue(alignment.horizontal, parentWidth) -
-      getOffset(alignment.horizontal, childrenWidth),
-    y:
-      getDefaultAligmnentAxisValue(alignment.vertical, parentHeight) -
-      getOffset(alignment.vertical, childrenHeight),
+    x: getDefaultAligmnentAxisValue(alignment.horizontal, parentWidth) - getOffset(alignment.horizontal, childrenWidth),
+    y: getDefaultAligmnentAxisValue(alignment.vertical, parentHeight) - getOffset(alignment.vertical, childrenHeight),
   };
 };

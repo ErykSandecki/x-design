@@ -51,27 +51,19 @@ export const SectionColumn: FC<TSectionColumnProps> = ({
       <div className={cx(classNamesWithTheme.labels)} style={{ width }}>
         {!!size(labels) &&
           labels.map((label, index) => (
-            <Small
-              classes={{ className: cx(classNamesWithTheme.label) }}
-              key={index}
-            >
+            <Small classes={{ className: cx(classNamesWithTheme.label) }} key={index}>
               {label}
             </Small>
           ))}
       </div>
       <div className={cx(classNamesWithTheme.wrapper)}>
         <div
-          className={cx(
-            classNamesWithTheme.content.name,
-            classNamesWithTheme.content.modificators[gridColumnType],
-          )}
+          className={cx(classNamesWithTheme.content.name, classNamesWithTheme.content.modificators[gridColumnType])}
           style={{ width }}
         >
           {children}
         </div>
-        <div className={cx(classNamesWithTheme.buttons)}>
-          {buttonsIcon.map((buttonIcon) => buttonIcon)}
-        </div>
+        <div className={cx(classNamesWithTheme.buttons)}>{buttonsIcon.map((buttonIcon) => buttonIcon)}</div>
       </div>
     </Box>
   );

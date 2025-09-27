@@ -1,16 +1,9 @@
 import { RefObject, WheelEvent } from 'react';
 
-// types
-import { T3DCoordinates } from 'types';
-
 // utils
 import { isControlPressed } from 'utils';
 
-export const getZoomSpeed = (
-  deltaY: number,
-  lastWheelTime: number,
-  now: number,
-): number => {
+export const getZoomSpeed = (deltaY: number, lastWheelTime: number, now: number): number => {
   if (now - lastWheelTime < 100) {
     return Math.abs(deltaY) < 20 ? 0.035 : 0.1;
   }

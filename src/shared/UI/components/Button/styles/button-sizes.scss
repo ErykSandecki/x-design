@@ -6,10 +6,7 @@
 @mixin button-size() {
   @each $size in $--xd-input-sizes {
     &--#{$size} {
-      padding: map.get(
-          $--xd-button-map,
-          'btn' + '-' + $size + '-' + 'padding-tb'
-        )
+      padding: map.get($--xd-button-map, 'btn' + '-' + $size + '-' + 'padding-tb')
         map.get($--xd-button-map, 'btn' + '-' + $size + '-' + 'padding-lr');
 
       @if $size == 'small' {

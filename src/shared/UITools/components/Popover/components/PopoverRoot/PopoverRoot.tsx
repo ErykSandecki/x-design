@@ -10,13 +10,8 @@ export type TPopoverRootProps = TContext & {
   children: ReactNode;
 };
 
-export const PopoverRoot: FC<TPopoverRootProps> = ({
-  children,
-  setSelected,
-}) => (
-  <PopoverRootProvider setSelected={setSelected}>
-    {children}
-  </PopoverRootProvider>
+export const PopoverRoot: FC<TPopoverRootProps> = ({ children, setSelected }) => (
+  <PopoverRootProvider setSelected={setSelected}>{children}</PopoverRootProvider>
 );
 
 export default PopoverRoot;

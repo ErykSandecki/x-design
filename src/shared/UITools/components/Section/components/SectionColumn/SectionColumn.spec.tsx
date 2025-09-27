@@ -16,9 +16,7 @@ describe('SectionColumn snapshots', () => {
   it('should render with buttons', () => {
     // before
     const { asFragment } = render(
-      <SectionColumn buttonsIcon={[<ButtonIcon name="Close" key={0} />]}>
-        children
-      </SectionColumn>,
+      <SectionColumn buttonsIcon={[<ButtonIcon name="Close" key={0} />]}>children</SectionColumn>,
     );
 
     // result
@@ -28,10 +26,7 @@ describe('SectionColumn snapshots', () => {
   it('should render with buttons & labels', () => {
     // before
     const { asFragment } = render(
-      <SectionColumn
-        buttonsIcon={[<ButtonIcon name="Close" key={0} />]}
-        labels={['label']}
-      >
+      <SectionColumn buttonsIcon={[<ButtonIcon name="Close" key={0} />]} labels={['label']}>
         children
       </SectionColumn>,
     );

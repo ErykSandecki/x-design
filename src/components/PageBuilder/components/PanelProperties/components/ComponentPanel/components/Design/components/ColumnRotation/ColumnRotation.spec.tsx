@@ -109,9 +109,7 @@ describe('ColumnRotation snapshots', () => {
               dynamicData: {
                 ...stateMock[PAGE_BUILDER].pages['0'].elements.dynamicData,
                 ['-1']: {
-                  ...stateMock[PAGE_BUILDER].pages['0'].elements.dynamicData[
-                    '-1'
-                  ],
+                  ...stateMock[PAGE_BUILDER].pages['0'].elements.dynamicData['-1'],
                   children: ['test-1', 'test-2'],
                 },
                 ['test-2']: {
@@ -123,9 +121,7 @@ describe('ColumnRotation snapshots', () => {
               staticData: {
                 ...stateMock[PAGE_BUILDER].pages['0'].elements.staticData,
                 ['-1']: {
-                  ...stateMock[PAGE_BUILDER].pages['0'].elements.staticData[
-                    '-1'
-                  ],
+                  ...stateMock[PAGE_BUILDER].pages['0'].elements.staticData['-1'],
                   children: ['test-1', 'test-2'],
                 },
                 ['test-2']: {
@@ -168,11 +164,7 @@ describe('ColumnRotation behaviors', () => {
     );
 
     // find
-    const inputX = getByE2EAttribute(
-      container,
-      E2EAttribute.textFieldInput,
-      'angle',
-    );
+    const inputX = getByE2EAttribute(container, E2EAttribute.textFieldInput, 'angle');
 
     // action
     fireEvent.click(inputX);
@@ -181,10 +173,7 @@ describe('ColumnRotation behaviors', () => {
     fireEvent.blur(inputX);
 
     // result
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1']
-        .angle,
-    ).toBe(100);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].angle).toBe(100);
   });
 
   it('should change anle when triger ScrubbableInput', () => {
@@ -206,11 +195,7 @@ describe('ColumnRotation behaviors', () => {
     );
 
     // find
-    const scrubbableInput = getByE2EAttribute(
-      container,
-      E2EAttribute.scrubbableInput,
-      'angle',
-    );
+    const scrubbableInput = getByE2EAttribute(container, E2EAttribute.scrubbableInput, 'angle');
 
     // action
     fireEvent.mouseDown(scrubbableInput, { clientX: 0, clientY: 0 });
@@ -218,10 +203,7 @@ describe('ColumnRotation behaviors', () => {
     fireEvent.mouseUp(scrubbableInput);
 
     // result
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1']
-        .angle,
-    ).toBe(-100);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].angle).toBe(-100);
   });
 
   it('should change angle another 90 degress', () => {
@@ -236,26 +218,13 @@ describe('ColumnRotation behaviors', () => {
     );
 
     // find
-    const verticalButtonGroup = getByE2EAttribute(
-      container,
-      E2EAttribute.buttonGroup,
-      'layout-position',
-    );
+    const verticalButtonGroup = getByE2EAttribute(container, E2EAttribute.buttonGroup, 'layout-position');
 
     // action
-    fireEvent.click(
-      getByE2EAttribute(
-        verticalButtonGroup,
-        E2EAttribute.buttonGroupInput,
-        'toggle-rotate',
-      ),
-    );
+    fireEvent.click(getByE2EAttribute(verticalButtonGroup, E2EAttribute.buttonGroupInput, 'toggle-rotate'));
 
     // result
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1']
-        .angle,
-    ).toBe(90);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].angle).toBe(90);
   });
 
   it('should flip x', () => {
@@ -347,26 +316,16 @@ describe('ColumnRotation behaviors', () => {
     );
 
     // find
-    const verticalButtonGroup = getByE2EAttribute(
-      container,
-      E2EAttribute.buttonGroup,
-      'layout-position',
-    );
+    const verticalButtonGroup = getByE2EAttribute(container, E2EAttribute.buttonGroup, 'layout-position');
 
     // action
-    fireEvent.click(
-      getByE2EAttribute(
-        verticalButtonGroup,
-        E2EAttribute.buttonGroupInput,
-        'flip-horizontal',
-      ),
-    );
+    fireEvent.click(getByE2EAttribute(verticalButtonGroup, E2EAttribute.buttonGroupInput, 'flip-horizontal'));
 
     // result
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1']
-        .children,
-    ).toStrictEqual(['test-3', 'test-2']);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].children).toStrictEqual([
+      'test-3',
+      'test-2',
+    ]);
   });
 
   it('should flip y', () => {
@@ -452,25 +411,15 @@ describe('ColumnRotation behaviors', () => {
     );
 
     // find
-    const verticalButtonGroup = getByE2EAttribute(
-      container,
-      E2EAttribute.buttonGroup,
-      'layout-position',
-    );
+    const verticalButtonGroup = getByE2EAttribute(container, E2EAttribute.buttonGroup, 'layout-position');
 
     // action
-    fireEvent.click(
-      getByE2EAttribute(
-        verticalButtonGroup,
-        E2EAttribute.buttonGroupInput,
-        'flip-vertical',
-      ),
-    );
+    fireEvent.click(getByE2EAttribute(verticalButtonGroup, E2EAttribute.buttonGroupInput, 'flip-vertical'));
 
     // result
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1']
-        .children,
-    ).toStrictEqual(['test-3', 'test-2']);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].children).toStrictEqual([
+      'test-3',
+      'test-2',
+    ]);
   });
 });

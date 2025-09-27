@@ -3,10 +3,7 @@ import { forOwn } from 'lodash';
 // types
 import { TField, TFields, TReduxHookFormState } from './types';
 
-export const getFieldsWithModifiedAttributes = (
-  formName: string,
-  state: TReduxHookFormState,
-): TFields => {
+export const getFieldsWithModifiedAttributes = (formName: string, state: TReduxHookFormState): TFields => {
   const fields: { [key: string]: TField } = {};
 
   forOwn(state[formName].fields, (field: TField, name) => {
@@ -35,11 +32,7 @@ export const getUpdatedFieldsState = (
   [name]: { ...state[formName]?.fields?.[name], ...field },
 });
 
-export const notifyFields = (
-  formName: string,
-  state: TReduxHookFormState,
-  when: 'after' | 'before',
-): void => {
+export const notifyFields = (formName: string, state: TReduxHookFormState, when: 'after' | 'before'): void => {
   const { fields } = state[formName] || {};
 
   forOwn(fields, (field: TField) => {

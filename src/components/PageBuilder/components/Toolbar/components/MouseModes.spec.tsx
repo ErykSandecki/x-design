@@ -49,9 +49,7 @@ describe('MouseModes behaviors', () => {
     );
 
     // action
-    fireEvent.click(
-      getByE2EAttribute(container, E2EAttribute.icon, MouseMode.comment),
-    );
+    fireEvent.click(getByE2EAttribute(container, E2EAttribute.icon, MouseMode.comment));
 
     // result
     expect(mockCallBack.mock.calls[0][0]).toBe(MouseMode.comment);

@@ -1,12 +1,7 @@
 import { CSSProperties } from 'react';
 
 // types
-import {
-  AlignmentHorizontal,
-  AlignmentVertical,
-  T2DCoordinates,
-  TElement,
-} from 'types';
+import { AlignmentHorizontal, AlignmentVertical, TElement } from 'types';
 
 export const getHorizontalPosition = (
   aligment: TElement['alignment'],
@@ -88,14 +83,8 @@ export const getPosition = (
   x: T2DCoordinates['x'],
   y: T2DCoordinates['y'],
 ): CSSProperties => {
-  const { originX, translateX, ...horizontal } = getHorizontalPosition(
-    alignment,
-    x,
-  );
-  const { originY, translateY, ...vertical } = getVerticalPosition(
-    alignment,
-    y,
-  );
+  const { originX, translateX, ...horizontal } = getHorizontalPosition(alignment, x);
+  const { originY, translateY, ...vertical } = getVerticalPosition(alignment, y);
 
   return {
     ...horizontal,

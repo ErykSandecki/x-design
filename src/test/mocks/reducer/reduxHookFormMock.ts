@@ -4,10 +4,7 @@ import { REDUCER_KEY as REDUX_HOOK_FORM } from 'store/reduxHookForm/actionsType'
 // types
 import { TField, TForm, TReduxHookFormState } from 'store/reduxHookForm/types';
 
-export const reduxHookFormStateMock: Record<
-  typeof REDUX_HOOK_FORM,
-  TReduxHookFormState
-> = {
+export const reduxHookFormStateMock: Record<typeof REDUX_HOOK_FORM, TReduxHookFormState> = {
   [REDUX_HOOK_FORM]: {
     testForm: {
       asyncTimeDelay: 0,

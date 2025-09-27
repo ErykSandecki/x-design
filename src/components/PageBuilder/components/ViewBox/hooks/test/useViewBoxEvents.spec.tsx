@@ -22,12 +22,9 @@ jest.mock('react-redux', () => ({
 describe('useViewBoxEvents', () => {
   it(`should return view box events and data`, () => {
     // before
-    const { result } = renderHook(
-      () => useViewBoxEvents(BASE_3D, MouseMode.default, mockCallBack),
-      {
-        wrapper: ({ children }) => <RefsProvider>{children}</RefsProvider>,
-      },
-    );
+    const { result } = renderHook(() => useViewBoxEvents(BASE_3D, MouseMode.default, mockCallBack), {
+      wrapper: ({ children }) => <RefsProvider>{children}</RefsProvider>,
+    });
 
     // result
     expect(result.current).toStrictEqual({

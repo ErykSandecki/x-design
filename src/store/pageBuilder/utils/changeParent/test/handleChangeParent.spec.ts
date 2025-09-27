@@ -232,9 +232,7 @@ describe('handleChangeParent', () => {
               },
             },
           },
-          selectedElements: [
-            { ...selectedElementMock, id: 'test-2', parentId: '-1' },
-          ],
+          selectedElements: [{ ...selectedElementMock, id: 'test-2', parentId: '-1' }],
         },
       },
     });

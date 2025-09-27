@@ -20,13 +20,7 @@ describe('useMouseUpEvent', () => {
   it(`should trigger event`, () => {
     // before
     const { result } = renderHook(() =>
-      useMouseUpEvent(
-        BASE_RECT,
-        MouseMode.toolBeltA,
-        mockCallBack,
-        mockCallBack,
-        mockCallBack,
-      ),
+      useMouseUpEvent(BASE_RECT, MouseMode.toolBeltA, mockCallBack, mockCallBack, mockCallBack),
     );
 
     // action

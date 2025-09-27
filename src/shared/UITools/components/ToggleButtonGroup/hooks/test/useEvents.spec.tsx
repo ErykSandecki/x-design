@@ -13,9 +13,7 @@ jest.mock('react-redux', () => ({
 describe('useBlurEvent', () => {
   it(`should trigger events once`, () => {
     // before
-    const { result } = renderHook(() =>
-      useEvents(false, false, null, mockCallBack, ''),
-    );
+    const { result } = renderHook(() => useEvents(false, false, null, mockCallBack, ''));
 
     // action
     result.current('value');
@@ -26,9 +24,7 @@ describe('useBlurEvent', () => {
 
   it(`should select value for single`, () => {
     // before
-    const { result } = renderHook(() =>
-      useEvents(false, false, mockCallBack, mockCallBack, ''),
-    );
+    const { result } = renderHook(() => useEvents(false, false, mockCallBack, mockCallBack, ''));
 
     // action
     result.current('value');
@@ -39,9 +35,7 @@ describe('useBlurEvent', () => {
 
   it(`should unselect value for single`, () => {
     // before
-    const { result } = renderHook(() =>
-      useEvents(false, false, mockCallBack, mockCallBack, 'value'),
-    );
+    const { result } = renderHook(() => useEvents(false, false, mockCallBack, mockCallBack, 'value'));
 
     // action
     result.current('value');
@@ -52,9 +46,7 @@ describe('useBlurEvent', () => {
 
   it(`should select value for multiple`, () => {
     // before
-    const { result } = renderHook(() =>
-      useEvents(false, true, mockCallBack, mockCallBack, []),
-    );
+    const { result } = renderHook(() => useEvents(false, true, mockCallBack, mockCallBack, []));
 
     // action
     result.current('value');
@@ -65,9 +57,7 @@ describe('useBlurEvent', () => {
 
   it(`should unselect value for multiple`, () => {
     // before
-    const { result } = renderHook(() =>
-      useEvents(false, true, mockCallBack, mockCallBack, ['value']),
-    );
+    const { result } = renderHook(() => useEvents(false, true, mockCallBack, mockCallBack, ['value']));
 
     // action
     result.current('value');
@@ -78,9 +68,7 @@ describe('useBlurEvent', () => {
 
   it(`should not unselect value for multiple`, () => {
     // before
-    const { result } = renderHook(() =>
-      useEvents(true, true, mockCallBack, mockCallBack, ['value']),
-    );
+    const { result } = renderHook(() => useEvents(true, true, mockCallBack, mockCallBack, ['value']));
 
     // action
     result.current('value');

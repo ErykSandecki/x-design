@@ -19,20 +19,12 @@ export type TUseTheme<T> = {
   theme: Theme;
 };
 
-export const useTheme = <T,>(
-  classNames: T,
-  styles: TObject<string>,
-): TUseTheme<T> => {
+export const useTheme = <T,>(classNames: T, styles: TObject<string>): TUseTheme<T> => {
   const { theme } = useContext(Context);
 
-  const [classNamesWithTheme, setClassNamesWithTheme] = useState(
-    getClassNamesWithTheme(classNames, theme),
-  );
+  const [classNamesWithTheme, setClassNamesWithTheme] = useState(getClassNamesWithTheme(classNames, theme));
 
-  const cx = useMemo(
-    () => themeClassNamesApplier(styles, theme),
-    [classNamesWithTheme, styles, theme],
-  );
+  const cx = useMemo(() => themeClassNamesApplier(styles, theme), [classNamesWithTheme, styles, theme]);
 
   const updateClassNames = (): void => {
     const classNamesWithTheme = getClassNamesWithTheme(classNames, theme);

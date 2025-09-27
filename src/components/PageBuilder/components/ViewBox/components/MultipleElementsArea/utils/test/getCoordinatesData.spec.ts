@@ -1,9 +1,5 @@
 // mocks
-import {
-  elementAllDataMock,
-  pageBuilderStateMock,
-  selectedElementMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { elementAllDataMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 import { wholeStateMock } from 'test/mocks/reducer/wholeStateMock';
 
 // others
@@ -18,10 +14,7 @@ import { getCoordinatesData } from '../getCoordinatesData';
 
 const element = document.createElement('div');
 const zoomContent = document.createElement('div');
-const currentPage =
-  pageBuilderStateMock[PAGE_BUILDER].pages[
-    pageBuilderStateMock[PAGE_BUILDER].currentPage
-  ];
+const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages[pageBuilderStateMock[PAGE_BUILDER].currentPage];
 
 const itemsRefs = {
   [selectedElementMock.id]: element,

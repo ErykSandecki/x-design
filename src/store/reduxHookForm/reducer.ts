@@ -36,11 +36,7 @@ import {
 } from './types';
 
 // utils
-import {
-  getUpdatedFieldsState,
-  getFieldsWithModifiedAttributes,
-  notifyFields,
-} from './utils';
+import { getUpdatedFieldsState, getFieldsWithModifiedAttributes, notifyFields } from './utils';
 
 const initialState: TReduxHookFormState = {};
 
@@ -154,9 +150,7 @@ const submitSuccess = (
 
 const updateField = (
   state: TReduxHookFormState,
-  {
-    payload: { formName, field, name },
-  }: TAction<TUpdateFieldAction['payload']>,
+  { payload: { formName, field, name } }: TAction<TUpdateFieldAction['payload']>,
 ): TReduxHookFormState => ({
   ...state,
   [formName]: {
@@ -176,10 +170,7 @@ const updateForm = (
   },
 });
 
-export const reduxHookForm = (
-  state: TReduxHookFormState = initialState,
-  action: TAction,
-): TReduxHookFormState => {
+export const reduxHookForm = (state: TReduxHookFormState = initialState, action: TAction): TReduxHookFormState => {
   switch (action.type) {
     case CLEAR_FIELDS:
       return clearFields(state, action);

@@ -32,12 +32,9 @@ describe('useMouseMoveEvent', () => {
     const store = configureStore(stateMock);
 
     // before
-    const { result } = renderHook(
-      () => useMouseDownEvent(cursorPosition, mockCallBack, mockCallBack),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    const { result } = renderHook(() => useMouseDownEvent(cursorPosition, mockCallBack, mockCallBack), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // action
     result.current(
@@ -57,12 +54,9 @@ describe('useMouseMoveEvent', () => {
     const store = configureStore(stateMock);
 
     // before
-    const { result } = renderHook(
-      () => useMouseDownEvent(cursorPosition, mockCallBack, mockCallBack),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    const { result } = renderHook(() => useMouseDownEvent(cursorPosition, mockCallBack, mockCallBack), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // action
     result.current({ stopPropagation: mockCallBack as any } as MouseEvent, '1');
@@ -76,12 +70,9 @@ describe('useMouseMoveEvent', () => {
     const store = configureStore(stateMock);
 
     // before
-    const { result } = renderHook(
-      () => useMouseDownEvent(cursorPosition, mockCallBack, mockCallBack),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    const { result } = renderHook(() => useMouseDownEvent(cursorPosition, mockCallBack, mockCallBack), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // action
     result.current(

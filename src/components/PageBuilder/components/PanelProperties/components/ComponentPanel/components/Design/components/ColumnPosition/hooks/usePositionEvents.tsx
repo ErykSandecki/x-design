@@ -29,13 +29,7 @@ export const usePositionEvents = (
   const [x, setX] = useState('');
   const [y, setY] = useState('');
   const onBlurEvents = useBlurEvent(element, setX, setY, x, y);
-  const onChangeEvents = useChangeEvent(
-    isMultiple,
-    isMixedX,
-    isMixedY,
-    setX,
-    setY,
-  );
+  const onChangeEvents = useChangeEvent(isMultiple, isMixedX, isMixedY, setX, setY);
 
   useEffect(() => {
     if (!isRelative) {

@@ -1,12 +1,7 @@
 import { cloneDeep, first } from 'lodash';
 
 // types
-import {
-  TChangeParentActionPayload,
-  TEvents,
-  TPage,
-  TPageBuilderState,
-} from '../../types';
+import { TChangeParentActionPayload, TEvents, TPage, TPageBuilderState } from '../../types';
 
 // utils
 import { detectIdAnomalies } from './detectIdAnomalies';
@@ -25,11 +20,7 @@ export const handleWithPossibleParent = (
 ): TPageBuilderState => {
   const prevParentId = currentPage.elements.allData[id].parentId;
   const parentHasChanged = prevParentId !== possibleParent;
-  const children = getMappedElementsToMove(
-    parentHasChanged,
-    payload,
-    stateCopy,
-  );
+  const children = getMappedElementsToMove(parentHasChanged, payload, stateCopy);
   const parents = getMappedParentsChildren(parentHasChanged, payload, state);
 
   return {
@@ -57,13 +48,11 @@ export const handleWithPossibleParent = (
             ...parents.staticData,
           },
         },
-        selectedElements: currentPage.selectedElements.map(
-          (selectedElement) => ({
-            ...selectedElement,
-            parentId: possibleParent,
-            position: children.allData[selectedElement.id].position,
-          }),
-        ),
+        selectedElements: currentPage.selectedElements.map((selectedElement) => ({
+          ...selectedElement,
+          parentId: possibleParent,
+          position: children.allData[selectedElement.id].position,
+        })),
       },
     },
   };
@@ -108,10 +97,7 @@ export const handleChangeParent = (
   const currentPage = state.pages[state.currentPage];
   const stateCopy = cloneDeep(state);
   const id = first(draggableElements);
-  const hasAnomalies = detectIdAnomalies(
-    draggableElements,
-    currentPage.selectedElements,
-  );
+  const hasAnomalies = detectIdAnomalies(draggableElements, currentPage.selectedElements);
   const events: TEvents = {
     ...state.events,
     draggableElements: [],
@@ -121,20 +107,8 @@ export const handleChangeParent = (
     possibleParent: null,
   };
 
-  if (
-    !hasAnomalies &&
-    possibleParent &&
-    !draggableElements.includes(possibleParent)
-  ) {
-    return handleWithPossibleParent(
-      currentPage,
-      events,
-      id,
-      payload,
-      possibleParent,
-      state,
-      stateCopy,
-    );
+  if (!hasAnomalies && possibleParent && !draggableElements.includes(possibleParent)) {
+    return handleWithPossibleParent(currentPage, events, id, payload, possibleParent, state, stateCopy);
   }
 
   return handleWithResetPosition(currentPage, events, payload, state);

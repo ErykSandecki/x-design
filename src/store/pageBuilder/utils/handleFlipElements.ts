@@ -2,11 +2,7 @@ import { cloneDeep } from 'lodash';
 
 // types
 import { LayoutType, TElement } from 'types';
-import {
-  TElementStaticData,
-  TFlipElementsAction,
-  TPageBuilderState,
-} from '../types';
+import { TElementStaticData, TFlipElementsAction, TPageBuilderState } from '../types';
 
 // utils
 import { findAllChildren } from './findAllChildren';
@@ -17,10 +13,7 @@ export const reverseChildren = (
   children: TElementStaticData['children'],
   layout: TElement['layout'],
 ): TElementStaticData['children'] => {
-  if (
-    axis === 'x' &&
-    (layout.type === LayoutType.horizontal || layout.type === LayoutType.grid)
-  ) {
+  if (axis === 'x' && (layout.type === LayoutType.horizontal || layout.type === LayoutType.grid)) {
     return [...children].reverse();
   } else if (axis === 'y' && layout.type !== LayoutType.horizontal) {
     return [...children].reverse();
@@ -48,19 +41,13 @@ export const handleFlipElements = (
     clonedElements.dynamicData[id].angle = angle;
     clonedElements.staticData[id].children = children;
 
-    findAllChildren(allData, allData[selectedElements[0].id].children).forEach(
-      (id) => {
-        const element = clonedElements.allData[id];
-        const children = reverseChildren(
-          axis,
-          element.children,
-          element.layout,
-        );
+    findAllChildren(allData, allData[selectedElements[0].id].children).forEach((id) => {
+      const element = clonedElements.allData[id];
+      const children = reverseChildren(axis, element.children, element.layout);
 
-        clonedElements.allData[id].children = children;
-        clonedElements.staticData[id].children = children;
-      },
-    );
+      clonedElements.allData[id].children = children;
+      clonedElements.staticData[id].children = children;
+    });
   });
 
   return {

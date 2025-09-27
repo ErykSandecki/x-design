@@ -1,13 +1,7 @@
 import { isNaN } from 'lodash';
 
 // types
-import {
-  TPage,
-  TPageBuilderState,
-  TPositions,
-  TSetElementsCoordinatesAction,
-} from '../types';
-import { T2DCoordinates } from 'types';
+import { TPage, TPageBuilderState, TPositions, TSetElementsCoordinatesAction } from '../types';
 
 export const getCoordinates = (
   coordinates: T2DCoordinates,
@@ -25,10 +19,7 @@ export const getCoordinates = (
 };
 
 export const getPositions = (
-  {
-    coordinates: currentCoordinates,
-    mode,
-  }: TSetElementsCoordinatesAction['payload'],
+  { coordinates: currentCoordinates, mode }: TSetElementsCoordinatesAction['payload'],
   prevPageState: TPage['prevState'],
   currentPage: TPage,
 ): TPositions => {
@@ -45,11 +36,7 @@ export const getPositions = (
   selectedElements.forEach(({ id, ...restData }) => {
     const alignment = elements.allData[id].alignment;
     const { coordinates: prevCoordinates } = allData[id];
-    const coordinates = getCoordinates(
-      currentCoordinates,
-      isDynamic,
-      prevCoordinates,
-    );
+    const coordinates = getCoordinates(currentCoordinates, isDynamic, prevCoordinates);
 
     positions.allData = {
       ...positions.allData,
@@ -80,11 +67,7 @@ export const handleSetElementsCoordinates = (
   const { canMoveElements } = state.events;
   const currentPage = state.pages[state.currentPage];
   const positions = canMoveElements
-    ? getPositions(
-        coordinates,
-        currentPage.prevState || currentPage,
-        currentPage,
-      )
+    ? getPositions(coordinates, currentPage.prevState || currentPage, currentPage)
     : {
         allData: {},
         dynamicData: {},

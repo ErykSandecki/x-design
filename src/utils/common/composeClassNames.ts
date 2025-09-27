@@ -1,10 +1,5 @@
 // types
-import {
-  Children,
-  TClassEntry,
-  TComposeClassNamesReturn,
-  TParentOnly,
-} from 'types';
+import { Children, TClassEntry, TComposeClassNamesReturn, TParentOnly } from 'types';
 
 const buildParent = <Name extends string, Mods extends readonly string[]>(
   name: Name,
@@ -15,20 +10,13 @@ const buildParent = <Name extends string, Mods extends readonly string[]>(
   }
   return {
     [name]: {
-      modificators: mods.reduce(
-        (obj, m) => ({ ...obj, [m]: `${name}--${m}` }),
-        {},
-      ),
+      modificators: mods.reduce((obj, m) => ({ ...obj, [m]: `${name}--${m}` }), {}),
       name,
     },
   } as unknown as TClassEntry<Name, Mods>;
 };
 
-const buildChild = <
-  Parent extends string,
-  Child extends string,
-  Mods extends readonly string[],
->(
+const buildChild = <Parent extends string, Child extends string, Mods extends readonly string[]>(
   parent: Parent,
   name: Child,
   mods: Mods,
@@ -40,22 +28,17 @@ const buildChild = <
   }
   return {
     [name]: {
-      modificators: mods.reduce(
-        (obj, m) => ({ ...obj, [m]: `${fullName}--${m}` }),
-        {},
-      ),
+      modificators: mods.reduce((obj, m) => ({ ...obj, [m]: `${fullName}--${m}` }), {}),
       name: fullName,
     },
   } as unknown as TClassEntry<`${Parent}__${Child}`, Mods>;
 };
 
-export function composeClassNames<Parent extends string>(
+export function composeClassNames<Parent extends string>(parent: Parent): TParentOnly<Parent>;
+export function composeClassNames<Parent extends string, T extends readonly Children[]>(
   parent: Parent,
-): TParentOnly<Parent>;
-export function composeClassNames<
-  Parent extends string,
-  T extends readonly Children[],
->(parent: Parent, ...children: T): TComposeClassNamesReturn<Parent, T>;
+  ...children: T
+): TComposeClassNamesReturn<Parent, T>;
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export function composeClassNames(parent: string, ...children: any[]) {
   if (!children.length) {

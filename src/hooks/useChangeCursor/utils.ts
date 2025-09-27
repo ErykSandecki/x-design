@@ -11,26 +11,16 @@ export const getSVGUrl = (angle: number, cursor: string): string => {
   return `url("data:image/svg+xml,${encodeURIComponent(svgRaw)}") 16 16, auto`;
 };
 
-export const toggleCursor = (
-  contentRef: RefObject<HTMLElement>,
-  url: string,
-): void => {
+export const toggleCursor = (contentRef: RefObject<HTMLElement>, url: string): void => {
   contentRef.current.style.cursor = url;
 };
 
-export const resetCursor = (
-  contentRef: RefObject<HTMLElement>,
-  cursorDefault: string,
-): void => {
+export const resetCursor = (contentRef: RefObject<HTMLElement>, cursorDefault: string): void => {
   const url = getPNGUrl(cursorDefault);
   toggleCursor(contentRef, url);
 };
 
-export const updateCursor = (
-  angle: number,
-  contentRef: RefObject<HTMLElement>,
-  cursor: string,
-): void => {
+export const updateCursor = (angle: number, contentRef: RefObject<HTMLElement>, cursor: string): void => {
   const url = getSVGUrl(angle, cursor);
   toggleCursor(contentRef, url);
 };

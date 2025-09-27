@@ -12,8 +12,7 @@ const state = reduxHookFormStateMock[REDUCER_KEY].testForm.fields.testField;
 describe('fieldAttributesSelectorCreator', () => {
   it('should return nothing', () => {
     // before
-    const selectorFunction = (fieldAttributesSelectorCreator('', '', '') as any)
-      .resultFunc;
+    const selectorFunction = (fieldAttributesSelectorCreator('', '', '') as any).resultFunc;
 
     // result
     expect(selectorFunction(state)).toStrictEqual(undefined);
@@ -21,9 +20,7 @@ describe('fieldAttributesSelectorCreator', () => {
 
   it('should return single attribute', () => {
     // before
-    const selectorFunction = (
-      fieldAttributesSelectorCreator('active', 'testForm', 'testField') as any
-    ).resultFunc;
+    const selectorFunction = (fieldAttributesSelectorCreator('active', 'testForm', 'testField') as any).resultFunc;
 
     // result
     expect(selectorFunction(state)).toStrictEqual(false);
@@ -31,13 +28,8 @@ describe('fieldAttributesSelectorCreator', () => {
 
   it('should return set of attributes', () => {
     // before
-    const selectorFunction = (
-      fieldAttributesSelectorCreator(
-        ['active', 'touched'],
-        'testForm',
-        'testField',
-      ) as any
-    ).resultFunc;
+    const selectorFunction = (fieldAttributesSelectorCreator(['active', 'touched'], 'testForm', 'testField') as any)
+      .resultFunc;
 
     // result
     expect(selectorFunction(state)).toStrictEqual({

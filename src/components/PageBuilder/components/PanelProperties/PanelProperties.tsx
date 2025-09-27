@@ -33,15 +33,7 @@ const PanelProperties: FC<TPanelPropertiesProps> = () => {
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState(Tab.design);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-  const { onMouseDownX, width } = useResizeHandler(
-    0,
-    240,
-    window.innerHeight - TOOLBAR_HEIGHT,
-    500,
-    0,
-    240,
-    boxRef,
-  );
+  const { onMouseDownX, width } = useResizeHandler(0, 240, window.innerHeight - TOOLBAR_HEIGHT, 500, 0, 240, boxRef);
 
   return (
     <Box
@@ -64,10 +56,7 @@ const PanelProperties: FC<TPanelPropertiesProps> = () => {
       }}
     >
       <E2EDataAttribute type={E2EAttribute.resize}>
-        <div
-          className={cx(classNamesWithTheme.areaHandleResize)}
-          onMouseDown={(event) => onMouseDownX(event, true)}
-        />
+        <div className={cx(classNamesWithTheme.areaHandleResize)} onMouseDown={(event) => onMouseDownX(event, true)} />
       </E2EDataAttribute>
       <UITools.Section label={t(`${translationNameSpace}.section.label`)}>
         <UITools.Tabs
@@ -77,11 +66,7 @@ const PanelProperties: FC<TPanelPropertiesProps> = () => {
         />
       </UITools.Section>
       <div className={cx(classNamesWithTheme.sections)}>
-        {selectedElements.length === 0 ? (
-          <MainPanel activeTab={activeTab} />
-        ) : (
-          <ComponentPanel activeTab={activeTab} />
-        )}
+        {selectedElements.length === 0 ? <MainPanel activeTab={activeTab} /> : <ComponentPanel activeTab={activeTab} />}
       </div>
     </Box>
   );

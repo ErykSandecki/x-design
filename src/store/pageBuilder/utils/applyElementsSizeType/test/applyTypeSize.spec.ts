@@ -38,8 +38,7 @@ describe('applyTypeSize', () => {
   beforeAll(() => {
     // mock
     document.getElementById = (): any => ({ querySelector: noop }) as any;
-    window.getComputedStyle = (): any =>
-      ({ height: '100px', width: '100px' }) as CSSStyleDeclaration;
+    window.getComputedStyle = (): any => ({ height: '100px', width: '100px' }) as CSSStyleDeclaration;
   });
 
   it(`should apply auto`, () => {
@@ -103,9 +102,7 @@ describe('applyTypeSize', () => {
     // result
     expect(clonedElements.allData['test-1'].height.unit).toBe(Unit.percentage);
     expect(clonedElements.allData['test-1'].height.value).toBe(100);
-    expect(clonedElements.dynamicData['test-1'].height.unit).toBe(
-      Unit.percentage,
-    );
+    expect(clonedElements.dynamicData['test-1'].height.unit).toBe(Unit.percentage);
     expect(clonedElements.dynamicData['test-1'].height.value).toBe(100);
   });
 });

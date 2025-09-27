@@ -26,9 +26,7 @@ describe('useResizeHandler', () => {
     } as any;
 
     // before
-    const { result } = renderHook(() =>
-      useResizeHandler(0, 250, maxHeight, maxWidth, minHeight, minWidth, ref),
-    );
+    const { result } = renderHook(() => useResizeHandler(0, 250, maxHeight, maxWidth, minHeight, minWidth, ref));
 
     // action
     act(() => {
@@ -53,9 +51,7 @@ describe('useResizeHandler', () => {
     } as any;
 
     // before
-    const { result } = renderHook(() =>
-      useResizeHandler(0, 250, maxHeight, maxWidth, minHeight, minWidth, ref),
-    );
+    const { result } = renderHook(() => useResizeHandler(0, 250, maxHeight, maxWidth, minHeight, minWidth, ref));
 
     // action
     act(() => {
@@ -80,9 +76,7 @@ describe('useResizeHandler', () => {
     } as any;
 
     // before
-    const { result } = renderHook(() =>
-      useResizeHandler(0, 500, maxHeight, maxWidth, minHeight, minWidth, ref),
-    );
+    const { result } = renderHook(() => useResizeHandler(0, 500, maxHeight, maxWidth, minHeight, minWidth, ref));
 
     // action
     act(() => {
@@ -107,9 +101,7 @@ describe('useResizeHandler', () => {
     } as any;
 
     // before
-    const { result } = renderHook(() =>
-      useResizeHandler(0, 500, maxHeight, maxWidth, minHeight, minWidth, ref),
-    );
+    const { result } = renderHook(() => useResizeHandler(0, 500, maxHeight, maxWidth, minHeight, minWidth, ref));
 
     // action
     act(() => {
@@ -134,9 +126,7 @@ describe('useResizeHandler', () => {
     } as any;
 
     // before
-    const { result } = renderHook(() =>
-      useResizeHandler(0, 250, maxHeight, maxWidth, minHeight, minWidth, ref),
-    );
+    const { result } = renderHook(() => useResizeHandler(0, 250, maxHeight, maxWidth, minHeight, minWidth, ref));
 
     // action
     act(() => {
@@ -161,9 +151,7 @@ describe('useResizeHandler', () => {
     } as any;
 
     // before
-    const { result } = renderHook(() =>
-      useResizeHandler(250, 0, maxHeight, maxWidth, minHeight, minWidth, ref),
-    );
+    const { result } = renderHook(() => useResizeHandler(250, 0, maxHeight, maxWidth, minHeight, minWidth, ref));
 
     // action
     act(() => {
@@ -188,9 +176,7 @@ describe('useResizeHandler', () => {
     } as any;
 
     // before
-    const { result } = renderHook(() =>
-      useResizeHandler(250, 0, maxHeight, maxWidth, minHeight, minWidth, ref),
-    );
+    const { result } = renderHook(() => useResizeHandler(250, 0, maxHeight, maxWidth, minHeight, minWidth, ref));
 
     // action
     act(() => {
@@ -215,9 +201,7 @@ describe('useResizeHandler', () => {
     } as any;
 
     // before
-    const { result } = renderHook(() =>
-      useResizeHandler(500, 0, maxHeight, maxWidth, minHeight, minWidth, ref),
-    );
+    const { result } = renderHook(() => useResizeHandler(500, 0, maxHeight, maxWidth, minHeight, minWidth, ref));
 
     // action
     act(() => {
@@ -242,9 +226,7 @@ describe('useResizeHandler', () => {
     } as any;
 
     // before
-    const { result } = renderHook(() =>
-      useResizeHandler(500, 0, maxHeight, maxWidth, minHeight, minWidth, ref),
-    );
+    const { result } = renderHook(() => useResizeHandler(500, 0, maxHeight, maxWidth, minHeight, minWidth, ref));
 
     // action
     act(() => {
@@ -269,16 +251,11 @@ describe('useResizeHandler', () => {
     } as any;
 
     // before
-    const { result } = renderHook(() =>
-      useResizeHandler(250, 0, maxHeight, maxWidth, minHeight, minWidth, ref),
-    );
+    const { result } = renderHook(() => useResizeHandler(250, 0, maxHeight, maxWidth, minHeight, minWidth, ref));
 
     // action
     act(() => {
-      result.current.onMouseDownY(
-        { buttons: MouseButton.mmb, clientY: 250 } as any,
-        false,
-      );
+      result.current.onMouseDownY({ buttons: MouseButton.mmb, clientY: 250 } as any, false);
     });
 
     act(() => {

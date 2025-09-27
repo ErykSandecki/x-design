@@ -43,19 +43,8 @@ export const useColorPickerEvents = (
   return {
     alphaValue,
     colorValue,
-    onBlurAlpha: useBlurAlphaEvent(
-      alpha,
-      alphaValue,
-      onChangeAlpha,
-      setAlphaValue,
-    ),
-    onBlurColor: useBlurColorEvent(
-      alpha,
-      color,
-      colorValue,
-      onChangeColor,
-      setColorValue,
-    ),
+    onBlurAlpha: useBlurAlphaEvent(alpha, alphaValue, onChangeAlpha, setAlphaValue),
+    onBlurColor: useBlurColorEvent(alpha, color, colorValue, onChangeColor, setColorValue),
     onChangeAlpha: useChangeAlphaEvent(setAlphaValue),
     onChangeColor: useChangeColorEvent(setColorValue),
     onChangeColorPicker: useChangeColorPickerEvent(onChangeColor),

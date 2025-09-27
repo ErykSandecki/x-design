@@ -5,7 +5,7 @@ import { RefObject } from 'react';
 import { setElementsCoordinates } from 'store/pageBuilder/actions';
 
 // types
-import { T2DCoordinates, TElement } from 'types';
+import { TElement } from 'types';
 
 // utils
 import { caculateMovePosition } from '../../../../../utils/caculateMovePosition';

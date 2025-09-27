@@ -1,32 +1,34 @@
 import { Store } from 'redux';
+import { TFunction } from 'i18next';
 
 // types
 import { TAction } from './redux';
-
-export type T2DCoordinates = {
-  y: number;
-  x: number;
-};
-export type T3DCoordinates = T2DCoordinates & {
-  z: number;
-};
-
-export type TRectCoordinates = {
-  x1: number;
-  x2: number;
-  y1: number;
-  y2: number;
-};
+import { TMainState } from './reducers';
 
 declare global {
+  type T2DCoordinates = {
+    y: number;
+    x: number;
+  };
+  type T3DCoordinates = T2DCoordinates & {
+    z: number;
+  };
+  type TRectCoordinates = {
+    x1: number;
+    x2: number;
+    y1: number;
+    y2: number;
+  };
+
+  type TFuncion<A extends any[] = [], T = void> = (...args: A) => T;
+  type TT = TFunction;
+
   interface Window {
     Cypress?: unknown;
-    store?: Store<any, TAction>;
+    store?: Store<TMainState, TAction>;
   }
 }
 
 export type TFileData = string | ArrayBuffer | null;
 
-export type TSvgComponent = React.FunctionComponent<
-  React.SVGProps<SVGSVGElement> & { title?: string }
->;
+export type TSvgComponent = React.FunctionComponent<React.SVGProps<SVGSVGElement> & { title?: string }>;

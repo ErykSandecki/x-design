@@ -4,9 +4,6 @@ import { RefObject, useCallback, useEffect } from 'react';
 // others
 import { DEBOUNCE_TIME } from 'constant/constants';
 
-// types
-import { T2DCoordinates, T3DCoordinates } from 'types';
-
 // utils
 import { handleMoveArea } from '../utils/handleMoveArea';
 import { MouseMode } from 'types/enums/mouseMode';
@@ -49,12 +46,5 @@ export const useMouseMoveEvent = (
     return (): void => {
       window.removeEventListener('mousemove', handleMouseMove);
     };
-  }, [
-    coordinates,
-    cursorPosition.current.x,
-    cursorPosition.current.y,
-    cursorState,
-    setCoordinates,
-    ...depedencies,
-  ]);
+  }, [coordinates, cursorPosition.current.x, cursorPosition.current.y, cursorState, setCoordinates, ...depedencies]);
 };

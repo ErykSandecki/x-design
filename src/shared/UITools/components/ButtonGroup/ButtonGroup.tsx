@@ -3,9 +3,7 @@ import { kebabCase } from 'lodash';
 
 // components
 import Box, { TBoxProps } from '../../../UI/components/Box/Box';
-import E2EDataAttribute, {
-  TE2EDataAttributeProps,
-} from '../../../E2EDataAttributes/E2EDataAttribute';
+import E2EDataAttribute, { TE2EDataAttributeProps } from '../../../E2EDataAttributes/E2EDataAttribute';
 import Icon from '../../../UI/components/Icon/Icon';
 
 // hooks
@@ -27,12 +25,7 @@ export type TSectionProps = TBoxProps & {
   fullWidth?: boolean;
 };
 
-export const ButtonGroup: FC<TSectionProps> = ({
-  buttons,
-  e2eValue = '',
-  fullWidth = false,
-  ...restProps
-}) => {
+export const ButtonGroup: FC<TSectionProps> = ({ buttons, e2eValue = '', fullWidth = false, ...restProps }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   return (
@@ -48,11 +41,7 @@ export const ButtonGroup: FC<TSectionProps> = ({
       {...restProps}
     >
       {buttons.map(({ disabled, name, onClick }) => (
-        <E2EDataAttribute
-          key={kebabCase(name)}
-          type={E2EAttribute.buttonGroupInput}
-          value={kebabCase(name)}
-        >
+        <E2EDataAttribute key={kebabCase(name)} type={E2EAttribute.buttonGroupInput} value={kebabCase(name)}>
           <div
             className={cx(classNamesWithTheme.button.name, [
               classNamesWithTheme.button.modificators.disabled,

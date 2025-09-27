@@ -70,12 +70,9 @@ describe('ZoomBox snapshots', () => {
     );
 
     // action
-    fireEvent.mouseDown(
-      getByE2EAttribute(container, E2EAttribute.box, 'zoom-box'),
-      {
-        buttons: MouseButton.lmb,
-      },
-    );
+    fireEvent.mouseDown(getByE2EAttribute(container, E2EAttribute.box, 'zoom-box'), {
+      buttons: MouseButton.lmb,
+    });
 
     // result
     expect(asFragment()).toMatchSnapshot();

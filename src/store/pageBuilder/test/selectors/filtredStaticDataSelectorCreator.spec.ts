@@ -10,8 +10,7 @@ import { filtredStaticDataSelectorCreator } from '../../selectors';
 describe('filtredStaticDataSelectorCreator', () => {
   it('should return filtered static data', () => {
     // before
-    const selectorFunction = (filtredStaticDataSelectorCreator('-1') as any)
-      .resultFunc;
+    const selectorFunction = (filtredStaticDataSelectorCreator('-1') as any).resultFunc;
 
     // result
     expect(

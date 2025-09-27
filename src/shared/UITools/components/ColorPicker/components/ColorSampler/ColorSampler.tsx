@@ -21,7 +21,7 @@ import { className, classNames } from './classNames';
 import styles from './color-sampler.scss';
 
 // types
-import { E2EAttribute, T2DCoordinates } from 'types';
+import { E2EAttribute } from 'types';
 
 // utils
 import { rgbToHex } from 'utils';
@@ -31,14 +31,10 @@ export type TColorSamplerProps = {
   onClickColorSampler: (color: string) => void;
 };
 
-export const ColorSampler: FC<TColorSamplerProps> = ({
-  initialMousePosition,
-  onClickColorSampler,
-}) => {
+export const ColorSampler: FC<TColorSamplerProps> = ({ initialMousePosition, onClickColorSampler }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { t } = useTranslation();
-  const { colors, isPending, mousePosition } =
-    useColorSamplerEvents(initialMousePosition);
+  const { colors, isPending, mousePosition } = useColorSamplerEvents(initialMousePosition);
   const { r, g, b, a } = colors[MIDDLE_ARRAY] || { a: 0, b: 0, g: 0, r: 0 };
 
   return createPortal(
@@ -84,10 +80,7 @@ export const ColorSampler: FC<TColorSamplerProps> = ({
           </div>
           <div className={cx(classNamesWithTheme.prompt)}>
             <Icon height={12} name="EyesDropper" width={12} />
-            <Small
-              classes={{ className: cx(classNamesWithTheme.promptDescription) }}
-              sx={{ cl: 'neutral2' }}
-            >
+            <Small classes={{ className: cx(classNamesWithTheme.promptDescription) }} sx={{ cl: 'neutral2' }}>
               {t(`${translationNameSpace}.prompt`)}
             </Small>
           </div>

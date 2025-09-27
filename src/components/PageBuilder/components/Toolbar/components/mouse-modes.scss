@@ -5,11 +5,7 @@
   height: 100%;
 
   &__button {
-    @include theme-selector(
-      'neutral-3',
-      background-color,
-      #{'&:not('}#{$self}#{'__button--active):hover'}
-    );
+    @include theme-selector('neutral-3', background-color, #{'&:not('}#{$self}#{'__button--active):hover'});
 
     align-items: center;
     cursor:

@@ -1,16 +1,10 @@
 import SagaTester from 'redux-saga-tester';
 
 // mocks
-import {
-  eventsMock,
-  pageBuilderStateMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { eventsMock, pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
-import {
-  REDUCER_KEY as PAGE_BUILDER,
-  UPDATE_EVENTS_STATUS,
-} from '../../actionsType';
+import { REDUCER_KEY as PAGE_BUILDER, UPDATE_EVENTS_STATUS } from '../../actionsType';
 
 // store
 import pageBuilder from '../../reducer';

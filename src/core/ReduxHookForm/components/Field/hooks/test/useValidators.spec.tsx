@@ -14,37 +14,22 @@ import { REDUCER_KEY as REDUX_HOOK_FORM } from 'store/reduxHookForm/actionsType'
 import { configureStore } from 'store/store';
 
 // types
-import {
-  TAsyncValidator,
-  TFieldValue,
-  TSyncValidator,
-} from '../../../../types';
+import { TAsyncValidator, TFieldValue, TSyncValidator } from '../../../../types';
 import { TFields } from 'store/reduxHookForm/types';
 
 // utils
 import { getProviderWrapper } from 'test/testHelpers';
 
-const asyncValidator = (value: TFieldValue): any =>
-  new Promise((resolve) => resolve(value ? 'Success' : 'Error'));
+const asyncValidator = (value: TFieldValue): any => new Promise((resolve) => resolve(value ? 'Success' : 'Error'));
 
-const syncValidator = (value: TFieldValue): any =>
-  value ? 'Success' : 'Error';
+const syncValidator = (value: TFieldValue): any => (value ? 'Success' : 'Error');
 
-const asyncValidators = [
-  (): any => asyncValidator(''),
-  (): any => asyncValidator('value'),
-] as Array<TAsyncValidator>;
+const asyncValidators = [(): any => asyncValidator(''), (): any => asyncValidator('value')] as Array<TAsyncValidator>;
 
-const compareValidator: TSyncValidator = (
-  _,
-  value: TFieldValue,
-  fields: TFields,
-) => (value === fields.testField2.value ? 'Equal' : 'Not Equal');
+const compareValidator: TSyncValidator = (_, value: TFieldValue, fields: TFields) =>
+  value === fields.testField2.value ? 'Equal' : 'Not Equal';
 
-const syncValidators = [
-  (): any => syncValidator(''),
-  (): any => syncValidator('value'),
-] as Array<TSyncValidator>;
+const syncValidators = [(): any => syncValidator(''), (): any => syncValidator('value')] as Array<TSyncValidator>;
 
 const mockCallBack = jest.fn();
 
@@ -78,19 +63,9 @@ describe('useValidators', () => {
     const store = configureStore(stateMock);
 
     // before
-    const { result } = renderHook(
-      () =>
-        useValidators(
-          asyncValidators,
-          'testForm',
-          'testField1',
-          [],
-          syncValidators,
-        ),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    const { result } = renderHook(() => useValidators(asyncValidators, 'testForm', 'testField1', [], syncValidators), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // mock
     const { getAsyncErrors } = result.current;
@@ -107,19 +82,9 @@ describe('useValidators', () => {
     const store = configureStore(stateMock);
 
     // before
-    const { result } = renderHook(
-      () =>
-        useValidators(
-          asyncValidators,
-          'testForm',
-          'testField1',
-          [],
-          syncValidators,
-        ),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    const { result } = renderHook(() => useValidators(asyncValidators, 'testForm', 'testField1', [], syncValidators), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // mock
     const { getSyncErrors } = result.current;
@@ -136,19 +101,9 @@ describe('useValidators', () => {
     const store = configureStore(stateMock);
 
     // before
-    const { result } = renderHook(
-      () =>
-        useValidators(
-          asyncValidators,
-          'testForm',
-          'testField1',
-          [],
-          syncValidators,
-        ),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    const { result } = renderHook(() => useValidators(asyncValidators, 'testForm', 'testField1', [], syncValidators), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // action
     await result.current.updateAsyncValidators;
@@ -162,12 +117,9 @@ describe('useValidators', () => {
     const store = configureStore(stateMock);
 
     // before
-    const { result } = renderHook(
-      () => useValidators([], 'testForm', 'testField1', [], syncValidators),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    const { result } = renderHook(() => useValidators([], 'testForm', 'testField1', [], syncValidators), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // action
     await result.current.updateAsyncValidators;
@@ -181,19 +133,9 @@ describe('useValidators', () => {
     const store = configureStore(stateMock);
 
     // before
-    const { result } = renderHook(
-      () =>
-        useValidators(
-          asyncValidators,
-          'testForm',
-          'testField1',
-          [],
-          syncValidators,
-        ),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    const { result } = renderHook(() => useValidators(asyncValidators, 'testForm', 'testField1', [], syncValidators), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // action
     result.current.updateSyncValidators('');
@@ -209,13 +151,7 @@ describe('useValidators', () => {
     // before
     const { result } = renderHook(
       () =>
-        useValidators(
-          asyncValidators,
-          'testForm',
-          'testField1',
-          ['testField2'],
-          [...syncValidators, compareValidator],
-        ),
+        useValidators(asyncValidators, 'testForm', 'testField1', ['testField2'], [...syncValidators, compareValidator]),
       {
         wrapper: getProviderWrapper(store),
       },

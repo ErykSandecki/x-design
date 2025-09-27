@@ -41,9 +41,7 @@ describe('useScrollLock', () => {
     result.current.setScrollLock(true);
 
     // result
-    expect(document.getElementsByTagName('html')[0].style.overflow).toBe(
-      'hidden',
-    );
+    expect(document.getElementsByTagName('html')[0].style.overflow).toBe('hidden');
   });
 
   it(`should trigger lock function`, () => {

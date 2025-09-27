@@ -4,7 +4,7 @@ import { RefObject } from 'react';
 import { CURSOR_STATES } from 'constant/constants';
 
 // types
-import { MouseButton, T2DCoordinates, T3DCoordinates } from 'types';
+import { MouseButton } from 'types';
 import { MouseMode } from 'types/enums/mouseMode';
 
 export const handleMoveArea = (

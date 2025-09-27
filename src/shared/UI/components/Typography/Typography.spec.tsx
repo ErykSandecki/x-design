@@ -9,11 +9,7 @@ import { className as classNameTypography, classNames } from './classNames';
 // types
 import { ColorsTheme } from 'types';
 import { E2EAttribute } from 'types/e2e';
-import {
-  TypographyFontStyle,
-  TypographyFontWeight,
-  TypographyVariant,
-} from './enums';
+import { TypographyFontStyle, TypographyFontWeight, TypographyVariant } from './enums';
 
 // utils
 import { enumToArray } from 'utils';
@@ -28,15 +24,10 @@ describe('Typography props', () => {
     const align = 'center';
 
     // before
-    const { container } = render(
-      <Typography align={align}>children</Typography>,
-    );
+    const { container } = render(<Typography align={align}>children</Typography>);
 
     // result
-    expect(getByE2EAttribute(container, E2EAttribute.text)).toHaveAttribute(
-      'style',
-      `text-align: ${align};`,
-    );
+    expect(getByE2EAttribute(container, E2EAttribute.text)).toHaveAttribute('style', `text-align: ${align};`);
   });
 
   it('should pass children', () => {
@@ -47,16 +38,12 @@ describe('Typography props', () => {
     const { container } = render(<Typography>{children}</Typography>);
 
     // result
-    expect(getByE2EAttribute(container, E2EAttribute.text)).toHaveTextContent(
-      children,
-    );
+    expect(getByE2EAttribute(container, E2EAttribute.text)).toHaveTextContent(children);
   });
 
   it('should pass classes', () => {
     //before
-    const { container } = render(
-      <Typography classes={{ className }}>children</Typography>,
-    );
+    const { container } = render(<Typography classes={{ className }}>children</Typography>);
 
     // result
     expect(container.querySelector(`.${className}`)).not.toBeNull();
@@ -71,9 +58,7 @@ describe('Typography props', () => {
     );
 
     // result
-    expect(container.querySelector(`.${className}`)).toHaveClass(
-      `${classNameTypography}--${ColorsTheme.blue1}`,
-    );
+    expect(container.querySelector(`.${className}`)).toHaveClass(`${classNameTypography}--${ColorsTheme.blue1}`);
   });
 
   it('should pass component', () => {
@@ -90,14 +75,10 @@ describe('Typography props', () => {
 
   it('should pass e2eAttribute', () => {
     // before
-    const { container } = render(
-      <Typography e2eAttribute={E2EAttribute.text}>children</Typography>,
-    );
+    const { container } = render(<Typography e2eAttribute={E2EAttribute.text}>children</Typography>);
 
     // result
-    expect(getByE2EAttribute(container, E2EAttribute.text)).toHaveAttribute(
-      getDataTestAttribute(E2EAttribute.text),
-    );
+    expect(getByE2EAttribute(container, E2EAttribute.text)).toHaveAttribute(getDataTestAttribute(E2EAttribute.text));
   });
 
   it('should pass e2eValue', () => {
@@ -105,9 +86,7 @@ describe('Typography props', () => {
     const e2eValue = 'e2eValue';
 
     // before
-    const { container } = render(
-      <Typography e2eValue={e2eValue}>children</Typography>,
-    );
+    const { container } = render(<Typography e2eValue={e2eValue}>children</Typography>);
 
     // result
     expect(getByE2EAttribute(container, E2EAttribute.text)).toHaveAttribute(
@@ -124,11 +103,7 @@ describe('Typography props', () => {
     const { container } = render(
       <>
         {fontStyles.map((fontStyle) => (
-          <Typography
-            e2eValue={fontStyle}
-            fontStyle={fontStyle}
-            key={fontStyle}
-          >
+          <Typography e2eValue={fontStyle} fontStyle={fontStyle} key={fontStyle}>
             children
           </Typography>
         ))}
@@ -137,9 +112,9 @@ describe('Typography props', () => {
 
     // result
     fontStyles.forEach((fontStyle) => {
-      expect(
-        getByE2EAttribute(container, E2EAttribute.text, fontStyle),
-      ).toHaveClass(classNames[classNameTypography].modificators[fontStyle]);
+      expect(getByE2EAttribute(container, E2EAttribute.text, fontStyle)).toHaveClass(
+        classNames[classNameTypography].modificators[fontStyle],
+      );
     });
   });
 
@@ -151,11 +126,7 @@ describe('Typography props', () => {
     const { container } = render(
       <>
         {fontWeights.map((fontWeight) => (
-          <Typography
-            e2eValue={fontWeight}
-            fontWeight={fontWeight}
-            key={fontWeight}
-          >
+          <Typography e2eValue={fontWeight} fontWeight={fontWeight} key={fontWeight}>
             children
           </Typography>
         ))}
@@ -164,9 +135,9 @@ describe('Typography props', () => {
 
     // result
     fontWeights.forEach((fontWeight) => {
-      expect(
-        getByE2EAttribute(container, E2EAttribute.text, fontWeight),
-      ).toHaveClass(classNames[classNameTypography].modificators[fontWeight]);
+      expect(getByE2EAttribute(container, E2EAttribute.text, fontWeight)).toHaveClass(
+        classNames[classNameTypography].modificators[fontWeight],
+      );
     });
   });
 
@@ -190,16 +161,12 @@ describe('Typography props', () => {
     const htmlTag = 'span';
 
     //before
-    const { container } = render(
-      <Typography innerHtml={`<${htmlTag}>${children}</${htmlTag}>`} />,
-    );
+    const { container } = render(<Typography innerHtml={`<${htmlTag}>${children}</${htmlTag}>`} />);
 
     // result
     expect(container.getElementsByTagName(htmlTag)[0]).not.toBeNull();
 
-    expect(container.getElementsByTagName(htmlTag)[0]).toHaveTextContent(
-      children,
-    );
+    expect(container.getElementsByTagName(htmlTag)[0]).toHaveTextContent(children);
   });
 
   it('should pass noWrap', () => {
@@ -229,9 +196,9 @@ describe('Typography props', () => {
 
     // result
     variants.forEach((fontType) => {
-      expect(
-        getByE2EAttribute(container, E2EAttribute.text, fontType),
-      ).toHaveClass(classNames[classNameTypography].modificators[fontType]);
+      expect(getByE2EAttribute(container, E2EAttribute.text, fontType)).toHaveClass(
+        classNames[classNameTypography].modificators[fontType],
+      );
 
       expect(container.getElementsByTagName(fontType)[0]).not.toBeNull();
     });
@@ -239,9 +206,7 @@ describe('Typography props', () => {
 
   it('should pass variantMapping', () => {
     //before
-    const { container } = render(
-      <Typography variantMapping={{ p: 'a' }}>children</Typography>,
-    );
+    const { container } = render(<Typography variantMapping={{ p: 'a' }}>children</Typography>);
 
     // result
     expect(getByE2EAttribute(container, E2EAttribute.text).tagName).toBe('A');
@@ -267,9 +232,7 @@ describe('Typography snapshots', () => {
 
   it('should render with passed inner html', () => {
     // before
-    const { asFragment } = render(
-      <Typography innerHtml={'<div>innerHtml</div>'} />,
-    );
+    const { asFragment } = render(<Typography innerHtml={'<div>innerHtml</div>'} />);
 
     // result
     expect(asFragment()).toMatchSnapshot();

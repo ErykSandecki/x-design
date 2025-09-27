@@ -1,6 +1,4 @@
-export const computeCounterRotation = (
-  angles: number | Array<number>,
-): { counterAngle: number; sumAngle: number } => {
+export const computeCounterRotation = (angles: number | Array<number>): { counterAngle: number; sumAngle: number } => {
   const arr = Array.isArray(angles) ? angles : [angles];
   const rawSum = arr.reduce((acc, v) => acc + Number(v || 0), 0);
   const mod360 = ((rawSum % 360) + 360) % 360;

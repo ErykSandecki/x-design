@@ -21,7 +21,6 @@ import { translationNameSpace } from './constants';
 import styles from './element-area.scss';
 
 // types
-import { TRectCoordinates } from 'types';
 
 export type TElementAreaProps = {
   elementArea: TRectCoordinates;

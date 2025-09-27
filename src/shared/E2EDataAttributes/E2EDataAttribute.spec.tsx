@@ -34,10 +34,7 @@ describe('E2EDataAttribute snapshots', () => {
   it('should render with multiple types and values', () => {
     // before
     const { asFragment } = render(
-      <E2EDataAttribute
-        type={[E2EAttribute.test1, E2EAttribute.test2]}
-        value={['test-1', 'test-2']}
-      >
+      <E2EDataAttribute type={[E2EAttribute.test1, E2EAttribute.test2]} value={['test-1', 'test-2']}>
         <span>child</span>
       </E2EDataAttribute>,
     );

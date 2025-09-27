@@ -7,10 +7,7 @@
 
 @mixin button-idle-styles($className, $color, $variant) {
   @if $variant == 'contained' {
-    background-color: map.get(
-      $--xd-background-color-map,
-      $variant + '-' + $color
-    );
+    background-color: map.get($--xd-background-color-map, $variant + '-' + $color);
   } @else if $variant == 'outlined' {
     border-color: map.get($--xd-border-map, $variant + '-' + $color);
   }
@@ -20,15 +17,9 @@
 
 @mixin button-disabled-styles($className, $color, $variant) {
   @if $variant == 'contained' {
-    background-color: map.get(
-      $--xd-background-color-map,
-      $variant + '-' + $color + '-disabled'
-    );
+    background-color: map.get($--xd-background-color-map, $variant + '-' + $color + '-disabled');
   } @else if $variant == 'outlined' {
-    border-color: map.get(
-      $--xd-border-map,
-      $variant + '-' + $color + '-disabled'
-    );
+    border-color: map.get($--xd-border-map, $variant + '-' + $color + '-disabled');
   }
 
   @if $variant != 'contained' {
@@ -40,10 +31,7 @@
 
 @mixin button-hover-styles($className, $color, $variant) {
   @if $variant != 'outlined' {
-    background-color: map.get(
-      $--xd-background-color-map,
-      $variant + '-' + $color + '-hover'
-    );
+    background-color: map.get($--xd-background-color-map, $variant + '-' + $color + '-hover');
 
     @if $variant == 'contained' {
       box-shadow:
@@ -63,17 +51,11 @@
 
 @mixin button-ripple-styles($color, $variant) {
   @if $variant == 'text' {
-    @include ripple-circle(
-      map.get($--xd-color-map, $variant + '-' + $color + '-hover')
-    );
+    @include ripple-circle(map.get($--xd-color-map, $variant + '-' + $color + '-hover'));
   } @else if $variant == 'contained' {
-    @include ripple-circle(
-      map.get($--xd-background-color-map, $variant + '-' + $color + '-hover')
-    );
+    @include ripple-circle(map.get($--xd-background-color-map, $variant + '-' + $color + '-hover'));
   } @else {
-    @include ripple-circle(
-      map.get($--xd-border-map, $variant + '-' + $color + '-hover')
-    );
+    @include ripple-circle(map.get($--xd-border-map, $variant + '-' + $color + '-hover'));
   }
 }
 

@@ -17,9 +17,7 @@ jest.mock('react-redux', () => ({
 describe('usePositionEvents', () => {
   it(`should return data`, () => {
     // before
-    const { result } = renderHook(() =>
-      usePositionEvents(elementAllDataMock, false, false, false, false),
-    );
+    const { result } = renderHook(() => usePositionEvents(elementAllDataMock, false, false, false, false));
 
     // result
     expect(result.current).toStrictEqual({

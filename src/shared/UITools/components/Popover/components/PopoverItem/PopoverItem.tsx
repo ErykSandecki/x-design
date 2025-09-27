@@ -27,13 +27,7 @@ export type TPopoverItemProps = {
   text: string;
 };
 
-export const PopoverItem: FC<TPopoverItemProps> = ({
-  icon,
-  index,
-  onClick,
-  selected,
-  text,
-}) => {
+export const PopoverItem: FC<TPopoverItemProps> = ({ icon, index, onClick, selected, text }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { setSelected } = usePopoverRoot();
 
@@ -44,10 +38,7 @@ export const PopoverItem: FC<TPopoverItemProps> = ({
 
   return (
     <E2EDataAttribute type={E2EAttribute.popoverItem} value={index}>
-      <div
-        className={cx(classNamesWithTheme[className])}
-        onClick={onClickHandler}
-      >
+      <div className={cx(classNamesWithTheme[className])} onClick={onClickHandler}>
         <Icon
           classes={{
             className: cx(classNamesWithTheme.checkIcon.name, [
@@ -59,17 +50,8 @@ export const PopoverItem: FC<TPopoverItemProps> = ({
           name="Check"
           width={12}
         />
-        {icon && (
-          <Icon
-            classes={{ className: cx(classNamesWithTheme.icon) }}
-            height={12}
-            name={icon}
-            width={12}
-          />
-        )}
-        <Small classes={{ className: cx(classNamesWithTheme.text) }}>
-          {text}
-        </Small>
+        {icon && <Icon classes={{ className: cx(classNamesWithTheme.icon) }} height={12} name={icon} width={12} />}
+        <Small classes={{ className: cx(classNamesWithTheme.text) }}>{text}</Small>
       </div>
     </E2EDataAttribute>
   );

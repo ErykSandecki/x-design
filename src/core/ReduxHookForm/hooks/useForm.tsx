@@ -6,16 +6,9 @@ import { formAttributesSelectorCreator } from '../../../store/reduxHookForm/sele
 // types
 import { TForm } from '../../../store/reduxHookForm/types';
 
-const attributes: Array<Partial<keyof TForm>> = [
-  'asyncTimeDelay',
-  'error',
-  'isPending',
-  'isValid',
-];
+const attributes: Array<Partial<keyof TForm>> = ['asyncTimeDelay', 'error', 'isPending', 'isValid'];
 
 export type TUseFormType = Partial<TForm>;
 
 export const useForm = (formName: string): TUseFormType =>
-  useSelector(
-    formAttributesSelectorCreator(attributes, formName),
-  ) as TUseFormType;
+  useSelector(formAttributesSelectorCreator(attributes, formName)) as TUseFormType;

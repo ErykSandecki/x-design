@@ -2,11 +2,7 @@
 import { BASE_2D } from 'shared';
 
 // types
-import {
-  TChangeParentActionPayload,
-  TElementsData,
-  TPageBuilderState,
-} from '../../types';
+import { TChangeParentActionPayload, TElementsData, TPageBuilderState } from '../../types';
 
 // utils
 import { reducedData } from './reducedData';

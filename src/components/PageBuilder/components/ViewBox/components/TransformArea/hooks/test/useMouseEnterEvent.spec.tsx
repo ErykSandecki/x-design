@@ -11,9 +11,7 @@ const mockCallBack = jest.fn();
 describe('useMouseEnterEvent', () => {
   it(`should trigger event on resize`, () => {
     // before
-    const { result } = renderHook(() =>
-      useMouseEnterEvent(0, false, false, mockCallBack, mockCallBack),
-    );
+    const { result } = renderHook(() => useMouseEnterEvent(0, false, false, mockCallBack, mockCallBack));
 
     // action
     result.current.onMouseEnterAnchorResize(AnchorResize.east);
@@ -24,9 +22,7 @@ describe('useMouseEnterEvent', () => {
 
   it(`should trigger event on rotate`, () => {
     // before
-    const { result } = renderHook(() =>
-      useMouseEnterEvent(0, false, false, mockCallBack, mockCallBack),
-    );
+    const { result } = renderHook(() => useMouseEnterEvent(0, false, false, mockCallBack, mockCallBack));
 
     // action
     result.current.onMouseEnterAnchorRotate(AnchorRotate.northEast);
@@ -37,9 +33,7 @@ describe('useMouseEnterEvent', () => {
 
   it(`should not trigger any events`, () => {
     // before
-    const { result } = renderHook(() =>
-      useMouseEnterEvent(0, true, true, mockCallBack, mockCallBack),
-    );
+    const { result } = renderHook(() => useMouseEnterEvent(0, true, true, mockCallBack, mockCallBack));
 
     // action
     result.current.onMouseEnterAnchorRotate(AnchorRotate.northEast);

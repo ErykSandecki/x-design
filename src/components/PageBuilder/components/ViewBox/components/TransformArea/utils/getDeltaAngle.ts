@@ -1,7 +1,4 @@
-export const getDeltaAngle = (
-  cursorBaseAngle: number,
-  cursorCurrentAngle: number,
-): number => {
+export const getDeltaAngle = (cursorBaseAngle: number, cursorCurrentAngle: number): number => {
   let deltaAngle = cursorCurrentAngle - cursorBaseAngle;
 
   if (deltaAngle > 180) {

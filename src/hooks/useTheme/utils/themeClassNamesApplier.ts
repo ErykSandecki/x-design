@@ -18,15 +18,8 @@ export const transformKey = (name): string =>
   /* istanbul ignore next */
   isJestRunning() ? name : camelCase(name);
 
-export const getModificator = (
-  styles: TObject<string>,
-  theme: Theme,
-  themeModificator: TThemeModificator,
-): string =>
-  cx(
-    styles[transformKey(themeModificator.name)],
-    styles[transformKey(themeModificator[theme])],
-  );
+export const getModificator = (styles: TObject<string>, theme: Theme, themeModificator: TThemeModificator): string =>
+  cx(styles[transformKey(themeModificator.name)], styles[transformKey(themeModificator[theme])]);
 
 export const getModificatorConditional = (
   styles: TObject<string>,

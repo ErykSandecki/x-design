@@ -15,7 +15,6 @@ import { configureStore } from 'store';
 
 // types
 import { MouseMode } from 'types/enums/mouseMode';
-import { T2DCoordinates } from 'types';
 
 // utils
 import { getProviderWrapper } from 'test';
@@ -49,20 +48,9 @@ describe('useMouseMoveEvent', () => {
     const store = configureStore(stateMock);
 
     // before
-    renderHook(
-      () =>
-        useMouseMoveEvent(
-          cursorPosition,
-          cursorPositionBase,
-          '-1',
-          true,
-          MouseMode.default,
-          '-1',
-        ),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    renderHook(() => useMouseMoveEvent(cursorPosition, cursorPositionBase, '-1', true, MouseMode.default, '-1'), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // action
     fireEvent.mouseMove(window, {});
@@ -76,20 +64,9 @@ describe('useMouseMoveEvent', () => {
     const store = configureStore(stateMock);
 
     // before
-    renderHook(
-      () =>
-        useMouseMoveEvent(
-          cursorPosition,
-          cursorPositionBase,
-          '-1',
-          true,
-          MouseMode.comment,
-          '-1',
-        ),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    renderHook(() => useMouseMoveEvent(cursorPosition, cursorPositionBase, '-1', true, MouseMode.comment, '-1'), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // action
     fireEvent.mouseMove(window, {});

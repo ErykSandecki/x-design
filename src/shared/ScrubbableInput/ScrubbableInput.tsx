@@ -3,10 +3,8 @@ import { FC, ReactNode, useRef } from 'react';
 import { noop } from 'lodash';
 
 // components
-import E2EDataAttribute, {
-  TE2EDataAttributeProps,
-} from 'shared/E2EDataAttributes/E2EDataAttribute';
-import Icon, { TIconProps } from 'shared/UI/components/Icon/Icon';
+import E2EDataAttribute, { TE2EDataAttributeProps } from '../E2EDataAttributes/E2EDataAttribute';
+import Icon, { TIconProps } from '../UI/components/Icon/Icon';
 
 // hooks
 import { useScrubbableInputEvents } from './hooks/useScrubbableInputEvents';
@@ -29,9 +27,9 @@ export type TScrubbableInputProps = {
   loop?: boolean;
   max: number;
   min: number;
-  onChange: (value: number) => void;
-  onMouseDown?: () => void;
-  onMouseUp?: () => void;
+  onChange: TFuncion<[number]>;
+  onMouseDown?: TFuncion;
+  onMouseUp?: TFuncion;
   value: number;
 };
 
@@ -50,6 +48,7 @@ export const ScrubbableInput: FC<TScrubbableInputProps> = ({
 }) => {
   const inputRef = useRef(null);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
+
   const { mousePosition, ...events } = useScrubbableInputEvents(
     inputRef,
     loop,

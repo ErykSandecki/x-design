@@ -17,9 +17,7 @@ const mockCallBack = jest.fn();
 describe('useMouseDownEvent', () => {
   it(`should save mouse position after trigger mouse down`, () => {
     // before
-    const { result } = renderHook(() =>
-      useMouseDownEvent(BASE_3D, cursorPosition, mockCallBack, mockCallBack),
-    );
+    const { result } = renderHook(() => useMouseDownEvent(BASE_3D, cursorPosition, mockCallBack, mockCallBack));
 
     // action
     result.current({

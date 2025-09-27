@@ -1,11 +1,5 @@
 // others
-import {
-  APP_INIT,
-  INIT_LANGUAGE,
-  INIT_LANGUAGE_SUCCESS,
-  SET_IS_APP_LOADED,
-  SET_THEME,
-} from './actionsType';
+import { APP_INIT, INIT_LANGUAGE, INIT_LANGUAGE_SUCCESS, SET_IS_APP_LOADED, SET_THEME } from './actionsType';
 
 // types
 import {
@@ -24,23 +18,17 @@ export const initLanguage = (): TInitLanguageAction => ({
   type: INIT_LANGUAGE,
 });
 
-export const initLanguageSuccess = (
-  payload: TInitLanguageSuccessAction['payload'],
-): TInitLanguageSuccessAction => ({
+export const initLanguageSuccess = (payload: TInitLanguageSuccessAction['payload']): TInitLanguageSuccessAction => ({
   payload,
   type: INIT_LANGUAGE_SUCCESS,
 });
 
-export const setIsAppLoaded = (
-  payload: TSetIsAppLoadedAction['payload'],
-): TSetIsAppLoadedAction => ({
+export const setIsAppLoaded = (payload: TSetIsAppLoadedAction['payload']): TSetIsAppLoadedAction => ({
   payload,
   type: SET_IS_APP_LOADED,
 });
 
-export const setTheme = (
-  payload: TSetThemeAction['payload'],
-): TSetThemeAction => ({
+export const setTheme = (payload: TSetThemeAction['payload']): TSetThemeAction => ({
   payload,
   type: SET_THEME,
 });

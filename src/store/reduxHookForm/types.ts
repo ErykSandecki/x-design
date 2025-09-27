@@ -134,9 +134,7 @@ export type TUpdateFieldAction = {
   type: TUpdateFieldActions;
 };
 
-export type TUpdateFormActions =
-  | typeof SET_PENDING
-  | typeof UPDATE_FORM_VALIDATOR;
+export type TUpdateFormActions = typeof SET_PENDING | typeof UPDATE_FORM_VALIDATOR;
 
 export type TUpdateFormActionPayload = {
   form: Partial<TForm>;

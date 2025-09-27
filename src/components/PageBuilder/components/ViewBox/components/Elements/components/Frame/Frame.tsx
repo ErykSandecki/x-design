@@ -28,14 +28,7 @@ import { getElementStickWallPosition } from 'components/PageBuilder/components/V
 
 export type TFrameProps = TElementProps;
 
-const Frame: FC<TFrameProps> = ({
-  className,
-  id,
-  index,
-  mouseMode,
-  parentId,
-  type,
-}) => {
+const Frame: FC<TFrameProps> = ({ className, id, index, mouseMode, parentId, type }) => {
   const { overlayContainerRef } = useRefs();
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { t } = useTranslation();
@@ -52,10 +45,7 @@ const Frame: FC<TFrameProps> = ({
       type={type}
     >
       {(angle, coordinates, height, hover, selected, width) => {
-        const stickWall = useMemo(
-          () => getElementStickWallPosition(angle),
-          [angle],
-        );
+        const stickWall = useMemo(() => getElementStickWallPosition(angle), [angle]);
 
         return (
           <>
@@ -77,10 +67,7 @@ const Frame: FC<TFrameProps> = ({
                       className: cx(
                         classNamesWithTheme.label.name,
                         [classNamesWithTheme.label.modificators.hover, hover],
-                        [
-                          classNamesWithTheme.label.modificators.selected,
-                          selected,
-                        ],
+                        [classNamesWithTheme.label.modificators.selected, selected],
                         classNamesWithTheme.label.modificators[stickWall],
                       ),
                     }}
@@ -90,12 +77,7 @@ const Frame: FC<TFrameProps> = ({
                 </Box>,
                 overlayContainerRef.current,
               )}
-            <Elements
-              eventsDisabled={false}
-              isSelected={selected}
-              mouseMode={mouseMode}
-              parentId={id}
-            />
+            <Elements eventsDisabled={false} isSelected={selected} mouseMode={mouseMode} parentId={id} />
           </>
         );
       }}

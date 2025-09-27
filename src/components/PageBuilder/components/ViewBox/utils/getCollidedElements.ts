@@ -1,15 +1,11 @@
 import { RefObject } from 'react';
 
 // store
-import {
-  allDataSelector,
-  eventsSelector,
-  selectedElementsSelector,
-} from 'store/pageBuilder/selectors';
+import { allDataSelector, eventsSelector, selectedElementsSelector } from 'store/pageBuilder/selectors';
 import { store } from 'store';
 
 // types
-import { KeyboardKeys, TObject, TRectCoordinates } from 'types';
+import { KeyboardKeys, TObject } from 'types';
 import { TRectArea } from '../../../../PageBuilder/types';
 import { TSelectedElements } from 'store/pageBuilder/types';
 
@@ -32,23 +28,13 @@ export const getCollidedElements = (
   const prevIds = selectedElements.map(({ id }) => id);
   const collidedElements: TSelectedElements = [];
   const { x1, x2, y1, y2 } = getBaseCoordinatesTopLeft(selectableArea);
-  const isControlPressed = [KeyboardKeys.meta, KeyboardKeys.control].includes(
-    pressedKey,
-  );
+  const isControlPressed = [KeyboardKeys.meta, KeyboardKeys.control].includes(pressedKey);
 
   for (const [id, coordinates] of Object.entries(rectCoordinates.current)) {
     const { parentId, position, type } = allData[id];
     const condition = isControlPressed
-      ? x1 <= coordinates.x1 &&
-        x2 >= coordinates.x2 &&
-        y1 <= coordinates.y1 &&
-        y2 >= coordinates.y2
-      : !(
-          coordinates.x2 < x1 ||
-          coordinates.x1 > x2 ||
-          coordinates.y2 < y1 ||
-          coordinates.y1 > y2
-        );
+      ? x1 <= coordinates.x1 && x2 >= coordinates.x2 && y1 <= coordinates.y1 && y2 >= coordinates.y2
+      : !(coordinates.x2 < x1 || coordinates.x1 > x2 || coordinates.y2 < y1 || coordinates.y1 > y2);
 
     if (condition) {
       if (!prevIds.includes(id)) {
@@ -64,8 +50,5 @@ export const getCollidedElements = (
     }
   }
 
-  return [
-    ...selectedElements.filter(({ id }) => prevCollidedElementsId.includes(id)),
-    ...collidedElements,
-  ];
+  return [...selectedElements.filter(({ id }) => prevCollidedElementsId.includes(id)), ...collidedElements];
 };

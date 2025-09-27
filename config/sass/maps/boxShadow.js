@@ -5,6 +5,5 @@ const constants = require('../../constants/constants');
 module.exports = (forScss) =>
   mapValues(
     mapKeys(boxShadows, (_, key) => camelCase(key)),
-    (value, key) =>
-      forScss ? `${constants.prefix}${kebabCase(key)}` : `${value.$value}`,
+    (value, key) => (forScss ? `${constants.prefix}${kebabCase(key)}` : `${value.$value}`),
   );

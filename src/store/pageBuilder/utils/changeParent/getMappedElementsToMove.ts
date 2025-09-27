@@ -2,13 +2,8 @@
 import { BASE_2D } from 'shared';
 
 // types
-import { T2DCoordinates, TElement } from 'types';
-import {
-  TChangeParentActionPayload,
-  TElementsData,
-  TEvents,
-  TPageBuilderState,
-} from '../../types';
+import { TElement } from 'types';
+import { TChangeParentActionPayload, TElementsData, TEvents, TPageBuilderState } from '../../types';
 
 // utils
 import { findMainParent } from '../findMainParent';
@@ -23,12 +18,8 @@ export const calculateCoordinates = (
 ): T2DCoordinates => {
   if (possibleParent === '-1') {
     const currentPage = state.pages[state.currentPage];
-    const mainParentId = findMainParent(
-      currentParentId,
-      currentPage.elements.staticData,
-    );
-    const parentCords =
-      currentPage.elements.dynamicData[mainParentId].coordinates;
+    const mainParentId = findMainParent(currentParentId, currentPage.elements.staticData);
+    const parentCords = currentPage.elements.dynamicData[mainParentId].coordinates;
     const { z } = currentPage.areaCoordinates;
     const { x, y } = getOffsetXY(id, mainParentId);
 
@@ -75,11 +66,7 @@ export const getPartialData = (
 ): Partial<TElement> => {
   const deepLevel = possibleParent !== '-1' ? parent.deepLevel + 1 : 0;
   const targetPosition = possibleParent === '-1' ? 'absolute' : 'relative';
-  const sizes = getSizes(
-    { height: element.height, width: element.width },
-    id,
-    possibleParent,
-  );
+  const sizes = getSizes({ height: element.height, width: element.width }, id, possibleParent);
 
   return {
     coordinates: parentHasChanged

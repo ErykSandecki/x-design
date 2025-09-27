@@ -10,19 +10,13 @@ export const classNames = {
   prompt: {
     name: `${className}__prompt`,
     modificators: {
-      ...mapValues(
-        DropAnchorsPosition,
-        (position) => `${className}__prompt--${position}`,
-      ),
+      ...mapValues(DropAnchorsPosition, (position) => `${className}__prompt--${position}`),
     },
   },
   anchor: {
     name: `${className}__anchor`,
     modificators: {
-      ...mapValues(
-        DropAnchorsPosition,
-        (position) => `${className}__anchor--${position}`,
-      ),
+      ...mapValues(DropAnchorsPosition, (position) => `${className}__anchor--${position}`),
     },
   },
 };

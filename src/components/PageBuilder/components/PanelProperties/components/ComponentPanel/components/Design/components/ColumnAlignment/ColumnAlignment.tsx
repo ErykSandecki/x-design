@@ -11,11 +11,7 @@ import { useClickHorizontalAlignmentEvent } from './hooks/useClickHorizontalAlig
 import { useClickVerticalAlignmentEvent } from './hooks/useClickVerticalAlignmentEvent';
 
 // others
-import {
-  HORIZONTAL_BUTTONS,
-  translationNameSpace,
-  VERTICAL_BUTTONS,
-} from './constants';
+import { HORIZONTAL_BUTTONS, translationNameSpace, VERTICAL_BUTTONS } from './constants';
 
 // store
 import {
@@ -36,10 +32,7 @@ const ColumnAlignment: FC = () => {
   const onClickHorizontalAlignment = useClickHorizontalAlignmentEvent();
   const onClickVerticalAlignment = useClickVerticalAlignmentEvent();
   const { t } = useTranslation();
-  const disabled =
-    element.parentId === '-1' ||
-    element.position === 'relative' ||
-    !areParentsTheSame;
+  const disabled = element.parentId === '-1' || element.position === 'relative' || !areParentsTheSame;
 
   return (
     <UITools.SectionColumn

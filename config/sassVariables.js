@@ -17,5 +17,4 @@ const interpolateIntoSass = (obj) => {
   return variables.join(' ');
 };
 
-module.exports = () =>
-  [interpolateIntoSass(boxShadows), interpolateIntoSass(colors)].join(' ');
+module.exports = () => [interpolateIntoSass(boxShadows), interpolateIntoSass(colors)].join(' ');

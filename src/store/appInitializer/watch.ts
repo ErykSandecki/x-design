@@ -7,8 +7,5 @@ import { APP_INIT, INIT_LANGUAGE } from './actionsType';
 import { appInitSaga, initLanguageSaga } from './saga';
 
 export function* watchAppInitializer(): Generator<AllEffect<ForkEffect<any>>> {
-  yield all([
-    takeEvery([APP_INIT], appInitSaga),
-    takeEvery([INIT_LANGUAGE], initLanguageSaga),
-  ]);
+  yield all([takeEvery([APP_INIT], appInitSaga), takeEvery([INIT_LANGUAGE], initLanguageSaga)]);
 }

@@ -5,10 +5,7 @@ import { Theme } from 'types/enums/theme';
 import { TObject } from 'types';
 import { TThemeModificator } from '../types';
 
-const getClassNameWithTheme = (
-  className: string,
-  theme: Theme,
-): TThemeModificator => {
+const getClassNameWithTheme = (className: string, theme: Theme): TThemeModificator => {
   const name = className;
 
   return theme === Theme.dark
@@ -16,10 +13,7 @@ const getClassNameWithTheme = (
     : { name, [Theme.light]: `${className}--light` };
 };
 
-export const getClassNamesWithTheme = <T extends {}>(
-  classNames: T,
-  theme: Theme,
-): T | any =>
+export const getClassNamesWithTheme = <T extends {}>(classNames: T, theme: Theme): T | any =>
   mapValues(classNames, (className: TObject<string> | string): T | any => {
     if (isObject(className)) {
       return getClassNamesWithTheme(className, theme);

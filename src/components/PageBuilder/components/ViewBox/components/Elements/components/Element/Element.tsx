@@ -14,11 +14,7 @@ import { useElementEvents } from './hooks/useElementEvents';
 import { useTheme } from 'hooks';
 
 // others
-import {
-  className as classNameElement,
-  classNames,
-  classes,
-} from './classNames';
+import { className as classNameElement, classNames, classes } from './classNames';
 import { DATA_STATUS_ATTRIBUTE } from './constants';
 
 // styles
@@ -51,15 +47,7 @@ type TElementProps = {
   type: ElementType;
 };
 
-const Element: FC<TElementProps> = ({
-  classes,
-  children,
-  id,
-  index,
-  mouseMode,
-  parentId,
-  type,
-}) => {
+const Element: FC<TElementProps> = ({ classes, children, id, index, mouseMode, parentId, type }) => {
   const elementRef = useRef<HTMLDivElement>(null);
   const { itemsRefs, zoomContentRef } = useRefs();
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
@@ -90,11 +78,10 @@ const Element: FC<TElementProps> = ({
   return (
     <Box
       classes={{
-        className: cx(
-          classes.className,
-          classNamesWithTheme[classNameElement].name,
-          [classNamesWithTheme[classNameElement].modificators.moving, isMoving],
-        ),
+        className: cx(classes.className, classNamesWithTheme[classNameElement].name, [
+          classNamesWithTheme[classNameElement].modificators.moving,
+          isMoving,
+        ]),
       }}
       id={id}
       ref={elementRef}
@@ -125,23 +112,10 @@ const Element: FC<TElementProps> = ({
         {...events}
       >
         {!isSelected && position === 'relative' && (
-          <DropAnchors
-            id={id}
-            index={index}
-            mouseMode={mouseMode}
-            parentId={parentId}
-          />
+          <DropAnchors id={id} index={index} mouseMode={mouseMode} parentId={parentId} />
         )}
         {children(angle, coordinates, height, isHover, isSelected, width)}
-        {displayOutline && (
-          <Outline
-            angle={angle - counterAngle}
-            height={height}
-            x={x1}
-            y={y1}
-            width={width}
-          />
-        )}
+        {displayOutline && <Outline angle={angle - counterAngle} height={height} x={x1} y={y1} width={width} />}
         {displayEventsArea && (
           <EventsArea
             angle={angle}

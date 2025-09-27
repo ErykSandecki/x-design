@@ -43,52 +43,28 @@ const ColumnPosition: FC = () => {
   const refInputY = useRef<HTMLInputElement>(null);
   const { t } = useTranslation();
   const isMultiple = size(selectedElements) > 1;
-  const hasAlignmentHorizontal = hasSomeAlignment(
-    'horizontal',
-    dynamicData,
-    selectedElements,
-  );
-  const hasAlignmentVertical = hasSomeAlignment(
-    'vertical',
-    dynamicData,
-    selectedElements,
-  );
-  const isMixedX = isMixed(
-    dynamicData,
-    firstElement,
-    'coordinates.x',
-    selectedElements,
-  );
-  const isMixedY = isMixed(
-    dynamicData,
-    firstElement,
-    'coordinates.y',
-    selectedElements,
-  );
-  const isRelative = selectedElements.some(
-    ({ position }) => position === 'relative',
-  );
+  const hasAlignmentHorizontal = hasSomeAlignment('horizontal', dynamicData, selectedElements);
+  const hasAlignmentVertical = hasSomeAlignment('vertical', dynamicData, selectedElements);
+  const isMixedX = isMixed(dynamicData, firstElement, 'coordinates.x', selectedElements);
+  const isMixedY = isMixed(dynamicData, firstElement, 'coordinates.y', selectedElements);
+  const isRelative = selectedElements.some(({ position }) => position === 'relative');
   const areParentsTheSame = useSelector(areParentsTheSameSelector);
   const disabledX = hasAlignmentHorizontal || isRelative;
   const disabledY = hasAlignmentVertical || isRelative;
-  const showConstrains =
-    (hasAlignmentHorizontal || hasAlignmentVertical) && areParentsTheSame;
-  const disabledAll =
-    (hasAlignmentHorizontal || hasAlignmentVertical) && isMultiple;
-  const { onBlurX, onBlurY, onChangeX, onChangeY, onMouseDown, x, y } =
-    usePositionEvents(element, isMixedX, isMixedY, isMultiple, isRelative);
+  const showConstrains = (hasAlignmentHorizontal || hasAlignmentVertical) && areParentsTheSame;
+  const disabledAll = (hasAlignmentHorizontal || hasAlignmentVertical) && isMultiple;
+  const { onBlurX, onBlurY, onChangeX, onChangeY, onMouseDown, x, y } = usePositionEvents(
+    element,
+    isMixedX,
+    isMixedY,
+    isMultiple,
+    isRelative,
+  );
 
   return (
     <UITools.SectionColumn
       buttonsIcon={
-        showConstrains
-          ? [
-              <ConstrainsView
-                alignment={dynamicData[firstElement.id].alignment}
-                key={0}
-              />,
-            ]
-          : []
+        showConstrains ? [<ConstrainsView alignment={dynamicData[firstElement.id].alignment} key={0} />] : []
       }
       gridColumnType={GridColumnType.twoInputs}
       labels={[t(`${translationNameSpace}.label`)]}
@@ -101,9 +77,7 @@ const ColumnPosition: FC = () => {
         onBlur={onBlurX}
         onChange={(event) => onChangeX(event.target.value)}
         onClick={() => refInputX.current.select()}
-        onKeyDown={(event) =>
-          handleSubmitInput(KeyboardKeys.enter, refInputX.current)(event)
-        }
+        onKeyDown={(event) => handleSubmitInput(KeyboardKeys.enter, refInputX.current)(event)}
         ref={refInputX}
         startAdornment={
           <ScrubbableInput
@@ -113,9 +87,7 @@ const ColumnPosition: FC = () => {
             min={MIN}
             onChange={(value) => onChangeX(value.toString(), true)}
             onMouseDown={onMouseDown}
-            onMouseUp={() =>
-              dispatch(updateEventsStatus({ isMultipleMoving: false }))
-            }
+            onMouseUp={() => dispatch(updateEventsStatus({ isMultipleMoving: false }))}
             value={isMultiple ? 0 : parseFloat(x)}
           >
             <Small color={ColorsTheme.neutral2}>X</Small>
@@ -131,9 +103,7 @@ const ColumnPosition: FC = () => {
         onBlur={onBlurY}
         onChange={(event) => onChangeY(event.target.value)}
         onClick={() => refInputY.current.select()}
-        onKeyDown={(event) =>
-          handleSubmitInput(KeyboardKeys.enter, refInputY.current)(event)
-        }
+        onKeyDown={(event) => handleSubmitInput(KeyboardKeys.enter, refInputY.current)(event)}
         ref={refInputY}
         startAdornment={
           <ScrubbableInput
@@ -143,9 +113,7 @@ const ColumnPosition: FC = () => {
             min={MIN}
             onChange={(value) => onChangeY(value.toString(), true)}
             onMouseDown={onMouseDown}
-            onMouseUp={() =>
-              dispatch(updateEventsStatus({ isMultipleMoving: false }))
-            }
+            onMouseUp={() => dispatch(updateEventsStatus({ isMultipleMoving: false }))}
             value={isMultiple ? 0 : parseFloat(y)}
           >
             <Small color={ColorsTheme.neutral2}>Y</Small>

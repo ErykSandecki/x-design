@@ -43,10 +43,7 @@ describe('formValidatorWithFileUploader', () => {
     };
 
     // action
-    const result = formValidatorWithFileUploader(
-      [{}] as Array<TFileData>,
-      mockCallBack,
-    )(fields);
+    const result = formValidatorWithFileUploader([{}] as Array<TFileData>, mockCallBack)(fields);
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(1);

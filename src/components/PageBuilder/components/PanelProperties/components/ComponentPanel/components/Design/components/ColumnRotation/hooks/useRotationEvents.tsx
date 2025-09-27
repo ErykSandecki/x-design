@@ -15,11 +15,7 @@ type TUseRotationEvents = {
   onMouseDown: () => void;
 };
 
-export const useRotationEvents = (
-  element: TElement,
-  isMixed: boolean,
-  isMultiple: boolean,
-): TUseRotationEvents => {
+export const useRotationEvents = (element: TElement, isMixed: boolean, isMultiple: boolean): TUseRotationEvents => {
   const { angle: currentAngle } = element;
   const [angle, setAngle] = useState('');
   const onBlur = useBlurEvent(angle, element, setAngle);

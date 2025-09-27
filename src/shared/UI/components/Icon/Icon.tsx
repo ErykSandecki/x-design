@@ -5,9 +5,7 @@ import { kebabCase } from 'lodash';
 import { Icons } from 'assets/svg';
 
 // components
-import E2EDataAttribute, {
-  TE2EDataAttributeProps,
-} from '../../../E2EDataAttributes/E2EDataAttribute';
+import E2EDataAttribute, { TE2EDataAttributeProps } from '../../../E2EDataAttributes/E2EDataAttribute';
 
 // hooks
 import { useTheme } from 'hooks';

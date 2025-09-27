@@ -4,7 +4,7 @@ import { Dispatch } from 'redux';
 import { addElement } from 'store/pageBuilder/actions';
 
 // types
-import { ElementType, LayoutType, TRectCoordinates } from 'types';
+import { ElementType, LayoutType } from 'types';
 import { MouseMode } from '../../../../../types/enums/mouseMode';
 import { TAddELementActionPayload } from 'store/pageBuilder/types';
 

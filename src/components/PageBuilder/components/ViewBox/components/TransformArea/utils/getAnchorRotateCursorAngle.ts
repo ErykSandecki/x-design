@@ -2,10 +2,7 @@
 import { AnchorRotate } from 'store/pageBuilder/enums';
 import { TElement } from 'types';
 
-export const getAnchorRotateCursorAngle = (
-  anchor: AnchorRotate,
-  angle: TElement['angle'],
-): number => {
+export const getAnchorRotateCursorAngle = (anchor: AnchorRotate, angle: TElement['angle']): number => {
   switch (anchor) {
     case AnchorRotate.northEast:
       return 0 + angle;

@@ -9,10 +9,7 @@ import { classNames } from '../classNames';
 // types
 import { InputSize } from '../../../enums';
 import { TButtonIconArgs } from '../types';
-import {
-  TThemeClassNames,
-  TThemeClassNamesApplier,
-} from 'hooks/useTheme/types';
+import { TThemeClassNames, TThemeClassNamesApplier } from 'hooks/useTheme/types';
 
 export type TUseIcon = (data: TButtonIconArgs) => JSX.Element;
 

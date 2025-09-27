@@ -54,10 +54,7 @@ describe('ViewBox snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <RefsProvider
-          itemsRefs={sharedRefs}
-          overlayContainerRefHtml={overlayContainer}
-        >
+        <RefsProvider itemsRefs={sharedRefs} overlayContainerRefHtml={overlayContainer}>
           <ViewBox
             coordinates={BASE_3D}
             mouseMode={MouseMode.default}
@@ -81,10 +78,7 @@ describe('ViewBox behaviors', () => {
     // before
     const { container } = render(
       <Provider store={store}>
-        <RefsProvider
-          itemsRefs={sharedRefs}
-          overlayContainerRefHtml={overlayContainer}
-        >
+        <RefsProvider itemsRefs={sharedRefs} overlayContainerRefHtml={overlayContainer}>
           <ViewBox
             coordinates={BASE_3D}
             mouseMode={MouseMode.default}
@@ -96,12 +90,9 @@ describe('ViewBox behaviors', () => {
     );
 
     // action
-    fireEvent.mouseDown(
-      getByE2EAttribute(container, E2EAttribute.box, 'zoom-box'),
-      {
-        buttons: MouseButton.rmb,
-      },
-    );
+    fireEvent.mouseDown(getByE2EAttribute(container, E2EAttribute.box, 'zoom-box'), {
+      buttons: MouseButton.rmb,
+    });
     fireEvent.mouseMove(window, {
       buttons: MouseButton.rmb,
     });

@@ -11,8 +11,5 @@ export const getThemePreferences = (): Theme => {
     return theme;
   }
 
-  return window.matchMedia &&
-    window.matchMedia('(prefers-color-scheme: dark)').matches
-    ? Theme.dark
-    : Theme.light;
+  return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? Theme.dark : Theme.light;
 };

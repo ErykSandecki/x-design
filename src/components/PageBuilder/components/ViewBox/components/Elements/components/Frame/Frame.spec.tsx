@@ -44,13 +44,11 @@ const stateMock = {
         elements: {
           ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements,
           dynamicData: {
-            ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements
-              .dynamicData,
+            ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements.dynamicData,
             [elementDynamicDataMock.id]: elementDynamicDataMock,
           },
           staticData: {
-            ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements
-              .staticData,
+            ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements.staticData,
             [elementStaticDataMock.id]: elementStaticDataMock,
           },
         },
@@ -73,10 +71,7 @@ describe('Frame snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <RefsProvider
-          itemsRefs={sharedRefs}
-          overlayContainerRefHtml={overlayContainer}
-        >
+        <RefsProvider itemsRefs={sharedRefs} overlayContainerRefHtml={overlayContainer}>
           <Frame
             className="className"
             id={elementDynamicDataMock.id}

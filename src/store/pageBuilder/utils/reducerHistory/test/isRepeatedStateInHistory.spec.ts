@@ -1,9 +1,5 @@
 // mocks
-import {
-  pageBuilderStateMock,
-  reducerHistoryMock,
-  selectedElementMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { pageBuilderStateMock, reducerHistoryMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { BASE_3D } from 'shared';
@@ -21,10 +17,7 @@ import { TPageBuilderState } from 'store/pageBuilder/types';
 // utils
 import { isRepeatedStateInHistory } from '../isRepeatedStateInHistory';
 
-const currentPage =
-  pageBuilderStateMock[PAGE_BUILDER].pages[
-    pageBuilderStateMock[PAGE_BUILDER].currentPage
-  ];
+const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages[pageBuilderStateMock[PAGE_BUILDER].currentPage];
 
 describe('isRepeatedStateInHistory', () => {
   it('should be repeated CHANGE_PARENT', () => {

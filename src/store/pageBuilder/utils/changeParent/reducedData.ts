@@ -1,10 +1,6 @@
 // types
 import { TElement } from 'types';
-import {
-  TElementDynamicData,
-  TElementsData,
-  TElementStaticData,
-} from '../../types';
+import { TElementDynamicData, TElementsData, TElementStaticData } from '../../types';
 
 export const reducedData = (
   data: Array<{

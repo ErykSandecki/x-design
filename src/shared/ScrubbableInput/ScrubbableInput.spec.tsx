@@ -33,9 +33,7 @@ describe('ScrubbableInput snapshots', () => {
     );
 
     // action
-    fireEvent.mouseDown(
-      getByE2EAttribute(container, E2EAttribute.scrubbableInput),
-    );
+    fireEvent.mouseDown(getByE2EAttribute(container, E2EAttribute.scrubbableInput));
 
     // result
     expect(asFragment()).toMatchSnapshot();

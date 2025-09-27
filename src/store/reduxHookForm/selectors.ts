@@ -16,35 +16,19 @@ import { TField, TFields, TForm, TReduxHookFormState } from './types';
 import { TFieldValue } from 'core';
 import { TMainState } from 'types/reducers';
 
-export const reduxHookFormStateSelector: Selector<
-  TMainState,
-  TReduxHookFormState
-> = getFp(REDUCER_KEY);
+export const reduxHookFormStateSelector: Selector<TMainState, TReduxHookFormState> = getFp(REDUCER_KEY);
 
-export const formSelectorCreator = (
-  formName: string,
-): Selector<TMainState, TForm> =>
-  createSelector(
-    reduxHookFormStateSelector,
-    getOrFp({} as TForm, `${formName}`),
-  );
+export const formSelectorCreator = (formName: string): Selector<TMainState, TForm> =>
+  createSelector(reduxHookFormStateSelector, getOrFp({} as TForm, `${formName}`));
 
-export const formsSelectorCreator = (
-  formNames: Array<string>,
-): Selector<TMainState, Array<TForm>> =>
-  createSelector(
-    reduxHookFormStateSelector,
-    composeFp(valuesFp, pickFp(formNames)),
-  );
+export const formsSelectorCreator = (formNames: Array<string>): Selector<TMainState, Array<TForm>> =>
+  createSelector(reduxHookFormStateSelector, composeFp(valuesFp, pickFp(formNames)));
 
 export const formAttributesSelectorCreator = (
   attributes: string | Array<string>,
   formName: string,
 ): Selector<TMainState, Partial<TForm> | TForm[keyof TForm]> =>
-  createSelector(
-    formSelectorCreator(formName),
-    isArrayFp(attributes) ? pickFp(attributes) : getFp(attributes),
-  );
+  createSelector(formSelectorCreator(formName), isArrayFp(attributes) ? pickFp(attributes) : getFp(attributes));
 
 export const fieldsSelectorCreator = (
   formName: string,
@@ -52,26 +36,17 @@ export const fieldsSelectorCreator = (
 ): Selector<TMainState, TFields | undefined> =>
   createSelector(
     formSelectorCreator(formName),
-    fieldsNames
-      ? composeFp(pickFp(fieldsNames), getFp('fields'))
-      : getFp(`fields`),
+    fieldsNames ? composeFp(pickFp(fieldsNames), getFp('fields')) : getFp(`fields`),
   );
 
 export const fieldSelectorCreator = <V extends TFieldValue>(
   formName: string,
   name: string,
-): Selector<TMainState, TField<V>> =>
-  createSelector(
-    fieldsSelectorCreator(formName),
-    getOrFp({} as TField<V>, name),
-  );
+): Selector<TMainState, TField<V>> => createSelector(fieldsSelectorCreator(formName), getOrFp({} as TField<V>, name));
 
 export const fieldAttributesSelectorCreator = (
   attributes: string | Array<string>,
   formName: string,
   name: string,
 ): Selector<TMainState, Partial<TField>> | undefined =>
-  createSelector(
-    fieldSelectorCreator(formName, name),
-    isArrayFp(attributes) ? pickFp(attributes) : getFp(attributes),
-  );
+  createSelector(fieldSelectorCreator(formName, name), isArrayFp(attributes) ? pickFp(attributes) : getFp(attributes));

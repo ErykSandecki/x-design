@@ -1,11 +1,7 @@
 import { fireEvent, renderHook } from '@testing-library/react';
 
 // mocks
-import {
-  elementAllDataMock,
-  pageBuilderStateMock,
-  selectedElementMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { elementAllDataMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 import { wholeStateMock } from 'test/mocks/reducer/wholeStateMock';
 
 // hooks
@@ -20,10 +16,7 @@ import { configureStore, store as storeToMock } from 'store';
 // utils
 import { getProviderWrapper } from 'test';
 
-const currentPage =
-  pageBuilderStateMock[PAGE_BUILDER].pages[
-    pageBuilderStateMock[PAGE_BUILDER].currentPage
-  ];
+const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages[pageBuilderStateMock[PAGE_BUILDER].currentPage];
 
 const mockCallBack = jest.fn();
 
@@ -63,19 +56,9 @@ describe('useMouseMoveEvent', () => {
     const store = configureStore(stateMock);
 
     // before
-    renderHook(
-      () =>
-        useMouseUpEvent(
-          false,
-          'test-1',
-          mockCallBack,
-          mockCallBack,
-          mockCallBack,
-        ),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    renderHook(() => useMouseUpEvent(false, 'test-1', mockCallBack, mockCallBack, mockCallBack), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // action
     fireEvent.mouseUp(window);

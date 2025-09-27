@@ -3,7 +3,6 @@ import { OUTLINE } from '../constants';
 
 // types
 import { TElementDynamicData } from 'store/pageBuilder/types';
-import { TRectCoordinates } from 'types';
 
 export const getCornersPosition = (
   height: TElementDynamicData['height']['value'],

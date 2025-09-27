@@ -31,10 +31,7 @@ describe('TextField snapshots', () => {
   it('should render wiht popover', () => {
     // before
     const { asFragment } = render(
-      <TextField
-        idContainer={id}
-        popoverChildren={<PopoverCompound.PopoverSeparator />}
-      />,
+      <TextField idContainer={id} popoverChildren={<PopoverCompound.PopoverSeparator />} />,
     );
 
     // result
@@ -44,10 +41,7 @@ describe('TextField snapshots', () => {
   it('should render with opened popover', () => {
     // before
     const { asFragment, container } = render(
-      <TextField
-        idContainer={id}
-        popoverChildren={<PopoverCompound.PopoverSeparator />}
-      />,
+      <TextField idContainer={id} popoverChildren={<PopoverCompound.PopoverSeparator />} />,
     );
 
     // find

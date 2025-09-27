@@ -1,9 +1,7 @@
 import { ReactNode, useEffect, useState } from 'react';
 
 // components
-import E2EDataAttribute, {
-  TE2EDataAttributeProps,
-} from '../../../E2EDataAttributes/E2EDataAttribute';
+import E2EDataAttribute, { TE2EDataAttributeProps } from '../../../E2EDataAttributes/E2EDataAttribute';
 import ToggleButton from './components/ToggleButton/ToggleButton';
 
 // hooks
@@ -48,13 +46,7 @@ export const ToggleButtonGroup = <V extends TToggleButtonGroupValue>({
   const [value, setValue] = useState(getInitialValue(multiple, defaultValue));
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
-  const onChangeHandler = useEvents<V>(
-    alwaysSelected,
-    multiple,
-    onChange,
-    setValue,
-    value,
-  );
+  const onChangeHandler = useEvents<V>(alwaysSelected, multiple, onChange, setValue, value);
 
   useEffect(() => {
     setValue(getInitialValue(multiple, defaultValue));
@@ -63,14 +55,10 @@ export const ToggleButtonGroup = <V extends TToggleButtonGroupValue>({
   return (
     <E2EDataAttribute type={E2EAttribute.toggleButtonGroup} value={e2eValue}>
       <div
-        className={cx(
-          className,
-          classNamesWithTheme[classNameToggleButton].name,
-          [
-            classNamesWithTheme[classNameToggleButton].modificators.fullWidth,
-            fullWidth,
-          ],
-        )}
+        className={cx(className, classNamesWithTheme[classNameToggleButton].name, [
+          classNamesWithTheme[classNameToggleButton].modificators.fullWidth,
+          fullWidth,
+        ])}
       >
         {toggleButtons.map(({ icon, value: valueButtton }, index) => (
           <ToggleButton<V>

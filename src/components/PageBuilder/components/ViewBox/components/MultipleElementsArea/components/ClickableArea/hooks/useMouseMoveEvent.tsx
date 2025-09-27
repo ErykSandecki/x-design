@@ -6,7 +6,6 @@ import { useDispatch } from 'react-redux';
 import { THROTTLE_WAIT } from '../../../../../constants';
 
 // types
-import { T2DCoordinates } from 'types';
 
 // utils
 import { setElementsCoordinatesHandler } from '../../../../../utils/setElementsCoordinatesHandler';

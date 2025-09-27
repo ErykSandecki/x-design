@@ -5,10 +5,7 @@ import { appInitializerStateMock } from 'test/mocks/reducer/appInitializerMock';
 
 // others
 import { DEFAULT_LANGUAGE } from 'translations';
-import {
-  REDUCER_KEY as APP_INITIALIZER,
-  SET_IS_APP_LOADED,
-} from '../../actionsType';
+import { REDUCER_KEY as APP_INITIALIZER, SET_IS_APP_LOADED } from '../../actionsType';
 
 // store
 import appInitializer from '../../reducer';
@@ -63,9 +60,7 @@ describe('appInitSaga', () => {
 
   it('should catch server error', async () => {
     // mock
-    jest
-      .spyOn(global, 'fetch')
-      .mockImplementation(() => new Promise((_, reject) => reject('error')));
+    jest.spyOn(global, 'fetch').mockImplementation(() => new Promise((_, reject) => reject('error')));
 
     // before
     const sagaTester = new SagaTester({

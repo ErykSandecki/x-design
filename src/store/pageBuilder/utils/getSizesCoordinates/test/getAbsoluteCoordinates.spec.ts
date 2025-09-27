@@ -10,13 +10,7 @@ const mouseCoordinates = { x: 200, y: 100 };
 describe('getAbsoluteCoordinates', () => {
   it(`should return cords east`, () => {
     // before
-    const result = getAbsoluteCoordinates(
-      AnchorResize.east,
-      baseCoordinates,
-      100,
-      100,
-      mouseCoordinates,
-    );
+    const result = getAbsoluteCoordinates(AnchorResize.east, baseCoordinates, 100, 100, mouseCoordinates);
 
     // result
     expect(result).toStrictEqual({
@@ -28,16 +22,10 @@ describe('getAbsoluteCoordinates', () => {
 
   it(`should return cords east reverse`, () => {
     // before
-    const result = getAbsoluteCoordinates(
-      AnchorResize.east,
-      baseCoordinates,
-      100,
-      100,
-      {
-        ...mouseCoordinates,
-        x: -300,
-      },
-    );
+    const result = getAbsoluteCoordinates(AnchorResize.east, baseCoordinates, 100, 100, {
+      ...mouseCoordinates,
+      x: -300,
+    });
 
     // result
     expect(result).toStrictEqual({
@@ -49,13 +37,7 @@ describe('getAbsoluteCoordinates', () => {
 
   it(`should return cords north`, () => {
     // before
-    const result = getAbsoluteCoordinates(
-      AnchorResize.north,
-      baseCoordinates,
-      100,
-      100,
-      mouseCoordinates,
-    );
+    const result = getAbsoluteCoordinates(AnchorResize.north, baseCoordinates, 100, 100, mouseCoordinates);
 
     // result
     expect(result).toStrictEqual({
@@ -67,13 +49,10 @@ describe('getAbsoluteCoordinates', () => {
 
   it(`should return cords north reverse`, () => {
     // before
-    const result = getAbsoluteCoordinates(
-      AnchorResize.north,
-      baseCoordinates,
-      100,
-      100,
-      { ...mouseCoordinates, y: -300 },
-    );
+    const result = getAbsoluteCoordinates(AnchorResize.north, baseCoordinates, 100, 100, {
+      ...mouseCoordinates,
+      y: -300,
+    });
 
     // result
     expect(result).toStrictEqual({
@@ -85,13 +64,7 @@ describe('getAbsoluteCoordinates', () => {
 
   it(`should return cords north east`, () => {
     // before
-    const result = getAbsoluteCoordinates(
-      AnchorResize.northEast,
-      baseCoordinates,
-      100,
-      100,
-      mouseCoordinates,
-    );
+    const result = getAbsoluteCoordinates(AnchorResize.northEast, baseCoordinates, 100, 100, mouseCoordinates);
 
     // result
     expect(result).toStrictEqual({
@@ -103,13 +76,7 @@ describe('getAbsoluteCoordinates', () => {
 
   it(`should return cords north west`, () => {
     // before
-    const result = getAbsoluteCoordinates(
-      AnchorResize.northWest,
-      baseCoordinates,
-      100,
-      100,
-      mouseCoordinates,
-    );
+    const result = getAbsoluteCoordinates(AnchorResize.northWest, baseCoordinates, 100, 100, mouseCoordinates);
 
     // result
     expect(result).toStrictEqual({
@@ -121,13 +88,7 @@ describe('getAbsoluteCoordinates', () => {
 
   it(`should return cords south`, () => {
     // before
-    const result = getAbsoluteCoordinates(
-      AnchorResize.south,
-      baseCoordinates,
-      100,
-      100,
-      mouseCoordinates,
-    );
+    const result = getAbsoluteCoordinates(AnchorResize.south, baseCoordinates, 100, 100, mouseCoordinates);
 
     // result
     expect(result).toStrictEqual({
@@ -139,13 +100,7 @@ describe('getAbsoluteCoordinates', () => {
 
   it(`should return cords south east`, () => {
     // before
-    const result = getAbsoluteCoordinates(
-      AnchorResize.southEast,
-      baseCoordinates,
-      100,
-      100,
-      mouseCoordinates,
-    );
+    const result = getAbsoluteCoordinates(AnchorResize.southEast, baseCoordinates, 100, 100, mouseCoordinates);
 
     // result
     expect(result).toStrictEqual({
@@ -157,13 +112,7 @@ describe('getAbsoluteCoordinates', () => {
 
   it(`should return cords south west`, () => {
     // before
-    const result = getAbsoluteCoordinates(
-      AnchorResize.southWest,
-      baseCoordinates,
-      100,
-      100,
-      mouseCoordinates,
-    );
+    const result = getAbsoluteCoordinates(AnchorResize.southWest, baseCoordinates, 100, 100, mouseCoordinates);
 
     // result
     expect(result).toStrictEqual({
@@ -175,13 +124,7 @@ describe('getAbsoluteCoordinates', () => {
 
   it(`should return cords west`, () => {
     // before
-    const result = getAbsoluteCoordinates(
-      AnchorResize.west,
-      baseCoordinates,
-      100,
-      100,
-      mouseCoordinates,
-    );
+    const result = getAbsoluteCoordinates(AnchorResize.west, baseCoordinates, 100, 100, mouseCoordinates);
 
     // result
     expect(result).toStrictEqual({

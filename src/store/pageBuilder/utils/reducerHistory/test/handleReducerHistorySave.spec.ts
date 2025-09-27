@@ -1,15 +1,8 @@
 // mocks
-import {
-  pageBuilderStateMock,
-  reducerHistoryMock,
-  selectedElementMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { pageBuilderStateMock, reducerHistoryMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
-import {
-  REDUCER_KEY as PAGE_BUILDER,
-  SELECT_ELEMENTS,
-} from '../../../actionsType';
+import { REDUCER_KEY as PAGE_BUILDER, SELECT_ELEMENTS } from '../../../actionsType';
 
 // types
 import { TPageBuilderState } from 'store/pageBuilder/types';
@@ -17,10 +10,7 @@ import { TPageBuilderState } from 'store/pageBuilder/types';
 // utils
 import { handleReducerHistorySave } from '../handleReducerHistorySave';
 
-const currentPage =
-  pageBuilderStateMock[PAGE_BUILDER].pages[
-    pageBuilderStateMock[PAGE_BUILDER].currentPage
-  ];
+const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages[pageBuilderStateMock[PAGE_BUILDER].currentPage];
 
 jest.mock('../../../constants', () => ({
   ...jest.requireActual('../../../constants'),

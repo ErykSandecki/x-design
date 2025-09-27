@@ -16,11 +16,7 @@ const composeEnhancers = composeWithDevTools({
 const sagaMiddleware = createSagaMiddleware();
 
 export const configureStore = (initialState = {}): TStore => {
-  const store = createStore(
-    reducers(),
-    initialState,
-    composeEnhancers(applyMiddleware(sagaMiddleware)),
-  );
+  const store = createStore(reducers(), initialState, composeEnhancers(applyMiddleware(sagaMiddleware)));
 
   sagaMiddlewareRuns(sagaMiddleware);
 

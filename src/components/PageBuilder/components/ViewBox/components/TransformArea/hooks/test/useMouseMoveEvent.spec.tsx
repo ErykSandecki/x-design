@@ -2,11 +2,7 @@ import { fireEvent, renderHook } from '@testing-library/react';
 import { RefObject } from 'react';
 
 // mocks
-import {
-  eventsMock,
-  pageBuilderStateMock,
-  selectedElementMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { eventsMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // hooks
 import { useMouseMoveEvent } from '../useMouseMoveEvent';
@@ -20,7 +16,6 @@ import { configureStore } from 'store';
 
 // types
 import { AnchorResize, AnchorRotate } from 'store/pageBuilder/enums';
-import { T2DCoordinates } from 'types';
 
 // utils
 import { getProviderWrapper } from 'test';

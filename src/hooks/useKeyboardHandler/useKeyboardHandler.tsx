@@ -27,13 +27,9 @@ export const useKeyboardHandler = (
   // const modalId = useSelector(modalIdSelector);
 
   const isPrimaryKey = (key: string): boolean =>
-    [KeyboardKeys.alt, KeyboardKeys.control, KeyboardKeys.shift].includes(
-      key as KeyboardKeys,
-    );
+    [KeyboardKeys.alt, KeyboardKeys.control, KeyboardKeys.shift].includes(key as KeyboardKeys);
 
-  const handleKeyDown = (
-    event: KeyboardEvent | React.KeyboardEvent<HTMLElement>,
-  ): void => {
+  const handleKeyDown = (event: KeyboardEvent | React.KeyboardEvent<HTMLElement>): void => {
     if (stopPropagation) {
       event.stopPropagation();
     }

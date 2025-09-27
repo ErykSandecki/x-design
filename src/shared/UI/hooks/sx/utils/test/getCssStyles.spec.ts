@@ -12,10 +12,7 @@ describe('getCssStyles', () => {
     const keys = enumToArray<string>(Pallete);
 
     // before
-    const result = getCssStyles(
-      { bg: ColorsTheme.blue1, cl: ColorsTheme.blue1 },
-      keys,
-    );
+    const result = getCssStyles({ bg: ColorsTheme.blue1, cl: ColorsTheme.blue1 }, keys);
 
     // result
     expect(result).toBe(`cl: blue1;\nbg: blue1;`);

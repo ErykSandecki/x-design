@@ -28,13 +28,9 @@ describe('biggerThanOther', () => {
       const t = (key: string): any => key;
       const { value } = args;
 
-      const result = biggerThanOther('field', 'translatedField')(
-        t as TT,
-        value,
-        {
-          field: { value: 1 } as TField,
-        },
-      );
+      const result = biggerThanOther('field', 'translatedField')(t as TT, value, {
+        field: { value: 1 } as TField,
+      });
 
       // result
       expect(result).toBe(expectedResult);

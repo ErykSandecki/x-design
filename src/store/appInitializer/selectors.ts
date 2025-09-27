@@ -10,13 +10,12 @@ import { TAppInitializerState } from './types';
 import { TMainState } from 'types/reducers';
 import { Theme } from 'types';
 
-export const appInitializerStateSelector: Selector<
-  TMainState,
-  TAppInitializerState
-> = getFp(REDUCER_KEY);
+export const appInitializerStateSelector: Selector<TMainState, TAppInitializerState> = getFp(REDUCER_KEY);
 
-export const isAppLoadedSelector: Selector<TMainState, boolean> =
-  createSelector(appInitializerStateSelector, getOrFp(false, 'isAppLoaded'));
+export const isAppLoadedSelector: Selector<TMainState, boolean> = createSelector(
+  appInitializerStateSelector,
+  getOrFp(false, 'isAppLoaded'),
+);
 
 export const isPendingSelector: Selector<TMainState, boolean> = createSelector(
   appInitializerStateSelector,
@@ -28,7 +27,4 @@ export const languageSelector: Selector<TMainState, string> = createSelector(
   getOrFp(DEFAULT_LANGUAGE, 'language'),
 );
 
-export const themeSelector: Selector<TMainState, Theme> = createSelector(
-  appInitializerStateSelector,
-  getFp('theme'),
-);
+export const themeSelector: Selector<TMainState, Theme> = createSelector(appInitializerStateSelector, getFp('theme'));

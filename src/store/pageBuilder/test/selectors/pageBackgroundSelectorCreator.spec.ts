@@ -10,17 +10,11 @@ import { pageBackgroundSelectorCreator } from '../../selectors';
 describe('pageBackgroundSelectorCreator', () => {
   it('should return background', () => {
     // before
-    const selectorFunction = (pageBackgroundSelectorCreator('-1') as any)
-      .resultFunc;
+    const selectorFunction = (pageBackgroundSelectorCreator('-1') as any).resultFunc;
 
     // result
-    expect(
-      selectorFunction(
-        pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements.allData,
-      ),
-    ).toStrictEqual(
-      pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements.allData['-1']
-        .background,
+    expect(selectorFunction(pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements.allData)).toStrictEqual(
+      pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements.allData['-1'].background,
     );
   });
 });

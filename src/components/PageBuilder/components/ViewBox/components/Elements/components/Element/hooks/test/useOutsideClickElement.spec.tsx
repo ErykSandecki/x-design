@@ -5,10 +5,7 @@ import { RefObject } from 'react';
 import { useOutsideClickElement } from '../useOutsideClickElement';
 
 // mocks
-import {
-  pageBuilderStateMock,
-  selectedElementMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
@@ -47,20 +44,15 @@ describe('useOutsideClickElement', () => {
     const store = configureStore(stateMock);
 
     // before
-    renderHook(
-      () => useOutsideClickElement(ref, selectedElementMock.id, true),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    renderHook(() => useOutsideClickElement(ref, selectedElementMock.id, true), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // action
     fireEvent.mouseDown(window, { buttons: MouseButton.lmb, shiftKey: true });
 
     // result
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].selectedElements,
-    ).toStrictEqual([selectedElementMock]);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].selectedElements).toStrictEqual([selectedElementMock]);
   });
 
   it('should not be selected if click outside', () => {
@@ -68,19 +60,14 @@ describe('useOutsideClickElement', () => {
     const store = configureStore(stateMock);
 
     // before
-    renderHook(
-      () => useOutsideClickElement(ref, selectedElementMock.id, true),
-      {
-        wrapper: getProviderWrapper(store),
-      },
-    );
+    renderHook(() => useOutsideClickElement(ref, selectedElementMock.id, true), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // action
     fireEvent.mouseDown(window, { buttons: MouseButton.lmb, shiftKey: false });
 
     // result
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].selectedElements,
-    ).toStrictEqual([]);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].selectedElements).toStrictEqual([]);
   });
 });

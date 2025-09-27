@@ -13,10 +13,7 @@ describe('mappingPallete', () => {
     const color = THEME_COLORS[Theme.dark][ColorsTheme.blue1];
 
     // before
-    const result = mappingPallete(
-      { bg: ColorsTheme.blue1, cl: ColorsTheme.blue1 },
-      Theme.dark,
-    );
+    const result = mappingPallete({ bg: ColorsTheme.blue1, cl: ColorsTheme.blue1 }, Theme.dark);
 
     // result
     expect(result).toBe(`color: ${color};\nbackground-color: ${color};`);
@@ -27,10 +24,7 @@ describe('mappingPallete', () => {
     const color = THEME_COLORS[Theme.light][ColorsTheme.blue1];
 
     // before
-    const result = mappingPallete(
-      { bg: ColorsTheme.blue1, cl: ColorsTheme.blue1 },
-      Theme.light,
-    );
+    const result = mappingPallete({ bg: ColorsTheme.blue1, cl: ColorsTheme.blue1 }, Theme.light);
 
     // result
     expect(result).toBe(`color: ${color};\nbackground-color: ${color};`);

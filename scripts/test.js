@@ -34,11 +34,7 @@ function isInMercurialRepository() {
   }
 }
 
-if (
-  !process.env.CI &&
-  argv.indexOf('--watchAll') === -1 &&
-  argv.indexOf('--watchAll=false') === -1
-) {
+if (!process.env.CI && argv.indexOf('--watchAll') === -1 && argv.indexOf('--watchAll=false') === -1) {
   const hasSourceControl = isInGitRepository() || isInMercurialRepository();
 
   argv.push(hasSourceControl ? '--watch' : '--watchAll');

@@ -29,9 +29,7 @@ const generateEnumsSass = (variableName, variables) => {
 fs.readdir(testFolder, (_, files) => {
   files.forEach((file) => {
     const [fileName] = file.split('.');
-    const stream = fs.createWriteStream(
-      `./src/types/enums/scss/${fileName}.ts`,
-    );
+    const stream = fs.createWriteStream(`./src/types/enums/scss/${fileName}.ts`);
     const variables = require(`../config/sass/maps/${fileName}`);
     const variableName = `${fileName[0].toUpperCase()}${fileName.substring(1)}`;
 

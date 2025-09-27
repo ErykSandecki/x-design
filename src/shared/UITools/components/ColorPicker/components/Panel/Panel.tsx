@@ -49,9 +49,7 @@ export const Panel: FC<TPanelProps> = ({
   useEffect(() => {
     /* istanbul ignore next */
     if (ref.current) {
-      const pickerContainer = ref.current.getElementsByClassName(
-        antColorPickerSliderContainerClassName,
-      );
+      const pickerContainer = ref.current.getElementsByClassName(antColorPickerSliderContainerClassName);
 
       setSampleContainer(pickerContainer[0] as HTMLDivElement);
     }
@@ -59,40 +57,18 @@ export const Panel: FC<TPanelProps> = ({
 
   return (
     <E2EDataAttribute type={E2EAttribute.colorPickerPanel}>
-      <div
-        className={cx(classNamesWithTheme[className])}
-        onKeyDown={(event) => event.stopPropagation()}
-        ref={ref}
-      >
+      <div className={cx(classNamesWithTheme[className])} onKeyDown={(event) => event.stopPropagation()} ref={ref}>
         <div className={cx(classNamesWithTheme.header)}>
-          <Tabs
-            activeTab={activeTab}
-            setActiveTab={setActiveTab as TTabsProps['setActiveTab']}
-            tabs={TABS}
-          />
-          <Icon
-            clickable
-            height={11}
-            name="Close"
-            onClick={() => setVisible(false)}
-            width={11}
-          />
+          <Tabs activeTab={activeTab} setActiveTab={setActiveTab as TTabsProps['setActiveTab']} tabs={TABS} />
+          <Icon clickable height={11} name="Close" onClick={() => setVisible(false)} width={11} />
         </div>
         {children}
         {sampleContainer &&
           createPortal(
             <div className={cx(classNamesWithTheme.sample)}>
-              <ButtonIcon
-                e2eValue="sampler"
-                name="Sample"
-                onClick={onClick}
-                selected={activeSampler}
-              />
+              <ButtonIcon e2eValue="sampler" name="Sample" onClick={onClick} selected={activeSampler} />
               {activeSampler && (
-                <ColorSampler
-                  initialMousePosition={mousePosition.current}
-                  onClickColorSampler={onClickColorSampler}
-                />
+                <ColorSampler initialMousePosition={mousePosition.current} onClickColorSampler={onClickColorSampler} />
               )}
             </div>,
             sampleContainer,

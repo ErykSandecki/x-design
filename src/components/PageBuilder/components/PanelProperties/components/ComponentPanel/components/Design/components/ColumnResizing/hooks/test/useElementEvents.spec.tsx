@@ -17,9 +17,7 @@ jest.mock('react-redux', () => ({
 describe('useResizingEvents', () => {
   it(`should return data`, () => {
     // before
-    const { result } = renderHook(() =>
-      useResizingEvents(elementAllDataMock, false, false, false),
-    );
+    const { result } = renderHook(() => useResizingEvents(elementAllDataMock, false, false, false));
 
     // result
     expect(result.current).toStrictEqual({

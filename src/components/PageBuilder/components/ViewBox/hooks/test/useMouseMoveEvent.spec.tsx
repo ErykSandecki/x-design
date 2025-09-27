@@ -16,14 +16,7 @@ describe('useMouseMoveEvent', () => {
   it(`should trigger event toolBeltA`, () => {
     // before
     const { result } = renderHook(() =>
-      useMouseMoveEvent(
-        BASE_3D,
-        BASE_RECT,
-        MouseMode.toolBeltA,
-        BASE_RECT,
-        mockCallBack,
-        mockCallBack,
-      ),
+      useMouseMoveEvent(BASE_3D, BASE_RECT, MouseMode.toolBeltA, BASE_RECT, mockCallBack, mockCallBack),
     );
 
     // action
@@ -36,14 +29,7 @@ describe('useMouseMoveEvent', () => {
   it(`should trigger event default`, () => {
     // before
     const { result } = renderHook(() =>
-      useMouseMoveEvent(
-        BASE_3D,
-        BASE_RECT,
-        MouseMode.default,
-        BASE_RECT,
-        mockCallBack,
-        mockCallBack,
-      ),
+      useMouseMoveEvent(BASE_3D, BASE_RECT, MouseMode.default, BASE_RECT, mockCallBack, mockCallBack),
     );
 
     // action

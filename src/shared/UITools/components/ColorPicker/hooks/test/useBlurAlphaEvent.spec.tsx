@@ -8,9 +8,7 @@ const mockCallBack = jest.fn();
 describe('useBlurAlphaEvent', () => {
   it(`should trigger on change when current value is valid`, () => {
     // before
-    const { result } = renderHook(() =>
-      useBlurAlphaEvent('100', '50', mockCallBack, mockCallBack),
-    );
+    const { result } = renderHook(() => useBlurAlphaEvent('100', '50', mockCallBack, mockCallBack));
 
     // action
     result.current();
@@ -21,9 +19,7 @@ describe('useBlurAlphaEvent', () => {
 
   it(`should change on default value`, () => {
     // before
-    const { result } = renderHook(() =>
-      useBlurAlphaEvent('100', '', mockCallBack, mockCallBack),
-    );
+    const { result } = renderHook(() => useBlurAlphaEvent('100', '', mockCallBack, mockCallBack));
 
     // action
     result.current();

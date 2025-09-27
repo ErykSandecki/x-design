@@ -17,9 +17,7 @@ jest.mock('react-redux', () => ({
 describe('useRotationEvents', () => {
   it(`should return data`, () => {
     // before
-    const { result } = renderHook(() =>
-      useRotationEvents(elementAllDataMock, false, false),
-    );
+    const { result } = renderHook(() => useRotationEvents(elementAllDataMock, false, false));
 
     // result
     expect(result.current).toStrictEqual({

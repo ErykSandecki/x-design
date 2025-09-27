@@ -146,10 +146,7 @@ describe('ColumnAlignment snapshots', () => {
                 },
               },
             },
-            selectElements: [
-              selectedElementMock,
-              { ...selectedElementMock, id: 'test-2' },
-            ],
+            selectElements: [selectedElementMock, { ...selectedElementMock, id: 'test-2' }],
           },
         },
       },
@@ -247,9 +244,7 @@ describe('ColumnAlignment behaviors', () => {
                 },
               },
             },
-            selectedElements: [
-              { ...selectedElementMock, id: childrenId, parentId },
-            ],
+            selectedElements: [{ ...selectedElementMock, id: childrenId, parentId }],
           },
         },
       },
@@ -263,41 +258,21 @@ describe('ColumnAlignment behaviors', () => {
     );
 
     // find
-    const horizontalButtonGroup = getByE2EAttribute(
-      container,
-      E2EAttribute.buttonGroup,
-      'horizontal-alignment',
-    );
+    const horizontalButtonGroup = getByE2EAttribute(container, E2EAttribute.buttonGroup, 'horizontal-alignment');
 
     // action
-    fireEvent.click(
-      getByE2EAttribute(
-        horizontalButtonGroup,
-        E2EAttribute.buttonGroupInput,
-        'align-horizontal-left',
-      ),
-    );
+    fireEvent.click(getByE2EAttribute(horizontalButtonGroup, E2EAttribute.buttonGroupInput, 'align-horizontal-left'));
 
     // find
-    const verticalButtonGroup = getByE2EAttribute(
-      container,
-      E2EAttribute.buttonGroup,
-      'vertical-alignment',
-    );
+    const verticalButtonGroup = getByE2EAttribute(container, E2EAttribute.buttonGroup, 'vertical-alignment');
 
     // action
-    fireEvent.click(
-      getByE2EAttribute(
-        verticalButtonGroup,
-        E2EAttribute.buttonGroupInput,
-        'align-vertical-top',
-      ),
-    );
+    fireEvent.click(getByE2EAttribute(verticalButtonGroup, E2EAttribute.buttonGroupInput, 'align-vertical-top'));
 
     // result
-    expect(
-      store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-2']
-        .alignment,
-    ).toStrictEqual({ horizontal: 'left', vertical: 'top' });
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-2'].alignment).toStrictEqual({
+      horizontal: 'left',
+      vertical: 'top',
+    });
   });
 });

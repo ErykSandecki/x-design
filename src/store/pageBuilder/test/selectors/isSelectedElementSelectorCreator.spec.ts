@@ -7,9 +7,7 @@ import { isSelectedElementSelectorCreator } from '../../selectors';
 describe('isSelectedElementSelectorCreator', () => {
   it('should be selected', () => {
     // before
-    const selectorFunction = (
-      isSelectedElementSelectorCreator(selectedElementMock.id) as any
-    ).resultFunc;
+    const selectorFunction = (isSelectedElementSelectorCreator(selectedElementMock.id) as any).resultFunc;
 
     // result
     expect(selectorFunction([selectedElementMock])).toBe(true);
@@ -17,9 +15,7 @@ describe('isSelectedElementSelectorCreator', () => {
 
   it('should be not selected', () => {
     // before
-    const selectorFunction = (
-      isSelectedElementSelectorCreator(selectedElementMock.id) as any
-    ).resultFunc;
+    const selectorFunction = (isSelectedElementSelectorCreator(selectedElementMock.id) as any).resultFunc;
 
     // result
     expect(selectorFunction([])).toBe(false);

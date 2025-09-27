@@ -59,9 +59,7 @@ import {
   TUpdatePrevStateAction,
 } from './types';
 
-export const addElement = (
-  payload: TAddELementActionPayload,
-): TAddELementAction => ({
+export const addElement = (payload: TAddELementActionPayload): TAddELementAction => ({
   payload,
   type: ADD_ELEMENT,
 });
@@ -74,9 +72,7 @@ export const applyElementsSizeType = (
   type: APPLY_ELEMENTS_SIZE_TYPE,
 });
 
-export const changeAlignment = (
-  payload: TChangeAlignmentAction['payload'],
-): TChangeAlignmentAction => ({
+export const changeAlignment = (payload: TChangeAlignmentAction['payload']): TChangeAlignmentAction => ({
   payload,
   type: CHANGE_ALIGNMENT,
 });
@@ -89,9 +85,7 @@ export const changeBackground = (
   type: CHANGE_BACKGROUND,
 });
 
-export const changeLayout = (
-  layoutType: TChangeLayoutAction['payload'],
-): TChangeLayoutAction => ({
+export const changeLayout = (layoutType: TChangeLayoutAction['payload']): TChangeLayoutAction => ({
   payload: layoutType,
   type: CHANGE_LAYOUT,
 });
@@ -117,9 +111,7 @@ export const fitLayout = (): TFitLayoutAction => ({
   type: FIT_LAYOUT,
 });
 
-export const flipElements = (
-  layoutType: TFlipElementsAction['payload'],
-): TFlipElementsAction => ({
+export const flipElements = (layoutType: TFlipElementsAction['payload']): TFlipElementsAction => ({
   payload: layoutType,
   type: FLIP_ELEMENTS,
 });
@@ -128,9 +120,7 @@ export const reducerHistoryRedo = (): TReducerHistoryRedoAction => ({
   type: REDUCER_HISTORY_REDO,
 });
 
-export const reducerHistorySave = (
-  payload: TReducerHistorySaveAction['payload'],
-): TReducerHistorySaveAction => ({
+export const reducerHistorySave = (payload: TReducerHistorySaveAction['payload']): TReducerHistorySaveAction => ({
   payload,
   type: REDUCER_HISTORY_SAVE,
 });
@@ -149,30 +139,22 @@ export const resizeElement = (
   type: RESIZE_ELEMENT,
 });
 
-export const rotateElements = (
-  angle: TRotateElementsAction['payload'],
-): TRotateElementsAction => ({
+export const rotateElements = (angle: TRotateElementsAction['payload']): TRotateElementsAction => ({
   payload: angle,
   type: ROTATE_ELEMENTS,
 });
 
-export const selectElement = (
-  payload: TSelectElementAction['payload'],
-): TSelectElementAction => ({
+export const selectElement = (payload: TSelectElementAction['payload']): TSelectElementAction => ({
   payload,
   type: SELECT_ELEMENT,
 });
 
-export const selectElements = (
-  payload: TSelectElementsAction['payload'],
-): TSelectElementsAction => ({
+export const selectElements = (payload: TSelectElementsAction['payload']): TSelectElementsAction => ({
   payload,
   type: SELECT_ELEMENTS,
 });
 
-export const setAreCoordinates = (
-  payload: TSetAreaCoordinatesAction['payload'],
-): TSetAreaCoordinatesAction => ({
+export const setAreCoordinates = (payload: TSetAreaCoordinatesAction['payload']): TSetAreaCoordinatesAction => ({
   payload,
   type: SET_AREA_COORDINATES,
 });
@@ -193,9 +175,7 @@ export const setElementsSizes = (
   type: SET_ELEMENTS_SIZES,
 });
 
-export const updateEventsStatus = (
-  payload: TUpdateEventsStatusAction['payload'],
-): TUpdateEventsStatusAction => ({
+export const updateEventsStatus = (payload: TUpdateEventsStatusAction['payload']): TUpdateEventsStatusAction => ({
   payload,
   type: UPDATE_EVENTS_STATUS,
 });
@@ -204,9 +184,7 @@ export const updatePrevState = (): TUpdatePrevStateAction => ({
   type: UPDATE_PREV_STATE,
 });
 
-export const unselectElement = (
-  payload: TUnselectElementAction['payload'],
-): TUnselectElementAction => ({
+export const unselectElement = (payload: TUnselectElementAction['payload']): TUnselectElementAction => ({
   payload,
   type: UNSELECT_ELEMENT,
 });

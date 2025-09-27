@@ -30,24 +30,14 @@ export const useDesignData = (): TUseDesignData => {
   const dynamicData = useSelector(dynamicDataSelector);
   const selectedElements = useSelector(selectedElementsSelector);
   const firstElement = first(selectedElements);
-  const isMixedLayoutType = isMixed(
-    dynamicData,
-    firstElement,
-    'layout.type',
-    selectedElements,
-  );
-  const { position, layout } = useSelector(
-    elementAllDataSelectorCreator(firstElement.id),
-  );
+  const isMixedLayoutType = isMixed(dynamicData, firstElement, 'layout.type', selectedElements);
+  const { position, layout } = useSelector(elementAllDataSelectorCreator(firstElement.id));
 
   const onChangeLayoutType = (): void => {
     if (isMixedLayoutType) {
       dispatch(changeLayout(LayoutType.vertical));
     } else {
-      const targetLayout =
-        layout.type === LayoutType.default
-          ? LayoutType.vertical
-          : LayoutType.default;
+      const targetLayout = layout.type === LayoutType.default ? LayoutType.vertical : LayoutType.default;
 
       dispatch(changeLayout(targetLayout));
     }

@@ -7,7 +7,6 @@ import { selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 import { BASE_2D } from 'shared';
 
 // types
-import { T2DCoordinates } from 'types';
 
 // utils
 import { handleResizeElement } from '../handleResizeElement';

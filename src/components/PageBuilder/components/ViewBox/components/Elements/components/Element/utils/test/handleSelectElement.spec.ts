@@ -14,45 +14,23 @@ const mockCallBack = jest.fn();
 describe('handleSelectElement', () => {
   it(`should add element to selection`, () => {
     // before
-    handleSelectElement(
-      mockCallBack,
-      { shiftKey: true } as MouseEvent,
-      false,
-      false,
-      selectedElementMock,
-    );
+    handleSelectElement(mockCallBack, { shiftKey: true } as MouseEvent, false, false, selectedElementMock);
 
     // result
-    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual(
-      selectedElementMock,
-    );
+    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual(selectedElementMock);
   });
 
   it(`should add element to selection`, () => {
     // before
-    handleSelectElement(
-      mockCallBack,
-      { shiftKey: true } as MouseEvent,
-      true,
-      false,
-      selectedElementMock,
-    );
+    handleSelectElement(mockCallBack, { shiftKey: true } as MouseEvent, true, false, selectedElementMock);
 
     // result
-    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual(
-      selectedElementMock,
-    );
+    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual(selectedElementMock);
   });
 
   it(`should remove element from selection`, () => {
     // before
-    handleSelectElement(
-      mockCallBack,
-      { shiftKey: true } as MouseEvent,
-      false,
-      true,
-      selectedElementMock,
-    );
+    handleSelectElement(mockCallBack, { shiftKey: true } as MouseEvent, false, true, selectedElementMock);
 
     // result
     expect(mockCallBack.mock.calls[0][0].payload).toBe(selectedElementMock.id);
@@ -60,30 +38,16 @@ describe('handleSelectElement', () => {
 
   it(`should add element & overwrite selection`, () => {
     // before
-    handleSelectElement(
-      mockCallBack,
-      { shiftKey: false } as MouseEvent,
-      false,
-      false,
-      selectedElementMock,
-    );
+    handleSelectElement(mockCallBack, { shiftKey: false } as MouseEvent, false, false, selectedElementMock);
 
     // result
     expect(mockCallBack.mock.calls[0][0].type).toBe(SELECT_ELEMENTS);
-    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual([
-      selectedElementMock,
-    ]);
+    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual([selectedElementMock]);
   });
 
   it(`should not trigger any event`, () => {
     // before
-    handleSelectElement(
-      mockCallBack,
-      { shiftKey: false } as MouseEvent,
-      true,
-      true,
-      selectedElementMock,
-    );
+    handleSelectElement(mockCallBack, { shiftKey: false } as MouseEvent, true, true, selectedElementMock);
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(0);

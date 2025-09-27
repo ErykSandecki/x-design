@@ -8,10 +8,7 @@ import { RefsProvider } from 'pages/PageBuilderPage/core/RefsProvider';
 import { useTransformAreaEvents } from '../useTransformAreaEvents';
 
 // mocks
-import {
-  pageBuilderStateMock,
-  selectedElementMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // store
 import { configureStore } from 'store';
@@ -39,22 +36,9 @@ describe('useTransformAreaEvents', () => {
 
     // before
     const { result } = renderHook(
-      () =>
-        useTransformAreaEvents(
-          0,
-          0,
-          elementRef,
-          100,
-          selectedElementMock.id,
-          MouseMode.default,
-          100,
-          100,
-          100,
-        ),
+      () => useTransformAreaEvents(0, 0, elementRef, 100, selectedElementMock.id, MouseMode.default, 100, 100, 100),
       {
-        wrapper: (children) => (
-          <RefsProvider>{getProviderWrapper(store)(children)}</RefsProvider>
-        ),
+        wrapper: (children) => <RefsProvider>{getProviderWrapper(store)(children)}</RefsProvider>,
       },
     );
 

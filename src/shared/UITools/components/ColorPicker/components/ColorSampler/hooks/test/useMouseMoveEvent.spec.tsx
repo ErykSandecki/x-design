@@ -20,16 +20,13 @@ jest.mock('lodash', () => ({
 }));
 
 jest.mock('../../utils/extractColors', () => ({
-  extractColors: async (): Promise<any> =>
-    new Promise((resolve) => resolve([])),
+  extractColors: async (): Promise<any> => new Promise((resolve) => resolve([])),
 }));
 
 describe('useMouseMoveEvent', () => {
   it(`should trigger event`, async () => {
     // before
-    renderHook(() =>
-      useMouseMoveEvent(BASE_2D, mockCallBack, mockCallBack, mockCallBack),
-    );
+    renderHook(() => useMouseMoveEvent(BASE_2D, mockCallBack, mockCallBack, mockCallBack));
 
     // action
     fireEvent.mouseMove(window, { clientX: 0, clientY: 0 });

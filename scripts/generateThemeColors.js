@@ -28,8 +28,7 @@ const getThemeColors = (colors) => {
   return themeVariables;
 };
 
-const getThemeVariable = (theme, themeColors) =>
-  `${theme}: { ${themeColors[theme].sort().join(',')} }`;
+const getThemeVariable = (theme, themeColors) => `${theme}: { ${themeColors[theme].sort().join(',')} }`;
 
 const generateThemeColors = (colors) => {
   const themeColors = getThemeColors(colors);

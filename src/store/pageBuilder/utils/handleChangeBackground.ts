@@ -21,8 +21,7 @@ export const handleChangeBackground = (
           [payload.id]: {
             ...state.pages[state.currentPage].elements.allData[payload.id],
             background: {
-              ...state.pages[state.currentPage].elements.allData[payload.id]
-                .background,
+              ...state.pages[state.currentPage].elements.allData[payload.id].background,
               ...payload.background,
             },
           },
@@ -32,8 +31,7 @@ export const handleChangeBackground = (
           [payload.id]: {
             ...state.pages[state.currentPage].elements.dynamicData[payload.id],
             background: {
-              ...state.pages[state.currentPage].elements.dynamicData[payload.id]
-                .background,
+              ...state.pages[state.currentPage].elements.dynamicData[payload.id].background,
               ...payload.background,
             },
           },

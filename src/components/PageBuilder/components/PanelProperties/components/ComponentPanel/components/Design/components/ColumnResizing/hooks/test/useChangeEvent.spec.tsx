@@ -13,9 +13,7 @@ jest.mock('react-redux', () => ({
 describe('useChangeEvent', () => {
   it(`should trigger change height from text field`, () => {
     // before
-    const { result } = renderHook(() =>
-      useChangeEvent(mockCallBack, mockCallBack),
-    );
+    const { result } = renderHook(() => useChangeEvent(mockCallBack, mockCallBack));
 
     // action
     result.current.onChangeHeight('100', false);
@@ -26,9 +24,7 @@ describe('useChangeEvent', () => {
 
   it(`should trigger change x from scrubbable input`, () => {
     // before
-    const { result } = renderHook(() =>
-      useChangeEvent(mockCallBack, mockCallBack),
-    );
+    const { result } = renderHook(() => useChangeEvent(mockCallBack, mockCallBack));
 
     // action
     result.current.onChangeHeight('100', true);
@@ -43,9 +39,7 @@ describe('useChangeEvent', () => {
 
   it(`should trigger change width from text field`, () => {
     // before
-    const { result } = renderHook(() =>
-      useChangeEvent(mockCallBack, mockCallBack),
-    );
+    const { result } = renderHook(() => useChangeEvent(mockCallBack, mockCallBack));
 
     // action
     result.current.onChangeWidth('100', false);
@@ -56,9 +50,7 @@ describe('useChangeEvent', () => {
 
   it(`should trigger change x from scrubbable input`, () => {
     // before
-    const { result } = renderHook(() =>
-      useChangeEvent(mockCallBack, mockCallBack),
-    );
+    const { result } = renderHook(() => useChangeEvent(mockCallBack, mockCallBack));
 
     // action
     result.current.onChangeWidth('100', true);

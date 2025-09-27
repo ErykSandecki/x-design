@@ -16,17 +16,11 @@
 
 @mixin button-icons-state-styles($color, $state, $variant) {
   @if $state == 'idle' {
-    @include button-icons-apply-property(
-      map.get($--xd-color-map, $variant + '-' + $color)
-    );
+    @include button-icons-apply-property(map.get($--xd-color-map, $variant + '-' + $color));
   } @else if $state == 'disabled' {
-    @include button-icons-apply-property(
-      map.get($--xd-color-map, $variant + '-' + $color + '-disabled')
-    );
+    @include button-icons-apply-property(map.get($--xd-color-map, $variant + '-' + $color + '-disabled'));
   } @else {
-    @include button-icons-apply-property(
-      map.get($--xd-color-map, $variant + '-' + $color + '-hover')
-    );
+    @include button-icons-apply-property(map.get($--xd-color-map, $variant + '-' + $color + '-hover'));
   }
 }
 

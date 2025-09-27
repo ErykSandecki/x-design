@@ -1,12 +1,11 @@
-import { mapValues } from 'lodash';
+import { values } from 'lodash';
 
 // types
 import { ColorsTheme } from 'types/enums/scss/colorsTheme';
-import {
-  TypographyFontStyle,
-  TypographyFontWeight,
-  TypographyVariant,
-} from './enums';
+import { TypographyFontStyle, TypographyFontWeight, TypographyVariant } from './enums';
+
+// utils
+import { composeClassNames } from 'utils';
 
 export const className = 'Typography';
 
@@ -14,25 +13,12 @@ export const classes = {
   className,
 };
 
-export const classNames = {
-  [className]: {
-    name: className,
-    modificators: {
-      gutterBottom: `${className}--gutter-bottom`,
-      noWrap: `${className}--no-wrap`,
-      ...mapValues(ColorsTheme, (color) => `${className}--${color}`),
-      ...mapValues(
-        TypographyVariant,
-        (fontType) => `${className}--${fontType}`,
-      ),
-      ...mapValues(
-        TypographyFontStyle,
-        (fontStyle) => `${className}--${fontStyle}`,
-      ),
-      ...mapValues(
-        TypographyFontWeight,
-        (fontWeight) => `${className}--${fontWeight}`,
-      ),
-    },
-  },
-};
+export const classNames = composeClassNames(className, [
+  className,
+  'gutterBottom',
+  'noWrap',
+  ...values(ColorsTheme),
+  ...values(TypographyVariant),
+  ...values(TypographyFontStyle),
+  ...values(TypographyFontWeight),
+] as const);

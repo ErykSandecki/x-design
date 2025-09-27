@@ -8,10 +8,7 @@ import { TSelectedElement } from 'store/pageBuilder/types';
 
 export type TUseInitializeRef = void;
 
-export const useInitializeRef = (
-  elementRef: RefObject<any>,
-  id: TSelectedElement['id'],
-): TUseInitializeRef => {
+export const useInitializeRef = (elementRef: RefObject<any>, id: TSelectedElement['id']): TUseInitializeRef => {
   const { itemsRefs } = useRefs();
 
   useEffect(() => {

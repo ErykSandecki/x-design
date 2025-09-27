@@ -21,8 +21,6 @@ describe('extractColors', () => {
     const result = await extractColors(0, 0);
 
     // result
-    expect(result).toStrictEqual(
-      Array.from(Array(49), () => ({ a: 0, b: 0, g: 0, r: 0 })),
-    );
+    expect(result).toStrictEqual(Array.from(Array(49), () => ({ a: 0, b: 0, g: 0, r: 0 })));
   });
 });

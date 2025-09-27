@@ -7,13 +7,8 @@ import { eventsSelector } from 'store/pageBuilder/selectors';
 import { store } from 'store';
 
 export const finishSetElementsCoordinates = (dispatch: Dispatch): void => {
-  const { draggableElements, possibleIndexPosition, possibleParent } =
-    eventsSelector(store.getState());
+  const { draggableElements, possibleIndexPosition, possibleParent } = eventsSelector(store.getState());
 
   dispatch(updateEventsStatus({ isMultipleMoving: false }));
-  defer(() =>
-    dispatch(
-      changeParent(draggableElements, possibleIndexPosition, possibleParent),
-    ),
-  );
+  defer(() => dispatch(changeParent(draggableElements, possibleIndexPosition, possibleParent)));
 };

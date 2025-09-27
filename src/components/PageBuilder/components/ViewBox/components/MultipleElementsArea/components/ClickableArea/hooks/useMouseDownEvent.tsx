@@ -5,16 +5,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { areParentsTheSameSelector } from 'store/pageBuilder/selectors';
 
 // types
-import { MouseButton, T2DCoordinates, TElement } from 'types';
+import { MouseButton, TElement } from 'types';
 
 // utils
 import { initSetElementsCoordinates } from '../utils/initSetElementsCoordinates';
 import { initStatesOnMouseDown } from '../utils/initStatesOnMouseDown';
 
-export type TUseMouseDownEvent = (
-  event: MouseEvent,
-  id: TElement['id'],
-) => void;
+export type TUseMouseDownEvent = (event: MouseEvent, id: TElement['id']) => void;
 
 export const useMouseDownEvent = (
   cursorPosition: RefObject<T2DCoordinates>,
@@ -29,13 +26,7 @@ export const useMouseDownEvent = (
     if (event.buttons === MouseButton.lmb && areParentsTheSame) {
       event.stopPropagation();
       initSetElementsCoordinates(cursorPosition, dispatch, event, true);
-      initStatesOnMouseDown(
-        dispatch,
-        event,
-        id,
-        setIsPressing,
-        setPossibleElementToSelect,
-      );
+      initStatesOnMouseDown(dispatch, event, id, setIsPressing, setPossibleElementToSelect);
     }
   };
 

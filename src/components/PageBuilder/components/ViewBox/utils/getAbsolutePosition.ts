@@ -9,7 +9,7 @@ import { store } from 'store';
 
 // types
 import { TContext } from 'pages/PageBuilderPage/core/types';
-import { TElement, TRectCoordinates } from 'types';
+import { TElement } from 'types';
 
 export const getAbsolutePosition = (
   id: TElement['id'],

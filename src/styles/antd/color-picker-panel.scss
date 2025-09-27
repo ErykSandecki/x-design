@@ -99,11 +99,7 @@
                       display: none;
                     }
 
-                    &:has(
-                        .ant-select-item:hover:not(
-                            .ant-select-item-option-selected
-                          )
-                      )
+                    &:has(.ant-select-item:hover:not(.ant-select-item-option-selected))
                       .ant-select-item-option-selected {
                       background: none;
                     }

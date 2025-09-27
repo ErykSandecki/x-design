@@ -4,17 +4,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
 // others
-import {
-  SET_PENDING_FIELD,
-  UPDATE_ASYNC_ERRORS,
-  UPDATE_SYNC_ERRORS,
-} from 'store/reduxHookForm/actionsType';
+import { SET_PENDING_FIELD, UPDATE_ASYNC_ERRORS, UPDATE_SYNC_ERRORS } from 'store/reduxHookForm/actionsType';
 
 // store
-import {
-  fieldsSelectorCreator,
-  formAttributesSelectorCreator,
-} from 'store/reduxHookForm/selectors';
+import { fieldsSelectorCreator, formAttributesSelectorCreator } from 'store/reduxHookForm/selectors';
 
 // types
 import { TAsyncValidator, TFieldValue, TSyncValidator } from '../../../types';
@@ -23,10 +16,7 @@ import { TMainState } from 'types/reducers';
 
 // utils
 import { dispatchFieldHandler } from '../../../utils/dispatchFieldHandler';
-import {
-  getErrorsFromAsyncValidators,
-  getErrorsFromSyncValidators,
-} from '../../../utils/validators';
+import { getErrorsFromAsyncValidators, getErrorsFromSyncValidators } from '../../../utils/validators';
 
 export type TUseValidator = {
   getAsyncErrors: (value: TFieldValue) => Promise<Array<string>>;
@@ -46,33 +36,22 @@ export const useValidators = (
   const { t } = useTranslation();
   const dispatchField = dispatchFieldHandler(useDispatch(), formName, name);
 
-  const asyncTimeDelay = (useSelector(
-    formAttributesSelectorCreator('asyncTimeDelay', formName),
-  ) || 0) as number;
+  const asyncTimeDelay = (useSelector(formAttributesSelectorCreator('asyncTimeDelay', formName)) || 0) as number;
 
-  const fields: { [key: string]: TField } | undefined = useSelector(
-    (state: TMainState) => {
-      if (subscriptionFields.length) {
-        return fieldsSelectorCreator(formName, subscriptionFields)(state);
-      }
+  const fields: { [key: string]: TField } | undefined = useSelector((state: TMainState) => {
+    if (subscriptionFields.length) {
+      return fieldsSelectorCreator(formName, subscriptionFields)(state);
+    }
 
-      return undefined;
-    },
-  );
+    return undefined;
+  });
 
-  const subscriptionFieldsValues = subscriptionFields.map(
-    (fieldName) => fields && fields[fieldName]?.value,
-  );
+  const subscriptionFieldsValues = subscriptionFields.map((fieldName) => fields && fields[fieldName]?.value);
 
   const getAsyncErrors = async (value: TFieldValue): Promise<Array<string>> => {
     dispatchField({ isPending: true }, SET_PENDING_FIELD);
 
-    return await getErrorsFromAsyncValidators(
-      asyncValidators,
-      value,
-      fields,
-      t,
-    );
+    return await getErrorsFromAsyncValidators(asyncValidators, value, fields, t);
   };
 
   const getSyncErrors = (value: TFieldValue): Array<string> =>

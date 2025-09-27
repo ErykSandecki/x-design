@@ -13,10 +13,7 @@ module.exports = {
           return [true];
         }
 
-        return [
-          false,
-          'The name of the commit must look according to the formula: XD: <message>.',
-        ];
+        return [false, 'The name of the commit must look according to the formula: XD: <message>.'];
       },
     ],
     'header-max-length': [0],

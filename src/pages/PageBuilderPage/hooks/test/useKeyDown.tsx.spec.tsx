@@ -7,10 +7,7 @@ import { useKeyDown } from '../useKeyDown';
 import { pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // store
-import {
-  canRedoReduxHistorySelector,
-  canUndoReduxHistorySelector,
-} from 'store/pageBuilder/selectors';
+import { canRedoReduxHistorySelector, canUndoReduxHistorySelector } from 'store/pageBuilder/selectors';
 import { configureStore } from 'store';
 
 // types

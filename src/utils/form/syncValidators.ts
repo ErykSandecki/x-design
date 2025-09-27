@@ -8,13 +8,4 @@ import { password } from './sync-validators/password';
 import { required } from './sync-validators/required';
 import { stepBetweenNumbers } from './sync-validators/stepBetweenNumbers';
 
-export {
-  biggerThanOther,
-  email,
-  lessThanOther,
-  minimumValue,
-  name,
-  password,
-  required,
-  stepBetweenNumbers,
-};
+export { biggerThanOther, email, lessThanOther, minimumValue, name, password, required, stepBetweenNumbers };

@@ -1,5 +1,5 @@
 // types
-import { TElement, TRectCoordinates } from 'types';
+import { TElement } from 'types';
 
 export type TCoordinatesData = {
   elementsCordinates: Array<{

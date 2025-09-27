@@ -1,9 +1,4 @@
-export const getValue = (
-  disabledAll: boolean,
-  hasAlignment: boolean,
-  isMultiple: boolean,
-  value: string,
-): string => {
+export const getValue = (disabledAll: boolean, hasAlignment: boolean, isMultiple: boolean, value: string): string => {
   if (disabledAll) {
     return 'Locked';
   }

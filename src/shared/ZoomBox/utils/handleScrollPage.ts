@@ -1,8 +1,5 @@
 import { WheelEvent } from 'react';
 
-// types
-import { T3DCoordinates } from 'types';
-
 // utils
 import { isControlPressed } from 'utils';
 
