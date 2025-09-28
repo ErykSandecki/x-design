@@ -1,35 +1,70 @@
+import { first, size } from 'lodash';
 import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 
 // hooks
 import { useBlurEvent } from './useBlurEvent';
 import { useChangeEvent } from './useChangeEvent';
 import { useMouseDownEvent } from './useMouseDownEvent';
 
+// store
+import {
+  areParentsTheSameSelector,
+  dynamicDataSelector,
+  elementAllDataSelectorCreator,
+  selectedElementsSelector,
+} from 'store/pageBuilder/selectors';
+
 // types
-import { TElement } from 'types';
+import { TSelectedElement } from 'store/pageBuilder/types';
+
+// utils
+import { hasSomeAlignment } from '../utils/hasSomeAlignment';
+import { isMixed } from '../../../utils/isMixed';
 
 type TUsePositionEvents = {
+  disabledAll: boolean;
+  disabledX: boolean;
+  disabledY: boolean;
+  firstElement: TSelectedElement;
+  hasAlignmentHorizontal: boolean;
+  hasAlignmentVertical: boolean;
+  isMultiple: boolean;
   onBlurX: () => void;
   onBlurY: () => void;
   onChangeX: (value: string, isScrubbableInput?: boolean) => void;
   onChangeY: (value: string, isScrubbableInput?: boolean) => void;
   onMouseDown: () => void;
+  showConstrains: boolean;
+  typeInputX: HTMLInputElement['type'];
+  typeInputY: HTMLInputElement['type'];
   x: string;
   y: string;
 };
 
-export const usePositionEvents = (
-  element: TElement,
-  isMixedX: boolean,
-  isMixedY: boolean,
-  isMultiple: boolean,
-  isRelative: boolean,
-): TUsePositionEvents => {
-  const { alignment, coordinates, parentId, position } = element;
+export const usePositionEvents = (): TUsePositionEvents => {
   const [x, setX] = useState('');
   const [y, setY] = useState('');
+  const selectedElements = useSelector(selectedElementsSelector);
+  const firstElement = first(selectedElements);
+  const element = useSelector(elementAllDataSelectorCreator(firstElement.id));
+  const { alignment, coordinates, parentId, position } = element;
+  const areParentsTheSame = useSelector(areParentsTheSameSelector);
+  const dynamicData = useSelector(dynamicDataSelector);
+  const hasAlignmentHorizontal = hasSomeAlignment('horizontal', dynamicData, selectedElements);
+  const hasAlignmentVertical = hasSomeAlignment('vertical', dynamicData, selectedElements);
+  const isRelative = selectedElements.some(({ position }) => position === 'relative');
+  const isMixedX = isMixed(dynamicData, firstElement, 'coordinates.x', selectedElements);
+  const isMixedY = isMixed(dynamicData, firstElement, 'coordinates.y', selectedElements);
+  const isMultiple = size(selectedElements) > 1;
   const onBlurEvents = useBlurEvent(element, setX, setY, x, y);
   const onChangeEvents = useChangeEvent(isMultiple, isMixedX, isMixedY, setX, setY);
+  const disabledAll = (hasAlignmentHorizontal || hasAlignmentVertical) && isMultiple;
+  const disabledX = hasAlignmentHorizontal || isRelative || disabledAll;
+  const disabledY = hasAlignmentVertical || isRelative || disabledAll;
+  const typeInputX = isMixedX || hasAlignmentHorizontal ? 'text' : 'number';
+  const typeInputY = isMixedY || hasAlignmentVertical ? 'text' : 'number';
+  const showConstrains = (hasAlignmentHorizontal || hasAlignmentVertical) && areParentsTheSame;
 
   useEffect(() => {
     if (!isRelative) {
@@ -46,7 +81,17 @@ export const usePositionEvents = (
   return {
     ...onBlurEvents,
     ...onChangeEvents,
+    disabledAll,
+    disabledX,
+    disabledY,
+    firstElement,
+    hasAlignmentHorizontal,
+    hasAlignmentVertical,
+    isMultiple,
     onMouseDown: useMouseDownEvent(),
+    showConstrains,
+    typeInputX,
+    typeInputY,
     x,
     y,
   };

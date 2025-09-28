@@ -7,8 +7,8 @@ import { setElementsCoordinates } from 'store/pageBuilder/actions';
 import { canChangeValue } from '../utils/canChangeValue';
 
 export type TUseChangeEvent = {
-  onChangeX: (value: string, isScrubbableInput?: boolean) => void;
-  onChangeY: (value: string, isScrubbableInput?: boolean) => void;
+  onChangeX: TFunc<[string, boolean?]>;
+  onChangeY: TFunc<[string, boolean?]>;
 };
 
 export const useChangeEvent = (
@@ -33,6 +33,7 @@ export const useChangeEvent = (
 
     updateStore(parseFloat(value), NaN, isScrubbableInput);
   };
+
   const handleChangeY = (value: string, isScrubbableInput: boolean): void => {
     if (canChangeValue(isMixedY, isMultiple, isScrubbableInput)) {
       setY(value);

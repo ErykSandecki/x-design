@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
 // components
+import ColumnHeaderButtonIcons from './ColumnHeaderButtonIcons';
 import { Small, UITools } from 'shared';
 
 // others
@@ -19,9 +20,7 @@ const ColumnHeader: FC = () => {
   const { t } = useTranslation();
 
   return (
-    <UITools.SectionColumn
-      buttonsIcon={[<UITools.ButtonIcon key={0} name="HtmlTag" />, <UITools.ButtonIcon key={1} name="Component" />]}
-    >
+    <UITools.SectionColumn buttonsIcon={ColumnHeaderButtonIcons()}>
       <Small>
         {t(`${translationNameSpace}.${text}`, {
           amount: amountElements,

@@ -7,14 +7,14 @@ import { setElementsCoordinates } from 'store/pageBuilder/actions';
 import { TElement } from 'types';
 
 export type TUseBlurEvent = {
-  onBlurX: () => void;
-  onBlurY: () => void;
+  onBlurX: TFunc;
+  onBlurY: TFunc;
 };
 
 export const useBlurEvent = (
   element: TElement,
-  setX: (value: string) => void,
-  setY: (value: string) => void,
+  setX: TFunc<[string]>,
+  setY: TFunc<[string]>,
   x: string,
   y: string,
 ): TUseBlurEvent => {

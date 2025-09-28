@@ -6,7 +6,7 @@ import { changeAlignment } from 'store/pageBuilder/actions';
 // types
 import { AlignmentVertical } from 'types';
 
-type TUseClickVerticalAlignmentEvent = (vertical: AlignmentVertical) => void;
+export type TUseClickVerticalAlignmentEvent = TFunc<[AlignmentVertical]>;
 
 export const useClickVerticalAlignmentEvent = (): TUseClickVerticalAlignmentEvent => {
   const dispatch = useDispatch();

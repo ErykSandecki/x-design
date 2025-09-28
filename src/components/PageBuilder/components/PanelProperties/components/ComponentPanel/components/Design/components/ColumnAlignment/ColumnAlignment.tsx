@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
 // components
+import ColumnAlignmentButtonsGroup from './ColumnAlignmentButtonsGroup';
 import { UITools } from 'shared';
 
 // hooks
@@ -22,7 +23,9 @@ import {
 
 // types
 import { GridColumnType } from 'shared/UITools/components/Section/components/SectionColumn/enums';
-import { TButtonGroup } from 'shared/UITools/components/ButtonGroup/types';
+
+// utils
+import { isBaseParent } from 'utils';
 
 const ColumnAlignment: FC = () => {
   const areParentsTheSame = useSelector(areParentsTheSameSelector);
@@ -32,7 +35,9 @@ const ColumnAlignment: FC = () => {
   const onClickHorizontalAlignment = useClickHorizontalAlignmentEvent();
   const onClickVerticalAlignment = useClickVerticalAlignmentEvent();
   const { t } = useTranslation();
-  const disabled = element.parentId === '-1' || element.position === 'relative' || !areParentsTheSame;
+  const baseParent = isBaseParent(element.parentId);
+  const isRelative = element.position === 'relative';
+  const disabled = baseParent || isRelative || !areParentsTheSame;
 
   return (
     <UITools.SectionColumn
@@ -40,27 +45,17 @@ const ColumnAlignment: FC = () => {
       labels={[t(`${translationNameSpace}.label`)]}
       withMargin
     >
-      <UITools.ButtonGroup
-        buttons={HORIZONTAL_BUTTONS.map(
-          ({ key, name }) =>
-            ({
-              disabled,
-              name,
-              onClick: () => onClickHorizontalAlignment(key),
-            }) as TButtonGroup,
-        )}
+      <ColumnAlignmentButtonsGroup
+        buttonGroups={HORIZONTAL_BUTTONS}
+        disabled={disabled}
         e2eValue="horizontal-alignment"
+        onClick={onClickHorizontalAlignment}
       />
-      <UITools.ButtonGroup
-        buttons={VERTICAL_BUTTONS.map(
-          ({ key, name }) =>
-            ({
-              disabled,
-              name,
-              onClick: () => onClickVerticalAlignment(key),
-            }) as TButtonGroup,
-        )}
+      <ColumnAlignmentButtonsGroup
+        buttonGroups={VERTICAL_BUTTONS}
+        disabled={disabled}
         e2eValue="vertical-alignment"
+        onClick={onClickVerticalAlignment}
       />
     </UITools.SectionColumn>
   );
