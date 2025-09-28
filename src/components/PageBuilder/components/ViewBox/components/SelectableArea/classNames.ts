@@ -1,6 +1,6 @@
+// utils
+import { composeClassNames } from 'utils';
+
 export const className = 'SelectableArea';
 
-export const classNames = {
-  [className]: className,
-  area: `${className}__area`,
-};
+export const classNames = composeClassNames(className, [className] as const, ['area'] as const);

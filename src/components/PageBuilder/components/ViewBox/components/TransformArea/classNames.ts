@@ -1,22 +1,16 @@
-import { mapValues } from 'lodash';
+import { values } from 'lodash';
 
 // types
 import { AnchorResize, AnchorRotate } from 'store/pageBuilder/enums';
 
+// utils
+import { composeClassNames } from 'utils';
+
 export const className = 'TransformArea';
 
-export const classNames = {
-  [className]: className,
-  anchorResize: {
-    name: `${className}__anchor-resize`,
-    modificators: {
-      ...mapValues(AnchorResize, (anchor) => `${className}__anchor-resize--${anchor}`),
-    },
-  },
-  anchorRotate: {
-    name: `${className}__anchor-rotate`,
-    modificators: {
-      ...mapValues(AnchorRotate, (anchor) => `${className}__anchor-rotate--${anchor}`),
-    },
-  },
-};
+export const classNames = composeClassNames(
+  className,
+  [className] as const,
+  ['anchorResize', ...values(AnchorResize)] as const,
+  ['anchorRotate', ...values(AnchorRotate)] as const,
+);

@@ -1,8 +1,0 @@
-@import '../../../../styles/z-indexes';
-
-.MultipleElementsArea {
-  &__shadow-element {
-    position: absolute;
-    z-index: $--xd-zindex-multiple-area;
-  }
-}
