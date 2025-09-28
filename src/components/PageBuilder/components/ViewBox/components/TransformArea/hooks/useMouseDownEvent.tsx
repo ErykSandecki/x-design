@@ -14,8 +14,8 @@ import { handleInitResizeElement } from '../utils/handleInitResizeElement';
 import { handleInitRotateElement } from '../utils/handleInitRotateElement';
 
 export type TUseMouseDownEvent = {
-  onMouseDownAnchorResize: (anchor: AnchorResize, event: MouseEvent) => void;
-  onMouseDownAnchorRotate: (anchor: AnchorRotate, event: MouseEvent) => void;
+  onMouseDownAnchorResize: TFunc<[AnchorResize, MouseEvent]>;
+  onMouseDownAnchorRotate: TFunc<[AnchorRotate, MouseEvent]>;
 };
 
 export const useMouseDownEvent = (

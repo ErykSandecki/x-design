@@ -6,8 +6,6 @@ import { selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 // others
 import { BASE_2D } from 'shared';
 
-// types
-
 // utils
 import { handleResizeElement } from '../handleResizeElement';
 

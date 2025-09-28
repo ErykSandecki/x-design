@@ -13,9 +13,9 @@ export type TUseMouseUpEvent = void;
 export const useMouseUpEvent = (
   isMoving: boolean,
   possibleElementToSelect: string,
-  setIsMoving: (isMoving: boolean) => void,
-  setIsPressing: (isPressing: boolean) => void,
-  setPossibleElementToSelect: (possibleElementToSelect: TElement['id']) => void,
+  setIsMoving: TFunc<[boolean]>,
+  setIsPressing: TFunc<[boolean]>,
+  setPossibleElementToSelect: TFunc<[TElement['id']]>,
 ): TUseMouseUpEvent => {
   const dispatch = useDispatch();
 

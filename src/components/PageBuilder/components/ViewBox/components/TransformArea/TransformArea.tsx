@@ -45,8 +45,8 @@ const TransformArea: FC<TTransformAreaProps> = ({
   x,
   y,
 }) => {
-  const cursorAngle = angle - counterAngle;
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
+
   const {
     onMouseDownAnchorResize,
     onMouseDownAnchorRotate,
@@ -54,7 +54,7 @@ const TransformArea: FC<TTransformAreaProps> = ({
     onMouseEnterAnchorRotate,
     onMouseLeaveAnchorResize,
     onMouseLeaveAnchorRotate,
-  } = useTransformAreaEvents(angle, cursorAngle, elementRef, height, id, moseMode, width, x, y);
+  } = useTransformAreaEvents(angle, counterAngle, elementRef, height, id, moseMode, width, x, y);
 
   return (
     <div className={cx(classNamesWithTheme[className])} style={{ height, width }}>

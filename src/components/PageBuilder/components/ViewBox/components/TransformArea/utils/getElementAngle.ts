@@ -1,7 +1,5 @@
 import { RefObject } from 'react';
 
-// types
-
 export const getElementCenter = (elementRef: RefObject<HTMLElement>): T2DCoordinates => {
   const rect = elementRef.current.getBoundingClientRect();
   const x = rect.left + rect.width / 2;

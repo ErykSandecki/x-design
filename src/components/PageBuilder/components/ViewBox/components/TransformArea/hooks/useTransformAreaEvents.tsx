@@ -27,7 +27,7 @@ export type TUseTransformAreaEvents = TUseMouseDownEvent & TUseMouseEnterEvent &
 
 export const useTransformAreaEvents = (
   angle: TElement['angle'],
-  cursorAngle: number,
+  counterAngle: number,
   elementRef: RefObject<HTMLDivElement>,
   height: TElement['height']['value'],
   id: TElement['id'],
@@ -37,6 +37,7 @@ export const useTransformAreaEvents = (
   y: TElement['coordinates']['y'],
 ): TUseTransformAreaEvents => {
   const { zoomBoxRef } = useRefs();
+  const cursorAngle = angle - counterAngle;
   const cursorBaseAngle = useRef(0);
   const cursorOffsetAngle = useRef(0);
   const cursorPosition = useRef(BASE_2D);

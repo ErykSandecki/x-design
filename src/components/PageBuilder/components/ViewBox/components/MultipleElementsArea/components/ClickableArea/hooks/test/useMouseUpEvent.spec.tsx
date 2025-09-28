@@ -17,7 +17,6 @@ import { configureStore, store as storeToMock } from 'store';
 import { getProviderWrapper } from 'test';
 
 const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages[pageBuilderStateMock[PAGE_BUILDER].currentPage];
-
 const mockCallBack = jest.fn();
 
 const stateMock = {

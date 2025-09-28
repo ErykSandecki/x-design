@@ -19,18 +19,16 @@ export const handleResizeElement = (
   x: TElement['coordinates']['x'],
   y: TElement['coordinates']['y'],
 ): void => {
-  const z = areaAxisSelectorCreator('z')(store.getState());
   const { current } = cursorPosition;
-  const baseCoordinates = {
-    x1: x,
-    x2: x + parseInt(width as string),
-    y1: y,
-    y2: y + parseInt(height as string),
-  };
-  const mousePosition = {
-    x: Math.round(event.clientX / z - current.x / z),
-    y: Math.round(event.clientY / z - current.y / z),
-  };
+  const z = areaAxisSelectorCreator('z')(store.getState());
+  const x1 = x;
+  const x2 = x + parseInt(width as string);
+  const y1 = y;
+  const y2 = y + parseInt(height as string);
+  const mouseX = Math.round(event.clientX / z - current.x / z);
+  const mouseY = Math.round(event.clientY / z - current.y / z);
+  const mousePosition = { x: mouseX, y: mouseY };
+  const baseCoordinates = { x1, x2, y1, y2 };
 
   dispatch(resizeElement(baseCoordinates, height, id, mousePosition, width));
 };

@@ -3,8 +3,6 @@ import { MouseEvent, RefObject } from 'react';
 // others
 import { BASE_2D } from 'shared';
 
-// types
-
 // utils
 import { handleInitResizeElement } from '../handleInitResizeElement';
 

@@ -31,13 +31,11 @@ export const useMouseMoveEvent = (
 
   const handleMouseMoveAnchorResize = (event: MouseEvent): void => {
     event.stopPropagation();
-
     handleResizeElement(cursorPosition, dispatch, event, height, id, width, x, y);
   };
 
   const handleMouseMoveAnchorRotate = (event: MouseEvent): void => {
     event.stopPropagation();
-
     handleRotateElement(cursorOffsetAngle, dispatch, elementRef, event);
   };
 

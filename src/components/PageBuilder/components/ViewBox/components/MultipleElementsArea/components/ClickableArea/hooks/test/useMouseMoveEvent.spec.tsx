@@ -13,8 +13,6 @@ import { BASE_2D } from 'shared';
 // store
 import { configureStore } from 'store';
 
-// types
-
 // utils
 import { getProviderWrapper } from 'test';
 

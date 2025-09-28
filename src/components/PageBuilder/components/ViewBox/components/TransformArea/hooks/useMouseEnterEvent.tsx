@@ -7,8 +7,8 @@ import { getAnchorResizeCursorAngle } from '../utils/getAnchorResizeCursorAngle'
 import { getAnchorRotateCursorAngle } from '../utils/getAnchorRotateCursorAngle';
 
 export type TUseMouseEnterEvent = {
-  onMouseEnterAnchorResize: (anchor: AnchorResize) => void;
-  onMouseEnterAnchorRotate: (anchor: AnchorRotate) => void;
+  onMouseEnterAnchorResize: TFunc<[AnchorResize]>;
+  onMouseEnterAnchorRotate: TFunc<[AnchorRotate]>;
 };
 
 export const useMouseEnterEvent = (

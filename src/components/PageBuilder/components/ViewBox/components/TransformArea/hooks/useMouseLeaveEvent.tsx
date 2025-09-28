@@ -2,8 +2,8 @@
 import { TUseChangeCursor } from 'hooks';
 
 export type TUseMouseLeaveEvent = {
-  onMouseLeaveAnchorResize: () => void;
-  onMouseLeaveAnchorRotate: () => void;
+  onMouseLeaveAnchorResize: TFunc;
+  onMouseLeaveAnchorRotate: TFunc;
 };
 
 export const useMouseLeaveEvent = (

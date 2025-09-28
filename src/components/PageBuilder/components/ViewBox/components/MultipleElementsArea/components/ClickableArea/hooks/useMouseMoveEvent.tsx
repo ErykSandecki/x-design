@@ -5,8 +5,6 @@ import { useDispatch } from 'react-redux';
 // others
 import { THROTTLE_WAIT } from '../../../../../constants';
 
-// types
-
 // utils
 import { setElementsCoordinatesHandler } from '../../../../../utils/setElementsCoordinatesHandler';
 
@@ -15,7 +13,7 @@ export type TUseMouseDownEvent = void;
 export const useMouseMoveEvent = (
   cursorPosition: RefObject<T2DCoordinates>,
   isPressing: boolean,
-  setIsMoving: (isMoving: boolean) => void,
+  setIsMoving: TFunc<[boolean]>,
 ): TUseMouseDownEvent => {
   const dispatch = useDispatch();
 

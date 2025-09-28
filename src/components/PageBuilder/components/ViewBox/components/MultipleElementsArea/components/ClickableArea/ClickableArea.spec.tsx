@@ -33,7 +33,7 @@ describe('ClickableArea snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <ClickableArea elementsCordinates={[{ coordinates: BASE_RECT, id: '1' }]} outlineCoordinates={BASE_RECT} />
+        <ClickableArea elementsCoordinates={[{ coordinates: BASE_RECT, id: '1' }]} outlineCoordinates={BASE_RECT} />
       </Provider>,
     );
 
@@ -57,7 +57,7 @@ describe('ClickableArea snapshots', () => {
     // before
     const { asFragment } = render(
       <Provider store={store}>
-        <ClickableArea elementsCordinates={[{ coordinates: BASE_RECT, id: '1' }]} outlineCoordinates={BASE_RECT} />
+        <ClickableArea elementsCoordinates={[{ coordinates: BASE_RECT, id: '1' }]} outlineCoordinates={BASE_RECT} />
       </Provider>,
     );
 
@@ -74,7 +74,7 @@ describe('ClickableArea behaviors', () => {
     // before
     const { container } = render(
       <Provider store={store}>
-        <ClickableArea elementsCordinates={[{ coordinates: BASE_RECT, id: '1' }]} outlineCoordinates={BASE_RECT} />
+        <ClickableArea elementsCoordinates={[{ coordinates: BASE_RECT, id: '1' }]} outlineCoordinates={BASE_RECT} />
       </Provider>,
     );
 
@@ -97,7 +97,7 @@ describe('ClickableArea behaviors', () => {
     // before
     const { container } = render(
       <Provider store={store}>
-        <ClickableArea elementsCordinates={[{ coordinates: BASE_RECT, id: '1' }]} outlineCoordinates={BASE_RECT} />
+        <ClickableArea elementsCoordinates={[{ coordinates: BASE_RECT, id: '1' }]} outlineCoordinates={BASE_RECT} />
       </Provider>,
     );
 

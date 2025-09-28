@@ -23,11 +23,11 @@ import { E2EAttribute } from 'types';
 import { TCoordinatesData } from '../../types';
 
 export type TClickableAreaProps = {
-  elementsCordinates: TCoordinatesData['elementsCoordinates'];
+  elementsCoordinates: TCoordinatesData['elementsCoordinates'];
   outlineCoordinates: TRectCoordinates;
 };
 
-const ClickableArea: FC<TClickableAreaProps> = ({ elementsCordinates, outlineCoordinates }) => {
+const ClickableArea: FC<TClickableAreaProps> = ({ elementsCoordinates, outlineCoordinates }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { isMultipleMoving } = useSelector(eventsSelector);
   const { onMouseDown } = useClickableAreaEvents();
@@ -41,6 +41,7 @@ const ClickableArea: FC<TClickableAreaProps> = ({ elementsCordinates, outlineCoo
 
   return (
     <>
+      {/* OUTLINE */}
       {areParentsTheSame && (
         <E2EDataAttribute type={E2EAttribute.outline}>
           <svg
@@ -61,7 +62,9 @@ const ClickableArea: FC<TClickableAreaProps> = ({ elementsCordinates, outlineCoo
           </svg>
         </E2EDataAttribute>
       )}
-      {elementsCordinates.map(({ coordinates: { x1, x2, y1, y2 }, id }) => (
+
+      {/* RECT INSIDE OUTLINE */}
+      {elementsCoordinates.map(({ coordinates: { x1, x2, y1, y2 }, id }) => (
         <E2EDataAttribute key={id} type={E2EAttribute.rect} value={id}>
           <svg
             className={cx(classNamesWithTheme[className])}

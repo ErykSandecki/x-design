@@ -15,11 +15,10 @@ export type TUseMouseDownEvent = (event: MouseEvent, id: TElement['id']) => void
 
 export const useMouseDownEvent = (
   cursorPosition: RefObject<T2DCoordinates>,
-  setIsPressing: (isPressing: boolean) => void,
-  setPossibleElementToSelect: (possibleElementToSelect: TElement['id']) => void,
+  setIsPressing: TFunc<[boolean]>,
+  setPossibleElementToSelect: TFunc<[TElement['id']]>,
 ): TUseMouseDownEvent => {
   const areParentsTheSame = useSelector(areParentsTheSameSelector);
-
   const dispatch = useDispatch();
 
   const handleMouseDown = (event: MouseEvent, id: TElement['id']): void => {

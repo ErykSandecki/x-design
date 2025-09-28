@@ -27,7 +27,7 @@ const MultipleElementsArea: FC = () => {
   return (
     <>
       <ClickableArea
-        elementsCordinates={coordinatesData.elementsCoordinates}
+        elementsCoordinates={coordinatesData.elementsCoordinates}
         outlineCoordinates={coordinatesData.outline}
       />
       {showCorners && createPortal(<Corners rectCoordinates={coordinatesData.outline} />, overlayContainerRef.current)}
