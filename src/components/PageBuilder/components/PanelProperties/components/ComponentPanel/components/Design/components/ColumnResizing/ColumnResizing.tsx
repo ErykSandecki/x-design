@@ -1,5 +1,5 @@
 import { FC, useRef } from 'react';
-import { first, size } from 'lodash';
+import { first } from 'lodash';
 import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
@@ -16,19 +16,14 @@ import { MAX, PANEL_PROPERTIES_ID } from '../../../../../../../../constants';
 import { translationNameSpace } from './constants';
 
 // store
-import {
-  dynamicDataSelector,
-  elementAllDataSelectorCreator,
-  selectedElementsSelector,
-} from 'store/pageBuilder/selectors';
+import { dynamicDataSelector, selectedElementsSelector } from 'store/pageBuilder/selectors';
 
 // types
 import { GridColumnType } from 'shared/UITools/components/Section/components/SectionColumn/enums';
 import { ColorsTheme, KeyboardKeys } from 'types';
 
 // utils
-import { handleSubmitInput, isPureNumber, sanitizeNumberInput } from 'utils';
-import { isMixed } from '../../utils/isMixed';
+import { handleSubmitInput, sanitizeNumberInput } from 'utils';
 
 const ColumnResizing: FC = () => {
   const dynamicData = useSelector(dynamicDataSelector);
@@ -36,25 +31,31 @@ const ColumnResizing: FC = () => {
   const refInputWidth = useRef<HTMLInputElement>(null);
   const selectedElements = useSelector(selectedElementsSelector);
   const firstElement = first(selectedElements);
-  const element = useSelector(elementAllDataSelectorCreator(firstElement.id));
-  const isMultiple = size(selectedElements) > 1;
-  const isMixedHeight = isMixed(dynamicData, firstElement, 'height.value', selectedElements);
-  const isMixedWidth = isMixed(dynamicData, firstElement, 'width.value', selectedElements);
+  const { t } = useTranslation();
+
   const {
     height,
-    isFocused,
+    inputHeightType,
+    inputWidthType,
+    isMixedHeight,
+    isMixedWidth,
+    isPureHeight,
+    isPureWidth,
     onBlurHeight,
     onBlurWidth,
     onChangeHeight,
     onChangeWidth,
     onFocus,
+    showHeightChip,
+    showWidthChip,
     unitHeight,
     unitWidth,
+    valueInputHeight,
+    valueInputWidth,
+    valueScrubbaleInputHeight,
+    valueScrubbaleInputWidth,
     width,
-  } = useResizingEvents(element, isMixedHeight, isMixedWidth, isMultiple);
-  const { t } = useTranslation();
-  const isPureHeight = isPureNumber(height);
-  const isPureWidth = isPureNumber(width);
+  } = useResizingEvents();
 
   return (
     <UITools.SectionColumn gridColumnType={GridColumnType.twoInputs} labels={[t(`${translationNameSpace}.label`)]}>
@@ -77,7 +78,7 @@ const ColumnResizing: FC = () => {
               max={MAX}
               min={0}
               onChange={(value) => onChangeWidth(value.toString(), true)}
-              value={isMultiple ? 0 : parseFloat(width)}
+              value={valueScrubbaleInputWidth}
             >
               {isPureWidth ? (
                 <Small color={ColorsTheme.neutral2}>W</Small>
@@ -85,7 +86,7 @@ const ColumnResizing: FC = () => {
                 <Icon color={ColorsTheme.neutral2} height={12} name="WidthRestricted" width={12} />
               )}
             </ScrubbableInput>
-            {isFocused !== 'width' && (!isPureWidth || unitWidth) && !isMixedWidth && (
+            {showWidthChip && (
               <UITools.Chip>
                 {width}
                 {unitWidth ?? ''}
@@ -93,8 +94,8 @@ const ColumnResizing: FC = () => {
             )}
           </>
         }
-        type={isMixedWidth || !isPureWidth ? 'text' : 'number'}
-        value={(isPureWidth && (!unitWidth || isFocused === 'width')) || isMixedWidth ? width : ''}
+        type={inputWidthType}
+        value={valueInputWidth}
       />
       <UITools.TextField
         e2eValue="height"
@@ -115,7 +116,7 @@ const ColumnResizing: FC = () => {
               max={MAX}
               min={0}
               onChange={(value) => onChangeHeight(value.toString(), true)}
-              value={isMultiple ? 0 : parseFloat(height)}
+              value={valueScrubbaleInputHeight}
             >
               {isPureHeight ? (
                 <Small color={ColorsTheme.neutral2}>H</Small>
@@ -123,7 +124,7 @@ const ColumnResizing: FC = () => {
                 <Icon color={ColorsTheme.neutral2} height={12} name="HeightRestricted" width={12} />
               )}
             </ScrubbableInput>
-            {isFocused !== 'height' && (!isPureHeight || unitHeight) && !isMixedHeight && (
+            {showHeightChip && (
               <UITools.Chip>
                 {height}
                 {unitHeight ?? ''}
@@ -131,8 +132,8 @@ const ColumnResizing: FC = () => {
             )}
           </>
         }
-        type={isMixedHeight || !isPureHeight ? 'text' : 'number'}
-        value={(isPureHeight && (!unitHeight || isFocused === 'height')) || isMixedHeight ? height : ''}
+        type={inputHeightType}
+        value={valueInputHeight}
       />
     </UITools.SectionColumn>
   );
