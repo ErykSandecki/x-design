@@ -20,7 +20,7 @@ export type TUseDesignData = {
   areParentsTheSame: boolean;
   isMixedLayoutType: boolean;
   layoutType: TElement['layout']['type'];
-  onChangeLayoutType: () => void;
+  onChangeLayoutType: TFunc;
   position: TElement['position'];
 };
 
@@ -37,7 +37,8 @@ export const useDesignData = (): TUseDesignData => {
     if (isMixedLayoutType) {
       dispatch(changeLayout(LayoutType.vertical));
     } else {
-      const targetLayout = layout.type === LayoutType.default ? LayoutType.vertical : LayoutType.default;
+      const isDefault = layout.type === LayoutType.default;
+      const targetLayout = isDefault ? LayoutType.vertical : LayoutType.default;
 
       dispatch(changeLayout(targetLayout));
     }

@@ -99,7 +99,8 @@ exports[`App snapshots should render router 1`] = `
       style="width: 240px;"
     >
       <div
-        class="PanelProperties__areaHandleResize PanelProperties__areaHandleResize--light"
+        class="css-xmuf4s PanelProperties__areaHandleResize PanelProperties__areaHandleResize--light"
+        data-test-box=""
         data-test-resize=""
       />
       <div

@@ -1,6 +1,4 @@
 import { FC } from 'react';
-import { first } from 'lodash';
-import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
 // components
@@ -10,6 +8,8 @@ import ColumnHeader from './components/ColumnHeader/ColumnHeader';
 import ColumnPosition from './components/ColumnPosition/ColumnPosition';
 import ColumnResizing from './components/ColumnResizing/ColumnResizing';
 import ColumnRotation from './components/ColumnRotation/ColumnRotation';
+import DesignLayoutButtonIcons from './DesignLayoutButtonIcons';
+import DesignPositionButtonIcons from './DesignPositionButtonIcons';
 import { UITools } from 'shared';
 
 // hooks
@@ -18,17 +18,7 @@ import { useDesignData } from './hooks/useDesignData';
 // others
 import { translationNameSpace } from './constants';
 
-// store
-import { changePosition, fitLayout } from 'store/pageBuilder/actions';
-import { selectedElementsSelector } from 'store/pageBuilder/selectors';
-
-// types
-import { LayoutType } from 'types';
-
 const Design: FC = () => {
-  const dispatch = useDispatch();
-  const selectedElements = useSelector(selectedElementsSelector);
-  const firstElement = first(selectedElements);
   const { t } = useTranslation();
   const { areParentsTheSame, isMixedLayoutType, layoutType, onChangeLayoutType, position } = useDesignData();
 
@@ -38,18 +28,7 @@ const Design: FC = () => {
         <ColumnHeader />
       </UITools.Section>
       <UITools.Section
-        buttonsIcon={
-          firstElement.parentId !== '-1' && areParentsTheSame
-            ? [
-                <UITools.ButtonIcon
-                  key={0}
-                  name="PositionSwitcher"
-                  onClick={() => dispatch(changePosition())}
-                  selected={position === 'absolute'}
-                />,
-              ]
-            : []
-        }
+        buttonsIcon={DesignPositionButtonIcons(areParentsTheSame, position)}
         label={t(`${translationNameSpace}.section.2.label`)}
       >
         <ColumnAlignment />
@@ -57,15 +36,7 @@ const Design: FC = () => {
         <ColumnRotation />
       </UITools.Section>
       <UITools.Section
-        buttonsIcon={[
-          <UITools.ButtonIcon key={0} name="FitLayout" onClick={() => dispatch(fitLayout())} selected={false} />,
-          <UITools.ButtonIcon
-            key={1}
-            name="AutoLayout"
-            onClick={onChangeLayoutType}
-            selected={isMixedLayoutType ? false : layoutType !== LayoutType.default}
-          />,
-        ]}
+        buttonsIcon={DesignLayoutButtonIcons(isMixedLayoutType, layoutType, onChangeLayoutType)}
         label={t(`${translationNameSpace}.section.3.label`)}
       >
         <ColumnFlow />

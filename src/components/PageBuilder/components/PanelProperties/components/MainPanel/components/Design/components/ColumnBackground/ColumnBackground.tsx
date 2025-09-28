@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 // components
+import ColumnBackgroundButtonIcons from './ColumnBackgroundButtonIcons';
 import { UITools } from 'shared';
 
 // store
@@ -15,19 +16,11 @@ const ColumnBackground: FC = () => {
   const background = useSelector(pageBackgroundSelectorCreator('-1'));
   const colorSampler = useSelector(eventSelectorCreator('colorSampler'));
   const dispatch = useDispatch();
-  const { properties, visible } = background;
+  const { properties } = background;
   const { alpha, color, format } = properties as TColor;
 
   return (
-    <UITools.SectionColumn
-      buttonsIcon={[
-        <UITools.ButtonIcon
-          key={0}
-          name={visible ? 'EyesOpened' : 'EyesClosed'}
-          onClick={() => dispatch(changeBackground({ visible: !visible }, '-1'))}
-        />,
-      ]}
-    >
+    <UITools.SectionColumn buttonsIcon={ColumnBackgroundButtonIcons()}>
       <UITools.ColorPicker
         activeSampler={colorSampler as boolean}
         alpha={alpha}
