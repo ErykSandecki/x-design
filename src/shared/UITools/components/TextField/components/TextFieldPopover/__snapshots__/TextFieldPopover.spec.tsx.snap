@@ -3,7 +3,7 @@
 exports[`TextFieldPopover snapshots should render TextFieldPopover 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp TextFieldPopover TextFieldPopover--light"
+    class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
     data-test-box=""
   >
     <div
@@ -28,7 +28,7 @@ exports[`TextFieldPopover snapshots should render TextFieldPopover 1`] = `
 exports[`TextFieldPopover snapshots should render with opened popover 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp TextFieldPopover TextFieldPopover--light"
+    class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
     data-test-box=""
   >
     <div

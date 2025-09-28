@@ -27,7 +27,11 @@ export const TextFieldPopover: FC<TTextFieldPopoverProps> = ({ children, classNa
   const { selected, setSelected } = useOutsideClick([], ref, noop, idContainer);
 
   return (
-    <Box classes={{ className: cx(classNamesWithTheme[className]) }} ref={ref}>
+    <Box
+      classes={{ className: cx(classNamesWithTheme[className]) }}
+      ref={ref}
+      sx={{ alignItems: 'center', display: 'flex', justifyContent: 'center', position: 'relative' }}
+    >
       <Icon
         classes={{ className: cx(classNamesWithTheme.icon, classNameIcon) }}
         clickable

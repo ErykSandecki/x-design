@@ -15,11 +15,19 @@ describe('TextField snapshots', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('should render wiht popover', () => {
+  it('should render with popover', () => {
     // before
     const { asFragment } = render(
       <TextField idContainer={id} popoverChildren={<PopoverCompound.PopoverSeparator />} />,
     );
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('should render with chip', () => {
+    // before
+    const { asFragment } = render(<TextField chipChildren={<>chip</>} idContainer={id} />);
 
     // result
     expect(asFragment()).toMatchSnapshot();

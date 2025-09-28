@@ -3,6 +3,7 @@ import { FC, InputHTMLAttributes, ReactNode, Ref } from 'react';
 // components
 import Box from '../../../UI/components/Box/Box';
 import TextFieldPopover from './components/TextFieldPopover/TextFieldPopover';
+import TextFieldChip, { TTextFieldChipProps } from './components/TextFieldChip/TextFieldChip';
 import { TPopoverProps } from '../Popover/Popover';
 
 // hooks
@@ -25,6 +26,7 @@ export type TTextFieldProps = Omit<
   InputHTMLAttributes<HTMLInputElement>,
   'className' | 'color' | 'popover' | 'style'
 > & {
+  chipChildren?: TTextFieldChipProps['children'];
   className?: string;
   e2eValue?: TE2EDataAttributeProps['value'];
   endAdorment?: ReactNode;
@@ -36,6 +38,7 @@ export type TTextFieldProps = Omit<
 };
 
 export const TextField: FC<TTextFieldProps> = ({
+  chipChildren,
   className = '',
   disabled,
   e2eValue = '',
@@ -78,6 +81,7 @@ export const TextField: FC<TTextFieldProps> = ({
       ) : (
         endAdorment
       )}
+      {chipChildren && <TextFieldChip>{chipChildren}</TextFieldChip>}
     </Box>
   );
 };

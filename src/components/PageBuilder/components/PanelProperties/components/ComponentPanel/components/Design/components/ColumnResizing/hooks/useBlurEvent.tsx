@@ -11,8 +11,8 @@ import { TFocusElement } from '../types';
 import { isPureNumber } from 'utils';
 
 export type TUseBlurEvent = {
-  onBlurHeight: () => void;
-  onBlurWidth: () => void;
+  onBlurHeight: TFunc;
+  onBlurWidth: TFunc;
 };
 
 export const useBlurEvent = (

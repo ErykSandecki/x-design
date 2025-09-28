@@ -1,4 +1,4 @@
-import { ReactNode, useRef } from 'react';
+import { FC, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 
 // components
@@ -31,7 +31,7 @@ export type TColumnPositionInputProps = {
   value: string;
 };
 
-const ColumnPositionInput = ({
+const ColumnPositionInput: FC<TColumnPositionInputProps> = ({
   disabled,
   disabledAll,
   e2eValue,
@@ -43,7 +43,7 @@ const ColumnPositionInput = ({
   onMouseDown,
   typeInput,
   value,
-}: TColumnPositionInputProps): ReactNode => {
+}) => {
   const dispatch = useDispatch();
   const refInput = useRef<HTMLInputElement>(null);
 

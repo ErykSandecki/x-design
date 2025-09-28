@@ -809,7 +809,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                   value="100"
                 />
                 <div
-                  class="css-1jnxvbp TextFieldPopover TextFieldPopover--light"
+                  class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
                   data-test-box=""
                 >
                   <div
@@ -992,7 +992,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                   value="100"
                 />
                 <div
-                  class="css-1jnxvbp TextFieldPopover TextFieldPopover--light"
+                  class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
                   data-test-box=""
                 >
                   <div

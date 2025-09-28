@@ -7,7 +7,7 @@ import Box from '../../../UI/components/Box/Box';
 import { useTheme } from 'hooks';
 
 // others
-import { className, classNames } from './classNames';
+import { className as classNameChip, classNames } from './classNames';
 
 // styles
 import styles from './chip.scss';
@@ -18,10 +18,11 @@ import { TE2EDataAttributeProps } from '../../../E2EDataAttributes/E2EDataAttrib
 
 export type TChipProps = {
   children: ReactNode;
+  className?: string;
   e2eValue?: TE2EDataAttributeProps['value'];
 };
 
-export const Chip: FC<TChipProps> = ({ children, e2eValue = '' }) => {
+export const Chip: FC<TChipProps> = ({ children, className, e2eValue = '' }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   if (!children) {
@@ -31,7 +32,7 @@ export const Chip: FC<TChipProps> = ({ children, e2eValue = '' }) => {
   return (
     <Box
       classes={{
-        className: cx(classNamesWithTheme[className]),
+        className: cx(classNamesWithTheme[classNameChip], className),
       }}
       e2eAttribute={E2EAttribute.chip}
       e2eValue={e2eValue}

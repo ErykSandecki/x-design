@@ -7,8 +7,8 @@ import { setElementsSizes } from 'store/pageBuilder/actions';
 import { TSetElementsSizesActionPayload } from 'store/pageBuilder/types';
 
 export type TUseChangeEvent = {
-  onChangeHeight: (value: string, isScrubbableInput?: boolean) => void;
-  onChangeWidth: (value: string, isScrubbableInput?: boolean) => void;
+  onChangeHeight: TFunc<[string, boolean?]>;
+  onChangeWidth: TFunc<[string, boolean?]>;
 };
 
 export const useChangeEvent = (
