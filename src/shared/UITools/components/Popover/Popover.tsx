@@ -2,6 +2,7 @@ import { createPortal } from 'react-dom';
 import { FC, ReactNode, RefObject, useRef } from 'react';
 
 // components
+import Box from 'shared/UI/components/Box/Box';
 import E2EDataAttribute, { TE2EDataAttributeProps } from '../../../E2EDataAttributes/E2EDataAttribute';
 import PopoverItem from './components/PopoverItem/PopoverItem';
 import PopoverRoot from './components/PopoverRoot/PopoverRoot';
@@ -36,16 +37,27 @@ export const Popover: FC<TPopoverProps> = ({ children, e2eValue, refItem, select
 
   return createPortal(
     <E2EDataAttribute type={E2EAttribute.popover} value={e2eValue}>
-      <div
-        className={cx(classNamesWithTheme[className].name, [
-          classNamesWithTheme[className].modificators.selected,
-          selected,
-        ])}
+      <Box
+        classes={{
+          className: cx(classNamesWithTheme[className].name, [
+            classNamesWithTheme[className].modificators.selected,
+            selected,
+          ]),
+        }}
         ref={refPopover}
         style={{ left, top }}
+        sx={{
+          borderRadius: '10px',
+          display: 'flex',
+          flexDirection: 'column',
+          position: 'fixed',
+          px: 10,
+          py: 7.5,
+          width: 'max-content',
+        }}
       >
         {children}
-      </div>
+      </Box>
     </E2EDataAttribute>,
     document.getElementById('dropdown'),
   );

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorResult snapshots should render ColorResult 1`] = `
+<DocumentFragment>
+  <div
+    class="css-e5vky9 ColorResult ColorResult--light"
+    data-test-box=""
+  >
+    <div
+      class="css-cc7zgu ColorResult__selectedColor ColorResult__selectedColor--light"
+      data-test-box=""
+      style="background-color: rgba(0, 0, 0, 0);"
+    />
+    <small
+      class="css-1jnxvbp Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      data-test-text=""
+      style="text-align: inherit;"
+    >
+      #000000
+    </small>
+  </div>
+</DocumentFragment>
+`;

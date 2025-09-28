@@ -1,0 +1,5 @@
+.ColorResult {
+  &__selected-color {
+    @include theme('neutral-3', border, '1px solid');
+  }
+}

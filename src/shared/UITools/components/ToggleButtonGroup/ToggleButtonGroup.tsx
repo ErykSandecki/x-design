@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 
 // components
+import Box from '../../../UI/components/Box/Box';
 import E2EDataAttribute, { TE2EDataAttributeProps } from '../../../E2EDataAttributes/E2EDataAttribute';
 import ToggleButton from './components/ToggleButton/ToggleButton';
 
@@ -50,11 +51,14 @@ export const ToggleButtonGroup = <V extends TToggleButtonGroupValue>({
 
   return (
     <E2EDataAttribute type={E2EAttribute.toggleButtonGroup} value={e2eValue}>
-      <div
-        className={cx(className, classNamesWithTheme[classNameToggleButton].name, [
-          classNamesWithTheme[classNameToggleButton].modificators.fullWidth,
-          fullWidth,
-        ])}
+      <Box
+        classes={{
+          className: cx(className, classNamesWithTheme[classNameToggleButton].name, [
+            classNamesWithTheme[classNameToggleButton].modificators.fullWidth,
+            fullWidth,
+          ]),
+        }}
+        sx={{ alignItems: 'center', borderRadius: '5px', boxSizing: 'border-box', display: 'flex', height: '24px' }}
       >
         {toggleButtons.map(({ icon, value: valueButtton }, index) => (
           <ToggleButton<V>
@@ -67,7 +71,7 @@ export const ToggleButtonGroup = <V extends TToggleButtonGroupValue>({
             value={valueButtton}
           />
         ))}
-      </div>
+      </Box>
     </E2EDataAttribute>
   );
 };

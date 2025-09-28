@@ -29,20 +29,34 @@ export const Tabs: FC<TTabsProps> = ({ activeTab, setActiveTab, tabs }) => {
   const { t } = useTranslation();
 
   return (
-    <Box classes={{ className: cx(classNamesWithTheme[className]) }}>
+    <Box
+      classes={{ className: cx(classNamesWithTheme[className]) }}
+      sx={{ alignItems: 'center', columnGap: '5px', display: 'flex' }}
+    >
       {tabs.map(({ labelTranslationKey, name }) => (
         <E2EDataAttribute key={name} type={E2EAttribute.tab} value={name}>
-          <div
-            className={cx(
-              classNamesWithTheme.tab.name,
-              [classNamesWithTheme.tab.modificators.active, activeTab === name],
-              [classNamesWithTheme.tab.modificators.disabled, disabledStates],
-            )}
+          <Box
+            classes={{
+              className: cx(
+                classNamesWithTheme.tab.name,
+                [classNamesWithTheme.tab.modificators.active, activeTab === name],
+                [classNamesWithTheme.tab.modificators.disabled, disabledStates],
+              ),
+            }}
             key={name}
             onClick={() => setActiveTab(name)}
+            sx={{
+              alignItems: 'center',
+              borderRadius: '5px',
+              boxSizing: 'border-box',
+              display: 'flex',
+              height: '24px',
+              justifyContent: 'center',
+              px: 8,
+            }}
           >
             {t(labelTranslationKey)}
-          </div>
+          </Box>
         </E2EDataAttribute>
       ))}
     </Box>

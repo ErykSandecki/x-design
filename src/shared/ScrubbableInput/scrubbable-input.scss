@@ -1,9 +1,7 @@
 @import '../../styles/z-indexes';
 
 .ScrubbableInput {
-  align-items: center;
   cursor: ew-resize;
-  display: flex;
   user-select: none;
 
   &--disabled {

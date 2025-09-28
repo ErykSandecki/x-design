@@ -3,18 +3,21 @@
 exports[`Panel snapshots should render Panel 1`] = `
 <DocumentFragment>
   <div
-    class="Panel Panel--light"
+    class="css-1jnxvbp Panel Panel--light"
+    data-test-box=""
     data-test-color-picker-panel=""
   >
     <div
-      class="Panel__header Panel__header--light"
+      class="css-yxih05 Panel__header Panel__header--light"
+      data-test-box=""
     >
       <div
-        class="css-1jnxvbp Tabs Tabs--light"
+        class="css-gu5024 Tabs Tabs--light"
         data-test-box=""
       >
         <div
-          class="Tabs__tab Tabs__tab--light Tabs__tab--active Tabs__tab--active--light Tabs__tab--disabled Tabs__tab--disabled--light"
+          class="css-17z9djj Tabs__tab Tabs__tab--light Tabs__tab--active Tabs__tab--active--light Tabs__tab--disabled Tabs__tab--disabled--light"
+          data-test-box=""
           data-test-tab="custom"
         >
           Custom
@@ -32,7 +35,8 @@ exports[`Panel snapshots should render Panel 1`] = `
       class="ant-color-picker-slider-container"
     />
     <div
-      class="Panel__sample Panel__sample--light"
+      class="css-175hdsd"
+      data-test-box=""
     >
       <div
         class="css-1jnxvbp ButtonIcon ButtonIcon--light"
@@ -54,18 +58,21 @@ exports[`Panel snapshots should render Panel 1`] = `
 exports[`Panel snapshots should render with active sampler 1`] = `
 <DocumentFragment>
   <div
-    class="Panel Panel--light"
+    class="css-1jnxvbp Panel Panel--light"
+    data-test-box=""
     data-test-color-picker-panel=""
   >
     <div
-      class="Panel__header Panel__header--light"
+      class="css-yxih05 Panel__header Panel__header--light"
+      data-test-box=""
     >
       <div
-        class="css-1jnxvbp Tabs Tabs--light"
+        class="css-gu5024 Tabs Tabs--light"
         data-test-box=""
       >
         <div
-          class="Tabs__tab Tabs__tab--light Tabs__tab--active Tabs__tab--active--light Tabs__tab--disabled Tabs__tab--disabled--light"
+          class="css-17z9djj Tabs__tab Tabs__tab--light Tabs__tab--active Tabs__tab--active--light Tabs__tab--disabled Tabs__tab--disabled--light"
+          data-test-box=""
           data-test-tab="custom"
         >
           Custom
@@ -83,7 +90,8 @@ exports[`Panel snapshots should render with active sampler 1`] = `
       class="ant-color-picker-slider-container"
     />
     <div
-      class="Panel__sample Panel__sample--light"
+      class="css-175hdsd"
+      data-test-box=""
     >
       <div
         class="css-1jnxvbp ButtonIcon ButtonIcon--light ButtonIcon--selected ButtonIcon--selected--light"
@@ -103,20 +111,25 @@ exports[`Panel snapshots should render with active sampler 1`] = `
         style="left: 15px; top: 15px;"
       >
         <div
-          class="ColorSampler__preventAntdEventMask ColorSampler__preventAntdEventMask--light"
+          class="css-1kjclab ColorGridMask ColorGridMask--light"
+          data-test-box=""
           data-test-button="color-sampler"
         />
         <div
-          class="ColorSampler__pickerWrapper ColorSampler__pickerWrapper--light"
+          class="css-1odrpt5 ColorGrid ColorGrid--light"
+          data-test-box=""
         >
           <div
-            class="ColorSampler__picker ColorSampler__picker--light"
+            class="css-fx1txq"
+            data-test-box=""
           />
           <div
-            class="ColorSampler__pickerTargetColor ColorSampler__pickerTargetColor--light"
+            class="css-tnkbza ColorGrid__pickerTargetColor ColorGrid__pickerTargetColor--light"
+            data-test-box=""
           />
           <div
-            class="ColorSampler__pickerLoader ColorSampler__pickerLoader--light"
+            class="css-18x4q7r"
+            data-test-box=""
           >
             <div
               aria-busy="true"

@@ -21,7 +21,7 @@ describe('mappingGrid', () => {
 
     // result
     expect(result).toBe(
-      `display: grid;\ngap: 1;\ncolumn-gap: 1;\nrow-gap: 1;\ngrid-column: 1;\ngrid-row: auto;\ngrid-auto-flow: column;\ngrid-auto-columns: 1;\ngrid-auto-rows: 1;\ngrid-template-columns: 1;\ngrid-template-rows: 1;\ngrid-template-areas: revert;\ngrid-area: auto;`,
+      `gap: 1;\ncolumn-gap: 1;\nrow-gap: 1;\ngrid-column: 1;\ngrid-row: auto;\ngrid-auto-flow: column;\ngrid-auto-columns: 1;\ngrid-auto-rows: 1;\ngrid-template-columns: 1;\ngrid-template-rows: 1;\ngrid-template-areas: revert;\ngrid-area: auto;`,
     );
   });
 

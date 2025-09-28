@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorGrid snapshots should render ColorGrid 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1odrpt5 ColorGrid ColorGrid--light"
+    data-test-box=""
+  >
+    <div
+      class="css-fx1txq"
+      data-test-box=""
+    >
+      <div
+        class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+        data-test-box=""
+        style="background-color: rgb(0, 0, 0);"
+      />
+    </div>
+    <div
+      class="css-tnkbza ColorGrid__pickerTargetColor ColorGrid__pickerTargetColor--light"
+      data-test-box=""
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ColorGrid snapshots should render when is pending 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1odrpt5 ColorGrid ColorGrid--light"
+    data-test-box=""
+  >
+    <div
+      class="css-fx1txq"
+      data-test-box=""
+    >
+      <div
+        class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+        data-test-box=""
+        style="background-color: rgb(0, 0, 0);"
+      />
+    </div>
+    <div
+      class="css-tnkbza ColorGrid__pickerTargetColor ColorGrid__pickerTargetColor--light"
+      data-test-box=""
+    />
+    <div
+      class="css-18x4q7r"
+      data-test-box=""
+    >
+      <div
+        aria-busy="true"
+        aria-live="polite"
+        class="ant-spin ant-spin-spinning css-dev-only-do-not-override-1odpy5d"
+      >
+        <span
+          class="ant-spin-dot-holder"
+        >
+          <span
+            class="ant-spin-dot ant-spin-dot-spin"
+          >
+            <i
+              class="ant-spin-dot-item"
+            />
+            <i
+              class="ant-spin-dot-item"
+            />
+            <i
+              class="ant-spin-dot-item"
+            />
+            <i
+              class="ant-spin-dot-item"
+            />
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

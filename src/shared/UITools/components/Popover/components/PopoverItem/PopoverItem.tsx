@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 // components
 import E2EDataAttribute from '../../../../../E2EDataAttributes/E2EDataAttribute';
-import { Icon, Small, TIconProps } from 'shared';
+import { Box, Icon, Small, TIconProps } from 'shared';
 
 // core
 import { usePopoverRoot } from '../PopoverRoot/core/PopoverRootProvider';
@@ -35,7 +35,19 @@ export const PopoverItem: FC<TPopoverItemProps> = ({ icon, index, onClick, selec
 
   return (
     <E2EDataAttribute type={E2EAttribute.popoverItem} value={index}>
-      <div className={cx(classNamesWithTheme[className])} onClick={onClickHandler}>
+      <Box
+        classes={{ className: cx(classNamesWithTheme[className]) }}
+        onClick={onClickHandler}
+        sx={{
+          alignItems: 'center',
+          borderRadius: '5px',
+          columnGap: '10px',
+          display: 'flex',
+          height: '24px',
+          justifyContent: 'left',
+          px: 5,
+        }}
+      >
         <Icon
           classes={{
             className: cx(classNamesWithTheme.checkIcon.name, [
@@ -49,7 +61,7 @@ export const PopoverItem: FC<TPopoverItemProps> = ({ icon, index, onClick, selec
         />
         {icon && <Icon classes={{ className: cx(classNamesWithTheme.icon) }} height={12} name={icon} width={12} />}
         <Small classes={{ className: cx(classNamesWithTheme.text) }}>{text}</Small>
-      </div>
+      </Box>
     </E2EDataAttribute>
   );
 };

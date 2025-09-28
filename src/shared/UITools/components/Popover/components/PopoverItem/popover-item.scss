@@ -1,14 +1,7 @@
 .PopoverItem {
   @include theme-selector('blue-2', background-color, '&:hover');
 
-  align-items: center;
-  border-radius: 5px;
-  column-gap: 10px;
   cursor: pointer;
-  display: flex;
-  height: 24px;
-  justify-content: left;
-  padding: 0 5px;
 
   &__check-icon {
     flex-shrink: 0;

@@ -17,7 +17,8 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
       data-test-section=""
     >
       <div
-        class="Section__header Section__header--light"
+        class="css-kp4ill"
+        data-test-box=""
       >
         <small
           class="css-1jnxvbp Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
@@ -27,21 +28,24 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
           Mode
         </small>
         <div
-          class="Section__buttons Section__buttons--light"
+          class="css-1f1atqu"
+          data-test-box=""
         />
       </div>
       <div
-        class="css-1jnxvbp Tabs Tabs--light"
+        class="css-gu5024 Tabs Tabs--light"
         data-test-box=""
       >
         <div
-          class="Tabs__tab Tabs__tab--light Tabs__tab--active Tabs__tab--active--light"
+          class="css-17z9djj Tabs__tab Tabs__tab--light Tabs__tab--active Tabs__tab--active--light"
+          data-test-box=""
           data-test-tab="design"
         >
           Design
         </div>
         <div
-          class="Tabs__tab Tabs__tab--light"
+          class="css-17z9djj Tabs__tab Tabs__tab--light"
+          data-test-box=""
           data-test-tab="prototype\`,"
         >
           Prototype
@@ -56,7 +60,8 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
         data-test-section=""
       >
         <div
-          class="Section__header Section__header--light"
+          class="css-kp4ill"
+          data-test-box=""
         >
           <small
             class="css-1jnxvbp Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
@@ -66,7 +71,8 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
             Page
           </small>
           <div
-            class="Section__buttons Section__buttons--light"
+            class="css-1f1atqu"
+            data-test-box=""
           />
         </div>
         <div
@@ -74,14 +80,17 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
           data-test-section=""
         >
           <div
-            class="SectionColumn__labels SectionColumn__labels--light"
+            class="css-lxhfcz SectionColumn__labels SectionColumn__labels--light"
+            data-test-box=""
             style="width: calc(100% - 24px - 0px - 8px);"
           />
           <div
-            class="SectionColumn__wrapper SectionColumn__wrapper--light"
+            class="css-1r00qlg"
+            data-test-box=""
           >
             <div
-              class="SectionColumn__content SectionColumn__content--light SectionColumn__content--single SectionColumn__content--single--light"
+              class="css-1m2m6pt SectionColumn__content SectionColumn__content--light SectionColumn__content--single SectionColumn__content--single--light"
+              data-test-box=""
               style="width: calc(100% - 24px - 0px - 8px);"
             >
               <div
@@ -94,21 +103,26 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
                 >
                   <div
                     aria-describedby="test-id"
+                    class="css-1jnxvbp"
+                    data-test-box=""
                   >
                     <div
-                      class="css-1jnxvbp Color Color--light"
+                      class="css-1axzf39 Color Color--light"
                       data-test-color=""
                     >
                       <div
-                        class="Color__picker Color__picker--light"
+                        class="css-agg4zg Color__picker Color__picker--light"
+                        data-test-box=""
                         style="background-color: rgb(241, 242, 246);"
                       />
                       <div
-                        class="Color__picker-alpha Color__picker-alpha--light"
+                        class="css-agg4zg Color__picker-alpha Color__picker-alpha--light"
+                        data-test-box=""
                         style="background-color: rgb(241, 242, 246);"
                       />
                       <div
-                        class="Color__picker-texture Color__picker-texture--light"
+                        class="css-hnxq09 Color__picker-texture Color__picker-texture--light"
+                        data-test-box=""
                       />
                     </div>
                   </div>
@@ -133,7 +147,8 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
                     value="100"
                   />
                   <div
-                    class="ScrubbableInput ScrubbableInput--light"
+                    class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+                    data-test-box=""
                     data-test-scrubbable-input=""
                   >
                     <div
@@ -146,7 +161,8 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
               </div>
             </div>
             <div
-              class="SectionColumn__buttons SectionColumn__buttons--light"
+              class="css-c1qms7"
+              data-test-box=""
             >
               <div
                 class="css-1jnxvbp ButtonIcon ButtonIcon--light"
@@ -186,7 +202,8 @@ exports[`PanelProperties snapshots should render when some element is selected 1
       data-test-section=""
     >
       <div
-        class="Section__header Section__header--light"
+        class="css-kp4ill"
+        data-test-box=""
       >
         <small
           class="css-1jnxvbp Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
@@ -196,21 +213,24 @@ exports[`PanelProperties snapshots should render when some element is selected 1
           Mode
         </small>
         <div
-          class="Section__buttons Section__buttons--light"
+          class="css-1f1atqu"
+          data-test-box=""
         />
       </div>
       <div
-        class="css-1jnxvbp Tabs Tabs--light"
+        class="css-gu5024 Tabs Tabs--light"
         data-test-box=""
       >
         <div
-          class="Tabs__tab Tabs__tab--light Tabs__tab--active Tabs__tab--active--light"
+          class="css-17z9djj Tabs__tab Tabs__tab--light Tabs__tab--active Tabs__tab--active--light"
+          data-test-box=""
           data-test-tab="design"
         >
           Design
         </div>
         <div
-          class="Tabs__tab Tabs__tab--light"
+          class="css-17z9djj Tabs__tab Tabs__tab--light"
+          data-test-box=""
           data-test-tab="prototype\`,"
         >
           Prototype
@@ -229,14 +249,17 @@ exports[`PanelProperties snapshots should render when some element is selected 1
           data-test-section=""
         >
           <div
-            class="SectionColumn__labels SectionColumn__labels--light"
+            class="css-lxhfcz SectionColumn__labels SectionColumn__labels--light"
+            data-test-box=""
             style="width: calc(100% - 48px - 2.5px - 8px);"
           />
           <div
-            class="SectionColumn__wrapper SectionColumn__wrapper--light"
+            class="css-1r00qlg"
+            data-test-box=""
           >
             <div
-              class="SectionColumn__content SectionColumn__content--light SectionColumn__content--single SectionColumn__content--single--light"
+              class="css-1m2m6pt SectionColumn__content SectionColumn__content--light SectionColumn__content--single SectionColumn__content--single--light"
+              data-test-box=""
               style="width: calc(100% - 48px - 2.5px - 8px);"
             >
               <small
@@ -248,7 +271,8 @@ exports[`PanelProperties snapshots should render when some element is selected 1
               </small>
             </div>
             <div
-              class="SectionColumn__buttons SectionColumn__buttons--light"
+              class="css-c1qms7"
+              data-test-box=""
             >
               <div
                 class="css-1jnxvbp ButtonIcon ButtonIcon--light"
@@ -283,7 +307,8 @@ exports[`PanelProperties snapshots should render when some element is selected 1
         data-test-section=""
       >
         <div
-          class="Section__header Section__header--light"
+          class="css-kp4ill"
+          data-test-box=""
         >
           <small
             class="css-1jnxvbp Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
@@ -293,7 +318,8 @@ exports[`PanelProperties snapshots should render when some element is selected 1
             Position
           </small>
           <div
-            class="Section__buttons Section__buttons--light"
+            class="css-1f1atqu"
+            data-test-box=""
           />
         </div>
         <div
@@ -301,7 +327,8 @@ exports[`PanelProperties snapshots should render when some element is selected 1
           data-test-section=""
         >
           <div
-            class="SectionColumn__labels SectionColumn__labels--light"
+            class="css-lxhfcz SectionColumn__labels SectionColumn__labels--light"
+            data-test-box=""
             style="width: calc(100% - 24px - 0px - 8px);"
           >
             <small
@@ -313,10 +340,12 @@ exports[`PanelProperties snapshots should render when some element is selected 1
             </small>
           </div>
           <div
-            class="SectionColumn__wrapper SectionColumn__wrapper--light"
+            class="css-1r00qlg"
+            data-test-box=""
           >
             <div
-              class="SectionColumn__content SectionColumn__content--light SectionColumn__content--twoInputs SectionColumn__content--twoInputs--light"
+              class="css-1m2m6pt SectionColumn__content SectionColumn__content--light SectionColumn__content--twoInputs SectionColumn__content--twoInputs--light"
+              data-test-box=""
               style="width: calc(100% - 24px - 0px - 8px);"
             >
               <div
@@ -403,7 +432,8 @@ exports[`PanelProperties snapshots should render when some element is selected 1
               </div>
             </div>
             <div
-              class="SectionColumn__buttons SectionColumn__buttons--light"
+              class="css-c1qms7"
+              data-test-box=""
             />
           </div>
         </div>
@@ -412,7 +442,8 @@ exports[`PanelProperties snapshots should render when some element is selected 1
           data-test-section=""
         >
           <div
-            class="SectionColumn__labels SectionColumn__labels--light"
+            class="css-lxhfcz SectionColumn__labels SectionColumn__labels--light"
+            data-test-box=""
             style="width: calc(100% - 24px - 0px - 8px);"
           >
             <small
@@ -424,10 +455,12 @@ exports[`PanelProperties snapshots should render when some element is selected 1
             </small>
           </div>
           <div
-            class="SectionColumn__wrapper SectionColumn__wrapper--light"
+            class="css-1r00qlg"
+            data-test-box=""
           >
             <div
-              class="SectionColumn__content SectionColumn__content--light SectionColumn__content--twoInputs SectionColumn__content--twoInputs--light"
+              class="css-1m2m6pt SectionColumn__content SectionColumn__content--light SectionColumn__content--twoInputs SectionColumn__content--twoInputs--light"
+              data-test-box=""
               style="width: calc(100% - 24px - 0px - 8px);"
             >
               <div
@@ -435,7 +468,8 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                 data-test-text-field="x"
               >
                 <div
-                  class="ScrubbableInput ScrubbableInput--light"
+                  class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+                  data-test-box=""
                   data-test-scrubbable-input="x"
                 >
                   <small
@@ -459,7 +493,8 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                 data-test-text-field="y"
               >
                 <div
-                  class="ScrubbableInput ScrubbableInput--light"
+                  class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+                  data-test-box=""
                   data-test-scrubbable-input="y"
                 >
                   <small
@@ -480,7 +515,8 @@ exports[`PanelProperties snapshots should render when some element is selected 1
               </div>
             </div>
             <div
-              class="SectionColumn__buttons SectionColumn__buttons--light"
+              class="css-c1qms7"
+              data-test-box=""
             />
           </div>
         </div>
@@ -489,7 +525,8 @@ exports[`PanelProperties snapshots should render when some element is selected 1
           data-test-section=""
         >
           <div
-            class="SectionColumn__labels SectionColumn__labels--light"
+            class="css-lxhfcz SectionColumn__labels SectionColumn__labels--light"
+            data-test-box=""
             style="width: calc(100% - 24px - 0px - 8px);"
           >
             <small
@@ -501,10 +538,12 @@ exports[`PanelProperties snapshots should render when some element is selected 1
             </small>
           </div>
           <div
-            class="SectionColumn__wrapper SectionColumn__wrapper--light"
+            class="css-1r00qlg"
+            data-test-box=""
           >
             <div
-              class="SectionColumn__content SectionColumn__content--light SectionColumn__content--twoInputs SectionColumn__content--twoInputs--light"
+              class="css-1m2m6pt SectionColumn__content SectionColumn__content--light SectionColumn__content--twoInputs SectionColumn__content--twoInputs--light"
+              data-test-box=""
               style="width: calc(100% - 24px - 0px - 8px);"
             >
               <div
@@ -512,7 +551,8 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                 data-test-text-field="angle"
               >
                 <div
-                  class="ScrubbableInput ScrubbableInput--light"
+                  class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+                  data-test-box=""
                   data-test-scrubbable-input="angle"
                 >
                   <div
@@ -574,7 +614,8 @@ exports[`PanelProperties snapshots should render when some element is selected 1
               </div>
             </div>
             <div
-              class="SectionColumn__buttons SectionColumn__buttons--light"
+              class="css-c1qms7"
+              data-test-box=""
             />
           </div>
         </div>
@@ -584,7 +625,8 @@ exports[`PanelProperties snapshots should render when some element is selected 1
         data-test-section=""
       >
         <div
-          class="Section__header Section__header--light"
+          class="css-kp4ill"
+          data-test-box=""
         >
           <small
             class="css-1jnxvbp Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
@@ -594,7 +636,8 @@ exports[`PanelProperties snapshots should render when some element is selected 1
             Layout
           </small>
           <div
-            class="Section__buttons Section__buttons--light"
+            class="css-1f1atqu"
+            data-test-box=""
           >
             <div
               class="css-1jnxvbp ButtonIcon ButtonIcon--light"
@@ -627,7 +670,8 @@ exports[`PanelProperties snapshots should render when some element is selected 1
           data-test-section=""
         >
           <div
-            class="SectionColumn__labels SectionColumn__labels--light"
+            class="css-lxhfcz SectionColumn__labels SectionColumn__labels--light"
+            data-test-box=""
             style="width: calc(100% - 24px - 0px - 8px);"
           >
             <small
@@ -639,14 +683,17 @@ exports[`PanelProperties snapshots should render when some element is selected 1
             </small>
           </div>
           <div
-            class="SectionColumn__wrapper SectionColumn__wrapper--light"
+            class="css-1r00qlg"
+            data-test-box=""
           >
             <div
-              class="SectionColumn__content SectionColumn__content--light SectionColumn__content--single SectionColumn__content--single--light"
+              class="css-1m2m6pt SectionColumn__content SectionColumn__content--light SectionColumn__content--single SectionColumn__content--single--light"
+              data-test-box=""
               style="width: calc(100% - 24px - 0px - 8px);"
             >
               <div
-                class="ToggleButtonGroup ToggleButtonGroup--light ToggleButtonGroup--fullWidth ToggleButtonGroup--fullWidth--light"
+                class="css-19um8c2 ToggleButtonGroup ToggleButtonGroup--light ToggleButtonGroup--fullWidth ToggleButtonGroup--fullWidth--light"
+                data-test-box=""
                 data-test-toggle-button-group="flow"
               >
                 <button
@@ -704,7 +751,8 @@ exports[`PanelProperties snapshots should render when some element is selected 1
               </div>
             </div>
             <div
-              class="SectionColumn__buttons SectionColumn__buttons--light"
+              class="css-c1qms7"
+              data-test-box=""
             />
           </div>
         </div>
@@ -713,7 +761,8 @@ exports[`PanelProperties snapshots should render when some element is selected 1
           data-test-section=""
         >
           <div
-            class="SectionColumn__labels SectionColumn__labels--light"
+            class="css-lxhfcz SectionColumn__labels SectionColumn__labels--light"
+            data-test-box=""
             style="width: calc(100% - 24px - 0px - 8px);"
           >
             <small
@@ -725,10 +774,12 @@ exports[`PanelProperties snapshots should render when some element is selected 1
             </small>
           </div>
           <div
-            class="SectionColumn__wrapper SectionColumn__wrapper--light"
+            class="css-1r00qlg"
+            data-test-box=""
           >
             <div
-              class="SectionColumn__content SectionColumn__content--light SectionColumn__content--twoInputs SectionColumn__content--twoInputs--light"
+              class="css-1m2m6pt SectionColumn__content SectionColumn__content--light SectionColumn__content--twoInputs SectionColumn__content--twoInputs--light"
+              data-test-box=""
               style="width: calc(100% - 24px - 0px - 8px);"
             >
               <div
@@ -736,7 +787,8 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                 data-test-text-field="width"
               >
                 <div
-                  class="ScrubbableInput ScrubbableInput--light"
+                  class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+                  data-test-box=""
                   data-test-scrubbable-input="width"
                 >
                   <small
@@ -766,12 +818,14 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                     width="12"
                   />
                   <div
-                    class="Popover Popover--light"
+                    class="css-17s20gh Popover Popover--light"
+                    data-test-box=""
                     data-test-popover="popover"
                     style="left: 0px; top: 0px;"
                   >
                     <div
-                      class="PopoverItem PopoverItem--light"
+                      class="css-1wfopar PopoverItem PopoverItem--light"
+                      data-test-box=""
                       data-test-popover-item="0"
                     >
                       <div
@@ -797,7 +851,8 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                       </small>
                     </div>
                     <div
-                      class="PopoverItem PopoverItem--light"
+                      class="css-1wfopar PopoverItem PopoverItem--light"
+                      data-test-box=""
                       data-test-popover-item="1"
                     >
                       <div
@@ -823,7 +878,8 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                       </small>
                     </div>
                     <div
-                      class="PopoverItem PopoverItem--light"
+                      class="css-1wfopar PopoverItem PopoverItem--light"
+                      data-test-box=""
                       data-test-popover-item="2"
                     >
                       <div
@@ -849,10 +905,12 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                       </small>
                     </div>
                     <div
-                      class="PopoverSeparator PopoverSeparator--light"
+                      class="css-qef3st"
+                      data-test-box=""
                     />
                     <div
-                      class="PopoverItem PopoverItem--light"
+                      class="css-1wfopar PopoverItem PopoverItem--light"
+                      data-test-box=""
                       data-test-popover-item="3"
                     >
                       <div
@@ -878,7 +936,8 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                       </small>
                     </div>
                     <div
-                      class="PopoverItem PopoverItem--light"
+                      class="css-1wfopar PopoverItem PopoverItem--light"
+                      data-test-box=""
                       data-test-popover-item="4"
                     >
                       <div
@@ -911,7 +970,8 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                 data-test-text-field="height"
               >
                 <div
-                  class="ScrubbableInput ScrubbableInput--light"
+                  class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+                  data-test-box=""
                   data-test-scrubbable-input="height"
                 >
                   <small
@@ -941,12 +1001,14 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                     width="12"
                   />
                   <div
-                    class="Popover Popover--light"
+                    class="css-17s20gh Popover Popover--light"
+                    data-test-box=""
                     data-test-popover="popover"
                     style="left: 0px; top: 0px;"
                   >
                     <div
-                      class="PopoverItem PopoverItem--light"
+                      class="css-1wfopar PopoverItem PopoverItem--light"
+                      data-test-box=""
                       data-test-popover-item="0"
                     >
                       <div
@@ -972,7 +1034,8 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                       </small>
                     </div>
                     <div
-                      class="PopoverItem PopoverItem--light"
+                      class="css-1wfopar PopoverItem PopoverItem--light"
+                      data-test-box=""
                       data-test-popover-item="1"
                     >
                       <div
@@ -998,7 +1061,8 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                       </small>
                     </div>
                     <div
-                      class="PopoverItem PopoverItem--light"
+                      class="css-1wfopar PopoverItem PopoverItem--light"
+                      data-test-box=""
                       data-test-popover-item="2"
                     >
                       <div
@@ -1024,10 +1088,12 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                       </small>
                     </div>
                     <div
-                      class="PopoverSeparator PopoverSeparator--light"
+                      class="css-qef3st"
+                      data-test-box=""
                     />
                     <div
-                      class="PopoverItem PopoverItem--light"
+                      class="css-1wfopar PopoverItem PopoverItem--light"
+                      data-test-box=""
                       data-test-popover-item="3"
                     >
                       <div
@@ -1053,7 +1119,8 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                       </small>
                     </div>
                     <div
-                      class="PopoverItem PopoverItem--light"
+                      class="css-1wfopar PopoverItem PopoverItem--light"
+                      data-test-box=""
                       data-test-popover-item="4"
                     >
                       <div
@@ -1083,7 +1150,8 @@ exports[`PanelProperties snapshots should render when some element is selected 1
               </div>
             </div>
             <div
-              class="SectionColumn__buttons SectionColumn__buttons--light"
+              class="css-c1qms7"
+              data-test-box=""
             />
           </div>
         </div>
@@ -1110,7 +1178,8 @@ exports[`PanelProperties snapshots should render with changed width 1`] = `
       data-test-section=""
     >
       <div
-        class="Section__header Section__header--light"
+        class="css-kp4ill"
+        data-test-box=""
       >
         <small
           class="css-1jnxvbp Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
@@ -1120,21 +1189,24 @@ exports[`PanelProperties snapshots should render with changed width 1`] = `
           Mode
         </small>
         <div
-          class="Section__buttons Section__buttons--light"
+          class="css-1f1atqu"
+          data-test-box=""
         />
       </div>
       <div
-        class="css-1jnxvbp Tabs Tabs--light"
+        class="css-gu5024 Tabs Tabs--light"
         data-test-box=""
       >
         <div
-          class="Tabs__tab Tabs__tab--light Tabs__tab--active Tabs__tab--active--light"
+          class="css-17z9djj Tabs__tab Tabs__tab--light Tabs__tab--active Tabs__tab--active--light"
+          data-test-box=""
           data-test-tab="design"
         >
           Design
         </div>
         <div
-          class="Tabs__tab Tabs__tab--light"
+          class="css-17z9djj Tabs__tab Tabs__tab--light"
+          data-test-box=""
           data-test-tab="prototype\`,"
         >
           Prototype
@@ -1149,7 +1221,8 @@ exports[`PanelProperties snapshots should render with changed width 1`] = `
         data-test-section=""
       >
         <div
-          class="Section__header Section__header--light"
+          class="css-kp4ill"
+          data-test-box=""
         >
           <small
             class="css-1jnxvbp Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
@@ -1159,7 +1232,8 @@ exports[`PanelProperties snapshots should render with changed width 1`] = `
             Page
           </small>
           <div
-            class="Section__buttons Section__buttons--light"
+            class="css-1f1atqu"
+            data-test-box=""
           />
         </div>
         <div
@@ -1167,14 +1241,17 @@ exports[`PanelProperties snapshots should render with changed width 1`] = `
           data-test-section=""
         >
           <div
-            class="SectionColumn__labels SectionColumn__labels--light"
+            class="css-lxhfcz SectionColumn__labels SectionColumn__labels--light"
+            data-test-box=""
             style="width: calc(100% - 24px - 0px - 8px);"
           />
           <div
-            class="SectionColumn__wrapper SectionColumn__wrapper--light"
+            class="css-1r00qlg"
+            data-test-box=""
           >
             <div
-              class="SectionColumn__content SectionColumn__content--light SectionColumn__content--single SectionColumn__content--single--light"
+              class="css-1m2m6pt SectionColumn__content SectionColumn__content--light SectionColumn__content--single SectionColumn__content--single--light"
+              data-test-box=""
               style="width: calc(100% - 24px - 0px - 8px);"
             >
               <div
@@ -1187,21 +1264,26 @@ exports[`PanelProperties snapshots should render with changed width 1`] = `
                 >
                   <div
                     aria-describedby="test-id"
+                    class="css-1jnxvbp"
+                    data-test-box=""
                   >
                     <div
-                      class="css-1jnxvbp Color Color--light"
+                      class="css-1axzf39 Color Color--light"
                       data-test-color=""
                     >
                       <div
-                        class="Color__picker Color__picker--light"
+                        class="css-agg4zg Color__picker Color__picker--light"
+                        data-test-box=""
                         style="background-color: rgb(241, 242, 246);"
                       />
                       <div
-                        class="Color__picker-alpha Color__picker-alpha--light"
+                        class="css-agg4zg Color__picker-alpha Color__picker-alpha--light"
+                        data-test-box=""
                         style="background-color: rgb(241, 242, 246);"
                       />
                       <div
-                        class="Color__picker-texture Color__picker-texture--light"
+                        class="css-hnxq09 Color__picker-texture Color__picker-texture--light"
+                        data-test-box=""
                       />
                     </div>
                   </div>
@@ -1226,7 +1308,8 @@ exports[`PanelProperties snapshots should render with changed width 1`] = `
                     value="100"
                   />
                   <div
-                    class="ScrubbableInput ScrubbableInput--light"
+                    class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+                    data-test-box=""
                     data-test-scrubbable-input=""
                   >
                     <div
@@ -1239,7 +1322,8 @@ exports[`PanelProperties snapshots should render with changed width 1`] = `
               </div>
             </div>
             <div
-              class="SectionColumn__buttons SectionColumn__buttons--light"
+              class="css-c1qms7"
+              data-test-box=""
             >
               <div
                 class="css-1jnxvbp ButtonIcon ButtonIcon--light"

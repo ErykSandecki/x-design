@@ -9,7 +9,6 @@ import { getCssStyles } from './utils';
 export const mappingGrid = (sx: TSX): string => {
   const keys = enumToArray<string>(Grid);
   const cssStyles = getCssStyles(sx, keys);
-  const hasGridStyle = cssStyles.length;
 
-  return hasGridStyle ? `display: grid;\n${cssStyles}` : cssStyles;
+  return cssStyles;
 };

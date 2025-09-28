@@ -2,6 +2,7 @@ import { createPortal } from 'react-dom';
 import { FC, ReactNode, useEffect, useRef, useState } from 'react';
 
 // components
+import Box from '../../../../../UI/components/Box/Box';
 import ButtonIcon from '../../../ButtonIcon/ButtonIcon';
 import ColorSampler from '../ColorSampler/ColorSampler';
 import E2EDataAttribute from 'shared/E2EDataAttributes/E2EDataAttribute';
@@ -39,12 +40,12 @@ export const Panel: FC<TPanelProps> = ({
   onClickSampler,
   setVisible,
 }) => {
-  const mousePosition = useRef(BASE_2D);
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const [activeTab, setActiveTab] = useState(Tab.custom);
   const [sampleContainer, setSampleContainer] = useState<HTMLDivElement>(null);
-  const ref = useRef<HTMLDivElement>(null);
+  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
+  const mousePosition = useRef(BASE_2D);
   const onClickHandler = useClickEvent(mousePosition, onClickSampler);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     /* istanbul ignore next */
@@ -57,23 +58,30 @@ export const Panel: FC<TPanelProps> = ({
 
   return (
     <E2EDataAttribute type={E2EAttribute.colorPickerPanel}>
-      <div className={cx(classNamesWithTheme[className])} onKeyDown={(event) => event.stopPropagation()} ref={ref}>
-        <div className={cx(classNamesWithTheme.header)}>
+      <Box
+        classes={{ className: cx(classNamesWithTheme[className]) }}
+        onKeyDown={(event) => event.stopPropagation()}
+        ref={ref}
+      >
+        <Box
+          classes={{ className: cx(classNamesWithTheme.header) }}
+          sx={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', justifyContent: 'center', p: 8 }}
+        >
           <Tabs activeTab={activeTab} setActiveTab={setActiveTab as TTabsProps['setActiveTab']} tabs={TABS} />
           <Icon clickable height={11} name="Close" onClick={() => setVisible(false)} width={11} />
-        </div>
+        </Box>
         {children}
         {sampleContainer &&
           createPortal(
-            <div className={cx(classNamesWithTheme.sample)}>
+            <Box sx={{ alignItems: 'center', display: 'flex', justifyContent: 'center' }}>
               <ButtonIcon e2eValue="sampler" name="Sample" onClick={onClickHandler} selected={activeSampler} />
               {activeSampler && (
                 <ColorSampler initialMousePosition={mousePosition.current} onClickColorSampler={onClickColorSampler} />
               )}
-            </div>,
+            </Box>,
             sampleContainer,
           )}
-      </div>
+      </Box>
     </E2EDataAttribute>
   );
 };

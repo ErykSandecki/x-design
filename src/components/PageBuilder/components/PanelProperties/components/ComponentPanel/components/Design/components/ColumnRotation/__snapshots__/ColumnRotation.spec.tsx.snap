@@ -7,7 +7,8 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
     data-test-section=""
   >
     <div
-      class="SectionColumn__labels SectionColumn__labels--light"
+      class="css-lxhfcz SectionColumn__labels SectionColumn__labels--light"
+      data-test-box=""
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
@@ -19,10 +20,12 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
       </small>
     </div>
     <div
-      class="SectionColumn__wrapper SectionColumn__wrapper--light"
+      class="css-1r00qlg"
+      data-test-box=""
     >
       <div
-        class="SectionColumn__content SectionColumn__content--light SectionColumn__content--twoInputs SectionColumn__content--twoInputs--light"
+        class="css-1m2m6pt SectionColumn__content SectionColumn__content--light SectionColumn__content--twoInputs SectionColumn__content--twoInputs--light"
+        data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
@@ -30,7 +33,8 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
           data-test-text-field="angle"
         >
           <div
-            class="ScrubbableInput ScrubbableInput--light"
+            class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+            data-test-box=""
             data-test-scrubbable-input="angle"
           >
             <div
@@ -92,7 +96,8 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
         </div>
       </div>
       <div
-        class="SectionColumn__buttons SectionColumn__buttons--light"
+        class="css-c1qms7"
+        data-test-box=""
       />
     </div>
   </div>
@@ -106,7 +111,8 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
     data-test-section=""
   >
     <div
-      class="SectionColumn__labels SectionColumn__labels--light"
+      class="css-lxhfcz SectionColumn__labels SectionColumn__labels--light"
+      data-test-box=""
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
@@ -118,10 +124,12 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
       </small>
     </div>
     <div
-      class="SectionColumn__wrapper SectionColumn__wrapper--light"
+      class="css-1r00qlg"
+      data-test-box=""
     >
       <div
-        class="SectionColumn__content SectionColumn__content--light SectionColumn__content--twoInputs SectionColumn__content--twoInputs--light"
+        class="css-1m2m6pt SectionColumn__content SectionColumn__content--light SectionColumn__content--twoInputs SectionColumn__content--twoInputs--light"
+        data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
@@ -129,7 +137,8 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
           data-test-text-field="angle"
         >
           <div
-            class="ScrubbableInput ScrubbableInput--light"
+            class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+            data-test-box=""
             data-test-scrubbable-input="angle"
           >
             <div
@@ -191,7 +200,8 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
         </div>
       </div>
       <div
-        class="SectionColumn__buttons SectionColumn__buttons--light"
+        class="css-c1qms7"
+        data-test-box=""
       />
     </div>
   </div>

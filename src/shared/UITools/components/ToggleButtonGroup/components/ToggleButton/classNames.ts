@@ -1,10 +1,6 @@
+// utils
+import { composeClassNames } from 'utils';
+
 export const className = 'ToggleButton';
 
-export const classNames = {
-  [className]: {
-    name: className,
-    modificators: {
-      selected: `${className}--selected`,
-    },
-  },
-};
+export const classNames = composeClassNames(className, [className, 'selected'] as const);

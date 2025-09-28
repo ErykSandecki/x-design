@@ -20,9 +20,12 @@ export const mappingSpacings = (sx: TSX): string => {
   return keys
     .map((key) => {
       const value = spacings[key as keyof TSXSpacings];
-      const keys = seperateCssProperties(Spacing[key as keyof typeof Spacing]);
 
-      return keys.map((key) => `${key}: ${value}px;`).join('\n');
+      if (value !== undefined) {
+        const keys = seperateCssProperties(Spacing[key as keyof typeof Spacing]);
+
+        return keys.map((key) => `${key}: ${value}px;`).join('\n');
+      }
     })
     .filter(Boolean)
     .join('\n');

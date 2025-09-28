@@ -13,7 +13,5 @@ export const classNames = composeClassNames(
   [className, 'withMargin'] as const,
   ['labels'] as const,
   ['label'] as const,
-  ['wrapper'] as const,
   ['content', ...values(GridColumnType)] as const,
-  ['buttons'] as const,
 );

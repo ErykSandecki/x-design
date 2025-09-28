@@ -1,6 +1,6 @@
 {
   "colorPicker.panel.tabs.1": "Standardowy",
-  "colorPicker.sampler.prompt": "Kliknij, aby pobrać",
+  "colorPicker.sampler.prompt.description": "Kliknij, aby pobrać",
   "pageBuilder.panelProperties.componentPanel.design.columnAlignment.label": "Wyrównanie",
   "pageBuilder.panelProperties.componentPanel.design.columnFlow.label": "Typ układu",
   "pageBuilder.panelProperties.componentPanel.design.columnHeader.header.frame": "Ramka",

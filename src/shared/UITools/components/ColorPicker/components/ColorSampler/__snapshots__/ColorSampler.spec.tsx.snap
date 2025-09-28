@@ -8,229 +8,286 @@ exports[`ColorSampler snapshots should render ColorSampler 1`] = `
     style="left: 15px; top: 15px;"
   >
     <div
-      class="ColorSampler__preventAntdEventMask ColorSampler__preventAntdEventMask--light"
+      class="css-1kjclab ColorGridMask ColorGridMask--light"
+      data-test-box=""
       data-test-button="color-sampler"
     />
     <div
-      class="ColorSampler__pickerWrapper ColorSampler__pickerWrapper--light"
+      class="css-1odrpt5 ColorGrid ColorGrid--light"
+      data-test-box=""
     >
       <div
-        class="ColorSampler__picker ColorSampler__picker--light"
+        class="css-fx1txq"
+        data-test-box=""
       >
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="ColorSampler__pickerGrid ColorSampler__pickerGrid--light"
+          class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
       </div>
       <div
-        class="ColorSampler__pickerTargetColor ColorSampler__pickerTargetColor--light"
+        class="css-tnkbza ColorGrid__pickerTargetColor ColorGrid__pickerTargetColor--light"
+        data-test-box=""
       />
     </div>
     <div
-      class="ColorSampler__data ColorSampler__data--light"
+      class="css-1jnxvbp"
+      data-test-box=""
     >
       <div
-        class="ColorSampler__header ColorSampler__header--light"
+        class="css-e5vky9 ColorResult ColorResult--light"
+        data-test-box=""
       >
         <div
-          class="ColorSampler__selectedColor ColorSampler__selectedColor--light"
+          class="css-cc7zgu ColorResult__selectedColor ColorResult__selectedColor--light"
+          data-test-box=""
           style="background-color: rgba(0, 0, 0, 0);"
         />
       </div>
       <div
-        class="ColorSampler__prompt ColorSampler__prompt--light"
+        class="css-6642oy ColorPrompt ColorPrompt--light"
+        data-test-box=""
       >
         <div
           class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -240,67 +297,12 @@ exports[`ColorSampler snapshots should render ColorSampler 1`] = `
           width="12"
         />
         <small
-          class="css-3thidm ColorSampler__promptDescription ColorSampler__promptDescription--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+          class="css-3thidm ColorPrompt__description ColorPrompt__description--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
           data-test-text=""
           style="text-align: inherit;"
         >
           Click to sample
         </small>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`ColorSampler snapshots should render when is pending 1`] = `
-<DocumentFragment>
-  <div
-    class="css-18rrimj ColorSampler ColorSampler--light"
-    data-test-box=""
-    style="left: 15px; top: 15px;"
-  >
-    <div
-      class="ColorSampler__preventAntdEventMask ColorSampler__preventAntdEventMask--light"
-      data-test-button="color-sampler"
-    />
-    <div
-      class="ColorSampler__pickerWrapper ColorSampler__pickerWrapper--light"
-    >
-      <div
-        class="ColorSampler__picker ColorSampler__picker--light"
-      />
-      <div
-        class="ColorSampler__pickerTargetColor ColorSampler__pickerTargetColor--light"
-      />
-      <div
-        class="ColorSampler__pickerLoader ColorSampler__pickerLoader--light"
-      >
-        <div
-          aria-busy="true"
-          aria-live="polite"
-          class="ant-spin ant-spin-spinning css-dev-only-do-not-override-1odpy5d"
-        >
-          <span
-            class="ant-spin-dot-holder"
-          >
-            <span
-              class="ant-spin-dot ant-spin-dot-spin"
-            >
-              <i
-                class="ant-spin-dot-item"
-              />
-              <i
-                class="ant-spin-dot-item"
-              />
-              <i
-                class="ant-spin-dot-item"
-              />
-              <i
-                class="ant-spin-dot-item"
-              />
-            </span>
-          </span>
-        </div>
       </div>
     </div>
   </div>

@@ -19,7 +19,7 @@ describe('mappingFlex', () => {
 
     // result
     expect(result).toBe(
-      `display: flex;\nalign-content: baseline;\nalign-items: baseline;\nalign-self: auto;\nflex: 0;\nflex-direction: column;\nflex-grow: inherit;\nflex-shrink: inherit;\nflex-wrap: inherit;\njustify-content: center;\norder: inherit;`,
+      `align-content: baseline;\nalign-items: baseline;\nalign-self: auto;\nflex: 0;\nflex-direction: column;\nflex-grow: inherit;\nflex-shrink: inherit;\nflex-wrap: inherit;\njustify-content: center;\norder: inherit;`,
     );
   });
 

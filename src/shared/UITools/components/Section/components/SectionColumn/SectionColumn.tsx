@@ -48,23 +48,28 @@ export const SectionColumn: FC<TSectionColumnProps> = ({
       }}
       e2eAttribute={E2EAttribute.section}
     >
-      <div className={cx(classNamesWithTheme.labels)} style={{ width }}>
+      <Box classes={{ className: cx(classNamesWithTheme.labels) }} style={{ width }} sx={{ display: 'flex' }}>
         {!!size(labels) &&
           labels.map((label, index) => (
             <Small classes={{ className: cx(classNamesWithTheme.label) }} key={index}>
               {label}
             </Small>
           ))}
-      </div>
-      <div className={cx(classNamesWithTheme.wrapper)}>
-        <div
-          className={cx(classNamesWithTheme.content.name, classNamesWithTheme.content.modificators[gridColumnType])}
+      </Box>
+      <Box sx={{ alignItems: 'center', columnGap: '8px', display: 'flex' }}>
+        <Box
+          classes={{
+            className: cx(classNamesWithTheme.content.name, classNamesWithTheme.content.modificators[gridColumnType]),
+          }}
           style={{ width }}
+          sx={{ display: 'grid' }}
         >
           {children}
-        </div>
-        <div className={cx(classNamesWithTheme.buttons)}>{buttonsIcon.map((buttonIcon) => buttonIcon)}</div>
-      </div>
+        </Box>
+        <Box sx={{ alignItems: 'center', columnGap: '2.5px', display: 'flex', flexGrow: 1, justifyContent: 'center' }}>
+          {buttonsIcon.map((buttonIcon) => buttonIcon)}
+        </Box>
+      </Box>
     </Box>
   );
 };

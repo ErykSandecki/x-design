@@ -32,13 +32,22 @@ export const Color: FC<TColorProps> = ({ alpha, color }) => {
         className: cx(classNamesWithTheme[className]),
       }}
       e2eAttribute={E2EAttribute.color}
+      sx={{ borderRadius: '2.5px', display: 'flex', height: '14px', position: 'relative', width: '14px' }}
     >
-      <div className={cx(classNamesWithTheme.picker)} style={{ backgroundColor: hexToRgb(color, 100) }} />
-      <div
-        className={cx(classNamesWithTheme.pickerAlpha)}
-        style={{ backgroundColor: hexToRgb(color, parseInt(alpha)) }}
+      <Box
+        classes={{ className: cx(classNamesWithTheme.picker) }}
+        style={{ backgroundColor: hexToRgb(color, 100) }}
+        sx={{ height: '100%', position: 'relative', width: '50%' }}
       />
-      <div className={cx(classNamesWithTheme.pickerTexture)} />
+      <Box
+        classes={{ className: cx(classNamesWithTheme.pickerAlpha) }}
+        style={{ backgroundColor: hexToRgb(color, parseInt(alpha)) }}
+        sx={{ height: '100%', position: 'relative', width: '50%' }}
+      />
+      <Box
+        classes={{ className: cx(classNamesWithTheme.pickerTexture) }}
+        sx={{ height: '100%', left: 0, position: 'absolute', top: 0, width: '100%' }}
+      />
     </Box>
   );
 };

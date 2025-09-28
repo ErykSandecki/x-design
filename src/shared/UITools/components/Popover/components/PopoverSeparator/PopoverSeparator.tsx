@@ -1,18 +1,8 @@
 import { FC } from 'react';
 
-// hooks
-import { useTheme } from 'hooks';
+// components
+import Box from 'shared/UI/components/Box/Box';
 
-// others
-import { className, classNames } from './classNames';
-
-// styles
-import styles from './popover-separator.scss';
-
-export const PopoverSeparator: FC = () => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-
-  return <div className={cx(classNamesWithTheme[className])} />;
-};
+export const PopoverSeparator: FC = () => <Box sx={{ bg: 'neutral3', height: '1px', my: 8 }} />;
 
 export default PopoverSeparator;

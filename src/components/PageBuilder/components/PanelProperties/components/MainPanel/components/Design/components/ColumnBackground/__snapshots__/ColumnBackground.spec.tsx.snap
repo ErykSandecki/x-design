@@ -7,14 +7,17 @@ exports[`ColumnBackground snapshots should render ColumnBackground 1`] = `
     data-test-section=""
   >
     <div
-      class="SectionColumn__labels SectionColumn__labels--light"
+      class="css-lxhfcz SectionColumn__labels SectionColumn__labels--light"
+      data-test-box=""
       style="width: calc(100% - 24px - 0px - 8px);"
     />
     <div
-      class="SectionColumn__wrapper SectionColumn__wrapper--light"
+      class="css-1r00qlg"
+      data-test-box=""
     >
       <div
-        class="SectionColumn__content SectionColumn__content--light SectionColumn__content--single SectionColumn__content--single--light"
+        class="css-1m2m6pt SectionColumn__content SectionColumn__content--light SectionColumn__content--single SectionColumn__content--single--light"
+        data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
@@ -27,21 +30,26 @@ exports[`ColumnBackground snapshots should render ColumnBackground 1`] = `
           >
             <div
               aria-describedby="test-id"
+              class="css-1jnxvbp"
+              data-test-box=""
             >
               <div
-                class="css-1jnxvbp Color Color--light"
+                class="css-1axzf39 Color Color--light"
                 data-test-color=""
               >
                 <div
-                  class="Color__picker Color__picker--light"
+                  class="css-agg4zg Color__picker Color__picker--light"
+                  data-test-box=""
                   style="background-color: rgb(241, 242, 246);"
                 />
                 <div
-                  class="Color__picker-alpha Color__picker-alpha--light"
+                  class="css-agg4zg Color__picker-alpha Color__picker-alpha--light"
+                  data-test-box=""
                   style="background-color: rgb(241, 242, 246);"
                 />
                 <div
-                  class="Color__picker-texture Color__picker-texture--light"
+                  class="css-hnxq09 Color__picker-texture Color__picker-texture--light"
+                  data-test-box=""
                 />
               </div>
             </div>
@@ -66,7 +74,8 @@ exports[`ColumnBackground snapshots should render ColumnBackground 1`] = `
               value="100"
             />
             <div
-              class="ScrubbableInput ScrubbableInput--light"
+              class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+              data-test-box=""
               data-test-scrubbable-input=""
             >
               <div
@@ -79,7 +88,8 @@ exports[`ColumnBackground snapshots should render ColumnBackground 1`] = `
         </div>
       </div>
       <div
-        class="SectionColumn__buttons SectionColumn__buttons--light"
+        class="css-c1qms7"
+        data-test-box=""
       >
         <div
           class="css-1jnxvbp ButtonIcon ButtonIcon--light"

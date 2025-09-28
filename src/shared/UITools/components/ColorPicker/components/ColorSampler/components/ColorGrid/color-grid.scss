@@ -1,0 +1,11 @@
+.ColorGrid {
+  &__picker-grid {
+    @include theme('neutral-3', border, '0.5px solid');
+  }
+
+  &__picker-target-color {
+    @include theme('neutral-1', border, '2px solid');
+
+    transform: translate(-50%, -50%);
+  }
+}

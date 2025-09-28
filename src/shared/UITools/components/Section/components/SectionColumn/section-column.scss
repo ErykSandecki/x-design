@@ -7,7 +7,6 @@ $--xd-gap: 10px;
 
   &__labels {
     column-gap: $--xd-gap;
-    display: flex;
   }
 
   &__label {
@@ -17,15 +16,8 @@ $--xd-gap: 10px;
     margin-bottom: 5px;
   }
 
-  &__wrapper {
-    align-items: center;
-    column-gap: 8px;
-    display: flex;
-  }
-
   &__content {
     column-gap: $--xd-gap;
-    display: grid;
 
     &--single {
       grid-template-columns: 1fr;
@@ -34,13 +26,5 @@ $--xd-gap: 10px;
     &--two-inputs {
       grid-template-columns: repeat(2, 1fr);
     }
-  }
-
-  &__buttons {
-    align-items: center;
-    column-gap: 2.5px;
-    display: flex;
-    flex-grow: 1;
-    justify-content: center;
   }
 }

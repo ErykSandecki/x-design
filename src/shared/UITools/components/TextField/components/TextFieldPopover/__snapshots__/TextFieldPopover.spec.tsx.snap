@@ -14,7 +14,8 @@ exports[`TextFieldPopover snapshots should render TextFieldPopover 1`] = `
       width="12"
     />
     <div
-      class="Popover Popover--light"
+      class="css-17s20gh Popover Popover--light"
+      data-test-box=""
       data-test-popover="popover"
       style="left: 0px; top: 0px;"
     >
@@ -38,7 +39,8 @@ exports[`TextFieldPopover snapshots should render with opened popover 1`] = `
       width="12"
     />
     <div
-      class="Popover Popover--light Popover--selected Popover--selected--light"
+      class="css-17s20gh Popover Popover--light Popover--selected Popover--selected--light"
+      data-test-box=""
       data-test-popover="popover"
       style="left: 0px; top: 0px;"
     >

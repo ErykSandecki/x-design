@@ -7,7 +7,8 @@ exports[`Section snapshots should render Section 1`] = `
     data-test-section=""
   >
     <div
-      class="Section__header Section__header--light"
+      class="css-kp4ill"
+      data-test-box=""
     >
       <small
         class="css-1jnxvbp Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
@@ -17,7 +18,8 @@ exports[`Section snapshots should render Section 1`] = `
         label
       </small>
       <div
-        class="Section__buttons Section__buttons--light"
+        class="css-1f1atqu"
+        data-test-box=""
       />
     </div>
     children
@@ -32,7 +34,8 @@ exports[`Section snapshots should render with buttons 1`] = `
     data-test-section=""
   >
     <div
-      class="Section__header Section__header--light"
+      class="css-kp4ill"
+      data-test-box=""
     >
       <small
         class="css-1jnxvbp Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
@@ -42,7 +45,8 @@ exports[`Section snapshots should render with buttons 1`] = `
         label
       </small>
       <div
-        class="Section__buttons Section__buttons--light"
+        class="css-1f1atqu"
+        data-test-box=""
       >
         <div
           class="css-1jnxvbp ButtonIcon ButtonIcon--light"

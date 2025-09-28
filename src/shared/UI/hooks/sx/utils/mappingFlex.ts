@@ -9,7 +9,6 @@ import { getCssStyles } from './utils';
 export const mappingFlex = (sx: TSX): string => {
   const keys = enumToArray<string>(Flex);
   const cssStyles = getCssStyles(sx, keys);
-  const hasFlexStyle = cssStyles.length;
 
-  return hasFlexStyle ? `display: flex;\n${cssStyles}` : cssStyles;
+  return cssStyles;
 };

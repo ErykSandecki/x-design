@@ -7,14 +7,17 @@ exports[`ColumnHeader snapshots should render ColumnHeader 1`] = `
     data-test-section=""
   >
     <div
-      class="SectionColumn__labels SectionColumn__labels--light"
+      class="css-lxhfcz SectionColumn__labels SectionColumn__labels--light"
+      data-test-box=""
       style="width: calc(100% - 48px - 2.5px - 8px);"
     />
     <div
-      class="SectionColumn__wrapper SectionColumn__wrapper--light"
+      class="css-1r00qlg"
+      data-test-box=""
     >
       <div
-        class="SectionColumn__content SectionColumn__content--light SectionColumn__content--single SectionColumn__content--single--light"
+        class="css-1m2m6pt SectionColumn__content SectionColumn__content--light SectionColumn__content--single SectionColumn__content--single--light"
+        data-test-box=""
         style="width: calc(100% - 48px - 2.5px - 8px);"
       >
         <small
@@ -26,7 +29,8 @@ exports[`ColumnHeader snapshots should render ColumnHeader 1`] = `
         </small>
       </div>
       <div
-        class="SectionColumn__buttons SectionColumn__buttons--light"
+        class="css-c1qms7"
+        data-test-box=""
       >
         <div
           class="css-1jnxvbp ButtonIcon ButtonIcon--light"
@@ -65,14 +69,17 @@ exports[`ColumnHeader snapshots should render with multiple selects 1`] = `
     data-test-section=""
   >
     <div
-      class="SectionColumn__labels SectionColumn__labels--light"
+      class="css-lxhfcz SectionColumn__labels SectionColumn__labels--light"
+      data-test-box=""
       style="width: calc(100% - 48px - 2.5px - 8px);"
     />
     <div
-      class="SectionColumn__wrapper SectionColumn__wrapper--light"
+      class="css-1r00qlg"
+      data-test-box=""
     >
       <div
-        class="SectionColumn__content SectionColumn__content--light SectionColumn__content--single SectionColumn__content--single--light"
+        class="css-1m2m6pt SectionColumn__content SectionColumn__content--light SectionColumn__content--single SectionColumn__content--single--light"
+        data-test-box=""
         style="width: calc(100% - 48px - 2.5px - 8px);"
       >
         <small
@@ -84,7 +91,8 @@ exports[`ColumnHeader snapshots should render with multiple selects 1`] = `
         </small>
       </div>
       <div
-        class="SectionColumn__buttons SectionColumn__buttons--light"
+        class="css-c1qms7"
+        data-test-box=""
       >
         <div
           class="css-1jnxvbp ButtonIcon ButtonIcon--light"

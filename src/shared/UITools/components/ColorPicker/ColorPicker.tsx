@@ -2,6 +2,7 @@ import { ColorPicker as ColorPickerAntd, ColorPickerProps } from 'antd';
 import { FC, useRef, useState } from 'react';
 
 // components
+import Box from '../../../UI/components/Box/Box';
 import Color from '../Color/Color';
 import FieldGroup from '../FieldGroup/FieldGroup';
 import Panel, { TPanelProps } from './components/Panel/Panel';
@@ -87,9 +88,9 @@ export const ColorPicker: FC<TColorPickerProps> = ({
             {...getAttributes(E2EAttribute.colorPicker, e2eValue)}
             {...restProps}
           >
-            <div>
+            <Box>
               <Color alpha={alpha} color={color} />
-            </div>
+            </Box>
           </ColorPickerAntd>
         }
         value={colorValue.replace('#', '')}

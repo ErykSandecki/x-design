@@ -3,7 +3,8 @@
 exports[`ScrubbableInput snapshots should render ScrubbableInput 1`] = `
 <DocumentFragment>
   <div
-    class="ScrubbableInput ScrubbableInput--light"
+    class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+    data-test-box=""
     data-test-scrubbable-input=""
   >
     <span>
@@ -16,7 +17,8 @@ exports[`ScrubbableInput snapshots should render ScrubbableInput 1`] = `
 exports[`ScrubbableInput snapshots should render with icon 1`] = `
 <DocumentFragment>
   <div
-    class="ScrubbableInput ScrubbableInput--light"
+    class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+    data-test-box=""
     data-test-scrubbable-input=""
   >
     <span>

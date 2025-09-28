@@ -3,11 +3,12 @@
 exports[`Tabs snapshots should render Tabs 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp Tabs Tabs--light"
+    class="css-gu5024 Tabs Tabs--light"
     data-test-box=""
   >
     <div
-      class="Tabs__tab Tabs__tab--light Tabs__tab--active Tabs__tab--active--light Tabs__tab--disabled Tabs__tab--disabled--light"
+      class="css-17z9djj Tabs__tab Tabs__tab--light Tabs__tab--active Tabs__tab--active--light Tabs__tab--disabled Tabs__tab--disabled--light"
+      data-test-box=""
       data-test-tab="name"
     >
       label

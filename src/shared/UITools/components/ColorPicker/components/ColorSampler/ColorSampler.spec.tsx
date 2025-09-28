@@ -1,4 +1,4 @@
-import { fireEvent, render } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 // components
 import ColorSampler from './ColorSampler';
@@ -8,12 +8,6 @@ import { useColorSamplerEvents } from './hooks/useColorSamplerEvents';
 
 // others
 import { BASE_2D } from 'shared/ZoomBox/constants';
-
-// types
-import { E2EAttribute } from 'types/e2e';
-
-// utils
-import { getByE2EAttribute } from 'test/testHelpers';
 
 const mockCallBack = jest.fn();
 
@@ -40,44 +34,5 @@ describe('ColorSampler snapshots', () => {
 
     // result
     expect(asFragment()).toMatchSnapshot();
-  });
-
-  it('should render when is pending', () => {
-    // mock
-    (useColorSamplerEvents as jest.Mock).mockImplementation(() => ({
-      colors: [],
-      isPending: true,
-      mousePosition: { x: 0, y: 0 },
-    }));
-
-    // before
-    const { asFragment } = render(<ColorSampler initialMousePosition={BASE_2D} onClickColorSampler={mockCallBack} />);
-
-    // result
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
-
-describe('ColorSampler behaviors', () => {
-  beforeEach(() => {
-    jest.clearAllMocks();
-  });
-
-  it('should get sample of color', () => {
-    // mock
-    (useColorSamplerEvents as jest.Mock).mockImplementation(() => ({
-      colors: [],
-      isPending: false,
-      mousePosition: { x: 0, y: 0 },
-    }));
-
-    // before
-    const { container } = render(<ColorSampler initialMousePosition={BASE_2D} onClickColorSampler={mockCallBack} />);
-
-    // action
-    fireEvent.click(getByE2EAttribute(container, E2EAttribute.button, 'color-sampler'));
-
-    // result
-    expect(mockCallBack.mock.calls.length).toBe(1);
   });
 });

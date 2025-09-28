@@ -28,10 +28,12 @@ export const Section: FC<TSectionProps> = ({ buttonsIcon = [], children, label }
   return (
     <Box classes={{ className: cx(classNamesWithTheme[className]) }} e2eAttribute={E2EAttribute.section}>
       {label && (
-        <div className={cx(classNamesWithTheme.header)}>
+        <Box sx={{ alignItems: 'center', display: 'flex', justifyContent: 'space-between', mb: 10 }}>
           <Small classes={{ className: cx(classNamesWithTheme.label) }}>{label}</Small>
-          <div className={cx(classNamesWithTheme.buttons)}>{buttonsIcon.map((buttonIcon) => buttonIcon)}</div>
-        </div>
+          <Box sx={{ alignItems: 'center', columnGap: '2.5px', display: 'flex', justifyContent: 'center' }}>
+            {buttonsIcon.map((buttonIcon) => buttonIcon)}
+          </Box>
+        </Box>
       )}
       {children}
     </Box>

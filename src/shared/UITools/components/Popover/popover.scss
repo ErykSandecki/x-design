@@ -4,11 +4,4 @@
   @include overlay-menu;
   @include theme('neutral-3', border, '1px solid');
   @include theme('neutral-4', background-color);
-
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  padding: 7.5px 10px;
-  position: fixed;
-  width: max-content;
 }

@@ -3,7 +3,8 @@
 exports[`PopoverItem snapshots should render PopoverItem 1`] = `
 <DocumentFragment>
   <div
-    class="PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem PopoverItem--light"
+    data-test-box=""
     data-test-popover-item="0"
   >
     <div
@@ -34,7 +35,8 @@ exports[`PopoverItem snapshots should render PopoverItem 1`] = `
 exports[`PopoverItem snapshots should render selected 1`] = `
 <DocumentFragment>
   <div
-    class="PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem PopoverItem--light"
+    data-test-box=""
     data-test-popover-item="0"
   >
     <div

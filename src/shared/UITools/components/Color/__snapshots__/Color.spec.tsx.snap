@@ -3,19 +3,22 @@
 exports[`Color snapshots should render Color 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp Color Color--light"
+    class="css-1axzf39 Color Color--light"
     data-test-color=""
   >
     <div
-      class="Color__picker Color__picker--light"
+      class="css-agg4zg Color__picker Color__picker--light"
+      data-test-box=""
       style="background-color: rgb(0, 0, 0);"
     />
     <div
-      class="Color__picker-alpha Color__picker-alpha--light"
+      class="css-agg4zg Color__picker-alpha Color__picker-alpha--light"
+      data-test-box=""
       style="background-color: rgb(0, 0, 0);"
     />
     <div
-      class="Color__picker-texture Color__picker-texture--light"
+      class="css-hnxq09 Color__picker-texture Color__picker-texture--light"
+      data-test-box=""
     />
   </div>
 </DocumentFragment>

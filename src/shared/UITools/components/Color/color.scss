@@ -1,31 +1,15 @@
 .Color {
-  border-radius: 2.5px;
   cursor: pointer;
-  display: flex;
-  height: 14px;
-  position: relative;
-  width: 14px;
 
   &__picker {
-    height: 100%;
-    position: relative;
-    width: 50%;
     z-index: 2;
   }
 
   &__picker-alpha {
-    height: 100%;
-    position: relative;
-    width: 50%;
     z-index: 2;
   }
 
   &__picker-texture {
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
     z-index: 1;
 
     &--light {

@@ -12,21 +12,26 @@ exports[`ColorPicker snapshots should render ColorPicker 1`] = `
     >
       <div
         aria-describedby="test-id"
+        class="css-1jnxvbp"
+        data-test-box=""
       >
         <div
-          class="css-1jnxvbp Color Color--light"
+          class="css-1axzf39 Color Color--light"
           data-test-color=""
         >
           <div
-            class="Color__picker Color__picker--light"
+            class="css-agg4zg Color__picker Color__picker--light"
+            data-test-box=""
             style="background-color: rgb(255, 255, 255);"
           />
           <div
-            class="Color__picker-alpha Color__picker-alpha--light"
+            class="css-agg4zg Color__picker-alpha Color__picker-alpha--light"
+            data-test-box=""
             style="background-color: rgb(255, 255, 255);"
           />
           <div
-            class="Color__picker-texture Color__picker-texture--light"
+            class="css-hnxq09 Color__picker-texture Color__picker-texture--light"
+            data-test-box=""
           />
         </div>
       </div>
@@ -51,7 +56,8 @@ exports[`ColorPicker snapshots should render ColorPicker 1`] = `
         value="100"
       />
       <div
-        class="ScrubbableInput ScrubbableInput--light"
+        class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+        data-test-box=""
         data-test-scrubbable-input=""
       >
         <div

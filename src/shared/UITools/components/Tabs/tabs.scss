@@ -1,23 +1,13 @@
 .Tabs {
-  align-items: center;
-  column-gap: 5px;
-  display: flex;
   user-select: none;
 
   &__tab {
     @include theme('neutral-2', color);
     @include theme-selector('neutral-3', background-color, '&:hover');
 
-    align-items: center;
-    border-radius: 5px;
-    box-sizing: border-box;
     cursor: pointer;
-    display: flex;
     font-size: 11px;
-    height: 24px;
-    justify-content: center;
     line-height: 16px;
-    padding: 0 8px;
 
     &--active {
       @include theme('neutral-1', color);

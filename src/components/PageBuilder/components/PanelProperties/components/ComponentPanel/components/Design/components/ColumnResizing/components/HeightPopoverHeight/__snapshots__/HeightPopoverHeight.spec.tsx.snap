@@ -3,7 +3,8 @@
 exports[`HeightPopoverHeight snapshots should render HeightPopoverHeight 1`] = `
 <DocumentFragment>
   <div
-    class="PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem PopoverItem--light"
+    data-test-box=""
     data-test-popover-item="0"
   >
     <div
@@ -29,7 +30,8 @@ exports[`HeightPopoverHeight snapshots should render HeightPopoverHeight 1`] = `
     </small>
   </div>
   <div
-    class="PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem PopoverItem--light"
+    data-test-box=""
     data-test-popover-item="1"
   >
     <div
@@ -55,7 +57,8 @@ exports[`HeightPopoverHeight snapshots should render HeightPopoverHeight 1`] = `
     </small>
   </div>
   <div
-    class="PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem PopoverItem--light"
+    data-test-box=""
     data-test-popover-item="2"
   >
     <div
@@ -81,10 +84,12 @@ exports[`HeightPopoverHeight snapshots should render HeightPopoverHeight 1`] = `
     </small>
   </div>
   <div
-    class="PopoverSeparator PopoverSeparator--light"
+    class="css-qef3st"
+    data-test-box=""
   />
   <div
-    class="PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem PopoverItem--light"
+    data-test-box=""
     data-test-popover-item="3"
   >
     <div
@@ -110,7 +115,8 @@ exports[`HeightPopoverHeight snapshots should render HeightPopoverHeight 1`] = `
     </small>
   </div>
   <div
-    class="PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem PopoverItem--light"
+    data-test-box=""
     data-test-popover-item="4"
   >
     <div
@@ -141,7 +147,8 @@ exports[`HeightPopoverHeight snapshots should render HeightPopoverHeight 1`] = `
 exports[`HeightPopoverHeight snapshots should render wiht mixed value 1`] = `
 <DocumentFragment>
   <div
-    class="PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem PopoverItem--light"
+    data-test-box=""
     data-test-popover-item="0"
   >
     <div
@@ -167,7 +174,8 @@ exports[`HeightPopoverHeight snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem PopoverItem--light"
+    data-test-box=""
     data-test-popover-item="1"
   >
     <div
@@ -193,7 +201,8 @@ exports[`HeightPopoverHeight snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem PopoverItem--light"
+    data-test-box=""
     data-test-popover-item="2"
   >
     <div
@@ -219,10 +228,12 @@ exports[`HeightPopoverHeight snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="PopoverSeparator PopoverSeparator--light"
+    class="css-qef3st"
+    data-test-box=""
   />
   <div
-    class="PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem PopoverItem--light"
+    data-test-box=""
     data-test-popover-item="3"
   >
     <div
@@ -248,7 +259,8 @@ exports[`HeightPopoverHeight snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem PopoverItem--light"
+    data-test-box=""
     data-test-popover-item="4"
   >
     <div

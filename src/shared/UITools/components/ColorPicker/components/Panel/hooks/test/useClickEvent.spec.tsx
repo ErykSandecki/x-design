@@ -7,8 +7,6 @@ import { useClickEvent } from '../useClickEvent';
 // others
 import { BASE_2D } from 'shared/ZoomBox/constants';
 
-// types
-
 const ref = { current: BASE_2D } as RefObject<T2DCoordinates>;
 const mockCallBack = jest.fn();
 
