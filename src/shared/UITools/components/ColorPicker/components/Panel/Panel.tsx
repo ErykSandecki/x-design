@@ -65,7 +65,7 @@ export const Panel: FC<TPanelProps> = ({
       >
         <Box
           classes={{ className: cx(classNamesWithTheme.header) }}
-          sx={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', justifyContent: 'center', p: 8 }}
+          sx={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between', p: 8 }}
         >
           <Tabs activeTab={activeTab} setActiveTab={setActiveTab as TTabsProps['setActiveTab']} tabs={TABS} />
           <Icon clickable height={11} name="Close" onClick={() => setVisible(false)} width={11} />

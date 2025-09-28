@@ -10,7 +10,7 @@ export const classes = {
 export const classNames = composeClassNames(
   className,
   [className] as const,
-  ['hexInput'] as const,
+  ['colorInput'] as const,
   ['alphaInput'] as const,
   ['alphaInputUnit'] as const,
 );

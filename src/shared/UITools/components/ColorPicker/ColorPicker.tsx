@@ -1,13 +1,11 @@
-import { ColorPicker as ColorPickerAntd, ColorPickerProps } from 'antd';
-import { FC, useRef, useState } from 'react';
+import { ColorPickerProps } from 'antd';
+import { FC } from 'react';
 
 // components
-import Box from '../../../UI/components/Box/Box';
-import Color from '../Color/Color';
+import ColorPickerInputAlpha from './ColorPickerInputAlpha';
+import ColorPickerInputColor from './ColorPickerInputColor';
 import FieldGroup from '../FieldGroup/FieldGroup';
-import Panel, { TPanelProps } from './components/Panel/Panel';
-import ScrubbableInput from '../../../ScrubbableInput/ScrubbableInput';
-import TextField from '../TextField/TextField';
+import { TPanelProps } from './components/Panel/Panel';
 
 // hooks
 import { useColorPickerEvents } from './hooks/useColorPickerEvents';
@@ -20,13 +18,9 @@ import { classes, className, classNames } from './classNames';
 import styles from './color-picker.scss';
 
 // types
-import { E2EAttribute, KeyboardKeys, TColor } from 'types';
+import { TColor } from 'types';
 import { TE2EDataAttributeProps } from '../../../E2EDataAttributes/E2EDataAttribute';
 import { TUIProps } from '../../../UI/types';
-
-// utils
-import { getAttributes } from '../../../E2EDataAttributes/utils';
-import { handleSubmitInput, hexToRgb } from 'utils';
 
 export type TColorPickerProps = Pick<TPanelProps, 'activeSampler' | 'onClickColorSampler' | 'onClickSampler'> &
   TUIProps<typeof classes> &
@@ -41,7 +35,6 @@ export type TColorPickerProps = Pick<TPanelProps, 'activeSampler' | 'onClickColo
 export const ColorPicker: FC<TColorPickerProps> = ({
   activeSampler,
   alpha,
-  classes = { className: '' },
   color,
   e2eValue = '',
   onChangeAlpha: onChangeAlphaHandler,
@@ -51,71 +44,36 @@ export const ColorPicker: FC<TColorPickerProps> = ({
   ...restProps
 }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-  const inputAlpha = useRef(null);
-  const inputColor = useRef(null);
-  const [visible, setVisible] = useState(false);
 
   const { alphaValue, colorValue, onBlurAlpha, onBlurColor, onChangeAlpha, onChangeColor, onChangeColorPicker } =
     useColorPickerEvents(alpha, color, onChangeAlphaHandler, onChangeColorHandler);
 
   return (
     <FieldGroup>
-      <TextField
-        className={cx(classNamesWithTheme.hexInput)}
-        e2eValue="color"
+      <ColorPickerInputColor
+        activeSampler={activeSampler}
+        alpha={alpha}
+        alphaValue={alphaValue}
+        className={cx(classNamesWithTheme.colorInput)}
+        classNameParent={cx(classNamesWithTheme[className])}
+        color={color}
+        colorValue={colorValue}
+        e2eValue={e2eValue}
         onBlur={onBlurColor}
-        onChange={onChangeColor}
-        onKeyDown={(event) => handleSubmitInput(KeyboardKeys.enter, inputColor.current)(event)}
-        ref={inputColor}
-        startAdornment={
-          <ColorPickerAntd
-            arrow={false}
-            className={cx(classes.className, classNamesWithTheme[className])}
-            onChange={onChangeColorPicker}
-            onOpenChange={(visible) => setVisible(visible)}
-            open={visible}
-            panelRender={(children) => (
-              <Panel
-                activeSampler={activeSampler}
-                onClickColorSampler={onClickColorSampler}
-                onClickSampler={onClickSampler}
-                setVisible={setVisible}
-              >
-                {children}
-              </Panel>
-            )}
-            value={hexToRgb(colorValue, parseInt(alphaValue))}
-            {...getAttributes(E2EAttribute.colorPicker, e2eValue)}
-            {...restProps}
-          >
-            <Box>
-              <Color alpha={alpha} color={color} />
-            </Box>
-          </ColorPickerAntd>
-        }
-        value={colorValue.replace('#', '')}
+        onChangeColor={onChangeColor}
+        onChangeColorPicker={onChangeColorPicker}
+        onClickColorSampler={onClickColorSampler}
+        onClickSampler={onClickSampler}
+        {...restProps}
       />
-      <TextField
+      <ColorPickerInputAlpha
+        alpha={alpha}
+        alphaValue={alphaValue}
         className={cx(classNamesWithTheme.alphaInput)}
-        e2eValue="alpha"
-        endAdorment={
-          <ScrubbableInput
-            max={100}
-            min={0}
-            onChange={(value) => onChangeAlphaHandler(value.toString())}
-            value={parseInt(alphaValue)}
-          >
-            <div className={cx(classNamesWithTheme.alphaInputUnit)}>%</div>
-          </ScrubbableInput>
-        }
-        max={100}
-        min={0}
+        classNameInputUnit={cx(classNamesWithTheme.alphaInputUnit)}
         onBlur={onBlurAlpha}
-        onChange={onChangeAlpha}
-        onKeyDown={(event) => handleSubmitInput(KeyboardKeys.enter, inputAlpha.current)(event)}
-        ref={inputAlpha}
-        type="number"
-        value={alphaValue}
+        onChangeAlpha={onChangeAlpha}
+        onChangeAlphaHandler={onChangeAlphaHandler}
       />
     </FieldGroup>
   );

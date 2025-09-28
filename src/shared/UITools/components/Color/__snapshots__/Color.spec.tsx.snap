@@ -12,12 +12,12 @@ exports[`Color snapshots should render Color 1`] = `
       style="background-color: rgb(0, 0, 0);"
     />
     <div
-      class="css-agg4zg Color__picker-alpha Color__picker-alpha--light"
+      class="css-agg4zg Color__pickerAlpha Color__pickerAlpha--light"
       data-test-box=""
       style="background-color: rgb(0, 0, 0);"
     />
     <div
-      class="css-hnxq09 Color__picker-texture Color__picker-texture--light"
+      class="css-hnxq09 Color__pickerTexture Color__pickerTexture--light"
       data-test-box=""
     />
   </div>

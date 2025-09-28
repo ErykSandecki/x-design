@@ -7,7 +7,7 @@ exports[`ColorPicker snapshots should render ColorPicker 1`] = `
     data-test-field-group=""
   >
     <div
-      class="css-1jnxvbp ColorPicker__hexInput ColorPicker__hexInput--light TextField TextField--light"
+      class="css-1jnxvbp ColorPicker__colorInput ColorPicker__colorInput--light TextField TextField--light"
       data-test-text-field="color"
     >
       <div
@@ -25,12 +25,12 @@ exports[`ColorPicker snapshots should render ColorPicker 1`] = `
             style="background-color: rgb(255, 255, 255);"
           />
           <div
-            class="css-agg4zg Color__picker-alpha Color__picker-alpha--light"
+            class="css-agg4zg Color__pickerAlpha Color__pickerAlpha--light"
             data-test-box=""
             style="background-color: rgb(255, 255, 255);"
           />
           <div
-            class="css-hnxq09 Color__picker-texture Color__picker-texture--light"
+            class="css-hnxq09 Color__pickerTexture Color__pickerTexture--light"
             data-test-box=""
           />
         </div>
