@@ -23,7 +23,7 @@ import { E2EAttribute } from 'types';
 import { TCoordinatesData } from '../../types';
 
 export type TClickableAreaProps = {
-  elementsCordinates: TCoordinatesData['elementsCordinates'];
+  elementsCordinates: TCoordinatesData['elementsCoordinates'];
   outlineCoordinates: TRectCoordinates;
 };
 

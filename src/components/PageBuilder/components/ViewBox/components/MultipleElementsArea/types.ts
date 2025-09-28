@@ -2,7 +2,7 @@
 import { TElement } from 'types';
 
 export type TCoordinatesData = {
-  elementsCordinates: Array<{
+  elementsCoordinates: Array<{
     coordinates: TRectCoordinates;
     id: TElement['id'];
   }>;

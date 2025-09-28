@@ -67,7 +67,7 @@ describe('calculateBoxSize', () => {
 
     // result
     expect(result).toStrictEqual({
-      elementsCordinates: [
+      elementsCoordinates: [
         { coordinates: { x1: 0, x2: 100, y1: 0, y2: 100 }, id: 'test-1' },
         { coordinates: { x1: 0, x2: 100, y1: 0, y2: 100 }, id: 'test-2' },
       ],
@@ -83,7 +83,7 @@ describe('calculateBoxSize', () => {
 
     // result
     expect(result).toStrictEqual({
-      elementsCordinates: [],
+      elementsCoordinates: [],
       outline: BASE_RECT,
     });
   });

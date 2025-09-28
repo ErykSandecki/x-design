@@ -48,7 +48,7 @@ export const getCoordinatesData = (
     );
 
     return {
-      elementsCordinates: setCoordinates.elementsCordinates,
+      elementsCoordinates: setCoordinates.elementsCordinates,
       outline: {
         x1: min(setCoordinates.x1) - offset,
         x2: max(setCoordinates.x2) + offset,
@@ -59,7 +59,7 @@ export const getCoordinatesData = (
   }
 
   return {
-    elementsCordinates: [],
+    elementsCoordinates: [],
     outline: BASE_RECT,
   };
 };
