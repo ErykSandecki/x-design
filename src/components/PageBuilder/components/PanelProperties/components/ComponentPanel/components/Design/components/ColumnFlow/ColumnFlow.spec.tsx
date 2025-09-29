@@ -5,14 +5,7 @@ import { Provider } from 'react-redux';
 import ColumnFlow from './ColumnFlow';
 
 // mocks
-import {
-  elementMock,
-  elementDynamicDataMock,
-  elementStaticDataMock,
-  layoutMock,
-  pageBuilderStateMock,
-  selectedElementMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, layoutMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
@@ -36,33 +29,12 @@ const stateMock = {
       ['0']: {
         ...currentPage,
         elements: {
-          allData: {
-            ['-1']: {
-              ...currentPage.elements.allData['-1'],
-              children: [elementMock.id, 'test-1'],
-            },
-            [elementMock.id]: elementMock,
-            ['test-1']: { ...elementMock, id: 'test-1' },
+          ['-1']: {
+            ...currentPage.elements['-1'],
+            children: [elementMock.id, 'test-1'],
           },
-          dynamicData: {
-            ['-1']: {
-              ...currentPage.elements.dynamicData['-1'],
-              children: [elementDynamicDataMock.id],
-            },
-            [elementDynamicDataMock.id]: elementDynamicDataMock,
-            ['test-1']: elementDynamicDataMock,
-          },
-          staticData: {
-            ['-1']: {
-              ...currentPage.elements.staticData['-1'],
-              children: [elementStaticDataMock.id, 'test-1'],
-            },
-            [elementStaticDataMock.id]: elementStaticDataMock,
-            ['test-1']: {
-              ...elementStaticDataMock,
-              id: 'test-1',
-            },
-          },
+          [elementMock.id]: elementMock,
+          ['test-1']: { ...elementMock, id: 'test-1' },
         },
         selectedElements: [selectedElementMock],
       },
@@ -97,26 +69,12 @@ describe('ColumnFlow snapshots', () => {
             ...stateMock[PAGE_BUILDER].pages['0'],
             elements: {
               ...stateMock[PAGE_BUILDER].pages['0'].elements,
-              allData: {
-                ...stateMock[PAGE_BUILDER].pages['0'].elements.allData,
-                ['test-1']: {
-                  ...elementMock,
-                  id: 'test-1',
-                  layout: {
-                    ...layoutMock,
-                    type: LayoutType.grid,
-                  },
-                },
-              },
-              dynamicData: {
-                ...stateMock[PAGE_BUILDER].pages['0'].elements.dynamicData,
-                ['test-1']: {
-                  ...elementDynamicDataMock,
-                  id: 'test-1',
-                  layout: {
-                    ...layoutMock,
-                    type: LayoutType.grid,
-                  },
+              ['test-1']: {
+                ...elementMock,
+                id: 'test-1',
+                layout: {
+                  ...layoutMock,
+                  type: LayoutType.grid,
                 },
               },
             },
@@ -161,6 +119,6 @@ describe('ColumnFlow behaviors', () => {
     fireEvent.click(toggleButton);
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].layout.type).toBe(LayoutType.grid);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].layout.type).toBe(LayoutType.grid);
   });
 });

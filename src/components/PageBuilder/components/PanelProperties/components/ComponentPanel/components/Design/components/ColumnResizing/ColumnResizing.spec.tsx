@@ -5,13 +5,7 @@ import { Provider } from 'react-redux';
 import ColumnResizing from './ColumnResizing';
 
 // mocks
-import {
-  elementMock,
-  elementDynamicDataMock,
-  elementStaticDataMock,
-  pageBuilderStateMock,
-  selectedElementMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
@@ -40,33 +34,13 @@ const stateMock = {
       ['0']: {
         ...currentPage,
         elements: {
-          allData: {
-            ['-1']: {
-              ...currentPage.elements.allData['-1'],
-              children: [elementMock.id, 'test-2'],
-            },
-            [elementMock.id]: elementMock,
-            ['test-2']: { ...elementMock, id: 'test-2' },
+          ...currentPage.elements,
+          ['-1']: {
+            ...currentPage.elements['-1'],
+            children: [elementMock.id, 'test-2'],
           },
-          dynamicData: {
-            ['-1']: {
-              ...currentPage.elements.dynamicData['-1'],
-              children: [elementDynamicDataMock.id],
-            },
-            [elementDynamicDataMock.id]: elementDynamicDataMock,
-            ['test-2']: elementDynamicDataMock,
-          },
-          staticData: {
-            ['-1']: {
-              ...currentPage.elements.staticData['-1'],
-              children: [elementStaticDataMock.id, 'test-2'],
-            },
-            [elementStaticDataMock.id]: elementStaticDataMock,
-            ['test-2']: {
-              ...elementStaticDataMock,
-              id: 'test-2',
-            },
-          },
+          [elementMock.id]: elementMock,
+          ['test-2']: { ...elementMock, id: 'test-2' },
         },
         selectedElements: [selectedElementMock],
       },
@@ -102,23 +76,11 @@ describe('ColumnResizing snapshots', () => {
             ...stateMock[PAGE_BUILDER].pages['0'],
             elements: {
               ...stateMock[PAGE_BUILDER].pages['0'].elements,
-              allData: {
-                ...stateMock[PAGE_BUILDER].pages['0'].elements.allData,
-                ['test-2']: {
-                  ...elementMock,
-                  height: '1000',
-                  id: 'test-2',
-                  width: '1000',
-                },
-              },
-              dynamicData: {
-                ...stateMock[PAGE_BUILDER].pages['0'].elements.dynamicData,
-                ['test-2']: {
-                  ...elementDynamicDataMock,
-                  height: '1000',
-                  id: 'test-2',
-                  width: '1000',
-                },
+              ['test-2']: {
+                ...elementMock,
+                height: '1000',
+                id: 'test-2',
+                width: '1000',
               },
             },
             selectedElements: [
@@ -182,8 +144,8 @@ describe('ColumnResizing behaviors', () => {
     fireEvent.blur(inputWidth);
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].height.value).toBe(10000);
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].width.value).toBe(10000);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.value).toBe(10000);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.value).toBe(10000);
   });
 
   it('should change width & height when triger ScrubbableInput', () => {
@@ -217,8 +179,8 @@ describe('ColumnResizing behaviors', () => {
     fireEvent.mouseUp(scrubbableInputWidth);
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].height.value).toBe(50);
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].width.value).toBe(50);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.value).toBe(50);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.value).toBe(50);
   });
 
   it('should apply fixed value for height & width', () => {
@@ -232,28 +194,13 @@ describe('ColumnResizing behaviors', () => {
             ...stateMock[PAGE_BUILDER].pages['0'],
             elements: {
               ...stateMock[PAGE_BUILDER].pages['0'].elements,
-              allData: {
-                ...stateMock[PAGE_BUILDER].pages['0'].elements.allData,
-                [elementMock.id]: {
-                  ...elementMock,
-                  height: {
-                    value: 'auto',
-                  },
-                  width: {
-                    value: 'auto',
-                  },
+              [elementMock.id]: {
+                ...elementMock,
+                height: {
+                  value: 'auto',
                 },
-              },
-              dynamicData: {
-                ...stateMock[PAGE_BUILDER].pages['0'].elements.dynamicData,
-                [elementMock.id]: {
-                  ...elementDynamicDataMock,
-                  height: {
-                    value: 'auto',
-                  },
-                  width: {
-                    value: 'auto',
-                  },
+                width: {
+                  value: 'auto',
                 },
               },
             },
@@ -292,8 +239,8 @@ describe('ColumnResizing behaviors', () => {
     fireEvent.click(popoverWidthItem);
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].height.value).toBe(100);
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].width.value).toBe(100);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.value).toBe(100);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.value).toBe(100);
   });
 
   it('should apply fixed value for height & width when mixed', () => {
@@ -307,46 +254,22 @@ describe('ColumnResizing behaviors', () => {
             ...stateMock[PAGE_BUILDER].pages['0'],
             elements: {
               ...stateMock[PAGE_BUILDER].pages['0'].elements,
-              allData: {
-                ...stateMock[PAGE_BUILDER].pages['0'].elements.allData,
-                [elementMock.id]: {
-                  ...elementMock,
-                  height: {
-                    value: 'auto',
-                  },
-                  width: {
-                    value: 'auto',
-                  },
+              [elementMock.id]: {
+                ...elementMock,
+                height: {
+                  value: 'auto',
                 },
-                ['test-2']: {
-                  ...elementMock,
-                  height: {
-                    value: 100,
-                  },
-                  width: {
-                    value: 100,
-                  },
+                width: {
+                  value: 'auto',
                 },
               },
-              dynamicData: {
-                ...stateMock[PAGE_BUILDER].pages['0'].elements.dynamicData,
-                [elementDynamicDataMock.id]: {
-                  ...elementDynamicDataMock,
-                  height: {
-                    value: 'auto',
-                  },
-                  width: {
-                    value: 'auto',
-                  },
+              ['test-2']: {
+                ...elementMock,
+                height: {
+                  value: 100,
                 },
-                ['test-2']: {
-                  ...elementDynamicDataMock,
-                  height: {
-                    value: 100,
-                  },
-                  width: {
-                    value: 100,
-                  },
+                width: {
+                  value: 100,
                 },
               },
             },
@@ -386,10 +309,10 @@ describe('ColumnResizing behaviors', () => {
     fireEvent.click(popoverWidthItem);
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].height.value).toBe(100);
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].width.value).toBe(100);
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-2'].height.value).toBe(100);
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-2'].width.value).toBe(100);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.value).toBe(100);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.value).toBe(100);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-2'].height.value).toBe(100);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-2'].width.value).toBe(100);
   });
 
   it('should apply auto value for height & width', () => {
@@ -426,8 +349,8 @@ describe('ColumnResizing behaviors', () => {
     fireEvent.click(popoverWidthItem);
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].height.value).toBe('auto');
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].width.value).toBe('auto');
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.value).toBe('auto');
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.value).toBe('auto');
   });
 
   it('should apply auto value for height & width when mixed', () => {
@@ -441,21 +364,10 @@ describe('ColumnResizing behaviors', () => {
             ...stateMock[PAGE_BUILDER].pages['0'],
             elements: {
               ...stateMock[PAGE_BUILDER].pages['0'].elements,
-              allData: {
-                ...stateMock[PAGE_BUILDER].pages['0'].elements.allData,
-                [elementMock.id]: elementMock,
-                ['test-2']: {
-                  ...elementMock,
-                  id: 'test-2',
-                },
-              },
-              dynamicData: {
-                ...stateMock[PAGE_BUILDER].pages['0'].elements.dynamicData,
-                [elementDynamicDataMock.id]: elementDynamicDataMock,
-                ['test-2']: {
-                  ...elementDynamicDataMock,
-                  id: 'test-2',
-                },
+              [elementMock.id]: elementMock,
+              ['test-2']: {
+                ...elementMock,
+                id: 'test-2',
               },
             },
             selectedElements: [selectedElementMock, { ...selectedElementMock, id: 'test-2' }],
@@ -494,10 +406,10 @@ describe('ColumnResizing behaviors', () => {
     fireEvent.click(popoverWidthItem);
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].height.value).toBe('auto');
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].width.value).toBe('auto');
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-2'].height.value).toBe('auto');
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-2'].width.value).toBe('auto');
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.value).toBe('auto');
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.value).toBe('auto');
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-2'].height.value).toBe('auto');
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-2'].width.value).toBe('auto');
   });
 
   it('should apply unit value for height & width', () => {
@@ -534,7 +446,7 @@ describe('ColumnResizing behaviors', () => {
     fireEvent.click(popoverWidthItem);
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].height.unit).toBe(Unit.percentage);
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].width.unit).toBe(Unit.percentage);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.unit).toBe(Unit.percentage);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.unit).toBe(Unit.percentage);
   });
 });

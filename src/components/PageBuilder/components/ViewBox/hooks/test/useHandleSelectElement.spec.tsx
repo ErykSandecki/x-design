@@ -35,9 +35,8 @@ const stateMock = {
       ['0']: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages['0'],
         elements: {
-          allData: {
-            [elementMock.id]: elementMock,
-          },
+          ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements,
+          [elementMock.id]: elementMock,
         },
       },
     },
@@ -82,9 +81,8 @@ describe('useHandleSelectElement', () => {
             ['0']: {
               ...pageBuilderStateMock[PAGE_BUILDER].pages['0'],
               elements: {
-                allData: {
-                  [elementMock.id]: elementMock,
-                },
+                ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements,
+                [elementMock.id]: elementMock,
               },
               selectedElements: [],
             },

@@ -8,12 +8,7 @@ import Frame from './Frame';
 import { RefsProvider } from 'pages/PageBuilderPage/core/RefsProvider';
 
 // mocks
-import {
-  elementMock,
-  elementDynamicDataMock,
-  elementStaticDataMock,
-  pageBuilderStateMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
 import { wholeStateMock } from 'test/mocks/reducer/wholeStateMock';
 import 'test/mocks/sagas/allSagas';
 
@@ -43,18 +38,7 @@ const stateMock = {
         ...pageBuilderStateMock[PAGE_BUILDER].pages['0'],
         elements: {
           ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements,
-          allData: {
-            ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements.allData,
-            [elementMock.id]: elementMock,
-          },
-          dynamicData: {
-            ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements.dynamicData,
-            [elementDynamicDataMock.id]: elementDynamicDataMock,
-          },
-          staticData: {
-            ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements.staticData,
-            [elementStaticDataMock.id]: elementStaticDataMock,
-          },
+          [elementMock.id]: elementMock,
         },
       },
     },
@@ -78,11 +62,11 @@ describe('Frame snapshots', () => {
         <RefsProvider itemsRefs={sharedRefs} overlayContainerRefHtml={overlayContainer}>
           <Frame
             className="className"
-            id={elementDynamicDataMock.id}
+            id={elementMock.id}
             index={0}
             mouseMode={MouseMode.default}
-            parentId={elementStaticDataMock.parentId}
-            type={elementStaticDataMock.type}
+            parentId={elementMock.parentId}
+            type={elementMock.type}
           />
         </RefsProvider>
       </Provider>,

@@ -1,11 +1,5 @@
 // mocks
-import {
-  elementMock,
-  elementDynamicDataMock,
-  elementStaticDataMock,
-  pageBuilderStateMock,
-  selectedElementMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
@@ -36,15 +30,8 @@ describe('handleResizeElement', () => {
         ['0']: {
           ...currentPage,
           elements: {
-            allData: {
-              [elementMock.id]: elementMock,
-            },
-            dynamicData: {
-              [elementDynamicDataMock.id]: elementDynamicDataMock,
-            },
-            staticData: {
-              [elementStaticDataMock.id]: elementStaticDataMock,
-            },
+            ...currentPage.elements,
+            [elementMock.id]: elementMock,
           },
           selectedElements: [selectedElementMock],
         },
@@ -60,28 +47,15 @@ describe('handleResizeElement', () => {
       },
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
-
         ['0']: {
           ...currentPage,
           elements: {
-            allData: {
-              [elementMock.id]: {
-                ...elementMock,
-                height: { value: 100 },
-                position: 'absolute',
-                width: { value: 300 },
-              },
-            },
-            dynamicData: {
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                height: { value: 100 },
-                position: 'absolute',
-                width: { value: 300 },
-              },
-            },
-            staticData: {
-              [elementStaticDataMock.id]: elementStaticDataMock,
+            ...currentPage.elements,
+            [elementMock.id]: {
+              ...elementMock,
+              height: { value: 100 },
+              position: 'absolute',
+              width: { value: 300 },
             },
           },
           selectedElements: [selectedElementMock],

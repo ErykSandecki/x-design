@@ -33,7 +33,7 @@ export const applyTypeSize = (
 
       return {
         ...element[sizeType],
-        max: hasMin ? undefined : size,
+        min: hasMin ? undefined : size,
       };
     default:
       return {

@@ -1,5 +1,10 @@
 // mocks
-import { elementMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
+import {
+  childrenMock,
+  elementMock,
+  pageBuilderStateMock,
+  selectedElementMock,
+} from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
@@ -38,18 +43,15 @@ describe('filterSelectedElements', () => {
             ...currentPage,
             elements: {
               ...currentPage.elements,
-              allData: {
-                ...currentPage.elements.allData,
-                [elementMock.id]: {
-                  ...elementMock,
-                  children: ['test-2'],
-                },
-                ['test-2']: {
-                  ...elementMock,
-                  children: [],
-                  id: 'test-2',
-                  parentId: elementMock.id,
-                },
+              [elementMock.id]: {
+                ...elementMock,
+                children: [{ ...childrenMock, id: 'test-2' }],
+              },
+              ['test-2']: {
+                ...elementMock,
+                children: [],
+                id: 'test-2',
+                parentId: elementMock.id,
               },
             },
           },

@@ -8,14 +8,7 @@ import Element from './Element';
 import { RefsProvider } from 'pages/PageBuilderPage/core/RefsProvider';
 
 // mocks
-import {
-  elementMock,
-  elementDynamicDataMock,
-  elementStaticDataMock,
-  eventsMock,
-  pageBuilderStateMock,
-  selectedElementMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, eventsMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
@@ -43,14 +36,7 @@ const stateMock = {
         ...pageBuilderStateMock[PAGE_BUILDER].pages['0'],
         elements: {
           ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements,
-          dynamicData: {
-            ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements.dynamicData,
-            [elementDynamicDataMock.id]: elementDynamicDataMock,
-          },
-          staticData: {
-            ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements.staticData,
-            [elementStaticDataMock.id]: elementStaticDataMock,
-          },
+          [elementMock.id]: elementMock,
         },
       },
     },
@@ -148,17 +134,10 @@ describe('Element snapshots', () => {
             ...stateMock[PAGE_BUILDER].pages['0'],
             elements: {
               ...stateMock[PAGE_BUILDER].pages['0'].elements,
-              dynamicData: {
-                ...stateMock[PAGE_BUILDER].pages['0'].elements.dynamicData,
-                [elementDynamicDataMock.id]: {
-                  ...elementDynamicDataMock,
-                  height: { value: 'auto' },
-                  width: { value: 'auto' },
-                },
-              },
-              staticData: {
-                ...stateMock[PAGE_BUILDER].pages['0'].elements.staticData,
-                [elementStaticDataMock.id]: elementStaticDataMock,
+              [elementMock.id]: {
+                ...elementMock,
+                height: { value: 'auto' },
+                width: { value: 'auto' },
               },
             },
           },

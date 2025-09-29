@@ -61,7 +61,7 @@ describe('ColumnBackground behaviors', () => {
     fireEvent.click(getByE2EAttribute(container, E2EAttribute.icon, 'eyes-opened'));
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['-1'].background.visible).toBe(false);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['-1'].background.visible).toBe(false);
   });
 
   it('should change alpha', async () => {
@@ -85,9 +85,7 @@ describe('ColumnBackground behaviors', () => {
     fireEvent.blur(input);
 
     // result
-    expect(
-      (store.getState()[PAGE_BUILDER].pages['0'].elements.allData['-1'].background.properties as TColor).alpha,
-    ).toBe('50');
+    expect((store.getState()[PAGE_BUILDER].pages['0'].elements['-1'].background.properties as TColor).alpha).toBe('50');
   });
 
   it('should change color', async () => {
@@ -111,9 +109,9 @@ describe('ColumnBackground behaviors', () => {
     fireEvent.blur(input);
 
     // result
-    expect(
-      (store.getState()[PAGE_BUILDER].pages['0'].elements.allData['-1'].background.properties as TColor).color,
-    ).toBe('#ffffff');
+    expect((store.getState()[PAGE_BUILDER].pages['0'].elements['-1'].background.properties as TColor).color).toBe(
+      '#ffffff',
+    );
   });
 
   it('should change format', async () => {
@@ -143,9 +141,9 @@ describe('ColumnBackground behaviors', () => {
     fireEvent.click(rgbOption);
 
     // result
-    expect(
-      (store.getState()[PAGE_BUILDER].pages['0'].elements.allData['-1'].background.properties as TColor).format,
-    ).toBe('rgb');
+    expect((store.getState()[PAGE_BUILDER].pages['0'].elements['-1'].background.properties as TColor).format).toBe(
+      'rgb',
+    );
   });
 
   it('should active color sampler', async () => {
@@ -191,8 +189,8 @@ describe('ColumnBackground behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].events.colorSampler).toBe(false);
-    expect(
-      (store.getState()[PAGE_BUILDER].pages['0'].elements.allData['-1'].background.properties as TColor).color,
-    ).toBe('#ffffff');
+    expect((store.getState()[PAGE_BUILDER].pages['0'].elements['-1'].background.properties as TColor).color).toBe(
+      '#ffffff',
+    );
   });
 });

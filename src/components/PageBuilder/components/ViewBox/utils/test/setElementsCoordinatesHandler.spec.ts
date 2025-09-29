@@ -32,15 +32,12 @@ describe('setElementsCoordinatesHandler', () => {
               ...currentPage,
               elements: {
                 ...currentPage.elements,
-                allData: {
-                  ...currentPage.elements.allData,
-                  [selectedElementMock.id]: {
-                    ...elementMock,
-                  },
-                  ['test-2']: {
-                    ...elementMock,
-                    id: 'test-2',
-                  },
+                [selectedElementMock.id]: {
+                  ...elementMock,
+                },
+                ['test-2']: {
+                  ...elementMock,
+                  id: 'test-2',
                 },
               },
               selectedElements: [selectedElementMock],

@@ -1,38 +1,13 @@
 import { noop } from 'lodash';
 
 // mocks
-import {
-  elementMock,
-  elementDynamicDataMock,
-  elementStaticDataMock,
-  pageBuilderStateMock,
-} from 'test/mocks/reducer/pageBuilderMock';
-
-// others
-import { REDUCER_KEY as PAGE_BUILDER } from '../../../actionsType';
+import { elementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // types
 import { Unit } from 'types';
 
 // utils
 import { applyTypeSize } from '../applyTypeSize';
-
-const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-const clonedElements = {
-  ...currentPage.elements,
-  allData: {
-    ...currentPage.elements.allData,
-    [elementMock.id]: elementMock,
-  },
-  dynamicData: {
-    ...currentPage.elements.dynamicData,
-    [elementDynamicDataMock.id]: elementDynamicDataMock,
-  },
-  staticData: {
-    ...currentPage.elements.staticData,
-    [elementStaticDataMock.id]: elementStaticDataMock,
-  },
-};
 
 describe('applyTypeSize', () => {
   beforeAll(() => {
@@ -43,66 +18,66 @@ describe('applyTypeSize', () => {
 
   it(`should apply auto`, () => {
     // before
-    applyTypeSize(clonedElements, 'test-1', 100, 'height', 'auto');
+    const result = applyTypeSize(elementMock, 100, 'height', 'auto');
 
     // result
-    expect(clonedElements.allData['test-1'].height.unit).toBe(undefined);
-    expect(clonedElements.allData['test-1'].height.value).toBe('auto');
-    expect(clonedElements.dynamicData['test-1'].height.unit).toBe(undefined);
-    expect(clonedElements.dynamicData['test-1'].height.value).toBe('auto');
+    expect(result.unit).toBe(undefined);
+    expect(result.value).toBe('auto');
   });
 
   it(`should apply fixed`, () => {
     // before
-    applyTypeSize(clonedElements, 'test-1', 100, 'height', 'fixed');
+    const result = applyTypeSize(elementMock, 100, 'height', 'fixed');
 
     // result
-    expect(clonedElements.allData['test-1'].height.unit).toBe(undefined);
-    expect(clonedElements.allData['test-1'].height.value).toBe(100);
-    expect(clonedElements.dynamicData['test-1'].height.unit).toBe(undefined);
-    expect(clonedElements.dynamicData['test-1'].height.value).toBe(100);
+    expect(result.unit).toBe(undefined);
+    expect(result.value).toBe(100);
   });
 
   it(`should apply max and remove`, () => {
     // before
-    applyTypeSize(clonedElements, 'test-1', 100, 'height', 'max');
+    const result1 = applyTypeSize(elementMock, 100, 'height', 'max');
 
     // result
-    expect(clonedElements.allData['test-1'].height.max).toBe(100);
-    expect(clonedElements.dynamicData['test-1'].height.max).toBe(100);
+    expect(result1.max).toBe(100);
 
     // before
-    applyTypeSize(clonedElements, 'test-1', 100, 'height', 'max');
+    const result2 = applyTypeSize(
+      { ...elementMock, height: { ...elementMock.height, max: 100 } },
+      100,
+      'height',
+      'max',
+    );
 
     // result
-    expect(clonedElements.allData['test-1'].height.max).toBe(undefined);
-    expect(clonedElements.dynamicData['test-1'].height.max).toBe(undefined);
+    expect(result2.max).toBe(undefined);
   });
 
   it(`should apply min and remove`, () => {
     // before
-    applyTypeSize(clonedElements, 'test-1', 100, 'height', 'min');
+    const result1 = applyTypeSize(elementMock, 100, 'height', 'min');
 
     // result
-    expect(clonedElements.allData['test-1'].height.min).toBe(100);
-    expect(clonedElements.dynamicData['test-1'].height.min).toBe(100);
+    expect(result1.min).toBe(100);
 
     // before
-    applyTypeSize(clonedElements, 'test-1', 100, 'height', 'min');
+    const result2 = applyTypeSize(
+      { ...elementMock, height: { ...elementMock.height, min: 100 } },
+      100,
+      'height',
+      'min',
+    );
 
     // result
-    expect(clonedElements.allData['test-1'].height.min).toBe(undefined);
-    expect(clonedElements.dynamicData['test-1'].height.min).toBe(undefined);
+    expect(result2.min).toBe(undefined);
   });
 
   it(`should apply unit`, () => {
     // before
-    applyTypeSize(clonedElements, 'test-1', 100, 'height', 'unit');
+    const result = applyTypeSize(elementMock, 100, 'height', 'unit');
 
     // result
-    expect(clonedElements.allData['test-1'].height.unit).toBe(Unit.percentage);
-    expect(clonedElements.allData['test-1'].height.value).toBe(100);
-    expect(clonedElements.dynamicData['test-1'].height.unit).toBe(Unit.percentage);
-    expect(clonedElements.dynamicData['test-1'].height.value).toBe(100);
+    expect(result.unit).toBe(Unit.percentage);
+    expect(result.value).toBe(100);
   });
 });

@@ -2,8 +2,6 @@
 import {
   childrenMock,
   elementMock,
-  elementDynamicDataMock,
-  elementStaticDataMock,
   pageBuilderStateMock,
   selectedElementMock,
 } from 'test/mocks/reducer/pageBuilderMock';
@@ -61,76 +59,31 @@ describe('handleChangeAlignment', () => {
             ...currentPage,
             elements: {
               ...currentPage.elements,
-              allData: {
-                ...currentPage.elements.allData,
-                ['-1']: {
-                  ...currentPage.elements.allData['-1'],
-                  children: [childrenMock],
-                },
-                [elementMock.id]: {
-                  ...elementMock,
-                  children: [
-                    { ...childrenMock, id: 'test-2' },
-                    { ...childrenMock, id: 'test-3' },
-                  ],
-                  position: 'absolute',
-                },
-                ['test-2']: {
-                  ...elementMock,
-                  children: [],
-                  id: 'test-2',
-                  parentId: 'test-1',
-                  position: 'absolute',
-                },
-                ['test-3']: {
-                  ...elementMock,
-                  children: [],
-                  id: 'test-3',
-                  parentId: 'test-1',
-                  position: 'relative',
-                },
+              ['-1']: {
+                ...currentPage.elements['-1'],
+                children: [childrenMock],
               },
-              dynamicData: {
-                ...currentPage.elements.dynamicData,
-                ...currentPage.elements.allData,
-                [elementDynamicDataMock.id]: {
-                  ...elementDynamicDataMock,
-                  position: 'absolute',
-                },
-                ['test-2']: {
-                  ...elementDynamicDataMock,
-                  id: 'test-2',
-                  position: 'absolute',
-                },
-                ['test-3']: {
-                  ...elementDynamicDataMock,
-                  id: 'test-3',
-                  position: 'relative',
-                },
+              [elementMock.id]: {
+                ...elementMock,
+                children: [
+                  { ...childrenMock, id: 'test-2' },
+                  { ...childrenMock, id: 'test-3' },
+                ],
+                position: 'absolute',
               },
-              staticData: {
-                ...currentPage.elements.staticData,
-                ['-1']: {
-                  ...currentPage.elements.staticData['-1'],
-                  children: [childrenMock],
-                },
-                [elementStaticDataMock.id]: {
-                  ...elementStaticDataMock,
-                  children: [
-                    { ...childrenMock, id: 'test-2' },
-                    { ...childrenMock, id: 'test-3' },
-                  ],
-                },
-                ['test-2']: {
-                  ...elementStaticDataMock,
-                  children: [],
-                  id: 'test-2',
-                },
-                ['test-3']: {
-                  ...elementStaticDataMock,
-                  children: [],
-                  id: 'test-3',
-                },
+              ['test-2']: {
+                ...elementMock,
+                children: [],
+                id: 'test-2',
+                parentId: 'test-1',
+                position: 'absolute',
+              },
+              ['test-3']: {
+                ...elementMock,
+                children: [],
+                id: 'test-3',
+                parentId: 'test-1',
+                position: 'relative',
               },
             },
             selectedElements: [
@@ -151,80 +104,33 @@ describe('handleChangeAlignment', () => {
           ...currentPage,
           elements: {
             ...currentPage.elements,
-            allData: {
-              ...currentPage.elements.allData,
-              ['-1']: {
-                ...currentPage.elements.allData['-1'],
-                children: [childrenMock],
-              },
-              [elementMock.id]: {
-                ...elementMock,
-                children: [
-                  { ...childrenMock, id: 'test-2' },
-                  { ...childrenMock, id: 'test-3' },
-                ],
-                position: 'absolute',
-              },
-              ['test-2']: {
-                ...elementMock,
-                alignment,
-                children: [],
-                id: 'test-2',
-                parentId: 'test-1',
-                position: 'absolute',
-              },
-              ['test-3']: {
-                ...elementMock,
-                alignment,
-                children: [],
-                id: 'test-3',
-                parentId: 'test-1',
-                position: 'absolute',
-              },
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [childrenMock],
             },
-            dynamicData: {
-              ...currentPage.elements.dynamicData,
-              ...currentPage.elements.allData,
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                position: 'absolute',
-              },
-              ['test-2']: {
-                ...elementDynamicDataMock,
-                alignment,
-                id: 'test-2',
-                position: 'absolute',
-              },
-              ['test-3']: {
-                ...elementDynamicDataMock,
-                alignment,
-                id: 'test-3',
-                position: 'absolute',
-              },
+            [elementMock.id]: {
+              ...elementMock,
+              children: [
+                { ...childrenMock, id: 'test-2' },
+                { ...childrenMock, id: 'test-3' },
+              ],
+              position: 'absolute',
             },
-            staticData: {
-              ...currentPage.elements.staticData,
-              ['-1']: {
-                ...currentPage.elements.staticData['-1'],
-                children: [childrenMock],
-              },
-              [elementStaticDataMock.id]: {
-                ...elementStaticDataMock,
-                children: [
-                  { ...childrenMock, id: 'test-2' },
-                  { ...childrenMock, id: 'test-3' },
-                ],
-              },
-              ['test-2']: {
-                ...elementStaticDataMock,
-                children: [],
-                id: 'test-2',
-              },
-              ['test-3']: {
-                ...elementStaticDataMock,
-                children: [],
-                id: 'test-3',
-              },
+            ['test-2']: {
+              ...elementMock,
+              alignment,
+              children: [],
+              id: 'test-2',
+              parentId: 'test-1',
+              position: 'absolute',
+            },
+            ['test-3']: {
+              ...elementMock,
+              alignment,
+              children: [],
+              id: 'test-3',
+              parentId: 'test-1',
+              position: 'absolute',
             },
           },
           selectedElements: [

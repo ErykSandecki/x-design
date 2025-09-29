@@ -1,5 +1,5 @@
 // mocks
-import { elementDynamicDataMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // types
 import { AlignmentHorizontal, AlignmentVertical } from 'types';
@@ -10,9 +10,7 @@ import { hasSomeAlignment } from '../hasSomeAlignment';
 describe('getCoordinates', () => {
   it(`should return false`, () => {
     // before
-    const result = hasSomeAlignment('horizontal', { [elementDynamicDataMock.id]: elementDynamicDataMock }, [
-      selectedElementMock,
-    ]);
+    const result = hasSomeAlignment('horizontal', { [elementMock.id]: elementMock }, [selectedElementMock]);
 
     // result
     expect(result).toBe(false);
@@ -23,8 +21,8 @@ describe('getCoordinates', () => {
     const result = hasSomeAlignment(
       'horizontal',
       {
-        [elementDynamicDataMock.id]: {
-          ...elementDynamicDataMock,
+        [elementMock.id]: {
+          ...elementMock,
           alignment: {
             horizontal: AlignmentHorizontal.center,
             vertical: AlignmentVertical.center,

@@ -23,43 +23,12 @@ describe('handleAddElement', () => {
         ['0']: {
           ...currentPage,
           elements: {
-            allData: {
-              ['-1']: {
-                ...currentPage.elements.allData['-1'],
-                children: [childrenMock],
-              },
-              [createFrameMock.id]: createFrameMock,
+            ...currentPage.elements,
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [childrenMock],
             },
-            dynamicData: {
-              ['-1']: {
-                ...currentPage.elements.dynamicData['-1'],
-              },
-              [createFrameMock.id]: {
-                alignment: {},
-                angle: createFrameMock.angle,
-                background: createFrameMock.background,
-                coordinates: createFrameMock.coordinates,
-                deepLevel: createFrameMock.deepLevel,
-                height: createFrameMock.height,
-                id: createFrameMock.id,
-                layout: createFrameMock.layout,
-                position: createFrameMock.position,
-                width: createFrameMock.width,
-              },
-            },
-            staticData: {
-              ['-1']: {
-                ...currentPage.elements.staticData['-1'],
-                children: [childrenMock],
-              },
-              [createFrameMock.id]: {
-                children: createFrameMock.children,
-                id: createFrameMock.id,
-                parentId: createFrameMock.parentId,
-                position: createFrameMock.position,
-                type: createFrameMock.type,
-              },
-            },
+            [createFrameMock.id]: createFrameMock,
           },
         },
       },

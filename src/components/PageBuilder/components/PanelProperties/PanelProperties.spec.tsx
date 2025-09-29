@@ -6,9 +6,8 @@ import PanelProperties from './PanelProperties';
 
 // mocks
 import {
+  childrenMock,
   elementMock,
-  elementDynamicDataMock,
-  elementStaticDataMock,
   pageBuilderStateMock,
   selectedElementMock,
 } from 'test/mocks/reducer/pageBuilderMock';
@@ -61,30 +60,13 @@ describe('PanelProperties snapshots', () => {
           ['0']: {
             ...currentPage,
             elements: {
-              allData: {
-                ['-1']: {
-                  ...currentPage.elements.allData['-1'],
-                  children: [elementMock.id],
-                },
-                [elementMock.id]: {
-                  ...elementMock,
-                },
+              ...currentPage.elements,
+              ['-1']: {
+                ...currentPage.elements['-1'],
+                children: [childrenMock],
               },
-              dynamicData: {
-                ['-1']: {
-                  ...currentPage.elements.dynamicData['-1'],
-                  children: [elementDynamicDataMock.id],
-                },
-                [elementDynamicDataMock.id]: elementDynamicDataMock,
-              },
-              staticData: {
-                ['-1']: {
-                  ...currentPage.elements.staticData['-1'],
-                  children: [elementStaticDataMock.id],
-                },
-                [elementStaticDataMock.id]: {
-                  ...elementStaticDataMock,
-                },
+              [elementMock.id]: {
+                ...elementMock,
               },
             },
             selectedElements: [selectedElementMock],

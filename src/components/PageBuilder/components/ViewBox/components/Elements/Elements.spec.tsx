@@ -8,13 +8,7 @@ import Elements from './Elements';
 import { RefsProvider } from 'pages/PageBuilderPage/core/RefsProvider';
 
 // mocks
-import {
-  childrenMock,
-  elementMock,
-  elementDynamicDataMock,
-  elementStaticDataMock,
-  pageBuilderStateMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { childrenMock, elementMock, pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
 import { wholeStateMock } from 'test/mocks/reducer/wholeStateMock';
 import 'test/mocks/sagas/allSagas';
 
@@ -71,35 +65,14 @@ describe('Elements snapshots', () => {
           ['0']: {
             ...currentPage,
             elements: {
-              allData: {
-                ['-1']: {
-                  ...currentPage.elements.allData['-1'],
-                  children: [childrenMock],
-                },
-                [elementMock.id]: {
-                  ...elementMock,
-                  position: 'relative',
-                },
+              ...currentPage.elements,
+              ['-1']: {
+                ...currentPage.elements['-1'],
+                children: [childrenMock],
               },
-              dynamicData: {
-                ['-1']: {
-                  ...currentPage.elements.dynamicData['-1'],
-                  children: [childrenMock],
-                },
-                [elementDynamicDataMock.id]: {
-                  ...elementDynamicDataMock,
-                  position: 'relative',
-                },
-              },
-              staticData: {
-                ['-1']: {
-                  ...currentPage.elements.staticData['-1'],
-                  children: [childrenMock],
-                },
-                [elementStaticDataMock.id]: {
-                  ...elementStaticDataMock,
-                  position: 'relative',
-                },
+              [elementMock.id]: {
+                ...elementMock,
+                position: 'relative',
               },
             },
           },
@@ -131,27 +104,12 @@ describe('Elements snapshots', () => {
           ['0']: {
             ...currentPage,
             elements: {
-              allData: {
-                ['-1']: {
-                  ...currentPage.elements.allData['-1'],
-                  children: [childrenMock],
-                },
-                [elementMock.id]: elementMock,
+              ...currentPage.elements,
+              ['-1']: {
+                ...currentPage.elements['-1'],
+                children: [childrenMock],
               },
-              dynamicData: {
-                ['-1']: {
-                  ...currentPage.elements.dynamicData['-1'],
-                  children: [childrenMock],
-                },
-                [elementDynamicDataMock.id]: elementDynamicDataMock,
-              },
-              staticData: {
-                ['-1']: {
-                  ...currentPage.elements.staticData['-1'],
-                  children: [childrenMock],
-                },
-                [elementStaticDataMock.id]: elementStaticDataMock,
-              },
+              [elementMock.id]: elementMock,
             },
           },
         },
@@ -182,35 +140,14 @@ describe('Elements snapshots', () => {
           ['0']: {
             ...currentPage,
             elements: {
-              allData: {
-                ['-1']: {
-                  ...currentPage.elements.allData['-1'],
-                  children: [{ ...childrenMock, type: ElementType.none }],
-                },
-                [elementMock.id]: {
-                  ...elementMock,
-                  type: ElementType.none,
-                },
+              ...currentPage.elements,
+              ['-1']: {
+                ...currentPage.elements['-1'],
+                children: [{ ...childrenMock, type: ElementType.none }],
               },
-              dynamicData: {
-                ['-1']: {
-                  ...currentPage.elements.dynamicData['-1'],
-                  children: [{ ...childrenMock, type: ElementType.none }],
-                },
-                [elementDynamicDataMock.id]: {
-                  ...elementDynamicDataMock,
-                  type: ElementType.none,
-                },
-              },
-              staticData: {
-                ['-1']: {
-                  ...currentPage.elements.staticData['-1'],
-                  children: [{ ...childrenMock, type: ElementType.none }],
-                },
-                [elementStaticDataMock.id]: {
-                  ...elementStaticDataMock,
-                  type: ElementType.none,
-                },
+              [elementMock.id]: {
+                ...elementMock,
+                type: ElementType.none,
               },
             },
           },

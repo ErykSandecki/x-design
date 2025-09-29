@@ -8,8 +8,6 @@ import ColumnRotation from './ColumnRotation';
 import {
   childrenMock,
   elementMock,
-  elementDynamicDataMock,
-  elementStaticDataMock,
   pageBuilderStateMock,
   selectedElementMock,
 } from 'test/mocks/reducer/pageBuilderMock';
@@ -36,30 +34,13 @@ const stateMock = {
       ['0']: {
         ...currentPage,
         elements: {
-          allData: {
-            ['-1']: {
-              ...currentPage.elements.allData['-1'],
-              children: [childrenMock],
-            },
-            [elementMock.id]: {
-              ...elementMock,
-            },
+          ...currentPage.elements,
+          ['-1']: {
+            ...currentPage.elements['-1'],
+            children: [childrenMock],
           },
-          dynamicData: {
-            ['-1']: {
-              ...currentPage.elements.dynamicData['-1'],
-              children: [childrenMock],
-            },
-            [elementDynamicDataMock.id]: elementDynamicDataMock,
-          },
-          staticData: {
-            ['-1']: {
-              ...currentPage.elements.staticData['-1'],
-              children: [childrenMock],
-            },
-            [elementStaticDataMock.id]: {
-              ...elementStaticDataMock,
-            },
+          [elementMock.id]: {
+            ...elementMock,
           },
         },
         selectedElements: [selectedElementMock],
@@ -95,40 +76,14 @@ describe('ColumnRotation snapshots', () => {
             ...stateMock[PAGE_BUILDER].pages['0'],
             elements: {
               ...stateMock[PAGE_BUILDER].pages['0'].elements,
-              allData: {
-                ...stateMock[PAGE_BUILDER].pages['0'].elements.allData,
-                ['-1']: {
-                  ...stateMock[PAGE_BUILDER].pages['0'].elements.allData['-1'],
-                  children: [childrenMock, { ...childrenMock, id: 'test-2' }],
-                },
-                ['test-2']: {
-                  ...elementMock,
-                  angle: 100,
-                  id: 'test-2',
-                },
+              ['-1']: {
+                ...stateMock[PAGE_BUILDER].pages['0'].elements['-1'],
+                children: [childrenMock, { ...childrenMock, id: 'test-2' }],
               },
-              dynamicData: {
-                ...stateMock[PAGE_BUILDER].pages['0'].elements.dynamicData,
-                ['-1']: {
-                  ...stateMock[PAGE_BUILDER].pages['0'].elements.dynamicData['-1'],
-                  children: [childrenMock, { ...childrenMock, id: 'test-2' }],
-                },
-                ['test-2']: {
-                  ...elementDynamicDataMock,
-                  angle: 100,
-                  id: 'test-2',
-                },
-              },
-              staticData: {
-                ...stateMock[PAGE_BUILDER].pages['0'].elements.staticData,
-                ['-1']: {
-                  ...stateMock[PAGE_BUILDER].pages['0'].elements.staticData['-1'],
-                  children: [childrenMock, { ...childrenMock, id: 'test-2' }],
-                },
-                ['test-2']: {
-                  ...elementStaticDataMock,
-                  id: 'test-2',
-                },
+              ['test-2']: {
+                ...elementMock,
+                angle: 100,
+                id: 'test-2',
               },
             },
             selectedElements: [
@@ -174,7 +129,7 @@ describe('ColumnRotation behaviors', () => {
     fireEvent.blur(inputX);
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].angle).toBe(100);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].angle).toBe(100);
   });
 
   it('should change anle when triger ScrubbableInput', () => {
@@ -204,7 +159,7 @@ describe('ColumnRotation behaviors', () => {
     fireEvent.mouseUp(scrubbableInput);
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].angle).toBe(-100);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].angle).toBe(-100);
   });
 
   it('should change angle another 90 degress', () => {
@@ -225,7 +180,7 @@ describe('ColumnRotation behaviors', () => {
     fireEvent.click(getByE2EAttribute(verticalButtonGroup, E2EAttribute.buttonGroupInput, 'toggle-rotate'));
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].angle).toBe(90);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].angle).toBe(90);
   });
 
   it('should flip x', () => {
@@ -240,73 +195,30 @@ describe('ColumnRotation behaviors', () => {
           ['0']: {
             ...currentPage,
             elements: {
-              allData: {
-                ['-1']: {
-                  ...currentPage.elements.allData['-1'],
-                  children: [elementMock.id],
-                },
-                [elementMock.id]: {
-                  ...elementMock,
-                  children: [
-                    { ...childrenMock, id: 'test-2' },
-                    { ...childrenMock, id: 'test-3' },
-                  ],
-                  layout: {
-                    type: LayoutType.horizontal,
-                  },
-                },
-                ['test-2']: {
-                  ...elementMock,
-                  id: 'test-2',
-                  parentId: 'test-1',
-                },
-                ['test-3']: {
-                  ...elementMock,
-                  id: 'test-3',
-                  parentId: 'test-1',
+              ...currentPage.elements,
+              ['-1']: {
+                ...currentPage.elements['-1'],
+                children: [elementMock.id],
+              },
+              [elementMock.id]: {
+                ...elementMock,
+                children: [
+                  { ...childrenMock, id: 'test-2' },
+                  { ...childrenMock, id: 'test-3' },
+                ],
+                layout: {
+                  type: LayoutType.horizontal,
                 },
               },
-              dynamicData: {
-                ['-1']: {
-                  ...currentPage.elements.dynamicData['-1'],
-                },
-                [elementDynamicDataMock.id]: {
-                  ...elementDynamicDataMock,
-                  layout: {
-                    type: LayoutType.horizontal,
-                  },
-                },
-                ['test-2']: {
-                  ...elementDynamicDataMock,
-                  id: 'test-2',
-                },
-                ['test-3']: {
-                  ...elementDynamicDataMock,
-                  id: 'test-3',
-                },
+              ['test-2']: {
+                ...elementMock,
+                id: 'test-2',
+                parentId: 'test-1',
               },
-              staticData: {
-                ['-1']: {
-                  ...currentPage.elements.staticData['-1'],
-                  children: [childrenMock],
-                },
-                [elementStaticDataMock.id]: {
-                  ...elementStaticDataMock,
-                  children: [
-                    { ...childrenMock, id: 'test-2' },
-                    { ...childrenMock, id: 'test-3' },
-                  ],
-                },
-                ['test-2']: {
-                  ...elementStaticDataMock,
-                  id: 'test-2',
-                  parentId: 'test-1',
-                },
-                ['test-3']: {
-                  ...elementStaticDataMock,
-                  id: 'test-3',
-                  parentId: 'test-1',
-                },
+              ['test-3']: {
+                ...elementMock,
+                id: 'test-3',
+                parentId: 'test-1',
               },
             },
             selectedElements: [selectedElementMock],
@@ -329,7 +241,7 @@ describe('ColumnRotation behaviors', () => {
     fireEvent.click(getByE2EAttribute(verticalButtonGroup, E2EAttribute.buttonGroupInput, 'flip-horizontal'));
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].children).toStrictEqual([
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].children).toStrictEqual([
       { ...childrenMock, id: 'test-3' },
       { ...childrenMock, id: 'test-2' },
     ]);
@@ -347,67 +259,27 @@ describe('ColumnRotation behaviors', () => {
           ['0']: {
             ...currentPage,
             elements: {
-              allData: {
-                ['-1']: {
-                  ...currentPage.elements.allData['-1'],
-                  children: [childrenMock],
-                },
-                [elementMock.id]: {
-                  ...elementMock,
-                  children: [
-                    { ...childrenMock, id: 'test-2' },
-                    { ...childrenMock, id: 'test-3' },
-                  ],
-                },
-                ['test-2']: {
-                  ...elementMock,
-                  id: 'test-2',
-                  parentId: 'test-1',
-                },
-                ['test-3']: {
-                  ...elementMock,
-                  id: 'test-3',
-                  parentId: 'test-1',
-                },
+              ...currentPage.elements,
+              ['-1']: {
+                ...currentPage.elements['-1'],
+                children: [childrenMock],
               },
-              dynamicData: {
-                ['-1']: {
-                  ...currentPage.elements.dynamicData['-1'],
-                },
-                [elementDynamicDataMock.id]: {
-                  ...elementDynamicDataMock,
-                },
-                ['test-2']: {
-                  ...elementDynamicDataMock,
-                  id: 'test-2',
-                },
-                ['test-3']: {
-                  ...elementDynamicDataMock,
-                  id: 'test-3',
-                },
+              [elementMock.id]: {
+                ...elementMock,
+                children: [
+                  { ...childrenMock, id: 'test-2' },
+                  { ...childrenMock, id: 'test-3' },
+                ],
               },
-              staticData: {
-                ['-1']: {
-                  ...currentPage.elements.staticData['-1'],
-                  children: [childrenMock],
-                },
-                [elementStaticDataMock.id]: {
-                  ...elementStaticDataMock,
-                  children: [
-                    { ...childrenMock, id: 'test-2' },
-                    { ...childrenMock, id: 'test-3' },
-                  ],
-                },
-                ['test-2']: {
-                  ...elementStaticDataMock,
-                  id: 'test-2',
-                  parentId: 'test-1',
-                },
-                ['test-3']: {
-                  ...elementStaticDataMock,
-                  id: 'test-3',
-                  parentId: 'test-1',
-                },
+              ['test-2']: {
+                ...elementMock,
+                id: 'test-2',
+                parentId: 'test-1',
+              },
+              ['test-3']: {
+                ...elementMock,
+                id: 'test-3',
+                parentId: 'test-1',
               },
             },
             selectedElements: [selectedElementMock],
@@ -430,7 +302,7 @@ describe('ColumnRotation behaviors', () => {
     fireEvent.click(getByE2EAttribute(verticalButtonGroup, E2EAttribute.buttonGroupInput, 'flip-vertical'));
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].children).toStrictEqual([
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].children).toStrictEqual([
       { ...childrenMock, id: 'test-3' },
       { ...childrenMock, id: 'test-2' },
     ]);

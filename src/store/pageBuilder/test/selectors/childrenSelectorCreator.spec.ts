@@ -13,16 +13,6 @@ describe('childrenSelectorCreator', () => {
     const selectorFunction = (childrenSelectorCreator('-1') as any).resultFunc;
 
     // result
-    expect(
-      selectorFunction({
-        allData: {
-          ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements.allData,
-        },
-        dynamicData: {},
-        staticData: {
-          ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements.staticData,
-        },
-      }),
-    ).toStrictEqual([]);
+    expect(selectorFunction(pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements['-1'])).toStrictEqual([]);
   });
 });

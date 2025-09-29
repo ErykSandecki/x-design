@@ -1,11 +1,5 @@
 // mocks
-import {
-  childrenMock,
-  elementMock,
-  elementDynamicDataMock,
-  elementStaticDataMock,
-  pageBuilderStateMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { childrenMock, elementMock, pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { BASE_2D } from 'shared';
@@ -33,53 +27,21 @@ describe('getMappedElementsWithResetPosition', () => {
           ...currentPage,
           elements: {
             ...currentPage.elements,
-            allData: {
-              ['-1']: {
-                ...currentPage.elements.allData['-1'],
-                children: [childrenMock],
-              },
-              [elementMock.id]: {
-                ...elementMock,
-                children: [{ ...childrenMock, id: 'test-2' }],
-              },
-              ['test-2']: {
-                ...elementMock,
-                children: [],
-                coordinates: { x: 100, y: 100 },
-                id: 'test-2',
-                parentId: elementMock.id,
-                position: 'relative',
-              },
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [childrenMock],
             },
-            dynamicData: {
-              ['-1']: {
-                ...currentPage.elements.dynamicData['-1'],
-              },
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-              },
-              ['test-2']: {
-                ...elementDynamicDataMock,
-                coordinates: { x: 100, y: 100 },
-                id: 'test-2',
-                position: 'relative',
-              },
+            [elementMock.id]: {
+              ...elementMock,
+              children: [{ ...childrenMock, id: 'test-2' }],
             },
-            staticData: {
-              ['-1']: {
-                ...currentPage.elements.staticData['-1'],
-                children: [childrenMock],
-              },
-              [elementStaticDataMock.id]: {
-                ...elementStaticDataMock,
-                children: [{ ...childrenMock, id: 'test-2' }],
-              },
-              ['test-2']: {
-                ...elementStaticDataMock,
-                children: [],
-                id: 'test-2',
-                parentId: elementStaticDataMock.id,
-              },
+            ['test-2']: {
+              ...elementMock,
+              children: [],
+              coordinates: { x: 100, y: 100 },
+              id: 'test-2',
+              parentId: elementMock.id,
+              position: 'relative',
             },
           },
         },
@@ -88,32 +50,13 @@ describe('getMappedElementsWithResetPosition', () => {
 
     // result
     expect(result).toStrictEqual({
-      ...currentPage.elements,
-      allData: {
-        ['test-2']: {
-          ...elementMock,
-          children: [],
-          coordinates: BASE_2D,
-          id: 'test-2',
-          parentId: elementMock.id,
-          position: 'relative',
-        },
-      },
-      dynamicData: {
-        ['test-2']: {
-          ...elementDynamicDataMock,
-          coordinates: BASE_2D,
-          id: 'test-2',
-          position: 'relative',
-        },
-      },
-      staticData: {
-        ['test-2']: {
-          ...elementStaticDataMock,
-          children: [],
-          id: 'test-2',
-          parentId: elementStaticDataMock.id,
-        },
+      ['test-2']: {
+        ...elementMock,
+        children: [],
+        coordinates: BASE_2D,
+        id: 'test-2',
+        parentId: elementMock.id,
+        position: 'relative',
       },
     });
   });
@@ -136,53 +79,21 @@ describe('getMappedElementsWithResetPosition', () => {
           ...currentPage,
           elements: {
             ...currentPage.elements,
-            allData: {
-              ['-1']: {
-                ...currentPage.elements.allData['-1'],
-                children: [childrenMock],
-              },
-              [elementMock.id]: {
-                ...elementMock,
-                children: [{ ...childrenMock, id: 'test-2' }],
-              },
-              ['test-2']: {
-                ...elementMock,
-                children: [],
-                coordinates: { x: 100, y: 100 },
-                id: 'test-2',
-                parentId: elementMock.id,
-                position: 'absolute',
-              },
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [childrenMock],
             },
-            dynamicData: {
-              ['-1']: {
-                ...currentPage.elements.dynamicData['-1'],
-              },
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-              },
-              ['test-2']: {
-                ...elementDynamicDataMock,
-                coordinates: { x: 100, y: 100 },
-                id: 'test-2',
-                position: 'absolute',
-              },
+            [elementMock.id]: {
+              ...elementMock,
+              children: [{ ...childrenMock, id: 'test-2' }],
             },
-            staticData: {
-              ['-1']: {
-                ...currentPage.elements.staticData['-1'],
-                children: [childrenMock],
-              },
-              [elementStaticDataMock.id]: {
-                ...elementStaticDataMock,
-                children: [{ ...childrenMock, id: 'test-2' }],
-              },
-              ['test-2']: {
-                ...elementStaticDataMock,
-                children: [],
-                id: 'test-2',
-                parentId: elementStaticDataMock.id,
-              },
+            ['test-2']: {
+              ...elementMock,
+              children: [],
+              coordinates: { x: 100, y: 100 },
+              id: 'test-2',
+              parentId: elementMock.id,
+              position: 'absolute',
             },
           },
         },
@@ -191,32 +102,13 @@ describe('getMappedElementsWithResetPosition', () => {
 
     // result
     expect(result).toStrictEqual({
-      ...currentPage.elements,
-      allData: {
-        ['test-2']: {
-          ...elementMock,
-          children: [],
-          coordinates: { x: 100, y: 100 },
-          id: 'test-2',
-          parentId: elementMock.id,
-          position: 'absolute',
-        },
-      },
-      dynamicData: {
-        ['test-2']: {
-          ...elementDynamicDataMock,
-          coordinates: { x: 100, y: 100 },
-          id: 'test-2',
-          position: 'absolute',
-        },
-      },
-      staticData: {
-        ['test-2']: {
-          ...elementStaticDataMock,
-          children: [],
-          id: 'test-2',
-          parentId: elementStaticDataMock.id,
-        },
+      ['test-2']: {
+        ...elementMock,
+        children: [],
+        coordinates: { x: 100, y: 100 },
+        id: 'test-2',
+        parentId: elementMock.id,
+        position: 'absolute',
       },
     });
   });

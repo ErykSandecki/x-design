@@ -1,5 +1,5 @@
 // mocks
-import { elementDynamicDataMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // utils
 import { isMixed } from '../isMixed';
@@ -7,12 +7,9 @@ import { isMixed } from '../isMixed';
 describe('isMixed', () => {
   it(`should not be mixed`, () => {
     // before
-    const result = isMixed(
-      { [elementDynamicDataMock.id]: elementDynamicDataMock },
+    const result = isMixed({ [elementMock.id]: elementMock }, selectedElementMock, 'coordinates.x', [
       selectedElementMock,
-      'coordinates.x',
-      [selectedElementMock],
-    );
+    ]);
 
     // result
     expect(result).toBe(false);
@@ -22,9 +19,9 @@ describe('isMixed', () => {
     // before
     const result = isMixed(
       {
-        [elementDynamicDataMock.id]: elementDynamicDataMock,
+        [elementMock.id]: elementMock,
         ['test-2']: {
-          ...elementDynamicDataMock,
+          ...elementMock,
           coordinates: { x: 100, y: 100 },
           id: 'test-2',
         },

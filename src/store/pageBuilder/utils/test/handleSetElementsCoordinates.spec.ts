@@ -1,13 +1,7 @@
 import { cloneDeep } from 'lodash';
 
 // mocks
-import {
-  elementMock,
-  elementDynamicDataMock,
-  elementStaticDataMock,
-  pageBuilderStateMock,
-  selectedElementMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { BASE_2D } from 'shared';
@@ -19,9 +13,7 @@ import { handleSetElementsCoordinates } from '../handleSetElementsCoordinates';
 const mockPage = {
   ...pageBuilderStateMock[PAGE_BUILDER].pages['0'],
   elements: {
-    allData: { [elementMock.id]: elementMock },
-    dynamicData: { [elementDynamicDataMock.id]: elementDynamicDataMock },
-    staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
+    [elementMock.id]: elementMock,
   },
   selectedElements: [selectedElementMock],
 };
@@ -57,21 +49,11 @@ describe('handleSetElementsCoordinates', () => {
         ['0']: {
           ...currentPage,
           elements: {
-            allData: {
-              [elementMock.id]: {
-                ...elementMock,
-                alignment: {},
-                coordinates,
-              },
+            [elementMock.id]: {
+              ...elementMock,
+              alignment: {},
+              coordinates,
             },
-            dynamicData: {
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                alignment: {},
-                coordinates,
-              },
-            },
-            staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
           },
           prevState,
           selectedElements: [selectedElementMock],
@@ -110,21 +92,11 @@ describe('handleSetElementsCoordinates', () => {
         ['0']: {
           ...currentPage,
           elements: {
-            allData: {
-              [elementMock.id]: {
-                ...elementMock,
-                alignment: {},
-                coordinates: BASE_2D,
-              },
+            [elementMock.id]: {
+              ...elementMock,
+              alignment: {},
+              coordinates: BASE_2D,
             },
-            dynamicData: {
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                alignment: {},
-                coordinates: BASE_2D,
-              },
-            },
-            staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
           },
           prevState,
           selectedElements: [selectedElementMock],
@@ -162,21 +134,11 @@ describe('handleSetElementsCoordinates', () => {
         ['0']: {
           ...currentPage,
           elements: {
-            allData: {
-              [elementMock.id]: {
-                ...elementMock,
-                alignment: {},
-                coordinates,
-              },
+            [elementMock.id]: {
+              ...elementMock,
+              alignment: {},
+              coordinates,
             },
-            dynamicData: {
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                alignment: {},
-                coordinates,
-              },
-            },
-            staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
           },
           prevState: undefined,
           selectedElements: [selectedElementMock],
@@ -214,21 +176,11 @@ describe('handleSetElementsCoordinates', () => {
         ['0']: {
           ...currentPage,
           elements: {
-            allData: {
-              [elementMock.id]: {
-                ...elementMock,
-                alignment: {},
-                coordinates: BASE_2D,
-              },
+            [elementMock.id]: {
+              ...elementMock,
+              alignment: {},
+              coordinates: BASE_2D,
             },
-            dynamicData: {
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                alignment: {},
-                coordinates: BASE_2D,
-              },
-            },
-            staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
           },
           prevState: undefined,
           selectedElements: [selectedElementMock],

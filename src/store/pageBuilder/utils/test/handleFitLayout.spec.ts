@@ -1,11 +1,5 @@
 // mocks
-import {
-  elementMock,
-  elementDynamicDataMock,
-  elementStaticDataMock,
-  pageBuilderStateMock,
-  selectedElementMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
@@ -27,18 +21,7 @@ describe('handleChangeLayout', () => {
           ...currentPage,
           elements: {
             ...currentPage.elements,
-            allData: {
-              ...currentPage.elements.allData,
-              [elementMock.id]: elementMock,
-            },
-            dynamicData: {
-              ...currentPage.elements.dynamicData,
-              [elementDynamicDataMock.id]: elementDynamicDataMock,
-            },
-            staticData: {
-              ...currentPage.elements.staticData,
-              [elementStaticDataMock.id]: elementStaticDataMock,
-            },
+            [elementMock.id]: elementMock,
           },
           selectedElements: [selectedElementMock],
         },
@@ -54,27 +37,10 @@ describe('handleChangeLayout', () => {
           ...currentPage,
           elements: {
             ...currentPage.elements,
-            allData: {
-              ...currentPage.elements.allData,
-              [elementMock.id]: {
-                ...elementMock,
-                height: { value: 'auto' },
-                width: { value: 'auto' },
-              },
-            },
-            dynamicData: {
-              ...currentPage.elements.dynamicData,
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                height: { value: 'auto' },
-                width: { value: 'auto' },
-              },
-            },
-            staticData: {
-              ...currentPage.elements.staticData,
-              [elementStaticDataMock.id]: {
-                ...elementStaticDataMock,
-              },
+            [elementMock.id]: {
+              ...elementMock,
+              height: { value: 'auto' },
+              width: { value: 'auto' },
             },
           },
           selectedElements: [selectedElementMock],

@@ -29,11 +29,8 @@ describe('handleTrySingleElement', () => {
               ...currentPage,
               elements: {
                 ...currentPage.elements,
-                allData: {
-                  ...currentPage.elements.allData,
-                  [selectedElementMock.id]: {
-                    ...elementMock,
-                  },
+                [selectedElementMock.id]: {
+                  ...elementMock,
                 },
               },
             },

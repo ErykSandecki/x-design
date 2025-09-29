@@ -40,7 +40,6 @@ export const handleFlipElements = (
       [state.currentPage]: {
         ...currentPage,
         elements: {
-          // selectedElements
           ...mapValues(currentPage.elements, (element, id) =>
             includes(ids, id)
               ? {
@@ -48,16 +47,12 @@ export const handleFlipElements = (
                   angle: negateValue(element.angle),
                   children: reverseChildren(axis, element.children, element.layout),
                 }
-              : element,
-          ),
-          // children of selected elements
-          ...mapValues(currentPage.elements, (element, id) =>
-            includes(childrenIds, id)
-              ? {
-                  ...element,
-                  children: reverseChildren(axis, element.children, element.layout),
-                }
-              : element,
+              : includes(childrenIds, id)
+                ? {
+                    ...element,
+                    children: reverseChildren(axis, element.children, element.layout),
+                  }
+                : element,
           ),
         },
       },

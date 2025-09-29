@@ -11,7 +11,7 @@ import { getDefaultCoordinates } from './getDefaultCoordinates';
 export const getAlignmentData = (
   element: TElement,
   payload: TChangeAlignmentAction['payload'],
-): Pick<TElement, 'alignment' | 'coordinates'> => {
+): Pick<TElement, 'alignment' | 'coordinates' | 'position'> => {
   const { alignment, id, parentId } = element;
   const targetAlignment = { ...alignment, ...payload };
   const coordinates = getDefaultCoordinates(targetAlignment, id, parentId);
@@ -19,6 +19,7 @@ export const getAlignmentData = (
   return {
     alignment: targetAlignment,
     coordinates,
+    position: 'absolute',
   };
 };
 

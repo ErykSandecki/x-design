@@ -5,13 +5,7 @@ import { Provider } from 'react-redux';
 import ColumnAlignment from './ColumnAlignment';
 
 // mocks
-import {
-  elementMock,
-  elementDynamicDataMock,
-  elementStaticDataMock,
-  pageBuilderStateMock,
-  selectedElementMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
@@ -35,30 +29,13 @@ const stateMock = {
       ['0']: {
         ...currentPage,
         elements: {
-          allData: {
-            ['-1']: {
-              ...currentPage.elements.allData['-1'],
-              children: [elementMock.id],
-            },
-            [elementMock.id]: {
-              ...elementMock,
-            },
+          ...currentPage.elements,
+          ['-1']: {
+            ...currentPage.elements['-1'],
+            children: [elementMock.id],
           },
-          dynamicData: {
-            ['-1']: {
-              ...currentPage.elements.dynamicData['-1'],
-              children: [elementDynamicDataMock.id],
-            },
-            [elementDynamicDataMock.id]: elementDynamicDataMock,
-          },
-          staticData: {
-            ['-1']: {
-              ...currentPage.elements.staticData['-1'],
-              children: [elementStaticDataMock.id],
-            },
-            [elementStaticDataMock.id]: {
-              ...elementStaticDataMock,
-            },
+          [elementMock.id]: {
+            ...elementMock,
           },
         },
         selectedElements: [selectedElementMock],
@@ -95,55 +72,22 @@ describe('ColumnAlignment snapshots', () => {
             ...stateMock[PAGE_BUILDER].pages['0'],
             elements: {
               ...currentPage.elements,
-              allData: {
-                ...currentPage.elements.allData,
-                ['-1']: {
-                  ...currentPage.elements.allData['-1'],
-                  children: [elementMock.id],
-                },
-                [elementMock.id]: {
-                  ...elementMock,
-                  children: ['test-2'],
-                  position: 'absolute',
-                },
-                ['test-2']: {
-                  ...elementMock,
-                  children: [],
-                  id: 'test-2',
-                  parentId: 'test-1',
-                  position: 'relative',
-                },
+              ...currentPage.elements,
+              ['-1']: {
+                ...currentPage.elements['-1'],
+                children: [elementMock.id],
               },
-              dynamicData: {
-                ...currentPage.elements.dynamicData,
-                ...currentPage.elements.allData,
-                [elementDynamicDataMock.id]: {
-                  ...elementDynamicDataMock,
-                  position: 'absolute',
-                },
-                ['test-2']: {
-                  ...elementDynamicDataMock,
-                  id: 'test-2',
-                  position: 'relative',
-                },
+              [elementMock.id]: {
+                ...elementMock,
+                children: ['test-2'],
+                position: 'absolute',
               },
-              staticData: {
-                ...currentPage.elements.staticData,
-                ['-1']: {
-                  ...currentPage.elements.staticData['-1'],
-                  children: [elementStaticDataMock.id],
-                },
-                [elementStaticDataMock.id]: {
-                  ...elementStaticDataMock,
-                  children: ['test-2'],
-                  position: 'absolute',
-                },
-                ['test-2']: {
-                  ...elementStaticDataMock,
-                  children: [],
-                  id: 'test-2',
-                  position: 'relative',
-                },
+              ['test-2']: {
+                ...elementMock,
+                children: [],
+                id: 'test-2',
+                parentId: 'test-1',
+                position: 'relative',
               },
             },
             selectElements: [selectedElementMock, { ...selectedElementMock, id: 'test-2' }],
@@ -193,55 +137,22 @@ describe('ColumnAlignment behaviors', () => {
             ...stateMock[PAGE_BUILDER].pages['0'],
             elements: {
               ...currentPage.elements,
-              allData: {
-                ...currentPage.elements.allData,
-                ['-1']: {
-                  ...currentPage.elements.allData['-1'],
-                  children: [elementMock.id],
-                },
-                [elementMock.id]: {
-                  ...elementMock,
-                  children: ['test-2'],
-                  position: 'absolute',
-                },
-                ['test-2']: {
-                  ...elementMock,
-                  children: [],
-                  id: 'test-2',
-                  parentId: 'test-1',
-                  position: 'absolute',
-                },
+              ...currentPage.elements,
+              ['-1']: {
+                ...currentPage.elements['-1'],
+                children: [elementMock.id],
               },
-              dynamicData: {
-                ...currentPage.elements.dynamicData,
-                ...currentPage.elements.allData,
-                [elementDynamicDataMock.id]: {
-                  ...elementDynamicDataMock,
-                  position: 'absolute',
-                },
-                ['test-2']: {
-                  ...elementDynamicDataMock,
-                  id: 'test-2',
-                  position: 'absolute',
-                },
+              [elementMock.id]: {
+                ...elementMock,
+                children: ['test-2'],
+                position: 'absolute',
               },
-              staticData: {
-                ...currentPage.elements.staticData,
-                ['-1']: {
-                  ...currentPage.elements.staticData['-1'],
-                  children: [elementStaticDataMock.id],
-                },
-                [elementStaticDataMock.id]: {
-                  ...elementStaticDataMock,
-                  children: ['test-2'],
-                  position: 'absolute',
-                },
-                ['test-2']: {
-                  ...elementStaticDataMock,
-                  children: [],
-                  id: 'test-2',
-                  position: 'absolute',
-                },
+              ['test-2']: {
+                ...elementMock,
+                children: [],
+                id: 'test-2',
+                parentId: 'test-1',
+                position: 'absolute',
               },
             },
             selectedElements: [{ ...selectedElementMock, id: childrenId, parentId }],
@@ -270,7 +181,7 @@ describe('ColumnAlignment behaviors', () => {
     fireEvent.click(getByE2EAttribute(verticalButtonGroup, E2EAttribute.buttonGroupInput, 'align-vertical-top'));
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-2'].alignment).toStrictEqual({
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-2'].alignment).toStrictEqual({
       horizontal: 'left',
       vertical: 'top',
     });

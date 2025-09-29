@@ -38,15 +38,12 @@ const stateMock = {
         ...pageBuilderStateMock[PAGE_BUILDER].pages['0'],
         elements: {
           ...currentPage.elements,
-          allData: {
-            ...currentPage.elements.allData,
-            [elementMock.id]: {
-              ...elementMock,
-            },
-            ['2']: {
-              ...elementMock,
-              id: '2',
-            },
+          [elementMock.id]: {
+            ...elementMock,
+          },
+          ['2']: {
+            ...elementMock,
+            id: '2',
           },
         },
         selectedElements: [
@@ -86,15 +83,12 @@ describe('useMultipleELementsAreaEvents', () => {
               ...currentPage,
               elements: {
                 ...currentPage.elements,
-                allData: {
-                  ...currentPage.elements.allData,
-                  [selectedElementMock.id]: {
-                    ...elementMock,
-                  },
-                  ['2']: {
-                    ...elementMock,
-                    id: '2',
-                  },
+                [selectedElementMock.id]: {
+                  ...elementMock,
+                },
+                ['2']: {
+                  ...elementMock,
+                  id: '2',
                 },
               },
             },

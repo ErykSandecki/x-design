@@ -42,9 +42,14 @@ export const getPositions = (
       positions.elements = { ...positions.elements, [id]: { ...prevElements[id], alignment, coordinates } };
       positions.selectedElements.push({ ...restData, id });
     });
+
+    return positions;
   }
 
-  return positions;
+  return {
+    ...positions,
+    selectedElements: currentPage.selectedElements,
+  };
 };
 
 export const handleSetElementsCoordinates = (

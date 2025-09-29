@@ -1,11 +1,5 @@
 // mocks
-import {
-  elementMock,
-  elementDynamicDataMock,
-  elementStaticDataMock,
-  pageBuilderStateMock,
-  selectedElementMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
@@ -29,18 +23,7 @@ describe('handleSetElementsSizes', () => {
             ...currentPage,
             elements: {
               ...currentPage.elements,
-              allData: {
-                ...currentPage.elements.allData,
-                [elementMock.id]: elementMock,
-              },
-              dynamicData: {
-                ...currentPage.elements.dynamicData,
-                [elementDynamicDataMock.id]: elementDynamicDataMock,
-              },
-              staticData: {
-                ...currentPage.elements.staticData,
-                [elementStaticDataMock.id]: elementStaticDataMock,
-              },
+              [elementMock.id]: elementMock,
             },
             selectedElements: [selectedElementMock],
           },
@@ -58,25 +41,9 @@ describe('handleSetElementsSizes', () => {
           ...currentPage,
           elements: {
             ...currentPage.elements,
-            allData: {
-              ...currentPage.elements.allData,
-              [elementMock.id]: {
-                ...elementMock,
-                height: { value: 'auto' },
-              },
-            },
-            dynamicData: {
-              ...currentPage.elements.dynamicData,
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                height: { value: 'auto' },
-              },
-            },
-            staticData: {
-              ...currentPage.elements.staticData,
-              [elementStaticDataMock.id]: {
-                ...elementStaticDataMock,
-              },
+            [elementMock.id]: {
+              ...elementMock,
+              height: { value: 'auto' },
             },
           },
           selectedElements: [selectedElementMock],

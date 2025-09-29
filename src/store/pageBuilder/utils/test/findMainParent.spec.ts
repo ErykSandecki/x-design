@@ -1,5 +1,5 @@
 // mocks
-import { elementStaticDataMock } from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // utils
 import { findMainParent } from '../findMainParent';
@@ -8,14 +8,14 @@ describe('findMainParent', () => {
   it(`should find main parent`, () => {
     // before
     const result = findMainParent('test-2', {
-      [elementStaticDataMock.id]: elementStaticDataMock,
+      [elementMock.id]: elementMock,
       ['test-2']: {
-        ...elementStaticDataMock,
+        ...elementMock,
         id: 'test-2',
-        parentId: elementStaticDataMock.id,
+        parentId: elementMock.id,
       },
       ['test-3']: {
-        ...elementStaticDataMock,
+        ...elementMock,
         id: 'test-3',
         parentId: 'test-2',
       },

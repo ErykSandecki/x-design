@@ -4,13 +4,7 @@ import { renderHook } from '@testing-library/react';
 import { useDropAnchorsEvents } from '../useDropAnchorsEvents';
 
 // mocks
-import {
-  elementMock,
-  elementDynamicDataMock,
-  elementStaticDataMock,
-  eventsMock,
-  pageBuilderStateMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, eventsMock, pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
@@ -40,30 +34,13 @@ const stateMock = {
       ['0']: {
         ...currentPage,
         elements: {
-          allData: {
-            ['-1']: {
-              ...currentPage.elements.allData['-1'],
-              children: [elementMock.id],
-            },
-            [elementMock.id]: {
-              ...elementMock,
-            },
+          ...currentPage.elements,
+          ['-1']: {
+            ...currentPage.elements['-1'],
+            children: [elementMock.id],
           },
-          dynamicData: {
-            ['-1']: {
-              ...currentPage.elements.dynamicData['-1'],
-              children: [elementDynamicDataMock.id],
-            },
-            [elementDynamicDataMock.id]: elementDynamicDataMock,
-          },
-          staticData: {
-            ['-1']: {
-              ...currentPage.elements.staticData['-1'],
-              children: [elementStaticDataMock.id],
-            },
-            [elementStaticDataMock.id]: {
-              ...elementStaticDataMock,
-            },
+          [elementMock.id]: {
+            ...elementMock,
           },
         },
       },

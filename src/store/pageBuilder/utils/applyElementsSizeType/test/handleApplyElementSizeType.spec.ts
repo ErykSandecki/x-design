@@ -1,13 +1,7 @@
 import { noop } from 'lodash';
 
 // mocks
-import {
-  elementMock,
-  elementDynamicDataMock,
-  elementStaticDataMock,
-  pageBuilderStateMock,
-  selectedElementMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from '../../../actionsType';
@@ -40,18 +34,7 @@ describe('handleApplyElementSizeType', () => {
             ...currentPage,
             elements: {
               ...currentPage.elements,
-              allData: {
-                ...currentPage.elements.allData,
-                [elementMock.id]: elementMock,
-              },
-              dynamicData: {
-                ...currentPage.elements.dynamicData,
-                [elementDynamicDataMock.id]: elementDynamicDataMock,
-              },
-              staticData: {
-                ...currentPage.elements.staticData,
-                [elementStaticDataMock.id]: elementStaticDataMock,
-              },
+              [elementMock.id]: elementMock,
             },
             selectedElements: [selectedElementMock],
           },
@@ -68,25 +51,9 @@ describe('handleApplyElementSizeType', () => {
           ...currentPage,
           elements: {
             ...currentPage.elements,
-            allData: {
-              ...currentPage.elements.allData,
-              [elementMock.id]: {
-                ...elementMock,
-                height: { unit: Unit.percentage, value: 100 },
-              },
-            },
-            dynamicData: {
-              ...currentPage.elements.dynamicData,
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                height: { unit: Unit.percentage, value: 100 },
-              },
-            },
-            staticData: {
-              ...currentPage.elements.staticData,
-              [elementStaticDataMock.id]: {
-                ...elementStaticDataMock,
-              },
+            [elementMock.id]: {
+              ...elementMock,
+              height: { unit: Unit.percentage, value: 100 },
             },
           },
           selectedElements: [selectedElementMock],

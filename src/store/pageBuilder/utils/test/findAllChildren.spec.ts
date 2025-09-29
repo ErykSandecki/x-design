@@ -10,7 +10,7 @@ import { findAllChildren } from '../findAllChildren';
 describe('findAllChildren', () => {
   it(`should find main parent`, () => {
     // mock
-    const allData: TElements['allData'] = {
+    const elements: TElements = {
       [elementMock.id]: {
         ...elementMock,
         children: [{ ...childrenMock, id: 'test-2' }],
@@ -30,7 +30,7 @@ describe('findAllChildren', () => {
     };
 
     // before
-    const result = findAllChildren(allData, allData['test-1'].children);
+    const result = findAllChildren(elements, elements['test-1'].children);
 
     // result
     expect(result).toStrictEqual([

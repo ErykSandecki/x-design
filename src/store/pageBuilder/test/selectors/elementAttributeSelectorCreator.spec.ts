@@ -10,6 +10,6 @@ describe('elementAttributeSelectorCreator', () => {
     const selectorFunction = (elementAttributeSelectorCreator('deepLevel', elementMock.id) as any).resultFunc;
 
     // result
-    expect(selectorFunction({ [elementMock.id]: elementMock })).toBe(0);
+    expect(selectorFunction(elementMock)).toBe(0);
   });
 });

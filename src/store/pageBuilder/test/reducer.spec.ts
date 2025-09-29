@@ -4,8 +4,6 @@ import { cloneDeep } from 'lodash';
 import {
   elementMock,
   createFrameMock,
-  elementDynamicDataMock,
-  elementStaticDataMock,
   pageBuilderStateMock,
   selectedElementMock,
   reducerHistoryMock,
@@ -90,43 +88,12 @@ describe('PageBuilderReducer', () => {
         ['0']: {
           ...currentPage,
           elements: {
-            allData: {
-              ['-1']: {
-                ...currentPage.elements.allData['-1'],
-                children: [childrenMock],
-              },
-              [createFrameMock.id]: createFrameMock,
+            ...currentPage.elements,
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [childrenMock],
             },
-            dynamicData: {
-              ['-1']: {
-                ...currentPage.elements.dynamicData['-1'],
-              },
-              [createFrameMock.id]: {
-                alignment: {},
-                angle: createFrameMock.angle,
-                background: createFrameMock.background,
-                coordinates: createFrameMock.coordinates,
-                deepLevel: createFrameMock.deepLevel,
-                height: createFrameMock.height,
-                id: createFrameMock.id,
-                layout: createFrameMock.layout,
-                position: createFrameMock.position,
-                width: createFrameMock.width,
-              },
-            },
-            staticData: {
-              ['-1']: {
-                ...currentPage.elements.staticData['-1'],
-                children: [childrenMock],
-              },
-              [createFrameMock.id]: {
-                children: createFrameMock.children,
-                id: createFrameMock.id,
-                parentId: createFrameMock.parentId,
-                position: createFrameMock.position,
-                type: createFrameMock.type,
-              },
-            },
+            [createFrameMock.id]: createFrameMock,
           },
         },
       },
@@ -147,18 +114,7 @@ describe('PageBuilderReducer', () => {
           ...currentPage,
           elements: {
             ...currentPage.elements,
-            allData: {
-              ...currentPage.elements.allData,
-              [elementMock.id]: elementMock,
-            },
-            dynamicData: {
-              ...currentPage.elements.dynamicData,
-              [elementDynamicDataMock.id]: elementDynamicDataMock,
-            },
-            staticData: {
-              ...currentPage.elements.staticData,
-              [elementStaticDataMock.id]: elementStaticDataMock,
-            },
+            [elementMock.id]: elementMock,
           },
           selectedElements: [selectedElementMock],
         },
@@ -174,23 +130,9 @@ describe('PageBuilderReducer', () => {
           ...currentPage,
           elements: {
             ...currentPage.elements,
-            allData: {
-              ...currentPage.elements.allData,
-              [elementMock.id]: {
-                ...elementMock,
-                height: { unit: Unit.percentage, value: 100 },
-              },
-            },
-            dynamicData: {
-              ...currentPage.elements.dynamicData,
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                height: { unit: Unit.percentage, value: 100 },
-              },
-            },
-            staticData: {
-              ...currentPage.elements.staticData,
-              [elementStaticDataMock.id]: elementStaticDataMock,
+            [elementMock.id]: {
+              ...elementMock,
+              height: { unit: Unit.percentage, value: 100 },
             },
           },
           selectedElements: [selectedElementMock],
@@ -237,76 +179,31 @@ describe('PageBuilderReducer', () => {
           ...currentPage,
           elements: {
             ...currentPage.elements,
-            allData: {
-              ...currentPage.elements.allData,
-              ['-1']: {
-                ...currentPage.elements.allData['-1'],
-                children: [childrenMock],
-              },
-              [elementMock.id]: {
-                ...elementMock,
-                children: [
-                  { ...childrenMock, id: 'test-2' },
-                  { ...childrenMock, id: 'test-3' },
-                ],
-                position: 'absolute',
-              },
-              ['test-2']: {
-                ...elementMock,
-                children: [],
-                id: 'test-2',
-                parentId: 'test-1',
-                position: 'absolute',
-              },
-              ['test-3']: {
-                ...elementMock,
-                children: [],
-                id: 'test-3',
-                parentId: 'test-1',
-                position: 'relative',
-              },
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [childrenMock],
             },
-            dynamicData: {
-              ...currentPage.elements.dynamicData,
-              ...currentPage.elements.allData,
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                position: 'absolute',
-              },
-              ['test-2']: {
-                ...elementDynamicDataMock,
-                id: 'test-2',
-                position: 'absolute',
-              },
-              ['test-3']: {
-                ...elementDynamicDataMock,
-                id: 'test-3',
-                position: 'relative',
-              },
+            [elementMock.id]: {
+              ...elementMock,
+              children: [
+                { ...childrenMock, id: 'test-2' },
+                { ...childrenMock, id: 'test-3' },
+              ],
+              position: 'absolute',
             },
-            staticData: {
-              ...currentPage.elements.staticData,
-              ['-1']: {
-                ...currentPage.elements.staticData['-1'],
-                children: [childrenMock],
-              },
-              [elementStaticDataMock.id]: {
-                ...elementStaticDataMock,
-                children: [
-                  { ...childrenMock, id: 'test-2' },
-                  { ...childrenMock, id: 'test-3' },
-                ],
-              },
-              ['test-2']: {
-                ...elementStaticDataMock,
-                children: [],
-                id: 'test-2',
-              },
-              ['test-3']: {
-                ...elementStaticDataMock,
-                children: [],
-                id: 'test-3',
-              },
+            ['test-2']: {
+              ...elementMock,
+              children: [],
+              id: 'test-2',
+              parentId: 'test-1',
+              position: 'absolute',
+            },
+            ['test-3']: {
+              ...elementMock,
+              children: [],
+              id: 'test-3',
+              parentId: 'test-1',
+              position: 'relative',
             },
           },
           selectedElements: [
@@ -326,80 +223,33 @@ describe('PageBuilderReducer', () => {
           ...currentPage,
           elements: {
             ...currentPage.elements,
-            allData: {
-              ...currentPage.elements.allData,
-              ['-1']: {
-                ...currentPage.elements.allData['-1'],
-                children: [childrenMock],
-              },
-              [elementMock.id]: {
-                ...elementMock,
-                children: [
-                  { ...childrenMock, id: 'test-2' },
-                  { ...childrenMock, id: 'test-3' },
-                ],
-                position: 'absolute',
-              },
-              ['test-2']: {
-                ...elementMock,
-                alignment,
-                children: [],
-                id: 'test-2',
-                parentId: 'test-1',
-                position: 'absolute',
-              },
-              ['test-3']: {
-                ...elementMock,
-                alignment,
-                children: [],
-                id: 'test-3',
-                parentId: 'test-1',
-                position: 'absolute',
-              },
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [childrenMock],
             },
-            dynamicData: {
-              ...currentPage.elements.dynamicData,
-              ...currentPage.elements.allData,
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                position: 'absolute',
-              },
-              ['test-2']: {
-                ...elementDynamicDataMock,
-                alignment,
-                id: 'test-2',
-                position: 'absolute',
-              },
-              ['test-3']: {
-                ...elementDynamicDataMock,
-                alignment,
-                id: 'test-3',
-                position: 'absolute',
-              },
+            [elementMock.id]: {
+              ...elementMock,
+              children: [
+                { ...childrenMock, id: 'test-2' },
+                { ...childrenMock, id: 'test-3' },
+              ],
+              position: 'absolute',
             },
-            staticData: {
-              ...currentPage.elements.staticData,
-              ['-1']: {
-                ...currentPage.elements.staticData['-1'],
-                children: [childrenMock],
-              },
-              [elementStaticDataMock.id]: {
-                ...elementStaticDataMock,
-                children: [
-                  { ...childrenMock, id: 'test-2' },
-                  { ...childrenMock, id: 'test-3' },
-                ],
-              },
-              ['test-2']: {
-                ...elementStaticDataMock,
-                children: [],
-                id: 'test-2',
-              },
-              ['test-3']: {
-                ...elementStaticDataMock,
-                children: [],
-                id: 'test-3',
-              },
+            ['test-2']: {
+              ...elementMock,
+              alignment,
+              children: [],
+              id: 'test-2',
+              parentId: 'test-1',
+              position: 'absolute',
+            },
+            ['test-3']: {
+              ...elementMock,
+              alignment,
+              children: [],
+              id: 'test-3',
+              parentId: 'test-1',
+              position: 'absolute',
             },
           },
           selectedElements: [
@@ -441,76 +291,31 @@ describe('PageBuilderReducer', () => {
           ...currentPage,
           elements: {
             ...currentPage.elements,
-            allData: {
-              ...currentPage.elements.allData,
-              ['-1']: {
-                ...currentPage.elements.allData['-1'],
-                children: [childrenMock],
-              },
-              [elementMock.id]: {
-                ...elementMock,
-                children: [
-                  { ...childrenMock, id: 'test-2' },
-                  { ...childrenMock, id: 'test-3' },
-                ],
-                position: 'absolute',
-              },
-              ['test-2']: {
-                ...elementMock,
-                children: [],
-                id: 'test-2',
-                parentId: 'test-1',
-                position: 'relative',
-              },
-              ['test-3']: {
-                ...elementMock,
-                children: [],
-                id: 'test-3',
-                parentId: 'test-1',
-                position: 'relative',
-              },
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [childrenMock],
             },
-            dynamicData: {
-              ...currentPage.elements.dynamicData,
-              ...currentPage.elements.allData,
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                position: 'absolute',
-              },
-              ['test-2']: {
-                ...elementDynamicDataMock,
-                id: 'test-2',
-                position: 'relative',
-              },
-              ['test-3']: {
-                ...elementDynamicDataMock,
-                id: 'test-3',
-                position: 'relative',
-              },
+            [elementMock.id]: {
+              ...elementMock,
+              children: [
+                { ...childrenMock, id: 'test-2' },
+                { ...childrenMock, id: 'test-3' },
+              ],
+              position: 'absolute',
             },
-            staticData: {
-              ...currentPage.elements.staticData,
-              ['-1']: {
-                ...currentPage.elements.staticData['-1'],
-                children: [childrenMock],
-              },
-              [elementStaticDataMock.id]: {
-                ...elementStaticDataMock,
-                children: [
-                  { ...childrenMock, id: 'test-2' },
-                  { ...childrenMock, id: 'test-3' },
-                ],
-              },
-              ['test-2']: {
-                ...elementStaticDataMock,
-                children: [],
-                id: 'test-2',
-              },
-              ['test-3']: {
-                ...elementStaticDataMock,
-                children: [],
-                id: 'test-3',
-              },
+            ['test-2']: {
+              ...elementMock,
+              children: [],
+              id: 'test-2',
+              parentId: 'test-1',
+              position: 'relative',
+            },
+            ['test-3']: {
+              ...elementMock,
+              children: [],
+              id: 'test-3',
+              parentId: 'test-1',
+              position: 'relative',
             },
           },
           selectedElements: [{ ...selectedElementMock, id: 'test-2', parentId: 'test-1' }],
@@ -527,78 +332,32 @@ describe('PageBuilderReducer', () => {
           ...currentPage,
           elements: {
             ...currentPage.elements,
-            allData: {
-              ...currentPage.elements.allData,
-              ['-1']: {
-                ...currentPage.elements.allData['-1'],
-                children: [childrenMock],
-              },
-              [elementMock.id]: {
-                ...elementMock,
-                children: [
-                  { ...childrenMock, id: 'test-3' },
-                  { ...childrenMock, id: 'test-2' },
-                ],
-                position: 'absolute',
-              },
-              ['test-2']: {
-                ...elementMock,
-                alignment: {},
-                children: [],
-                id: 'test-2',
-                parentId: 'test-1',
-                position: 'absolute',
-              },
-              ['test-3']: {
-                ...elementMock,
-                children: [],
-                id: 'test-3',
-                parentId: 'test-1',
-                position: 'relative',
-              },
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [childrenMock],
             },
-            dynamicData: {
-              ...currentPage.elements.dynamicData,
-              ...currentPage.elements.allData,
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                position: 'absolute',
-              },
-              ['test-2']: {
-                ...elementDynamicDataMock,
-                alignment: {},
-                id: 'test-2',
-                position: 'absolute',
-              },
-              ['test-3']: {
-                ...elementDynamicDataMock,
-                id: 'test-3',
-                position: 'relative',
-              },
+            [elementMock.id]: {
+              ...elementMock,
+              children: [
+                { ...childrenMock, id: 'test-3' },
+                { ...childrenMock, id: 'test-2' },
+              ],
+              position: 'absolute',
             },
-            staticData: {
-              ...currentPage.elements.staticData,
-              ['-1']: {
-                ...currentPage.elements.staticData['-1'],
-                children: [childrenMock],
-              },
-              [elementStaticDataMock.id]: {
-                ...elementStaticDataMock,
-                children: [
-                  { ...childrenMock, id: 'test-3' },
-                  { ...childrenMock, id: 'test-2' },
-                ],
-              },
-              ['test-2']: {
-                ...elementStaticDataMock,
-                children: [],
-                id: 'test-2',
-              },
-              ['test-3']: {
-                ...elementStaticDataMock,
-                children: [],
-                id: 'test-3',
-              },
+            ['test-2']: {
+              ...elementMock,
+              alignment: {},
+              children: [],
+              id: 'test-2',
+              parentId: 'test-1',
+              position: 'absolute',
+            },
+            ['test-3']: {
+              ...elementMock,
+              children: [],
+              id: 'test-3',
+              parentId: 'test-1',
+              position: 'relative',
             },
           },
           selectedElements: [{ ...selectedElementMock, id: 'test-2', parentId: 'test-1' }],
@@ -633,30 +392,11 @@ describe('PageBuilderReducer', () => {
           ...currentPage,
           elements: {
             ...currentPage.elements,
-            allData: {
-              ...currentPage.elements.allData,
-              ['-1']: {
-                ...currentPage.elements.allData['-1'],
-                background: {
-                  ...currentPage.elements.allData['-1'].background,
-                  ...background,
-                },
-              },
-            },
-            dynamicData: {
-              ...currentPage.elements.dynamicData,
-              ['-1']: {
-                ...currentPage.elements.dynamicData['-1'],
-                background: {
-                  ...currentPage.elements.dynamicData['-1'].background,
-                  ...background,
-                },
-              },
-            },
-            staticData: {
-              ...currentPage.elements.staticData,
-              ['-1']: {
-                ...currentPage.elements.staticData['-1'],
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              background: {
+                ...currentPage.elements['-1'].background,
+                ...background,
               },
             },
           },
@@ -678,18 +418,7 @@ describe('PageBuilderReducer', () => {
           ...currentPage,
           elements: {
             ...currentPage.elements,
-            allData: {
-              ...currentPage.elements.allData,
-              [elementMock.id]: elementMock,
-            },
-            dynamicData: {
-              ...currentPage.elements.dynamicData,
-              [elementDynamicDataMock.id]: elementDynamicDataMock,
-            },
-            staticData: {
-              ...currentPage.elements.staticData,
-              [elementStaticDataMock.id]: elementStaticDataMock,
-            },
+            [elementMock.id]: elementMock,
           },
           selectedElements: [selectedElementMock],
         },
@@ -705,27 +434,10 @@ describe('PageBuilderReducer', () => {
           ...currentPage,
           elements: {
             ...currentPage.elements,
-            allData: {
-              ...currentPage.elements.allData,
-              [elementMock.id]: {
-                ...elementMock,
-                height: { value: 'auto' },
-                width: { value: 'auto' },
-              },
-            },
-            dynamicData: {
-              ...currentPage.elements.dynamicData,
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                height: { value: 'auto' },
-                width: { value: 'auto' },
-              },
-            },
-            staticData: {
-              ...currentPage.elements.staticData,
-              [elementStaticDataMock.id]: {
-                ...elementStaticDataMock,
-              },
+            [elementMock.id]: {
+              ...elementMock,
+              height: { value: 'auto' },
+              width: { value: 'auto' },
             },
           },
           selectedElements: [selectedElementMock],
@@ -748,40 +460,16 @@ describe('PageBuilderReducer', () => {
           ...currentPage,
           elements: {
             ...currentPage.elements,
-            allData: {
-              ...currentPage.elements.allData,
-              ['-1']: {
-                ...currentPage.elements.allData['-1'],
-                children: [selectedElementMock.id, 'test-2'],
-              },
-              [elementMock.id]: {
-                ...elementMock,
-                layout: {
-                  ...layoutMock,
-                  type: LayoutType.default,
-                },
-              },
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [selectedElementMock.id, 'test-2'],
             },
-            dynamicData: {
-              ...currentPage.elements.dynamicData,
-              ['-1']: {
-                ...currentPage.elements.dynamicData['-1'],
+            [elementMock.id]: {
+              ...elementMock,
+              layout: {
+                ...layoutMock,
+                type: LayoutType.default,
               },
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                layout: {
-                  ...layoutMock,
-                  type: LayoutType.default,
-                },
-              },
-            },
-            staticData: {
-              ...currentPage.elements.staticData,
-              ['-1']: {
-                ...currentPage.elements.staticData['-1'],
-                children: [elementStaticDataMock.id],
-              },
-              [elementStaticDataMock.id]: elementStaticDataMock,
             },
           },
           selectedElements: [selectedElementMock],
@@ -798,40 +486,16 @@ describe('PageBuilderReducer', () => {
           ...currentPage,
           elements: {
             ...currentPage.elements,
-            allData: {
-              ...currentPage.elements.allData,
-              ['-1']: {
-                ...currentPage.elements.allData['-1'],
-                children: [selectedElementMock.id, 'test-2'],
-              },
-              [elementMock.id]: {
-                ...elementMock,
-                layout: {
-                  ...layoutMock,
-                  type: layoutType,
-                },
-              },
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [selectedElementMock.id, 'test-2'],
             },
-            dynamicData: {
-              ...currentPage.elements.dynamicData,
-              ['-1']: {
-                ...currentPage.elements.dynamicData['-1'],
+            [elementMock.id]: {
+              ...elementMock,
+              layout: {
+                ...layoutMock,
+                type: layoutType,
               },
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                layout: {
-                  ...layoutMock,
-                  type: layoutType,
-                },
-              },
-            },
-            staticData: {
-              ...currentPage.elements.staticData,
-              ['-1']: {
-                ...currentPage.elements.staticData['-1'],
-                children: [elementStaticDataMock.id],
-              },
-              [elementStaticDataMock.id]: elementStaticDataMock,
             },
           },
           selectedElements: [selectedElementMock],
@@ -868,46 +532,18 @@ describe('PageBuilderReducer', () => {
           ...currentPage,
           elements: {
             ...currentPage.elements,
-            allData: {
-              ['-1']: {
-                ...currentPage.elements.allData['-1'],
-                children: [childrenMock],
-              },
-              [elementMock.id]: {
-                ...elementMock,
-                children: [{ ...childrenMock, id: 'test-2' }],
-              },
-              ['test-2']: {
-                ...elementMock,
-                id: 'test-2',
-                parentId: selectedElementMock.id,
-              },
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [childrenMock],
             },
-            dynamicData: {
-              ...currentPage.elements.dynamicData,
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-              },
-              ['test-2']: {
-                ...elementDynamicDataMock,
-                id: 'test-2',
-              },
+            [elementMock.id]: {
+              ...elementMock,
+              children: [{ ...childrenMock, id: 'test-2' }],
             },
-            staticData: {
-              ['-1']: {
-                ...currentPage.elements.staticData['-1'],
-                children: [childrenMock],
-              },
-
-              [elementStaticDataMock.id]: {
-                ...elementStaticDataMock,
-                children: [{ ...childrenMock, id: 'test-2' }],
-              },
-              ['test-2']: {
-                ...elementStaticDataMock,
-                id: 'test-2',
-                parentId: selectedElementMock.id,
-              },
+            ['test-2']: {
+              ...elementMock,
+              id: 'test-2',
+              parentId: selectedElementMock.id,
             },
           },
         },
@@ -923,43 +559,17 @@ describe('PageBuilderReducer', () => {
           ...currentPage,
           elements: {
             ...currentPage.elements,
-            allData: {
-              ['-1']: {
-                ...currentPage.elements.allData['-1'],
-                children: [childrenMock, { ...childrenMock, id: 'test-2' }],
-              },
-              [elementMock.id]: {
-                ...elementMock,
-              },
-              ['test-2']: {
-                ...elementMock,
-                id: 'test-2',
-                parentId: '-1',
-              },
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [childrenMock, { ...childrenMock, id: 'test-2' }],
             },
-            dynamicData: {
-              ...currentPage.elements.dynamicData,
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-              },
-              ['test-2']: {
-                ...elementDynamicDataMock,
-                id: 'test-2',
-              },
+            [elementMock.id]: {
+              ...elementMock,
             },
-            staticData: {
-              ['-1']: {
-                ...currentPage.elements.staticData['-1'],
-                children: [childrenMock, { ...childrenMock, id: 'test-2' }],
-              },
-              [elementStaticDataMock.id]: {
-                ...elementStaticDataMock,
-              },
-              ['test-2']: {
-                ...elementStaticDataMock,
-                id: 'test-2',
-                parentId: '-1',
-              },
+            ['test-2']: {
+              ...elementMock,
+              id: 'test-2',
+              parentId: '-1',
             },
           },
         },
@@ -1009,69 +619,28 @@ describe('PageBuilderReducer', () => {
         ['0']: {
           ...currentPage,
           elements: {
-            allData: {
-              ['-1']: {
-                ...currentPage.elements.allData['-1'],
-                children: [childrenMock],
-              },
-              [elementMock.id]: {
-                ...elementMock,
-                angle,
-                children: [
-                  { ...childrenMock, id: 'test-2' },
-                  { ...childrenMock, id: 'test-3' },
-                ],
-              },
-              ['test-2']: {
-                ...elementMock,
-                id: 'test-2',
-                parentId: 'test-1',
-              },
-              ['test-3']: {
-                ...elementMock,
-                id: 'test-3',
-                parentId: 'test-1',
-              },
+            ...currentPage.elements,
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [childrenMock],
             },
-            dynamicData: {
-              ['-1']: {
-                ...currentPage.elements.dynamicData['-1'],
-              },
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                angle,
-              },
-              ['test-2']: {
-                ...elementDynamicDataMock,
-                id: 'test-2',
-              },
-              ['test-3']: {
-                ...elementDynamicDataMock,
-                id: 'test-3',
-              },
+            [elementMock.id]: {
+              ...elementMock,
+              angle,
+              children: [
+                { ...childrenMock, id: 'test-2' },
+                { ...childrenMock, id: 'test-3' },
+              ],
             },
-            staticData: {
-              ['-1']: {
-                ...currentPage.elements.staticData['-1'],
-                children: [childrenMock],
-              },
-              [elementStaticDataMock.id]: {
-                ...elementStaticDataMock,
-                children: [
-                  { ...childrenMock, id: 'test-2' },
-                  { ...childrenMock, id: 'test-3' },
-                ],
-              },
-              ['test-2']: {
-                ...elementStaticDataMock,
-                id: 'test-2',
-                parentId: 'test-1',
-              },
-              ['test-3']: {
-                ...elementStaticDataMock,
-                id: 'test-3',
-                parentId: 'test-1',
-              },
+            ['test-2']: {
+              ...elementMock,
+              id: 'test-2',
+              parentId: 'test-1',
+            },
+            ['test-3']: {
+              ...elementMock,
+              id: 'test-3',
+              parentId: 'test-1',
             },
           },
           selectedElements: [selectedElementMock],
@@ -1087,69 +656,28 @@ describe('PageBuilderReducer', () => {
         ['0']: {
           ...currentPage,
           elements: {
-            allData: {
-              ['-1']: {
-                ...currentPage.elements.allData['-1'],
-                children: [childrenMock],
-              },
-              [elementMock.id]: {
-                ...elementMock,
-                angle: negateValue(angle),
-                children: [
-                  { ...childrenMock, id: 'test-3' },
-                  { ...childrenMock, id: 'test-2' },
-                ],
-              },
-              ['test-2']: {
-                ...elementMock,
-                id: 'test-2',
-                parentId: 'test-1',
-              },
-              ['test-3']: {
-                ...elementMock,
-                id: 'test-3',
-                parentId: 'test-1',
-              },
+            ...currentPage.elements,
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [childrenMock],
             },
-            dynamicData: {
-              ['-1']: {
-                ...currentPage.elements.dynamicData['-1'],
-              },
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                angle: negateValue(angle),
-              },
-              ['test-2']: {
-                ...elementDynamicDataMock,
-                id: 'test-2',
-              },
-              ['test-3']: {
-                ...elementDynamicDataMock,
-                id: 'test-3',
-              },
+            [elementMock.id]: {
+              ...elementMock,
+              angle: negateValue(angle),
+              children: [
+                { ...childrenMock, id: 'test-3' },
+                { ...childrenMock, id: 'test-2' },
+              ],
             },
-            staticData: {
-              ['-1']: {
-                ...currentPage.elements.staticData['-1'],
-                children: [childrenMock],
-              },
-              [elementStaticDataMock.id]: {
-                ...elementStaticDataMock,
-                children: [
-                  { ...childrenMock, id: 'test-3' },
-                  { ...childrenMock, id: 'test-2' },
-                ],
-              },
-              ['test-2']: {
-                ...elementStaticDataMock,
-                id: 'test-2',
-                parentId: 'test-1',
-              },
-              ['test-3']: {
-                ...elementStaticDataMock,
-                id: 'test-3',
-                parentId: 'test-1',
-              },
+            ['test-2']: {
+              ...elementMock,
+              id: 'test-2',
+              parentId: 'test-1',
+            },
+            ['test-3']: {
+              ...elementMock,
+              id: 'test-3',
+              parentId: 'test-1',
             },
           },
           selectedElements: [selectedElementMock],
@@ -1271,15 +799,8 @@ describe('PageBuilderReducer', () => {
         ['0']: {
           ...currentPage,
           elements: {
-            allData: {
-              [elementMock.id]: elementMock,
-            },
-            dynamicData: {
-              [elementDynamicDataMock.id]: elementDynamicDataMock,
-            },
-            staticData: {
-              [elementStaticDataMock.id]: elementStaticDataMock,
-            },
+            ...currentPage.elements,
+            [elementMock.id]: elementMock,
           },
           selectedElements: {
             [selectedElementMock.id]: selectedElementMock,
@@ -1300,24 +821,12 @@ describe('PageBuilderReducer', () => {
         ['0']: {
           ...currentPage,
           elements: {
-            allData: {
-              [elementMock.id]: {
-                ...elementMock,
-                coordinates: { x: 0, y: 0 },
-                height: { value: 100 },
-                width: { value: 300 },
-              },
-            },
-            dynamicData: {
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                coordinates: { x: 0, y: 0 },
-                height: { value: 100 },
-                width: { value: 300 },
-              },
-            },
-            staticData: {
-              [elementStaticDataMock.id]: elementStaticDataMock,
+            ...currentPage.elements,
+            [elementMock.id]: {
+              ...elementMock,
+              coordinates: { x: 0, y: 0 },
+              height: { value: 100 },
+              width: { value: 300 },
             },
           },
           selectedElements: {
@@ -1342,23 +851,8 @@ describe('PageBuilderReducer', () => {
           ...currentPage,
           elements: {
             ...currentPage.elements,
-            allData: {
-              ...currentPage.elements.allData,
-              [elementMock.id]: {
-                ...elementMock,
-              },
-            },
-            dynamicData: {
-              ...currentPage.elements.dynamicData,
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-              },
-            },
-            staticData: {
-              ...currentPage.elements.staticData,
-              [elementStaticDataMock.id]: {
-                ...elementStaticDataMock,
-              },
+            [elementMock.id]: {
+              ...elementMock,
             },
           },
           selectedElements: [selectedElementMock],
@@ -1375,25 +869,9 @@ describe('PageBuilderReducer', () => {
           ...currentPage,
           elements: {
             ...currentPage.elements,
-            allData: {
-              ...currentPage.elements.allData,
-              [elementMock.id]: {
-                ...elementMock,
-                angle,
-              },
-            },
-            dynamicData: {
-              ...currentPage.elements.dynamicData,
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                angle,
-              },
-            },
-            staticData: {
-              ...currentPage.elements.staticData,
-              [elementStaticDataMock.id]: {
-                ...elementStaticDataMock,
-              },
+            [elementMock.id]: {
+              ...elementMock,
+              angle,
             },
           },
           selectedElements: [selectedElementMock],
@@ -1476,9 +954,7 @@ describe('PageBuilderReducer', () => {
     const mockState = {
       ...currentPage,
       elements: {
-        allData: { [elementMock.id]: elementMock },
-        dynamicData: { [elementDynamicDataMock.id]: elementDynamicDataMock },
-        staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
+        [elementMock.id]: elementMock,
       },
       selectedElements: [selectedElementMock],
     };
@@ -1492,11 +968,8 @@ describe('PageBuilderReducer', () => {
         ['0']: {
           ...currentPage,
           elements: {
-            allData: { [elementMock.id]: elementMock },
-            dynamicData: {
-              [elementDynamicDataMock.id]: elementDynamicDataMock,
-            },
-            staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
+            ...currentPage.elements,
+            [elementMock.id]: elementMock,
           },
           prevState,
           selectedElements: [selectedElementMock],
@@ -1512,21 +985,12 @@ describe('PageBuilderReducer', () => {
         ['0']: {
           ...currentPage,
           elements: {
-            allData: {
-              [elementMock.id]: {
-                ...elementMock,
-                alignment: {},
-                coordinates,
-              },
+            ...currentPage.elements,
+            [elementMock.id]: {
+              ...elementMock,
+              alignment: {},
+              coordinates,
             },
-            dynamicData: {
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                alignment: {},
-                coordinates,
-              },
-            },
-            staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
           },
           prevState,
           selectedElements: [selectedElementMock],
@@ -1548,18 +1012,7 @@ describe('PageBuilderReducer', () => {
           ...currentPage,
           elements: {
             ...currentPage.elements,
-            allData: {
-              ...currentPage.elements.allData,
-              [elementMock.id]: elementMock,
-            },
-            dynamicData: {
-              ...currentPage.elements.dynamicData,
-              [elementDynamicDataMock.id]: elementDynamicDataMock,
-            },
-            staticData: {
-              ...currentPage.elements.staticData,
-              [elementStaticDataMock.id]: elementStaticDataMock,
-            },
+            [elementMock.id]: elementMock,
           },
           selectedElements: [selectedElementMock],
         },
@@ -1575,25 +1028,9 @@ describe('PageBuilderReducer', () => {
           ...currentPage,
           elements: {
             ...currentPage.elements,
-            allData: {
-              ...currentPage.elements.allData,
-              [elementMock.id]: {
-                ...elementMock,
-                height: { value: 'auto' },
-              },
-            },
-            dynamicData: {
-              ...currentPage.elements.dynamicData,
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                height: { value: 'auto' },
-              },
-            },
-            staticData: {
-              ...currentPage.elements.staticData,
-              [elementStaticDataMock.id]: {
-                ...elementStaticDataMock,
-              },
+            [elementMock.id]: {
+              ...elementMock,
+              height: { value: 'auto' },
             },
           },
           selectedElements: [selectedElementMock],

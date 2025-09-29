@@ -5,14 +5,7 @@ import { Provider } from 'react-redux';
 import Design from './Design';
 
 // mocks
-import {
-  elementMock,
-  elementDynamicDataMock,
-  elementStaticDataMock,
-  layoutMock,
-  pageBuilderStateMock,
-  selectedElementMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, layoutMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
@@ -36,56 +29,23 @@ const stateMock = {
       ['0']: {
         ...currentPage,
         elements: {
-          allData: {
-            ['-1']: {
-              ...currentPage.elements.allData['-1'],
-              children: [elementMock.id],
-            },
-            [elementMock.id]: {
-              ...elementMock,
-              children: ['test-2'],
-              layout: {
-                ...layoutMock,
-                type: LayoutType.grid,
-              },
-            },
-            ['test-2']: {
-              ...elementMock,
-              id: 'test-2',
-              parentId: elementMock.id,
+          ...currentPage.elements,
+          ['-1']: {
+            ...currentPage.elements['-1'],
+            children: [elementMock.id],
+          },
+          [elementMock.id]: {
+            ...elementMock,
+            children: ['test-2'],
+            layout: {
+              ...layoutMock,
+              type: LayoutType.grid,
             },
           },
-          dynamicData: {
-            ['-1']: {
-              ...currentPage.elements.dynamicData['-1'],
-              children: [elementDynamicDataMock.id],
-            },
-            [elementDynamicDataMock.id]: {
-              ...elementDynamicDataMock,
-              layout: {
-                ...layoutMock,
-                type: LayoutType.grid,
-              },
-            },
-            ['test-2']: {
-              ...elementDynamicDataMock,
-              id: 'test-2',
-            },
-          },
-          staticData: {
-            ['-1']: {
-              ...currentPage.elements.staticData['-1'],
-              children: [elementStaticDataMock.id],
-            },
-            [elementStaticDataMock.id]: {
-              ...elementStaticDataMock,
-              children: ['test-2'],
-            },
-            ['test-2']: {
-              ...elementStaticDataMock,
-              id: 'test-2',
-              parentId: elementStaticDataMock.id,
-            },
+          ['test-2']: {
+            ...elementMock,
+            id: 'test-2',
+            parentId: elementMock.id,
           },
         },
         selectedElements: [selectedElementMock],
@@ -139,7 +99,7 @@ describe('Design behaviors', () => {
     fireEvent.click(getByE2EAttribute(container, E2EAttribute.icon, 'position-switcher'));
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-2'].position).toBe('relative');
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-2'].position).toBe('relative');
   });
 
   it('should change layout', () => {
@@ -169,7 +129,7 @@ describe('Design behaviors', () => {
     fireEvent.click(getByE2EAttribute(container, E2EAttribute.icon, 'auto-layout'));
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-2'].layout.type).toBe(LayoutType.vertical);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-2'].layout.type).toBe(LayoutType.vertical);
   });
 
   it('should change layout to vertical when mixed', () => {
@@ -183,55 +143,23 @@ describe('Design behaviors', () => {
           ['0']: {
             ...stateMock[PAGE_BUILDER].pages['0'],
             elements: {
-              allData: {
-                ['-1']: {
-                  ...currentPage.elements.allData['-1'],
-                  children: [elementMock.id, 'test-2'],
-                },
-                [elementMock.id]: {
-                  ...elementMock,
-                  children: [],
-                  layout: {
-                    ...layoutMock,
-                    type: LayoutType.grid,
-                  },
-                },
-                ['test-2']: {
-                  ...elementMock,
-                  id: 'test-2',
-                  parentId: '-1',
+              ...stateMock[PAGE_BUILDER].pages['0'].elements,
+              ['-1']: {
+                ...currentPage.elements['-1'],
+                children: [elementMock.id, 'test-2'],
+              },
+              [elementMock.id]: {
+                ...elementMock,
+                children: [],
+                layout: {
+                  ...layoutMock,
+                  type: LayoutType.grid,
                 },
               },
-              dynamicData: {
-                ['-1']: {
-                  ...currentPage.elements.dynamicData['-1'],
-                },
-                [elementDynamicDataMock.id]: {
-                  ...elementDynamicDataMock,
-                  layout: {
-                    ...layoutMock,
-                    type: LayoutType.grid,
-                  },
-                },
-                ['test-2']: {
-                  ...elementDynamicDataMock,
-                  id: 'test-2',
-                },
-              },
-              staticData: {
-                ['-1']: {
-                  ...currentPage.elements.staticData['-1'],
-                  children: [elementStaticDataMock.id, 'test-2'],
-                },
-                [elementStaticDataMock.id]: {
-                  ...elementStaticDataMock,
-                  children: [],
-                },
-                ['test-2']: {
-                  ...elementStaticDataMock,
-                  id: 'test-2',
-                  parentId: '-1',
-                },
+              ['test-2']: {
+                ...elementMock,
+                id: 'test-2',
+                parentId: '-1',
               },
             },
             selectedElements: [selectedElementMock, { ...selectedElementMock, id: 'test-2', parentId: '-1' }],
@@ -251,8 +179,8 @@ describe('Design behaviors', () => {
     fireEvent.click(getByE2EAttribute(container, E2EAttribute.icon, 'auto-layout'));
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].layout.type).toBe(LayoutType.vertical);
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-2'].layout.type).toBe(LayoutType.vertical);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].layout.type).toBe(LayoutType.vertical);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-2'].layout.type).toBe(LayoutType.vertical);
   });
 
   it('should change layout to default when vertical', () => {
@@ -266,55 +194,23 @@ describe('Design behaviors', () => {
           ['0']: {
             ...stateMock[PAGE_BUILDER].pages['0'],
             elements: {
-              allData: {
-                ['-1']: {
-                  ...currentPage.elements.allData['-1'],
-                  children: [elementMock.id, 'test-2'],
-                },
-                [elementMock.id]: {
-                  ...elementMock,
-                  children: [],
-                },
-                ['test-2']: {
-                  ...elementMock,
-                  id: 'test-2',
-                  layout: {
-                    ...layoutMock,
-                    type: LayoutType.vertical,
-                  },
-                  parentId: '-1',
-                },
+              ...stateMock[PAGE_BUILDER].pages['0'].elements,
+              ['-1']: {
+                ...currentPage.elements['-1'],
+                children: [elementMock.id, 'test-2'],
               },
-              dynamicData: {
-                ['-1']: {
-                  ...currentPage.elements.dynamicData['-1'],
-                },
-                [elementDynamicDataMock.id]: {
-                  ...elementDynamicDataMock,
-                },
-                ['test-2']: {
-                  ...elementDynamicDataMock,
-                  id: 'test-2',
-                  layout: {
-                    ...layoutMock,
-                    type: LayoutType.vertical,
-                  },
-                },
+              [elementMock.id]: {
+                ...elementMock,
+                children: [],
               },
-              staticData: {
-                ['-1']: {
-                  ...currentPage.elements.staticData['-1'],
-                  children: [elementStaticDataMock.id, 'test-2'],
+              ['test-2']: {
+                ...elementMock,
+                id: 'test-2',
+                layout: {
+                  ...layoutMock,
+                  type: LayoutType.vertical,
                 },
-                [elementStaticDataMock.id]: {
-                  ...elementStaticDataMock,
-                  children: [],
-                },
-                ['test-2']: {
-                  ...elementStaticDataMock,
-                  id: 'test-2',
-                  parentId: '-1',
-                },
+                parentId: '-1',
               },
             },
             selectedElements: [{ ...selectedElementMock, id: 'test-2', parentId: '-1' }],
@@ -334,7 +230,7 @@ describe('Design behaviors', () => {
     fireEvent.click(getByE2EAttribute(container, E2EAttribute.icon, 'auto-layout'));
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-2'].layout.type).toBe(LayoutType.default);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-2'].layout.type).toBe(LayoutType.default);
   });
 
   it('should fit layout', () => {
@@ -364,7 +260,7 @@ describe('Design behaviors', () => {
     fireEvent.click(getByE2EAttribute(container, E2EAttribute.icon, 'fit-layout'));
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].height.value).toBe('auto');
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].width.value).toBe('auto');
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.value).toBe('auto');
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.value).toBe('auto');
   });
 });

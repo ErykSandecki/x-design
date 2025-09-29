@@ -1,8 +1,8 @@
 // mocks
-import { elementStaticDataMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
-import { BASE_STATIC_DATA } from '../../constants';
+import { BASE_ALL_DATA } from '../../constants';
 
 // store
 import { counterAngleSelectorCreator } from '../../selectors';
@@ -15,15 +15,15 @@ describe('counterAngleSelectorCreator', () => {
     // result
     expect(
       selectorFunction({
-        [BASE_STATIC_DATA.id]: BASE_STATIC_DATA,
-        [elementStaticDataMock.id]: {
-          ...elementStaticDataMock,
+        [BASE_ALL_DATA.id]: BASE_ALL_DATA,
+        [elementMock.id]: {
+          ...elementMock,
           children: ['test-2'],
         },
         ['test-2']: {
-          ...elementStaticDataMock,
+          ...elementMock,
           id: 'test-2',
-          parentId: selectedElementMock.id,
+          parentId: elementMock.id,
         },
       }),
     ).toBe(-0);

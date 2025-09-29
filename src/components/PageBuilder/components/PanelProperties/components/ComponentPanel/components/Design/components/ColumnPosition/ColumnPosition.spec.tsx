@@ -5,13 +5,7 @@ import { Provider } from 'react-redux';
 import ColumnPosition from './ColumnPosition';
 
 // mocks
-import {
-  elementMock,
-  elementDynamicDataMock,
-  elementStaticDataMock,
-  pageBuilderStateMock,
-  selectedElementMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
@@ -35,30 +29,13 @@ const stateMock = {
       ['0']: {
         ...currentPage,
         elements: {
-          allData: {
-            ['-1']: {
-              ...currentPage.elements.allData['-1'],
-              children: [elementMock.id],
-            },
-            [elementMock.id]: {
-              ...elementMock,
-            },
+          ...currentPage.elements,
+          ['-1']: {
+            ...currentPage.elements['-1'],
+            children: [elementMock.id],
           },
-          dynamicData: {
-            ['-1']: {
-              ...currentPage.elements.dynamicData['-1'],
-              children: [elementDynamicDataMock.id],
-            },
-            [elementDynamicDataMock.id]: elementDynamicDataMock,
-          },
-          staticData: {
-            ['-1']: {
-              ...currentPage.elements.staticData['-1'],
-              children: [elementStaticDataMock.id],
-            },
-            [elementStaticDataMock.id]: {
-              ...elementStaticDataMock,
-            },
+          [elementMock.id]: {
+            ...elementMock,
           },
         },
         selectedElements: [selectedElementMock],
@@ -94,40 +71,14 @@ describe('ColumnPosition snapshots', () => {
             ...stateMock[PAGE_BUILDER].pages['0'],
             elements: {
               ...stateMock[PAGE_BUILDER].pages['0'].elements,
-              allData: {
-                ...stateMock[PAGE_BUILDER].pages['0'].elements.allData,
-                ['-1']: {
-                  ...stateMock[PAGE_BUILDER].pages['0'].elements.allData['-1'],
-                  children: ['test-1', 'test-2'],
-                },
-                ['test-2']: {
-                  ...elementMock,
-                  coordinates: { x: 100, y: 100 },
-                  id: 'test-2',
-                },
+              ['-1']: {
+                ...stateMock[PAGE_BUILDER].pages['0'].elements['-1'],
+                children: ['test-1', 'test-2'],
               },
-              dynamicData: {
-                ...stateMock[PAGE_BUILDER].pages['0'].elements.dynamicData,
-                ['-1']: {
-                  ...stateMock[PAGE_BUILDER].pages['0'].elements.dynamicData['-1'],
-                  children: ['test-1', 'test-2'],
-                },
-                ['test-2']: {
-                  ...elementDynamicDataMock,
-                  coordinates: { x: 100, y: 100 },
-                  id: 'test-2',
-                },
-              },
-              staticData: {
-                ...stateMock[PAGE_BUILDER].pages['0'].elements.staticData,
-                ['-1']: {
-                  ...stateMock[PAGE_BUILDER].pages['0'].elements.staticData['-1'],
-                  children: ['test-1', 'test-2'],
-                },
-                ['test-2']: {
-                  ...elementStaticDataMock,
-                  id: 'test-2',
-                },
+              ['test-2']: {
+                ...elementMock,
+                coordinates: { x: 100, y: 100 },
+                id: 'test-2',
               },
             },
             selectedElements: [
@@ -161,48 +112,18 @@ describe('ColumnPosition snapshots', () => {
             ...stateMock[PAGE_BUILDER].pages['0'],
             elements: {
               ...stateMock[PAGE_BUILDER].pages['0'].elements,
-              allData: {
-                ...stateMock[PAGE_BUILDER].pages['0'].elements.allData,
-                ['-1']: {
-                  ...stateMock[PAGE_BUILDER].pages['0'].elements.allData['-1'],
-                  children: ['test-1', 'test-2'],
-                },
-                ['test-2']: {
-                  ...elementMock,
-                  alignment: {
-                    horizontal: AlignmentHorizontal.center,
-                    vertical: AlignmentVertical.center,
-                  },
-                  coordinates: { x: 100, y: 100 },
-                  id: 'test-2',
-                },
+              ['-1']: {
+                ...stateMock[PAGE_BUILDER].pages['0'].elements['-1'],
+                children: ['test-1', 'test-2'],
               },
-              dynamicData: {
-                ...stateMock[PAGE_BUILDER].pages['0'].elements.dynamicData,
-                ['-1']: {
-                  ...stateMock[PAGE_BUILDER].pages['0'].elements.dynamicData['-1'],
-                  children: ['test-1', 'test-2'],
+              ['test-2']: {
+                ...elementMock,
+                alignment: {
+                  horizontal: AlignmentHorizontal.center,
+                  vertical: AlignmentVertical.center,
                 },
-                ['test-2']: {
-                  ...elementDynamicDataMock,
-                  alignment: {
-                    horizontal: AlignmentHorizontal.center,
-                    vertical: AlignmentVertical.center,
-                  },
-                  coordinates: { x: 100, y: 100 },
-                  id: 'test-2',
-                },
-              },
-              staticData: {
-                ...stateMock[PAGE_BUILDER].pages['0'].elements.staticData,
-                ['-1']: {
-                  ...stateMock[PAGE_BUILDER].pages['0'].elements.staticData['-1'],
-                  children: ['test-1', 'test-2'],
-                },
-                ['test-2']: {
-                  ...elementStaticDataMock,
-                  id: 'test-2',
-                },
+                coordinates: { x: 100, y: 100 },
+                id: 'test-2',
               },
             },
             selectedElements: [
@@ -253,7 +174,7 @@ describe('ColumnPosition behaviors', () => {
     fireEvent.blur(inputY);
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].coordinates).toStrictEqual({
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].coordinates).toStrictEqual({
       x: 100,
       y: 100,
     });
@@ -290,7 +211,7 @@ describe('ColumnPosition behaviors', () => {
     fireEvent.mouseUp(scrubbableInputY);
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].coordinates).toStrictEqual({
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].coordinates).toStrictEqual({
       x: -50,
       y: -50,
     });

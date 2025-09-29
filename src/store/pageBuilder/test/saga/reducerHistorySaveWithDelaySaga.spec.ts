@@ -1,13 +1,7 @@
 import SagaTester from 'redux-saga-tester';
 
 // mocks
-import {
-  elementMock,
-  elementDynamicDataMock,
-  elementStaticDataMock,
-  pageBuilderStateMock,
-  reducerHistoryMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, pageBuilderStateMock, reducerHistoryMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { CHANGE_BACKGROUND, REDUCER_KEY as PAGE_BUILDER, REDUCER_HISTORY_SAVE } from '../../actionsType';
@@ -67,18 +61,7 @@ describe('reducerHistorySaveWithDelaySaga', () => {
               ...currentPage,
               elements: {
                 ...currentPage.elements,
-                allData: {
-                  ...currentPage.elements.allData,
-                  [elementMock.id]: elementMock,
-                },
-                dynamicData: {
-                  ...currentPage.elements.dynamicData,
-                  [elementDynamicDataMock.id]: elementDynamicDataMock,
-                },
-                staticData: {
-                  ...currentPage.elements.staticData,
-                  [elementStaticDataMock.id]: elementStaticDataMock,
-                },
+                [elementMock.id]: elementMock,
               },
               reducerHistory: reducerHistoryMock,
               reducerHistoryIndex: 0,

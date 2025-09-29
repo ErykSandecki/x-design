@@ -1,12 +1,5 @@
 // mocks
-import {
-  elementMock,
-  elementDynamicDataMock,
-  elementStaticDataMock,
-  layoutMock,
-  pageBuilderStateMock,
-  selectedElementMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, layoutMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
@@ -31,23 +24,8 @@ describe('handleChangeLayout', () => {
           ...currentPage,
           elements: {
             ...currentPage.elements,
-            allData: {
-              ...currentPage.elements.allData,
-              [elementMock.id]: {
-                ...elementMock,
-              },
-            },
-            dynamicData: {
-              ...currentPage.elements.dynamicData,
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-              },
-            },
-            staticData: {
-              ...currentPage.elements.staticData,
-              [elementStaticDataMock.id]: {
-                ...elementStaticDataMock,
-              },
+            [elementMock.id]: {
+              ...elementMock,
             },
           },
           selectedElements: [selectedElementMock],
@@ -64,30 +42,11 @@ describe('handleChangeLayout', () => {
           ...currentPage,
           elements: {
             ...currentPage.elements,
-            allData: {
-              ...currentPage.elements.allData,
-              [elementMock.id]: {
-                ...elementMock,
-                layout: {
-                  ...layoutMock,
-                  type: LayoutType.horizontal,
-                },
-              },
-            },
-            dynamicData: {
-              ...currentPage.elements.dynamicData,
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                layout: {
-                  ...layoutMock,
-                  type: LayoutType.horizontal,
-                },
-              },
-            },
-            staticData: {
-              ...currentPage.elements.staticData,
-              [elementStaticDataMock.id]: {
-                ...elementStaticDataMock,
+            [elementMock.id]: {
+              ...elementMock,
+              layout: {
+                ...layoutMock,
+                type: LayoutType.horizontal,
               },
             },
           },

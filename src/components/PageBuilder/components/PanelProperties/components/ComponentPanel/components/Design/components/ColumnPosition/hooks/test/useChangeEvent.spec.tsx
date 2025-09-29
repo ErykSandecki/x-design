@@ -33,7 +33,7 @@ describe('useChangeEvent', () => {
     expect(mockCallBack.mock.calls[0][0]).toBe('100');
     expect(mockCallBack.mock.calls[1][0].payload).toStrictEqual({
       coordinates: { x: 100, y: NaN },
-      mode: 'dynamic',
+      mode: 'static',
     });
   });
 
@@ -47,7 +47,7 @@ describe('useChangeEvent', () => {
     // result
     expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
       coordinates: { x: 100, y: NaN },
-      mode: 'dynamic',
+      mode: 'static',
     });
   });
 
@@ -73,7 +73,7 @@ describe('useChangeEvent', () => {
     expect(mockCallBack.mock.calls[0][0]).toBe('100');
     expect(mockCallBack.mock.calls[1][0].payload).toStrictEqual({
       coordinates: { x: NaN, y: 100 },
-      mode: 'dynamic',
+      mode: 'static',
     });
   });
 
@@ -87,7 +87,7 @@ describe('useChangeEvent', () => {
     // result
     expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
       coordinates: { x: NaN, y: 100 },
-      mode: 'dynamic',
+      mode: 'static',
     });
   });
 });

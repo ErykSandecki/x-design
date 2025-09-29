@@ -2,8 +2,6 @@
 import {
   childrenMock,
   elementMock,
-  elementDynamicDataMock,
-  elementStaticDataMock,
   pageBuilderStateMock,
   selectedElementMock,
 } from 'test/mocks/reducer/pageBuilderMock';
@@ -32,75 +30,31 @@ describe('handleFlipElements', () => {
         ['0']: {
           ...currentPage,
           elements: {
-            allData: {
-              ['-1']: {
-                ...currentPage.elements.allData['-1'],
-                children: [childrenMock],
-              },
-              [elementMock.id]: {
-                ...elementMock,
-                angle,
-                children: [
-                  { ...childrenMock, id: 'test-2' },
-                  { ...childrenMock, id: 'test-3' },
-                ],
-                layout: {
-                  type: LayoutType.horizontal,
-                },
-              },
-              ['test-2']: {
-                ...elementMock,
-                id: 'test-2',
-                parentId: 'test-1',
-              },
-              ['test-3']: {
-                ...elementMock,
-                id: 'test-3',
-                parentId: 'test-1',
+            ...currentPage.elements,
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [childrenMock],
+            },
+            [elementMock.id]: {
+              ...elementMock,
+              angle,
+              children: [
+                { ...childrenMock, id: 'test-2' },
+                { ...childrenMock, id: 'test-3' },
+              ],
+              layout: {
+                type: LayoutType.horizontal,
               },
             },
-            dynamicData: {
-              ['-1']: {
-                ...currentPage.elements.dynamicData['-1'],
-              },
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                angle,
-                layout: {
-                  type: LayoutType.horizontal,
-                },
-              },
-              ['test-2']: {
-                ...elementDynamicDataMock,
-                id: 'test-2',
-              },
-              ['test-3']: {
-                ...elementDynamicDataMock,
-                id: 'test-3',
-              },
+            ['test-2']: {
+              ...elementMock,
+              id: 'test-2',
+              parentId: 'test-1',
             },
-            staticData: {
-              ['-1']: {
-                ...currentPage.elements.staticData['-1'],
-                children: [childrenMock],
-              },
-              [elementStaticDataMock.id]: {
-                ...elementStaticDataMock,
-                children: [
-                  { ...childrenMock, id: 'test-2' },
-                  { ...childrenMock, id: 'test-3' },
-                ],
-              },
-              ['test-2']: {
-                ...elementStaticDataMock,
-                id: 'test-2',
-                parentId: 'test-1',
-              },
-              ['test-3']: {
-                ...elementStaticDataMock,
-                id: 'test-3',
-                parentId: 'test-1',
-              },
+            ['test-3']: {
+              ...elementMock,
+              id: 'test-3',
+              parentId: 'test-1',
             },
           },
           selectedElements: [selectedElementMock],
@@ -116,75 +70,31 @@ describe('handleFlipElements', () => {
         ['0']: {
           ...currentPage,
           elements: {
-            allData: {
-              ['-1']: {
-                ...currentPage.elements.allData['-1'],
-                children: [childrenMock],
-              },
-              [elementMock.id]: {
-                ...elementMock,
-                angle: negateValue(angle),
-                children: [
-                  { ...childrenMock, id: 'test-3' },
-                  { ...childrenMock, id: 'test-2' },
-                ],
-                layout: {
-                  type: LayoutType.horizontal,
-                },
-              },
-              ['test-2']: {
-                ...elementMock,
-                id: 'test-2',
-                parentId: 'test-1',
-              },
-              ['test-3']: {
-                ...elementMock,
-                id: 'test-3',
-                parentId: 'test-1',
+            ...currentPage.elements,
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [childrenMock],
+            },
+            [elementMock.id]: {
+              ...elementMock,
+              angle: negateValue(angle),
+              children: [
+                { ...childrenMock, id: 'test-3' },
+                { ...childrenMock, id: 'test-2' },
+              ],
+              layout: {
+                type: LayoutType.horizontal,
               },
             },
-            dynamicData: {
-              ['-1']: {
-                ...currentPage.elements.dynamicData['-1'],
-              },
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                angle: negateValue(angle),
-                layout: {
-                  type: LayoutType.horizontal,
-                },
-              },
-              ['test-2']: {
-                ...elementDynamicDataMock,
-                id: 'test-2',
-              },
-              ['test-3']: {
-                ...elementDynamicDataMock,
-                id: 'test-3',
-              },
+            ['test-2']: {
+              ...elementMock,
+              id: 'test-2',
+              parentId: 'test-1',
             },
-            staticData: {
-              ['-1']: {
-                ...currentPage.elements.staticData['-1'],
-                children: [childrenMock],
-              },
-              [elementStaticDataMock.id]: {
-                ...elementStaticDataMock,
-                children: [
-                  { ...childrenMock, id: 'test-3' },
-                  { ...childrenMock, id: 'test-2' },
-                ],
-              },
-              ['test-2']: {
-                ...elementStaticDataMock,
-                id: 'test-2',
-                parentId: 'test-1',
-              },
-              ['test-3']: {
-                ...elementStaticDataMock,
-                id: 'test-3',
-                parentId: 'test-1',
-              },
+            ['test-3']: {
+              ...elementMock,
+              id: 'test-3',
+              parentId: 'test-1',
             },
           },
           selectedElements: [selectedElementMock],
@@ -206,75 +116,31 @@ describe('handleFlipElements', () => {
         ['0']: {
           ...currentPage,
           elements: {
-            allData: {
-              ['-1']: {
-                ...currentPage.elements.allData['-1'],
-                children: [childrenMock],
-              },
-              [elementMock.id]: {
-                ...elementMock,
-                angle,
-                children: [
-                  { ...childrenMock, id: 'test-2' },
-                  { ...childrenMock, id: 'test-3' },
-                ],
-                layout: {
-                  type: LayoutType.grid,
-                },
-              },
-              ['test-2']: {
-                ...elementMock,
-                id: 'test-2',
-                parentId: 'test-1',
-              },
-              ['test-3']: {
-                ...elementMock,
-                id: 'test-3',
-                parentId: 'test-1',
+            ...currentPage.elements,
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [childrenMock],
+            },
+            [elementMock.id]: {
+              ...elementMock,
+              angle,
+              children: [
+                { ...childrenMock, id: 'test-2' },
+                { ...childrenMock, id: 'test-3' },
+              ],
+              layout: {
+                type: LayoutType.grid,
               },
             },
-            dynamicData: {
-              ['-1']: {
-                ...currentPage.elements.dynamicData['-1'],
-              },
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                angle,
-                layout: {
-                  type: LayoutType.grid,
-                },
-              },
-              ['test-2']: {
-                ...elementDynamicDataMock,
-                id: 'test-2',
-              },
-              ['test-3']: {
-                ...elementDynamicDataMock,
-                id: 'test-3',
-              },
+            ['test-2']: {
+              ...elementMock,
+              id: 'test-2',
+              parentId: 'test-1',
             },
-            staticData: {
-              ['-1']: {
-                ...currentPage.elements.staticData['-1'],
-                children: [childrenMock],
-              },
-              [elementStaticDataMock.id]: {
-                ...elementStaticDataMock,
-                children: [
-                  { ...childrenMock, id: 'test-2' },
-                  { ...childrenMock, id: 'test-3' },
-                ],
-              },
-              ['test-2']: {
-                ...elementStaticDataMock,
-                id: 'test-2',
-                parentId: 'test-1',
-              },
-              ['test-3']: {
-                ...elementStaticDataMock,
-                id: 'test-3',
-                parentId: 'test-1',
-              },
+            ['test-3']: {
+              ...elementMock,
+              id: 'test-3',
+              parentId: 'test-1',
             },
           },
           selectedElements: [selectedElementMock],
@@ -290,75 +156,31 @@ describe('handleFlipElements', () => {
         ['0']: {
           ...currentPage,
           elements: {
-            allData: {
-              ['-1']: {
-                ...currentPage.elements.allData['-1'],
-                children: [childrenMock],
-              },
-              [elementMock.id]: {
-                ...elementMock,
-                angle: negateValue(angle),
-                children: [
-                  { ...childrenMock, id: 'test-3' },
-                  { ...childrenMock, id: 'test-2' },
-                ],
-                layout: {
-                  type: LayoutType.grid,
-                },
-              },
-              ['test-2']: {
-                ...elementMock,
-                id: 'test-2',
-                parentId: 'test-1',
-              },
-              ['test-3']: {
-                ...elementMock,
-                id: 'test-3',
-                parentId: 'test-1',
+            ...currentPage.elements,
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [childrenMock],
+            },
+            [elementMock.id]: {
+              ...elementMock,
+              angle: negateValue(angle),
+              children: [
+                { ...childrenMock, id: 'test-3' },
+                { ...childrenMock, id: 'test-2' },
+              ],
+              layout: {
+                type: LayoutType.grid,
               },
             },
-            dynamicData: {
-              ['-1']: {
-                ...currentPage.elements.dynamicData['-1'],
-              },
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                angle: negateValue(angle),
-                layout: {
-                  type: LayoutType.grid,
-                },
-              },
-              ['test-2']: {
-                ...elementDynamicDataMock,
-                id: 'test-2',
-              },
-              ['test-3']: {
-                ...elementDynamicDataMock,
-                id: 'test-3',
-              },
+            ['test-2']: {
+              ...elementMock,
+              id: 'test-2',
+              parentId: 'test-1',
             },
-            staticData: {
-              ['-1']: {
-                ...currentPage.elements.staticData['-1'],
-                children: [childrenMock],
-              },
-              [elementStaticDataMock.id]: {
-                ...elementStaticDataMock,
-                children: [
-                  { ...childrenMock, id: 'test-3' },
-                  { ...childrenMock, id: 'test-2' },
-                ],
-              },
-              ['test-2']: {
-                ...elementStaticDataMock,
-                id: 'test-2',
-                parentId: 'test-1',
-              },
-              ['test-3']: {
-                ...elementStaticDataMock,
-                id: 'test-3',
-                parentId: 'test-1',
-              },
+            ['test-3']: {
+              ...elementMock,
+              id: 'test-3',
+              parentId: 'test-1',
             },
           },
           selectedElements: [selectedElementMock],
@@ -380,69 +202,28 @@ describe('handleFlipElements', () => {
         ['0']: {
           ...currentPage,
           elements: {
-            allData: {
-              ['-1']: {
-                ...currentPage.elements.allData['-1'],
-                children: [childrenMock],
-              },
-              [elementMock.id]: {
-                ...elementMock,
-                angle,
-                children: [
-                  { ...childrenMock, id: 'test-2' },
-                  { ...childrenMock, id: 'test-3' },
-                ],
-              },
-              ['test-2']: {
-                ...elementMock,
-                id: 'test-2',
-                parentId: 'test-1',
-              },
-              ['test-3']: {
-                ...elementMock,
-                id: 'test-3',
-                parentId: 'test-1',
-              },
+            ...currentPage.elements,
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [childrenMock],
             },
-            dynamicData: {
-              ['-1']: {
-                ...currentPage.elements.dynamicData['-1'],
-              },
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                angle,
-              },
-              ['test-2']: {
-                ...elementDynamicDataMock,
-                id: 'test-2',
-              },
-              ['test-3']: {
-                ...elementDynamicDataMock,
-                id: 'test-3',
-              },
+            [elementMock.id]: {
+              ...elementMock,
+              angle,
+              children: [
+                { ...childrenMock, id: 'test-2' },
+                { ...childrenMock, id: 'test-3' },
+              ],
             },
-            staticData: {
-              ['-1']: {
-                ...currentPage.elements.staticData['-1'],
-                children: [childrenMock],
-              },
-              [elementStaticDataMock.id]: {
-                ...elementStaticDataMock,
-                children: [
-                  { ...childrenMock, id: 'test-2' },
-                  { ...childrenMock, id: 'test-3' },
-                ],
-              },
-              ['test-2']: {
-                ...elementStaticDataMock,
-                id: 'test-2',
-                parentId: 'test-1',
-              },
-              ['test-3']: {
-                ...elementStaticDataMock,
-                id: 'test-3',
-                parentId: 'test-1',
-              },
+            ['test-2']: {
+              ...elementMock,
+              id: 'test-2',
+              parentId: 'test-1',
+            },
+            ['test-3']: {
+              ...elementMock,
+              id: 'test-3',
+              parentId: 'test-1',
             },
           },
           selectedElements: [selectedElementMock],
@@ -458,69 +239,28 @@ describe('handleFlipElements', () => {
         ['0']: {
           ...currentPage,
           elements: {
-            allData: {
-              ['-1']: {
-                ...currentPage.elements.allData['-1'],
-                children: [childrenMock],
-              },
-              [elementMock.id]: {
-                ...elementMock,
-                angle: negateValue(angle),
-                children: [
-                  { ...childrenMock, id: 'test-3' },
-                  { ...childrenMock, id: 'test-2' },
-                ],
-              },
-              ['test-2']: {
-                ...elementMock,
-                id: 'test-2',
-                parentId: 'test-1',
-              },
-              ['test-3']: {
-                ...elementMock,
-                id: 'test-3',
-                parentId: 'test-1',
-              },
+            ...currentPage.elements,
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [childrenMock],
             },
-            dynamicData: {
-              ['-1']: {
-                ...currentPage.elements.dynamicData['-1'],
-              },
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                angle: negateValue(angle),
-              },
-              ['test-2']: {
-                ...elementDynamicDataMock,
-                id: 'test-2',
-              },
-              ['test-3']: {
-                ...elementDynamicDataMock,
-                id: 'test-3',
-              },
+            [elementMock.id]: {
+              ...elementMock,
+              angle: negateValue(angle),
+              children: [
+                { ...childrenMock, id: 'test-3' },
+                { ...childrenMock, id: 'test-2' },
+              ],
             },
-            staticData: {
-              ['-1']: {
-                ...currentPage.elements.staticData['-1'],
-                children: [childrenMock],
-              },
-              [elementStaticDataMock.id]: {
-                ...elementStaticDataMock,
-                children: [
-                  { ...childrenMock, id: 'test-3' },
-                  { ...childrenMock, id: 'test-2' },
-                ],
-              },
-              ['test-2']: {
-                ...elementStaticDataMock,
-                id: 'test-2',
-                parentId: 'test-1',
-              },
-              ['test-3']: {
-                ...elementStaticDataMock,
-                id: 'test-3',
-                parentId: 'test-1',
-              },
+            ['test-2']: {
+              ...elementMock,
+              id: 'test-2',
+              parentId: 'test-1',
+            },
+            ['test-3']: {
+              ...elementMock,
+              id: 'test-3',
+              parentId: 'test-1',
             },
           },
           selectedElements: [selectedElementMock],
@@ -542,75 +282,31 @@ describe('handleFlipElements', () => {
         ['0']: {
           ...currentPage,
           elements: {
-            allData: {
-              ['-1']: {
-                ...currentPage.elements.allData['-1'],
-                children: [childrenMock],
-              },
-              [elementMock.id]: {
-                ...elementMock,
-                angle,
-                children: [
-                  { ...childrenMock, id: 'test-2' },
-                  { ...childrenMock, id: 'test-3' },
-                ],
-                layout: {
-                  type: LayoutType.grid,
-                },
-              },
-              ['test-2']: {
-                ...elementMock,
-                id: 'test-2',
-                parentId: 'test-1',
-              },
-              ['test-3']: {
-                ...elementMock,
-                id: 'test-3',
-                parentId: 'test-1',
+            ...currentPage.elements,
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [childrenMock],
+            },
+            [elementMock.id]: {
+              ...elementMock,
+              angle,
+              children: [
+                { ...childrenMock, id: 'test-2' },
+                { ...childrenMock, id: 'test-3' },
+              ],
+              layout: {
+                type: LayoutType.grid,
               },
             },
-            dynamicData: {
-              ['-1']: {
-                ...currentPage.elements.dynamicData['-1'],
-              },
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                angle,
-                layout: {
-                  type: LayoutType.grid,
-                },
-              },
-              ['test-2']: {
-                ...elementDynamicDataMock,
-                id: 'test-2',
-              },
-              ['test-3']: {
-                ...elementDynamicDataMock,
-                id: 'test-3',
-              },
+            ['test-2']: {
+              ...elementMock,
+              id: 'test-2',
+              parentId: 'test-1',
             },
-            staticData: {
-              ['-1']: {
-                ...currentPage.elements.staticData['-1'],
-                children: [childrenMock],
-              },
-              [elementStaticDataMock.id]: {
-                ...elementStaticDataMock,
-                children: [
-                  { ...childrenMock, id: 'test-2' },
-                  { ...childrenMock, id: 'test-3' },
-                ],
-              },
-              ['test-2']: {
-                ...elementStaticDataMock,
-                id: 'test-2',
-                parentId: 'test-1',
-              },
-              ['test-3']: {
-                ...elementStaticDataMock,
-                id: 'test-3',
-                parentId: 'test-1',
-              },
+            ['test-3']: {
+              ...elementMock,
+              id: 'test-3',
+              parentId: 'test-1',
             },
           },
           selectedElements: [selectedElementMock],
@@ -626,75 +322,31 @@ describe('handleFlipElements', () => {
         ['0']: {
           ...currentPage,
           elements: {
-            allData: {
-              ['-1']: {
-                ...currentPage.elements.allData['-1'],
-                children: [childrenMock],
-              },
-              [elementMock.id]: {
-                ...elementMock,
-                angle: negateValue(angle),
-                children: [
-                  { ...childrenMock, id: 'test-3' },
-                  { ...childrenMock, id: 'test-2' },
-                ],
-                layout: {
-                  type: LayoutType.grid,
-                },
-              },
-              ['test-2']: {
-                ...elementMock,
-                id: 'test-2',
-                parentId: 'test-1',
-              },
-              ['test-3']: {
-                ...elementMock,
-                id: 'test-3',
-                parentId: 'test-1',
+            ...currentPage.elements,
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [childrenMock],
+            },
+            [elementMock.id]: {
+              ...elementMock,
+              angle: negateValue(angle),
+              children: [
+                { ...childrenMock, id: 'test-3' },
+                { ...childrenMock, id: 'test-2' },
+              ],
+              layout: {
+                type: LayoutType.grid,
               },
             },
-            dynamicData: {
-              ['-1']: {
-                ...currentPage.elements.dynamicData['-1'],
-              },
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                angle: negateValue(angle),
-                layout: {
-                  type: LayoutType.grid,
-                },
-              },
-              ['test-2']: {
-                ...elementDynamicDataMock,
-                id: 'test-2',
-              },
-              ['test-3']: {
-                ...elementDynamicDataMock,
-                id: 'test-3',
-              },
+            ['test-2']: {
+              ...elementMock,
+              id: 'test-2',
+              parentId: 'test-1',
             },
-            staticData: {
-              ['-1']: {
-                ...currentPage.elements.staticData['-1'],
-                children: [childrenMock],
-              },
-              [elementStaticDataMock.id]: {
-                ...elementStaticDataMock,
-                children: [
-                  { ...childrenMock, id: 'test-3' },
-                  { ...childrenMock, id: 'test-2' },
-                ],
-              },
-              ['test-2']: {
-                ...elementStaticDataMock,
-                id: 'test-2',
-                parentId: 'test-1',
-              },
-              ['test-3']: {
-                ...elementStaticDataMock,
-                id: 'test-3',
-                parentId: 'test-1',
-              },
+            ['test-3']: {
+              ...elementMock,
+              id: 'test-3',
+              parentId: 'test-1',
             },
           },
           selectedElements: [selectedElementMock],
@@ -716,75 +368,31 @@ describe('handleFlipElements', () => {
         ['0']: {
           ...currentPage,
           elements: {
-            allData: {
-              ['-1']: {
-                ...currentPage.elements.allData['-1'],
-                children: [childrenMock],
-              },
-              [elementMock.id]: {
-                ...elementMock,
-                angle,
-                children: [
-                  { ...childrenMock, id: 'test-2' },
-                  { ...childrenMock, id: 'test-3' },
-                ],
-                layout: {
-                  type: LayoutType.horizontal,
-                },
-              },
-              ['test-2']: {
-                ...elementMock,
-                id: 'test-2',
-                parentId: 'test-1',
-              },
-              ['test-3']: {
-                ...elementMock,
-                id: 'test-3',
-                parentId: 'test-1',
+            ...currentPage.elements,
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [childrenMock],
+            },
+            [elementMock.id]: {
+              ...elementMock,
+              angle,
+              children: [
+                { ...childrenMock, id: 'test-2' },
+                { ...childrenMock, id: 'test-3' },
+              ],
+              layout: {
+                type: LayoutType.horizontal,
               },
             },
-            dynamicData: {
-              ['-1']: {
-                ...currentPage.elements.dynamicData['-1'],
-              },
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                angle,
-                layout: {
-                  type: LayoutType.horizontal,
-                },
-              },
-              ['test-2']: {
-                ...elementDynamicDataMock,
-                id: 'test-2',
-              },
-              ['test-3']: {
-                ...elementDynamicDataMock,
-                id: 'test-3',
-              },
+            ['test-2']: {
+              ...elementMock,
+              id: 'test-2',
+              parentId: 'test-1',
             },
-            staticData: {
-              ['-1']: {
-                ...currentPage.elements.staticData['-1'],
-                children: [childrenMock],
-              },
-              [elementStaticDataMock.id]: {
-                ...elementStaticDataMock,
-                children: [
-                  { ...childrenMock, id: 'test-2' },
-                  { ...childrenMock, id: 'test-3' },
-                ],
-              },
-              ['test-2']: {
-                ...elementStaticDataMock,
-                id: 'test-2',
-                parentId: 'test-1',
-              },
-              ['test-3']: {
-                ...elementStaticDataMock,
-                id: 'test-3',
-                parentId: 'test-1',
-              },
+            ['test-3']: {
+              ...elementMock,
+              id: 'test-3',
+              parentId: 'test-1',
             },
           },
           selectedElements: [selectedElementMock],
@@ -800,75 +408,31 @@ describe('handleFlipElements', () => {
         ['0']: {
           ...currentPage,
           elements: {
-            allData: {
-              ['-1']: {
-                ...currentPage.elements.allData['-1'],
-                children: [childrenMock],
-              },
-              [elementMock.id]: {
-                ...elementMock,
-                angle: negateValue(angle),
-                children: [
-                  { ...childrenMock, id: 'test-2' },
-                  { ...childrenMock, id: 'test-3' },
-                ],
-                layout: {
-                  type: LayoutType.horizontal,
-                },
-              },
-              ['test-2']: {
-                ...elementMock,
-                id: 'test-2',
-                parentId: 'test-1',
-              },
-              ['test-3']: {
-                ...elementMock,
-                id: 'test-3',
-                parentId: 'test-1',
+            ...currentPage.elements,
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [childrenMock],
+            },
+            [elementMock.id]: {
+              ...elementMock,
+              angle: negateValue(angle),
+              children: [
+                { ...childrenMock, id: 'test-2' },
+                { ...childrenMock, id: 'test-3' },
+              ],
+              layout: {
+                type: LayoutType.horizontal,
               },
             },
-            dynamicData: {
-              ['-1']: {
-                ...currentPage.elements.dynamicData['-1'],
-              },
-              [elementDynamicDataMock.id]: {
-                ...elementDynamicDataMock,
-                angle: negateValue(angle),
-                layout: {
-                  type: LayoutType.horizontal,
-                },
-              },
-              ['test-2']: {
-                ...elementDynamicDataMock,
-                id: 'test-2',
-              },
-              ['test-3']: {
-                ...elementDynamicDataMock,
-                id: 'test-3',
-              },
+            ['test-2']: {
+              ...elementMock,
+              id: 'test-2',
+              parentId: 'test-1',
             },
-            staticData: {
-              ['-1']: {
-                ...currentPage.elements.staticData['-1'],
-                children: [childrenMock],
-              },
-              [elementStaticDataMock.id]: {
-                ...elementStaticDataMock,
-                children: [
-                  { ...childrenMock, id: 'test-2' },
-                  { ...childrenMock, id: 'test-3' },
-                ],
-              },
-              ['test-2']: {
-                ...elementStaticDataMock,
-                id: 'test-2',
-                parentId: 'test-1',
-              },
-              ['test-3']: {
-                ...elementStaticDataMock,
-                id: 'test-3',
-                parentId: 'test-1',
-              },
+            ['test-3']: {
+              ...elementMock,
+              id: 'test-3',
+              parentId: 'test-1',
             },
           },
           selectedElements: [selectedElementMock],
