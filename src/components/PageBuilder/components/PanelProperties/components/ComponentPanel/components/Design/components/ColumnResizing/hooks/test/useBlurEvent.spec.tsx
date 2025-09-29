@@ -4,7 +4,7 @@ import { renderHook } from '@testing-library/react';
 import { useBlurEvent } from '../useBlurEvent';
 
 // mocks
-import { elementAllDataMock } from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 const mockCallBack = jest.fn();
 
@@ -16,9 +16,7 @@ jest.mock('react-redux', () => ({
 describe('useBlurEvent', () => {
   it(`should trigger blur height`, () => {
     // before
-    const { result } = renderHook(() =>
-      useBlurEvent(elementAllDataMock, '0', mockCallBack, mockCallBack, mockCallBack, '0'),
-    );
+    const { result } = renderHook(() => useBlurEvent(elementMock, '0', mockCallBack, mockCallBack, mockCallBack, '0'));
 
     // action
     result.current.onBlurHeight();
@@ -33,7 +31,7 @@ describe('useBlurEvent', () => {
   it(`should trigger blur height`, () => {
     // before
     const { result } = renderHook(() =>
-      useBlurEvent(elementAllDataMock, 'auto', mockCallBack, mockCallBack, mockCallBack, '0'),
+      useBlurEvent(elementMock, 'auto', mockCallBack, mockCallBack, mockCallBack, '0'),
     );
 
     // action
@@ -48,9 +46,7 @@ describe('useBlurEvent', () => {
 
   it(`should reset value height`, () => {
     // before
-    const { result } = renderHook(() =>
-      useBlurEvent(elementAllDataMock, '', mockCallBack, mockCallBack, mockCallBack, '0'),
-    );
+    const { result } = renderHook(() => useBlurEvent(elementMock, '', mockCallBack, mockCallBack, mockCallBack, '0'));
 
     // action
     result.current.onBlurHeight();
@@ -61,9 +57,7 @@ describe('useBlurEvent', () => {
 
   it(`should trigger blur width`, () => {
     // before
-    const { result } = renderHook(() =>
-      useBlurEvent(elementAllDataMock, '0', mockCallBack, mockCallBack, mockCallBack, '0'),
-    );
+    const { result } = renderHook(() => useBlurEvent(elementMock, '0', mockCallBack, mockCallBack, mockCallBack, '0'));
 
     // action
     result.current.onBlurWidth();
@@ -78,7 +72,7 @@ describe('useBlurEvent', () => {
   it(`should trigger blur width`, () => {
     // before
     const { result } = renderHook(() =>
-      useBlurEvent(elementAllDataMock, '0', mockCallBack, mockCallBack, mockCallBack, 'auto'),
+      useBlurEvent(elementMock, '0', mockCallBack, mockCallBack, mockCallBack, 'auto'),
     );
 
     // action
@@ -93,9 +87,7 @@ describe('useBlurEvent', () => {
 
   it(`should reset value width`, () => {
     // before
-    const { result } = renderHook(() =>
-      useBlurEvent(elementAllDataMock, '0', mockCallBack, mockCallBack, mockCallBack, ''),
-    );
+    const { result } = renderHook(() => useBlurEvent(elementMock, '0', mockCallBack, mockCallBack, mockCallBack, ''));
 
     // action
     result.current.onBlurWidth();

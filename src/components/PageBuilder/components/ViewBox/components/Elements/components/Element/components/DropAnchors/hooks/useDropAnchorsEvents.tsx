@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 
 // store
-import { elementAllDataSelectorCreator, eventSelectorCreator } from 'store/pageBuilder/selectors';
+import { elementDataSelectorCreator, eventSelectorCreator } from 'store/pageBuilder/selectors';
 
 // types
 import { DropAnchorsPosition } from 'store/pageBuilder/enums';
@@ -26,7 +26,7 @@ export const useDropAnchorsEvents = (
   mouseMode: MouseMode,
   parentId: TElement['parentId'],
 ): TUseDropAnchorsEvents => {
-  const parentData = useSelector(elementAllDataSelectorCreator(parentId));
+  const parentData = useSelector(elementDataSelectorCreator(parentId));
   const elId = useSelector(eventSelectorCreator('possibleAnchorElementId'));
   const anchorPos = useSelector(eventSelectorCreator('possibleAnchorPosition'));
   const isBottom = anchorPos === DropAnchorsPosition.bottom;

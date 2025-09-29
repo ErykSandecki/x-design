@@ -5,7 +5,7 @@ import { usePositionEvents } from '../usePositionEvents';
 
 // mocks
 import {
-  elementAllDataMock,
+  elementMock,
   elementDynamicDataMock,
   elementStaticDataMock,
   pageBuilderStateMock,
@@ -34,9 +34,9 @@ const stateMock = {
           allData: {
             ['-1']: {
               ...currentPage.elements.allData['-1'],
-              children: [elementAllDataMock.id],
+              children: [elementMock.id],
             },
-            [elementAllDataMock.id]: elementAllDataMock,
+            [elementMock.id]: elementMock,
           },
           dynamicData: {
             ['-1']: {

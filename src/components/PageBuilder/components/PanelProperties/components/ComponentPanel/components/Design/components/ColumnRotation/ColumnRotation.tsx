@@ -13,11 +13,7 @@ import { useRotationEvents } from './hooks/useRotationEvents';
 import { OPTIONS_BUTTONS, translationNameSpace } from './constants';
 
 // store
-import {
-  dynamicDataSelector,
-  elementAllDataSelectorCreator,
-  selectedElementsSelector,
-} from 'store/pageBuilder/selectors';
+import { elementsSelector, elementDataSelectorCreator, selectedElementsSelector } from 'store/pageBuilder/selectors';
 import { updateEventsStatus } from 'store/pageBuilder/actions';
 
 // types
@@ -30,13 +26,13 @@ import { isMixed } from '../../utils/isMixed';
 
 const ColumnRotation: FC = () => {
   const dispatch = useDispatch();
-  const dynamicData = useSelector(dynamicDataSelector);
+  const elements = useSelector(elementsSelector);
   const selectedElements = useSelector(selectedElementsSelector);
   const firstElement = first(selectedElements);
-  const element = useSelector(elementAllDataSelectorCreator(firstElement.id));
+  const element = useSelector(elementDataSelectorCreator(firstElement.id));
   const refInputAngle = useRef<HTMLInputElement>(null);
   const isMultiple = size(selectedElements) > 1;
-  const isMixedAngle = isMixed(dynamicData, firstElement, 'angle', selectedElements);
+  const isMixedAngle = isMixed(elements, firstElement, 'angle', selectedElements);
   const { t } = useTranslation();
   const { angle, onBlur, onChange, onMouseDown } = useRotationEvents(element, isMixedAngle, isMultiple);
 

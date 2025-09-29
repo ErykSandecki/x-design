@@ -5,7 +5,7 @@ import { renderHook } from '@testing-library/react';
 import { useHandleSelectElement } from '../useHandleSelectElement';
 
 // mocks
-import { elementAllDataMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
@@ -19,11 +19,11 @@ import { TObject } from 'types';
 const mockCallBack = jest.fn();
 const rectCoordinates = {
   current: {
-    [elementAllDataMock.id]: {
-      x1: elementAllDataMock.coordinates.x,
-      x2: elementAllDataMock.width.value,
-      y1: elementAllDataMock.coordinates.y,
-      y2: elementAllDataMock.height.value,
+    [elementMock.id]: {
+      x1: elementMock.coordinates.x,
+      x2: elementMock.width.value,
+      y1: elementMock.coordinates.y,
+      y2: elementMock.height.value,
     },
   },
 } as RefObject<TObject<TRectCoordinates>>;
@@ -36,7 +36,7 @@ const stateMock = {
         ...pageBuilderStateMock[PAGE_BUILDER].pages['0'],
         elements: {
           allData: {
-            [elementAllDataMock.id]: elementAllDataMock,
+            [elementMock.id]: elementMock,
           },
         },
       },
@@ -83,7 +83,7 @@ describe('useHandleSelectElement', () => {
               ...pageBuilderStateMock[PAGE_BUILDER].pages['0'],
               elements: {
                 allData: {
-                  [elementAllDataMock.id]: elementAllDataMock,
+                  [elementMock.id]: elementMock,
                 },
               },
               selectedElements: [],

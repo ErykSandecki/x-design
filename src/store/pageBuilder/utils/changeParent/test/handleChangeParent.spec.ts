@@ -1,7 +1,7 @@
 // mocks
 import {
   childrenMock,
-  elementAllDataMock,
+  elementMock,
   elementDynamicDataMock,
   elementStaticDataMock,
   pageBuilderStateMock,
@@ -54,8 +54,8 @@ describe('handleChangeParent', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [childrenMock],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
               },
             },
             dynamicData: {
@@ -93,8 +93,8 @@ describe('handleChangeParent', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [childrenMock],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
               },
             },
             dynamicData: {
@@ -142,12 +142,12 @@ describe('handleChangeParent', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [childrenMock],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 children: [{ ...childrenMock, id: 'test-2' }],
               },
               ['test-2']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 id: 'test-2',
                 parentId: elementStaticDataMock.id,
               },
@@ -197,12 +197,12 @@ describe('handleChangeParent', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [childrenMock, { ...childrenMock, id: 'test-2' }],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 children: [],
               },
               ['test-2']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 children: [],
                 id: 'test-2',
                 parentId: '-1',
@@ -264,12 +264,12 @@ describe('handleChangeParent', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [childrenMock, { ...childrenMock, id: 'test-2' }],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 children: [],
               },
               ['test-2']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 children: [],
                 id: 'test-2',
                 parentId: '-1',
@@ -321,15 +321,15 @@ describe('handleChangeParent', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [childrenMock],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 children: [{ ...childrenMock, id: 'test-2' }],
               },
               ['test-2']: {
-                ...elementAllDataMock,
-                deepLevel: elementAllDataMock.deepLevel + 1,
+                ...elementMock,
+                deepLevel: elementMock.deepLevel + 1,
                 id: 'test-2',
-                parentId: elementAllDataMock.id,
+                parentId: elementMock.id,
                 position: 'relative',
               },
             },

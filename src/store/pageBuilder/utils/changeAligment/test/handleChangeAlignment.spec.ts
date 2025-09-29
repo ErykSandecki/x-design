@@ -1,7 +1,7 @@
 // mocks
 import {
   childrenMock,
-  elementAllDataMock,
+  elementMock,
   elementDynamicDataMock,
   elementStaticDataMock,
   pageBuilderStateMock,
@@ -67,8 +67,8 @@ describe('handleChangeAlignment', () => {
                   ...currentPage.elements.allData['-1'],
                   children: [childrenMock],
                 },
-                [elementAllDataMock.id]: {
-                  ...elementAllDataMock,
+                [elementMock.id]: {
+                  ...elementMock,
                   children: [
                     { ...childrenMock, id: 'test-2' },
                     { ...childrenMock, id: 'test-3' },
@@ -76,14 +76,14 @@ describe('handleChangeAlignment', () => {
                   position: 'absolute',
                 },
                 ['test-2']: {
-                  ...elementAllDataMock,
+                  ...elementMock,
                   children: [],
                   id: 'test-2',
                   parentId: 'test-1',
                   position: 'absolute',
                 },
                 ['test-3']: {
-                  ...elementAllDataMock,
+                  ...elementMock,
                   children: [],
                   id: 'test-3',
                   parentId: 'test-1',
@@ -157,8 +157,8 @@ describe('handleChangeAlignment', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [childrenMock],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 children: [
                   { ...childrenMock, id: 'test-2' },
                   { ...childrenMock, id: 'test-3' },
@@ -166,7 +166,7 @@ describe('handleChangeAlignment', () => {
                 position: 'absolute',
               },
               ['test-2']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 alignment,
                 children: [],
                 id: 'test-2',
@@ -174,7 +174,7 @@ describe('handleChangeAlignment', () => {
                 position: 'absolute',
               },
               ['test-3']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 alignment,
                 children: [],
                 id: 'test-3',

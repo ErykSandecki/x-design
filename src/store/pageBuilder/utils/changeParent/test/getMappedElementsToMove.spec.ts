@@ -1,7 +1,7 @@
 // mocks
 import {
   childrenMock,
-  elementAllDataMock,
+  elementMock,
   elementDynamicDataMock,
   elementStaticDataMock,
   pageBuilderStateMock,
@@ -54,8 +54,8 @@ describe('getMappedElementsToMove', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [childrenMock],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 children: [],
               },
             },
@@ -83,8 +83,8 @@ describe('getMappedElementsToMove', () => {
     expect(result).toStrictEqual({
       ...currentPage.elements,
       allData: {
-        [elementAllDataMock.id]: {
-          ...elementAllDataMock,
+        [elementMock.id]: {
+          ...elementMock,
           children: [],
         },
       },
@@ -125,12 +125,12 @@ describe('getMappedElementsToMove', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [childrenMock],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 children: [{ ...childrenMock, id: 'test-2' }],
               },
               ['test-2']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 id: 'test-2',
                 parentId: elementStaticDataMock.id,
               },
@@ -169,7 +169,7 @@ describe('getMappedElementsToMove', () => {
       ...currentPage.elements,
       allData: {
         ['test-2']: {
-          ...elementAllDataMock,
+          ...elementMock,
           children: [],
           id: 'test-2',
         },
@@ -196,7 +196,7 @@ describe('getMappedElementsToMove', () => {
     const payload = {
       draggableElements: [{ ...childrenMock, id: 'test-2' }],
       possibleIndexPosition: null,
-      possibleParent: elementAllDataMock.id,
+      possibleParent: elementMock.id,
     };
 
     // before
@@ -213,12 +213,12 @@ describe('getMappedElementsToMove', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [childrenMock, { ...childrenMock, id: 'test-2' }],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 children: [],
               },
               ['test-2']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 id: 'test-2',
                 parentId: '-1',
               },
@@ -257,9 +257,9 @@ describe('getMappedElementsToMove', () => {
       ...currentPage.elements,
       allData: {
         ['test-2']: {
-          ...elementAllDataMock,
+          ...elementMock,
           children: [],
-          deepLevel: elementAllDataMock.deepLevel + 1,
+          deepLevel: elementMock.deepLevel + 1,
           id: 'test-2',
           parentId: elementStaticDataMock.id,
           position: 'relative',
@@ -268,7 +268,7 @@ describe('getMappedElementsToMove', () => {
       dynamicData: {
         ['test-2']: {
           ...elementDynamicDataMock,
-          deepLevel: elementAllDataMock.deepLevel + 1,
+          deepLevel: elementMock.deepLevel + 1,
           id: 'test-2',
           position: 'relative',
         },

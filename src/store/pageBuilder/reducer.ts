@@ -53,7 +53,7 @@ import {
 // utils
 import { filterSelectedElements } from './utils/filterSelectedElements';
 import { handleAddElement } from './utils/handleAddElement';
-import { handleApplyElementSizeType } from './utils/applyElementsSizeType/handleApplyElementSizeType';
+import { handleApplyElementsSizeType } from './utils/applyElementsSizeType/handleApplyElementsSizeType';
 import { handleChangeAlignment } from './utils/changeAligment/handleChangeAlignment';
 import { handleChangeBackground } from './utils/handleChangeBackground';
 import { handleChangeLayout } from './utils/handleChangeLayout';
@@ -102,7 +102,7 @@ const addElement = (
 const applyElementsSizeType = (
   state: TPageBuilderState,
   { payload }: TAction<TApplyElementsSizeTypeAction['payload']>,
-): TPageBuilderState => handleApplyElementSizeType(payload, state);
+): TPageBuilderState => handleApplyElementsSizeType(payload, state);
 
 const changeAlignment = (
   state: TPageBuilderState,

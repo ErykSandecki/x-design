@@ -10,7 +10,7 @@ import { RefsProvider } from 'pages/PageBuilderPage/core/RefsProvider';
 // mocks
 import {
   childrenMock,
-  elementAllDataMock,
+  elementMock,
   elementDynamicDataMock,
   elementStaticDataMock,
   pageBuilderStateMock,
@@ -32,7 +32,7 @@ const element = document.createElement('div');
 const overlayContainer = document.createElement('div');
 
 const sharedRefs = {
-  [elementAllDataMock.id]: element,
+  [elementMock.id]: element,
 };
 
 const stateMock = {
@@ -76,8 +76,8 @@ describe('Elements snapshots', () => {
                   ...currentPage.elements.allData['-1'],
                   children: [childrenMock],
                 },
-                [elementAllDataMock.id]: {
-                  ...elementAllDataMock,
+                [elementMock.id]: {
+                  ...elementMock,
                   position: 'relative',
                 },
               },
@@ -136,7 +136,7 @@ describe('Elements snapshots', () => {
                   ...currentPage.elements.allData['-1'],
                   children: [childrenMock],
                 },
-                [elementAllDataMock.id]: elementAllDataMock,
+                [elementMock.id]: elementMock,
               },
               dynamicData: {
                 ['-1']: {
@@ -187,8 +187,8 @@ describe('Elements snapshots', () => {
                   ...currentPage.elements.allData['-1'],
                   children: [{ ...childrenMock, type: ElementType.none }],
                 },
-                [elementAllDataMock.id]: {
-                  ...elementAllDataMock,
+                [elementMock.id]: {
+                  ...elementMock,
                   type: ElementType.none,
                 },
               },

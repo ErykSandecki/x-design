@@ -3,11 +3,7 @@ import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 // store
-import {
-  dynamicDataSelector,
-  elementAllDataSelectorCreator,
-  selectedElementsSelector,
-} from 'store/pageBuilder/selectors';
+import { elementDataSelectorCreator, elementsSelector, selectedElementsSelector } from 'store/pageBuilder/selectors';
 
 // types
 import { TElement } from 'types';
@@ -42,13 +38,13 @@ type TUseResizingEvents = TUseChangeEvent &
   };
 
 export const useResizingEvents = (): TUseResizingEvents => {
-  const dynamicData = useSelector(dynamicDataSelector);
+  const elements = useSelector(elementsSelector);
   const selectedElements = useSelector(selectedElementsSelector);
   const firstElement = first(selectedElements);
-  const element = useSelector(elementAllDataSelectorCreator(firstElement.id));
+  const element = useSelector(elementDataSelectorCreator(firstElement.id));
   const isMultiple = size(selectedElements) > 1;
-  const isMixedHeight = isMixed(dynamicData, firstElement, 'height.value', selectedElements);
-  const isMixedWidth = isMixed(dynamicData, firstElement, 'width.value', selectedElements);
+  const isMixedHeight = isMixed(elements, firstElement, 'height.value', selectedElements);
+  const isMixedWidth = isMixed(elements, firstElement, 'width.value', selectedElements);
   const [isFocused, setIsFocused] = useState<TFocusElement>('');
   const { unit: unitHeight, value: currentHeight } = element.height;
   const { unit: unitWidth, value: currentWidth } = element.width;

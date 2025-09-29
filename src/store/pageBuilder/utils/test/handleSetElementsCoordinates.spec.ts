@@ -2,7 +2,7 @@ import { cloneDeep } from 'lodash';
 
 // mocks
 import {
-  elementAllDataMock,
+  elementMock,
   elementDynamicDataMock,
   elementStaticDataMock,
   pageBuilderStateMock,
@@ -19,7 +19,7 @@ import { handleSetElementsCoordinates } from '../handleSetElementsCoordinates';
 const mockPage = {
   ...pageBuilderStateMock[PAGE_BUILDER].pages['0'],
   elements: {
-    allData: { [elementAllDataMock.id]: elementAllDataMock },
+    allData: { [elementMock.id]: elementMock },
     dynamicData: { [elementDynamicDataMock.id]: elementDynamicDataMock },
     staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
   },
@@ -58,8 +58,8 @@ describe('handleSetElementsCoordinates', () => {
           ...currentPage,
           elements: {
             allData: {
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 alignment: {},
                 coordinates,
               },
@@ -111,8 +111,8 @@ describe('handleSetElementsCoordinates', () => {
           ...currentPage,
           elements: {
             allData: {
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 alignment: {},
                 coordinates: BASE_2D,
               },
@@ -163,8 +163,8 @@ describe('handleSetElementsCoordinates', () => {
           ...currentPage,
           elements: {
             allData: {
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 alignment: {},
                 coordinates,
               },
@@ -215,8 +215,8 @@ describe('handleSetElementsCoordinates', () => {
           ...currentPage,
           elements: {
             allData: {
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 alignment: {},
                 coordinates: BASE_2D,
               },

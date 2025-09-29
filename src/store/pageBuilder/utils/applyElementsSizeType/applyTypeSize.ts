@@ -1,43 +1,45 @@
 // types
-import { TApplyElementsSizeTypeActionPaylad, TElementsData } from 'store/pageBuilder/types';
+import { TApplyElementsSizeTypeActionPaylad } from 'store/pageBuilder/types';
 import { TElement, Unit } from 'types';
 
 export const applyTypeSize = (
-  clonedElements: TElementsData,
-  id: TElement['id'],
+  element: TElement,
   size: number,
   sizeType: TApplyElementsSizeTypeActionPaylad['sizeType'],
   type: TApplyElementsSizeTypeActionPaylad['type'],
-): void => {
+): TElement['height'] | TElement['width'] => {
   switch (type) {
     case 'auto':
-      clonedElements.allData[id][sizeType].unit = undefined;
-      clonedElements.allData[id][sizeType].value = 'auto';
-      clonedElements.dynamicData[id][sizeType].unit = undefined;
-      clonedElements.dynamicData[id][sizeType].value = 'auto';
-      break;
+      return {
+        ...element[sizeType],
+        unit: undefined,
+        value: 'auto',
+      };
     case 'fixed':
-      clonedElements.allData[id][sizeType].unit = undefined;
-      clonedElements.allData[id][sizeType].value = size;
-      clonedElements.dynamicData[id][sizeType].unit = undefined;
-      clonedElements.dynamicData[id][sizeType].value = size;
-      break;
+      return {
+        ...element[sizeType],
+        unit: undefined,
+        value: size,
+      };
     case 'max':
-      const hasMax = clonedElements.allData[id][sizeType].max !== undefined;
+      const hasMax = element[sizeType].max !== undefined;
 
-      clonedElements.allData[id][sizeType].max = hasMax ? undefined : size;
-      clonedElements.dynamicData[id][sizeType].max = hasMax ? undefined : size;
-      break;
+      return {
+        ...element[sizeType],
+        max: hasMax ? undefined : size,
+      };
     case 'min':
-      const hasMin = clonedElements.allData[id][sizeType].min !== undefined;
+      const hasMin = element[sizeType].min !== undefined;
 
-      clonedElements.allData[id][sizeType].min = hasMin ? undefined : size;
-      clonedElements.dynamicData[id][sizeType].min = hasMin ? undefined : size;
-      break;
+      return {
+        ...element[sizeType],
+        max: hasMin ? undefined : size,
+      };
     default:
-      clonedElements.allData[id][sizeType].unit = Unit.percentage;
-      clonedElements.allData[id][sizeType].value = size;
-      clonedElements.dynamicData[id][sizeType].unit = Unit.percentage;
-      clonedElements.dynamicData[id][sizeType].value = size;
+      return {
+        ...element[sizeType],
+        unit: Unit.percentage,
+        value: size,
+      };
   }
 };

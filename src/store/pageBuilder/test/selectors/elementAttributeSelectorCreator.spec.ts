@@ -1,5 +1,5 @@
 // mocks
-import { elementAllDataMock } from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // store
 import { elementAttributeSelectorCreator } from '../../selectors';
@@ -7,9 +7,9 @@ import { elementAttributeSelectorCreator } from '../../selectors';
 describe('elementAttributeSelectorCreator', () => {
   it('should get attribute', () => {
     // before
-    const selectorFunction = (elementAttributeSelectorCreator('deepLevel', elementAllDataMock.id) as any).resultFunc;
+    const selectorFunction = (elementAttributeSelectorCreator('deepLevel', elementMock.id) as any).resultFunc;
 
     // result
-    expect(selectorFunction({ [elementAllDataMock.id]: elementAllDataMock })).toBe(0);
+    expect(selectorFunction({ [elementMock.id]: elementMock })).toBe(0);
   });
 });

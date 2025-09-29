@@ -5,7 +5,7 @@ import { BASE_RECT } from 'shared';
 import { SW } from '../components/ClickableArea/constants';
 
 // store
-import { counterAngleSelectorCreator, elementAllDataSelectorCreator } from 'store/pageBuilder/selectors';
+import { counterAngleSelectorCreator, elementDataSelectorCreator } from 'store/pageBuilder/selectors';
 import { store } from 'store';
 
 // types
@@ -29,7 +29,7 @@ export const getCoordinatesData = (
       (obj, { id, parentId }) => {
         const state = store.getState();
         const counterAngle = counterAngleSelectorCreator(parentId)(state);
-        const element = elementAllDataSelectorCreator(id)(state);
+        const element = elementDataSelectorCreator(id)(state);
         const angle = element.angle - counterAngle;
         const cords = getAbsolutePosition(id, itemsRefs, zoomContentRef);
         const height = cords.y2 - cords.y1;

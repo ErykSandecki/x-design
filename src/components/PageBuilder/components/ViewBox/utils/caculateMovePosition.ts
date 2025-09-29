@@ -4,7 +4,7 @@ import { RefObject } from 'react';
 import {
   areaAxisSelectorCreator,
   counterAngleSelectorCreator,
-  elementAllDataSelectorCreator,
+  elementDataSelectorCreator,
 } from 'store/pageBuilder/selectors';
 import { store } from 'store';
 
@@ -19,7 +19,7 @@ export const caculateMovePosition = (
   const state = store.getState();
   const z = areaAxisSelectorCreator('z')(state);
   const { x, y } = cursorPosition.current;
-  const { angle, parentId: _parentId } = elementAllDataSelectorCreator(parentId)(state);
+  const { angle, parentId: _parentId } = elementDataSelectorCreator(parentId)(state);
 
   const counterAngle = counterAngleSelectorCreator(_parentId)(state);
   const totalAngle = angle - counterAngle;

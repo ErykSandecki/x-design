@@ -20,7 +20,7 @@ import { THEME_COLORS } from 'constant/themeColors';
 
 // types
 import { ElementType, LayoutType, TElement, Theme } from 'types';
-import { TElementDynamicData, TElementsData, TElementStaticData, TPage } from './types';
+import { TElements, TPage } from './types';
 
 const color = localStorage.getItem(THEME) === Theme.dark ? THEME_COLORS.dark.neutral4 : THEME_COLORS.light.neutral4;
 
@@ -43,36 +43,8 @@ export const BASE_ALL_DATA: TElement = {
   width: { value: 0 },
 };
 
-export const BASE_DYNAMIC_DATA: TElementDynamicData = {
-  alignment: {},
-  angle: BASE_ALL_DATA.angle,
-  background: BASE_ALL_DATA.background,
-  coordinates: BASE_ALL_DATA.coordinates,
-  deepLevel: 0,
-  height: BASE_ALL_DATA.height,
-  id: BASE_ALL_DATA.id,
-  layout: { type: LayoutType.default },
-  position: BASE_ALL_DATA.position,
-  width: BASE_ALL_DATA.width,
-};
-
-export const BASE_STATIC_DATA: TElementStaticData = {
-  children: BASE_ALL_DATA.children,
-  id: BASE_ALL_DATA.id,
-  parentId: BASE_ALL_DATA.parentId,
-  type: BASE_ALL_DATA.type,
-};
-
-export const BASE_PAGE_ELEMENTS: TElementsData = {
-  allData: {
-    [BASE_ALL_DATA.id]: BASE_ALL_DATA,
-  },
-  dynamicData: {
-    [BASE_DYNAMIC_DATA.id]: BASE_DYNAMIC_DATA,
-  },
-  staticData: {
-    [BASE_STATIC_DATA.id]: BASE_STATIC_DATA,
-  },
+export const BASE_PAGE_ELEMENTS: TElements = {
+  [BASE_ALL_DATA.id]: BASE_ALL_DATA,
 };
 
 export const BASE_PAGE: TPage = {

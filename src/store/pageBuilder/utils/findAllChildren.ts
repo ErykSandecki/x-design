@@ -1,10 +1,8 @@
 // types
-import { TElementsData, TElementStaticData } from '../types';
+import { TElement } from 'types';
+import { TElements } from '../types';
 
-export const findAllChildren = (
-  allData: TElementsData['allData'],
-  children: TElementStaticData['children'],
-): TElementStaticData['children'] => [
+export const findAllChildren = (elements: TElements, children: TElement['children']): TElement['children'] => [
   ...children,
-  ...children.map(({ id }) => findAllChildren(allData, allData[id].children)).flat(),
+  ...children.map(({ id }) => findAllChildren(elements, elements[id].children)).flat(),
 ];

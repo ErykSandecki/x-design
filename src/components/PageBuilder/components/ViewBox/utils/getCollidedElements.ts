@@ -1,7 +1,7 @@
 import { RefObject } from 'react';
 
 // store
-import { allDataSelector, eventsSelector, selectedElementsSelector } from 'store/pageBuilder/selectors';
+import { elementsSelector, eventsSelector, selectedElementsSelector } from 'store/pageBuilder/selectors';
 import { store } from 'store';
 
 // types
@@ -21,7 +21,7 @@ export const getCollidedElements = (
   rectCoordinates: RefObject<TObject<TRectCoordinates>>,
   selectableArea: TRectArea,
 ): TSelectedElements => {
-  const allData = allDataSelector(store.getState());
+  const elements = elementsSelector(store.getState());
   const { pressedKey } = eventsSelector(store.getState());
   const { x1, x2, y1, y2 } = getBaseCoordinatesTopLeft(selectableArea);
   const prevCollidedElementsId = [];
@@ -31,12 +31,13 @@ export const getCollidedElements = (
   const isControlPressed = [KeyboardKeys.meta, KeyboardKeys.control].includes(pressedKey);
 
   for (const [id, coordinates] of Object.entries(rectCoordinates.current)) {
-    const { parentId, position, type } = allData[id];
-    const condition = isControlPressed
+    const { parentId, position, type } = elements[id];
+
+    const conditionPassed = isControlPressed
       ? x1 <= coordinates.x1 && x2 >= coordinates.x2 && y1 <= coordinates.y1 && y2 >= coordinates.y2
       : !(coordinates.x2 < x1 || coordinates.x1 > x2 || coordinates.y2 < y1 || coordinates.y1 > y2);
 
-    if (condition) {
+    if (conditionPassed) {
       if (!prevIds.includes(id)) {
         collidedElements.push({
           id,

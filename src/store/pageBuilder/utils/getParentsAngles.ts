@@ -1,15 +1,16 @@
 // types
-import { TElement, TObject } from 'types';
+import { TElement } from 'types';
+import { TElements } from '../types';
 
 export const getParentsAngles = (
-  allData: TObject<TElement>,
   angles: Array<TElement['angle']>,
+  elements: TElements,
   parentId: TElement['id'],
 ): Array<TElement['angle']> => {
   if (parentId !== '-1') {
-    const parent = allData[parentId];
+    const parent = elements[parentId];
 
-    return getParentsAngles(allData, [...angles, parent.angle], parent.parentId);
+    return getParentsAngles([...angles, parent.angle], elements, parent.parentId);
   }
 
   return angles;

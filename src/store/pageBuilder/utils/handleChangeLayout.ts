@@ -1,20 +1,18 @@
-import { cloneDeep } from 'lodash';
+import { includes, mapValues } from 'lodash';
 
 // types
 import { TChangeLayoutAction, TPageBuilderState } from '../types';
+
+// utils
+import { extractObjectValues } from 'utils';
 
 export const handleChangeLayout = (
   layoutType: TChangeLayoutAction['payload'],
   state: TPageBuilderState,
 ): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];
-  const { elements, selectedElements } = currentPage;
-  const clonedElements = cloneDeep(elements);
-
-  selectedElements.forEach(({ id }) => {
-    clonedElements.allData[id].layout.type = layoutType;
-    clonedElements.dynamicData[id].layout.type = layoutType;
-  });
+  const { selectedElements } = currentPage;
+  const ids = extractObjectValues(selectedElements, ['id']);
 
   return {
     ...state,
@@ -22,17 +20,9 @@ export const handleChangeLayout = (
       ...state.pages,
       [state.currentPage]: {
         ...currentPage,
-        elements: {
-          ...currentPage.elements,
-          allData: {
-            ...currentPage.elements.allData,
-            ...clonedElements.allData,
-          },
-          dynamicData: {
-            ...currentPage.elements.dynamicData,
-            ...clonedElements.dynamicData,
-          },
-        },
+        elements: mapValues(currentPage.elements, (element, id) =>
+          includes(ids, id) ? { ...element, layout: { ...element.layout, type: layoutType } } : element,
+        ),
       },
     },
   };

@@ -16,14 +16,7 @@ import {
   TLayout,
 } from 'types';
 import { AnchorResize, AnchorRotate } from 'store/pageBuilder/enums';
-import {
-  TElementDynamicData,
-  TElementStaticData,
-  TEvents,
-  TPageBuilderState,
-  TReducerHistory,
-  TSelectedElement,
-} from 'store/pageBuilder/types';
+import { TEvents, TPageBuilderState, TReducerHistory, TSelectedElement } from 'store/pageBuilder/types';
 
 export const pageBuilderStateMock: Record<typeof PAGE_BUILDER, TPageBuilderState> = {
   [PAGE_BUILDER]: {
@@ -61,13 +54,14 @@ export const layoutMock: TLayout = {
   type: LayoutType.default,
 };
 
-export const elementDynamicDataMock: TElementDynamicData = {
+export const elementMock: TElement = {
   alignment: {},
   angle: 0,
   background: {
     properties: { alpha: '100', color: '#ffffff', format: 'hex' },
     visible: true,
   },
+  children: [],
   coordinates: {
     x: 0,
     y: 0,
@@ -78,22 +72,12 @@ export const elementDynamicDataMock: TElementDynamicData = {
   },
   id: 'test-1',
   layout: layoutMock,
+  parentId: '-1',
   position: 'absolute',
+  type: ElementType.frame,
   width: {
     value: 100,
   },
-};
-
-export const elementStaticDataMock: TElementStaticData = {
-  children: [],
-  id: 'test-1',
-  parentId: '-1',
-  type: ElementType.frame,
-};
-
-export const elementAllDataMock: TElement = {
-  ...elementDynamicDataMock,
-  ...elementStaticDataMock,
 };
 
 export const createFrameMock: TElement = {
@@ -146,29 +130,10 @@ export const reducerHistoryMock: Array<TReducerHistory> = [
     areaCoordinates: BASE_3D,
     elements: {
       ...BASE_PAGE_ELEMENTS,
-      allData: {
-        ...BASE_PAGE_ELEMENTS.allData,
-        ['test-1']: elementAllDataMock,
-        ['test-2']: {
-          ...elementAllDataMock,
-          id: 'test-2',
-        },
-      },
-      dynamicData: {
-        ...BASE_PAGE_ELEMENTS.dynamicData,
-        ['test-1']: elementDynamicDataMock,
-        ['test-2']: {
-          ...elementDynamicDataMock,
-          id: 'test-2',
-        },
-      },
-      staticData: {
-        ...BASE_PAGE_ELEMENTS.staticData,
-        ['test-1']: elementStaticDataMock,
-        ['test-2']: {
-          ...elementStaticDataMock,
-          id: 'test-2',
-        },
+      ['test-1']: elementMock,
+      ['test-2']: {
+        ...elementMock,
+        id: 'test-2',
       },
     },
     selectedElements: [],

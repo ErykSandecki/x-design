@@ -1,12 +1,12 @@
 import { get } from 'lodash';
 
 // types
-import { TElementDynamicData, TElementsData, TSelectedElement, TSelectedElements } from 'store/pageBuilder/types';
-import { TNestedKeyOf } from 'types';
+import { TElement, TNestedKeyOf } from 'types';
+import { TElements, TSelectedElement, TSelectedElements } from 'store/pageBuilder/types';
 
 export const isMixed = (
-  dynamicData: TElementsData['dynamicData'],
+  elements: TElements,
   firstElement: TSelectedElement,
-  key: TNestedKeyOf<TElementDynamicData>,
+  key: TNestedKeyOf<TElement>,
   selectedElements: TSelectedElements,
-): boolean => selectedElements.some(({ id }) => get(dynamicData[id], key) !== get(dynamicData[firstElement.id], key));
+): boolean => selectedElements.some(({ id }) => get(elements[id], key) !== get(elements[firstElement.id], key));

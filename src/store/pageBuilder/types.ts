@@ -40,18 +40,7 @@ import {
   TSize,
 } from 'types';
 
-export type TElementDynamicData = Pick<
-  TElement,
-  'alignment' | 'angle' | 'background' | 'coordinates' | 'deepLevel' | 'height' | 'id' | 'layout' | 'position' | 'width'
->;
-
-export type TElementStaticData = Pick<TElement, 'children' | 'id' | 'parentId' | 'type'>;
-
-export type TElementsData = {
-  allData: TObject<TElement>;
-  dynamicData: TObject<TElementDynamicData>;
-  staticData: TObject<TElementStaticData>;
-};
+export type TElements = TObject<TElement>;
 
 export type TEvents = {
   canMoveElements: boolean;
@@ -70,12 +59,6 @@ export type TEvents = {
   selectedAnchorRotate: AnchorRotate;
 };
 
-export type TPositions = {
-  allData: TElementsData['allData'];
-  dynamicData: TElementsData['dynamicData'];
-  selectedElements: TSelectedElements;
-};
-
 export type TReducerHistory = Pick<TPage, 'areaCoordinates' | 'elements' | 'selectedElements'>;
 
 export type TSelectedElement = {
@@ -91,7 +74,7 @@ export type TSizeCoordinates = Pick<TElement, 'coordinates' | 'height' | 'width'
 
 export type TPage = {
   areaCoordinates: T3DCoordinates;
-  elements: TElementsData;
+  elements: TElements;
   id: string;
   name: string;
   prevState: TPage;

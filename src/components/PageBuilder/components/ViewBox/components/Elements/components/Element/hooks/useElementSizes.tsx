@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { useRefs } from 'pages/PageBuilderPage/core/RefsProvider';
 
 // store
-import { elementDynamicDataSelectorCreator } from 'store/pageBuilder/selectors';
+import { elementDataSelectorCreator } from 'store/pageBuilder/selectors';
 
 // types
 import { TElement } from 'types';
@@ -21,7 +21,7 @@ export type TUseElementSizes = {
 
 export const useElementSizes = (id: TElement['id']): TUseElementSizes => {
   const { itemsRefs } = useRefs();
-  const elementDynamicData = useSelector(elementDynamicDataSelectorCreator(id));
+  const elementDynamicData = useSelector(elementDataSelectorCreator(id));
   const { unit: unitHeight, value: relativeHeight } = elementDynamicData.height;
   const { unit: unitWidth, value: relativeWidth } = elementDynamicData.width;
   const cssHeight = `${relativeHeight}${unitHeight ?? ''}`;

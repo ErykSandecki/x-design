@@ -1,7 +1,7 @@
 import { isNaN } from 'lodash';
 
 // types
-import { TPage, TPageBuilderState, TPositions, TSetElementsCoordinatesAction } from '../types';
+import { TElements, TPage, TPageBuilderState, TSelectedElements, TSetElementsCoordinatesAction } from '../types';
 
 export const getCoordinates = (
   coordinates: T2DCoordinates,
@@ -19,43 +19,30 @@ export const getCoordinates = (
 };
 
 export const getPositions = (
+  canMoveElements: boolean,
   { coordinates: currentCoordinates, mode }: TSetElementsCoordinatesAction['payload'],
   prevPageState: TPage['prevState'],
   currentPage: TPage,
-): TPositions => {
+): { elements: TElements; selectedElements: TSelectedElements } => {
   const elements = currentPage.elements;
   const isDynamic = mode === 'dynamic';
-  const { allData, dynamicData } = prevPageState.elements;
+  const prevElements = prevPageState.elements;
   const selectedElements = prevPageState.selectedElements;
-  const positions: TPositions = {
-    allData: {},
-    dynamicData: {},
+  const positions = {
+    elements: {},
     selectedElements: [],
   };
 
-  selectedElements.forEach(({ id, ...restData }) => {
-    const alignment = elements.allData[id].alignment;
-    const { coordinates: prevCoordinates } = allData[id];
-    const coordinates = getCoordinates(currentCoordinates, isDynamic, prevCoordinates);
+  if (canMoveElements) {
+    selectedElements.forEach(({ id, ...restData }) => {
+      const alignment = elements[id].alignment;
+      const { coordinates: prevCoordinates } = prevElements[id];
+      const coordinates = getCoordinates(currentCoordinates, isDynamic, prevCoordinates);
 
-    positions.allData = {
-      ...positions.allData,
-      [id]: { ...allData[id], alignment, coordinates },
-    };
-    positions.dynamicData = {
-      ...positions.dynamicData,
-      [id]: {
-        ...dynamicData[id],
-        alignment,
-        coordinates,
-      },
-    };
-
-    positions.selectedElements.push({
-      ...restData,
-      id,
+      positions.elements = { ...positions.elements, [id]: { ...prevElements[id], alignment, coordinates } };
+      positions.selectedElements.push({ ...restData, id });
     });
-  });
+  }
 
   return positions;
 };
@@ -66,13 +53,7 @@ export const handleSetElementsCoordinates = (
 ): TPageBuilderState => {
   const { canMoveElements } = state.events;
   const currentPage = state.pages[state.currentPage];
-  const positions = canMoveElements
-    ? getPositions(coordinates, currentPage.prevState || currentPage, currentPage)
-    : {
-        allData: {},
-        dynamicData: {},
-        selectedElements: currentPage.selectedElements,
-      };
+  const positions = getPositions(canMoveElements, coordinates, currentPage.prevState || currentPage, currentPage);
 
   return {
     ...state,
@@ -82,14 +63,7 @@ export const handleSetElementsCoordinates = (
         ...currentPage,
         elements: {
           ...currentPage.elements,
-          allData: {
-            ...currentPage.elements.allData,
-            ...positions.allData,
-          },
-          dynamicData: {
-            ...currentPage.elements.dynamicData,
-            ...positions.dynamicData,
-          },
+          ...positions.elements,
         },
         selectedElements: positions.selectedElements,
       },

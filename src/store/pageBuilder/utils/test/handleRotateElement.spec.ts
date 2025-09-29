@@ -1,6 +1,6 @@
 // mocks
 import {
-  elementAllDataMock,
+  elementMock,
   elementDynamicDataMock,
   elementStaticDataMock,
   pageBuilderStateMock,
@@ -30,8 +30,8 @@ describe('handleRotateElement', () => {
             ...currentPage.elements,
             allData: {
               ...currentPage.elements.allData,
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
               },
             },
             dynamicData: {
@@ -63,8 +63,8 @@ describe('handleRotateElement', () => {
             ...currentPage.elements,
             allData: {
               ...currentPage.elements.allData,
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 angle,
               },
             },

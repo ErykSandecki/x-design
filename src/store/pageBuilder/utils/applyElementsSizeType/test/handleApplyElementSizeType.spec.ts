@@ -2,7 +2,7 @@ import { noop } from 'lodash';
 
 // mocks
 import {
-  elementAllDataMock,
+  elementMock,
   elementDynamicDataMock,
   elementStaticDataMock,
   pageBuilderStateMock,
@@ -16,7 +16,7 @@ import { REDUCER_KEY as PAGE_BUILDER } from '../../../actionsType';
 import { Unit } from 'types';
 
 // utils
-import { handleApplyElementSizeType } from '../handleApplyElementSizeType';
+import { handleApplyElementsSizeType } from '../handleApplyElementsSizeType';
 
 describe('handleApplyElementSizeType', () => {
   beforeAll(() => {
@@ -30,7 +30,7 @@ describe('handleApplyElementSizeType', () => {
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
     // before
-    const result = handleApplyElementSizeType(
+    const result = handleApplyElementsSizeType(
       { sizeType: 'height', type: 'unit' },
       {
         ...pageBuilderStateMock[PAGE_BUILDER],
@@ -42,7 +42,7 @@ describe('handleApplyElementSizeType', () => {
               ...currentPage.elements,
               allData: {
                 ...currentPage.elements.allData,
-                [elementAllDataMock.id]: elementAllDataMock,
+                [elementMock.id]: elementMock,
               },
               dynamicData: {
                 ...currentPage.elements.dynamicData,
@@ -70,8 +70,8 @@ describe('handleApplyElementSizeType', () => {
             ...currentPage.elements,
             allData: {
               ...currentPage.elements.allData,
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 height: { unit: Unit.percentage, value: 100 },
               },
             },

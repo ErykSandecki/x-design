@@ -2,11 +2,11 @@
 import { OUTLINE } from '../constants';
 
 // types
-import { TElementDynamicData } from 'store/pageBuilder/types';
+import { TElement } from 'types';
 
 export const getCornersPosition = (
-  height: TElementDynamicData['height']['value'],
-  width: TElementDynamicData['width']['value'],
+  height: TElement['height']['value'],
+  width: TElement['width']['value'],
 ): TRectCoordinates => ({
   x1: (OUTLINE / 2) * -1,
   x2: (width as number) + OUTLINE / 2,

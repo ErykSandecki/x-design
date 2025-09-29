@@ -1,21 +1,19 @@
-import { cloneDeep } from 'lodash';
+import { includes, mapValues } from 'lodash';
 
 // types
 import { TPageBuilderState, TRotateElementsAction } from '../types';
+
+// utils
+import { extractObjectValues } from 'utils';
 
 export const handleRotateElements = (
   angle: TRotateElementsAction['payload'],
   state: TPageBuilderState,
 ): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];
-  const { elements, selectedElements } = currentPage;
-  const clonedElements = cloneDeep(elements);
+  const { selectedElements } = currentPage;
+  const ids = extractObjectValues(selectedElements, ['id']);
   const fixedAngle = parseFloat(angle.toFixed(2));
-
-  selectedElements.forEach(({ id }) => {
-    clonedElements.allData[id].angle = fixedAngle;
-    clonedElements.dynamicData[id].angle = fixedAngle;
-  });
 
   return {
     ...state,
@@ -23,17 +21,9 @@ export const handleRotateElements = (
       ...state.pages,
       [state.currentPage]: {
         ...currentPage,
-        elements: {
-          ...currentPage.elements,
-          allData: {
-            ...currentPage.elements.allData,
-            ...clonedElements.allData,
-          },
-          dynamicData: {
-            ...currentPage.elements.dynamicData,
-            ...clonedElements.dynamicData,
-          },
-        },
+        elements: mapValues(currentPage.elements, (element, id) =>
+          includes(ids, id) ? { ...element, angle: fixedAngle } : element,
+        ),
       },
     },
   };

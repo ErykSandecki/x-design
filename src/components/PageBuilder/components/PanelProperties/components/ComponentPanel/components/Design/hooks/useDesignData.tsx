@@ -4,8 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 // store
 import {
   areParentsTheSameSelector,
-  dynamicDataSelector,
-  elementAllDataSelectorCreator,
+  elementDataSelectorCreator,
+  elementsSelector,
   selectedElementsSelector,
 } from 'store/pageBuilder/selectors';
 import { changeLayout } from 'store/pageBuilder/actions';
@@ -27,11 +27,11 @@ export type TUseDesignData = {
 export const useDesignData = (): TUseDesignData => {
   const areParentsTheSame = useSelector(areParentsTheSameSelector);
   const dispatch = useDispatch();
-  const dynamicData = useSelector(dynamicDataSelector);
+  const elements = useSelector(elementsSelector);
   const selectedElements = useSelector(selectedElementsSelector);
   const firstElement = first(selectedElements);
-  const isMixedLayoutType = isMixed(dynamicData, firstElement, 'layout.type', selectedElements);
-  const { position, layout } = useSelector(elementAllDataSelectorCreator(firstElement.id));
+  const isMixedLayoutType = isMixed(elements, firstElement, 'layout.type', selectedElements);
+  const { position, layout } = useSelector(elementDataSelectorCreator(firstElement.id));
 
   const onChangeLayoutType = (): void => {
     if (isMixedLayoutType) {

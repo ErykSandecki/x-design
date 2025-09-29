@@ -8,7 +8,7 @@ import { useElementSizes } from '../useElementSizes';
 
 // mocks
 import {
-  elementAllDataMock,
+  elementMock,
   elementDynamicDataMock,
   elementStaticDataMock,
   pageBuilderStateMock,
@@ -47,9 +47,9 @@ describe('useElementEvents', () => {
               allData: {
                 ['-1']: {
                   ...currentPage.elements.allData['-1'],
-                  children: [elementAllDataMock.id],
+                  children: [elementMock.id],
                 },
-                [elementAllDataMock.id]: elementAllDataMock,
+                [elementMock.id]: elementMock,
               },
               dynamicData: {
                 ['-1']: {
@@ -108,10 +108,10 @@ describe('useElementEvents', () => {
               allData: {
                 ['-1']: {
                   ...currentPage.elements.allData['-1'],
-                  children: [elementAllDataMock.id],
+                  children: [elementMock.id],
                 },
-                [elementAllDataMock.id]: {
-                  ...elementAllDataMock,
+                [elementMock.id]: {
+                  ...elementMock,
                   height: { value: 'auto' },
                   width: { value: 'auto' },
                 },
@@ -150,7 +150,7 @@ describe('useElementEvents', () => {
           <Wrapper>
             <RefsProvider
               itemsRefs={{
-                [elementAllDataMock.id]: createHtmlElement('div'),
+                [elementMock.id]: createHtmlElement('div'),
               }}
             >
               {children}

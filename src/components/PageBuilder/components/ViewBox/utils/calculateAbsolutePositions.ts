@@ -1,7 +1,7 @@
 import { RefObject } from 'react';
 
 // store
-import { allDataSelector } from 'store/pageBuilder/selectors';
+import { elementsSelector } from 'store/pageBuilder/selectors';
 import { store } from 'store';
 
 // types
@@ -20,10 +20,10 @@ export const calculateAbsolutePositions = (
   zoomContentRef: TContext['zoomContentRef'],
 ): void => {
   if (event.buttons === MouseButton.lmb && mouseMode === MouseMode.default) {
-    const allData = allDataSelector(store.getState());
+    const elements = elementsSelector(store.getState());
 
     // eslint-disable-next-line
-    for (const [_, value] of Object.entries(allData)) {
+    for (const [_, value] of Object.entries(elements)) {
       const { id } = value;
 
       if (id !== '-1') {

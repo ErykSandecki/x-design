@@ -2,7 +2,7 @@ import { noop } from 'lodash';
 
 // mocks
 import {
-  elementAllDataMock,
+  elementMock,
   elementDynamicDataMock,
   elementStaticDataMock,
   pageBuilderStateMock,
@@ -22,7 +22,7 @@ const clonedElements = {
   ...currentPage.elements,
   allData: {
     ...currentPage.elements.allData,
-    [elementAllDataMock.id]: elementAllDataMock,
+    [elementMock.id]: elementMock,
   },
   dynamicData: {
     ...currentPage.elements.dynamicData,

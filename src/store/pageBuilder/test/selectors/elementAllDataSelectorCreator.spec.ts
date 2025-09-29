@@ -1,23 +1,23 @@
 // mocks
-import { elementAllDataMock } from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // store
-import { elementAllDataSelectorCreator } from '../../selectors';
+import { elementDataSelectorCreator } from '../../selectors';
 
-describe('elementAllDataSelectorCreator', () => {
+describe('elementDataSelectorCreator', () => {
   it('should find item', () => {
     // before
-    const selectorFunction = (elementAllDataSelectorCreator(elementAllDataMock.id) as any).resultFunc;
+    const selectorFunction = (elementDataSelectorCreator(elementMock.id) as any).resultFunc;
 
     // result
-    expect(selectorFunction({ [elementAllDataMock.id]: elementAllDataMock })).toStrictEqual(elementAllDataMock);
+    expect(selectorFunction({ [elementMock.id]: elementMock })).toStrictEqual(elementMock);
   });
 
   it('should not find item', () => {
     // before
-    const selectorFunction = (elementAllDataSelectorCreator('-1') as any).resultFunc;
+    const selectorFunction = (elementDataSelectorCreator('-1') as any).resultFunc;
 
     // result
-    expect(selectorFunction({ [elementAllDataMock.id]: elementAllDataMock })).toBe(undefined);
+    expect(selectorFunction({ [elementMock.id]: elementMock })).toBe(undefined);
   });
 });

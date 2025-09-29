@@ -1,19 +1,15 @@
-import { cloneDeep } from 'lodash';
+import { includes, mapValues } from 'lodash';
 
 // types
 import { TPageBuilderState } from '../types';
 
+// utils
+import { extractObjectValues } from 'utils';
+
 export const handleFitLayout = (state: TPageBuilderState): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];
-  const { elements, selectedElements } = currentPage;
-  const clonedElements = cloneDeep(elements);
-
-  selectedElements.forEach(({ id }) => {
-    clonedElements.allData[id].height = { value: 'auto' };
-    clonedElements.allData[id].width = { value: 'auto' };
-    clonedElements.dynamicData[id].height = { value: 'auto' };
-    clonedElements.dynamicData[id].width = { value: 'auto' };
-  });
+  const { selectedElements } = currentPage;
+  const ids = extractObjectValues(selectedElements, ['id']);
 
   return {
     ...state,
@@ -21,17 +17,11 @@ export const handleFitLayout = (state: TPageBuilderState): TPageBuilderState => 
       ...state.pages,
       [state.currentPage]: {
         ...currentPage,
-        elements: {
-          ...currentPage.elements,
-          allData: {
-            ...currentPage.elements.allData,
-            ...clonedElements.allData,
-          },
-          dynamicData: {
-            ...currentPage.elements.dynamicData,
-            ...clonedElements.dynamicData,
-          },
-        },
+        elements: mapValues(currentPage.elements, (element, id) =>
+          includes(ids, id)
+            ? { ...element, height: { ...element.height, value: 'auto' }, width: { ...element.width, value: 'auto' } }
+            : element,
+        ),
       },
     },
   };

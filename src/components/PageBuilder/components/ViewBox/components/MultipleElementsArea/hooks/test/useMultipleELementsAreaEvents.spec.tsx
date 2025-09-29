@@ -7,7 +7,7 @@ import { RefsProvider } from 'pages/PageBuilderPage/core/RefsProvider';
 import { useMultipleELementsAreaEvents } from '../useMultipleELementsAreaEvents';
 
 // mocks
-import { elementAllDataMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 import { wholeStateMock } from 'test/mocks/reducer/wholeStateMock';
 
 // others
@@ -25,7 +25,7 @@ const overlayContainer = document.createElement('div');
 const zoomContent = document.createElement('div');
 
 const sharedRefs = {
-  [elementAllDataMock.id]: element,
+  [elementMock.id]: element,
   ['2']: element,
 };
 
@@ -40,11 +40,11 @@ const stateMock = {
           ...currentPage.elements,
           allData: {
             ...currentPage.elements.allData,
-            [elementAllDataMock.id]: {
-              ...elementAllDataMock,
+            [elementMock.id]: {
+              ...elementMock,
             },
             ['2']: {
-              ...elementAllDataMock,
+              ...elementMock,
               id: '2',
             },
           },
@@ -89,10 +89,10 @@ describe('useMultipleELementsAreaEvents', () => {
                 allData: {
                   ...currentPage.elements.allData,
                   [selectedElementMock.id]: {
-                    ...elementAllDataMock,
+                    ...elementMock,
                   },
                   ['2']: {
-                    ...elementAllDataMock,
+                    ...elementMock,
                     id: '2',
                   },
                 },

@@ -1,9 +1,9 @@
 // types
 import { TAlignment } from 'types';
-import { TElementsData, TSelectedElements } from 'store/pageBuilder/types';
+import { TElements, TSelectedElements } from 'store/pageBuilder/types';
 
 export const hasSomeAlignment = (
   direction: keyof TAlignment,
-  dynamicData: TElementsData['dynamicData'],
+  elements: TElements,
   selectedElements: TSelectedElements,
-): boolean => selectedElements.some(({ id }) => dynamicData[id].alignment[direction] !== undefined);
+): boolean => selectedElements.some(({ id }) => elements[id].alignment[direction] !== undefined);

@@ -1,10 +1,10 @@
 // utils
-import { extracObjectValues } from '../extracObjectValues';
+import { extractObjectValues } from '../extractObjectValues';
 
-describe('extracObjectValues', () => {
+describe('extractObjectValues', () => {
   it('should extract single values', () => {
     // before
-    const result = extracObjectValues([{ a: 'a' }], ['a']);
+    const result = extractObjectValues([{ a: 'a' }], ['a']);
 
     // result
     expect(result).toStrictEqual(['a']);
@@ -12,7 +12,7 @@ describe('extracObjectValues', () => {
 
   it('should extract couple valyes', () => {
     // before
-    const result = extracObjectValues([{ a: 'a', b: 'b' }], ['a', 'b']);
+    const result = extractObjectValues([{ a: 'a', b: 'b' }], ['a', 'b']);
 
     // result
     expect(result).toStrictEqual([{ a: 'a', b: 'b' }]);

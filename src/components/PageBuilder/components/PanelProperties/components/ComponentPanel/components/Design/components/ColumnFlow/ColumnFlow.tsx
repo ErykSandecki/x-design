@@ -11,11 +11,7 @@ import { toggleButtons, translationNameSpace } from './constants';
 
 // store
 import { changeLayout } from 'store/pageBuilder/actions';
-import {
-  dynamicDataSelector,
-  elementAllDataSelectorCreator,
-  selectedElementsSelector,
-} from 'store/pageBuilder/selectors';
+import { elementsSelector, elementDataSelectorCreator, selectedElementsSelector } from 'store/pageBuilder/selectors';
 
 // types
 import { GridColumnType } from 'shared/UITools/components/Section/components/SectionColumn/enums';
@@ -26,11 +22,11 @@ import { isMixed } from '../../utils/isMixed';
 
 const ColumnFlow: FC = () => {
   const dispatch = useDispatch();
-  const dynamicData = useSelector(dynamicDataSelector);
+  const elements = useSelector(elementsSelector);
   const selectedElements = useSelector(selectedElementsSelector);
   const firstElement = first(selectedElements);
-  const element = useSelector(elementAllDataSelectorCreator(firstElement.id));
-  const isMixedLayoutType = isMixed(dynamicData, firstElement, 'layout.type', selectedElements);
+  const element = useSelector(elementDataSelectorCreator(firstElement.id));
+  const isMixedLayoutType = isMixed(elements, firstElement, 'layout.type', selectedElements);
   const { t } = useTranslation();
 
   return (

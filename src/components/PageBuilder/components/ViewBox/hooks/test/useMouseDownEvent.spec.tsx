@@ -8,7 +8,7 @@ import { RefsProvider } from 'pages/PageBuilderPage/core/RefsProvider';
 import { useMouseDownEvent } from '../useMouseDownEvent';
 
 // mocks
-import { elementAllDataMock } from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { BASE_3D } from 'shared/ZoomBox/constants';
@@ -20,11 +20,11 @@ import { MouseMode } from 'types/enums/mouseMode';
 const mockCallBack = jest.fn();
 const rectCoordinates = {
   current: {
-    [elementAllDataMock.id]: {
-      x1: elementAllDataMock.coordinates.x,
-      x2: elementAllDataMock.width.value,
-      y1: elementAllDataMock.coordinates.y,
-      y2: elementAllDataMock.height.value,
+    [elementMock.id]: {
+      x1: elementMock.coordinates.x,
+      x2: elementMock.width.value,
+      y1: elementMock.coordinates.y,
+      y2: elementMock.height.value,
     },
   },
 } as RefObject<TObject<TRectCoordinates>>;

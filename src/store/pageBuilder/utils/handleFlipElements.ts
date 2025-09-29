@@ -1,18 +1,19 @@
-import { cloneDeep } from 'lodash';
+import { includes, mapValues } from 'lodash';
 
 // types
 import { LayoutType, TElement } from 'types';
-import { TElementStaticData, TFlipElementsAction, TPageBuilderState } from '../types';
+import { TFlipElementsAction, TPageBuilderState } from '../types';
 
 // utils
+import { extractObjectValues } from 'utils';
 import { findAllChildren } from './findAllChildren';
 import { negateValue } from 'utils/math/negateValue';
 
 export const reverseChildren = (
   axis: TFlipElementsAction['payload'],
-  children: TElementStaticData['children'],
+  children: TElement['children'],
   layout: TElement['layout'],
-): TElementStaticData['children'] => {
+): TElement['children'] => {
   if (axis === 'x' && (layout.type === LayoutType.horizontal || layout.type === LayoutType.grid)) {
     return [...children].reverse();
   } else if (axis === 'y' && layout.type !== LayoutType.horizontal) {
@@ -28,27 +29,9 @@ export const handleFlipElements = (
 ): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];
   const { elements, selectedElements } = currentPage;
-  const { allData } = elements;
-  const clonedElements = cloneDeep(elements);
-
-  selectedElements.forEach(({ id }) => {
-    const element = clonedElements.allData[id];
-    const angle = negateValue(element.angle);
-    const children = reverseChildren(axis, element.children, element.layout);
-
-    clonedElements.allData[id].angle = angle;
-    clonedElements.allData[id].children = children;
-    clonedElements.dynamicData[id].angle = angle;
-    clonedElements.staticData[id].children = children;
-
-    findAllChildren(allData, allData[selectedElements[0].id].children).forEach(({ id }) => {
-      const element = clonedElements.allData[id];
-      const children = reverseChildren(axis, element.children, element.layout);
-
-      clonedElements.allData[id].children = children;
-      clonedElements.staticData[id].children = children;
-    });
-  });
+  const ids = extractObjectValues(selectedElements, ['id']);
+  const childrenData = ids.map((id) => findAllChildren(elements, elements[id].children)).flat();
+  const childrenIds = extractObjectValues(childrenData, ['id']);
 
   return {
     ...state,
@@ -57,19 +40,25 @@ export const handleFlipElements = (
       [state.currentPage]: {
         ...currentPage,
         elements: {
-          ...currentPage.elements,
-          allData: {
-            ...currentPage.elements.allData,
-            ...clonedElements.allData,
-          },
-          dynamicData: {
-            ...currentPage.elements.dynamicData,
-            ...clonedElements.dynamicData,
-          },
-          staticData: {
-            ...currentPage.elements.staticData,
-            ...clonedElements.staticData,
-          },
+          // selectedElements
+          ...mapValues(currentPage.elements, (element, id) =>
+            includes(ids, id)
+              ? {
+                  ...element,
+                  angle: negateValue(element.angle),
+                  children: reverseChildren(axis, element.children, element.layout),
+                }
+              : element,
+          ),
+          // children of selected elements
+          ...mapValues(currentPage.elements, (element, id) =>
+            includes(childrenIds, id)
+              ? {
+                  ...element,
+                  children: reverseChildren(axis, element.children, element.layout),
+                }
+              : element,
+          ),
         },
       },
     },

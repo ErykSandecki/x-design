@@ -1,5 +1,5 @@
 // mocks
-import { elementAllDataMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 import { wholeStateMock } from 'test/mocks/reducer/wholeStateMock';
 
 // others
@@ -32,7 +32,7 @@ describe('handleTrySingleElement', () => {
                 allData: {
                   ...currentPage.elements.allData,
                   [selectedElementMock.id]: {
-                    ...elementAllDataMock,
+                    ...elementMock,
                   },
                 },
               },

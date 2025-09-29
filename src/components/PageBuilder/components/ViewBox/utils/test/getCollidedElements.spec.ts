@@ -1,12 +1,7 @@
 import { RefObject } from 'react';
 
 // mocks
-import {
-  elementAllDataMock,
-  eventsMock,
-  pageBuilderStateMock,
-  selectedElementMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, eventsMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 import { wholeStateMock } from 'test/mocks/reducer/wholeStateMock';
 
 // others
@@ -25,11 +20,11 @@ const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages[pageBuilderStateMoc
 
 const rectCoordinates = {
   current: {
-    [elementAllDataMock.id]: {
-      x1: elementAllDataMock.coordinates.x,
-      x2: elementAllDataMock.width.value,
-      y1: elementAllDataMock.coordinates.y,
-      y2: elementAllDataMock.height.value,
+    [elementMock.id]: {
+      x1: elementMock.coordinates.x,
+      x2: elementMock.width.value,
+      y1: elementMock.coordinates.y,
+      y2: elementMock.height.value,
     },
   },
 } as RefObject<TObject<TRectCoordinates>>;
@@ -50,10 +45,10 @@ describe('getCollidedElements', () => {
                 allData: {
                   ...currentPage.elements.allData,
                   [selectedElementMock.id]: {
-                    ...elementAllDataMock,
+                    ...elementMock,
                   },
                   ['test-2']: {
-                    ...elementAllDataMock,
+                    ...elementMock,
                     id: 'test-2',
                   },
                 },
@@ -120,10 +115,10 @@ describe('getCollidedElements', () => {
                 allData: {
                   ...currentPage.elements.allData,
                   [selectedElementMock.id]: {
-                    ...elementAllDataMock,
+                    ...elementMock,
                   },
                   ['test-2']: {
-                    ...elementAllDataMock,
+                    ...elementMock,
                     id: 'test-2',
                   },
                 },
@@ -161,10 +156,10 @@ describe('getCollidedElements', () => {
                 allData: {
                   ...currentPage.elements.allData,
                   [selectedElementMock.id]: {
-                    ...elementAllDataMock,
+                    ...elementMock,
                   },
                   ['test-2']: {
-                    ...elementAllDataMock,
+                    ...elementMock,
                     id: 'test-2',
                   },
                 },
@@ -179,17 +174,17 @@ describe('getCollidedElements', () => {
     const result = getCollidedElements(
       {
         current: {
-          [elementAllDataMock.id]: {
-            x1: elementAllDataMock.coordinates.x,
-            x2: elementAllDataMock.width,
-            y1: elementAllDataMock.coordinates.y,
-            y2: elementAllDataMock.height,
+          [elementMock.id]: {
+            x1: elementMock.coordinates.x,
+            x2: elementMock.width,
+            y1: elementMock.coordinates.y,
+            y2: elementMock.height,
           },
           ['test-2']: {
-            x1: elementAllDataMock.coordinates.x,
-            x2: elementAllDataMock.width.value as number,
-            y1: elementAllDataMock.coordinates.y,
-            y2: elementAllDataMock.height.value as number,
+            x1: elementMock.coordinates.x,
+            x2: elementMock.width.value as number,
+            y1: elementMock.coordinates.y,
+            y2: elementMock.height.value as number,
           },
         },
       } as RefObject<TObject<TRectCoordinates>>,

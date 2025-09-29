@@ -5,7 +5,7 @@ import { useDropAnchorsEvents } from '../useDropAnchorsEvents';
 
 // mocks
 import {
-  elementAllDataMock,
+  elementMock,
   elementDynamicDataMock,
   elementStaticDataMock,
   eventsMock,
@@ -43,10 +43,10 @@ const stateMock = {
           allData: {
             ['-1']: {
               ...currentPage.elements.allData['-1'],
-              children: [elementAllDataMock.id],
+              children: [elementMock.id],
             },
-            [elementAllDataMock.id]: {
-              ...elementAllDataMock,
+            [elementMock.id]: {
+              ...elementMock,
             },
           },
           dynamicData: {

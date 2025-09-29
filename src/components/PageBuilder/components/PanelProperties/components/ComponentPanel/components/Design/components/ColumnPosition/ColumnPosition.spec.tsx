@@ -6,7 +6,7 @@ import ColumnPosition from './ColumnPosition';
 
 // mocks
 import {
-  elementAllDataMock,
+  elementMock,
   elementDynamicDataMock,
   elementStaticDataMock,
   pageBuilderStateMock,
@@ -38,10 +38,10 @@ const stateMock = {
           allData: {
             ['-1']: {
               ...currentPage.elements.allData['-1'],
-              children: [elementAllDataMock.id],
+              children: [elementMock.id],
             },
-            [elementAllDataMock.id]: {
-              ...elementAllDataMock,
+            [elementMock.id]: {
+              ...elementMock,
             },
           },
           dynamicData: {
@@ -101,7 +101,7 @@ describe('ColumnPosition snapshots', () => {
                   children: ['test-1', 'test-2'],
                 },
                 ['test-2']: {
-                  ...elementAllDataMock,
+                  ...elementMock,
                   coordinates: { x: 100, y: 100 },
                   id: 'test-2',
                 },
@@ -168,7 +168,7 @@ describe('ColumnPosition snapshots', () => {
                   children: ['test-1', 'test-2'],
                 },
                 ['test-2']: {
-                  ...elementAllDataMock,
+                  ...elementMock,
                   alignment: {
                     horizontal: AlignmentHorizontal.center,
                     vertical: AlignmentVertical.center,

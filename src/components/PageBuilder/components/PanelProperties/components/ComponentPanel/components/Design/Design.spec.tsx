@@ -6,7 +6,7 @@ import Design from './Design';
 
 // mocks
 import {
-  elementAllDataMock,
+  elementMock,
   elementDynamicDataMock,
   elementStaticDataMock,
   layoutMock,
@@ -39,10 +39,10 @@ const stateMock = {
           allData: {
             ['-1']: {
               ...currentPage.elements.allData['-1'],
-              children: [elementAllDataMock.id],
+              children: [elementMock.id],
             },
-            [elementAllDataMock.id]: {
-              ...elementAllDataMock,
+            [elementMock.id]: {
+              ...elementMock,
               children: ['test-2'],
               layout: {
                 ...layoutMock,
@@ -50,9 +50,9 @@ const stateMock = {
               },
             },
             ['test-2']: {
-              ...elementAllDataMock,
+              ...elementMock,
               id: 'test-2',
-              parentId: elementAllDataMock.id,
+              parentId: elementMock.id,
             },
           },
           dynamicData: {
@@ -186,10 +186,10 @@ describe('Design behaviors', () => {
               allData: {
                 ['-1']: {
                   ...currentPage.elements.allData['-1'],
-                  children: [elementAllDataMock.id, 'test-2'],
+                  children: [elementMock.id, 'test-2'],
                 },
-                [elementAllDataMock.id]: {
-                  ...elementAllDataMock,
+                [elementMock.id]: {
+                  ...elementMock,
                   children: [],
                   layout: {
                     ...layoutMock,
@@ -197,7 +197,7 @@ describe('Design behaviors', () => {
                   },
                 },
                 ['test-2']: {
-                  ...elementAllDataMock,
+                  ...elementMock,
                   id: 'test-2',
                   parentId: '-1',
                 },
@@ -269,14 +269,14 @@ describe('Design behaviors', () => {
               allData: {
                 ['-1']: {
                   ...currentPage.elements.allData['-1'],
-                  children: [elementAllDataMock.id, 'test-2'],
+                  children: [elementMock.id, 'test-2'],
                 },
-                [elementAllDataMock.id]: {
-                  ...elementAllDataMock,
+                [elementMock.id]: {
+                  ...elementMock,
                   children: [],
                 },
                 ['test-2']: {
-                  ...elementAllDataMock,
+                  ...elementMock,
                   id: 'test-2',
                   layout: {
                     ...layoutMock,

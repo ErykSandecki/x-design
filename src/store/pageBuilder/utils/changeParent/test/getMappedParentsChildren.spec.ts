@@ -1,7 +1,7 @@
 // mocks
 import {
   childrenMock,
-  elementAllDataMock,
+  elementMock,
   elementDynamicDataMock,
   elementStaticDataMock,
   pageBuilderStateMock,
@@ -37,8 +37,8 @@ describe('getMappedParentsChildren', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [childrenMock],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 children: [],
               },
             },
@@ -104,12 +104,12 @@ describe('getMappedParentsChildren', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [childrenMock],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 children: [{ ...childrenMock, id: 'test-2' }],
               },
               ['test-2']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 children: [],
                 id: 'test-2',
                 parentId: elementStaticDataMock.id,
@@ -153,8 +153,8 @@ describe('getMappedParentsChildren', () => {
           ...currentPage.elements.allData['-1'],
           children: [childrenMock, { ...childrenMock, id: 'test-2' }],
         },
-        [elementAllDataMock.id]: {
-          ...elementAllDataMock,
+        [elementMock.id]: {
+          ...elementMock,
           children: [],
         },
       },
@@ -178,7 +178,7 @@ describe('getMappedParentsChildren', () => {
     const payload = {
       draggableElements: [{ ...childrenMock, id: 'test-3' }],
       possibleIndexPosition: 0,
-      possibleParent: elementAllDataMock.id,
+      possibleParent: elementMock.id,
     };
 
     // before
@@ -195,21 +195,21 @@ describe('getMappedParentsChildren', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [childrenMock],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 children: [
                   { ...childrenMock, id: 'test-2' },
                   { ...childrenMock, id: 'test-3' },
                 ],
               },
               ['test-2']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 children: [],
                 id: 'test-2',
                 parentId: elementStaticDataMock.id,
               },
               ['test-3']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 children: [],
                 id: 'test-3',
                 parentId: elementStaticDataMock.id,
@@ -262,8 +262,8 @@ describe('getMappedParentsChildren', () => {
     // result
     expect(result).toStrictEqual({
       allData: {
-        [elementAllDataMock.id]: {
-          ...elementAllDataMock,
+        [elementMock.id]: {
+          ...elementMock,
           children: [
             { ...childrenMock, id: 'test-3' },
             { ...childrenMock, id: 'test-2' },
@@ -289,7 +289,7 @@ describe('getMappedParentsChildren', () => {
     const payload = {
       draggableElements: [{ ...childrenMock, id: 'test-3' }],
       possibleIndexPosition: 0,
-      possibleParent: elementAllDataMock.id,
+      possibleParent: elementMock.id,
     };
 
     // before
@@ -306,18 +306,18 @@ describe('getMappedParentsChildren', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [childrenMock, { ...childrenMock, id: 'test-3' }],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 children: [{ ...childrenMock, id: 'test-2' }],
               },
               ['test-2']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 children: [],
                 id: 'test-2',
                 parentId: elementStaticDataMock.id,
               },
               ['test-3']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 children: [],
                 id: 'test-3',
                 parentId: '-1',
@@ -371,8 +371,8 @@ describe('getMappedParentsChildren', () => {
           ...currentPage.elements.allData['-1'],
           children: [childrenMock],
         },
-        [elementAllDataMock.id]: {
-          ...elementAllDataMock,
+        [elementMock.id]: {
+          ...elementMock,
           children: [
             { ...childrenMock, id: 'test-3' },
             { ...childrenMock, id: 'test-2' },

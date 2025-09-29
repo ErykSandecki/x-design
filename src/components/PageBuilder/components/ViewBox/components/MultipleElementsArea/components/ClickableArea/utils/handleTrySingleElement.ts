@@ -1,7 +1,7 @@
 import { Dispatch } from 'redux';
 
 // store
-import { allDataSelector } from 'store/pageBuilder/selectors';
+import { elementsSelector } from 'store/pageBuilder/selectors';
 import { selectElements } from 'store/pageBuilder/actions';
 import { store } from 'store';
 
@@ -14,7 +14,7 @@ export const handleTrySingleElement = (
   possibleElementToSelect: TElement['id'],
 ): void => {
   if (!isMoving && possibleElementToSelect !== '-1') {
-    const { parentId, position, type } = allDataSelector(store.getState())[possibleElementToSelect];
+    const { parentId, position, type } = elementsSelector(store.getState())[possibleElementToSelect];
 
     dispatch(
       selectElements([

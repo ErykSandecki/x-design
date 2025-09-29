@@ -1,6 +1,6 @@
 // mocks
 import {
-  elementAllDataMock,
+  elementMock,
   elementDynamicDataMock,
   elementStaticDataMock,
   layoutMock,
@@ -33,8 +33,8 @@ describe('handleChangeLayout', () => {
             ...currentPage.elements,
             allData: {
               ...currentPage.elements.allData,
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
               },
             },
             dynamicData: {
@@ -66,8 +66,8 @@ describe('handleChangeLayout', () => {
             ...currentPage.elements,
             allData: {
               ...currentPage.elements.allData,
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 layout: {
                   ...layoutMock,
                   type: LayoutType.horizontal,

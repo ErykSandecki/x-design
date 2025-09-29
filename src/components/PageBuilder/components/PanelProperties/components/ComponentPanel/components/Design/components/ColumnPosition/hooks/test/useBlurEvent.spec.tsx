@@ -4,7 +4,7 @@ import { renderHook } from '@testing-library/react';
 import { useBlurEvent } from '../useBlurEvent';
 
 // mocks
-import { elementAllDataMock } from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 const mockCallBack = jest.fn();
 
@@ -16,7 +16,7 @@ jest.mock('react-redux', () => ({
 describe('useBlurEvent', () => {
   it(`should trigger blur x`, () => {
     // before
-    const { result } = renderHook(() => useBlurEvent(elementAllDataMock, mockCallBack, mockCallBack, '0', '0'));
+    const { result } = renderHook(() => useBlurEvent(elementMock, mockCallBack, mockCallBack, '0', '0'));
 
     // action
     result.current.onBlurX();
@@ -30,7 +30,7 @@ describe('useBlurEvent', () => {
 
   it(`should trigger blur x multiple`, () => {
     // before
-    const { result } = renderHook(() => useBlurEvent(elementAllDataMock, mockCallBack, mockCallBack, '0', '0'));
+    const { result } = renderHook(() => useBlurEvent(elementMock, mockCallBack, mockCallBack, '0', '0'));
 
     // action
     result.current.onBlurX();
@@ -44,7 +44,7 @@ describe('useBlurEvent', () => {
 
   it(`should reset value x`, () => {
     // before
-    const { result } = renderHook(() => useBlurEvent(elementAllDataMock, mockCallBack, mockCallBack, '', '0'));
+    const { result } = renderHook(() => useBlurEvent(elementMock, mockCallBack, mockCallBack, '', '0'));
 
     // action
     result.current.onBlurX();
@@ -55,7 +55,7 @@ describe('useBlurEvent', () => {
 
   it(`should trigger blur y`, () => {
     // before
-    const { result } = renderHook(() => useBlurEvent(elementAllDataMock, mockCallBack, mockCallBack, '0', '0'));
+    const { result } = renderHook(() => useBlurEvent(elementMock, mockCallBack, mockCallBack, '0', '0'));
 
     // action
     result.current.onBlurY();
@@ -69,7 +69,7 @@ describe('useBlurEvent', () => {
 
   it(`should trigger blur y multiple`, () => {
     // before
-    const { result } = renderHook(() => useBlurEvent(elementAllDataMock, mockCallBack, mockCallBack, '0', '0'));
+    const { result } = renderHook(() => useBlurEvent(elementMock, mockCallBack, mockCallBack, '0', '0'));
 
     // action
     result.current.onBlurY();
@@ -83,7 +83,7 @@ describe('useBlurEvent', () => {
 
   it(`should reset value y`, () => {
     // before
-    const { result } = renderHook(() => useBlurEvent(elementAllDataMock, mockCallBack, mockCallBack, '0', ''));
+    const { result } = renderHook(() => useBlurEvent(elementMock, mockCallBack, mockCallBack, '0', ''));
 
     // action
     result.current.onBlurY();

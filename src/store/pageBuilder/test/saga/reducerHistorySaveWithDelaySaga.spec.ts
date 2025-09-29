@@ -2,7 +2,7 @@ import SagaTester from 'redux-saga-tester';
 
 // mocks
 import {
-  elementAllDataMock,
+  elementMock,
   elementDynamicDataMock,
   elementStaticDataMock,
   pageBuilderStateMock,
@@ -69,7 +69,7 @@ describe('reducerHistorySaveWithDelaySaga', () => {
                 ...currentPage.elements,
                 allData: {
                   ...currentPage.elements.allData,
-                  [elementAllDataMock.id]: elementAllDataMock,
+                  [elementMock.id]: elementMock,
                 },
                 dynamicData: {
                   ...currentPage.elements.dynamicData,
@@ -102,7 +102,7 @@ describe('reducerHistorySaveWithDelaySaga', () => {
           properties: { alpha: '100', color: '#ffffff', format: 'hex' },
           visible: true,
         },
-        id: elementAllDataMock.id,
+        id: elementMock.id,
       },
       type: REDUCER_HISTORY_SAVE_WITH_DELAY_ACTIONS[0],
     });

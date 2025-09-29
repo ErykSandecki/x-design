@@ -16,13 +16,13 @@ import { useResizingEvents } from './hooks/useResizingEvents';
 import { translationNameSpace } from './constants';
 
 // store
-import { dynamicDataSelector, selectedElementsSelector } from 'store/pageBuilder/selectors';
+import { elementsSelector, selectedElementsSelector } from 'store/pageBuilder/selectors';
 
 // types
 import { GridColumnType } from 'shared/UITools/components/Section/components/SectionColumn/enums';
 
 const ColumnResizing: FC = () => {
-  const dynamicData = useSelector(dynamicDataSelector);
+  const elements = useSelector(elementsSelector);
   const selectedElements = useSelector(selectedElementsSelector);
   const firstElement = first(selectedElements);
   const { t } = useTranslation();
@@ -60,7 +60,7 @@ const ColumnResizing: FC = () => {
         onBlur={onBlurWidth}
         onChange={onChangeWidth}
         onFocus={onFocus}
-        popoverChildren={<HeightPopoverWidth isMixed={isMixedWidth} width={dynamicData[firstElement.id].width} />}
+        popoverChildren={<HeightPopoverWidth isMixed={isMixedWidth} width={elements[firstElement.id].width} />}
         showChip={showWidthChip}
         size={width}
         sizeType="width"
@@ -75,7 +75,7 @@ const ColumnResizing: FC = () => {
         onBlur={onBlurHeight}
         onChange={onChangeHeight}
         onFocus={onFocus}
-        popoverChildren={<HeightPopoverHeight height={dynamicData[firstElement.id].height} isMixed={isMixedHeight} />}
+        popoverChildren={<HeightPopoverHeight height={elements[firstElement.id].height} isMixed={isMixedHeight} />}
         showChip={showHeightChip}
         size={height}
         sizeType="height"

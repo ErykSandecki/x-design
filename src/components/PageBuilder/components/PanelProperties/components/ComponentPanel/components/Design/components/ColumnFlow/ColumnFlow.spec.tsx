@@ -6,7 +6,7 @@ import ColumnFlow from './ColumnFlow';
 
 // mocks
 import {
-  elementAllDataMock,
+  elementMock,
   elementDynamicDataMock,
   elementStaticDataMock,
   layoutMock,
@@ -39,10 +39,10 @@ const stateMock = {
           allData: {
             ['-1']: {
               ...currentPage.elements.allData['-1'],
-              children: [elementAllDataMock.id, 'test-1'],
+              children: [elementMock.id, 'test-1'],
             },
-            [elementAllDataMock.id]: elementAllDataMock,
-            ['test-1']: { ...elementAllDataMock, id: 'test-1' },
+            [elementMock.id]: elementMock,
+            ['test-1']: { ...elementMock, id: 'test-1' },
           },
           dynamicData: {
             ['-1']: {
@@ -100,7 +100,7 @@ describe('ColumnFlow snapshots', () => {
               allData: {
                 ...stateMock[PAGE_BUILDER].pages['0'].elements.allData,
                 ['test-1']: {
-                  ...elementAllDataMock,
+                  ...elementMock,
                   id: 'test-1',
                   layout: {
                     ...layoutMock,

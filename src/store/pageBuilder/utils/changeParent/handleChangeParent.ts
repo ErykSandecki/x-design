@@ -18,7 +18,7 @@ export const handleWithPossibleParent = (
   state: TPageBuilderState,
   stateCopy: TPageBuilderState,
 ): TPageBuilderState => {
-  const prevParentId = currentPage.elements.allData[id].parentId;
+  const prevParentId = currentPage.elements[id].parentId;
   const parentHasChanged = prevParentId !== possibleParent;
   const children = getMappedElementsToMove(parentHasChanged, payload, stateCopy);
   const parents = getMappedParentsChildren(parentHasChanged, payload, state);
@@ -32,26 +32,13 @@ export const handleWithPossibleParent = (
         ...state.pages[state.currentPage],
         elements: {
           ...currentPage.elements,
-          allData: {
-            ...currentPage.elements.allData,
-            ...children.allData,
-            ...parents.allData,
-          },
-          dynamicData: {
-            ...currentPage.elements.dynamicData,
-            ...children.dynamicData,
-            ...parents.dynamicData,
-          },
-          staticData: {
-            ...currentPage.elements.staticData,
-            ...children.staticData,
-            ...parents.staticData,
-          },
+          ...children,
+          ...parents,
         },
         selectedElements: currentPage.selectedElements.map((selectedElement) => ({
           ...selectedElement,
           parentId: possibleParent,
-          position: children.allData[selectedElement.id].position,
+          position: children[selectedElement.id].position,
         })),
       },
     },
@@ -75,14 +62,7 @@ export const handleWithResetPosition = (
         ...currentPage,
         elements: {
           ...currentPage.elements,
-          allData: {
-            ...currentPage.elements.allData,
-            ...children.allData,
-          },
-          dynamicData: {
-            ...currentPage.elements.dynamicData,
-            ...children.dynamicData,
-          },
+          ...children,
         },
       },
     },

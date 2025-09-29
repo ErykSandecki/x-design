@@ -1,7 +1,7 @@
 // mocks
 import {
   childrenMock,
-  elementAllDataMock,
+  elementMock,
   elementDynamicDataMock,
   elementStaticDataMock,
   pageBuilderStateMock,
@@ -38,16 +38,16 @@ describe('getMappedElementsWithResetPosition', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [childrenMock],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 children: [{ ...childrenMock, id: 'test-2' }],
               },
               ['test-2']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 children: [],
                 coordinates: { x: 100, y: 100 },
                 id: 'test-2',
-                parentId: elementAllDataMock.id,
+                parentId: elementMock.id,
                 position: 'relative',
               },
             },
@@ -91,11 +91,11 @@ describe('getMappedElementsWithResetPosition', () => {
       ...currentPage.elements,
       allData: {
         ['test-2']: {
-          ...elementAllDataMock,
+          ...elementMock,
           children: [],
           coordinates: BASE_2D,
           id: 'test-2',
-          parentId: elementAllDataMock.id,
+          parentId: elementMock.id,
           position: 'relative',
         },
       },
@@ -141,16 +141,16 @@ describe('getMappedElementsWithResetPosition', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [childrenMock],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 children: [{ ...childrenMock, id: 'test-2' }],
               },
               ['test-2']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 children: [],
                 coordinates: { x: 100, y: 100 },
                 id: 'test-2',
-                parentId: elementAllDataMock.id,
+                parentId: elementMock.id,
                 position: 'absolute',
               },
             },
@@ -194,11 +194,11 @@ describe('getMappedElementsWithResetPosition', () => {
       ...currentPage.elements,
       allData: {
         ['test-2']: {
-          ...elementAllDataMock,
+          ...elementMock,
           children: [],
           coordinates: { x: 100, y: 100 },
           id: 'test-2',
-          parentId: elementAllDataMock.id,
+          parentId: elementMock.id,
           position: 'absolute',
         },
       },

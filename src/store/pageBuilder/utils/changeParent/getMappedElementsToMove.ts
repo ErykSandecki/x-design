@@ -3,7 +3,7 @@ import { BASE_2D } from 'shared';
 
 // types
 import { TElement } from 'types';
-import { TChangeParentActionPayload, TElementsData, TEvents, TPageBuilderState } from '../../types';
+import { TChangeParentActionPayload, TElements, TEvents, TPageBuilderState } from '../../types';
 
 // utils
 import { findMainParent } from '../findMainParent';
@@ -18,8 +18,8 @@ export const calculateCoordinates = (
 ): T2DCoordinates => {
   if (possibleParent === '-1') {
     const currentPage = state.pages[state.currentPage];
-    const mainParentId = findMainParent(currentParentId, currentPage.elements.staticData);
-    const parentCords = currentPage.elements.dynamicData[mainParentId].coordinates;
+    const mainParentId = findMainParent(currentParentId, currentPage.elements);
+    const parentCords = currentPage.elements[mainParentId].coordinates;
     const { z } = currentPage.areaCoordinates;
     const { x, y } = getOffsetXY(id, mainParentId);
 
@@ -84,45 +84,24 @@ export const getMappedElementsToMove = (
   parentHasChanged: boolean,
   payload: TChangeParentActionPayload,
   state: TPageBuilderState,
-): TElementsData => {
+): TElements => {
   const currentPage = state.pages[state.currentPage];
   const { elements } = currentPage;
   const { draggableElements, possibleParent } = payload;
 
   return reducedData(
     draggableElements.map(({ id }) => {
-      const data = getPartialData(
-        elements.allData[id],
-        id,
-        elements.allData[possibleParent],
-        parentHasChanged,
-        possibleParent,
-        state,
-      );
+      const data = getPartialData(elements[id], id, elements[possibleParent], parentHasChanged, possibleParent, state);
       const shouldResetCoordinates = data.position === 'relative';
 
       return {
-        allData: {
-          ...elements.allData[id],
-          coordinates: shouldResetCoordinates ? BASE_2D : data.coordinates,
-          deepLevel: data.deepLevel,
-          height: data.height,
-          parentId: data.parentId,
-          position: data.position,
-          width: data.width,
-        },
-        dynamicData: {
-          ...elements.dynamicData[id],
-          coordinates: shouldResetCoordinates ? BASE_2D : data.coordinates,
-          deepLevel: data.deepLevel,
-          height: data.height,
-          position: data.position,
-          width: data.width,
-        },
-        staticData: {
-          ...elements.staticData[id],
-          parentId: data.parentId,
-        },
+        ...elements[id],
+        coordinates: shouldResetCoordinates ? BASE_2D : data.coordinates,
+        deepLevel: data.deepLevel,
+        height: data.height,
+        parentId: data.parentId,
+        position: data.position,
+        width: data.width,
       };
     }),
   );

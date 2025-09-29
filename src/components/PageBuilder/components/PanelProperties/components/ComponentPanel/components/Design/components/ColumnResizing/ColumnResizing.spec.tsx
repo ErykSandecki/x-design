@@ -6,7 +6,7 @@ import ColumnResizing from './ColumnResizing';
 
 // mocks
 import {
-  elementAllDataMock,
+  elementMock,
   elementDynamicDataMock,
   elementStaticDataMock,
   pageBuilderStateMock,
@@ -43,10 +43,10 @@ const stateMock = {
           allData: {
             ['-1']: {
               ...currentPage.elements.allData['-1'],
-              children: [elementAllDataMock.id, 'test-2'],
+              children: [elementMock.id, 'test-2'],
             },
-            [elementAllDataMock.id]: elementAllDataMock,
-            ['test-2']: { ...elementAllDataMock, id: 'test-2' },
+            [elementMock.id]: elementMock,
+            ['test-2']: { ...elementMock, id: 'test-2' },
           },
           dynamicData: {
             ['-1']: {
@@ -105,7 +105,7 @@ describe('ColumnResizing snapshots', () => {
               allData: {
                 ...stateMock[PAGE_BUILDER].pages['0'].elements.allData,
                 ['test-2']: {
-                  ...elementAllDataMock,
+                  ...elementMock,
                   height: '1000',
                   id: 'test-2',
                   width: '1000',
@@ -234,8 +234,8 @@ describe('ColumnResizing behaviors', () => {
               ...stateMock[PAGE_BUILDER].pages['0'].elements,
               allData: {
                 ...stateMock[PAGE_BUILDER].pages['0'].elements.allData,
-                [elementAllDataMock.id]: {
-                  ...elementAllDataMock,
+                [elementMock.id]: {
+                  ...elementMock,
                   height: {
                     value: 'auto',
                   },
@@ -246,7 +246,7 @@ describe('ColumnResizing behaviors', () => {
               },
               dynamicData: {
                 ...stateMock[PAGE_BUILDER].pages['0'].elements.dynamicData,
-                [elementAllDataMock.id]: {
+                [elementMock.id]: {
                   ...elementDynamicDataMock,
                   height: {
                     value: 'auto',
@@ -309,8 +309,8 @@ describe('ColumnResizing behaviors', () => {
               ...stateMock[PAGE_BUILDER].pages['0'].elements,
               allData: {
                 ...stateMock[PAGE_BUILDER].pages['0'].elements.allData,
-                [elementAllDataMock.id]: {
-                  ...elementAllDataMock,
+                [elementMock.id]: {
+                  ...elementMock,
                   height: {
                     value: 'auto',
                   },
@@ -319,7 +319,7 @@ describe('ColumnResizing behaviors', () => {
                   },
                 },
                 ['test-2']: {
-                  ...elementAllDataMock,
+                  ...elementMock,
                   height: {
                     value: 100,
                   },
@@ -443,9 +443,9 @@ describe('ColumnResizing behaviors', () => {
               ...stateMock[PAGE_BUILDER].pages['0'].elements,
               allData: {
                 ...stateMock[PAGE_BUILDER].pages['0'].elements.allData,
-                [elementAllDataMock.id]: elementAllDataMock,
+                [elementMock.id]: elementMock,
                 ['test-2']: {
-                  ...elementAllDataMock,
+                  ...elementMock,
                   id: 'test-2',
                 },
               },

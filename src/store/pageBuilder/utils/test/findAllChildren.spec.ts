@@ -1,8 +1,8 @@
 // mocks
-import { childrenMock, elementAllDataMock } from 'test/mocks/reducer/pageBuilderMock';
+import { childrenMock, elementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // types
-import { TElementsData } from 'store/pageBuilder/types';
+import { TElements } from 'store/pageBuilder/types';
 
 // utils
 import { findAllChildren } from '../findAllChildren';
@@ -10,19 +10,19 @@ import { findAllChildren } from '../findAllChildren';
 describe('findAllChildren', () => {
   it(`should find main parent`, () => {
     // mock
-    const allData: TElementsData['allData'] = {
-      [elementAllDataMock.id]: {
-        ...elementAllDataMock,
+    const allData: TElements['allData'] = {
+      [elementMock.id]: {
+        ...elementMock,
         children: [{ ...childrenMock, id: 'test-2' }],
       },
       ['test-2']: {
-        ...elementAllDataMock,
+        ...elementMock,
         children: [{ ...childrenMock, id: 'test-3' }],
         id: 'test-2',
         parentId: 'test-1',
       },
       ['test-3']: {
-        ...elementAllDataMock,
+        ...elementMock,
         children: [],
         id: 'test-3',
         parentId: 'test-2',

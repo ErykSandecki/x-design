@@ -1,7 +1,7 @@
 // mocks
 import {
   childrenMock,
-  elementAllDataMock,
+  elementMock,
   elementDynamicDataMock,
   elementStaticDataMock,
   pageBuilderStateMock,
@@ -37,8 +37,8 @@ describe('handleFlipElements', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [childrenMock],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 angle,
                 children: [
                   { ...childrenMock, id: 'test-2' },
@@ -49,12 +49,12 @@ describe('handleFlipElements', () => {
                 },
               },
               ['test-2']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 id: 'test-2',
                 parentId: 'test-1',
               },
               ['test-3']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 id: 'test-3',
                 parentId: 'test-1',
               },
@@ -121,8 +121,8 @@ describe('handleFlipElements', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [childrenMock],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 angle: negateValue(angle),
                 children: [
                   { ...childrenMock, id: 'test-3' },
@@ -133,12 +133,12 @@ describe('handleFlipElements', () => {
                 },
               },
               ['test-2']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 id: 'test-2',
                 parentId: 'test-1',
               },
               ['test-3']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 id: 'test-3',
                 parentId: 'test-1',
               },
@@ -211,8 +211,8 @@ describe('handleFlipElements', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [childrenMock],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 angle,
                 children: [
                   { ...childrenMock, id: 'test-2' },
@@ -223,12 +223,12 @@ describe('handleFlipElements', () => {
                 },
               },
               ['test-2']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 id: 'test-2',
                 parentId: 'test-1',
               },
               ['test-3']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 id: 'test-3',
                 parentId: 'test-1',
               },
@@ -295,8 +295,8 @@ describe('handleFlipElements', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [childrenMock],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 angle: negateValue(angle),
                 children: [
                   { ...childrenMock, id: 'test-3' },
@@ -307,12 +307,12 @@ describe('handleFlipElements', () => {
                 },
               },
               ['test-2']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 id: 'test-2',
                 parentId: 'test-1',
               },
               ['test-3']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 id: 'test-3',
                 parentId: 'test-1',
               },
@@ -385,8 +385,8 @@ describe('handleFlipElements', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [childrenMock],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 angle,
                 children: [
                   { ...childrenMock, id: 'test-2' },
@@ -394,12 +394,12 @@ describe('handleFlipElements', () => {
                 ],
               },
               ['test-2']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 id: 'test-2',
                 parentId: 'test-1',
               },
               ['test-3']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 id: 'test-3',
                 parentId: 'test-1',
               },
@@ -463,8 +463,8 @@ describe('handleFlipElements', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [childrenMock],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 angle: negateValue(angle),
                 children: [
                   { ...childrenMock, id: 'test-3' },
@@ -472,12 +472,12 @@ describe('handleFlipElements', () => {
                 ],
               },
               ['test-2']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 id: 'test-2',
                 parentId: 'test-1',
               },
               ['test-3']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 id: 'test-3',
                 parentId: 'test-1',
               },
@@ -547,8 +547,8 @@ describe('handleFlipElements', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [childrenMock],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 angle,
                 children: [
                   { ...childrenMock, id: 'test-2' },
@@ -559,12 +559,12 @@ describe('handleFlipElements', () => {
                 },
               },
               ['test-2']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 id: 'test-2',
                 parentId: 'test-1',
               },
               ['test-3']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 id: 'test-3',
                 parentId: 'test-1',
               },
@@ -631,8 +631,8 @@ describe('handleFlipElements', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [childrenMock],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 angle: negateValue(angle),
                 children: [
                   { ...childrenMock, id: 'test-3' },
@@ -643,12 +643,12 @@ describe('handleFlipElements', () => {
                 },
               },
               ['test-2']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 id: 'test-2',
                 parentId: 'test-1',
               },
               ['test-3']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 id: 'test-3',
                 parentId: 'test-1',
               },
@@ -721,8 +721,8 @@ describe('handleFlipElements', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [childrenMock],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 angle,
                 children: [
                   { ...childrenMock, id: 'test-2' },
@@ -733,12 +733,12 @@ describe('handleFlipElements', () => {
                 },
               },
               ['test-2']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 id: 'test-2',
                 parentId: 'test-1',
               },
               ['test-3']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 id: 'test-3',
                 parentId: 'test-1',
               },
@@ -805,8 +805,8 @@ describe('handleFlipElements', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [childrenMock],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 angle: negateValue(angle),
                 children: [
                   { ...childrenMock, id: 'test-2' },
@@ -817,12 +817,12 @@ describe('handleFlipElements', () => {
                 },
               },
               ['test-2']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 id: 'test-2',
                 parentId: 'test-1',
               },
               ['test-3']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 id: 'test-3',
                 parentId: 'test-1',
               },

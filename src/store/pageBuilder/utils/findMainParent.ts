@@ -1,14 +1,11 @@
 // types
-import { TElement, TObject } from 'types';
-import { TElementStaticData } from '../types';
+import { TElement } from 'types';
+import { TElements } from '../types';
 
-export const findMainParent = (
-  parentId: TElement['parentId'],
-  staticData: TObject<TElementStaticData>,
-): TElement['id'] => {
-  if (staticData[parentId].parentId !== '-1' && staticData[parentId].parentId !== 'none') {
-    return findMainParent(staticData[parentId].parentId, staticData);
+export const findMainParent = (parentId: TElement['parentId'], elements: TElements): TElement['id'] => {
+  if (elements[parentId].parentId !== '-1' && elements[parentId].parentId !== 'none') {
+    return findMainParent(elements[parentId].parentId, elements);
   }
 
-  return staticData[parentId].id;
+  return elements[parentId].id;
 };

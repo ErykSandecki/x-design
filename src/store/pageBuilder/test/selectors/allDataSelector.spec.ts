@@ -5,14 +5,14 @@ import { pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
 import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
 
 // store
-import { allDataSelector } from '../../selectors';
+import { elementsSelector } from '../../selectors';
 
 const { elements } = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
-describe('allDataSelector', () => {
+describe('elementsSelector', () => {
   it('should return data', () => {
     // before
-    const selectorFunction = (allDataSelector as any).resultFunc;
+    const selectorFunction = (elementsSelector as any).resultFunc;
 
     // result
     expect(selectorFunction(elements)).toStrictEqual({

@@ -6,7 +6,7 @@ import ColumnAlignment from './ColumnAlignment';
 
 // mocks
 import {
-  elementAllDataMock,
+  elementMock,
   elementDynamicDataMock,
   elementStaticDataMock,
   pageBuilderStateMock,
@@ -38,10 +38,10 @@ const stateMock = {
           allData: {
             ['-1']: {
               ...currentPage.elements.allData['-1'],
-              children: [elementAllDataMock.id],
+              children: [elementMock.id],
             },
-            [elementAllDataMock.id]: {
-              ...elementAllDataMock,
+            [elementMock.id]: {
+              ...elementMock,
             },
           },
           dynamicData: {
@@ -99,15 +99,15 @@ describe('ColumnAlignment snapshots', () => {
                 ...currentPage.elements.allData,
                 ['-1']: {
                   ...currentPage.elements.allData['-1'],
-                  children: [elementAllDataMock.id],
+                  children: [elementMock.id],
                 },
-                [elementAllDataMock.id]: {
-                  ...elementAllDataMock,
+                [elementMock.id]: {
+                  ...elementMock,
                   children: ['test-2'],
                   position: 'absolute',
                 },
                 ['test-2']: {
-                  ...elementAllDataMock,
+                  ...elementMock,
                   children: [],
                   id: 'test-2',
                   parentId: 'test-1',
@@ -197,15 +197,15 @@ describe('ColumnAlignment behaviors', () => {
                 ...currentPage.elements.allData,
                 ['-1']: {
                   ...currentPage.elements.allData['-1'],
-                  children: [elementAllDataMock.id],
+                  children: [elementMock.id],
                 },
-                [elementAllDataMock.id]: {
-                  ...elementAllDataMock,
+                [elementMock.id]: {
+                  ...elementMock,
                   children: ['test-2'],
                   position: 'absolute',
                 },
                 ['test-2']: {
-                  ...elementAllDataMock,
+                  ...elementMock,
                   children: [],
                   id: 'test-2',
                   parentId: 'test-1',

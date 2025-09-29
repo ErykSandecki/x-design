@@ -1,5 +1,5 @@
 // mocks
-import { elementAllDataMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 import { wholeStateMock } from 'test/mocks/reducer/wholeStateMock';
 
 // others
@@ -42,10 +42,10 @@ describe('calculateBoxSize', () => {
                 allData: {
                   ...currentPage.elements.allData,
                   [selectedElementMock.id]: {
-                    ...elementAllDataMock,
+                    ...elementMock,
                   },
                   ['test-2']: {
-                    ...elementAllDataMock,
+                    ...elementMock,
                     id: 'test-2',
                   },
                 },

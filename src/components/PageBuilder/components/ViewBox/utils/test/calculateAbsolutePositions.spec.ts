@@ -1,8 +1,7 @@
-import { cloneDeep } from 'lodash';
 import { RefObject } from 'react';
 
 // mocks
-import { elementAllDataMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 import { wholeStateMock } from 'test/mocks/reducer/wholeStateMock';
 
 // others
@@ -22,16 +21,16 @@ const element = document.createElement('div');
 const zoomContent = document.createElement('div');
 const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages[pageBuilderStateMock[PAGE_BUILDER].currentPage];
 const sharedRefs = {
-  [elementAllDataMock.id]: element,
+  [elementMock.id]: element,
   ['test-2']: element,
 };
 const rectCoordinates = {
   current: {
-    [elementAllDataMock.id]: {
-      x1: elementAllDataMock.coordinates.x,
-      x2: elementAllDataMock.width.value,
-      y1: elementAllDataMock.coordinates.y,
-      y2: elementAllDataMock.height.value,
+    [elementMock.id]: {
+      x1: elementMock.coordinates.x,
+      x2: elementMock.width.value,
+      y1: elementMock.coordinates.y,
+      y2: elementMock.height.value,
     },
   },
 } as RefObject<TObject<TRectCoordinates>>;
@@ -62,10 +61,10 @@ describe('calculateAbsolutePositions', () => {
                 allData: {
                   ...currentPage.elements.allData,
                   [selectedElementMock.id]: {
-                    ...elementAllDataMock,
+                    ...elementMock,
                   },
                   ['test-2']: {
-                    ...elementAllDataMock,
+                    ...elementMock,
                     id: 'test-2',
                   },
                 },

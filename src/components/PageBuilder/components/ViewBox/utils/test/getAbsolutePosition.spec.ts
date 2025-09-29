@@ -1,7 +1,7 @@
 import { RefObject } from 'react';
 
 // mocks
-import { elementAllDataMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 import { wholeStateMock } from 'test/mocks/reducer/wholeStateMock';
 
 // others
@@ -22,7 +22,7 @@ const zoomContentRef = {
 const element = document.createElement('div');
 const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages[pageBuilderStateMock[PAGE_BUILDER].currentPage];
 const sharedRefs = {
-  [elementAllDataMock.id]: element,
+  [elementMock.id]: element,
   ['test-2']: element,
 };
 
@@ -50,10 +50,10 @@ describe('getAbsolutePosition', () => {
                 allData: {
                   ...currentPage.elements.allData,
                   [selectedElementMock.id]: {
-                    ...elementAllDataMock,
+                    ...elementMock,
                   },
                   ['test-2']: {
-                    ...elementAllDataMock,
+                    ...elementMock,
                     id: 'test-2',
                   },
                 },
@@ -66,7 +66,7 @@ describe('getAbsolutePosition', () => {
 
   it(`should return coordinates`, () => {
     // before
-    const result = getAbsolutePosition(elementAllDataMock.id, sharedRefs, zoomContentRef);
+    const result = getAbsolutePosition(elementMock.id, sharedRefs, zoomContentRef);
 
     // result
     expect(result).toStrictEqual({ x1: 0, x2: 100, y1: 0, y2: 100 });

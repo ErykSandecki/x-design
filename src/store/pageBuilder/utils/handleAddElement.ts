@@ -1,57 +1,25 @@
-import { pick } from 'lodash';
-
 // types
 import { TAddELementActionPayload, TPageBuilderState } from '../types';
 
-export const handleAddElement = (element: TAddELementActionPayload, state: TPageBuilderState): TPageBuilderState => ({
-  ...state,
-  pages: {
-    ...state.pages,
-    [state.currentPage]: {
-      ...state.pages[state.currentPage],
-      elements: {
-        ...state.pages[state.currentPage].elements,
-        allData: {
-          ...state.pages[state.currentPage].elements.allData,
-          [element.id]: { ...element },
+export const handleAddElement = (element: TAddELementActionPayload, state: TPageBuilderState): TPageBuilderState => {
+  const children = { id: element.id, type: element.type };
+  const currentPage = state.pages[state.currentPage];
+
+  return {
+    ...state,
+    pages: {
+      ...state.pages,
+      [state.currentPage]: {
+        ...currentPage,
+        elements: {
+          ...currentPage.elements,
           '-1': {
-            ...state.pages[state.currentPage].elements.allData['-1'],
-            children: [
-              ...state.pages[state.currentPage].elements.staticData['-1'].children,
-              { id: element.id, type: element.type },
-            ],
+            ...currentPage.elements['-1'],
+            children: [...currentPage.elements['-1'].children, children],
           },
-        },
-        dynamicData: {
-          ...state.pages[state.currentPage].elements.dynamicData,
-          [element.id]: pick(
-            element,
-            'alignment',
-            'angle',
-            'background',
-            'coordinates',
-            'deepLevel',
-            'height',
-            'id',
-            'layout',
-            'position',
-            'width',
-          ),
-        },
-        staticData: {
-          ...state.pages[state.currentPage].elements.staticData,
-          [element.id]: {
-            ...pick(element, 'children', 'id', 'parentId', 'position', 'type'),
-          },
-          '-1': {
-            ...state.pages[state.currentPage].elements.staticData['-1'],
-            children: [
-              ...state.pages[state.currentPage].elements.staticData['-1'].children,
-              { id: element.id, type: element.type },
-            ],
-          },
+          [element.id]: element,
         },
       },
     },
-  },
-});
+  };
+};

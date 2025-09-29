@@ -2,12 +2,12 @@
 import { elementDynamicDataMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // store
-import { elementDynamicDataSelectorCreator } from '../../selectors';
+import { elementDataSelectorCreator } from '../../selectors';
 
-describe('elementDynamicDataSelectorCreator', () => {
+describe('elementDataSelectorCreator', () => {
   it('should find item', () => {
     // before
-    const selectorFunction = (elementDynamicDataSelectorCreator(elementDynamicDataMock.id) as any).resultFunc;
+    const selectorFunction = (elementDataSelectorCreator(elementDynamicDataMock.id) as any).resultFunc;
 
     // result
     expect(selectorFunction({ [elementDynamicDataMock.id]: elementDynamicDataMock })).toStrictEqual(
@@ -17,7 +17,7 @@ describe('elementDynamicDataSelectorCreator', () => {
 
   it('should not find item', () => {
     // before
-    const selectorFunction = (elementDynamicDataSelectorCreator('-1') as any).resultFunc;
+    const selectorFunction = (elementDataSelectorCreator('-1') as any).resultFunc;
 
     // result
     expect(selectorFunction({ [elementDynamicDataMock.id]: elementDynamicDataMock })).toBe(undefined);

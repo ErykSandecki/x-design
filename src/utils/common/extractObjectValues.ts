@@ -1,6 +1,6 @@
 import { map, pick } from 'lodash';
 
-export const extracObjectValues: {
+export const extractObjectValues: {
   <T, K extends keyof T>(obj: T[], keys: [K]): T[K][];
   <T, K extends keyof T>(obj: T[], keys: K[]): Pick<T, K>[];
 } = <T extends {}>(obj: Array<T>, keys: Array<keyof T>) => {

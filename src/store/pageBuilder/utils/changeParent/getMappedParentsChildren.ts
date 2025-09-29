@@ -2,7 +2,7 @@ import { cloneDeep, first } from 'lodash';
 
 // types
 import { TChildren, TElement } from 'types';
-import { TChangeParentActionPayload, TElementsData, TEvents, TPageBuilderState } from 'store/pageBuilder/types';
+import { TChangeParentActionPayload, TElements, TEvents, TPageBuilderState } from 'store/pageBuilder/types';
 
 export const getTargetIndex = (
   nextParent: TElement,
@@ -45,32 +45,18 @@ export const getMappedParentsChildren = (
   parentHasChanged: boolean,
   payload: TChangeParentActionPayload,
   state: TPageBuilderState,
-): TElementsData => {
+): TElements => {
   const { elements } = state.pages[state.currentPage];
   const { draggableElements, possibleIndexPosition, possibleParent } = payload;
-  const { allData, staticData } = elements;
   const draggableElement = first(draggableElements);
-  const prevParent = cloneDeep(allData[allData[draggableElement.id].parentId]);
-  const nextParent = cloneDeep(allData[possibleParent]);
+  const prevParent = cloneDeep(elements[elements[draggableElement.id].parentId]);
+  const nextParent = cloneDeep(elements[possibleParent]);
   const index = getTargetIndex(nextParent, parentHasChanged, possibleIndexPosition);
 
   replaceChildrenPosition(draggableElements, nextParent, index, parentHasChanged, prevParent);
 
   return {
-    allData: {
-      [prevParent.id]: prevParent,
-      [nextParent.id]: nextParent,
-    },
-    dynamicData: {},
-    staticData: {
-      [prevParent.id]: {
-        ...staticData[prevParent.id],
-        children: prevParent.children,
-      },
-      [nextParent.id]: {
-        ...staticData[nextParent.id],
-        children: nextParent.children,
-      },
-    },
+    [prevParent.id]: prevParent,
+    [nextParent.id]: nextParent,
   };
 };

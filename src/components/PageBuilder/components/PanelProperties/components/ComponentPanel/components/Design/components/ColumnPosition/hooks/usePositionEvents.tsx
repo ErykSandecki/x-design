@@ -10,8 +10,8 @@ import { useMouseDownEvent } from './useMouseDownEvent';
 // store
 import {
   areParentsTheSameSelector,
-  dynamicDataSelector,
-  elementAllDataSelectorCreator,
+  elementDataSelectorCreator,
+  elementsSelector,
   selectedElementsSelector,
 } from 'store/pageBuilder/selectors';
 
@@ -47,15 +47,15 @@ export const usePositionEvents = (): TUsePositionEvents => {
   const [y, setY] = useState('');
   const selectedElements = useSelector(selectedElementsSelector);
   const firstElement = first(selectedElements);
-  const element = useSelector(elementAllDataSelectorCreator(firstElement.id));
+  const element = useSelector(elementDataSelectorCreator(firstElement.id));
   const { alignment, coordinates, parentId, position } = element;
   const areParentsTheSame = useSelector(areParentsTheSameSelector);
-  const dynamicData = useSelector(dynamicDataSelector);
-  const hasAlignmentHorizontal = hasSomeAlignment('horizontal', dynamicData, selectedElements);
-  const hasAlignmentVertical = hasSomeAlignment('vertical', dynamicData, selectedElements);
+  const elements = useSelector(elementsSelector);
+  const hasAlignmentHorizontal = hasSomeAlignment('horizontal', elements, selectedElements);
+  const hasAlignmentVertical = hasSomeAlignment('vertical', elements, selectedElements);
   const isRelative = selectedElements.some(({ position }) => position === 'relative');
-  const isMixedX = isMixed(dynamicData, firstElement, 'coordinates.x', selectedElements);
-  const isMixedY = isMixed(dynamicData, firstElement, 'coordinates.y', selectedElements);
+  const isMixedX = isMixed(elements, firstElement, 'coordinates.x', selectedElements);
+  const isMixedY = isMixed(elements, firstElement, 'coordinates.y', selectedElements);
   const isMultiple = size(selectedElements) > 1;
   const onBlurEvents = useBlurEvent(element, setX, setY, x, y);
   const onChangeEvents = useChangeEvent(isMultiple, isMixedX, isMixedY, setX, setY);

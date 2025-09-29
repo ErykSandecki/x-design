@@ -17,7 +17,7 @@ import { HORIZONTAL_BUTTONS, translationNameSpace, VERTICAL_BUTTONS } from './co
 // store
 import {
   areParentsTheSameSelector,
-  elementAllDataSelectorCreator,
+  elementDataSelectorCreator,
   selectedElementsSelector,
 } from 'store/pageBuilder/selectors';
 
@@ -31,7 +31,7 @@ const ColumnAlignment: FC = () => {
   const areParentsTheSame = useSelector(areParentsTheSameSelector);
   const selectedElements = useSelector(selectedElementsSelector);
   const firstElement = first(selectedElements);
-  const element = useSelector(elementAllDataSelectorCreator(firstElement.id));
+  const element = useSelector(elementDataSelectorCreator(firstElement.id));
   const onClickHorizontalAlignment = useClickHorizontalAlignmentEvent();
   const onClickVerticalAlignment = useClickVerticalAlignmentEvent();
   const { t } = useTranslation();

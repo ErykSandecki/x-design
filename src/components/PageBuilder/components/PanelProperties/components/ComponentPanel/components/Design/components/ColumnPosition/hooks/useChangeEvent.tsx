@@ -22,7 +22,7 @@ export const useChangeEvent = (
 
   const updateStore = (x: number, y: number, isScrubbableInput: boolean): void => {
     if (isScrubbableInput) {
-      dispatch(setElementsCoordinates({ x, y }, 'dynamic'));
+      dispatch(setElementsCoordinates({ x, y }, 'static'));
     }
   };
 

@@ -13,7 +13,8 @@ export const handleResizeElement = (
   state: TPageBuilderState,
 ): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];
-  const { position } = currentPage.elements.allData[id];
+  const { position } = currentPage.elements[id];
+
   const { height, coordinates, width } = getSizesCoordinates(
     state.events.selectedAnchorResize,
     baseCoordinates,
@@ -31,23 +32,11 @@ export const handleResizeElement = (
         ...currentPage,
         elements: {
           ...currentPage.elements,
-          allData: {
-            ...currentPage.elements.allData,
-            [id]: {
-              ...currentPage.elements.allData[id],
-              coordinates,
-              height,
-              width,
-            },
-          },
-          dynamicData: {
-            ...currentPage.elements.dynamicData,
-            [id]: {
-              ...currentPage.elements.dynamicData[id],
-              coordinates,
-              height,
-              width,
-            },
+          [id]: {
+            ...currentPage.elements[id],
+            coordinates,
+            height,
+            width,
           },
         },
       },

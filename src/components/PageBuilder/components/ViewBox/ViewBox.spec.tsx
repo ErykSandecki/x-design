@@ -8,7 +8,7 @@ import ViewBox from './ViewBox';
 import { RefsProvider } from 'pages/PageBuilderPage/core/RefsProvider';
 
 // mocks
-import { elementAllDataMock } from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock } from 'test/mocks/reducer/pageBuilderMock';
 import 'test/mocks/sagas/allSagas';
 
 // others
@@ -28,7 +28,7 @@ const element = document.createElement('div');
 const overlayContainer = document.createElement('div');
 const mockCallBack = jest.fn();
 const sharedRefs = {
-  [elementAllDataMock.id]: element,
+  [elementMock.id]: element,
   ['2']: element,
 };
 

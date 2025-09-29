@@ -2,7 +2,7 @@ import { cloneDeep } from 'lodash';
 
 // mocks
 import {
-  elementAllDataMock,
+  elementMock,
   createFrameMock,
   elementDynamicDataMock,
   elementStaticDataMock,
@@ -149,7 +149,7 @@ describe('PageBuilderReducer', () => {
             ...currentPage.elements,
             allData: {
               ...currentPage.elements.allData,
-              [elementAllDataMock.id]: elementAllDataMock,
+              [elementMock.id]: elementMock,
             },
             dynamicData: {
               ...currentPage.elements.dynamicData,
@@ -176,8 +176,8 @@ describe('PageBuilderReducer', () => {
             ...currentPage.elements,
             allData: {
               ...currentPage.elements.allData,
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 height: { unit: Unit.percentage, value: 100 },
               },
             },
@@ -243,8 +243,8 @@ describe('PageBuilderReducer', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [childrenMock],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 children: [
                   { ...childrenMock, id: 'test-2' },
                   { ...childrenMock, id: 'test-3' },
@@ -252,14 +252,14 @@ describe('PageBuilderReducer', () => {
                 position: 'absolute',
               },
               ['test-2']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 children: [],
                 id: 'test-2',
                 parentId: 'test-1',
                 position: 'absolute',
               },
               ['test-3']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 children: [],
                 id: 'test-3',
                 parentId: 'test-1',
@@ -332,8 +332,8 @@ describe('PageBuilderReducer', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [childrenMock],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 children: [
                   { ...childrenMock, id: 'test-2' },
                   { ...childrenMock, id: 'test-3' },
@@ -341,7 +341,7 @@ describe('PageBuilderReducer', () => {
                 position: 'absolute',
               },
               ['test-2']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 alignment,
                 children: [],
                 id: 'test-2',
@@ -349,7 +349,7 @@ describe('PageBuilderReducer', () => {
                 position: 'absolute',
               },
               ['test-3']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 alignment,
                 children: [],
                 id: 'test-3',
@@ -447,8 +447,8 @@ describe('PageBuilderReducer', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [childrenMock],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 children: [
                   { ...childrenMock, id: 'test-2' },
                   { ...childrenMock, id: 'test-3' },
@@ -456,14 +456,14 @@ describe('PageBuilderReducer', () => {
                 position: 'absolute',
               },
               ['test-2']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 children: [],
                 id: 'test-2',
                 parentId: 'test-1',
                 position: 'relative',
               },
               ['test-3']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 children: [],
                 id: 'test-3',
                 parentId: 'test-1',
@@ -533,8 +533,8 @@ describe('PageBuilderReducer', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [childrenMock],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 children: [
                   { ...childrenMock, id: 'test-3' },
                   { ...childrenMock, id: 'test-2' },
@@ -542,7 +542,7 @@ describe('PageBuilderReducer', () => {
                 position: 'absolute',
               },
               ['test-2']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 alignment: {},
                 children: [],
                 id: 'test-2',
@@ -550,7 +550,7 @@ describe('PageBuilderReducer', () => {
                 position: 'absolute',
               },
               ['test-3']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 children: [],
                 id: 'test-3',
                 parentId: 'test-1',
@@ -680,7 +680,7 @@ describe('PageBuilderReducer', () => {
             ...currentPage.elements,
             allData: {
               ...currentPage.elements.allData,
-              [elementAllDataMock.id]: elementAllDataMock,
+              [elementMock.id]: elementMock,
             },
             dynamicData: {
               ...currentPage.elements.dynamicData,
@@ -707,8 +707,8 @@ describe('PageBuilderReducer', () => {
             ...currentPage.elements,
             allData: {
               ...currentPage.elements.allData,
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 height: { value: 'auto' },
                 width: { value: 'auto' },
               },
@@ -754,8 +754,8 @@ describe('PageBuilderReducer', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [selectedElementMock.id, 'test-2'],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 layout: {
                   ...layoutMock,
                   type: LayoutType.default,
@@ -804,8 +804,8 @@ describe('PageBuilderReducer', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [selectedElementMock.id, 'test-2'],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 layout: {
                   ...layoutMock,
                   type: layoutType,
@@ -873,12 +873,12 @@ describe('PageBuilderReducer', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [childrenMock],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 children: [{ ...childrenMock, id: 'test-2' }],
               },
               ['test-2']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 id: 'test-2',
                 parentId: selectedElementMock.id,
               },
@@ -928,11 +928,11 @@ describe('PageBuilderReducer', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [childrenMock, { ...childrenMock, id: 'test-2' }],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
               },
               ['test-2']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 id: 'test-2',
                 parentId: '-1',
               },
@@ -1014,8 +1014,8 @@ describe('PageBuilderReducer', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [childrenMock],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 angle,
                 children: [
                   { ...childrenMock, id: 'test-2' },
@@ -1023,12 +1023,12 @@ describe('PageBuilderReducer', () => {
                 ],
               },
               ['test-2']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 id: 'test-2',
                 parentId: 'test-1',
               },
               ['test-3']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 id: 'test-3',
                 parentId: 'test-1',
               },
@@ -1092,8 +1092,8 @@ describe('PageBuilderReducer', () => {
                 ...currentPage.elements.allData['-1'],
                 children: [childrenMock],
               },
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 angle: negateValue(angle),
                 children: [
                   { ...childrenMock, id: 'test-3' },
@@ -1101,12 +1101,12 @@ describe('PageBuilderReducer', () => {
                 ],
               },
               ['test-2']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 id: 'test-2',
                 parentId: 'test-1',
               },
               ['test-3']: {
-                ...elementAllDataMock,
+                ...elementMock,
                 id: 'test-3',
                 parentId: 'test-1',
               },
@@ -1272,7 +1272,7 @@ describe('PageBuilderReducer', () => {
           ...currentPage,
           elements: {
             allData: {
-              [elementAllDataMock.id]: elementAllDataMock,
+              [elementMock.id]: elementMock,
             },
             dynamicData: {
               [elementDynamicDataMock.id]: elementDynamicDataMock,
@@ -1301,8 +1301,8 @@ describe('PageBuilderReducer', () => {
           ...currentPage,
           elements: {
             allData: {
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 coordinates: { x: 0, y: 0 },
                 height: { value: 100 },
                 width: { value: 300 },
@@ -1344,8 +1344,8 @@ describe('PageBuilderReducer', () => {
             ...currentPage.elements,
             allData: {
               ...currentPage.elements.allData,
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
               },
             },
             dynamicData: {
@@ -1377,8 +1377,8 @@ describe('PageBuilderReducer', () => {
             ...currentPage.elements,
             allData: {
               ...currentPage.elements.allData,
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 angle,
               },
             },
@@ -1476,7 +1476,7 @@ describe('PageBuilderReducer', () => {
     const mockState = {
       ...currentPage,
       elements: {
-        allData: { [elementAllDataMock.id]: elementAllDataMock },
+        allData: { [elementMock.id]: elementMock },
         dynamicData: { [elementDynamicDataMock.id]: elementDynamicDataMock },
         staticData: { [elementStaticDataMock.id]: elementStaticDataMock },
       },
@@ -1492,7 +1492,7 @@ describe('PageBuilderReducer', () => {
         ['0']: {
           ...currentPage,
           elements: {
-            allData: { [elementAllDataMock.id]: elementAllDataMock },
+            allData: { [elementMock.id]: elementMock },
             dynamicData: {
               [elementDynamicDataMock.id]: elementDynamicDataMock,
             },
@@ -1513,8 +1513,8 @@ describe('PageBuilderReducer', () => {
           ...currentPage,
           elements: {
             allData: {
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 alignment: {},
                 coordinates,
               },
@@ -1550,7 +1550,7 @@ describe('PageBuilderReducer', () => {
             ...currentPage.elements,
             allData: {
               ...currentPage.elements.allData,
-              [elementAllDataMock.id]: elementAllDataMock,
+              [elementMock.id]: elementMock,
             },
             dynamicData: {
               ...currentPage.elements.dynamicData,
@@ -1577,8 +1577,8 @@ describe('PageBuilderReducer', () => {
             ...currentPage.elements,
             allData: {
               ...currentPage.elements.allData,
-              [elementAllDataMock.id]: {
-                ...elementAllDataMock,
+              [elementMock.id]: {
+                ...elementMock,
                 height: { value: 'auto' },
               },
             },

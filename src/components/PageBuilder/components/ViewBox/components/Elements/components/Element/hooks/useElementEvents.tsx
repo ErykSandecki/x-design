@@ -14,7 +14,7 @@ import { BASE_2D } from 'shared';
 // store
 import {
   counterAngleSelectorCreator,
-  elementDynamicDataSelectorCreator,
+  elementDataSelectorCreator,
   eventSelectorCreator,
   isDraggableSelectorCreator,
   isHoverSelectorCreator,
@@ -58,7 +58,7 @@ export const useElementEvents = (
   parentId: TElement['parentId'],
   type: TElement['type'],
 ): TUseElementEvents => {
-  const elementDynamicData = useSelector(elementDynamicDataSelectorCreator(id));
+  const elementDynamicData = useSelector(elementDataSelectorCreator(id));
   const counterAngle = useSelector(counterAngleSelectorCreator(parentId));
   const cursorPosition = useRef(BASE_2D);
   const cursorPositionBase = useRef(BASE_2D);

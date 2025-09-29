@@ -6,7 +6,7 @@ import DropAnchors from './DropAnchors';
 
 // mocks
 import {
-  elementAllDataMock,
+  elementMock,
   elementDynamicDataMock,
   elementStaticDataMock,
   eventsMock,
@@ -44,10 +44,10 @@ const stateMock = {
           allData: {
             ['-1']: {
               ...currentPage.elements.allData['-1'],
-              children: [elementAllDataMock.id],
+              children: [elementMock.id],
             },
-            [elementAllDataMock.id]: {
-              ...elementAllDataMock,
+            [elementMock.id]: {
+              ...elementMock,
             },
           },
           dynamicData: {
@@ -151,13 +151,13 @@ describe('DropAnchors snapshots', () => {
               allData: {
                 ['-1']: {
                   ...currentPage.elements.allData['-1'],
-                  children: [elementAllDataMock.id],
+                  children: [elementMock.id],
                   layout: {
                     ...layoutMock,
                     type: LayoutType.horizontal,
                   },
                 },
-                [elementAllDataMock.id]: elementAllDataMock,
+                [elementMock.id]: elementMock,
               },
               dynamicData: {
                 ['-1']: {
@@ -252,13 +252,13 @@ describe('DropAnchors snapshots', () => {
               allData: {
                 ['-1']: {
                   ...currentPage.elements.allData['-1'],
-                  children: [elementAllDataMock.id],
+                  children: [elementMock.id],
                   layout: {
                     ...layoutMock,
                     type: LayoutType.horizontal,
                   },
                 },
-                [elementAllDataMock.id]: elementAllDataMock,
+                [elementMock.id]: elementMock,
               },
               dynamicData: {
                 ['-1']: {
@@ -321,13 +321,13 @@ describe('DropAnchors snapshots', () => {
               allData: {
                 ['-1']: {
                   ...currentPage.elements.allData['-1'],
-                  children: [elementAllDataMock.id],
+                  children: [elementMock.id],
                   layout: {
                     ...layoutMock,
                     type: LayoutType.grid,
                   },
                 },
-                [elementAllDataMock.id]: elementAllDataMock,
+                [elementMock.id]: elementMock,
               },
               dynamicData: {
                 ['-1']: {
@@ -390,13 +390,13 @@ describe('DropAnchors snapshots', () => {
               allData: {
                 ['-1']: {
                   ...currentPage.elements.allData['-1'],
-                  children: [elementAllDataMock.id],
+                  children: [elementMock.id],
                   layout: {
                     ...layoutMock,
                     type: LayoutType.grid,
                   },
                 },
-                [elementAllDataMock.id]: elementAllDataMock,
+                [elementMock.id]: elementMock,
               },
               dynamicData: {
                 ['-1']: {
@@ -459,13 +459,13 @@ describe('DropAnchors snapshots', () => {
               allData: {
                 ['-1']: {
                   ...currentPage.elements.allData['-1'],
-                  children: [elementAllDataMock.id],
+                  children: [elementMock.id],
                   layout: {
                     ...layoutMock,
                     type: LayoutType.grid,
                   },
                 },
-                [elementAllDataMock.id]: elementAllDataMock,
+                [elementMock.id]: elementMock,
               },
               dynamicData: {
                 ['-1']: {
@@ -528,13 +528,13 @@ describe('DropAnchors snapshots', () => {
               allData: {
                 ['-1']: {
                   ...currentPage.elements.allData['-1'],
-                  children: [elementAllDataMock.id],
+                  children: [elementMock.id],
                   layout: {
                     ...layoutMock,
                     type: LayoutType.grid,
                   },
                 },
-                [elementAllDataMock.id]: elementAllDataMock,
+                [elementMock.id]: elementMock,
               },
               dynamicData: {
                 ['-1']: {

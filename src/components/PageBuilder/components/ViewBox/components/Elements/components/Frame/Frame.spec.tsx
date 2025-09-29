@@ -9,7 +9,7 @@ import { RefsProvider } from 'pages/PageBuilderPage/core/RefsProvider';
 
 // mocks
 import {
-  elementAllDataMock,
+  elementMock,
   elementDynamicDataMock,
   elementStaticDataMock,
   pageBuilderStateMock,
@@ -30,7 +30,7 @@ const element = document.createElement('div');
 const overlayContainer = document.createElement('div');
 
 const sharedRefs = {
-  [elementAllDataMock.id]: element,
+  [elementMock.id]: element,
 };
 
 const stateMock = {
@@ -45,7 +45,7 @@ const stateMock = {
           ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements,
           allData: {
             ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements.allData,
-            [elementAllDataMock.id]: elementAllDataMock,
+            [elementMock.id]: elementMock,
           },
           dynamicData: {
             ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements.dynamicData,

@@ -6,7 +6,7 @@ import HeightPopoverWidth from './HeightPopoverWidth';
 import { UITools } from 'shared';
 
 // mocks
-import { elementAllDataMock } from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 jest.mock('react-redux', () => ({
   ...jest.requireActual('react-redux'),
@@ -18,7 +18,7 @@ describe('HeightPopoverWidth snapshots', () => {
     // before
     const { asFragment } = render(
       <UITools.PopoverCompound.PopoverRoot setSelected={noop}>
-        <HeightPopoverWidth isMixed={false} width={elementAllDataMock.width} />
+        <HeightPopoverWidth isMixed={false} width={elementMock.width} />
       </UITools.PopoverCompound.PopoverRoot>,
     );
 
@@ -30,7 +30,7 @@ describe('HeightPopoverWidth snapshots', () => {
     // before
     const { asFragment } = render(
       <UITools.PopoverCompound.PopoverRoot setSelected={noop}>
-        <HeightPopoverWidth isMixed width={elementAllDataMock.width} />
+        <HeightPopoverWidth isMixed width={elementMock.width} />
       </UITools.PopoverCompound.PopoverRoot>,
     );
 

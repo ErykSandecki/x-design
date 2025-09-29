@@ -16,24 +16,11 @@ export const handleChangeBackground = (
       ...state.pages[state.currentPage],
       elements: {
         ...state.pages[state.currentPage].elements,
-        allData: {
-          ...state.pages[state.currentPage].elements.allData,
-          [payload.id]: {
-            ...state.pages[state.currentPage].elements.allData[payload.id],
-            background: {
-              ...state.pages[state.currentPage].elements.allData[payload.id].background,
-              ...payload.background,
-            },
-          },
-        },
-        dynamicData: {
-          ...state.pages[state.currentPage].elements.dynamicData,
-          [payload.id]: {
-            ...state.pages[state.currentPage].elements.dynamicData[payload.id],
-            background: {
-              ...state.pages[state.currentPage].elements.dynamicData[payload.id].background,
-              ...payload.background,
-            },
+        [payload.id]: {
+          ...state.pages[state.currentPage].elements[payload.id],
+          background: {
+            ...state.pages[state.currentPage].elements[payload.id].background,
+            ...payload.background,
           },
         },
       },
