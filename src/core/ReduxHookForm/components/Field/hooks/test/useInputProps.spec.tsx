@@ -45,7 +45,6 @@ describe('useInputProps behaviors', () => {
     expect(name).toBe('testField');
     expect(value).toBe('');
     expect(mockCallBack.mock.calls.length).toBe(3);
-
     expect(store.getState()[REDUX_HOOK_FORM].testForm.fields.testField).toStrictEqual({
       active: false,
       asyncErrors: [],
