@@ -4,6 +4,7 @@ import { cloneDeep, first } from 'lodash';
 import { TChangeAlignmentAction, TPageBuilderState } from '../../types';
 
 // utils
+import { extracObjectValues } from 'utils';
 import { getDefaultCoordinates } from './getDefaultCoordinates';
 
 export const handleChangeAlignment = (
@@ -15,8 +16,8 @@ export const handleChangeAlignment = (
   const { allData } = elements;
   const { parentId } = first(selectedElements);
   const clonedElements = cloneDeep(elements);
-  const ids = selectedElements.map(({ id }) => id);
-  const elementsInAbsolutePosition = selectedElements.map(({ id, type }) => ({ id, type }));
+  const ids = extracObjectValues(selectedElements, ['id']);
+  const elementsInAbsolutePosition = extracObjectValues(selectedElements, ['id', 'type']);
   const elementsInRelativePosition = allData[parentId].children.filter((children) => !ids.includes(children.id));
 
   selectedElements.forEach(({ id, parentId }) => {
