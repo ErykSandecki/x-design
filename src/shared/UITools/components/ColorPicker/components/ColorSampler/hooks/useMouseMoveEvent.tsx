@@ -13,7 +13,7 @@ export const useMouseMoveEvent = (
   initialMousePosition: T2DCoordinates,
   setColors: TFunc<[Array<TRGBA>]>,
   setMousePosition: TFunc<[T2DCoordinates]>,
-  setIsPending: (isPending: boolean) => void,
+  setIsPending: TFunc<[boolean]>,
 ): TUseMouseMoveEvent => {
   let timeout: NodeJS.Timeout;
 

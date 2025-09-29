@@ -36,7 +36,7 @@ export const notifyFields = (formName: string, state: TReduxHookFormState, when:
   const { fields } = state[formName] || {};
 
   forOwn(fields, (field: TField) => {
-    const notify = field[`${when}Submit`] as () => void;
+    const notify = field[`${when}Submit`] as TFunc;
 
     if (notify) {
       notify();

@@ -8,7 +8,7 @@ import { DEBOUNCE_TIME } from 'constant/constants';
 import { handleScrollPage } from '../utils/handleScrollPage';
 import { handleZoom } from '../utils/handleZoom';
 
-export type TUseWheelEvent = (event: WheelEvent) => void;
+export type TUseWheelEvent = TFunc<[WheelEvent]>;
 
 export const useWheelEvent = (
   coordinates: T3DCoordinates,

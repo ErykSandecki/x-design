@@ -1,7 +1,7 @@
 // utils
 import { isHexColor } from 'utils';
 
-export type TUseBlurColorEvent = () => void;
+export type TUseBlurColorEvent = TFunc;
 
 export const useBlurColorEvent = (
   alpha: string,

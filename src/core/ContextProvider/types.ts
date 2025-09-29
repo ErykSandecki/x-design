@@ -3,8 +3,8 @@ import { Theme } from 'types/enums/theme';
 
 export type TContext = {
   scrollLock: boolean;
-  setScrollLock: (scrollLock: boolean) => void;
-  setTheme: (theme: Theme) => void;
+  setScrollLock: TFunc<[boolean]>;
+  setTheme: TFunc<[Theme]>;
   theme: Theme;
 };
 

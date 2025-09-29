@@ -28,7 +28,7 @@ export type TFormProps<T> = {
   e2eValue?: TE2EDataAttributeProps['value'];
   formName: string;
   isValid?: boolean;
-  onSubmit: (formData: T) => void;
+  onSubmit: TFunc<[T]>;
   validate?: (fields: TFields<T>) => boolean;
 };
 

@@ -15,8 +15,8 @@ export const useChangeEvent = (
   isMultiple: boolean,
   isMixedX: boolean,
   isMixedY: boolean,
-  setX: (value: string) => void,
-  setY: (value: string) => void,
+  setX: TFunc<[string]>,
+  setY: TFunc<[string]>,
 ): TUseChangeEvent => {
   const dispatch = useDispatch();
 

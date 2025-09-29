@@ -19,7 +19,7 @@ import { TTab } from './types';
 
 export type TTabsProps = {
   activeTab: TTab['name'];
-  setActiveTab: (activeTab: TTab['name']) => void;
+  setActiveTab: TFunc<[TTab['name']]>;
   tabs: Array<TTab>;
 };
 

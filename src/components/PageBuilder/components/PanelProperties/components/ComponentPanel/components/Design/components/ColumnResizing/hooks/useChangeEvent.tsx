@@ -11,10 +11,7 @@ export type TUseChangeEvent = {
   onChangeWidth: TFunc<[string, boolean?]>;
 };
 
-export const useChangeEvent = (
-  setHeight: (height: string) => void,
-  setWidth: (width: string) => void,
-): TUseChangeEvent => {
+export const useChangeEvent = (setHeight: TFunc<[string]>, setWidth: TFunc<[string]>): TUseChangeEvent => {
   const dispatch = useDispatch();
 
   const updateStore = (

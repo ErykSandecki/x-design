@@ -18,9 +18,9 @@ export type TUseBlurEvent = {
 export const useBlurEvent = (
   element: TElement,
   height: string,
-  setHeight: (height: string) => void,
+  setHeight: TFunc<[string]>,
   setIsFocused: TFunc<[TFocusElement]>,
-  setWidth: (width: string) => void,
+  setWidth: TFunc<[string]>,
   width: string,
 ): TUseBlurEvent => {
   const dispatch = useDispatch();

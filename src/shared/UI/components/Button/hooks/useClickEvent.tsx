@@ -1,11 +1,11 @@
 import { ButtonHTMLAttributes, MouseEvent } from 'react';
 
-type TUseClickEvent = (event: MouseEvent<HTMLButtonElement>) => void;
+type TUseClickEvent = TFunc<[MouseEvent<HTMLButtonElement>]>;
 
 export const useClickEvent = (
   disabledRippleEffect: boolean,
   onClick: ButtonHTMLAttributes<HTMLElement>['onClick'],
-  triggerRippleEffect: (event: MouseEvent<HTMLElement>) => void,
+  triggerRippleEffect: TFunc<[MouseEvent<HTMLElement>]>,
 ): TUseClickEvent => {
   const handleClick = (event: MouseEvent<HTMLButtonElement>): void => {
     if (!disabledRippleEffect) {

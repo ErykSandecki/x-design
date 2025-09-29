@@ -9,7 +9,7 @@ export const defaultFormValidator = (fields: TFields): boolean =>
   every(fields, (field) => !(field.asyncErrors.length || field.syncErrors.length));
 
 export const formValidatorWithFileUploader =
-  (files: Array<TFileData>, setTouched: (touched: boolean) => void) =>
+  (files: Array<TFileData>, setTouched: TFunc<[boolean]>) =>
   (fields: TFields): boolean => {
     setTouched(true);
 

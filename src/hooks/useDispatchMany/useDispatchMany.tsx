@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 // types
 import { TAction } from 'types/redux';
 
-export type TUseDispatchMany = (...actions: Array<TAction>) => void;
+export type TUseDispatchMany = TFunc<[...Array<TAction>]>;
 
 export const useDispatchMany = (): TUseDispatchMany => {
   const dispatch = useDispatch();

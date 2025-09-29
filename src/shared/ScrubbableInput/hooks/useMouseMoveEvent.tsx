@@ -14,7 +14,7 @@ export const useMouseMoveEvent = (
   loop: boolean,
   mousePosition: T2DCoordinates | null,
   onChange: TFunc<[number]>,
-  setMousePosition: (mousePosition: T2DCoordinates) => void,
+  setMousePosition: TFunc<[T2DCoordinates]>,
   value: number,
 ): TUseMouseMoveEvent => {
   const handleMouseMove = (event: MouseEvent): void => {

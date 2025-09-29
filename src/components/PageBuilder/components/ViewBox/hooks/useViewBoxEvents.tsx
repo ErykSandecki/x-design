@@ -26,7 +26,7 @@ export type TUseViewBoxEvents = {
 export const useViewBoxEvents = (
   coordinates: T3DCoordinates,
   mouseMode: MouseMode,
-  setMouseMode: (mouseMode: MouseMode) => void,
+  setMouseMode: TFunc<[MouseMode]>,
 ): TUseViewBoxEvents => {
   const rectCoordinates = useRef<TObject<TRectCoordinates>>({});
   const [elementArea, setElementArea] = useState<TRectArea>(null);

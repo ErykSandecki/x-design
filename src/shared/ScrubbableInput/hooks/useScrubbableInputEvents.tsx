@@ -18,7 +18,7 @@ export const useScrubbableInputEvents = (
   loop: boolean,
   max: number,
   min: number,
-  onChange: (value: number) => void,
+  onChange: TFunc<[number]>,
   onMouseDown: TFunc,
   onMouseUp: TFunc,
   value: number,

@@ -25,7 +25,7 @@ export type TToggleButtonProps<V> = {
   e2eAttribute?: TE2EDataAttributeProps['type'];
   e2eValue?: TE2EDataAttributeProps['value'];
   icon: TIconProps['name'];
-  onChange: (value: string) => void;
+  onChange: TFunc<[string]>;
   value: string;
 };
 

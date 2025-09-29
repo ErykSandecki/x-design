@@ -23,7 +23,7 @@ export type TUseValidator = {
   getSyncErrors: (value: TFieldValue) => Array<string>;
   subscriptionFieldsValues: Array<TFieldValue | undefined>;
   updateAsyncValidators: DebouncedFunc<(value: TFieldValue) => Promise<void>>;
-  updateSyncValidators: (value: TFieldValue) => void;
+  updateSyncValidators: TFunc<[TFieldValue]>;
 };
 
 export const useValidators = (

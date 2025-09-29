@@ -16,7 +16,7 @@ import { MouseMode } from 'types/enums/mouseMode';
 
 type TUseKeyDown = void;
 
-export const useKeyDown = (setMouseMode: (mouseMode: MouseMode) => void): TUseKeyDown => {
+export const useKeyDown = (setMouseMode: TFunc<[MouseMode]>): TUseKeyDown => {
   const canRedo = useSelector(canRedoReduxHistorySelector);
   const canUndo = useSelector(canUndoReduxHistorySelector);
   const dispatch = useDispatch();

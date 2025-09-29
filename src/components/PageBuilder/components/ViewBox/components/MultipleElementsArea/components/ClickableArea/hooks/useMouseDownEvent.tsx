@@ -11,7 +11,7 @@ import { MouseButton, TElement } from 'types';
 import { initSetElementsCoordinates } from '../utils/initSetElementsCoordinates';
 import { initStatesOnMouseDown } from '../utils/initStatesOnMouseDown';
 
-export type TUseMouseDownEvent = (event: MouseEvent, id: TElement['id']) => void;
+export type TUseMouseDownEvent = TFunc<[MouseEvent, TElement['id']]>;
 
 export const useMouseDownEvent = (
   cursorPosition: RefObject<T2DCoordinates>,

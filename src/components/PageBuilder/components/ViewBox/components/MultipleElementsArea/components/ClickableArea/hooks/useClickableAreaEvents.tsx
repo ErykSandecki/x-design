@@ -12,7 +12,7 @@ import { BASE_2D } from 'shared';
 import { TElement } from 'types';
 
 export type TUseClickableAreaEvents = {
-  onMouseDown: (event: MouseEvent, id: TElement['id']) => void;
+  onMouseDown: TFunc<[MouseEvent, TElement['id']]>;
 };
 
 export const useClickableAreaEvents = (): TUseClickableAreaEvents => {

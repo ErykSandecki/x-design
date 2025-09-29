@@ -40,7 +40,7 @@ export const useKeyboardHandler = (
   };
 
   const updateEventHandler = (
-    callback: (event: KeyboardEvent) => void,
+    callback: TFunc<[KeyboardEvent]>,
     key: 'addEventListener' | 'removeEventListener',
     type: keyof WindowEventMap,
   ): void => {

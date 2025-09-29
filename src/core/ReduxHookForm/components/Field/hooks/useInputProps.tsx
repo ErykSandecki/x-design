@@ -16,9 +16,9 @@ import { dispatchFieldHandler } from '../../../utils/dispatchFieldHandler';
 
 export type TUseInputProps<V> = {
   name: string;
-  onBlur: (value: V) => void;
-  onChange: (value: V) => void;
-  onFocus: (value: V) => void;
+  onBlur: TFunc<[V]>;
+  onChange: TFunc<[V]>;
+  onFocus: TFunc<[V]>;
   value: V;
 };
 

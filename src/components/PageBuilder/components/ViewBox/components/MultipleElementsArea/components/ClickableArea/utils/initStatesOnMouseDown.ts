@@ -11,8 +11,8 @@ export const initStatesOnMouseDown = (
   dispatch: Dispatch,
   event: MouseEvent,
   id: TElement['id'],
-  setIsPressing: (isPressing: boolean) => void,
-  setPossibleElementToSelect: (possibleElementToSelect: TElement['id']) => void,
+  setIsPressing: TFunc<[boolean]>,
+  setPossibleElementToSelect: TFunc<[TElement['id']]>,
 ): void => {
   if (!event.shiftKey) {
     setIsPressing(true);

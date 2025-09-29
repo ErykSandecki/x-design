@@ -8,8 +8,8 @@ export type TUseMouseDownEvent = TFunc<[MouseEvent]>;
 export const useMouseDownEvent = (
   coordinates: T3DCoordinates,
   cursorPosition: RefObject<T2DCoordinates>,
-  onMouseDown: (event: MouseEvent) => void,
-  setCursorState: (cursorState: string) => void,
+  onMouseDown: TFunc<[MouseEvent]>,
+  setCursorState: TFunc<[string]>,
 ): TUseMouseDownEvent => {
   const handleMouseDown = (event: MouseEvent): void => {
     onMouseDown(event);
