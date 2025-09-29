@@ -14,6 +14,7 @@ import { BASE_2D } from 'shared';
 import { configureStore } from 'store';
 
 // types
+import { ElementType } from 'types';
 import { MouseMode } from 'types/enums/mouseMode';
 
 // utils
@@ -48,15 +49,22 @@ describe('useMouseMoveEvent', () => {
     const store = configureStore(stateMock);
 
     // before
-    renderHook(() => useMouseMoveEvent(cursorPosition, cursorPositionBase, '-1', true, MouseMode.default, '-1'), {
-      wrapper: getProviderWrapper(store),
-    });
+    renderHook(
+      () =>
+        useMouseMoveEvent(cursorPosition, cursorPositionBase, '-1', true, MouseMode.default, '-1', ElementType.frame),
+      {
+        wrapper: getProviderWrapper(store),
+      },
+    );
 
     // action
     fireEvent.mouseMove(window, {});
 
     // result
-    expect(mockCallBack.mock.calls.length).toBe(2);
+    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({ coordinates: { x: 0, y: 0 }, mode: 'dynamic' });
+    expect(mockCallBack.mock.calls[1][0].payload).toStrictEqual({
+      draggableElements: [{ id: '-1', type: ElementType.frame }],
+    });
   });
 
   it(`should not trigger event when mouse mode is not default`, () => {
@@ -64,9 +72,13 @@ describe('useMouseMoveEvent', () => {
     const store = configureStore(stateMock);
 
     // before
-    renderHook(() => useMouseMoveEvent(cursorPosition, cursorPositionBase, '-1', true, MouseMode.comment, '-1'), {
-      wrapper: getProviderWrapper(store),
-    });
+    renderHook(
+      () =>
+        useMouseMoveEvent(cursorPosition, cursorPositionBase, '-1', true, MouseMode.comment, '-1', ElementType.frame),
+      {
+        wrapper: getProviderWrapper(store),
+      },
+    );
 
     // action
     fireEvent.mouseMove(window, {});
