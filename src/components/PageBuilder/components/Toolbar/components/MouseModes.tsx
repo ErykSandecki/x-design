@@ -28,7 +28,10 @@ const MouseModes: FC<TMouseModeProps> = ({ mouseMode, setMouseMode }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   return (
-    <Box classes={{ className: cx(classNamesWithTheme[className]) }} sx={{ display: 'flex', height: '100%' }}>
+    <Box
+      classes={{ className: cx(classNamesWithTheme[className]) }}
+      sx={{ columnGap: '8px', display: 'flex', height: '100%' }}
+    >
       {enumToArray<string>(MouseMode).map((name) => (
         <Box
           classes={{
@@ -39,7 +42,14 @@ const MouseModes: FC<TMouseModeProps> = ({ mouseMode, setMouseMode }) => {
           }}
           key={name}
           onClick={() => setMouseMode(name as MouseMode)}
-          sx={{ alignItems: 'center', display: 'flex', height: '100%', justifyContent: 'center', width: '55px' }}
+          sx={{
+            alignItems: 'center',
+            borderRadius: '5px',
+            display: 'flex',
+            height: '100%',
+            justifyContent: 'center',
+            width: '32px',
+          }}
         >
           <Icon e2eValue={name} name={MOUSE_MODE_ICON[name]} />
         </Box>

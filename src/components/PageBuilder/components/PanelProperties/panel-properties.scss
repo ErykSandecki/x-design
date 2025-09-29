@@ -8,6 +8,7 @@
   &__sections {
     @include scrollbar-styles;
 
+    // todo: check the correct size for max max-height
     max-height: calc(100% - 72.5px);
     min-height: calc(100% - 72.5px);
     overflow-y: overlay;

@@ -3,7 +3,7 @@
 exports[`PanelProperties snapshots should render PanelProperties 1`] = `
 <DocumentFragment>
   <div
-    class="css-w7unf8 PanelProperties PanelProperties--light"
+    class="css-k0rgoo PanelProperties PanelProperties--light"
     data-test-box="panel-properties"
     id="panelProperties"
     style="width: 240px;"
@@ -189,7 +189,7 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
 exports[`PanelProperties snapshots should render when some element is selected 1`] = `
 <DocumentFragment>
   <div
-    class="css-w7unf8 PanelProperties PanelProperties--light"
+    class="css-k0rgoo PanelProperties PanelProperties--light"
     data-test-box="panel-properties"
     id="panelProperties"
     style="width: 240px;"
@@ -1166,7 +1166,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
 exports[`PanelProperties snapshots should render with changed width 1`] = `
 <DocumentFragment>
   <div
-    class="css-w7unf8 PanelProperties PanelProperties--light"
+    class="css-k0rgoo PanelProperties PanelProperties--light"
     data-test-box="panel-properties"
     id="panelProperties"
     style="width: 500px;"

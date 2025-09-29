@@ -13,7 +13,7 @@ import { useResizeHandler, useTheme } from 'hooks';
 // others
 import { className, classNames } from './classNames';
 import { TABS, translationNameSpace } from './constants';
-import { PANEL_PROPERTIES_ID, TOOLBAR_HEIGHT } from '../../constants';
+import { PANEL_PROPERTIES_ID } from '../../constants';
 
 // store
 import { selectedElementsSelector } from 'store/pageBuilder/selectors';
@@ -34,7 +34,7 @@ const PanelProperties: FC<TPanelPropertiesProps> = () => {
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState(Tab.design);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-  const { onMouseDownX, width } = useResizeHandler(0, 240, window.innerHeight - TOOLBAR_HEIGHT, 500, 0, 240, boxRef);
+  const { onMouseDownX, width } = useResizeHandler(0, 240, window.innerHeight, 500, 0, 240, boxRef);
 
   return (
     <Box
@@ -49,10 +49,10 @@ const PanelProperties: FC<TPanelPropertiesProps> = () => {
         bg: 'neutral5',
         borderLeft: 1,
         boxSizing: 'border-box',
-        height: `calc(100vh - ${TOOLBAR_HEIGHT}px)`,
+        height: `100vh`,
         position: 'absolute',
         right: 0,
-        top: `${TOOLBAR_HEIGHT}px`,
+        top: 0,
         zIndex: ZIndex.standard,
       }}
     >

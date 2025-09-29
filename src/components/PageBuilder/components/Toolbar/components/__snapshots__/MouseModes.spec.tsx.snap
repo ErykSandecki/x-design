@@ -3,23 +3,11 @@
 exports[`MouseModes snapshots should render MouseModes 1`] = `
 <DocumentFragment>
   <div
-    class="css-wed8fd MouseModes MouseModes--light"
+    class="css-1douohc MouseModes MouseModes--light"
     data-test-box=""
   >
     <div
-      class="css-1lj1sf1 MouseModes__button MouseModes__button--light"
-      data-test-box=""
-    >
-      <div
-        class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-        data-test-icon="menu"
-        height="16"
-        name="Logo"
-        width="16"
-      />
-    </div>
-    <div
-      class="css-1lj1sf1 MouseModes__button MouseModes__button--light MouseModes__button--active MouseModes__button--active--light"
+      class="css-1uzmw43 MouseModes__button MouseModes__button--light MouseModes__button--active MouseModes__button--active--light"
       data-test-box=""
     >
       <div
@@ -31,7 +19,7 @@ exports[`MouseModes snapshots should render MouseModes 1`] = `
       />
     </div>
     <div
-      class="css-1lj1sf1 MouseModes__button MouseModes__button--light"
+      class="css-1uzmw43 MouseModes__button MouseModes__button--light"
       data-test-box=""
     >
       <div
@@ -43,7 +31,7 @@ exports[`MouseModes snapshots should render MouseModes 1`] = `
       />
     </div>
     <div
-      class="css-1lj1sf1 MouseModes__button MouseModes__button--light"
+      class="css-1uzmw43 MouseModes__button MouseModes__button--light"
       data-test-box=""
     >
       <div
@@ -55,7 +43,7 @@ exports[`MouseModes snapshots should render MouseModes 1`] = `
       />
     </div>
     <div
-      class="css-1lj1sf1 MouseModes__button MouseModes__button--light"
+      class="css-1uzmw43 MouseModes__button MouseModes__button--light"
       data-test-box=""
     >
       <div
