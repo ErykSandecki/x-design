@@ -30,11 +30,11 @@ type TUsePositionEvents = {
   hasAlignmentHorizontal: boolean;
   hasAlignmentVertical: boolean;
   isMultiple: boolean;
-  onBlurX: () => void;
-  onBlurY: () => void;
-  onChangeX: (value: string, isScrubbableInput?: boolean) => void;
-  onChangeY: (value: string, isScrubbableInput?: boolean) => void;
-  onMouseDown: () => void;
+  onBlurX: TFunc;
+  onBlurY: TFunc;
+  onChangeX: TFunc<[string, boolean?]>;
+  onChangeY: TFunc<[string, boolean?]>;
+  onMouseDown: TFunc;
   showConstrains: boolean;
   typeInputX: HTMLInputElement['type'];
   typeInputY: HTMLInputElement['type'];

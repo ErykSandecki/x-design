@@ -3,9 +3,4 @@ import { composeClassNames } from 'utils';
 
 export const className = 'ScrubbableInput';
 
-export const classNames = composeClassNames(
-  className,
-  [className, 'disabled'] as const,
-  ['handler'] as const,
-  ['icon'] as const,
-);
+export const classNames = composeClassNames(className, [className, 'disabled'] as const, ['handler'] as const);

@@ -54,6 +54,8 @@ const ColumnRotation: FC = () => {
           <ScrubbableInput
             e2eValue="angle"
             icon="Protractor"
+            iconHeight={8}
+            iconWidth={8}
             loop
             max={180}
             min={-180}

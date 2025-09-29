@@ -24,9 +24,9 @@ import { TObject } from 'types';
 
 export type TField<V = TFieldValue> = {
   active: boolean;
-  afterSubmit?: () => void;
+  afterSubmit?: TFunc;
   asyncErrors: Array<string>;
-  beforeSubmit?: () => void;
+  beforeSubmit?: TFunc;
   data: TObject<any>;
   emptyValue: V;
   fieldsToClearOnChange: Array<string>;

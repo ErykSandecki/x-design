@@ -31,7 +31,7 @@ const Elements: FC<TElementsProps> = ({ eventsDisabled, mouseMode, parentId }) =
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const staticData = useSelector(filtredStaticDataSelectorCreator(parentId));
 
-  return staticData.data.map(({ id, parentId, type }, index) => {
+  return staticData.data.map(({ id, type }, index) => {
     switch (type) {
       case ElementType.frame:
         return (

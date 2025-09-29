@@ -9,9 +9,9 @@ import { TElement } from 'types';
 // utils
 import { clampAngle } from 'utils/math/clampAngle';
 
-export type TUseBlurEvent = () => void;
+export type TUseBlurEvent = TFunc;
 
-export const useBlurEvent = (angle: string, element: TElement, setAngle: (angle: string) => void): TUseBlurEvent => {
+export const useBlurEvent = (angle: string, element: TElement, setAngle: TFunc<[string]>): TUseBlurEvent => {
   const dispatch = useDispatch();
 
   const handleBlur = (): void => {

@@ -8,11 +8,6 @@
     pointer-events: none;
   }
 
-  &__icon {
-    height: 12px;
-    width: 12px;
-  }
-
   &__handler {
     position: fixed;
     transform: translate(-50%, -7px);

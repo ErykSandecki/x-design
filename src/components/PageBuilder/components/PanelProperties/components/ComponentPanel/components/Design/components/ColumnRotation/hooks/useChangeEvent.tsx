@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 // store
 import { rotateElements } from 'store/pageBuilder/actions';
 
-export type TUseChangeEvent = (value: string, isScrubbableInput?: boolean) => void;
+export type TUseChangeEvent = TFunc<[string, boolean?]>;
 
 export const useChangeEvent = (setAngle: (angle: string) => void): TUseChangeEvent => {
   const dispatch = useDispatch();

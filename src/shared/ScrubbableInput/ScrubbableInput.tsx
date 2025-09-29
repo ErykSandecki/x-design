@@ -25,6 +25,8 @@ export type TScrubbableInputProps = {
   disabled?: boolean;
   e2eValue?: TE2EDataAttributeProps['value'];
   icon?: TIconProps['name'];
+  iconHeight?: number;
+  iconWidth?: number;
   loop?: boolean;
   max: number;
   min: number;
@@ -39,6 +41,8 @@ export const ScrubbableInput: FC<TScrubbableInputProps> = ({
   disabled = false,
   e2eValue = '',
   icon,
+  iconHeight = 12,
+  iconWidth = 12,
   loop,
   max,
   min,
@@ -76,12 +80,7 @@ export const ScrubbableInput: FC<TScrubbableInputProps> = ({
       >
         {children}
         {icon && (
-          <Icon
-            classes={{ className: cx(classNamesWithTheme.icon) }}
-            color={ColorsTheme.neutral2}
-            disabled={disabled}
-            name={icon}
-          />
+          <Icon color={ColorsTheme.neutral2} disabled={disabled} height={iconHeight} name={icon} width={iconWidth} />
         )}
         {mousePosition &&
           createPortal(

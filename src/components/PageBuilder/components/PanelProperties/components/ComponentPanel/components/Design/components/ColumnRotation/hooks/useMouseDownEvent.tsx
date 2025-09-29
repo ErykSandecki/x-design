@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 // store
 import { updateEventsStatus } from 'store/pageBuilder/actions';
 
-export type TUseMouseDownEvent = () => void;
+export type TUseMouseDownEvent = TFunc;
 
 export const useMouseDownEvent = (): TUseMouseDownEvent => {
   const dispatch = useDispatch();

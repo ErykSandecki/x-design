@@ -15,7 +15,7 @@ import { themeClassNamesApplier } from './utils/themeClassNamesApplier';
 export type TUseTheme<T> = {
   classNamesWithTheme: TThemeClassNames<T>;
   cx: TThemeClassNamesApplier;
-  forceUpdateClassNames: () => void;
+  forceUpdateClassNames: TFunc;
   theme: Theme;
 };
 

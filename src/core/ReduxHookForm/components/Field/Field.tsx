@@ -19,19 +19,19 @@ import { TFieldComponentProps } from './types';
 import { TObject } from 'types';
 
 export type TFieldProps<T, V> = {
-  afterSubmit?: () => void;
+  afterSubmit?: TFunc;
   asyncValidators?: Array<TAsyncValidator>;
-  beforeSubmit?: () => void;
+  beforeSubmit?: TFunc;
   Component: FC<TFieldComponentProps<T, V>> | ForwardRefExoticComponent<TFieldComponentProps<T, V>>;
   data?: TObject<any>;
   defaultValue?: TFieldValue;
   fieldsToClearOnChange?: Array<string>;
-  formatOnBlur?: (value: V, name: string) => V;
-  formatOnChange?: (value: V, name: string) => V;
-  formatOnFocus?: (value: V, name: string) => V;
-  formatOnInit?: (value: V) => V;
+  formatOnBlur?: TFunc<[V, string], V>;
+  formatOnChange?: TFunc<[V, string], V>;
+  formatOnFocus?: TFunc<[V, string], V>;
+  formatOnInit?: TFunc<[V], V>;
   name: string;
-  parse?: (value: V, name: string) => V;
+  parse?: TFunc<[V, string], V>;
   ref?: RefObject<HTMLElement>;
   subscriptionFields?: Array<string>;
   syncValidators?: Array<TSyncValidator>;

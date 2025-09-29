@@ -2,10 +2,7 @@
 
 export type TUseMouseUpEvent = TFunc;
 
-export const useMouseUpEvent = (
-  onMouseUp: () => void,
-  setMousePosition: (mousePosition: T2DCoordinates) => void,
-): TUseMouseUpEvent => {
+export const useMouseUpEvent = (onMouseUp: TFunc, setMousePosition: TFunc<[T2DCoordinates]>): TUseMouseUpEvent => {
   const handleMouseUp = (): void => {
     setMousePosition(null);
     onMouseUp();

@@ -19,8 +19,8 @@ export const useScrubbableInputEvents = (
   max: number,
   min: number,
   onChange: (value: number) => void,
-  onMouseDown: () => void,
-  onMouseUp: () => void,
+  onMouseDown: TFunc,
+  onMouseUp: TFunc,
   value: number,
 ): TUseScrubbableInputEvents => {
   const [mousePosition, setMousePosition] = useState(null);
