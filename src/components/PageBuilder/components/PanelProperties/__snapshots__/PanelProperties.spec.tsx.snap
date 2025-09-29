@@ -558,11 +558,11 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                   data-test-scrubbable-input="angle"
                 >
                   <div
-                    class="css-1jnxvbp ScrubbableInput__icon ScrubbableInput__icon--light Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+                    class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
                     data-test-icon="protractor"
-                    height="16"
+                    height="8"
                     name="Protractor"
-                    width="16"
+                    width="8"
                   />
                 </div>
                 <input
