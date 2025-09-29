@@ -1,5 +1,5 @@
 // mocks
-import { elementAllDataMock } from 'test/mocks/reducer/pageBuilderMock';
+import { childrenMock, elementAllDataMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // types
 import { TElementsData } from 'store/pageBuilder/types';
@@ -13,11 +13,11 @@ describe('findAllChildren', () => {
     const allData: TElementsData['allData'] = {
       [elementAllDataMock.id]: {
         ...elementAllDataMock,
-        children: ['test-2'],
+        children: [{ ...childrenMock, id: 'test-2' }],
       },
       ['test-2']: {
         ...elementAllDataMock,
-        children: ['test-3'],
+        children: [{ ...childrenMock, id: 'test-3' }],
         id: 'test-2',
         parentId: 'test-1',
       },
@@ -33,6 +33,9 @@ describe('findAllChildren', () => {
     const result = findAllChildren(allData, allData['test-1'].children);
 
     // result
-    expect(result).toStrictEqual(['test-2', 'test-3']);
+    expect(result).toStrictEqual([
+      { ...childrenMock, id: 'test-2' },
+      { ...childrenMock, id: 'test-3' },
+    ]);
   });
 });

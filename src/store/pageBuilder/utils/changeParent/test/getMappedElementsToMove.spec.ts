@@ -1,5 +1,6 @@
 // mocks
 import {
+  childrenMock,
   elementAllDataMock,
   elementDynamicDataMock,
   elementStaticDataMock,
@@ -34,7 +35,7 @@ describe('getMappedElementsToMove', () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
     const payload = {
-      draggableElements: ['test-1'],
+      draggableElements: [childrenMock],
       possibleIndexPosition: null,
       possibleParent: '-1',
     };
@@ -51,7 +52,7 @@ describe('getMappedElementsToMove', () => {
             allData: {
               ['-1']: {
                 ...currentPage.elements.allData['-1'],
-                children: [elementAllDataMock.id],
+                children: [childrenMock],
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
@@ -66,7 +67,7 @@ describe('getMappedElementsToMove', () => {
             staticData: {
               ['-1']: {
                 ...currentPage.elements.staticData['-1'],
-                children: [elementAllDataMock.id],
+                children: [childrenMock],
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
@@ -105,7 +106,7 @@ describe('getMappedElementsToMove', () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
     const payload = {
-      draggableElements: ['test-2'],
+      draggableElements: [{ ...childrenMock, id: 'test-2' }],
       possibleIndexPosition: null,
       possibleParent: '-1',
     };
@@ -122,11 +123,11 @@ describe('getMappedElementsToMove', () => {
             allData: {
               ['-1']: {
                 ...currentPage.elements.allData['-1'],
-                children: [elementAllDataMock.id],
+                children: [childrenMock],
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
-                children: ['test-2'],
+                children: [{ ...childrenMock, id: 'test-2' }],
               },
               ['test-2']: {
                 ...elementAllDataMock,
@@ -146,11 +147,11 @@ describe('getMappedElementsToMove', () => {
             staticData: {
               ['-1']: {
                 ...currentPage.elements.staticData['-1'],
-                children: [elementAllDataMock.id],
+                children: [childrenMock],
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['test-2'],
+                children: [{ ...childrenMock, id: 'test-2' }],
               },
               ['test-2']: {
                 ...elementStaticDataMock,
@@ -193,7 +194,7 @@ describe('getMappedElementsToMove', () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
     const payload = {
-      draggableElements: ['test-2'],
+      draggableElements: [{ ...childrenMock, id: 'test-2' }],
       possibleIndexPosition: null,
       possibleParent: elementAllDataMock.id,
     };
@@ -210,7 +211,7 @@ describe('getMappedElementsToMove', () => {
             allData: {
               ['-1']: {
                 ...currentPage.elements.allData['-1'],
-                children: [elementAllDataMock.id, 'test-2'],
+                children: [childrenMock, { ...childrenMock, id: 'test-2' }],
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
@@ -234,7 +235,7 @@ describe('getMappedElementsToMove', () => {
             staticData: {
               ['-1']: {
                 ...currentPage.elements.staticData['-1'],
-                children: [elementAllDataMock.id, 'test-2'],
+                children: [childrenMock, { ...childrenMock, id: 'test-2' }],
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,

@@ -1,5 +1,6 @@
 // mocks
 import {
+  childrenMock,
   elementAllDataMock,
   elementDynamicDataMock,
   elementStaticDataMock,
@@ -34,7 +35,7 @@ describe('handleChangeParent', () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
     const payload = {
-      draggableElements: ['test-1'],
+      draggableElements: [childrenMock],
       possibleIndexPosition: null,
       possibleParent: null,
     };
@@ -51,7 +52,7 @@ describe('handleChangeParent', () => {
             allData: {
               ['-1']: {
                 ...currentPage.elements.allData['-1'],
-                children: [elementAllDataMock.id],
+                children: [childrenMock],
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
@@ -66,7 +67,7 @@ describe('handleChangeParent', () => {
             staticData: {
               ['-1']: {
                 ...currentPage.elements.staticData['-1'],
-                children: [elementAllDataMock.id],
+                children: [childrenMock],
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
@@ -90,7 +91,7 @@ describe('handleChangeParent', () => {
             allData: {
               ['-1']: {
                 ...currentPage.elements.allData['-1'],
-                children: [elementAllDataMock.id],
+                children: [childrenMock],
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
@@ -105,7 +106,7 @@ describe('handleChangeParent', () => {
             staticData: {
               ['-1']: {
                 ...currentPage.elements.staticData['-1'],
-                children: [elementAllDataMock.id],
+                children: [childrenMock],
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
@@ -122,7 +123,7 @@ describe('handleChangeParent', () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
     const payload = {
-      draggableElements: ['test-2'],
+      draggableElements: [{ ...childrenMock, id: 'test-2' }],
       possibleIndexPosition: null,
       possibleParent: '-1',
     };
@@ -139,11 +140,11 @@ describe('handleChangeParent', () => {
             allData: {
               ['-1']: {
                 ...currentPage.elements.allData['-1'],
-                children: [elementAllDataMock.id],
+                children: [childrenMock],
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
-                children: ['test-2'],
+                children: [{ ...childrenMock, id: 'test-2' }],
               },
               ['test-2']: {
                 ...elementAllDataMock,
@@ -164,11 +165,11 @@ describe('handleChangeParent', () => {
             staticData: {
               ['-1']: {
                 ...currentPage.elements.staticData['-1'],
-                children: [elementAllDataMock.id],
+                children: [childrenMock],
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['test-2'],
+                children: [{ ...childrenMock, id: 'test-2' }],
               },
               ['test-2']: {
                 ...elementStaticDataMock,
@@ -194,7 +195,7 @@ describe('handleChangeParent', () => {
             allData: {
               ['-1']: {
                 ...currentPage.elements.allData['-1'],
-                children: [elementAllDataMock.id, 'test-2'],
+                children: [childrenMock, { ...childrenMock, id: 'test-2' }],
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
@@ -202,6 +203,7 @@ describe('handleChangeParent', () => {
               },
               ['test-2']: {
                 ...elementAllDataMock,
+                children: [],
                 id: 'test-2',
                 parentId: '-1',
               },
@@ -219,7 +221,7 @@ describe('handleChangeParent', () => {
             staticData: {
               ['-1']: {
                 ...currentPage.elements.staticData['-1'],
-                children: [elementAllDataMock.id, 'test-2'],
+                children: [childrenMock, { ...childrenMock, id: 'test-2' }],
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
@@ -227,6 +229,7 @@ describe('handleChangeParent', () => {
               },
               ['test-2']: {
                 ...elementStaticDataMock,
+                children: [],
                 id: 'test-2',
                 parentId: '-1',
               },
@@ -242,7 +245,7 @@ describe('handleChangeParent', () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
     const payload = {
-      draggableElements: ['test-2'],
+      draggableElements: [{ ...childrenMock, id: 'test-2' }],
       possibleIndexPosition: null,
       possibleParent: 'test-1',
     };
@@ -259,7 +262,7 @@ describe('handleChangeParent', () => {
             allData: {
               ['-1']: {
                 ...currentPage.elements.allData['-1'],
-                children: [elementAllDataMock.id, 'test-2'],
+                children: [childrenMock, { ...childrenMock, id: 'test-2' }],
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
@@ -267,6 +270,7 @@ describe('handleChangeParent', () => {
               },
               ['test-2']: {
                 ...elementAllDataMock,
+                children: [],
                 id: 'test-2',
                 parentId: '-1',
               },
@@ -284,7 +288,7 @@ describe('handleChangeParent', () => {
             staticData: {
               ['-1']: {
                 ...currentPage.elements.staticData['-1'],
-                children: [elementAllDataMock.id, 'test-2'],
+                children: [childrenMock, { ...childrenMock, id: 'test-2' }],
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
@@ -292,6 +296,7 @@ describe('handleChangeParent', () => {
               },
               ['test-2']: {
                 ...elementStaticDataMock,
+                children: [],
                 id: 'test-2',
                 parentId: '-1',
               },
@@ -314,11 +319,11 @@ describe('handleChangeParent', () => {
             allData: {
               ['-1']: {
                 ...currentPage.elements.allData['-1'],
-                children: [elementAllDataMock.id],
+                children: [childrenMock],
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
-                children: ['test-2'],
+                children: [{ ...childrenMock, id: 'test-2' }],
               },
               ['test-2']: {
                 ...elementAllDataMock,
@@ -343,11 +348,11 @@ describe('handleChangeParent', () => {
             staticData: {
               ['-1']: {
                 ...currentPage.elements.staticData['-1'],
-                children: [elementAllDataMock.id],
+                children: [childrenMock],
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['test-2'],
+                children: [{ ...childrenMock, id: 'test-2' }],
               },
               ['test-2']: {
                 ...elementStaticDataMock,

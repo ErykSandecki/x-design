@@ -96,7 +96,8 @@ export const handleChangeParent = (
   const { draggableElements, possibleParent } = payload;
   const currentPage = state.pages[state.currentPage];
   const stateCopy = cloneDeep(state);
-  const id = first(draggableElements);
+  const draggableElement = first(draggableElements);
+  const draggableElementsId = draggableElements.map(({ id }) => id);
   const hasAnomalies = detectIdAnomalies(draggableElements, currentPage.selectedElements);
   const events: TEvents = {
     ...state.events,
@@ -107,8 +108,16 @@ export const handleChangeParent = (
     possibleParent: null,
   };
 
-  if (!hasAnomalies && possibleParent && !draggableElements.includes(possibleParent)) {
-    return handleWithPossibleParent(currentPage, events, id, payload, possibleParent, state, stateCopy);
+  if (!hasAnomalies && possibleParent && !draggableElementsId.includes(possibleParent)) {
+    return handleWithPossibleParent(
+      currentPage,
+      events,
+      draggableElement.id,
+      payload,
+      possibleParent,
+      state,
+      stateCopy,
+    );
   }
 
   return handleWithResetPosition(currentPage, events, payload, state);

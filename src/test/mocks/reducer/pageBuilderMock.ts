@@ -11,6 +11,7 @@ import {
   KeyboardKeys,
   LayoutType,
   TAlignment,
+  TChildren,
   TElement,
   TLayout,
 } from 'types';
@@ -173,6 +174,11 @@ export const reducerHistoryMock: Array<TReducerHistory> = [
     selectedElements: [],
   },
 ];
+
+export const childrenMock: TChildren = {
+  id: 'test-1',
+  type: ElementType.frame,
+};
 
 export const selectedElementMock: TSelectedElement = {
   id: 'test-1',

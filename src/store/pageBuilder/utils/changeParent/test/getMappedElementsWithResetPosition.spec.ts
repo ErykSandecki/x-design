@@ -1,5 +1,6 @@
 // mocks
 import {
+  childrenMock,
   elementAllDataMock,
   elementDynamicDataMock,
   elementStaticDataMock,
@@ -18,7 +19,7 @@ describe('getMappedElementsWithResetPosition', () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
     const payload = {
-      draggableElements: ['test-2'],
+      draggableElements: [{ ...childrenMock, id: 'test-2' }],
       possibleIndexPosition: null,
       possibleParent: null,
     };
@@ -35,11 +36,11 @@ describe('getMappedElementsWithResetPosition', () => {
             allData: {
               ['-1']: {
                 ...currentPage.elements.allData['-1'],
-                children: [elementAllDataMock.id],
+                children: [childrenMock],
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
-                children: ['test-2'],
+                children: [{ ...childrenMock, id: 'test-2' }],
               },
               ['test-2']: {
                 ...elementAllDataMock,
@@ -67,11 +68,11 @@ describe('getMappedElementsWithResetPosition', () => {
             staticData: {
               ['-1']: {
                 ...currentPage.elements.staticData['-1'],
-                children: [elementAllDataMock.id],
+                children: [childrenMock],
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['test-2'],
+                children: [{ ...childrenMock, id: 'test-2' }],
               },
               ['test-2']: {
                 ...elementStaticDataMock,
@@ -121,7 +122,7 @@ describe('getMappedElementsWithResetPosition', () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
     const payload = {
-      draggableElements: ['test-2'],
+      draggableElements: [{ ...childrenMock, id: 'test-2' }],
       possibleIndexPosition: null,
       possibleParent: null,
     };
@@ -138,11 +139,11 @@ describe('getMappedElementsWithResetPosition', () => {
             allData: {
               ['-1']: {
                 ...currentPage.elements.allData['-1'],
-                children: [elementAllDataMock.id],
+                children: [childrenMock],
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
-                children: ['test-2'],
+                children: [{ ...childrenMock, id: 'test-2' }],
               },
               ['test-2']: {
                 ...elementAllDataMock,
@@ -170,11 +171,11 @@ describe('getMappedElementsWithResetPosition', () => {
             staticData: {
               ['-1']: {
                 ...currentPage.elements.staticData['-1'],
-                children: [elementAllDataMock.id],
+                children: [childrenMock],
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['test-2'],
+                children: [{ ...childrenMock, id: 'test-2' }],
               },
               ['test-2']: {
                 ...elementStaticDataMock,

@@ -71,6 +71,7 @@ const ViewBox: FC<TViewBoxProps> = ({ coordinates, mouseMode, setCoordinates, se
       <MultipleElementsArea />
       <Elements
         eventsDisabled={elementArea !== null || mouseMode !== MouseMode.default}
+        id="-1"
         mouseMode={mouseMode}
         parentId="-1"
       />

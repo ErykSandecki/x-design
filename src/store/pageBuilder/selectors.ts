@@ -1,21 +1,13 @@
 import { createSelector, Selector } from 'reselect';
 import { compose, get as getFp } from 'lodash/fp';
-import { get, map, size } from 'lodash';
+import { get, size } from 'lodash';
 
 // others
 import { REDUCER_KEY } from './actionsType';
 
 // types
 import { TElement } from 'types';
-import {
-  TElementDynamicData,
-  TElementsData,
-  TElementStaticData,
-  TEvents,
-  TPage,
-  TPageBuilderState,
-  TSelectedElements,
-} from './types';
+import { TElementDynamicData, TElementsData, TEvents, TPage, TPageBuilderState, TSelectedElements } from './types';
 import { TMainState } from 'types/reducers';
 
 // utils
@@ -98,14 +90,6 @@ export const staticDataSelector: Selector<TMainState, TElementsData['staticData'
   getFp('staticData'),
 );
 
-export const filtredStaticDataSelectorCreator = (
-  parentId: TElement['parentId'],
-): Selector<TMainState, { children: TElement['children']; data: Array<TElementStaticData> }> =>
-  createSelector(childrenSelectorCreator(parentId), staticDataSelector, (children, staticData) => ({
-    children,
-    data: map(children, (id) => staticData[id]),
-  }));
-
 export const eventsSelector: Selector<TMainState, TEvents> = createSelector(pageBuilderStateSelector, getFp('events'));
 
 export const eventSelectorCreator = (key: keyof TEvents): Selector<TMainState, TEvents[typeof key]> =>
@@ -115,7 +99,9 @@ export const isHoverSelectorCreator = (id: TElement['id']): Selector<TMainState,
   createSelector(eventsSelector, ({ hoverOnElement }) => hoverOnElement === id);
 
 export const isDraggableSelectorCreator = (id: TElement['id']): Selector<TMainState, boolean> =>
-  createSelector(eventsSelector, ({ draggableElements }) => draggableElements.includes(id));
+  createSelector(eventsSelector, ({ draggableElements }) =>
+    draggableElements.some((draggableElement) => draggableElement.id === id),
+  );
 
 export const isLoadingSelector: Selector<TMainState, boolean> = createSelector(
   pageBuilderStateSelector,

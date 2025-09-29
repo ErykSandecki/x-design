@@ -77,7 +77,7 @@ const Frame: FC<TFrameProps> = ({ className, id, index, mouseMode, parentId, typ
                 </Box>,
                 overlayContainerRef.current,
               )}
-            <Elements eventsDisabled={false} isSelected={selected} mouseMode={mouseMode} parentId={id} />
+            <Elements eventsDisabled={false} id={id} mouseMode={mouseMode} parentId={id} />
           </>
         );
       }}

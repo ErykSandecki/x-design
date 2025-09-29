@@ -1,5 +1,5 @@
 // mocks
-import { createFrameMock, pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
+import { childrenMock, createFrameMock, pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
@@ -26,7 +26,7 @@ describe('handleAddElement', () => {
             allData: {
               ['-1']: {
                 ...currentPage.elements.allData['-1'],
-                children: [createFrameMock.id],
+                children: [childrenMock],
               },
               [createFrameMock.id]: createFrameMock,
             },
@@ -50,7 +50,7 @@ describe('handleAddElement', () => {
             staticData: {
               ['-1']: {
                 ...currentPage.elements.staticData['-1'],
-                children: [createFrameMock.id],
+                children: [childrenMock],
               },
               [createFrameMock.id]: {
                 children: createFrameMock.children,

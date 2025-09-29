@@ -16,7 +16,7 @@ export const getMappedElementsWithResetPosition = (
   const { draggableElements } = payload;
 
   return reducedData(
-    draggableElements.map((id) => {
+    draggableElements.map(({ id }) => {
       const element = elements.allData[id];
       const shouldResetCoordinates = element.position === 'relative';
 

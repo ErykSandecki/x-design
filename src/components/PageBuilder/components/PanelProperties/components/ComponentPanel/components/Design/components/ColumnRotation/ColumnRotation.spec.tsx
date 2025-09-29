@@ -6,6 +6,7 @@ import ColumnRotation from './ColumnRotation';
 
 // mocks
 import {
+  childrenMock,
   elementAllDataMock,
   elementDynamicDataMock,
   elementStaticDataMock,
@@ -38,7 +39,7 @@ const stateMock = {
           allData: {
             ['-1']: {
               ...currentPage.elements.allData['-1'],
-              children: [elementAllDataMock.id],
+              children: [childrenMock],
             },
             [elementAllDataMock.id]: {
               ...elementAllDataMock,
@@ -47,14 +48,14 @@ const stateMock = {
           dynamicData: {
             ['-1']: {
               ...currentPage.elements.dynamicData['-1'],
-              children: [elementDynamicDataMock.id],
+              children: [childrenMock],
             },
             [elementDynamicDataMock.id]: elementDynamicDataMock,
           },
           staticData: {
             ['-1']: {
               ...currentPage.elements.staticData['-1'],
-              children: [elementStaticDataMock.id],
+              children: [childrenMock],
             },
             [elementStaticDataMock.id]: {
               ...elementStaticDataMock,
@@ -98,7 +99,7 @@ describe('ColumnRotation snapshots', () => {
                 ...stateMock[PAGE_BUILDER].pages['0'].elements.allData,
                 ['-1']: {
                   ...stateMock[PAGE_BUILDER].pages['0'].elements.allData['-1'],
-                  children: ['test-1', 'test-2'],
+                  children: [childrenMock, { ...childrenMock, id: 'test-2' }],
                 },
                 ['test-2']: {
                   ...elementAllDataMock,
@@ -110,7 +111,7 @@ describe('ColumnRotation snapshots', () => {
                 ...stateMock[PAGE_BUILDER].pages['0'].elements.dynamicData,
                 ['-1']: {
                   ...stateMock[PAGE_BUILDER].pages['0'].elements.dynamicData['-1'],
-                  children: ['test-1', 'test-2'],
+                  children: [childrenMock, { ...childrenMock, id: 'test-2' }],
                 },
                 ['test-2']: {
                   ...elementDynamicDataMock,
@@ -122,7 +123,7 @@ describe('ColumnRotation snapshots', () => {
                 ...stateMock[PAGE_BUILDER].pages['0'].elements.staticData,
                 ['-1']: {
                   ...stateMock[PAGE_BUILDER].pages['0'].elements.staticData['-1'],
-                  children: ['test-1', 'test-2'],
+                  children: [childrenMock, { ...childrenMock, id: 'test-2' }],
                 },
                 ['test-2']: {
                   ...elementStaticDataMock,
@@ -246,7 +247,10 @@ describe('ColumnRotation behaviors', () => {
                 },
                 [elementAllDataMock.id]: {
                   ...elementAllDataMock,
-                  children: ['test-2', 'test-3'],
+                  children: [
+                    { ...childrenMock, id: 'test-2' },
+                    { ...childrenMock, id: 'test-3' },
+                  ],
                   layout: {
                     type: LayoutType.horizontal,
                   },
@@ -284,11 +288,14 @@ describe('ColumnRotation behaviors', () => {
               staticData: {
                 ['-1']: {
                   ...currentPage.elements.staticData['-1'],
-                  children: [elementStaticDataMock.id],
+                  children: [childrenMock],
                 },
                 [elementStaticDataMock.id]: {
                   ...elementStaticDataMock,
-                  children: ['test-2', 'test-3'],
+                  children: [
+                    { ...childrenMock, id: 'test-2' },
+                    { ...childrenMock, id: 'test-3' },
+                  ],
                 },
                 ['test-2']: {
                   ...elementStaticDataMock,
@@ -323,8 +330,8 @@ describe('ColumnRotation behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].children).toStrictEqual([
-      'test-3',
-      'test-2',
+      { ...childrenMock, id: 'test-3' },
+      { ...childrenMock, id: 'test-2' },
     ]);
   });
 
@@ -343,11 +350,14 @@ describe('ColumnRotation behaviors', () => {
               allData: {
                 ['-1']: {
                   ...currentPage.elements.allData['-1'],
-                  children: [elementAllDataMock.id],
+                  children: [childrenMock],
                 },
                 [elementAllDataMock.id]: {
                   ...elementAllDataMock,
-                  children: ['test-2', 'test-3'],
+                  children: [
+                    { ...childrenMock, id: 'test-2' },
+                    { ...childrenMock, id: 'test-3' },
+                  ],
                 },
                 ['test-2']: {
                   ...elementAllDataMock,
@@ -379,11 +389,14 @@ describe('ColumnRotation behaviors', () => {
               staticData: {
                 ['-1']: {
                   ...currentPage.elements.staticData['-1'],
-                  children: [elementStaticDataMock.id],
+                  children: [childrenMock],
                 },
                 [elementStaticDataMock.id]: {
                   ...elementStaticDataMock,
-                  children: ['test-2', 'test-3'],
+                  children: [
+                    { ...childrenMock, id: 'test-2' },
+                    { ...childrenMock, id: 'test-3' },
+                  ],
                 },
                 ['test-2']: {
                   ...elementStaticDataMock,
@@ -418,8 +431,8 @@ describe('ColumnRotation behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements.allData['test-1'].children).toStrictEqual([
-      'test-3',
-      'test-2',
+      { ...childrenMock, id: 'test-3' },
+      { ...childrenMock, id: 'test-2' },
     ]);
   });
 });

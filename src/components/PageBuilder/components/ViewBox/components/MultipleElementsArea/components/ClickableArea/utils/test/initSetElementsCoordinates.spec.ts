@@ -44,7 +44,7 @@ describe('initSetElementsCoordinates', () => {
 
     // result
     expect(mockCallBack.mock.calls[1][0].payload).toStrictEqual({
-      draggableElements: [selectedElementMock.id],
+      draggableElements: [{ id: selectedElementMock.id, type: selectedElementMock.type }],
       isMultipleMoving: true,
     });
   });

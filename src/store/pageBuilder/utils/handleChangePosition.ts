@@ -9,12 +9,15 @@ import { TPageBuilderState } from '../types';
 export const handleChangePosition = (state: TPageBuilderState): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];
   const { elements, selectedElements } = currentPage;
+  const { allData } = elements;
   const ids = selectedElements.map(({ id }) => id);
   const clonedElements = cloneDeep(elements);
   const { id, parentId } = first(selectedElements);
   const currentPosition = elements.allData[id].position;
   const reversePosition = currentPosition === 'relative' ? 'absolute' : 'relative';
-  const filteredChildren = currentPage.elements.allData[parentId].children.filter((id) => !ids.includes(id));
+
+  const elementsInAbsolutePosition = selectedElements.map(({ id, type }) => ({ id, type }));
+  const elementsInRelativePosition = allData[parentId].children.filter((children) => !ids.includes(children.id));
 
   selectedElements.forEach(({ id }) => {
     const targetCoordinates = BASE_2D;
@@ -40,7 +43,7 @@ export const handleChangePosition = (state: TPageBuilderState): TPageBuilderStat
             ...clonedElements.allData,
             [parentId]: {
               ...currentPage.elements.allData[parentId],
-              children: [...filteredChildren, ...ids],
+              children: [...elementsInRelativePosition, ...elementsInAbsolutePosition],
             },
           },
           dynamicData: {
@@ -51,7 +54,7 @@ export const handleChangePosition = (state: TPageBuilderState): TPageBuilderStat
             ...currentPage.elements.staticData,
             [parentId]: {
               ...currentPage.elements.staticData[parentId],
-              children: [...filteredChildren, ...ids],
+              children: [...elementsInRelativePosition, ...elementsInAbsolutePosition],
             },
           },
         },

@@ -18,6 +18,11 @@ export type TBackground = {
   visible: boolean;
 };
 
+export type TChildren = {
+  id: string;
+  type: ElementType;
+};
+
 export type TLayout = {
   type: LayoutType;
 };
@@ -33,7 +38,7 @@ export type TElement = {
   alignment: TAlignment;
   angle: number;
   background: TBackground;
-  children: Array<string>;
+  children: Array<TChildren>;
   coordinates: T2DCoordinates;
   deepLevel: number;
   height: TSize;

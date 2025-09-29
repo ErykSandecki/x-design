@@ -79,7 +79,7 @@ export const useElementEvents = (
 
   useForceRerender([coordinates]);
   useInitializeRef(elementRef, id);
-  useMouseMoveEvent(cursorPosition, cursorPositionBase, id, isPressing, mouseMode, parentId);
+  useMouseMoveEvent(cursorPosition, cursorPositionBase, id, isPressing, mouseMode, parentId, type);
   useMouseUpEvent(isPressing, setIsPressing);
   useOutsideClickElement(elementRef, id, isSelected);
 

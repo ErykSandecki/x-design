@@ -26,6 +26,7 @@ export const useMouseMoveEvent = (
   isPressing: boolean,
   mouseMode: MouseMode,
   parentId: TElement['parentId'],
+  type: TElement['type'],
 ): TUseMouseMoveEvent => {
   const dispatch = useDispatch();
 
@@ -34,7 +35,7 @@ export const useMouseMoveEvent = (
 
     if (mouseMode === MouseMode.default && distanceChanged) {
       updateElementPosition(cursorPosition, dispatch, event, parentId);
-      dispatch(updateEventsStatus({ draggableElements: [id] }));
+      dispatch(updateEventsStatus({ draggableElements: [{ id, type }] }));
     }
   }, THROTTLE_WAIT);
 

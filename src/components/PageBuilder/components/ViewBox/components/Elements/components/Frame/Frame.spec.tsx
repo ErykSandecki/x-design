@@ -43,6 +43,10 @@ const stateMock = {
         ...pageBuilderStateMock[PAGE_BUILDER].pages['0'],
         elements: {
           ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements,
+          allData: {
+            ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements.allData,
+            [elementAllDataMock.id]: elementAllDataMock,
+          },
           dynamicData: {
             ...pageBuilderStateMock[PAGE_BUILDER].pages['0'].elements.dynamicData,
             [elementDynamicDataMock.id]: elementDynamicDataMock,

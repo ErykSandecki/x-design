@@ -41,7 +41,7 @@ export const handleFlipElements = (
     clonedElements.dynamicData[id].angle = angle;
     clonedElements.staticData[id].children = children;
 
-    findAllChildren(allData, allData[selectedElements[0].id].children).forEach((id) => {
+    findAllChildren(allData, allData[selectedElements[0].id].children).forEach(({ id }) => {
       const element = clonedElements.allData[id];
       const children = reverseChildren(axis, element.children, element.layout);
 

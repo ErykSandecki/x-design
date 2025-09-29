@@ -16,7 +16,10 @@ export const handleAddElement = (element: TAddELementActionPayload, state: TPage
           [element.id]: { ...element },
           '-1': {
             ...state.pages[state.currentPage].elements.allData['-1'],
-            children: [...state.pages[state.currentPage].elements.allData['-1'].children, element.id],
+            children: [
+              ...state.pages[state.currentPage].elements.staticData['-1'].children,
+              { id: element.id, type: element.type },
+            ],
           },
         },
         dynamicData: {
@@ -42,7 +45,10 @@ export const handleAddElement = (element: TAddELementActionPayload, state: TPage
           },
           '-1': {
             ...state.pages[state.currentPage].elements.staticData['-1'],
-            children: [...state.pages[state.currentPage].elements.staticData['-1'].children, element.id],
+            children: [
+              ...state.pages[state.currentPage].elements.staticData['-1'].children,
+              { id: element.id, type: element.type },
+            ],
           },
         },
       },

@@ -12,10 +12,12 @@ export const handleChangeAlignment = (
 ): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];
   const { elements, selectedElements } = currentPage;
+  const { allData } = elements;
   const { parentId } = first(selectedElements);
   const clonedElements = cloneDeep(elements);
-  const allId = selectedElements.map(({ id }) => id);
-  const filteredChildren = currentPage.elements.allData[parentId].children.filter((id) => !allId.includes(id));
+  const ids = selectedElements.map(({ id }) => id);
+  const elementsInAbsolutePosition = selectedElements.map(({ id, type }) => ({ id, type }));
+  const elementsInRelativePosition = allData[parentId].children.filter((children) => !ids.includes(children.id));
 
   selectedElements.forEach(({ id, parentId }) => {
     const { alignment } = currentPage.elements.allData[id];
@@ -43,7 +45,7 @@ export const handleChangeAlignment = (
             ...clonedElements.allData,
             [parentId]: {
               ...currentPage.elements.allData[parentId],
-              children: [...filteredChildren, ...allId],
+              children: [...elementsInRelativePosition, ...elementsInAbsolutePosition],
             },
           },
           dynamicData: {
@@ -54,7 +56,7 @@ export const handleChangeAlignment = (
             ...currentPage.elements.staticData,
             [parentId]: {
               ...currentPage.elements.staticData[parentId],
-              children: [...filteredChildren, ...allId],
+              children: [...elementsInRelativePosition, ...elementsInAbsolutePosition],
             },
           },
         },

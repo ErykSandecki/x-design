@@ -11,7 +11,7 @@ import { useTheme } from 'hooks';
 import { classNames } from './classNames';
 
 // store
-import { filtredStaticDataSelectorCreator } from 'store/pageBuilder/selectors';
+import { elementAttributeSelectorCreator } from 'store/pageBuilder/selectors';
 
 // styles
 import styles from './elements.scss';
@@ -22,16 +22,16 @@ import { MouseMode } from 'types/enums/mouseMode';
 
 export type TElementsProps = {
   eventsDisabled: boolean;
-  isSelected?: boolean;
+  id: TElement['id'];
   mouseMode: MouseMode;
   parentId: TElement['parentId'];
 };
 
-const Elements: FC<TElementsProps> = ({ eventsDisabled, mouseMode, parentId }) => {
+const Elements: FC<TElementsProps> = ({ eventsDisabled, id, mouseMode, parentId }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-  const staticData = useSelector(filtredStaticDataSelectorCreator(parentId));
+  const children = useSelector(elementAttributeSelectorCreator('children', id));
 
-  return staticData.data.map(({ id, type }, index) => {
+  return children.map(({ id, type }, index) => {
     switch (type) {
       case ElementType.frame:
         return (

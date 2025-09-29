@@ -1,5 +1,6 @@
 // mocks
 import {
+  childrenMock,
   elementAllDataMock,
   elementDynamicDataMock,
   elementStaticDataMock,
@@ -34,12 +35,15 @@ describe('handleFlipElements', () => {
             allData: {
               ['-1']: {
                 ...currentPage.elements.allData['-1'],
-                children: [elementAllDataMock.id],
+                children: [childrenMock],
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
                 angle,
-                children: ['test-2', 'test-3'],
+                children: [
+                  { ...childrenMock, id: 'test-2' },
+                  { ...childrenMock, id: 'test-3' },
+                ],
                 layout: {
                   type: LayoutType.horizontal,
                 },
@@ -78,11 +82,14 @@ describe('handleFlipElements', () => {
             staticData: {
               ['-1']: {
                 ...currentPage.elements.staticData['-1'],
-                children: [elementStaticDataMock.id],
+                children: [childrenMock],
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['test-2', 'test-3'],
+                children: [
+                  { ...childrenMock, id: 'test-2' },
+                  { ...childrenMock, id: 'test-3' },
+                ],
               },
               ['test-2']: {
                 ...elementStaticDataMock,
@@ -112,12 +119,15 @@ describe('handleFlipElements', () => {
             allData: {
               ['-1']: {
                 ...currentPage.elements.allData['-1'],
-                children: [elementAllDataMock.id],
+                children: [childrenMock],
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
                 angle: negateValue(angle),
-                children: ['test-3', 'test-2'],
+                children: [
+                  { ...childrenMock, id: 'test-3' },
+                  { ...childrenMock, id: 'test-2' },
+                ],
                 layout: {
                   type: LayoutType.horizontal,
                 },
@@ -156,11 +166,14 @@ describe('handleFlipElements', () => {
             staticData: {
               ['-1']: {
                 ...currentPage.elements.staticData['-1'],
-                children: [elementStaticDataMock.id],
+                children: [childrenMock],
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['test-3', 'test-2'],
+                children: [
+                  { ...childrenMock, id: 'test-3' },
+                  { ...childrenMock, id: 'test-2' },
+                ],
               },
               ['test-2']: {
                 ...elementStaticDataMock,
@@ -196,12 +209,15 @@ describe('handleFlipElements', () => {
             allData: {
               ['-1']: {
                 ...currentPage.elements.allData['-1'],
-                children: [elementAllDataMock.id],
+                children: [childrenMock],
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
                 angle,
-                children: ['test-2', 'test-3'],
+                children: [
+                  { ...childrenMock, id: 'test-2' },
+                  { ...childrenMock, id: 'test-3' },
+                ],
                 layout: {
                   type: LayoutType.grid,
                 },
@@ -240,11 +256,14 @@ describe('handleFlipElements', () => {
             staticData: {
               ['-1']: {
                 ...currentPage.elements.staticData['-1'],
-                children: [elementStaticDataMock.id],
+                children: [childrenMock],
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['test-2', 'test-3'],
+                children: [
+                  { ...childrenMock, id: 'test-2' },
+                  { ...childrenMock, id: 'test-3' },
+                ],
               },
               ['test-2']: {
                 ...elementStaticDataMock,
@@ -274,12 +293,15 @@ describe('handleFlipElements', () => {
             allData: {
               ['-1']: {
                 ...currentPage.elements.allData['-1'],
-                children: [elementAllDataMock.id],
+                children: [childrenMock],
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
                 angle: negateValue(angle),
-                children: ['test-3', 'test-2'],
+                children: [
+                  { ...childrenMock, id: 'test-3' },
+                  { ...childrenMock, id: 'test-2' },
+                ],
                 layout: {
                   type: LayoutType.grid,
                 },
@@ -318,11 +340,14 @@ describe('handleFlipElements', () => {
             staticData: {
               ['-1']: {
                 ...currentPage.elements.staticData['-1'],
-                children: [elementStaticDataMock.id],
+                children: [childrenMock],
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['test-3', 'test-2'],
+                children: [
+                  { ...childrenMock, id: 'test-3' },
+                  { ...childrenMock, id: 'test-2' },
+                ],
               },
               ['test-2']: {
                 ...elementStaticDataMock,
@@ -358,12 +383,15 @@ describe('handleFlipElements', () => {
             allData: {
               ['-1']: {
                 ...currentPage.elements.allData['-1'],
-                children: [elementAllDataMock.id],
+                children: [childrenMock],
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
                 angle,
-                children: ['test-2', 'test-3'],
+                children: [
+                  { ...childrenMock, id: 'test-2' },
+                  { ...childrenMock, id: 'test-3' },
+                ],
               },
               ['test-2']: {
                 ...elementAllDataMock,
@@ -396,11 +424,14 @@ describe('handleFlipElements', () => {
             staticData: {
               ['-1']: {
                 ...currentPage.elements.staticData['-1'],
-                children: [elementStaticDataMock.id],
+                children: [childrenMock],
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['test-2', 'test-3'],
+                children: [
+                  { ...childrenMock, id: 'test-2' },
+                  { ...childrenMock, id: 'test-3' },
+                ],
               },
               ['test-2']: {
                 ...elementStaticDataMock,
@@ -430,12 +461,15 @@ describe('handleFlipElements', () => {
             allData: {
               ['-1']: {
                 ...currentPage.elements.allData['-1'],
-                children: [elementAllDataMock.id],
+                children: [childrenMock],
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
                 angle: negateValue(angle),
-                children: ['test-3', 'test-2'],
+                children: [
+                  { ...childrenMock, id: 'test-3' },
+                  { ...childrenMock, id: 'test-2' },
+                ],
               },
               ['test-2']: {
                 ...elementAllDataMock,
@@ -468,11 +502,14 @@ describe('handleFlipElements', () => {
             staticData: {
               ['-1']: {
                 ...currentPage.elements.staticData['-1'],
-                children: [elementStaticDataMock.id],
+                children: [childrenMock],
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['test-3', 'test-2'],
+                children: [
+                  { ...childrenMock, id: 'test-3' },
+                  { ...childrenMock, id: 'test-2' },
+                ],
               },
               ['test-2']: {
                 ...elementStaticDataMock,
@@ -508,12 +545,15 @@ describe('handleFlipElements', () => {
             allData: {
               ['-1']: {
                 ...currentPage.elements.allData['-1'],
-                children: [elementAllDataMock.id],
+                children: [childrenMock],
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
                 angle,
-                children: ['test-2', 'test-3'],
+                children: [
+                  { ...childrenMock, id: 'test-2' },
+                  { ...childrenMock, id: 'test-3' },
+                ],
                 layout: {
                   type: LayoutType.grid,
                 },
@@ -552,11 +592,14 @@ describe('handleFlipElements', () => {
             staticData: {
               ['-1']: {
                 ...currentPage.elements.staticData['-1'],
-                children: [elementStaticDataMock.id],
+                children: [childrenMock],
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['test-2', 'test-3'],
+                children: [
+                  { ...childrenMock, id: 'test-2' },
+                  { ...childrenMock, id: 'test-3' },
+                ],
               },
               ['test-2']: {
                 ...elementStaticDataMock,
@@ -586,12 +629,15 @@ describe('handleFlipElements', () => {
             allData: {
               ['-1']: {
                 ...currentPage.elements.allData['-1'],
-                children: [elementAllDataMock.id],
+                children: [childrenMock],
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
                 angle: negateValue(angle),
-                children: ['test-3', 'test-2'],
+                children: [
+                  { ...childrenMock, id: 'test-3' },
+                  { ...childrenMock, id: 'test-2' },
+                ],
                 layout: {
                   type: LayoutType.grid,
                 },
@@ -630,11 +676,14 @@ describe('handleFlipElements', () => {
             staticData: {
               ['-1']: {
                 ...currentPage.elements.staticData['-1'],
-                children: [elementStaticDataMock.id],
+                children: [childrenMock],
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['test-3', 'test-2'],
+                children: [
+                  { ...childrenMock, id: 'test-3' },
+                  { ...childrenMock, id: 'test-2' },
+                ],
               },
               ['test-2']: {
                 ...elementStaticDataMock,
@@ -670,12 +719,15 @@ describe('handleFlipElements', () => {
             allData: {
               ['-1']: {
                 ...currentPage.elements.allData['-1'],
-                children: [elementAllDataMock.id],
+                children: [childrenMock],
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
                 angle,
-                children: ['test-2', 'test-3'],
+                children: [
+                  { ...childrenMock, id: 'test-2' },
+                  { ...childrenMock, id: 'test-3' },
+                ],
                 layout: {
                   type: LayoutType.horizontal,
                 },
@@ -714,11 +766,14 @@ describe('handleFlipElements', () => {
             staticData: {
               ['-1']: {
                 ...currentPage.elements.staticData['-1'],
-                children: [elementStaticDataMock.id],
+                children: [childrenMock],
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['test-2', 'test-3'],
+                children: [
+                  { ...childrenMock, id: 'test-2' },
+                  { ...childrenMock, id: 'test-3' },
+                ],
               },
               ['test-2']: {
                 ...elementStaticDataMock,
@@ -748,12 +803,15 @@ describe('handleFlipElements', () => {
             allData: {
               ['-1']: {
                 ...currentPage.elements.allData['-1'],
-                children: [elementAllDataMock.id],
+                children: [childrenMock],
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
                 angle: negateValue(angle),
-                children: ['test-2', 'test-3'],
+                children: [
+                  { ...childrenMock, id: 'test-2' },
+                  { ...childrenMock, id: 'test-3' },
+                ],
                 layout: {
                   type: LayoutType.horizontal,
                 },
@@ -792,11 +850,14 @@ describe('handleFlipElements', () => {
             staticData: {
               ['-1']: {
                 ...currentPage.elements.staticData['-1'],
-                children: [elementStaticDataMock.id],
+                children: [childrenMock],
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['test-2', 'test-3'],
+                children: [
+                  { ...childrenMock, id: 'test-2' },
+                  { ...childrenMock, id: 'test-3' },
+                ],
               },
               ['test-2']: {
                 ...elementStaticDataMock,

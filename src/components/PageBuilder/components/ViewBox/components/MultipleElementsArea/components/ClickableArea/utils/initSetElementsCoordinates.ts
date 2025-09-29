@@ -19,12 +19,12 @@ export const initSetElementsCoordinates = (
       x: Math.round(event.clientX),
       y: Math.round(event.clientY),
     };
-    const selectedElementsId = selectedElementsSelector(store.getState()).map(({ id }) => id);
+    const selectedElements = selectedElementsSelector(store.getState()).map(({ id, type }) => ({ id, type }));
 
     dispatch(updatePrevState());
     dispatch(
       updateEventsStatus({
-        draggableElements: selectedElementsId,
+        draggableElements: selectedElements,
         isMultipleMoving: true,
       }),
     );

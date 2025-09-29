@@ -90,7 +90,7 @@ export const getMappedElementsToMove = (
   const { draggableElements, possibleParent } = payload;
 
   return reducedData(
-    draggableElements.map((id) => {
+    draggableElements.map(({ id }) => {
       const data = getPartialData(
         elements.allData[id],
         id,

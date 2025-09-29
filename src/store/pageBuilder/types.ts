@@ -34,6 +34,7 @@ import {
   KeyboardKeys,
   TAction,
   TBackground,
+  TChildren,
   TElement,
   TObject,
   TSize,
@@ -55,7 +56,7 @@ export type TElementsData = {
 export type TEvents = {
   canMoveElements: boolean;
   colorSampler: boolean;
-  draggableElements: Array<TElement['id']>;
+  draggableElements: Array<TChildren>;
   hoverOnElement: TElement['id'];
   isMultipleMoving: boolean;
   isResizing: boolean;

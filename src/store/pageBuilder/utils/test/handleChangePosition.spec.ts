@@ -1,5 +1,6 @@
 // mocks
 import {
+  childrenMock,
   elementAllDataMock,
   elementDynamicDataMock,
   elementStaticDataMock,
@@ -52,11 +53,14 @@ describe('handleChangePosition', () => {
               ...currentPage.elements.allData,
               ['-1']: {
                 ...currentPage.elements.allData['-1'],
-                children: [elementAllDataMock.id],
+                children: [childrenMock],
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
-                children: ['test-2', 'test-3'],
+                children: [
+                  { ...childrenMock, id: 'test-2' },
+                  { ...childrenMock, id: 'test-3' },
+                ],
                 position: 'absolute',
               },
               ['test-2']: {
@@ -96,11 +100,14 @@ describe('handleChangePosition', () => {
               ...currentPage.elements.staticData,
               ['-1']: {
                 ...currentPage.elements.staticData['-1'],
-                children: [elementStaticDataMock.id],
+                children: [childrenMock],
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['test-2', 'test-3'],
+                children: [
+                  { ...childrenMock, id: 'test-2' },
+                  { ...childrenMock, id: 'test-3' },
+                ],
               },
               ['test-2']: {
                 ...elementStaticDataMock,
@@ -132,11 +139,14 @@ describe('handleChangePosition', () => {
               ...currentPage.elements.allData,
               ['-1']: {
                 ...currentPage.elements.allData['-1'],
-                children: [elementAllDataMock.id],
+                children: [childrenMock],
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
-                children: ['test-3', 'test-2'],
+                children: [
+                  { ...childrenMock, id: 'test-3' },
+                  { ...childrenMock, id: 'test-2' },
+                ],
                 position: 'absolute',
               },
               ['test-2']: {
@@ -178,11 +188,14 @@ describe('handleChangePosition', () => {
               ...currentPage.elements.staticData,
               ['-1']: {
                 ...currentPage.elements.staticData['-1'],
-                children: [elementStaticDataMock.id],
+                children: [childrenMock],
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['test-3', 'test-2'],
+                children: [
+                  { ...childrenMock, id: 'test-3' },
+                  { ...childrenMock, id: 'test-2' },
+                ],
               },
               ['test-2']: {
                 ...elementStaticDataMock,
@@ -219,11 +232,14 @@ describe('handleChangePosition', () => {
               ...currentPage.elements.allData,
               ['-1']: {
                 ...currentPage.elements.allData['-1'],
-                children: [elementAllDataMock.id],
+                children: [childrenMock],
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
-                children: ['test-2', 'test-3'],
+                children: [
+                  { ...childrenMock, id: 'test-2' },
+                  { ...childrenMock, id: 'test-3' },
+                ],
                 position: 'absolute',
               },
               ['test-2']: {
@@ -263,11 +279,14 @@ describe('handleChangePosition', () => {
               ...currentPage.elements.staticData,
               ['-1']: {
                 ...currentPage.elements.staticData['-1'],
-                children: [elementStaticDataMock.id],
+                children: [childrenMock],
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['test-2', 'test-3'],
+                children: [
+                  { ...childrenMock, id: 'test-2' },
+                  { ...childrenMock, id: 'test-3' },
+                ],
               },
               ['test-2']: {
                 ...elementStaticDataMock,
@@ -299,11 +318,14 @@ describe('handleChangePosition', () => {
               ...currentPage.elements.allData,
               ['-1']: {
                 ...currentPage.elements.allData['-1'],
-                children: [elementAllDataMock.id],
+                children: [childrenMock],
               },
               [elementAllDataMock.id]: {
                 ...elementAllDataMock,
-                children: ['test-2', 'test-3'],
+                children: [
+                  { ...childrenMock, id: 'test-2' },
+                  { ...childrenMock, id: 'test-3' },
+                ],
                 position: 'absolute',
               },
               ['test-2']: {
@@ -345,11 +367,14 @@ describe('handleChangePosition', () => {
               ...currentPage.elements.staticData,
               ['-1']: {
                 ...currentPage.elements.staticData['-1'],
-                children: [elementStaticDataMock.id],
+                children: [childrenMock],
               },
               [elementStaticDataMock.id]: {
                 ...elementStaticDataMock,
-                children: ['test-2', 'test-3'],
+                children: [
+                  { ...childrenMock, id: 'test-2' },
+                  { ...childrenMock, id: 'test-3' },
+                ],
               },
               ['test-2']: {
                 ...elementStaticDataMock,
