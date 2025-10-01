@@ -27,7 +27,7 @@ exports[`MainPanel snapshots should render MainPanel 1`] = `
       data-test-section=""
     >
       <div
-        class="css-lxhfcz SectionColumn__labels SectionColumn__labels--light"
+        class="css-xdzdnq SectionColumn__labels SectionColumn__labels--light"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       />

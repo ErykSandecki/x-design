@@ -1,0 +1,431 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColumnResizing snapshots should render ColumnResizing{max} 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
+    data-test-section=""
+  >
+    <div
+      class="css-xdzdnq SectionColumn__labels SectionColumn__labels--light"
+      data-test-box=""
+      style="width: calc(100% - 24px - 0px - 8px);"
+    >
+      <small
+        class="css-1jnxvbp SectionColumn__label SectionColumn__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        data-test-text=""
+        style="text-align: inherit;"
+      >
+        Max width
+      </small>
+      <small
+        class="css-1jnxvbp SectionColumn__label SectionColumn__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        data-test-text=""
+        style="text-align: inherit;"
+      >
+        Max height
+      </small>
+    </div>
+    <div
+      class="css-1r00qlg"
+      data-test-box=""
+    >
+      <div
+        class="css-1m2m6pt SectionColumn__content SectionColumn__content--light SectionColumn__content--twoInputs SectionColumn__content--twoInputs--light"
+        data-test-box=""
+        style="width: calc(100% - 24px - 0px - 8px);"
+      >
+        <div
+          class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
+          data-test-text-field="maxWidth"
+        >
+          <div
+            class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+            data-test-box=""
+            data-test-scrubbable-input="maxWidth"
+          >
+            <div
+              class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+              data-test-icon="max-width"
+              height="12"
+              name="MaxWidth"
+              width="12"
+            />
+          </div>
+          <input
+            class="TextField__input TextField__input--light"
+            data-test-text-field-input="maxWidth"
+            maxlength="6"
+            type="number"
+            value="200"
+          />
+          <div
+            class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextField__icon TextField__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+              data-test-icon="variant"
+              height="12"
+              name="Variant"
+              width="12"
+            />
+            <div
+              class="css-17s20gh Popover Popover--light"
+              data-test-box=""
+              data-test-popover="popover"
+              style="left: 0px; top: 0px;"
+            >
+              <div
+                class="css-1wfopar PopoverItem PopoverItem--light"
+                data-test-box=""
+                data-test-popover-item="0"
+              >
+                <div
+                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="check"
+                  height="12"
+                  name="Check"
+                  width="12"
+                />
+                <small
+                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  data-test-text=""
+                  style="text-align: inherit;"
+                >
+                  Set to current width
+                </small>
+              </div>
+              <div
+                class="css-1wfopar PopoverItem PopoverItem--light"
+                data-test-box=""
+                data-test-popover-item="1"
+              >
+                <div
+                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="check"
+                  height="12"
+                  name="Check"
+                  width="12"
+                />
+                <small
+                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  data-test-text=""
+                  style="text-align: inherit;"
+                >
+                  Remove max width
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
+          data-test-text-field="maxHeight"
+        >
+          <div
+            class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+            data-test-box=""
+            data-test-scrubbable-input="maxHeight"
+          >
+            <div
+              class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+              data-test-icon="max-height"
+              height="12"
+              name="MaxHeight"
+              width="12"
+            />
+          </div>
+          <input
+            class="TextField__input TextField__input--light"
+            data-test-text-field-input="maxHeight"
+            maxlength="6"
+            type="number"
+            value="200"
+          />
+          <div
+            class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextField__icon TextField__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+              data-test-icon="variant"
+              height="12"
+              name="Variant"
+              width="12"
+            />
+            <div
+              class="css-17s20gh Popover Popover--light"
+              data-test-box=""
+              data-test-popover="popover"
+              style="left: 0px; top: 0px;"
+            >
+              <div
+                class="css-1wfopar PopoverItem PopoverItem--light"
+                data-test-box=""
+                data-test-popover-item="0"
+              >
+                <div
+                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="check"
+                  height="12"
+                  name="Check"
+                  width="12"
+                />
+                <small
+                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  data-test-text=""
+                  style="text-align: inherit;"
+                >
+                  Set to current height
+                </small>
+              </div>
+              <div
+                class="css-1wfopar PopoverItem PopoverItem--light"
+                data-test-box=""
+                data-test-popover-item="1"
+              >
+                <div
+                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="check"
+                  height="12"
+                  name="Check"
+                  width="12"
+                />
+                <small
+                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  data-test-text=""
+                  style="text-align: inherit;"
+                >
+                  Remove max height
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-c1qms7"
+        data-test-box=""
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ColumnResizing snapshots should render ColumnResizing{min} 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
+    data-test-section=""
+  >
+    <div
+      class="css-xdzdnq SectionColumn__labels SectionColumn__labels--light"
+      data-test-box=""
+      style="width: calc(100% - 24px - 0px - 8px);"
+    >
+      <small
+        class="css-1jnxvbp SectionColumn__label SectionColumn__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        data-test-text=""
+        style="text-align: inherit;"
+      >
+        Min width
+      </small>
+      <small
+        class="css-1jnxvbp SectionColumn__label SectionColumn__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        data-test-text=""
+        style="text-align: inherit;"
+      >
+        Min height
+      </small>
+    </div>
+    <div
+      class="css-1r00qlg"
+      data-test-box=""
+    >
+      <div
+        class="css-1m2m6pt SectionColumn__content SectionColumn__content--light SectionColumn__content--twoInputs SectionColumn__content--twoInputs--light"
+        data-test-box=""
+        style="width: calc(100% - 24px - 0px - 8px);"
+      >
+        <div
+          class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
+          data-test-text-field="minWidth"
+        >
+          <div
+            class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+            data-test-box=""
+            data-test-scrubbable-input="minWidth"
+          >
+            <div
+              class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+              data-test-icon="min-width"
+              height="12"
+              name="MinWidth"
+              width="12"
+            />
+          </div>
+          <input
+            class="TextField__input TextField__input--light"
+            data-test-text-field-input="minWidth"
+            maxlength="6"
+            type="number"
+            value="200"
+          />
+          <div
+            class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextField__icon TextField__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+              data-test-icon="variant"
+              height="12"
+              name="Variant"
+              width="12"
+            />
+            <div
+              class="css-17s20gh Popover Popover--light"
+              data-test-box=""
+              data-test-popover="popover"
+              style="left: 0px; top: 0px;"
+            >
+              <div
+                class="css-1wfopar PopoverItem PopoverItem--light"
+                data-test-box=""
+                data-test-popover-item="0"
+              >
+                <div
+                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="check"
+                  height="12"
+                  name="Check"
+                  width="12"
+                />
+                <small
+                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  data-test-text=""
+                  style="text-align: inherit;"
+                >
+                  Set to current width
+                </small>
+              </div>
+              <div
+                class="css-1wfopar PopoverItem PopoverItem--light"
+                data-test-box=""
+                data-test-popover-item="1"
+              >
+                <div
+                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="check"
+                  height="12"
+                  name="Check"
+                  width="12"
+                />
+                <small
+                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  data-test-text=""
+                  style="text-align: inherit;"
+                >
+                  Remove min width
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
+          data-test-text-field="minHeight"
+        >
+          <div
+            class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+            data-test-box=""
+            data-test-scrubbable-input="minHeight"
+          >
+            <div
+              class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+              data-test-icon="min-height"
+              height="12"
+              name="MinHeight"
+              width="12"
+            />
+          </div>
+          <input
+            class="TextField__input TextField__input--light"
+            data-test-text-field-input="minHeight"
+            maxlength="6"
+            type="number"
+            value="200"
+          />
+          <div
+            class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextField__icon TextField__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+              data-test-icon="variant"
+              height="12"
+              name="Variant"
+              width="12"
+            />
+            <div
+              class="css-17s20gh Popover Popover--light"
+              data-test-box=""
+              data-test-popover="popover"
+              style="left: 0px; top: 0px;"
+            >
+              <div
+                class="css-1wfopar PopoverItem PopoverItem--light"
+                data-test-box=""
+                data-test-popover-item="0"
+              >
+                <div
+                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="check"
+                  height="12"
+                  name="Check"
+                  width="12"
+                />
+                <small
+                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  data-test-text=""
+                  style="text-align: inherit;"
+                >
+                  Set to current height
+                </small>
+              </div>
+              <div
+                class="css-1wfopar PopoverItem PopoverItem--light"
+                data-test-box=""
+                data-test-popover-item="1"
+              >
+                <div
+                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="check"
+                  height="12"
+                  name="Check"
+                  width="12"
+                />
+                <small
+                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  data-test-text=""
+                  style="text-align: inherit;"
+                >
+                  Remove min height
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-c1qms7"
+        data-test-box=""
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ColumnResizing snapshots should render when values are mixed{max} 1`] = `<DocumentFragment />`;
+
+exports[`ColumnResizing snapshots should render when values are mixed{min} 1`] = `<DocumentFragment />`;

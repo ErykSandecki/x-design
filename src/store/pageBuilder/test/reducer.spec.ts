@@ -41,6 +41,8 @@ import {
   fitLayout,
   setElementsSizes,
   applyElementsSizeType,
+  setElementsSizesMinMax,
+  setElementsScoreToCurrentSize,
 } from '../actions';
 
 // types
@@ -999,7 +1001,47 @@ describe('PageBuilderReducer', () => {
     });
   });
 
-  it('should handle FIT_LAYOUT', () => {
+  it('should handle SET_ELEMENTS_SCORE_TO_CURRENT_SIZE', () => {
+    // mock
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+
+    // before
+    const state = reducer(setElementsScoreToCurrentSize('min', 'height'), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            [elementMock.id]: elementMock,
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            [elementMock.id]: {
+              ...elementMock,
+              height: { ...elementMock.height, min: 100 },
+            },
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+  });
+
+  it('should handle SET_ELEMENT_SIZES', () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
@@ -1031,6 +1073,46 @@ describe('PageBuilderReducer', () => {
             [elementMock.id]: {
               ...elementMock,
               height: { value: 'auto' },
+            },
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+  });
+
+  it('should handle SET_ELEMENT_SIZES_MIN_MAX', () => {
+    // mock
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+
+    // before
+    const state = reducer(setElementsSizesMinMax('min', 'height', 100), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            [elementMock.id]: elementMock,
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            [elementMock.id]: {
+              ...elementMock,
+              height: { ...elementMock.height, min: 100 },
             },
           },
           selectedElements: [selectedElementMock],

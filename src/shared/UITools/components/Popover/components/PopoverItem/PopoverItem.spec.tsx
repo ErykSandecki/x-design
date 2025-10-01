@@ -36,6 +36,18 @@ describe('PopoverItem snapshots', () => {
     // result
     expect(asFragment()).toMatchSnapshot();
   });
+
+  it('should render not visible', () => {
+    // before
+    const { asFragment } = render(
+      <PopoverRoot setSelected={mockCallBack}>
+        <PopoverItem icon="AlignHorizontalCenter" index={0} onClick={mockCallBack} text="text" visible={false} />
+      </PopoverRoot>,
+    );
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
 });
 
 describe('PopoverItem behaviors', () => {

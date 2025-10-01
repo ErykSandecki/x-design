@@ -11,4 +11,12 @@ describe('PopoverSeparator snapshots', () => {
     // result
     expect(asFragment()).toMatchSnapshot();
   });
+
+  it('should render not visible', () => {
+    // before
+    const { asFragment } = render(<PopoverSeparator visible={false} />);
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
 });

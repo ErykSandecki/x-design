@@ -3,11 +3,11 @@
 exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
     data-test-section=""
   >
     <div
-      class="css-lxhfcz SectionColumn__labels SectionColumn__labels--light"
+      class="css-xdzdnq SectionColumn__labels SectionColumn__labels--light"
       data-test-box=""
       style="width: calc(100% - 24px - 0px - 8px);"
     >
@@ -361,7 +361,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
                   data-test-text=""
                   style="text-align: inherit;"
                 >
-                  Percentage
+                  Add min height...
                 </small>
               </div>
               <div
@@ -407,11 +407,11 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
 exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
     data-test-section=""
   >
     <div
-      class="css-lxhfcz SectionColumn__labels SectionColumn__labels--light"
+      class="css-xdzdnq SectionColumn__labels SectionColumn__labels--light"
       data-test-box=""
       style="width: calc(100% - 24px - 0px - 8px);"
     >
@@ -554,64 +554,6 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
                   Percentage
                 </small>
               </div>
-              <div
-                class="css-qef3st"
-                data-test-box=""
-              />
-              <div
-                class="css-1wfopar PopoverItem PopoverItem--light"
-                data-test-box=""
-                data-test-popover-item="3"
-              >
-                <div
-                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-                  data-test-icon="check"
-                  height="12"
-                  name="Check"
-                  width="12"
-                />
-                <div
-                  class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-                  data-test-icon="min-width"
-                  height="12"
-                  name="MinWidth"
-                  width="12"
-                />
-                <small
-                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
-                  data-test-text=""
-                  style="text-align: inherit;"
-                >
-                  Add min width...
-                </small>
-              </div>
-              <div
-                class="css-1wfopar PopoverItem PopoverItem--light"
-                data-test-box=""
-                data-test-popover-item="4"
-              >
-                <div
-                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-                  data-test-icon="check"
-                  height="12"
-                  name="Check"
-                  width="12"
-                />
-                <div
-                  class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-                  data-test-icon="max-width"
-                  height="12"
-                  name="MaxWidth"
-                  width="12"
-                />
-                <small
-                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
-                  data-test-text=""
-                  style="text-align: inherit;"
-                >
-                  Add max width...
-                </small>
-              </div>
             </div>
           </div>
         </div>
@@ -735,64 +677,6 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
                   style="text-align: inherit;"
                 >
                   Percentage
-                </small>
-              </div>
-              <div
-                class="css-qef3st"
-                data-test-box=""
-              />
-              <div
-                class="css-1wfopar PopoverItem PopoverItem--light"
-                data-test-box=""
-                data-test-popover-item="3"
-              >
-                <div
-                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-                  data-test-icon="check"
-                  height="12"
-                  name="Check"
-                  width="12"
-                />
-                <div
-                  class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-                  data-test-icon="min-height"
-                  height="12"
-                  name="MinHeight"
-                  width="12"
-                />
-                <small
-                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
-                  data-test-text=""
-                  style="text-align: inherit;"
-                >
-                  Percentage
-                </small>
-              </div>
-              <div
-                class="css-1wfopar PopoverItem PopoverItem--light"
-                data-test-box=""
-                data-test-popover-item="4"
-              >
-                <div
-                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-                  data-test-icon="check"
-                  height="12"
-                  name="Check"
-                  width="12"
-                />
-                <div
-                  class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-                  data-test-icon="max-height"
-                  height="12"
-                  name="MaxHeight"
-                  width="12"
-                />
-                <small
-                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
-                  data-test-text=""
-                  style="text-align: inherit;"
-                >
-                  Add max height...
                 </small>
               </div>
             </div>

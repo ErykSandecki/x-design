@@ -23,6 +23,8 @@ import {
   UPDATE_PREV_STATE,
   SET_ELEMENTS_SIZES,
   APPLY_ELEMENTS_SIZE_TYPE,
+  SET_ELEMENTS_SIZES_MIN_MAX,
+  SET_ELEMENTS_SCORE_TO_CURRENT_SIZE,
 } from './actionsType';
 
 // types
@@ -37,6 +39,7 @@ import {
   TChildren,
   TElement,
   TObject,
+  TScore,
   TSize,
 } from 'types';
 
@@ -214,14 +217,35 @@ export type TSetElementsCoordinatesAction = {
   type: typeof SET_ELEMENTS_COORDINATES;
 };
 
+export type TSetElementsScoreToCurrentSizeActionPayload = {
+  scoreType: keyof TScore;
+  sizeType: keyof Pick<TElement, 'height' | 'width'>;
+};
+
+export type TSetElementsScoreToCurrentSizeAction = {
+  payload: TSetElementsScoreToCurrentSizeActionPayload;
+  type: typeof SET_ELEMENTS_SCORE_TO_CURRENT_SIZE;
+};
+
 export type TSetElementsSizesActionPayload = {
   sizeType: keyof Pick<TElement, 'height' | 'width'>;
-  value: TElement['height']['value'] | TElement['width']['value'];
+  value: TSize['value'];
 };
 
 export type TSetElementsSizesAction = {
   payload: TSetElementsSizesActionPayload;
   type: typeof SET_ELEMENTS_SIZES;
+};
+
+export type TSetElementsSizesMinMaxActionPayload = {
+  scoreType: keyof TScore;
+  sizeType: keyof Pick<TElement, 'height' | 'width'>;
+  value: TSize['max'] | TSize['min'];
+};
+
+export type TSetElementsSizesMinMaxAction = {
+  payload: TSetElementsSizesMinMaxActionPayload;
+  type: typeof SET_ELEMENTS_SIZES_MIN_MAX;
 };
 
 export type TUpdateEventsStatusAction = {

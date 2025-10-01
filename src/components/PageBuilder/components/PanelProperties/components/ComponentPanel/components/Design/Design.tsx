@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import ColumnAlignment from './components/ColumnAlignment/ColumnAlignment';
 import ColumnFlow from './components/ColumnFlow/ColumnFlow';
 import ColumnHeader from './components/ColumnHeader/ColumnHeader';
+import ColumnMinMaxSize from './components/ColumnMinMaxSize/ColumnMinMaxSize';
 import ColumnPosition from './components/ColumnPosition/ColumnPosition';
 import ColumnResizing from './components/ColumnResizing/ColumnResizing';
 import ColumnRotation from './components/ColumnRotation/ColumnRotation';
@@ -41,6 +42,8 @@ const Design: FC = () => {
       >
         <ColumnFlow />
         <ColumnResizing />
+        <ColumnMinMaxSize score="min" />
+        <ColumnMinMaxSize score="max" />
       </UITools.Section>
     </>
   );

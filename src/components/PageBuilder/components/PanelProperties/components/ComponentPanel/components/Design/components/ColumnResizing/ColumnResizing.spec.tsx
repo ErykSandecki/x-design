@@ -449,4 +449,80 @@ describe('ColumnResizing behaviors', () => {
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.unit).toBe(Unit.percentage);
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.unit).toBe(Unit.percentage);
   });
+
+  it('should apply min score for height & width', () => {
+    // mock
+    const store = configureStore(stateMock);
+
+    // before
+    const { container } = render(
+      <Provider store={store}>
+        <ColumnResizing />
+      </Provider>,
+    );
+
+    // find { inputs }
+    const inputHeight = getByE2EAttribute(container, E2EAttribute.textField, 'height');
+    const inputWidth = getByE2EAttribute(container, E2EAttribute.textField, 'width');
+
+    // find { icons }
+    const iconHeight = getByE2EAttribute(inputHeight, E2EAttribute.icon, 'variant');
+    const iconWidth = getByE2EAttribute(inputWidth, E2EAttribute.icon, 'variant');
+
+    // find { popovers }
+    const popoverHeight = getByE2EAttribute(inputHeight, E2EAttribute.popover, 'popover');
+    const popoverWidth = getByE2EAttribute(inputWidth, E2EAttribute.popover, 'popover');
+
+    // find { popover items }
+    const popoverHeightItem = getByE2EAttribute(popoverHeight, E2EAttribute.popoverItem, PopoverItem.minScore);
+    const popoverWidthItem = getByE2EAttribute(popoverWidth, E2EAttribute.popoverItem, PopoverItem.minScore);
+
+    // action
+    fireEvent.click(iconHeight);
+    fireEvent.click(popoverHeightItem);
+    fireEvent.click(iconWidth);
+    fireEvent.click(popoverWidthItem);
+
+    // result
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.min).toBe(elementMock.height.value);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.min).toBe(elementMock.width.value);
+  });
+
+  it('should apply max score for height & width', () => {
+    // mock
+    const store = configureStore(stateMock);
+
+    // before
+    const { container } = render(
+      <Provider store={store}>
+        <ColumnResizing />
+      </Provider>,
+    );
+
+    // find { inputs }
+    const inputHeight = getByE2EAttribute(container, E2EAttribute.textField, 'height');
+    const inputWidth = getByE2EAttribute(container, E2EAttribute.textField, 'width');
+
+    // find { icons }
+    const iconHeight = getByE2EAttribute(inputHeight, E2EAttribute.icon, 'variant');
+    const iconWidth = getByE2EAttribute(inputWidth, E2EAttribute.icon, 'variant');
+
+    // find { popovers }
+    const popoverHeight = getByE2EAttribute(inputHeight, E2EAttribute.popover, 'popover');
+    const popoverWidth = getByE2EAttribute(inputWidth, E2EAttribute.popover, 'popover');
+
+    // find { popover items }
+    const popoverHeightItem = getByE2EAttribute(popoverHeight, E2EAttribute.popoverItem, PopoverItem.maxScore);
+    const popoverWidthItem = getByE2EAttribute(popoverWidth, E2EAttribute.popoverItem, PopoverItem.maxScore);
+
+    // action
+    fireEvent.click(iconHeight);
+    fireEvent.click(popoverHeightItem);
+    fireEvent.click(iconWidth);
+    fireEvent.click(popoverWidthItem);
+
+    // result
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.max).toBe(elementMock.height.value);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.max).toBe(elementMock.width.value);
+  });
 });

@@ -81,7 +81,7 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
           data-test-section=""
         >
           <div
-            class="css-lxhfcz SectionColumn__labels SectionColumn__labels--light"
+            class="css-xdzdnq SectionColumn__labels SectionColumn__labels--light"
             data-test-box=""
             style="width: calc(100% - 24px - 0px - 8px);"
           />
@@ -251,7 +251,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
           data-test-section=""
         >
           <div
-            class="css-lxhfcz SectionColumn__labels SectionColumn__labels--light"
+            class="css-xdzdnq SectionColumn__labels SectionColumn__labels--light"
             data-test-box=""
             style="width: calc(100% - 48px - 2.5px - 8px);"
           />
@@ -329,7 +329,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
           data-test-section=""
         >
           <div
-            class="css-lxhfcz SectionColumn__labels SectionColumn__labels--light"
+            class="css-xdzdnq SectionColumn__labels SectionColumn__labels--light"
             data-test-box=""
             style="width: calc(100% - 24px - 0px - 8px);"
           >
@@ -444,7 +444,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
           data-test-section=""
         >
           <div
-            class="css-lxhfcz SectionColumn__labels SectionColumn__labels--light"
+            class="css-xdzdnq SectionColumn__labels SectionColumn__labels--light"
             data-test-box=""
             style="width: calc(100% - 24px - 0px - 8px);"
           >
@@ -527,7 +527,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
           data-test-section=""
         >
           <div
-            class="css-lxhfcz SectionColumn__labels SectionColumn__labels--light"
+            class="css-xdzdnq SectionColumn__labels SectionColumn__labels--light"
             data-test-box=""
             style="width: calc(100% - 24px - 0px - 8px);"
           >
@@ -672,7 +672,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
           data-test-section=""
         >
           <div
-            class="css-lxhfcz SectionColumn__labels SectionColumn__labels--light"
+            class="css-xdzdnq SectionColumn__labels SectionColumn__labels--light"
             data-test-box=""
             style="width: calc(100% - 24px - 0px - 8px);"
           >
@@ -759,11 +759,11 @@ exports[`PanelProperties snapshots should render when some element is selected 1
           </div>
         </div>
         <div
-          class="css-1jnxvbp SectionColumn SectionColumn--light"
+          class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
           data-test-section=""
         >
           <div
-            class="css-lxhfcz SectionColumn__labels SectionColumn__labels--light"
+            class="css-xdzdnq SectionColumn__labels SectionColumn__labels--light"
             data-test-box=""
             style="width: calc(100% - 24px - 0px - 8px);"
           >
@@ -1117,7 +1117,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                         data-test-text=""
                         style="text-align: inherit;"
                       >
-                        Percentage
+                        Add min height...
                       </small>
                     </div>
                     <div
@@ -1244,7 +1244,7 @@ exports[`PanelProperties snapshots should render with changed width 1`] = `
           data-test-section=""
         >
           <div
-            class="css-lxhfcz SectionColumn__labels SectionColumn__labels--light"
+            class="css-xdzdnq SectionColumn__labels SectionColumn__labels--light"
             data-test-box=""
             style="width: calc(100% - 24px - 0px - 8px);"
           />

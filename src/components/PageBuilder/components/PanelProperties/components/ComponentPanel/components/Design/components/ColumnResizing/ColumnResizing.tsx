@@ -52,7 +52,11 @@ const ColumnResizing: FC = () => {
   } = useResizingEvents();
 
   return (
-    <UITools.SectionColumn gridColumnType={GridColumnType.twoInputs} labels={[t(`${translationNameSpace}.label`)]}>
+    <UITools.SectionColumn
+      gridColumnType={GridColumnType.twoInputs}
+      labels={[t(`${translationNameSpace}.label`)]}
+      withMargin
+    >
       <ColumnResizingInput
         e2eValue="width"
         inputType={inputWidthType}

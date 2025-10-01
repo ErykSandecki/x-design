@@ -19,7 +19,9 @@ import {
   SELECT_ELEMENTS,
   SET_AREA_COORDINATES,
   SET_ELEMENTS_COORDINATES,
+  SET_ELEMENTS_SCORE_TO_CURRENT_SIZE,
   SET_ELEMENTS_SIZES,
+  SET_ELEMENTS_SIZES_MIN_MAX,
   UNSELECT_ELEMENT,
   UPDATE_EVENTS_STATUS,
   UPDATE_PREV_STATE,
@@ -52,8 +54,12 @@ import {
   TSetAreaCoordinatesAction,
   TSetElementsCoordinatesAction,
   TSetElementsCoordinatesActionPayload,
+  TSetElementsScoreToCurrentSizeAction,
+  TSetElementsScoreToCurrentSizeActionPayload,
   TSetElementsSizesAction,
   TSetElementsSizesActionPayload,
+  TSetElementsSizesMinMaxAction,
+  TSetElementsSizesMinMaxActionPayload,
   TUnselectElementAction,
   TUpdateEventsStatusAction,
   TUpdatePrevStateAction,
@@ -167,12 +173,29 @@ export const setElementsCoordinates = (
   type: SET_ELEMENTS_COORDINATES,
 });
 
+export const setElementsScoreToCurrentSize = (
+  scoreType: TSetElementsScoreToCurrentSizeActionPayload['scoreType'],
+  sizeType: TSetElementsScoreToCurrentSizeActionPayload['sizeType'],
+): TSetElementsScoreToCurrentSizeAction => ({
+  payload: { scoreType, sizeType },
+  type: SET_ELEMENTS_SCORE_TO_CURRENT_SIZE,
+});
+
 export const setElementsSizes = (
   sizeType: TSetElementsSizesActionPayload['sizeType'],
   value: TSetElementsSizesActionPayload['value'],
 ): TSetElementsSizesAction => ({
   payload: { sizeType, value },
   type: SET_ELEMENTS_SIZES,
+});
+
+export const setElementsSizesMinMax = (
+  scoreType: TSetElementsSizesMinMaxActionPayload['scoreType'],
+  sizeType: TSetElementsSizesMinMaxActionPayload['sizeType'],
+  value: TSetElementsSizesMinMaxActionPayload['value'],
+): TSetElementsSizesMinMaxAction => ({
+  payload: { scoreType, sizeType, value },
+  type: SET_ELEMENTS_SIZES_MIN_MAX,
 });
 
 export const updateEventsStatus = (payload: TUpdateEventsStatusAction['payload']): TUpdateEventsStatusAction => ({

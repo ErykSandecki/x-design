@@ -27,9 +27,12 @@ export type TLayout = {
   type: LayoutType;
 };
 
-export type TSize = {
+export type TScore = {
   max?: number;
   min?: number;
+};
+
+export type TSize = TScore & {
   unit?: Unit;
   value: number | CSSProperties['height'] | CSSProperties['width'];
 };

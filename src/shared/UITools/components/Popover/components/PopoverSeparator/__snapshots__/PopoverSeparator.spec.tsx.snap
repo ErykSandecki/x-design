@@ -8,3 +8,5 @@ exports[`PopoverSeparator snapshots should render PopoverSeparator 1`] = `
   />
 </DocumentFragment>
 `;
+
+exports[`PopoverSeparator snapshots should render not visible 1`] = `<DocumentFragment />`;

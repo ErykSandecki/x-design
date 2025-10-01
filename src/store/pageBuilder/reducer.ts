@@ -23,6 +23,8 @@ import {
   UPDATE_PREV_STATE,
   SET_ELEMENTS_SIZES,
   APPLY_ELEMENTS_SIZE_TYPE,
+  SET_ELEMENTS_SIZES_MIN_MAX,
+  SET_ELEMENTS_SCORE_TO_CURRENT_SIZE,
 } from './actionsType';
 import { BASE_PAGE } from './constants';
 
@@ -48,6 +50,8 @@ import {
   TSetElementsCoordinatesAction,
   TSetElementsSizesAction,
   TApplyElementsSizeTypeAction,
+  TSetElementsSizesMinMaxAction,
+  TSetElementsScoreToCurrentSizeAction,
 } from './types';
 
 // utils
@@ -59,6 +63,7 @@ import { handleChangeBackground } from './utils/handleChangeBackground';
 import { handleChangeLayout } from './utils/handleChangeLayout';
 import { handleChangeParent } from './utils/changeParent/handleChangeParent';
 import { handleChangePosition } from './utils/handleChangePosition';
+import { handleFitLayout } from './utils/handleFitLayout';
 import { handleFlipElements } from './utils/handleFlipElements';
 import { handleReducerHistoryRedo } from './utils/reducerHistory/handleReducerHistoryRedo';
 import { handleReducerHistorySave } from './utils/reducerHistory/handleReducerHistorySave';
@@ -66,8 +71,9 @@ import { handleReducerHistoryUndo } from './utils/reducerHistory/handleReducerHi
 import { handleResizeElement } from './utils/handleResizeElement';
 import { handleRotateElements } from './utils/handleRotateElements';
 import { handleSetElementsCoordinates } from './utils/handleSetElementsCoordinates';
-import { handleFitLayout } from './utils/handleFitLayout';
+import { handleSetElementsScoreToCurrentSize } from './utils/handleSetElementsScoreToCurrentSize';
 import { handleSetElementsSizes } from './utils/handleSetElementsSizes';
+import { handleSetElementsSizesMinMax } from './utils/handleSetElementsSizesMinMax';
 
 const initialState: TPageBuilderState = {
   currentPage: '0',
@@ -216,10 +222,20 @@ const setElementsCoordinates = (
   { payload: coordinates }: TAction<TSetElementsCoordinatesAction['payload']>,
 ): TPageBuilderState => handleSetElementsCoordinates(coordinates, state);
 
+const setElementsScoreToCurrentSize = (
+  state: TPageBuilderState,
+  { payload: { scoreType, sizeType } }: TAction<TSetElementsScoreToCurrentSizeAction['payload']>,
+): TPageBuilderState => handleSetElementsScoreToCurrentSize(scoreType, sizeType, state);
+
 const setElementsSizes = (
   state: TPageBuilderState,
   { payload: { sizeType, value } }: TAction<TSetElementsSizesAction['payload']>,
 ): TPageBuilderState => handleSetElementsSizes(sizeType, state, value);
+
+const setElementsSizesMinMax = (
+  state: TPageBuilderState,
+  { payload: { scoreType, sizeType, value } }: TAction<TSetElementsSizesMinMaxAction['payload']>,
+): TPageBuilderState => handleSetElementsSizesMinMax(scoreType, sizeType, state, value);
 
 const updateEventsStatus = (
   state: TPageBuilderState,
@@ -297,8 +313,12 @@ const pageBuilder = (state: TPageBuilderState = initialState, action: TAction): 
       return setAreaCoordinates(state, action);
     case SET_ELEMENTS_COORDINATES:
       return setElementsCoordinates(state, action);
+    case SET_ELEMENTS_SCORE_TO_CURRENT_SIZE:
+      return setElementsScoreToCurrentSize(state, action);
     case SET_ELEMENTS_SIZES:
       return setElementsSizes(state, action);
+    case SET_ELEMENTS_SIZES_MIN_MAX:
+      return setElementsSizesMinMax(state, action);
     case UPDATE_EVENTS_STATUS:
       return updateEventsStatus(state, action);
     case UPDATE_PREV_STATE:

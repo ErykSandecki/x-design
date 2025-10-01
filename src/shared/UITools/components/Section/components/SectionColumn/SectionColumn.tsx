@@ -48,7 +48,11 @@ export const SectionColumn: FC<TSectionColumnProps> = ({
       }}
       e2eAttribute={E2EAttribute.section}
     >
-      <Box classes={{ className: cx(classNamesWithTheme.labels) }} style={{ width }} sx={{ display: 'flex' }}>
+      <Box
+        classes={{ className: cx(classNamesWithTheme.labels) }}
+        style={{ width }}
+        sx={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)' }}
+      >
         {!!size(labels) &&
           labels.map((label, index) => (
             <Small classes={{ className: cx(classNamesWithTheme.label) }} key={index}>

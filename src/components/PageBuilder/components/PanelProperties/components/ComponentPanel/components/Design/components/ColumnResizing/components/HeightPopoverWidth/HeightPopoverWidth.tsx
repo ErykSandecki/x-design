@@ -51,9 +51,23 @@ const HeightPopoverWidth: FC<THeightPopoverWidthProps> = ({ width, isMixed }) =>
         selected={!isMixed && !!width.unit}
         text={t(`${translationNameSpace}.3`)}
       />
-      <PopoverCompound.PopoverSeparator />
-      <PopoverCompound.PopoverItem icon="MinWidth" index={3} selected={false} text={t(`${translationNameSpace}.4`)} />
-      <PopoverCompound.PopoverItem icon="MaxWidth" index={4} selected={false} text={t(`${translationNameSpace}.5`)} />
+      <PopoverCompound.PopoverSeparator visible={!isMixed} />
+      <PopoverCompound.PopoverItem
+        icon="MinWidth"
+        index={3}
+        onClick={() => dispatch(applyElementsSizeType('width', 'min'))}
+        selected={!!width.min}
+        text={t(`${translationNameSpace}.4`)}
+        visible={!isMixed}
+      />
+      <PopoverCompound.PopoverItem
+        icon="MaxWidth"
+        index={4}
+        onClick={() => dispatch(applyElementsSizeType('width', 'max'))}
+        selected={!!width.max}
+        text={t(`${translationNameSpace}.5`)}
+        visible={!isMixed}
+      />
     </>
   );
 };

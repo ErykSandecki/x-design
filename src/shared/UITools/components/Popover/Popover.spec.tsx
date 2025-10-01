@@ -42,4 +42,20 @@ describe('Popover snapshots', () => {
     // result
     expect(asFragment()).toMatchSnapshot();
   });
+
+  it('should render not visible item', () => {
+    // before
+    const { asFragment } = render(
+      <Popover e2eValue="popover" refItem={refItem} selected>
+        <PopoverCompound.PopoverRoot setSelected={noop}>
+          <PopoverCompound.PopoverItem icon="AlignHorizontalCenter" index={0} selected={false} text="text" />
+          <PopoverCompound.PopoverItem icon="AlignHorizontalCenter" index={1} selected text="text" />
+          <PopoverCompound.PopoverSeparator />
+        </PopoverCompound.PopoverRoot>
+      </Popover>,
+    );
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
 });

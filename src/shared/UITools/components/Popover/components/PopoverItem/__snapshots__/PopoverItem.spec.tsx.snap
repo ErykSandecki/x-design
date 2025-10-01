@@ -32,6 +32,8 @@ exports[`PopoverItem snapshots should render PopoverItem 1`] = `
 </DocumentFragment>
 `;
 
+exports[`PopoverItem snapshots should render not visible 1`] = `<DocumentFragment />`;
+
 exports[`PopoverItem snapshots should render selected 1`] = `
 <DocumentFragment>
   <div

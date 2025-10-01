@@ -26,12 +26,17 @@ export type TPopoverItemProps = {
   onClick?: TFunc;
   selected?: boolean;
   text: string;
+  visible?: boolean;
 };
 
-export const PopoverItem: FC<TPopoverItemProps> = ({ icon, index, onClick, selected, text }) => {
+export const PopoverItem: FC<TPopoverItemProps> = ({ icon, index, onClick, selected, text, visible = true }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { setSelected } = usePopoverRoot();
   const onClickHandler = useClickEvent(onClick, setSelected);
+
+  if (!visible) {
+    return null;
+  }
 
   return (
     <E2EDataAttribute type={E2EAttribute.popoverItem} value={index}>

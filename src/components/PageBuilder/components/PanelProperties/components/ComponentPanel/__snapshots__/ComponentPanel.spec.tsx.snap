@@ -11,7 +11,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
       data-test-section=""
     >
       <div
-        class="css-lxhfcz SectionColumn__labels SectionColumn__labels--light"
+        class="css-xdzdnq SectionColumn__labels SectionColumn__labels--light"
         data-test-box=""
         style="width: calc(100% - 48px - 2.5px - 8px);"
       />
@@ -89,7 +89,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
       data-test-section=""
     >
       <div
-        class="css-lxhfcz SectionColumn__labels SectionColumn__labels--light"
+        class="css-xdzdnq SectionColumn__labels SectionColumn__labels--light"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
@@ -204,7 +204,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
       data-test-section=""
     >
       <div
-        class="css-lxhfcz SectionColumn__labels SectionColumn__labels--light"
+        class="css-xdzdnq SectionColumn__labels SectionColumn__labels--light"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
@@ -287,7 +287,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
       data-test-section=""
     >
       <div
-        class="css-lxhfcz SectionColumn__labels SectionColumn__labels--light"
+        class="css-xdzdnq SectionColumn__labels SectionColumn__labels--light"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
@@ -432,7 +432,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
       data-test-section=""
     >
       <div
-        class="css-lxhfcz SectionColumn__labels SectionColumn__labels--light"
+        class="css-xdzdnq SectionColumn__labels SectionColumn__labels--light"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
@@ -519,11 +519,11 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp SectionColumn SectionColumn--light"
+      class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
       data-test-section=""
     >
       <div
-        class="css-lxhfcz SectionColumn__labels SectionColumn__labels--light"
+        class="css-xdzdnq SectionColumn__labels SectionColumn__labels--light"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
@@ -877,7 +877,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
                     data-test-text=""
                     style="text-align: inherit;"
                   >
-                    Percentage
+                    Add min height...
                   </small>
                 </div>
                 <div
