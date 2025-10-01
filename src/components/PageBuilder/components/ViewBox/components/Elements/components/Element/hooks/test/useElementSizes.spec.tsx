@@ -43,7 +43,19 @@ describe('useElementEvents', () => {
                 ...currentPage.elements['-1'],
                 children: [elementMock.id],
               },
-              [elementMock.id]: elementMock,
+              [elementMock.id]: {
+                ...elementMock,
+                height: {
+                  ...elementMock.height,
+                  max: 100,
+                  min: 100,
+                },
+                width: {
+                  ...elementMock.width,
+                  max: 100,
+                  min: 100,
+                },
+              },
             },
             selectedElements: [selectedElementMock],
           },
@@ -69,6 +81,10 @@ describe('useElementEvents', () => {
       cssHeight: '100px',
       cssWidth: '100px',
       height: 100,
+      maxHeight: '100px',
+      maxWidth: '100px',
+      minHeight: '100px',
+      minWidth: '100px',
       width: 100,
     });
   });
@@ -125,6 +141,10 @@ describe('useElementEvents', () => {
       cssHeight: 'auto',
       cssWidth: 'auto',
       height: 100,
+      maxHeight: '',
+      maxWidth: '',
+      minHeight: '',
+      minWidth: '',
       width: 100,
     });
   });
