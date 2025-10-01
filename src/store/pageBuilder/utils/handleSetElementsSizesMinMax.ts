@@ -1,10 +1,8 @@
-import { includes, mapValues } from 'lodash';
-
 // types
 import { TPageBuilderState, TSetElementsSizesMinMaxActionPayload } from '../types';
 
 // utils
-import { extractObjectValues } from 'utils';
+import { extractObjectValues, mapFilteredValues } from 'utils';
 
 export const handleSetElementsSizesMinMax = (
   scoreType: TSetElementsSizesMinMaxActionPayload['scoreType'],
@@ -22,9 +20,13 @@ export const handleSetElementsSizesMinMax = (
       ...state.pages,
       [state.currentPage]: {
         ...currentPage,
-        elements: mapValues(currentPage.elements, (element, id) =>
-          includes(ids, id) ? { ...element, [sizeType]: { ...element[sizeType], [scoreType]: value } } : element,
-        ),
+        elements: {
+          ...currentPage.elements,
+          ...mapFilteredValues(currentPage.elements, ids, (element) => ({
+            ...element,
+            [sizeType]: { ...element[sizeType], [scoreType]: value },
+          })),
+        },
       },
     },
   };

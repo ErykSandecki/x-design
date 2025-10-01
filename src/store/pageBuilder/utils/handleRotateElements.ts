@@ -1,10 +1,8 @@
-import { includes, mapValues } from 'lodash';
-
 // types
 import { TPageBuilderState, TRotateElementsAction } from '../types';
 
 // utils
-import { extractObjectValues } from 'utils';
+import { extractObjectValues, mapFilteredValues } from 'utils';
 
 export const handleRotateElements = (
   angle: TRotateElementsAction['payload'],
@@ -21,9 +19,10 @@ export const handleRotateElements = (
       ...state.pages,
       [state.currentPage]: {
         ...currentPage,
-        elements: mapValues(currentPage.elements, (element, id) =>
-          includes(ids, id) ? { ...element, angle: fixedAngle } : element,
-        ),
+        elements: {
+          ...currentPage.elements,
+          ...mapFilteredValues(currentPage.elements, ids, (element) => ({ ...element, angle: fixedAngle })),
+        },
       },
     },
   };

@@ -1,5 +1,3 @@
-import { includes, mapValues } from 'lodash';
-
 // others
 import { ZOOM_CONTENT_ID } from 'shared';
 
@@ -9,7 +7,7 @@ import { TElement } from 'types';
 
 // utils
 import { applyTypeSize } from './applyTypeSize';
-import { extractObjectValues } from 'utils';
+import { extractObjectValues, mapFilteredValues } from 'utils';
 
 export const getSizeData = (
   element: TElement,
@@ -39,9 +37,13 @@ export const handleApplyElementsSizeType = (
       ...state.pages,
       [state.currentPage]: {
         ...currentPage,
-        elements: mapValues(currentPage.elements, (element, id) =>
-          includes(ids, id) ? { ...element, [sizeType]: getSizeData(element, sizeType, type, zoomContent) } : element,
-        ),
+        elements: {
+          ...currentPage.elements,
+          ...mapFilteredValues(currentPage.elements, ids, (element) => ({
+            ...element,
+            [sizeType]: getSizeData(element, sizeType, type, zoomContent),
+          })),
+        },
       },
     },
   };

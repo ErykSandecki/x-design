@@ -1,14 +1,12 @@
-import { includes, mapValues } from 'lodash';
-
 // others
 import { ZOOM_CONTENT_ID } from 'shared';
 
 // types
+import { TElement } from 'types';
 import { TPageBuilderState, TSetElementsScoreToCurrentSizeActionPayload } from '../types';
 
 // utils
-import { extractObjectValues } from 'utils';
-import { TElement } from 'types';
+import { extractObjectValues, mapFilteredValues } from 'utils';
 
 export const getSize = (
   element: TElement,
@@ -37,11 +35,13 @@ export const handleSetElementsScoreToCurrentSize = (
       ...state.pages,
       [state.currentPage]: {
         ...currentPage,
-        elements: mapValues(currentPage.elements, (element, id) =>
-          includes(ids, id)
-            ? { ...element, [sizeType]: { ...element[sizeType], [scoreType]: getSize(element, sizeType, zoomContent) } }
-            : element,
-        ),
+        elements: {
+          ...currentPage.elements,
+          ...mapFilteredValues(currentPage.elements, ids, (element) => ({
+            ...element,
+            [sizeType]: { ...element[sizeType], [scoreType]: getSize(element, sizeType, zoomContent) },
+          })),
+        },
       },
     },
   };

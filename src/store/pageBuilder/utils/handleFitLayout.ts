@@ -1,10 +1,8 @@
-import { includes, mapValues } from 'lodash';
-
 // types
 import { TPageBuilderState } from '../types';
 
 // utils
-import { extractObjectValues } from 'utils';
+import { extractObjectValues, mapFilteredValues } from 'utils';
 
 export const handleFitLayout = (state: TPageBuilderState): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];
@@ -17,11 +15,14 @@ export const handleFitLayout = (state: TPageBuilderState): TPageBuilderState => 
       ...state.pages,
       [state.currentPage]: {
         ...currentPage,
-        elements: mapValues(currentPage.elements, (element, id) =>
-          includes(ids, id)
-            ? { ...element, height: { ...element.height, value: 'auto' }, width: { ...element.width, value: 'auto' } }
-            : element,
-        ),
+        elements: {
+          ...currentPage.elements,
+          ...mapFilteredValues(currentPage.elements, ids, (element) => ({
+            ...element,
+            height: { ...element.height, value: 'auto' },
+            width: { ...element.width, value: 'auto' },
+          })),
+        },
       },
     },
   };

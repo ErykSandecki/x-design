@@ -1,13 +1,13 @@
-import { first, includes, mapValues } from 'lodash';
+import { first } from 'lodash';
 
 // others
 import { BASE_2D } from 'shared';
 
 // types
-import { TElements, TPageBuilderState } from '../types';
+import { TPageBuilderState } from '../types';
 
 // utils
-import { extractObjectValues } from 'utils';
+import { extractObjectValues, mapFilteredValues } from 'utils';
 
 export const handleChangePosition = (state: TPageBuilderState): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];
@@ -27,11 +27,13 @@ export const handleChangePosition = (state: TPageBuilderState): TPageBuilderStat
       [state.currentPage]: {
         ...currentPage,
         elements: {
-          ...(mapValues(currentPage.elements, (element, id) =>
-            includes(ids, id)
-              ? { ...element, alignment: {}, coordinates: targetCoordinates, position: reversePosition }
-              : element,
-          ) as TElements),
+          ...currentPage.elements,
+          ...mapFilteredValues(currentPage.elements, ids, (element) => ({
+            ...element,
+            alignment: {},
+            coordinates: targetCoordinates,
+            position: reversePosition,
+          })),
           [parentId]: {
             ...currentPage.elements[parentId],
             children: [...elementsInRelativePosition, ...elementsInAbsolutePosition],

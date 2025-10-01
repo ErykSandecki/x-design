@@ -1,11 +1,11 @@
-import { first, includes, mapValues } from 'lodash';
+import { first } from 'lodash';
 
 // types
 import { TChangeAlignmentAction, TPageBuilderState } from '../../types';
 import { TElement } from 'types';
 
 // utils
-import { extractObjectValues } from 'utils';
+import { extractObjectValues, mapFilteredValues } from 'utils';
 import { getDefaultCoordinates } from './getDefaultCoordinates';
 
 export const getAlignmentData = (
@@ -42,9 +42,10 @@ export const handleChangeAlignment = (
         ...currentPage,
         elements: {
           ...currentPage.elements,
-          ...mapValues(currentPage.elements, (element, id) =>
-            includes(ids, id) ? { ...element, ...getAlignmentData(element, payload) } : element,
-          ),
+          ...mapFilteredValues(currentPage.elements, ids, (element) => ({
+            ...element,
+            ...getAlignmentData(element, payload),
+          })),
           [parentId]: {
             ...currentPage.elements[parentId],
             children: [...elementsInRelativePosition, ...elementsInAbsolutePosition],

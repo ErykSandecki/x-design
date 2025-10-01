@@ -1,11 +1,9 @@
-import { includes, mapValues } from 'lodash';
-
 // types
 import { LayoutType, TElement } from 'types';
 import { TFlipElementsAction, TPageBuilderState } from '../types';
 
 // utils
-import { extractObjectValues } from 'utils';
+import { extractObjectValues, mapFilteredValues } from 'utils';
 import { findAllChildren } from './findAllChildren';
 import { negateValue } from 'utils/math/negateValue';
 
@@ -40,20 +38,16 @@ export const handleFlipElements = (
       [state.currentPage]: {
         ...currentPage,
         elements: {
-          ...mapValues(currentPage.elements, (element, id) =>
-            includes(ids, id)
-              ? {
-                  ...element,
-                  angle: negateValue(element.angle),
-                  children: reverseChildren(axis, element.children, element.layout),
-                }
-              : includes(childrenIds, id)
-                ? {
-                    ...element,
-                    children: reverseChildren(axis, element.children, element.layout),
-                  }
-                : element,
-          ),
+          ...currentPage.elements,
+          ...mapFilteredValues(currentPage.elements, ids, (element) => ({
+            ...element,
+            angle: negateValue(element.angle),
+            children: reverseChildren(axis, element.children, element.layout),
+          })),
+          ...mapFilteredValues(currentPage.elements, childrenIds, (element) => ({
+            ...element,
+            children: reverseChildren(axis, element.children, element.layout),
+          })),
         },
       },
     },

@@ -4,6 +4,7 @@ export * from './common/generateID';
 export * from './common/getCssVariable';
 export * from './common/isBaseParent';
 export * from './common/isPureNumber';
+export * from './common/mapFilteredValues';
 export * from './dom/createHtmlElement';
 export * from './dom/handleSubmitInput';
 export * from './dom/hasScroll';

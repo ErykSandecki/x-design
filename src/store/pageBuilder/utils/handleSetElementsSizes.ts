@@ -1,10 +1,8 @@
-import { includes, mapValues } from 'lodash';
-
 // types
 import { TPageBuilderState, TSetElementsSizesActionPayload } from '../types';
 
 // utils
-import { extractObjectValues } from 'utils';
+import { extractObjectValues, mapFilteredValues } from 'utils';
 
 export const handleSetElementsSizes = (
   sizeType: TSetElementsSizesActionPayload['sizeType'],
@@ -21,9 +19,13 @@ export const handleSetElementsSizes = (
       ...state.pages,
       [state.currentPage]: {
         ...currentPage,
-        elements: mapValues(currentPage.elements, (element, id) =>
-          includes(ids, id) ? { ...element, [sizeType]: { ...element[sizeType], value } } : element,
-        ),
+        elements: {
+          ...currentPage.elements,
+          ...mapFilteredValues(currentPage.elements, ids, (element) => ({
+            ...element,
+            [sizeType]: { ...element[sizeType], value },
+          })),
+        },
       },
     },
   };
