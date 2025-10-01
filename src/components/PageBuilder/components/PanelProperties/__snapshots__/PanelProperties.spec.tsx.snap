@@ -934,7 +934,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                         data-test-text=""
                         style="text-align: inherit;"
                       >
-                        Percentage
+                        Add min width...
                       </small>
                     </div>
                     <div
@@ -961,7 +961,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                         data-test-text=""
                         style="text-align: inherit;"
                       >
-                        Add min width...
+                        Add max width...
                       </small>
                     </div>
                   </div>
@@ -1144,7 +1144,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                         data-test-text=""
                         style="text-align: inherit;"
                       >
-                        Add min height...
+                        Add max height...
                       </small>
                     </div>
                   </div>

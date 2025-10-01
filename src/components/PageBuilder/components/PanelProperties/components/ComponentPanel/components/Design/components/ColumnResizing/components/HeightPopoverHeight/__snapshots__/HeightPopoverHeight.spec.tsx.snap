@@ -138,7 +138,7 @@ exports[`HeightPopoverHeight snapshots should render HeightPopoverHeight 1`] = `
       data-test-text=""
       style="text-align: inherit;"
     >
-      Add min height...
+      Add max height...
     </small>
   </div>
 </DocumentFragment>
@@ -282,7 +282,7 @@ exports[`HeightPopoverHeight snapshots should render wiht mixed value 1`] = `
       data-test-text=""
       style="text-align: inherit;"
     >
-      Add min height...
+      Add max height...
     </small>
   </div>
 </DocumentFragment>
