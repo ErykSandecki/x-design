@@ -6,6 +6,7 @@ import { TSizeCoordinates } from '../../types';
 // utils
 import { getHeightByAspectRatio } from './getHeightByAspectRatio';
 import { getWidthByAspectRatio } from './getWidthByAspectRatio';
+import { keepAspectFromCorner } from './keepAspectFromCorner';
 
 export const getEastCoordinates = (
   aspectRatio: TElement['aspectRatio'],
@@ -115,35 +116,55 @@ export const getAbsoluteCoordinates = (
   switch (anchor) {
     case AnchorResize.east:
       return eastCoordinates;
-    case AnchorResize.west:
-      return westCoordinates;
     case AnchorResize.north:
       return northCoordinates;
     case AnchorResize.south:
       return southCoordinates;
     case AnchorResize.northEast:
-      return {
-        coordinates: { x: eastCoordinates.coordinates.x, y: northCoordinates.coordinates.y },
-        height: northCoordinates.height,
-        width: eastCoordinates.width,
-      };
+      return keepAspectFromCorner(
+        AnchorResize.northEast,
+        aspectRatio,
+        baseHeight,
+        baseWidth,
+        northCoordinates.height.value as number,
+        eastCoordinates.width.value as number,
+        eastCoordinates.coordinates.x,
+        northCoordinates.coordinates.y,
+      );
     case AnchorResize.northWest:
-      return {
-        coordinates: { x: westCoordinates.coordinates.x, y: northCoordinates.coordinates.y },
-        height: northCoordinates.height,
-        width: westCoordinates.width,
-      };
+      return keepAspectFromCorner(
+        AnchorResize.northWest,
+        aspectRatio,
+        baseHeight,
+        baseWidth,
+        northCoordinates.height.value as number,
+        westCoordinates.width.value as number,
+        westCoordinates.coordinates.x,
+        northCoordinates.coordinates.y,
+      );
     case AnchorResize.southEast:
-      return {
-        coordinates: { x: eastCoordinates.coordinates.x, y: southCoordinates.coordinates.y },
-        height: southCoordinates.height,
-        width: eastCoordinates.width,
-      };
+      return keepAspectFromCorner(
+        AnchorResize.southEast,
+        aspectRatio,
+        baseHeight,
+        baseWidth,
+        southCoordinates.height.value as number,
+        eastCoordinates.width.value as number,
+        eastCoordinates.coordinates.x,
+        southCoordinates.coordinates.y,
+      );
+    case AnchorResize.southWest:
+      return keepAspectFromCorner(
+        AnchorResize.southWest,
+        aspectRatio,
+        baseHeight,
+        baseWidth,
+        southCoordinates.height.value as number,
+        westCoordinates.width.value as number,
+        westCoordinates.coordinates.x,
+        southCoordinates.coordinates.y,
+      );
     default:
-      return {
-        coordinates: { x: westCoordinates.coordinates.x, y: southCoordinates.coordinates.y },
-        height: southCoordinates.height,
-        width: westCoordinates.width,
-      };
+      return westCoordinates;
   }
 };
