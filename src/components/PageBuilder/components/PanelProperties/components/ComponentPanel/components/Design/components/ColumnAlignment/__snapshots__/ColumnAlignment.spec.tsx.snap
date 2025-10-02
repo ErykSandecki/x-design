@@ -24,7 +24,7 @@ exports[`ColumnAlignment snapshots should render ColumnAlignment 1`] = `
       data-test-box=""
     >
       <div
-        class="css-1m2m6pt SectionColumn__content SectionColumn__content--light SectionColumn__content--twoInputs SectionColumn__content--twoInputs--light"
+        class="css-biptg5 SectionColumn__content SectionColumn__content--light SectionColumn__content--twoInputs SectionColumn__content--twoInputs--light"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
@@ -109,6 +109,18 @@ exports[`ColumnAlignment snapshots should render ColumnAlignment 1`] = `
               width="12"
             />
           </div>
+        </div>
+        <div
+          class="css-2ro7w4 SectionColumn__inputConnector SectionColumn__inputConnector--light"
+          data-test-box=""
+        >
+          <div
+            class="css-1jnxvbp Icon Icon--light Icon--neutral3 Icon--neutral3--light"
+            data-test-icon="inputs-connector"
+            height="24"
+            name="InputsConnector"
+            width="24"
+          />
         </div>
       </div>
       <div
@@ -144,7 +156,7 @@ exports[`ColumnAlignment snapshots should render when element is on position rel
       data-test-box=""
     >
       <div
-        class="css-1m2m6pt SectionColumn__content SectionColumn__content--light SectionColumn__content--twoInputs SectionColumn__content--twoInputs--light"
+        class="css-biptg5 SectionColumn__content SectionColumn__content--light SectionColumn__content--twoInputs SectionColumn__content--twoInputs--light"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
@@ -229,6 +241,18 @@ exports[`ColumnAlignment snapshots should render when element is on position rel
               width="12"
             />
           </div>
+        </div>
+        <div
+          class="css-2ro7w4 SectionColumn__inputConnector SectionColumn__inputConnector--light"
+          data-test-box=""
+        >
+          <div
+            class="css-1jnxvbp Icon Icon--light Icon--neutral3 Icon--neutral3--light"
+            data-test-icon="inputs-connector"
+            height="24"
+            name="InputsConnector"
+            width="24"
+          />
         </div>
       </div>
       <div

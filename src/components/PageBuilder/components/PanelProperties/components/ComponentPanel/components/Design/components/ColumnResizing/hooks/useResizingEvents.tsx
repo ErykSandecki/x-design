@@ -18,6 +18,7 @@ import { isPureNumber } from 'utils';
 
 type TUseResizingEvents = TUseChangeEvent &
   TUseBlurEvent & {
+    aspectRatio: boolean;
     height: string;
     inputHeightType: HTMLInputElement['type'];
     inputWidthType: HTMLInputElement['type'];
@@ -34,6 +35,7 @@ type TUseResizingEvents = TUseChangeEvent &
     valueInputWidth: string;
     valueScrubbaleInputHeight: number;
     valueScrubbaleInputWidth: number;
+    visibleAspectRatioButton: boolean;
     width: string;
   };
 
@@ -43,6 +45,7 @@ export const useResizingEvents = (): TUseResizingEvents => {
   const firstElement = first(selectedElements);
   const element = useSelector(elementDataSelectorCreator(firstElement.id));
   const isMultiple = size(selectedElements) > 1;
+  const isMixedAspectRatio = isMixed(elements, firstElement, 'aspectRatio', selectedElements);
   const isMixedHeight = isMixed(elements, firstElement, 'height.value', selectedElements);
   const isMixedWidth = isMixed(elements, firstElement, 'width.value', selectedElements);
   const [isFocused, setIsFocused] = useState<TFocusElement>('');
@@ -52,6 +55,9 @@ export const useResizingEvents = (): TUseResizingEvents => {
   const [width, setWidth] = useState('');
   const isPureHeight = isPureNumber(height);
   const isPureWidth = isPureNumber(width);
+  const hasMixedSizes = isMixedHeight || isMixedWidth;
+  const hasPureSizes = isPureHeight && isPureWidth;
+  const hasNoUnit = unitHeight === undefined && unitWidth === undefined;
   const onBlurEvents = useBlurEvent(element, height, setHeight, setIsFocused, setWidth, width);
   const onChangeEvents = useChangeEvent(setHeight, setWidth);
   const onFocusEvents = useFocusEvent(setIsFocused);
@@ -63,6 +69,7 @@ export const useResizingEvents = (): TUseResizingEvents => {
   const valueInputWidth = (isPureWidth && (!unitWidth || isFocused === 'width')) || isMixedWidth ? width : '';
   const valueScrubbaleInputHeight = isMultiple ? 0 : parseFloat(height);
   const valueScrubbaleInputWidth = isMultiple ? 0 : parseFloat(width);
+  const visibleAspectRatioButton = !isMixedAspectRatio && !hasMixedSizes && hasPureSizes && hasNoUnit;
 
   useEffect(() => {
     setHeight(isMixedHeight ? 'Mixed' : currentHeight.toString());
@@ -72,6 +79,7 @@ export const useResizingEvents = (): TUseResizingEvents => {
   return {
     ...onBlurEvents,
     ...onChangeEvents,
+    aspectRatio: element.aspectRatio,
     height,
     inputHeightType,
     inputWidthType,
@@ -88,6 +96,7 @@ export const useResizingEvents = (): TUseResizingEvents => {
     valueInputWidth,
     valueScrubbaleInputHeight,
     valueScrubbaleInputWidth,
+    visibleAspectRatioButton,
     width,
   };
 };

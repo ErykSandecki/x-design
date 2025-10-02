@@ -23,6 +23,18 @@ describe('SectionColumn snapshots', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
+  it('should render with buttons and input connector', () => {
+    // before
+    const { asFragment } = render(
+      <SectionColumn buttonsIcon={[<ButtonIcon name="Close" key={0} />]} inputConnector>
+        children
+      </SectionColumn>,
+    );
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
+
   it('should render with buttons & labels', () => {
     // before
     const { asFragment } = render(

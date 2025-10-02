@@ -48,6 +48,7 @@ describe('useResizingEvents', () => {
 
     // result
     expect(result.current).toStrictEqual({
+      aspectRatio: false,
       height: '100',
       inputHeightType: 'number',
       inputWidthType: 'number',
@@ -68,6 +69,7 @@ describe('useResizingEvents', () => {
       valueInputWidth: '100',
       valueScrubbaleInputHeight: 100,
       valueScrubbaleInputWidth: 100,
+      visibleAspectRatioButton: true,
       width: '100',
     });
   });

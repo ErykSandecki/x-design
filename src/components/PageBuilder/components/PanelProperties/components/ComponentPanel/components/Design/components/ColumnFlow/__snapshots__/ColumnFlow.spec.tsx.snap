@@ -24,7 +24,7 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
       data-test-box=""
     >
       <div
-        class="css-1m2m6pt SectionColumn__content SectionColumn__content--light SectionColumn__content--single SectionColumn__content--single--light"
+        class="css-biptg5 SectionColumn__content SectionColumn__content--light SectionColumn__content--single SectionColumn__content--single--light"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
@@ -86,6 +86,18 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
             />
           </button>
         </div>
+        <div
+          class="css-2ro7w4 SectionColumn__inputConnector SectionColumn__inputConnector--light"
+          data-test-box=""
+        >
+          <div
+            class="css-1jnxvbp Icon Icon--light Icon--neutral3 Icon--neutral3--light"
+            data-test-icon="inputs-connector"
+            height="24"
+            name="InputsConnector"
+            width="24"
+          />
+        </div>
       </div>
       <div
         class="css-c1qms7"
@@ -120,7 +132,7 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
       data-test-box=""
     >
       <div
-        class="css-1m2m6pt SectionColumn__content SectionColumn__content--light SectionColumn__content--single SectionColumn__content--single--light"
+        class="css-biptg5 SectionColumn__content SectionColumn__content--light SectionColumn__content--single SectionColumn__content--single--light"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
@@ -181,6 +193,18 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
               width="12"
             />
           </button>
+        </div>
+        <div
+          class="css-2ro7w4 SectionColumn__inputConnector SectionColumn__inputConnector--light"
+          data-test-box=""
+        >
+          <div
+            class="css-1jnxvbp Icon Icon--light Icon--neutral3 Icon--neutral3--light"
+            data-test-icon="inputs-connector"
+            height="24"
+            name="InputsConnector"
+            width="24"
+          />
         </div>
       </div>
       <div

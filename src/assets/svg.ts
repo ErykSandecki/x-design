@@ -4,6 +4,7 @@ import { ReactComponent as AlignHorizontalRight } from './svg/align-horizontal-r
 import { ReactComponent as AlignVerticalBottom } from './svg/align-vertical-bottom.svg';
 import { ReactComponent as AlignVerticalCenter } from './svg/align-vertical-center.svg';
 import { ReactComponent as AlignVerticalTop } from './svg/align-vertical-top.svg';
+import { ReactComponent as AspectRatio } from './svg/aspect-ratio.svg';
 import { ReactComponent as AutoHeight } from './svg/auto-height.svg';
 import { ReactComponent as AutoLayout } from './svg/auto-layout.svg';
 import { ReactComponent as AutoWidth } from './svg/auto-width.svg';
@@ -27,6 +28,7 @@ import { ReactComponent as FlowVertical } from './svg/flow-vertical.svg';
 import { ReactComponent as FrameTool } from './svg/frame-tool.svg';
 import { ReactComponent as HeightRestricted } from './svg/height-restricted.svg';
 import { ReactComponent as HtmlTag } from './svg/html-tag.svg';
+import { ReactComponent as InputsConnector } from './svg/inputs-connector.svg';
 import { ReactComponent as Logo } from './svg/logo.svg';
 import { ReactComponent as MaxHeight } from './svg/max-height.svg';
 import { ReactComponent as MaxWidth } from './svg/max-width.svg';
@@ -51,6 +53,7 @@ export const Icons = {
   AlignVerticalBottom,
   AlignVerticalCenter,
   AlignVerticalTop,
+  AspectRatio,
   AutoHeight,
   AutoLayout,
   AutoWidth,
@@ -74,6 +77,7 @@ export const Icons = {
   FrameTool,
   HeightRestricted,
   HtmlTag,
+  InputsConnector,
   Logo,
   MaxHeight,
   MaxWidth,

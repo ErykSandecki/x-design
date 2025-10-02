@@ -14,4 +14,5 @@ export const classNames = composeClassNames(
   ['labels'] as const,
   ['label'] as const,
   ['content', ...values(GridColumnType)] as const,
+  ['inputConnector', 'visible'] as const,
 );

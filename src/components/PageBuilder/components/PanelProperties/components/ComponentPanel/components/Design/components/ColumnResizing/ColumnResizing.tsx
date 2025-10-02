@@ -20,6 +20,7 @@ import { elementsSelector, selectedElementsSelector } from 'store/pageBuilder/se
 
 // types
 import { GridColumnType } from 'shared/UITools/components/Section/components/SectionColumn/enums';
+import ColumnResizingButtonIcons from './ColumnResizingButtonIcons';
 
 const ColumnResizing: FC = () => {
   const elements = useSelector(elementsSelector);
@@ -28,6 +29,7 @@ const ColumnResizing: FC = () => {
   const { t } = useTranslation();
 
   const {
+    aspectRatio,
     height,
     inputHeightType,
     inputWidthType,
@@ -48,12 +50,15 @@ const ColumnResizing: FC = () => {
     valueInputWidth,
     valueScrubbaleInputHeight,
     valueScrubbaleInputWidth,
+    visibleAspectRatioButton,
     width,
   } = useResizingEvents();
 
   return (
     <UITools.SectionColumn
+      buttonsIcon={ColumnResizingButtonIcons(aspectRatio, visibleAspectRatioButton)}
       gridColumnType={GridColumnType.twoInputs}
+      inputConnector={aspectRatio}
       labels={[t(`${translationNameSpace}.label`)]}
       withMargin
     >

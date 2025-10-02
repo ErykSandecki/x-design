@@ -116,6 +116,27 @@ describe('ColumnResizing behaviors', () => {
     zoomContent.appendChild(el2);
   });
 
+  it('should change aspect ratio', () => {
+    // mock
+    const store = configureStore(stateMock);
+
+    // before
+    const { container } = render(
+      <Provider store={store}>
+        <ColumnResizing />
+      </Provider>,
+    );
+
+    // find
+    const buttonIcon = getByE2EAttribute(container, E2EAttribute.buttonIcon, 'aspect-ratio');
+
+    // action
+    fireEvent.click(buttonIcon);
+
+    // result
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].aspectRatio).toBe(true);
+  });
+
   it('should change width & height when enter value on input', () => {
     // mock
     const store = configureStore(stateMock);

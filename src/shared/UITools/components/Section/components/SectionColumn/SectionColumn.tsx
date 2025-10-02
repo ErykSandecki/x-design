@@ -15,13 +15,15 @@ import { className, classNames } from './classNames';
 import styles from './section-column.scss';
 
 // types
-import { E2EAttribute } from 'types';
+import { ColorsTheme, E2EAttribute } from 'types';
 import { GridColumnType } from './enums';
+import Icon from 'shared/UI/components/Icon/Icon';
 
 export type TSectionColumnProps = {
   buttonsIcon?: Array<ReactNode>;
   children: ReactNode;
   gridColumnType?: GridColumnType;
+  inputConnector?: boolean;
   labels?: [string] | [string, string];
   withMargin?: boolean;
 };
@@ -30,6 +32,7 @@ export const SectionColumn: FC<TSectionColumnProps> = ({
   buttonsIcon = [],
   children,
   gridColumnType = GridColumnType.single,
+  inputConnector = false,
   labels = [],
   withMargin = false,
 }) => {
@@ -66,9 +69,27 @@ export const SectionColumn: FC<TSectionColumnProps> = ({
             className: cx(classNamesWithTheme.content.name, classNamesWithTheme.content.modificators[gridColumnType]),
           }}
           style={{ width }}
-          sx={{ display: 'grid' }}
+          sx={{ display: 'grid', position: 'relative' }}
         >
           {children}
+          <Box
+            classes={{
+              className: cx(classNamesWithTheme.inputConnector.name, [
+                classNamesWithTheme.inputConnector.modificators.visible,
+                inputConnector,
+              ]),
+            }}
+            sx={{
+              alignItems: 'center',
+              display: 'flex',
+              justifyContent: 'center',
+              left: '50%',
+              position: 'absolute',
+              top: '50%',
+            }}
+          >
+            <Icon color={ColorsTheme.neutral3} height={24} name="InputsConnector" width={24} />
+          </Box>
         </Box>
         <Box sx={{ alignItems: 'center', columnGap: '2.5px', display: 'flex', flexGrow: 1, justifyContent: 'center' }}>
           {buttonsIcon.map((buttonIcon) => buttonIcon)}

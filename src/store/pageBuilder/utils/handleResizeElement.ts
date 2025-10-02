@@ -13,6 +13,7 @@ export const handleResizeElement = (
   state: TPageBuilderState,
 ): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];
+  const element = currentPage.elements[id];
   const { aspectRatio, position } = currentPage.elements[id];
 
   const { height, coordinates, width } = getSizesCoordinates(
@@ -34,10 +35,16 @@ export const handleResizeElement = (
         elements: {
           ...currentPage.elements,
           [id]: {
-            ...currentPage.elements[id],
+            ...element,
             coordinates,
-            height,
-            width,
+            height: {
+              ...element.height,
+              ...height,
+            },
+            width: {
+              ...element.width,
+              ...width,
+            },
           },
         },
       },
