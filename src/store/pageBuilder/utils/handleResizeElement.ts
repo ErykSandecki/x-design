@@ -13,10 +13,11 @@ export const handleResizeElement = (
   state: TPageBuilderState,
 ): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];
-  const { position } = currentPage.elements[id];
+  const { aspectRatio, position } = currentPage.elements[id];
 
   const { height, coordinates, width } = getSizesCoordinates(
     state.events.selectedAnchorResize,
+    aspectRatio,
     baseCoordinates,
     baseHeight as number,
     baseWidth as number,

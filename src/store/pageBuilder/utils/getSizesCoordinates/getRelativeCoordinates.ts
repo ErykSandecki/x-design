@@ -1,73 +1,99 @@
 // types
-import { AnchorResize } from '../../enums';
+import { AnchorResize } from 'store/pageBuilder/enums';
+import { TElement } from 'types';
+import { TSizeCoordinates } from 'store/pageBuilder/types';
 
-import { TSizeCoordinates } from '../../types';
-
-export const getHeightCoordinates = (
-  baseCoordinates: TRectCoordinates,
+export const getVerticalAnchorCoordinates = (
+  aspectRatio: TElement['aspectRatio'],
   baseHeight: number,
   baseWidth: number,
-  mouseCoordinates: T2DCoordinates,
-): TSizeCoordinates => {
-  const { y } = mouseCoordinates;
-  const { x1, y1 } = baseCoordinates;
-  const height = baseHeight + y;
+  ratio: number,
+  y: number,
+): Pick<TElement, 'height' | 'width'> => {
+  const offsetY = baseHeight + y;
+  const height = offsetY < 0 ? 0 : offsetY;
 
   return {
-    coordinates: {
-      x: x1,
-      y: y1,
-    },
-    height: { value: height < 0 ? 0 : height },
-    width: { value: baseWidth },
+    height: { value: height },
+    width: { value: aspectRatio ? height * ratio : baseWidth },
   };
 };
 
-export const getWidthCoordinates = (
-  baseCoordinates: TRectCoordinates,
+export const getHorizontalAnchorCoordinates = (
+  aspectRatio: TElement['aspectRatio'],
   baseHeight: number,
   baseWidth: number,
-  mouseCoordinates: T2DCoordinates,
-): TSizeCoordinates => {
-  const { x } = mouseCoordinates;
-  const { x1, y1 } = baseCoordinates;
-  const width = baseWidth + x;
+  ratio: number,
+  x: number,
+): Pick<TElement, 'height' | 'width'> => {
+  const offsetX = baseWidth + x;
+  const width = offsetX < 0 ? 0 : offsetX;
 
   return {
-    coordinates: {
-      x: x1,
-      y: y1,
-    },
-    height: { value: baseHeight },
-    width: { value: width < 0 ? 0 : width },
+    height: { value: aspectRatio ? width / ratio : baseHeight },
+    width: { value: width },
+  };
+};
+
+export const getRelativePositionByAspectRatio = (
+  aspectRatio: boolean,
+  baseHeight: number,
+  baseWidth: number,
+  ratio: number,
+  x: number,
+  y: number,
+): Pick<TElement, 'height' | 'width'> => {
+  let newWidth = baseWidth + x;
+  let newHeight = baseHeight + y;
+  let deltaX = x;
+  let deltaY = y;
+
+  if (aspectRatio) {
+    if (Math.abs(deltaX) > Math.abs(deltaY * ratio)) {
+      deltaY = deltaX / ratio;
+    } else {
+      deltaX = deltaY * ratio;
+    }
+
+    newWidth = baseWidth + deltaX;
+    newHeight = baseHeight + deltaY;
+  }
+
+  return {
+    height: { value: newHeight < 0 ? 0 : newHeight },
+    width: { value: newWidth < 0 ? 0 : newWidth },
   };
 };
 
 export const getRelativeCoordinates = (
   anchor: AnchorResize,
+  aspectRatio: TElement['aspectRatio'],
   baseCoordinates: TRectCoordinates,
   baseHeight: number,
   baseWidth: number,
   mouseCoordinates: T2DCoordinates,
 ): TSizeCoordinates => {
-  const heightCoordinates = getHeightCoordinates(baseCoordinates, baseHeight, baseWidth, mouseCoordinates);
-  const widthCoordinates = getWidthCoordinates(baseCoordinates, baseHeight, baseWidth, mouseCoordinates);
+  const { x, y } = mouseCoordinates;
+  const { x1, y1 } = baseCoordinates;
+  const ratio = baseWidth / baseHeight;
 
   switch (anchor) {
     case AnchorResize.north:
     case AnchorResize.south:
-      return heightCoordinates;
+      return {
+        coordinates: { x: x1, y: y1 },
+        ...getVerticalAnchorCoordinates(aspectRatio, baseHeight, baseWidth, ratio, y),
+      };
     case AnchorResize.east:
     case AnchorResize.west:
-      return widthCoordinates;
+      return {
+        coordinates: { x: x1, y: y1 },
+        ...getHorizontalAnchorCoordinates(aspectRatio, baseHeight, baseWidth, ratio, x),
+      };
     default:
       return {
-        coordinates: {
-          x: baseCoordinates.x1,
-          y: baseCoordinates.y1,
-        },
-        height: heightCoordinates.height,
-        width: widthCoordinates.width,
+        coordinates: { x: x1, y: y1 },
+        ...getRelativePositionByAspectRatio(aspectRatio, baseHeight, baseWidth, ratio, x, y),
       };
   }
 };

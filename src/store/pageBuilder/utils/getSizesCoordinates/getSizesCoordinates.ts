@@ -9,6 +9,7 @@ import { getRelativeCoordinates } from './getRelativeCoordinates';
 
 export const getSizesCoordinates = (
   anchor: AnchorResize,
+  aspectRatio: TElement['aspectRatio'],
   baseCoordinates: TRectCoordinates,
   baseHeight: number,
   baseWidth: number,
@@ -16,8 +17,8 @@ export const getSizesCoordinates = (
   position: TElement['position'],
 ): TSizeCoordinates => {
   if (position === 'absolute') {
-    return getAbsoluteCoordinates(anchor, baseCoordinates, baseHeight, baseWidth, mouseCoordinates);
+    return getAbsoluteCoordinates(anchor, aspectRatio, baseCoordinates, baseHeight, baseWidth, mouseCoordinates);
   }
 
-  return getRelativeCoordinates(anchor, baseCoordinates, baseHeight, baseWidth, mouseCoordinates);
+  return getRelativeCoordinates(anchor, aspectRatio, baseCoordinates, baseHeight, baseWidth, mouseCoordinates);
 };
