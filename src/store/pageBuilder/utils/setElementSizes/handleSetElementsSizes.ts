@@ -1,8 +1,9 @@
 // types
-import { TPageBuilderState, TSetElementsSizesActionPayload } from '../types';
+import { TPageBuilderState, TSetElementsSizesActionPayload } from '../../types';
 
 // utils
 import { extractObjectValues, mapFilteredValues } from 'utils';
+import { getElementSizes } from './getElementSizes';
 
 export const handleSetElementsSizes = (
   sizeType: TSetElementsSizesActionPayload['sizeType'],
@@ -23,7 +24,7 @@ export const handleSetElementsSizes = (
           ...currentPage.elements,
           ...mapFilteredValues(currentPage.elements, ids, (element) => ({
             ...element,
-            [sizeType]: { ...element[sizeType], value },
+            ...getElementSizes(element, sizeType, value),
           })),
         },
       },

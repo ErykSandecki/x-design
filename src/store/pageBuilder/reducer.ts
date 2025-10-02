@@ -73,7 +73,7 @@ import { handleResizeElement } from './utils/handleResizeElement';
 import { handleRotateElements } from './utils/handleRotateElements';
 import { handleSetElementsCoordinates } from './utils/handleSetElementsCoordinates';
 import { handleSetElementsScoreToCurrentSize } from './utils/handleSetElementsScoreToCurrentSize';
-import { handleSetElementsSizes } from './utils/handleSetElementsSizes';
+import { handleSetElementsSizes } from './utils/setElementSizes/handleSetElementsSizes';
 import { handleSetElementsSizesMinMax } from './utils/handleSetElementsSizesMinMax';
 import { handleToggleAspectRatio } from './utils/handleToggleAspectRatio';
 

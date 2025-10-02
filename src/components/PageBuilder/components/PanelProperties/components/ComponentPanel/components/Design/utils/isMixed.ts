@@ -9,4 +9,7 @@ export const isMixed = (
   firstElement: TSelectedElement,
   key: TNestedKeyOf<TElement>,
   selectedElements: TSelectedElements,
-): boolean => selectedElements.some(({ id }) => get(elements[id], key) !== get(elements[firstElement.id], key));
+): boolean =>
+  selectedElements
+    .filter(({ id }) => id !== firstElement.id)
+    .some(({ id }) => get(elements[id], key) !== get(elements[firstElement.id], key));
