@@ -27,6 +27,7 @@ const color = localStorage.getItem(THEME) === Theme.dark ? THEME_COLORS.dark.neu
 export const BASE_ALL_DATA: TElement = {
   alignment: {},
   angle: 0,
+  aspectRatio: false,
   background: {
     properties: { alpha: '100', color, format: 'hex' },
     visible: true,

@@ -27,6 +27,7 @@ export const handleCreateElement = (
     const element: TAddELementActionPayload = {
       alignment: {},
       angle: 0,
+      aspectRatio: false,
       background: {
         properties: { alpha: '100', color: '#ffffff', format: 'hex' },
         visible: true,

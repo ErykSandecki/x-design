@@ -25,6 +25,7 @@ import {
   APPLY_ELEMENTS_SIZE_TYPE,
   SET_ELEMENTS_SIZES_MIN_MAX,
   SET_ELEMENTS_SCORE_TO_CURRENT_SIZE,
+  TOGGLE_ASPECT_RATIO,
 } from './actionsType';
 import { BASE_PAGE } from './constants';
 
@@ -74,6 +75,7 @@ import { handleSetElementsCoordinates } from './utils/handleSetElementsCoordinat
 import { handleSetElementsScoreToCurrentSize } from './utils/handleSetElementsScoreToCurrentSize';
 import { handleSetElementsSizes } from './utils/handleSetElementsSizes';
 import { handleSetElementsSizesMinMax } from './utils/handleSetElementsSizesMinMax';
+import { handleToggleAspectRatio } from './utils/handleToggleAspectRatio';
 
 const initialState: TPageBuilderState = {
   currentPage: '0',
@@ -237,6 +239,8 @@ const setElementsSizesMinMax = (
   { payload: { scoreType, sizeType, value } }: TAction<TSetElementsSizesMinMaxAction['payload']>,
 ): TPageBuilderState => handleSetElementsSizesMinMax(scoreType, sizeType, state, value);
 
+const toggleAspectRatio = (state: TPageBuilderState): TPageBuilderState => handleToggleAspectRatio(state);
+
 const updateEventsStatus = (
   state: TPageBuilderState,
   { payload: events }: TAction<TUpdateEventsStatusAction['payload']>,
@@ -319,6 +323,8 @@ const pageBuilder = (state: TPageBuilderState = initialState, action: TAction): 
       return setElementsSizes(state, action);
     case SET_ELEMENTS_SIZES_MIN_MAX:
       return setElementsSizesMinMax(state, action);
+    case TOGGLE_ASPECT_RATIO:
+      return toggleAspectRatio(state);
     case UPDATE_EVENTS_STATUS:
       return updateEventsStatus(state, action);
     case UPDATE_PREV_STATE:

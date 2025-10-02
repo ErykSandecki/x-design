@@ -40,6 +40,7 @@ export type TSize = TScore & {
 export type TElement = {
   alignment: TAlignment;
   angle: number;
+  aspectRatio: boolean;
   background: TBackground;
   children: Array<TChildren>;
   coordinates: T2DCoordinates;

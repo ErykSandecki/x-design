@@ -57,6 +57,7 @@ export const layoutMock: TLayout = {
 export const elementMock: TElement = {
   alignment: {},
   angle: 0,
+  aspectRatio: false,
   background: {
     properties: { alpha: '100', color: '#ffffff', format: 'hex' },
     visible: true,
@@ -83,6 +84,7 @@ export const elementMock: TElement = {
 export const createFrameMock: TElement = {
   alignment: {},
   angle: 0,
+  aspectRatio: false,
   background: {
     properties: { alpha: '100', color: '#ffffff', format: 'hex' },
     visible: true,
