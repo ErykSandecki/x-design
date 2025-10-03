@@ -25,7 +25,7 @@
 
 ## 📌 Installation
 
-🚨🚨🚨<b> Recommend you to use this version Node `23.7.0`</b>🚨🚨🚨
+🚨🚨🚨<b> Recommend you to use this version Node `v24.9.0`</b>🚨🚨🚨
 
 ### 📦 node modules
 

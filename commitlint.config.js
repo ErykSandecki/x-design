@@ -7,7 +7,7 @@ module.exports = {
       2, // level: error
       'always',
       async (parsed) => {
-        const regex = new RegExp(`^XD: ([a-zA-Z-&0-9 ]{1,})$`);
+        const regex = new RegExp(`^XD: ([a-zA-Z-&0-9. ]{1,})$`);
 
         if (regex.test(parsed.header)) {
           return [true];
