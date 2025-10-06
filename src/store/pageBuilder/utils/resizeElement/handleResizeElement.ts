@@ -1,8 +1,8 @@
 // types
-import { TPageBuilderState, TResizeElementActionPayload } from '../types';
+import { TPageBuilderState, TResizeElementActionPayload } from '../../types';
 
 // utils
-import { getSizesCoordinates } from './getSizesCoordinates/getSizesCoordinates';
+import { getSizesCoordinates } from './getSizesCoordinates';
 
 export const handleResizeElement = (
   baseCoordinates: TResizeElementActionPayload['baseCoordinates'],
