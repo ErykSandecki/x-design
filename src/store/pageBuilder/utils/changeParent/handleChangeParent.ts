@@ -8,6 +8,7 @@ import { detectIdAnomalies } from './detectIdAnomalies';
 import { getMappedElementsToMove } from './getMappedElementsToMove';
 import { getMappedElementsWithResetPosition } from './getMappedElementsWithResetPosition';
 import { getMappedParentsChildren } from './getMappedParentsChildren';
+import { getMappedNestedChildren } from './getMappedNestedChildren';
 
 export const handleWithPossibleParent = (
   currentPage: TPage,
@@ -21,6 +22,7 @@ export const handleWithPossibleParent = (
   const prevParentId = currentPage.elements[id].parentId;
   const parentHasChanged = prevParentId !== possibleParent;
   const children = getMappedElementsToMove(parentHasChanged, payload, stateCopy);
+  const nestedChildren = getMappedNestedChildren(currentPage, children);
   const parents = getMappedParentsChildren(parentHasChanged, payload, state);
 
   return {
@@ -34,6 +36,7 @@ export const handleWithPossibleParent = (
           ...currentPage.elements,
           ...children,
           ...parents,
+          ...nestedChildren,
         },
         selectedElements: currentPage.selectedElements.map((selectedElement) => ({
           ...selectedElement,
