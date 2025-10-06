@@ -1,11 +1,12 @@
 // types
 import { LayoutType, TElement } from 'types';
-import { TFlipElementsAction, TPageBuilderState } from '../types';
+import { TFlipElementsAction, TPageBuilderState } from '../../types';
 
 // utils
 import { extractObjectValues, mapFilteredValues } from 'utils';
-import { findAllChildren } from './findAllChildren';
+import { findAllChildren } from '../findAllChildren';
 import { negateValue } from 'utils/math/negateValue';
+import { reverseAligment } from './reverseAligment';
 
 export const reverseChildren = (
   axis: TFlipElementsAction['payload'],
@@ -46,6 +47,7 @@ export const handleFlipElements = (
           })),
           ...mapFilteredValues(currentPage.elements, childrenIds, (element) => ({
             ...element,
+            alignment: reverseAligment(element.alignment, axis),
             children: reverseChildren(axis, element.children, element.layout),
           })),
         },
