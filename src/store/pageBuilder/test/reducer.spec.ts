@@ -9,6 +9,7 @@ import {
   reducerHistoryMock,
   layoutMock,
   childrenMock,
+  flipMock,
 } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
@@ -671,6 +672,10 @@ describe('PageBuilderReducer', () => {
                 { ...childrenMock, id: 'test-3' },
                 { ...childrenMock, id: 'test-2' },
               ],
+              flip: {
+                ...flipMock,
+                y: true,
+              },
             },
             ['test-2']: {
               ...elementMock,

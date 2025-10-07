@@ -2,12 +2,13 @@
 import {
   childrenMock,
   elementMock,
+  flipMock,
   pageBuilderStateMock,
   selectedElementMock,
 } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
-import { REDUCER_KEY as PAGE_BUILDER } from '../../../actionsType';
+import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
 
 // types
 import { LayoutType } from 'types';
@@ -82,6 +83,10 @@ describe('handleFlipElements', () => {
                 { ...childrenMock, id: 'test-3' },
                 { ...childrenMock, id: 'test-2' },
               ],
+              flip: {
+                ...flipMock,
+                x: true,
+              },
               layout: {
                 type: LayoutType.horizontal,
               },
@@ -168,6 +173,10 @@ describe('handleFlipElements', () => {
                 { ...childrenMock, id: 'test-3' },
                 { ...childrenMock, id: 'test-2' },
               ],
+              flip: {
+                ...flipMock,
+                x: true,
+              },
               layout: {
                 type: LayoutType.grid,
               },
@@ -251,6 +260,10 @@ describe('handleFlipElements', () => {
                 { ...childrenMock, id: 'test-3' },
                 { ...childrenMock, id: 'test-2' },
               ],
+              flip: {
+                ...flipMock,
+                y: true,
+              },
             },
             ['test-2']: {
               ...elementMock,
@@ -334,6 +347,10 @@ describe('handleFlipElements', () => {
                 { ...childrenMock, id: 'test-3' },
                 { ...childrenMock, id: 'test-2' },
               ],
+              flip: {
+                ...flipMock,
+                y: true,
+              },
               layout: {
                 type: LayoutType.grid,
               },
@@ -420,6 +437,10 @@ describe('handleFlipElements', () => {
                 { ...childrenMock, id: 'test-2' },
                 { ...childrenMock, id: 'test-3' },
               ],
+              flip: {
+                ...flipMock,
+                y: true,
+              },
               layout: {
                 type: LayoutType.horizontal,
               },
