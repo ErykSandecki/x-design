@@ -35,6 +35,7 @@ export const handleCreateElement = (
       children: [],
       coordinates: { x, y },
       deepLevel: 0,
+      flip: { x: false, y: false },
       height: {
         value: Math.abs(y1 - y2),
       },

@@ -35,6 +35,7 @@ export const BASE_ALL_DATA: TElement = {
   children: [],
   coordinates: BASE_2D,
   deepLevel: 0,
+  flip: { x: false, y: false },
   height: { value: 0 },
   id: '-1',
   layout: { type: LayoutType.default },

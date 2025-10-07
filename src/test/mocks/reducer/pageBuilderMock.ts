@@ -13,6 +13,7 @@ import {
   TAlignment,
   TChildren,
   TElement,
+  TFlip,
   TLayout,
 } from 'types';
 import { AnchorResize, AnchorRotate } from 'store/pageBuilder/enums';
@@ -54,6 +55,11 @@ export const layoutMock: TLayout = {
   type: LayoutType.default,
 };
 
+export const flipMock: TFlip = {
+  x: false,
+  y: false,
+};
+
 export const elementMock: TElement = {
   alignment: {},
   angle: 0,
@@ -68,6 +74,7 @@ export const elementMock: TElement = {
     y: 0,
   },
   deepLevel: 0,
+  flip: flipMock,
   height: {
     value: 100,
   },
@@ -92,6 +99,7 @@ export const createFrameMock: TElement = {
   children: [],
   coordinates: { x: 0, y: 0 },
   deepLevel: 0,
+  flip: flipMock,
   height: {
     value: 0,
   },

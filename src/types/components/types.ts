@@ -23,6 +23,11 @@ export type TChildren = {
   type: ElementType;
 };
 
+export type TFlip = {
+  x: boolean;
+  y: boolean;
+};
+
 export type TLayout = {
   type: LayoutType;
 };
@@ -45,6 +50,7 @@ export type TElement = {
   children: Array<TChildren>;
   coordinates: T2DCoordinates;
   deepLevel: number;
+  flip: TFlip;
   height: TSize;
   id: string;
   layout: TLayout;
