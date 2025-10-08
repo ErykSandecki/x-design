@@ -3,6 +3,7 @@ import { AnchorResize } from 'store/pageBuilder/enums';
 
 // utils
 import { getSizesCoordinates } from '../getSizesCoordinates';
+import { flipMock } from 'test/mocks/reducer/pageBuilderMock';
 
 const baseCoordinates = { x1: 0, x2: 100, y1: 0, y2: 100 };
 const mouseCoordinates = { x: 200, y: 100 };
@@ -14,6 +15,7 @@ describe('getSizesCoordinates', () => {
       AnchorResize.east,
       false,
       baseCoordinates,
+      flipMock,
       100,
       100,
       mouseCoordinates,
@@ -34,6 +36,7 @@ describe('getSizesCoordinates', () => {
       AnchorResize.east,
       false,
       baseCoordinates,
+      flipMock,
       100,
       100,
       mouseCoordinates,

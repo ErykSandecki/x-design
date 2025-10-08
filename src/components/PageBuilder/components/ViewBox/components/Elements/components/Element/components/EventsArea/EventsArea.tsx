@@ -20,6 +20,7 @@ type TOutlineProps = {
   angle: TElement['angle'];
   counterAngle: number;
   elementRef: RefObject<HTMLDivElement>;
+  flip: TElement['flip'];
   height: TElement['height']['value'];
   id: TElement['id'];
   mouseMode: MouseMode;
@@ -32,6 +33,7 @@ const EventsArea: FC<TOutlineProps> = ({
   angle,
   counterAngle,
   elementRef,
+  flip,
   height,
   id,
   mouseMode,
@@ -62,6 +64,7 @@ const EventsArea: FC<TOutlineProps> = ({
           angle={angle}
           counterAngle={counterAngle}
           elementRef={elementRef}
+          flip={flip}
           height={height}
           id={id}
           moseMode={mouseMode}

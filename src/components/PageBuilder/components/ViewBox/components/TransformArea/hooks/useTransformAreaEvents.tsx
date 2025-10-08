@@ -29,6 +29,7 @@ export const useTransformAreaEvents = (
   angle: TElement['angle'],
   counterAngle: number,
   elementRef: RefObject<HTMLDivElement>,
+  flip: TElement['flip'],
   height: TElement['height']['value'],
   id: TElement['id'],
   mouseMode: MouseMode,
@@ -67,7 +68,7 @@ export const useTransformAreaEvents = (
     cursorRotate.onMouseLeave,
   );
 
-  useMouseMoveEvent(cursorBaseAngle, cursorOffsetAngle, cursorPosition, elementRef, height, id, width, x, y);
+  useMouseMoveEvent(cursorBaseAngle, cursorOffsetAngle, cursorPosition, elementRef, flip, height, id, width, x, y);
   useMouseUpEvent();
 
   return {

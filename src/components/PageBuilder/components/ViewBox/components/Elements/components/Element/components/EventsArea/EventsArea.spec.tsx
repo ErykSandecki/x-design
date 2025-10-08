@@ -8,6 +8,9 @@ import EventsArea from './EventsArea';
 // core
 import { RefsProvider } from 'pages/PageBuilderPage/core/RefsProvider';
 
+// mocks
+import { flipMock } from 'test/mocks/reducer/pageBuilderMock';
+
 // others
 import { BASE_2D } from 'shared';
 
@@ -43,6 +46,7 @@ describe('EventsArea snapshots', () => {
             absoluteCoordinates={BASE_2D}
             counterAngle={0}
             elementRef={elementRef}
+            flip={flipMock}
             height={100}
             id="1"
             mouseMode={MouseMode.default}

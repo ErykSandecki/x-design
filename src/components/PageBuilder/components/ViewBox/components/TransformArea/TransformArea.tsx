@@ -26,6 +26,7 @@ export type TTransformAreaProps = {
   angle: TElement['angle'];
   counterAngle: number;
   elementRef: RefObject<HTMLDivElement>;
+  flip: TElement['flip'];
   height: TElement['height']['value'];
   id: TElement['id'];
   moseMode: MouseMode;
@@ -38,6 +39,7 @@ const TransformArea: FC<TTransformAreaProps> = ({
   angle,
   counterAngle,
   elementRef,
+  flip,
   height,
   id,
   moseMode,
@@ -54,7 +56,7 @@ const TransformArea: FC<TTransformAreaProps> = ({
     onMouseEnterAnchorRotate,
     onMouseLeaveAnchorResize,
     onMouseLeaveAnchorRotate,
-  } = useTransformAreaEvents(angle, counterAngle, elementRef, height, id, moseMode, width, x, y);
+  } = useTransformAreaEvents(angle, counterAngle, elementRef, flip, height, id, moseMode, width, x, y);
 
   return (
     <div className={cx(classNamesWithTheme[className])} style={{ height, width }}>

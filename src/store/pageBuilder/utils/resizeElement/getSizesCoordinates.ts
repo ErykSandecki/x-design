@@ -11,6 +11,7 @@ export const getSizesCoordinates = (
   anchor: AnchorResize,
   aspectRatio: TElement['aspectRatio'],
   baseCoordinates: TRectCoordinates,
+  baseFlip: TElement['flip'],
   baseHeight: number,
   baseWidth: number,
   mouseCoordinates: T2DCoordinates,

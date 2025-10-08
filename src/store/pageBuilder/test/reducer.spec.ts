@@ -796,26 +796,29 @@ describe('PageBuilderReducer', () => {
     const mouseCoordinates = { x: 200, y: 100 };
 
     // before
-    const state = reducer(resizeElement(baseCoordinates, 100, selectedElementMock.id, mouseCoordinates, 100), {
-      ...pageBuilderStateMock[PAGE_BUILDER],
-      events: {
-        ...pageBuilderStateMock[PAGE_BUILDER].events,
-        selectedAnchorResize: AnchorResize.east,
-      },
-      pages: {
-        ...pageBuilderStateMock[PAGE_BUILDER].pages,
-        ['0']: {
-          ...currentPage,
-          elements: {
-            ...currentPage.elements,
-            [elementMock.id]: elementMock,
-          },
-          selectedElements: {
-            [selectedElementMock.id]: selectedElementMock,
+    const state = reducer(
+      resizeElement(baseCoordinates, flipMock, 100, selectedElementMock.id, mouseCoordinates, 100),
+      {
+        ...pageBuilderStateMock[PAGE_BUILDER],
+        events: {
+          ...pageBuilderStateMock[PAGE_BUILDER].events,
+          selectedAnchorResize: AnchorResize.east,
+        },
+        pages: {
+          ...pageBuilderStateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...currentPage,
+            elements: {
+              ...currentPage.elements,
+              [elementMock.id]: elementMock,
+            },
+            selectedElements: {
+              [selectedElementMock.id]: selectedElementMock,
+            },
           },
         },
       },
-    });
+    );
 
     // result
     expect(state).toStrictEqual({

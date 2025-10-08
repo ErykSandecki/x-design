@@ -163,8 +163,8 @@ const reducerHistoryUndo = (state: TPageBuilderState): TPageBuilderState => hand
 
 const resizeElement = (
   state: TPageBuilderState,
-  { payload: { baseCoordinates, height, id, mouseCoordinates, width } }: TAction<TResizeElementAction['payload']>,
-): TPageBuilderState => handleResizeElement(baseCoordinates, height, width, id, mouseCoordinates, state);
+  { payload: { baseCoordinates, flip, height, id, mouseCoordinates, width } }: TAction<TResizeElementAction['payload']>,
+): TPageBuilderState => handleResizeElement(baseCoordinates, flip, height, width, id, mouseCoordinates, state);
 
 const rotateElements = (
   state: TPageBuilderState,

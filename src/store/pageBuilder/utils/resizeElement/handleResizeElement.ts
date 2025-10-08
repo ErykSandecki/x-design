@@ -6,6 +6,7 @@ import { getSizesCoordinates } from './getSizesCoordinates';
 
 export const handleResizeElement = (
   baseCoordinates: TResizeElementActionPayload['baseCoordinates'],
+  baseFlip: TResizeElementActionPayload['flip'],
   baseHeight: TResizeElementActionPayload['height'],
   baseWidth: TResizeElementActionPayload['width'],
   id: TResizeElementActionPayload['id'],
@@ -20,6 +21,7 @@ export const handleResizeElement = (
     state.events.selectedAnchorResize,
     aspectRatio,
     baseCoordinates,
+    baseFlip,
     baseHeight as number,
     baseWidth as number,
     mouseCoordinates,

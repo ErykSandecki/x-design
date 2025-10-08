@@ -13,7 +13,7 @@ import { RefsProvider } from 'pages/PageBuilderPage/core/RefsProvider';
 import { useTransformAreaEvents } from './hooks/useTransformAreaEvents';
 
 // mocks
-import { selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
+import { flipMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 import 'test/mocks/sagas/allSagas';
 
 // store
@@ -68,6 +68,7 @@ describe('TransformArea snapshots', () => {
           <TransformArea
             counterAngle={0}
             elementRef={elementRef}
+            flip={flipMock}
             height={100}
             id={selectedElementMock.id}
             moseMode={MouseMode.default}
@@ -108,6 +109,7 @@ describe('TransformArea behaviors', () => {
           <TransformArea
             counterAngle={0}
             elementRef={elementRef}
+            flip={flipMock}
             height={100}
             id={selectedElementMock.id}
             moseMode={MouseMode.default}
@@ -138,6 +140,7 @@ describe('TransformArea behaviors', () => {
           <TransformArea
             counterAngle={0}
             elementRef={elementRef}
+            flip={flipMock}
             height={100}
             id={selectedElementMock.id}
             moseMode={MouseMode.default}
@@ -168,6 +171,7 @@ describe('TransformArea behaviors', () => {
           <TransformArea
             counterAngle={0}
             elementRef={elementRef}
+            flip={flipMock}
             height={100}
             id={selectedElementMock.id}
             moseMode={MouseMode.default}
@@ -198,6 +202,7 @@ describe('TransformArea behaviors', () => {
           <TransformArea
             counterAngle={0}
             elementRef={elementRef}
+            flip={flipMock}
             height={100}
             id={selectedElementMock.id}
             moseMode={MouseMode.default}
@@ -228,6 +233,7 @@ describe('TransformArea behaviors', () => {
           <TransformArea
             counterAngle={0}
             elementRef={elementRef}
+            flip={flipMock}
             height={100}
             id={selectedElementMock.id}
             moseMode={MouseMode.default}
@@ -258,6 +264,7 @@ describe('TransformArea behaviors', () => {
           <TransformArea
             counterAngle={0}
             elementRef={elementRef}
+            flip={flipMock}
             height={100}
             id={selectedElementMock.id}
             moseMode={MouseMode.default}

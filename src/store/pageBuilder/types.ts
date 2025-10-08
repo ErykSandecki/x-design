@@ -178,6 +178,7 @@ export type TReducerHistoryUndoAction = {
 
 export type TResizeElementActionPayload = Pick<TElement, 'id'> & {
   baseCoordinates: TRectCoordinates;
+  flip: TElement['flip'];
   height: TSize['value'];
   mouseCoordinates: T2DCoordinates;
   width: TSize['value'];

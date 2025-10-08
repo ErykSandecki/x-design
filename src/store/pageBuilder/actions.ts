@@ -1,4 +1,5 @@
 // others
+import { TElement } from 'types';
 import {
   ADD_ELEMENT,
   APPLY_ELEMENTS_SIZE_TYPE,
@@ -138,12 +139,13 @@ export const reducerHistoryUndo = (): TReducerHistoryUndoAction => ({
 });
 export const resizeElement = (
   baseCoordinates: TResizeElementActionPayload['baseCoordinates'],
+  flip: TElement['flip'],
   height: TResizeElementActionPayload['height'],
   id: TResizeElementActionPayload['id'],
   mouseCoordinates: TResizeElementActionPayload['mouseCoordinates'],
   width: TResizeElementActionPayload['width'],
 ): TResizeElementAction => ({
-  payload: { baseCoordinates, height, id, mouseCoordinates, width },
+  payload: { baseCoordinates, flip, height, id, mouseCoordinates, width },
   type: RESIZE_ELEMENT,
 });
 

@@ -19,6 +19,7 @@ export const useMouseMoveEvent = (
   cursorOffsetAngle: RefObject<number>,
   cursorPosition: RefObject<T2DCoordinates>,
   elementRef: RefObject<HTMLDivElement>,
+  flip: TElement['flip'],
   height: TElement['height']['value'],
   id: TElement['id'],
   width: TElement['width']['value'],
@@ -31,7 +32,7 @@ export const useMouseMoveEvent = (
 
   const handleMouseMoveAnchorResize = (event: MouseEvent): void => {
     event.stopPropagation();
-    handleResizeElement(cursorPosition, dispatch, event, height, id, width, x, y);
+    handleResizeElement(cursorPosition, dispatch, event, flip, height, id, width, x, y);
   };
 
   const handleMouseMoveAnchorRotate = (event: MouseEvent): void => {

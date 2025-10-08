@@ -62,6 +62,7 @@ const Element: FC<TElementProps> = ({ classes, children, id, index, mouseMode, p
     cssWidth,
     displayEventsArea,
     displayOutline,
+    flip,
     height,
     isHover,
     isMoving,
@@ -129,6 +130,7 @@ const Element: FC<TElementProps> = ({ classes, children, id, index, mouseMode, p
             absoluteCoordinates={{ x: x1, y: y1 }}
             counterAngle={counterAngle}
             elementRef={elementRef}
+            flip={flip}
             height={height}
             id={id}
             mouseMode={mouseMode}

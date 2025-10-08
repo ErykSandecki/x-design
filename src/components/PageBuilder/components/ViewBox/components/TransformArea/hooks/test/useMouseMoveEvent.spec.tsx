@@ -2,7 +2,7 @@ import { fireEvent, renderHook } from '@testing-library/react';
 import { RefObject } from 'react';
 
 // mocks
-import { eventsMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
+import { eventsMock, flipMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // hooks
 import { useMouseMoveEvent } from '../useMouseMoveEvent';
@@ -69,6 +69,7 @@ describe('useMouseMoveEvent', () => {
           cursorOffsetAngle,
           cursorPosition,
           elementRef,
+          flipMock,
           100,
           selectedElementMock.id,
           0,
@@ -86,6 +87,7 @@ describe('useMouseMoveEvent', () => {
     // result
     expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
       baseCoordinates: { x1: 100, x2: 100, y1: 0, y2: 100 },
+      flip: flipMock,
       height: 100,
       id: 'test-1',
       mouseCoordinates: { x: 0, y: 0 },
@@ -114,6 +116,7 @@ describe('useMouseMoveEvent', () => {
           cursorOffsetAngle,
           cursorPosition,
           elementRef,
+          flipMock,
           100,
           selectedElementMock.id,
           0,
@@ -144,6 +147,7 @@ describe('useMouseMoveEvent', () => {
           cursorOffsetAngle,
           cursorPosition,
           elementRef,
+          flipMock,
           100,
           selectedElementMock.id,
           0,

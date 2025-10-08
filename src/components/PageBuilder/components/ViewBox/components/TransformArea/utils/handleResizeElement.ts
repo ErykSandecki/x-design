@@ -13,6 +13,7 @@ export const handleResizeElement = (
   cursorPosition: RefObject<T2DCoordinates>,
   dispatch: Dispatch,
   event: MouseEvent,
+  flip: TElement['flip'],
   height: TElement['height']['value'],
   id: TElement['id'],
   width: TElement['width']['value'],
@@ -30,5 +31,5 @@ export const handleResizeElement = (
   const mousePosition = { x: mouseX, y: mouseY };
   const baseCoordinates = { x1, x2, y1, y2 };
 
-  dispatch(resizeElement(baseCoordinates, height, id, mousePosition, width));
+  dispatch(resizeElement(baseCoordinates, flip, height, id, mousePosition, width));
 };

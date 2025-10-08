@@ -8,7 +8,13 @@ import { RefsProvider } from 'pages/PageBuilderPage/core/RefsProvider';
 import { useElementEvents } from '../useElementEvents';
 
 // mocks
-import { elementMock, layoutMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
+import {
+  elementMock,
+  flipMock,
+  layoutMock,
+  pageBuilderStateMock,
+  selectedElementMock,
+} from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
@@ -96,6 +102,7 @@ describe('useElementEvents', () => {
       cssWidth: '100px',
       displayEventsArea: true,
       displayOutline: true,
+      flip: flipMock,
       height: 100,
       isHover: false,
       isMoving: false,

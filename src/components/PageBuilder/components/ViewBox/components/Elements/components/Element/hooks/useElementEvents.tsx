@@ -38,6 +38,7 @@ export type TUseElementEvents = TUseElementSizes & {
   counterAngle: number;
   displayEventsArea: boolean;
   displayOutline: boolean;
+  flip: TElement['flip'];
   isHover: boolean;
   isMoving: boolean;
   isSelected: boolean;
@@ -58,7 +59,7 @@ export const useElementEvents = (
   parentId: TElement['parentId'],
   type: TElement['type'],
 ): TUseElementEvents => {
-  const elementDynamicData = useSelector(elementDataSelectorCreator(id));
+  const elementData = useSelector(elementDataSelectorCreator(id));
   const counterAngle = useSelector(counterAngleSelectorCreator(parentId));
   const cursorPosition = useRef(BASE_2D);
   const cursorPositionBase = useRef(BASE_2D);
@@ -72,7 +73,7 @@ export const useElementEvents = (
   const displayEventsArea = !isDraggable && !isMultiple && isSelected;
   const displayOutline = isFocused;
   const [isPressing, setIsPressing] = useState(false);
-  const { alignment, angle, background, coordinates, layout, position } = elementDynamicData;
+  const { alignment, angle, background, coordinates, flip, layout, position } = elementData;
   const { x, y } = coordinates;
   const sizes = useElementSizes(id);
   const showDropAnchors = !isSelected && position === 'relative';
@@ -92,6 +93,7 @@ export const useElementEvents = (
     counterAngle,
     displayEventsArea,
     displayOutline,
+    flip,
     isHover,
     isMoving,
     isSelected,

@@ -1,5 +1,5 @@
 // mocks
-import { elementMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, flipMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from '../../../actionsType';
@@ -19,7 +19,7 @@ describe('handleResizeElement', () => {
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
     // before
-    const result = handleResizeElement(baseCoordinates, 100, 100, selectedElementMock.id, mouseCoordinates, {
+    const result = handleResizeElement(baseCoordinates, flipMock, 100, 100, selectedElementMock.id, mouseCoordinates, {
       ...pageBuilderStateMock[PAGE_BUILDER],
       events: {
         ...pageBuilderStateMock[PAGE_BUILDER].events,
