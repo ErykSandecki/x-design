@@ -63,6 +63,14 @@ export const getCorrectAnchor = (
   const maxHeight = Math.abs(baseCoordinates.y1 - baseCoordinates.y2);
 
   switch (anchor) {
+    case AnchorResize.east:
+      return x < maxWidth * -1 ? AnchorResize.west : anchor;
+    case AnchorResize.north:
+      return y > maxHeight ? AnchorResize.south : anchor;
+    case AnchorResize.south:
+      return y < maxHeight * -1 ? AnchorResize.north : anchor;
+    case AnchorResize.west:
+      return x > maxWidth ? AnchorResize.east : anchor;
     case AnchorResize.northEast:
       return getCorrectNorthEast(maxHeight, maxWidth, x, y);
     case AnchorResize.northWest:

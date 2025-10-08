@@ -20,6 +20,8 @@ export const getSizesCoordinates = (
 ): TSizeCoordinates => {
   const correctAnchor = getCorrectAnchor(anchor, baseCoordinates, mouseCoordinates);
 
+  console.log(correctAnchor);
+
   if (position === 'absolute') {
     return getAbsoluteCoordinates(
       anchor,
