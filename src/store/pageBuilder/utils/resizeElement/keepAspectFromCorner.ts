@@ -2,22 +2,15 @@
 import { AnchorResize } from '../../enums';
 import { TSizeCoordinates } from '../../types';
 
-// utils
-import { getCorrectAnchor } from './getCorrectAnchor';
-
 export const getCorrectXY = (
-  anchor: AnchorResize,
-  baseCoordinates: TRectCoordinates,
+  correctAnchor: AnchorResize,
   height: number,
-  mouseCoordinates: T2DCoordinates,
   targetHeight: number,
   targetWidth: number,
   width: number,
   x: number,
   y: number,
 ): T2DCoordinates => {
-  const correctAnchor = getCorrectAnchor(anchor, baseCoordinates, mouseCoordinates);
-
   switch (correctAnchor) {
     case AnchorResize.northWest:
       return {
@@ -40,13 +33,11 @@ export const getCorrectXY = (
 };
 
 export const keepAspectFromCorner = (
-  anchor: AnchorResize,
   aspectRatio: boolean,
-  baseCoordinates: TRectCoordinates,
   baseHeight: number,
   baseWidth: number,
+  correctAnchor: AnchorResize,
   height: number,
-  mouseCoordinates: T2DCoordinates,
   width: number,
   x: number,
   y: number,
@@ -56,18 +47,7 @@ export const keepAspectFromCorner = (
     const isWidthLeading = Math.abs(width) > Math.abs(height * ratio);
     const targetHeight = isWidthLeading ? width / ratio : height;
     const targetWidth = isWidthLeading ? width : height * ratio;
-
-    const correctedXY = getCorrectXY(
-      anchor,
-      baseCoordinates,
-      height,
-      mouseCoordinates,
-      targetHeight,
-      targetWidth,
-      width,
-      x,
-      y,
-    );
+    const correctedXY = getCorrectXY(correctAnchor, height, targetHeight, targetWidth, width, x, y);
 
     return {
       coordinates: { x: correctedXY.x, y: correctedXY.y },

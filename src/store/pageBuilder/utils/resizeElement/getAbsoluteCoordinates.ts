@@ -106,6 +106,7 @@ export const getAbsoluteCoordinates = (
   baseCoordinates: TRectCoordinates,
   baseHeight: number,
   baseWidth: number,
+  correctAnchor: AnchorResize,
   mouseCoordinates: T2DCoordinates,
 ): TSizeCoordinates => {
   const eastCoordinates = getEastCoordinates(aspectRatio, baseCoordinates, baseHeight, baseWidth, mouseCoordinates);
@@ -122,52 +123,44 @@ export const getAbsoluteCoordinates = (
       return southCoordinates;
     case AnchorResize.northEast:
       return keepAspectFromCorner(
-        AnchorResize.northEast,
         aspectRatio,
-        baseCoordinates,
         baseHeight,
         baseWidth,
+        correctAnchor,
         northCoordinates.height.value as number,
-        mouseCoordinates,
         eastCoordinates.width.value as number,
         eastCoordinates.coordinates.x,
         northCoordinates.coordinates.y,
       );
     case AnchorResize.northWest:
       return keepAspectFromCorner(
-        AnchorResize.northWest,
         aspectRatio,
-        baseCoordinates,
         baseHeight,
         baseWidth,
+        correctAnchor,
         northCoordinates.height.value as number,
-        mouseCoordinates,
         westCoordinates.width.value as number,
         westCoordinates.coordinates.x,
         northCoordinates.coordinates.y,
       );
     case AnchorResize.southEast:
       return keepAspectFromCorner(
-        AnchorResize.southEast,
         aspectRatio,
-        baseCoordinates,
         baseHeight,
         baseWidth,
+        correctAnchor,
         southCoordinates.height.value as number,
-        mouseCoordinates,
         eastCoordinates.width.value as number,
         eastCoordinates.coordinates.x,
         southCoordinates.coordinates.y,
       );
     case AnchorResize.southWest:
       return keepAspectFromCorner(
-        AnchorResize.southWest,
         aspectRatio,
-        baseCoordinates,
         baseHeight,
         baseWidth,
+        correctAnchor,
         southCoordinates.height.value as number,
-        mouseCoordinates,
         westCoordinates.width.value as number,
         westCoordinates.coordinates.x,
         southCoordinates.coordinates.y,

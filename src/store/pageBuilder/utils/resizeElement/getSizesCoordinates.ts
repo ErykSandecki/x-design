@@ -5,6 +5,7 @@ import { TSizeCoordinates } from '../../types';
 
 // utils
 import { getAbsoluteCoordinates } from './getAbsoluteCoordinates';
+import { getCorrectAnchor } from './getCorrectAnchor';
 import { getRelativeCoordinates } from './getRelativeCoordinates';
 
 export const getSizesCoordinates = (
@@ -17,8 +18,18 @@ export const getSizesCoordinates = (
   mouseCoordinates: T2DCoordinates,
   position: TElement['position'],
 ): TSizeCoordinates => {
+  const correctAnchor = getCorrectAnchor(anchor, baseCoordinates, mouseCoordinates);
+
   if (position === 'absolute') {
-    return getAbsoluteCoordinates(anchor, aspectRatio, baseCoordinates, baseHeight, baseWidth, mouseCoordinates);
+    return getAbsoluteCoordinates(
+      anchor,
+      aspectRatio,
+      baseCoordinates,
+      baseHeight,
+      baseWidth,
+      correctAnchor,
+      mouseCoordinates,
+    );
   }
 
   return getRelativeCoordinates(anchor, aspectRatio, baseCoordinates, baseHeight, baseWidth, mouseCoordinates);
