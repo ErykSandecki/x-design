@@ -1,6 +1,6 @@
 // types
-import { AlignmentHorizontal, AlignmentVertical, TElement } from 'types';
-import { TFlipElementsAction } from '../../types';
+import { AlignmentHorizontal, AlignmentVertical, TAlignment, TElement } from 'types';
+import { TFlipElementsAction, TStrictAxis } from '../../types';
 
 export const reverseAligment = (
   aligment: TElement['alignment'],
@@ -26,4 +26,13 @@ export const reverseAligment = (
   }
 
   return aligment;
+};
+
+export const handleReverseAlignment = (axis: TStrictAxis, element: TElement): TAlignment => {
+  if (axis.length === 2) {
+    const reversedAlignment = reverseAligment(element.alignment, axis[0]);
+    return reverseAligment(reversedAlignment, axis[1]);
+  }
+
+  return reverseAligment(element.alignment, axis[0]);
 };

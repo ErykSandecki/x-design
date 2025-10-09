@@ -24,52 +24,41 @@ describe('getFlippedElements', () => {
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
     // before
-    const result = getFlippedElements('x', {
-      ...pageBuilderStateMock[PAGE_BUILDER],
-      pages: {
-        ...pageBuilderStateMock[PAGE_BUILDER].pages,
-        ['0']: {
-          ...currentPage,
-          elements: {
-            ...currentPage.elements,
-            ['-1']: {
-              ...currentPage.elements['-1'],
-              children: [childrenMock],
-            },
-            [elementMock.id]: {
-              ...elementMock,
-              angle,
-              children: [
-                { ...childrenMock, id: 'test-2' },
-                { ...childrenMock, id: 'test-3' },
-              ],
-              layout: {
-                type: LayoutType.horizontal,
-              },
-            },
-            ['test-2']: {
-              ...elementMock,
-              id: 'test-2',
-              parentId: 'test-1',
-            },
-            ['test-3']: {
-              ...elementMock,
-              id: 'test-3',
-              parentId: 'test-1',
-            },
+    const result = getFlippedElements(
+      ['x'],
+      {
+        ...currentPage.elements,
+        ['-1']: {
+          ...currentPage.elements['-1'],
+          children: [childrenMock],
+        },
+        [elementMock.id]: {
+          ...elementMock,
+          angle,
+          children: [
+            { ...childrenMock, id: 'test-2' },
+            { ...childrenMock, id: 'test-3' },
+          ],
+          layout: {
+            type: LayoutType.horizontal,
           },
-          selectedElements: [selectedElementMock],
+        },
+        ['test-2']: {
+          ...elementMock,
+          id: 'test-2',
+          parentId: 'test-1',
+        },
+        ['test-3']: {
+          ...elementMock,
+          id: 'test-3',
+          parentId: 'test-1',
         },
       },
-    });
+      [selectedElementMock],
+    );
 
     // result
     expect(result).toStrictEqual({
-      ...currentPage.elements,
-      ['-1']: {
-        ...currentPage.elements['-1'],
-        children: [childrenMock],
-      },
       [elementMock.id]: {
         ...elementMock,
         angle: negateValue(angle),
@@ -101,52 +90,38 @@ describe('getFlippedElements', () => {
   it(`should get fliped elements for axis y`, () => {
     // mock
     const angle = 45;
-    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
     // before
-    const result = getFlippedElements('y', {
-      ...pageBuilderStateMock[PAGE_BUILDER],
-      pages: {
-        ...pageBuilderStateMock[PAGE_BUILDER].pages,
-        ['0']: {
-          ...currentPage,
-          elements: {
-            ...currentPage.elements,
-            ['-1']: {
-              ...currentPage.elements['-1'],
-              children: [childrenMock],
-            },
-            [elementMock.id]: {
-              ...elementMock,
-              angle,
-              children: [
-                { ...childrenMock, id: 'test-2' },
-                { ...childrenMock, id: 'test-3' },
-              ],
-            },
-            ['test-2']: {
-              ...elementMock,
-              id: 'test-2',
-              parentId: 'test-1',
-            },
-            ['test-3']: {
-              ...elementMock,
-              id: 'test-3',
-              parentId: 'test-1',
-            },
+    const result = getFlippedElements(
+      ['y'],
+      {
+        [elementMock.id]: {
+          ...elementMock,
+          angle,
+          children: [
+            { ...childrenMock, id: 'test-2' },
+            { ...childrenMock, id: 'test-3' },
+          ],
+          layout: {
+            type: LayoutType.vertical,
           },
-          selectedElements: [selectedElementMock],
+        },
+        ['test-2']: {
+          ...elementMock,
+          id: 'test-2',
+          parentId: 'test-1',
+        },
+        ['test-3']: {
+          ...elementMock,
+          id: 'test-3',
+          parentId: 'test-1',
         },
       },
-    });
+      [selectedElementMock],
+    );
 
     // result
     expect(result).toStrictEqual({
-      ...currentPage.elements,
-      ['-1']: {
-        ...currentPage.elements['-1'],
-        children: [childrenMock],
-      },
       [elementMock.id]: {
         ...elementMock,
         angle: negateValue(angle),
@@ -157,6 +132,9 @@ describe('getFlippedElements', () => {
         flip: {
           ...flipMock,
           y: true,
+        },
+        layout: {
+          type: LayoutType.vertical,
         },
       },
       ['test-2']: {

@@ -8,6 +8,7 @@ import ColumnRotation from './ColumnRotation';
 import {
   childrenMock,
   elementMock,
+  layoutMock,
   pageBuilderStateMock,
   selectedElementMock,
 } from 'test/mocks/reducer/pageBuilderMock';
@@ -270,6 +271,10 @@ describe('ColumnRotation behaviors', () => {
                   { ...childrenMock, id: 'test-2' },
                   { ...childrenMock, id: 'test-3' },
                 ],
+                layout: {
+                  ...layoutMock,
+                  type: LayoutType.vertical,
+                },
               },
               ['test-2']: {
                 ...elementMock,

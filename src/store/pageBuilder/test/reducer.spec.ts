@@ -635,6 +635,10 @@ describe('PageBuilderReducer', () => {
                 { ...childrenMock, id: 'test-2' },
                 { ...childrenMock, id: 'test-3' },
               ],
+              layout: {
+                ...layoutMock,
+                type: LayoutType.vertical,
+              },
             },
             ['test-2']: {
               ...elementMock,
@@ -675,6 +679,10 @@ describe('PageBuilderReducer', () => {
               flip: {
                 ...flipMock,
                 y: true,
+              },
+              layout: {
+                ...layoutMock,
+                type: LayoutType.vertical,
               },
             },
             ['test-2']: {

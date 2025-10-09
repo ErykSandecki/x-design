@@ -1,8 +1,13 @@
+import { isUndefined, keys, omitBy, pickBy } from 'lodash';
+
 // types
-import { TPageBuilderState, TResizeElementActionPayload } from '../../types';
+import { TPageBuilderState, TResizeElementActionPayload, TStrictAxis } from '../../types';
 
 // utils
+import { getCorrectAnchor } from './getCorrectAnchor';
+import { getFlipAxisToChange } from './getFlipAxisToChange';
 import { getSizesCoordinates } from './getSizesCoordinates';
+import { getFlippedElements } from '../flipElements/getFlippedElements';
 
 export const handleResizeElement = (
   baseCoordinates: TResizeElementActionPayload['baseCoordinates'],
@@ -15,15 +20,21 @@ export const handleResizeElement = (
 ): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];
   const element = currentPage.elements[id];
-  const { aspectRatio, position } = currentPage.elements[id];
+  const { selectedAnchorResize: anchor } = state.events;
+  const { aspectRatio, flip, position } = currentPage.elements[id];
+  const correctAnchor = getCorrectAnchor(anchor, baseCoordinates, mouseCoordinates);
+  const flipAxisToChange = getFlipAxisToChange(baseFlip, correctAnchor, flip, anchor, position);
+  const axis = keys(pickBy(flipAxisToChange, (axis) => axis !== undefined)) as TStrictAxis;
+  const flippedElements = getFlippedElements(axis, currentPage.elements, currentPage.selectedElements);
+  const currentElement = flippedElements[id];
 
   const { height, coordinates, width } = getSizesCoordinates(
     state.events.selectedAnchorResize,
     aspectRatio,
     baseCoordinates,
-    baseFlip,
     baseHeight as number,
     baseWidth as number,
+    correctAnchor,
     mouseCoordinates,
     position,
   );
@@ -36,9 +47,15 @@ export const handleResizeElement = (
         ...currentPage,
         elements: {
           ...currentPage.elements,
+          ...flippedElements,
           [id]: {
             ...element,
+            ...currentElement,
             coordinates,
+            flip: {
+              ...element.flip,
+              ...omitBy(flipAxisToChange, isUndefined),
+            },
             height: {
               ...element.height,
               ...height,

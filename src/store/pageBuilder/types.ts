@@ -74,8 +74,6 @@ export type TSelectedElement = {
 
 export type TSelectedElements = Array<TSelectedElement>;
 
-export type TSizeCoordinates = Pick<TElement, 'coordinates' | 'height' | 'width'>;
-
 export type TPage = {
   areaCoordinates: T3DCoordinates;
   elements: TElements;
@@ -86,6 +84,10 @@ export type TPage = {
   reducerHistoryIndex: number;
   selectedElements: TSelectedElements;
 };
+
+export type TSizeCoordinates = Pick<TElement, 'coordinates' | 'height' | 'width'>;
+
+export type TStrictAxis = [] | [keyof T2DCoordinates] | [keyof T2DCoordinates, keyof T2DCoordinates];
 
 export type TPageBuilderState = {
   currentPage: TPage['id'];
