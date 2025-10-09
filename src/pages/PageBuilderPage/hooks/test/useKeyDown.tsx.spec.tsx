@@ -47,8 +47,8 @@ describe('useWheelEvent', () => {
 
     // action
     fireEvent.keyDown(window, {
+      code: KeyboardKeys.z,
       ctrlKey: true,
-      key: KeyboardKeys.z,
       shiftKey: true,
     });
 
@@ -67,7 +67,7 @@ describe('useWheelEvent', () => {
     });
 
     // action
-    fireEvent.keyDown(window, { ctrlKey: true, key: KeyboardKeys.z });
+    fireEvent.keyDown(window, { code: KeyboardKeys.z, ctrlKey: true });
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(1);
@@ -83,7 +83,7 @@ describe('useWheelEvent', () => {
     });
 
     // action
-    fireEvent.keyDown(window, { key: KeyboardKeys.e });
+    fireEvent.keyDown(window, { code: KeyboardKeys.e });
 
     // result
     expect(mockCallBack.mock.calls[0][0]).toBe(MouseMode.comment);
@@ -99,7 +99,7 @@ describe('useWheelEvent', () => {
     });
 
     // action
-    fireEvent.keyDown(window, { key: KeyboardKeys.escape });
+    fireEvent.keyDown(window, { code: KeyboardKeys.escape });
 
     // result
     expect(mockCallBack.mock.calls[0][0]).toBe(MouseMode.default);
@@ -115,7 +115,7 @@ describe('useWheelEvent', () => {
     });
 
     // action
-    fireEvent.keyDown(window, { key: KeyboardKeys.q });
+    fireEvent.keyDown(window, { code: KeyboardKeys.q });
 
     // result
     expect(mockCallBack.mock.calls[0][0]).toBe(MouseMode.default);
@@ -131,7 +131,7 @@ describe('useWheelEvent', () => {
     });
 
     // action
-    fireEvent.keyDown(window, { key: KeyboardKeys.w });
+    fireEvent.keyDown(window, { code: KeyboardKeys.w });
 
     // result
     expect(mockCallBack.mock.calls[0][0]).toBe(MouseMode.move);
@@ -147,7 +147,7 @@ describe('useWheelEvent', () => {
     });
 
     // action
-    fireEvent.keyDown(window, { key: KeyboardKeys.f });
+    fireEvent.keyDown(window, { code: KeyboardKeys.f });
 
     // result
     expect(mockCallBack.mock.calls[0][0]).toBe(MouseMode.toolBeltA);

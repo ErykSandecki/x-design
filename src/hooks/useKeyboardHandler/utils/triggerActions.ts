@@ -17,7 +17,7 @@ export const triggerActions = (
   keysMap: TKeysMap,
   lockBrowserEvents: boolean,
 ): void => {
-  const { key } = event;
+  const { code } = event;
 
   keysMap.forEach(({ action, anyKey = false, conditions = [], primaryKeys = [], secondaryKey }) => {
     const { altKey, ctrlKey, metaKey, shiftKey } = event;
@@ -28,12 +28,12 @@ export const triggerActions = (
     const withShift = primaryKeys.includes('shift' as never);
 
     if (lockBrowserEvents) {
-      handleLockBrowserEvents(ctrlKey || metaKey, event, key);
+      handleLockBrowserEvents(ctrlKey || metaKey, event, code);
     }
 
     if (
       anyKey ||
-      (key.toLowerCase() === secondaryKey.toLowerCase() &&
+      (code.toLowerCase() === secondaryKey.toLowerCase() &&
         primaryKeysLength === primaryKeys.length &&
         (!withAlt || altKey) &&
         (!withControl || ctrlKey) &&
@@ -41,7 +41,7 @@ export const triggerActions = (
         (!withShift || shiftKey) &&
         conditions.every(Boolean))
     ) {
-      action(event, key);
+      action(event, code);
     }
   });
 };

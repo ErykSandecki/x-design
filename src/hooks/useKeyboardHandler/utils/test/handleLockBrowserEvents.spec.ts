@@ -25,7 +25,7 @@ describe('handleLockBrowserEvents', () => {
 
   it('should lock event when key is "D"', () => {
     // before
-    handleLockBrowserEvents(true, { preventDefault: mockCallBack } as unknown as KeyboardEvent, KeyboardKeys.D);
+    handleLockBrowserEvents(true, { preventDefault: mockCallBack } as unknown as KeyboardEvent, KeyboardKeys.d);
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(1);
@@ -41,7 +41,7 @@ describe('handleLockBrowserEvents', () => {
 
   it('should lock event when key is "F"', () => {
     // before
-    handleLockBrowserEvents(true, { preventDefault: mockCallBack } as unknown as KeyboardEvent, KeyboardKeys.F);
+    handleLockBrowserEvents(true, { preventDefault: mockCallBack } as unknown as KeyboardEvent, KeyboardKeys.f);
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(1);
@@ -57,7 +57,7 @@ describe('handleLockBrowserEvents', () => {
 
   it('should lock event when key is "R"', () => {
     // before
-    handleLockBrowserEvents(true, { preventDefault: mockCallBack } as unknown as KeyboardEvent, KeyboardKeys.R);
+    handleLockBrowserEvents(true, { preventDefault: mockCallBack } as unknown as KeyboardEvent, KeyboardKeys.r);
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(1);
@@ -73,7 +73,7 @@ describe('handleLockBrowserEvents', () => {
 
   it('should lock event when key is "S"', () => {
     // before
-    handleLockBrowserEvents(true, { preventDefault: mockCallBack } as unknown as KeyboardEvent, KeyboardKeys.S);
+    handleLockBrowserEvents(true, { preventDefault: mockCallBack } as unknown as KeyboardEvent, KeyboardKeys.s);
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(1);

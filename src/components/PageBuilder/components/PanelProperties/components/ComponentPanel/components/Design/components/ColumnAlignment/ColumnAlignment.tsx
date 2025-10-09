@@ -1,6 +1,4 @@
 import { FC } from 'react';
-import { first } from 'lodash';
-import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
 // components
@@ -14,30 +12,17 @@ import { useClickVerticalAlignmentEvent } from './hooks/useClickVerticalAlignmen
 // others
 import { HORIZONTAL_BUTTONS, translationNameSpace, VERTICAL_BUTTONS } from './constants';
 
-// store
-import {
-  areParentsTheSameSelector,
-  elementDataSelectorCreator,
-  selectedElementsSelector,
-} from 'store/pageBuilder/selectors';
-
 // types
 import { GridColumnType } from 'shared/UITools/components/Section/components/SectionColumn/enums';
 
 // utils
-import { isBaseParent } from 'utils';
+import { disabledAlignment } from '../../../../../../../../utils/disabledAlignment';
 
 const ColumnAlignment: FC = () => {
-  const areParentsTheSame = useSelector(areParentsTheSameSelector);
-  const selectedElements = useSelector(selectedElementsSelector);
-  const firstElement = first(selectedElements);
-  const element = useSelector(elementDataSelectorCreator(firstElement.id));
   const onClickHorizontalAlignment = useClickHorizontalAlignmentEvent();
   const onClickVerticalAlignment = useClickVerticalAlignmentEvent();
   const { t } = useTranslation();
-  const baseParent = isBaseParent(element.parentId);
-  const isRelative = element.position === 'relative';
-  const disabled = baseParent || isRelative || !areParentsTheSame;
+  const disabled = disabledAlignment();
 
   return (
     <UITools.SectionColumn

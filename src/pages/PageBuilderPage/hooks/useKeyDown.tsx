@@ -7,7 +7,7 @@ import { useKeyboardHandler } from 'hooks';
 import { CONTROL } from 'constant/constants';
 
 // store
-import { canRedoReduxHistorySelector, canUndoReduxHistorySelector } from 'store/pageBuilder/selectors';
+import { canRedoReduxHistorySelector, canUndoReduxHistorySelector, pageSelector } from 'store/pageBuilder/selectors';
 import { reducerHistoryRedo, reducerHistoryUndo, updateEventsStatus } from 'store/pageBuilder/actions';
 
 // types
@@ -17,13 +17,14 @@ import { MouseMode } from 'types/enums/mouseMode';
 type TUseKeyDown = void;
 
 export const useKeyDown = (setMouseMode: TFunc<[MouseMode]>): TUseKeyDown => {
+  const dispatch = useDispatch();
   const canRedo = useSelector(canRedoReduxHistorySelector);
   const canUndo = useSelector(canUndoReduxHistorySelector);
-  const dispatch = useDispatch();
+  const page = useSelector(pageSelector);
 
   useKeyboardHandler(
     true,
-    [canRedo, canUndo],
+    [page],
     [
       {
         action: (): any => dispatch(reducerHistoryRedo()),

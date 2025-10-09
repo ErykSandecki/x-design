@@ -1,4 +1,5 @@
 import { fireEvent, renderHook } from '@testing-library/react';
+import { noop } from 'lodash';
 
 // hooks
 import { useKeyboardHandler } from './useKeyboardHandler';
@@ -19,11 +20,10 @@ import { TKeyMap } from './types';
 
 // utils
 import { getProviderWrapper } from 'test/testHelpers';
-import { noop } from 'lodash';
 
 const mockCallBack = jest.fn();
 
-const keyMap: TKeyMap = { action: mockCallBack, secondaryKey: KeyboardKeys.C };
+const keyMap: TKeyMap = { action: mockCallBack, secondaryKey: KeyboardKeys.c };
 
 const stateMock = {
   // [DRAWER]: {
@@ -45,7 +45,7 @@ describe('useKeyboardHandler', () => {
     });
 
     // action
-    fireEvent.keyDown(window, { key: KeyboardKeys.C });
+    fireEvent.keyDown(window, { code: KeyboardKeys.c });
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(1);
@@ -61,7 +61,7 @@ describe('useKeyboardHandler', () => {
     });
 
     // action
-    fireEvent.keyDown(window, { key: KeyboardKeys.A });
+    fireEvent.keyDown(window, { code: KeyboardKeys.a });
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(1);
@@ -77,7 +77,7 @@ describe('useKeyboardHandler', () => {
     });
 
     // action
-    fireEvent.keyDown(window, { key: KeyboardKeys.A });
+    fireEvent.keyDown(window, { code: KeyboardKeys.a });
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(0);
@@ -98,7 +98,7 @@ describe('useKeyboardHandler', () => {
     });
 
     // action
-    fireEvent.keyDown(document.getElementById(id), { key: KeyboardKeys.C });
+    fireEvent.keyDown(document.getElementById(id), { code: KeyboardKeys.c });
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(1);
@@ -120,7 +120,7 @@ describe('useKeyboardHandler', () => {
 
     // action
     fireEvent.keyDown(document.getElementById(id), {
-      key: KeyboardKeys.control,
+      code: KeyboardKeys.control,
     });
 
     // result
@@ -144,7 +144,7 @@ describe('useKeyboardHandler', () => {
     // action
     fireEvent.keyDown(document.getElementById(id), {
       altKey: true,
-      key: KeyboardKeys.c,
+      code: KeyboardKeys.c,
     });
 
     // result
@@ -167,7 +167,7 @@ describe('useKeyboardHandler', () => {
 
     // action
     fireEvent.keyDown(document.getElementById(id), {
-      key: KeyboardKeys.c,
+      code: KeyboardKeys.c,
       shiftKey: true,
     });
 
@@ -191,7 +191,7 @@ describe('useKeyboardHandler', () => {
 
     // action
     fireEvent.keyDown(document.getElementById(id), {
-      key: KeyboardKeys.c,
+      code: KeyboardKeys.c,
       metaKey: true,
     });
 
@@ -215,8 +215,8 @@ describe('useKeyboardHandler', () => {
 
     // action
     fireEvent.keyDown(document.getElementById(id), {
+      code: KeyboardKeys.f,
       ctrlKey: true,
-      key: KeyboardKeys.F,
       preventDefault: mockCallBack,
     });
 
@@ -240,7 +240,7 @@ describe('useKeyboardHandler', () => {
 
     // action
     fireEvent.keyDown(document.getElementById(id), {
-      key: KeyboardKeys.F,
+      code: KeyboardKeys.f,
       metaKey: true,
       preventDefault: mockCallBack,
     });
@@ -259,7 +259,7 @@ describe('useKeyboardHandler', () => {
     });
 
     // action
-    fireEvent.keyDown(window, { ctrlKey: true, key: KeyboardKeys.C });
+    fireEvent.keyDown(window, { code: KeyboardKeys.c, ctrlKey: true });
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(1);
@@ -277,7 +277,7 @@ describe('useKeyboardHandler', () => {
     // action
     fireEvent.keyDown(window, {
       ctrlKey: true,
-      key: KeyboardKeys.C,
+      key: KeyboardKeys.c,
       shiftKey: true,
     });
 
@@ -295,7 +295,7 @@ describe('useKeyboardHandler', () => {
     });
 
     // action
-    fireEvent.keyDown(window, { key: KeyboardKeys.C });
+    fireEvent.keyDown(window, { code: KeyboardKeys.c });
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(1);
@@ -311,7 +311,7 @@ describe('useKeyboardHandler', () => {
     });
 
     // action
-    fireEvent.keyDown(window, { key: KeyboardKeys.C });
+    fireEvent.keyDown(window, { key: KeyboardKeys.c });
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(0);
@@ -337,7 +337,7 @@ describe('useKeyboardHandler', () => {
   //   );
 
   //   // action
-  //   fireEvent.keyDown(window, { ctrlKey: true, key: KeyboardKeys.C });
+  //   fireEvent.keyDown(window, { ctrlKey: true, key: KeyboardKeys.c });
 
   //   // result
   //   expect(mockCallBack.mock.calls.length).toBe(0);
@@ -363,7 +363,7 @@ describe('useKeyboardHandler', () => {
   //   );
 
   //   // action
-  //   fireEvent.keyDown(window, { ctrlKey: true, key: KeyboardKeys.C });
+  //   fireEvent.keyDown(window, { ctrlKey: true, key: KeyboardKeys.c });
 
   //   // result
   //   expect(mockCallBack.mock.calls.length).toBe(0);
@@ -393,7 +393,7 @@ describe('useKeyboardHandler', () => {
   //   );
 
   //   // action
-  //   fireEvent.keyDown(window, { ctrlKey: true, key: KeyboardKeys.C });
+  //   fireEvent.keyDown(window, { ctrlKey: true, key: KeyboardKeys.c });
 
   //   // result
   //   expect(mockCallBack.mock.calls.length).toBe(0);
@@ -414,7 +414,7 @@ describe('useKeyboardHandler', () => {
     });
 
     // action
-    fireEvent.keyDown(document.getElementById(id), { key: KeyboardKeys.C });
+    fireEvent.keyDown(document.getElementById(id), { key: KeyboardKeys.c });
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(0);
