@@ -3,7 +3,10 @@ export * from './E2EDataAttributes/E2EDataAttribute';
 export * from './E2EDataAttributes/types';
 export * from './E2EDataAttributes/utils';
 
-// SCURBABBLE INPUT
+// Keyboards keys group
+export * from './KeyboardKeysGroup/KeyboardKeysGroup';
+
+// Scubbable input
 export * from './ScrubbableInput/ScrubbableInput';
 
 // UI
@@ -15,10 +18,10 @@ export * from './UI/components/Typography/Typography';
 export * from './UI/components/Typography/enums';
 export * from './UI/components/Typography/types';
 
-// UI TOOLS
+// UI tools
 export * from './UITools';
 
-// ZOOMBOX
+// Zoombox
 export * from './ZoomBox/ZoomBox';
 export * from './ZoomBox/utils/mousePositionRelative';
 export * from './ZoomBox/utils/hasBasePosition';

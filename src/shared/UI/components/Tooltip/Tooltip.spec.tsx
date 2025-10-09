@@ -17,7 +17,7 @@ jest.mock('utils', () => ({
 }));
 
 const className = 'className';
-const children = '?';
+const children = <div>?</div>;
 const content = 'content';
 const container = createHtmlElement('div', { id: HTMLContainerId.tooltip });
 
@@ -25,18 +25,6 @@ describe('Tooltip props', () => {
   beforeAll(() => {
     // mock
     document.body.appendChild(container);
-  });
-
-  it('should pass children', () => {
-    // before
-    const { container } = render(
-      <Tooltip className={className} content={content}>
-        {children}
-      </Tooltip>,
-    );
-
-    // result
-    expect(container.querySelector(`.${className}`)?.firstChild).toHaveTextContent(children);
   });
 
   it('should pass className', () => {
@@ -49,18 +37,6 @@ describe('Tooltip props', () => {
 
     // result
     expect(container.querySelector(`.${className}`)).not.toBeNull();
-  });
-
-  it('should has custom styles', () => {
-    // before
-    const { container } = render(
-      <Tooltip className={className} content={content} style={{ width: '100%' }}>
-        {children}
-      </Tooltip>,
-    );
-
-    // result
-    expect(container.querySelector(`.${className}`)).toHaveAttribute('style', 'width: 100%;');
   });
 });
 
@@ -119,7 +95,7 @@ describe('Tooltip snapshots', () => {
     );
 
     // action
-    fireEvent.mouseEnter(getByText(children), { clientX: 1024, clientY: 1024 });
+    fireEvent.mouseEnter(getByText('?'), { clientX: 1024, clientY: 1024 });
 
     // wait
     await sleep(1100);
@@ -149,7 +125,7 @@ describe('Tooltip snapshots', () => {
     );
 
     // action
-    fireEvent.mouseEnter(getByText(children), { clientX: 1024, clientY: 1024 });
+    fireEvent.mouseEnter(getByText('?'), { clientX: 1024, clientY: 1024 });
 
     // wait
     await sleep(1100);
@@ -163,13 +139,13 @@ describe('Tooltip snapshots', () => {
     const { asFragment, getByText } = render(<Tooltip content={content}>{children}</Tooltip>);
 
     // action
-    fireEvent.mouseEnter(getByText(children), { clientX: 1024, clientY: 1024 });
+    fireEvent.mouseEnter(getByText('?'), { clientX: 1024, clientY: 1024 });
 
     // wait
     await sleep(1100);
 
     // action
-    fireEvent.mouseLeave(getByText(children), { clientX: 1024, clientY: 1024 });
+    fireEvent.mouseLeave(getByText('?'), { clientX: 1024, clientY: 1024 });
 
     // result
     expect(asFragment()).toMatchSnapshot();

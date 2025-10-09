@@ -1,4 +1,4 @@
-import { CSSProperties, FC, ReactNode, useRef } from 'react';
+import { cloneElement, FC, ReactNode, useRef, ReactElement } from 'react';
 import { createPortal } from 'react-dom';
 
 // components
@@ -15,21 +15,26 @@ import { className as classNameTooltip, classNames } from './classNames';
 import _styles from './styles/tooltip.scss';
 
 // types
-import { ColorsTheme, HTMLContainerId } from 'types';
+import { ColorsTheme, E2EAttribute, HTMLContainerId } from 'types';
 import { TCarrotPlacement } from './types';
+import { TE2EDataAttributeProps } from '../../../E2EDataAttributes/E2EDataAttribute';
 import { TooltipPosition } from './enums';
+
+// utils
+import { getAttributes } from '../../../E2EDataAttributes/utils';
 
 export type TTooltipProps = {
   autoPositioning?: boolean;
   autoPositioningHorizontal?: boolean;
   autoPositioningCarrotPlacement?: TCarrotPlacement;
-  children: ReactNode;
+  children: ReactElement<any, any>;
   className?: string;
   content: ReactNode | string;
   customId?: string;
+  e2eAttribute?: TE2EDataAttributeProps['type'];
+  e2eValue?: TE2EDataAttributeProps['value'];
   hide?: boolean;
   position?: TooltipPosition;
-  style?: CSSProperties;
   visible?: boolean;
 };
 
@@ -41,9 +46,10 @@ export const Tooltip: FC<TTooltipProps> = ({
   className = '',
   content,
   customId = '',
+  e2eAttribute = E2EAttribute.tooltip,
+  e2eValue = '',
   hide = false,
   position: initialPosition = TooltipPosition.topCenter,
-  style = {},
   visible: initialVisible = false,
 }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, _styles);
@@ -61,23 +67,26 @@ export const Tooltip: FC<TTooltipProps> = ({
     tooltipRef,
   );
 
+  if (!content) {
+    return cloneElement(children, getAttributes(e2eAttribute, e2eValue));
+  }
+
   if (!container) {
     return null;
   }
 
   return (
-    <div
-      className={cx(className, classNamesWithTheme[classNameTooltip])}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
-      ref={elementRef}
-      style={style}
-    >
-      {children}
+    <>
+      {cloneElement(children, {
+        ...getAttributes(e2eAttribute, e2eValue),
+        onMouseEnter,
+        onMouseLeave,
+        ref: elementRef,
+      })}
       {createPortal(
         <div
-          className={cx(classNamesWithTheme.container.name, [
-            classNamesWithTheme.container.modificators.visible,
+          className={cx(className, classNamesWithTheme[classNameTooltip].name, [
+            classNamesWithTheme[classNameTooltip].modificators.visible,
             visible && !hide,
           ])}
           style={styles}
@@ -97,7 +106,7 @@ export const Tooltip: FC<TTooltipProps> = ({
         </div>,
         container,
       )}
-    </div>
+    </>
   );
 };
 

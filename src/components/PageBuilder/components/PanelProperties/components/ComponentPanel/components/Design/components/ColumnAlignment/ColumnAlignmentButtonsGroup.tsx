@@ -22,11 +22,12 @@ const ColumnAlignmentButtonsGroup = <K, T extends TFunc<[K]>>({
 }: TColumnAlignmentButtonsGroupProps<K, T>): ReactNode => (
   <UITools.ButtonGroup
     buttons={buttonGroups.map(
-      ({ key, name }) =>
+      ({ key, name, tooltip }) =>
         ({
           disabled,
           name,
           onClick: () => onClick(key as K),
+          tooltip,
         }) as TButtonGroup,
     )}
     e2eValue={e2eValue}

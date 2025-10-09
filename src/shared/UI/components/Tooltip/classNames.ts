@@ -10,8 +10,7 @@ export const className = 'Tooltip';
 
 export const classNames = composeClassNames(
   className,
-  [className] as const,
-  ['container', 'visible'] as const,
+  [className, 'visible'] as const,
   ['content'] as const,
   ['carrot', ...values(TooltipPosition)] as const,
 );

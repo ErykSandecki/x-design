@@ -3,8 +3,9 @@ import { kebabCase } from 'lodash';
 
 // components
 import Box, { TBoxProps } from '../../../UI/components/Box/Box';
-import E2EDataAttribute, { TE2EDataAttributeProps } from '../../../E2EDataAttributes/E2EDataAttribute';
+import { TE2EDataAttributeProps } from '../../../E2EDataAttributes/E2EDataAttribute';
 import Icon from '../../../UI/components/Icon/Icon';
+import Tooltip from '../../../UI/components/Tooltip/Tooltip';
 
 // hooks
 import { useTheme } from 'hooks';
@@ -40,8 +41,13 @@ export const ButtonGroup: FC<TSectionProps> = ({ buttons, e2eValue = '', fullWid
       e2eValue={e2eValue}
       {...restProps}
     >
-      {buttons.map(({ disabled, name, onClick }) => (
-        <E2EDataAttribute key={kebabCase(name)} type={E2EAttribute.buttonGroupInput} value={kebabCase(name)}>
+      {buttons.map(({ disabled, name, onClick, tooltip }) => (
+        <Tooltip
+          e2eAttribute={E2EAttribute.buttonGroupInput}
+          e2eValue={kebabCase(name)}
+          key={kebabCase(name)}
+          {...tooltip}
+        >
           <div
             className={cx(classNamesWithTheme.button.name, [
               classNamesWithTheme.button.modificators.disabled,
@@ -61,7 +67,7 @@ export const ButtonGroup: FC<TSectionProps> = ({ buttons, e2eValue = '', fullWid
               width={12}
             />
           </div>
-        </E2EDataAttribute>
+        </Tooltip>
       ))}
     </Box>
   );

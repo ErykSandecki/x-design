@@ -104,7 +104,7 @@ describe('useKeyboardHandler', () => {
     expect(mockCallBack.mock.calls.length).toBe(1);
   });
 
-  it('should not trigger actionw when is secondary key', () => {
+  it('should not trigger action when is secondary key', () => {
     // mock
     const id = 'id';
     const element = document.createElement('div');
@@ -127,7 +127,7 @@ describe('useKeyboardHandler', () => {
     expect(mockCallBack.mock.calls.length).toBe(0);
   });
 
-  it('should not trigger actionw with alt key', () => {
+  it('should trigger action with alt key', () => {
     // mock
     const id = 'id';
     const element = document.createElement('div');
@@ -151,7 +151,7 @@ describe('useKeyboardHandler', () => {
     expect(mockCallBack.mock.calls.length).toBe(1);
   });
 
-  it('should not trigger actionw with shift key', () => {
+  it('should not trigger action with shift key', () => {
     // mock
     const id = 'id';
     const element = document.createElement('div');
@@ -312,6 +312,22 @@ describe('useKeyboardHandler', () => {
 
     // action
     fireEvent.keyDown(window, { key: KeyboardKeys.c });
+
+    // result
+    expect(mockCallBack.mock.calls.length).toBe(0);
+  });
+
+  it('should not trigger action when clicked primary key', () => {
+    // mock
+    const store = configureStore(stateMock);
+
+    // before
+    renderHook(() => useKeyboardHandler(true, [], [{ ...keyMap, conditions: [false] }]), {
+      wrapper: getProviderWrapper(store),
+    });
+
+    // action
+    fireEvent.keyDown(window, { key: KeyboardKeys.alt });
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(0);
