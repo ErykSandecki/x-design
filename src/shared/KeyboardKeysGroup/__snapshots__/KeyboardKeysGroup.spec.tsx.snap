@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`KeyboardKeysGroup snapshots should render with couple keys 1`] = `
+<DocumentFragment>
+  ABC
+</DocumentFragment>
+`;
+
+exports[`KeyboardKeysGroup snapshots should render with couple keys and optional 1`] = `
+<DocumentFragment>
+  ABCorDEF
+</DocumentFragment>
+`;
+
+exports[`KeyboardKeysGroup snapshots should render with icon 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+    data-test-icon="align-horizontal-center"
+    height="16"
+    name="AlignHorizontalCenter"
+    width="16"
+  />
+</DocumentFragment>
+`;
+
+exports[`KeyboardKeysGroup snapshots should render with one key 1`] = `
+<DocumentFragment>
+  A
+</DocumentFragment>
+`;

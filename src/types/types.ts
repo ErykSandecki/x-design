@@ -4,6 +4,7 @@ import { TFunction } from 'i18next';
 // types
 import { TAction } from './redux';
 import { TMainState } from './reducers';
+import { TObject } from './generic/object';
 
 declare global {
   type T2DCoordinates = {
@@ -13,6 +14,7 @@ declare global {
   type T3DCoordinates = T2DCoordinates & {
     z: number;
   };
+  type TExtractInnerArray<T> = T extends TObject<infer U> ? U : never;
   type TRectCoordinates = {
     x1: number;
     x2: number;

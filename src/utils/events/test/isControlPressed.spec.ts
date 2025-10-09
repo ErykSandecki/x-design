@@ -1,5 +1,5 @@
 // utils
-import { isControlPressed } from 'utils/isControlPressed';
+import { isControlPressed } from '../isControlPressed';
 
 describe('isControlPressed', () => {
   it('should be preesed for windows', () => {

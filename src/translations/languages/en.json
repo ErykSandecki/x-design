@@ -1,6 +1,7 @@
 {
   "colorPicker.panel.tabs.1": "Custom",
   "colorPicker.sampler.prompt.description": "Click to sample",
+  "keyboardKeysGroup.optional": "or",
   "pageBuilder.panelProperties.componentPanel.design.columnAlignment.label": "Alignment",
   "pageBuilder.panelProperties.componentPanel.design.columnFlow.label": "Flow",
   "pageBuilder.panelProperties.componentPanel.design.columnHeader.header.frame": "Frame",

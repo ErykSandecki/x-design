@@ -21,6 +21,7 @@ import { TE2EDataAttributeProps } from '../../../E2EDataAttributes/E2EDataAttrib
 
 // utils
 import { getAttributes } from 'shared/E2EDataAttributes/utils';
+import { stopPropagation } from 'utils';
 
 export type TTextFieldProps = Omit<
   InputHTMLAttributes<HTMLInputElement>,
@@ -70,6 +71,7 @@ export const TextField: FC<TTextFieldProps> = ({
         className={cx(classNamesWithTheme.input)}
         disabled={disabled}
         maxLength={6}
+        onKeyDown={stopPropagation}
         ref={ref}
         {...getAttributes(E2EAttribute.textFieldInput, e2eValue)}
         {...restProps}

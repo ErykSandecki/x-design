@@ -1,10 +1,11 @@
+// COMMON
 export * from './common/composeClassNames';
-export * from './transform/extractObjectValues';
 export * from './common/generateID';
 export * from './common/getCssVariable';
 export * from './common/isBaseParent';
 export * from './common/isPureNumber';
-export * from './transform/mapFilteredValues';
+
+// DOM
 export * from './dom/createHtmlElement';
 export * from './dom/hasScroll';
 export * from './dom/sanitizeNumberInput';
@@ -13,23 +14,40 @@ export * from './dom/toggleBodyScroll';
 export * from './dom/toggleBodyUserSelect';
 export * from './dom/toggleElementScrollById';
 export * from './dom/toggleOverscroollBehaviorX';
+
+// EVENTS
 export * from './events/getMousePositionRelativeToScreen';
 export * from './events/handleSubmitInput';
+export * from './events/isControlPressed';
+export * from './events/stopPropagation';
+
+// FORM
 export * from './form/formStates';
 export * from './form/inputStates';
 export * from './form/syncValidators';
-export * from './isControlPressed';
-export * from './isJestRunning';
+
+// MATH
 export * from './math/computeCounterRotation';
 export * from './math/distanceHasChanged';
 export * from './math/getCornerBounds';
 export * from './math/normalizeAngle';
 export * from './math/sort';
-export * from './transform/hexToRgb/hexToRgb';
+
+// TRANSFORM
+export * from './transform/extractObjectValues';
 export * from './transform/enumToArray';
+export * from './transform/hexToRgb/hexToRgb';
 export * from './transform/isHexColor';
+export * from './transform/mapFilteredValues';
 export * from './transform/objectToArray';
 export * from './transform/rgbToHex';
 export * from './transform/seperateValue';
+
+// TS
 export * from './ts/guards';
-export * from './userPreferences';
+
+// SETTINGS
+export * from './settings/userPreferences';
+
+// REST
+export * from './isJestRunning';

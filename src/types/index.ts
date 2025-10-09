@@ -12,6 +12,7 @@ export * from './enums/scss/colorsTheme';
 export * from './enums/scss/zIndex';
 export * from './generic/object';
 export * from './generic/types';
+export * from './keys';
 export * from './reducers';
 export * from './redux';
 export * from './router/enums';
