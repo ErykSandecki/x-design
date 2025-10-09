@@ -8,6 +8,7 @@ import { ReactComponent as AspectRatio } from './svg/aspect-ratio.svg';
 import { ReactComponent as AutoHeight } from './svg/auto-height.svg';
 import { ReactComponent as AutoLayout } from './svg/auto-layout.svg';
 import { ReactComponent as AutoWidth } from './svg/auto-width.svg';
+import { ReactComponent as CarrotDown } from './svg/carrot-down.svg';
 import { ReactComponent as Check } from './svg/check.svg';
 import { ReactComponent as Close } from './svg/close.svg';
 import { ReactComponent as Comment } from './svg/comment.svg';
@@ -57,6 +58,7 @@ export const Icons = {
   AutoHeight,
   AutoLayout,
   AutoWidth,
+  CarrotDown,
   Check,
   Close,
   Comment,

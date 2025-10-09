@@ -42,6 +42,17 @@ const XD_NEUTRAL_4_DARK = `${prefix}-neutral-4-dark`;
 const XD_NEUTRAL_5_DARK = `${prefix}-neutral-5-dark`;
 
 /**
+ * Z-indexes
+ */
+const XD_ZINDEX_STANDARD = `${prefix}-zindex-standard`;
+const XD_ZINDEX_OVERLAY = `${prefix}-zindex-overlay`;
+const XD_ZINDEX_DROPDOWN = `${prefix}-zindex-dropdown`;
+const XD_ZINDEX_MENU = `${prefix}-zindex-menu`;
+const XD_ZINDEX_SNACKBAR = `${prefix}-zindex-snackbar`;
+const XD_ZINDEX_TOOLTIP = `${prefix}-zindex-tooltip`;
+const XD_ZINDEX_LOADER = `${prefix}-zindex-loader`;
+
+/**
  * Z-indexes for [Page Builder] components
  */
 const XD_PAGE_BUILDER_ZINDEX_EVENTS = `${prefix}-page-builder-zindex-events`;
@@ -92,4 +103,11 @@ export const cssVariables = {
   XD_PAGE_BUILDER_ZINDEX_ELEMENT_ANCHOR,
   XD_PAGE_BUILDER_ZINDEX_MULTIPLE_AREA,
   XD_PAGE_BUILDER_ZINDEX_OVERLAY_CONTAINER,
+  XD_ZINDEX_STANDARD,
+  XD_ZINDEX_OVERLAY,
+  XD_ZINDEX_DROPDOWN,
+  XD_ZINDEX_MENU,
+  XD_ZINDEX_SNACKBAR,
+  XD_ZINDEX_TOOLTIP,
+  XD_ZINDEX_LOADER,
 } as const;

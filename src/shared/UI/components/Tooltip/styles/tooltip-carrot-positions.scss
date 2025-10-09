@@ -1,0 +1,74 @@
+$--xd-value-1: 10px;
+$--xd-value-2: -8px;
+
+@mixin tooltip-carrot-positions() {
+  &--top-start {
+    bottom: $--xd-value-2;
+    left: $--xd-value-1;
+  }
+
+  &--top-center {
+    bottom: $--xd-value-2;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &--top-end {
+    bottom: $--xd-value-2;
+    right: $--xd-value-1;
+  }
+
+  &--bottom-start {
+    left: $--xd-value-1;
+    top: $--xd-value-2;
+    transform: rotate(180deg);
+  }
+
+  &--bottom-center {
+    left: 50%;
+    top: $--xd-value-2;
+    transform: translateX(-50%) rotate(180deg);
+  }
+
+  &--bottom-end {
+    right: $--xd-value-1;
+    top: $--xd-value-2;
+    transform: rotate(180deg);
+  }
+
+  &--left-start {
+    right: $--xd-value-2;
+    top: $--xd-value-1;
+    transform: rotate(270deg);
+  }
+
+  &--left-center {
+    right: $--xd-value-2;
+    top: 50%;
+    transform: translateY(-50%) rotate(270deg);
+  }
+
+  &--left-end {
+    bottom: $--xd-value-1;
+    right: $--xd-value-2;
+    transform: rotate(270deg);
+  }
+
+  &--right-start {
+    left: $--xd-value-2;
+    top: $--xd-value-1;
+    transform: rotate(90deg);
+  }
+
+  &--right-center {
+    left: $--xd-value-2;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+  }
+
+  &--right-end {
+    bottom: $--xd-value-1;
+    left: $--xd-value-2;
+    transform: rotate(90deg);
+  }
+}

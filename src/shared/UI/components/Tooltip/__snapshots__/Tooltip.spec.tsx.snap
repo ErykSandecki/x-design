@@ -1,0 +1,461 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tooltip snapshots should adjust correct placement 1`] = `
+<DocumentFragment>
+  <div
+    class="tooltip tooltipLight"
+  >
+    ?
+    <div
+      class="tooltipContainer tooltipContainerLight tooltipContainerVisible tooltipContainerVisibleLight"
+      style="left: calc(0px - 7px); top: calc(0px + 0px - 14px);"
+    >
+      <div
+        class="tooltipContent tooltipContentLight"
+      >
+        content
+        <div
+          class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotLeftStart tooltipCarrotLeftStartLight icon iconLight iconNeutral3 iconNeutral3Light"
+          data-test-icon="carrot-down"
+          height="14"
+          name="CarrotDown"
+          width="10"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Tooltip snapshots should be visible after enter mouse & invisible after leave 1`] = `
+<DocumentFragment>
+  <div
+    class="tooltip tooltipLight"
+  >
+    ?
+    <div
+      class="tooltipContainer tooltipContainerLight"
+      style="left: calc(0px - 0px + 0px); top: calc(0px - 0px - 7px);"
+    >
+      <div
+        class="tooltipContent tooltipContentLight"
+      >
+        content
+        <div
+          class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotTopCenter tooltipCarrotTopCenterLight icon iconLight iconNeutral3 iconNeutral3Light"
+          data-test-icon="carrot-down"
+          height="14"
+          name="CarrotDown"
+          width="10"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Tooltip snapshots should change position after mouse wheel 1`] = `
+<DocumentFragment>
+  <div
+    class="tooltip tooltipLight"
+  >
+    ?
+    <div
+      class="tooltipContainer tooltipContainerLight"
+      style="left: calc(0px - 0px + 0px); top: calc(0px - 0px - 7px);"
+    >
+      <div
+        class="tooltipContent tooltipContentLight"
+      >
+        content
+        <div
+          class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotTopCenter tooltipCarrotTopCenterLight icon iconLight iconNeutral3 iconNeutral3Light"
+          data-test-icon="carrot-down"
+          height="14"
+          name="CarrotDown"
+          width="10"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Tooltip snapshots should render with diffrent positions 1`] = `
+<DocumentFragment>
+  <div
+    class="tooltip tooltipLight"
+  >
+    ?
+    <div
+      class="tooltipContainer tooltipContainerLight"
+      style="left: calc(0px - 17px + 0px); top: calc(0px - 0px - 7px);"
+    >
+      <div
+        class="tooltipContent tooltipContentLight"
+      >
+        content
+        <div
+          class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotTopStart tooltipCarrotTopStartLight icon iconLight iconNeutral3 iconNeutral3Light"
+          data-test-icon="carrot-down"
+          height="14"
+          name="CarrotDown"
+          width="10"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Tooltip snapshots should render with diffrent positions 2`] = `
+<DocumentFragment>
+  <div
+    class="tooltip tooltipLight"
+  >
+    ?
+    <div
+      class="tooltipContainer tooltipContainerLight"
+      style="left: calc(0px - 0px + 0px); top: calc(0px - 0px - 7px);"
+    >
+      <div
+        class="tooltipContent tooltipContentLight"
+      >
+        content
+        <div
+          class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotTopCenter tooltipCarrotTopCenterLight icon iconLight iconNeutral3 iconNeutral3Light"
+          data-test-icon="carrot-down"
+          height="14"
+          name="CarrotDown"
+          width="10"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Tooltip snapshots should render with diffrent positions 3`] = `
+<DocumentFragment>
+  <div
+    class="tooltip tooltipLight"
+  >
+    ?
+    <div
+      class="tooltipContainer tooltipContainerLight"
+      style="left: calc(0px + 17px - 0px + 0px); top: calc(0px - 0px - 7px);"
+    >
+      <div
+        class="tooltipContent tooltipContentLight"
+      >
+        content
+        <div
+          class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotTopEnd tooltipCarrotTopEndLight icon iconLight iconNeutral3 iconNeutral3Light"
+          data-test-icon="carrot-down"
+          height="14"
+          name="CarrotDown"
+          width="10"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Tooltip snapshots should render with diffrent positions 4`] = `
+<DocumentFragment>
+  <div
+    class="tooltip tooltipLight"
+  >
+    ?
+    <div
+      class="tooltipContainer tooltipContainerLight"
+      style="left: calc(0px - 14px + 0px); top: calc(0px + 0px + 7px);"
+    >
+      <div
+        class="tooltipContent tooltipContentLight"
+      >
+        content
+        <div
+          class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotBottomStart tooltipCarrotBottomStartLight icon iconLight iconNeutral3 iconNeutral3Light"
+          data-test-icon="carrot-down"
+          height="14"
+          name="CarrotDown"
+          width="10"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Tooltip snapshots should render with diffrent positions 5`] = `
+<DocumentFragment>
+  <div
+    class="tooltip tooltipLight"
+  >
+    ?
+    <div
+      class="tooltipContainer tooltipContainerLight"
+      style="left: calc(0px - 0px + 0px); top: calc(0px + 0px + 7px);"
+    >
+      <div
+        class="tooltipContent tooltipContentLight"
+      >
+        content
+        <div
+          class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotBottomCenter tooltipCarrotBottomCenterLight icon iconLight iconNeutral3 iconNeutral3Light"
+          data-test-icon="carrot-down"
+          height="14"
+          name="CarrotDown"
+          width="10"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Tooltip snapshots should render with diffrent positions 6`] = `
+<DocumentFragment>
+  <div
+    class="tooltip tooltipLight"
+  >
+    ?
+    <div
+      class="tooltipContainer tooltipContainerLight"
+      style="left: calc(0px + 14px - 0px + 0px); top: calc(0px + 0px + 7px);"
+    >
+      <div
+        class="tooltipContent tooltipContentLight"
+      >
+        content
+        <div
+          class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotBottomEnd tooltipCarrotBottomEndLight icon iconLight iconNeutral3 iconNeutral3Light"
+          data-test-icon="carrot-down"
+          height="14"
+          name="CarrotDown"
+          width="10"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Tooltip snapshots should render with diffrent positions 7`] = `
+<DocumentFragment>
+  <div
+    class="tooltip tooltipLight"
+  >
+    ?
+    <div
+      class="tooltipContainer tooltipContainerLight"
+      style="left: calc(0px - 7px); top: calc(0px + 0px - 14px);"
+    >
+      <div
+        class="tooltipContent tooltipContentLight"
+      >
+        content
+        <div
+          class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotLeftStart tooltipCarrotLeftStartLight icon iconLight iconNeutral3 iconNeutral3Light"
+          data-test-icon="carrot-down"
+          height="14"
+          name="CarrotDown"
+          width="10"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Tooltip snapshots should render with diffrent positions 8`] = `
+<DocumentFragment>
+  <div
+    class="tooltip tooltipLight"
+  >
+    ?
+    <div
+      class="tooltipContainer tooltipContainerLight"
+      style="left: calc(0px - 7px); top: calc(0px + 0px - 0px);"
+    >
+      <div
+        class="tooltipContent tooltipContentLight"
+      >
+        content
+        <div
+          class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotLeftCenter tooltipCarrotLeftCenterLight icon iconLight iconNeutral3 iconNeutral3Light"
+          data-test-icon="carrot-down"
+          height="14"
+          name="CarrotDown"
+          width="10"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Tooltip snapshots should render with diffrent positions 9`] = `
+<DocumentFragment>
+  <div
+    class="tooltip tooltipLight"
+  >
+    ?
+    <div
+      class="tooltipContainer tooltipContainerLight"
+      style="left: calc(0px - 7px); top: calc(0px + 0px - 0px + 14px);"
+    >
+      <div
+        class="tooltipContent tooltipContentLight"
+      >
+        content
+        <div
+          class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotLeftEnd tooltipCarrotLeftEndLight icon iconLight iconNeutral3 iconNeutral3Light"
+          data-test-icon="carrot-down"
+          height="14"
+          name="CarrotDown"
+          width="10"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Tooltip snapshots should render with diffrent positions 10`] = `
+<DocumentFragment>
+  <div
+    class="tooltip tooltipLight"
+  >
+    ?
+    <div
+      class="tooltipContainer tooltipContainerLight"
+      style="left: calc(0px + 7px); top: calc(0px + 0px - 14px);"
+    >
+      <div
+        class="tooltipContent tooltipContentLight"
+      >
+        content
+        <div
+          class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotRightStart tooltipCarrotRightStartLight icon iconLight iconNeutral3 iconNeutral3Light"
+          data-test-icon="carrot-down"
+          height="14"
+          name="CarrotDown"
+          width="10"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Tooltip snapshots should render with diffrent positions 11`] = `
+<DocumentFragment>
+  <div
+    class="tooltip tooltipLight"
+  >
+    ?
+    <div
+      class="tooltipContainer tooltipContainerLight"
+      style="left: calc(0px + 7px); top: calc(0px + 0px - 0px);"
+    >
+      <div
+        class="tooltipContent tooltipContentLight"
+      >
+        content
+        <div
+          class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotRightCenter tooltipCarrotRightCenterLight icon iconLight iconNeutral3 iconNeutral3Light"
+          data-test-icon="carrot-down"
+          height="14"
+          name="CarrotDown"
+          width="10"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Tooltip snapshots should render with diffrent positions 12`] = `
+<DocumentFragment>
+  <div
+    class="tooltip tooltipLight"
+  >
+    ?
+    <div
+      class="tooltipContainer tooltipContainerLight"
+      style="left: calc(0px + 7px); top: calc(0px + 0px - 0px + 14px);"
+    >
+      <div
+        class="tooltipContent tooltipContentLight"
+      >
+        content
+        <div
+          class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotRightEnd tooltipCarrotRightEndLight icon iconLight iconNeutral3 iconNeutral3Light"
+          data-test-icon="carrot-down"
+          height="14"
+          name="CarrotDown"
+          width="10"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Tooltip snapshots should render with passed container id 1`] = `<DocumentFragment />`;
+
+exports[`Tooltip snapshots should set tooltip position horizontal automatically after enter 1`] = `
+<DocumentFragment>
+  <div
+    class="tooltip tooltipLight"
+  >
+    ?
+    <div
+      class="tooltipContainer tooltipContainerLight"
+    >
+      <div
+        class="tooltipContent tooltipContentLight"
+      >
+        content
+        <div
+          class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotTopCenter tooltipCarrotTopCenterLight icon iconLight iconNeutral3 iconNeutral3Light"
+          data-test-icon="carrot-down"
+          height="14"
+          name="CarrotDown"
+          width="10"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Tooltip snapshots should set tooltip position vertical automatically after enter 1`] = `
+<DocumentFragment>
+  <div
+    class="tooltip tooltipLight"
+  >
+    ?
+    <div
+      class="tooltipContainer tooltipContainerLight tooltipContainerVisible tooltipContainerVisibleLight"
+      style="left: calc(0px + 17px - 0px + 0px); top: calc(0px - 0px - 7px);"
+    >
+      <div
+        class="tooltipContent tooltipContentLight"
+      >
+        content
+        <div
+          class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotTopEnd tooltipCarrotTopEndLight icon iconLight iconNeutral3 iconNeutral3Light"
+          data-test-icon="carrot-down"
+          height="14"
+          name="CarrotDown"
+          width="10"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
