@@ -20,9 +20,10 @@ export type TChipProps = {
   children: ReactNode;
   className?: string;
   e2eValue?: TE2EDataAttributeProps['value'];
+  onClick: TFunc;
 };
 
-export const Chip: FC<TChipProps> = ({ children, className, e2eValue = '' }) => {
+export const Chip: FC<TChipProps> = ({ children, className, e2eValue = '', onClick }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   if (!children) {
@@ -36,6 +37,7 @@ export const Chip: FC<TChipProps> = ({ children, className, e2eValue = '' }) => 
       }}
       e2eAttribute={E2EAttribute.chip}
       e2eValue={e2eValue}
+      onClick={onClick}
     >
       {children}
     </Box>

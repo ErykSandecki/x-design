@@ -1,10 +1,18 @@
-import { render } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react';
+import { RefObject } from 'react';
 
 // components
 import TextField from './TextField';
 import { PopoverCompound } from '../Popover/Popover';
 
+// types
+import { E2EAttribute } from 'types';
+
+// utils
+import { getByE2EAttribute } from 'test';
+
 const id = 'id';
+const ref = { current: null } as unknown as RefObject<HTMLInputElement>;
 
 describe('TextField snapshots', () => {
   it('should render TextField', () => {
@@ -31,5 +39,21 @@ describe('TextField snapshots', () => {
 
     // result
     expect(asFragment()).toMatchSnapshot();
+  });
+});
+
+describe('TextField behaviors', () => {
+  it('should click on chip', () => {
+    // before
+    const { container } = render(<TextField chipChildren="chip" ref={ref} />);
+
+    // find
+    const chip = getByE2EAttribute(container, E2EAttribute.chip);
+
+    // action
+    fireEvent.click(chip);
+
+    // result
+    expect(document.activeElement === ref.current).toBe(true);
   });
 });

@@ -1,4 +1,4 @@
-import { FC, InputHTMLAttributes, ReactNode, Ref } from 'react';
+import { FC, InputHTMLAttributes, ReactNode, RefObject } from 'react';
 
 // components
 import Box from '../../../UI/components/Box/Box';
@@ -33,7 +33,7 @@ export type TTextFieldProps = Omit<
   fullWidth?: boolean;
   idContainer?: string;
   popoverChildren?: TPopoverProps['children'];
-  ref?: Ref<HTMLInputElement>;
+  ref?: RefObject<HTMLInputElement>;
   startAdornment?: ReactNode;
 };
 
@@ -81,7 +81,7 @@ export const TextField: FC<TTextFieldProps> = ({
       ) : (
         endAdorment
       )}
-      {chipChildren && <TextFieldChip>{chipChildren}</TextFieldChip>}
+      {chipChildren && <TextFieldChip onClick={() => ref.current.focus()}>{chipChildren}</TextFieldChip>}
     </Box>
   );
 };

@@ -14,12 +14,17 @@ import styles from './text-field-chip.scss';
 
 export type TTextFieldChipProps = {
   children: ReactNode;
+  onClick: TFunc;
 };
 
-export const TextFieldChip: FC<TTextFieldChipProps> = ({ children }) => {
+export const TextFieldChip: FC<TTextFieldChipProps> = ({ children, onClick }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
-  return <Chip className={cx(classNamesWithTheme[className])}>{children}</Chip>;
+  return (
+    <Chip className={cx(classNamesWithTheme[className])} onClick={onClick}>
+      {children}
+    </Chip>
+  );
 };
 
 export default TextFieldChip;
