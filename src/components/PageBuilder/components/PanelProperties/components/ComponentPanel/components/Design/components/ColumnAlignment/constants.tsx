@@ -2,7 +2,7 @@
 import { KeyboardKeysGroup } from 'shared';
 
 // others
-import { KEYBOARD_SHORTCUTS } from 'components/PageBuilder/keys';
+import { KEYBOARD_SHORTCUTS } from 'pages/PageBuilderPage/keys';
 import { TOOLTIP_TRANSLATION_KEY } from 'constant/constants';
 import { translationNameSpace as parentNameSpace } from '../../constants';
 
