@@ -13,7 +13,7 @@ import { useRotationEvents } from './hooks/useRotationEvents';
 import { OPTIONS_BUTTONS, translationNameSpace } from './constants';
 
 // types
-import { GridColumnType } from 'shared/UITools/components/Section/components/SectionColumn/enums';
+import { GridColumnType } from 'shared/UITools/Section/components/SectionColumn/enums';
 
 const ColumnRotation: FC = () => {
   const dispatch = useDispatch();

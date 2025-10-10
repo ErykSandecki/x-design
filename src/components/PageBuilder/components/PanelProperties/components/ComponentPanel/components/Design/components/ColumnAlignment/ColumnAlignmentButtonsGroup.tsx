@@ -5,7 +5,7 @@ import { TE2EValue, UITools } from 'shared';
 
 // types
 import { TAligmentHorizontalButtonGroup, TAligmentVerticalButtonGoup } from './types';
-import { TButtonGroup } from 'shared/UITools/components/ButtonGroup/types';
+import { TButtonGroup } from 'shared/UITools/ButtonGroup/types';
 
 export type TColumnAlignmentButtonsGroupProps<K, T extends TFunc<[K]>> = {
   buttonGroups: TAligmentHorizontalButtonGroup | TAligmentVerticalButtonGoup;

@@ -14,7 +14,7 @@ import { changeLayout } from 'store/pageBuilder/actions';
 import { elementsSelector, elementDataSelectorCreator, selectedElementsSelector } from 'store/pageBuilder/selectors';
 
 // types
-import { GridColumnType } from 'shared/UITools/components/Section/components/SectionColumn/enums';
+import { GridColumnType } from 'shared/UITools/Section/components/SectionColumn/enums';
 import { LayoutType } from 'types';
 
 // utils

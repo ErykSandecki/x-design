@@ -1,0 +1,41 @@
+@import '../../../styles/mixins/text-ellipsis';
+@import '../../../styles/mixins/typography/typography';
+@import '../../../styles/mixins/typography/typography-list';
+@import '../../../styles/mixins/typography/typography-map';
+
+.Typography {
+  @each $color in $--xd-font-colors {
+    &--#{$color} {
+      @include theme($color, color);
+    }
+  }
+
+  @each $font-type in $--xd-font-types {
+    &--gutter-bottom#{&}--#{$font-type} {
+      $--xd-font-size: map.get($--xd-font-size-map, $font-type);
+      $--xd-line-height: map.get($--xd-line-height-map, $font-type);
+      $--xd-margin-bottom: map.get($--xd-margin-bottom-map, $font-type);
+
+      @include typography-styles($--xd-font-size, $--xd-line-height, $--xd-margin-bottom);
+    }
+  }
+
+  @each $font-style in $--xd-font-styles {
+    &--#{$font-style} {
+      font-style: map.get($--xd-font-styles-map, $font-style);
+    }
+  }
+
+  @each $font-weight in $--xd-font-weights {
+    &--#{$font-weight} {
+      font-weight: map.get($--xd-font-weights-map, $font-weight);
+    }
+  }
+
+  font-family: Rubik, sans-serif;
+  margin: 0;
+
+  &--no-wrap {
+    @include text-ellipsis;
+  }
+}

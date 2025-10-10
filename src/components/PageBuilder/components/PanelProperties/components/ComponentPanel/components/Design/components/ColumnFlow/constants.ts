@@ -4,7 +4,7 @@ import { translationNameSpace as parentNameSpace } from '../../constants';
 
 // types
 import { LayoutType } from 'types';
-import { TToggleButton } from 'shared/UITools/components/ToggleButtonGroup/types';
+import { TToggleButton } from 'shared/UITools/ToggleButtonGroup/types';
 
 export const translationNameSpace = `${parentNameSpace}.columnFlow`;
 

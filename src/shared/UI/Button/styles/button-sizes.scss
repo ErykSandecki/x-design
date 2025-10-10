@@ -1,0 +1,24 @@
+@use 'sass:map';
+
+@import '../../../../styles/typography';
+@import '../../../../styles/lists/input';
+
+@mixin button-size() {
+  @each $size in $--xd-input-sizes {
+    &--#{$size} {
+      padding: map.get($--xd-button-map, 'btn' + '-' + $size + '-' + 'padding-tb')
+        map.get($--xd-button-map, 'btn' + '-' + $size + '-' + 'padding-lr');
+
+      @if $size == 'small' {
+        font-size: $--xd-typography-font-size-small;
+        line-height: $--xd-typography-line-height-small;
+      } @else if $size == 'medium' {
+        font-size: $--xd-typography-font-size-p;
+        line-height: $--xd-typography-line-height-p;
+      } @else {
+        font-size: $--xd-typography-font-size-h6;
+        line-height: $--xd-typography-line-height-h6;
+      }
+    }
+  }
+}

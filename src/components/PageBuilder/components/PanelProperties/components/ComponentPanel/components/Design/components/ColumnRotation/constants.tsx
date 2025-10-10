@@ -12,7 +12,7 @@ import { translationNameSpace as parentNameSpace } from '../../constants';
 import { flipElements, rotateElements } from 'store/pageBuilder/actions';
 
 // types
-import { TButtonGroup } from 'shared/UITools/components/ButtonGroup/types';
+import { TButtonGroup } from 'shared/UITools/ButtonGroup/types';
 import { TElement } from 'types';
 
 // utils

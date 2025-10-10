@@ -4,8 +4,8 @@ import { noop } from 'lodash';
 
 // components
 import E2EDataAttribute, { TE2EDataAttributeProps } from '../E2EDataAttributes/E2EDataAttribute';
-import Box from '../UI/components/Box/Box';
-import Icon, { TIconProps } from '../UI/components/Icon/Icon';
+import Box from '../UI/Box/Box';
+import Icon, { TIconProps } from '../UI/Icon/Icon';
 
 // hooks
 import { useScrubbableInputEvents } from './hooks/useScrubbableInputEvents';

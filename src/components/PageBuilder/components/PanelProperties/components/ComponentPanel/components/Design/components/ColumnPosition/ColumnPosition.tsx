@@ -13,7 +13,7 @@ import { usePositionEvents } from './hooks/usePositionEvents';
 import { translationNameSpace } from './constants';
 
 // types
-import { GridColumnType } from 'shared/UITools/components/Section/components/SectionColumn/enums';
+import { GridColumnType } from 'shared/UITools/Section/components/SectionColumn/enums';
 
 // utils
 

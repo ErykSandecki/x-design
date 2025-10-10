@@ -10,15 +10,15 @@ export * from './KeyboardKeysGroup/KeyboardKeysGroup';
 export * from './ScrubbableInput/ScrubbableInput';
 
 // UI
-export * from './UI/components/Box/Box';
-export * from './UI/components/Button/Button';
-export * from './UI/components/Icon/Icon';
-export * from './UI/components/Tooltip/Tooltip';
-export * from './UI/components/Tooltip/core/TooltipProvider';
-export * from './UI/components/Typography';
-export * from './UI/components/Typography/Typography';
-export * from './UI/components/Typography/enums';
-export * from './UI/components/Typography/types';
+export * from './UI/Box/Box';
+export * from './UI/Button/Button';
+export * from './UI/Icon/Icon';
+export * from './UI/Tooltip/Tooltip';
+export * from './UI/Tooltip/core/TooltipProvider';
+export * from './UI/Typography';
+export * from './UI/Typography/Typography';
+export * from './UI/Typography/enums';
+export * from './UI/Typography/types';
 
 // UI tools
 export * from './UITools';

@@ -1,7 +1,7 @@
 import React, { FC, KeyboardEvent, ReactNode, RefObject } from 'react';
 
 // components
-import Box from '../UI/components/Box/Box';
+import Box from '../UI/Box/Box';
 
 // hooks
 import { useTheme } from 'hooks';

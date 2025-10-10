@@ -14,7 +14,7 @@ import { useMinMaxSizeEvents } from './hooks/useMinMaxSizeEvents';
 import { translationNameSpace } from './constants';
 
 // types
-import { GridColumnType } from 'shared/UITools/components/Section/components/SectionColumn/enums';
+import { GridColumnType } from 'shared/UITools/Section/components/SectionColumn/enums';
 import { TScore } from 'types';
 
 export type TColumnMinMaxSizeProps = { score: keyof TScore };
