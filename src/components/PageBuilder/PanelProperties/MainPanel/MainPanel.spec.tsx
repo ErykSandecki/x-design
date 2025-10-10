@@ -7,7 +7,7 @@ import MainPanel from './MainPanel';
 import { configureStore } from 'store/store';
 
 // types
-import { Tab } from '../../enums';
+import { Tab } from '../enums';
 
 // utils
 import { customRender } from 'test';

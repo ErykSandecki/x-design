@@ -1,4 +1,4 @@
 // others
 import { translationNameSpace as parentNameSpace } from '../constants';
 
-export const translationNameSpace = `${parentNameSpace}.design`;
+export const translationNameSpace = `${parentNameSpace}.elements`;

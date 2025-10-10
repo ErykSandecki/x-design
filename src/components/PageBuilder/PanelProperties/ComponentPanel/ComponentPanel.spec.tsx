@@ -18,7 +18,7 @@ import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 import { configureStore } from 'store/store';
 
 // types
-import { Tab } from '../../enums';
+import { Tab } from '../enums';
 
 // utils
 import { customRender } from 'test';

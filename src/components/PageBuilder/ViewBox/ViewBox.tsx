@@ -2,11 +2,11 @@ import { FC, memo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 // components
-import Elements from './components/Elements/Elements';
-import ElementArea from './components/ElementArea/ElementArea';
-import MultipleElementsArea from './components/MultipleElementsArea/MultipleElementsArea';
-import OverlayContainer from './components/OverlayContainer/OverlayContainer';
-import SelectableArea from './components/SelectableArea/SelectableArea';
+import Elements from './Elements/Elements';
+import ElementArea from './ElementArea/ElementArea';
+import MultipleElementsArea from './MultipleElementsArea/MultipleElementsArea';
+import OverlayContainer from './OverlayContainer/OverlayContainer';
+import SelectableArea from './SelectableArea/SelectableArea';
 import { ZoomBox } from 'shared';
 
 // core
