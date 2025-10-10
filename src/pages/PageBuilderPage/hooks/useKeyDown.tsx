@@ -11,8 +11,7 @@ import { canRedoReduxHistorySelector, canUndoReduxHistorySelector, pageSelector 
 import { reducerHistoryRedo, reducerHistoryUndo, updateEventsStatus } from 'store/pageBuilder/actions';
 
 // types
-import { KeyboardKeys } from 'types';
-import { MouseMode } from 'types/enums/mouseMode';
+import { KeyboardKeys, MouseMode } from 'types';
 
 type TUseKeyDown = void;
 
