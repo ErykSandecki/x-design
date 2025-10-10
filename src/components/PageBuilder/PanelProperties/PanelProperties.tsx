@@ -3,8 +3,8 @@ import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
 // components
-import ComponentPanel from './components/ComponentPanel/ComponentPanel';
-import MainPanel from './components/MainPanel/MainPanel';
+import ComponentPanel from './ComponentPanel/ComponentPanel';
+import MainPanel from './MainPanel/MainPanel';
 import { Box, E2EDataAttribute, TUITypes, UITools } from 'shared';
 
 // hooks

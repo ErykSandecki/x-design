@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import { useSelector } from 'react-redux';
 
 // components
-import ConstrainsView from '../../../../../../../shared/ConstrainsView/ConstrainsView';
+import ConstrainsView from '../../../../../../shared/ConstrainsView/ConstrainsView';
 
 // store
 import { elementsSelector } from 'store/pageBuilder/selectors';

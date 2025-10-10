@@ -4,7 +4,7 @@ import { FC } from 'react';
 import Design from './components/Design/Design';
 
 // types
-import { Tab } from '../../enums';
+import { Tab } from '../enums';
 
 export type TMainPanel = {
   activeTab: Tab;

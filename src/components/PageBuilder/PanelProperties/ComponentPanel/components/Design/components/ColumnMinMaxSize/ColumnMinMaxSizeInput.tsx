@@ -5,7 +5,7 @@ import { FC, ReactNode, useRef } from 'react';
 import { Icon, ScrubbableInput, TE2EValue, TIconProps, UITools } from 'shared';
 
 // others
-import { MAX, PANEL_PROPERTIES_ID } from '../../../../../../../constants';
+import { MAX, PANEL_PROPERTIES_ID } from '../../../../../../constants';
 
 // types
 import { ColorsTheme, KeyboardKeys, TElement, TScore } from 'types';

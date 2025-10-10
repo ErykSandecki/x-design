@@ -15,7 +15,7 @@ import { HORIZONTAL_BUTTONS, translationNameSpace, VERTICAL_BUTTONS } from './co
 // types
 
 // utils
-import { disabledAlignment } from '../../../../../../../utils/disabledAlignment';
+import { disabledAlignment } from '../../../../../../utils/disabledAlignment';
 
 const ColumnAlignment: FC = () => {
   const onClickHorizontalAlignment = useClickHorizontalAlignmentEvent();

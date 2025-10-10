@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 import { ScrubbableInput, Small, TE2EValue, UITools } from 'shared';
 
 // others
-import { MAX, MIN } from '../../../../../../../constants';
+import { MAX, MIN } from '../../../../../../constants';
 import { TOOLTIP_TRANSLATION_KEY } from 'constant/constants';
 
 // store
