@@ -2,9 +2,9 @@ import { render } from '@testing-library/react';
 
 // components
 import E2EDataAttribute from './E2EDataAttribute';
-import { E2EAttribute } from 'types/e2e';
 
 // types
+import { E2EAttribute } from 'types/e2e';
 
 describe('E2EDataAttribute snapshots', () => {
   it('should render E2EDataAttribute', () => {

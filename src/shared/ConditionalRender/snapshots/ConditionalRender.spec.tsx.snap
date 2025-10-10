@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConditionalRender snapshots should render ConditionalRender 1`] = `
+<DocumentFragment>
+  Component
+</DocumentFragment>
+`;
+
+exports[`ConditionalRender snapshots should render not visible 1`] = `<DocumentFragment />`;
