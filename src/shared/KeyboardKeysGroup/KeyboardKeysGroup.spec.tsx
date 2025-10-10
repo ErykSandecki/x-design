@@ -3,10 +3,13 @@ import { render } from '@testing-library/react';
 // components
 import KeyboardKeysGroup from './KeyboardKeysGroup';
 
+// types
+import { KeyboardKeys } from 'types';
+
 describe('KeyboardKeysGroup snapshots', () => {
   it('should render with one key', () => {
     // before
-    const { asFragment } = render(<KeyboardKeysGroup keyboardShortcutsGroup={[['A']]} />);
+    const { asFragment } = render(<KeyboardKeysGroup keyboardShortcutsGroup={[{ secondaryKey: KeyboardKeys.a }]} />);
 
     // result
     expect(asFragment()).toMatchSnapshot();
@@ -14,7 +17,9 @@ describe('KeyboardKeysGroup snapshots', () => {
 
   it('should render with title', () => {
     // before
-    const { asFragment } = render(<KeyboardKeysGroup keyboardShortcutsGroup={[['A']]} title="title" />);
+    const { asFragment } = render(
+      <KeyboardKeysGroup keyboardShortcutsGroup={[{ secondaryKey: KeyboardKeys.a }]} title="title" />,
+    );
 
     // result
     expect(asFragment()).toMatchSnapshot();
@@ -22,7 +27,11 @@ describe('KeyboardKeysGroup snapshots', () => {
 
   it('should render with couple keys', () => {
     // before
-    const { asFragment } = render(<KeyboardKeysGroup keyboardShortcutsGroup={[['A', 'B', 'C']]} />);
+    const { asFragment } = render(
+      <KeyboardKeysGroup
+        keyboardShortcutsGroup={[{ primaryKeys: ['alt', 'meta', 'shift'], secondaryKey: KeyboardKeys.a }]}
+      />,
+    );
 
     // result
     expect(asFragment()).toMatchSnapshot();
@@ -33,8 +42,8 @@ describe('KeyboardKeysGroup snapshots', () => {
     const { asFragment } = render(
       <KeyboardKeysGroup
         keyboardShortcutsGroup={[
-          ['A', 'B', 'C'],
-          ['D', 'E', 'F'],
+          { primaryKeys: ['alt', 'meta', 'shift'], secondaryKey: KeyboardKeys.a },
+          { primaryKeys: ['alt', 'meta', 'shift'], secondaryKey: KeyboardKeys.a },
         ]}
       />,
     );

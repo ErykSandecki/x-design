@@ -1,18 +1,18 @@
 // others
-import { ALT, CONTROL, SHIFT } from 'constant/mainKeys';
+import { CONTROL } from 'constant/constants';
 
 // types
-import { TKeyboardShortcutsGroup } from 'types';
+import { KeyboardKeys, TKeyboardShortcutsGroup } from 'types';
 
 export const KEYBOARD_SHORTCUTS: TKeyboardShortcutsGroup = {
-  alignHorizontalCenter: [[ALT, 'H']],
-  alignHorizontalLeft: [[ALT, 'A']],
-  alignHorizontalRight: [[ALT, 'D']],
-  alignVerticalBottom: [[ALT, 'S']],
-  alignVerticalCenter: [[ALT, 'V']],
-  alignVerticalTop: [[ALT, 'W']],
-  flipHorizontal: [[SHIFT, 'H']],
-  flipVertical: [[SHIFT, 'V']],
-  resizeToFit: [[ALT, SHIFT, CONTROL, 'R']],
-  toggleAutoLayout: [[SHIFT, 'A']],
+  alignHorizontalCenter: [{ primaryKeys: ['alt'], secondaryKey: KeyboardKeys.h }],
+  alignHorizontalLeft: [{ primaryKeys: ['alt'], secondaryKey: KeyboardKeys.a }],
+  alignHorizontalRight: [{ primaryKeys: ['alt'], secondaryKey: KeyboardKeys.d }],
+  alignVerticalBottom: [{ primaryKeys: ['alt'], secondaryKey: KeyboardKeys.s }],
+  alignVerticalCenter: [{ primaryKeys: ['alt'], secondaryKey: KeyboardKeys.v }],
+  alignVerticalTop: [{ primaryKeys: ['alt'], secondaryKey: KeyboardKeys.w }],
+  flipHorizontal: [{ primaryKeys: ['shift'], secondaryKey: KeyboardKeys.h }],
+  flipVertical: [{ primaryKeys: ['shift'], secondaryKey: KeyboardKeys.v }],
+  resizeToFit: [{ primaryKeys: ['alt', CONTROL, 'shift'], secondaryKey: KeyboardKeys.r }],
+  toggleAutoLayout: [{ primaryKeys: ['shift'], secondaryKey: KeyboardKeys.a }],
 };

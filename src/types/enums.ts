@@ -38,6 +38,7 @@ export enum KeyboardKeys {
   enter = 'Enter',
   escape = 'Escape',
   f = 'KeyF',
+  h = 'KeyH',
   meta = 'Meta',
   q = 'KeyQ',
   r = 'KeyR',

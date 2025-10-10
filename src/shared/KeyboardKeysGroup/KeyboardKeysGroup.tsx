@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 // components
-import KeyboardKeys, { TKeyboardKeysProps } from './KeyboardKey';
+import KeyboardKeys, { TKeyboardKeysProps } from './KeyboardKeys';
 
 // others
 import { translationNameSpace } from './constants';

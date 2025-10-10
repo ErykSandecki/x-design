@@ -178,7 +178,7 @@ exports[`Design snapshots should render Design 1`] = `
               <div
                 class="Tooltip__content Tooltip__content--light"
               >
-                Align left  AltA
+                Align left  ⌥A
                 <div
                   class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                   data-test-icon="carrot-down"
@@ -206,7 +206,7 @@ exports[`Design snapshots should render Design 1`] = `
               <div
                 class="Tooltip__content Tooltip__content--light"
               >
-                Align center  AltH
+                Align center  ⌥H
                 <div
                   class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                   data-test-icon="carrot-down"
@@ -234,7 +234,7 @@ exports[`Design snapshots should render Design 1`] = `
               <div
                 class="Tooltip__content Tooltip__content--light"
               >
-                Align right  AltD
+                Align right  ⌥D
                 <div
                   class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                   data-test-icon="carrot-down"
@@ -267,7 +267,7 @@ exports[`Design snapshots should render Design 1`] = `
               <div
                 class="Tooltip__content Tooltip__content--light"
               >
-                Align top  AltW
+                Align top  ⌥W
                 <div
                   class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                   data-test-icon="carrot-down"
@@ -295,7 +295,7 @@ exports[`Design snapshots should render Design 1`] = `
               <div
                 class="Tooltip__content Tooltip__content--light"
               >
-                Align center  AltV
+                Align center  ⌥V
                 <div
                   class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                   data-test-icon="carrot-down"
@@ -323,7 +323,7 @@ exports[`Design snapshots should render Design 1`] = `
               <div
                 class="Tooltip__content Tooltip__content--light"
               >
-                Align bottom  AltS
+                Align bottom  ⌥S
                 <div
                   class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                   data-test-icon="carrot-down"
@@ -600,7 +600,7 @@ exports[`Design snapshots should render Design 1`] = `
               <div
                 class="Tooltip__content Tooltip__content--light"
               >
-                Flip horizontal  ShiftH
+                Flip horizontal  ⇧H
                 <div
                   class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                   data-test-icon="carrot-down"
@@ -628,7 +628,7 @@ exports[`Design snapshots should render Design 1`] = `
               <div
                 class="Tooltip__content Tooltip__content--light"
               >
-                Flip vertical  ShiftV
+                Flip vertical  ⇧V
                 <div
                   class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                   data-test-icon="carrot-down"
@@ -697,7 +697,7 @@ exports[`Design snapshots should render Design 1`] = `
           <div
             class="Tooltip__content Tooltip__content--light"
           >
-            Resize to fit  AltShiftCtrlR
+            Resize to fit  ⌥⌘⇧R
             <div
               class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="carrot-down"
@@ -726,7 +726,7 @@ exports[`Design snapshots should render Design 1`] = `
           <div
             class="Tooltip__content Tooltip__content--light"
           >
-            Toggle auto layout  ShiftA
+            Toggle auto layout  ⇧A
             <div
               class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="carrot-down"

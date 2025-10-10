@@ -120,7 +120,7 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
             <div
               class="Tooltip__content Tooltip__content--light"
             >
-              Flip horizontal  ShiftH
+              Flip horizontal  ⇧H
               <div
                 class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                 data-test-icon="carrot-down"
@@ -148,7 +148,7 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
             <div
               class="Tooltip__content Tooltip__content--light"
             >
-              Flip vertical  ShiftV
+              Flip vertical  ⇧V
               <div
                 class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                 data-test-icon="carrot-down"
@@ -301,7 +301,7 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
             <div
               class="Tooltip__content Tooltip__content--light"
             >
-              Flip horizontal  ShiftH
+              Flip horizontal  ⇧H
               <div
                 class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                 data-test-icon="carrot-down"
@@ -329,7 +329,7 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
             <div
               class="Tooltip__content Tooltip__content--light"
             >
-              Flip vertical  ShiftV
+              Flip vertical  ⇧V
               <div
                 class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                 data-test-icon="carrot-down"

@@ -2,13 +2,13 @@
 
 exports[`KeyboardKeysGroup snapshots should render with couple keys 1`] = `
 <DocumentFragment>
-    ABC
+    ⌥⌘⇧A
 </DocumentFragment>
 `;
 
 exports[`KeyboardKeysGroup snapshots should render with couple keys and optional 1`] = `
 <DocumentFragment>
-   ABCorDEF
+   ⌥⌘⇧Aor⌥⌘⇧A
 </DocumentFragment>
 `;
 

@@ -48,7 +48,7 @@ describe('useWheelEvent', () => {
     // action
     fireEvent.keyDown(window, {
       code: KeyboardKeys.z,
-      ctrlKey: true,
+      metaKey: true,
       shiftKey: true,
     });
 
@@ -67,7 +67,7 @@ describe('useWheelEvent', () => {
     });
 
     // action
-    fireEvent.keyDown(window, { code: KeyboardKeys.z, ctrlKey: true });
+    fireEvent.keyDown(window, { code: KeyboardKeys.z, metaKey: true });
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(1);

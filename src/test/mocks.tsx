@@ -74,3 +74,10 @@ document.execCommand = jest.fn();
  * Mock tooltip container
  */
 document.body.appendChild(createHtmlElement('div', { id: HTMLContainerId.tooltip }));
+
+/**
+ * Mock to avoid other keys when different environment
+ */
+jest.mock('react-device-detect', () => ({
+  isMacOs: true,
+}));

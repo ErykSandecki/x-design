@@ -1,6 +1,11 @@
 // types
+import { KeyboardKeys } from './enums';
 import { TObject } from './generic/object';
+import { TKeyMap } from 'hooks';
 
-export type TKeyboardShortcut = string;
-export type TKeyboardShortcuts = Array<TKeyboardShortcut>;
-export type TKeyboardShortcutsGroup = TObject<[TKeyboardShortcuts] | [TKeyboardShortcuts, TKeyboardShortcuts], any>;
+export type TKeyboardSecondaryKey = KeyboardKeys;
+export type TKeyboardShortcuts = {
+  primaryKeys?: TKeyMap['primaryKeys'];
+  secondaryKey: TKeyboardSecondaryKey;
+};
+export type TKeyboardShortcutsGroup = TObject<[TKeyboardShortcuts] | [TKeyboardShortcuts, TKeyboardShortcuts]>;
