@@ -1,0 +1,52 @@
+import { FC } from 'react';
+import { useTranslation } from 'react-i18next';
+
+// components
+import ColumnAlignment from './ColumnAlignment/ColumnAlignment';
+import ColumnFlow from './ColumnFlow/ColumnFlow';
+import ColumnHeader from './ColumnHeader/ColumnHeader';
+import ColumnMinMaxSize from './ColumnMinMaxSize/ColumnMinMaxSize';
+import ColumnPosition from './ColumnPosition/ColumnPosition';
+import ColumnResizing from './ColumnResizing/ColumnResizing';
+import ColumnRotation from './ColumnRotation/ColumnRotation';
+import DesignLayoutButtonIcons from './DesignLayoutButtonIcons';
+import DesignPositionButtonIcons from './DesignPositionButtonIcons';
+import { UITools } from 'shared';
+
+// hooks
+import { useDesignData } from './hooks/useDesignData';
+
+// others
+import { translationNameSpace } from './constants';
+
+const Design: FC = () => {
+  const { t } = useTranslation();
+  const { areParentsTheSame, isMixedLayoutType, layoutType, onChangeLayoutType, position } = useDesignData();
+
+  return (
+    <>
+      <UITools.Section>
+        <ColumnHeader />
+      </UITools.Section>
+      <UITools.Section
+        buttonsIcon={DesignPositionButtonIcons(areParentsTheSame, position)}
+        label={t(`${translationNameSpace}.section.2.label`)}
+      >
+        <ColumnAlignment />
+        <ColumnPosition />
+        <ColumnRotation />
+      </UITools.Section>
+      <UITools.Section
+        buttonsIcon={DesignLayoutButtonIcons(isMixedLayoutType, layoutType, onChangeLayoutType)}
+        label={t(`${translationNameSpace}.section.3.label`)}
+      >
+        <ColumnFlow />
+        <ColumnResizing />
+        <ColumnMinMaxSize score="min" />
+        <ColumnMinMaxSize score="max" />
+      </UITools.Section>
+    </>
+  );
+};
+
+export default Design;

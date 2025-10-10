@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 // components
-import Design from './components/Design/Design';
+import Design from './Design/Design';
 
 // types
 import { Tab } from '../enums';
