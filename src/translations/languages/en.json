@@ -39,5 +39,11 @@
   "pageBuilder.panelProperties.tabs.2": "Prototype",
   "pageBuilder.viewBox.elements.frame.label.createFrame": "Frame",
   "pageBuilder.viewBox.elementArea.label.createFrame": "Frame",
-  "pageBuilder.viewBox.elements.element.newElementButton.label": "Add section"
+  "pageBuilder.viewBox.elements.element.newElementButton.label": "Add section",
+  "tooltip.alignHorizontalCenter": "Align center",
+  "tooltip.alignHorizontalLeft": "Align left",
+  "tooltip.alignHorizontalRight": "Align right",
+  "tooltip.alignVerticalBottom": "Align bottom",
+  "tooltip.alignVerticalCenter": "Align center",
+  "tooltip.alignVerticalTop": "Align top"
 }

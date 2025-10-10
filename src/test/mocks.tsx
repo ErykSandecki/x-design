@@ -7,6 +7,12 @@ import { ReactNode } from 'react';
 import resource from 'translations/languages/en.json';
 import { AVAILABLE_LANGUAGES } from 'translations/constants';
 
+// types
+import { HTMLContainerId } from 'types';
+
+// utils
+import { createHtmlElement } from 'utils';
+
 /**
  * React Portal
  */
@@ -63,3 +69,8 @@ delete (window as any).prompt;
  * Mock copy to clipboard
  */
 document.execCommand = jest.fn();
+
+/**
+ * Mock tooltip container
+ */
+document.body.appendChild(createHtmlElement('div', { id: HTMLContainerId.tooltip }));

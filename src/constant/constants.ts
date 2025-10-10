@@ -20,3 +20,4 @@ export const DATE_FORMATS = [DATE_FORMAT, DATE_FORMAT_HOURS_MINUTES, DATE_FORMAT
 export const DEBOUNCE_TIME = 250;
 
 export const ROWS_PER_PAGE = [5, 25, 50, 100] as const;
+export const TOOLTIP_TRANSLATION_KEY = 'tooltip';

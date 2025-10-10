@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import { isMacOs } from 'react-device-detect';
 
 export const ALT = isMacOs ? '⌥' : 'Alt';

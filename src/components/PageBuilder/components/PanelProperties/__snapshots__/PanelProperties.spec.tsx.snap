@@ -391,6 +391,22 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                   />
                 </div>
                 <div
+                  class="Tooltip Tooltip--light"
+                >
+                  <div
+                    class="Tooltip__content Tooltip__content--light"
+                  >
+                    Align left AltA
+                    <div
+                      class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral3 Icon--neutral3--light"
+                      data-test-icon="carrot-down"
+                      height="14"
+                      name="CarrotDown"
+                      width="10"
+                    />
+                  </div>
+                </div>
+                <div
                   class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
                   data-test-button-group-input="align-horizontal-center"
                 >
@@ -403,6 +419,22 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                   />
                 </div>
                 <div
+                  class="Tooltip Tooltip--light"
+                >
+                  <div
+                    class="Tooltip__content Tooltip__content--light"
+                  >
+                    Align center AltH
+                    <div
+                      class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral3 Icon--neutral3--light"
+                      data-test-icon="carrot-down"
+                      height="14"
+                      name="CarrotDown"
+                      width="10"
+                    />
+                  </div>
+                </div>
+                <div
                   class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
                   data-test-button-group-input="align-horizontal-right"
                 >
@@ -413,6 +445,22 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                     name="AlignHorizontalRight"
                     width="12"
                   />
+                </div>
+                <div
+                  class="Tooltip Tooltip--light"
+                >
+                  <div
+                    class="Tooltip__content Tooltip__content--light"
+                  >
+                    Align right AltD
+                    <div
+                      class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral3 Icon--neutral3--light"
+                      data-test-icon="carrot-down"
+                      height="14"
+                      name="CarrotDown"
+                      width="10"
+                    />
+                  </div>
                 </div>
               </div>
               <div
@@ -432,6 +480,22 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                   />
                 </div>
                 <div
+                  class="Tooltip Tooltip--light"
+                >
+                  <div
+                    class="Tooltip__content Tooltip__content--light"
+                  >
+                    Align top AltW
+                    <div
+                      class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral3 Icon--neutral3--light"
+                      data-test-icon="carrot-down"
+                      height="14"
+                      name="CarrotDown"
+                      width="10"
+                    />
+                  </div>
+                </div>
+                <div
                   class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
                   data-test-button-group-input="align-vertical-center"
                 >
@@ -444,6 +508,22 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                   />
                 </div>
                 <div
+                  class="Tooltip Tooltip--light"
+                >
+                  <div
+                    class="Tooltip__content Tooltip__content--light"
+                  >
+                    Align center AltV
+                    <div
+                      class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral3 Icon--neutral3--light"
+                      data-test-icon="carrot-down"
+                      height="14"
+                      name="CarrotDown"
+                      width="10"
+                    />
+                  </div>
+                </div>
+                <div
                   class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
                   data-test-button-group-input="align-vertical-bottom"
                 >
@@ -454,6 +534,22 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                     name="AlignVerticalBottom"
                     width="12"
                   />
+                </div>
+                <div
+                  class="Tooltip Tooltip--light"
+                >
+                  <div
+                    class="Tooltip__content Tooltip__content--light"
+                  >
+                    Align bottom AltS
+                    <div
+                      class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral3 Icon--neutral3--light"
+                      data-test-icon="carrot-down"
+                      height="14"
+                      name="CarrotDown"
+                      width="10"
+                    />
+                  </div>
                 </div>
               </div>
               <div

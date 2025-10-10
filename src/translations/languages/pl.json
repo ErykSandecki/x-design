@@ -40,5 +40,11 @@
   "pageBuilder.panelProperties.tabs.2": "Prototyp",
   "pageBuilder.viewBox.elements.frame.label.createFrame": "Kontener",
   "pageBuilder.viewBox.elementArea.label.createFrame": "Kontener",
-  "pageBuilder.viewBox.elements.element.newElementButton.label": "Dodaj sekcje"
+  "pageBuilder.viewBox.elements.element.newElementButton.label": "Dodaj sekcje",
+  "tooltip.alignHorizontalCenter": "Wyrównaj do środka",
+  "tooltip.alignHorizontalLeft": "Wyrównaj do lewej",
+  "tooltip.alignHorizontalRight": "Wyrównaj w prawo",
+  "tooltip.alignVerticalBottom": "Wyrównaj dół",
+  "tooltip.alignVerticalCenter": "Wyrównaj do środka",
+  "tooltip.alignVerticalTop": "Wyrównaj do góry"
 }
