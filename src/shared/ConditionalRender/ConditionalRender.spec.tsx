@@ -6,7 +6,7 @@ import ConditionalRender from './ConditionalRender';
 describe('ConditionalRender snapshots', () => {
   it('should render ConditionalRender', () => {
     // before
-    const { asFragment } = render(<ConditionalRender component={() => <>Component</>} visible />);
+    const { asFragment } = render(<ConditionalRender component={<>Component</>} visible />);
 
     // result
     expect(asFragment()).toMatchSnapshot();
@@ -14,7 +14,7 @@ describe('ConditionalRender snapshots', () => {
 
   it('should render not visible', () => {
     // before
-    const { asFragment } = render(<ConditionalRender component={() => <>Component</>} visible={false} />);
+    const { asFragment } = render(<ConditionalRender component={<>Component</>} visible={false} />);
 
     // result
     expect(asFragment()).toMatchSnapshot();

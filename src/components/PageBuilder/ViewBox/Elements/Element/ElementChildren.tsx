@@ -4,6 +4,7 @@ import { FC, memo, RefObject } from 'react';
 import DropAnchors from './DropAnchors/DropAnchors';
 import EventsArea from './EventsArea/EventsArea';
 import Outline from './Outline/Outline';
+import { ConditionalRender } from 'shared';
 
 // core
 import { useRefs } from 'pages/PageBuilderPage/core/RefsProvider';
@@ -64,23 +65,32 @@ const ElementChildren: FC<TElementChildrenProps> = ({
 
   return (
     <>
-      {showDropAnchors && <DropAnchors id={id} index={index} mouseMode={mouseMode} parentId={parentId} />}
+      <ConditionalRender
+        component={<DropAnchors id={id} index={index} mouseMode={mouseMode} parentId={parentId} />}
+        visible={showDropAnchors}
+      />
       {children(angle, coordinates, height, isHover, isSelected, width)}
-      {displayOutline && <Outline angle={angle - counterAngle} height={height} x={x1} y={y1} width={width} />}
-      {displayEventsArea && (
-        <EventsArea
-          angle={angle}
-          absoluteCoordinates={{ x: x1, y: y1 }}
-          counterAngle={counterAngle}
-          elementRef={elementRef}
-          flip={flip}
-          height={height}
-          id={id}
-          mouseMode={mouseMode}
-          relativeCoordinates={{ x, y }}
-          width={width}
-        />
-      )}
+      <ConditionalRender
+        component={<Outline angle={angle - counterAngle} height={height} x={x1} y={y1} width={width} />}
+        visible={displayOutline}
+      />
+      <ConditionalRender
+        component={
+          <EventsArea
+            angle={angle}
+            absoluteCoordinates={{ x: x1, y: y1 }}
+            counterAngle={counterAngle}
+            elementRef={elementRef}
+            flip={flip}
+            height={height}
+            id={id}
+            mouseMode={mouseMode}
+            relativeCoordinates={{ x, y }}
+            width={width}
+          />
+        }
+        visible={displayEventsArea}
+      />
     </>
   );
 };

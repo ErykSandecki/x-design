@@ -1,14 +1,12 @@
-import { Activity, FC, JSX } from 'react';
+import { Activity, FC, ReactElement } from 'react';
 
 export type TConditionalRenderProps = {
-  component: () => JSX.Element;
+  component: ReactElement;
   visible: boolean;
 };
 
-export const ConditionalRender: FC<TConditionalRenderProps> = ({ component: Component, visible }) => (
-  <Activity mode={visible ? 'visible' : 'hidden'}>
-    <Component />
-  </Activity>
+export const ConditionalRender: FC<TConditionalRenderProps> = ({ component, visible }) => (
+  <Activity mode={visible ? 'visible' : 'hidden'}>{component}</Activity>
 );
 
 export default ConditionalRender;
