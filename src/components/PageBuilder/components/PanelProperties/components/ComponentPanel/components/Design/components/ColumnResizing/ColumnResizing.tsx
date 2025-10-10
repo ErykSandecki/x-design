@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
 // components
+import ColumnResizingButtonIcons from './ColumnResizingButtonIcons';
 import ColumnResizingInput from './ColumnResizingInput';
 import HeightPopoverHeight from './components/HeightPopoverHeight/HeightPopoverHeight';
 import HeightPopoverWidth from './components/HeightPopoverWidth/HeightPopoverWidth';
@@ -17,10 +18,6 @@ import { translationNameSpace } from './constants';
 
 // store
 import { elementsSelector, selectedElementsSelector } from 'store/pageBuilder/selectors';
-
-// types
-import { GridColumnType } from 'shared/UITools/Section/components/SectionColumn/enums';
-import ColumnResizingButtonIcons from './ColumnResizingButtonIcons';
 
 const ColumnResizing: FC = () => {
   const elements = useSelector(elementsSelector);
@@ -57,7 +54,7 @@ const ColumnResizing: FC = () => {
   return (
     <UITools.SectionColumn
       buttonsIcon={ColumnResizingButtonIcons(aspectRatio, visibleAspectRatioButton)}
-      gridColumnType={GridColumnType.twoInputs}
+      gridColumnType={UITools.GridColumnType.twoInputs}
       inputConnector={aspectRatio}
       labels={[t(`${translationNameSpace}.label`)]}
       withMargin

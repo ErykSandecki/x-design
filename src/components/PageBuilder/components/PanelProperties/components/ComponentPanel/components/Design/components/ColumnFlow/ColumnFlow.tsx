@@ -14,7 +14,6 @@ import { changeLayout } from 'store/pageBuilder/actions';
 import { elementsSelector, elementDataSelectorCreator, selectedElementsSelector } from 'store/pageBuilder/selectors';
 
 // types
-import { GridColumnType } from 'shared/UITools/Section/components/SectionColumn/enums';
 import { LayoutType } from 'types';
 
 // utils
@@ -31,7 +30,7 @@ const ColumnFlow: FC = () => {
 
   return (
     <UITools.SectionColumn
-      gridColumnType={GridColumnType.single}
+      gridColumnType={UITools.GridColumnType.single}
       labels={[t(`${translationNameSpace}.label`)]}
       withMargin
     >

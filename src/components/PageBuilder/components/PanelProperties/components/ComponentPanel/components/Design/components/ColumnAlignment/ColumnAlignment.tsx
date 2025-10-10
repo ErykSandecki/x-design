@@ -13,7 +13,6 @@ import { useClickVerticalAlignmentEvent } from './hooks/useClickVerticalAlignmen
 import { HORIZONTAL_BUTTONS, translationNameSpace, VERTICAL_BUTTONS } from './constants';
 
 // types
-import { GridColumnType } from 'shared/UITools/Section/components/SectionColumn/enums';
 
 // utils
 import { disabledAlignment } from '../../../../../../../../utils/disabledAlignment';
@@ -26,7 +25,7 @@ const ColumnAlignment: FC = () => {
 
   return (
     <UITools.SectionColumn
-      gridColumnType={GridColumnType.twoInputs}
+      gridColumnType={UITools.GridColumnType.twoInputs}
       labels={[t(`${translationNameSpace}.label`)]}
       withMargin
     >

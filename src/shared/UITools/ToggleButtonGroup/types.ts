@@ -1,5 +1,5 @@
 import { TIconProps } from '../../UI/Icon/Icon';
-import { TToggleButtonProps } from './components/ToggleButton/ToggleButton';
+import { TToggleButtonProps } from './ToggleButton/ToggleButton';
 
 export type TToggleButton<V> = Pick<TToggleButtonProps<V>, 'tooltip' | 'value'> & {
   icon: TIconProps['name'];

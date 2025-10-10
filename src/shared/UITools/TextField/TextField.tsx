@@ -2,8 +2,8 @@ import { FC, InputHTMLAttributes, ReactNode, RefObject } from 'react';
 
 // components
 import Box from '../../UI/Box/Box';
-import TextFieldPopover from './components/TextFieldPopover/TextFieldPopover';
-import TextFieldChip, { TTextFieldChipProps } from './components/TextFieldChip/TextFieldChip';
+import TextFieldPopover from './TextFieldPopover/TextFieldPopover';
+import TextFieldChip, { TTextFieldChipProps } from './TextFieldChip/TextFieldChip';
 import Tooltip, { TTooltipProps } from '../../UI/Tooltip/Tooltip';
 import { TPopoverProps } from '../Popover/Popover';
 

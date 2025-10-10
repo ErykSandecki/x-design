@@ -4,9 +4,9 @@ import { FC, ReactNode, RefObject, useRef } from 'react';
 // components
 import Box from 'shared/UI/Box/Box';
 import E2EDataAttribute, { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute';
-import PopoverItem from './components/PopoverItem/PopoverItem';
-import PopoverRoot from './components/PopoverRoot/PopoverRoot';
-import PopoverSeparator from './components/PopoverSeparator/PopoverSeparator';
+import PopoverItem from './PopoverItem/PopoverItem';
+import PopoverRoot from './PopoverRoot/PopoverRoot';
+import PopoverSeparator from './PopoverSeparator/PopoverSeparator';
 
 // hooks
 import { useTheme } from 'hooks';

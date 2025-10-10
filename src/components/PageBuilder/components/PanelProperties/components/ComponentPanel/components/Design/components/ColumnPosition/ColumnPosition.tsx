@@ -12,11 +12,6 @@ import { usePositionEvents } from './hooks/usePositionEvents';
 // others
 import { translationNameSpace } from './constants';
 
-// types
-import { GridColumnType } from 'shared/UITools/Section/components/SectionColumn/enums';
-
-// utils
-
 const ColumnPosition: FC = () => {
   const { t } = useTranslation();
 
@@ -43,7 +38,7 @@ const ColumnPosition: FC = () => {
   return (
     <UITools.SectionColumn
       buttonsIcon={ColumnPositionButtonIcons(firstElement, showConstrains)}
-      gridColumnType={GridColumnType.twoInputs}
+      gridColumnType={UITools.GridColumnType.twoInputs}
       labels={[t(`${translationNameSpace}.label`)]}
       withMargin
     >

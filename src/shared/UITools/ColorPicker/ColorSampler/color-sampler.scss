@@ -1,0 +1,23 @@
+@import '../../../../styles/z-indexes';
+@import '../../../../styles/mixins/box-shadow';
+
+.ColorSampler {
+  @include box-shadow-panel;
+
+  border-radius: 15px;
+  box-sizing: border-box;
+  column-gap: 15px;
+  display: flex;
+  height: 64px;
+  padding: 8px;
+  position: fixed;
+  width: 260px;
+  z-index: map.get($map: $--xd-z-indexes, $key: 'overlay');
+
+  &__prevent-antd-event-mask {
+    cursor:
+      url('assets/icons/cursors/sampler.svg') 8 24,
+      auto !important;
+    pointer-events: all;
+  }
+}

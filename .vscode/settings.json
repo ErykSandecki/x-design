@@ -199,6 +199,7 @@
       "italic": false
     }
   ],
+  "explorer.compactFolders": false,
   "explorer.sortOrderLexicographicOptions": "upper",
   "search.exclude": {
     "**/*.spec.tsx.snap": true,

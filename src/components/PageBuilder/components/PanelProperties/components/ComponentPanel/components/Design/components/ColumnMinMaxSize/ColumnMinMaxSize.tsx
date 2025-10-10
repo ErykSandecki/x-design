@@ -14,7 +14,6 @@ import { useMinMaxSizeEvents } from './hooks/useMinMaxSizeEvents';
 import { translationNameSpace } from './constants';
 
 // types
-import { GridColumnType } from 'shared/UITools/Section/components/SectionColumn/enums';
 import { TScore } from 'types';
 
 export type TColumnMinMaxSizeProps = { score: keyof TScore };
@@ -41,7 +40,7 @@ const ColumnMinMaxSize: FC<TColumnMinMaxSizeProps> = ({ score }) => {
 
   return (
     <UITools.SectionColumn
-      gridColumnType={GridColumnType.twoInputs}
+      gridColumnType={UITools.GridColumnType.twoInputs}
       labels={
         [
           visibleWidth && t(`${translationNameSpace}.${score}.label.width`),

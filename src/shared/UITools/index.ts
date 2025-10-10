@@ -6,7 +6,8 @@ import Color from './Color/Color';
 import ColorPicker from './ColorPicker/ColorPicker';
 import FieldGroup from './FieldGroup/FieldGroup';
 import Popover, { PopoverCompound } from './Popover/Popover';
-import SectionColumn from './Section/components/SectionColumn/SectionColumn';
+import SectionColumn from './SectionColumn/SectionColumn';
+import { GridColumnType } from './SectionColumn/enums';
 import Section from './Section/Section';
 import Tabs, { TTabsProps } from './Tabs/Tabs';
 import TextField from './TextField/TextField';
@@ -19,6 +20,7 @@ export const UITools = {
   Color,
   ColorPicker,
   FieldGroup,
+  GridColumnType,
   Popover,
   PopoverCompound,
   Section,

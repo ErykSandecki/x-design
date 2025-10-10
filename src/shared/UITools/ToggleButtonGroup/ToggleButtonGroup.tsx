@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 // components
 import Box from '../../UI/Box/Box';
 import E2EDataAttribute, { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute';
-import ToggleButton from './components/ToggleButton/ToggleButton';
+import ToggleButton from './ToggleButton/ToggleButton';
 
 // hooks
 import { useTheme } from '../../../hooks/useTheme/useTheme';

@@ -5,7 +5,7 @@ import { FC, useRef, useState } from 'react';
 // components
 import Box from '../../UI/Box/Box';
 import Color from '../Color/Color';
-import Panel, { TPanelProps } from './components/Panel/Panel';
+import Panel, { TPanelProps } from './Panel/Panel';
 import TextField from '../TextField/TextField';
 
 // others

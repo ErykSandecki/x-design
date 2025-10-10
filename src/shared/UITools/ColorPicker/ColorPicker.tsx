@@ -5,7 +5,7 @@ import { FC } from 'react';
 import ColorPickerInputAlpha from './ColorPickerInputAlpha';
 import ColorPickerInputColor from './ColorPickerInputColor';
 import FieldGroup from '../FieldGroup/FieldGroup';
-import { TPanelProps } from './components/Panel/Panel';
+import { TPanelProps } from './Panel/Panel';
 
 // hooks
 import { useColorPickerEvents } from './hooks/useColorPickerEvents';
