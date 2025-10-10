@@ -48,6 +48,11 @@ const stateMock = {
   },
 };
 
+jest.mock('lodash', () => ({
+  ...(jest.requireActual('lodash') as object),
+  defer: (callback: any): any => callback(),
+}));
+
 describe('ComponentPanel snapshots', () => {
   it('should render ComponentPanel', () => {
     // mock

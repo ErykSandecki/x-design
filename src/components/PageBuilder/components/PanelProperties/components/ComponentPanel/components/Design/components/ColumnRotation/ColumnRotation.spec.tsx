@@ -50,6 +50,11 @@ const stateMock = {
   },
 };
 
+jest.mock('lodash', () => ({
+  ...(jest.requireActual('lodash') as object),
+  defer: (callback: any): any => callback(),
+}));
+
 describe('ColumnRotation snapshots', () => {
   it('should render ColumnRotation', () => {
     // mock

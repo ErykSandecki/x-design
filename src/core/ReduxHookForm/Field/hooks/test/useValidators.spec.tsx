@@ -48,7 +48,7 @@ const stateMock = {
   },
 };
 
-jest.mock('../../../../utils/dispatchFieldHandler', () => ({
+jest.mock('../../../utils/dispatchFieldHandler', () => ({
   dispatchFieldHandler: (): any => mockCallBack,
 }));
 

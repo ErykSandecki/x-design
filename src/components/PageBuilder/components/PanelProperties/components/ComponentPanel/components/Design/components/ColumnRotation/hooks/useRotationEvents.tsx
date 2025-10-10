@@ -1,4 +1,4 @@
-import { first, size } from 'lodash';
+import { defer, first, size } from 'lodash';
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
@@ -36,7 +36,7 @@ export const useRotationEvents = (): TUseRotationEvents => {
   const onChange = useChangeEvent(setAngle);
 
   useEffect(() => {
-    setAngle(isMixedAngle ? 'Mixed' : `${currentAngle.toString()}°`);
+    defer(() => setAngle(isMixedAngle ? 'Mixed' : `${currentAngle.toString()}°`));
   }, [currentAngle, isMultiple]);
 
   return {

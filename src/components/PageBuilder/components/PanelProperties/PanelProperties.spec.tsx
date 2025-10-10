@@ -32,6 +32,11 @@ const stateMock = {
   ...pageBuilderStateMock,
 };
 
+jest.mock('lodash', () => ({
+  ...(jest.requireActual('lodash') as object),
+  defer: (callback: any): any => callback(),
+}));
+
 describe('PanelProperties snapshots', () => {
   it('should render PanelProperties', () => {
     // mock

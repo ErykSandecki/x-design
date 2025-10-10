@@ -38,6 +38,11 @@ const stateMock = {
   },
 };
 
+jest.mock('lodash', () => ({
+  ...(jest.requireActual('lodash') as object),
+  defer: (callback: any): any => callback(),
+}));
+
 describe('useRotationEvents', () => {
   it(`should return data`, () => {
     // mock
