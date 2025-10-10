@@ -1,4 +1,4 @@
-import { fireEvent, render } from '@testing-library/react';
+import { fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';
 
 // components
@@ -23,7 +23,7 @@ import { configureStore } from 'store/store';
 import { E2EAttribute, KeyboardKeys, LayoutType } from 'types';
 
 // utils
-import { getByE2EAttribute } from 'test';
+import { customRender, getByE2EAttribute } from 'test';
 
 const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 const stateMock = {
@@ -56,7 +56,7 @@ describe('ColumnRotation snapshots', () => {
     const store = configureStore(stateMock);
 
     // before
-    const { asFragment } = render(
+    const { asFragment } = customRender(
       <Provider store={store}>
         <ColumnRotation />
       </Provider>,
@@ -97,7 +97,7 @@ describe('ColumnRotation snapshots', () => {
     });
 
     // before
-    const { asFragment } = render(
+    const { asFragment } = customRender(
       <Provider store={store}>
         <ColumnRotation />
       </Provider>,
@@ -114,7 +114,7 @@ describe('ColumnRotation behaviors', () => {
     const store = configureStore(stateMock);
 
     // before
-    const { container } = render(
+    const { container } = customRender(
       <Provider store={store}>
         <ColumnRotation />
       </Provider>,
@@ -145,7 +145,7 @@ describe('ColumnRotation behaviors', () => {
     Object.defineProperty(mouseMoveEvent, 'movementX', { value: -200 });
 
     // before
-    const { container } = render(
+    const { container } = customRender(
       <Provider store={store}>
         <ColumnRotation />
       </Provider>,
@@ -168,7 +168,7 @@ describe('ColumnRotation behaviors', () => {
     const store = configureStore(stateMock);
 
     // before
-    const { container } = render(
+    const { container } = customRender(
       <Provider store={store}>
         <ColumnRotation />
       </Provider>,
@@ -229,7 +229,7 @@ describe('ColumnRotation behaviors', () => {
     });
 
     // before
-    const { container } = render(
+    const { container } = customRender(
       <Provider store={store}>
         <ColumnRotation />
       </Provider>,
@@ -294,7 +294,7 @@ describe('ColumnRotation behaviors', () => {
     });
 
     // before
-    const { container } = render(
+    const { container } = customRender(
       <Provider store={store}>
         <ColumnRotation />
       </Provider>,

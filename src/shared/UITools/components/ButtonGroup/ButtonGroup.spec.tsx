@@ -1,13 +1,13 @@
 import { noop } from 'lodash';
-import { render } from '@testing-library/react';
 
 // components
 import ButtonGroup from './ButtonGroup';
+import { customRender } from 'test';
 
 describe('ButtonGroup snapshots', () => {
   it('should render ButtonGroup', () => {
     // before
-    const { asFragment } = render(
+    const { asFragment } = customRender(
       <ButtonGroup
         buttons={[
           { name: 'AlignHorizontalLeft', onClick: noop },
@@ -23,7 +23,7 @@ describe('ButtonGroup snapshots', () => {
 
   it('should render with disabled states', () => {
     // before
-    const { asFragment } = render(
+    const { asFragment } = customRender(
       <ButtonGroup
         buttons={[
           { disabled: true, name: 'AlignHorizontalLeft', onClick: noop },

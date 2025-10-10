@@ -6,6 +6,7 @@ import App from './components/App/App';
 
 // core
 import { ContextProvider } from 'core';
+import { TooltipProvider } from 'shared';
 
 // store
 import { store } from 'store/store';
@@ -24,7 +25,9 @@ createRoot(document.getElementById('root')!).render(
   <Provider store={store}>
     {/* @ts-ignore */}
     <ContextProvider actionOnChangeTheme={noop}>
-      <App />
+      <TooltipProvider>
+        <App />
+      </TooltipProvider>
     </ContextProvider>
   </Provider>,
 );

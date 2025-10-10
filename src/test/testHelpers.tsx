@@ -1,6 +1,8 @@
 import { History } from 'history';
 import { Provider } from 'react-redux';
+import { ReactElement } from 'react';
 import { Router } from 'react-router-dom';
+import { render, RenderOptions } from '@testing-library/react';
 import { values } from 'lodash';
 
 // types
@@ -9,6 +11,7 @@ import { TStore } from 'store/types';
 
 // utils
 import { getDataTestAttribute } from 'shared/E2EDataAttributes/utils';
+import { TooltipProvider } from 'shared';
 
 export const getByE2EAttribute = (
   container: Element | HTMLElement,
@@ -37,3 +40,14 @@ export const sleep = async (time = 0): Promise<NodeJS.Timeout> =>
 
 export const matchClassName = (htmlElement: HTMLElement, targetClassName: string): boolean =>
   values(htmlElement.classList).some((className) => className.includes(targetClassName));
+
+// eslint-disable-next-line
+export const customRender = (ui: ReactElement, options?: Omit<RenderOptions, 'wrapper'>) =>
+  render(ui, {
+    wrapper: ({ children }) => (
+      <TooltipProvider timeoutEnter={0} timeoutLeave={0}>
+        {children}
+      </TooltipProvider>
+    ),
+    ...options,
+  });

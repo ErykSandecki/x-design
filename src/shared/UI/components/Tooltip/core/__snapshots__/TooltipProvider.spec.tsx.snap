@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TooltipProvider snapshots should render TooltipProvider 1`] = `
+<DocumentFragment>
+  <div
+    id="test"
+  >
+    disabled
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TooltipProvider snapshots should render when active 1`] = `
+<DocumentFragment>
+  <div
+    id="test"
+  >
+    active
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TooltipProvider snapshots should render when toggle active 1`] = `
+<DocumentFragment>
+  <div
+    id="test"
+  >
+    disabled
+  </div>
+</DocumentFragment>
+`;

@@ -1,4 +1,4 @@
-import { fireEvent, render } from '@testing-library/react';
+import { fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';
 
 // components
@@ -17,7 +17,7 @@ import { configureStore } from 'store/store';
 import { E2EAttribute, LayoutType } from 'types';
 
 // utils
-import { getByE2EAttribute } from 'test';
+import { customRender, getByE2EAttribute } from 'test';
 
 const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 const stateMock = {
@@ -60,7 +60,7 @@ describe('Design snapshots', () => {
     const store = configureStore(stateMock);
 
     // before
-    const { asFragment } = render(
+    const { asFragment } = customRender(
       <Provider store={store}>
         <Design />
       </Provider>,
@@ -89,7 +89,7 @@ describe('Design behaviors', () => {
     });
 
     // before
-    const { container } = render(
+    const { container } = customRender(
       <Provider store={store}>
         <Design />
       </Provider>,
@@ -119,7 +119,7 @@ describe('Design behaviors', () => {
     });
 
     // before
-    const { container } = render(
+    const { container } = customRender(
       <Provider store={store}>
         <Design />
       </Provider>,
@@ -169,7 +169,7 @@ describe('Design behaviors', () => {
     });
 
     // before
-    const { container } = render(
+    const { container } = customRender(
       <Provider store={store}>
         <Design />
       </Provider>,
@@ -220,7 +220,7 @@ describe('Design behaviors', () => {
     });
 
     // before
-    const { container } = render(
+    const { container } = customRender(
       <Provider store={store}>
         <Design />
       </Provider>,
@@ -250,7 +250,7 @@ describe('Design behaviors', () => {
     });
 
     // before
-    const { container } = render(
+    const { container } = customRender(
       <Provider store={store}>
         <Design />
       </Provider>,

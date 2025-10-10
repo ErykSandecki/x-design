@@ -1,4 +1,4 @@
-import { fireEvent, render } from '@testing-library/react';
+import { fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';
 
 // components
@@ -23,7 +23,7 @@ import { configureStore } from 'store/store';
 import { E2EAttribute, MouseButton } from 'types';
 
 // utils
-import { getByE2EAttribute } from 'test';
+import { customRender, getByE2EAttribute } from 'test';
 
 const mockCallBack = jest.fn();
 
@@ -38,7 +38,7 @@ describe('PanelProperties snapshots', () => {
     const store = configureStore();
 
     // before
-    const { asFragment } = render(
+    const { asFragment } = customRender(
       <Provider store={store}>
         <PanelProperties />
       </Provider>,
@@ -76,7 +76,7 @@ describe('PanelProperties snapshots', () => {
     });
 
     // before
-    const { asFragment } = render(
+    const { asFragment } = customRender(
       <Provider store={store}>
         <PanelProperties />
       </Provider>,
@@ -91,7 +91,7 @@ describe('PanelProperties snapshots', () => {
     const store = configureStore();
 
     // before
-    const { asFragment, container } = render(
+    const { asFragment, container } = customRender(
       <Provider store={store}>
         <PanelProperties />
       </Provider>,
@@ -114,7 +114,7 @@ describe('PanelProperties behaviors', () => {
     const store = configureStore();
 
     // before
-    const { container } = render(
+    const { container } = customRender(
       <Provider store={store}>
         <div onKeyDown={mockCallBack}>
           <PanelProperties />

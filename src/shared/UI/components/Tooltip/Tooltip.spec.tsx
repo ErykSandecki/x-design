@@ -3,6 +3,9 @@ import { fireEvent, render } from '@testing-library/react';
 // components
 import Tooltip from './Tooltip';
 
+// core
+import { TooltipProvider } from './core/TooltipProvider';
+
 // types
 import { HTMLContainerId } from 'types';
 import { TooltipPosition } from './enums';
@@ -30,9 +33,11 @@ describe('Tooltip props', () => {
   it('should pass className', () => {
     // before
     const { container } = render(
-      <Tooltip className={className} content={content}>
-        {children}
-      </Tooltip>,
+      <TooltipProvider timeoutEnter={0} timeoutLeave={0}>
+        <Tooltip className={className} content={content}>
+          {children}
+        </Tooltip>
+      </TooltipProvider>,
     );
 
     // result
@@ -48,7 +53,11 @@ describe('Tooltip snapshots', () => {
 
   it('should change position after mouse wheel', () => {
     // before
-    const { asFragment } = render(<Tooltip content={content}>{children}</Tooltip>);
+    const { asFragment } = render(
+      <TooltipProvider timeoutEnter={0} timeoutLeave={0}>
+        <Tooltip content={content}>{children}</Tooltip>
+      </TooltipProvider>,
+    );
 
     // action
     fireEvent.wheel(window);
@@ -60,9 +69,11 @@ describe('Tooltip snapshots', () => {
   it('should render with passed container id', () => {
     // before
     const { asFragment } = render(
-      <Tooltip customId="containerForTeleportId" content={content}>
-        {children}
-      </Tooltip>,
+      <TooltipProvider timeoutEnter={0} timeoutLeave={0}>
+        <Tooltip customId="containerForTeleportId" content={content}>
+          {children}
+        </Tooltip>
+      </TooltipProvider>,
     );
 
     // result
@@ -73,9 +84,11 @@ describe('Tooltip snapshots', () => {
     enumToArray<TooltipPosition>(TooltipPosition).forEach((position) => {
       // before
       const { asFragment } = render(
-        <Tooltip content={content} position={TooltipPosition[position]}>
-          {children}
-        </Tooltip>,
+        <TooltipProvider timeoutEnter={0} timeoutLeave={0}>
+          <Tooltip content={content} position={TooltipPosition[position]}>
+            {children}
+          </Tooltip>
+        </TooltipProvider>,
       );
 
       // action
@@ -89,16 +102,18 @@ describe('Tooltip snapshots', () => {
   it('should set tooltip position vertical automatically after enter', async () => {
     // before
     const { asFragment, getByText } = render(
-      <Tooltip autoPositioning content={content}>
-        {children}
-      </Tooltip>,
+      <TooltipProvider timeoutEnter={0} timeoutLeave={0}>
+        <Tooltip autoPositioning content={content}>
+          {children}
+        </Tooltip>
+      </TooltipProvider>,
     );
 
     // action
     fireEvent.mouseEnter(getByText('?'), { clientX: 1024, clientY: 1024 });
 
     // wait
-    await sleep(1100);
+    await sleep(100);
 
     // result
     expect(asFragment()).toMatchSnapshot();
@@ -107,9 +122,11 @@ describe('Tooltip snapshots', () => {
   it('should set tooltip position horizontal automatically after enter', () => {
     // before
     const { asFragment } = render(
-      <Tooltip autoPositioning autoPositioningHorizontal content={content}>
-        {children}
-      </Tooltip>,
+      <TooltipProvider timeoutEnter={0} timeoutLeave={0}>
+        <Tooltip autoPositioning autoPositioningHorizontal content={content}>
+          {children}
+        </Tooltip>
+      </TooltipProvider>,
     );
 
     // result
@@ -119,16 +136,18 @@ describe('Tooltip snapshots', () => {
   it('should adjust correct placement', async () => {
     // before
     const { asFragment, getByText } = render(
-      <Tooltip autoPositioning autoPositioningHorizontal autoPositioningCarrotPlacement="Start" content={content}>
-        {children}
-      </Tooltip>,
+      <TooltipProvider timeoutEnter={0} timeoutLeave={0}>
+        <Tooltip autoPositioning autoPositioningHorizontal autoPositioningCarrotPlacement="Start" content={content}>
+          {children}
+        </Tooltip>
+      </TooltipProvider>,
     );
 
     // action
     fireEvent.mouseEnter(getByText('?'), { clientX: 1024, clientY: 1024 });
 
     // wait
-    await sleep(1100);
+    await sleep(100);
 
     // result
     expect(asFragment()).toMatchSnapshot();
@@ -136,13 +155,17 @@ describe('Tooltip snapshots', () => {
 
   it('should be visible after enter mouse & invisible after leave', async () => {
     // before
-    const { asFragment, getByText } = render(<Tooltip content={content}>{children}</Tooltip>);
+    const { asFragment, getByText } = render(
+      <TooltipProvider timeoutEnter={0} timeoutLeave={0}>
+        <Tooltip content={content}>{children}</Tooltip>
+      </TooltipProvider>,
+    );
 
     // action
     fireEvent.mouseEnter(getByText('?'), { clientX: 1024, clientY: 1024 });
 
     // wait
-    await sleep(1100);
+    await sleep(100);
 
     // action
     fireEvent.mouseLeave(getByText('?'), { clientX: 1024, clientY: 1024 });

@@ -1,4 +1,7 @@
-import { CSSProperties, MouseEvent, RefObject, useEffect, useRef, useState } from 'react';
+import { CSSProperties, MouseEvent, RefObject, useEffect, useState } from 'react';
+
+// core
+import { useTooltip } from '../core/TooltipProvider';
 
 // types
 import { TCarrotPlacement } from '../types';
@@ -26,10 +29,10 @@ export const useUpdatePosition = (
   initialPosition: TooltipPosition,
   tooltipRef: RefObject<HTMLDivElement>,
 ): TUseUpdatePosition => {
-  const refTimeout = useRef(null);
   const [position, setPosition] = useState(initialPosition);
   const [styles, setStyles] = useState<CSSProperties>({});
   const [visible, setVisible] = useState(initialVisible);
+  const { active, onMouseEnter, onMouseLeave } = useTooltip();
 
   const updatePosition = (event: MouseEvent | WheelEvent): void => {
     let targetPosition = position;
@@ -46,15 +49,14 @@ export const useUpdatePosition = (
   };
 
   const handleMouseEnter = (event: MouseEvent): void => {
-    refTimeout.current = setTimeout(() => {
-      updatePosition(event);
-      setVisible(true);
-    }, 1000);
+    updatePosition(event);
+    setVisible(true);
+    onMouseEnter();
   };
 
   const handleMouseLeave = (): void => {
-    clearTimeout(refTimeout.current);
     setVisible(false);
+    onMouseLeave();
   };
 
   const handleMouseWheel = (event: WheelEvent): void => {
@@ -74,6 +76,6 @@ export const useUpdatePosition = (
     onMouseLeave: handleMouseLeave,
     position,
     styles,
-    visible,
+    visible: active && visible,
   };
 };

@@ -1,5 +1,4 @@
 import { Provider } from 'react-redux';
-import { render } from '@testing-library/react';
 
 // components
 import ComponentPanel from './ComponentPanel';
@@ -20,6 +19,9 @@ import { configureStore } from 'store/store';
 
 // types
 import { Tab } from '../../enums';
+
+// utils
+import { customRender } from 'test';
 
 const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 const stateMock = {
@@ -52,7 +54,7 @@ describe('ComponentPanel snapshots', () => {
     const store = configureStore(stateMock);
 
     // before
-    const { asFragment } = render(
+    const { asFragment } = customRender(
       <Provider store={store}>
         <ComponentPanel activeTab={Tab.design} />
       </Provider>,
@@ -67,7 +69,7 @@ describe('ComponentPanel snapshots', () => {
     const store = configureStore(stateMock);
 
     // before
-    const { asFragment } = render(
+    const { asFragment } = customRender(
       <Provider store={store}>
         <ComponentPanel activeTab={Tab.prototype} />
       </Provider>,

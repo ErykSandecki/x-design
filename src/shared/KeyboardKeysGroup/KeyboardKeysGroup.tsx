@@ -22,14 +22,14 @@ export const KeyboardKeysGroup: FC<TKeyboardKeysGroupProps> = ({ keyboardShortcu
   if (keyboardShortcutsGroup.length === 1) {
     return (
       <>
-        {translatedTitle} <KeyboardKeys keyboardShortcuts={keyboardShortcutsGroup[0]} {...restProps} />
+        {`${translatedTitle} `} <KeyboardKeys keyboardShortcuts={keyboardShortcutsGroup[0]} {...restProps} />
       </>
     );
   }
 
   return (
     <>
-      {translatedTitle}
+      {`${translatedTitle} `}
       <KeyboardKeys keyboardShortcuts={keyboardShortcutsGroup[0]} {...restProps} />
       {t(`${translationNameSpace}.optional`)}
       <KeyboardKeys keyboardShortcuts={keyboardShortcutsGroup[1]} {...restProps} />

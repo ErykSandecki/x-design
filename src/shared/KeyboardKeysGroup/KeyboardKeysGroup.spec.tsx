@@ -12,6 +12,14 @@ describe('KeyboardKeysGroup snapshots', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
+  it('should render with title', () => {
+    // before
+    const { asFragment } = render(<KeyboardKeysGroup keyboardShortcutsGroup={[['A']]} title="title" />);
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
+
   it('should render with icon', () => {
     // before
     const { asFragment } = render(<KeyboardKeysGroup keyboardShortcutsGroup={[[{ name: 'AlignHorizontalCenter' }]]} />);

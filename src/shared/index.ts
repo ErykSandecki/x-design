@@ -13,6 +13,8 @@ export * from './ScrubbableInput/ScrubbableInput';
 export * from './UI/components/Box/Box';
 export * from './UI/components/Button/Button';
 export * from './UI/components/Icon/Icon';
+export * from './UI/components/Tooltip/Tooltip';
+export * from './UI/components/Tooltip/core/TooltipProvider';
 export * from './UI/components/Typography';
 export * from './UI/components/Typography/Typography';
 export * from './UI/components/Typography/enums';
