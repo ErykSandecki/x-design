@@ -43,6 +43,7 @@ module.exports = {
   roots: ['<rootDir>/src'],
   setupFiles: ['react-app-polyfill/jsdom'],
   setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
+  snapshotResolver: '<rootDir>/scripts/snapshotResolver.js',
   testEnvironment: 'jsdom',
   testMatch: ['<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}', '<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}'],
   testRunner: '<rootDir>/node_modules/jest-circus/runner.js',
