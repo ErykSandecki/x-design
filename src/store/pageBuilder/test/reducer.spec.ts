@@ -472,7 +472,7 @@ describe('PageBuilderReducer', () => {
               ...elementMock,
               layout: {
                 ...layoutMock,
-                type: LayoutType.default,
+                type: LayoutType.freeForm,
               },
             },
           },

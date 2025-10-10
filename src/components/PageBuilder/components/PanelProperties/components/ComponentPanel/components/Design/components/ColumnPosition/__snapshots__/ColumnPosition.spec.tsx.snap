@@ -31,6 +31,7 @@ exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
         <div
           class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
           data-test-text-field="x"
+          data-test-tooltip=""
         >
           <div
             class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -54,8 +55,25 @@ exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
           />
         </div>
         <div
+          class="Tooltip Tooltip--light"
+        >
+          <div
+            class="Tooltip__content Tooltip__content--light"
+          >
+            X - position
+            <div
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="carrot-down"
+              height="14"
+              name="CarrotDown"
+              width="10"
+            />
+          </div>
+        </div>
+        <div
           class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
           data-test-text-field="y"
+          data-test-tooltip=""
         >
           <div
             class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -77,6 +95,22 @@ exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
             type="number"
             value="0"
           />
+        </div>
+        <div
+          class="Tooltip Tooltip--light"
+        >
+          <div
+            class="Tooltip__content Tooltip__content--light"
+          >
+            Y - position
+            <div
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="carrot-down"
+              height="14"
+              name="CarrotDown"
+              width="10"
+            />
+          </div>
         </div>
         <div
           class="css-2ro7w4 SectionColumn__inputConnector SectionColumn__inputConnector--light"
@@ -131,6 +165,7 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
         <div
           class="css-1jnxvbp TextField TextField--light TextField--disabled TextField--disabled--light TextField--fullWidth TextField--fullWidth--light"
           data-test-text-field="x"
+          data-test-tooltip=""
         >
           <div
             class="css-e5vky9 ScrubbableInput ScrubbableInput--light ScrubbableInput--disabled ScrubbableInput--disabled--light"
@@ -155,8 +190,25 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
           />
         </div>
         <div
+          class="Tooltip Tooltip--light"
+        >
+          <div
+            class="Tooltip__content Tooltip__content--light"
+          >
+            X - position
+            <div
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="carrot-down"
+              height="14"
+              name="CarrotDown"
+              width="10"
+            />
+          </div>
+        </div>
+        <div
           class="css-1jnxvbp TextField TextField--light TextField--disabled TextField--disabled--light TextField--fullWidth TextField--fullWidth--light"
           data-test-text-field="y"
+          data-test-tooltip=""
         >
           <div
             class="css-e5vky9 ScrubbableInput ScrubbableInput--light ScrubbableInput--disabled ScrubbableInput--disabled--light"
@@ -179,6 +231,22 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
             type="text"
             value="Locked"
           />
+        </div>
+        <div
+          class="Tooltip Tooltip--light"
+        >
+          <div
+            class="Tooltip__content Tooltip__content--light"
+          >
+            Y - position
+            <div
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="carrot-down"
+              height="14"
+              name="CarrotDown"
+              width="10"
+            />
+          </div>
         </div>
         <div
           class="css-2ro7w4 SectionColumn__inputConnector SectionColumn__inputConnector--light"
@@ -257,6 +325,7 @@ exports[`ColumnPosition snapshots should render when values are mixed 1`] = `
         <div
           class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
           data-test-text-field="x"
+          data-test-tooltip=""
         >
           <div
             class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -280,8 +349,25 @@ exports[`ColumnPosition snapshots should render when values are mixed 1`] = `
           />
         </div>
         <div
+          class="Tooltip Tooltip--light"
+        >
+          <div
+            class="Tooltip__content Tooltip__content--light"
+          >
+            X - position
+            <div
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="carrot-down"
+              height="14"
+              name="CarrotDown"
+              width="10"
+            />
+          </div>
+        </div>
+        <div
           class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
           data-test-text-field="y"
+          data-test-tooltip=""
         >
           <div
             class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -303,6 +389,22 @@ exports[`ColumnPosition snapshots should render when values are mixed 1`] = `
             type="text"
             value="Mixed"
           />
+        </div>
+        <div
+          class="Tooltip Tooltip--light"
+        >
+          <div
+            class="Tooltip__content Tooltip__content--light"
+          >
+            Y - position
+            <div
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="carrot-down"
+              height="14"
+              name="CarrotDown"
+              width="10"
+            />
+          </div>
         </div>
         <div
           class="css-2ro7w4 SectionColumn__inputConnector SectionColumn__inputConnector--light"

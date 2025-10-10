@@ -20,7 +20,7 @@ export const handleCreateElement = (
 ): void => {
   if (elementArea && mouseMode === MouseMode.toolBeltA) {
     const { x1, x2, y1, y2 } = elementArea;
-    const layout = { type: LayoutType.default };
+    const layout = { type: LayoutType.freeForm };
     const x = x1 < x2 ? x1 : x2;
     const y = y1 < y2 ? y1 : y2;
 

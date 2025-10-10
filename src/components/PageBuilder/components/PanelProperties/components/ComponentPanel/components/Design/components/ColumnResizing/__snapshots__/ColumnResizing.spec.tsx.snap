@@ -31,6 +31,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
         <div
           class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
           data-test-text-field="width"
+          data-test-tooltip=""
         >
           <div
             class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -214,6 +215,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
         <div
           class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
           data-test-text-field="height"
+          data-test-tooltip=""
         >
           <div
             class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -414,6 +416,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
         <div
           class="css-1jnxvbp ButtonIcon ButtonIcon--light"
           data-test-button-icon="aspect-ratio"
+          data-test-tooltip=""
         >
           <div
             class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -422,6 +425,22 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
             name="AspectRatio"
             width="14"
           />
+        </div>
+        <div
+          class="Tooltip Tooltip--light"
+        >
+          <div
+            class="Tooltip__content Tooltip__content--light"
+          >
+            Look aspect ratio
+            <div
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="carrot-down"
+              height="14"
+              name="CarrotDown"
+              width="10"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -460,6 +479,7 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
         <div
           class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
           data-test-text-field="width"
+          data-test-tooltip=""
         >
           <div
             class="css-e5vky9 ScrubbableInput ScrubbableInput--light ScrubbableInput--disabled ScrubbableInput--disabled--light"
@@ -585,6 +605,7 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
         <div
           class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
           data-test-text-field="height"
+          data-test-tooltip=""
         >
           <div
             class="css-e5vky9 ScrubbableInput ScrubbableInput--light ScrubbableInput--disabled ScrubbableInput--disabled--light"

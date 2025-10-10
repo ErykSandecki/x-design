@@ -1,4 +1,4 @@
-import { fireEvent, render } from '@testing-library/react';
+import { fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';
 
 // components
@@ -20,7 +20,7 @@ import { PopoverItem } from './enums';
 
 // utils
 import { createHtmlElement } from 'utils';
-import { getByE2EAttribute } from 'test';
+import { customRender, getByE2EAttribute } from 'test';
 
 const el1 = createHtmlElement('div', { id: 'test-1' });
 const el2 = createHtmlElement('div', { id: 'test-2' });
@@ -55,7 +55,7 @@ describe('ColumnResizing snapshots', () => {
     const store = configureStore(stateMock);
 
     // before
-    const { asFragment } = render(
+    const { asFragment } = customRender(
       <Provider store={store}>
         <ColumnResizing />
       </Provider>,
@@ -93,7 +93,7 @@ describe('ColumnResizing snapshots', () => {
     });
 
     // before
-    const { asFragment } = render(
+    const { asFragment } = customRender(
       <Provider store={store}>
         <ColumnResizing />
       </Provider>,
@@ -121,7 +121,7 @@ describe('ColumnResizing behaviors', () => {
     const store = configureStore(stateMock);
 
     // before
-    const { container } = render(
+    const { container } = customRender(
       <Provider store={store}>
         <ColumnResizing />
       </Provider>,
@@ -142,7 +142,7 @@ describe('ColumnResizing behaviors', () => {
     const store = configureStore(stateMock);
 
     // before
-    const { container } = render(
+    const { container } = customRender(
       <Provider store={store}>
         <ColumnResizing />
       </Provider>,
@@ -181,7 +181,7 @@ describe('ColumnResizing behaviors', () => {
     Object.defineProperty(mouseMoveEvent, 'movementX', { value: -100 });
 
     // before
-    const { container } = render(
+    const { container } = customRender(
       <Provider store={store}>
         <ColumnResizing />
       </Provider>,
@@ -231,7 +231,7 @@ describe('ColumnResizing behaviors', () => {
     });
 
     // before
-    const { container } = render(
+    const { container } = customRender(
       <Provider store={store}>
         <ColumnResizing />
       </Provider>,
@@ -301,7 +301,7 @@ describe('ColumnResizing behaviors', () => {
     });
 
     // before
-    const { container } = render(
+    const { container } = customRender(
       <Provider store={store}>
         <ColumnResizing />
       </Provider>,
@@ -341,7 +341,7 @@ describe('ColumnResizing behaviors', () => {
     const store = configureStore(stateMock);
 
     // before
-    const { container } = render(
+    const { container } = customRender(
       <Provider store={store}>
         <ColumnResizing />
       </Provider>,
@@ -398,7 +398,7 @@ describe('ColumnResizing behaviors', () => {
     });
 
     // before
-    const { container } = render(
+    const { container } = customRender(
       <Provider store={store}>
         <ColumnResizing />
       </Provider>,
@@ -438,7 +438,7 @@ describe('ColumnResizing behaviors', () => {
     const store = configureStore(stateMock);
 
     // before
-    const { container } = render(
+    const { container } = customRender(
       <Provider store={store}>
         <ColumnResizing />
       </Provider>,
@@ -476,7 +476,7 @@ describe('ColumnResizing behaviors', () => {
     const store = configureStore(stateMock);
 
     // before
-    const { container } = render(
+    const { container } = customRender(
       <Provider store={store}>
         <ColumnResizing />
       </Provider>,
@@ -514,7 +514,7 @@ describe('ColumnResizing behaviors', () => {
     const store = configureStore(stateMock);
 
     // before
-    const { container } = render(
+    const { container } = customRender(
       <Provider store={store}>
         <ColumnResizing />
       </Provider>,

@@ -22,7 +22,8 @@ describe('useBlurEvent', () => {
     result.current();
 
     // result
-    expect(mockCallBack.mock.calls[0][0].payload).toBe(0);
+    expect(mockCallBack.mock.calls[0][0]).toBe('0°');
+    expect(mockCallBack.mock.calls[1][0].payload).toBe(0);
   });
 
   it(`should reset angle`, () => {

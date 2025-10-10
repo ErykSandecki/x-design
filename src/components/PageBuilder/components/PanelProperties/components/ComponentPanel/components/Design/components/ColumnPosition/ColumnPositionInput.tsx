@@ -1,11 +1,14 @@
 import { FC, useRef } from 'react';
+import { lowerCase } from 'lodash';
 import { useDispatch } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
 // components
 import { ScrubbableInput, Small, TE2EValue, UITools } from 'shared';
 
 // others
 import { MAX, MIN } from '../../../../../../../../constants';
+import { TOOLTIP_TRANSLATION_KEY } from 'constant/constants';
 
 // store
 import { updateEventsStatus } from 'store/pageBuilder/actions';
@@ -46,6 +49,7 @@ const ColumnPositionInput: FC<TColumnPositionInputProps> = ({
 }) => {
   const dispatch = useDispatch();
   const refInput = useRef<HTMLInputElement>(null);
+  const { t } = useTranslation();
 
   return (
     <UITools.TextField
@@ -71,6 +75,7 @@ const ColumnPositionInput: FC<TColumnPositionInputProps> = ({
           <Small color={ColorsTheme.neutral2}>{label}</Small>
         </ScrubbableInput>
       }
+      tooltip={{ content: t(`${TOOLTIP_TRANSLATION_KEY}.coordinates.${lowerCase(label)}`) }}
       type={typeInput}
       value={getValue(disabledAll, hasAlignment, isMultiple, value)}
     />

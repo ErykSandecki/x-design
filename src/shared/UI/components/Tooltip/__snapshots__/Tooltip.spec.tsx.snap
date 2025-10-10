@@ -16,7 +16,7 @@ exports[`Tooltip snapshots should adjust correct placement 1`] = `
     >
       content
       <div
-        class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotLeftStart tooltipCarrotLeftStartLight icon iconLight iconNeutral3 iconNeutral3Light"
+        class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotLeftStart tooltipCarrotLeftStartLight icon iconLight iconNeutral1 iconNeutral1Light"
         data-test-icon="carrot-down"
         height="14"
         name="CarrotDown"
@@ -43,7 +43,7 @@ exports[`Tooltip snapshots should be visible after enter mouse & invisible after
     >
       content
       <div
-        class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotTopCenter tooltipCarrotTopCenterLight icon iconLight iconNeutral3 iconNeutral3Light"
+        class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotTopCenter tooltipCarrotTopCenterLight icon iconLight iconNeutral1 iconNeutral1Light"
         data-test-icon="carrot-down"
         height="14"
         name="CarrotDown"
@@ -70,7 +70,7 @@ exports[`Tooltip snapshots should change position after mouse wheel 1`] = `
     >
       content
       <div
-        class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotTopCenter tooltipCarrotTopCenterLight icon iconLight iconNeutral3 iconNeutral3Light"
+        class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotTopCenter tooltipCarrotTopCenterLight icon iconLight iconNeutral1 iconNeutral1Light"
         data-test-icon="carrot-down"
         height="14"
         name="CarrotDown"
@@ -97,7 +97,7 @@ exports[`Tooltip snapshots should render with diffrent positions 1`] = `
     >
       content
       <div
-        class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotTopStart tooltipCarrotTopStartLight icon iconLight iconNeutral3 iconNeutral3Light"
+        class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotTopStart tooltipCarrotTopStartLight icon iconLight iconNeutral1 iconNeutral1Light"
         data-test-icon="carrot-down"
         height="14"
         name="CarrotDown"
@@ -124,7 +124,7 @@ exports[`Tooltip snapshots should render with diffrent positions 2`] = `
     >
       content
       <div
-        class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotTopCenter tooltipCarrotTopCenterLight icon iconLight iconNeutral3 iconNeutral3Light"
+        class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotTopCenter tooltipCarrotTopCenterLight icon iconLight iconNeutral1 iconNeutral1Light"
         data-test-icon="carrot-down"
         height="14"
         name="CarrotDown"
@@ -151,7 +151,7 @@ exports[`Tooltip snapshots should render with diffrent positions 3`] = `
     >
       content
       <div
-        class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotTopEnd tooltipCarrotTopEndLight icon iconLight iconNeutral3 iconNeutral3Light"
+        class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotTopEnd tooltipCarrotTopEndLight icon iconLight iconNeutral1 iconNeutral1Light"
         data-test-icon="carrot-down"
         height="14"
         name="CarrotDown"
@@ -178,7 +178,7 @@ exports[`Tooltip snapshots should render with diffrent positions 4`] = `
     >
       content
       <div
-        class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotBottomStart tooltipCarrotBottomStartLight icon iconLight iconNeutral3 iconNeutral3Light"
+        class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotBottomStart tooltipCarrotBottomStartLight icon iconLight iconNeutral1 iconNeutral1Light"
         data-test-icon="carrot-down"
         height="14"
         name="CarrotDown"
@@ -205,7 +205,7 @@ exports[`Tooltip snapshots should render with diffrent positions 5`] = `
     >
       content
       <div
-        class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotBottomCenter tooltipCarrotBottomCenterLight icon iconLight iconNeutral3 iconNeutral3Light"
+        class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotBottomCenter tooltipCarrotBottomCenterLight icon iconLight iconNeutral1 iconNeutral1Light"
         data-test-icon="carrot-down"
         height="14"
         name="CarrotDown"
@@ -232,7 +232,7 @@ exports[`Tooltip snapshots should render with diffrent positions 6`] = `
     >
       content
       <div
-        class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotBottomEnd tooltipCarrotBottomEndLight icon iconLight iconNeutral3 iconNeutral3Light"
+        class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotBottomEnd tooltipCarrotBottomEndLight icon iconLight iconNeutral1 iconNeutral1Light"
         data-test-icon="carrot-down"
         height="14"
         name="CarrotDown"
@@ -259,7 +259,7 @@ exports[`Tooltip snapshots should render with diffrent positions 7`] = `
     >
       content
       <div
-        class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotLeftStart tooltipCarrotLeftStartLight icon iconLight iconNeutral3 iconNeutral3Light"
+        class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotLeftStart tooltipCarrotLeftStartLight icon iconLight iconNeutral1 iconNeutral1Light"
         data-test-icon="carrot-down"
         height="14"
         name="CarrotDown"
@@ -286,7 +286,7 @@ exports[`Tooltip snapshots should render with diffrent positions 8`] = `
     >
       content
       <div
-        class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotLeftCenter tooltipCarrotLeftCenterLight icon iconLight iconNeutral3 iconNeutral3Light"
+        class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotLeftCenter tooltipCarrotLeftCenterLight icon iconLight iconNeutral1 iconNeutral1Light"
         data-test-icon="carrot-down"
         height="14"
         name="CarrotDown"
@@ -313,7 +313,7 @@ exports[`Tooltip snapshots should render with diffrent positions 9`] = `
     >
       content
       <div
-        class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotLeftEnd tooltipCarrotLeftEndLight icon iconLight iconNeutral3 iconNeutral3Light"
+        class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotLeftEnd tooltipCarrotLeftEndLight icon iconLight iconNeutral1 iconNeutral1Light"
         data-test-icon="carrot-down"
         height="14"
         name="CarrotDown"
@@ -340,7 +340,7 @@ exports[`Tooltip snapshots should render with diffrent positions 10`] = `
     >
       content
       <div
-        class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotRightStart tooltipCarrotRightStartLight icon iconLight iconNeutral3 iconNeutral3Light"
+        class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotRightStart tooltipCarrotRightStartLight icon iconLight iconNeutral1 iconNeutral1Light"
         data-test-icon="carrot-down"
         height="14"
         name="CarrotDown"
@@ -367,7 +367,7 @@ exports[`Tooltip snapshots should render with diffrent positions 11`] = `
     >
       content
       <div
-        class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotRightCenter tooltipCarrotRightCenterLight icon iconLight iconNeutral3 iconNeutral3Light"
+        class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotRightCenter tooltipCarrotRightCenterLight icon iconLight iconNeutral1 iconNeutral1Light"
         data-test-icon="carrot-down"
         height="14"
         name="CarrotDown"
@@ -394,7 +394,7 @@ exports[`Tooltip snapshots should render with diffrent positions 12`] = `
     >
       content
       <div
-        class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotRightEnd tooltipCarrotRightEndLight icon iconLight iconNeutral3 iconNeutral3Light"
+        class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotRightEnd tooltipCarrotRightEndLight icon iconLight iconNeutral1 iconNeutral1Light"
         data-test-icon="carrot-down"
         height="14"
         name="CarrotDown"
@@ -422,7 +422,7 @@ exports[`Tooltip snapshots should set tooltip position horizontal automatically 
     >
       content
       <div
-        class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotTopCenter tooltipCarrotTopCenterLight icon iconLight iconNeutral3 iconNeutral3Light"
+        class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotTopCenter tooltipCarrotTopCenterLight icon iconLight iconNeutral1 iconNeutral1Light"
         data-test-icon="carrot-down"
         height="14"
         name="CarrotDown"
@@ -449,7 +449,7 @@ exports[`Tooltip snapshots should set tooltip position vertical automatically af
     >
       content
       <div
-        class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotTopEnd tooltipCarrotTopEndLight icon iconLight iconNeutral3 iconNeutral3Light"
+        class="css-1jnxvbp tooltipCarrot tooltipCarrotLight tooltipCarrotTopEnd tooltipCarrotTopEndLight icon iconLight iconNeutral1 iconNeutral1Light"
         data-test-icon="carrot-down"
         height="14"
         name="CarrotDown"

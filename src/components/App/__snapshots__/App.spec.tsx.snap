@@ -179,6 +179,7 @@ exports[`App snapshots should render router 1`] = `
                   <div
                     class="css-1jnxvbp ColorPicker__colorInput ColorPicker__colorInput--light TextField TextField--light"
                     data-test-text-field="color"
+                    data-test-tooltip=""
                   >
                     <div
                       aria-describedby="test-id"
@@ -215,6 +216,7 @@ exports[`App snapshots should render router 1`] = `
                   <div
                     class="css-1jnxvbp ColorPicker__alphaInput ColorPicker__alphaInput--light TextField TextField--light"
                     data-test-text-field="alpha"
+                    data-test-tooltip=""
                   >
                     <input
                       class="TextField__input TextField__input--light"
@@ -258,6 +260,7 @@ exports[`App snapshots should render router 1`] = `
                 <div
                   class="css-1jnxvbp ButtonIcon ButtonIcon--light"
                   data-test-button-icon=""
+                  data-test-tooltip=""
                 >
                   <div
                     class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -266,6 +269,22 @@ exports[`App snapshots should render router 1`] = `
                     name="EyesOpened"
                     width="14"
                   />
+                </div>
+                <div
+                  class="Tooltip Tooltip--light"
+                >
+                  <div
+                    class="Tooltip__content Tooltip__content--light"
+                  >
+                    Toggle visibility
+                    <div
+                      class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      data-test-icon="carrot-down"
+                      height="14"
+                      name="CarrotDown"
+                      width="10"
+                    />
+                  </div>
                 </div>
               </div>
             </div>

@@ -1,5 +1,4 @@
 import { Provider } from 'react-redux';
-import { render } from '@testing-library/react';
 
 // components
 import Design from './Design';
@@ -9,6 +8,9 @@ import { pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // store
 import { configureStore } from 'store/store';
+
+// utils
+import { customRender } from 'test';
 
 const stateMock = {
   ...pageBuilderStateMock,
@@ -20,7 +22,7 @@ describe('Design snapshots', () => {
     const store = configureStore(stateMock);
 
     // before
-    const { asFragment } = render(
+    const { asFragment } = customRender(
       <Provider store={store}>
         <Design />
       </Provider>,

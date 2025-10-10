@@ -9,6 +9,7 @@ exports[`ColorPicker snapshots should render ColorPicker 1`] = `
     <div
       class="css-1jnxvbp ColorPicker__colorInput ColorPicker__colorInput--light TextField TextField--light"
       data-test-text-field="color"
+      data-test-tooltip=""
     >
       <div
         aria-describedby="test-id"
@@ -45,6 +46,7 @@ exports[`ColorPicker snapshots should render ColorPicker 1`] = `
     <div
       class="css-1jnxvbp ColorPicker__alphaInput ColorPicker__alphaInput--light TextField TextField--light"
       data-test-text-field="alpha"
+      data-test-tooltip=""
     >
       <input
         class="TextField__input TextField__input--light"

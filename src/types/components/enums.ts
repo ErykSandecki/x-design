@@ -18,7 +18,7 @@ export enum ElementType {
 }
 
 export enum LayoutType {
-  default = 'default',
+  freeForm = 'freeForm',
   grid = 'grid',
   horizontal = 'horizontal',
   vertical = 'vertical',

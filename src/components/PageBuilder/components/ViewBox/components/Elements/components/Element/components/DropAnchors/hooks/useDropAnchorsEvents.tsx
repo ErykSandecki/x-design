@@ -36,7 +36,7 @@ export const useDropAnchorsEvents = (
   const isDraggingOn = elId === id;
   const displayPrevPrompt = isDraggingOn && (isTop || isLeft);
   const displayNextPrompt = isDraggingOn && (isBottom || isRight);
-  const isDefault = parentData.layout.type === LayoutType.default;
+  const isDefault = parentData.layout.type === LayoutType.freeForm;
   const isVertical = parentData.layout.type === LayoutType.vertical;
   const isFlowVertical = isVertical || isDefault;
   const isGrid = parentData.layout.type === LayoutType.grid;

@@ -60,7 +60,7 @@ export const ToggleButtonGroup = <V extends TToggleButtonGroupValue>({
         }}
         sx={{ alignItems: 'center', borderRadius: '5px', boxSizing: 'border-box', display: 'flex', height: '24px' }}
       >
-        {toggleButtons.map(({ icon, value: valueButtton }, index) => (
+        {toggleButtons.map(({ icon, tooltip, value: valueButtton }, index) => (
           <ToggleButton<V>
             {...buttonProps}
             currentValue={value}
@@ -68,6 +68,7 @@ export const ToggleButtonGroup = <V extends TToggleButtonGroupValue>({
             icon={icon}
             key={valueButtton}
             onChange={onChangeHandler}
+            tooltip={tooltip}
             value={valueButtton}
           />
         ))}

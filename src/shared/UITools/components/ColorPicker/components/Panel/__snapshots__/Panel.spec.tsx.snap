@@ -41,6 +41,7 @@ exports[`Panel snapshots should render Panel 1`] = `
       <div
         class="css-1jnxvbp ButtonIcon ButtonIcon--light"
         data-test-button-icon="sampler"
+        data-test-tooltip=""
       >
         <div
           class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -96,6 +97,7 @@ exports[`Panel snapshots should render with active sampler 1`] = `
       <div
         class="css-1jnxvbp ButtonIcon ButtonIcon--light ButtonIcon--selected ButtonIcon--selected--light"
         data-test-button-icon="sampler"
+        data-test-tooltip=""
       >
         <div
           class="css-1jnxvbp Icon Icon--light Icon--blue1 Icon--blue1--light"

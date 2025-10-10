@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 
 // components
-import E2EDataAttribute, { TE2EDataAttributeProps } from '../../../../../E2EDataAttributes/E2EDataAttribute';
 import Icon, { TIconProps } from 'shared/UI/components/Icon/Icon';
+import Tooltip, { TTooltipProps } from '../../../../../UI/components/Tooltip/Tooltip';
 
 // hooks
 import { useTheme } from 'hooks';
@@ -15,6 +15,7 @@ import styles from './toggle-button.scss';
 
 // types
 import { E2EAttribute } from 'types';
+import { TE2EDataAttributeProps } from '../../../../../E2EDataAttributes/E2EDataAttribute';
 import { TToggleButtonGroupValue } from '../../types';
 
 // utils
@@ -26,6 +27,7 @@ export type TToggleButtonProps<V> = {
   e2eValue?: TE2EDataAttributeProps['value'];
   icon: TIconProps['name'];
   onChange: TFunc<[string]>;
+  tooltip?: Omit<TTooltipProps, 'children'>;
   value: string;
 };
 
@@ -35,13 +37,14 @@ const ToggleButton = <V extends TToggleButtonGroupValue>({
   e2eValue,
   icon,
   onChange,
+  tooltip,
   value,
 }: TToggleButtonProps<V>): ReactNode => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const selected = isSelected<V>(currentValue, value);
 
   return (
-    <E2EDataAttribute type={e2eAttribute} value={e2eValue}>
+    <Tooltip e2eAttribute={e2eAttribute} e2eValue={e2eValue} {...tooltip}>
       <button
         className={cx(classNamesWithTheme[classNameToggleButton].name, [
           classNamesWithTheme[classNameToggleButton].modificators.selected,
@@ -52,7 +55,7 @@ const ToggleButton = <V extends TToggleButtonGroupValue>({
       >
         <Icon height={12} name={icon} width={12} />
       </button>
-    </E2EDataAttribute>
+    </Tooltip>
   );
 };
 

@@ -2,7 +2,11 @@ import { ReactNode } from 'react';
 import { useDispatch } from 'react-redux';
 
 // components
-import { UITools } from 'shared';
+import { KeyboardKeysGroup, UITools } from 'shared';
+
+// others
+import { KEYBOARD_SHORTCUTS } from '../../../../../../keys';
+import { TOOLTIP_TRANSLATION_KEY } from 'constant/constants';
 
 // store
 import { fitLayout } from 'store/pageBuilder/actions';
@@ -16,12 +20,40 @@ const DesignLayoutButtonIcons = (
   onChangeLayoutType: TFunc,
 ): Array<ReactNode> => {
   const dispatch = useDispatch();
-  const isFlexible = layoutType !== LayoutType.default;
+  const isFlexible = layoutType !== LayoutType.freeForm;
   const isSelected = !isMixedLayoutType && isFlexible;
 
   return [
-    <UITools.ButtonIcon key={0} name="FitLayout" onClick={() => dispatch(fitLayout())} selected={false} />,
-    <UITools.ButtonIcon key={1} name="AutoLayout" onClick={onChangeLayoutType} selected={isSelected} />,
+    <UITools.ButtonIcon
+      key={0}
+      name="FitLayout"
+      onClick={() => dispatch(fitLayout())}
+      selected={false}
+      tooltip={{
+        autoPositioning: true,
+        content: (
+          <KeyboardKeysGroup
+            keyboardShortcutsGroup={KEYBOARD_SHORTCUTS.resizeToFit}
+            title={`${TOOLTIP_TRANSLATION_KEY}.resizeToFit`}
+          />
+        ),
+      }}
+    />,
+    <UITools.ButtonIcon
+      key={1}
+      name="AutoLayout"
+      onClick={onChangeLayoutType}
+      selected={isSelected}
+      tooltip={{
+        autoPositioning: true,
+        content: (
+          <KeyboardKeysGroup
+            keyboardShortcutsGroup={KEYBOARD_SHORTCUTS.toggleAutoLayout}
+            title={`${TOOLTIP_TRANSLATION_KEY}.toggleAutoLayout`}
+          />
+        ),
+      }}
+    />,
   ];
 };
 

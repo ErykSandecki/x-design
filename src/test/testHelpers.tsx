@@ -5,13 +5,15 @@ import { Router } from 'react-router-dom';
 import { render, RenderOptions } from '@testing-library/react';
 import { values } from 'lodash';
 
+// core
+import { TooltipProvider } from 'shared';
+
 // types
 import { TE2EDataAttributeProps } from 'shared/E2EDataAttributes/E2EDataAttribute';
 import { TStore } from 'store/types';
 
 // utils
 import { getDataTestAttribute } from 'shared/E2EDataAttributes/utils';
-import { TooltipProvider } from 'shared';
 
 export const getByE2EAttribute = (
   container: Element | HTMLElement,

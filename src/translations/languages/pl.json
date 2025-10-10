@@ -46,5 +46,21 @@
   "tooltip.alignHorizontalRight": "Wyr. w prawo",
   "tooltip.alignVerticalBottom": "Wyr. do dołu",
   "tooltip.alignVerticalCenter": "Wyr. do środka",
-  "tooltip.alignVerticalTop": "Wyr. do góry"
+  "tooltip.alignVerticalTop": "Wyr. do góry",
+  "tooltip.coordinates.x": "X - pozycja",
+  "tooltip.coordinates.y": "Y - pozycja",
+  "tooltip.createComponent": "Utwórz komponent",
+  "tooltip.flipHorizontal": "Odwróć w poziomie",
+  "tooltip.flipVertical": "Odwróć w pionie",
+  "tooltip.flow.freeForm": "Dowolna forma",
+  "tooltip.flow.grid": "Siatka",
+  "tooltip.flow.horizontal": "Poziomy układ",
+  "tooltip.flow.vertical": "Pionowy układ",
+  "tooltip.lookAspectRatio": "Współczynnik proporcji",
+  "tooltip.readyForDevStatus": "Przełącz gotowość dla statusu dewelopera",
+  "tooltip.resizeToFit": "Dopasuj do rozmiaru",
+  "tooltip.rotation": "Obrót",
+  "tooltip.rotationNext90": "Obróć o 90° w prawo",
+  "tooltip.toggleAutoLayout": "Przełącz na automatyczne dostosowanie",
+  "tooltip.toggleVisibility": "Przełącz widoczność"
 }

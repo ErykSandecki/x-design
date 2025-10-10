@@ -1,5 +1,4 @@
 import { Provider } from 'react-redux';
-import { render } from '@testing-library/react';
 
 // components
 import App from './App';
@@ -14,13 +13,16 @@ import { REDUCER_KEY as APP_INITIALIZER } from 'store/appInitializer/actionsType
 // store
 import { configureStore } from 'store/store';
 
+// utils
+import { customRender } from 'test';
+
 describe('App snapshots', () => {
   it('should render initializer', () => {
     // mock
     const store = configureStore();
 
     // before
-    const { asFragment } = render(
+    const { asFragment } = customRender(
       <Provider store={store}>
         <App />
       </Provider>,
@@ -41,7 +43,7 @@ describe('App snapshots', () => {
     });
 
     // before
-    const { asFragment } = render(
+    const { asFragment } = customRender(
       <Provider store={store}>
         <App />
       </Provider>,
@@ -62,7 +64,7 @@ describe('App snapshots', () => {
     });
 
     // before
-    const { asFragment } = render(
+    const { asFragment } = customRender(
       <Provider store={store}>
         <App />
       </Provider>,

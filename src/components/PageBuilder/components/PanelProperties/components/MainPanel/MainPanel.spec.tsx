@@ -1,5 +1,4 @@
 import { Provider } from 'react-redux';
-import { render } from '@testing-library/react';
 
 // components
 import MainPanel from './MainPanel';
@@ -10,13 +9,16 @@ import { configureStore } from 'store/store';
 // types
 import { Tab } from '../../enums';
 
+// utils
+import { customRender } from 'test';
+
 describe('MainPanel snapshots', () => {
   it('should render MainPanel', () => {
     // mock
     const store = configureStore();
 
     // before
-    const { asFragment } = render(
+    const { asFragment } = customRender(
       <Provider store={store}>
         <MainPanel activeTab={Tab.design} />
       </Provider>,
@@ -31,7 +33,7 @@ describe('MainPanel snapshots', () => {
     const store = configureStore();
 
     // before
-    const { asFragment } = render(
+    const { asFragment } = customRender(
       <Provider store={store}>
         <MainPanel activeTab={Tab.prototype} />
       </Provider>,

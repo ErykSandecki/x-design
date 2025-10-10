@@ -5,7 +5,7 @@ import { LayoutType, TElement } from 'types';
 
 export const getLayout = (layout: TElement['layout']): CSSProperties => {
   switch (layout.type) {
-    case LayoutType.default:
+    case LayoutType.freeForm:
       return {};
     case LayoutType.vertical:
       return {

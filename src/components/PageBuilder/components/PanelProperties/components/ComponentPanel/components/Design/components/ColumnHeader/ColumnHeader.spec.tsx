@@ -1,5 +1,4 @@
 import { Provider } from 'react-redux';
-import { render } from '@testing-library/react';
 
 // components
 import ColumnHeader from './ColumnHeader';
@@ -12,6 +11,9 @@ import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 
 // store
 import { configureStore } from 'store/store';
+
+// utils
+import { customRender } from 'test';
 
 const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 const stateMock = {
@@ -44,7 +46,7 @@ describe('ColumnHeader snapshots', () => {
     const store = configureStore(stateMock);
 
     // before
-    const { asFragment } = render(
+    const { asFragment } = customRender(
       <Provider store={store}>
         <ColumnHeader />
       </Provider>,
@@ -71,7 +73,7 @@ describe('ColumnHeader snapshots', () => {
     });
 
     // before
-    const { asFragment } = render(
+    const { asFragment } = customRender(
       <Provider store={store}>
         <ColumnHeader />
       </Provider>,

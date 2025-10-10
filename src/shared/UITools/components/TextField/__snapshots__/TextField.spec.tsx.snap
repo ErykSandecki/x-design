@@ -5,6 +5,7 @@ exports[`TextField snapshots should render TextField 1`] = `
   <div
     class="css-1jnxvbp TextField TextField--light"
     data-test-text-field=""
+    data-test-tooltip=""
   >
     <input
       class="TextField__input TextField__input--light"
@@ -20,6 +21,7 @@ exports[`TextField snapshots should render with chip 1`] = `
   <div
     class="css-1jnxvbp TextField TextField--light"
     data-test-text-field=""
+    data-test-tooltip=""
   >
     <input
       class="TextField__input TextField__input--light"
@@ -41,6 +43,7 @@ exports[`TextField snapshots should render with popover 1`] = `
   <div
     class="css-1jnxvbp TextField TextField--light"
     data-test-text-field=""
+    data-test-tooltip=""
   >
     <input
       class="TextField__input TextField__input--light"

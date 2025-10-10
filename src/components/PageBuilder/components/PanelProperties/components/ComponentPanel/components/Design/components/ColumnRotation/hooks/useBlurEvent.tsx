@@ -15,10 +15,13 @@ export const useBlurEvent = (angle: string, element: TElement, setAngle: TFunc<[
   const dispatch = useDispatch();
 
   const handleBlur = (): void => {
-    if (angle === '') {
+    if (angle === '' || isNaN(parseFloat(angle))) {
       setAngle(element.angle.toString());
     } else {
-      dispatch(rotateElements(clampAngle(parseInt(angle))));
+      const targetAngle = clampAngle(parseInt(angle));
+
+      setAngle(`${targetAngle}°`);
+      dispatch(rotateElements(targetAngle));
     }
   };
 

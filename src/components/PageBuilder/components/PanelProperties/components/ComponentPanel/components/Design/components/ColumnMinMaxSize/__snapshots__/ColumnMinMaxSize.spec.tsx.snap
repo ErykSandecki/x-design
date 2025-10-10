@@ -38,6 +38,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing{max} 1`] = `
         <div
           class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
           data-test-text-field="maxWidth"
+          data-test-tooltip=""
         >
           <div
             class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -122,6 +123,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing{max} 1`] = `
         <div
           class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
           data-test-text-field="maxHeight"
+          data-test-tooltip=""
         >
           <div
             class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -263,6 +265,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing{min} 1`] = `
         <div
           class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
           data-test-text-field="minWidth"
+          data-test-tooltip=""
         >
           <div
             class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -347,6 +350,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing{min} 1`] = `
         <div
           class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
           data-test-text-field="minHeight"
+          data-test-tooltip=""
         >
           <div
             class="css-e5vky9 ScrubbableInput ScrubbableInput--light"

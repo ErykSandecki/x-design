@@ -1,12 +1,13 @@
-import { render } from '@testing-library/react';
-
 // components
 import ButtonIcon from './ButtonIcon';
+
+// utils
+import { customRender } from 'test';
 
 describe('ButtonIcon snapshots', () => {
   it('should render ButtonIcon', () => {
     // before
-    const { asFragment } = render(<ButtonIcon name="Close" />);
+    const { asFragment } = customRender(<ButtonIcon name="Close" />);
 
     // result
     expect(asFragment()).toMatchSnapshot();
@@ -14,7 +15,7 @@ describe('ButtonIcon snapshots', () => {
 
   it('should render when is selected', () => {
     // before
-    const { asFragment } = render(<ButtonIcon name="Close" selected />);
+    const { asFragment } = customRender(<ButtonIcon name="Close" selected />);
 
     // result
     expect(asFragment()).toMatchSnapshot();

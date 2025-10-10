@@ -52,7 +52,7 @@ export const alignmetnMock: TAlignment = {
 };
 
 export const layoutMock: TLayout = {
-  type: LayoutType.default,
+  type: LayoutType.freeForm,
 };
 
 export const flipMock: TFlip = {

@@ -68,7 +68,7 @@ describe('useDesignData', () => {
     expect(result.current).toStrictEqual({
       areParentsTheSame: true,
       isMixedLayoutType: false,
-      layoutType: LayoutType.default,
+      layoutType: LayoutType.freeForm,
       onChangeLayoutType: expect.any(Function),
       position: 'absolute',
     });

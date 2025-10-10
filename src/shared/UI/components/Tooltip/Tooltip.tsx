@@ -15,7 +15,7 @@ import { className as classNameTooltip, classNames } from './classNames';
 import _styles from './styles/tooltip.scss';
 
 // types
-import { ColorsTheme, E2EAttribute, HTMLContainerId } from 'types';
+import { E2EAttribute, HTMLContainerId } from 'types';
 import { TCarrotPlacement } from './types';
 import { TE2EDataAttributeProps } from '../../../E2EDataAttributes/E2EDataAttribute';
 import { TooltipPosition } from './enums';
@@ -29,7 +29,7 @@ export type TTooltipProps = {
   autoPositioningCarrotPlacement?: TCarrotPlacement;
   children: ReactElement<any, any>;
   className?: string;
-  content: ReactNode | string;
+  content?: ReactNode | string;
   customId?: string;
   e2eAttribute?: TE2EDataAttributeProps['type'];
   e2eValue?: TE2EDataAttributeProps['value'];
@@ -97,7 +97,6 @@ export const Tooltip: FC<TTooltipProps> = ({
               classes={{
                 className: cx(classNamesWithTheme.carrot.name, classNamesWithTheme.carrot.modificators[position]),
               }}
-              color={ColorsTheme.neutral3}
               height={14}
               name="CarrotDown"
               width={10}

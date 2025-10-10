@@ -40,7 +40,7 @@ const ColumnFlow: FC = () => {
         e2eValue="flow"
         fullWidth
         onChange={(layoutType) => dispatch(changeLayout(layoutType as LayoutType))}
-        toggleButtons={toggleButtons}
+        toggleButtons={toggleButtons(t)}
       />
     </UITools.SectionColumn>
   );

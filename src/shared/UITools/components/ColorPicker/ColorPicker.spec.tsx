@@ -1,4 +1,4 @@
-import { fireEvent, render } from '@testing-library/react';
+import { fireEvent } from '@testing-library/react';
 
 // components
 import ColorPicker from './ColorPicker';
@@ -7,14 +7,14 @@ import ColorPicker from './ColorPicker';
 import { E2EAttribute, KeyboardKeys } from 'types';
 
 // utils
-import { getByE2EAttribute } from 'test';
+import { customRender, getByE2EAttribute } from 'test';
 
 const mockCallBack = jest.fn();
 
 describe('ColorPicker snapshots', () => {
   it('should render ColorPicker', () => {
     // before
-    const { asFragment } = render(
+    const { asFragment } = customRender(
       <ColorPicker
         activeSampler={false}
         alpha="100"
@@ -34,7 +34,7 @@ describe('ColorPicker snapshots', () => {
 describe('ColorPicker behaviors', () => {
   it('should change and submit alpha', () => {
     // before
-    const { container } = render(
+    const { container } = customRender(
       <ColorPicker
         activeSampler={false}
         alpha="100"
@@ -69,7 +69,7 @@ describe('ColorPicker behaviors', () => {
     Object.defineProperty(mouseMoveEvent, 'movementX', { value: -100 });
 
     // before
-    const { container } = render(
+    const { container } = customRender(
       <ColorPicker
         activeSampler={false}
         alpha="100"
@@ -95,7 +95,7 @@ describe('ColorPicker behaviors', () => {
 
   it('should change and submit color', () => {
     // before
-    const { container } = render(
+    const { container } = customRender(
       <ColorPicker
         activeSampler={false}
         alpha="100"

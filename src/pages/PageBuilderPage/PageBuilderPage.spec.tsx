@@ -1,5 +1,4 @@
 import { Provider } from 'react-redux';
-import { render } from '@testing-library/react';
 
 // components
 import PageBuilderPage from './PageBuilderPage';
@@ -10,13 +9,16 @@ import 'test/mocks/sagas/allSagas';
 // store
 import { configureStore } from 'store/store';
 
+// utils
+import { customRender } from 'test';
+
 describe('PageBuilderPage snapshots', () => {
   it('should render PageBuilderPage', () => {
     // mock
     const store = configureStore();
 
     // before
-    const { asFragment } = render(
+    const { asFragment } = customRender(
       <Provider store={store}>
         <PageBuilderPage />
       </Provider>,

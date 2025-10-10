@@ -38,7 +38,7 @@ export const BASE_ALL_DATA: TElement = {
   flip: { x: false, y: false },
   height: { value: 0 },
   id: '-1',
-  layout: { type: LayoutType.default },
+  layout: { type: LayoutType.freeForm },
   parentId: '-1',
   position: 'absolute',
   type: ElementType.base,

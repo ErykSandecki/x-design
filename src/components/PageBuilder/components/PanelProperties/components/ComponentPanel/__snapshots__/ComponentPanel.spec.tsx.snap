@@ -51,6 +51,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
           <div
             class="css-1jnxvbp ButtonIcon ButtonIcon--light"
             data-test-button-icon=""
+            data-test-tooltip=""
           >
             <div
               class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -61,8 +62,25 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
             />
           </div>
           <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Toggle ready for dev status
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
             class="css-1jnxvbp ButtonIcon ButtonIcon--light"
             data-test-button-icon=""
+            data-test-tooltip=""
           >
             <div
               class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -71,6 +89,22 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
               name="Component"
               width="14"
             />
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Create component
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -146,7 +180,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
               >
                 Align left  AltA
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral3 Icon--neutral3--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -174,7 +208,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
               >
                 Align center  AltH
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral3 Icon--neutral3--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -202,7 +236,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
               >
                 Align right  AltD
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral3 Icon--neutral3--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -235,7 +269,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
               >
                 Align top  AltW
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral3 Icon--neutral3--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -263,7 +297,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
               >
                 Align center  AltV
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral3 Icon--neutral3--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -291,7 +325,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
               >
                 Align bottom  AltS
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral3 Icon--neutral3--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -348,6 +382,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
           <div
             class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
             data-test-text-field="x"
+            data-test-tooltip=""
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -371,8 +406,25 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
             />
           </div>
           <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              X - position
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
             class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
             data-test-text-field="y"
+            data-test-tooltip=""
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -394,6 +446,22 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
               type="number"
               value="0"
             />
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Y - position
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
           </div>
           <div
             class="css-2ro7w4 SectionColumn__inputConnector SectionColumn__inputConnector--light"
@@ -443,6 +511,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
           <div
             class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
             data-test-text-field="angle"
+            data-test-tooltip=""
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -461,9 +530,25 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
               class="TextField__input TextField__input--light"
               data-test-text-field-input="angle"
               maxlength="6"
-              type="number"
-              value="0"
+              type="text"
+              value="0°"
             />
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Rotation
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
           </div>
           <div
             class="css-1jnxvbp ButtonGroup ButtonGroup--light ButtonGroup--fullWidth ButtonGroup--fullWidth--light"
@@ -482,6 +567,22 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
               />
             </div>
             <div
+              class="Tooltip Tooltip--light"
+            >
+              <div
+                class="Tooltip__content Tooltip__content--light"
+              >
+                Rotate 90° right
+                <div
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="carrot-down"
+                  height="14"
+                  name="CarrotDown"
+                  width="10"
+                />
+              </div>
+            </div>
+            <div
               class="ButtonGroup__button ButtonGroup__button--light"
               data-test-button-group-input="flip-horizontal"
             >
@@ -494,6 +595,22 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
               />
             </div>
             <div
+              class="Tooltip Tooltip--light"
+            >
+              <div
+                class="Tooltip__content Tooltip__content--light"
+              >
+                Flip horizontal  ShiftH
+                <div
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="carrot-down"
+                  height="14"
+                  name="CarrotDown"
+                  width="10"
+                />
+              </div>
+            </div>
+            <div
               class="ButtonGroup__button ButtonGroup__button--light"
               data-test-button-group-input="flip-vertical"
             >
@@ -504,6 +621,22 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
                 name="FlipVertical"
                 width="12"
               />
+            </div>
+            <div
+              class="Tooltip Tooltip--light"
+            >
+              <div
+                class="Tooltip__content Tooltip__content--light"
+              >
+                Flip vertical  ShiftV
+                <div
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="carrot-down"
+                  height="14"
+                  name="CarrotDown"
+                  width="10"
+                />
+              </div>
             </div>
           </div>
           <div
@@ -548,6 +681,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
         <div
           class="css-1jnxvbp ButtonIcon ButtonIcon--light"
           data-test-button-icon=""
+          data-test-tooltip=""
         >
           <div
             class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -558,8 +692,25 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
           />
         </div>
         <div
+          class="Tooltip Tooltip--light"
+        >
+          <div
+            class="Tooltip__content Tooltip__content--light"
+          >
+            Resize to fit  AltShiftCtrlR
+            <div
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="carrot-down"
+              height="14"
+              name="CarrotDown"
+              width="10"
+            />
+          </div>
+        </div>
+        <div
           class="css-1jnxvbp ButtonIcon ButtonIcon--light"
           data-test-button-icon=""
+          data-test-tooltip=""
         >
           <div
             class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -568,6 +719,22 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
             name="AutoLayout"
             width="14"
           />
+        </div>
+        <div
+          class="Tooltip Tooltip--light"
+        >
+          <div
+            class="Tooltip__content Tooltip__content--light"
+          >
+            Toggle auto layout  ShiftA
+            <div
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="carrot-down"
+              height="14"
+              name="CarrotDown"
+              width="10"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -615,6 +782,22 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
                 width="12"
               />
             </button>
+            <div
+              class="Tooltip Tooltip--light"
+            >
+              <div
+                class="Tooltip__content Tooltip__content--light"
+              >
+                Free form
+                <div
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="carrot-down"
+                  height="14"
+                  name="CarrotDown"
+                  width="10"
+                />
+              </div>
+            </div>
             <button
               class="ToggleButton ToggleButton--light"
               data-test-toggle-button="1"
@@ -628,6 +811,22 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
                 width="12"
               />
             </button>
+            <div
+              class="Tooltip Tooltip--light"
+            >
+              <div
+                class="Tooltip__content Tooltip__content--light"
+              >
+                Vertical
+                <div
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="carrot-down"
+                  height="14"
+                  name="CarrotDown"
+                  width="10"
+                />
+              </div>
+            </div>
             <button
               class="ToggleButton ToggleButton--light"
               data-test-toggle-button="2"
@@ -641,6 +840,22 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
                 width="12"
               />
             </button>
+            <div
+              class="Tooltip Tooltip--light"
+            >
+              <div
+                class="Tooltip__content Tooltip__content--light"
+              >
+                Horizontal
+                <div
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="carrot-down"
+                  height="14"
+                  name="CarrotDown"
+                  width="10"
+                />
+              </div>
+            </div>
             <button
               class="ToggleButton ToggleButton--light"
               data-test-toggle-button="3"
@@ -654,6 +869,22 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
                 width="12"
               />
             </button>
+            <div
+              class="Tooltip Tooltip--light"
+            >
+              <div
+                class="Tooltip__content Tooltip__content--light"
+              >
+                Grid
+                <div
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="carrot-down"
+                  height="14"
+                  name="CarrotDown"
+                  width="10"
+                />
+              </div>
+            </div>
           </div>
           <div
             class="css-2ro7w4 SectionColumn__inputConnector SectionColumn__inputConnector--light"
@@ -703,6 +934,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
           <div
             class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
             data-test-text-field="width"
+            data-test-tooltip=""
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -886,6 +1118,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
           <div
             class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
             data-test-text-field="height"
+            data-test-tooltip=""
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -1086,6 +1319,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
           <div
             class="css-1jnxvbp ButtonIcon ButtonIcon--light"
             data-test-button-icon="aspect-ratio"
+            data-test-tooltip=""
           >
             <div
               class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -1094,6 +1328,22 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
               name="AspectRatio"
               width="14"
             />
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Look aspect ratio
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
           </div>
         </div>
       </div>

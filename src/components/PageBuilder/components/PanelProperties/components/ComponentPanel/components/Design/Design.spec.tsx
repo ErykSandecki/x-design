@@ -230,7 +230,7 @@ describe('Design behaviors', () => {
     fireEvent.click(getByE2EAttribute(container, E2EAttribute.icon, 'auto-layout'));
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-2'].layout.type).toBe(LayoutType.default);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-2'].layout.type).toBe(LayoutType.freeForm);
   });
 
   it('should fit layout', () => {

@@ -45,5 +45,21 @@
   "tooltip.alignHorizontalRight": "Align right",
   "tooltip.alignVerticalBottom": "Align bottom",
   "tooltip.alignVerticalCenter": "Align center",
-  "tooltip.alignVerticalTop": "Align top"
+  "tooltip.alignVerticalTop": "Align top",
+  "tooltip.coordinates.x": "X - position",
+  "tooltip.coordinates.y": "Y - position",
+  "tooltip.createComponent": "Create component",
+  "tooltip.flipHorizontal": "Flip horizontal",
+  "tooltip.flipVertical": "Flip vertical",
+  "tooltip.flow.freeForm": "Free form",
+  "tooltip.flow.grid": "Grid",
+  "tooltip.flow.horizontal": "Horizontal",
+  "tooltip.flow.vertical": "Vertical",
+  "tooltip.lookAspectRatio": "Look aspect ratio",
+  "tooltip.readyForDevStatus": "Toggle ready for dev status",
+  "tooltip.resizeToFit": "Resize to fit",
+  "tooltip.rotation": "Rotation",
+  "tooltip.rotationNext90": "Rotate 90° right",
+  "tooltip.toggleAutoLayout": "Toggle auto layout",
+  "tooltip.toggleVisibility": "Toggle visibility"
 }

@@ -1,4 +1,4 @@
-import { fireEvent, render } from '@testing-library/react';
+import { fireEvent } from '@testing-library/react';
 import { noop } from 'lodash';
 
 // components
@@ -11,14 +11,14 @@ import { antColorPickerSliderContainerClassName } from './constants';
 import { E2EAttribute } from 'types/e2e';
 
 // utils
-import { getByE2EAttribute } from 'test/testHelpers';
+import { customRender, getByE2EAttribute } from 'test/testHelpers';
 
 const mockCallBack = jest.fn();
 
 describe('Panel snapshots', () => {
   it('should render Panel', () => {
     // before
-    const { asFragment } = render(
+    const { asFragment } = customRender(
       <Panel activeSampler={false} onClickColorSampler={mockCallBack} onClickSampler={mockCallBack} setVisible={noop}>
         <div className={antColorPickerSliderContainerClassName}></div>
       </Panel>,
@@ -30,7 +30,7 @@ describe('Panel snapshots', () => {
 
   it('should render with active sampler', () => {
     // before
-    const { asFragment } = render(
+    const { asFragment } = customRender(
       <Panel activeSampler onClickColorSampler={mockCallBack} onClickSampler={mockCallBack} setVisible={noop}>
         <div className={antColorPickerSliderContainerClassName}></div>
       </Panel>,
@@ -48,7 +48,7 @@ describe('Panel behaviors', () => {
 
   it('should change visibility after click close icon', () => {
     // before
-    const { container } = render(
+    const { container } = customRender(
       <Panel
         activeSampler={false}
         onClickColorSampler={mockCallBack}
@@ -68,7 +68,7 @@ describe('Panel behaviors', () => {
 
   it('should prevent key down', () => {
     // before
-    const { container } = render(
+    const { container } = customRender(
       <div id="test" onKeyDown={mockCallBack}>
         <Panel activeSampler={false} onClickColorSampler={mockCallBack} onClickSampler={mockCallBack} setVisible={noop}>
           children

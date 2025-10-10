@@ -37,8 +37,8 @@ export const useDesignData = (): TUseDesignData => {
     if (isMixedLayoutType) {
       dispatch(changeLayout(LayoutType.vertical));
     } else {
-      const isDefault = layout.type === LayoutType.default;
-      const targetLayout = isDefault ? LayoutType.vertical : LayoutType.default;
+      const isDefault = layout.type === LayoutType.freeForm;
+      const targetLayout = isDefault ? LayoutType.vertical : LayoutType.freeForm;
 
       dispatch(changeLayout(targetLayout));
     }

@@ -15,7 +15,7 @@ export const useChangeEvent = (setAngle: TFunc<[string]>): TUseChangeEvent => {
   };
 
   const handleChange = (value: string, isScrubbableInput: boolean): void => {
-    setAngle(value);
+    setAngle(isScrubbableInput ? `${value}°` : value);
     updateStore(parseFloat(value), isScrubbableInput);
   };
 

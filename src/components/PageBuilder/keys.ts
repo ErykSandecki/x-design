@@ -1,5 +1,5 @@
 // others
-import { ALT } from 'constant/mainKeys';
+import { ALT, CONTROL, SHIFT } from 'constant/mainKeys';
 
 // types
 import { TKeyboardShortcutsGroup } from 'types';
@@ -11,4 +11,8 @@ export const KEYBOARD_SHORTCUTS: TKeyboardShortcutsGroup = {
   alignVerticalBottom: [[ALT, 'S']],
   alignVerticalCenter: [[ALT, 'V']],
   alignVerticalTop: [[ALT, 'W']],
+  flipHorizontal: [[SHIFT, 'H']],
+  flipVertical: [[SHIFT, 'V']],
+  resizeToFit: [[ALT, SHIFT, CONTROL, 'R']],
+  toggleAutoLayout: [[SHIFT, 'A']],
 };

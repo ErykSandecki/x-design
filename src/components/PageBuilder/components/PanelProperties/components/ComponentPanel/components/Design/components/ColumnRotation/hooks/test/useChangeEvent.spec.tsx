@@ -30,7 +30,7 @@ describe('useChangeEvent', () => {
     result.current('100', true);
 
     // result
-    expect(mockCallBack.mock.calls[0][0]).toBe('100');
+    expect(mockCallBack.mock.calls[0][0]).toBe('100°');
     expect(mockCallBack.mock.calls[1][0].payload).toBe(100);
   });
 });

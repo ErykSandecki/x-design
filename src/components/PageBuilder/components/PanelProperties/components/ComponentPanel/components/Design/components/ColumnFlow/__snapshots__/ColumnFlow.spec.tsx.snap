@@ -46,6 +46,22 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
               width="12"
             />
           </button>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Free form
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
           <button
             class="ToggleButton ToggleButton--light"
             data-test-toggle-button="1"
@@ -59,6 +75,22 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
               width="12"
             />
           </button>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Vertical
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
           <button
             class="ToggleButton ToggleButton--light"
             data-test-toggle-button="2"
@@ -72,6 +104,22 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
               width="12"
             />
           </button>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Horizontal
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
           <button
             class="ToggleButton ToggleButton--light"
             data-test-toggle-button="3"
@@ -85,6 +133,22 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
               width="12"
             />
           </button>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Grid
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
         </div>
         <div
           class="css-2ro7w4 SectionColumn__inputConnector SectionColumn__inputConnector--light"
@@ -154,6 +218,22 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
               width="12"
             />
           </button>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Free form
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
           <button
             class="ToggleButton ToggleButton--light"
             data-test-toggle-button="1"
@@ -167,6 +247,22 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
               width="12"
             />
           </button>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Vertical
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
           <button
             class="ToggleButton ToggleButton--light"
             data-test-toggle-button="2"
@@ -180,6 +276,22 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
               width="12"
             />
           </button>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Horizontal
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
           <button
             class="ToggleButton ToggleButton--light"
             data-test-toggle-button="3"
@@ -193,6 +305,22 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
               width="12"
             />
           </button>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Grid
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
         </div>
         <div
           class="css-2ro7w4 SectionColumn__inputConnector SectionColumn__inputConnector--light"
