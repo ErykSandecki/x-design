@@ -6,8 +6,8 @@ import { useTranslation } from 'react-i18next';
 // components
 import ColumnResizingButtonIcons from './ColumnResizingButtonIcons';
 import ColumnResizingInput from './ColumnResizingInput';
-import HeightPopoverHeight from './components/HeightPopoverHeight/HeightPopoverHeight';
-import HeightPopoverWidth from './components/HeightPopoverWidth/HeightPopoverWidth';
+import HeightPopoverHeight from './HeightPopoverHeight/HeightPopoverHeight';
+import HeightPopoverWidth from './HeightPopoverWidth/HeightPopoverWidth';
 import { UITools } from 'shared';
 
 // hooks

@@ -1,7 +1,7 @@
 import { FC, memo } from 'react';
 
 // components
-import MouseModes, { TMouseModeProps } from './components/MouseModes';
+import MouseModes, { TMouseModeProps } from './MouseModes/MouseModes';
 import { Box } from 'shared';
 
 // hooks

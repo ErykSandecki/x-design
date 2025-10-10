@@ -3,8 +3,8 @@ import { useTranslation } from 'react-i18next';
 
 // components
 import ColumnMinMaxSizeInput from './ColumnMinMaxSizeInput';
-import HeightPopoverHeight from './components/HeightPopoverHeight/HeightPopoverHeight';
-import HeightPopoverWidth from './components/HeightPopoverWidth/HeightPopoverWidth';
+import HeightPopoverHeight from './HeightPopoverHeight/HeightPopoverHeight';
+import HeightPopoverWidth from './HeightPopoverWidth/HeightPopoverWidth';
 import { UITools } from 'shared';
 
 // hooks
