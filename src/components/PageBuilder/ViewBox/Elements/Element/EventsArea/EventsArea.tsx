@@ -3,7 +3,7 @@ import { FC, memo, RefObject } from 'react';
 
 // components
 import Corners from '../../../Corners/Corners';
-import TransformArea from '../../../TransformArea/TransformArea';
+import TransformArea from './TransformArea/TransformArea';
 import { Box } from 'shared';
 
 // core
