@@ -2,9 +2,9 @@ import { FC, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 // components
-import PanelProperties from 'components/PageBuilder/components/PanelProperties/PanelProperties';
-import Toolbar from 'components/PageBuilder/components/Toolbar/Toolbar';
-import ViewBox from 'components/PageBuilder/components/ViewBox/ViewBox';
+import PanelProperties from 'components/PageBuilder/PanelProperties/PanelProperties';
+import Toolbar from 'components/PageBuilder/Toolbar/Toolbar';
+import ViewBox from 'components/PageBuilder/ViewBox/ViewBox';
 
 // core
 import { RefsProvider } from './core/RefsProvider';

@@ -1,0 +1,28 @@
+@import '../../../styles/z-indexes';
+@import '../../../../../styles/mixins/text-ellipsis';
+
+.ElementArea {
+  pointer-events: none;
+
+  &__label {
+    @include text-ellipsis;
+
+    font-size: 11px;
+    transform: translate(1.5px, -20px);
+    z-index: $--xd-zindex-element-active;
+  }
+
+  &__area {
+    @include theme-selector('blue-1', stroke, path);
+
+    height: 100%;
+    overflow: visible;
+    position: absolute;
+    width: 100%;
+    z-index: $--xd-zindex-element-active;
+
+    path {
+      fill: rgba(#ffffff, $alpha: 0);
+    }
+  }
+}

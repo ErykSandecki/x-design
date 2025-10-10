@@ -1,0 +1,30 @@
+@import '../../../../../styles/z-indexes';
+@import '../../../../../../../styles/mixins/enter-delay';
+
+.Element {
+  $self: &;
+  @include enter-delay;
+
+  animation-delay: 100ms;
+  user-select: none;
+  z-index: $--xd-zindex-element;
+
+  &--moving {
+    pointer-events: none;
+    z-index: $--xd-zindex-element-moving !important;
+  }
+
+  &:has([data-status='true']) {
+    z-index: $--xd-zindex-element-moving;
+  }
+
+  &__wrapper {
+    &--hover {
+      z-index: $--xd-zindex-element-active;
+    }
+
+    &--moving {
+      opacity: 0.5;
+    }
+  }
+}

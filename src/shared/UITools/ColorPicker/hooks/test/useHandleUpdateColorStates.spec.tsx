@@ -9,8 +9,8 @@ jest.mock('lodash', () => ({
   ...jest.requireActual('lodash'),
   debounce:
     (callback: any) =>
-    (value1: any, value2: any): any =>
-      callback(value1, value2),
+    (...args: any): any =>
+      callback(...args),
 }));
 
 describe('useHandleUpdateColorStates', () => {

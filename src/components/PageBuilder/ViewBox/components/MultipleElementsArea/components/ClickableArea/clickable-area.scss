@@ -1,0 +1,13 @@
+@import '../../../../../styles/z-indexes';
+
+.ClickableArea {
+  overflow: visible;
+  position: absolute;
+  z-index: $--xd-zindex-multiple-area;
+
+  &__outline {
+    @include theme('blue-1', stroke);
+
+    fill: rgba($color: #000000, $alpha: 0%);
+  }
+}

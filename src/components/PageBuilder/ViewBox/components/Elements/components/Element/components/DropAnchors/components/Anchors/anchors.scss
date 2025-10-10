@@ -1,0 +1,33 @@
+@import '../../../../../../../../../styles/z-indexes';
+
+.Anchors {
+  z-index: $--xd-zindex-element-anchor;
+
+  &--bottom {
+    bottom: 0;
+    height: 10px;
+    left: 0;
+    width: 100%;
+  }
+
+  &--left {
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 10px;
+  }
+
+  &--right {
+    height: 100%;
+    right: 0;
+    top: 0;
+    width: 10px;
+  }
+
+  &--top {
+    height: 10px;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}

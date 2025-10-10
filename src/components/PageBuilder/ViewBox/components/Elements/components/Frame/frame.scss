@@ -1,0 +1,48 @@
+@import '../../../../../styles/z-indexes';
+
+.Frame {
+  background-color: #ffffff;
+
+  &__wrapper {
+    pointer-events: none;
+    position: absolute;
+  }
+
+  &__label {
+    @include theme('neutral-2', color);
+
+    font-size: 11px;
+    pointer-events: all;
+    position: absolute;
+    transform: translate(1.5px, -20px);
+    user-select: none;
+
+    &--hover {
+      @include theme('blue-1', color);
+    }
+
+    &--selected {
+      @include theme('blue-1', color);
+    }
+
+    &--bottom {
+      left: 100%;
+      top: 100%;
+      transform: rotate(180deg) translate(1.5px, -20px);
+      transform-origin: left top;
+    }
+
+    &--left {
+      left: 0;
+      top: 100%;
+      transform: rotate(270deg) translate(1.5px, -20px);
+      transform-origin: left top;
+    }
+
+    &--right {
+      left: 100%;
+      transform: rotate(90deg) translate(1.5px, -20px);
+      transform-origin: left top;
+    }
+  }
+}

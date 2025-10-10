@@ -1,0 +1,15 @@
+@import '../../../styles/z-indexes';
+@import '../../../../../styles/mixins/enter-delay';
+
+.Corners {
+  @include enter-delay;
+  @include theme-selector('neutral-1', fill, rect);
+  @include theme-selector('blue-1', stroke, rect);
+  @include theme('blue-1', border, '1px solid');
+
+  box-sizing: border-box;
+  overflow: visible;
+  pointer-events: none;
+  position: absolute;
+  z-index: $--xd-zindex-element;
+}
