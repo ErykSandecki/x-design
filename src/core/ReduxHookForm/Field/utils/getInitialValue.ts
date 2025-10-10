@@ -1,7 +1,7 @@
 import { head, isArray } from 'lodash';
 
 // types
-import { TFieldValue } from '../../../types';
+import { TFieldValue } from '../../types';
 
 export const getComplexInitalValue = <V>(initValue: Array<boolean | string>, shouldBeEmpty: boolean): V => {
   const length = initValue.length;

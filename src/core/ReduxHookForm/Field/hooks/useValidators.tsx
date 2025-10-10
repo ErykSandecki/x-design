@@ -10,13 +10,13 @@ import { SET_PENDING_FIELD, UPDATE_ASYNC_ERRORS, UPDATE_SYNC_ERRORS } from 'stor
 import { fieldsSelectorCreator, formAttributesSelectorCreator } from 'store/reduxHookForm/selectors';
 
 // types
-import { TAsyncValidator, TFieldValue, TSyncValidator } from '../../../types';
+import { TAsyncValidator, TFieldValue, TSyncValidator } from '../../types';
 import { TField } from 'store/reduxHookForm/types';
 import { TMainState } from 'types/reducers';
 
 // utils
-import { dispatchFieldHandler } from '../../../utils/dispatchFieldHandler';
-import { getErrorsFromAsyncValidators, getErrorsFromSyncValidators } from '../../../utils/validators';
+import { dispatchFieldHandler } from '../../utils/dispatchFieldHandler';
+import { getErrorsFromAsyncValidators, getErrorsFromSyncValidators } from '../../utils/validators';
 
 export type TUseValidator = {
   getAsyncErrors: (value: TFieldValue) => Promise<Array<string>>;

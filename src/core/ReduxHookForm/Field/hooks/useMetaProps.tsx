@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { fieldSelectorCreator, formAttributesSelectorCreator } from 'store/reduxHookForm/selectors';
 
 // types
-import { TFieldValue } from '../../../types';
+import { TFieldValue } from '../../types';
 import { TObject } from 'types';
 
 export type TUseMetaProps<V> = {

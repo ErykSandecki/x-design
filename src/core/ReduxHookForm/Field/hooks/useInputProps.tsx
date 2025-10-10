@@ -9,10 +9,10 @@ import { clearFields } from 'store/reduxHookForm/actions';
 import { fieldAttributesSelectorCreator, fieldSelectorCreator } from 'store/reduxHookForm/selectors';
 
 // types
-import { TFieldValue } from '../../../types';
+import { TFieldValue } from '../../types';
 
 // utils
-import { dispatchFieldHandler } from '../../../utils/dispatchFieldHandler';
+import { dispatchFieldHandler } from '../../utils/dispatchFieldHandler';
 
 export type TUseInputProps<V> = {
   name: string;

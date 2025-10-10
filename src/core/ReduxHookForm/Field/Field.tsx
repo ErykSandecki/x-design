@@ -14,7 +14,7 @@ import { FormContext } from '../Form/Form';
 import { fieldSelectorCreator } from 'store/reduxHookForm/selectors';
 
 // types
-import { TAsyncValidator, TFieldValue, TSyncValidator } from '../../types';
+import { TAsyncValidator, TFieldValue, TSyncValidator } from '../types';
 import { TFieldComponentProps } from './types';
 import { TObject } from 'types';
 

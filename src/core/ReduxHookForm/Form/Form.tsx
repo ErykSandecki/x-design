@@ -3,20 +3,20 @@ import { forOwn, isEmpty, kebabCase } from 'lodash';
 import { useDispatch, useSelector } from 'react-redux';
 
 // others
-import { UPDATE_FORM_VALIDATOR } from '../../../../store/reduxHookForm/actionsType';
+import { UPDATE_FORM_VALIDATOR } from '../../../store/reduxHookForm/actionsType';
 
 // store
-import { destroyForm, mountForm, submit, updateForm } from '../../../../store/reduxHookForm/actions';
-import { fieldsSelectorCreator, formSelectorCreator } from '../../../../store/reduxHookForm/selectors';
+import { destroyForm, mountForm, submit, updateForm } from '../../../store/reduxHookForm/actions';
+import { fieldsSelectorCreator, formSelectorCreator } from '../../../store/reduxHookForm/selectors';
 
 // types
 import { E2EAttribute } from 'types/e2e';
 import { E2EDataAttribute, TE2EDataAttributeProps } from 'shared/E2EDataAttributes/E2EDataAttribute';
-import { TField, TFields } from '../../../../store/reduxHookForm/types';
+import { TField, TFields } from '../../../store/reduxHookForm/types';
 
 // utils
-import { defaultFormValidator } from '../../utils/validators';
-import { markInputsAsTouched } from '../../utils/markInputsAsTouched';
+import { defaultFormValidator } from '../utils/validators';
+import { markInputsAsTouched } from '../utils/markInputsAsTouched';
 
 export const FormContext = createContext('');
 

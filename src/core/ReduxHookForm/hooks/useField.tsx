@@ -1,6 +1,6 @@
 // hooks
-import { TUseInputProps, useInputProps } from '../components/Field/hooks/useInputProps';
-import { TUseMetaProps, useMetaProps } from '../components/Field/hooks/useMetaProps';
+import { TUseInputProps, useInputProps } from '../Field/hooks/useInputProps';
+import { TUseMetaProps, useMetaProps } from '../Field/hooks/useMetaProps';
 
 // types
 import { TFieldValue } from '../types';

@@ -1,10 +1,10 @@
-export * from './components/Field/Field';
-export * from './components/Field/hooks/useInputProps';
-export * from './components/Field/hooks/useMetaProps';
-export * from './components/Field/hooks/useValidators';
-export * from './components/Field/types';
+export * from './Field/Field';
+export * from './Field/hooks/useInputProps';
+export * from './Field/hooks/useMetaProps';
+export * from './Field/hooks/useValidators';
+export * from './Field/types';
 
-export * from './components/Form/Form';
+export * from './Form/Form';
 
 export * from './hooks/useField';
 export * from './hooks/useForm';

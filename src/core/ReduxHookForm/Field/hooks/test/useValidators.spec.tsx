@@ -14,7 +14,7 @@ import { REDUCER_KEY as REDUX_HOOK_FORM } from 'store/reduxHookForm/actionsType'
 import { configureStore } from 'store/store';
 
 // types
-import { TAsyncValidator, TFieldValue, TSyncValidator } from '../../../../types';
+import { TAsyncValidator, TFieldValue, TSyncValidator } from '../../../types';
 import { TFields } from 'store/reduxHookForm/types';
 
 // utils

@@ -10,7 +10,7 @@ import { fieldSelectorCreator } from 'store/reduxHookForm/selectors';
 import { initField } from 'store/reduxHookForm/actions';
 
 // types
-import { TAsyncValidator, TFieldValue, TSyncValidator } from '../../../types';
+import { TAsyncValidator, TFieldValue, TSyncValidator } from '../../types';
 import { TObject } from 'types';
 import { TUseValidator, useValidators } from './useValidators';
 
