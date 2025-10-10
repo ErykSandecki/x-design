@@ -41,10 +41,10 @@
   "pageBuilder.viewBox.elements.frame.label.createFrame": "Kontener",
   "pageBuilder.viewBox.elementArea.label.createFrame": "Kontener",
   "pageBuilder.viewBox.elements.element.newElementButton.label": "Dodaj sekcje",
-  "tooltip.alignHorizontalCenter": "Wyrównaj do środka",
-  "tooltip.alignHorizontalLeft": "Wyrównaj do lewej",
-  "tooltip.alignHorizontalRight": "Wyrównaj w prawo",
-  "tooltip.alignVerticalBottom": "Wyrównaj dół",
-  "tooltip.alignVerticalCenter": "Wyrównaj do środka",
-  "tooltip.alignVerticalTop": "Wyrównaj do góry"
+  "tooltip.alignHorizontalCenter": "Wyr. do środka",
+  "tooltip.alignHorizontalLeft": "Wyr. do lewej",
+  "tooltip.alignHorizontalRight": "Wyr. w prawo",
+  "tooltip.alignVerticalBottom": "Wyr. do dołu",
+  "tooltip.alignVerticalCenter": "Wyr. do środka",
+  "tooltip.alignVerticalTop": "Wyr. do góry"
 }
