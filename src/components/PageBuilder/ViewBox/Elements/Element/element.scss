@@ -6,6 +6,7 @@
   @include enter-delay;
 
   animation-delay: 100ms;
+  flex-shrink: 0;
   user-select: none;
   z-index: $--xd-zindex-element;
 
