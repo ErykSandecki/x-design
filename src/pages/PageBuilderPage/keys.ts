@@ -13,6 +13,12 @@ export const KEYBOARD_SHORTCUTS: TKeyboardShortcutsGroup = {
   alignVerticalTop: [{ primaryKeys: ['alt'], secondaryKey: KeyboardKeys.w }],
   flipHorizontal: [{ primaryKeys: ['shift'], secondaryKey: KeyboardKeys.h }],
   flipVertical: [{ primaryKeys: ['shift'], secondaryKey: KeyboardKeys.v }],
+  historyRedo: [{ primaryKeys: [CONTROL, 'shift'], secondaryKey: KeyboardKeys.z }],
+  historyUndo: [{ primaryKeys: [CONTROL], secondaryKey: KeyboardKeys.z }],
+  mouseModeComment: [{ secondaryKey: KeyboardKeys.e }],
+  mouseModeDefault: [{ secondaryKey: KeyboardKeys.escape }, { secondaryKey: KeyboardKeys.q }],
+  mouseModeMove: [{ secondaryKey: KeyboardKeys.w }],
+  mouseModeToolBeltA: [{ secondaryKey: KeyboardKeys.f }],
   resizeToFit: [{ primaryKeys: ['alt', CONTROL, 'shift'], secondaryKey: KeyboardKeys.r }],
   toggleAutoLayout: [{ primaryKeys: ['shift'], secondaryKey: KeyboardKeys.a }],
 };

@@ -4,14 +4,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useKeyboardHandler } from 'hooks';
 
 // others
-import { CONTROL } from 'constant/constants';
+import { KEYBOARD_SHORTCUTS } from '../keys';
 
 // store
 import { canRedoReduxHistorySelector, canUndoReduxHistorySelector, pageSelector } from 'store/pageBuilder/selectors';
 import { reducerHistoryRedo, reducerHistoryUndo, updateEventsStatus } from 'store/pageBuilder/actions';
 
 // types
-import { KeyboardKeys, MouseMode } from 'types';
+import { MouseMode } from 'types';
 
 type TUseKeyDown = void;
 
@@ -28,37 +28,37 @@ export const useKeyDown = (setMouseMode: TFunc<[MouseMode]>): TUseKeyDown => {
       {
         action: (): any => dispatch(reducerHistoryRedo()),
         conditions: [canRedo],
-        primaryKeys: [CONTROL, 'shift'],
-        secondaryKey: KeyboardKeys.z,
+        primaryKeys: KEYBOARD_SHORTCUTS.historyRedo[0].primaryKeys,
+        secondaryKey: KEYBOARD_SHORTCUTS.historyRedo[0].secondaryKey,
       },
       {
         action: (): any => dispatch(reducerHistoryUndo()),
         conditions: [canUndo],
-        primaryKeys: [CONTROL],
-        secondaryKey: KeyboardKeys.z,
+        primaryKeys: KEYBOARD_SHORTCUTS.historyUndo[0].primaryKeys,
+        secondaryKey: KEYBOARD_SHORTCUTS.historyUndo[0].secondaryKey,
       },
       {
         action: (): any => setMouseMode(MouseMode.comment),
-        secondaryKey: KeyboardKeys.e,
+        secondaryKey: KEYBOARD_SHORTCUTS.mouseModeComment[0].secondaryKey,
       },
       {
         action: (): any => {
           setMouseMode(MouseMode.default);
           dispatch(updateEventsStatus({ colorSampler: false }));
         },
-        secondaryKey: KeyboardKeys.escape,
+        secondaryKey: KEYBOARD_SHORTCUTS.mouseModeDefault[0].secondaryKey,
       },
       {
         action: (): any => setMouseMode(MouseMode.default),
-        secondaryKey: KeyboardKeys.q,
+        secondaryKey: KEYBOARD_SHORTCUTS.mouseModeDefault[1].secondaryKey,
       },
       {
         action: (): any => setMouseMode(MouseMode.move),
-        secondaryKey: KeyboardKeys.w,
+        secondaryKey: KEYBOARD_SHORTCUTS.mouseModeMove[0].secondaryKey,
       },
       {
         action: (): any => setMouseMode(MouseMode.toolBeltA),
-        secondaryKey: KeyboardKeys.f,
+        secondaryKey: KEYBOARD_SHORTCUTS.mouseModeToolBeltA[0].secondaryKey,
       },
     ],
     '',
