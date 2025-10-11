@@ -1,5 +1,5 @@
 // mocks
-import { elementMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, layoutMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
@@ -7,12 +7,54 @@ import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 // store
 import { store as storeToMock } from 'store/store';
 
+// types
+import { LayoutType } from 'types';
+
 // utils
 import { disabledAlignment } from '../disabledAlignment';
 
 const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
 describe('disabledAlignment', () => {
+  it('should not be disabled', () => {
+    // mock
+    storeToMock.getState = (): any =>
+      ({
+        [PAGE_BUILDER]: {
+          ...pageBuilderStateMock[PAGE_BUILDER],
+          pages: {
+            ...pageBuilderStateMock[PAGE_BUILDER].pages,
+            ['0']: {
+              ...pageBuilderStateMock[PAGE_BUILDER].pages['0'],
+              elements: {
+                ...currentPage.elements,
+                [elementMock.id]: {
+                  ...elementMock,
+                  layout: {
+                    ...layoutMock,
+                    type: LayoutType.horizontal,
+                  },
+                },
+                ['test-2']: {
+                  ...elementMock,
+                  id: 'test-2',
+                  parentId: 'test-1',
+                  position: 'absolute',
+                },
+              },
+              selectedElements: [{ ...selectedElementMock, id: 'test-2', parentId: 'test-1' }],
+            },
+          },
+        },
+      }) as any;
+
+    // before
+    const result = disabledAlignment();
+
+    // result
+    expect(result).toBe(false);
+  });
+
   it('should be disabled', () => {
     // mock
     storeToMock.getState = (): any =>
@@ -56,6 +98,10 @@ describe('disabledAlignment', () => {
                 ...currentPage.elements,
                 [elementMock.id]: {
                   ...elementMock,
+                  layout: {
+                    ...layoutMock,
+                    type: LayoutType.horizontal,
+                  },
                 },
                 ['test-2']: {
                   ...elementMock,
@@ -80,7 +126,7 @@ describe('disabledAlignment', () => {
     expect(result).toBe(true);
   });
 
-  it('should not be disabled', () => {
+  it('should be disabled', () => {
     // mock
     storeToMock.getState = (): any =>
       ({
