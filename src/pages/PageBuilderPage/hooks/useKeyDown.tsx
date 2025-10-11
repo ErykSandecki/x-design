@@ -8,10 +8,13 @@ import { KEYBOARD_SHORTCUTS } from '../keys';
 
 // store
 import { canRedoReduxHistorySelector, canUndoReduxHistorySelector, pageSelector } from 'store/pageBuilder/selectors';
-import { reducerHistoryRedo, reducerHistoryUndo, updateEventsStatus } from 'store/pageBuilder/actions';
+import { reducerHistoryRedo, reducerHistoryUndo } from 'store/pageBuilder/actions';
 
 // types
 import { MouseMode } from 'types';
+
+// utils
+import { onEscapeChangeMouseModeHandler } from '../utils/onEscapeChangeMouseModeHandler';
 
 type TUseKeyDown = void;
 
@@ -42,10 +45,7 @@ export const useKeyDown = (setMouseMode: TFunc<[MouseMode]>): TUseKeyDown => {
         secondaryKey: KEYBOARD_SHORTCUTS.mouseModeComment[0].secondaryKey,
       },
       {
-        action: (): any => {
-          setMouseMode(MouseMode.default);
-          dispatch(updateEventsStatus({ colorSampler: false }));
-        },
+        action: (): any => onEscapeChangeMouseModeHandler(dispatch, setMouseMode),
         secondaryKey: KEYBOARD_SHORTCUTS.mouseModeDefault[0].secondaryKey,
       },
       {
