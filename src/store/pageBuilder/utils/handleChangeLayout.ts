@@ -1,7 +1,12 @@
+// others
+import { BASE_2D } from 'shared';
+
 // types
+import { LayoutType } from 'types';
 import { TChangeLayoutAction, TPageBuilderState } from '../types';
 
 // utils
+import { calculateCoordinatesLayoutFreeForm } from './calculateCoordinatesLayoutFreeForm';
 import { extractObjectValues, mapFilteredValues } from 'utils';
 
 export const handleChangeLayout = (
@@ -9,8 +14,11 @@ export const handleChangeLayout = (
   state: TPageBuilderState,
 ): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];
-  const { selectedElements } = currentPage;
+  const { elements, selectedElements } = currentPage;
   const ids = extractObjectValues(selectedElements, ['id']);
+  const children = selectedElements.map(({ id }) => elements[id].children).flat();
+  const childrenIds = extractObjectValues(children, ['id']);
+  const isFreeForm = layoutType === LayoutType.freeForm;
 
   return {
     ...state,
@@ -23,6 +31,14 @@ export const handleChangeLayout = (
           ...mapFilteredValues(currentPage.elements, ids, (element) => ({
             ...element,
             layout: { ...element.layout, type: layoutType },
+          })),
+          ...mapFilteredValues(currentPage.elements, childrenIds, (element) => ({
+            ...element,
+            alignment: {},
+            coordinates: isFreeForm
+              ? calculateCoordinatesLayoutFreeForm(currentPage, element.id, element.parentId)
+              : BASE_2D,
+            position: isFreeForm ? 'absolute' : 'relative',
           })),
         },
       },

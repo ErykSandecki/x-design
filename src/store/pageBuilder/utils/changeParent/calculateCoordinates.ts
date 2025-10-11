@@ -6,6 +6,7 @@ import { LayoutType, TElement } from 'types';
 import { TPage, TPageBuilderState } from '../../types';
 
 // utils
+import { calculateCoordinatesLayoutFreeForm } from '../calculateCoordinatesLayoutFreeForm';
 import { findMainParent } from '../findMainParent';
 import { getOffsetXY } from '../getOffsetXY';
 
@@ -25,20 +26,6 @@ export const calculateCoordinatesWhenBaseParent = (
   };
 };
 
-export const calculateCoordinatesWhenParentFreeForm = (
-  currentPage: TPage,
-  id: TElement['id'],
-  possibleParent: TElement['parentId'],
-): T2DCoordinates => {
-  const { z } = currentPage.areaCoordinates;
-  const { x, y } = getOffsetXY(id, possibleParent);
-
-  return {
-    x: Math.floor(Math.abs(x) / z),
-    y: Math.floor(Math.abs(y) / z),
-  };
-};
-
 export const calculateCoordinates = (
   currentParentId: TElement['parentId'],
   id: TElement['id'],
@@ -52,7 +39,7 @@ export const calculateCoordinates = (
     case possibleParent === '-1':
       return calculateCoordinatesWhenBaseParent(currentPage, currentParentId, id);
     case possibleParentData.layout.type === LayoutType.freeForm:
-      return calculateCoordinatesWhenParentFreeForm(currentPage, id, possibleParent);
+      return calculateCoordinatesLayoutFreeForm(currentPage, id, possibleParent);
     default:
       return BASE_2D;
   }
