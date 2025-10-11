@@ -1,8 +1,13 @@
 import { FC, memo, useRef } from 'react';
 
 // components
-import ElementChildren from './ElementChildren';
+import DropAnchors from './DropAnchors/DropAnchors';
+import EventsArea from './EventsArea/EventsArea';
+import Outline from './Outline/Outline';
 import { Box } from 'shared';
+
+// core
+import { useRefs } from 'pages/PageBuilderPage/core/RefsProvider';
 
 // hooks
 import { useElementEvents } from './hooks/useElementEvents';
@@ -21,6 +26,7 @@ import { MouseMode } from 'types/enums/mouseMode';
 import { TElementChildren } from './types';
 
 // utils
+import { getAbsolutePosition } from '../../utils/getAbsolutePosition';
 import { getCssStyles } from './utils/getCssStyles';
 import { getLayout } from './utils/getLayout';
 
@@ -37,6 +43,8 @@ export type TElementProps = {
 const Element: FC<TElementProps> = ({ classes, children, id, index, mouseMode, parentId, type }) => {
   const elementRef = useRef<HTMLDivElement>(null);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
+  const { itemsRefs, zoomContentRef } = useRefs();
+  const { x1, y1 } = getAbsolutePosition(id, itemsRefs, zoomContentRef);
 
   const {
     alignment,
@@ -107,28 +115,23 @@ const Element: FC<TElementProps> = ({ classes, children, id, index, mouseMode, p
         sx={{ overflow: 'hidden', position: 'relative' }}
         {...events}
       >
-        <ElementChildren
-          angle={angle}
-          coordinates={coordinates}
-          counterAngle={counterAngle}
-          displayEventsArea={displayEventsArea}
-          displayOutline={displayOutline}
-          elementRef={elementRef}
-          flip={flip}
-          height={height}
-          id={id}
-          index={index}
-          isHover={isHover}
-          isSelected={isSelected}
-          mouseMode={mouseMode}
-          parentId={parentId}
-          showDropAnchors={showDropAnchors}
-          width={width}
-          x={x}
-          y={y}
-        >
-          {children}
-        </ElementChildren>
+        {showDropAnchors && <DropAnchors id={id} index={index} mouseMode={mouseMode} parentId={parentId} />}
+        {children(angle, coordinates, height, isHover, isSelected, width)}
+        {displayOutline && <Outline angle={angle - counterAngle} height={height} x={x1} y={y1} width={width} />}
+        {displayEventsArea && (
+          <EventsArea
+            angle={angle}
+            absoluteCoordinates={{ x: x1, y: y1 }}
+            counterAngle={counterAngle}
+            elementRef={elementRef}
+            flip={flip}
+            height={height}
+            id={id}
+            mouseMode={mouseMode}
+            relativeCoordinates={{ x, y }}
+            width={width}
+          />
+        )}
       </Box>
     </Box>
   );
