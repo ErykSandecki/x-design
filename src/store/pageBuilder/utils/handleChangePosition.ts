@@ -7,6 +7,7 @@ import { BASE_2D } from 'shared';
 import { TPageBuilderState } from '../types';
 
 // utils
+import { calculateCoordinatesAbsoluteToParent } from './calculateCoordinatesAbsoluteToParent';
 import { extractObjectValues, mapFilteredValues } from 'utils';
 
 export const handleChangePosition = (state: TPageBuilderState): TPageBuilderState => {
@@ -18,7 +19,6 @@ export const handleChangePosition = (state: TPageBuilderState): TPageBuilderStat
   const reversePosition = currentPosition === 'relative' ? 'absolute' : 'relative';
   const elementsInAbsolutePosition = extractObjectValues(selectedElements, ['id', 'type']);
   const elementsInRelativePosition = elements[parentId].children.filter((children) => !ids.includes(children.id));
-  const targetCoordinates = BASE_2D;
 
   return {
     ...state,
@@ -31,7 +31,10 @@ export const handleChangePosition = (state: TPageBuilderState): TPageBuilderStat
           ...mapFilteredValues(currentPage.elements, ids, (element) => ({
             ...element,
             alignment: {},
-            coordinates: targetCoordinates,
+            coordinates:
+              reversePosition === 'absolute'
+                ? calculateCoordinatesAbsoluteToParent(currentPage, element.id, element.parentId)
+                : BASE_2D,
             position: reversePosition,
           })),
           [parentId]: {

@@ -5,7 +5,7 @@ import { TPage } from '../types';
 // utils
 import { getOffsetXY } from './getOffsetXY';
 
-export const calculateCoordinatesLayoutFreeForm = (
+export const calculateCoordinatesAbsoluteToParent = (
   currentPage: TPage,
   id: TElement['id'],
   parentId: TElement['parentId'],

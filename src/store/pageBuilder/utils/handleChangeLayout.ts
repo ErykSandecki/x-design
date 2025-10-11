@@ -6,7 +6,7 @@ import { LayoutType } from 'types';
 import { TChangeLayoutAction, TPageBuilderState } from '../types';
 
 // utils
-import { calculateCoordinatesLayoutFreeForm } from './calculateCoordinatesLayoutFreeForm';
+import { calculateCoordinatesAbsoluteToParent } from './calculateCoordinatesAbsoluteToParent';
 import { extractObjectValues, mapFilteredValues } from 'utils';
 
 export const handleChangeLayout = (
@@ -36,7 +36,7 @@ export const handleChangeLayout = (
             ...element,
             alignment: {},
             coordinates: isFreeForm
-              ? calculateCoordinatesLayoutFreeForm(currentPage, element.id, element.parentId)
+              ? calculateCoordinatesAbsoluteToParent(currentPage, element.id, element.parentId)
               : BASE_2D,
             position: isFreeForm ? 'absolute' : 'relative',
           })),

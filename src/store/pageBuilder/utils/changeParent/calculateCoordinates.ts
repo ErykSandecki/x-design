@@ -6,7 +6,7 @@ import { LayoutType, TElement } from 'types';
 import { TPage, TPageBuilderState } from '../../types';
 
 // utils
-import { calculateCoordinatesLayoutFreeForm } from '../calculateCoordinatesLayoutFreeForm';
+import { calculateCoordinatesAbsoluteToParent } from '../calculateCoordinatesAbsoluteToParent';
 import { findMainParent } from '../findMainParent';
 import { getOffsetXY } from '../getOffsetXY';
 
@@ -39,7 +39,7 @@ export const calculateCoordinates = (
     case possibleParent === '-1':
       return calculateCoordinatesWhenBaseParent(currentPage, currentParentId, id);
     case possibleParentData.layout.type === LayoutType.freeForm:
-      return calculateCoordinatesLayoutFreeForm(currentPage, id, possibleParent);
+      return calculateCoordinatesAbsoluteToParent(currentPage, id, possibleParent);
     default:
       return BASE_2D;
   }

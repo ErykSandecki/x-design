@@ -5,11 +5,11 @@ import { elementMock, pageBuilderStateMock } from 'test/mocks/reducer/pageBuilde
 import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
 
 // utils
-import { calculateCoordinatesLayoutFreeForm } from '../calculateCoordinatesLayoutFreeForm';
+import { calculateCoordinatesAbsoluteToParent } from '../calculateCoordinatesAbsoluteToParent';
 
 const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
-describe('calculateCoordinatesLayoutFreeForm', () => {
+describe('calculateCoordinatesAbsoluteToParent', () => {
   beforeEach(() => {
     // mock
     const el1 = document.createElement('div');
@@ -30,7 +30,7 @@ describe('calculateCoordinatesLayoutFreeForm', () => {
 
   it('should return coordinates', () => {
     // before
-    const result = calculateCoordinatesLayoutFreeForm(currentPage, elementMock.id, '-1');
+    const result = calculateCoordinatesAbsoluteToParent(currentPage, elementMock.id, '-1');
 
     // result
     expect(result).toStrictEqual({ x: 0, y: 0 });
