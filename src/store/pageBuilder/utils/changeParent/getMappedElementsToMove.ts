@@ -6,31 +6,9 @@ import { TElement } from 'types';
 import { TChangeParentActionPayload, TElements, TEvents, TPageBuilderState } from '../../types';
 
 // utils
-import { findMainParent } from '../findMainParent';
-import { getOffsetXY } from '../getOffsetXY';
+import { calculateCoordinates } from './calculateCoordinates';
+import { getTargetPosition } from './getTargetPosition';
 import { reducedData } from './reducedData';
-
-export const calculateCoordinates = (
-  currentParentId: TElement['parentId'],
-  id: TElement['id'],
-  possibleParent: TElement['parentId'],
-  state: TPageBuilderState,
-): T2DCoordinates => {
-  if (possibleParent === '-1') {
-    const currentPage = state.pages[state.currentPage];
-    const mainParentId = findMainParent(currentParentId, currentPage.elements);
-    const parentCords = currentPage.elements[mainParentId].coordinates;
-    const { z } = currentPage.areaCoordinates;
-    const { x, y } = getOffsetXY(id, mainParentId);
-
-    return {
-      x: Math.floor(parentCords.x - x / z),
-      y: Math.floor(parentCords.y - y / z),
-    };
-  }
-
-  return { x: 0, y: 0 };
-};
 
 export const getSizes = (
   element: Pick<TElement, 'height' | 'width'>,
@@ -65,7 +43,7 @@ export const getPartialData = (
   state: TPageBuilderState,
 ): Partial<TElement> => {
   const deepLevel = possibleParent !== '-1' ? parent.deepLevel + 1 : 0;
-  const targetPosition = possibleParent === '-1' ? 'absolute' : 'relative';
+  const targetPosition = getTargetPosition(parent, possibleParent);
   const sizes = getSizes({ height: element.height, width: element.width }, id, possibleParent);
 
   return {

@@ -2,6 +2,7 @@
 import {
   childrenMock,
   elementMock,
+  layoutMock,
   pageBuilderStateMock,
   selectedElementMock,
 } from 'test/mocks/reducer/pageBuilderMock';
@@ -11,6 +12,7 @@ import { REDUCER_KEY as PAGE_BUILDER } from '../../../actionsType';
 
 // utils
 import { getMappedElementsToMove } from '../getMappedElementsToMove';
+import { LayoutType } from 'types';
 
 describe('getMappedElementsToMove', () => {
   beforeEach(() => {
@@ -140,6 +142,59 @@ describe('getMappedElementsToMove', () => {
             [elementMock.id]: {
               ...elementMock,
               children: [],
+            },
+            ['test-2']: {
+              ...elementMock,
+              id: 'test-2',
+              parentId: '-1',
+            },
+          },
+        },
+      },
+    });
+
+    // result
+    expect(result).toStrictEqual({
+      ['test-2']: {
+        ...elementMock,
+        children: [],
+        deepLevel: elementMock.deepLevel + 1,
+        id: 'test-2',
+        parentId: elementMock.id,
+        position: 'absolute',
+      },
+    });
+  });
+
+  it(`should put element inside another element when parent grid`, () => {
+    // mock
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+    const payload = {
+      draggableElements: [{ ...childrenMock, id: 'test-2' }],
+      possibleIndexPosition: null,
+      possibleParent: elementMock.id,
+    };
+
+    // before
+    const result = getMappedElementsToMove(true, payload, {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [childrenMock, { ...childrenMock, id: 'test-2' }],
+            },
+            [elementMock.id]: {
+              ...elementMock,
+              children: [],
+              layout: {
+                ...layoutMock,
+                type: LayoutType.grid,
+              },
             },
             ['test-2']: {
               ...elementMock,

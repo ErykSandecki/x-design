@@ -210,7 +210,7 @@ describe('handleChangeParent', () => {
               deepLevel: elementMock.deepLevel + 1,
               id: 'test-2',
               parentId: elementMock.id,
-              position: 'relative',
+              position: 'absolute',
             },
           },
           selectedElements: [
@@ -218,7 +218,7 @@ describe('handleChangeParent', () => {
               ...selectedElementMock,
               id: 'test-2',
               parentId: 'test-1',
-              position: 'relative',
+              position: 'absolute',
             },
           ],
         },
