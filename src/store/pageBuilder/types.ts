@@ -46,6 +46,8 @@ import {
 
 export type TElements = TObject<TElement>;
 
+export type TPossibleElement = Pick<TElement, 'parentId'> & T2DCoordinates;
+
 export type TEvents = {
   canMoveElements: boolean;
   colorSampler: boolean;
@@ -56,6 +58,7 @@ export type TEvents = {
   isRotating: boolean;
   possibleAnchorElementId: TElement['id'];
   possibleAnchorPosition: DropAnchorsPosition;
+  possibleElement: TPossibleElement | undefined;
   possibleIndexPosition: number | null;
   possibleParent: TElement['id'] | null;
   pressedKey: KeyboardKeys;

@@ -89,6 +89,7 @@ const initialState: TPageBuilderState = {
     isRotating: false,
     possibleAnchorElementId: '-1',
     possibleAnchorPosition: null,
+    possibleElement: undefined,
     possibleIndexPosition: null,
     possibleParent: null,
     pressedKey: KeyboardKeys.none,
