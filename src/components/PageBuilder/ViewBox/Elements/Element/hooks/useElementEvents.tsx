@@ -67,7 +67,7 @@ export const useElementEvents = (
   const isDraggable = useSelector(isDraggableSelectorCreator(id));
   const isHover = useSelector(isHoverSelectorCreator(id));
   const isMultiple = useSelector(multipleSelectedElementsSelector);
-  const isFocused = isHover || isSelected;
+  const isFocused = (isHover || isSelected) && mouseMode === MouseMode.default;
   const isMultipleMoving = useSelector(eventSelectorCreator('isMultipleMoving'));
   const isMoving = isDraggable || (isMultipleMoving && isSelected);
   const displayEventsArea = !isDraggable && !isMultiple && isSelected;

@@ -31,27 +31,31 @@ const Elements: FC<TElementsProps> = ({ eventsDisabled, id, mouseMode, parentId 
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const children = useSelector(elementAttributeSelectorCreator('children', id));
 
-  return children.map(({ id, type }, index) => {
-    switch (type) {
-      case ElementType.frame:
-        return (
-          <Frame
-            className={cx(classNamesWithTheme.element.name, [
-              classNamesWithTheme.element.modificators.eventsDisabled,
-              eventsDisabled,
-            ])}
-            id={id}
-            index={index}
-            key={id}
-            mouseMode={mouseMode}
-            parentId={parentId}
-            type={type}
-          />
-        );
-      default:
-        return <></>;
-    }
-  });
+  return (
+    <>
+      {children.map(({ id, type }, index) => {
+        switch (type) {
+          case ElementType.frame:
+            return (
+              <Frame
+                className={cx(classNamesWithTheme.element.name, [
+                  classNamesWithTheme.element.modificators.eventsDisabled,
+                  eventsDisabled,
+                ])}
+                id={id}
+                index={index}
+                key={id}
+                mouseMode={mouseMode}
+                parentId={parentId}
+                type={type}
+              />
+            );
+          default:
+            return <></>;
+        }
+      })}
+    </>
+  );
 };
 
 export default memo(Elements);

@@ -79,28 +79,4 @@ describe('useMouseEnterEvent', () => {
       hoverOnElement: '1',
     });
   });
-
-  it(`should not trigger event`, () => {
-    // mock
-    storeToMock.getState = (): any =>
-      ({
-        ...stateMock,
-        [PAGE_BUILDER]: {
-          ...stateMock[PAGE_BUILDER],
-          events: {
-            ...eventsMock,
-            draggableElements: [],
-          },
-        },
-      }) as any;
-
-    // before
-    const { result } = renderHook(() => useMouseEnterEvent('1', false, MouseMode.comment));
-
-    // action
-    result.current({} as MouseEvent);
-
-    // result
-    expect(mockCallBack.mock.calls.length).toBe(0);
-  });
 });

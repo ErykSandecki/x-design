@@ -19,23 +19,21 @@ export const useMouseLeaveEvent = (mouseMode: MouseMode, parentId: TElement['par
   const dispatch = useDispatch();
 
   const handleMouseLeave = (): void => {
-    if (mouseMode === MouseMode.default) {
-      const draggableElements = eventSelectorCreator('draggableElements')(store.getState());
+    const draggableElements = eventSelectorCreator('draggableElements')(store.getState());
 
-      if (!isEmpty(draggableElements)) {
-        dispatch(
-          updateEventsStatus({
-            hoverOnElement: parentId,
-            possibleParent: parentId,
-          }),
-        );
-      } else {
-        dispatch(
-          updateEventsStatus({
-            hoverOnElement: parentId,
-          }),
-        );
-      }
+    if (!isEmpty(draggableElements) && mouseMode === MouseMode.default) {
+      dispatch(
+        updateEventsStatus({
+          hoverOnElement: parentId,
+          possibleParent: parentId,
+        }),
+      );
+    } else {
+      dispatch(
+        updateEventsStatus({
+          hoverOnElement: parentId,
+        }),
+      );
     }
   };
 

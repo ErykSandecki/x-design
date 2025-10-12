@@ -14,6 +14,7 @@ import { useRefs } from 'pages/PageBuilderPage/core/RefsProvider';
 
 // others
 import { className, classNames } from './classNames';
+import { MOUSE_MODE_DISABLED } from 'pages/PageBuilderPage/constants';
 
 // hooks
 import { useTheme } from 'hooks';
@@ -70,7 +71,7 @@ const ViewBox: FC<TViewBoxProps> = ({ coordinates, mouseMode, setCoordinates, se
     >
       <MultipleElementsArea />
       <Elements
-        eventsDisabled={elementArea !== null || mouseMode !== MouseMode.default}
+        eventsDisabled={elementArea !== null || MOUSE_MODE_DISABLED.includes(mouseMode)}
         id="-1"
         mouseMode={mouseMode}
         parentId="-1"
