@@ -1,9 +1,5 @@
 import { RefObject, useEffect } from 'react';
-import { throttle } from 'lodash';
 import { useDispatch } from 'react-redux';
-
-// others
-import { THROTTLE_WAIT } from '../constants';
 
 // store
 import { updateEventsStatus } from 'store/pageBuilder/actions';
@@ -30,14 +26,14 @@ export const useMouseMoveEvent = (
 ): TUseMouseMoveEvent => {
   const dispatch = useDispatch();
 
-  const handleMouseMove = throttle((event: MouseEvent): void => {
+  const handleMouseMove = (event: MouseEvent): void => {
     const distanceChanged = distanceHasChanged(cursorPositionBase.current, 5, event);
 
     if (mouseMode === MouseMode.default && distanceChanged) {
       updateElementPosition(cursorPosition, dispatch, event, parentId);
       dispatch(updateEventsStatus({ draggableElements: [{ id, type }] }));
     }
-  }, THROTTLE_WAIT);
+  };
 
   useEffect(() => {
     if (isPressing) {
