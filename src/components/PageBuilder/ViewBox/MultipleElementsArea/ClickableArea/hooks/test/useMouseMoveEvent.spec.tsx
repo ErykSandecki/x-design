@@ -22,14 +22,6 @@ const stateMock = {
   ...pageBuilderStateMock,
 };
 
-jest.mock('lodash', () => ({
-  ...jest.requireActual('lodash'),
-  throttle:
-    (callback: any) =>
-    (value: any): any =>
-      callback(value),
-}));
-
 jest.mock('react-redux', () => ({
   ...jest.requireActual('react-redux'),
   useDispatch: () => (): any => {},

@@ -1,9 +1,5 @@
 import { RefObject, useEffect } from 'react';
-import { throttle } from 'lodash';
 import { useDispatch } from 'react-redux';
-
-// others
-import { THROTTLE_WAIT } from '../../../constants';
 
 // utils
 import { setElementsCoordinatesHandler } from '../../../utils/setElementsCoordinatesHandler';
@@ -17,10 +13,10 @@ export const useMouseMoveEvent = (
 ): TUseMouseDownEvent => {
   const dispatch = useDispatch();
 
-  const handleMouseMove = throttle((event: MouseEvent) => {
+  const handleMouseMove = (event: MouseEvent): void => {
     setIsMoving(true);
     setElementsCoordinatesHandler(cursorPosition, dispatch, event);
-  }, THROTTLE_WAIT);
+  };
 
   useEffect(() => {
     if (isPressing) {
