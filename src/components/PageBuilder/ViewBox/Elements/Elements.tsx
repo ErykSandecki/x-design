@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 
 // components
 import Frame from './Frame/Frame';
+import PossibleElement from './PossibleElement/PossibleElement';
 
 // hooks
 import { useTheme } from 'hooks';
@@ -11,7 +12,7 @@ import { useTheme } from 'hooks';
 import { classNames } from './classNames';
 
 // store
-import { elementAttributeSelectorCreator } from 'store/pageBuilder/selectors';
+import { elementAttributeSelectorCreator, eventSelectorCreator } from 'store/pageBuilder/selectors';
 
 // styles
 import styles from './elements.scss';
@@ -30,6 +31,8 @@ export type TElementsProps = {
 const Elements: FC<TElementsProps> = ({ eventsDisabled, id, mouseMode, parentId }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const children = useSelector(elementAttributeSelectorCreator('children', id));
+  const possibleElement = useSelector(eventSelectorCreator('possibleElement'));
+  const showPossibleElement = possibleElement && possibleElement.parentId === id;
 
   return (
     <>
@@ -54,6 +57,7 @@ const Elements: FC<TElementsProps> = ({ eventsDisabled, id, mouseMode, parentId 
             return <></>;
         }
       })}
+      {showPossibleElement && <PossibleElement parentId={id} possibleElement={possibleElement} />}
     </>
   );
 };

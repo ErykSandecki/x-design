@@ -1,12 +1,16 @@
 import { MouseEvent, RefObject } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 // core
 import { useRefs } from 'pages/PageBuilderPage/core/RefsProvider';
 
+// store
+import { eventSelectorCreator } from 'store/pageBuilder/selectors';
+
 // types
 import { MouseMode } from '../../../../types/enums/mouseMode';
 import { TObject } from 'types';
-import { TRectArea, TRectAreaExtended } from '../../types';
+import { TRectAreaExtended } from '../../types';
 
 // utils
 import { calculateAbsolutePositions } from '../utils/calculateAbsolutePositions';
@@ -19,14 +23,15 @@ export const useMouseDownEvent = (
   coordinates: T3DCoordinates,
   mouseMode: MouseMode,
   rectCoordinates: RefObject<TObject<TRectCoordinates>>,
-  setElementArea: TFunc<[TRectArea]>,
   setSelectableArea: TFunc<[TRectAreaExtended]>,
 ): TUseMouseDownEvent => {
+  const dispatch = useDispatch();
+  const hoverOnElement = useSelector(eventSelectorCreator('hoverOnElement'));
   const { itemsRefs, zoomContentRef } = useRefs();
 
   const handleMouseDown = (event: MouseEvent): void => {
     calculateAbsolutePositions(event, mouseMode, rectCoordinates, itemsRefs, zoomContentRef);
-    handleInitElementArea(coordinates, event, mouseMode, setElementArea);
+    handleInitElementArea(coordinates, dispatch, event, hoverOnElement, mouseMode);
     handleInitSelectableArea(coordinates, event, mouseMode, setSelectableArea);
   };
 

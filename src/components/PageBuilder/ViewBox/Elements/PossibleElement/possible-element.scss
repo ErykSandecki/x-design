@@ -1,0 +1,17 @@
+@import '../../../styles/z-indexes';
+@import '../../../../../styles/mixins/text-ellipsis';
+
+.PossibleElement {
+  pointer-events: none;
+  z-index: $--xd-zindex-element-active;
+
+  &__label {
+    @include text-ellipsis;
+
+    font-size: 11px;
+    left: 0;
+    top: 0;
+    transform: translate(1.5px, -20px);
+    z-index: $--xd-zindex-element-active;
+  }
+}

@@ -8,14 +8,20 @@ import { RefsProvider } from 'pages/PageBuilderPage/core/RefsProvider';
 import { useMouseDownEvent } from '../useMouseDownEvent';
 
 // mocks
-import { elementMock } from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { BASE_3D } from 'shared/ZoomBox/constants';
 
+// store
+import { configureStore } from 'store';
+
 // types
 import { MouseButton, TObject } from 'types';
 import { MouseMode } from 'types/enums/mouseMode';
+
+// utils
+import { getProviderWrapper } from 'test';
 
 const mockCallBack = jest.fn();
 const rectCoordinates = {
@@ -28,36 +34,23 @@ const rectCoordinates = {
     },
   },
 } as RefObject<TObject<TRectCoordinates>>;
+const stateMock = {
+  ...pageBuilderStateMock,
+};
 
 jest.mock('../../utils/calculateAbsolutePositions', () => ({
   calculateAbsolutePositions: jest.fn(),
 }));
 
 describe('useMouseMoveEvent', () => {
-  it(`should trigger event for toolBeltA`, () => {
-    // before
-    const { result } = renderHook(
-      () => useMouseDownEvent(BASE_3D, MouseMode.toolBeltA, rectCoordinates, mockCallBack, mockCallBack),
-      {
-        wrapper: ({ children }) => <RefsProvider>{children}</RefsProvider>,
-      },
-    );
-
-    // action
-    result.current({ buttons: MouseButton.lmb } as MouseEvent);
-
-    // result
-    expect(mockCallBack.mock.calls.length).toBe(1);
-  });
-
   it(`should trigger event for default`, () => {
+    // mock
+    const store = configureStore(stateMock);
+
     // before
-    const { result } = renderHook(
-      () => useMouseDownEvent(BASE_3D, MouseMode.default, rectCoordinates, mockCallBack, mockCallBack),
-      {
-        wrapper: ({ children }) => <RefsProvider>{children}</RefsProvider>,
-      },
-    );
+    const { result } = renderHook(() => useMouseDownEvent(BASE_3D, MouseMode.default, rectCoordinates, mockCallBack), {
+      wrapper: (children) => <RefsProvider>{getProviderWrapper(store)(children)}</RefsProvider>,
+    });
 
     // action
     result.current({ buttons: MouseButton.lmb } as MouseEvent);

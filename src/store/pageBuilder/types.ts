@@ -46,7 +46,7 @@ import {
 
 export type TElements = TObject<TElement>;
 
-export type TPossibleElement = Pick<TElement, 'parentId'> & T2DCoordinates;
+export type TPossibleElement = Pick<TElement, 'parentId'> & TRectCoordinates;
 
 export type TEvents = {
   canMoveElements: boolean;

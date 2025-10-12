@@ -1,5 +1,5 @@
 // others
-import { BASE_3D, BASE_RECT } from 'shared/ZoomBox/constants';
+import { BASE_3D } from 'shared/ZoomBox/constants';
 
 // types
 import { MouseButton } from 'types';
@@ -7,6 +7,7 @@ import { MouseMode } from 'types/enums/mouseMode';
 
 // utils
 import { handleResizeElementArea } from '../handleResizeElementArea';
+import { possibleElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 const mockCallBack = jest.fn();
 
@@ -15,14 +16,15 @@ describe('handleResizeElementArea', () => {
     // before
     handleResizeElementArea(
       BASE_3D,
-      BASE_RECT,
+      mockCallBack,
       { buttons: MouseButton.lmb, clientX: 100, clientY: 100 } as MouseEvent,
       MouseMode.toolBeltA,
-      mockCallBack,
+      possibleElementMock,
     );
 
     // result
-    expect(mockCallBack.mock.calls[0][0]).toStrictEqual({
+    expect(mockCallBack.mock.calls[0][0].payload.possibleElement).toStrictEqual({
+      parentId: '-1',
       x1: 0,
       x2: 100,
       y1: 0,
@@ -34,10 +36,10 @@ describe('handleResizeElementArea', () => {
     // before
     handleResizeElementArea(
       BASE_3D,
-      null,
-      { buttons: MouseButton.lmb, clientX: 100, clientY: 100 } as MouseEvent,
-      MouseMode.toolBeltA,
       mockCallBack,
+      { buttons: MouseButton.lmb, clientX: 100, clientY: 100 } as MouseEvent,
+      MouseMode.default,
+      possibleElementMock,
     );
 
     // result

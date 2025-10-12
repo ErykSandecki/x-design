@@ -6,7 +6,7 @@ import { useHandleSelectElement } from './useHandleSelectElement';
 // types
 import { MouseMode } from 'types/enums/mouseMode';
 import { TObject } from 'types';
-import { TRectArea, TRectAreaExtended } from '../../types';
+import { TRectAreaExtended } from '../../types';
 import { TUseKeyDownEvent, useKeyDownEvent } from './useKeyDownEvent';
 import { TUseKeyUpEvent, useKeyUpEvent } from './useKeyUpEvent';
 import { TUseMouseDownEvent, useMouseDownEvent } from './useMouseDownEvent';
@@ -14,7 +14,6 @@ import { TUseMouseMoveEvent, useMouseMoveEvent } from './useMouseMoveEvent';
 import { TUseMouseUpEvent, useMouseUpEvent } from './useMouseUpEvent';
 
 export type TUseViewBoxEvents = {
-  elementArea: TRectArea;
   onKeyDown: TUseKeyDownEvent;
   onKeyUp: TUseKeyUpEvent;
   onMouseDown: TUseMouseDownEvent;
@@ -29,25 +28,16 @@ export const useViewBoxEvents = (
   setMouseMode: TFunc<[MouseMode]>,
 ): TUseViewBoxEvents => {
   const rectCoordinates = useRef<TObject<TRectCoordinates>>({});
-  const [elementArea, setElementArea] = useState<TRectArea>(null);
   const [selectableArea, setSelectableArea] = useState<TRectAreaExtended>(null);
 
   useHandleSelectElement(rectCoordinates, selectableArea);
 
   return {
-    elementArea,
     onKeyDown: useKeyDownEvent(),
     onKeyUp: useKeyUpEvent(),
-    onMouseDown: useMouseDownEvent(coordinates, mouseMode, rectCoordinates, setElementArea, setSelectableArea),
-    onMouseMove: useMouseMoveEvent(
-      coordinates,
-      elementArea,
-      mouseMode,
-      selectableArea,
-      setElementArea,
-      setSelectableArea,
-    ),
-    onMouseUp: useMouseUpEvent(elementArea, mouseMode, setElementArea, setMouseMode, setSelectableArea),
+    onMouseDown: useMouseDownEvent(coordinates, mouseMode, rectCoordinates, setSelectableArea),
+    onMouseMove: useMouseMoveEvent(coordinates, mouseMode, selectableArea, setSelectableArea),
+    onMouseUp: useMouseUpEvent(mouseMode, setMouseMode, setSelectableArea),
     selectableArea,
   };
 };

@@ -72,7 +72,7 @@ export const pageBackgroundSelectorCreator = (
 
 export const eventsSelector: Selector<TMainState, TEvents> = createSelector(pageBuilderStateSelector, getFp('events'));
 
-export const eventSelectorCreator = (key: keyof TEvents): Selector<TMainState, TEvents[typeof key]> =>
+export const eventSelectorCreator = <K extends keyof TEvents>(key: K): Selector<TMainState, TEvents[K]> =>
   createSelector(eventsSelector, getFp(key));
 
 export const isHoverSelectorCreator = (id: TElement['id']): Selector<TMainState, boolean> =>

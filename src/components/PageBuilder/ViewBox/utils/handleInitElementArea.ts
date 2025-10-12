@@ -1,22 +1,26 @@
+import { Dispatch } from 'redux';
 import { MouseEvent } from 'react';
+
+// store
+import { updateEventsStatus } from 'store/pageBuilder/actions';
 
 // types
 import { MouseButton } from 'types';
 import { MouseMode } from '../../../../types/enums/mouseMode';
-import { TRectArea } from '../../types';
 
 // utils
-import { mousePositionRelative } from 'shared';
+import { getElementAreaMouseCoordinates } from './getElementAreaMouseCoordinates';
 
 export const handleInitElementArea = (
   coordinates: T3DCoordinates,
+  dispatch: Dispatch,
   event: MouseEvent,
+  hoverOnElement: string,
   mouseMode: MouseMode,
-  setElementArea: TFunc<[TRectArea]>,
 ): void => {
   if (event.buttons === MouseButton.lmb && mouseMode === MouseMode.toolBeltA) {
-    const { x, y } = mousePositionRelative(coordinates, event);
+    const { x, y } = getElementAreaMouseCoordinates(coordinates, event, hoverOnElement);
 
-    setElementArea({ x1: x, x2: x, y1: y, y2: y });
+    dispatch(updateEventsStatus({ possibleElement: { parentId: hoverOnElement, x1: x, x2: x, y1: y, y2: y } }));
   }
 };

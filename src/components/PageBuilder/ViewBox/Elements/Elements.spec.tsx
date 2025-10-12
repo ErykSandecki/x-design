@@ -8,7 +8,13 @@ import Elements from './Elements';
 import { RefsProvider } from 'pages/PageBuilderPage/core/RefsProvider';
 
 // mocks
-import { childrenMock, elementMock, pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
+import {
+  childrenMock,
+  elementMock,
+  eventsMock,
+  pageBuilderStateMock,
+  possibleElementMock,
+} from 'test/mocks/reducer/pageBuilderMock';
 import { wholeStateMock } from 'test/mocks/reducer/wholeStateMock';
 import 'test/mocks/sagas/allSagas';
 
@@ -149,6 +155,49 @@ describe('Elements snapshots', () => {
                 ...elementMock,
                 type: ElementType.none,
               },
+            },
+          },
+        },
+      },
+    });
+
+    // before
+    const { asFragment } = render(
+      <Provider store={store}>
+        <RefsProvider itemsRefs={sharedRefs} overlayContainerRefHtml={overlayContainer}>
+          <Elements eventsDisabled={false} id="-1" mouseMode={MouseMode.default} parentId="-1" />
+        </RefsProvider>
+      </Provider>,
+    );
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('should render when possible Element', () => {
+    // mock
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+    const store = configureStore({
+      [PAGE_BUILDER]: {
+        ...pageBuilderStateMock[PAGE_BUILDER],
+        events: {
+          ...eventsMock,
+          possibleElement: {
+            ...possibleElementMock,
+            parentId: '-1',
+          },
+        },
+        pages: {
+          ...pageBuilderStateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...currentPage,
+            elements: {
+              ...currentPage.elements,
+              ['-1']: {
+                ...currentPage.elements['-1'],
+                children: [childrenMock],
+              },
+              [elementMock.id]: elementMock,
             },
           },
         },

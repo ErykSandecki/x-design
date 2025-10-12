@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 
 // types
 import { MouseMode } from '../../../../types/enums/mouseMode';
-import { TRectArea, TRectAreaExtended } from '../../types';
+import { TRectAreaExtended } from '../../types';
 
 // utils
 import { handleCreateElement } from '../utils/handleCreateElement';
@@ -10,16 +10,14 @@ import { handleCreateElement } from '../utils/handleCreateElement';
 export type TUseMouseUpEvent = TFunc<[MouseEvent]>;
 
 export const useMouseUpEvent = (
-  elementArea: TRectArea,
   mouseMode: MouseMode,
-  setElementArea: TFunc<[TRectArea]>,
   setMouseMode: TFunc<[MouseMode]>,
   setSelectableArea: TFunc<[TRectAreaExtended]>,
 ): TUseMouseUpEvent => {
   const dispatch = useDispatch();
 
   const handleMouseUp = (): void => {
-    handleCreateElement(dispatch, elementArea, mouseMode, setElementArea, setMouseMode);
+    handleCreateElement(dispatch, mouseMode, setMouseMode);
     setSelectableArea(null);
   };
 

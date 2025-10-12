@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 
 // components
 import Elements from './Elements/Elements';
-import ElementArea from './ElementArea/ElementArea';
 import MultipleElementsArea from './MultipleElementsArea/MultipleElementsArea';
 import OverlayContainer from './OverlayContainer/OverlayContainer';
 import SelectableArea from './SelectableArea/SelectableArea';
@@ -43,9 +42,10 @@ const ViewBox: FC<TViewBoxProps> = ({ coordinates, mouseMode, setCoordinates, se
   const background = useSelector(pageBackgroundSelectorCreator('-1'));
   const data = background.properties as TColor;
   const dispatch = useDispatch();
+  const possibleElement = useSelector(eventSelectorCreator('possibleElement'));
   const { zoomBoxRef, zoomContentRef } = useRefs();
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-  const { elementArea, selectableArea, ...events } = useViewBoxEvents(coordinates, mouseMode, setMouseMode);
+  const { selectableArea, ...events } = useViewBoxEvents(coordinates, mouseMode, setMouseMode);
 
   return (
     <ZoomBox
@@ -61,8 +61,8 @@ const ViewBox: FC<TViewBoxProps> = ({ coordinates, mouseMode, setCoordinates, se
       colorSampler={colorSampler as boolean}
       coordinates={coordinates}
       mouseMode={mouseMode}
-      onMouseMoveDepedencies={[elementArea, mouseMode]}
-      onMouseUpDepedencies={[elementArea, mouseMode]}
+      onMouseMoveDepedencies={[mouseMode]}
+      onMouseUpDepedencies={[mouseMode]}
       onUpdateCoordinates={(coordinates) => dispatch(setAreCoordinates(coordinates))}
       setCoordinates={setCoordinates}
       zoomBoxRef={zoomBoxRef}
@@ -71,12 +71,11 @@ const ViewBox: FC<TViewBoxProps> = ({ coordinates, mouseMode, setCoordinates, se
     >
       <MultipleElementsArea />
       <Elements
-        eventsDisabled={elementArea !== null || MOUSE_MODE_DISABLED.includes(mouseMode)}
+        eventsDisabled={!!possibleElement || MOUSE_MODE_DISABLED.includes(mouseMode)}
         id="-1"
         mouseMode={mouseMode}
         parentId="-1"
       />
-      <ElementArea elementArea={elementArea} />
       <SelectableArea selectableArea={selectableArea} />
       <OverlayContainer />
     </ZoomBox>

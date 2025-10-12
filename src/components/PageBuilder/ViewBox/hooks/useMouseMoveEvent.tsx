@@ -1,6 +1,11 @@
+import { useDispatch, useSelector } from 'react-redux';
+
+// store
+import { eventSelectorCreator } from 'store/pageBuilder/selectors';
+
 // types
 import { MouseMode } from '../../../../types/enums/mouseMode';
-import { TRectArea, TRectAreaExtended } from '../../types';
+import { TRectAreaExtended } from '../../types';
 
 // utils
 import { handleResizeElementArea } from '../utils/handleResizeElementArea';
@@ -10,14 +15,15 @@ export type TUseMouseMoveEvent = TFunc<[MouseEvent]>;
 
 export const useMouseMoveEvent = (
   coordinates: T3DCoordinates,
-  elementArea: TRectArea,
   mouseMode: MouseMode,
   selectableArea: TRectAreaExtended,
-  setElementArea: TFunc<[TRectArea]>,
   setSelectableArea: TFunc<[TRectAreaExtended]>,
 ): TUseMouseMoveEvent => {
+  const dispatch = useDispatch();
+  const possibleElement = useSelector(eventSelectorCreator('possibleElement'));
+
   const handleMouseMove = (event: MouseEvent): void => {
-    handleResizeElementArea(coordinates, elementArea, event, mouseMode, setElementArea);
+    handleResizeElementArea(coordinates, dispatch, event, mouseMode, possibleElement);
     handleResizeSelectableArea(coordinates, event, mouseMode, selectableArea, setSelectableArea);
   };
 

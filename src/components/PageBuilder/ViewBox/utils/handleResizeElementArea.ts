@@ -1,21 +1,26 @@
+import { Dispatch } from 'redux';
+
+// store
+import { updateEventsStatus } from 'store/pageBuilder/actions';
+
 // types
 import { MouseButton } from 'types';
 import { MouseMode } from '../../../../types/enums/mouseMode';
-import { TRectArea } from '../../types';
+import { TEvents } from 'store/pageBuilder/types';
 
 // utils
-import { mousePositionRelative } from 'shared';
+import { getElementAreaMouseCoordinates } from './getElementAreaMouseCoordinates';
 
 export const handleResizeElementArea = (
   coordinates: T3DCoordinates,
-  elementArea: TRectArea,
+  dispatch: Dispatch,
   event: MouseEvent,
   mouseMode: MouseMode,
-  setElementArea: TFunc<[TRectArea]>,
+  possibleElement: TEvents['possibleElement'],
 ): void => {
-  if (elementArea && event.buttons === MouseButton.lmb && mouseMode === MouseMode.toolBeltA) {
-    const { x, y } = mousePositionRelative(coordinates, event);
+  if (possibleElement && event.buttons === MouseButton.lmb && mouseMode === MouseMode.toolBeltA) {
+    const { x, y } = getElementAreaMouseCoordinates(coordinates, event, possibleElement.parentId);
 
-    setElementArea({ ...elementArea, x2: x, y2: y });
+    dispatch(updateEventsStatus({ possibleElement: { ...possibleElement, x2: x, y2: y } }));
   }
 };

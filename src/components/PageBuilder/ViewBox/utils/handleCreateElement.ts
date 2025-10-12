@@ -2,6 +2,8 @@ import { Dispatch } from 'redux';
 
 // store
 import { addElement } from 'store/pageBuilder/actions';
+import { eventSelectorCreator } from 'store/pageBuilder/selectors';
+import { store } from 'store';
 
 // types
 import { ElementType, LayoutType } from 'types';
@@ -13,13 +15,13 @@ import { generateID } from 'utils';
 
 export const handleCreateElement = (
   dispatch: Dispatch,
-  elementArea: TRectCoordinates,
   mouseMode: MouseMode,
-  setElementArea: TFunc<[TRectCoordinates]>,
   setMouseMode: TFunc<[MouseMode]>,
 ): void => {
-  if (elementArea && mouseMode === MouseMode.toolBeltA) {
-    const { x1, x2, y1, y2 } = elementArea;
+  const possibleElement = eventSelectorCreator('possibleElement')(store.getState());
+
+  if (possibleElement && mouseMode === MouseMode.toolBeltA) {
+    const { x1, x2, y1, y2 } = possibleElement;
     const layout = { type: LayoutType.freeForm };
     const x = x1 < x2 ? x1 : x2;
     const y = y1 < y2 ? y1 : y2;
@@ -41,7 +43,7 @@ export const handleCreateElement = (
       },
       id: generateID(),
       layout,
-      parentId: '-1',
+      parentId: possibleElement.parentId,
       position: 'absolute',
       type: ElementType.frame,
       width: {
@@ -50,7 +52,6 @@ export const handleCreateElement = (
     };
 
     dispatch(addElement(element));
-    setElementArea(null);
     setMouseMode(MouseMode.default);
   }
 };

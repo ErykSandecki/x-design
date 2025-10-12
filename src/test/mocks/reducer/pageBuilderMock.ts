@@ -1,5 +1,5 @@
 // others
-import { BASE_3D } from 'shared';
+import { BASE_3D, BASE_RECT } from 'shared';
 import { BASE_PAGE, BASE_PAGE_ELEMENTS } from 'store/pageBuilder/constants';
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 
@@ -17,7 +17,13 @@ import {
   TLayout,
 } from 'types';
 import { AnchorResize, AnchorRotate } from 'store/pageBuilder/enums';
-import { TEvents, TPageBuilderState, TReducerHistory, TSelectedElement } from 'store/pageBuilder/types';
+import {
+  TEvents,
+  TPageBuilderState,
+  TPossibleElement,
+  TReducerHistory,
+  TSelectedElement,
+} from 'store/pageBuilder/types';
 
 export const pageBuilderStateMock: Record<typeof PAGE_BUILDER, TPageBuilderState> = {
   [PAGE_BUILDER]: {
@@ -99,7 +105,7 @@ export const createFrameMock: TElement = {
   },
   children: [],
   coordinates: { x: 0, y: 0 },
-  deepLevel: 0,
+  deepLevel: 1,
   flip: flipMock,
   height: {
     value: 0,
@@ -130,6 +136,11 @@ export const eventsMock: TEvents = {
   pressedKey: KeyboardKeys.none,
   selectedAnchorResize: AnchorResize.none,
   selectedAnchorRotate: AnchorRotate.none,
+};
+
+export const possibleElementMock: TPossibleElement = {
+  ...BASE_RECT,
+  parentId: '-1',
 };
 
 export const reducerHistoryMock: Array<TReducerHistory> = [

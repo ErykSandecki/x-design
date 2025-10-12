@@ -17,13 +17,15 @@ describe('handleInitElementArea', () => {
     // before
     handleInitElementArea(
       BASE_3D,
-      { buttons: MouseButton.lmb, clientX: 100, clientY: 100 } as MouseEvent,
-      MouseMode.toolBeltA,
       mockCallBack,
+      { buttons: MouseButton.lmb, clientX: 100, clientY: 100 } as MouseEvent,
+      '-1',
+      MouseMode.toolBeltA,
     );
 
     // result
-    expect(mockCallBack.mock.calls[0][0]).toStrictEqual({
+    expect(mockCallBack.mock.calls[0][0].payload.possibleElement).toStrictEqual({
+      parentId: '-1',
       x1: 100,
       x2: 100,
       y1: 100,
@@ -35,9 +37,10 @@ describe('handleInitElementArea', () => {
     // before
     handleInitElementArea(
       BASE_3D,
-      { buttons: MouseButton.idle, clientX: 100, clientY: 100 } as MouseEvent,
-      MouseMode.toolBeltA,
       mockCallBack,
+      { buttons: MouseButton.idle, clientX: 100, clientY: 100 } as MouseEvent,
+      '-1',
+      MouseMode.toolBeltA,
     );
 
     // result

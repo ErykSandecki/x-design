@@ -1,8 +1,16 @@
 // mocks
-import { createFrameMock } from 'test/mocks/reducer/pageBuilderMock';
+import {
+  createFrameMock,
+  eventsMock,
+  pageBuilderStateMock,
+  possibleElementMock,
+} from 'test/mocks/reducer/pageBuilderMock';
 
 // others
-import { BASE_RECT } from 'shared/ZoomBox/constants';
+import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
+
+// store
+import { store as storeToMock } from 'store/store';
 
 // types
 import { MouseMode } from 'types/enums/mouseMode';
@@ -11,6 +19,15 @@ import { MouseMode } from 'types/enums/mouseMode';
 import { handleCreateElement } from '../handleCreateElement';
 
 const mockCallBack = jest.fn();
+const stateMock = {
+  [PAGE_BUILDER]: {
+    ...pageBuilderStateMock[PAGE_BUILDER],
+    events: {
+      ...eventsMock,
+      possibleElement: possibleElementMock,
+    },
+  },
+};
 
 jest.mock('utils', () => ({
   ...jest.requireActual('utils'),
@@ -19,40 +36,62 @@ jest.mock('utils', () => ({
 
 describe('handleCreateElement', () => {
   it(`should create element and reset data`, () => {
+    // mock
+    storeToMock.getState = (): any => stateMock;
+
     // before
-    handleCreateElement(mockCallBack, BASE_RECT, MouseMode.toolBeltA, mockCallBack, mockCallBack);
+    handleCreateElement(mockCallBack, MouseMode.toolBeltA, mockCallBack);
 
     // result
     expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
       ...createFrameMock,
+      deepLevel: 0,
     });
-    expect(mockCallBack.mock.calls[1][0]).toBe(null);
-    expect(mockCallBack.mock.calls[2][0]).toBe(MouseMode.default);
+    expect(mockCallBack.mock.calls[1][0]).toBe(MouseMode.default);
   });
 
   it(`should create element when y2 & x2 are bigger than rest cords`, () => {
+    // mock
+    storeToMock.getState = (): any => ({
+      ...stateMock,
+      [PAGE_BUILDER]: {
+        ...stateMock[PAGE_BUILDER],
+        events: {
+          ...stateMock[PAGE_BUILDER].events,
+          possibleElement: {
+            ...stateMock[PAGE_BUILDER].events.possibleElement,
+            x1: 0,
+            x2: 100,
+            y1: 0,
+            y2: 100,
+          },
+        },
+      },
+    });
+
     // before
-    handleCreateElement(
-      mockCallBack,
-      { ...BASE_RECT, x2: 100, y2: 100 },
-      MouseMode.toolBeltA,
-      mockCallBack,
-      mockCallBack,
-    );
+    handleCreateElement(mockCallBack, MouseMode.toolBeltA, mockCallBack);
 
     // result
     expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
       ...createFrameMock,
+      coordinates: {
+        x: 0,
+        y: 0,
+      },
+      deepLevel: 0,
       height: { value: 100 },
       width: { value: 100 },
     });
-    expect(mockCallBack.mock.calls[1][0]).toBe(null);
-    expect(mockCallBack.mock.calls[2][0]).toBe(MouseMode.default);
+    expect(mockCallBack.mock.calls[1][0]).toBe(MouseMode.default);
   });
 
   it(`should not create element`, () => {
+    // mock
+    storeToMock.getState = (): any => stateMock;
+
     // before
-    handleCreateElement(mockCallBack, null, MouseMode.toolBeltA, mockCallBack, mockCallBack);
+    handleCreateElement(mockCallBack, MouseMode.default, mockCallBack);
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(0);
