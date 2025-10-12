@@ -48,7 +48,7 @@ describe('PossibleElement snapshots', () => {
     const { asFragment } = render(
       <Provider store={store}>
         <RefsProvider overlayContainerRefHtml={overlayContainer}>
-          <PossibleElement parentId="-1" possibleElement={possibleElementMock} />
+          <PossibleElement parentId="-1" />
         </RefsProvider>
       </Provider>,
     );
@@ -86,7 +86,7 @@ describe('PossibleElement snapshots', () => {
     const { asFragment } = render(
       <Provider store={store}>
         <RefsProvider overlayContainerRefHtml={overlayContainer}>
-          <PossibleElement parentId="-1" possibleElement={possibleElementMock} />
+          <PossibleElement parentId="-1" />
         </RefsProvider>
       </Provider>,
     );

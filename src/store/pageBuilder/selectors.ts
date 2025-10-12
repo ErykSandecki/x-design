@@ -78,6 +78,9 @@ export const eventSelectorCreator = <K extends keyof TEvents>(key: K): Selector<
 export const isHoverSelectorCreator = (id: TElement['id']): Selector<TMainState, boolean> =>
   createSelector(eventsSelector, ({ hoverOnElement }) => hoverOnElement === id);
 
+export const hasPossibleElementSelectorCreator = (id: TElement['id']): Selector<TMainState, boolean> =>
+  createSelector(eventsSelector, ({ possibleElement }) => possibleElement?.parentId === id);
+
 export const isDraggableSelectorCreator = (id: TElement['id']): Selector<TMainState, boolean> =>
   createSelector(eventsSelector, ({ draggableElements }) =>
     draggableElements.some((draggableElement) => draggableElement.id === id),

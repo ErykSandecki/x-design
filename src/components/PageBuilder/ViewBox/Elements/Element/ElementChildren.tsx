@@ -1,4 +1,4 @@
-import { FC, memo, RefObject } from 'react';
+import { FC, RefObject } from 'react';
 
 // components
 import DropAnchors from './DropAnchors/DropAnchors';
@@ -85,4 +85,4 @@ const ElementChildren: FC<TElementChildrenProps> = ({
   );
 };
 
-export default memo(ElementChildren);
+export default ElementChildren;

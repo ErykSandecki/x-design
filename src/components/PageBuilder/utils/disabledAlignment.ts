@@ -8,9 +8,6 @@ import {
 } from 'store/pageBuilder/selectors';
 import { store } from 'store';
 
-// types
-import { LayoutType } from 'types';
-
 // utils
 import { isBaseParent } from 'utils';
 
@@ -22,12 +19,10 @@ export const disabledAlignment = (): boolean => {
   if (selectedElements.length) {
     const firstElement = first(selectedElements);
     const element = elementDataSelectorCreator(firstElement.id)(state);
-    const parent = elementDataSelectorCreator(element.parentId)(state);
     const baseParent = isBaseParent(element.parentId);
-    const isFreeForm = parent.layout.type === LayoutType.freeForm;
     const isRelative = element.position === 'relative';
 
-    return baseParent || isRelative || isFreeForm || !areParentsTheSame;
+    return baseParent || isRelative || !areParentsTheSame;
   }
 
   return true;

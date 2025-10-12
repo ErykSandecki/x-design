@@ -14,14 +14,13 @@ import { className, classNames } from './classNames';
 import { translationNameSpace } from './constants';
 
 // store
-import { elementAttributeSelectorCreator } from 'store/pageBuilder/selectors';
+import { elementAttributeSelectorCreator, eventSelectorCreator } from 'store/pageBuilder/selectors';
 
 // styles
 import styles from './possible-element.scss';
 
 // types
 import { LayoutType, TElement } from 'types';
-import { TEvents } from 'store/pageBuilder/types';
 
 // utils
 import { getCoordinates } from './utils/getCoordinates';
@@ -29,10 +28,10 @@ import { isBaseParent } from 'utils';
 
 export type TPossibleElementProps = {
   parentId: TElement['id'];
-  possibleElement: TEvents['possibleElement'];
 };
 
-const PossibleElement: FC<TPossibleElementProps> = ({ parentId, possibleElement }) => {
+const PossibleElement: FC<TPossibleElementProps> = ({ parentId }) => {
+  const possibleElement = useSelector(eventSelectorCreator('possibleElement'));
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { t } = useTranslation();
   const { type } = useSelector(elementAttributeSelectorCreator('layout', parentId));

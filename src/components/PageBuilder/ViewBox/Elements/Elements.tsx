@@ -12,7 +12,7 @@ import { useTheme } from 'hooks';
 import { classNames } from './classNames';
 
 // store
-import { elementAttributeSelectorCreator, eventSelectorCreator } from 'store/pageBuilder/selectors';
+import { elementAttributeSelectorCreator, hasPossibleElementSelectorCreator } from 'store/pageBuilder/selectors';
 
 // styles
 import styles from './elements.scss';
@@ -31,8 +31,7 @@ export type TElementsProps = {
 const Elements: FC<TElementsProps> = ({ eventsDisabled, id, mouseMode, parentId }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const children = useSelector(elementAttributeSelectorCreator('children', id));
-  const possibleElement = useSelector(eventSelectorCreator('possibleElement'));
-  const showPossibleElement = possibleElement && possibleElement.parentId === id;
+  const hasPossibleElement = useSelector(hasPossibleElementSelectorCreator(id));
 
   return (
     <>
@@ -57,7 +56,7 @@ const Elements: FC<TElementsProps> = ({ eventsDisabled, id, mouseMode, parentId 
             return <></>;
         }
       })}
-      {showPossibleElement && <PossibleElement parentId={id} possibleElement={possibleElement} />}
+      {hasPossibleElement && <PossibleElement parentId={id} />}
     </>
   );
 };
