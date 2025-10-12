@@ -35,11 +35,14 @@ export const getPositions = (
 
   if (canMoveElements) {
     selectedElements.forEach(({ id, ...restData }) => {
-      const alignment = elements[id].alignment;
+      const alignment = isDynamic ? {} : elements[id].alignment;
       const { coordinates: prevCoordinates } = prevElements[id];
       const coordinates = getCoordinates(currentCoordinates, isDynamic, prevCoordinates);
 
-      positions.elements = { ...positions.elements, [id]: { ...prevElements[id], alignment, coordinates } };
+      positions.elements = {
+        ...positions.elements,
+        [id]: { ...prevElements[id], alignment, coordinates },
+      };
       positions.selectedElements.push({ ...restData, id });
     });
 
