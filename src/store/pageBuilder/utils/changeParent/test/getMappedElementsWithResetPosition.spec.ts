@@ -1,5 +1,5 @@
 // mocks
-import { childrenMock, elementMock, pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
+import { childrenMock, elementMock, eventsMock, pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { BASE_2D } from 'shared';
@@ -12,15 +12,16 @@ describe('getMappedElementsWithResetPosition', () => {
   it(`should get mapped elements with reset position`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-    const payload = {
-      draggableElements: [{ ...childrenMock, id: 'test-2' }],
-      possibleIndexPosition: null,
-      possibleParent: null,
-    };
 
     // before
-    const result = getMappedElementsWithResetPosition(payload, {
+    const result = getMappedElementsWithResetPosition({
       ...pageBuilderStateMock[PAGE_BUILDER],
+      events: {
+        ...eventsMock,
+        draggableElements: [{ ...childrenMock, id: 'test-2' }],
+        possibleIndexPosition: null,
+        possibleParent: null,
+      },
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
         ['0']: {
@@ -64,15 +65,16 @@ describe('getMappedElementsWithResetPosition', () => {
   it(`should get mapped elements without reset position`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-    const payload = {
-      draggableElements: [{ ...childrenMock, id: 'test-2' }],
-      possibleIndexPosition: null,
-      possibleParent: null,
-    };
 
     // before
-    const result = getMappedElementsWithResetPosition(payload, {
+    const result = getMappedElementsWithResetPosition({
       ...pageBuilderStateMock[PAGE_BUILDER],
+      events: {
+        ...eventsMock,
+        draggableElements: [{ ...childrenMock, id: 'test-2' }],
+        possibleIndexPosition: null,
+        possibleParent: null,
+      },
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
         ['0']: {

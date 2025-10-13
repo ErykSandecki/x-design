@@ -1,5 +1,5 @@
 // mocks
-import { childrenMock, elementMock, pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
+import { childrenMock, elementMock, eventsMock, pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from '../../../actionsType';
@@ -11,15 +11,16 @@ describe('getMappedParentsChildren', () => {
   it(`should get mapped parents when parent was not changed`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-    const payload = {
-      draggableElements: [childrenMock],
-      possibleIndexPosition: null,
-      possibleParent: '-1',
-    };
 
     // before
-    const result = getMappedParentsChildren(false, payload, {
+    const result = getMappedParentsChildren(false, {
       ...pageBuilderStateMock[PAGE_BUILDER],
+      events: {
+        ...eventsMock,
+        draggableElements: [childrenMock],
+        possibleIndexPosition: null,
+        possibleParent: '-1',
+      },
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
         ['0']: {
@@ -51,15 +52,16 @@ describe('getMappedParentsChildren', () => {
   it(`should get mapped parents when parent was changed`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-    const payload = {
-      draggableElements: [{ ...childrenMock, id: 'test-2' }],
-      possibleIndexPosition: null,
-      possibleParent: '-1',
-    };
 
     // before
-    const result = getMappedParentsChildren(true, payload, {
+    const result = getMappedParentsChildren(true, {
       ...pageBuilderStateMock[PAGE_BUILDER],
+      events: {
+        ...eventsMock,
+        draggableElements: [{ ...childrenMock, id: 'test-2' }],
+        possibleIndexPosition: null,
+        possibleParent: '-1',
+      },
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
         ['0']: {
@@ -101,15 +103,16 @@ describe('getMappedParentsChildren', () => {
   it(`should replace index position`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-    const payload = {
-      draggableElements: [{ ...childrenMock, id: 'test-3' }],
-      possibleIndexPosition: 0,
-      possibleParent: elementMock.id,
-    };
 
     // before
-    const result = getMappedParentsChildren(false, payload, {
+    const result = getMappedParentsChildren(false, {
       ...pageBuilderStateMock[PAGE_BUILDER],
+      events: {
+        ...eventsMock,
+        draggableElements: [{ ...childrenMock, id: 'test-3' }],
+        possibleIndexPosition: 0,
+        possibleParent: elementMock.id,
+      },
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
         ['0']: {
@@ -159,15 +162,16 @@ describe('getMappedParentsChildren', () => {
   it(`should replace index position and parent`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-    const payload = {
-      draggableElements: [{ ...childrenMock, id: 'test-3' }],
-      possibleIndexPosition: 0,
-      possibleParent: elementMock.id,
-    };
 
     // before
-    const result = getMappedParentsChildren(true, payload, {
+    const result = getMappedParentsChildren(true, {
       ...pageBuilderStateMock[PAGE_BUILDER],
+      events: {
+        ...eventsMock,
+        draggableElements: [{ ...childrenMock, id: 'test-3' }],
+        possibleIndexPosition: 0,
+        possibleParent: elementMock.id,
+      },
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
         ['0']: {

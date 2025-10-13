@@ -141,13 +141,7 @@ export type TChangeLayoutAction = {
   type: typeof CHANGE_LAYOUT;
 };
 
-export type TChangeParentActionPayload = Pick<
-  TEvents,
-  'draggableElements' | 'possibleIndexPosition' | 'possibleParent'
->;
-
 export type TChangeParentAction = {
-  payload: TChangeParentActionPayload;
   type: typeof CHANGE_PARENT;
 };
 

@@ -1,11 +1,13 @@
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 
+// store
+import { changeParent } from 'store/pageBuilder/actions';
+
 // types
 import { TElement } from 'types';
 
 // utils
-import { finishSetElementsCoordinates } from '../../../utils/finishSetElementsCoordinates';
 import { handleTrySingleElement } from '../utils/handleTrySingleElement';
 
 export type TUseMouseUpEvent = void;
@@ -21,7 +23,7 @@ export const useMouseUpEvent = (
 
   const handleMouseUp = (): void => {
     setIsPressing(false);
-    finishSetElementsCoordinates(dispatch);
+    dispatch(changeParent());
     setIsMoving(false);
     setPossibleElementToSelect('-1');
     handleTrySingleElement(dispatch, isMoving, possibleElementToSelect);

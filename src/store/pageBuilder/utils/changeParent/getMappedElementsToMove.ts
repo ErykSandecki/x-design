@@ -3,7 +3,7 @@ import { BASE_2D } from 'shared';
 
 // types
 import { TElement } from 'types';
-import { TChangeParentActionPayload, TElements, TEvents, TPageBuilderState } from '../../types';
+import { TElements, TEvents, TPageBuilderState } from '../../types';
 
 // utils
 import { calculateCoordinates } from './calculateCoordinates';
@@ -58,14 +58,10 @@ export const getPartialData = (
   };
 };
 
-export const getMappedElementsToMove = (
-  parentHasChanged: boolean,
-  payload: TChangeParentActionPayload,
-  state: TPageBuilderState,
-): TElements => {
+export const getMappedElementsToMove = (parentHasChanged: boolean, state: TPageBuilderState): TElements => {
   const currentPage = state.pages[state.currentPage];
   const { elements } = currentPage;
-  const { draggableElements, possibleParent } = payload;
+  const { draggableElements, possibleParent } = state.events;
 
   return reducedData(
     draggableElements.map(({ id }) => {

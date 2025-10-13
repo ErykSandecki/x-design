@@ -40,7 +40,6 @@ import {
   TChangeBackgroundActionPayload,
   TChangeLayoutAction,
   TChangeParentAction,
-  TChangeParentActionPayload,
   TChangePositionAction,
   TClearPrevStateAction,
   TFitLayoutAction,
@@ -99,12 +98,7 @@ export const changeLayout = (layoutType: TChangeLayoutAction['payload']): TChang
   type: CHANGE_LAYOUT,
 });
 
-export const changeParent = (
-  draggableElements: TChangeParentActionPayload['draggableElements'],
-  possibleIndexPosition: TChangeParentActionPayload['possibleIndexPosition'],
-  possibleParent: TChangeParentActionPayload['possibleParent'],
-): TChangeParentAction => ({
-  payload: { draggableElements, possibleIndexPosition, possibleParent },
+export const changeParent = (): TChangeParentAction => ({
   type: CHANGE_PARENT,
 });
 

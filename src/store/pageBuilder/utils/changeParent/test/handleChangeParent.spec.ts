@@ -2,6 +2,7 @@
 import {
   childrenMock,
   elementMock,
+  eventsMock,
   pageBuilderStateMock,
   selectedElementMock,
 } from 'test/mocks/reducer/pageBuilderMock';
@@ -32,15 +33,16 @@ describe('handleChangeParent', () => {
   it(`should not change parent when possible parent is null`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-    const payload = {
-      draggableElements: [childrenMock],
-      possibleIndexPosition: null,
-      possibleParent: null,
-    };
 
     // before
-    const result = handleChangeParent(payload, {
+    const result = handleChangeParent({
       ...pageBuilderStateMock[PAGE_BUILDER],
+      events: {
+        ...eventsMock,
+        draggableElements: [childrenMock],
+        possibleIndexPosition: null,
+        possibleParent: null,
+      },
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
         ['0']: {
@@ -86,15 +88,16 @@ describe('handleChangeParent', () => {
   it(`should change parent`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-    const payload = {
-      draggableElements: [{ ...childrenMock, id: 'test-2' }],
-      possibleIndexPosition: null,
-      possibleParent: '-1',
-    };
 
     // before
-    const result = handleChangeParent(payload, {
+    const result = handleChangeParent({
       ...pageBuilderStateMock[PAGE_BUILDER],
+      events: {
+        ...eventsMock,
+        draggableElements: [{ ...childrenMock, id: 'test-2' }],
+        possibleIndexPosition: null,
+        possibleParent: '-1',
+      },
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
         ['0']: {
@@ -153,15 +156,16 @@ describe('handleChangeParent', () => {
   it(`should change parent when element is put inside another element`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-    const payload = {
-      draggableElements: [{ ...childrenMock, id: 'test-2' }],
-      possibleIndexPosition: null,
-      possibleParent: 'test-1',
-    };
 
     // before
-    const result = handleChangeParent(payload, {
+    const result = handleChangeParent({
       ...pageBuilderStateMock[PAGE_BUILDER],
+      events: {
+        ...eventsMock,
+        draggableElements: [{ ...childrenMock, id: 'test-2' }],
+        possibleIndexPosition: null,
+        possibleParent: 'test-1',
+      },
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
         ['0']: {

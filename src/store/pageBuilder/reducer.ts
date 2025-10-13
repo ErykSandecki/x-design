@@ -42,7 +42,6 @@ import {
   TUpdateEventsStatusAction,
   TResizeElementAction,
   TRotateElementsAction,
-  TChangeParentAction,
   TChangeBackgroundAction,
   TReducerHistorySaveAction,
   TChangeAlignmentAction,
@@ -128,10 +127,7 @@ const changeLayout = (
   { payload }: TAction<TChangeLayoutAction['payload']>,
 ): TPageBuilderState => handleChangeLayout(payload, state);
 
-const changeParent = (
-  state: TPageBuilderState,
-  { payload }: TAction<TChangeParentAction['payload']>,
-): TPageBuilderState => handleChangeParent(payload, state);
+const changeParent = (state: TPageBuilderState): TPageBuilderState => handleChangeParent(state);
 
 const changePosition = (state: TPageBuilderState): TPageBuilderState => handleChangePosition(state);
 
@@ -291,7 +287,7 @@ const pageBuilder = (state: TPageBuilderState = initialState, action: TAction): 
     case CHANGE_LAYOUT:
       return changeLayout(state, action);
     case CHANGE_PARENT:
-      return changeParent(state, action);
+      return changeParent(state);
     case CHANGE_POSITION:
       return changePosition(state);
     case CLEAR_PREV_STATE:

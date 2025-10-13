@@ -1,7 +1,7 @@
 import { cloneDeep, first } from 'lodash';
 
 // types
-import { TChangeParentActionPayload, TEvents, TPage, TPageBuilderState } from '../../types';
+import { TEvents, TPage, TPageBuilderState } from '../../types';
 
 // utils
 import { detectIdAnomalies } from './detectIdAnomalies';
@@ -14,16 +14,15 @@ export const handleWithPossibleParent = (
   currentPage: TPage,
   events: TPageBuilderState['events'],
   id: string,
-  payload: TChangeParentActionPayload,
   possibleParent: string,
   state: TPageBuilderState,
   stateCopy: TPageBuilderState,
 ): TPageBuilderState => {
   const prevParentId = currentPage.elements[id].parentId;
   const parentHasChanged = prevParentId !== possibleParent;
-  const children = getMappedElementsToMove(parentHasChanged, payload, stateCopy);
+  const children = getMappedElementsToMove(parentHasChanged, stateCopy);
   const nestedChildren = getMappedNestedChildren(currentPage, children);
-  const parents = getMappedParentsChildren(parentHasChanged, payload, state);
+  const parents = getMappedParentsChildren(parentHasChanged, state);
 
   return {
     ...state,
@@ -51,10 +50,9 @@ export const handleWithPossibleParent = (
 export const handleWithResetPosition = (
   currentPage: TPage,
   events: TPageBuilderState['events'],
-  payload: TChangeParentActionPayload,
   state: TPageBuilderState,
 ): TPageBuilderState => {
-  const children = getMappedElementsWithResetPosition(payload, state);
+  const children = getMappedElementsWithResetPosition(state);
 
   return {
     ...state,
@@ -72,11 +70,8 @@ export const handleWithResetPosition = (
   };
 };
 
-export const handleChangeParent = (
-  payload: TChangeParentActionPayload,
-  state: TPageBuilderState,
-): TPageBuilderState => {
-  const { draggableElements, possibleParent } = payload;
+export const handleChangeParent = (state: TPageBuilderState): TPageBuilderState => {
+  const { draggableElements, possibleParent } = state.events;
   const currentPage = state.pages[state.currentPage];
   const stateCopy = cloneDeep(state);
   const draggableElement = first(draggableElements);
@@ -85,6 +80,7 @@ export const handleChangeParent = (
   const events: TEvents = {
     ...state.events,
     draggableElements: [],
+    isMultipleMoving: false,
     possibleAnchorElementId: null,
     possibleAnchorPosition: null,
     possibleIndexPosition: null,
@@ -92,16 +88,8 @@ export const handleChangeParent = (
   };
 
   if (!hasAnomalies && possibleParent && !draggableElementsId.includes(possibleParent)) {
-    return handleWithPossibleParent(
-      currentPage,
-      events,
-      draggableElement.id,
-      payload,
-      possibleParent,
-      state,
-      stateCopy,
-    );
+    return handleWithPossibleParent(currentPage, events, draggableElement.id, possibleParent, state, stateCopy);
   }
 
-  return handleWithResetPosition(currentPage, events, payload, state);
+  return handleWithResetPosition(currentPage, events, state);
 };

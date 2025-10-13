@@ -10,6 +10,7 @@ import {
   layoutMock,
   childrenMock,
   flipMock,
+  eventsMock,
 } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
@@ -528,8 +529,14 @@ describe('PageBuilderReducer', () => {
     document.body.appendChild(el2);
 
     // before
-    const state = reducer(changeParent(draggableElements, possibleIndexPosition, possibleParent), {
+    const state = reducer(changeParent(), {
       ...pageBuilderStateMock[PAGE_BUILDER],
+      events: {
+        ...eventsMock,
+        draggableElements,
+        possibleIndexPosition,
+        possibleParent,
+      },
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
         ['0']: {

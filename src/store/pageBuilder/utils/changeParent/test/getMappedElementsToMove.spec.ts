@@ -2,6 +2,7 @@
 import {
   childrenMock,
   elementMock,
+  eventsMock,
   layoutMock,
   pageBuilderStateMock,
   selectedElementMock,
@@ -34,15 +35,16 @@ describe('getMappedElementsToMove', () => {
   it(`should get mapped children when parent was not changed`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-    const payload = {
-      draggableElements: [childrenMock],
-      possibleIndexPosition: null,
-      possibleParent: '-1',
-    };
 
     // before
-    const result = getMappedElementsToMove(false, payload, {
+    const result = getMappedElementsToMove(false, {
       ...pageBuilderStateMock[PAGE_BUILDER],
+      events: {
+        ...eventsMock,
+        draggableElements: [childrenMock],
+        possibleIndexPosition: null,
+        possibleParent: '-1',
+      },
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
         ['0']: {
@@ -74,15 +76,16 @@ describe('getMappedElementsToMove', () => {
   it(`should get mapped children when parent was changed`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-    const payload = {
-      draggableElements: [{ ...childrenMock, id: 'test-2' }],
-      possibleIndexPosition: null,
-      possibleParent: '-1',
-    };
 
     // before
-    const result = getMappedElementsToMove(true, payload, {
+    const result = getMappedElementsToMove(true, {
       ...pageBuilderStateMock[PAGE_BUILDER],
+      events: {
+        ...eventsMock,
+        draggableElements: [{ ...childrenMock, id: 'test-2' }],
+        possibleIndexPosition: null,
+        possibleParent: '-1',
+      },
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
         ['0']: {
@@ -120,15 +123,16 @@ describe('getMappedElementsToMove', () => {
   it(`should put element inside another element`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-    const payload = {
-      draggableElements: [{ ...childrenMock, id: 'test-2' }],
-      possibleIndexPosition: null,
-      possibleParent: elementMock.id,
-    };
 
     // before
-    const result = getMappedElementsToMove(true, payload, {
+    const result = getMappedElementsToMove(true, {
       ...pageBuilderStateMock[PAGE_BUILDER],
+      events: {
+        ...eventsMock,
+        draggableElements: [{ ...childrenMock, id: 'test-2' }],
+        possibleIndexPosition: null,
+        possibleParent: elementMock.id,
+      },
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
         ['0']: {
@@ -169,15 +173,16 @@ describe('getMappedElementsToMove', () => {
   it(`should put element inside another element when parent grid`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-    const payload = {
-      draggableElements: [{ ...childrenMock, id: 'test-2' }],
-      possibleIndexPosition: null,
-      possibleParent: elementMock.id,
-    };
 
     // before
-    const result = getMappedElementsToMove(true, payload, {
+    const result = getMappedElementsToMove(true, {
       ...pageBuilderStateMock[PAGE_BUILDER],
+      events: {
+        ...eventsMock,
+        draggableElements: [{ ...childrenMock, id: 'test-2' }],
+        possibleIndexPosition: null,
+        possibleParent: elementMock.id,
+      },
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
         ['0']: {

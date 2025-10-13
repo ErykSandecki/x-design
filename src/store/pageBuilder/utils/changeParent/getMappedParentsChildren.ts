@@ -2,7 +2,7 @@ import { cloneDeep, first } from 'lodash';
 
 // types
 import { TChildren, TElement } from 'types';
-import { TChangeParentActionPayload, TElements, TEvents, TPageBuilderState } from 'store/pageBuilder/types';
+import { TElements, TEvents, TPageBuilderState } from 'store/pageBuilder/types';
 
 export const getTargetIndex = (
   nextParent: TElement,
@@ -41,13 +41,9 @@ export const replaceChildrenPosition = (
       : nextParent.children;
 };
 
-export const getMappedParentsChildren = (
-  parentHasChanged: boolean,
-  payload: TChangeParentActionPayload,
-  state: TPageBuilderState,
-): TElements => {
+export const getMappedParentsChildren = (parentHasChanged: boolean, state: TPageBuilderState): TElements => {
   const { elements } = state.pages[state.currentPage];
-  const { draggableElements, possibleIndexPosition, possibleParent } = payload;
+  const { draggableElements, possibleIndexPosition, possibleParent } = state.events;
   const draggableElement = first(draggableElements);
   const prevParent = cloneDeep(elements[elements[draggableElement.id].parentId]);
   const nextParent = cloneDeep(elements[possibleParent]);

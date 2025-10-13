@@ -1,8 +1,8 @@
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 
-// utils
-import { handleTriggerEvents } from '../utils/handleTriggerEvents';
+// store
+import { changeParent } from 'store/pageBuilder/actions';
 
 export type TUseMouseUpEvent = void;
 
@@ -11,7 +11,7 @@ export const useMouseUpEvent = (isPressing: boolean, setIsPressing: TFunc<[boole
 
   const handleMouseUp = (): void => {
     setIsPressing(false);
-    handleTriggerEvents(dispatch);
+    dispatch(changeParent());
   };
 
   useEffect(() => {
