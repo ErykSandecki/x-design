@@ -7,8 +7,8 @@ import { TElements, TEvents, TPageBuilderState } from '../../types';
 
 // utils
 import { calculateCoordinates } from './calculateCoordinates';
+import { extractObjectValues, mapFilteredValues } from 'utils';
 import { getTargetPosition } from './getTargetPosition';
-import { reducedData } from './reducedData';
 
 export const getSizes = (
   element: Pick<TElement, 'height' | 'width'>,
@@ -62,21 +62,20 @@ export const getMappedElementsToMove = (parentHasChanged: boolean, state: TPageB
   const currentPage = state.pages[state.currentPage];
   const { elements } = currentPage;
   const { draggableElements, possibleParent } = state.events;
+  const ids = extractObjectValues(draggableElements, ['id']);
 
-  return reducedData(
-    draggableElements.map(({ id }) => {
-      const data = getPartialData(elements[id], id, elements[possibleParent], parentHasChanged, possibleParent, state);
-      const shouldResetCoordinates = data.position === 'relative';
+  return mapFilteredValues(elements, ids, ({ id }) => {
+    const data = getPartialData(elements[id], id, elements[possibleParent], parentHasChanged, possibleParent, state);
+    const shouldResetCoordinates = data.position === 'relative';
 
-      return {
-        ...elements[id],
-        coordinates: shouldResetCoordinates ? BASE_2D : data.coordinates,
-        deepLevel: data.deepLevel,
-        height: data.height,
-        parentId: data.parentId,
-        position: data.position,
-        width: data.width,
-      };
-    }),
-  );
+    return {
+      ...elements[id],
+      coordinates: shouldResetCoordinates ? BASE_2D : data.coordinates,
+      deepLevel: data.deepLevel,
+      height: data.height,
+      parentId: data.parentId,
+      position: data.position,
+      width: data.width,
+    };
+  });
 };
