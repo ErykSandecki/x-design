@@ -18,7 +18,7 @@ export const handleFlipElements = (
         ...currentPage,
         elements: {
           ...currentPage.elements,
-          ...getFlippedElements([axis], currentPage.elements, currentPage.selectedElements),
+          ...getFlippedElements([axis], currentPage.elements, true, currentPage.selectedElements),
         },
       },
     },

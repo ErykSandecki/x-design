@@ -68,7 +68,19 @@ export const useTransformAreaEvents = (
     cursorRotate.onMouseLeave,
   );
 
-  useMouseMoveEvent(cursorBaseAngle, cursorOffsetAngle, cursorPosition, elementRef, flip, height, id, width, x, y);
+  useMouseMoveEvent(
+    angle,
+    cursorBaseAngle,
+    cursorOffsetAngle,
+    cursorPosition,
+    elementRef,
+    flip,
+    height,
+    id,
+    width,
+    x,
+    y,
+  );
   useMouseUpEvent();
 
   return {

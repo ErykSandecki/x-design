@@ -60,6 +60,7 @@ describe('useMouseMoveEvent', () => {
     renderHook(
       () =>
         useMouseMoveEvent(
+          0,
           cursorBaseAngle,
           cursorOffsetAngle,
           cursorPosition,
@@ -107,6 +108,7 @@ describe('useMouseMoveEvent', () => {
     renderHook(
       () =>
         useMouseMoveEvent(
+          0,
           cursorBaseAngle,
           cursorOffsetAngle,
           cursorPosition,
@@ -138,6 +140,7 @@ describe('useMouseMoveEvent', () => {
     renderHook(
       () =>
         useMouseMoveEvent(
+          0,
           cursorBaseAngle,
           cursorOffsetAngle,
           cursorPosition,

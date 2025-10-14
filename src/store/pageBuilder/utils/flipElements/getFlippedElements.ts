@@ -11,6 +11,7 @@ import { negateValue } from 'utils/math/negateValue';
 export const getFlippedElements = (
   axis: TStrictAxis,
   elements: TElements,
+  invertAngle: boolean,
   selectedElements: TSelectedElements,
 ): TElements => {
   if (axis.length) {
@@ -21,7 +22,7 @@ export const getFlippedElements = (
     return {
       ...mapFilteredValues(elements, ids, (element) => ({
         ...element,
-        angle: negateValue(element.angle),
+        angle: invertAngle ? negateValue(element.angle) : element.angle,
         children: handleReverseChildren(axis, element),
         flip: { ...element.flip, ...axis.reduce((obj, key) => ({ ...obj, [key]: !element.flip[key] }), {}) },
       })),

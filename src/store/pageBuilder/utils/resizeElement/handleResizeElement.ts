@@ -25,7 +25,7 @@ export const handleResizeElement = (
   const correctAnchor = getCorrectAnchor(anchor, baseCoordinates, mouseCoordinates);
   const flipAxisToChange = getFlipAxisToChange(baseFlip, correctAnchor, flip, anchor, position);
   const axis = keys(pickBy(flipAxisToChange, (axis) => axis !== undefined)) as TStrictAxis;
-  const flippedElements = getFlippedElements(axis, currentPage.elements, currentPage.selectedElements);
+  const flippedElements = getFlippedElements(axis, currentPage.elements, false, currentPage.selectedElements);
   const currentElement = flippedElements[id];
 
   const { height, coordinates, width } = getSizesCoordinates(

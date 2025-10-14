@@ -98,7 +98,9 @@ const initialState: TPageBuilderState = {
   isLoading: true,
   isPending: false,
   pages: {
-    [BASE_PAGE.id]: BASE_PAGE,
+    [BASE_PAGE.id]: {
+      ...BASE_PAGE,
+    },
   },
 };
 
