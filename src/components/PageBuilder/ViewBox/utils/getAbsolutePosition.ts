@@ -11,21 +11,20 @@ import { store } from 'store';
 import { TContext } from 'pages/PageBuilderPage/core/types';
 import { TElement } from 'types';
 
+// utils
+import { getOriginElementBounding } from 'utils';
+
 export const getAbsolutePosition = (
   id: TElement['id'],
   itemsRefs: TContext['itemsRefs'],
   zoomContentRef: RefObject<HTMLDivElement | null>,
 ): TRectCoordinates => {
   if (itemsRefs[id]) {
-    const height = parseInt(getComputedStyle(itemsRefs[id]).height);
-    const width = parseInt(getComputedStyle(itemsRefs[id]).width);
     const z = areaAxisSelectorCreator('z')(store.getState());
-
     const diagramRect = zoomContentRef.current?.getBoundingClientRect();
-    const blockRect = itemsRefs[id]?.getBoundingClientRect();
-
-    const x = (blockRect?.left - diagramRect?.left) / z;
-    const y = (blockRect?.top - diagramRect?.top) / z;
+    const { left, top, width, height } = getOriginElementBounding(itemsRefs[id], z);
+    const x = left - diagramRect?.left / z;
+    const y = top - diagramRect?.top / z;
 
     return {
       x1: x,

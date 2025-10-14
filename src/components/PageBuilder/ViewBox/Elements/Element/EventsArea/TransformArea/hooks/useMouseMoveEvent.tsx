@@ -15,7 +15,7 @@ import { handleRotateElement } from '../utils/handleRotateElement';
 export type TUseMouseMoveEvent = void;
 
 export const useMouseMoveEvent = (
-  angle: TElement['angle'],
+  cursorAngle: number,
   cursorBaseAngle: RefObject<number>,
   cursorOffsetAngle: RefObject<number>,
   cursorPosition: RefObject<T2DCoordinates>,
@@ -33,7 +33,7 @@ export const useMouseMoveEvent = (
 
   const handleMouseMoveAnchorResize = (event: MouseEvent): void => {
     event.stopPropagation();
-    handleResizeElement(angle, cursorPosition, dispatch, event, flip, height, id, width, x, y);
+    handleResizeElement(cursorAngle, cursorPosition, dispatch, event, flip, height, id, width, x, y);
   };
 
   const handleMouseMoveAnchorRotate = (event: MouseEvent): void => {

@@ -10,11 +10,10 @@ export const calculateCoordinatesAbsoluteToParent = (
   id: TElement['id'],
   parentId: TElement['parentId'],
 ): T2DCoordinates => {
-  const { z } = currentPage.areaCoordinates;
-  const { x, y } = getOffsetXY(id, parentId);
+  const { x, y } = getOffsetXY(id, parentId, currentPage.areaCoordinates.z);
 
   return {
-    x: Math.floor(Math.abs(x) / z),
-    y: Math.floor(Math.abs(y) / z),
+    x: Math.floor(Math.abs(x)),
+    y: Math.floor(Math.abs(y)),
   };
 };

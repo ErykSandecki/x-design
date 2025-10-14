@@ -20,11 +20,9 @@ export const caculateMovePosition = (
   const z = areaAxisSelectorCreator('z')(state);
   const { x, y } = cursorPosition.current;
   const { angle, parentId: _parentId } = elementDataSelectorCreator(parentId)(state);
-
   const counterAngle = counterAngleSelectorCreator(_parentId)(state);
   const totalAngle = angle - counterAngle;
   const targetAngle = -totalAngle * (Math.PI / 180);
-
   const deltaX = event.clientX / z - x / z;
   const deltaY = event.clientY / z - y / z;
 

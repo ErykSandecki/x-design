@@ -4,17 +4,11 @@ exports[`Element snapshots should render Element 1`] = `
 <DocumentFragment>
   <div
     class="css-1jnxvbp className Element Element--light"
+    data-status="false"
     data-test-box=""
     id="test-1"
-    style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; height: 100px; position: absolute; width: 100px;"
-  >
-    <div
-      class="css-1yvp3ly Element__wrapper Element__wrapper--light"
-      data-status="false"
-      data-test-box=""
-      style="background-color: rgb(255, 255, 255); height: 100%; transform: rotate(0deg); width: 100%;"
-    />
-  </div>
+    style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; background-color: rgb(255, 255, 255); height: 100px; position: absolute; width: 100px;"
+  />
 </DocumentFragment>
 `;
 
@@ -22,117 +16,111 @@ exports[`Element snapshots should render Element when is selected & is multiple 
 <DocumentFragment>
   <div
     class="css-1jnxvbp className Element Element--light Element--moving Element--moving--light"
+    data-status="true"
     data-test-box=""
     id="test-1"
-    style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; height: 100px; position: absolute; width: 100px;"
+    style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; background-color: rgb(255, 255, 255); height: 100px; position: absolute; width: 100px;"
   >
     <div
-      class="css-1yvp3ly Element__wrapper Element__wrapper--light Element__wrapper--moving Element__wrapper--moving--light"
-      data-status="true"
+      class="css-1jnxvbp Outline Outline--light"
       data-test-box=""
-      style="background-color: rgb(255, 255, 255); height: 100%; transform: rotate(0deg); width: 100%;"
+      style="height: 100px; left: 0px; top: 0px; transform: rotate(0deg); width: 100px;"
+    />
+    <div
+      class="css-1xpffs9"
+      data-test-box=""
+      style="height: 100px; left: 0px; top: 0px; transform: rotate(0deg); transform-origin: center center; width: 100px;"
     >
       <div
-        class="css-1jnxvbp Outline Outline--light"
+        class="css-1jnxvbp"
         data-test-box=""
-        style="height: 100px; left: 0px; top: 0px; transform: rotate(0deg); width: 100px;"
+        style="height: 100px; width: 100px;"
       />
+      <svg
+        class="Corners Corners--light"
+        style="height: 102px; left: -1px; top: -1px; width: 102px;"
+      >
+        <rect
+          height="6"
+          rx="1.5"
+          width="6"
+          x="-3"
+          y="-3"
+        />
+        <rect
+          height="6"
+          rx="1.5"
+          width="6"
+          x="-3"
+          y="97.5"
+        />
+        <rect
+          height="6"
+          rx="1.5"
+          width="6"
+          x="97.5"
+          y="-3"
+        />
+        <rect
+          height="6"
+          rx="1.5"
+          width="6"
+          x="97.5"
+          y="97.5"
+        />
+      </svg>
       <div
-        class="css-1xpffs9"
-        data-test-box=""
-        style="height: 100px; left: 0px; top: 0px; transform: rotate(0deg); transform-origin: center center; width: 100px;"
+        class="TransformArea TransformArea--light"
+        style="height: 100px; width: 100px;"
       >
         <div
-          class="css-1jnxvbp"
-          data-test-box=""
-          style="height: 100px; width: 100px;"
+          class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--east TransformArea__anchorResize--east--light"
+          data-test-anchor-resize="east"
         />
-        <svg
-          class="Corners Corners--light"
-          style="height: 102px; left: -1px; top: -1px; width: 102px;"
-        >
-          <rect
-            height="6"
-            rx="1.5"
-            width="6"
-            x="-3"
-            y="-3"
-          />
-          <rect
-            height="6"
-            rx="1.5"
-            width="6"
-            x="-3"
-            y="97.5"
-          />
-          <rect
-            height="6"
-            rx="1.5"
-            width="6"
-            x="97.5"
-            y="-3"
-          />
-          <rect
-            height="6"
-            rx="1.5"
-            width="6"
-            x="97.5"
-            y="97.5"
-          />
-        </svg>
         <div
-          class="TransformArea TransformArea--light"
-          style="height: 100px; width: 100px;"
-        >
-          <div
-            class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--east TransformArea__anchorResize--east--light"
-            data-test-anchor-resize="east"
-          />
-          <div
-            class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--north TransformArea__anchorResize--north--light"
-            data-test-anchor-resize="north"
-          />
-          <div
-            class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--northEast TransformArea__anchorResize--northEast--light"
-            data-test-anchor-resize="north-east"
-          />
-          <div
-            class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--northWest TransformArea__anchorResize--northWest--light"
-            data-test-anchor-resize="north-west"
-          />
-          <div
-            class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--south TransformArea__anchorResize--south--light"
-            data-test-anchor-resize="south"
-          />
-          <div
-            class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--southEast TransformArea__anchorResize--southEast--light"
-            data-test-anchor-resize="south-east"
-          />
-          <div
-            class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--southWest TransformArea__anchorResize--southWest--light"
-            data-test-anchor-resize="south-west"
-          />
-          <div
-            class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--west TransformArea__anchorResize--west--light"
-            data-test-anchor-resize="west"
-          />
-          <div
-            class="TransformArea__anchorRotate TransformArea__anchorRotate--light TransformArea__anchorRotate--northEast TransformArea__anchorRotate--northEast--light"
-            data-test-anchor-rotate="north-east"
-          />
-          <div
-            class="TransformArea__anchorRotate TransformArea__anchorRotate--light TransformArea__anchorRotate--northWest TransformArea__anchorRotate--northWest--light"
-            data-test-anchor-rotate="north-west"
-          />
-          <div
-            class="TransformArea__anchorRotate TransformArea__anchorRotate--light TransformArea__anchorRotate--southEast TransformArea__anchorRotate--southEast--light"
-            data-test-anchor-rotate="south-east"
-          />
-          <div
-            class="TransformArea__anchorRotate TransformArea__anchorRotate--light TransformArea__anchorRotate--southWest TransformArea__anchorRotate--southWest--light"
-            data-test-anchor-rotate="south-west"
-          />
-        </div>
+          class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--north TransformArea__anchorResize--north--light"
+          data-test-anchor-resize="north"
+        />
+        <div
+          class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--northEast TransformArea__anchorResize--northEast--light"
+          data-test-anchor-resize="north-east"
+        />
+        <div
+          class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--northWest TransformArea__anchorResize--northWest--light"
+          data-test-anchor-resize="north-west"
+        />
+        <div
+          class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--south TransformArea__anchorResize--south--light"
+          data-test-anchor-resize="south"
+        />
+        <div
+          class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--southEast TransformArea__anchorResize--southEast--light"
+          data-test-anchor-resize="south-east"
+        />
+        <div
+          class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--southWest TransformArea__anchorResize--southWest--light"
+          data-test-anchor-resize="south-west"
+        />
+        <div
+          class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--west TransformArea__anchorResize--west--light"
+          data-test-anchor-resize="west"
+        />
+        <div
+          class="TransformArea__anchorRotate TransformArea__anchorRotate--light TransformArea__anchorRotate--northEast TransformArea__anchorRotate--northEast--light"
+          data-test-anchor-rotate="north-east"
+        />
+        <div
+          class="TransformArea__anchorRotate TransformArea__anchorRotate--light TransformArea__anchorRotate--northWest TransformArea__anchorRotate--northWest--light"
+          data-test-anchor-rotate="north-west"
+        />
+        <div
+          class="TransformArea__anchorRotate TransformArea__anchorRotate--light TransformArea__anchorRotate--southEast TransformArea__anchorRotate--southEast--light"
+          data-test-anchor-rotate="south-east"
+        />
+        <div
+          class="TransformArea__anchorRotate TransformArea__anchorRotate--light TransformArea__anchorRotate--southWest TransformArea__anchorRotate--southWest--light"
+          data-test-anchor-rotate="south-west"
+        />
       </div>
     </div>
   </div>
@@ -143,117 +131,111 @@ exports[`Element snapshots should render Element when is selected 1`] = `
 <DocumentFragment>
   <div
     class="css-1jnxvbp className Element Element--light"
+    data-status="true"
     data-test-box=""
     id="test-1"
-    style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; height: 100px; position: absolute; width: 100px;"
+    style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; background-color: rgb(255, 255, 255); height: 100px; position: absolute; width: 100px;"
   >
     <div
-      class="css-1yvp3ly Element__wrapper Element__wrapper--light"
-      data-status="true"
+      class="css-1jnxvbp Outline Outline--light"
       data-test-box=""
-      style="background-color: rgb(255, 255, 255); height: 100%; transform: rotate(0deg); width: 100%;"
+      style="height: 100px; left: 0px; top: 0px; transform: rotate(0deg); width: 100px;"
+    />
+    <div
+      class="css-1xpffs9"
+      data-test-box=""
+      style="height: 100px; left: 0px; top: 0px; transform: rotate(0deg); transform-origin: center center; width: 100px;"
     >
       <div
-        class="css-1jnxvbp Outline Outline--light"
+        class="css-1jnxvbp"
         data-test-box=""
-        style="height: 100px; left: 0px; top: 0px; transform: rotate(0deg); width: 100px;"
+        style="height: 100px; width: 100px;"
       />
+      <svg
+        class="Corners Corners--light"
+        style="height: 102px; left: -1px; top: -1px; width: 102px;"
+      >
+        <rect
+          height="6"
+          rx="1.5"
+          width="6"
+          x="-3"
+          y="-3"
+        />
+        <rect
+          height="6"
+          rx="1.5"
+          width="6"
+          x="-3"
+          y="97.5"
+        />
+        <rect
+          height="6"
+          rx="1.5"
+          width="6"
+          x="97.5"
+          y="-3"
+        />
+        <rect
+          height="6"
+          rx="1.5"
+          width="6"
+          x="97.5"
+          y="97.5"
+        />
+      </svg>
       <div
-        class="css-1xpffs9"
-        data-test-box=""
-        style="height: 100px; left: 0px; top: 0px; transform: rotate(0deg); transform-origin: center center; width: 100px;"
+        class="TransformArea TransformArea--light"
+        style="height: 100px; width: 100px;"
       >
         <div
-          class="css-1jnxvbp"
-          data-test-box=""
-          style="height: 100px; width: 100px;"
+          class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--east TransformArea__anchorResize--east--light"
+          data-test-anchor-resize="east"
         />
-        <svg
-          class="Corners Corners--light"
-          style="height: 102px; left: -1px; top: -1px; width: 102px;"
-        >
-          <rect
-            height="6"
-            rx="1.5"
-            width="6"
-            x="-3"
-            y="-3"
-          />
-          <rect
-            height="6"
-            rx="1.5"
-            width="6"
-            x="-3"
-            y="97.5"
-          />
-          <rect
-            height="6"
-            rx="1.5"
-            width="6"
-            x="97.5"
-            y="-3"
-          />
-          <rect
-            height="6"
-            rx="1.5"
-            width="6"
-            x="97.5"
-            y="97.5"
-          />
-        </svg>
         <div
-          class="TransformArea TransformArea--light"
-          style="height: 100px; width: 100px;"
-        >
-          <div
-            class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--east TransformArea__anchorResize--east--light"
-            data-test-anchor-resize="east"
-          />
-          <div
-            class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--north TransformArea__anchorResize--north--light"
-            data-test-anchor-resize="north"
-          />
-          <div
-            class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--northEast TransformArea__anchorResize--northEast--light"
-            data-test-anchor-resize="north-east"
-          />
-          <div
-            class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--northWest TransformArea__anchorResize--northWest--light"
-            data-test-anchor-resize="north-west"
-          />
-          <div
-            class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--south TransformArea__anchorResize--south--light"
-            data-test-anchor-resize="south"
-          />
-          <div
-            class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--southEast TransformArea__anchorResize--southEast--light"
-            data-test-anchor-resize="south-east"
-          />
-          <div
-            class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--southWest TransformArea__anchorResize--southWest--light"
-            data-test-anchor-resize="south-west"
-          />
-          <div
-            class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--west TransformArea__anchorResize--west--light"
-            data-test-anchor-resize="west"
-          />
-          <div
-            class="TransformArea__anchorRotate TransformArea__anchorRotate--light TransformArea__anchorRotate--northEast TransformArea__anchorRotate--northEast--light"
-            data-test-anchor-rotate="north-east"
-          />
-          <div
-            class="TransformArea__anchorRotate TransformArea__anchorRotate--light TransformArea__anchorRotate--northWest TransformArea__anchorRotate--northWest--light"
-            data-test-anchor-rotate="north-west"
-          />
-          <div
-            class="TransformArea__anchorRotate TransformArea__anchorRotate--light TransformArea__anchorRotate--southEast TransformArea__anchorRotate--southEast--light"
-            data-test-anchor-rotate="south-east"
-          />
-          <div
-            class="TransformArea__anchorRotate TransformArea__anchorRotate--light TransformArea__anchorRotate--southWest TransformArea__anchorRotate--southWest--light"
-            data-test-anchor-rotate="south-west"
-          />
-        </div>
+          class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--north TransformArea__anchorResize--north--light"
+          data-test-anchor-resize="north"
+        />
+        <div
+          class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--northEast TransformArea__anchorResize--northEast--light"
+          data-test-anchor-resize="north-east"
+        />
+        <div
+          class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--northWest TransformArea__anchorResize--northWest--light"
+          data-test-anchor-resize="north-west"
+        />
+        <div
+          class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--south TransformArea__anchorResize--south--light"
+          data-test-anchor-resize="south"
+        />
+        <div
+          class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--southEast TransformArea__anchorResize--southEast--light"
+          data-test-anchor-resize="south-east"
+        />
+        <div
+          class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--southWest TransformArea__anchorResize--southWest--light"
+          data-test-anchor-resize="south-west"
+        />
+        <div
+          class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--west TransformArea__anchorResize--west--light"
+          data-test-anchor-resize="west"
+        />
+        <div
+          class="TransformArea__anchorRotate TransformArea__anchorRotate--light TransformArea__anchorRotate--northEast TransformArea__anchorRotate--northEast--light"
+          data-test-anchor-rotate="north-east"
+        />
+        <div
+          class="TransformArea__anchorRotate TransformArea__anchorRotate--light TransformArea__anchorRotate--northWest TransformArea__anchorRotate--northWest--light"
+          data-test-anchor-rotate="north-west"
+        />
+        <div
+          class="TransformArea__anchorRotate TransformArea__anchorRotate--light TransformArea__anchorRotate--southEast TransformArea__anchorRotate--southEast--light"
+          data-test-anchor-rotate="south-east"
+        />
+        <div
+          class="TransformArea__anchorRotate TransformArea__anchorRotate--light TransformArea__anchorRotate--southWest TransformArea__anchorRotate--southWest--light"
+          data-test-anchor-rotate="south-west"
+        />
       </div>
     </div>
   </div>
@@ -264,16 +246,10 @@ exports[`Element snapshots should render Element when width & height is auto 1`]
 <DocumentFragment>
   <div
     class="css-1jnxvbp className Element Element--light"
+    data-status="false"
     data-test-box=""
     id="test-1"
-    style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; height: auto; position: absolute; width: auto;"
-  >
-    <div
-      class="css-1yvp3ly Element__wrapper Element__wrapper--light"
-      data-status="false"
-      data-test-box=""
-      style="background-color: rgb(255, 255, 255); height: 100%; transform: rotate(0deg); width: 100%;"
-    />
-  </div>
+    style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; background-color: rgb(255, 255, 255); height: auto; position: absolute; width: auto;"
+  />
 </DocumentFragment>
 `;

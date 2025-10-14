@@ -13,7 +13,6 @@ import { BASE_2D } from 'shared';
 
 // store
 import {
-  counterAngleSelectorCreator,
   elementDataSelectorCreator,
   eventSelectorCreator,
   isDraggableSelectorCreator,
@@ -35,7 +34,6 @@ export type TUseElementEvents = TUseElementSizes & {
   angle: TElement['angle'];
   background: TElement['background'];
   coordinates: TElement['coordinates'];
-  counterAngle: number;
   displayEventsArea: boolean;
   displayOutline: boolean;
   flip: TElement['flip'];
@@ -60,7 +58,6 @@ export const useElementEvents = (
   type: TElement['type'],
 ): TUseElementEvents => {
   const elementData = useSelector(elementDataSelectorCreator(id));
-  const counterAngle = useSelector(counterAngleSelectorCreator(parentId));
   const cursorPosition = useRef(BASE_2D);
   const cursorPositionBase = useRef(BASE_2D);
   const isSelected = useSelector(isSelectedElementSelectorCreator(id));
@@ -90,7 +87,6 @@ export const useElementEvents = (
     angle,
     background,
     coordinates,
-    counterAngle,
     displayEventsArea,
     displayOutline,
     flip,

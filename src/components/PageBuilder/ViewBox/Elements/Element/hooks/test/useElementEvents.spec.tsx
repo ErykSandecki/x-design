@@ -97,7 +97,6 @@ describe('useElementEvents', () => {
         x: 0,
         y: 0,
       },
-      counterAngle: 0,
       cssHeight: '100px',
       cssWidth: '100px',
       displayEventsArea: true,

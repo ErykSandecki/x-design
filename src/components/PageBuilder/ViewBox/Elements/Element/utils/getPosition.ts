@@ -16,7 +16,7 @@ export const getHorizontalPosition = (
     case AlignmentHorizontal.center:
       return {
         left: '50%',
-        originX: '0',
+        originX: '25%',
         translateX: '-50%',
       };
     case AlignmentHorizontal.left:
@@ -58,7 +58,7 @@ export const getVerticalPosition = (
       };
     case AlignmentVertical.center:
       return {
-        originY: '0',
+        originY: '25%',
         top: '50%',
         translateY: '-50%',
       };
@@ -77,7 +77,7 @@ export const getVerticalPosition = (
   }
 };
 
-export const getCssStyles = (
+export const getPosition = (
   alignment: TElement['alignment'],
   angle: number,
   x: T2DCoordinates['x'],

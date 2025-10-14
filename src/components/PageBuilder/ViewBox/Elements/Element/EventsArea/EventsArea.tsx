@@ -1,5 +1,5 @@
 import { createPortal } from 'react-dom';
-import { FC, memo, RefObject } from 'react';
+import { FC, RefObject } from 'react';
 
 // components
 import Corners from '../../../Corners/Corners';
@@ -78,4 +78,4 @@ const EventsArea: FC<TOutlineProps> = ({
   );
 };
 
-export default memo(EventsArea);
+export default EventsArea;

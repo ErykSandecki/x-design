@@ -2,12 +2,12 @@
 import { AlignmentHorizontal, AlignmentVertical } from 'types';
 
 // utils
-import { getCssStyles } from '../getCssStyles';
+import { getPosition } from '../getPosition';
 
-describe('getCssStyles', () => {
+describe('getPosition', () => {
   it(`should return default position`, () => {
     // before
-    const result = getCssStyles({}, 0, 0, 0);
+    const result = getPosition({}, 0, 0, 0);
 
     // result
     expect(result).toStrictEqual({
@@ -20,7 +20,7 @@ describe('getCssStyles', () => {
 
   it(`should return horizontal left position`, () => {
     // before
-    const result = getCssStyles({ horizontal: AlignmentHorizontal.left }, 0, 0, 0);
+    const result = getPosition({ horizontal: AlignmentHorizontal.left }, 0, 0, 0);
 
     // result
     expect(result).toStrictEqual({
@@ -33,20 +33,20 @@ describe('getCssStyles', () => {
 
   it(`should return horizontal center position`, () => {
     // before
-    const result = getCssStyles({ horizontal: AlignmentHorizontal.center }, 0, 0, 0);
+    const result = getPosition({ horizontal: AlignmentHorizontal.center }, 0, 0, 0);
 
     // result
     expect(result).toStrictEqual({
       left: '50%',
       top: '0px',
       transform: 'rotate(0deg) translate(-50%, 0)',
-      transformOrigin: '0 center',
+      transformOrigin: '25% center',
     });
   });
 
   it(`should return horizontal right position`, () => {
     // before
-    const result = getCssStyles({ horizontal: AlignmentHorizontal.right }, 0, 0, 0);
+    const result = getPosition({ horizontal: AlignmentHorizontal.right }, 0, 0, 0);
 
     // result
     expect(result).toStrictEqual({
@@ -59,7 +59,7 @@ describe('getCssStyles', () => {
 
   it(`should return vertical top position`, () => {
     // before
-    const result = getCssStyles({ vertical: AlignmentVertical.top }, 0, 0, 0);
+    const result = getPosition({ vertical: AlignmentVertical.top }, 0, 0, 0);
 
     // result
     expect(result).toStrictEqual({
@@ -72,20 +72,20 @@ describe('getCssStyles', () => {
 
   it(`should return vertical center position`, () => {
     // before
-    const result = getCssStyles({ vertical: AlignmentVertical.center }, 0, 0, 0);
+    const result = getPosition({ vertical: AlignmentVertical.center }, 0, 0, 0);
 
     // result
     expect(result).toStrictEqual({
       left: '0px',
       top: '50%',
       transform: 'rotate(0deg) translate(0, -50%)',
-      transformOrigin: 'center 0',
+      transformOrigin: 'center 25%',
     });
   });
 
   it(`should return vertical bottom position`, () => {
     // before
-    const result = getCssStyles({ vertical: AlignmentVertical.bottom }, 0, 0, 0);
+    const result = getPosition({ vertical: AlignmentVertical.bottom }, 0, 0, 0);
 
     // result
     expect(result).toStrictEqual({

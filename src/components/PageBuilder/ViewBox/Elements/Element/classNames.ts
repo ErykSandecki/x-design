@@ -7,8 +7,4 @@ export const classes = {
   className,
 };
 
-export const classNames = composeClassNames(
-  className,
-  [className, 'moving'] as const,
-  ['wrapper', 'hover', 'moving'] as const,
-);
+export const classNames = composeClassNames(className, [className, 'moving', 'hover'] as const);

@@ -3,29 +3,24 @@
 
 .Element {
   $self: &;
-  @include enter-delay;
 
-  animation-delay: 100ms;
   flex-shrink: 0;
+  overflow: hidden;
+  transform-origin: center center;
   user-select: none;
   z-index: $--xd-zindex-element;
 
   &--moving {
+    opacity: 0.5;
     pointer-events: none;
     z-index: $--xd-zindex-element-moving !important;
   }
 
-  &:has([data-status='true']) {
-    z-index: $--xd-zindex-element-moving;
+  &--hover {
+    z-index: $--xd-zindex-element-active;
   }
 
-  &__wrapper {
-    &--hover {
-      z-index: $--xd-zindex-element-active;
-    }
-
-    &--moving {
-      opacity: 0.5;
-    }
+  &:has([data-status='true']) {
+    z-index: $--xd-zindex-element-moving;
   }
 }

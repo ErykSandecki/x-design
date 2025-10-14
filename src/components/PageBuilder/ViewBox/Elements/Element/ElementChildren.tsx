@@ -1,4 +1,5 @@
 import { FC, RefObject } from 'react';
+import { useSelector } from 'react-redux';
 
 // components
 import DropAnchors from './DropAnchors/DropAnchors';
@@ -7,6 +8,9 @@ import Outline from './Outline/Outline';
 
 // core
 import { useRefs } from 'pages/PageBuilderPage/core/RefsProvider';
+
+// store
+import { counterAngleSelectorCreator } from 'store/pageBuilder/selectors';
 
 // types
 import { MouseMode, TElement, TFlip } from 'types';
@@ -20,7 +24,6 @@ export type TElementChildrenProps = {
   angle: TElement['angle'];
   children: TElementChildren;
   coordinates: T2DCoordinates;
-  counterAngle: TElement['angle'];
   displayEventsArea: boolean;
   displayOutline: boolean;
   elementRef: RefObject<HTMLDivElement>;
@@ -42,7 +45,6 @@ const ElementChildren: FC<TElementChildrenProps> = ({
   angle,
   children,
   coordinates,
-  counterAngle,
   displayEventsArea,
   displayOutline,
   elementRef,
@@ -59,6 +61,7 @@ const ElementChildren: FC<TElementChildrenProps> = ({
   x,
   y,
 }) => {
+  const counterAngle = useSelector(counterAngleSelectorCreator(parentId));
   const { itemsRefs, zoomContentRef } = useRefs();
   const { x1, y1 } = getAbsolutePosition(id, itemsRefs, zoomContentRef);
 

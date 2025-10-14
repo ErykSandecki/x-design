@@ -18,7 +18,7 @@ export const calculateCoordinatesWhenBaseParent = (
   const mainParentId = findMainParent(currentParentId, currentPage.elements);
   const parentCords = currentPage.elements[mainParentId].coordinates;
   const { z } = currentPage.areaCoordinates;
-  const { x, y } = getOffsetXY(id, mainParentId);
+  const { x, y } = getOffsetXY(id, mainParentId, currentPage.areaCoordinates.z);
 
   return {
     x: Math.floor(parentCords.x - x / z),

@@ -1,5 +1,5 @@
 import { createPortal } from 'react-dom';
-import { FC, memo } from 'react';
+import { FC } from 'react';
 
 // components
 import { Box } from 'shared';
@@ -49,4 +49,4 @@ const Outline: FC<TOutlineProps> = ({ angle, height, width, x, y }) => {
   );
 };
 
-export default memo(Outline);
+export default Outline;

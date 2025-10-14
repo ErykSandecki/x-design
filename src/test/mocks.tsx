@@ -81,3 +81,19 @@ document.body.appendChild(createHtmlElement('div', { id: HTMLContainerId.tooltip
 jest.mock('react-device-detect', () => ({
   isMacOs: true,
 }));
+
+/**
+ * Mock DOM Matrix
+ */
+jest.mock('../utils/dom/getOriginElementBounding', () => ({
+  getOriginElementBounding: (element: HTMLElement) => ({
+    x: 0,
+    y: 0,
+    bottom: 0,
+    height: parseFloat(element.style.height),
+    left: 0,
+    right: 0,
+    top: 0,
+    width: parseFloat(element.style.width),
+  }),
+}));

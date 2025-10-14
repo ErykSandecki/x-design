@@ -21,8 +21,8 @@ import { MouseMode } from 'types/enums/mouseMode';
 import { TElementChildren } from './types';
 
 // utils
-import { getCssStyles } from './utils/getCssStyles';
 import { getLayout } from './utils/getLayout';
+import { getPosition } from './utils/getPosition';
 
 export type TElementProps = {
   classes: typeof classes;
@@ -43,7 +43,6 @@ const Element: FC<TElementProps> = ({ classes, children, id, index, mouseMode, p
     angle,
     background,
     coordinates,
-    counterAngle,
     cssHeight,
     cssWidth,
     displayEventsArea,
@@ -68,17 +67,21 @@ const Element: FC<TElementProps> = ({ classes, children, id, index, mouseMode, p
 
   return (
     <Box
+      attributes={{ [DATA_STATUS_ATTRIBUTE]: isSelected ? 'true' : 'false' }}
       classes={{
-        className: cx(classes.className, classNamesWithTheme[classNameElement].name, [
-          classNamesWithTheme[classNameElement].modificators.moving,
-          isMoving,
-        ]),
+        className: cx(
+          classes.className,
+          classNamesWithTheme[classNameElement].name,
+          [classNamesWithTheme[classNameElement].modificators.hover, isHover],
+          [classNamesWithTheme[classNameElement].modificators.moving, isMoving],
+        ),
       }}
       id={id}
       ref={elementRef}
       style={{
-        ...getCssStyles(alignment, counterAngle, x, y),
-        backgroundColor: 'unset',
+        ...getLayout(layout),
+        ...getPosition(alignment, angle, x, y),
+        backgroundColor: (background.properties as TColor).color,
         height: cssHeight,
         maxHeight,
         maxWidth,
@@ -87,49 +90,29 @@ const Element: FC<TElementProps> = ({ classes, children, id, index, mouseMode, p
         position,
         width: cssWidth,
       }}
+      {...events}
     >
-      <Box
-        attributes={{ [DATA_STATUS_ATTRIBUTE]: isSelected ? 'true' : 'false' }}
-        classes={{
-          className: cx(
-            classNamesWithTheme.wrapper.name,
-            [classNamesWithTheme.wrapper.modificators.hover, isHover],
-            [classNamesWithTheme.wrapper.modificators.moving, isMoving],
-          ),
-        }}
-        style={{
-          ...getLayout(layout),
-          backgroundColor: (background.properties as TColor).color,
-          height: '100%',
-          transform: `rotate(${angle - counterAngle}deg)`,
-          width: '100%',
-        }}
-        sx={{ overflow: 'hidden', position: 'relative' }}
-        {...events}
+      <ElementChildren
+        angle={angle}
+        coordinates={coordinates}
+        displayEventsArea={displayEventsArea}
+        displayOutline={displayOutline}
+        elementRef={elementRef}
+        flip={flip}
+        height={height}
+        id={id}
+        index={index}
+        isHover={isHover}
+        isSelected={isSelected}
+        mouseMode={mouseMode}
+        parentId={parentId}
+        showDropAnchors={showDropAnchors}
+        width={width}
+        x={x}
+        y={y}
       >
-        <ElementChildren
-          angle={angle}
-          coordinates={coordinates}
-          counterAngle={counterAngle}
-          displayEventsArea={displayEventsArea}
-          displayOutline={displayOutline}
-          elementRef={elementRef}
-          flip={flip}
-          height={height}
-          id={id}
-          index={index}
-          isHover={isHover}
-          isSelected={isSelected}
-          mouseMode={mouseMode}
-          parentId={parentId}
-          showDropAnchors={showDropAnchors}
-          width={width}
-          x={x}
-          y={y}
-        >
-          {children}
-        </ElementChildren>
-      </Box>
+        {children}
+      </ElementChildren>
     </Box>
   );
 };

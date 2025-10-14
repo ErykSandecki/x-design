@@ -1,9 +1,16 @@
 // types
 import { TElement } from 'types';
 
-export const getOffsetXY = (childrenId: TElement['id'], parentId: TElement['parentId']): T2DCoordinates => {
-  const { top: parentTop, left: parentLeft } = document.getElementById(parentId).getBoundingClientRect();
-  const { top: childrenTop, left: childrenLeft } = document.getElementById(childrenId).getBoundingClientRect();
+// utils
+import { getOriginElementBounding } from 'utils';
+
+export const getOffsetXY = (
+  childrenId: TElement['id'],
+  parentId: TElement['parentId'],
+  z: T3DCoordinates['z'],
+): T2DCoordinates => {
+  const { top: parentTop, left: parentLeft } = getOriginElementBounding(document.getElementById(parentId), z);
+  const { top: childrenTop, left: childrenLeft } = getOriginElementBounding(document.getElementById(childrenId), z);
 
   return {
     x: parentLeft - childrenLeft,

@@ -14,6 +14,12 @@ declare global {
   type T3DCoordinates = T2DCoordinates & {
     z: number;
   };
+  type THTMLElementBounding = {
+    height: number;
+    left: number;
+    top: number;
+    width: number;
+  };
   type TExtractInnerArray<T> = T extends TObject<infer U> ? U : never;
   type TRectCoordinates = {
     x1: number;

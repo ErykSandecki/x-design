@@ -21,7 +21,7 @@ const itemsRefs = {
   ['test-2']: element,
 };
 
-describe('calculateBoxSize', () => {
+describe('getCoordinatesData', () => {
   beforeAll(() => {
     // mock
     element.style.height = '100px';

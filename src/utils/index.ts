@@ -7,6 +7,7 @@ export * from './common/isPureNumber';
 
 // DOM
 export * from './dom/createHtmlElement';
+export * from './dom/getOriginElementBounding';
 export * from './dom/hasScroll';
 export * from './dom/sanitizeNumberInput';
 export * from './dom/scrollIntoView';

@@ -69,7 +69,7 @@ export const useTransformAreaEvents = (
   );
 
   useMouseMoveEvent(
-    angle,
+    cursorAngle,
     cursorBaseAngle,
     cursorOffsetAngle,
     cursorPosition,
