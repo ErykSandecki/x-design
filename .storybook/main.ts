@@ -1,8 +1,12 @@
 import type { StorybookConfig } from '@storybook/react-webpack5';
+
 import path from 'path';
-import { fileURLToPath } from 'url';
 import { createRequire } from 'module';
+import { fileURLToPath } from 'url';
+
 const require = createRequire(import.meta.url);
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // styles
 import sassImports from '../config/sassImports.js';
@@ -10,9 +14,6 @@ import sassList from '../config/sassList.js';
 import sassMaps from '../config/sassMaps.js';
 import sassMixins from '../config/sassMixins.js';
 import sassVariables from '../config/sassVariables.js';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
