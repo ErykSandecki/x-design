@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 
 // core
 import { TooltipProvider } from '../src/shared/UI/Tooltip/core/TooltipProvider';
+import { ContextProvider } from '../src/core/ContextProvider/ContextProvider';
 
 // store
 import { configureStore } from '../src/store/store';
@@ -36,11 +37,13 @@ export const composed = (Story: any) => {
     <Suspense fallback={<div>loading translations...</div>}>
       <BrowserRouter>
         <I18nextProvider i18n={i18n}>
-          <TooltipProvider>
-            <Provider store={configureStore()}>
-              <Story />
-            </Provider>
-          </TooltipProvider>
+          <Provider store={configureStore()}>
+            <ContextProvider>
+              <TooltipProvider>
+                <Story />
+              </TooltipProvider>
+            </ContextProvider>
+          </Provider>
         </I18nextProvider>
       </BrowserRouter>
     </Suspense>

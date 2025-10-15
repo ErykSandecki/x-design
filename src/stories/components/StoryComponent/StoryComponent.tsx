@@ -32,6 +32,7 @@ export type TStoryComponentProps = TStoryBlockCodeProps & {
 
 export const StoryComponent: FC<TStoryComponentProps> = ({
   applyMaxWidth = true,
+  blocksCodeData,
   children,
   className = '',
   contentAlignItems = ContentAlignItems.center,
@@ -84,7 +85,13 @@ export const StoryComponent: FC<TStoryComponentProps> = ({
       )}
 
       {/* BLOCK CODE */}
-      <StoryBlockCode className={cx(classNamesWithTheme.storyBlockCode)} {...restProps} />
+      {blocksCodeData.length > 0 && (
+        <StoryBlockCode
+          blocksCodeData={blocksCodeData}
+          className={cx(classNamesWithTheme.storyBlockCode)}
+          {...restProps}
+        />
+      )}
     </section>
   );
 };
