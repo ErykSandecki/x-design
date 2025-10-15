@@ -28,12 +28,17 @@ const config: StorybookConfig = {
     },
   },
   webpackFinal: async (config) => {
+    config.module!.rules = config.module!.rules?.filter((rule: any) => !rule.test?.toString().includes('svg'));
+
     config.module!.rules!.push({
       test: /\.svg$/,
+      include: path.resolve(__dirname, '../src/assets/svg'),
       use: [
         {
-          loader: require.resolve('@svgr/webpack'), // <-- tu zmiana
+          loader: require.resolve('@svgr/webpack'),
           options: {
+            exportType: 'named',
+            namedExport: 'ReactComponent',
             prettier: false,
             svgo: false,
             svgoConfig: { plugins: [{ removeViewBox: false }] },
@@ -41,13 +46,18 @@ const config: StorybookConfig = {
             ref: true,
           },
         },
-        {
-          loader: require.resolve('file-loader'),
-          options: { name: 'static/media/[name].[hash].[ext]' },
-        },
       ],
-      issuer: { and: [/\.(ts|tsx|js|jsx|md|mdx)$/] },
     });
+
+    config.module!.rules!.push({
+      test: /\.svg$/,
+      exclude: path.resolve(__dirname, '../src/assets/svg'),
+      type: 'asset/resource',
+      generator: {
+        filename: 'static/media/[name].[hash][ext][query]',
+      },
+    });
+
     config.module!.rules!.push({
       test: /\.scss$/i,
       use: [
@@ -74,6 +84,7 @@ const config: StorybookConfig = {
       ],
       include: path.resolve(__dirname, '../'),
     });
+
     config.resolve!.alias = {
       ...(config.resolve?.alias ?? {}),
       api: path.resolve(process.cwd(), 'src/api'),
@@ -91,6 +102,7 @@ const config: StorybookConfig = {
       translations: path.resolve(process.cwd(), 'src/translations'),
       types: path.resolve(process.cwd(), 'src/types'),
       utils: path.resolve(process.cwd(), 'src/utils'),
+      stories: path.resolve(process.cwd(), 'src/stories'),
     };
 
     return config;

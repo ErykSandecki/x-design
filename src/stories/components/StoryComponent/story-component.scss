@@ -1,0 +1,157 @@
+.StoryComponent {
+  font-family:
+    PlusJakartaSans-Bold,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol';
+  margin: 0 auto;
+  padding: 64px 20px;
+  width: 100%;
+
+  &--max-width {
+    max-width: 1200px;
+  }
+
+  &__title {
+    font-size: 30px;
+    margin: 40px 0 10px;
+
+    &--light {
+      color: #1e2839;
+    }
+
+    &--dark {
+      color: #eaeef3;
+    }
+  }
+
+  &__description {
+    font-family:
+      'IBM Plex Sans',
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      Roboto,
+      'Helvetica Neue',
+      Arial,
+      sans-serif,
+      'Apple Color Emoji',
+      'Segoe UI Emoji',
+      'Segoe UI Symbol';
+    font-size: 16px;
+
+    & > a {
+      color: #66b2ff;
+      font-size: 13px;
+      text-decoration: underline #3399ff66;
+    }
+
+    & > code {
+      background-color: #66b2ff26;
+      border-radius: 5px;
+      font-family: Consolas, Menlo, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 1.5;
+      padding: 0 5px;
+    }
+
+    &--light {
+      color: #4b4b4d;
+
+      & > code {
+        color: #1a2027;
+      }
+    }
+
+    &--dark {
+      color: #aab4be;
+
+      & > code {
+        color: #ffffff;
+      }
+    }
+  }
+
+  &__content {
+    border: 1px solid;
+    border-radius: 10px;
+    grid-column-gap: 25px;
+    justify-content: center;
+    padding: 24px;
+
+    &--light {
+      border-color: #0000001f;
+    }
+
+    &--dark {
+      border-color: #ffffff1f;
+    }
+
+    &--flex {
+      display: flex;
+    }
+
+    &--grid {
+      display: grid;
+    }
+
+    &--top {
+      align-items: flex-start;
+    }
+
+    &--center {
+      align-items: center;
+    }
+
+    &--bottom {
+      align-items: flex-end;
+    }
+
+    &--column {
+      grid-auto-flow: column;
+    }
+
+    &--row {
+      grid-auto-flow: row;
+      grid-row-gap: 15px;
+    }
+
+    &--max-two-columns {
+      grid-row-gap: 15px;
+      grid-template-columns: repeat(2, auto);
+    }
+
+    &--max-three-columns {
+      grid-row-gap: 15px;
+      grid-template-columns: repeat(3, auto);
+    }
+
+    &--max-four-columns {
+      grid-row-gap: 15px;
+      grid-template-columns: repeat(4, auto);
+    }
+
+    &--max-five-columns {
+      grid-row-gap: 15px;
+      grid-template-columns: repeat(5, auto);
+    }
+
+    &--max-six-columns {
+      grid-row-gap: 15px;
+      grid-template-columns: repeat(6, auto);
+    }
+
+    &--max-eight-columns {
+      grid-row-gap: 15px;
+      grid-template-columns: repeat(8, auto);
+    }
+  }
+}

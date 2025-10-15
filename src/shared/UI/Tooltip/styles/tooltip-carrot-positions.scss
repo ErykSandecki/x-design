@@ -1,5 +1,6 @@
-$--xd-value-1: 10px;
+$--xd-value-1: 4px;
 $--xd-value-2: -8px;
+$--xd-value-3: -7px;
 
 @mixin tooltip-carrot-positions() {
   &--top-start {
@@ -37,38 +38,38 @@ $--xd-value-2: -8px;
   }
 
   &--left-start {
-    right: $--xd-value-2;
+    right: $--xd-value-3;
     top: $--xd-value-1;
     transform: rotate(270deg);
   }
 
   &--left-center {
-    right: $--xd-value-2;
+    right: $--xd-value-3;
     top: 50%;
     transform: translateY(-50%) rotate(270deg);
   }
 
   &--left-end {
     bottom: $--xd-value-1;
-    right: $--xd-value-2;
+    right: $--xd-value-3;
     transform: rotate(270deg);
   }
 
   &--right-start {
-    left: $--xd-value-2;
+    left: $--xd-value-3;
     top: $--xd-value-1;
     transform: rotate(90deg);
   }
 
   &--right-center {
-    left: $--xd-value-2;
+    left: $--xd-value-3;
     top: 50%;
     transform: translateY(-50%) rotate(90deg);
   }
 
   &--right-end {
     bottom: $--xd-value-1;
-    left: $--xd-value-2;
+    left: $--xd-value-3;
     transform: rotate(90deg);
   }
 }

@@ -19,7 +19,7 @@ export const useIcon = (
   size: InputSize,
 ): TUseIcon =>
   useCallback(
-    ({ placement, src: { name } }: TButtonIconArgs): JSX.Element => (
+    ({ name, placement }: TButtonIconArgs): JSX.Element => (
       <Icon
         classes={{
           className: cx(

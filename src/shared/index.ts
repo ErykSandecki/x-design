@@ -31,3 +31,6 @@ export * from './ZoomBox/ZoomBox';
 export * from './ZoomBox/utils/mousePositionRelative';
 export * from './ZoomBox/utils/hasBasePosition';
 export * from './ZoomBox/constants';
+
+// ENUMS
+export * from './UI/enums';

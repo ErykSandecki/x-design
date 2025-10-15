@@ -1,0 +1,119 @@
+.StoryPropsTable {
+  font-family:
+    'IBM Plex Sans',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol';
+
+  &__title {
+    font-size: 30px;
+    margin: 40px 0 10px;
+
+    &--light {
+      color: #1e2839;
+    }
+
+    &--dark {
+      color: #eaeef3;
+    }
+  }
+
+  &__table {
+    border-collapse: collapse;
+    margin: 20px 0;
+    width: 100%;
+  }
+
+  &__row-header {
+    border-bottom: 1px solid;
+    font-size: 16px;
+
+    &--light {
+      border-bottom-color: #0000001f;
+      color: #000000;
+    }
+
+    &--dark {
+      border-bottom-color: #ffffff1f;
+      color: #ffffff;
+    }
+
+    & > th {
+      padding: 20px;
+      text-align: left;
+    }
+  }
+
+  &__row-body {
+    border-bottom: 1px solid;
+    font-size: 13px;
+    line-height: 1.5;
+
+    &--light {
+      border-bottom-color: #0000001f;
+      color: #4b4b4d;
+
+      & code {
+        color: #1a2027;
+      }
+    }
+
+    &--dark {
+      border-bottom-color: #ffffff1f;
+      color: #ffffff;
+
+      & code {
+        color: #ffffff;
+      }
+    }
+
+    & code {
+      background-color: #66b2ff26;
+      border-radius: 5px;
+      font-family: Consolas, Menlo, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+      font-size: 13px;
+      font-weight: 400;
+      padding: 0 5px;
+    }
+
+    & > td {
+      padding: 20px;
+      text-align: left;
+    }
+  }
+
+  &__column {
+    &-name {
+      font-family: Consolas, Menlo, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+      -webkit-font-smoothing: subpixel-antialiased;
+    }
+
+    &-type {
+      font-family: Consolas, Menlo, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+
+      &--light {
+        color: #932981;
+      }
+
+      &--dark {
+        color: #a6e22e;
+      }
+    }
+
+    &-default-value {
+      font-family: Consolas, Menlo, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    }
+
+    &-description {
+      font-size: 14px;
+      max-width: 150px;
+    }
+  }
+}

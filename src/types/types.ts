@@ -34,6 +34,7 @@ declare global {
     top: number;
   };
   type TFunc<A extends any[] = [], T = void> = (...args: A) => T;
+  type TPickValues<T, K extends keyof T> = T[K];
   type TT = TFunction;
 
   interface Window {

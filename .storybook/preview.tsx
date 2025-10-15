@@ -4,6 +4,9 @@ import { I18nextProvider } from 'react-i18next';
 import { Preview } from '@storybook/react';
 import { Provider } from 'react-redux';
 
+// core
+import { TooltipProvider } from '../src/shared/UI/Tooltip/core/TooltipProvider';
+
 // store
 import { configureStore } from '../src/store/store';
 
@@ -33,9 +36,11 @@ export const composed = (Story: any) => {
     <Suspense fallback={<div>loading translations...</div>}>
       <BrowserRouter>
         <I18nextProvider i18n={i18n}>
-          <Provider store={configureStore()}>
-            <Story />
-          </Provider>
+          <TooltipProvider>
+            <Provider store={configureStore()}>
+              <Story />
+            </Provider>
+          </TooltipProvider>
         </I18nextProvider>
       </BrowserRouter>
     </Suspense>

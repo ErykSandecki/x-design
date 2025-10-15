@@ -20,7 +20,7 @@ import styles from './styles/button.scss';
 import { ButtonColor, ButtonVariant } from './enums';
 import { E2EAttribute } from 'types';
 import { InputSize } from '../enums';
-import { TButtonIcon } from './types';
+import { TIconProps } from '../Icon/Icon';
 import { TUIProps } from '../types';
 
 export type TButtonProps = Omit<ButtonHTMLAttributes<HTMLElement>, 'className' | 'color' | 'style'> &
@@ -30,12 +30,12 @@ export type TButtonProps = Omit<ButtonHTMLAttributes<HTMLElement>, 'className' |
     disabledRippleEffect?: boolean;
     e2eAttribute?: TE2EDataAttributeProps['type'];
     e2eValue?: TE2EDataAttributeProps['value'];
-    endIcon?: TButtonIcon;
+    endIcon?: TIconProps['name'];
     forcedHover?: boolean;
     fullWidth?: boolean;
     ref?: Ref<HTMLButtonElement>;
     size?: InputSize;
-    startIcon?: TButtonIcon;
+    startIcon?: TIconProps['name'];
     variant?: ButtonVariant;
   };
 
@@ -85,9 +85,9 @@ export const Button: FC<TButtonProps> = ({
         type={type}
         {...restProps}
       >
-        {startIcon && <Icon placement="start" src={startIcon} />}
+        {startIcon && <Icon name={startIcon} placement="start" />}
         {children}
-        {endIcon && <Icon placement="end" src={endIcon} />}
+        {endIcon && <Icon name={endIcon} placement="end" />}
         {rippleEffect}
       </button>
     </E2EDataAttribute>

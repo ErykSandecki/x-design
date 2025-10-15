@@ -1,0 +1,51 @@
+.StoryBlockWarning {
+  border-image: initial;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px 1px 1px 8px;
+  box-sizing: border-box;
+  margin: 20px 0;
+  padding: 10px 20px;
+
+  &--light {
+    background-color: #fff9eb;
+    border-color: #ffdc48;
+  }
+
+  &--dark {
+    background-color: #5a360033;
+    border-color: #dea500;
+  }
+
+  &__context {
+    font-family:
+      'IBM Plex Sans',
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      Roboto,
+      'Helvetica Neue',
+      Arial,
+      sans-serif,
+      'Apple Color Emoji',
+      'Segoe UI Emoji',
+      'Segoe UI Symbol';
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.5;
+    word-break: break-word;
+
+    &--light {
+      color: #001e3c;
+    }
+
+    &--dark {
+      color: #f3f6f9;
+    }
+  }
+
+  &__icon-warning {
+    color: #ffbe00;
+  }
+}
