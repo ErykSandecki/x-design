@@ -11,6 +11,7 @@
   "scripts": {
     "build": "node scripts/build.js",
     "cypress": "cypress open REACT_APP_CYPRESS_IS_RUNNING=false",
+    "cypress:record": "npx cypress run --record --key ea7b8000-4064-4d74-a53d-eaaab551f0f9",
     "eslint-ts": "eslint . --ext .ts --fix --max-warnings=0",
     "eslint-tsx": "eslint . --ext .tsx --fix --max-warnings=0",
     "generate:enums": "node scripts/generateEnums.js & npx prettier --write ./src/types/enums",

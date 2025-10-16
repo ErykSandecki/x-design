@@ -10,7 +10,7 @@ export default defineConfig({
     },
     specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx}',
   },
-  projectId: 'ovggcr',
+  projectId: 'haoyt9',
   screenshotOnRunFailure: false,
   video: false,
   viewportHeight: 840,
