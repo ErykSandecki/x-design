@@ -183,7 +183,7 @@ describe('Button props', () => {
 
   it('should pass startIcon', () => {
     // before
-    const { container } = render(<Button startIcon={{ name: 'Comment' }}>{content}</Button>);
+    const { container } = render(<Button startIcon={'AlignHorizontalCenter'}>{content}</Button>);
 
     // result
     expect(getByE2EAttribute(container, E2EAttribute.button).firstChild).toHaveClass(classNames.icon.name);

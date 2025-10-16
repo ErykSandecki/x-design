@@ -66,6 +66,7 @@ const PanelProperties: FC<TPanelPropertiesProps> = () => {
       <UITools.Section label={t(`${translationNameSpace}.section.label`)}>
         <UITools.Tabs
           activeTab={activeTab}
+          e2eValue="panel-mode"
           setActiveTab={setActiveTab as TUITypes['TTabsProps']['setActiveTab']}
           tabs={TABS}
         />

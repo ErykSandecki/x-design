@@ -113,19 +113,18 @@ exports[`App snapshots should render router 1`] = `
         </div>
         <div
           class="css-gu5024 Tabs Tabs--light"
-          data-test-box=""
+          data-test-tabs="panel-mode"
         >
           <div
+            active=""
             class="css-17z9djj Tabs__tab Tabs__tab--light Tabs__tab--active Tabs__tab--active--light"
-            data-test-box=""
             data-test-tab="design"
           >
             Design
           </div>
           <div
             class="css-17z9djj Tabs__tab Tabs__tab--light"
-            data-test-box=""
-            data-test-tab="prototype\`,"
+            data-test-tab="prototype"
           >
             Prototype
           </div>

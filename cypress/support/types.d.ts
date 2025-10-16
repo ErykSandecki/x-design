@@ -1,0 +1,15 @@
+// types
+import { TNestedKeyOf } from 'types';
+import { TMainState } from '../../src/types/reducers';
+
+declare global {
+  namespace Cypress {
+    interface Chainable {
+      button(e2eValue: string): Chainable<JQuery<HTMLElement>>;
+      getState<K extends keyof TMainState>(reducerKey: K, path: TNestedKeyOf<TMainState[K]>): Chainable<any>;
+      UITab(e2eValue: string, value: string): Chainable<JQuery<HTMLElement>>;
+    }
+  }
+}
+
+export {};

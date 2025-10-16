@@ -2,7 +2,8 @@ import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 // components
-import { Box, E2EDataAttribute } from 'shared';
+import Box from '../../UI/Box/Box';
+import E2EDataAttribute, { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute';
 
 // hooks
 import { useTheme } from 'hooks';
@@ -19,11 +20,12 @@ import { TTab } from './types';
 
 export type TTabsProps = {
   activeTab: TTab['name'];
+  e2eValue?: TE2EDataAttributeProps['value'];
   setActiveTab: TFunc<[TTab['name']]>;
   tabs: Array<TTab>;
 };
 
-export const Tabs: FC<TTabsProps> = ({ activeTab, setActiveTab, tabs }) => {
+export const Tabs: FC<TTabsProps> = ({ activeTab, setActiveTab, e2eValue, tabs }) => {
   const disabledStates = tabs.length < 2;
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { t } = useTranslation();
@@ -31,18 +33,25 @@ export const Tabs: FC<TTabsProps> = ({ activeTab, setActiveTab, tabs }) => {
   return (
     <Box
       classes={{ className: cx(classNamesWithTheme[className]) }}
+      e2eAttribute={E2EAttribute.tabs}
+      e2eValue={e2eValue}
       sx={{ alignItems: 'center', columnGap: '5px', display: 'flex' }}
     >
-      {tabs.map(({ labelTranslationKey, name }) => (
-        <E2EDataAttribute key={name} type={E2EAttribute.tab} value={name}>
+      {tabs.map(({ labelTranslationKey, name }) => {
+        const isActive = activeTab === name;
+
+        return (
           <Box
+            attributes={isActive ? { [E2EAttribute.active]: '' } : {}}
             classes={{
               className: cx(
                 classNamesWithTheme.tab.name,
-                [classNamesWithTheme.tab.modificators.active, activeTab === name],
+                [classNamesWithTheme.tab.modificators.active, isActive],
                 [classNamesWithTheme.tab.modificators.disabled, disabledStates],
               ),
             }}
+            e2eAttribute={E2EAttribute.tab}
+            e2eValue={name}
             key={name}
             onClick={() => setActiveTab(name)}
             sx={{
@@ -57,8 +66,8 @@ export const Tabs: FC<TTabsProps> = ({ activeTab, setActiveTab, tabs }) => {
           >
             {t(labelTranslationKey)}
           </Box>
-        </E2EDataAttribute>
-      ))}
+        );
+      })}
     </Box>
   );
 };

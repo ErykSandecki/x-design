@@ -1,4 +1,5 @@
 export enum E2EAttribute {
+  active = 'active',
   anchor = 'anchor',
   anchorResize = 'anchor-resize',
   anchorRotate = 'anchor-rotate',
@@ -24,6 +25,7 @@ export enum E2EAttribute {
   section = 'section',
   sectionColumn = 'section-column',
   scrubbableInput = 'scrubbable-input',
+  tabs = 'tabs',
   tab = 'tab',
   test1 = 'test1',
   test2 = 'test2',

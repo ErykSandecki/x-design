@@ -1,6 +1,24 @@
 {
   "better-comments.tags": [
     {
+      "tag": "@html",
+      "color": "#FFA500",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "@store",
+      "color": "#FFC0CB",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
       "tag": "action",
       "color": "#FFC107",
       "strikethrough": false,
@@ -153,6 +171,7 @@
       "bold": false,
       "italic": false
     },
+
     {
       "tag": "selectors",
       "color": "#7147B5",

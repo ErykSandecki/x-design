@@ -13,6 +13,6 @@ export const TABS: Array<TTab> = [
   },
   {
     labelTranslationKey: `${translationNameSpace}.tabs.2`,
-    name: 'prototype`,',
+    name: 'prototype',
   },
 ];
