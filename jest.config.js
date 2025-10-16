@@ -18,10 +18,12 @@ module.exports = {
     'src/store/reducers.ts',
     'src/store/store.ts',
     'src/store/watchers.ts',
+    'src/stories',
     'src/test',
     'src/translations',
     'src/types',
     'src/utils/history',
+    '\\.stories\\.tsx$',
   ],
   coverageThreshold: {
     global: {

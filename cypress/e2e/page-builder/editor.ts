@@ -1,5 +1,5 @@
 // types
-import { E2EAttribute } from 'types';
+import { E2EAttribute } from '../../../src/types/e2e';
 
 describe('Editor 🖥️', () => {
   beforeEach(() => {

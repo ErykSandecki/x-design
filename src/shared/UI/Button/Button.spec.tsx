@@ -121,7 +121,7 @@ describe('Button props', () => {
 
   it('should pass endIcon', () => {
     // before
-    const { container } = render(<Button endIcon={{ name: 'Comment' }}>{content}</Button>);
+    const { container } = render(<Button endIcon="Comment">{content}</Button>);
 
     // result
     expect(getByE2EAttribute(container, E2EAttribute.button).lastChild).toHaveClass(classNames.icon.name);

@@ -1,6 +1,8 @@
+/// <reference types="cypress" />
+
 // types
-import { TMainState } from '../../src/types/reducers';
-import { TNestedKeyOf } from '../../src/types/generic/types';
+import { TNestedKeyOf } from '../src/types/generic/types';
+import { TMainState } from '../src/types/reducers';
 
 declare global {
   namespace Cypress {

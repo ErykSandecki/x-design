@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 
 // components
 import Box from '../../UI/Box/Box';
-import E2EDataAttribute, { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute';
 
 // hooks
 import { useTheme } from 'hooks';
@@ -16,6 +15,7 @@ import styles from './tabs.scss';
 
 // types
 import { E2EAttribute } from 'types';
+import { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute';
 import { TTab } from './types';
 
 export type TTabsProps = {
