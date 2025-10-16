@@ -21,16 +21,18 @@ import {
   UNSELECT_ELEMENT,
 } from './actionsType';
 import { BASE_2D, BASE_3D } from 'shared';
-import { THEME } from 'constant/localStorageKeys';
 import { THEME_COLORS } from 'constant/themeColors';
 
 // types
 import { ElementType, LayoutType, TElement, Theme } from 'types';
 import { TElements, TPage } from './types';
 
-const color = localStorage.getItem(THEME) === Theme.dark ? THEME_COLORS.dark.neutral4 : THEME_COLORS.light.neutral4;
+// utils
+import { getThemePreferences } from 'utils';
 
-export const BASE_ALL_DATA: TElement = {
+const color = getThemePreferences() === Theme.dark ? THEME_COLORS.dark.neutral4 : THEME_COLORS.light.neutral4;
+
+export const BASE_ELEMENTS: TElement = {
   alignment: {},
   angle: 0,
   aspectRatio: false,
@@ -52,7 +54,7 @@ export const BASE_ALL_DATA: TElement = {
 };
 
 export const BASE_PAGE_ELEMENTS: TElements = {
-  [BASE_ALL_DATA.id]: BASE_ALL_DATA,
+  [BASE_ELEMENTS.id]: BASE_ELEMENTS,
 };
 
 export const BASE_PAGE: TPage = {

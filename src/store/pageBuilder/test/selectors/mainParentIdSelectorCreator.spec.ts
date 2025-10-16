@@ -2,7 +2,7 @@
 import { elementMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
-import { BASE_ALL_DATA } from '../../constants';
+import { BASE_ELEMENTS } from '../../constants';
 
 // store
 import { mainParentIdSelectorCreator } from '../../selectors';
@@ -15,7 +15,7 @@ describe('mainParentIdSelectorCreator', () => {
     // result
     expect(
       selectorFunction({
-        [BASE_ALL_DATA.id]: BASE_ALL_DATA,
+        [BASE_ELEMENTS.id]: BASE_ELEMENTS,
         [elementMock.id]: {
           ...elementMock,
           children: ['test-2'],

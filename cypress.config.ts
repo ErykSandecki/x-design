@@ -8,7 +8,7 @@ export default defineConfig({
       // eslint-disable-next-line
       return require('./cypress/plugins/index.ts')(on, config);
     },
-    specPattern: 'cypress/test/**/*.{js,jsx,ts,tsx}',
+    specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx}',
   },
   projectId: 'ovggcr',
   screenshotOnRunFailure: false,
