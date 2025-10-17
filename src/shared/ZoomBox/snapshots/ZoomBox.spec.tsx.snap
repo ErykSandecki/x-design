@@ -9,7 +9,7 @@ exports[`ZoomBox snapshots should render Zoombox 1`] = `
   >
     <div
       class="css-1jnxvbp ZoomBox__backgroundMask ZoomBox__backgroundMask--light"
-      data-test-box=""
+      data-test-box="zoom-box-background-mask"
       style="background-color: rgb(255, 255, 255); display: initial;"
     />
     <div
@@ -38,7 +38,7 @@ exports[`ZoomBox snapshots should render when background is hidden 1`] = `
   >
     <div
       class="css-1jnxvbp ZoomBox__backgroundMask ZoomBox__backgroundMask--light"
-      data-test-box=""
+      data-test-box="zoom-box-background-mask"
       style="background-color: rgb(255, 255, 255); display: none;"
     />
     <div
@@ -67,7 +67,7 @@ exports[`ZoomBox snapshots should render when mouse mode is move & cursor state 
   >
     <div
       class="css-1jnxvbp ZoomBox__backgroundMask ZoomBox__backgroundMask--light"
-      data-test-box=""
+      data-test-box="zoom-box-background-mask"
       style="background-color: rgb(255, 255, 255); display: initial;"
     />
     <div

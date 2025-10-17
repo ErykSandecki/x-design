@@ -4,7 +4,7 @@ exports[`Color snapshots should render Color 1`] = `
 <DocumentFragment>
   <div
     class="css-1axzf39 Color Color--light"
-    data-test-color=""
+    data-test-box=""
   >
     <div
       class="css-agg4zg Color__picker Color__picker--light"

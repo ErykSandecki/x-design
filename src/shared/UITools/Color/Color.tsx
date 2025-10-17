@@ -12,9 +12,6 @@ import { className, classNames } from './classNames';
 // styles
 import styles from './color.scss';
 
-// types
-import { E2EAttribute } from 'types';
-
 // utils
 import { hexToRgb } from 'utils';
 
@@ -31,7 +28,6 @@ export const Color: FC<TColorProps> = ({ alpha, color }) => {
       classes={{
         className: cx(classNamesWithTheme[className]),
       }}
-      e2eAttribute={E2EAttribute.color}
       sx={{ borderRadius: '2.5px', display: 'flex', height: '14px', position: 'relative', width: '14px' }}
     >
       <Box

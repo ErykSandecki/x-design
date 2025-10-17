@@ -76,6 +76,7 @@ export const ColorPickerInputColor: FC<TColorPickerInputColorProps> = ({
           panelRender={(children) => (
             <Panel
               activeSampler={activeSampler}
+              e2eValue={e2eValue}
               onClickColorSampler={onClickColorSampler}
               onClickSampler={onClickSampler}
               setVisible={setVisible}
@@ -87,7 +88,7 @@ export const ColorPickerInputColor: FC<TColorPickerInputColorProps> = ({
           {...getAttributes(E2EAttribute.colorPicker, e2eValue)}
           {...restProps}
         >
-          <Box>
+          <Box e2eAttribute={E2EAttribute.color} e2eValue={e2eValue}>
             <Color alpha={alpha} color={color} />
           </Box>
         </ColorPickerAntd>

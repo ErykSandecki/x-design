@@ -10,6 +10,15 @@
       "italic": false
     },
     {
+      "tag": "@parent",
+      "color": "#ffffff",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
       "tag": "@store",
       "color": "#FFC0CB",
       "strikethrough": false,

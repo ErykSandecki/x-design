@@ -9,7 +9,7 @@ exports[`ViewBox snapshots should render ViewBox 1`] = `
   >
     <div
       class="css-1jnxvbp ZoomBox__backgroundMask ZoomBox__backgroundMask--light"
-      data-test-box=""
+      data-test-box="zoom-box-background-mask"
       style="background-color: rgb(241, 242, 246); display: initial;"
     />
     <div

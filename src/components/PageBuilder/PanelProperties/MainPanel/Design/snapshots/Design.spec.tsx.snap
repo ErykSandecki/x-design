@@ -4,7 +4,7 @@ exports[`Design snapshots should render Design 1`] = `
 <DocumentFragment>
   <div
     class="css-1jnxvbp Section Section--light"
-    data-test-section=""
+    data-test-section="background"
   >
     <div
       class="css-kp4ill"
@@ -42,7 +42,7 @@ exports[`Design snapshots should render Design 1`] = `
         >
           <div
             class="css-1jnxvbp FieldGroup FieldGroup--light"
-            data-test-field-group=""
+            data-test-field-group="background"
           >
             <div
               class="css-1jnxvbp ColorPicker__colorInput ColorPicker__colorInput--light TextField TextField--light"
@@ -52,11 +52,11 @@ exports[`Design snapshots should render Design 1`] = `
               <div
                 aria-describedby="test-id"
                 class="css-1jnxvbp"
-                data-test-box=""
+                data-test-color="background"
               >
                 <div
                   class="css-1axzf39 Color Color--light"
-                  data-test-color=""
+                  data-test-box=""
                 >
                   <div
                     class="css-agg4zg Color__picker Color__picker--light"
@@ -127,7 +127,7 @@ exports[`Design snapshots should render Design 1`] = `
         >
           <div
             class="css-1jnxvbp ButtonIcon ButtonIcon--light"
-            data-test-button-icon=""
+            data-test-button-icon="toggle-visibility"
             data-test-tooltip=""
           >
             <div

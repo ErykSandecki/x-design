@@ -15,6 +15,7 @@ import { TUIProps } from '../types';
 
 // utils
 import { getAttributes } from '../../E2EDataAttributes/utils';
+import { mapAttributes } from 'utils';
 
 export type TBoxProps = Omit<HTMLAttributes<HTMLElement>, 'className'> &
   TUIProps<typeof classes> & {
@@ -46,7 +47,7 @@ export const Box: FC<TBoxProps> = ({
       ...restProps,
       className: cx(sxClassName, classes.className),
       ...getAttributes(e2eAttribute, e2eValue),
-      ...attributes,
+      ...mapAttributes(attributes),
       ref,
       style,
     },

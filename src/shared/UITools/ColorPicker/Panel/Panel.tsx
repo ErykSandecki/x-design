@@ -23,11 +23,13 @@ import styles from './panel.scss';
 
 // types
 import { E2EAttribute } from 'types';
+import { TE2EDataAttributeProps } from '../../../E2EDataAttributes/E2EDataAttribute';
 import { Tab } from './enums';
 
 export type TPanelProps = {
   activeSampler: boolean;
   children: ReactNode;
+  e2eValue?: TE2EDataAttributeProps['value'];
   onClickColorSampler: TFunc<[string]>;
   onClickSampler: TFunc;
   setVisible: TFunc<[boolean]>;
@@ -36,6 +38,7 @@ export type TPanelProps = {
 export const Panel: FC<TPanelProps> = ({
   activeSampler,
   children,
+  e2eValue,
   onClickColorSampler,
   onClickSampler,
   setVisible,
@@ -57,7 +60,7 @@ export const Panel: FC<TPanelProps> = ({
   }, []);
 
   return (
-    <E2EDataAttribute type={E2EAttribute.colorPickerPanel}>
+    <E2EDataAttribute type={E2EAttribute.colorPickerPanel} value={e2eValue}>
       <Box
         classes={{ className: cx(classNamesWithTheme[className]) }}
         onKeyDown={(event) => event.stopPropagation()}

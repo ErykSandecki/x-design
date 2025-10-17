@@ -13,7 +13,7 @@ const Design: FC = () => {
 
   return (
     <>
-      <UITools.Section label={t(`${translationNameSpace}.section.1.label`)}>
+      <UITools.Section e2eValue="background" label={t(`${translationNameSpace}.section.1.label`)}>
         <ColumnBackground />
       </UITools.Section>
     </>

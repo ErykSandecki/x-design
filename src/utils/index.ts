@@ -39,6 +39,7 @@ export * from './transform/extractObjectValues';
 export * from './transform/enumToArray';
 export * from './transform/hexToRgb/hexToRgb';
 export * from './transform/isHexColor';
+export * from './transform/mapAttributes';
 export * from './transform/mapFilteredValues';
 export * from './transform/objectToArray';
 export * from './transform/rgbToHex';

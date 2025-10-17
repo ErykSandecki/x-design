@@ -14,11 +14,11 @@ exports[`ColorPicker snapshots should render ColorPicker 1`] = `
       <div
         aria-describedby="test-id"
         class="css-1jnxvbp"
-        data-test-box=""
+        data-test-color=""
       >
         <div
           class="css-1axzf39 Color Color--light"
-          data-test-color=""
+          data-test-box=""
         >
           <div
             class="css-agg4zg Color__picker Color__picker--light"

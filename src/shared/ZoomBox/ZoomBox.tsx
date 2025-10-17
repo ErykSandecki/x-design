@@ -108,6 +108,7 @@ export const ZoomBox: FC<TZoomBoxProps> = ({
     >
       <Box
         classes={{ className: cx(classNamesWithTheme.backgroundMask) }}
+        e2eValue="zoom-box-background-mask"
         style={{
           backgroundColor: hexToRgb(backgroundColor, parseInt(alpha)),
           display: backgroundVissible ? 'initial' : 'none',

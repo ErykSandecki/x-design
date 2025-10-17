@@ -8,11 +8,12 @@ exports[`Toolbar snapshots should render Toolbar 1`] = `
   >
     <div
       class="css-1douohc MouseModes MouseModes--light"
-      data-test-box=""
+      data-test-box="toolbar"
     >
       <div
+        active=""
         class="css-1uzmw43 MouseModes__button MouseModes__button--light MouseModes__button--active MouseModes__button--active--light"
-        data-test-box=""
+        data-test-box="default"
       >
         <div
           class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -24,7 +25,19 @@ exports[`Toolbar snapshots should render Toolbar 1`] = `
       </div>
       <div
         class="css-1uzmw43 MouseModes__button MouseModes__button--light"
-        data-test-box=""
+        data-test-box="toolBeltA"
+      >
+        <div
+          class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          data-test-icon="toolBeltA"
+          height="16"
+          name="FrameTool"
+          width="16"
+        />
+      </div>
+      <div
+        class="css-1uzmw43 MouseModes__button MouseModes__button--light"
+        data-test-box="move"
       >
         <div
           class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -36,25 +49,13 @@ exports[`Toolbar snapshots should render Toolbar 1`] = `
       </div>
       <div
         class="css-1uzmw43 MouseModes__button MouseModes__button--light"
-        data-test-box=""
+        data-test-box="comment"
       >
         <div
           class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
           data-test-icon="comment"
           height="16"
           name="Comment"
-          width="16"
-        />
-      </div>
-      <div
-        class="css-1uzmw43 MouseModes__button MouseModes__button--light"
-        data-test-box=""
-      >
-        <div
-          class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-          data-test-icon="toolBeltA"
-          height="16"
-          name="FrameTool"
           width="16"
         />
       </div>

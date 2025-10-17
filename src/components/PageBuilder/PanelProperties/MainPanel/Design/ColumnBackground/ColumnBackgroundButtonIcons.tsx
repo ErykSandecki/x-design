@@ -20,6 +20,7 @@ const ColumnBackgroundButtonIcons = (): Array<ReactNode> => {
 
   return [
     <UITools.ButtonIcon
+      e2eValue="toggle-visibility"
       key={0}
       name={visible ? 'EyesOpened' : 'EyesClosed'}
       onClick={() => dispatch(changeBackground({ visible: !visible }, '-1'))}

@@ -28,11 +28,12 @@ exports[`App snapshots should render router 1`] = `
     >
       <div
         class="css-1douohc MouseModes MouseModes--light"
-        data-test-box=""
+        data-test-box="toolbar"
       >
         <div
+          active=""
           class="css-1uzmw43 MouseModes__button MouseModes__button--light MouseModes__button--active MouseModes__button--active--light"
-          data-test-box=""
+          data-test-box="default"
         >
           <div
             class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -44,7 +45,19 @@ exports[`App snapshots should render router 1`] = `
         </div>
         <div
           class="css-1uzmw43 MouseModes__button MouseModes__button--light"
-          data-test-box=""
+          data-test-box="toolBeltA"
+        >
+          <div
+            class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            data-test-icon="toolBeltA"
+            height="16"
+            name="FrameTool"
+            width="16"
+          />
+        </div>
+        <div
+          class="css-1uzmw43 MouseModes__button MouseModes__button--light"
+          data-test-box="move"
         >
           <div
             class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -56,25 +69,13 @@ exports[`App snapshots should render router 1`] = `
         </div>
         <div
           class="css-1uzmw43 MouseModes__button MouseModes__button--light"
-          data-test-box=""
+          data-test-box="comment"
         >
           <div
             class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
             data-test-icon="comment"
             height="16"
             name="Comment"
-            width="16"
-          />
-        </div>
-        <div
-          class="css-1uzmw43 MouseModes__button MouseModes__button--light"
-          data-test-box=""
-        >
-          <div
-            class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-            data-test-icon="toolBeltA"
-            height="16"
-            name="FrameTool"
             width="16"
           />
         </div>
@@ -135,7 +136,7 @@ exports[`App snapshots should render router 1`] = `
       >
         <div
           class="css-1jnxvbp Section Section--light"
-          data-test-section=""
+          data-test-section="background"
         >
           <div
             class="css-kp4ill"
@@ -173,7 +174,7 @@ exports[`App snapshots should render router 1`] = `
               >
                 <div
                   class="css-1jnxvbp FieldGroup FieldGroup--light"
-                  data-test-field-group=""
+                  data-test-field-group="background"
                 >
                   <div
                     class="css-1jnxvbp ColorPicker__colorInput ColorPicker__colorInput--light TextField TextField--light"
@@ -183,11 +184,11 @@ exports[`App snapshots should render router 1`] = `
                     <div
                       aria-describedby="test-id"
                       class="css-1jnxvbp"
-                      data-test-box=""
+                      data-test-color="background"
                     >
                       <div
                         class="css-1axzf39 Color Color--light"
-                        data-test-color=""
+                        data-test-box=""
                       >
                         <div
                           class="css-agg4zg Color__picker Color__picker--light"
@@ -258,7 +259,7 @@ exports[`App snapshots should render router 1`] = `
               >
                 <div
                   class="css-1jnxvbp ButtonIcon ButtonIcon--light"
-                  data-test-button-icon=""
+                  data-test-button-icon="toggle-visibility"
                   data-test-tooltip=""
                 >
                   <div
@@ -298,7 +299,7 @@ exports[`App snapshots should render router 1`] = `
     >
       <div
         class="css-1jnxvbp ZoomBox__backgroundMask ZoomBox__backgroundMask--light"
-        data-test-box=""
+        data-test-box="zoom-box-background-mask"
         style="background-color: rgb(241, 242, 246); display: initial;"
       />
       <div

@@ -25,6 +25,7 @@ const ColumnBackground: FC = () => {
         activeSampler={colorSampler as boolean}
         alpha={alpha}
         color={color}
+        e2eValue="background"
         format={format}
         onChangeAlpha={(alpha) => dispatch(changeBackground({ properties: { alpha, color, format } }, '-1'))}
         onChangeColor={(alpha, color) => dispatch(changeBackground({ properties: { alpha, color, format } }, '-1'))}

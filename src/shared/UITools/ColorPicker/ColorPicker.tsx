@@ -49,7 +49,7 @@ export const ColorPicker: FC<TColorPickerProps> = ({
     useColorPickerEvents(alpha, color, onChangeAlphaHandler, onChangeColorHandler);
 
   return (
-    <FieldGroup>
+    <FieldGroup e2eValue={e2eValue}>
       <ColorPickerInputColor
         activeSampler={activeSampler}
         alpha={alpha}

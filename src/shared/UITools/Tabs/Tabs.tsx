@@ -42,7 +42,7 @@ export const Tabs: FC<TTabsProps> = ({ activeTab, setActiveTab, e2eValue, tabs }
 
         return (
           <Box
-            attributes={isActive ? { [E2EAttribute.active]: '' } : {}}
+            attributes={{ [E2EAttribute.active]: isActive }}
             classes={{
               className: cx(
                 classNamesWithTheme.tab.name,
