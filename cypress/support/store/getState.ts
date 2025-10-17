@@ -1,10 +1,10 @@
 // types
 import { TMainState } from 'types';
 
-Cypress.Commands.add('getState', (reducerKey: keyof TMainState, path: any) =>
+Cypress.Commands.add('getState', (reducerKey: keyof TMainState) =>
   cy
     .window()
     .its('store')
     .invoke('getState')
-    .then((state: TMainState) => path.split('.').reduce((acc: any, key: any) => acc[key], state[reducerKey])),
+    .then((state: TMainState) => state[reducerKey]),
 );
