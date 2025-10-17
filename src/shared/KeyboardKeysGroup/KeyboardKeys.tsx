@@ -13,7 +13,9 @@ export type TKeyboardKeysProps = {
 
 export const KeyboardKeys: FC<TKeyboardKeysProps> = ({ keyboardShortcuts: { primaryKeys, secondaryKey } }) => (
   <>
-    {primaryKeys?.map((primaryKey, index) => <Fragment key={index}>{mapPrimaryKey(primaryKey)}</Fragment>)}
+    {primaryKeys?.map((primaryKey, index) => (
+      <Fragment key={index}>{mapPrimaryKey(primaryKey)}</Fragment>
+    ))}
     {mapSecondaryKey(secondaryKey)}
   </>
 );

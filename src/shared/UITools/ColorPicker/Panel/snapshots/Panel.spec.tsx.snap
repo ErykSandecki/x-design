@@ -136,7 +136,7 @@ exports[`Panel snapshots should render with active sampler 1`] = `
             <div
               aria-busy="true"
               aria-live="polite"
-              class="ant-spin ant-spin-spinning css-dev-only-do-not-override-1odpy5d"
+              class="ant-spin ant-spin-spinning css-dev-only-do-not-override-1cj4ms"
             >
               <span
                 class="ant-spin-dot-holder"
