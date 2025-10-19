@@ -16,7 +16,7 @@ import { DATA_STATUS_ATTRIBUTE } from './constants';
 import styles from './element.scss';
 
 // types
-import { ElementType, TColor, TElement } from 'types';
+import { E2EAttribute, ElementType, TColor, TElement } from 'types';
 import { MouseMode } from 'types/enums/mouseMode';
 import { TElementChildren } from './types';
 
@@ -76,6 +76,8 @@ const Element: FC<TElementProps> = ({ classes, children, id, index, mouseMode, p
           [classNamesWithTheme[classNameElement].modificators.moving, isMoving],
         ),
       }}
+      e2eAttribute={E2EAttribute.element}
+      e2eValue={id}
       id={id}
       ref={elementRef}
       style={{

@@ -5,7 +5,7 @@ exports[`Frame snapshots should render Frame 1`] = `
   <div
     class="css-1jnxvbp className Frame Frame--light Element Element--light"
     data-status="false"
-    data-test-box=""
+    data-test-element="test-1"
     id="test-1"
     style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; background-color: rgb(255, 255, 255); height: 100px; position: absolute; width: 100px;"
   >

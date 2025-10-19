@@ -13,7 +13,7 @@ export const generateJestID = (elements: TObject<any>): string => {
   if (isJestRunning()) {
     const ids = keys(elements)
       .filter((id) => !isBaseParent(id))
-      .map(parseInt);
+      .map((id) => parseInt(id.split('-')[1]));
 
     if (ids.length) {
       return `test-${(Math.max(...ids) + 1).toString()}`;

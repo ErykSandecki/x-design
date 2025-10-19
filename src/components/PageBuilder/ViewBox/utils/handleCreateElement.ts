@@ -3,7 +3,6 @@ import { Dispatch } from 'redux';
 // store
 import { addElement } from 'store/pageBuilder/actions';
 import { elementsSelector, eventSelectorCreator } from 'store/pageBuilder/selectors';
-import { store } from 'store';
 
 // types
 import { ElementType, LayoutType } from 'types';
@@ -18,7 +17,7 @@ export const handleCreateElement = (
   mouseMode: MouseMode,
   setMouseMode: TFunc<[MouseMode]>,
 ): void => {
-  const possibleElement = eventSelectorCreator('possibleElement')(store.getState());
+  const possibleElement = eventSelectorCreator('possibleElement')(window.store.getState());
 
   if (possibleElement && mouseMode === MouseMode.toolBeltA) {
     const { x1, x2, y1, y2 } = possibleElement;
@@ -41,7 +40,7 @@ export const handleCreateElement = (
       height: {
         value: Math.abs(y1 - y2),
       },
-      id: generateJestID(elementsSelector(store.getState())),
+      id: generateJestID(elementsSelector(window.store.getState())),
       layout,
       parentId: possibleElement.parentId,
       position: 'absolute',

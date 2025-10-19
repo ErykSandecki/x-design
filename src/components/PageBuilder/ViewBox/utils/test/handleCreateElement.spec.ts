@@ -10,7 +10,7 @@ import {
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 
 // store
-import { store as storeToMock } from 'store/store';
+import { configureStore } from 'store/store';
 
 // types
 import { MouseMode } from 'types/enums/mouseMode';
@@ -32,7 +32,7 @@ const stateMock = {
 describe('handleCreateElement', () => {
   it(`should create element and reset data`, () => {
     // mock
-    storeToMock.getState = (): any => stateMock;
+    window.store = configureStore(stateMock);
 
     // before
     handleCreateElement(mockCallBack, MouseMode.toolBeltA, mockCallBack);
@@ -47,7 +47,7 @@ describe('handleCreateElement', () => {
 
   it(`should create element when y2 & x2 are bigger than rest cords`, () => {
     // mock
-    storeToMock.getState = (): any => ({
+    window.store = configureStore({
       ...stateMock,
       [PAGE_BUILDER]: {
         ...stateMock[PAGE_BUILDER],
@@ -83,7 +83,7 @@ describe('handleCreateElement', () => {
 
   it(`should not create element`, () => {
     // mock
-    storeToMock.getState = (): any => stateMock;
+    window.store = configureStore(stateMock);
 
     // before
     handleCreateElement(mockCallBack, MouseMode.default, mockCallBack);

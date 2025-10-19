@@ -5,7 +5,7 @@ exports[`Element snapshots should render Element 1`] = `
   <div
     class="css-1jnxvbp className Element Element--light"
     data-status="false"
-    data-test-box=""
+    data-test-element="test-1"
     id="test-1"
     style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; background-color: rgb(255, 255, 255); height: 100px; position: absolute; width: 100px;"
   />
@@ -17,7 +17,7 @@ exports[`Element snapshots should render Element when is selected & is multiple 
   <div
     class="css-1jnxvbp className Element Element--light Element--moving Element--moving--light"
     data-status="true"
-    data-test-box=""
+    data-test-element="test-1"
     id="test-1"
     style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; background-color: rgb(255, 255, 255); height: 100px; position: absolute; width: 100px;"
   >
@@ -132,7 +132,7 @@ exports[`Element snapshots should render Element when is selected 1`] = `
   <div
     class="css-1jnxvbp className Element Element--light"
     data-status="true"
-    data-test-box=""
+    data-test-element="test-1"
     id="test-1"
     style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; background-color: rgb(255, 255, 255); height: 100px; position: absolute; width: 100px;"
   >
@@ -247,7 +247,7 @@ exports[`Element snapshots should render Element when width & height is auto 1`]
   <div
     class="css-1jnxvbp className Element Element--light"
     data-status="false"
-    data-test-box=""
+    data-test-element="test-1"
     id="test-1"
     style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; background-color: rgb(255, 255, 255); height: auto; position: absolute; width: auto;"
   />

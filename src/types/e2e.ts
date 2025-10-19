@@ -13,6 +13,7 @@ export enum E2EAttribute {
   colorPicker = 'color-picker',
   colorPickerPanel = 'color-picker-panel',
   dropdown = 'dropdown',
+  element = 'element',
   fieldGroup = 'field-group',
   form = 'form',
   icon = 'icon',

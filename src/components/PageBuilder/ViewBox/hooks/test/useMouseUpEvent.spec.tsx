@@ -30,6 +30,9 @@ describe('useMouseUpEvent', () => {
     // mock
     const store = configureStore(stateMock);
 
+    // mock
+    window.store = store;
+
     // before
     const { result } = renderHook(() => useMouseUpEvent(MouseMode.toolBeltA, mockCallBack, mockCallBack), {
       wrapper: getProviderWrapper(store),
