@@ -29,11 +29,6 @@ const stateMock = {
   },
 };
 
-jest.mock('utils', () => ({
-  ...jest.requireActual('utils'),
-  generateID: (): any => 'test-1',
-}));
-
 describe('handleCreateElement', () => {
   it(`should create element and reset data`, () => {
     // mock

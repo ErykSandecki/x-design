@@ -27,6 +27,10 @@ export * from './form/formStates';
 export * from './form/inputStates';
 export * from './form/syncValidators';
 
+// JEST
+export * from './jest/generateJestID';
+export * from './jest/isJestRunning';
+
 // MATH
 export * from './math/computeCounterRotation';
 export * from './math/distanceHasChanged';
@@ -50,6 +54,3 @@ export * from './ts/guards';
 
 // SETTINGS
 export * from './settings/userPreferences';
-
-// REST
-export * from './isJestRunning';

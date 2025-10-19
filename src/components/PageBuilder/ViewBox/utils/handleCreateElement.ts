@@ -2,7 +2,7 @@ import { Dispatch } from 'redux';
 
 // store
 import { addElement } from 'store/pageBuilder/actions';
-import { eventSelectorCreator } from 'store/pageBuilder/selectors';
+import { elementsSelector, eventSelectorCreator } from 'store/pageBuilder/selectors';
 import { store } from 'store';
 
 // types
@@ -11,7 +11,7 @@ import { MouseMode } from '../../../../types/enums/mouseMode';
 import { TAddELementActionPayload } from 'store/pageBuilder/types';
 
 // utils
-import { generateID } from 'utils';
+import { generateJestID } from 'utils';
 
 export const handleCreateElement = (
   dispatch: Dispatch,
@@ -41,7 +41,7 @@ export const handleCreateElement = (
       height: {
         value: Math.abs(y1 - y2),
       },
-      id: generateID(),
+      id: generateJestID(elementsSelector(store.getState())),
       layout,
       parentId: possibleElement.parentId,
       position: 'absolute',
