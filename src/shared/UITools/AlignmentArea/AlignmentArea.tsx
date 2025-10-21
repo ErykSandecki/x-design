@@ -41,14 +41,16 @@ export const AlignmentArea: FC<TAlignmentAreaProps> = ({ e2eValue = '', fullWidt
       e2eAttribute={E2EAttribute.alignmentArea}
       e2eValue={e2eValue}
     >
-      {enumToArray<AlignmentFlow>(AlignmentFlow).map((alignmentFlow) => (
-        <AlignmentOption
-          alignmentFlow={alignmentFlow}
-          isSelected={value === alignmentFlow}
-          key={alignmentFlow}
-          onClick={onClick}
-        />
-      ))}
+      {enumToArray<AlignmentFlow>(AlignmentFlow)
+        .filter((alignmentFlow) => alignmentFlow !== AlignmentFlow.none)
+        .map((alignmentFlow) => (
+          <AlignmentOption
+            alignmentFlow={alignmentFlow}
+            isSelected={value === alignmentFlow}
+            key={alignmentFlow}
+            onClick={onClick}
+          />
+        ))}
     </Box>
   );
 };

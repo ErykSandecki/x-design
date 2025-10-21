@@ -38,4 +38,5 @@ export enum AlignmentFlow {
   bottomLeft = 'bottomLeft',
   bottomCenter = 'bottomCenter',
   bottomRight = 'bottomRight',
+  none = 'none',
 }

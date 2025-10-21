@@ -137,7 +137,7 @@ describe('handleChangeLayout', () => {
               children: [{ ...childrenMock, id: 'test-2' }],
               layout: {
                 ...layoutMock,
-                alignment: undefined,
+                alignment: AlignmentFlow.none,
               },
             },
             ['test-2']: {

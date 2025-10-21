@@ -29,7 +29,7 @@ export type TFlip = {
 };
 
 export type TLayout = {
-  alignment?: AlignmentFlow;
+  alignment: AlignmentFlow;
   type: LayoutType;
 };
 

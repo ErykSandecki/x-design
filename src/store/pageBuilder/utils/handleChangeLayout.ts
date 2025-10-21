@@ -30,7 +30,11 @@ export const handleChangeLayout = (
           ...currentPage.elements,
           ...mapFilteredValues(currentPage.elements, ids, (element) => ({
             ...element,
-            layout: { ...element.layout, alignment: isFreeForm ? undefined : AlignmentFlow.topLeft, type: layoutType },
+            layout: {
+              ...element.layout,
+              alignment: isFreeForm ? AlignmentFlow.none : AlignmentFlow.topLeft,
+              type: layoutType,
+            },
           })),
           ...mapFilteredValues(currentPage.elements, childrenIds, (element) => ({
             ...element,

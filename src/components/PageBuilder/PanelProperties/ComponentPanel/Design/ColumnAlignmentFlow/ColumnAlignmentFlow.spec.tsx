@@ -2,7 +2,7 @@ import { fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';
 
 // components
-import ColumnFlow from './ColumnFlow';
+import ColumnAlignmentFlow from './ColumnAlignmentFlow';
 
 // mocks
 import { elementMock, layoutMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
@@ -14,7 +14,7 @@ import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 import { configureStore } from 'store/store';
 
 // types
-import { E2EAttribute, LayoutType } from 'types';
+import { AlignmentFlow, E2EAttribute, LayoutType } from 'types';
 
 // utils
 import { customRender, getByE2EAttribute } from 'test';
@@ -33,7 +33,14 @@ const stateMock = {
             ...currentPage.elements['-1'],
             children: [elementMock.id, 'test-1'],
           },
-          [elementMock.id]: elementMock,
+          [elementMock.id]: {
+            ...elementMock,
+            layout: {
+              ...layoutMock,
+              alignment: AlignmentFlow.topLeft,
+              type: LayoutType.horizontal,
+            },
+          },
         },
         selectedElements: [selectedElementMock],
       },
@@ -41,15 +48,15 @@ const stateMock = {
   },
 };
 
-describe('ColumnFlow snapshots', () => {
-  it('should render ColumnFlow', () => {
+describe('ColumnAlignmentFlow snapshots', () => {
+  it('should render ColumnAlignmentFlow', () => {
     // mock
     const store = configureStore(stateMock);
 
     // before
     const { asFragment } = customRender(
       <Provider store={store}>
-        <ColumnFlow />
+        <ColumnAlignmentFlow />
       </Provider>,
     );
 
@@ -57,7 +64,7 @@ describe('ColumnFlow snapshots', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('should render when values are mixed', () => {
+  it('should render when is free form', () => {
     // mock
     const store = configureStore({
       ...stateMock,
@@ -73,8 +80,51 @@ describe('ColumnFlow snapshots', () => {
                 id: 'test-1',
                 layout: {
                   ...layoutMock,
-                  type: LayoutType.grid,
+                  alignment: AlignmentFlow.none,
+                  type: LayoutType.freeForm,
                 },
+              },
+            },
+            selectedElements: [...stateMock[PAGE_BUILDER].pages['0'].selectedElements],
+          },
+        },
+      },
+    });
+
+    // before
+    const { asFragment } = customRender(
+      <Provider store={store}>
+        <ColumnAlignmentFlow />
+      </Provider>,
+    );
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('should render when layout types are mixed', () => {
+    // mock
+    const store = configureStore({
+      ...stateMock,
+      [PAGE_BUILDER]: {
+        ...stateMock[PAGE_BUILDER],
+        pages: {
+          ['0']: {
+            ...stateMock[PAGE_BUILDER].pages['0'],
+            elements: {
+              ...stateMock[PAGE_BUILDER].pages['0'].elements,
+              ['test-1']: {
+                ...elementMock,
+                id: 'test-1',
+                layout: {
+                  ...layoutMock,
+                  alignment: AlignmentFlow.topLeft,
+                  type: LayoutType.horizontal,
+                },
+              },
+              ['test-2']: {
+                ...elementMock,
+                id: 'test-2',
               },
             },
             selectedElements: [
@@ -89,7 +139,7 @@ describe('ColumnFlow snapshots', () => {
     // before
     const { asFragment } = customRender(
       <Provider store={store}>
-        <ColumnFlow />
+        <ColumnAlignmentFlow />
       </Provider>,
     );
 
@@ -98,26 +148,26 @@ describe('ColumnFlow snapshots', () => {
   });
 });
 
-describe('ColumnFlow behaviors', () => {
-  it('should change layout type', () => {
+describe('ColumnAlignmentFlow behaviors', () => {
+  it('should change alignment', () => {
     // mock
     const store = configureStore(stateMock);
 
     // before
     const { container } = customRender(
       <Provider store={store}>
-        <ColumnFlow />
+        <ColumnAlignmentFlow />
       </Provider>,
     );
 
     // find
-    const toggleButtonGroup = getByE2EAttribute(container, E2EAttribute.toggleButtonGroup, 'flow');
-    const toggleButton = getByE2EAttribute(toggleButtonGroup, E2EAttribute.toggleButton, 3);
+    const aligmentArea = getByE2EAttribute(container, E2EAttribute.alignmentArea, 'alignment-flow');
+    const alignmentOption = getByE2EAttribute(aligmentArea, E2EAttribute.alignmentAreaOption, AlignmentFlow.center);
 
     // action
-    fireEvent.click(toggleButton);
+    fireEvent.click(alignmentOption);
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].layout.type).toBe(LayoutType.grid);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].layout.alignment).toBe(AlignmentFlow.center);
   });
 });

@@ -5,6 +5,7 @@ import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 
 // types
 import {
+  AlignmentFlow,
   AlignmentHorizontal,
   AlignmentVertical,
   ElementType,
@@ -59,6 +60,7 @@ export const alignmetnMock: TAlignment = {
 };
 
 export const layoutMock: TLayout = {
+  alignment: AlignmentFlow.none,
   type: LayoutType.freeForm,
 };
 

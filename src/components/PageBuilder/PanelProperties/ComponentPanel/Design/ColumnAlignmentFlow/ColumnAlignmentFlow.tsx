@@ -1,18 +1,22 @@
 import { FC } from 'react';
-import { noop } from 'lodash';
 import { useTranslation } from 'react-i18next';
 
 // components
 import { UITools } from 'shared';
 
+// hooks
+import { useColumnAlignmentFlowEvents } from './hooks/useColumnAlignmentFlowEvents';
+
 // others
 import { translationNameSpace } from './constants';
 
-// types
-import { AlignmentFlow } from 'types';
-
 const ColumnAlignmentFlow: FC = () => {
   const { t } = useTranslation();
+  const { alignment, isFreeForm, isMixedLayout, onChangeAlignment } = useColumnAlignmentFlowEvents();
+
+  if (isMixedLayout || isFreeForm) {
+    return null;
+  }
 
   return (
     <UITools.SectionColumn
@@ -20,7 +24,7 @@ const ColumnAlignmentFlow: FC = () => {
       labels={[t(`${translationNameSpace}.label`)]}
       withMargin
     >
-      <UITools.AlignmentArea onClick={noop} value={AlignmentFlow.center} />
+      <UITools.AlignmentArea e2eValue="alignment-flow" onClick={onChangeAlignment} value={alignment} />
     </UITools.SectionColumn>
   );
 };

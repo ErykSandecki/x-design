@@ -1376,7 +1376,7 @@ exports[`Design snapshots should render Design 1`] = `
         >
           <div
             class="css-1jnxvbp AlignmentArea AlignmentArea AlignmentArea--light"
-            data-test-alignment-area=""
+            data-test-alignment-area="alignment-flow"
           >
             <div
               class="css-1jnxvbp AlignmentOption AlignmentOption--light"
@@ -1535,7 +1535,7 @@ exports[`Design snapshots should render Design 1`] = `
               </div>
             </div>
             <div
-              class="css-1jnxvbp AlignmentOption AlignmentOption--light AlignmentOption--selected AlignmentOption--selected--light"
+              class="css-1jnxvbp AlignmentOption AlignmentOption--light"
               data-test-alignment-area-option="center"
               data-test-box=""
             >
@@ -1544,15 +1544,15 @@ exports[`Design snapshots should render Design 1`] = `
                 data-test-box=""
               >
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light AlignmentOption__indicator--selected AlignmentOption__indicator--selected--light"
+                  class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
                   data-test-box=""
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light AlignmentOption__indicator--selected AlignmentOption__indicator--selected--light"
+                  class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
                   data-test-box=""
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light AlignmentOption__indicator--selected AlignmentOption__indicator--selected--light"
+                  class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
                   data-test-box=""
                 />
               </div>
