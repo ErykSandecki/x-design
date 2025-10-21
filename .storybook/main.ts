@@ -46,11 +46,13 @@ const config: StorybookConfig = {
             ref: true,
           },
         },
+        {
+          loader: require.resolve('file-loader'),
+          options: {
+            name: 'static/media/[name].[hash].[ext]',
+          },
+        },
       ],
-      type: 'asset/resource',
-      generator: {
-        filename: 'static/media/[name].[hash][ext][query]',
-      },
     });
 
     config.module!.rules!.push({
