@@ -1,0 +1,76 @@
+.AlignmentOption {
+  @include theme-selector('neutral-2', background-color, '&::before');
+  $self: &;
+
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+
+  &::before {
+    border-radius: 50%;
+    content: '';
+    height: 2.5px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%);
+    width: 2.5px;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 0;
+    }
+
+    #{$self}__indicator {
+      opacity: 1;
+    }
+  }
+
+  &--selected::before {
+    opacity: 0;
+  }
+
+  &__option-view {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    #{$self}__indicator {
+      height: 2px;
+      width: 7px;
+
+      &:not(:first-child):not(:last-child) {
+        width: 10px;
+      }
+    }
+
+    &--top-center,
+    &--center,
+    &--bottom-center {
+      align-items: center;
+    }
+
+    &--top-right,
+    &--right,
+    &--bottom-right {
+      align-items: flex-end;
+    }
+  }
+
+  &__indicator {
+    @include theme('neutral-2', background-color);
+
+    border-radius: 1px;
+    opacity: 0;
+
+    &--selected {
+      @include theme('blue-1', background-color);
+
+      opacity: 1;
+    }
+  }
+}

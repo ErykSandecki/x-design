@@ -27,3 +27,15 @@ export enum LayoutType {
 export enum Unit {
   percentage = '%',
 }
+
+export enum AlignmentFlow {
+  topLeft = 'topLeft',
+  topCenter = 'topCenter',
+  topRight = 'topRight',
+  left = 'left',
+  center = 'center',
+  right = 'right',
+  bottomLeft = 'bottomLeft',
+  bottomCenter = 'bottomCenter',
+  bottomRight = 'bottomRight',
+}

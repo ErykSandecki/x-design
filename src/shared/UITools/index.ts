@@ -1,4 +1,5 @@
 // components
+import AlignmentArea from './AlignmentArea/AlignmentArea';
 import ButtonGroup from './ButtonGroup/ButtonGroup';
 import ButtonIcon from './ButtonIcon/ButtonIcon';
 import Chip from './Chip/Chip';
@@ -14,6 +15,7 @@ import TextField from './TextField/TextField';
 import ToggleButtonGroup from './ToggleButtonGroup/ToggleButtonGroup';
 
 export const UITools = {
+  AlignmentArea,
   ButtonGroup,
   ButtonIcon,
   Chip,

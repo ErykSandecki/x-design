@@ -1,4 +1,4 @@
-//
+// components
 import { KeyboardKeysGroup } from 'shared';
 
 // others

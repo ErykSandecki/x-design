@@ -1,5 +1,7 @@
 export enum E2EAttribute {
   active = 'active',
+  alignmentArea = 'alignment-area',
+  alignmentAreaOption = 'alignment-area-option',
   anchor = 'anchor',
   anchorResize = 'anchor-resize',
   anchorRotate = 'anchor-rotate',
