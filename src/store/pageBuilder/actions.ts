@@ -6,6 +6,7 @@ import {
   CHANGE_ALIGNMENT,
   CHANGE_BACKGROUND,
   CHANGE_LAYOUT,
+  CHANGE_LAYOUT_ALIGNMENT,
   CHANGE_PARENT,
   CHANGE_POSITION,
   CLEAR_PREV_STATE,
@@ -39,6 +40,7 @@ import {
   TChangeBackgroundAction,
   TChangeBackgroundActionPayload,
   TChangeLayoutAction,
+  TChangeLayoutAlignmentAction,
   TChangeParentAction,
   TChangePositionAction,
   TClearPrevStateAction,
@@ -96,6 +98,13 @@ export const changeBackground = (
 export const changeLayout = (layoutType: TChangeLayoutAction['payload']): TChangeLayoutAction => ({
   payload: layoutType,
   type: CHANGE_LAYOUT,
+});
+
+export const changeLayoutAlignment = (
+  layoutType: TChangeLayoutAlignmentAction['payload'],
+): TChangeLayoutAlignmentAction => ({
+  payload: layoutType,
+  type: CHANGE_LAYOUT_ALIGNMENT,
 });
 
 export const changeParent = (): TChangeParentAction => ({

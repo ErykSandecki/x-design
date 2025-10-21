@@ -15,7 +15,7 @@ import { LayoutType } from 'types';
 
 // utils
 import { getFlippedElements } from '../getFlippedElements';
-import { negateValue } from 'utils/math/negateValue';
+import { negateValue } from 'utils';
 
 describe('getFlippedElements', () => {
   it(`should get fliped elements for axis x`, () => {

@@ -5,6 +5,7 @@ import {
   CHANGE_ALIGNMENT,
   CHANGE_BACKGROUND,
   CHANGE_LAYOUT,
+  CHANGE_LAYOUT_ALIGNMENT,
   CHANGE_PARENT,
   CHANGE_POSITION,
   CLEAR_PREV_STATE,
@@ -139,6 +140,11 @@ export type TChangeBackgroundAction = {
 export type TChangeLayoutAction = {
   payload: TElement['layout']['type'];
   type: typeof CHANGE_LAYOUT;
+};
+
+export type TChangeLayoutAlignmentAction = {
+  payload: TElement['layout']['alignment'];
+  type: typeof CHANGE_LAYOUT_ALIGNMENT;
 };
 
 export type TChangeParentAction = {

@@ -2,11 +2,10 @@
 import { TElements, TSelectedElements, TStrictAxis } from 'store/pageBuilder/types';
 
 // utils
-import { extractObjectValues, mapFilteredValues } from 'utils';
+import { extractObjectValues, mapFilteredValues, negateValue } from 'utils';
 import { findAllChildren } from '../findAllChildren';
 import { handleReverseAlignment } from './handleReverseAlignment';
 import { handleReverseChildren } from './handleReverseChildren';
-import { negateValue } from 'utils/math/negateValue';
 
 export const getFlippedElements = (
   axis: TStrictAxis,

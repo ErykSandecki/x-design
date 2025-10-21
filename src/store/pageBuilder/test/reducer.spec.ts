@@ -46,16 +46,16 @@ import {
   setElementsSizesMinMax,
   setElementsScoreToCurrentSize,
   toggleAspectRatio,
+  changeLayoutAlignment,
 } from '../actions';
 
 // types
-import { AlignmentHorizontal, AlignmentVertical, LayoutType, TAction, TBackground, Unit } from 'types';
+import { AlignmentFlow, AlignmentHorizontal, AlignmentVertical, LayoutType, TAction, TBackground, Unit } from 'types';
 import { AnchorResize } from '../enums';
 import { TPageBuilderState } from '../types';
 
 // utils
-import { negateValue } from 'utils/math/negateValue';
-import { createHtmlElement } from 'utils';
+import { createHtmlElement, negateValue } from 'utils';
 
 const zoomContent = createHtmlElement('div', { id: ZOOM_CONTENT_ID });
 
@@ -499,7 +499,68 @@ describe('PageBuilderReducer', () => {
               ...elementMock,
               layout: {
                 ...layoutMock,
+                alignment: AlignmentFlow.topLeft,
                 type: layoutType,
+              },
+            },
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+  });
+
+  it('should handle CHANGE_LAYOUT_ALIGNMENT', () => {
+    // mock
+    const alignment = AlignmentFlow.center;
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+
+    // before
+    const state = reducer(changeLayoutAlignment(alignment), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [selectedElementMock.id, 'test-2'],
+            },
+            [elementMock.id]: {
+              ...elementMock,
+              layout: {
+                ...layoutMock,
+                alignment: AlignmentFlow.topLeft,
+                type: LayoutType.horizontal,
+              },
+            },
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [selectedElementMock.id, 'test-2'],
+            },
+            [elementMock.id]: {
+              ...elementMock,
+              layout: {
+                ...layoutMock,
+                alignment: AlignmentFlow.center,
+                type: LayoutType.horizontal,
               },
             },
           },

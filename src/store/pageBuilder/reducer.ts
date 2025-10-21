@@ -26,6 +26,7 @@ import {
   SET_ELEMENTS_SIZES_MIN_MAX,
   SET_ELEMENTS_SCORE_TO_CURRENT_SIZE,
   TOGGLE_ASPECT_RATIO,
+  CHANGE_LAYOUT_ALIGNMENT,
 } from './actionsType';
 import { BASE_PAGE } from './constants';
 
@@ -52,6 +53,7 @@ import {
   TApplyElementsSizeTypeAction,
   TSetElementsSizesMinMaxAction,
   TSetElementsScoreToCurrentSizeAction,
+  TChangeLayoutAlignmentAction,
 } from './types';
 
 // utils
@@ -61,6 +63,7 @@ import { handleApplyElementsSizeType } from './utils/applyElementsSizeType/handl
 import { handleChangeAlignment } from './utils/changeAligment/handleChangeAlignment';
 import { handleChangeBackground } from './utils/handleChangeBackground';
 import { handleChangeLayout } from './utils/handleChangeLayout';
+import { handleChangeLayoutAlignment } from './utils/handleChangeLayoutAlignment';
 import { handleChangeParent } from './utils/changeParent/handleChangeParent';
 import { handleChangePosition } from './utils/handleChangePosition';
 import { handleFitLayout } from './utils/handleFitLayout';
@@ -128,6 +131,11 @@ const changeLayout = (
   state: TPageBuilderState,
   { payload }: TAction<TChangeLayoutAction['payload']>,
 ): TPageBuilderState => handleChangeLayout(payload, state);
+
+const changeLayoutAlignment = (
+  state: TPageBuilderState,
+  { payload }: TAction<TChangeLayoutAlignmentAction['payload']>,
+): TPageBuilderState => handleChangeLayoutAlignment(payload, state);
 
 const changeParent = (state: TPageBuilderState): TPageBuilderState => handleChangeParent(state);
 
@@ -288,6 +296,8 @@ const pageBuilder = (state: TPageBuilderState = initialState, action: TAction): 
       return changeBackground(state, action);
     case CHANGE_LAYOUT:
       return changeLayout(state, action);
+    case CHANGE_LAYOUT_ALIGNMENT:
+      return changeLayoutAlignment(state, action);
     case CHANGE_PARENT:
       return changeParent(state);
     case CHANGE_POSITION:
