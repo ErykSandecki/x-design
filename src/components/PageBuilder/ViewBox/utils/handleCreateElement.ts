@@ -5,7 +5,7 @@ import { addElement } from 'store/pageBuilder/actions';
 import { elementsSelector, eventSelectorCreator } from 'store/pageBuilder/selectors';
 
 // types
-import { AlignmentFlow, ElementType, LayoutType } from 'types';
+import { AlignmentLayout, ElementType, LayoutType } from 'types';
 import { MouseMode } from '../../../../types/enums/mouseMode';
 import { TAddELementActionPayload } from 'store/pageBuilder/types';
 
@@ -21,7 +21,7 @@ export const handleCreateElement = (
 
   if (possibleElement && mouseMode === MouseMode.toolBeltA) {
     const { x1, x2, y1, y2 } = possibleElement;
-    const layout = { alignment: AlignmentFlow.none, type: LayoutType.freeForm };
+    const layout = { alignment: AlignmentLayout.none, type: LayoutType.freeForm };
     const x = x1 < x2 ? x1 : x2;
     const y = y1 < y2 ? y1 : y2;
 

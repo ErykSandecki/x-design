@@ -2,7 +2,7 @@ import { ColorFormatType } from 'antd/es/color-picker/interface';
 import { CSSProperties } from 'react';
 
 // types
-import { AlignmentFlow, AlignmentHorizontal, AlignmentVertical, ElementType, LayoutType, Unit } from './enums';
+import { AlignmentLayout, AlignmentHorizontal, AlignmentVertical, ElementType, LayoutType, Unit } from './enums';
 
 export type TAlignment = {
   horizontal?: AlignmentHorizontal;
@@ -29,7 +29,7 @@ export type TFlip = {
 };
 
 export type TLayout = {
-  alignment: AlignmentFlow;
+  alignment: AlignmentLayout;
   type: LayoutType;
 };
 

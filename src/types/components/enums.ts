@@ -28,7 +28,7 @@ export enum Unit {
   percentage = '%',
 }
 
-export enum AlignmentFlow {
+export enum AlignmentLayout {
   topLeft = 'topLeft',
   topCenter = 'topCenter',
   topRight = 'topRight',

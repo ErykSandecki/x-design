@@ -4,7 +4,7 @@ import { renderHook } from '@testing-library/react';
 import { useChangeAlignmentEvent } from '../useChangeAlignmentEvent';
 
 // types
-import { AlignmentFlow } from 'types';
+import { AlignmentLayout } from 'types';
 
 const mockCallBack = jest.fn();
 
@@ -19,10 +19,10 @@ describe('useChangeAlignmentEvent', () => {
     const { result } = renderHook(() => useChangeAlignmentEvent(mockCallBack));
 
     // action
-    result.current(AlignmentFlow.center);
+    result.current(AlignmentLayout.center);
 
     // result
-    expect(mockCallBack.mock.calls[0][0]).toBe(AlignmentFlow.center);
-    expect(mockCallBack.mock.calls[1][0].payload).toBe(AlignmentFlow.center);
+    expect(mockCallBack.mock.calls[0][0]).toBe(AlignmentLayout.center);
+    expect(mockCallBack.mock.calls[1][0].payload).toBe(AlignmentLayout.center);
   });
 });

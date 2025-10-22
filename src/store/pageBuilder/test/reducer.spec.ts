@@ -50,7 +50,7 @@ import {
 } from '../actions';
 
 // types
-import { AlignmentFlow, AlignmentHorizontal, AlignmentVertical, LayoutType, TAction, TBackground, Unit } from 'types';
+import { AlignmentLayout, AlignmentHorizontal, AlignmentVertical, LayoutType, TAction, TBackground, Unit } from 'types';
 import { AnchorResize } from '../enums';
 import { TPageBuilderState } from '../types';
 
@@ -499,7 +499,7 @@ describe('PageBuilderReducer', () => {
               ...elementMock,
               layout: {
                 ...layoutMock,
-                alignment: AlignmentFlow.topLeft,
+                alignment: AlignmentLayout.topLeft,
                 type: layoutType,
               },
             },
@@ -512,7 +512,7 @@ describe('PageBuilderReducer', () => {
 
   it('should handle CHANGE_LAYOUT_ALIGNMENT', () => {
     // mock
-    const alignment = AlignmentFlow.center;
+    const alignment = AlignmentLayout.center;
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
     // before
@@ -532,7 +532,7 @@ describe('PageBuilderReducer', () => {
               ...elementMock,
               layout: {
                 ...layoutMock,
-                alignment: AlignmentFlow.topLeft,
+                alignment: AlignmentLayout.topLeft,
                 type: LayoutType.horizontal,
               },
             },
@@ -559,7 +559,7 @@ describe('PageBuilderReducer', () => {
               ...elementMock,
               layout: {
                 ...layoutMock,
-                alignment: AlignmentFlow.center,
+                alignment: AlignmentLayout.center,
                 type: LayoutType.horizontal,
               },
             },

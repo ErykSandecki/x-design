@@ -14,7 +14,7 @@ import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 import { configureStore } from 'store/store';
 
 // types
-import { AlignmentFlow, E2EAttribute, LayoutType } from 'types';
+import { AlignmentLayout, E2EAttribute, LayoutType } from 'types';
 
 // utils
 import { customRender, getByE2EAttribute } from 'test';
@@ -37,7 +37,7 @@ const stateMock = {
             ...elementMock,
             layout: {
               ...layoutMock,
-              alignment: AlignmentFlow.topLeft,
+              alignment: AlignmentLayout.topLeft,
               type: LayoutType.horizontal,
             },
           },
@@ -80,7 +80,7 @@ describe('ColumnAlignmentFlow snapshots', () => {
                 id: 'test-1',
                 layout: {
                   ...layoutMock,
-                  alignment: AlignmentFlow.none,
+                  alignment: AlignmentLayout.none,
                   type: LayoutType.freeForm,
                 },
               },
@@ -118,7 +118,7 @@ describe('ColumnAlignmentFlow snapshots', () => {
                 id: 'test-1',
                 layout: {
                   ...layoutMock,
-                  alignment: AlignmentFlow.topLeft,
+                  alignment: AlignmentLayout.topLeft,
                   type: LayoutType.horizontal,
                 },
               },
@@ -162,12 +162,12 @@ describe('ColumnAlignmentFlow behaviors', () => {
 
     // find
     const aligmentArea = getByE2EAttribute(container, E2EAttribute.alignmentArea, 'alignment-flow');
-    const alignmentOption = getByE2EAttribute(aligmentArea, E2EAttribute.alignmentAreaOption, AlignmentFlow.center);
+    const alignmentOption = getByE2EAttribute(aligmentArea, E2EAttribute.alignmentAreaOption, AlignmentLayout.center);
 
     // action
     fireEvent.click(alignmentOption);
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].layout.alignment).toBe(AlignmentFlow.center);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].layout.alignment).toBe(AlignmentLayout.center);
   });
 });

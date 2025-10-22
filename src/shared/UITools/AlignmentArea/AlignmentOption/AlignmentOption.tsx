@@ -15,12 +15,12 @@ import { className, classNames } from './classNames';
 import styles from './alignment-option.scss';
 
 // types
-import { AlignmentFlow, E2EAttribute } from 'types';
+import { AlignmentLayout, E2EAttribute } from 'types';
 
 export type TAlignmentOptionProps = {
-  alignmentFlow: AlignmentFlow;
+  alignmentFlow: AlignmentLayout;
   isSelected: boolean;
-  onClick: TFunc<[AlignmentFlow]>;
+  onClick: TFunc<[AlignmentLayout]>;
 };
 
 export const AlignmentOption: FC<TAlignmentOptionProps> = ({ alignmentFlow, isSelected, onClick }) => {

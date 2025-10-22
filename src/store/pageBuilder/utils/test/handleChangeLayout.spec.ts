@@ -11,7 +11,7 @@ import {
 import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
 
 // types
-import { AlignmentFlow, LayoutType } from 'types';
+import { AlignmentLayout, LayoutType } from 'types';
 
 // utils
 import { handleChangeLayout } from '../handleChangeLayout';
@@ -77,7 +77,7 @@ describe('handleChangeLayout', () => {
               children: [{ ...childrenMock, id: 'test-2' }],
               layout: {
                 ...layoutMock,
-                alignment: AlignmentFlow.topLeft,
+                alignment: AlignmentLayout.topLeft,
                 type: LayoutType.horizontal,
               },
             },
@@ -137,7 +137,7 @@ describe('handleChangeLayout', () => {
               children: [{ ...childrenMock, id: 'test-2' }],
               layout: {
                 ...layoutMock,
-                alignment: AlignmentFlow.none,
+                alignment: AlignmentLayout.none,
               },
             },
             ['test-2']: {

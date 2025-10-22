@@ -6,14 +6,14 @@ import { useSelector } from 'react-redux';
 import { elementDataSelectorCreator, elementsSelector, selectedElementsSelector } from 'store/pageBuilder/selectors';
 
 // types
-import { AlignmentFlow, LayoutType } from 'types';
+import { AlignmentLayout, LayoutType } from 'types';
 import { TUseChangeAlignmentEvent, useChangeAlignmentEvent } from './useChangeAlignmentEvent';
 
 // utils
 import { isMixed } from '../../utils/isMixed';
 
 type TUseColumnAlignmentFlowEvents = {
-  alignment: AlignmentFlow;
+  alignment: AlignmentLayout;
   isFreeForm: boolean;
   isMixedLayout: boolean;
   onChangeAlignment: TUseChangeAlignmentEvent;
@@ -28,11 +28,11 @@ export const useColumnAlignmentFlowEvents = (): TUseColumnAlignmentFlowEvents =>
   const isMixedLayout = isMixed(elements, firstElement, 'layout.type', selectedElements);
   const isMultiple = size(selectedElements) > 1;
   const { layout } = element;
-  const [alignment, setAlignment] = useState(AlignmentFlow.none);
+  const [alignment, setAlignment] = useState(AlignmentLayout.none);
   const isFreeForm = layout.type === LayoutType.freeForm;
 
   useEffect(() => {
-    setAlignment(isMixedAlignment ? AlignmentFlow.none : layout.alignment);
+    setAlignment(isMixedAlignment ? AlignmentLayout.none : layout.alignment);
   }, [layout.alignment, isMultiple]);
 
   return {

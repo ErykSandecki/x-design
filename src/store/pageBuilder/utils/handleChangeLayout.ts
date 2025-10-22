@@ -2,7 +2,7 @@
 import { BASE_2D } from 'shared';
 
 // types
-import { AlignmentFlow, LayoutType } from 'types';
+import { AlignmentLayout, LayoutType } from 'types';
 import { TChangeLayoutAction, TPageBuilderState } from '../types';
 
 // utils
@@ -32,7 +32,7 @@ export const handleChangeLayout = (
             ...element,
             layout: {
               ...element.layout,
-              alignment: isFreeForm ? AlignmentFlow.none : AlignmentFlow.topLeft,
+              alignment: isFreeForm ? AlignmentLayout.none : AlignmentLayout.topLeft,
               type: layoutType,
             },
           })),

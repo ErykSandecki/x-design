@@ -11,7 +11,7 @@ import 'test/mocks/sagas/allSagas';
 import { configureStore } from 'store/store';
 
 // types
-import { AlignmentFlow, E2EAttribute } from 'types';
+import { AlignmentLayout, E2EAttribute } from 'types';
 
 // utils
 import { customRender, getByE2EAttribute } from 'test';
@@ -26,7 +26,7 @@ describe('AlignmentArea snapshots', () => {
     // before
     const { asFragment } = customRender(
       <Provider store={store}>
-        <AlignmentArea onClick={mockCallBack} value={AlignmentFlow.bottomCenter} />
+        <AlignmentArea onClick={mockCallBack} value={AlignmentLayout.bottomCenter} />
       </Provider>,
     );
 
@@ -43,14 +43,14 @@ describe('AlignmentArea behaviors', () => {
     // before
     const { container } = customRender(
       <Provider store={store}>
-        <AlignmentArea onClick={mockCallBack} value={AlignmentFlow.bottomCenter} />
+        <AlignmentArea onClick={mockCallBack} value={AlignmentLayout.bottomCenter} />
       </Provider>,
     );
 
     // action
-    fireEvent.click(getByE2EAttribute(container, E2EAttribute.alignmentAreaOption, AlignmentFlow.bottomLeft));
+    fireEvent.click(getByE2EAttribute(container, E2EAttribute.alignmentAreaOption, AlignmentLayout.bottomLeft));
 
     // result
-    expect(mockCallBack.mock.calls[0][0]).toBe(AlignmentFlow.bottomLeft);
+    expect(mockCallBack.mock.calls[0][0]).toBe(AlignmentLayout.bottomLeft);
   });
 });

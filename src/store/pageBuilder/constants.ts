@@ -25,7 +25,7 @@ import { BASE_2D, BASE_3D } from 'shared';
 import { THEME_COLORS } from 'constant/themeColors';
 
 // types
-import { AlignmentFlow, ElementType, LayoutType, TElement, Theme } from 'types';
+import { AlignmentLayout, ElementType, LayoutType, TElement, Theme } from 'types';
 import { TElements, TPage } from './types';
 
 // utils
@@ -47,7 +47,7 @@ export const BASE_ELEMENTS: TElement = {
   flip: { x: false, y: false },
   height: { value: 0 },
   id: '-1',
-  layout: { alignment: AlignmentFlow.none, type: LayoutType.freeForm },
+  layout: { alignment: AlignmentLayout.none, type: LayoutType.freeForm },
   parentId: '-1',
   position: 'absolute',
   type: ElementType.base,

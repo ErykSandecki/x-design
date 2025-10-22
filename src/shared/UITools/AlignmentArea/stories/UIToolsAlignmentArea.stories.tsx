@@ -6,7 +6,7 @@ import { AlignmentArea } from '../AlignmentArea';
 import { StoryComponent } from 'stories';
 
 // types
-import { AlignmentFlow } from 'types';
+import { AlignmentLayout } from 'types';
 
 const description = [];
 
@@ -18,7 +18,7 @@ export default {
 } satisfies Meta<typeof AlignmentArea>;
 
 const Template: StoryFn<typeof AlignmentArea> = () => {
-  const [value, setValue] = useState(AlignmentFlow.center);
+  const [value, setValue] = useState(AlignmentLayout.center);
 
   return (
     <StoryComponent blocksCodeData={[]} description={description} title="AlignmentArea">

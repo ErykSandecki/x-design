@@ -4,14 +4,14 @@ import { useDispatch } from 'react-redux';
 import { changeLayoutAlignment } from 'store/pageBuilder/actions';
 
 // types
-import { AlignmentFlow } from 'types';
+import { AlignmentLayout } from 'types';
 
-export type TUseChangeAlignmentEvent = TFunc<[AlignmentFlow?]>;
+export type TUseChangeAlignmentEvent = TFunc<[AlignmentLayout?]>;
 
-export const useChangeAlignmentEvent = (setAlignment: TFunc<[AlignmentFlow]>): TUseChangeAlignmentEvent => {
+export const useChangeAlignmentEvent = (setAlignment: TFunc<[AlignmentLayout]>): TUseChangeAlignmentEvent => {
   const dispatch = useDispatch();
 
-  const handleChange = (alignment: AlignmentFlow): void => {
+  const handleChange = (alignment: AlignmentLayout): void => {
     setAlignment(alignment);
     dispatch(changeLayoutAlignment(alignment));
   };

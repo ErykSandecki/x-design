@@ -5,7 +5,7 @@ import { elementMock, layoutMock, pageBuilderStateMock, selectedElementMock } fr
 import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
 
 // types
-import { AlignmentFlow, LayoutType } from 'types';
+import { AlignmentLayout, LayoutType } from 'types';
 
 // utils
 import { handleChangeLayoutAlignment } from '../handleChangeLayoutAlignment';
@@ -16,7 +16,7 @@ describe('handleChangeLayoutAlignment', () => {
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
     // before
-    const result = handleChangeLayoutAlignment(AlignmentFlow.center, {
+    const result = handleChangeLayoutAlignment(AlignmentLayout.center, {
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -28,7 +28,7 @@ describe('handleChangeLayoutAlignment', () => {
               ...elementMock,
               layout: {
                 ...layoutMock,
-                alignment: AlignmentFlow.topLeft,
+                alignment: AlignmentLayout.topLeft,
                 type: LayoutType.vertical,
               },
             },
@@ -51,7 +51,7 @@ describe('handleChangeLayoutAlignment', () => {
               ...elementMock,
               layout: {
                 ...layoutMock,
-                alignment: AlignmentFlow.center,
+                alignment: AlignmentLayout.center,
                 type: LayoutType.vertical,
               },
             },

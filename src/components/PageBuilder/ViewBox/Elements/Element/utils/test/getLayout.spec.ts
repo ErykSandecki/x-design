@@ -22,8 +22,10 @@ describe('getLayout', () => {
 
     // result
     expect(result).toStrictEqual({
+      alignItems: 'flex-end',
       display: 'flex',
       flexDirection: 'column',
+      justifyContent: 'flex-start',
     });
   });
 
@@ -33,7 +35,9 @@ describe('getLayout', () => {
 
     // result
     expect(result).toStrictEqual({
+      alignItems: 'flex-start',
       display: 'flex',
+      justifyContent: 'flex-end',
     });
   });
 
@@ -43,7 +47,9 @@ describe('getLayout', () => {
 
     // result
     expect(result).toStrictEqual({
+      alignItems: 'flex-start',
       display: 'grid',
+      justifyContent: 'flex-end',
     });
   });
 });

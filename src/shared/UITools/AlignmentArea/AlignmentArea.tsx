@@ -14,7 +14,7 @@ import { className, classNames } from './classNames';
 import styles from './alignment-area.scss';
 
 // types
-import { AlignmentFlow, E2EAttribute } from 'types';
+import { AlignmentLayout, E2EAttribute } from 'types';
 import { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute';
 
 // utils
@@ -23,8 +23,8 @@ import { enumToArray } from 'utils';
 export type TAlignmentAreaProps = {
   e2eValue?: TE2EDataAttributeProps['value'];
   fullWidth?: boolean;
-  onClick: TFunc<[AlignmentFlow]>;
-  value: AlignmentFlow;
+  onClick: TFunc<[AlignmentLayout]>;
+  value: AlignmentLayout;
 };
 
 export const AlignmentArea: FC<TAlignmentAreaProps> = ({ e2eValue = '', fullWidth = false, onClick, value }) => {
@@ -41,8 +41,8 @@ export const AlignmentArea: FC<TAlignmentAreaProps> = ({ e2eValue = '', fullWidt
       e2eAttribute={E2EAttribute.alignmentArea}
       e2eValue={e2eValue}
     >
-      {enumToArray<AlignmentFlow>(AlignmentFlow)
-        .filter((alignmentFlow) => alignmentFlow !== AlignmentFlow.none)
+      {enumToArray<AlignmentLayout>(AlignmentLayout)
+        .filter((alignmentFlow) => alignmentFlow !== AlignmentLayout.none)
         .map((alignmentFlow) => (
           <AlignmentOption
             alignmentFlow={alignmentFlow}
