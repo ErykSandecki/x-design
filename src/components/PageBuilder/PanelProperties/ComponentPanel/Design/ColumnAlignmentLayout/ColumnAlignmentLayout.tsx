@@ -5,14 +5,14 @@ import { useTranslation } from 'react-i18next';
 import { UITools } from 'shared';
 
 // hooks
-import { useColumnAlignmentFlowEvents } from './hooks/useColumnAlignmentFlowEvents';
+import { useColumnAlignmentLayoutEvents } from './hooks/useColumnAlignmentLayoutEvents';
 
 // others
 import { translationNameSpace } from './constants';
 
-const ColumnAlignmentFlow: FC = () => {
+const ColumnAlignmentLayout: FC = () => {
   const { t } = useTranslation();
-  const { alignment, isFreeForm, isMixedLayout, onChangeAlignment } = useColumnAlignmentFlowEvents();
+  const { alignment, isFreeForm, isMixedLayout, onChangeAlignment } = useColumnAlignmentLayoutEvents();
 
   if (isMixedLayout || isFreeForm) {
     return null;
@@ -29,4 +29,4 @@ const ColumnAlignmentFlow: FC = () => {
   );
 };
 
-export default ColumnAlignmentFlow;
+export default ColumnAlignmentLayout;

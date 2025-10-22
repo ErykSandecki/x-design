@@ -3,7 +3,7 @@
   "colorPicker.sampler.prompt.description": "Click to sample",
   "keyboardKeysGroup.optional": "or",
   "pageBuilder.panelProperties.componentPanel.design.columnAlignment.label": "Alignment",
-  "pageBuilder.panelProperties.componentPanel.design.columnAlignmentFlow.label": "Alignment",
+  "pageBuilder.panelProperties.componentPanel.design.columnAlignmentLayout.label": "Alignment",
   "pageBuilder.panelProperties.componentPanel.design.columnFlow.label": "Flow",
   "pageBuilder.panelProperties.componentPanel.design.columnHeader.header.frame": "Frame",
   "pageBuilder.panelProperties.componentPanel.design.columnHeader.header_other": "{{ amount }} selected",

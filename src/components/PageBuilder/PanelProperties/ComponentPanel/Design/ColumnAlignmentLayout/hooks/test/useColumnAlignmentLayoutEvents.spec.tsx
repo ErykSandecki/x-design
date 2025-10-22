@@ -1,7 +1,7 @@
 import { renderHook } from '@testing-library/react';
 
 // hooks
-import { useColumnAlignmentFlowEvents } from '../useColumnAlignmentFlowEvents';
+import { useColumnAlignmentLayoutEvents } from '../useColumnAlignmentLayoutEvents';
 
 // mocks
 import { elementMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
@@ -38,13 +38,13 @@ const stateMock = {
   },
 };
 
-describe('useColumnAlignmentFlowEvents', () => {
+describe('useColumnAlignmentLayoutEvents', () => {
   it(`should return data`, () => {
     // mock
     const store = configureStore(stateMock);
 
     // before
-    const { result } = renderHook(() => useColumnAlignmentFlowEvents(), { wrapper: getProviderWrapper(store) });
+    const { result } = renderHook(() => useColumnAlignmentLayoutEvents(), { wrapper: getProviderWrapper(store) });
 
     // result
     expect(result.current).toStrictEqual({

@@ -2,7 +2,7 @@ import { fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';
 
 // components
-import ColumnAlignmentFlow from './ColumnAlignmentFlow';
+import ColumnAlignmentLayout from './ColumnAlignmentLayout';
 
 // mocks
 import { elementMock, layoutMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
@@ -48,15 +48,15 @@ const stateMock = {
   },
 };
 
-describe('ColumnAlignmentFlow snapshots', () => {
-  it('should render ColumnAlignmentFlow', () => {
+describe('ColumnAlignmentLayout snapshots', () => {
+  it('should render ColumnAlignmentLayout', () => {
     // mock
     const store = configureStore(stateMock);
 
     // before
     const { asFragment } = customRender(
       <Provider store={store}>
-        <ColumnAlignmentFlow />
+        <ColumnAlignmentLayout />
       </Provider>,
     );
 
@@ -94,7 +94,7 @@ describe('ColumnAlignmentFlow snapshots', () => {
     // before
     const { asFragment } = customRender(
       <Provider store={store}>
-        <ColumnAlignmentFlow />
+        <ColumnAlignmentLayout />
       </Provider>,
     );
 
@@ -139,7 +139,7 @@ describe('ColumnAlignmentFlow snapshots', () => {
     // before
     const { asFragment } = customRender(
       <Provider store={store}>
-        <ColumnAlignmentFlow />
+        <ColumnAlignmentLayout />
       </Provider>,
     );
 
@@ -148,7 +148,7 @@ describe('ColumnAlignmentFlow snapshots', () => {
   });
 });
 
-describe('ColumnAlignmentFlow behaviors', () => {
+describe('ColumnAlignmentLayout behaviors', () => {
   it('should change alignment', () => {
     // mock
     const store = configureStore(stateMock);
@@ -156,7 +156,7 @@ describe('ColumnAlignmentFlow behaviors', () => {
     // before
     const { container } = customRender(
       <Provider store={store}>
-        <ColumnAlignmentFlow />
+        <ColumnAlignmentLayout />
       </Provider>,
     );
 

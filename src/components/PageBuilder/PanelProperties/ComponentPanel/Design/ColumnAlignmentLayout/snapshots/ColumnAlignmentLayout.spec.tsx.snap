@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ColumnAlignmentFlow snapshots should render ColumnAlignmentFlow 1`] = `
+exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`] = `
 <DocumentFragment>
   <div
     class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
@@ -406,6 +406,6 @@ exports[`ColumnAlignmentFlow snapshots should render ColumnAlignmentFlow 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ColumnAlignmentFlow snapshots should render when is free form 1`] = `<DocumentFragment />`;
+exports[`ColumnAlignmentLayout snapshots should render when is free form 1`] = `<DocumentFragment />`;
 
-exports[`ColumnAlignmentFlow snapshots should render when layout types are mixed 1`] = `<DocumentFragment />`;
+exports[`ColumnAlignmentLayout snapshots should render when layout types are mixed 1`] = `<DocumentFragment />`;

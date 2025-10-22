@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 // components
 import ColumnAlignment from './ColumnAlignment/ColumnAlignment';
-import ColumnAlignmentFlow from './ColumnAlignmentFlow/ColumnAlignmentFlow';
+import ColumnAlignmentLayout from './ColumnAlignmentLayout/ColumnAlignmentLayout';
 import ColumnFlow from './ColumnFlow/ColumnFlow';
 import ColumnHeader from './ColumnHeader/ColumnHeader';
 import ColumnMinMaxSize from './ColumnMinMaxSize/ColumnMinMaxSize';
@@ -45,7 +45,7 @@ const Design: FC = () => {
         <ColumnResizing />
         <ColumnMinMaxSize score="min" />
         <ColumnMinMaxSize score="max" />
-        <ColumnAlignmentFlow />
+        <ColumnAlignmentLayout />
       </UITools.Section>
     </>
   );

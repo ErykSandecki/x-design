@@ -12,14 +12,14 @@ import { TUseChangeAlignmentEvent, useChangeAlignmentEvent } from './useChangeAl
 // utils
 import { isMixed } from '../../utils/isMixed';
 
-type TUseColumnAlignmentFlowEvents = {
+type TUseColumnAlignmentLayoutEvents = {
   alignment: AlignmentLayout;
   isFreeForm: boolean;
   isMixedLayout: boolean;
   onChangeAlignment: TUseChangeAlignmentEvent;
 };
 
-export const useColumnAlignmentFlowEvents = (): TUseColumnAlignmentFlowEvents => {
+export const useColumnAlignmentLayoutEvents = (): TUseColumnAlignmentLayoutEvents => {
   const elements = useSelector(elementsSelector);
   const selectedElements = useSelector(selectedElementsSelector);
   const firstElement = first(selectedElements);
