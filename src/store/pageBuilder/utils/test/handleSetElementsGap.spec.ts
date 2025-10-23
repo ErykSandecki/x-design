@@ -1,5 +1,11 @@
 // mocks
-import { elementMock, layoutMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
+import {
+  elementMock,
+  gapMock,
+  layoutMock,
+  pageBuilderStateMock,
+  selectedElementMock,
+} from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
@@ -55,7 +61,7 @@ describe('handleSetElementsGap', () => {
               layout: {
                 ...layoutMock,
                 alignment: AlignmentLayout.topLeft,
-                gap: { ...layoutMock.gap, column: 100 },
+                gap: { ...layoutMock.gap, column: { ...gapMock, value: 100 } },
                 type: LayoutType.vertical,
               },
             },

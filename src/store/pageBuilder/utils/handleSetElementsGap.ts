@@ -23,7 +23,7 @@ export const handleSetElementsGap = (
           ...currentPage.elements,
           ...mapFilteredValues(currentPage.elements, ids, (element) => ({
             ...element,
-            layout: { ...element.layout, gap: { ...element.layout.gap, [gap]: value } },
+            layout: { ...element.layout, gap: { ...element.layout.gap, [gap]: { ...element.layout.gap[gap], value } } },
           })),
         },
       },

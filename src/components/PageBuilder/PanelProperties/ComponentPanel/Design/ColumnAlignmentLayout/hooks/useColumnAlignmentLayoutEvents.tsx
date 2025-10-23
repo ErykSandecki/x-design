@@ -37,8 +37,8 @@ export const useColumnAlignmentLayoutEvents = (): TUseColumnAlignmentLayoutEvent
   const firstElement = first(selectedElements);
   const element = useSelector(elementDataSelectorCreator(firstElement.id));
   const isMixedAlignment = isMixed(elements, firstElement, 'layout.alignment', selectedElements);
-  const isMixedColumnGap = isMixed(elements, firstElement, 'layout.gap.column', selectedElements);
-  const isMixedColumnRow = isMixed(elements, firstElement, 'layout.gap.row', selectedElements);
+  const isMixedColumnGap = isMixed(elements, firstElement, 'layout.gap.column.value', selectedElements);
+  const isMixedColumnRow = isMixed(elements, firstElement, 'layout.gap.row.value', selectedElements);
   const isMixedLayout = isMixed(elements, firstElement, 'layout.type', selectedElements);
   const isMultiple = size(selectedElements) > 1;
   const { layout } = element;
@@ -56,8 +56,8 @@ export const useColumnAlignmentLayoutEvents = (): TUseColumnAlignmentLayoutEvent
   useEffect(() => {
     const { column, row } = element.layout.gap;
 
-    setColumnGap(isMixedColumnGap ? 'Mixed' : column.toString());
-    setRowGap(isMixedColumnRow ? 'Mixed' : row.toString());
+    setColumnGap(isMixedColumnGap ? 'Mixed' : column.value.toString());
+    setRowGap(isMixedColumnRow ? 'Mixed' : row.value.toString());
   }, [layout.gap.column, layout.gap.row, isMultiple]);
 
   return {

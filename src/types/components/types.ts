@@ -28,9 +28,13 @@ export type TFlip = {
   y: boolean;
 };
 
+export type TGapProperties = {
+  value: number;
+};
+
 export type TGap = {
-  column: number;
-  row: number;
+  column: TGapProperties;
+  row: TGapProperties;
 };
 
 export type TLayout = {

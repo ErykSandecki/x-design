@@ -11,6 +11,7 @@ import {
   childrenMock,
   flipMock,
   eventsMock,
+  gapMock,
 } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
@@ -1139,7 +1140,7 @@ describe('PageBuilderReducer', () => {
               layout: {
                 ...layoutMock,
                 alignment: AlignmentLayout.topLeft,
-                gap: { ...layoutMock.gap, [gap]: value },
+                gap: { ...layoutMock.gap, [gap]: { ...gapMock, value } },
                 type: LayoutType.vertical,
               },
             },

@@ -19,22 +19,22 @@ export const getLayout = (layout: TElement['layout']): CSSProperties => {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: alignItems,
-        rowGap: `${gap.row}px`,
+        rowGap: `${gap.row.value}px`,
       };
     case LayoutType.horizontal:
       return {
         alignItems,
-        columnGap: `${gap.column}px`,
+        columnGap: `${gap.column.value}px`,
         display: 'flex',
         justifyContent,
       };
     default:
       return {
         alignContent: alignItems,
-        columnGap: `${gap.column}px`,
+        columnGap: `${gap.column.value}px`,
         display: 'grid',
         justifyContent,
-        rowGap: `${gap.row}px`,
+        rowGap: `${gap.row.value}px`,
       };
   }
 };

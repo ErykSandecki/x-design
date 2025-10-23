@@ -22,7 +22,7 @@ export const useBlurGapEvents = (
 
   const handleBlurColumnGap = (): void => {
     if (columnGap === '') {
-      setColumnGap(element.layout.gap.column.toString());
+      setColumnGap(element.layout.gap.column.value.toString());
     } else {
       dispatch(setElementsGap('column', parseFloat(columnGap)));
     }
@@ -30,7 +30,7 @@ export const useBlurGapEvents = (
 
   const handleBlurRowGap = (): void => {
     if (rowGap === '') {
-      setRowGap(element.layout.gap.row.toString());
+      setRowGap(element.layout.gap.row.value.toString());
     } else {
       dispatch(setElementsGap('row', parseFloat(rowGap)));
     }

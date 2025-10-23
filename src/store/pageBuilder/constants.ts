@@ -48,7 +48,11 @@ export const BASE_ELEMENTS: TElement = {
   flip: { x: false, y: false },
   height: { value: 0 },
   id: '-1',
-  layout: { alignment: AlignmentLayout.none, gap: { column: 0, row: 0 }, type: LayoutType.freeForm },
+  layout: {
+    alignment: AlignmentLayout.none,
+    gap: { column: { value: 0 }, row: { value: 0 } },
+    type: LayoutType.freeForm,
+  },
   parentId: '-1',
   position: 'absolute',
   type: ElementType.base,

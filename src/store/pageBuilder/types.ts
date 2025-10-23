@@ -42,6 +42,7 @@ import {
   TChildren,
   TElement,
   TGap,
+  TGapProperties,
   TObject,
   TScore,
   TSize,
@@ -228,7 +229,7 @@ export type TSetElementsCoordinatesAction = {
 
 export type TSetElementsGapActionPayload = {
   gap: keyof TGap;
-  value: TGap['column'] | TGap['row'];
+  value: TGapProperties['value'];
 };
 
 export type TSetElementsGapAction = {

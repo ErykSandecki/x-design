@@ -5,7 +5,13 @@ import { Provider } from 'react-redux';
 import ColumnAlignmentLayout from './ColumnAlignmentLayout';
 
 // mocks
-import { elementMock, layoutMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
+import {
+  elementMock,
+  gapMock,
+  layoutMock,
+  pageBuilderStateMock,
+  selectedElementMock,
+} from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
@@ -292,8 +298,8 @@ describe('ColumnAlignmentLayout snapshots', () => {
                   alignment: AlignmentLayout.topLeft,
                   gap: {
                     ...layoutMock.gap,
-                    column: 0,
-                    row: 0,
+                    column: { ...gapMock, value: 0 },
+                    row: { ...gapMock, value: 0 },
                   },
                   type: LayoutType.grid,
                 },
@@ -306,8 +312,8 @@ describe('ColumnAlignmentLayout snapshots', () => {
                   alignment: AlignmentLayout.topLeft,
                   gap: {
                     ...layoutMock.gap,
-                    column: 10,
-                    row: 10,
+                    column: { ...gapMock, value: 10 },
+                    row: { ...gapMock, value: 10 },
                   },
                   type: LayoutType.grid,
                 },
@@ -465,8 +471,8 @@ describe('ColumnAlignmentLayout behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].layout.gap).toStrictEqual({
-      column: 100,
-      row: 100,
+      column: { value: 100 },
+      row: { value: 100 },
     });
   });
 
@@ -527,8 +533,8 @@ describe('ColumnAlignmentLayout behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].layout.gap).toStrictEqual({
-      column: 100,
-      row: 100,
+      column: { value: 100 },
+      row: { value: 100 },
     });
   });
 
@@ -551,8 +557,14 @@ describe('ColumnAlignmentLayout behaviors', () => {
                   alignment: AlignmentLayout.topLeft,
                   gap: {
                     ...layoutMock.gap,
-                    column: 0,
-                    row: 0,
+                    column: {
+                      ...gapMock,
+                      value: 0,
+                    },
+                    row: {
+                      ...gapMock,
+                      value: 0,
+                    },
                   },
                   type: LayoutType.grid,
                 },
@@ -565,8 +577,14 @@ describe('ColumnAlignmentLayout behaviors', () => {
                   alignment: AlignmentLayout.topLeft,
                   gap: {
                     ...layoutMock.gap,
-                    column: 10,
-                    row: 10,
+                    column: {
+                      ...gapMock,
+                      value: 10,
+                    },
+                    row: {
+                      ...gapMock,
+                      value: 10,
+                    },
                   },
                   type: LayoutType.grid,
                 },
@@ -604,12 +622,12 @@ describe('ColumnAlignmentLayout behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].layout.gap).toStrictEqual({
-      column: 100,
-      row: 100,
+      column: { value: 100 },
+      row: { value: 100 },
     });
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-2'].layout.gap).toStrictEqual({
-      column: 100,
-      row: 100,
+      column: { value: 100 },
+      row: { value: 100 },
     });
   });
 });

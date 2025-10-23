@@ -40,7 +40,11 @@ export const handleCreateElement = (
         value: Math.abs(y1 - y2),
       },
       id: generateJestID(elementsSelector(window.store.getState())),
-      layout: { alignment: AlignmentLayout.none, gap: { column: 0, row: 0 }, type: LayoutType.freeForm },
+      layout: {
+        alignment: AlignmentLayout.none,
+        gap: { column: { value: 0 }, row: { value: 0 } },
+        type: LayoutType.freeForm,
+      },
       parentId: possibleElement.parentId,
       position: 'absolute',
       type: ElementType.frame,

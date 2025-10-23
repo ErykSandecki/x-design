@@ -16,6 +16,7 @@ import {
   TElement,
   TFlip,
   TLayout,
+  TGapProperties,
 } from 'types';
 import { AnchorResize, AnchorRotate } from 'store/pageBuilder/enums';
 import {
@@ -59,9 +60,13 @@ export const alignmetnMock: TAlignment = {
   vertical: AlignmentVertical.center,
 };
 
+export const gapMock: TGapProperties = {
+  value: 0,
+};
+
 export const layoutMock: TLayout = {
   alignment: AlignmentLayout.none,
-  gap: { column: 0, row: 0 },
+  gap: { column: gapMock, row: gapMock },
   type: LayoutType.freeForm,
 };
 
