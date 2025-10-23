@@ -21,6 +21,7 @@ import {
   SELECT_ELEMENTS,
   SET_AREA_COORDINATES,
   SET_ELEMENTS_COORDINATES,
+  SET_ELEMENTS_GAP,
   SET_ELEMENTS_SCORE_TO_CURRENT_SIZE,
   SET_ELEMENTS_SIZES,
   SET_ELEMENTS_SIZES_MIN_MAX,
@@ -57,6 +58,8 @@ import {
   TSetAreaCoordinatesAction,
   TSetElementsCoordinatesAction,
   TSetElementsCoordinatesActionPayload,
+  TSetElementsGapAction,
+  TSetElementsGapActionPayload,
   TSetElementsScoreToCurrentSizeAction,
   TSetElementsScoreToCurrentSizeActionPayload,
   TSetElementsSizesAction,
@@ -178,6 +181,14 @@ export const setElementsCoordinates = (
 ): TSetElementsCoordinatesAction => ({
   payload: { coordinates, mode },
   type: SET_ELEMENTS_COORDINATES,
+});
+
+export const setElementsGap = (
+  gap: TSetElementsGapActionPayload['gap'],
+  value: TSetElementsGapActionPayload['value'],
+): TSetElementsGapAction => ({
+  payload: { gap, value },
+  type: SET_ELEMENTS_GAP,
 });
 
 export const setElementsScoreToCurrentSize = (

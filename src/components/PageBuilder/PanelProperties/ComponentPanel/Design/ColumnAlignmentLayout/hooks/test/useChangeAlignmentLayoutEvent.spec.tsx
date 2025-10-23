@@ -1,7 +1,7 @@
 import { renderHook } from '@testing-library/react';
 
 // hooks
-import { useChangeAlignmentEvent } from '../useChangeAlignmentEvent';
+import { useChangeAlignmentLayoutEvent } from '../useChangeAlignmentEvent';
 
 // types
 import { AlignmentLayout } from 'types';
@@ -13,10 +13,10 @@ jest.mock('react-redux', () => ({
   useDispatch: (): any => mockCallBack,
 }));
 
-describe('useChangeAlignmentEvent', () => {
+describe('useChangeAlignmentLayoutEvent', () => {
   it(`should trigger change event`, () => {
     // before
-    const { result } = renderHook(() => useChangeAlignmentEvent(mockCallBack));
+    const { result } = renderHook(() => useChangeAlignmentLayoutEvent(mockCallBack));
 
     // action
     result.current(AlignmentLayout.center);

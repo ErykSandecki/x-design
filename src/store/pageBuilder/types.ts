@@ -20,6 +20,7 @@ import {
   SELECT_ELEMENTS,
   SET_AREA_COORDINATES,
   SET_ELEMENTS_COORDINATES,
+  SET_ELEMENTS_GAP,
   SET_ELEMENTS_SCORE_TO_CURRENT_SIZE,
   SET_ELEMENTS_SIZES,
   SET_ELEMENTS_SIZES_MIN_MAX,
@@ -40,6 +41,7 @@ import {
   TBackground,
   TChildren,
   TElement,
+  TGap,
   TObject,
   TScore,
   TSize,
@@ -222,6 +224,16 @@ export type TSetElementsCoordinatesActionPayload = {
 export type TSetElementsCoordinatesAction = {
   payload: TSetElementsCoordinatesActionPayload;
   type: typeof SET_ELEMENTS_COORDINATES;
+};
+
+export type TSetElementsGapActionPayload = {
+  gap: keyof TGap;
+  value: TGap['column'] | TGap['row'];
+};
+
+export type TSetElementsGapAction = {
+  payload: TSetElementsGapActionPayload;
+  type: typeof SET_ELEMENTS_GAP;
 };
 
 export type TSetElementsScoreToCurrentSizeActionPayload = {

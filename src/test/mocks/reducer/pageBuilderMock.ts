@@ -61,6 +61,7 @@ export const alignmetnMock: TAlignment = {
 
 export const layoutMock: TLayout = {
   alignment: AlignmentLayout.none,
+  gap: { column: 0, row: 0 },
   type: LayoutType.freeForm,
 };
 

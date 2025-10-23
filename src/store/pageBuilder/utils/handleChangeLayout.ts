@@ -33,6 +33,7 @@ export const handleChangeLayout = (
             layout: {
               ...element.layout,
               alignment: isFreeForm ? AlignmentLayout.none : AlignmentLayout.topLeft,
+              gap: { column: 0, row: 0 },
               type: layoutType,
             },
           })),

@@ -1,4 +1,3 @@
-// @ts-nocheck
 // others
 import {
   ADD_ELEMENT,
@@ -28,6 +27,7 @@ import {
   SET_ELEMENTS_SCORE_TO_CURRENT_SIZE,
   TOGGLE_ASPECT_RATIO,
   CHANGE_LAYOUT_ALIGNMENT,
+  SET_ELEMENTS_GAP,
 } from './actionsType';
 import { BASE_PAGE } from './constants';
 
@@ -55,6 +55,7 @@ import {
   TSetElementsSizesMinMaxAction,
   TSetElementsScoreToCurrentSizeAction,
   TChangeLayoutAlignmentAction,
+  TSetElementsGapAction,
 } from './types';
 
 // utils
@@ -75,6 +76,7 @@ import { handleReducerHistoryUndo } from './utils/reducerHistory/handleReducerHi
 import { handleResizeElement } from './utils/resizeElement/handleResizeElement';
 import { handleRotateElements } from './utils/handleRotateElements';
 import { handleSetElementsCoordinates } from './utils/handleSetElementsCoordinates';
+import { handleSetElementsGap } from './utils/handleSetElementsGap';
 import { handleSetElementsScoreToCurrentSize } from './utils/handleSetElementsScoreToCurrentSize';
 import { handleSetElementsSizes } from './utils/setElementSizes/handleSetElementsSizes';
 import { handleSetElementsSizesMinMax } from './utils/handleSetElementsSizesMinMax';
@@ -104,213 +106,6 @@ const initialState: TPageBuilderState = {
   pages: {
     [BASE_PAGE.id]: {
       ...BASE_PAGE,
-
-      // @ts-ignore
-      elements: {
-        '-1': {
-          alignment: {},
-          angle: 0,
-          aspectRatio: false,
-          background: {
-            properties: {
-              alpha: '100',
-              color: '#1e262f',
-              format: 'hex',
-            },
-            visible: true,
-          },
-          children: [
-            {
-              id: 'mh37owtm1761211227945',
-              type: 'frame',
-            },
-          ],
-          coordinates: {
-            x: 0,
-            y: 0,
-          },
-          deepLevel: 0,
-          flip: {
-            x: false,
-            y: false,
-          },
-          height: {
-            value: 0,
-          },
-          id: '-1',
-          layout: {
-            alignment: 'none',
-            type: 'freeForm',
-          },
-          parentId: '-1',
-          position: 'absolute',
-          type: 'base',
-          width: {
-            value: 0,
-          },
-        },
-        mh37owtm1761211227945: {
-          alignment: {},
-          angle: 0,
-          aspectRatio: false,
-          background: {
-            properties: {
-              alpha: '100',
-              color: '#ffffff',
-              format: 'hex',
-            },
-            visible: true,
-          },
-          children: [
-            {
-              id: 'mh37oxqu1761211229142',
-              type: 'frame',
-            },
-            {
-              id: 'mh37ozll1761211231545',
-              type: 'frame',
-            },
-            {
-              id: 'mh37p14t1761211233533',
-              type: 'frame',
-            },
-          ],
-          coordinates: {
-            x: 639,
-            y: 265,
-          },
-          deepLevel: 1,
-          flip: {
-            x: false,
-            y: false,
-          },
-          height: {
-            value: 317,
-          },
-          id: 'mh37owtm1761211227945',
-          layout: {
-            alignment: 'topLeft',
-            type: 'vertical',
-          },
-          parentId: '-1',
-          position: 'absolute',
-          type: 'frame',
-          width: {
-            value: 335,
-          },
-        },
-        mh37oxqu1761211229142: {
-          alignment: {},
-          angle: 0,
-          aspectRatio: false,
-          background: {
-            properties: {
-              alpha: '100',
-              color: '#d82424ff',
-              format: 'hex',
-            },
-            visible: true,
-          },
-          children: [],
-          coordinates: {
-            x: 0,
-            y: 0,
-          },
-          deepLevel: 2,
-          flip: {
-            x: false,
-            y: false,
-          },
-          height: {
-            value: 87,
-          },
-          id: 'mh37oxqu1761211229142',
-          layout: {
-            alignment: 'none',
-            type: 'freeForm',
-          },
-          parentId: 'mh37owtm1761211227945',
-          position: 'relative',
-          type: 'frame',
-          width: {
-            value: 130,
-          },
-        },
-        mh37ozll1761211231545: {
-          alignment: {},
-          angle: 0,
-          aspectRatio: false,
-          background: {
-            properties: {
-              alpha: '100',
-              color: '#3d87b2ff',
-              format: 'hex',
-            },
-            visible: true,
-          },
-          children: [],
-          coordinates: {
-            x: 0,
-            y: 0,
-          },
-          deepLevel: 2,
-          flip: {
-            x: false,
-            y: false,
-          },
-          height: {
-            value: 75,
-          },
-          id: 'mh37ozll1761211231545',
-          layout: {
-            alignment: 'none',
-            type: 'freeForm',
-          },
-          parentId: 'mh37owtm1761211227945',
-          position: 'relative',
-          type: 'frame',
-          width: {
-            value: 127,
-          },
-        },
-        mh37p14t1761211233533: {
-          alignment: {},
-          angle: 0,
-          aspectRatio: false,
-          background: {
-            properties: {
-              alpha: '100',
-              color: '#1c9b1aff',
-              format: 'hex',
-            },
-            visible: true,
-          },
-          children: [],
-          coordinates: {
-            x: 0,
-            y: 0,
-          },
-          deepLevel: 2,
-          flip: {
-            x: false,
-            y: false,
-          },
-          height: {
-            value: 95,
-          },
-          id: 'mh37p14t1761211233533',
-          layout: {
-            alignment: 'none',
-            type: 'freeForm',
-          },
-          parentId: 'mh37owtm1761211227945',
-          position: 'relative',
-          type: 'frame',
-          width: {
-            value: 92,
-          },
-        },
-      },
     },
   },
 };
@@ -439,6 +234,11 @@ const setElementsCoordinates = (
   { payload: coordinates }: TAction<TSetElementsCoordinatesAction['payload']>,
 ): TPageBuilderState => handleSetElementsCoordinates(coordinates, state);
 
+const setElementsGap = (
+  state: TPageBuilderState,
+  { payload }: TAction<TSetElementsGapAction['payload']>,
+): TPageBuilderState => handleSetElementsGap(payload, state);
+
 const setElementsScoreToCurrentSize = (
   state: TPageBuilderState,
   { payload: { scoreType, sizeType } }: TAction<TSetElementsScoreToCurrentSizeAction['payload']>,
@@ -534,6 +334,8 @@ const pageBuilder = (state: TPageBuilderState = initialState, action: TAction): 
       return setAreaCoordinates(state, action);
     case SET_ELEMENTS_COORDINATES:
       return setElementsCoordinates(state, action);
+    case SET_ELEMENTS_GAP:
+      return setElementsGap(state, action);
     case SET_ELEMENTS_SCORE_TO_CURRENT_SIZE:
       return setElementsScoreToCurrentSize(state, action);
     case SET_ELEMENTS_SIZES:

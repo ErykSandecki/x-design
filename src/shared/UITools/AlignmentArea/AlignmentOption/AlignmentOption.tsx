@@ -10,6 +10,7 @@ import { useTheme } from 'hooks';
 
 // others
 import { className, classNames } from './classNames';
+import { TOOLTIP_TRANSLATION_KEY } from 'constant/constants';
 
 // styles
 import styles from './alignment-option.scss';
@@ -29,7 +30,7 @@ export const AlignmentOption: FC<TAlignmentOptionProps> = ({ alignmentFlow, isSe
 
   return (
     <Tooltip
-      content={t(`tooltip.alignmentFlow.${alignmentFlow}`)}
+      content={t(`${TOOLTIP_TRANSLATION_KEY}.alignmentFlow.${alignmentFlow}`)}
       e2eAttribute={E2EAttribute.alignmentAreaOption}
       e2eValue={alignmentFlow}
       key={alignmentFlow}

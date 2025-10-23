@@ -23,6 +23,7 @@ import { isSelected } from './utils/isSelected';
 
 export type TToggleButtonProps<V> = {
   currentValue: V;
+  disabledWhenSelected: boolean;
   e2eAttribute?: TE2EDataAttributeProps['type'];
   e2eValue?: TE2EDataAttributeProps['value'];
   icon: TIconProps['name'];
@@ -33,6 +34,7 @@ export type TToggleButtonProps<V> = {
 
 const ToggleButton = <V extends TToggleButtonGroupValue>({
   currentValue,
+  disabledWhenSelected,
   e2eAttribute = E2EAttribute.toggleButton,
   e2eValue,
   icon,
@@ -42,6 +44,7 @@ const ToggleButton = <V extends TToggleButtonGroupValue>({
 }: TToggleButtonProps<V>): ReactNode => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const selected = isSelected<V>(currentValue, value);
+  const canTriggerChange = !disabledWhenSelected || !selected;
 
   return (
     <Tooltip e2eAttribute={e2eAttribute} e2eValue={e2eValue} {...tooltip}>
@@ -50,7 +53,7 @@ const ToggleButton = <V extends TToggleButtonGroupValue>({
           classNamesWithTheme[classNameToggleButton].modificators.selected,
           selected,
         ])}
-        onClick={() => onChange(value)}
+        onClick={() => canTriggerChange && onChange(value)}
         type="button"
       >
         <Icon height={12} name={icon} width={12} />

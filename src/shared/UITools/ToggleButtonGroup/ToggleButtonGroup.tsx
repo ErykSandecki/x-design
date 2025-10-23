@@ -23,6 +23,7 @@ export type TToggleButtonGroupProps<V> = {
   alwaysSelected?: boolean;
   className?: string;
   defaultValue?: V;
+  disabledWhenSelected?: boolean;
   e2eValue: TE2EDataAttributeProps['value'];
   fullWidth?: boolean;
   multiple?: boolean;
@@ -34,6 +35,7 @@ export const ToggleButtonGroup = <V extends TToggleButtonGroupValue>({
   alwaysSelected = false,
   className = '',
   defaultValue = null,
+  disabledWhenSelected = false,
   e2eValue,
   fullWidth,
   multiple = false,
@@ -64,6 +66,7 @@ export const ToggleButtonGroup = <V extends TToggleButtonGroupValue>({
           <ToggleButton<V>
             {...buttonProps}
             currentValue={value}
+            disabledWhenSelected={disabledWhenSelected}
             e2eValue={index}
             icon={icon}
             key={valueButtton}

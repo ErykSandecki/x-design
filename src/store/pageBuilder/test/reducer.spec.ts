@@ -47,6 +47,7 @@ import {
   setElementsScoreToCurrentSize,
   toggleAspectRatio,
   changeLayoutAlignment,
+  setElementsGap,
 } from '../actions';
 
 // types
@@ -1077,6 +1078,70 @@ describe('PageBuilderReducer', () => {
               ...elementMock,
               alignment: {},
               coordinates,
+            },
+          },
+          prevState,
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+  });
+
+  it('should handle SET_ELEMENTS_GAP', () => {
+    // mock
+    const gap = 'column';
+    const value = 100;
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+    const mockState = {
+      ...currentPage,
+      elements: {
+        [elementMock.id]: elementMock,
+      },
+      selectedElements: [selectedElementMock],
+    };
+    const prevState = cloneDeep(mockState);
+
+    // before
+    const state = reducer(setElementsGap(gap, value), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            [elementMock.id]: {
+              ...elementMock,
+              layout: {
+                ...layoutMock,
+                alignment: AlignmentLayout.topLeft,
+                type: LayoutType.vertical,
+              },
+            },
+          },
+          prevState,
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            [elementMock.id]: {
+              ...elementMock,
+              layout: {
+                ...layoutMock,
+                alignment: AlignmentLayout.topLeft,
+                gap: { ...layoutMock.gap, [gap]: value },
+                type: LayoutType.vertical,
+              },
             },
           },
           prevState,

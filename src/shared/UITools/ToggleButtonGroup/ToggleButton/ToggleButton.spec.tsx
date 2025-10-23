@@ -10,7 +10,13 @@ describe('ToggleButton snapshots', () => {
   it('should render ToggleButton', () => {
     // before
     const { asFragment } = customRender(
-      <ToggleButton<any> currentValue="" icon="AlignHorizontalCenter" onChange={noop} value="" />,
+      <ToggleButton<any>
+        currentValue=""
+        disabledWhenSelected={false}
+        icon="AlignHorizontalCenter"
+        onChange={noop}
+        value=""
+      />,
     );
 
     // result

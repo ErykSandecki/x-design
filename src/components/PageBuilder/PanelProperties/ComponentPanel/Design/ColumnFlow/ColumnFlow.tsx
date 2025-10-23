@@ -35,7 +35,9 @@ const ColumnFlow: FC = () => {
       withMargin
     >
       <UITools.ToggleButtonGroup
+        alwaysSelected
         defaultValue={isMixedLayoutType ? '' : element.layout.type}
+        disabledWhenSelected
         e2eValue="flow"
         fullWidth
         onChange={(layoutType) => dispatch(changeLayout(layoutType as LayoutType))}

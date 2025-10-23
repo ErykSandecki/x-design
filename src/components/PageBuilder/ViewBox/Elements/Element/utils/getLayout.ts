@@ -7,9 +7,10 @@ import { LayoutType, TElement } from 'types';
 import { getAlignmentLayout } from './getAlignmentLayout';
 
 export const getLayout = (layout: TElement['layout']): CSSProperties => {
-  const { alignItems, justifyContent } = getAlignmentLayout(layout.alignment);
+  const { alignment, gap, type } = layout;
+  const { alignItems, justifyContent } = getAlignmentLayout(alignment);
 
-  switch (layout.type) {
+  switch (type) {
     case LayoutType.freeForm:
       return {};
     case LayoutType.vertical:
@@ -18,18 +19,22 @@ export const getLayout = (layout: TElement['layout']): CSSProperties => {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: alignItems,
+        rowGap: `${gap.row}px`,
       };
     case LayoutType.horizontal:
       return {
         alignItems,
+        columnGap: `${gap.column}px`,
         display: 'flex',
         justifyContent,
       };
     default:
       return {
-        alignItems,
+        alignContent: alignItems,
+        columnGap: `${gap.column}px`,
         display: 'grid',
         justifyContent,
+        rowGap: `${gap.row}px`,
       };
   }
 };

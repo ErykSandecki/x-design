@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 // components
+import ColumnAlignmentLayoutGapInput from './ColumnAlignmentLayoutGapInput';
 import { UITools } from 'shared';
 
 // hooks
@@ -12,7 +13,23 @@ import { translationNameSpace } from './constants';
 
 const ColumnAlignmentLayout: FC = () => {
   const { t } = useTranslation();
-  const { alignment, isFreeForm, isMixedLayout, onChangeAlignment } = useColumnAlignmentLayoutEvents();
+
+  const {
+    alignment,
+    columnGap,
+    isFreeForm,
+    isMixedColumnGap,
+    isMixedColumnRow,
+    isMixedLayout,
+    onBlurColumnGap,
+    onBlurRowGap,
+    onChangeAlignment,
+    onChangeColumnGap,
+    onChangeRowGap,
+    rowGap,
+    showColumnGap,
+    showRowGap,
+  } = useColumnAlignmentLayoutEvents();
 
   if (isMixedLayout || isFreeForm) {
     return null;
@@ -21,10 +38,26 @@ const ColumnAlignmentLayout: FC = () => {
   return (
     <UITools.SectionColumn
       gridColumnType={UITools.GridColumnType.oneByTwo}
-      labels={[t(`${translationNameSpace}.label`)]}
+      labels={[t(`${translationNameSpace}.label.alignment`), t(`${translationNameSpace}.label.gap`)]}
       withMargin
     >
       <UITools.AlignmentArea e2eValue="alignment-flow" onClick={onChangeAlignment} value={alignment} />
+      <ColumnAlignmentLayoutGapInput
+        gap="column"
+        isMixed={isMixedColumnGap}
+        onBlur={onBlurColumnGap}
+        onChange={onChangeColumnGap}
+        showGap={showColumnGap}
+        value={columnGap}
+      />
+      <ColumnAlignmentLayoutGapInput
+        gap="row"
+        isMixed={isMixedColumnRow}
+        onBlur={onBlurRowGap}
+        onChange={onChangeRowGap}
+        showGap={showRowGap}
+        value={rowGap}
+      />
     </UITools.SectionColumn>
   );
 };

@@ -16,6 +16,7 @@ import {
   SELECT_ELEMENTS,
   SET_AREA_COORDINATES,
   SET_ELEMENTS_COORDINATES,
+  SET_ELEMENTS_GAP,
   SET_ELEMENTS_SIZES,
   SET_ELEMENTS_SIZES_MIN_MAX,
   TOGGLE_ASPECT_RATIO,
@@ -47,7 +48,7 @@ export const BASE_ELEMENTS: TElement = {
   flip: { x: false, y: false },
   height: { value: 0 },
   id: '-1',
-  layout: { alignment: AlignmentLayout.none, type: LayoutType.freeForm },
+  layout: { alignment: AlignmentLayout.none, gap: { column: 0, row: 0 }, type: LayoutType.freeForm },
   parentId: '-1',
   position: 'absolute',
   type: ElementType.base,
@@ -89,7 +90,6 @@ export const REDUCER_HISTORY_SAVE_ACTIONS = [
   FLIP_ELEMENTS,
   SELECT_ELEMENT,
   SELECT_ELEMENTS,
-  SET_ELEMENTS_SIZES_MIN_MAX,
   TOGGLE_ASPECT_RATIO,
   UNSELECT_ELEMENT,
 ];
@@ -100,5 +100,7 @@ export const REDUCER_HISTORY_SAVE_WITH_DELAY_ACTIONS = [
   RESIZE_ELEMENT,
   SET_AREA_COORDINATES,
   SET_ELEMENTS_COORDINATES,
+  SET_ELEMENTS_GAP,
   SET_ELEMENTS_SIZES,
+  SET_ELEMENTS_SIZES_MIN_MAX,
 ];

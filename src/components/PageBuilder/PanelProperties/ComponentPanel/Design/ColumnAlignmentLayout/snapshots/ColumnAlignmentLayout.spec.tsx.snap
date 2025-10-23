@@ -18,6 +18,13 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
       >
         Alignment
       </small>
+      <small
+        class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        data-test-text=""
+        style="text-align: inherit;"
+      >
+        Gap
+      </small>
     </div>
     <div
       class="css-1r00qlg"
@@ -384,6 +391,538 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
             </div>
           </div>
         </div>
+        <div
+          class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
+          data-test-text-field="column"
+          data-test-tooltip=""
+        >
+          <div
+            class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+            data-test-box=""
+            data-test-scrubbable-input="column"
+          >
+            <div
+              class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+              data-test-icon="gap-columns"
+              height="8"
+              name="GapColumns"
+              width="8"
+            />
+          </div>
+          <input
+            class="TextField__input TextField__input--light"
+            data-test-text-field-input="column"
+            maxlength="6"
+            type="number"
+            value="0"
+          />
+        </div>
+        <div
+          class="Tooltip Tooltip--light"
+        >
+          <div
+            class="Tooltip__content Tooltip__content--light"
+          >
+            Gap between columns
+            <div
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="carrot-down"
+              height="14"
+              name="CarrotDown"
+              width="10"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-1r00qlg"
+        data-test-box=""
+      >
+        <div
+          class="css-c1qms7"
+          data-test-box=""
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
+    data-test-section=""
+  >
+    <div
+      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+      data-test-box=""
+      style="width: calc(100% - 24px - 0px - 8px);"
+    >
+      <small
+        class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        data-test-text=""
+        style="text-align: inherit;"
+      >
+        Alignment
+      </small>
+      <small
+        class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        data-test-text=""
+        style="text-align: inherit;"
+      >
+        Gap
+      </small>
+    </div>
+    <div
+      class="css-1r00qlg"
+      data-test-box=""
+    >
+      <div
+        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--oneByTwo SectionColumnContent--oneByTwo--light"
+        data-test-box=""
+        style="width: calc(100% - 24px - 0px - 8px);"
+      >
+        <div
+          class="css-1jnxvbp AlignmentArea AlignmentArea AlignmentArea--light"
+          data-test-alignment-area="alignment-flow"
+        >
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light AlignmentOption--selected AlignmentOption--selected--light"
+            data-test-alignment-area-option="topLeft"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--topLeft AlignmentOption__optionView--topLeft--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light AlignmentOption__indicator--selected AlignmentOption__indicator--selected--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light AlignmentOption__indicator--selected AlignmentOption__indicator--selected--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light AlignmentOption__indicator--selected AlignmentOption__indicator--selected--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align top left
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+            data-test-alignment-area-option="topCenter"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--topCenter AlignmentOption__optionView--topCenter--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align top center
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+            data-test-alignment-area-option="topRight"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--topRight AlignmentOption__optionView--topRight--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align top right
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+            data-test-alignment-area-option="left"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--left AlignmentOption__optionView--left--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align left
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+            data-test-alignment-area-option="center"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--center AlignmentOption__optionView--center--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align center
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+            data-test-alignment-area-option="right"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--right AlignmentOption__optionView--right--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align right
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+            data-test-alignment-area-option="bottomLeft"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--bottomLeft AlignmentOption__optionView--bottomLeft--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align bottom left
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+            data-test-alignment-area-option="bottomCenter"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--bottomCenter AlignmentOption__optionView--bottomCenter--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align bottom center
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+            data-test-alignment-area-option="bottomRight"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--bottomRight AlignmentOption__optionView--bottomRight--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align bottom right
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
+          data-test-text-field="column"
+          data-test-tooltip=""
+        >
+          <div
+            class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+            data-test-box=""
+            data-test-scrubbable-input="column"
+          >
+            <div
+              class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+              data-test-icon="gap-columns"
+              height="8"
+              name="GapColumns"
+              width="8"
+            />
+          </div>
+          <input
+            class="TextField__input TextField__input--light"
+            data-test-text-field-input="column"
+            maxlength="6"
+            type="string"
+            value="Mixed"
+          />
+        </div>
+        <div
+          class="Tooltip Tooltip--light"
+        >
+          <div
+            class="Tooltip__content Tooltip__content--light"
+          >
+            Gap between columns
+            <div
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="carrot-down"
+              height="14"
+              name="CarrotDown"
+              width="10"
+            />
+          </div>
+        </div>
+        <div
+          class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
+          data-test-text-field="row"
+          data-test-tooltip=""
+        >
+          <div
+            class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+            data-test-box=""
+            data-test-scrubbable-input="row"
+          >
+            <div
+              class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+              data-test-icon="gap-rows"
+              height="8"
+              name="GapRows"
+              width="8"
+            />
+          </div>
+          <input
+            class="TextField__input TextField__input--light"
+            data-test-text-field-input="row"
+            maxlength="6"
+            type="string"
+            value="Mixed"
+          />
+        </div>
+        <div
+          class="Tooltip Tooltip--light"
+        >
+          <div
+            class="Tooltip__content Tooltip__content--light"
+          >
+            Gap between rows
+            <div
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="carrot-down"
+              height="14"
+              name="CarrotDown"
+              width="10"
+            />
+          </div>
+        </div>
       </div>
       <div
         class="css-1r00qlg"
@@ -400,5 +939,1391 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
 `;
 
 exports[`ColumnAlignmentLayout snapshots should render when is free form 1`] = `<DocumentFragment />`;
+
+exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
+    data-test-section=""
+  >
+    <div
+      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+      data-test-box=""
+      style="width: calc(100% - 24px - 0px - 8px);"
+    >
+      <small
+        class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        data-test-text=""
+        style="text-align: inherit;"
+      >
+        Alignment
+      </small>
+      <small
+        class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        data-test-text=""
+        style="text-align: inherit;"
+      >
+        Gap
+      </small>
+    </div>
+    <div
+      class="css-1r00qlg"
+      data-test-box=""
+    >
+      <div
+        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--oneByTwo SectionColumnContent--oneByTwo--light"
+        data-test-box=""
+        style="width: calc(100% - 24px - 0px - 8px);"
+      >
+        <div
+          class="css-1jnxvbp AlignmentArea AlignmentArea AlignmentArea--light"
+          data-test-alignment-area="alignment-flow"
+        >
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light AlignmentOption--selected AlignmentOption--selected--light"
+            data-test-alignment-area-option="topLeft"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--topLeft AlignmentOption__optionView--topLeft--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light AlignmentOption__indicator--selected AlignmentOption__indicator--selected--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light AlignmentOption__indicator--selected AlignmentOption__indicator--selected--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light AlignmentOption__indicator--selected AlignmentOption__indicator--selected--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align top left
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+            data-test-alignment-area-option="topCenter"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--topCenter AlignmentOption__optionView--topCenter--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align top center
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+            data-test-alignment-area-option="topRight"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--topRight AlignmentOption__optionView--topRight--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align top right
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+            data-test-alignment-area-option="left"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--left AlignmentOption__optionView--left--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align left
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+            data-test-alignment-area-option="center"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--center AlignmentOption__optionView--center--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align center
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+            data-test-alignment-area-option="right"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--right AlignmentOption__optionView--right--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align right
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+            data-test-alignment-area-option="bottomLeft"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--bottomLeft AlignmentOption__optionView--bottomLeft--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align bottom left
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+            data-test-alignment-area-option="bottomCenter"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--bottomCenter AlignmentOption__optionView--bottomCenter--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align bottom center
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+            data-test-alignment-area-option="bottomRight"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--bottomRight AlignmentOption__optionView--bottomRight--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align bottom right
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
+          data-test-text-field="column"
+          data-test-tooltip=""
+        >
+          <div
+            class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+            data-test-box=""
+            data-test-scrubbable-input="column"
+          >
+            <div
+              class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+              data-test-icon="gap-columns"
+              height="8"
+              name="GapColumns"
+              width="8"
+            />
+          </div>
+          <input
+            class="TextField__input TextField__input--light"
+            data-test-text-field-input="column"
+            maxlength="6"
+            type="number"
+            value="0"
+          />
+        </div>
+        <div
+          class="Tooltip Tooltip--light"
+        >
+          <div
+            class="Tooltip__content Tooltip__content--light"
+          >
+            Gap between columns
+            <div
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="carrot-down"
+              height="14"
+              name="CarrotDown"
+              width="10"
+            />
+          </div>
+        </div>
+        <div
+          class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
+          data-test-text-field="row"
+          data-test-tooltip=""
+        >
+          <div
+            class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+            data-test-box=""
+            data-test-scrubbable-input="row"
+          >
+            <div
+              class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+              data-test-icon="gap-rows"
+              height="8"
+              name="GapRows"
+              width="8"
+            />
+          </div>
+          <input
+            class="TextField__input TextField__input--light"
+            data-test-text-field-input="row"
+            maxlength="6"
+            type="number"
+            value="0"
+          />
+        </div>
+        <div
+          class="Tooltip Tooltip--light"
+        >
+          <div
+            class="Tooltip__content Tooltip__content--light"
+          >
+            Gap between rows
+            <div
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="carrot-down"
+              height="14"
+              name="CarrotDown"
+              width="10"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-1r00qlg"
+        data-test-box=""
+      >
+        <div
+          class="css-c1qms7"
+          data-test-box=""
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
+    data-test-section=""
+  >
+    <div
+      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+      data-test-box=""
+      style="width: calc(100% - 24px - 0px - 8px);"
+    >
+      <small
+        class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        data-test-text=""
+        style="text-align: inherit;"
+      >
+        Alignment
+      </small>
+      <small
+        class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        data-test-text=""
+        style="text-align: inherit;"
+      >
+        Gap
+      </small>
+    </div>
+    <div
+      class="css-1r00qlg"
+      data-test-box=""
+    >
+      <div
+        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--oneByTwo SectionColumnContent--oneByTwo--light"
+        data-test-box=""
+        style="width: calc(100% - 24px - 0px - 8px);"
+      >
+        <div
+          class="css-1jnxvbp AlignmentArea AlignmentArea AlignmentArea--light"
+          data-test-alignment-area="alignment-flow"
+        >
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light AlignmentOption--selected AlignmentOption--selected--light"
+            data-test-alignment-area-option="topLeft"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--topLeft AlignmentOption__optionView--topLeft--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light AlignmentOption__indicator--selected AlignmentOption__indicator--selected--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light AlignmentOption__indicator--selected AlignmentOption__indicator--selected--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light AlignmentOption__indicator--selected AlignmentOption__indicator--selected--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align top left
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+            data-test-alignment-area-option="topCenter"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--topCenter AlignmentOption__optionView--topCenter--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align top center
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+            data-test-alignment-area-option="topRight"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--topRight AlignmentOption__optionView--topRight--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align top right
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+            data-test-alignment-area-option="left"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--left AlignmentOption__optionView--left--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align left
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+            data-test-alignment-area-option="center"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--center AlignmentOption__optionView--center--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align center
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+            data-test-alignment-area-option="right"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--right AlignmentOption__optionView--right--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align right
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+            data-test-alignment-area-option="bottomLeft"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--bottomLeft AlignmentOption__optionView--bottomLeft--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align bottom left
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+            data-test-alignment-area-option="bottomCenter"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--bottomCenter AlignmentOption__optionView--bottomCenter--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align bottom center
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+            data-test-alignment-area-option="bottomRight"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--bottomRight AlignmentOption__optionView--bottomRight--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align bottom right
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
+          data-test-text-field="row"
+          data-test-tooltip=""
+        >
+          <div
+            class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+            data-test-box=""
+            data-test-scrubbable-input="row"
+          >
+            <div
+              class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+              data-test-icon="gap-rows"
+              height="8"
+              name="GapRows"
+              width="8"
+            />
+          </div>
+          <input
+            class="TextField__input TextField__input--light"
+            data-test-text-field-input="row"
+            maxlength="6"
+            type="number"
+            value="0"
+          />
+        </div>
+        <div
+          class="Tooltip Tooltip--light"
+        >
+          <div
+            class="Tooltip__content Tooltip__content--light"
+          >
+            Gap between rows
+            <div
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="carrot-down"
+              height="14"
+              name="CarrotDown"
+              width="10"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-1r00qlg"
+        data-test-box=""
+      >
+        <div
+          class="css-c1qms7"
+          data-test-box=""
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ColumnAlignmentLayout snapshots should render when layout alignment are mixed 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
+    data-test-section=""
+  >
+    <div
+      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+      data-test-box=""
+      style="width: calc(100% - 24px - 0px - 8px);"
+    >
+      <small
+        class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        data-test-text=""
+        style="text-align: inherit;"
+      >
+        Alignment
+      </small>
+      <small
+        class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        data-test-text=""
+        style="text-align: inherit;"
+      >
+        Gap
+      </small>
+    </div>
+    <div
+      class="css-1r00qlg"
+      data-test-box=""
+    >
+      <div
+        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--oneByTwo SectionColumnContent--oneByTwo--light"
+        data-test-box=""
+        style="width: calc(100% - 24px - 0px - 8px);"
+      >
+        <div
+          class="css-1jnxvbp AlignmentArea AlignmentArea AlignmentArea--light"
+          data-test-alignment-area="alignment-flow"
+        >
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+            data-test-alignment-area-option="topLeft"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--topLeft AlignmentOption__optionView--topLeft--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align top left
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+            data-test-alignment-area-option="topCenter"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--topCenter AlignmentOption__optionView--topCenter--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align top center
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+            data-test-alignment-area-option="topRight"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--topRight AlignmentOption__optionView--topRight--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align top right
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+            data-test-alignment-area-option="left"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--left AlignmentOption__optionView--left--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align left
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+            data-test-alignment-area-option="center"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--center AlignmentOption__optionView--center--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align center
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+            data-test-alignment-area-option="right"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--right AlignmentOption__optionView--right--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align right
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+            data-test-alignment-area-option="bottomLeft"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--bottomLeft AlignmentOption__optionView--bottomLeft--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align bottom left
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+            data-test-alignment-area-option="bottomCenter"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--bottomCenter AlignmentOption__optionView--bottomCenter--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align bottom center
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
+            class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+            data-test-alignment-area-option="bottomRight"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--bottomRight AlignmentOption__optionView--bottomRight--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+              <div
+                class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                data-test-box=""
+              />
+            </div>
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Align bottom right
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
+          data-test-text-field="column"
+          data-test-tooltip=""
+        >
+          <div
+            class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+            data-test-box=""
+            data-test-scrubbable-input="column"
+          >
+            <div
+              class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+              data-test-icon="gap-columns"
+              height="8"
+              name="GapColumns"
+              width="8"
+            />
+          </div>
+          <input
+            class="TextField__input TextField__input--light"
+            data-test-text-field-input="column"
+            maxlength="6"
+            type="number"
+            value="0"
+          />
+        </div>
+        <div
+          class="Tooltip Tooltip--light"
+        >
+          <div
+            class="Tooltip__content Tooltip__content--light"
+          >
+            Gap between columns
+            <div
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="carrot-down"
+              height="14"
+              name="CarrotDown"
+              width="10"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-1r00qlg"
+        data-test-box=""
+      >
+        <div
+          class="css-c1qms7"
+          data-test-box=""
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
 
 exports[`ColumnAlignmentLayout snapshots should render when layout types are mixed 1`] = `<DocumentFragment />`;

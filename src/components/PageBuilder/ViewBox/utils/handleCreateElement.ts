@@ -21,7 +21,6 @@ export const handleCreateElement = (
 
   if (possibleElement && mouseMode === MouseMode.toolBeltA) {
     const { x1, x2, y1, y2 } = possibleElement;
-    const layout = { alignment: AlignmentLayout.none, type: LayoutType.freeForm };
     const x = x1 < x2 ? x1 : x2;
     const y = y1 < y2 ? y1 : y2;
 
@@ -41,7 +40,7 @@ export const handleCreateElement = (
         value: Math.abs(y1 - y2),
       },
       id: generateJestID(elementsSelector(window.store.getState())),
-      layout,
+      layout: { alignment: AlignmentLayout.none, gap: { column: 0, row: 0 }, type: LayoutType.freeForm },
       parentId: possibleElement.parentId,
       position: 'absolute',
       type: ElementType.frame,

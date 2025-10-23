@@ -49,9 +49,19 @@ describe('useColumnAlignmentLayoutEvents', () => {
     // result
     expect(result.current).toStrictEqual({
       alignment: 'none',
+      columnGap: '0',
       isFreeForm: true,
+      isMixedColumnGap: false,
+      isMixedColumnRow: false,
       isMixedLayout: false,
+      onBlurColumnGap: expect.any(Function),
+      onBlurRowGap: expect.any(Function),
       onChangeAlignment: expect.any(Function),
+      onChangeColumnGap: expect.any(Function),
+      onChangeRowGap: expect.any(Function),
+      rowGap: '0',
+      showColumnGap: false,
+      showRowGap: false,
     });
   });
 });

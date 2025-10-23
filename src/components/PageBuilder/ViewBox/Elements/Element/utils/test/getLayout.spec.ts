@@ -26,6 +26,7 @@ describe('getLayout', () => {
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'flex-start',
+      rowGap: '0px',
     });
   });
 
@@ -36,6 +37,7 @@ describe('getLayout', () => {
     // result
     expect(result).toStrictEqual({
       alignItems: 'flex-start',
+      columnGap: '0px',
       display: 'flex',
       justifyContent: 'flex-end',
     });
@@ -47,9 +49,11 @@ describe('getLayout', () => {
 
     // result
     expect(result).toStrictEqual({
-      alignItems: 'flex-start',
+      alignContent: 'flex-start',
+      columnGap: '0px',
       display: 'grid',
       justifyContent: 'flex-end',
+      rowGap: '0px',
     });
   });
 });

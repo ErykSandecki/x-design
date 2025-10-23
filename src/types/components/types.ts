@@ -28,8 +28,14 @@ export type TFlip = {
   y: boolean;
 };
 
+export type TGap = {
+  column: number;
+  row: number;
+};
+
 export type TLayout = {
   alignment: AlignmentLayout;
+  gap: TGap;
   type: LayoutType;
 };
 

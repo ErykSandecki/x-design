@@ -6,9 +6,11 @@ import { changeLayoutAlignment } from 'store/pageBuilder/actions';
 // types
 import { AlignmentLayout } from 'types';
 
-export type TUseChangeAlignmentEvent = TFunc<[AlignmentLayout?]>;
+export type TUseChangeAlignmentLayoutEvent = TFunc<[AlignmentLayout?]>;
 
-export const useChangeAlignmentEvent = (setAlignment: TFunc<[AlignmentLayout]>): TUseChangeAlignmentEvent => {
+export const useChangeAlignmentLayoutEvent = (
+  setAlignment: TFunc<[AlignmentLayout]>,
+): TUseChangeAlignmentLayoutEvent => {
   const dispatch = useDispatch();
 
   const handleChange = (alignment: AlignmentLayout): void => {

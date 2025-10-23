@@ -7,38 +7,71 @@ import { elementDataSelectorCreator, elementsSelector, selectedElementsSelector 
 
 // types
 import { AlignmentLayout, LayoutType } from 'types';
-import { TUseChangeAlignmentEvent, useChangeAlignmentEvent } from './useChangeAlignmentEvent';
+import { TUseBlurGapEvents, useBlurGapEvents } from './useBlurGapEvents';
+import { TUseChangeAlignmentLayoutEvent, useChangeAlignmentLayoutEvent } from './useChangeAlignmentEvent';
+import { TUseChangeGapEvents, useChangeGapEvents } from './useChangeGapEvents';
 
 // utils
 import { isMixed } from '../../utils/isMixed';
 
-type TUseColumnAlignmentLayoutEvents = {
-  alignment: AlignmentLayout;
-  isFreeForm: boolean;
-  isMixedLayout: boolean;
-  onChangeAlignment: TUseChangeAlignmentEvent;
-};
+export type TUseColumnAlignmentLayoutEvents = TUseBlurGapEvents &
+  TUseChangeGapEvents & {
+    alignment: AlignmentLayout;
+    columnGap: string;
+    isFreeForm: boolean;
+    isMixedColumnGap: boolean;
+    isMixedLayout: boolean;
+    isMixedColumnRow: boolean;
+    onChangeAlignment: TUseChangeAlignmentLayoutEvent;
+    rowGap: string;
+    showColumnGap: boolean;
+    showRowGap: boolean;
+  };
 
 export const useColumnAlignmentLayoutEvents = (): TUseColumnAlignmentLayoutEvents => {
+  const [alignment, setAlignment] = useState(AlignmentLayout.none);
+  const [columnGap, setColumnGap] = useState('');
+  const [rowGap, setRowGap] = useState('');
   const elements = useSelector(elementsSelector);
   const selectedElements = useSelector(selectedElementsSelector);
   const firstElement = first(selectedElements);
   const element = useSelector(elementDataSelectorCreator(firstElement.id));
   const isMixedAlignment = isMixed(elements, firstElement, 'layout.alignment', selectedElements);
+  const isMixedColumnGap = isMixed(elements, firstElement, 'layout.gap.column', selectedElements);
+  const isMixedColumnRow = isMixed(elements, firstElement, 'layout.gap.row', selectedElements);
   const isMixedLayout = isMixed(elements, firstElement, 'layout.type', selectedElements);
   const isMultiple = size(selectedElements) > 1;
   const { layout } = element;
-  const [alignment, setAlignment] = useState(AlignmentLayout.none);
-  const isFreeForm = layout.type === LayoutType.freeForm;
+  const { type } = layout;
+  const isFreeForm = type === LayoutType.freeForm;
+  const showColumnGap = type === LayoutType.horizontal || type === LayoutType.grid;
+  const showRowGap = type === LayoutType.vertical || type === LayoutType.grid;
+  const onBlurGapEvents = useBlurGapEvents(columnGap, element, rowGap, setColumnGap, setRowGap);
+  const onChangeGapEvents = useChangeGapEvents(setColumnGap, setRowGap);
 
   useEffect(() => {
     setAlignment(isMixedAlignment ? AlignmentLayout.none : layout.alignment);
   }, [layout.alignment, isMultiple]);
 
+  useEffect(() => {
+    const { column, row } = element.layout.gap;
+
+    setColumnGap(isMixedColumnGap ? 'Mixed' : column.toString());
+    setRowGap(isMixedColumnRow ? 'Mixed' : row.toString());
+  }, [layout.gap.column, layout.gap.row, isMultiple]);
+
   return {
+    ...onBlurGapEvents,
+    ...onChangeGapEvents,
     alignment,
+    columnGap,
     isFreeForm,
+    isMixedColumnGap,
+    isMixedColumnRow,
     isMixedLayout,
-    onChangeAlignment: useChangeAlignmentEvent(setAlignment),
+    onChangeAlignment: useChangeAlignmentLayoutEvent(setAlignment),
+    rowGap,
+    showColumnGap,
+    showRowGap,
   };
 };
