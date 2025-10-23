@@ -1,7 +1,7 @@
 import { noop } from 'lodash';
 
 // components
-import HeightPopoverHeight from './HeightPopoverHeight';
+import PopoverHeight from './PopoverHeight';
 import { UITools } from 'shared';
 
 // mocks
@@ -15,12 +15,12 @@ jest.mock('react-redux', () => ({
   useDispatch: jest.fn(),
 }));
 
-describe('HeightPopoverHeight snapshots', () => {
-  it('should render HeightPopoverHeight', () => {
+describe('PopoverHeight snapshots', () => {
+  it('should render PopoverHeight', () => {
     // before
     const { asFragment } = customRender(
       <UITools.PopoverCompound.PopoverRoot setSelected={noop}>
-        <HeightPopoverHeight height={elementMock.height} isMixed={false} />
+        <PopoverHeight height={elementMock.height} isMixed={false} />
       </UITools.PopoverCompound.PopoverRoot>,
     );
 
@@ -32,7 +32,7 @@ describe('HeightPopoverHeight snapshots', () => {
     // before
     const { asFragment } = customRender(
       <UITools.PopoverCompound.PopoverRoot setSelected={noop}>
-        <HeightPopoverHeight height={elementMock.width} isMixed />
+        <PopoverHeight height={elementMock.width} isMixed />
       </UITools.PopoverCompound.PopoverRoot>,
     );
 

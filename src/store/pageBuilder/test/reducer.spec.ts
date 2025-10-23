@@ -49,6 +49,7 @@ import {
   toggleAspectRatio,
   changeLayoutAlignment,
   setElementsGap,
+  applyElementsGapType,
 } from '../actions';
 
 // types
@@ -102,6 +103,43 @@ describe('PageBuilderReducer', () => {
             },
             [createFrameMock.id]: createFrameMock,
           },
+        },
+      },
+    });
+  });
+
+  it('should handle APPLY_ELEMENTS_GAP_TYPE', () => {
+    // mock
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+
+    // before
+    const state = reducer(applyElementsGapType('column', 'fixed'), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            [elementMock.id]: elementMock,
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            [elementMock.id]: elementMock,
+          },
+          selectedElements: [selectedElementMock],
         },
       },
     });

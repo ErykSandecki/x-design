@@ -21,6 +21,7 @@ const ColumnAlignmentLayout: FC = () => {
     isMixedColumnGap,
     isMixedColumnRow,
     isMixedLayout,
+    layout,
     onBlurColumnGap,
     onBlurRowGap,
     onChangeAlignment,
@@ -44,6 +45,7 @@ const ColumnAlignmentLayout: FC = () => {
       <UITools.AlignmentArea e2eValue="alignment-flow" onClick={onChangeAlignment} value={alignment} />
       <ColumnAlignmentLayoutGapInput
         gap="column"
+        gapProperties={layout.gap.column}
         isMixed={isMixedColumnGap}
         onBlur={onBlurColumnGap}
         onChange={onChangeColumnGap}
@@ -52,6 +54,7 @@ const ColumnAlignmentLayout: FC = () => {
       />
       <ColumnAlignmentLayoutGapInput
         gap="row"
+        gapProperties={layout.gap.row}
         isMixed={isMixedColumnRow}
         onBlur={onBlurRowGap}
         onChange={onChangeRowGap}

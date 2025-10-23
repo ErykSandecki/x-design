@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 // components
 import { UITools } from 'shared';
 
-// tohers
+// others
 import { translationNameSpace } from './constants';
 
 // store
@@ -19,52 +19,52 @@ import { isPureNumber } from 'utils';
 
 const { PopoverCompound } = UITools;
 
-export type THeightPopoverHeightProps = {
-  height: TElement['height'];
+export type TPopoverWidthProps = {
   isMixed: boolean;
+  width: TElement['width'];
 };
 
-const HeightPopoverHeight: FC<THeightPopoverHeightProps> = ({ height, isMixed }) => {
+const PopoverWidth: FC<TPopoverWidthProps> = ({ width, isMixed }) => {
   const dispatch = useDispatch();
   const { t } = useTranslation();
 
   return (
     <>
       <PopoverCompound.PopoverItem
-        icon="FixedHeight"
+        icon="FixedWidth"
         index={0}
-        onClick={() => dispatch(applyElementsSizeType('height', 'fixed'))}
-        selected={!isMixed && !height.unit && isPureNumber(height.value)}
+        onClick={() => dispatch(applyElementsSizeType('width', 'fixed'))}
+        selected={!isMixed && !width.unit && isPureNumber(width.value)}
         text={t(`${translationNameSpace}.1`)}
       />
       <PopoverCompound.PopoverItem
-        icon="AutoHeight"
+        icon="AutoWidth"
         index={1}
-        onClick={() => dispatch(applyElementsSizeType('height', 'auto'))}
-        selected={!isMixed && height.value === 'auto'}
+        onClick={() => dispatch(applyElementsSizeType('width', 'auto'))}
+        selected={!isMixed && width.value === 'auto'}
         text={t(`${translationNameSpace}.2`)}
       />
       <PopoverCompound.PopoverItem
         icon="Percentage"
         index={2}
-        onClick={() => dispatch(applyElementsSizeType('height', 'unit'))}
-        selected={!isMixed && !!height.unit}
+        onClick={() => dispatch(applyElementsSizeType('width', 'unit'))}
+        selected={!isMixed && !!width.unit}
         text={t(`${translationNameSpace}.3`)}
       />
       <PopoverCompound.PopoverSeparator visible={!isMixed} />
       <PopoverCompound.PopoverItem
-        icon="MinHeight"
+        icon="MinWidth"
         index={3}
-        onClick={() => dispatch(applyElementsSizeType('height', 'min'))}
-        selected={!!height.min}
+        onClick={() => dispatch(applyElementsSizeType('width', 'min'))}
+        selected={!!width.min}
         text={t(`${translationNameSpace}.4`)}
         visible={!isMixed}
       />
       <PopoverCompound.PopoverItem
-        icon="MaxHeight"
+        icon="MaxWidth"
         index={4}
-        onClick={() => dispatch(applyElementsSizeType('height', 'max'))}
-        selected={!!height.max}
+        onClick={() => dispatch(applyElementsSizeType('width', 'max'))}
+        selected={!!width.max}
         text={t(`${translationNameSpace}.5`)}
         visible={!isMixed}
       />
@@ -72,4 +72,4 @@ const HeightPopoverHeight: FC<THeightPopoverHeightProps> = ({ height, isMixed })
   );
 };
 
-export default HeightPopoverHeight;
+export default PopoverWidth;

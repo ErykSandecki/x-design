@@ -1,11 +1,11 @@
 import { noop } from 'lodash';
 
 // components
-import HeightPopoverWidth from './HeightPopoverWidth';
+import PopoverGap from './PopoverGap';
 import { UITools } from 'shared';
 
 // mocks
-import { elementMock } from 'test/mocks/reducer/pageBuilderMock';
+import { gapMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // utils
 import { customRender } from 'test';
@@ -15,12 +15,12 @@ jest.mock('react-redux', () => ({
   useDispatch: jest.fn(),
 }));
 
-describe('HeightPopoverWidth snapshots', () => {
-  it('should render HeightPopoverWidth', () => {
+describe('PopoverGap snapshots', () => {
+  it('should render PopoverGap', () => {
     // before
     const { asFragment } = customRender(
       <UITools.PopoverCompound.PopoverRoot setSelected={noop}>
-        <HeightPopoverWidth isMixed={false} width={elementMock.width} />
+        <PopoverGap gap="column" gapProperties={gapMock} isMixed={false} />
       </UITools.PopoverCompound.PopoverRoot>,
     );
 
@@ -32,7 +32,7 @@ describe('HeightPopoverWidth snapshots', () => {
     // before
     const { asFragment } = customRender(
       <UITools.PopoverCompound.PopoverRoot setSelected={noop}>
-        <HeightPopoverWidth isMixed width={elementMock.width} />
+        <PopoverGap gap="column" gapProperties={gapMock} isMixed />
       </UITools.PopoverCompound.PopoverRoot>,
     );
 

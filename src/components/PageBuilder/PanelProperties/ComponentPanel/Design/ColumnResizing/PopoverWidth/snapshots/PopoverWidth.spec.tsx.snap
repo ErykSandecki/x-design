@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`HeightPopoverWidth snapshots should render HeightPopoverWidth 1`] = `
+exports[`PopoverWidth snapshots should render PopoverWidth 1`] = `
 <DocumentFragment>
   <div
     class="css-1wfopar PopoverItem PopoverItem--light"
@@ -144,7 +144,7 @@ exports[`HeightPopoverWidth snapshots should render HeightPopoverWidth 1`] = `
 </DocumentFragment>
 `;
 
-exports[`HeightPopoverWidth snapshots should render wiht mixed value 1`] = `
+exports[`PopoverWidth snapshots should render wiht mixed value 1`] = `
 <DocumentFragment>
   <div
     class="css-1wfopar PopoverItem PopoverItem--light"

@@ -6,8 +6,8 @@ import { useTranslation } from 'react-i18next';
 // components
 import ColumnResizingButtonIcons from './ColumnResizingButtonIcons';
 import ColumnResizingInput from './ColumnResizingInput';
-import HeightPopoverHeight from './HeightPopoverHeight/HeightPopoverHeight';
-import HeightPopoverWidth from './HeightPopoverWidth/HeightPopoverWidth';
+import PopoverHeight from './PopoverHeight/PopoverHeight';
+import PopoverWidth from './PopoverWidth/PopoverWidth';
 import { UITools } from 'shared';
 
 // hooks
@@ -66,7 +66,7 @@ const ColumnResizing: FC = () => {
         onBlur={onBlurWidth}
         onChange={onChangeWidth}
         onFocus={onFocus}
-        popoverChildren={<HeightPopoverWidth isMixed={isMixedWidth} width={elements[firstElement.id].width} />}
+        popoverChildren={<PopoverWidth isMixed={isMixedWidth} width={elements[firstElement.id].width} />}
         showChip={showWidthChip}
         size={width}
         sizeType="width"
@@ -81,7 +81,7 @@ const ColumnResizing: FC = () => {
         onBlur={onBlurHeight}
         onChange={onChangeHeight}
         onFocus={onFocus}
-        popoverChildren={<HeightPopoverHeight height={elements[firstElement.id].height} isMixed={isMixedHeight} />}
+        popoverChildren={<PopoverHeight height={elements[firstElement.id].height} isMixed={isMixedHeight} />}
         showChip={showHeightChip}
         size={height}
         sizeType="height"

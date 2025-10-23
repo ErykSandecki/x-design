@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 import { elementDataSelectorCreator, elementsSelector, selectedElementsSelector } from 'store/pageBuilder/selectors';
 
 // types
-import { AlignmentLayout, LayoutType } from 'types';
+import { AlignmentLayout, LayoutType, TLayout } from 'types';
 import { TUseBlurGapEvents, useBlurGapEvents } from './useBlurGapEvents';
 import { TUseChangeAlignmentLayoutEvent, useChangeAlignmentLayoutEvent } from './useChangeAlignmentEvent';
 import { TUseChangeGapEvents, useChangeGapEvents } from './useChangeGapEvents';
@@ -22,6 +22,7 @@ export type TUseColumnAlignmentLayoutEvents = TUseBlurGapEvents &
     isMixedColumnGap: boolean;
     isMixedLayout: boolean;
     isMixedColumnRow: boolean;
+    layout: TLayout;
     onChangeAlignment: TUseChangeAlignmentLayoutEvent;
     rowGap: string;
     showColumnGap: boolean;
@@ -69,6 +70,7 @@ export const useColumnAlignmentLayoutEvents = (): TUseColumnAlignmentLayoutEvent
     isMixedColumnGap,
     isMixedColumnRow,
     isMixedLayout,
+    layout,
     onChangeAlignment: useChangeAlignmentLayoutEvent(setAlignment),
     rowGap,
     showColumnGap,

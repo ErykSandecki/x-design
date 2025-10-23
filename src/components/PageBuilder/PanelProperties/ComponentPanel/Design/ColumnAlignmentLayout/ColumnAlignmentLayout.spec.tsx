@@ -24,6 +24,7 @@ import { AlignmentLayout, E2EAttribute, KeyboardKeys, LayoutType } from 'types';
 
 // utils
 import { customRender, getByE2EAttribute } from 'test';
+import { PopoverItem } from './enums';
 
 const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 const stateMock = {
@@ -628,6 +629,69 @@ describe('ColumnAlignmentLayout behaviors', () => {
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-2'].layout.gap).toStrictEqual({
       column: { value: 100 },
       row: { value: 100 },
+    });
+  });
+
+  it('should apply fixed value for column & row', () => {
+    // mock
+    const store = configureStore({
+      ...stateMock,
+      [PAGE_BUILDER]: {
+        ...stateMock[PAGE_BUILDER],
+        pages: {
+          ['0']: {
+            ...stateMock[PAGE_BUILDER].pages['0'],
+            elements: {
+              ...stateMock[PAGE_BUILDER].pages['0'].elements,
+              ['test-1']: {
+                ...elementMock,
+                id: 'test-1',
+                layout: {
+                  ...layoutMock,
+                  alignment: AlignmentLayout.topLeft,
+                  type: LayoutType.grid,
+                },
+              },
+            },
+            selectedElements: [...stateMock[PAGE_BUILDER].pages['0'].selectedElements],
+          },
+        },
+      },
+    });
+
+    // before
+    const { container } = customRender(
+      <Provider store={store}>
+        <ColumnAlignmentLayout />
+      </Provider>,
+    );
+
+    // find
+    const inputColumnGap = getByE2EAttribute(container, E2EAttribute.textField, 'column');
+    const inputRowGap = getByE2EAttribute(container, E2EAttribute.textField, 'row');
+
+    // find { icons }
+    const iconColumnGap = getByE2EAttribute(inputColumnGap, E2EAttribute.icon, 'variant');
+    const iconRowGap = getByE2EAttribute(inputRowGap, E2EAttribute.icon, 'variant');
+
+    // find { popovers }
+    const popoverColumnGap = getByE2EAttribute(inputColumnGap, E2EAttribute.popover, 'popover');
+    const popoverRowGap = getByE2EAttribute(inputRowGap, E2EAttribute.popover, 'popover');
+
+    // find { popover items }
+    const popoverColumnGapItem = getByE2EAttribute(popoverColumnGap, E2EAttribute.popoverItem, PopoverItem.fixed);
+    const popoverRowGapItem = getByE2EAttribute(popoverRowGap, E2EAttribute.popoverItem, PopoverItem.fixed);
+
+    // action
+    fireEvent.click(iconColumnGap);
+    fireEvent.click(popoverColumnGapItem);
+    fireEvent.click(iconRowGap);
+    fireEvent.click(popoverRowGapItem);
+
+    // result
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].layout.gap).toStrictEqual({
+      column: { value: 0 },
+      row: { value: 0 },
     });
   });
 });

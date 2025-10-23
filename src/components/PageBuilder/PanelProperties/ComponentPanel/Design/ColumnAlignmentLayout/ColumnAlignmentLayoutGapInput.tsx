@@ -2,20 +2,22 @@ import { FC, useMemo, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
 // components
+import PopoverGap from './PopoverGap/PopoverGap';
 import { ScrubbableInput, UITools } from 'shared';
 
 // others
-import { MAX } from '../../../../constants';
+import { MAX, PANEL_PROPERTIES_ID } from '../../../../constants';
 import { TOOLTIP_TRANSLATION_KEY } from 'constant/constants';
 
 // types
-import { KeyboardKeys, TGap } from 'types';
+import { KeyboardKeys, TGap, TGapProperties } from 'types';
 
 // utils
 import { handleSubmitInput } from 'utils';
 
 export type TColumnAlignmentLayoutGapInputProps = {
   gap: keyof TGap;
+  gapProperties: TGapProperties;
   isMixed: boolean;
   onBlur: TFunc;
   onChange: TFunc<[string, boolean?]>;
@@ -25,6 +27,7 @@ export type TColumnAlignmentLayoutGapInputProps = {
 
 const ColumnAlignmentLayoutGapInput: FC<TColumnAlignmentLayoutGapInputProps> = ({
   gap,
+  gapProperties,
   isMixed,
   onBlur,
   onChange,
@@ -44,10 +47,12 @@ const ColumnAlignmentLayoutGapInput: FC<TColumnAlignmentLayoutGapInputProps> = (
     <UITools.TextField
       e2eValue={gap}
       fullWidth
+      idContainer={PANEL_PROPERTIES_ID}
       onBlur={onBlur}
       onChange={(event) => onChange(event.target.value)}
       onClick={() => refInputGap.current.select()}
       onKeyDown={(event) => handleSubmitInput(KeyboardKeys.enter, refInputGap.current)(event)}
+      popoverChildren={<PopoverGap gap={gap} gapProperties={gapProperties} isMixed={isMixed} />}
       ref={refInputGap}
       startAdornment={
         <ScrubbableInput

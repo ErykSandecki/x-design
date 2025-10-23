@@ -416,6 +416,52 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
             type="number"
             value="0"
           />
+          <div
+            class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextField__icon TextField__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+              data-test-icon="variant"
+              height="12"
+              name="Variant"
+              width="12"
+            />
+            <div
+              class="css-17s20gh Popover Popover--light"
+              data-test-box=""
+              data-test-popover="popover"
+              style="left: 0px; top: 0px;"
+            >
+              <div
+                class="css-1wfopar PopoverItem PopoverItem--light"
+                data-test-box=""
+                data-test-popover-item="0"
+              >
+                <div
+                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="check"
+                  height="12"
+                  name="Check"
+                  width="12"
+                />
+                <div
+                  class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="gap-columns"
+                  height="12"
+                  name="GapColumns"
+                  width="12"
+                />
+                <small
+                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  data-test-text=""
+                  style="text-align: inherit;"
+                >
+                  Fixed column gap (0)
+                </small>
+              </div>
+            </div>
+          </div>
         </div>
         <div
           class="Tooltip Tooltip--light"
@@ -864,6 +910,52 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
             type="string"
             value="Mixed"
           />
+          <div
+            class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextField__icon TextField__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+              data-test-icon="variant"
+              height="12"
+              name="Variant"
+              width="12"
+            />
+            <div
+              class="css-17s20gh Popover Popover--light"
+              data-test-box=""
+              data-test-popover="popover"
+              style="left: 0px; top: 0px;"
+            >
+              <div
+                class="css-1wfopar PopoverItem PopoverItem--light"
+                data-test-box=""
+                data-test-popover-item="0"
+              >
+                <div
+                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="check"
+                  height="12"
+                  name="Check"
+                  width="12"
+                />
+                <div
+                  class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="gap-columns"
+                  height="12"
+                  name="GapColumns"
+                  width="12"
+                />
+                <small
+                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  data-test-text=""
+                  style="text-align: inherit;"
+                >
+                  Fixed column gap (0)
+                </small>
+              </div>
+            </div>
+          </div>
         </div>
         <div
           class="Tooltip Tooltip--light"
@@ -906,6 +998,52 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
             type="string"
             value="Mixed"
           />
+          <div
+            class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextField__icon TextField__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+              data-test-icon="variant"
+              height="12"
+              name="Variant"
+              width="12"
+            />
+            <div
+              class="css-17s20gh Popover Popover--light"
+              data-test-box=""
+              data-test-popover="popover"
+              style="left: 0px; top: 0px;"
+            >
+              <div
+                class="css-1wfopar PopoverItem PopoverItem--light"
+                data-test-box=""
+                data-test-popover-item="0"
+              >
+                <div
+                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="check"
+                  height="12"
+                  name="Check"
+                  width="12"
+                />
+                <div
+                  class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="gap-rows"
+                  height="12"
+                  name="GapRows"
+                  width="12"
+                />
+                <small
+                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  data-test-text=""
+                  style="text-align: inherit;"
+                >
+                  Fixed row gap (0)
+                </small>
+              </div>
+            </div>
+          </div>
         </div>
         <div
           class="Tooltip Tooltip--light"
@@ -1356,6 +1494,52 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
             type="number"
             value="0"
           />
+          <div
+            class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextField__icon TextField__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+              data-test-icon="variant"
+              height="12"
+              name="Variant"
+              width="12"
+            />
+            <div
+              class="css-17s20gh Popover Popover--light"
+              data-test-box=""
+              data-test-popover="popover"
+              style="left: 0px; top: 0px;"
+            >
+              <div
+                class="css-1wfopar PopoverItem PopoverItem--light"
+                data-test-box=""
+                data-test-popover-item="0"
+              >
+                <div
+                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="check"
+                  height="12"
+                  name="Check"
+                  width="12"
+                />
+                <div
+                  class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="gap-columns"
+                  height="12"
+                  name="GapColumns"
+                  width="12"
+                />
+                <small
+                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  data-test-text=""
+                  style="text-align: inherit;"
+                >
+                  Fixed column gap (0)
+                </small>
+              </div>
+            </div>
+          </div>
         </div>
         <div
           class="Tooltip Tooltip--light"
@@ -1398,6 +1582,52 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
             type="number"
             value="0"
           />
+          <div
+            class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextField__icon TextField__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+              data-test-icon="variant"
+              height="12"
+              name="Variant"
+              width="12"
+            />
+            <div
+              class="css-17s20gh Popover Popover--light"
+              data-test-box=""
+              data-test-popover="popover"
+              style="left: 0px; top: 0px;"
+            >
+              <div
+                class="css-1wfopar PopoverItem PopoverItem--light"
+                data-test-box=""
+                data-test-popover-item="0"
+              >
+                <div
+                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="check"
+                  height="12"
+                  name="Check"
+                  width="12"
+                />
+                <div
+                  class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="gap-rows"
+                  height="12"
+                  name="GapRows"
+                  width="12"
+                />
+                <small
+                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  data-test-text=""
+                  style="text-align: inherit;"
+                >
+                  Fixed row gap (0)
+                </small>
+              </div>
+            </div>
+          </div>
         </div>
         <div
           class="Tooltip Tooltip--light"
@@ -1846,6 +2076,52 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
             type="number"
             value="0"
           />
+          <div
+            class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextField__icon TextField__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+              data-test-icon="variant"
+              height="12"
+              name="Variant"
+              width="12"
+            />
+            <div
+              class="css-17s20gh Popover Popover--light"
+              data-test-box=""
+              data-test-popover="popover"
+              style="left: 0px; top: 0px;"
+            >
+              <div
+                class="css-1wfopar PopoverItem PopoverItem--light"
+                data-test-box=""
+                data-test-popover-item="0"
+              >
+                <div
+                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="check"
+                  height="12"
+                  name="Check"
+                  width="12"
+                />
+                <div
+                  class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="gap-rows"
+                  height="12"
+                  name="GapRows"
+                  width="12"
+                />
+                <small
+                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  data-test-text=""
+                  style="text-align: inherit;"
+                >
+                  Fixed row gap (0)
+                </small>
+              </div>
+            </div>
+          </div>
         </div>
         <div
           class="Tooltip Tooltip--light"
@@ -2294,6 +2570,52 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
             type="number"
             value="0"
           />
+          <div
+            class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+            data-test-box=""
+          >
+            <div
+              class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextField__icon TextField__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+              data-test-icon="variant"
+              height="12"
+              name="Variant"
+              width="12"
+            />
+            <div
+              class="css-17s20gh Popover Popover--light"
+              data-test-box=""
+              data-test-popover="popover"
+              style="left: 0px; top: 0px;"
+            >
+              <div
+                class="css-1wfopar PopoverItem PopoverItem--light"
+                data-test-box=""
+                data-test-popover-item="0"
+              >
+                <div
+                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="check"
+                  height="12"
+                  name="Check"
+                  width="12"
+                />
+                <div
+                  class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="gap-columns"
+                  height="12"
+                  name="GapColumns"
+                  width="12"
+                />
+                <small
+                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  data-test-text=""
+                  style="text-align: inherit;"
+                >
+                  Fixed column gap (0)
+                </small>
+              </div>
+            </div>
+          </div>
         </div>
         <div
           class="Tooltip Tooltip--light"

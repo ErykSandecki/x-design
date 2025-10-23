@@ -28,6 +28,7 @@ import {
   TOGGLE_ASPECT_RATIO,
   CHANGE_LAYOUT_ALIGNMENT,
   SET_ELEMENTS_GAP,
+  APPLY_ELEMENTS_GAP_TYPE,
 } from './actionsType';
 import { BASE_PAGE } from './constants';
 
@@ -56,6 +57,7 @@ import {
   TSetElementsScoreToCurrentSizeAction,
   TChangeLayoutAlignmentAction,
   TSetElementsGapAction,
+  TApplyElementsGapTypeAction,
 } from './types';
 
 // utils
@@ -81,6 +83,7 @@ import { handleSetElementsScoreToCurrentSize } from './utils/handleSetElementsSc
 import { handleSetElementsSizes } from './utils/setElementSizes/handleSetElementsSizes';
 import { handleSetElementsSizesMinMax } from './utils/handleSetElementsSizesMinMax';
 import { handleToggleAspectRatio } from './utils/handleToggleAspectRatio';
+import { handleApplyElementsGapType } from './utils/applyElementsGapType/handleApplyElementsGapType';
 
 const initialState: TPageBuilderState = {
   currentPage: '0',
@@ -114,6 +117,11 @@ const addElement = (
   state: TPageBuilderState,
   { payload: element }: TAction<TAddELementAction['payload']>,
 ): TPageBuilderState => handleAddElement(element, state);
+
+const applyElementsGapType = (
+  state: TPageBuilderState,
+  { payload }: TAction<TApplyElementsGapTypeAction['payload']>,
+): TPageBuilderState => handleApplyElementsGapType(payload, state);
 
 const applyElementsSizeType = (
   state: TPageBuilderState,
@@ -296,6 +304,8 @@ const pageBuilder = (state: TPageBuilderState = initialState, action: TAction): 
   switch (action.type) {
     case ADD_ELEMENT:
       return addElement(state, action);
+    case APPLY_ELEMENTS_GAP_TYPE:
+      return applyElementsGapType(state, action);
     case APPLY_ELEMENTS_SIZE_TYPE:
       return applyElementsSizeType(state, action);
     case CHANGE_ALIGNMENT:

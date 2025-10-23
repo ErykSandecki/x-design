@@ -1,6 +1,7 @@
 // others
 import {
   ADD_ELEMENT,
+  APPLY_ELEMENTS_GAP_TYPE,
   APPLY_ELEMENTS_SIZE_TYPE,
   CHANGE_ALIGNMENT,
   CHANGE_BACKGROUND,
@@ -109,6 +110,16 @@ export type TAddELementActionPayload = Omit<TElement, 'index'>;
 export type TAddELementAction = {
   payload: TAddELementActionPayload;
   type: typeof ADD_ELEMENT;
+};
+
+export type TApplyElementsGapTypeActionPaylad = {
+  gap: keyof TGap;
+  type: 'fixed';
+};
+
+export type TApplyElementsGapTypeAction = {
+  payload: TApplyElementsGapTypeActionPaylad;
+  type: typeof APPLY_ELEMENTS_GAP_TYPE;
 };
 
 export type TApplyElementsSizeTypeActionPaylad = {

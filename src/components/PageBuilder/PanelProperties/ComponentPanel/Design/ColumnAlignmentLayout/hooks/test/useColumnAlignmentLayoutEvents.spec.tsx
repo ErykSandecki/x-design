@@ -4,7 +4,7 @@ import { renderHook } from '@testing-library/react';
 import { useColumnAlignmentLayoutEvents } from '../useColumnAlignmentLayoutEvents';
 
 // mocks
-import { elementMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, layoutMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
@@ -54,6 +54,7 @@ describe('useColumnAlignmentLayoutEvents', () => {
       isMixedColumnGap: false,
       isMixedColumnRow: false,
       isMixedLayout: false,
+      layout: layoutMock,
       onBlurColumnGap: expect.any(Function),
       onBlurRowGap: expect.any(Function),
       onChangeAlignment: expect.any(Function),

@@ -2,6 +2,7 @@
 import { TElement } from 'types';
 import {
   ADD_ELEMENT,
+  APPLY_ELEMENTS_GAP_TYPE,
   APPLY_ELEMENTS_SIZE_TYPE,
   CHANGE_ALIGNMENT,
   CHANGE_BACKGROUND,
@@ -35,6 +36,8 @@ import {
 import {
   TAddELementAction,
   TAddELementActionPayload,
+  TApplyElementsGapTypeAction,
+  TApplyElementsGapTypeActionPaylad,
   TApplyElementsSizeTypeAction,
   TApplyElementsSizeTypeActionPaylad,
   TChangeAlignmentAction,
@@ -75,6 +78,14 @@ import {
 export const addElement = (payload: TAddELementActionPayload): TAddELementAction => ({
   payload,
   type: ADD_ELEMENT,
+});
+
+export const applyElementsGapType = (
+  gap: TApplyElementsGapTypeActionPaylad['gap'],
+  type: TApplyElementsGapTypeActionPaylad['type'],
+): TApplyElementsGapTypeAction => ({
+  payload: { gap, type },
+  type: APPLY_ELEMENTS_GAP_TYPE,
 });
 
 export const applyElementsSizeType = (
