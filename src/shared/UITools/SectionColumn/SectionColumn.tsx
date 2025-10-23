@@ -34,7 +34,7 @@ export const SectionColumn: FC<TSectionColumnProps> = ({
   children,
   gridColumnType,
   labels,
-  withInputConnector = false,
+  withInputConnector,
   withMargin = false,
 }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
