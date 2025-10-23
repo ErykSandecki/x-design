@@ -27,6 +27,8 @@ import { ReactComponent as FlowGrid } from './svg/flow-grid.svg';
 import { ReactComponent as FlowHorizontal } from './svg/flow-horizontal.svg';
 import { ReactComponent as FlowVertical } from './svg/flow-vertical.svg';
 import { ReactComponent as FrameTool } from './svg/frame-tool.svg';
+import { ReactComponent as GapColumns } from './svg/gap-columns.svg';
+import { ReactComponent as GapRows } from './svg/gap-rows.svg';
 import { ReactComponent as HeightRestricted } from './svg/height-restricted.svg';
 import { ReactComponent as HtmlTag } from './svg/html-tag.svg';
 import { ReactComponent as InputsConnector } from './svg/inputs-connector.svg';
@@ -77,6 +79,8 @@ export const Icons = {
   FlowHorizontal,
   FlowVertical,
   FrameTool,
+  GapColumns,
+  GapRows,
   HeightRestricted,
   HtmlTag,
   InputsConnector,
