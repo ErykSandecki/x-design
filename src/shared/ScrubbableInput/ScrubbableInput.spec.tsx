@@ -1,4 +1,4 @@
-import { fireEvent, render } from '@testing-library/react';
+import { fireEvent } from '@testing-library/react';
 
 // components
 import ScrubbableInput from './ScrubbableInput';
@@ -7,14 +7,14 @@ import ScrubbableInput from './ScrubbableInput';
 import { E2EAttribute } from 'types/e2e';
 
 // utils
-import { getByE2EAttribute } from 'test';
+import { customRender, getByE2EAttribute } from 'test';
 
 const mockCallBack = jest.fn();
 
 describe('ScrubbableInput snapshots', () => {
   it('should render ScrubbableInput', () => {
     // before
-    const { asFragment } = render(
+    const { asFragment } = customRender(
       <ScrubbableInput max={100} min={0} onChange={mockCallBack} value={0}>
         <span>child</span>
       </ScrubbableInput>,
@@ -26,7 +26,7 @@ describe('ScrubbableInput snapshots', () => {
 
   it('should render with icon', () => {
     // before
-    const { asFragment, container } = render(
+    const { asFragment, container } = customRender(
       <ScrubbableInput max={100} min={0} onChange={mockCallBack} value={0}>
         <span>child</span>
       </ScrubbableInput>,

@@ -5,7 +5,7 @@ import { kebabCase } from 'lodash';
 import { Icons } from 'assets/svg';
 
 // components
-import E2EDataAttribute, { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute';
+import Tooltip, { TTooltipProps } from '../Tooltip/Tooltip';
 
 // hooks
 import { useTheme } from 'hooks';
@@ -19,6 +19,7 @@ import styles from './icon.scss';
 
 // types
 import { ColorsTheme, E2EAttribute } from 'types';
+import { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute';
 import { TSX } from '../hooks/sx/types/types';
 import { TSXPallete } from '../hooks/sx/types/pallete';
 import { TUIProps } from '../types';
@@ -33,6 +34,7 @@ export type TIconProps = Omit<HTMLAttributes<HTMLOrSVGElement>, 'className'> &
     height?: number;
     name: keyof typeof Icons;
     ref?: Ref<SVGSVGElement>;
+    tooltip?: Omit<TTooltipProps, 'children'>;
     width?: number;
   };
 
@@ -48,6 +50,7 @@ export const Icon: FC<TIconProps> = ({
   name,
   ref,
   sx = {},
+  tooltip = {},
   width = 16,
   ...restProps
 }) => {
@@ -57,7 +60,7 @@ export const Icon: FC<TIconProps> = ({
   const sxClassName = useSX(depsSx, sx);
 
   return (
-    <E2EDataAttribute type={e2eAttribute} value={e2eValue || kebabCase(name)}>
+    <Tooltip e2eAttribute={e2eAttribute} e2eValue={e2eValue || kebabCase(name)} {...tooltip}>
       <SVG
         className={cx(
           sxClassName,
@@ -73,7 +76,7 @@ export const Icon: FC<TIconProps> = ({
         width={width}
         {...restProps}
       />
-    </E2EDataAttribute>
+    </Tooltip>
   );
 };
 

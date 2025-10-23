@@ -1,4 +1,4 @@
-import { fireEvent, render } from '@testing-library/react';
+import { fireEvent } from '@testing-library/react';
 
 // components
 import TextFieldPopover from './TextFieldPopover';
@@ -8,7 +8,7 @@ import { E2EAttribute } from 'types';
 
 // utils
 import { createHtmlElement } from 'utils';
-import { getByE2EAttribute } from 'test';
+import { customRender, getByE2EAttribute } from 'test';
 
 const id = 'id';
 const element = createHtmlElement('div', { id });
@@ -21,7 +21,7 @@ describe('TextFieldPopover snapshots', () => {
 
   it('should render TextFieldPopover', () => {
     // before
-    const { asFragment } = render(
+    const { asFragment } = customRender(
       <TextFieldPopover classNameIcon="classNameIcon" idContainer="idContainer">
         children
       </TextFieldPopover>,
@@ -33,7 +33,7 @@ describe('TextFieldPopover snapshots', () => {
 
   it('should render with opened popover', () => {
     // before
-    const { asFragment, container } = render(
+    const { asFragment, container } = customRender(
       <TextFieldPopover classNameIcon="classNameIcon" idContainer="idContainer">
         children
       </TextFieldPopover>,

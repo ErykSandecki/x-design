@@ -1,4 +1,4 @@
-import { fireEvent, render } from '@testing-library/react';
+import { fireEvent } from '@testing-library/react';
 
 // components
 import PopoverItem from './PopoverItem';
@@ -8,14 +8,14 @@ import PopoverRoot from '../PopoverRoot/PopoverRoot';
 import { E2EAttribute } from 'types';
 
 // utils
-import { getByE2EAttribute } from 'test';
+import { customRender, getByE2EAttribute } from 'test';
 
 const mockCallBack = jest.fn();
 
 describe('PopoverItem snapshots', () => {
   it('should render PopoverItem', () => {
     // before
-    const { asFragment } = render(
+    const { asFragment } = customRender(
       <PopoverRoot setSelected={mockCallBack}>
         <PopoverItem icon="AlignHorizontalCenter" index={0} onClick={mockCallBack} selected={false} text="text" />
       </PopoverRoot>,
@@ -27,7 +27,7 @@ describe('PopoverItem snapshots', () => {
 
   it('should render selected', () => {
     // before
-    const { asFragment } = render(
+    const { asFragment } = customRender(
       <PopoverRoot setSelected={mockCallBack}>
         <PopoverItem icon="AlignHorizontalCenter" index={0} onClick={mockCallBack} selected text="text" />
       </PopoverRoot>,
@@ -39,7 +39,7 @@ describe('PopoverItem snapshots', () => {
 
   it('should render not visible', () => {
     // before
-    const { asFragment } = render(
+    const { asFragment } = customRender(
       <PopoverRoot setSelected={mockCallBack}>
         <PopoverItem icon="AlignHorizontalCenter" index={0} onClick={mockCallBack} text="text" visible={false} />
       </PopoverRoot>,
@@ -53,7 +53,7 @@ describe('PopoverItem snapshots', () => {
 describe('PopoverItem behaviors', () => {
   it('should click item', () => {
     // before
-    const { container } = render(
+    const { container } = customRender(
       <PopoverRoot setSelected={mockCallBack}>
         <PopoverItem icon="AlignHorizontalCenter" index={0} onClick={mockCallBack} selected={false} text="text" />
       </PopoverRoot>,

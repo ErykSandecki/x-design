@@ -1,19 +1,19 @@
 import { noop } from 'lodash';
 import { RefObject } from 'react';
-import { render } from '@testing-library/react';
 
 // components
 import Popover, { PopoverCompound } from './Popover';
 
 // utils
 import { createHtmlElement } from 'utils';
+import { customRender } from 'test';
 
 const refItem = { current: createHtmlElement('div') } as RefObject<HTMLElement>;
 
 describe('Popover snapshots', () => {
   it('should render Popover', () => {
     // before
-    const { asFragment } = render(
+    const { asFragment } = customRender(
       <Popover e2eValue="popover" refItem={refItem} selected={false}>
         <PopoverCompound.PopoverRoot setSelected={noop}>
           <PopoverCompound.PopoverItem icon="AlignHorizontalCenter" index={0} selected={false} text="text" />
@@ -29,7 +29,7 @@ describe('Popover snapshots', () => {
 
   it('should render selected', () => {
     // before
-    const { asFragment } = render(
+    const { asFragment } = customRender(
       <Popover e2eValue="popover" refItem={refItem} selected>
         <PopoverCompound.PopoverRoot setSelected={noop}>
           <PopoverCompound.PopoverItem icon="AlignHorizontalCenter" index={0} selected={false} text="text" />
@@ -45,7 +45,7 @@ describe('Popover snapshots', () => {
 
   it('should render not visible item', () => {
     // before
-    const { asFragment } = render(
+    const { asFragment } = customRender(
       <Popover e2eValue="popover" refItem={refItem} selected>
         <PopoverCompound.PopoverRoot setSelected={noop}>
           <PopoverCompound.PopoverItem icon="AlignHorizontalCenter" index={0} selected={false} text="text" />

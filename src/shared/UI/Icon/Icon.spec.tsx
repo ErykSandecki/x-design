@@ -1,5 +1,3 @@
-import { render } from '@testing-library/react';
-
 // components
 import Icon from './Icon';
 
@@ -11,7 +9,7 @@ import { ColorsTheme } from 'types';
 import { E2EAttribute } from 'types/e2e';
 
 // utils
-import { getByE2EAttribute } from 'test/testHelpers';
+import { customRender, getByE2EAttribute } from 'test/testHelpers';
 import { getDataTestAttribute } from '../../E2EDataAttributes/utils';
 
 const className = 'className';
@@ -19,7 +17,7 @@ const className = 'className';
 describe('Typography props', () => {
   it('should pass clickable', () => {
     //before
-    const { container } = render(<Icon clickable name="StepBackwardOutlined" />);
+    const { container } = customRender(<Icon clickable name="StepBackwardOutlined" />);
 
     // result
     expect(container.querySelector(`.${classNames[classNameIcon].name}`)).toHaveClass(
@@ -29,7 +27,7 @@ describe('Typography props', () => {
 
   it('should pass classes', () => {
     //before
-    const { container } = render(<Icon classes={{ className }} name="StepBackwardOutlined" />);
+    const { container } = customRender(<Icon classes={{ className }} name="StepBackwardOutlined" />);
 
     // result
     expect(container.querySelector(`.${className}`)).not.toBeNull();
@@ -37,7 +35,7 @@ describe('Typography props', () => {
 
   it('should pass color', () => {
     //before
-    const { container } = render(<Icon color={ColorsTheme.blue1} name="StepBackwardOutlined" />);
+    const { container } = customRender(<Icon color={ColorsTheme.blue1} name="StepBackwardOutlined" />);
 
     // result
     expect(container.querySelector(`.${classNames[classNameIcon].name}`)).toHaveClass(
@@ -47,7 +45,7 @@ describe('Typography props', () => {
 
   it('should pass disabled', () => {
     //before
-    const { container } = render(<Icon disabled name="StepBackwardOutlined" />);
+    const { container } = customRender(<Icon disabled name="StepBackwardOutlined" />);
 
     // result
     expect(container.querySelector(`.${classNames[classNameIcon].name}`)).toHaveClass(
@@ -57,7 +55,7 @@ describe('Typography props', () => {
 
   it('should pass e2eAttribute', () => {
     // before
-    const { container } = render(<Icon e2eAttribute={E2EAttribute.icon} name="StepBackwardOutlined" />);
+    const { container } = customRender(<Icon e2eAttribute={E2EAttribute.icon} name="StepBackwardOutlined" />);
 
     // result
     expect(getByE2EAttribute(container, E2EAttribute.icon)).toHaveAttribute(getDataTestAttribute(E2EAttribute.icon));
@@ -68,7 +66,7 @@ describe('Typography props', () => {
     const e2eValue = 'e2eValue';
 
     // before
-    const { container } = render(<Icon e2eValue={e2eValue} name="StepBackwardOutlined" />);
+    const { container } = customRender(<Icon e2eValue={e2eValue} name="StepBackwardOutlined" />);
 
     // result
     expect(getByE2EAttribute(container, E2EAttribute.icon)).toHaveAttribute(
@@ -79,7 +77,7 @@ describe('Typography props', () => {
 
   it('should pass height', () => {
     //before
-    const { container } = render(<Icon height={100} name="StepBackwardOutlined" />);
+    const { container } = customRender(<Icon height={100} name="StepBackwardOutlined" />);
 
     // result
     expect(container.querySelector(`.${classNames[classNameIcon].name}`)).toHaveAttribute('height', '100');
@@ -87,7 +85,7 @@ describe('Typography props', () => {
 
   it('should pass name', () => {
     //before
-    const { container } = render(<Icon name="StepBackwardOutlined" />);
+    const { container } = customRender(<Icon name="StepBackwardOutlined" />);
 
     // result
     expect(container.querySelector(`.${classNames[classNameIcon].name}`)).toHaveAttribute(
@@ -98,7 +96,7 @@ describe('Typography props', () => {
 
   it('should pass width', () => {
     //before
-    const { container } = render(<Icon name="StepBackwardOutlined" width={100} />);
+    const { container } = customRender(<Icon name="StepBackwardOutlined" width={100} />);
 
     // result
     expect(container.querySelector(`.${classNames[classNameIcon].name}`)).toHaveAttribute('width', '100');
@@ -108,7 +106,7 @@ describe('Typography props', () => {
 describe('Icon snapshots', () => {
   it('should render Icon', () => {
     // before
-    const { asFragment } = render(<Icon name="StepBackwardOutlined" />);
+    const { asFragment } = customRender(<Icon name="StepBackwardOutlined" />);
 
     // result
     expect(asFragment()).toMatchSnapshot();

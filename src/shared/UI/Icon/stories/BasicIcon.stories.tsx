@@ -58,7 +58,7 @@ const Template: StoryFn<typeof Icon> = ({ ...args }) => {
       title="Icon"
     >
       {icons.map((iconName) => (
-        <Icon {...args} name={iconName as TIconProps['name']} key={iconName} />
+        <Icon {...args} name={iconName as TIconProps['name']} key={iconName} tooltip={{ content: iconName }} />
       ))}
     </StoryComponent>
   );

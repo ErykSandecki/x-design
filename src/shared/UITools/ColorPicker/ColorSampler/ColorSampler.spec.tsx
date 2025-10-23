@@ -1,5 +1,3 @@
-import { render } from '@testing-library/react';
-
 // components
 import ColorSampler from './ColorSampler';
 
@@ -8,6 +6,9 @@ import { useColorSamplerEvents } from './hooks/useColorSamplerEvents';
 
 // others
 import { BASE_2D } from 'shared/ZoomBox/constants';
+
+// utils
+import { customRender } from 'test';
 
 const mockCallBack = jest.fn();
 
@@ -30,7 +31,9 @@ describe('ColorSampler snapshots', () => {
     }));
 
     // before
-    const { asFragment } = render(<ColorSampler initialMousePosition={BASE_2D} onClickColorSampler={mockCallBack} />);
+    const { asFragment } = customRender(
+      <ColorSampler initialMousePosition={BASE_2D} onClickColorSampler={mockCallBack} />,
+    );
 
     // result
     expect(asFragment()).toMatchSnapshot();

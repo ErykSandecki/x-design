@@ -1,9 +1,11 @@
 import { noop } from 'lodash';
-import { render } from '@testing-library/react';
 
 // components
 import HeightPopoverHeight from './HeightPopoverHeight';
 import { UITools } from 'shared';
+
+// utils
+import { customRender } from 'test';
 
 jest.mock('react-redux', () => ({
   ...jest.requireActual('react-redux'),
@@ -13,7 +15,7 @@ jest.mock('react-redux', () => ({
 describe('HeightPopoverHeight snapshots', () => {
   it('should render HeightPopoverHeight{max}', () => {
     // before
-    const { asFragment } = render(
+    const { asFragment } = customRender(
       <UITools.PopoverCompound.PopoverRoot setSelected={noop}>
         <HeightPopoverHeight score="max" />
       </UITools.PopoverCompound.PopoverRoot>,
@@ -25,7 +27,7 @@ describe('HeightPopoverHeight snapshots', () => {
 
   it('should render HeightPopoverHeight{min}', () => {
     // before
-    const { asFragment } = render(
+    const { asFragment } = customRender(
       <UITools.PopoverCompound.PopoverRoot setSelected={noop}>
         <HeightPopoverHeight score="min" />
       </UITools.PopoverCompound.PopoverRoot>,

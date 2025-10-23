@@ -1,4 +1,4 @@
-import { fireEvent, render } from '@testing-library/react';
+import { fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';
 
 // components
@@ -15,7 +15,7 @@ import { E2EAttribute } from 'types';
 import { MouseMode } from 'types/enums/mouseMode';
 
 // utils
-import { getByE2EAttribute } from 'test';
+import { customRender, getByE2EAttribute } from 'test';
 
 const mockCallBack = jest.fn();
 
@@ -25,7 +25,7 @@ describe('MouseModes snapshots', () => {
     const store = configureStore();
 
     // before
-    const { asFragment } = render(
+    const { asFragment } = customRender(
       <Provider store={store}>
         <MouseModes mouseMode={MouseMode.default} setMouseMode={mockCallBack} />
       </Provider>,
@@ -42,7 +42,7 @@ describe('MouseModes behaviors', () => {
     const store = configureStore();
 
     // before
-    const { container } = render(
+    const { container } = customRender(
       <Provider store={store}>
         <MouseModes mouseMode={MouseMode.default} setMouseMode={mockCallBack} />
       </Provider>,
