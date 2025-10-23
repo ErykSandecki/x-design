@@ -20,6 +20,7 @@
 
   &--one-by-two {
     grid-template-areas: 'first second' 'first third';
+    grid-template-columns: repeat(2, 1fr);
     row-gap: $--xd-row-gap;
 
     & > :nth-child(1) {
