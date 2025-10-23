@@ -42,6 +42,7 @@ import { ReactComponent as MoveTool } from './svg/move-tool.svg';
 import { ReactComponent as Percentage } from './svg/percentage.svg';
 import { ReactComponent as PlusOutlined } from './svg/plus-outlined.svg';
 import { ReactComponent as PositionSwitcher } from './svg/position-switcher.svg';
+import { ReactComponent as Properties } from './svg/properties.svg';
 import { ReactComponent as Protractor } from './svg/protractor.svg';
 import { ReactComponent as Sample } from './svg/sample.svg';
 import { ReactComponent as StepBackwardOutlined } from './svg/step-backward-outlined.svg';
@@ -94,6 +95,7 @@ export const Icons = {
   Percentage,
   PlusOutlined,
   PositionSwitcher,
+  Properties,
   Protractor,
   Sample,
   StepBackwardOutlined,
