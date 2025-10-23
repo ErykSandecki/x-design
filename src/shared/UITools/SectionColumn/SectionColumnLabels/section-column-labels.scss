@@ -1,0 +1,12 @@
+@import '../section-column';
+
+.SectionColumnLabels {
+  column-gap: $--xd-column-gap;
+
+  &__label {
+    @include theme('neutral-2', color);
+
+    font-size: 9px;
+    margin-bottom: 5px;
+  }
+}

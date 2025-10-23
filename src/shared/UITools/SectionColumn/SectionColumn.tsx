@@ -3,8 +3,9 @@ import { size } from 'lodash';
 
 // components
 import Box from '../../UI/Box/Box';
-import Icon from '../../UI/Icon/Icon';
-import { Small } from '../../UI/Typography';
+import SectionColumnButtonIcons from './SectionColumnButtonIcons/SectionColumnButtonIcons';
+import SectionColumnContent from './SectionColumnContent/SectionColumnContent';
+import SectionColumnLabels from './SectionColumnLabels/SectionColumnLabels';
 
 // hooks
 import { useTheme } from 'hooks';
@@ -16,24 +17,24 @@ import { className, classNames } from './classNames';
 import styles from './section-column.scss';
 
 // types
-import { ColorsTheme, E2EAttribute } from 'types';
+import { E2EAttribute } from 'types';
 import { GridColumnType } from './enums';
 
 export type TSectionColumnProps = {
   buttonsIcon?: Array<ReactNode>;
   children: ReactNode;
   gridColumnType?: GridColumnType;
-  inputConnector?: boolean;
   labels?: [string] | [string, string];
+  withInputConnector?: boolean;
   withMargin?: boolean;
 };
 
 export const SectionColumn: FC<TSectionColumnProps> = ({
-  buttonsIcon = [],
+  buttonsIcon,
   children,
-  gridColumnType = GridColumnType.single,
-  inputConnector = false,
-  labels = [],
+  gridColumnType,
+  labels,
+  withInputConnector = false,
   withMargin = false,
 }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
@@ -51,49 +52,12 @@ export const SectionColumn: FC<TSectionColumnProps> = ({
       }}
       e2eAttribute={E2EAttribute.section}
     >
-      <Box
-        classes={{ className: cx(classNamesWithTheme.labels) }}
-        style={{ width }}
-        sx={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)' }}
-      >
-        {!!size(labels) &&
-          labels.map((label, index) => (
-            <Small classes={{ className: cx(classNamesWithTheme.label) }} key={index}>
-              {label}
-            </Small>
-          ))}
-      </Box>
+      <SectionColumnLabels labels={labels} width={width} />
       <Box sx={{ alignItems: 'center', columnGap: '8px', display: 'flex' }}>
-        <Box
-          classes={{
-            className: cx(classNamesWithTheme.content.name, classNamesWithTheme.content.modificators[gridColumnType]),
-          }}
-          style={{ width }}
-          sx={{ display: 'grid', position: 'relative' }}
-        >
+        <SectionColumnContent gridColumnType={gridColumnType} width={width} withInputConnector={withInputConnector}>
           {children}
-          <Box
-            classes={{
-              className: cx(classNamesWithTheme.inputConnector.name, [
-                classNamesWithTheme.inputConnector.modificators.visible,
-                inputConnector,
-              ]),
-            }}
-            sx={{
-              alignItems: 'center',
-              display: 'flex',
-              justifyContent: 'center',
-              left: '50%',
-              position: 'absolute',
-              top: '50%',
-            }}
-          >
-            <Icon color={ColorsTheme.neutral3} height={24} name="InputsConnector" width={24} />
-          </Box>
-        </Box>
-        <Box sx={{ alignItems: 'center', columnGap: '2.5px', display: 'flex', flexGrow: 1, justifyContent: 'center' }}>
-          {buttonsIcon.map((buttonIcon) => buttonIcon)}
-        </Box>
+        </SectionColumnContent>
+        <SectionColumnButtonIcons buttonsIcon={buttonsIcon} />
       </Box>
     </Box>
   );

@@ -20,7 +20,7 @@ const ColumnAlignmentLayout: FC = () => {
 
   return (
     <UITools.SectionColumn
-      gridColumnType={UITools.GridColumnType.twoInputs}
+      gridColumnType={UITools.GridColumnType.oneByTwo}
       labels={[t(`${translationNameSpace}.label`)]}
       withMargin
     >

@@ -1,43 +1,8 @@
-$--xd-gap: 10px;
+$--xd-column-gap: 10px;
+$--xd-row-gap: 8px;
 
 .SectionColumn {
   &--with-margin {
     margin-bottom: 7.5px;
-  }
-
-  &__labels {
-    column-gap: $--xd-gap;
-  }
-
-  &__label {
-    @include theme('neutral-2', color);
-
-    font-size: 9px;
-    margin-bottom: 5px;
-  }
-
-  &__content {
-    column-gap: $--xd-gap;
-
-    &--single {
-      grid-template-columns: 1fr;
-    }
-
-    &--two-inputs {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  &__input-connector {
-    opacity: 0;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    transition: 500ms cubic-bezier(0.2, 0.8, 0.3, 1);
-    width: 0;
-
-    &--visible {
-      opacity: 1;
-      width: 24px;
-    }
   }
 }

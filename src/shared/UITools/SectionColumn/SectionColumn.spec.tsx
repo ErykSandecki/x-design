@@ -27,7 +27,7 @@ describe('SectionColumn snapshots', () => {
   it('should render with buttons and input connector', () => {
     // before
     const { asFragment } = customRender(
-      <SectionColumn buttonsIcon={[<ButtonIcon name="Close" key={0} />]} inputConnector>
+      <SectionColumn buttonsIcon={[<ButtonIcon name="Close" key={0} />]} withInputConnector>
         children
       </SectionColumn>,
     );

@@ -55,8 +55,8 @@ const ColumnResizing: FC = () => {
     <UITools.SectionColumn
       buttonsIcon={ColumnResizingButtonIcons(aspectRatio, visibleAspectRatioButton)}
       gridColumnType={UITools.GridColumnType.twoInputs}
-      inputConnector={aspectRatio}
       labels={[t(`${translationNameSpace}.label`)]}
+      withInputConnector={aspectRatio}
       withMargin
     >
       <ColumnResizingInput

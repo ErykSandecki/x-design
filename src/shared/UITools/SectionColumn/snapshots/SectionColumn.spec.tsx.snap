@@ -7,7 +7,7 @@ exports[`SectionColumn snapshots should render SectionColumn 1`] = `
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumn__labels SectionColumn__labels--light"
+      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
       data-test-box=""
       style="width: calc(100% - 24px - 0px - 8px);"
     />
@@ -16,28 +16,21 @@ exports[`SectionColumn snapshots should render SectionColumn 1`] = `
       data-test-box=""
     >
       <div
-        class="css-biptg5 SectionColumn__content SectionColumn__content--light SectionColumn__content--single SectionColumn__content--single--light"
+        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--single SectionColumnContent--single--light"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         children
-        <div
-          class="css-2ro7w4 SectionColumn__inputConnector SectionColumn__inputConnector--light"
-          data-test-box=""
-        >
-          <div
-            class="css-1jnxvbp Icon Icon--light Icon--neutral3 Icon--neutral3--light"
-            data-test-icon="inputs-connector"
-            height="24"
-            name="InputsConnector"
-            width="24"
-          />
-        </div>
       </div>
       <div
-        class="css-c1qms7"
+        class="css-1r00qlg"
         data-test-box=""
-      />
+      >
+        <div
+          class="css-c1qms7"
+          data-test-box=""
+        />
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -50,12 +43,12 @@ exports[`SectionColumn snapshots should render with buttons & labels 1`] = `
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumn__labels SectionColumn__labels--light"
+      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
       data-test-box=""
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumn__label SectionColumn__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -67,40 +60,33 @@ exports[`SectionColumn snapshots should render with buttons & labels 1`] = `
       data-test-box=""
     >
       <div
-        class="css-biptg5 SectionColumn__content SectionColumn__content--light SectionColumn__content--single SectionColumn__content--single--light"
+        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--single SectionColumnContent--single--light"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         children
-        <div
-          class="css-2ro7w4 SectionColumn__inputConnector SectionColumn__inputConnector--light"
-          data-test-box=""
-        >
-          <div
-            class="css-1jnxvbp Icon Icon--light Icon--neutral3 Icon--neutral3--light"
-            data-test-icon="inputs-connector"
-            height="24"
-            name="InputsConnector"
-            width="24"
-          />
-        </div>
       </div>
       <div
-        class="css-c1qms7"
+        class="css-1r00qlg"
         data-test-box=""
       >
         <div
-          class="css-1jnxvbp ButtonIcon ButtonIcon--light"
-          data-test-button-icon=""
-          data-test-tooltip=""
+          class="css-c1qms7"
+          data-test-box=""
         >
           <div
-            class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-            data-test-icon="close"
-            height="14"
-            name="Close"
-            width="14"
-          />
+            class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+            data-test-button-icon=""
+            data-test-tooltip=""
+          >
+            <div
+              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="close"
+              height="14"
+              name="Close"
+              width="14"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -115,7 +101,7 @@ exports[`SectionColumn snapshots should render with buttons 1`] = `
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumn__labels SectionColumn__labels--light"
+      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
       data-test-box=""
       style="width: calc(100% - 24px - 0px - 8px);"
     />
@@ -124,40 +110,33 @@ exports[`SectionColumn snapshots should render with buttons 1`] = `
       data-test-box=""
     >
       <div
-        class="css-biptg5 SectionColumn__content SectionColumn__content--light SectionColumn__content--single SectionColumn__content--single--light"
+        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--single SectionColumnContent--single--light"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         children
-        <div
-          class="css-2ro7w4 SectionColumn__inputConnector SectionColumn__inputConnector--light"
-          data-test-box=""
-        >
-          <div
-            class="css-1jnxvbp Icon Icon--light Icon--neutral3 Icon--neutral3--light"
-            data-test-icon="inputs-connector"
-            height="24"
-            name="InputsConnector"
-            width="24"
-          />
-        </div>
       </div>
       <div
-        class="css-c1qms7"
+        class="css-1r00qlg"
         data-test-box=""
       >
         <div
-          class="css-1jnxvbp ButtonIcon ButtonIcon--light"
-          data-test-button-icon=""
-          data-test-tooltip=""
+          class="css-c1qms7"
+          data-test-box=""
         >
           <div
-            class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-            data-test-icon="close"
-            height="14"
-            name="Close"
-            width="14"
-          />
+            class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+            data-test-button-icon=""
+            data-test-tooltip=""
+          >
+            <div
+              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="close"
+              height="14"
+              name="Close"
+              width="14"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -172,7 +151,7 @@ exports[`SectionColumn snapshots should render with buttons and input connector 
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumn__labels SectionColumn__labels--light"
+      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
       data-test-box=""
       style="width: calc(100% - 24px - 0px - 8px);"
     />
@@ -181,13 +160,13 @@ exports[`SectionColumn snapshots should render with buttons and input connector 
       data-test-box=""
     >
       <div
-        class="css-biptg5 SectionColumn__content SectionColumn__content--light SectionColumn__content--single SectionColumn__content--single--light"
+        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--single SectionColumnContent--single--light"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         children
         <div
-          class="css-2ro7w4 SectionColumn__inputConnector SectionColumn__inputConnector--light SectionColumn__inputConnector--visible SectionColumn__inputConnector--visible--light"
+          class="css-2ro7w4 SectionColumnContent__inputConnector SectionColumnContent__inputConnector--light"
           data-test-box=""
         >
           <div
@@ -200,21 +179,26 @@ exports[`SectionColumn snapshots should render with buttons and input connector 
         </div>
       </div>
       <div
-        class="css-c1qms7"
+        class="css-1r00qlg"
         data-test-box=""
       >
         <div
-          class="css-1jnxvbp ButtonIcon ButtonIcon--light"
-          data-test-button-icon=""
-          data-test-tooltip=""
+          class="css-c1qms7"
+          data-test-box=""
         >
           <div
-            class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-            data-test-icon="close"
-            height="14"
-            name="Close"
-            width="14"
-          />
+            class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+            data-test-button-icon=""
+            data-test-tooltip=""
+          >
+            <div
+              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="close"
+              height="14"
+              name="Close"
+              width="14"
+            />
+          </div>
         </div>
       </div>
     </div>

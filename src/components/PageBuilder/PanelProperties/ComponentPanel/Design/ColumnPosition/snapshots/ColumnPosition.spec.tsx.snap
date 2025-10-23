@@ -7,12 +7,12 @@ exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumn__labels SectionColumn__labels--light"
+      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
       data-test-box=""
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumn__label SectionColumn__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -24,7 +24,7 @@ exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
       data-test-box=""
     >
       <div
-        class="css-biptg5 SectionColumn__content SectionColumn__content--light SectionColumn__content--twoInputs SectionColumn__content--twoInputs--light"
+        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--twoInputs SectionColumnContent--twoInputs--light"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
@@ -112,23 +112,16 @@ exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
             />
           </div>
         </div>
-        <div
-          class="css-2ro7w4 SectionColumn__inputConnector SectionColumn__inputConnector--light"
-          data-test-box=""
-        >
-          <div
-            class="css-1jnxvbp Icon Icon--light Icon--neutral3 Icon--neutral3--light"
-            data-test-icon="inputs-connector"
-            height="24"
-            name="InputsConnector"
-            width="24"
-          />
-        </div>
       </div>
       <div
-        class="css-c1qms7"
+        class="css-1r00qlg"
         data-test-box=""
-      />
+      >
+        <div
+          class="css-c1qms7"
+          data-test-box=""
+        />
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -141,12 +134,12 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumn__labels SectionColumn__labels--light"
+      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
       data-test-box=""
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumn__label SectionColumn__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -158,7 +151,7 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
       data-test-box=""
     >
       <div
-        class="css-biptg5 SectionColumn__content SectionColumn__content--light SectionColumn__content--twoInputs SectionColumn__content--twoInputs--light"
+        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--twoInputs SectionColumnContent--twoInputs--light"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
@@ -248,45 +241,38 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
             />
           </div>
         </div>
-        <div
-          class="css-2ro7w4 SectionColumn__inputConnector SectionColumn__inputConnector--light"
-          data-test-box=""
-        >
-          <div
-            class="css-1jnxvbp Icon Icon--light Icon--neutral3 Icon--neutral3--light"
-            data-test-icon="inputs-connector"
-            height="24"
-            name="InputsConnector"
-            width="24"
-          />
-        </div>
       </div>
       <div
-        class="css-c1qms7"
+        class="css-1r00qlg"
         data-test-box=""
       >
         <div
-          class="css-1jnxvbp ConstrainsView ConstrainsView--light"
+          class="css-c1qms7"
           data-test-box=""
         >
           <div
-            class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--bottom ConstrainsView__constrain--bottom--light"
-          />
-          <div
-            class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--centerHorizontal ConstrainsView__constrain--centerHorizontal--light"
-          />
-          <div
-            class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--centerVertical ConstrainsView__constrain--centerVertical--light"
-          />
-          <div
-            class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--left ConstrainsView__constrain--left--light"
-          />
-          <div
-            class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--right ConstrainsView__constrain--right--light"
-          />
-          <div
-            class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--top ConstrainsView__constrain--top--light"
-          />
+            class="css-1jnxvbp ConstrainsView ConstrainsView--light"
+            data-test-box=""
+          >
+            <div
+              class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--bottom ConstrainsView__constrain--bottom--light"
+            />
+            <div
+              class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--centerHorizontal ConstrainsView__constrain--centerHorizontal--light"
+            />
+            <div
+              class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--centerVertical ConstrainsView__constrain--centerVertical--light"
+            />
+            <div
+              class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--left ConstrainsView__constrain--left--light"
+            />
+            <div
+              class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--right ConstrainsView__constrain--right--light"
+            />
+            <div
+              class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--top ConstrainsView__constrain--top--light"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -301,12 +287,12 @@ exports[`ColumnPosition snapshots should render when values are mixed 1`] = `
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumn__labels SectionColumn__labels--light"
+      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
       data-test-box=""
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumn__label SectionColumn__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -318,7 +304,7 @@ exports[`ColumnPosition snapshots should render when values are mixed 1`] = `
       data-test-box=""
     >
       <div
-        class="css-biptg5 SectionColumn__content SectionColumn__content--light SectionColumn__content--twoInputs SectionColumn__content--twoInputs--light"
+        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--twoInputs SectionColumnContent--twoInputs--light"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
@@ -406,23 +392,16 @@ exports[`ColumnPosition snapshots should render when values are mixed 1`] = `
             />
           </div>
         </div>
-        <div
-          class="css-2ro7w4 SectionColumn__inputConnector SectionColumn__inputConnector--light"
-          data-test-box=""
-        >
-          <div
-            class="css-1jnxvbp Icon Icon--light Icon--neutral3 Icon--neutral3--light"
-            data-test-icon="inputs-connector"
-            height="24"
-            name="InputsConnector"
-            width="24"
-          />
-        </div>
       </div>
       <div
-        class="css-c1qms7"
+        class="css-1r00qlg"
         data-test-box=""
-      />
+      >
+        <div
+          class="css-c1qms7"
+          data-test-box=""
+        />
+      </div>
     </div>
   </div>
 </DocumentFragment>
