@@ -35,6 +35,7 @@ export type TTextFieldProps = Omit<
   fullWidth?: boolean;
   idContainer?: string;
   popoverChildren?: TPopoverProps['children'];
+  popoverOffset?: TPopoverProps['offset'];
   ref?: RefObject<HTMLInputElement>;
   startAdornment?: ReactNode;
   tooltip?: Omit<TTooltipProps, 'children'>;
@@ -49,6 +50,7 @@ export const TextField: FC<TTextFieldProps> = ({
   fullWidth = false,
   idContainer = undefined,
   popoverChildren,
+  popoverOffset,
   ref,
   startAdornment,
   tooltip,
@@ -81,7 +83,11 @@ export const TextField: FC<TTextFieldProps> = ({
           {...restProps}
         />
         {popoverChildren ? (
-          <TextFieldPopover classNameIcon={cx(classNamesWithTheme.icon)} idContainer={idContainer}>
+          <TextFieldPopover
+            classNameIcon={cx(classNamesWithTheme.icon)}
+            idContainer={idContainer}
+            offset={popoverOffset}
+          >
             {popoverChildren}
           </TextFieldPopover>
         ) : (

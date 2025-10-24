@@ -55,7 +55,7 @@ exports[`ButtonIcon snapshots should render with popover 1`] = `
       data-test-box=""
     >
       <div
-        class="css-17s20gh Popover Popover--light"
+        class="css-6wln18 Popover Popover--light"
         data-test-box=""
         data-test-popover="popover"
         style="left: 0px; top: 0px;"

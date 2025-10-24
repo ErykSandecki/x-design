@@ -15,13 +15,12 @@ import { className, classNames } from './classNames';
 // styles
 import styles from './text-field-popover.scss';
 
-export type TTextFieldPopoverProps = {
-  children: TPopoverProps['children'];
+export type TTextFieldPopoverProps = Pick<TPopoverProps, 'children' | 'offset'> & {
   classNameIcon: string;
   idContainer: HTMLAttributes<any>['id'];
 };
 
-export const TextFieldPopover: FC<TTextFieldPopoverProps> = ({ children, classNameIcon, idContainer }) => {
+export const TextFieldPopover: FC<TTextFieldPopoverProps> = ({ children, classNameIcon, idContainer, offset }) => {
   const ref = useRef(null);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { selected, setSelected } = useOutsideClick([], ref, noop, idContainer);
@@ -40,7 +39,7 @@ export const TextFieldPopover: FC<TTextFieldPopoverProps> = ({ children, classNa
         onClick={() => setSelected(!selected)}
         width={12}
       />
-      <Popover e2eValue="popover" refItem={ref} selected={selected}>
+      <Popover e2eValue="popover" offset={offset} refItem={ref} selected={selected}>
         <PopoverCompound.PopoverRoot setSelected={setSelected}>{children}</PopoverCompound.PopoverRoot>
       </Popover>
     </Box>

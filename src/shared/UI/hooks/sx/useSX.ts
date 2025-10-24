@@ -22,7 +22,7 @@ import { mappingSpacings } from './utils/mappingSpacings';
 
 export type TUseSX = string;
 
-export const useSX = (deps: Array<TSX>, sx: TSX): TUseSX => {
+export const useSX = (deps: Array<any>, sx: TSX): TUseSX => {
   const { theme } = useContext(Context);
 
   return useMemo(

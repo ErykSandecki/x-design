@@ -12,7 +12,11 @@ import { useColumnAlignmentLayoutEvents } from './hooks/useColumnAlignmentLayout
 // others
 import { translationNameSpace } from './constants';
 
-const ColumnAlignmentLayout: FC = () => {
+export type TColumnAlignmentLayoutProps = {
+  width: number;
+};
+
+const ColumnAlignmentLayout: FC<TColumnAlignmentLayoutProps> = ({ width }) => {
   const { t } = useTranslation();
 
   const {
@@ -39,7 +43,7 @@ const ColumnAlignmentLayout: FC = () => {
 
   return (
     <UITools.SectionColumn
-      buttonsIcon={ColumnAlignmentLayoutButtonIcons(t)}
+      buttonsIcon={ColumnAlignmentLayoutButtonIcons(t, width)}
       gridColumnType={UITools.GridColumnType.oneByTwo}
       labels={[t(`${translationNameSpace}.label.alignment`), t(`${translationNameSpace}.label.gap`)]}
       withMargin

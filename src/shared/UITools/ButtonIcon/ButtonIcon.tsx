@@ -27,6 +27,7 @@ export type TSectionProps = Pick<TIconProps, 'name'> &
     e2eValue?: TE2EDataAttributeProps['value'];
     idContainer?: string;
     popoverChildren?: TPopoverProps['children'];
+    popoverOffset?: TPopoverProps['offset'];
     selected?: boolean;
     tooltip?: Omit<TTooltipProps, 'children'>;
   };
@@ -37,6 +38,7 @@ export const ButtonIcon: FC<TSectionProps> = ({
   name,
   onClick,
   popoverChildren,
+  popoverOffset,
   selected = false,
   tooltip,
   ...restProps
@@ -63,7 +65,12 @@ export const ButtonIcon: FC<TSectionProps> = ({
       >
         <Icon color={selected ? ColorsTheme.blue1 : ColorsTheme.neutral1} height={14} name={name} width={14} />
         {popoverChildren && (
-          <ButtonIconPopover ref={ref} selected={selectedPopover} setSelected={setSelectedPopover}>
+          <ButtonIconPopover
+            ref={ref}
+            selected={selectedPopover}
+            setSelected={setSelectedPopover}
+            offset={popoverOffset}
+          >
             {popoverChildren}
           </ButtonIconPopover>
         )}

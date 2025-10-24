@@ -12,6 +12,7 @@ import PopoverSeparator from './PopoverSeparator/PopoverSeparator';
 import { useTheme } from 'hooks';
 
 // others
+import { BASE_2D } from 'shared/ZoomBox/constants';
 import { className, classNames } from './classNames';
 
 // styles
@@ -19,21 +20,33 @@ import styles from './popover.scss';
 
 // types
 import { E2EAttribute } from 'types';
+import { TSXColor } from '../../UI/hooks/sx/types/types';
 
 // utils
 import { getPosition } from './utils/getPosition';
 
 export type TPopoverProps = {
+  backgroundColor?: TSXColor;
   children: ReactNode;
   e2eValue?: TE2EDataAttributeProps['value'];
+  offset?: T2DCoordinates;
   refItem: RefObject<HTMLElement>;
   selected: boolean;
 };
 
-export const Popover: FC<TPopoverProps> = ({ children, e2eValue, refItem, selected }) => {
+export const Popover: FC<TPopoverProps> = ({
+  backgroundColor = 'neutral4',
+  children,
+  e2eValue,
+  offset = BASE_2D,
+  refItem,
+  selected,
+}) => {
   const refPopover = useRef(null);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { left, top } = getPosition(refItem, refPopover);
+  const x = left - offset.x;
+  const y = top - offset.y;
 
   return createPortal(
     <E2EDataAttribute type={E2EAttribute.popover} value={e2eValue}>
@@ -44,9 +57,11 @@ export const Popover: FC<TPopoverProps> = ({ children, e2eValue, refItem, select
             selected,
           ]),
         }}
+        depsSx={[backgroundColor]}
         ref={refPopover}
-        style={{ left, top }}
+        style={{ left: x, top: y }}
         sx={{
+          bg: backgroundColor,
           borderRadius: '10px',
           display: 'flex',
           flexDirection: 'column',

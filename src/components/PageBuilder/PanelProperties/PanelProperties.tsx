@@ -72,7 +72,7 @@ const PanelProperties: FC<TPanelPropertiesProps> = () => {
         />
       </UITools.Section>
       <div className={cx(classNamesWithTheme.sections)}>
-        {isSelected ? <ComponentPanel activeTab={activeTab} /> : <MainPanel activeTab={activeTab} />}
+        {isSelected ? <ComponentPanel activeTab={activeTab} width={width} /> : <MainPanel activeTab={activeTab} />}
       </div>
     </Box>
   );

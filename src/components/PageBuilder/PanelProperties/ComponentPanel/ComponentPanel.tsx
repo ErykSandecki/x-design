@@ -8,11 +8,12 @@ import { Tab } from '../enums';
 
 export type TMainPanel = {
   activeTab: Tab;
+  width: number;
 };
 
-const ComponentPanel: FC<TMainPanel> = ({ activeTab }) => {
+const ComponentPanel: FC<TMainPanel> = ({ activeTab, width }) => {
   if (activeTab === Tab.design) {
-    return <Design />;
+    return <Design width={width} />;
   }
 
   return <></>;

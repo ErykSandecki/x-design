@@ -21,7 +21,11 @@ import { useDesignData } from './hooks/useDesignData';
 // others
 import { translationNameSpace } from './constants';
 
-const Design: FC = () => {
+export type TDesignProps = {
+  width: number;
+};
+
+const Design: FC<TDesignProps> = ({ width }) => {
   const dispatch = useDispatch();
   const { t } = useTranslation();
   const { areParentsTheSame, isMixedLayoutType, layoutType, onChangeLayoutType, position } = useDesignData();
@@ -47,7 +51,7 @@ const Design: FC = () => {
         <ColumnResizing />
         <ColumnMinMaxSize score="min" />
         <ColumnMinMaxSize score="max" />
-        <ColumnAlignmentLayout />
+        <ColumnAlignmentLayout width={width} />
       </UITools.Section>
     </>
   );

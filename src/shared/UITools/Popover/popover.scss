@@ -3,5 +3,4 @@
 .Popover {
   @include overlay-menu;
   @include theme('neutral-3', border, '1px solid');
-  @include theme('neutral-4', background-color);
 }

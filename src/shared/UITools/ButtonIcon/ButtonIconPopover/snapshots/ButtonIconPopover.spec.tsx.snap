@@ -7,7 +7,7 @@ exports[`TextFieldPopover snapshots should render ButtonIconPopover 1`] = `
     data-test-box=""
   >
     <div
-      class="css-17s20gh Popover Popover--light"
+      class="css-6wln18 Popover Popover--light"
       data-test-box=""
       data-test-popover="popover"
       style="left: 0px; top: 0px;"
@@ -25,7 +25,7 @@ exports[`TextFieldPopover snapshots should render with opened popover 1`] = `
     data-test-box=""
   >
     <div
-      class="css-17s20gh Popover Popover--light Popover--selected Popover--selected--light"
+      class="css-6wln18 Popover Popover--light Popover--selected Popover--selected--light"
       data-test-box=""
       data-test-popover="popover"
       style="left: 0px; top: 0px;"
