@@ -1,4 +1,5 @@
 import { FC, ReactElement, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
 // components
 import Box from '../../UI/Box/Box';
@@ -20,12 +21,17 @@ import styles from './select.scss';
 import { E2EAttribute } from 'types';
 import { TextFieldVariant } from '../TextField/enums';
 
+// utils
+import { getValueAsText } from './utils/getValueAsText';
+
 export type TSelectProps = Omit<TTextFieldProps, 'endAdorment' | 'onChange'> & {
   children?: ReactElement | Array<ReactElement>;
   disabled?: boolean;
   enableTyping?: boolean;
   idContainerOptions?: string;
+  isMixed?: boolean;
   onChange: TFunc<[string]>;
+  translationNameSpace?: string;
   value: string;
 };
 
@@ -36,14 +42,18 @@ export const Select: FC<TSelectProps> = ({
   enableTyping = false,
   idContainer,
   idContainerOptions,
+  isMixed = false,
   onChange,
+  translationNameSpace = '',
   variant = TextFieldVariant.outlined,
   value,
   ...restProps
 }) => {
+  const targetValue = isMixed ? 'Mixed' : value;
   const optionsRef = useRef<HTMLDivElement>(null);
   const selectRef = useRef(null);
   const wrapperRef = useRef(null);
+  const { t } = useTranslation();
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { onClickOption, onClickSelect, selected } = useSelectEvents(idContainer, onChange, selectRef);
 
@@ -64,7 +74,7 @@ export const Select: FC<TSelectProps> = ({
         disabled={disabled}
         endAdorment={<Icon height={5} name="ChevronDown" style={{ marginRight: '5px' }} width={8} />}
         readOnly={!enableTyping}
-        value={value}
+        value={getValueAsText(isMixed, t, translationNameSpace, targetValue)}
         variant={variant}
         wrapperRef={wrapperRef}
         {...restProps}
@@ -75,7 +85,7 @@ export const Select: FC<TSelectProps> = ({
         onClick={onClickOption}
         ref={optionsRef}
         selected={selected}
-        value={value}
+        value={targetValue}
         wrapperRef={wrapperRef}
       >
         {children}

@@ -1959,7 +1959,7 @@ exports[`Design snapshots should render Design 1`] = `
                   </div>
                   <div
                     class="css-1jnxvbp Select Select--light"
-                    data-test-select=""
+                    data-test-select="box-sizing"
                   >
                     <div
                       class="css-1jnxvbp TextField TextField--light"
@@ -1983,7 +1983,7 @@ exports[`Design snapshots should render Design 1`] = `
                           data-test-text-field-input=""
                           maxlength="6"
                           readonly=""
-                          value="excluded"
+                          value="Excluded"
                         />
                         <div
                           class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"

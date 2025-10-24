@@ -51,6 +51,7 @@ describe('useColumnAlignmentLayoutEvents', () => {
       alignment: 'none',
       columnGap: '0',
       isFreeForm: true,
+      isMixedBoxSizing: false,
       isMixedColumnGap: false,
       isMixedColumnRow: false,
       isMixedLayout: false,

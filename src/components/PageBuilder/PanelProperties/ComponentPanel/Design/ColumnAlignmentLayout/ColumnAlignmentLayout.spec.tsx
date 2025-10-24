@@ -20,12 +20,14 @@ import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 import { configureStore } from 'store/store';
 
 // types
-import { AlignmentLayout, E2EAttribute, KeyboardKeys, LayoutType } from 'types';
-
-// utils
-import { customRender, getByE2EAttribute } from 'test';
+import { AlignmentLayout, E2EAttribute, HTMLContainerId, KeyboardKeys, LayoutType } from 'types';
 import { PopoverItem } from './enums';
 
+// utils
+import { createHtmlElement } from 'utils';
+import { customRender, getByE2EAttribute } from 'test';
+
+const dropdownContainer = createHtmlElement('div', { id: HTMLContainerId.dropdown });
 const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 const stateMock = {
   ...pageBuilderStateMock,
@@ -342,6 +344,11 @@ describe('ColumnAlignmentLayout snapshots', () => {
 });
 
 describe('ColumnAlignmentLayout behaviors', () => {
+  beforeAll(() => {
+    // mock
+    document.body.appendChild(dropdownContainer);
+  });
+
   it('should change alignment', () => {
     // mock
     const store = configureStore(stateMock);
@@ -693,5 +700,101 @@ describe('ColumnAlignmentLayout behaviors', () => {
       column: { value: 0 },
       row: { value: 0 },
     });
+  });
+
+  it('should change box sizing', () => {
+    // mock
+    const store = configureStore(stateMock);
+
+    // before
+    const { container } = customRender(
+      <Provider store={store}>
+        <ColumnAlignmentLayout width={0} />
+      </Provider>,
+    );
+
+    // find
+    const buttonIcon = getByE2EAttribute(container, E2EAttribute.buttonIcon, 'properties');
+
+    // action
+    fireEvent.click(buttonIcon);
+
+    // find
+    const select = getByE2EAttribute(container, E2EAttribute.select, 'box-sizing');
+    const selectOptions = getByE2EAttribute(select, E2EAttribute.selectOptions);
+    const selectItem = getByE2EAttribute(selectOptions, E2EAttribute.selectItem, 0);
+
+    // action
+    fireEvent.click(select);
+    fireEvent.click(selectItem);
+
+    // result
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].layout.boxSizing).toBe('included');
+  });
+
+  it('should change box sizing when mixed', () => {
+    // mock
+    const store = configureStore({
+      ...stateMock,
+      [PAGE_BUILDER]: {
+        ...stateMock[PAGE_BUILDER],
+        pages: {
+          ['0']: {
+            ...stateMock[PAGE_BUILDER].pages['0'],
+            elements: {
+              ...stateMock[PAGE_BUILDER].pages['0'].elements,
+              ['test-1']: {
+                ...elementMock,
+                layout: {
+                  ...elementMock.layout,
+                  alignment: AlignmentLayout.topLeft,
+                  type: LayoutType.grid,
+                },
+              },
+              ['test-2']: {
+                ...elementMock,
+                id: 'test-2',
+                layout: {
+                  ...elementMock.layout,
+                  alignment: AlignmentLayout.topLeft,
+                  boxSizing: 'included',
+                  type: LayoutType.grid,
+                },
+              },
+            },
+            selectedElements: [
+              ...stateMock[PAGE_BUILDER].pages['0'].selectedElements,
+              { ...selectedElementMock, id: 'test-2' },
+            ],
+          },
+        },
+      },
+    });
+
+    // before
+    const { container } = customRender(
+      <Provider store={store}>
+        <ColumnAlignmentLayout width={0} />
+      </Provider>,
+    );
+
+    // find
+    const buttonIcon = getByE2EAttribute(container, E2EAttribute.buttonIcon, 'properties');
+
+    // action
+    fireEvent.click(buttonIcon);
+
+    // find
+    const select = getByE2EAttribute(container, E2EAttribute.select, 'box-sizing');
+    const selectOptions = getByE2EAttribute(select, E2EAttribute.selectOptions);
+    const selectItem = getByE2EAttribute(selectOptions, E2EAttribute.selectItem, 0);
+
+    // action
+    fireEvent.click(select);
+    fireEvent.click(selectItem);
+
+    // result
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].layout.boxSizing).toBe('included');
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-2'].layout.boxSizing).toBe('included');
   });
 });

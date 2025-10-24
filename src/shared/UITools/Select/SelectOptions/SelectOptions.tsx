@@ -48,7 +48,7 @@ export const SelectOptions: FC<TSelectOptionsProps> = ({
   const container = useRenderContainer(idContainer, HTMLContainerId.dropdown);
   const style = useOptionsStyle(ref, selected, value, wrapperRef);
 
-  if (!children || !container) {
+  if (!container) {
     return null;
   }
 
@@ -66,7 +66,7 @@ export const SelectOptions: FC<TSelectOptionsProps> = ({
         ref={ref}
         style={style}
       >
-        {isArray(children) && !children.length ? (
+        {!children ? (
           <SelectItem disabled value="">
             {t(`${translationNameSpace}.noOptions`)}
           </SelectItem>

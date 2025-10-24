@@ -19,6 +19,7 @@ export type TUseColumnAlignmentLayoutEvents = TUseBlurGapEvents &
     alignment: AlignmentLayout;
     columnGap: string;
     isFreeForm: boolean;
+    isMixedBoxSizing: boolean;
     isMixedColumnGap: boolean;
     isMixedLayout: boolean;
     isMixedColumnRow: boolean;
@@ -38,6 +39,7 @@ export const useColumnAlignmentLayoutEvents = (): TUseColumnAlignmentLayoutEvent
   const firstElement = first(selectedElements);
   const element = useSelector(elementDataSelectorCreator(firstElement.id));
   const isMixedAlignment = isMixed(elements, firstElement, 'layout.alignment', selectedElements);
+  const isMixedBoxSizing = isMixed(elements, firstElement, 'layout.boxSizing', selectedElements);
   const isMixedColumnGap = isMixed(elements, firstElement, 'layout.gap.column.value', selectedElements);
   const isMixedColumnRow = isMixed(elements, firstElement, 'layout.gap.row.value', selectedElements);
   const isMixedLayout = isMixed(elements, firstElement, 'layout.type', selectedElements);
@@ -67,6 +69,7 @@ export const useColumnAlignmentLayoutEvents = (): TUseColumnAlignmentLayoutEvent
     alignment,
     columnGap,
     isFreeForm,
+    isMixedBoxSizing,
     isMixedColumnGap,
     isMixedColumnRow,
     isMixedLayout,

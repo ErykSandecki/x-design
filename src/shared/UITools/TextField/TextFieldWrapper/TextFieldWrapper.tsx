@@ -42,7 +42,7 @@ export type TTextFieldWrapperProps = Omit<InputHTMLAttributes<HTMLInputElement>,
 export const TextFieldWrapper: FC<TTextFieldWrapperProps> = ({
   chipChildren,
   disabled,
-  e2eValue = '',
+  e2eValue,
   endAdorment,
   fullWidth = false,
   idContainer = undefined,

@@ -12,13 +12,18 @@ import { TOOLTIP_TRANSLATION_KEY } from 'constant/constants';
 // types
 import { TElement } from 'types';
 
-const ColumnAlignmentLayoutButtonIcons = (layout: TElement['layout'], t: TT, width: number): Array<ReactNode> => [
+const ColumnAlignmentLayoutButtonIcons = (
+  isMixedBoxSizing: boolean,
+  layout: TElement['layout'],
+  t: TT,
+  width: number,
+): Array<ReactNode> => [
   <UITools.ButtonIcon
     e2eValue="properties"
     idContainer={PANEL_PROPERTIES_ID}
     key={0}
     name="Properties"
-    popoverChildren={<PopoverAutoLayoutSettings layout={layout} />}
+    popoverChildren={<PopoverAutoLayoutSettings isMixedBoxSizing={isMixedBoxSizing} layout={layout} />}
     popoverId={POPOVER_AUTO_LAYOUT_SETTINGS_ID}
     popoverOffset={{ x: width - 30, y: 0 }}
     popoverStyle={{ width: '240px' }}

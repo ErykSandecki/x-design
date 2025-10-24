@@ -537,7 +537,7 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
                 </div>
                 <div
                   class="css-1jnxvbp Select Select--light"
-                  data-test-select=""
+                  data-test-select="box-sizing"
                 >
                   <div
                     class="css-1jnxvbp TextField TextField--light"
@@ -561,7 +561,7 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
                         data-test-text-field-input=""
                         maxlength="6"
                         readonly=""
-                        value="excluded"
+                        value="Excluded"
                       />
                       <div
                         class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -1230,7 +1230,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 </div>
                 <div
                   class="css-1jnxvbp Select Select--light"
-                  data-test-select=""
+                  data-test-select="box-sizing"
                 >
                   <div
                     class="css-1jnxvbp TextField TextField--light"
@@ -1254,7 +1254,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                         data-test-text-field-input=""
                         maxlength="6"
                         readonly=""
-                        value="excluded"
+                        value="Excluded"
                       />
                       <div
                         class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -1925,7 +1925,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 </div>
                 <div
                   class="css-1jnxvbp Select Select--light"
-                  data-test-select=""
+                  data-test-select="box-sizing"
                 >
                   <div
                     class="css-1jnxvbp TextField TextField--light"
@@ -1949,7 +1949,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                         data-test-text-field-input=""
                         maxlength="6"
                         readonly=""
-                        value="excluded"
+                        value="Excluded"
                       />
                       <div
                         class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -2525,7 +2525,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
                 </div>
                 <div
                   class="css-1jnxvbp Select Select--light"
-                  data-test-select=""
+                  data-test-select="box-sizing"
                 >
                   <div
                     class="css-1jnxvbp TextField TextField--light"
@@ -2549,7 +2549,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
                         data-test-text-field-input=""
                         maxlength="6"
                         readonly=""
-                        value="excluded"
+                        value="Excluded"
                       />
                       <div
                         class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
@@ -3125,7 +3125,7 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
                 </div>
                 <div
                   class="css-1jnxvbp Select Select--light"
-                  data-test-select=""
+                  data-test-select="box-sizing"
                 >
                   <div
                     class="css-1jnxvbp TextField TextField--light"
@@ -3149,7 +3149,7 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
                         data-test-text-field-input=""
                         maxlength="6"
                         readonly=""
-                        value="excluded"
+                        value="Excluded"
                       />
                       <div
                         class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"

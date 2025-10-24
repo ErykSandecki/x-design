@@ -18,10 +18,11 @@ import { TElement, TLayout } from 'types';
 const { PopoverCompound } = UITools;
 
 export type TPopoverAutoLayoutSettingsProps = {
+  isMixedBoxSizing: boolean;
   layout: TElement['layout'];
 };
 
-const PopoverAutoLayoutSettings: FC<TPopoverAutoLayoutSettingsProps> = ({ layout }) => {
+const PopoverAutoLayoutSettings: FC<TPopoverAutoLayoutSettingsProps> = ({ isMixedBoxSizing, layout }) => {
   const dispatch = useDispatch();
   const { t } = useTranslation();
 
@@ -29,10 +30,13 @@ const PopoverAutoLayoutSettings: FC<TPopoverAutoLayoutSettingsProps> = ({ layout
     <>
       <PopoverCompound.PopoverHeader title={t(`${translationNameSpace}.header`)} />
       <UITools.Select
+        e2eValue="box-sizing"
         idContainer={POPOVER_AUTO_LAYOUT_SETTINGS_ID}
+        isMixed={isMixedBoxSizing}
         label={t(`${translationNameSpace}.label.boxSizing`)}
         onChange={(value) => dispatch(changeLayoutBoxSizing(value as TLayout['boxSizing']))}
         style={{ width: '112px' }}
+        translationNameSpace={`${translationNameSpace}.options`}
         value={layout.boxSizing}
       >
         <UITools.SelectItem value="included">{t(`${translationNameSpace}.options.included`)}</UITools.SelectItem>

@@ -20,7 +20,7 @@ describe('PopoverAutoLayoutSettings snapshots', () => {
     // before
     const { asFragment } = customRender(
       <UITools.PopoverCompound.PopoverRoot selected={false} setSelected={noop}>
-        <PopoverAutoLayoutSettings layout={layoutMock} />
+        <PopoverAutoLayoutSettings isMixedBoxSizing={false} layout={layoutMock} />
       </UITools.PopoverCompound.PopoverRoot>,
     );
 

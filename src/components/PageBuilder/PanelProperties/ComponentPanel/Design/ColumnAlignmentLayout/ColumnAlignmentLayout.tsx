@@ -23,6 +23,7 @@ const ColumnAlignmentLayout: FC<TColumnAlignmentLayoutProps> = ({ width }) => {
     alignment,
     columnGap,
     isFreeForm,
+    isMixedBoxSizing,
     isMixedColumnGap,
     isMixedColumnRow,
     isMixedLayout,
@@ -43,7 +44,7 @@ const ColumnAlignmentLayout: FC<TColumnAlignmentLayoutProps> = ({ width }) => {
 
   return (
     <UITools.SectionColumn
-      buttonsIcon={ColumnAlignmentLayoutButtonIcons(layout, t, width)}
+      buttonsIcon={ColumnAlignmentLayoutButtonIcons(isMixedBoxSizing, layout, t, width)}
       gridColumnType={UITools.GridColumnType.oneByTwo}
       labels={[t(`${translationNameSpace}.label.alignment`), t(`${translationNameSpace}.label.gap`)]}
       withMargin
