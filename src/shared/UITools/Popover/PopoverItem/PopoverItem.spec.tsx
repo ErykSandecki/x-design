@@ -16,7 +16,7 @@ describe('PopoverItem snapshots', () => {
   it('should render PopoverItem', () => {
     // before
     const { asFragment } = customRender(
-      <PopoverRoot setSelected={mockCallBack}>
+      <PopoverRoot selected={false} setSelected={mockCallBack}>
         <PopoverItem icon="AlignHorizontalCenter" index={0} onClick={mockCallBack} selected={false} text="text" />
       </PopoverRoot>,
     );
@@ -28,7 +28,7 @@ describe('PopoverItem snapshots', () => {
   it('should render selected', () => {
     // before
     const { asFragment } = customRender(
-      <PopoverRoot setSelected={mockCallBack}>
+      <PopoverRoot selected={false} setSelected={mockCallBack}>
         <PopoverItem icon="AlignHorizontalCenter" index={0} onClick={mockCallBack} selected text="text" />
       </PopoverRoot>,
     );
@@ -40,7 +40,7 @@ describe('PopoverItem snapshots', () => {
   it('should render not visible', () => {
     // before
     const { asFragment } = customRender(
-      <PopoverRoot setSelected={mockCallBack}>
+      <PopoverRoot selected={false} setSelected={mockCallBack}>
         <PopoverItem icon="AlignHorizontalCenter" index={0} onClick={mockCallBack} text="text" visible={false} />
       </PopoverRoot>,
     );
@@ -54,7 +54,7 @@ describe('PopoverItem behaviors', () => {
   it('should click item', () => {
     // before
     const { container } = customRender(
-      <PopoverRoot setSelected={mockCallBack}>
+      <PopoverRoot selected={false} setSelected={mockCallBack}>
         <PopoverItem icon="AlignHorizontalCenter" index={0} onClick={mockCallBack} selected={false} text="text" />
       </PopoverRoot>,
     );

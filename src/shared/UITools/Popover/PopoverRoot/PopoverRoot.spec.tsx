@@ -7,7 +7,11 @@ import PopoverRoot from './PopoverRoot';
 describe('PopoverRoot snapshots', () => {
   it('should render PopoverRoot', () => {
     // before
-    const { asFragment } = render(<PopoverRoot setSelected={noop}>children</PopoverRoot>);
+    const { asFragment } = render(
+      <PopoverRoot selected={false} setSelected={noop}>
+        children
+      </PopoverRoot>,
+    );
 
     // result
     expect(asFragment()).toMatchSnapshot();

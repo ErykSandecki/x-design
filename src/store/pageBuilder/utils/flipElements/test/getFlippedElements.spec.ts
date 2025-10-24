@@ -3,6 +3,7 @@ import {
   childrenMock,
   elementMock,
   flipMock,
+  layoutMock,
   pageBuilderStateMock,
   selectedElementMock,
 } from 'test/mocks/reducer/pageBuilderMock';
@@ -40,6 +41,7 @@ describe('getFlippedElements', () => {
             { ...childrenMock, id: 'test-3' },
           ],
           layout: {
+            ...layoutMock,
             type: LayoutType.horizontal,
           },
         },
@@ -72,6 +74,7 @@ describe('getFlippedElements', () => {
           x: true,
         },
         layout: {
+          ...layoutMock,
           type: LayoutType.horizontal,
         },
       },
@@ -104,6 +107,7 @@ describe('getFlippedElements', () => {
             { ...childrenMock, id: 'test-3' },
           ],
           layout: {
+            ...layoutMock,
             type: LayoutType.vertical,
           },
         },
@@ -136,6 +140,7 @@ describe('getFlippedElements', () => {
           y: true,
         },
         layout: {
+          ...layoutMock,
           type: LayoutType.vertical,
         },
       },
@@ -174,6 +179,7 @@ describe('getFlippedElements', () => {
             { ...childrenMock, id: 'test-3' },
           ],
           layout: {
+            ...layoutMock,
             type: LayoutType.horizontal,
           },
         },
@@ -206,6 +212,7 @@ describe('getFlippedElements', () => {
           x: true,
         },
         layout: {
+          ...layoutMock,
           type: LayoutType.horizontal,
         },
       },

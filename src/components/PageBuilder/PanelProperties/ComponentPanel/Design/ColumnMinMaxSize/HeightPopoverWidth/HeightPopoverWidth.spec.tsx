@@ -16,7 +16,7 @@ describe('HeightPopoverWidth snapshots', () => {
   it('should render HeightPopoverWidth{max}', () => {
     // before
     const { asFragment } = customRender(
-      <UITools.PopoverCompound.PopoverRoot setSelected={noop}>
+      <UITools.PopoverCompound.PopoverRoot selected={false} setSelected={noop}>
         <HeightPopoverWidth score="max" />
       </UITools.PopoverCompound.PopoverRoot>,
     );
@@ -28,7 +28,7 @@ describe('HeightPopoverWidth snapshots', () => {
   it('should render HeightPopoverWidth{min}', () => {
     // before
     const { asFragment } = customRender(
-      <UITools.PopoverCompound.PopoverRoot setSelected={noop}>
+      <UITools.PopoverCompound.PopoverRoot selected={false} setSelected={noop}>
         <HeightPopoverWidth score="min" />
       </UITools.PopoverCompound.PopoverRoot>,
     );

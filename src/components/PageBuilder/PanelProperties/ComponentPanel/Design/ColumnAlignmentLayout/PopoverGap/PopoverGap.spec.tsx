@@ -19,7 +19,7 @@ describe('PopoverGap snapshots', () => {
   it('should render PopoverGap', () => {
     // before
     const { asFragment } = customRender(
-      <UITools.PopoverCompound.PopoverRoot setSelected={noop}>
+      <UITools.PopoverCompound.PopoverRoot selected={false} setSelected={noop}>
         <PopoverGap gap="column" gapProperties={gapMock} isMixed={false} />
       </UITools.PopoverCompound.PopoverRoot>,
     );
@@ -28,10 +28,10 @@ describe('PopoverGap snapshots', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('should render wiht mixed value', () => {
+  it('should render with mixed value', () => {
     // before
     const { asFragment } = customRender(
-      <UITools.PopoverCompound.PopoverRoot setSelected={noop}>
+      <UITools.PopoverCompound.PopoverRoot selected={false} setSelected={noop}>
         <PopoverGap gap="column" gapProperties={gapMock} isMixed />
       </UITools.PopoverCompound.PopoverRoot>,
     );

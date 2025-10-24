@@ -15,7 +15,7 @@ describe('Popover snapshots', () => {
     // before
     const { asFragment } = customRender(
       <Popover e2eValue="popover" refItem={refItem} selected={false}>
-        <PopoverCompound.PopoverRoot setSelected={noop}>
+        <PopoverCompound.PopoverRoot selected={false} setSelected={noop}>
           <PopoverCompound.PopoverItem icon="AlignHorizontalCenter" index={0} selected={false} text="text" />
           <PopoverCompound.PopoverItem icon="AlignHorizontalCenter" index={1} selected text="text" />
         </PopoverCompound.PopoverRoot>
@@ -31,7 +31,7 @@ describe('Popover snapshots', () => {
     // before
     const { asFragment } = customRender(
       <Popover e2eValue="popover" refItem={refItem} selected>
-        <PopoverCompound.PopoverRoot setSelected={noop}>
+        <PopoverCompound.PopoverRoot selected={false} setSelected={noop}>
           <PopoverCompound.PopoverItem icon="AlignHorizontalCenter" index={0} selected={false} text="text" />
           <PopoverCompound.PopoverItem icon="AlignHorizontalCenter" index={1} selected text="text" />
           <PopoverCompound.PopoverSeparator />
@@ -47,7 +47,7 @@ describe('Popover snapshots', () => {
     // before
     const { asFragment } = customRender(
       <Popover e2eValue="popover" refItem={refItem} selected>
-        <PopoverCompound.PopoverRoot setSelected={noop}>
+        <PopoverCompound.PopoverRoot selected={false} setSelected={noop}>
           <PopoverCompound.PopoverItem icon="AlignHorizontalCenter" index={0} selected={false} text="text" />
           <PopoverCompound.PopoverItem icon="AlignHorizontalCenter" index={1} selected text="text" />
           <PopoverCompound.PopoverSeparator />

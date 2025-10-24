@@ -1936,7 +1936,7 @@ exports[`Design snapshots should render Design 1`] = `
                   data-test-box=""
                   data-test-popover="popover"
                   id="popoverAutoLayoutSettings"
-                  style="width: 240px; top: 0px;"
+                  style="width: 240px; left: 30px; top: 0px;"
                 >
                   <div
                     class="css-11hn3ec"

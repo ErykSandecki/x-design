@@ -45,6 +45,7 @@ describe('handleFlipElements', () => {
                 { ...childrenMock, id: 'test-3' },
               ],
               layout: {
+                ...layoutMock,
                 type: LayoutType.horizontal,
               },
             },
@@ -89,6 +90,7 @@ describe('handleFlipElements', () => {
                 x: true,
               },
               layout: {
+                ...layoutMock,
                 type: LayoutType.horizontal,
               },
             },
@@ -227,6 +229,7 @@ describe('handleFlipElements', () => {
                 { ...childrenMock, id: 'test-3' },
               ],
               layout: {
+                ...layoutMock,
                 type: LayoutType.horizontal,
               },
             },
@@ -271,6 +274,7 @@ describe('handleFlipElements', () => {
                 y: true,
               },
               layout: {
+                ...layoutMock,
                 type: LayoutType.horizontal,
               },
             },

@@ -19,7 +19,7 @@ describe('PopoverHeight snapshots', () => {
   it('should render PopoverHeight', () => {
     // before
     const { asFragment } = customRender(
-      <UITools.PopoverCompound.PopoverRoot setSelected={noop}>
+      <UITools.PopoverCompound.PopoverRoot selected={false} setSelected={noop}>
         <PopoverHeight height={elementMock.height} isMixed={false} />
       </UITools.PopoverCompound.PopoverRoot>,
     );
@@ -31,7 +31,7 @@ describe('PopoverHeight snapshots', () => {
   it('should render wiht mixed value', () => {
     // before
     const { asFragment } = customRender(
-      <UITools.PopoverCompound.PopoverRoot setSelected={noop}>
+      <UITools.PopoverCompound.PopoverRoot selected={false} setSelected={noop}>
         <PopoverHeight height={elementMock.width} isMixed />
       </UITools.PopoverCompound.PopoverRoot>,
     );

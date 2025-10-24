@@ -63,7 +63,7 @@ describe('ColumnAlignmentLayout snapshots', () => {
     // before
     const { asFragment } = customRender(
       <Provider store={store}>
-        <ColumnAlignmentLayout />
+        <ColumnAlignmentLayout width={0} />
       </Provider>,
     );
 
@@ -101,7 +101,7 @@ describe('ColumnAlignmentLayout snapshots', () => {
     // before
     const { asFragment } = customRender(
       <Provider store={store}>
-        <ColumnAlignmentLayout />
+        <ColumnAlignmentLayout width={0} />
       </Provider>,
     );
 
@@ -139,7 +139,7 @@ describe('ColumnAlignmentLayout snapshots', () => {
     // before
     const { asFragment } = customRender(
       <Provider store={store}>
-        <ColumnAlignmentLayout />
+        <ColumnAlignmentLayout width={0} />
       </Provider>,
     );
 
@@ -177,7 +177,7 @@ describe('ColumnAlignmentLayout snapshots', () => {
     // before
     const { asFragment } = customRender(
       <Provider store={store}>
-        <ColumnAlignmentLayout />
+        <ColumnAlignmentLayout width={0} />
       </Provider>,
     );
 
@@ -222,7 +222,7 @@ describe('ColumnAlignmentLayout snapshots', () => {
     // before
     const { asFragment } = customRender(
       <Provider store={store}>
-        <ColumnAlignmentLayout />
+        <ColumnAlignmentLayout width={0} />
       </Provider>,
     );
 
@@ -272,7 +272,7 @@ describe('ColumnAlignmentLayout snapshots', () => {
     // before
     const { asFragment } = customRender(
       <Provider store={store}>
-        <ColumnAlignmentLayout />
+        <ColumnAlignmentLayout width={0} />
       </Provider>,
     );
 
@@ -332,7 +332,7 @@ describe('ColumnAlignmentLayout snapshots', () => {
     // before
     const { asFragment } = customRender(
       <Provider store={store}>
-        <ColumnAlignmentLayout />
+        <ColumnAlignmentLayout width={0} />
       </Provider>,
     );
 
@@ -349,7 +349,7 @@ describe('ColumnAlignmentLayout behaviors', () => {
     // before
     const { container } = customRender(
       <Provider store={store}>
-        <ColumnAlignmentLayout />
+        <ColumnAlignmentLayout width={0} />
       </Provider>,
     );
 
@@ -406,7 +406,7 @@ describe('ColumnAlignmentLayout behaviors', () => {
     // before
     const { container } = customRender(
       <Provider store={store}>
-        <ColumnAlignmentLayout />
+        <ColumnAlignmentLayout width={0} />
       </Provider>,
     );
 
@@ -452,7 +452,7 @@ describe('ColumnAlignmentLayout behaviors', () => {
     // before
     const { container } = customRender(
       <Provider store={store}>
-        <ColumnAlignmentLayout />
+        <ColumnAlignmentLayout width={0} />
       </Provider>,
     );
 
@@ -516,7 +516,7 @@ describe('ColumnAlignmentLayout behaviors', () => {
     // before
     const { container } = customRender(
       <Provider store={store}>
-        <ColumnAlignmentLayout />
+        <ColumnAlignmentLayout width={0} />
       </Provider>,
     );
 
@@ -603,7 +603,7 @@ describe('ColumnAlignmentLayout behaviors', () => {
     // before
     const { container } = customRender(
       <Provider store={store}>
-        <ColumnAlignmentLayout />
+        <ColumnAlignmentLayout width={0} />
       </Provider>,
     );
 
@@ -662,7 +662,7 @@ describe('ColumnAlignmentLayout behaviors', () => {
     // before
     const { container } = customRender(
       <Provider store={store}>
-        <ColumnAlignmentLayout />
+        <ColumnAlignmentLayout width={0} />
       </Provider>,
     );
 

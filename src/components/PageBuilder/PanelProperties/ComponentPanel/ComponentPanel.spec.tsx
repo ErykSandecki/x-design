@@ -61,7 +61,7 @@ describe('ComponentPanel snapshots', () => {
     // before
     const { asFragment } = customRender(
       <Provider store={store}>
-        <ComponentPanel activeTab={Tab.design} />
+        <ComponentPanel activeTab={Tab.design} width={0} />
       </Provider>,
     );
 
@@ -76,7 +76,7 @@ describe('ComponentPanel snapshots', () => {
     // before
     const { asFragment } = customRender(
       <Provider store={store}>
-        <ComponentPanel activeTab={Tab.prototype} />
+        <ComponentPanel activeTab={Tab.prototype} width={0} />
       </Provider>,
     );
 

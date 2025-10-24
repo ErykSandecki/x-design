@@ -16,7 +16,7 @@ describe('PopoverHeader snapshots', () => {
   it('should render PopoverHeader', () => {
     // before
     const { asFragment } = customRender(
-      <PopoverRoot setSelected={mockCallBack}>
+      <PopoverRoot selected={false} setSelected={mockCallBack}>
         <PopoverHeader title="title" />
       </PopoverRoot>,
     );
@@ -30,7 +30,7 @@ describe('PopoverHeader behaviors', () => {
   it('should click item', () => {
     // before
     const { container } = customRender(
-      <PopoverRoot setSelected={mockCallBack}>
+      <PopoverRoot selected={false} setSelected={mockCallBack}>
         <PopoverHeader title="title" />
       </PopoverRoot>,
     );

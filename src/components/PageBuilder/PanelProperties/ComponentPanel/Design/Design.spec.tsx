@@ -67,7 +67,7 @@ describe('Design snapshots', () => {
     // before
     const { asFragment } = customRender(
       <Provider store={store}>
-        <Design />
+        <Design width={0} />
       </Provider>,
     );
 
@@ -96,7 +96,7 @@ describe('Design behaviors', () => {
     // before
     const { container } = customRender(
       <Provider store={store}>
-        <Design />
+        <Design width={0} />
       </Provider>,
     );
 
@@ -126,7 +126,7 @@ describe('Design behaviors', () => {
     // before
     const { container } = customRender(
       <Provider store={store}>
-        <Design />
+        <Design width={0} />
       </Provider>,
     );
 
@@ -176,7 +176,7 @@ describe('Design behaviors', () => {
     // before
     const { container } = customRender(
       <Provider store={store}>
-        <Design />
+        <Design width={0} />
       </Provider>,
     );
 
@@ -227,7 +227,7 @@ describe('Design behaviors', () => {
     // before
     const { container } = customRender(
       <Provider store={store}>
-        <Design />
+        <Design width={0} />
       </Provider>,
     );
 
@@ -257,7 +257,7 @@ describe('Design behaviors', () => {
     // before
     const { container } = customRender(
       <Provider store={store}>
-        <Design />
+        <Design width={0} />
       </Provider>,
     );
 
