@@ -20,13 +20,13 @@ import { isPureNumber } from 'utils';
 
 const { PopoverCompound } = UITools;
 
-export type THeightPopoverWidthProps = {
+export type TPopoverGapProps = {
   gap: keyof TGap;
   gapProperties: TGapProperties;
   isMixed: boolean;
 };
 
-const PopoverGap: FC<THeightPopoverWidthProps> = ({ gap, gapProperties, isMixed }) => {
+const PopoverGap: FC<TPopoverGapProps> = ({ gap, gapProperties, isMixed }) => {
   const icon = useMemo(() => (gap === 'column' ? 'GapColumns' : 'GapRows'), []);
   const dispatch = useDispatch();
   const { t } = useTranslation();

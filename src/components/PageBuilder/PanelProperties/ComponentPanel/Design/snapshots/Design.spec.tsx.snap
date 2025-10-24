@@ -1892,6 +1892,17 @@ exports[`Design snapshots should render Design 1`] = `
                 name="Properties"
                 width="14"
               />
+              <div
+                class="css-zcp5dz"
+                data-test-box=""
+              >
+                <div
+                  class="css-17s20gh Popover Popover--light"
+                  data-test-box=""
+                  data-test-popover="popover"
+                  style="left: 0px; top: 0px;"
+                />
+              </div>
             </div>
             <div
               class="Tooltip Tooltip--light"

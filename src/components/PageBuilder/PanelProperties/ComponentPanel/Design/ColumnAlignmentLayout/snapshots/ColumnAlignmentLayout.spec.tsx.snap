@@ -500,6 +500,17 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
               name="Properties"
               width="14"
             />
+            <div
+              class="css-zcp5dz"
+              data-test-box=""
+            >
+              <div
+                class="css-17s20gh Popover Popover--light"
+                data-test-box=""
+                data-test-popover="popover"
+                style="left: 0px; top: 0px;"
+              />
+            </div>
           </div>
           <div
             class="Tooltip Tooltip--light"
@@ -1112,6 +1123,17 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
               name="Properties"
               width="14"
             />
+            <div
+              class="css-zcp5dz"
+              data-test-box=""
+            >
+              <div
+                class="css-17s20gh Popover Popover--light"
+                data-test-box=""
+                data-test-popover="popover"
+                style="left: 0px; top: 0px;"
+              />
+            </div>
           </div>
           <div
             class="Tooltip Tooltip--light"
@@ -1726,6 +1748,17 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
               name="Properties"
               width="14"
             />
+            <div
+              class="css-zcp5dz"
+              data-test-box=""
+            >
+              <div
+                class="css-17s20gh Popover Popover--light"
+                data-test-box=""
+                data-test-popover="popover"
+                style="left: 0px; top: 0px;"
+              />
+            </div>
           </div>
           <div
             class="Tooltip Tooltip--light"
@@ -2250,6 +2283,17 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
               name="Properties"
               width="14"
             />
+            <div
+              class="css-zcp5dz"
+              data-test-box=""
+            >
+              <div
+                class="css-17s20gh Popover Popover--light"
+                data-test-box=""
+                data-test-popover="popover"
+                style="left: 0px; top: 0px;"
+              />
+            </div>
           </div>
           <div
             class="Tooltip Tooltip--light"
@@ -2774,6 +2818,17 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
               name="Properties"
               width="14"
             />
+            <div
+              class="css-zcp5dz"
+              data-test-box=""
+            >
+              <div
+                class="css-17s20gh Popover Popover--light"
+                data-test-box=""
+                data-test-popover="popover"
+                style="left: 0px; top: 0px;"
+              />
+            </div>
           </div>
           <div
             class="Tooltip Tooltip--light"
