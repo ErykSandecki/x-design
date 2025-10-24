@@ -13,8 +13,8 @@ import { getPositionVertically } from '../utils/getPositionVertically';
 import { getTooltipPosition } from '../utils/getTooltipPosition';
 
 type TUseUpdatePosition = {
-  onMouseEnter: TFunc<[MouseEvent]>;
   onMouseLeave: TFunc<[MouseEvent]>;
+  onMouseOver: TFunc<[MouseEvent]>;
   position: TooltipPosition;
   styles: CSSProperties;
   visible: boolean;
@@ -48,7 +48,7 @@ export const useUpdatePosition = (
     setStyles(getTooltipPosition(elementRef, targetPosition, tooltipRef));
   };
 
-  const handleMouseEnter = (event: MouseEvent): void => {
+  const handleMouseOver = (event: MouseEvent): void => {
     updatePosition(event);
     setVisible(true);
     onMouseEnter();
@@ -72,8 +72,8 @@ export const useUpdatePosition = (
   });
 
   return {
-    onMouseEnter: handleMouseEnter,
     onMouseLeave: handleMouseLeave,
+    onMouseOver: handleMouseOver,
     position,
     styles,
     visible: active && visible,

@@ -1,5 +1,5 @@
-import { RefObject } from 'react';
 import { noop } from 'lodash';
+import { RefObject } from 'react';
 
 // components
 import ButtonIconPopover from './ButtonIconPopover';
@@ -7,7 +7,7 @@ import ButtonIconPopover from './ButtonIconPopover';
 // utils
 import { customRender } from 'test';
 
-const ref = { current: {} } as RefObject<HTMLDivElement>;
+const ref = { current: { getBoundingClientRect: () => ({ left: 0, top: 0 }) } } as RefObject<HTMLDivElement>;
 
 describe('TextFieldPopover snapshots', () => {
   it('should render ButtonIconPopover', () => {

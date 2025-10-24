@@ -45,7 +45,7 @@ export const ButtonIcon: FC<TSectionProps> = ({
 }) => {
   const ref = useRef(null);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-  const { selected: selectedPopover, setSelected: setSelectedPopover } = useOutsideClick([ref], ref, noop, idContainer);
+  const { selected: selectedPopover, setSelected: setSelectedPopover } = useOutsideClick([], ref, noop, idContainer);
   const isSelected = selectedPopover || selected;
   const onClickHandler = useClickEvent(onClick, selectedPopover, setSelectedPopover);
 

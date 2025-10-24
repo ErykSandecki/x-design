@@ -1901,7 +1901,27 @@ exports[`Design snapshots should render Design 1`] = `
                   data-test-box=""
                   data-test-popover="popover"
                   style="top: 0px;"
-                />
+                >
+                  <div
+                    class="css-11hn3ec"
+                    data-test-popover-header=""
+                  >
+                    <small
+                      class="css-1jnxvbp Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                      data-test-text=""
+                      style="font-size: 11px; text-align: inherit;"
+                    >
+                      Auto layout settings
+                    </small>
+                    <div
+                      class="css-1jnxvbp Icon Icon--light Icon--clickable Icon--clickable--light"
+                      data-test-icon="close"
+                      height="10"
+                      name="Close"
+                      width="10"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
             <div

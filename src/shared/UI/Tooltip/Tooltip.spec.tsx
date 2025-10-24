@@ -110,7 +110,7 @@ describe('Tooltip snapshots', () => {
     );
 
     // action
-    fireEvent.mouseEnter(getByText('?'), { clientX: 1024, clientY: 1024 });
+    fireEvent.mouseOver(getByText('?'), { clientX: 1024, clientY: 1024 });
 
     // wait
     await sleep(100);
@@ -144,7 +144,7 @@ describe('Tooltip snapshots', () => {
     );
 
     // action
-    fireEvent.mouseEnter(getByText('?'), { clientX: 1024, clientY: 1024 });
+    fireEvent.mouseOver(getByText('?'), { clientX: 1024, clientY: 1024 });
 
     // wait
     await sleep(100);
@@ -162,7 +162,7 @@ describe('Tooltip snapshots', () => {
     );
 
     // action
-    fireEvent.mouseEnter(getByText('?'), { clientX: 1024, clientY: 1024 });
+    fireEvent.mouseOver(getByText('?'), { clientX: 1024, clientY: 1024 });
 
     // wait
     await sleep(100);

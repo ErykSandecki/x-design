@@ -4,6 +4,7 @@ import { FC, ReactNode, RefObject, useRef } from 'react';
 // components
 import Box from 'shared/UI/Box/Box';
 import E2EDataAttribute, { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute';
+import PopoverHeader from './PopoverHeader/PopoverHeader';
 import PopoverItem from './PopoverItem/PopoverItem';
 import PopoverRoot from './PopoverRoot/PopoverRoot';
 import PopoverSeparator from './PopoverSeparator/PopoverSeparator';
@@ -24,6 +25,7 @@ import { TSXColor } from '../../UI/hooks/sx/types/types';
 
 // utils
 import { getPosition } from './utils/getPosition';
+import { stopPropagation } from 'utils';
 
 export type TPopoverProps = {
   backgroundColor?: TSXColor;
@@ -58,6 +60,7 @@ export const Popover: FC<TPopoverProps> = ({
           ]),
         }}
         depsSx={[backgroundColor]}
+        onClick={stopPropagation}
         ref={refPopover}
         style={{ left: x, top: y }}
         sx={{
@@ -79,6 +82,7 @@ export const Popover: FC<TPopoverProps> = ({
 };
 
 export const PopoverCompound = {
+  PopoverHeader,
   PopoverItem,
   PopoverRoot,
   PopoverSeparator,

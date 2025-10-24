@@ -59,7 +59,7 @@ export const Tooltip: FC<TTooltipProps> = ({
   const elementRef = ref || useRef<HTMLDivElement>(null);
   const tooltipRef = useRef<HTMLDivElement>(null);
 
-  const { onMouseEnter, onMouseLeave, position, styles, visible } = useUpdatePosition(
+  const { onMouseLeave, onMouseOver, position, styles, visible } = useUpdatePosition(
     autoPositioning,
     autoPositioningCarrotPlacement,
     autoPositioningHorizontal,
@@ -70,7 +70,7 @@ export const Tooltip: FC<TTooltipProps> = ({
   );
 
   if (!content) {
-    return cloneElement(children, getAttributes(e2eAttribute, e2eValue));
+    return cloneElement(children, { ...getAttributes(e2eAttribute, e2eValue), ref: elementRef });
   }
 
   if (!container) {
@@ -81,8 +81,8 @@ export const Tooltip: FC<TTooltipProps> = ({
     <>
       {cloneElement(children, {
         ...getAttributes(e2eAttribute, e2eValue),
-        onMouseEnter,
         onMouseLeave,
+        onMouseOver,
         ref: elementRef,
       })}
       {createPortal(

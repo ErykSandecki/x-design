@@ -5,6 +5,7 @@
   "pageBuilder.panelProperties.componentPanel.design.columnAlignment.label": "Wyrównanie",
   "pageBuilder.panelProperties.componentPanel.design.columnAlignmentLayout.label.alignment": "Wyrównanie",
   "pageBuilder.panelProperties.componentPanel.design.columnAlignmentLayout.label.gap": "Odstęp",
+  "pageBuilder.panelProperties.componentPanel.design.columnAlignmentLayout.popover.autoLayoutSettings.header": "Ustawienia układu widoku",
   "pageBuilder.panelProperties.componentPanel.design.columnAlignmentLayout.popover.gap.column.1": "Ustaw na obecną między kolumnami ({{ value }})",
   "pageBuilder.panelProperties.componentPanel.design.columnAlignmentLayout.popover.gap.row.1": "Ustaw na obecną między wierszami ({{ value }})",
   "pageBuilder.panelProperties.componentPanel.design.columnFlow.label": "Typ układu",

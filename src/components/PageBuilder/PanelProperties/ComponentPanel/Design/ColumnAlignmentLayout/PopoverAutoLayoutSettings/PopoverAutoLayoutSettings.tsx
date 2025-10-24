@@ -26,7 +26,11 @@ const PopoverAutoLayoutSettings: FC<TPopoverAutoLayoutSettingsProps> = () => {
   const dispatch = useDispatch();
   const { t } = useTranslation();
 
-  return <></>;
+  return (
+    <>
+      <PopoverCompound.PopoverHeader title={t(`${translationNameSpace}.header`)} />
+    </>
+  );
 };
 
 export default PopoverAutoLayoutSettings;
