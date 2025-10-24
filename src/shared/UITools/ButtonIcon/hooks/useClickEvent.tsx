@@ -1,13 +1,13 @@
-import { ButtonHTMLAttributes, MouseEvent } from 'react';
+import { MouseEvent } from 'react';
 
-type TUseClickEvent = TFunc<[MouseEvent<HTMLButtonElement>]>;
+type TUseClickEvent = TFunc<[MouseEvent]>;
 
 export const useClickEvent = (
-  onClick: ButtonHTMLAttributes<HTMLElement>['onClick'] | undefined,
+  onClick: TFunc<[MouseEvent]> | undefined,
   selected: boolean,
   setSelected: TFunc<[boolean]>,
 ): TUseClickEvent => {
-  const handleClick = (event: MouseEvent<HTMLButtonElement>): void => {
+  const handleClick = (event: MouseEvent): void => {
     if (onClick) {
       onClick(event);
     }

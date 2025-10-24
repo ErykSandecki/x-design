@@ -24,7 +24,7 @@ export const useUpdatePosition = (
   autoPositioning: boolean,
   autoPositioningCarrotPlacement: TCarrotPlacement,
   autoPositioningHorizontal: boolean,
-  elementRef: RefObject<HTMLDivElement>,
+  elementRef: RefObject<HTMLElement>,
   initialVisible: boolean,
   initialPosition: TooltipPosition,
   tooltipRef: RefObject<HTMLDivElement>,

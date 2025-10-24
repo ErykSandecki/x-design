@@ -77,7 +77,7 @@ const getCoordinates = (
 };
 
 export const getTooltipPosition = (
-  elementRef: RefObject<HTMLDivElement>,
+  elementRef: RefObject<HTMLElement>,
   position: TooltipPosition,
   tooltipRef: RefObject<HTMLDivElement>,
 ): CSSProperties => {

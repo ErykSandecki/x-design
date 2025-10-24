@@ -15,7 +15,7 @@ const ColumnAlignmentLayoutButtonIcons = (t: TT, width: number): Array<ReactNode
     key={0}
     name="Properties"
     popoverChildren={<PopoverAutoLayoutSettings />}
-    popoverOffset={{ x: width - 15, y: 0 }}
+    popoverOffset={{ x: width - 30, y: 0 }}
     tooltip={{ autoPositioning: true, content: t(`${TOOLTIP_TRANSLATION_KEY}.autoLayoutSettings`) }}
     selected={false}
   />,

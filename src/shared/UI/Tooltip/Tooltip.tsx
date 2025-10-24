@@ -1,4 +1,4 @@
-import { cloneElement, FC, ReactNode, useRef, ReactElement } from 'react';
+import { cloneElement, FC, ReactNode, useRef, ReactElement, RefObject } from 'react';
 import { createPortal } from 'react-dom';
 
 // components
@@ -35,6 +35,7 @@ export type TTooltipProps = {
   e2eValue?: TE2EDataAttributeProps['value'];
   hide?: boolean;
   position?: TooltipPosition;
+  ref?: RefObject<HTMLElement>;
   visible?: boolean;
 };
 
@@ -50,11 +51,12 @@ export const Tooltip: FC<TTooltipProps> = ({
   e2eValue = '',
   hide = false,
   position: initialPosition = TooltipPosition.topCenter,
+  ref,
   visible: initialVisible = false,
 }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, _styles);
   const container = useRenderContainer(customId, HTMLContainerId.tooltip);
-  const elementRef = useRef<HTMLDivElement>(null);
+  const elementRef = ref || useRef<HTMLDivElement>(null);
   const tooltipRef = useRef<HTMLDivElement>(null);
 
   const { onMouseEnter, onMouseLeave, position, styles, visible } = useUpdatePosition(
