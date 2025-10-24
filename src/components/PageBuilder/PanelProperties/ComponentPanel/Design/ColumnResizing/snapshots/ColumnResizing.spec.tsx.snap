@@ -20,7 +20,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
       </small>
     </div>
     <div
-      class="css-1r00qlg"
+      class="css-4ja0ji"
       data-test-box=""
     >
       <div
@@ -398,7 +398,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
         </div>
       </div>
       <div
-        class="css-1r00qlg"
+        class="css-1jnxvbp"
         data-test-box=""
       >
         <div
@@ -461,7 +461,7 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
       </small>
     </div>
     <div
-      class="css-1r00qlg"
+      class="css-4ja0ji"
       data-test-box=""
     >
       <div
@@ -723,7 +723,7 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
         </div>
       </div>
       <div
-        class="css-1r00qlg"
+        class="css-1jnxvbp"
         data-test-box=""
       >
         <div

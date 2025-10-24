@@ -10,7 +10,7 @@ exports[`ViewBox snapshots should render ViewBox 1`] = `
     <div
       class="css-1jnxvbp ZoomBox__backgroundMask ZoomBox__backgroundMask--light"
       data-test-box="zoom-box-background-mask"
-      style="background-color: rgb(241, 242, 246); display: initial;"
+      style="background-color: rgb(30, 38, 47); display: initial;"
     />
     <div
       class="css-1jnxvbp ZoomBox__textureBlank ZoomBox__textureBlank--light"
@@ -23,6 +23,27 @@ exports[`ViewBox snapshots should render ViewBox 1`] = `
       id="zoomContentId"
       style="transform: translate(0px, 0px) scale(1);"
     >
+      <div
+        class="css-1jnxvbp Elements__element Elements__element--light Frame Frame--light Element Element--light"
+        data-status="false"
+        data-test-element="mh4j5eb01761290939051"
+        id="mh4j5eb01761290939051"
+        style="align-items: flex-start; display: flex; flex-direction: column; justify-content: flex-start; row-gap: 0px; left: 637px; top: 323px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; background-color: rgb(255, 255, 255); height: 328px; position: absolute; width: 382px;"
+      >
+        <div
+          class="css-1jnxvbp Frame__wrapper Frame__wrapper--light"
+          data-test-box=""
+          style="height: 328px; left: 637px; top: 323px; transform: rotate(0deg); width: 382px;"
+        >
+          <small
+            class="css-1jnxvbp Frame__label Frame__label--light Frame__label--top Frame__label--top--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+            data-test-text=""
+            style="text-align: inherit;"
+          >
+            Frame
+          </small>
+        </div>
+      </div>
       <div
         class="css-u5h2b"
         data-test-box=""

@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
 // components
@@ -21,6 +22,7 @@ import { useDesignData } from './hooks/useDesignData';
 import { translationNameSpace } from './constants';
 
 const Design: FC = () => {
+  const dispatch = useDispatch();
   const { t } = useTranslation();
   const { areParentsTheSame, isMixedLayoutType, layoutType, onChangeLayoutType, position } = useDesignData();
 
@@ -30,7 +32,7 @@ const Design: FC = () => {
         <ColumnHeader />
       </UITools.Section>
       <UITools.Section
-        buttonsIcon={DesignPositionButtonIcons(areParentsTheSame, position)}
+        buttonsIcon={DesignPositionButtonIcons(areParentsTheSame, dispatch, position, useSelector)}
         label={t(`${translationNameSpace}.section.2.label`)}
       >
         <ColumnAlignment />
@@ -38,7 +40,7 @@ const Design: FC = () => {
         <ColumnRotation />
       </UITools.Section>
       <UITools.Section
-        buttonsIcon={DesignLayoutButtonIcons(isMixedLayoutType, layoutType, onChangeLayoutType)}
+        buttonsIcon={DesignLayoutButtonIcons(dispatch, isMixedLayoutType, layoutType, onChangeLayoutType)}
         label={t(`${translationNameSpace}.section.3.label`)}
       >
         <ColumnFlow />

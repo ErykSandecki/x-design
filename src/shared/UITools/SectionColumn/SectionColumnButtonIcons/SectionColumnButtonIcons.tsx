@@ -8,7 +8,7 @@ export type TSectionColumnButtonIconsProps = {
 };
 
 export const SectionColumnButtonIcons: FC<TSectionColumnButtonIconsProps> = ({ buttonsIcon = [] }) => (
-  <Box sx={{ alignItems: 'center', columnGap: '8px', display: 'flex' }}>
+  <Box>
     <Box sx={{ alignItems: 'center', columnGap: '2.5px', display: 'flex', flexGrow: 1, justifyContent: 'center' }}>
       {buttonsIcon.map((buttonIcon) => buttonIcon)}
     </Box>

@@ -1,6 +1,7 @@
 import { first } from 'lodash';
 import { ReactNode } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { UseSelector } from 'react-redux';
+import { Dispatch } from 'redux';
 
 // components
 import { UITools } from 'shared';
@@ -12,8 +13,12 @@ import { elementDataSelectorCreator, selectedElementsSelector } from 'store/page
 // types
 import { LayoutType, TElement } from 'types';
 
-const DesignPositionButtonIcons = (areParentsTheSame: boolean, position: TElement['position']): Array<ReactNode> => {
-  const dispatch = useDispatch();
+const DesignPositionButtonIcons = (
+  areParentsTheSame: boolean,
+  dispatch: Dispatch,
+  position: TElement['position'],
+  useSelector: UseSelector,
+): Array<ReactNode> => {
   const selectedElements = useSelector(selectedElementsSelector);
   const firstElement = first(selectedElements);
   const parent = useSelector(elementDataSelectorCreator(firstElement.parentId));

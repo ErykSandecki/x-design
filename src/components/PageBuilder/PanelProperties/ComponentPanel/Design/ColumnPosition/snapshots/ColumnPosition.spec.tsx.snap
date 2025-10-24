@@ -20,7 +20,7 @@ exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
       </small>
     </div>
     <div
-      class="css-1r00qlg"
+      class="css-4ja0ji"
       data-test-box=""
     >
       <div
@@ -114,7 +114,7 @@ exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
         </div>
       </div>
       <div
-        class="css-1r00qlg"
+        class="css-1jnxvbp"
         data-test-box=""
       >
         <div
@@ -147,7 +147,7 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
       </small>
     </div>
     <div
-      class="css-1r00qlg"
+      class="css-4ja0ji"
       data-test-box=""
     >
       <div
@@ -243,7 +243,7 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
         </div>
       </div>
       <div
-        class="css-1r00qlg"
+        class="css-1jnxvbp"
         data-test-box=""
       >
         <div
@@ -300,7 +300,7 @@ exports[`ColumnPosition snapshots should render when values are mixed 1`] = `
       </small>
     </div>
     <div
-      class="css-1r00qlg"
+      class="css-4ja0ji"
       data-test-box=""
     >
       <div
@@ -394,7 +394,7 @@ exports[`ColumnPosition snapshots should render when values are mixed 1`] = `
         </div>
       </div>
       <div
-        class="css-1r00qlg"
+        class="css-1jnxvbp"
         data-test-box=""
       >
         <div

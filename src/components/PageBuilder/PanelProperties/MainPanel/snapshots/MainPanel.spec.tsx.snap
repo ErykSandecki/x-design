@@ -32,7 +32,7 @@ exports[`MainPanel snapshots should render MainPanel 1`] = `
         style="width: calc(100% - 24px - 0px - 8px);"
       />
       <div
-        class="css-1r00qlg"
+        class="css-4ja0ji"
         data-test-box=""
       >
         <div
@@ -61,12 +61,12 @@ exports[`MainPanel snapshots should render MainPanel 1`] = `
                   <div
                     class="css-agg4zg Color__picker Color__picker--light"
                     data-test-box=""
-                    style="background-color: rgb(241, 242, 246);"
+                    style="background-color: rgb(30, 38, 47);"
                   />
                   <div
                     class="css-agg4zg Color__pickerAlpha Color__pickerAlpha--light"
                     data-test-box=""
-                    style="background-color: rgb(241, 242, 246);"
+                    style="background-color: rgb(30, 38, 47);"
                   />
                   <div
                     class="css-hnxq09 Color__pickerTexture Color__pickerTexture--light"
@@ -78,7 +78,7 @@ exports[`MainPanel snapshots should render MainPanel 1`] = `
                 class="TextField__input TextField__input--light"
                 data-test-text-field-input="color"
                 maxlength="6"
-                value="f1f2f6"
+                value="1e262f"
               />
             </div>
             <div
@@ -110,7 +110,7 @@ exports[`MainPanel snapshots should render MainPanel 1`] = `
           </div>
         </div>
         <div
-          class="css-1r00qlg"
+          class="css-1jnxvbp"
           data-test-box=""
         >
           <div

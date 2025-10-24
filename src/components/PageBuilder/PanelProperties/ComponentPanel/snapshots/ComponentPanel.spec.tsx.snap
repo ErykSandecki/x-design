@@ -16,7 +16,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
         style="width: calc(100% - 48px - 2.5px - 8px);"
       />
       <div
-        class="css-1r00qlg"
+        class="css-4ja0ji"
         data-test-box=""
       >
         <div
@@ -33,7 +33,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
           </small>
         </div>
         <div
-          class="css-1r00qlg"
+          class="css-1jnxvbp"
           data-test-box=""
         >
           <div
@@ -141,7 +141,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
         </small>
       </div>
       <div
-        class="css-1r00qlg"
+        class="css-4ja0ji"
         data-test-box=""
       >
         <div
@@ -329,7 +329,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
           </div>
         </div>
         <div
-          class="css-1r00qlg"
+          class="css-1jnxvbp"
           data-test-box=""
         >
           <div
@@ -357,7 +357,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
         </small>
       </div>
       <div
-        class="css-1r00qlg"
+        class="css-4ja0ji"
         data-test-box=""
       >
         <div
@@ -451,7 +451,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
           </div>
         </div>
         <div
-          class="css-1r00qlg"
+          class="css-1jnxvbp"
           data-test-box=""
         >
           <div
@@ -479,7 +479,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
         </small>
       </div>
       <div
-        class="css-1r00qlg"
+        class="css-4ja0ji"
         data-test-box=""
       >
         <div
@@ -620,7 +620,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
           </div>
         </div>
         <div
-          class="css-1r00qlg"
+          class="css-1jnxvbp"
           data-test-box=""
         >
           <div
@@ -728,7 +728,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
         </small>
       </div>
       <div
-        class="css-1r00qlg"
+        class="css-4ja0ji"
         data-test-box=""
       >
         <div
@@ -860,7 +860,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
           </div>
         </div>
         <div
-          class="css-1r00qlg"
+          class="css-1jnxvbp"
           data-test-box=""
         >
           <div
@@ -888,7 +888,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
         </small>
       </div>
       <div
-        class="css-1r00qlg"
+        class="css-4ja0ji"
         data-test-box=""
       >
         <div
@@ -1266,7 +1266,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
           </div>
         </div>
         <div
-          class="css-1r00qlg"
+          class="css-1jnxvbp"
           data-test-box=""
         >
           <div

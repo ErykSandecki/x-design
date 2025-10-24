@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
 // components
 import ColumnBackgroundButtonIcons from './ColumnBackgroundButtonIcons';
@@ -18,9 +19,10 @@ const ColumnBackground: FC = () => {
   const dispatch = useDispatch();
   const { properties } = background;
   const { alpha, color, format } = properties as TColor;
+  const { t } = useTranslation();
 
   return (
-    <UITools.SectionColumn buttonsIcon={ColumnBackgroundButtonIcons()}>
+    <UITools.SectionColumn buttonsIcon={ColumnBackgroundButtonIcons(dispatch, t, useSelector)}>
       <UITools.ColorPicker
         activeSampler={colorSampler as boolean}
         alpha={alpha}

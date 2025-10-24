@@ -53,7 +53,7 @@ export const SectionColumn: FC<TSectionColumnProps> = ({
       e2eAttribute={E2EAttribute.section}
     >
       <SectionColumnLabels labels={labels} width={width} />
-      <Box sx={{ alignItems: 'center', columnGap: '8px', display: 'flex' }}>
+      <Box sx={{ columnGap: '8px', display: 'flex' }}>
         <SectionColumnContent gridColumnType={gridColumnType} width={width} withInputConnector={withInputConnector}>
           {children}
         </SectionColumnContent>

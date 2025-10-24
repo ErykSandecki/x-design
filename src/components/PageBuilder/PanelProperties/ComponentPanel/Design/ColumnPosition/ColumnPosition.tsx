@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
 // components
@@ -37,7 +38,7 @@ const ColumnPosition: FC = () => {
 
   return (
     <UITools.SectionColumn
-      buttonsIcon={ColumnPositionButtonIcons(firstElement, showConstrains)}
+      buttonsIcon={ColumnPositionButtonIcons(firstElement, showConstrains, useSelector)}
       gridColumnType={UITools.GridColumnType.twoInputs}
       labels={[t(`${translationNameSpace}.label`)]}
       withMargin

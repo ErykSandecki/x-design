@@ -1,6 +1,5 @@
+import { Dispatch } from 'redux';
 import { ReactNode } from 'react';
-import { useDispatch } from 'react-redux';
-import { useTranslation } from 'react-i18next';
 
 // components
 import { UITools } from 'shared';
@@ -11,11 +10,13 @@ import { TOOLTIP_TRANSLATION_KEY } from 'constant/constants';
 // store
 import { toggleAspectRatio } from 'store/pageBuilder/actions';
 
-const ColumnResizingButtonIcons = (aspectRatio: boolean, visibleAspectRatioButton: boolean): Array<ReactNode> => {
-  const dispatch = useDispatch();
-  const { t } = useTranslation();
-
-  return visibleAspectRatioButton
+const ColumnResizingButtonIcons = (
+  aspectRatio: boolean,
+  dispatch: Dispatch,
+  t: TT,
+  visibleAspectRatioButton: boolean,
+): Array<ReactNode> =>
+  visibleAspectRatioButton
     ? [
         <UITools.ButtonIcon
           e2eValue="aspect-ratio"
@@ -27,6 +28,5 @@ const ColumnResizingButtonIcons = (aspectRatio: boolean, visibleAspectRatioButto
         />,
       ]
     : [];
-};
 
 export default ColumnResizingButtonIcons;

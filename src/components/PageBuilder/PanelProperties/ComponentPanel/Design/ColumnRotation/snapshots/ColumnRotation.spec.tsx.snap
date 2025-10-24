@@ -20,7 +20,7 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
       </small>
     </div>
     <div
-      class="css-1r00qlg"
+      class="css-4ja0ji"
       data-test-box=""
     >
       <div
@@ -161,7 +161,7 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
         </div>
       </div>
       <div
-        class="css-1r00qlg"
+        class="css-1jnxvbp"
         data-test-box=""
       >
         <div
@@ -194,7 +194,7 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
       </small>
     </div>
     <div
-      class="css-1r00qlg"
+      class="css-4ja0ji"
       data-test-box=""
     >
       <div
@@ -335,7 +335,7 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
         </div>
       </div>
       <div
-        class="css-1r00qlg"
+        class="css-1jnxvbp"
         data-test-box=""
       >
         <div

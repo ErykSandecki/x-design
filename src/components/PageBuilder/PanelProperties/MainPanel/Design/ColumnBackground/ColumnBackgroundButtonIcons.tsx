@@ -1,6 +1,6 @@
+import { Dispatch } from 'redux';
 import { ReactNode } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useTranslation } from 'react-i18next';
+import { UseSelector } from 'react-redux';
 
 // components
 import { UITools } from 'shared';
@@ -12,10 +12,8 @@ import { TOOLTIP_TRANSLATION_KEY } from 'constant/constants';
 import { changeBackground } from 'store/pageBuilder/actions';
 import { pageBackgroundSelectorCreator } from 'store/pageBuilder/selectors';
 
-const ColumnBackgroundButtonIcons = (): Array<ReactNode> => {
+const ColumnBackgroundButtonIcons = (dispatch: Dispatch, t: TT, useSelector: UseSelector): Array<ReactNode> => {
   const background = useSelector(pageBackgroundSelectorCreator('-1'));
-  const dispatch = useDispatch();
-  const { t } = useTranslation();
   const { visible } = background;
 
   return [

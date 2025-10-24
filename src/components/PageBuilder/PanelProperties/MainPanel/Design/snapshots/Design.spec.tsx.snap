@@ -32,7 +32,7 @@ exports[`Design snapshots should render Design 1`] = `
         style="width: calc(100% - 24px - 0px - 8px);"
       />
       <div
-        class="css-1r00qlg"
+        class="css-4ja0ji"
         data-test-box=""
       >
         <div
@@ -110,7 +110,7 @@ exports[`Design snapshots should render Design 1`] = `
           </div>
         </div>
         <div
-          class="css-1r00qlg"
+          class="css-1jnxvbp"
           data-test-box=""
         >
           <div

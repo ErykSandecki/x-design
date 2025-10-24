@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 // components
+import ColumnAlignmentLayoutButtonIcons from './ColumnAlignmentLayoutButtonIcons';
 import ColumnAlignmentLayoutGapInput from './ColumnAlignmentLayoutGapInput';
 import { UITools } from 'shared';
 
@@ -38,6 +39,7 @@ const ColumnAlignmentLayout: FC = () => {
 
   return (
     <UITools.SectionColumn
+      buttonsIcon={ColumnAlignmentLayoutButtonIcons(t)}
       gridColumnType={UITools.GridColumnType.oneByTwo}
       labels={[t(`${translationNameSpace}.label.alignment`), t(`${translationNameSpace}.label.gap`)]}
       withMargin

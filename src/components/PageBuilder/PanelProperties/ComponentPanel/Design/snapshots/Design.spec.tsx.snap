@@ -16,7 +16,7 @@ exports[`Design snapshots should render Design 1`] = `
         style="width: calc(100% - 48px - 2.5px - 8px);"
       />
       <div
-        class="css-1r00qlg"
+        class="css-4ja0ji"
         data-test-box=""
       >
         <div
@@ -33,7 +33,7 @@ exports[`Design snapshots should render Design 1`] = `
           </small>
         </div>
         <div
-          class="css-1r00qlg"
+          class="css-1jnxvbp"
           data-test-box=""
         >
           <div
@@ -141,7 +141,7 @@ exports[`Design snapshots should render Design 1`] = `
         </small>
       </div>
       <div
-        class="css-1r00qlg"
+        class="css-4ja0ji"
         data-test-box=""
       >
         <div
@@ -329,7 +329,7 @@ exports[`Design snapshots should render Design 1`] = `
           </div>
         </div>
         <div
-          class="css-1r00qlg"
+          class="css-1jnxvbp"
           data-test-box=""
         >
           <div
@@ -357,7 +357,7 @@ exports[`Design snapshots should render Design 1`] = `
         </small>
       </div>
       <div
-        class="css-1r00qlg"
+        class="css-4ja0ji"
         data-test-box=""
       >
         <div
@@ -451,7 +451,7 @@ exports[`Design snapshots should render Design 1`] = `
           </div>
         </div>
         <div
-          class="css-1r00qlg"
+          class="css-1jnxvbp"
           data-test-box=""
         >
           <div
@@ -479,7 +479,7 @@ exports[`Design snapshots should render Design 1`] = `
         </small>
       </div>
       <div
-        class="css-1r00qlg"
+        class="css-4ja0ji"
         data-test-box=""
       >
         <div
@@ -620,7 +620,7 @@ exports[`Design snapshots should render Design 1`] = `
           </div>
         </div>
         <div
-          class="css-1r00qlg"
+          class="css-1jnxvbp"
           data-test-box=""
         >
           <div
@@ -728,7 +728,7 @@ exports[`Design snapshots should render Design 1`] = `
         </small>
       </div>
       <div
-        class="css-1r00qlg"
+        class="css-4ja0ji"
         data-test-box=""
       >
         <div
@@ -860,7 +860,7 @@ exports[`Design snapshots should render Design 1`] = `
           </div>
         </div>
         <div
-          class="css-1r00qlg"
+          class="css-1jnxvbp"
           data-test-box=""
         >
           <div
@@ -888,7 +888,7 @@ exports[`Design snapshots should render Design 1`] = `
         </small>
       </div>
       <div
-        class="css-1r00qlg"
+        class="css-4ja0ji"
         data-test-box=""
       >
         <div
@@ -1266,7 +1266,7 @@ exports[`Design snapshots should render Design 1`] = `
           </div>
         </div>
         <div
-          class="css-1r00qlg"
+          class="css-1jnxvbp"
           data-test-box=""
         >
           <div
@@ -1331,7 +1331,7 @@ exports[`Design snapshots should render Design 1`] = `
         </small>
       </div>
       <div
-        class="css-1r00qlg"
+        class="css-4ja0ji"
         data-test-box=""
       >
         <div
@@ -1873,13 +1873,43 @@ exports[`Design snapshots should render Design 1`] = `
           </div>
         </div>
         <div
-          class="css-1r00qlg"
+          class="css-1jnxvbp"
           data-test-box=""
         >
           <div
             class="css-c1qms7"
             data-test-box=""
-          />
+          >
+            <div
+              class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+              data-test-button-icon="properties"
+              data-test-tooltip=""
+            >
+              <div
+                class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="properties"
+                height="14"
+                name="Properties"
+                width="14"
+              />
+            </div>
+            <div
+              class="Tooltip Tooltip--light"
+            >
+              <div
+                class="Tooltip__content Tooltip__content--light"
+              >
+                Auto layout settings
+                <div
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="carrot-down"
+                  height="14"
+                  name="CarrotDown"
+                  width="10"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

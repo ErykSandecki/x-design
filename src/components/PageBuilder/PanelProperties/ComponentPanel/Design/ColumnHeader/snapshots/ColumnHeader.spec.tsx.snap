@@ -12,7 +12,7 @@ exports[`ColumnHeader snapshots should render ColumnHeader 1`] = `
       style="width: calc(100% - 48px - 2.5px - 8px);"
     />
     <div
-      class="css-1r00qlg"
+      class="css-4ja0ji"
       data-test-box=""
     >
       <div
@@ -29,7 +29,7 @@ exports[`ColumnHeader snapshots should render ColumnHeader 1`] = `
         </small>
       </div>
       <div
-        class="css-1r00qlg"
+        class="css-1jnxvbp"
         data-test-box=""
       >
         <div
@@ -113,7 +113,7 @@ exports[`ColumnHeader snapshots should render with multiple selects 1`] = `
       style="width: calc(100% - 48px - 2.5px - 8px);"
     />
     <div
-      class="css-1r00qlg"
+      class="css-4ja0ji"
       data-test-box=""
     >
       <div
@@ -130,7 +130,7 @@ exports[`ColumnHeader snapshots should render with multiple selects 1`] = `
         </small>
       </div>
       <div
-        class="css-1r00qlg"
+        class="css-1jnxvbp"
         data-test-box=""
       >
         <div

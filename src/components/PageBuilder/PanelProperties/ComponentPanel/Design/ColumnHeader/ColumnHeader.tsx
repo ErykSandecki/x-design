@@ -20,7 +20,7 @@ const ColumnHeader: FC = () => {
   const { t } = useTranslation();
 
   return (
-    <UITools.SectionColumn buttonsIcon={ColumnHeaderButtonIcons()}>
+    <UITools.SectionColumn buttonsIcon={ColumnHeaderButtonIcons(t)}>
       <Small>
         {t(`${translationNameSpace}.${text}`, {
           amount: amountElements,

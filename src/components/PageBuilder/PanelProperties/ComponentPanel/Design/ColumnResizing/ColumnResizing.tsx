@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { first } from 'lodash';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
 // components
@@ -23,6 +23,7 @@ const ColumnResizing: FC = () => {
   const elements = useSelector(elementsSelector);
   const selectedElements = useSelector(selectedElementsSelector);
   const firstElement = first(selectedElements);
+  const dispatch = useDispatch();
   const { t } = useTranslation();
 
   const {
@@ -53,7 +54,7 @@ const ColumnResizing: FC = () => {
 
   return (
     <UITools.SectionColumn
-      buttonsIcon={ColumnResizingButtonIcons(aspectRatio, visibleAspectRatioButton)}
+      buttonsIcon={ColumnResizingButtonIcons(aspectRatio, dispatch, t, visibleAspectRatioButton)}
       gridColumnType={UITools.GridColumnType.twoInputs}
       labels={[t(`${translationNameSpace}.label`)]}
       withInputConnector={aspectRatio}

@@ -106,9 +106,107 @@ const initialState: TPageBuilderState = {
   },
   isLoading: true,
   isPending: false,
+  // @ts-ignore
   pages: {
     [BASE_PAGE.id]: {
       ...BASE_PAGE,
+      elements: {
+        '-1': {
+          alignment: {},
+          angle: 0,
+          aspectRatio: false,
+          background: {
+            properties: {
+              alpha: '100',
+              color: '#1e262f',
+              format: 'hex',
+            },
+            visible: true,
+          },
+          children: [
+            {
+              id: 'mh4j5eb01761290939051',
+              type: 'frame',
+            },
+          ],
+          coordinates: {
+            x: 0,
+            y: 0,
+          },
+          deepLevel: 0,
+          flip: {
+            x: false,
+            y: false,
+          },
+          height: {
+            value: 0,
+          },
+          id: '-1',
+          layout: {
+            alignment: 'none',
+            gap: {
+              column: {
+                value: 0,
+              },
+              row: {
+                value: 0,
+              },
+            },
+            type: 'freeForm',
+          },
+          parentId: '-1',
+          position: 'absolute',
+          type: 'base',
+          width: {
+            value: 0,
+          },
+        },
+        mh4j5eb01761290939051: {
+          alignment: {},
+          angle: 0,
+          aspectRatio: false,
+          background: {
+            properties: {
+              alpha: '100',
+              color: '#ffffff',
+              format: 'hex',
+            },
+            visible: true,
+          },
+          children: [],
+          coordinates: {
+            x: 637,
+            y: 323,
+          },
+          deepLevel: 1,
+          flip: {
+            x: false,
+            y: false,
+          },
+          height: {
+            value: 328,
+          },
+          id: 'mh4j5eb01761290939051',
+          layout: {
+            alignment: 'topLeft',
+            gap: {
+              column: {
+                value: 0,
+              },
+              row: {
+                value: 0,
+              },
+            },
+            type: 'vertical',
+          },
+          parentId: '-1',
+          position: 'absolute',
+          type: 'frame',
+          width: {
+            value: 382,
+          },
+        },
+      },
     },
   },
 };
