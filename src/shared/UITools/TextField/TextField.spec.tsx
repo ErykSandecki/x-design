@@ -23,6 +23,14 @@ describe('TextField snapshots', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
+  it('should render with label', () => {
+    // before
+    const { asFragment } = customRender(<TextField idContainer={id} label="label" />);
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
+
   it('should render with popover', () => {
     // before
     const { asFragment } = customRender(
@@ -45,7 +53,7 @@ describe('TextField snapshots', () => {
 describe('TextField behaviors', () => {
   it('should click on chip', () => {
     // before
-    const { container } = customRender(<TextField chipChildren="chip" ref={ref} />);
+    const { container } = customRender(<TextField chipChildren="chip" inputRef={ref} />);
 
     // find
     const chip = getByE2EAttribute(container, E2EAttribute.chip);

@@ -1,7 +1,7 @@
 import { FC, ReactNode } from 'react';
 
 // components
-import Chip from '../../Chip/Chip';
+import Chip from '../../../Chip/Chip';
 
 // hooks
 import { useTheme } from 'hooks';
@@ -19,6 +19,10 @@ export type TTextFieldChipProps = {
 
 export const TextFieldChip: FC<TTextFieldChipProps> = ({ children, onClick }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
+
+  if (!children) {
+    return null;
+  }
 
   return (
     <Chip className={cx(classNamesWithTheme[className])} onClick={onClick}>

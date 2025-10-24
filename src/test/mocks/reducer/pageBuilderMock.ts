@@ -66,6 +66,7 @@ export const gapMock: TGapProperties = {
 
 export const layoutMock: TLayout = {
   alignment: AlignmentLayout.none,
+  boxSizing: 'excluded',
   gap: { column: gapMock, row: gapMock },
   type: LayoutType.freeForm,
 };

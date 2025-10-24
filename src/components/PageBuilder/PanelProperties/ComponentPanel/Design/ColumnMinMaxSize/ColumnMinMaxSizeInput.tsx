@@ -47,7 +47,7 @@ const ColumnMinMaxSizeInput: FC<TColumnResizingInputProps> = ({
       onClick={() => refInput.current.select()}
       onKeyDown={(event) => handleSubmitInput(KeyboardKeys.enter, refInput.current)(event)}
       popoverChildren={popoverChildren}
-      ref={refInput}
+      inputRef={refInput}
       startAdornment={
         <ScrubbableInput
           e2eValue={e2eValue}

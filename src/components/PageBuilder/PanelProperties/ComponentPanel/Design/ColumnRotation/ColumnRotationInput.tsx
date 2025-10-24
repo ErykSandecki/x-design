@@ -41,7 +41,7 @@ const ColumnRotationInput: FC<TColumnRotationInputProps> = ({ angle, isMixedAngl
       onChange={(event) => onChange(event.target.value)}
       onClick={() => refInputAngle.current.select()}
       onKeyDown={(event) => handleSubmitInput(KeyboardKeys.enter, refInputAngle.current)(event)}
-      ref={refInputAngle}
+      inputRef={refInputAngle}
       startAdornment={
         <ScrubbableInput
           e2eValue="angle"

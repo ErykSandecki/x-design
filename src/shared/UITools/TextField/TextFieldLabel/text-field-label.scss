@@ -1,0 +1,5 @@
+.TextFieldLabel {
+  @include theme('neutral-2', color);
+
+  font-size: 11px;
+}

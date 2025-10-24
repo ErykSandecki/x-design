@@ -4,6 +4,9 @@ import { noop } from 'lodash';
 import PopoverAutoLayoutSettings from './PopoverAutoLayoutSettings';
 import { UITools } from 'shared';
 
+// mocks
+import { layoutMock } from 'test/mocks/reducer/pageBuilderMock';
+
 // utils
 import { customRender } from 'test';
 
@@ -16,8 +19,8 @@ describe('PopoverAutoLayoutSettings snapshots', () => {
   it('should render PopoverAutoLayoutSettings', () => {
     // before
     const { asFragment } = customRender(
-      <UITools.PopoverCompound.PopoverRoot setSelected={noop}>
-        <PopoverAutoLayoutSettings />
+      <UITools.PopoverCompound.PopoverRoot selected={false} setSelected={noop}>
+        <PopoverAutoLayoutSettings layout={layoutMock} />
       </UITools.PopoverCompound.PopoverRoot>,
     );
 

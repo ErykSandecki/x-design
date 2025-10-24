@@ -50,7 +50,7 @@ export const ColorPickerInputAlpha: FC<TColorPickerInputAlphaProps> = ({
       onBlur={onBlur}
       onChange={onChangeAlpha}
       onKeyDown={(event) => handleSubmitInput(KeyboardKeys.enter, inputAlpha.current)(event)}
-      ref={inputAlpha}
+      inputRef={inputAlpha}
       type="number"
       value={alphaValue}
     />

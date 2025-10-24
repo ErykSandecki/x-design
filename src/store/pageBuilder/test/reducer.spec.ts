@@ -50,6 +50,7 @@ import {
   changeLayoutAlignment,
   setElementsGap,
   applyElementsGapType,
+  changeLayoutBoxSizing,
 } from '../actions';
 
 // types
@@ -450,47 +451,6 @@ describe('PageBuilderReducer', () => {
     });
   });
 
-  it('should handle FIT_LAYOUT', () => {
-    // mock
-    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-
-    // before
-    const state = reducer(fitLayout(), {
-      ...pageBuilderStateMock[PAGE_BUILDER],
-      pages: {
-        ...pageBuilderStateMock[PAGE_BUILDER].pages,
-        ['0']: {
-          ...currentPage,
-          elements: {
-            ...currentPage.elements,
-            [elementMock.id]: elementMock,
-          },
-          selectedElements: [selectedElementMock],
-        },
-      },
-    });
-
-    // result
-    expect(state).toStrictEqual({
-      ...pageBuilderStateMock[PAGE_BUILDER],
-      pages: {
-        ...pageBuilderStateMock[PAGE_BUILDER].pages,
-        ['0']: {
-          ...currentPage,
-          elements: {
-            ...currentPage.elements,
-            [elementMock.id]: {
-              ...elementMock,
-              height: { value: 'auto' },
-              width: { value: 'auto' },
-            },
-          },
-          selectedElements: [selectedElementMock],
-        },
-      },
-    });
-  });
-
   it('should handle CHANGE_LAYOUT', () => {
     // mock
     const layoutType = LayoutType.vertical;
@@ -601,6 +561,57 @@ describe('PageBuilderReducer', () => {
                 ...layoutMock,
                 alignment: AlignmentLayout.center,
                 type: LayoutType.horizontal,
+              },
+            },
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+  });
+
+  it('should handle CHANGE_LAYOUT_BOX_SIZING', () => {
+    // mock
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+
+    // before
+    const state = reducer(changeLayoutBoxSizing('included'), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [selectedElementMock.id, 'test-2'],
+            },
+            [elementMock.id]: elementMock,
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [selectedElementMock.id, 'test-2'],
+            },
+            [elementMock.id]: {
+              ...elementMock,
+              layout: {
+                ...layoutMock,
+                boxSizing: 'included',
               },
             },
           },
@@ -802,6 +813,47 @@ describe('PageBuilderReducer', () => {
               ...elementMock,
               id: 'test-3',
               parentId: 'test-1',
+            },
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+  });
+
+  it('should handle FIT_LAYOUT', () => {
+    // mock
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+
+    // before
+    const state = reducer(fitLayout(), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            [elementMock.id]: elementMock,
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            [elementMock.id]: {
+              ...elementMock,
+              height: { value: 'auto' },
+              width: { value: 'auto' },
             },
           },
           selectedElements: [selectedElementMock],

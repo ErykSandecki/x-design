@@ -60,7 +60,7 @@ const ColumnPositionInput: FC<TColumnPositionInputProps> = ({
       onChange={(event) => onChange(event.target.value)}
       onClick={() => refInput.current.select()}
       onKeyDown={(event) => handleSubmitInput(KeyboardKeys.enter, refInput.current)(event)}
-      ref={refInput}
+      inputRef={refInput}
       startAdornment={
         <ScrubbableInput
           disabled={disabled}

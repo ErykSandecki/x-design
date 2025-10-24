@@ -29,6 +29,7 @@ import {
   CHANGE_LAYOUT_ALIGNMENT,
   SET_ELEMENTS_GAP,
   APPLY_ELEMENTS_GAP_TYPE,
+  CHANGE_LAYOUT_BOX_SIZING,
 } from './actionsType';
 import { BASE_PAGE } from './constants';
 
@@ -58,6 +59,7 @@ import {
   TChangeLayoutAlignmentAction,
   TSetElementsGapAction,
   TApplyElementsGapTypeAction,
+  TChangeLayoutBoxSizingAction,
 } from './types';
 
 // utils
@@ -68,6 +70,7 @@ import { handleChangeAlignment } from './utils/changeAligment/handleChangeAlignm
 import { handleChangeBackground } from './utils/handleChangeBackground';
 import { handleChangeLayout } from './utils/handleChangeLayout';
 import { handleChangeLayoutAlignment } from './utils/handleChangeLayoutAlignment';
+import { handleChangeLayoutBoxSizing } from './utils/handleChangeLayoutBoxSizing';
 import { handleChangeParent } from './utils/changeParent/handleChangeParent';
 import { handleChangePosition } from './utils/handleChangePosition';
 import { handleFitLayout } from './utils/handleFitLayout';
@@ -106,9 +109,108 @@ const initialState: TPageBuilderState = {
   },
   isLoading: true,
   isPending: false,
+  // @ts-ignore
   pages: {
     [BASE_PAGE.id]: {
       ...BASE_PAGE,
+      elements: {
+        '-1': {
+          alignment: {},
+          angle: 0,
+          aspectRatio: false,
+          background: {
+            properties: {
+              alpha: '100',
+              color: '#1e262f',
+              format: 'hex',
+            },
+            visible: true,
+          },
+          children: [
+            {
+              id: 'mh4tqqqh1761308731096',
+              type: 'frame',
+            },
+          ],
+          coordinates: {
+            x: 0,
+            y: 0,
+          },
+          deepLevel: 0,
+          flip: {
+            x: false,
+            y: false,
+          },
+          height: {
+            value: 0,
+          },
+          id: '-1',
+          layout: {
+            alignment: 'none',
+            gap: {
+              column: {
+                value: 0,
+              },
+              row: {
+                value: 0,
+              },
+            },
+            type: 'freeForm',
+          },
+          parentId: '-1',
+          position: 'absolute',
+          type: 'base',
+          width: {
+            value: 0,
+          },
+        },
+        mh4tqqqh1761308731096: {
+          alignment: {},
+          angle: 0,
+          aspectRatio: false,
+          background: {
+            properties: {
+              alpha: '100',
+              color: '#ffffff',
+              format: 'hex',
+            },
+            visible: true,
+          },
+          children: [],
+          coordinates: {
+            x: 533,
+            y: 387,
+          },
+          deepLevel: 1,
+          flip: {
+            x: false,
+            y: false,
+          },
+          height: {
+            value: 257,
+          },
+          id: 'mh4tqqqh1761308731096',
+          layout: {
+            alignment: 'topLeft',
+            boxSizing: 'excluded',
+            gap: {
+              column: {
+                value: 0,
+              },
+              row: {
+                value: 0,
+              },
+            },
+            type: 'vertical',
+          },
+          parentId: '-1',
+          position: 'absolute',
+          type: 'frame',
+          width: {
+            value: 287,
+          },
+        },
+      },
     },
   },
 };
@@ -147,6 +249,11 @@ const changeLayoutAlignment = (
   state: TPageBuilderState,
   { payload }: TAction<TChangeLayoutAlignmentAction['payload']>,
 ): TPageBuilderState => handleChangeLayoutAlignment(payload, state);
+
+const changeLayoutBoxSizing = (
+  state: TPageBuilderState,
+  { payload }: TAction<TChangeLayoutBoxSizingAction['payload']>,
+): TPageBuilderState => handleChangeLayoutBoxSizing(payload, state);
 
 const changeParent = (state: TPageBuilderState): TPageBuilderState => handleChangeParent(state);
 
@@ -316,6 +423,8 @@ const pageBuilder = (state: TPageBuilderState = initialState, action: TAction): 
       return changeLayout(state, action);
     case CHANGE_LAYOUT_ALIGNMENT:
       return changeLayoutAlignment(state, action);
+    case CHANGE_LAYOUT_BOX_SIZING:
+      return changeLayoutBoxSizing(state, action);
     case CHANGE_PARENT:
       return changeParent(state);
     case CHANGE_POSITION:

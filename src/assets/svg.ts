@@ -10,6 +10,10 @@ import { ReactComponent as AutoLayout } from './svg/auto-layout.svg';
 import { ReactComponent as AutoWidth } from './svg/auto-width.svg';
 import { ReactComponent as CarrotDown } from './svg/carrot-down.svg';
 import { ReactComponent as Check } from './svg/check.svg';
+import { ReactComponent as ChevronDown } from './svg/chevron-down.svg';
+import { ReactComponent as ChevronLeft } from './svg/chevron-left.svg';
+import { ReactComponent as ChevronRight } from './svg/chevron-right.svg';
+import { ReactComponent as ChevronUp } from './svg/chevron-up.svg';
 import { ReactComponent as Close } from './svg/close.svg';
 import { ReactComponent as Comment } from './svg/comment.svg';
 import { ReactComponent as Component } from './svg/component.svg';
@@ -63,6 +67,10 @@ export const Icons = {
   AutoWidth,
   CarrotDown,
   Check,
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  ChevronUp,
   Close,
   Comment,
   Component,

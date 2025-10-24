@@ -42,6 +42,7 @@ export const handleCreateElement = (
       id: generateJestID(elementsSelector(window.store.getState())),
       layout: {
         alignment: AlignmentLayout.none,
+        boxSizing: 'excluded',
         gap: { column: { value: 0 }, row: { value: 0 } },
         type: LayoutType.freeForm,
       },

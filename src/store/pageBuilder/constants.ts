@@ -7,6 +7,7 @@ import {
   CHANGE_BACKGROUND,
   CHANGE_LAYOUT,
   CHANGE_LAYOUT_ALIGNMENT,
+  CHANGE_LAYOUT_BOX_SIZING,
   CHANGE_PARENT,
   CHANGE_POSITION,
   FIT_LAYOUT,
@@ -51,6 +52,7 @@ export const BASE_ELEMENTS: TElement = {
   id: '-1',
   layout: {
     alignment: AlignmentLayout.none,
+    boxSizing: 'excluded',
     gap: { column: { value: 0 }, row: { value: 0 } },
     type: LayoutType.freeForm,
   },
@@ -90,6 +92,7 @@ export const REDUCER_HISTORY_SAVE_ACTIONS = [
   CHANGE_ALIGNMENT,
   CHANGE_LAYOUT,
   CHANGE_LAYOUT_ALIGNMENT,
+  CHANGE_LAYOUT_BOX_SIZING,
   CHANGE_PARENT,
   CHANGE_POSITION,
   FIT_LAYOUT,

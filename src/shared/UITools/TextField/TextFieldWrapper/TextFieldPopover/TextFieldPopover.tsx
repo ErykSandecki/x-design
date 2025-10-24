@@ -2,9 +2,9 @@ import { FC, HTMLAttributes, useRef } from 'react';
 import { noop } from 'lodash';
 
 // components
-import Box from '../../../UI/Box/Box';
-import Icon from '../../../UI/Icon/Icon';
-import Popover, { PopoverCompound, TPopoverProps } from '../../Popover/Popover';
+import Box from '../../../../UI/Box/Box';
+import Icon from '../../../../UI/Icon/Icon';
+import Popover, { PopoverCompound, TPopoverProps } from '../../../Popover/Popover';
 
 // hooks
 import { useOutsideClick, useTheme } from 'hooks';
@@ -15,12 +15,18 @@ import { className, classNames } from './classNames';
 // styles
 import styles from './text-field-popover.scss';
 
-export type TTextFieldPopoverProps = Pick<TPopoverProps, 'children' | 'offset'> & {
+export type TTextFieldPopoverProps = Pick<TPopoverProps, 'children' | 'offset' | 'style'> & {
   classNameIcon: string;
   idContainer: HTMLAttributes<any>['id'];
 };
 
-export const TextFieldPopover: FC<TTextFieldPopoverProps> = ({ children, classNameIcon, idContainer, offset }) => {
+export const TextFieldPopover: FC<TTextFieldPopoverProps> = ({
+  children,
+  classNameIcon,
+  idContainer,
+  offset,
+  style,
+}) => {
   const ref = useRef(null);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { selected, setSelected } = useOutsideClick([], ref, noop, idContainer);
@@ -39,8 +45,10 @@ export const TextFieldPopover: FC<TTextFieldPopoverProps> = ({ children, classNa
         onClick={() => setSelected(!selected)}
         width={12}
       />
-      <Popover e2eValue="popover" offset={offset} refItem={ref} selected={selected}>
-        <PopoverCompound.PopoverRoot setSelected={setSelected}>{children}</PopoverCompound.PopoverRoot>
+      <Popover e2eValue="popover" offset={offset} refItem={ref} selected={selected} style={style}>
+        <PopoverCompound.PopoverRoot selected={selected} setSelected={setSelected}>
+          {children}
+        </PopoverCompound.PopoverRoot>
       </Popover>
     </Box>
   );

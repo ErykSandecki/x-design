@@ -50,60 +50,70 @@ exports[`MainPanel snapshots should render MainPanel 1`] = `
               data-test-tooltip=""
             >
               <div
-                aria-describedby="test-id"
-                class="css-1jnxvbp"
-                data-test-color="background"
+                class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--filled TextFieldLabel--filled--light"
+                data-test-box=""
               >
                 <div
-                  class="css-1axzf39 Color Color--light"
-                  data-test-box=""
+                  aria-describedby="test-id"
+                  class="css-1jnxvbp"
+                  data-test-color="background"
                 >
                   <div
-                    class="css-agg4zg Color__picker Color__picker--light"
+                    class="css-1axzf39 Color Color--light"
                     data-test-box=""
-                    style="background-color: rgb(241, 242, 246);"
-                  />
-                  <div
-                    class="css-agg4zg Color__pickerAlpha Color__pickerAlpha--light"
-                    data-test-box=""
-                    style="background-color: rgb(241, 242, 246);"
-                  />
-                  <div
-                    class="css-hnxq09 Color__pickerTexture Color__pickerTexture--light"
-                    data-test-box=""
-                  />
+                  >
+                    <div
+                      class="css-agg4zg Color__picker Color__picker--light"
+                      data-test-box=""
+                      style="background-color: rgb(30, 38, 47);"
+                    />
+                    <div
+                      class="css-agg4zg Color__pickerAlpha Color__pickerAlpha--light"
+                      data-test-box=""
+                      style="background-color: rgb(30, 38, 47);"
+                    />
+                    <div
+                      class="css-hnxq09 Color__pickerTexture Color__pickerTexture--light"
+                      data-test-box=""
+                    />
+                  </div>
                 </div>
+                <input
+                  class="TextFieldLabel__input TextFieldLabel__input--light"
+                  data-test-text-field-input="color"
+                  maxlength="6"
+                  value="1e262f"
+                />
               </div>
-              <input
-                class="TextField__input TextField__input--light"
-                data-test-text-field-input="color"
-                maxlength="6"
-                value="f1f2f6"
-              />
             </div>
             <div
               class="css-1jnxvbp ColorPicker__alphaInput ColorPicker__alphaInput--light TextField TextField--light"
               data-test-text-field="alpha"
               data-test-tooltip=""
             >
-              <input
-                class="TextField__input TextField__input--light"
-                data-test-text-field-input="alpha"
-                max="100"
-                maxlength="6"
-                min="0"
-                type="number"
-                value="100"
-              />
               <div
-                class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+                class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--filled TextFieldLabel--filled--light"
                 data-test-box=""
-                data-test-scrubbable-input=""
               >
+                <input
+                  class="TextFieldLabel__input TextFieldLabel__input--light"
+                  data-test-text-field-input="alpha"
+                  max="100"
+                  maxlength="6"
+                  min="0"
+                  type="number"
+                  value="100"
+                />
                 <div
-                  class="ColorPicker__alphaInputUnit ColorPicker__alphaInputUnit--light"
+                  class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+                  data-test-box=""
+                  data-test-scrubbable-input=""
                 >
-                  %
+                  <div
+                    class="ColorPicker__alphaInputUnit ColorPicker__alphaInputUnit--light"
+                  >
+                    %
+                  </div>
                 </div>
               </div>
             </div>

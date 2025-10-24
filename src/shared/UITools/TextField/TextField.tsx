@@ -1,11 +1,10 @@
-import { FC, InputHTMLAttributes, ReactNode, RefObject } from 'react';
+import { FC, RefObject, useRef } from 'react';
 
 // components
 import Box from '../../UI/Box/Box';
-import TextFieldPopover from './TextFieldPopover/TextFieldPopover';
-import TextFieldChip, { TTextFieldChipProps } from './TextFieldChip/TextFieldChip';
+import TextFieldLabel from './TextFieldLabel/TextFieldLabel';
+import TextFieldWrapper, { TTextFieldWrapperProps } from './TextFieldWrapper/TextFieldWrapper';
 import Tooltip, { TTooltipProps } from '../../UI/Tooltip/Tooltip';
-import { TPopoverProps } from '../Popover/Popover';
 
 // hooks
 import { useTheme } from 'hooks';
@@ -20,80 +19,36 @@ import styles from './text-field.scss';
 import { E2EAttribute } from 'types';
 import { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute';
 
-// utils
-import { getAttributes } from 'shared/E2EDataAttributes/utils';
-import { stopPropagation } from 'utils';
-
-export type TTextFieldProps = Omit<
-  InputHTMLAttributes<HTMLInputElement>,
-  'className' | 'color' | 'popover' | 'style'
-> & {
-  chipChildren?: TTextFieldChipProps['children'];
+export type TTextFieldProps = TTextFieldWrapperProps & {
   className?: string;
   e2eValue?: TE2EDataAttributeProps['value'];
-  endAdorment?: ReactNode;
-  fullWidth?: boolean;
-  idContainer?: string;
-  popoverChildren?: TPopoverProps['children'];
-  popoverOffset?: TPopoverProps['offset'];
+  label?: string;
   ref?: RefObject<HTMLInputElement>;
-  startAdornment?: ReactNode;
   tooltip?: Omit<TTooltipProps, 'children'>;
 };
 
 export const TextField: FC<TTextFieldProps> = ({
-  chipChildren,
   className = '',
-  disabled,
   e2eValue = '',
-  endAdorment,
-  fullWidth = false,
-  idContainer = undefined,
-  popoverChildren,
-  popoverOffset,
-  ref,
-  startAdornment,
+  label,
+  inputRef: ref,
   tooltip,
   ...restProps
 }) => {
+  const inputRef = ref || useRef(null);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   return (
     <Tooltip {...tooltip}>
       <Box
         classes={{
-          className: cx(
-            className,
-            classNamesWithTheme[textFieldClassName].name,
-            [classNamesWithTheme[textFieldClassName].modificators.disabled, disabled],
-            [classNamesWithTheme[textFieldClassName].modificators.fullWidth, fullWidth],
-          ),
+          className: cx(className, classNamesWithTheme[textFieldClassName]),
         }}
         e2eAttribute={E2EAttribute.textField}
         e2eValue={e2eValue}
       >
-        {startAdornment}
-        <input
-          className={cx(classNamesWithTheme.input)}
-          disabled={disabled}
-          maxLength={6}
-          onKeyDown={stopPropagation}
-          ref={ref}
-          {...getAttributes(E2EAttribute.textFieldInput, e2eValue)}
-          {...restProps}
-        />
-        {popoverChildren ? (
-          <TextFieldPopover
-            classNameIcon={cx(classNamesWithTheme.icon)}
-            idContainer={idContainer}
-            offset={popoverOffset}
-          >
-            {popoverChildren}
-          </TextFieldPopover>
-        ) : (
-          endAdorment
-        )}
-        {chipChildren && <TextFieldChip onClick={() => ref.current.focus()}>{chipChildren}</TextFieldChip>}
+        <TextFieldLabel label={label} />
+        <TextFieldWrapper e2eValue={e2eValue} inputRef={inputRef} {...restProps} />
       </Box>
     </Tooltip>
   );

@@ -65,7 +65,7 @@ export const ColorPickerInputColor: FC<TColorPickerInputColorProps> = ({
       onBlur={onBlur}
       onChange={onChangeColor}
       onKeyDown={(event) => handleSubmitInput(KeyboardKeys.enter, inputColor.current)(event)}
-      ref={inputColor}
+      inputRef={inputColor}
       startAdornment={
         <ColorPickerAntd
           arrow={false}

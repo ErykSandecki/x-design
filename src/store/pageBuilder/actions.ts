@@ -8,6 +8,7 @@ import {
   CHANGE_BACKGROUND,
   CHANGE_LAYOUT,
   CHANGE_LAYOUT_ALIGNMENT,
+  CHANGE_LAYOUT_BOX_SIZING,
   CHANGE_PARENT,
   CHANGE_POSITION,
   CLEAR_PREV_STATE,
@@ -45,6 +46,7 @@ import {
   TChangeBackgroundActionPayload,
   TChangeLayoutAction,
   TChangeLayoutAlignmentAction,
+  TChangeLayoutBoxSizingAction,
   TChangeParentAction,
   TChangePositionAction,
   TClearPrevStateAction,
@@ -119,6 +121,13 @@ export const changeLayoutAlignment = (
 ): TChangeLayoutAlignmentAction => ({
   payload: layoutType,
   type: CHANGE_LAYOUT_ALIGNMENT,
+});
+
+export const changeLayoutBoxSizing = (
+  boxSizing: TChangeLayoutBoxSizingAction['payload'],
+): TChangeLayoutBoxSizingAction => ({
+  payload: boxSizing,
+  type: CHANGE_LAYOUT_BOX_SIZING,
 });
 
 export const changeParent = (): TChangeParentAction => ({

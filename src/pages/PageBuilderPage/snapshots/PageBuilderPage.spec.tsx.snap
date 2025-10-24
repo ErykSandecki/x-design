@@ -166,60 +166,70 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
                     data-test-tooltip=""
                   >
                     <div
-                      aria-describedby="test-id"
-                      class="css-1jnxvbp"
-                      data-test-color="background"
+                      class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--filled TextFieldLabel--filled--light"
+                      data-test-box=""
                     >
                       <div
-                        class="css-1axzf39 Color Color--light"
-                        data-test-box=""
+                        aria-describedby="test-id"
+                        class="css-1jnxvbp"
+                        data-test-color="background"
                       >
                         <div
-                          class="css-agg4zg Color__picker Color__picker--light"
+                          class="css-1axzf39 Color Color--light"
                           data-test-box=""
-                          style="background-color: rgb(241, 242, 246);"
-                        />
-                        <div
-                          class="css-agg4zg Color__pickerAlpha Color__pickerAlpha--light"
-                          data-test-box=""
-                          style="background-color: rgb(241, 242, 246);"
-                        />
-                        <div
-                          class="css-hnxq09 Color__pickerTexture Color__pickerTexture--light"
-                          data-test-box=""
-                        />
+                        >
+                          <div
+                            class="css-agg4zg Color__picker Color__picker--light"
+                            data-test-box=""
+                            style="background-color: rgb(30, 38, 47);"
+                          />
+                          <div
+                            class="css-agg4zg Color__pickerAlpha Color__pickerAlpha--light"
+                            data-test-box=""
+                            style="background-color: rgb(30, 38, 47);"
+                          />
+                          <div
+                            class="css-hnxq09 Color__pickerTexture Color__pickerTexture--light"
+                            data-test-box=""
+                          />
+                        </div>
                       </div>
+                      <input
+                        class="TextFieldLabel__input TextFieldLabel__input--light"
+                        data-test-text-field-input="color"
+                        maxlength="6"
+                        value="1e262f"
+                      />
                     </div>
-                    <input
-                      class="TextField__input TextField__input--light"
-                      data-test-text-field-input="color"
-                      maxlength="6"
-                      value="f1f2f6"
-                    />
                   </div>
                   <div
                     class="css-1jnxvbp ColorPicker__alphaInput ColorPicker__alphaInput--light TextField TextField--light"
                     data-test-text-field="alpha"
                     data-test-tooltip=""
                   >
-                    <input
-                      class="TextField__input TextField__input--light"
-                      data-test-text-field-input="alpha"
-                      max="100"
-                      maxlength="6"
-                      min="0"
-                      type="number"
-                      value="100"
-                    />
                     <div
-                      class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+                      class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--filled TextFieldLabel--filled--light"
                       data-test-box=""
-                      data-test-scrubbable-input=""
                     >
+                      <input
+                        class="TextFieldLabel__input TextFieldLabel__input--light"
+                        data-test-text-field-input="alpha"
+                        max="100"
+                        maxlength="6"
+                        min="0"
+                        type="number"
+                        value="100"
+                      />
                       <div
-                        class="ColorPicker__alphaInputUnit ColorPicker__alphaInputUnit--light"
+                        class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+                        data-test-box=""
+                        data-test-scrubbable-input=""
                       >
-                        %
+                        <div
+                          class="ColorPicker__alphaInputUnit ColorPicker__alphaInputUnit--light"
+                        >
+                          %
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -277,7 +287,7 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
       <div
         class="css-1jnxvbp ZoomBox__backgroundMask ZoomBox__backgroundMask--light"
         data-test-box="zoom-box-background-mask"
-        style="background-color: rgb(241, 242, 246); display: initial;"
+        style="background-color: rgb(30, 38, 47); display: initial;"
       />
       <div
         class="css-1jnxvbp ZoomBox__textureBlank ZoomBox__textureBlank--light"
@@ -290,6 +300,27 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
         id="zoomContentId"
         style="transform: translate(0px, 0px) scale(1);"
       >
+        <div
+          class="css-1jnxvbp Elements__element Elements__element--light Frame Frame--light Element Element--light"
+          data-status="false"
+          data-test-element="mh4tqqqh1761308731096"
+          id="mh4tqqqh1761308731096"
+          style="align-items: flex-start; display: flex; flex-direction: column; justify-content: flex-start; row-gap: 0px; left: 533px; top: 387px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; background-color: rgb(255, 255, 255); height: 257px; position: absolute; width: 287px;"
+        >
+          <div
+            class="css-1jnxvbp Frame__wrapper Frame__wrapper--light"
+            data-test-box=""
+            style="height: 257px; left: 533px; top: 387px; transform: rotate(0deg); width: 287px;"
+          >
+            <small
+              class="css-1jnxvbp Frame__label Frame__label--light Frame__label--top Frame__label--top--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+              data-test-text=""
+              style="text-align: inherit;"
+            >
+              Frame
+            </small>
+          </div>
+        </div>
         <div
           class="css-u5h2b"
           data-test-box=""

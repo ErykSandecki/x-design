@@ -1,5 +1,5 @@
 import { createPortal } from 'react-dom';
-import { FC, ReactNode, RefObject, useRef } from 'react';
+import { CSSProperties, FC, ReactNode, RefObject, useRef } from 'react';
 
 // components
 import Box from 'shared/UI/Box/Box';
@@ -31,18 +31,22 @@ export type TPopoverProps = {
   backgroundColor?: TSXColor;
   children: ReactNode;
   e2eValue?: TE2EDataAttributeProps['value'];
+  id?: string;
   offset?: T2DCoordinates;
   refItem: RefObject<HTMLElement>;
   selected: boolean;
+  style?: CSSProperties;
 };
 
 export const Popover: FC<TPopoverProps> = ({
   backgroundColor = 'neutral4',
   children,
   e2eValue,
+  id,
   offset = BASE_2D,
   refItem,
   selected,
+  style,
 }) => {
   const refPopover = useRef(null);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
@@ -60,9 +64,10 @@ export const Popover: FC<TPopoverProps> = ({
           ]),
         }}
         depsSx={[backgroundColor]}
+        id={id}
         onClick={stopPropagation}
         ref={refPopover}
-        style={{ left: x, top: y }}
+        style={{ ...style, left: x, top: y }}
         sx={{
           bg: backgroundColor,
           borderRadius: '10px',

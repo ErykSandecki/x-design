@@ -29,30 +29,35 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
+          class="css-1jnxvbp TextField TextField--light"
           data-test-text-field="angle"
           data-test-tooltip=""
         >
           <div
-            class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+            class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--fullWidth TextFieldLabel--fullWidth--light TextFieldLabel--filled TextFieldLabel--filled--light"
             data-test-box=""
-            data-test-scrubbable-input="angle"
           >
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
-              data-test-icon="protractor"
-              height="8"
-              name="Protractor"
-              width="8"
+              class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+              data-test-box=""
+              data-test-scrubbable-input="angle"
+            >
+              <div
+                class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+                data-test-icon="protractor"
+                height="8"
+                name="Protractor"
+                width="8"
+              />
+            </div>
+            <input
+              class="TextFieldLabel__input TextFieldLabel__input--light"
+              data-test-text-field-input="angle"
+              maxlength="6"
+              type="text"
+              value="0°"
             />
           </div>
-          <input
-            class="TextField__input TextField__input--light"
-            data-test-text-field-input="angle"
-            maxlength="6"
-            type="text"
-            value="0°"
-          />
         </div>
         <div
           class="Tooltip Tooltip--light"
@@ -203,30 +208,35 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp TextField TextField--light TextField--fullWidth TextField--fullWidth--light"
+          class="css-1jnxvbp TextField TextField--light"
           data-test-text-field="angle"
           data-test-tooltip=""
         >
           <div
-            class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+            class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--fullWidth TextFieldLabel--fullWidth--light TextFieldLabel--filled TextFieldLabel--filled--light"
             data-test-box=""
-            data-test-scrubbable-input="angle"
           >
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
-              data-test-icon="protractor"
-              height="8"
-              name="Protractor"
-              width="8"
+              class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+              data-test-box=""
+              data-test-scrubbable-input="angle"
+            >
+              <div
+                class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+                data-test-icon="protractor"
+                height="8"
+                name="Protractor"
+                width="8"
+              />
+            </div>
+            <input
+              class="TextFieldLabel__input TextFieldLabel__input--light"
+              data-test-text-field-input="angle"
+              maxlength="6"
+              type="text"
+              value="Mixed"
             />
           </div>
-          <input
-            class="TextField__input TextField__input--light"
-            data-test-text-field-input="angle"
-            maxlength="6"
-            type="text"
-            value="Mixed"
-          />
         </div>
         <div
           class="Tooltip Tooltip--light"

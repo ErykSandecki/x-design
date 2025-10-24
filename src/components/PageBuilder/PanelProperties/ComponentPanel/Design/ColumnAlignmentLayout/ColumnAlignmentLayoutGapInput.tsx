@@ -53,7 +53,7 @@ const ColumnAlignmentLayoutGapInput: FC<TColumnAlignmentLayoutGapInputProps> = (
       onClick={() => refInputGap.current.select()}
       onKeyDown={(event) => handleSubmitInput(KeyboardKeys.enter, refInputGap.current)(event)}
       popoverChildren={<PopoverGap gap={gap} gapProperties={gapProperties} isMixed={isMixed} />}
-      ref={refInputGap}
+      inputRef={refInputGap}
       startAdornment={
         <ScrubbableInput
           e2eValue={gap}

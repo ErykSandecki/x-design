@@ -43,7 +43,7 @@ const ColumnAlignmentLayout: FC<TColumnAlignmentLayoutProps> = ({ width }) => {
 
   return (
     <UITools.SectionColumn
-      buttonsIcon={ColumnAlignmentLayoutButtonIcons(t, width)}
+      buttonsIcon={ColumnAlignmentLayoutButtonIcons(layout, t, width)}
       gridColumnType={UITools.GridColumnType.oneByTwo}
       labels={[t(`${translationNameSpace}.label.alignment`), t(`${translationNameSpace}.label.gap`)]}
       withMargin

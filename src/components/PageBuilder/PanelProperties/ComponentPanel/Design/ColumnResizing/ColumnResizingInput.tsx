@@ -62,7 +62,7 @@ const ColumnResizingInput: FC<TColumnResizingInputProps> = ({
       onFocus={() => onFocus(sizeType)}
       onKeyDown={(event) => handleSubmitInput(KeyboardKeys.enter, refInput.current)(event)}
       popoverChildren={popoverChildren}
-      ref={refInput}
+      inputRef={refInput}
       startAdornment={
         <ScrubbableInput
           disabled={!isPure}

@@ -7,6 +7,7 @@ import {
   CHANGE_BACKGROUND,
   CHANGE_LAYOUT,
   CHANGE_LAYOUT_ALIGNMENT,
+  CHANGE_LAYOUT_BOX_SIZING,
   CHANGE_PARENT,
   CHANGE_POSITION,
   CLEAR_PREV_STATE,
@@ -159,6 +160,11 @@ export type TChangeLayoutAction = {
 export type TChangeLayoutAlignmentAction = {
   payload: TElement['layout']['alignment'];
   type: typeof CHANGE_LAYOUT_ALIGNMENT;
+};
+
+export type TChangeLayoutBoxSizingAction = {
+  payload: TElement['layout']['boxSizing'];
+  type: typeof CHANGE_LAYOUT_BOX_SIZING;
 };
 
 export type TChangeParentAction = {

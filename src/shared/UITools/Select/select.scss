@@ -1,0 +1,10 @@
+.Select {
+  &--disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  & * {
+    cursor: pointer;
+  }
+}

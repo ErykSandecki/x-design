@@ -39,6 +39,7 @@ export type TGap = {
 
 export type TLayout = {
   alignment: AlignmentLayout;
+  boxSizing: 'included' | 'excluded';
   gap: TGap;
   type: LayoutType;
 };

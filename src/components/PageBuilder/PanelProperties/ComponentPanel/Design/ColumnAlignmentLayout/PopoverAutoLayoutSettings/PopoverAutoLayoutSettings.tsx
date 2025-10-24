@@ -1,4 +1,4 @@
-import { FC, useMemo } from 'react';
+import { FC } from 'react';
 import { useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
@@ -6,29 +6,38 @@ import { useTranslation } from 'react-i18next';
 import { UITools } from 'shared';
 
 // others
+import { POPOVER_AUTO_LAYOUT_SETTINGS_ID } from '../constants';
 import { translationNameSpace } from './constants';
 
 // store
-import { applyElementsGapType } from 'store/pageBuilder/actions';
+import { changeLayoutBoxSizing } from 'store/pageBuilder/actions';
 
 // types
-import { PopoverItem } from '../enums';
-import { TGap, TGapProperties } from 'types';
-
-// utils
-import { isPureNumber } from 'utils';
+import { TElement, TLayout } from 'types';
 
 const { PopoverCompound } = UITools;
 
-export type TPopoverAutoLayoutSettingsProps = {};
+export type TPopoverAutoLayoutSettingsProps = {
+  layout: TElement['layout'];
+};
 
-const PopoverAutoLayoutSettings: FC<TPopoverAutoLayoutSettingsProps> = () => {
+const PopoverAutoLayoutSettings: FC<TPopoverAutoLayoutSettingsProps> = ({ layout }) => {
   const dispatch = useDispatch();
   const { t } = useTranslation();
 
   return (
     <>
       <PopoverCompound.PopoverHeader title={t(`${translationNameSpace}.header`)} />
+      <UITools.Select
+        idContainer={POPOVER_AUTO_LAYOUT_SETTINGS_ID}
+        label={t(`${translationNameSpace}.label.boxSizing`)}
+        onChange={(value) => dispatch(changeLayoutBoxSizing(value as TLayout['boxSizing']))}
+        style={{ width: '112px' }}
+        value={layout.boxSizing}
+      >
+        <UITools.SelectItem value="included">{t(`${translationNameSpace}.options.included`)}</UITools.SelectItem>
+        <UITools.SelectItem value="excluded">{t(`${translationNameSpace}.options.excluded`)}</UITools.SelectItem>
+      </UITools.Select>
     </>
   );
 };
