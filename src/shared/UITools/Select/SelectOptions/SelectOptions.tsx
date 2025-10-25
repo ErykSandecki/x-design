@@ -9,8 +9,8 @@ import E2EDataAttribute, { TE2EDataAttributeProps } from '../../../E2EDataAttrib
 import SelectItem from '../SelectItem/SelectItem';
 
 // hooks
-import { useOptionsStyle } from './hooks/useOptionsStyle';
 import { useRenderContainer, useTheme } from 'hooks';
+import { useSelectOptionsEvents } from './hooks/useSelectOptionsEvents';
 
 // others
 import { className, classNames } from './classNames';
@@ -27,6 +27,8 @@ export type TSelectOptionsProps = {
   e2eValue?: TE2EDataAttributeProps['value'];
   idContainer?: string;
   onClick: (event: MouseEvent<HTMLElement>) => void;
+  onMouseEnterOptions?: TFunc<[string]>;
+  onMouseLeaveOptions?: TFunc<[string]>;
   ref: RefObject<HTMLDivElement>;
   selected: boolean;
   value: string;
@@ -38,6 +40,8 @@ export const SelectOptions: FC<TSelectOptionsProps> = ({
   e2eValue,
   idContainer,
   onClick,
+  onMouseEnterOptions,
+  onMouseLeaveOptions,
   ref,
   selected,
   value,
@@ -46,7 +50,15 @@ export const SelectOptions: FC<TSelectOptionsProps> = ({
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { t } = useTranslation();
   const container = useRenderContainer(idContainer, HTMLContainerId.dropdown);
-  const style = useOptionsStyle(ref, selected, value, wrapperRef);
+
+  const { onMouseEnter, onMouseLeave, style } = useSelectOptionsEvents(
+    onMouseEnterOptions,
+    onMouseLeaveOptions,
+    ref,
+    selected,
+    value,
+    wrapperRef,
+  );
 
   if (!container) {
     return null;
@@ -80,12 +92,16 @@ export const SelectOptions: FC<TSelectOptionsProps> = ({
                     ...(children as ReactElement<any>).props,
                     index,
                     key: targetIndex,
+                    onMouseEnter,
+                    onMouseLeave,
                     selectedValue: value,
                   });
                 })
               : cloneElement(children as ReactElement<any>, {
                   ...(children.props as ReactElement<any>),
                   index: 0,
+                  onMouseEnter,
+                  onMouseLeave,
                   selectedValue: value,
                 })}
           </>

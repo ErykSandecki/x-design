@@ -40,7 +40,6 @@ exports[`Select snapshots should render Select 1`] = `
     >
       <li
         class="css-1jnxvbp SelectItem SelectItem--light SelectItem--selected SelectItem--selected--light"
-        data-test-box=""
         data-test-select-item="0"
         data-value="0"
         role="option"
@@ -57,7 +56,6 @@ exports[`Select snapshots should render Select 1`] = `
       </li>
       <li
         class="css-1jnxvbp SelectItem SelectItem--light"
-        data-test-box=""
         data-test-select-item="1"
         data-value="1"
         role="option"
@@ -74,7 +72,6 @@ exports[`Select snapshots should render Select 1`] = `
       </li>
       <li
         class="css-1jnxvbp SelectItem SelectItem--light"
-        data-test-box=""
         data-test-select-item="2"
         data-value="2"
         role="option"
@@ -134,7 +131,6 @@ exports[`Select snapshots should render when mixed 1`] = `
     >
       <li
         class="css-1jnxvbp SelectItem SelectItem--light"
-        data-test-box=""
         data-test-select-item="0"
         data-value="0"
         role="option"
@@ -151,7 +147,6 @@ exports[`Select snapshots should render when mixed 1`] = `
       </li>
       <li
         class="css-1jnxvbp SelectItem SelectItem--light"
-        data-test-box=""
         data-test-select-item="1"
         data-value="1"
         role="option"
@@ -168,7 +163,6 @@ exports[`Select snapshots should render when mixed 1`] = `
       </li>
       <li
         class="css-1jnxvbp SelectItem SelectItem--light"
-        data-test-box=""
         data-test-select-item="2"
         data-value="2"
         role="option"
@@ -228,7 +222,6 @@ exports[`Select snapshots should render with no options 1`] = `
     >
       <li
         class="css-1jnxvbp SelectItem SelectItem--light SelectItem--disabled SelectItem--disabled--light"
-        data-test-box=""
         data-test-select-item="-1"
         data-value=""
         role="option"
@@ -288,7 +281,6 @@ exports[`Select snapshots should render with one option 1`] = `
     >
       <li
         class="css-1jnxvbp SelectItem SelectItem--light SelectItem--selected SelectItem--selected--light"
-        data-test-box=""
         data-test-select-item="0"
         data-value="0"
         role="option"

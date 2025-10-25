@@ -1,13 +1,13 @@
 import { RefObject, useState, useEffect, CSSProperties } from 'react';
 
-export type TUseOptionsStyle = Pick<CSSProperties, 'left' | 'top' | 'width'>;
+export type TUseStyle = Pick<CSSProperties, 'left' | 'top' | 'width'>;
 
-export const useOptionsStyle = (
+export const useStyle = (
   optionsRef: RefObject<HTMLDivElement>,
   selected: boolean,
   value: string | Array<string>,
   wrapperRef: RefObject<HTMLDivElement>,
-): TUseOptionsStyle => {
+): TUseStyle => {
   const [style, setStyle] = useState<CSSProperties>({});
   const height = wrapperRef.current ? getComputedStyle(wrapperRef.current).height : 0;
 

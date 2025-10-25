@@ -1,5 +1,8 @@
 import { MouseEvent } from 'react';
 
+// utils
+import { getOptionValue } from '../utils/getOptionValue';
+
 export type TUseClickEvents = {
   onClickOption: TFunc<[MouseEvent]>;
   onClickSelect: TFunc<[MouseEvent]>;
@@ -7,14 +10,12 @@ export type TUseClickEvents = {
 
 export const useClickEvents = (onChange: TFunc<[string]>, setSelected: TFunc<[boolean]>): TUseClickEvents => {
   const handleClickOption = (event: MouseEvent<HTMLElement>): void => {
-    const target = event.target as HTMLElement;
+    const value = getOptionValue(event);
     event.stopPropagation();
 
-    if (target.tagName === 'LI') {
-      const targetValue: string = target.getAttribute('data-value') as string;
-
+    if (value !== undefined) {
       setSelected(false);
-      onChange(targetValue);
+      onChange(value);
     }
   };
 

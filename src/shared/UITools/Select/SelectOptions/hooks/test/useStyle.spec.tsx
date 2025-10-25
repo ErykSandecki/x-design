@@ -2,20 +2,20 @@ import { RefObject } from 'react';
 import { renderHook } from '@testing-library/react';
 
 // hooks
-import { useOptionsStyle } from '../useOptionsStyle';
+import { useStyle } from '../useStyle';
 
 const optionsRef = { current: { getBoundingClientRect: () => ({ height: 100 }) } } as RefObject<HTMLDivElement>;
 const wrapperRef = {
   current: { getBoundingClientRect: () => ({ width: 100, x: 0, y: 0 }) },
 } as RefObject<HTMLDivElement>;
 
-describe('useOptionsStyle', () => {
+describe('useStyle', () => {
   it(`should return style`, () => {
     // mock
     window.getComputedStyle = (): any => ({ height: '100px', width: '100px' }) as CSSStyleDeclaration;
 
     // before
-    const { result } = renderHook(() => useOptionsStyle(optionsRef, false, '', wrapperRef));
+    const { result } = renderHook(() => useStyle(optionsRef, false, '', wrapperRef));
 
     // result
     expect(result.current).toStrictEqual({ left: '0px', top: '24px', width: 100 });
@@ -27,7 +27,7 @@ describe('useOptionsStyle', () => {
 
     // before
     const { result } = renderHook(() =>
-      useOptionsStyle(optionsRef, false, '', {
+      useStyle(optionsRef, false, '', {
         current: { getBoundingClientRect: () => ({ width: 100, x: 0, y: 1000 }) },
       } as RefObject<HTMLDivElement>),
     );

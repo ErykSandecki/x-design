@@ -1,4 +1,4 @@
-import { FC, ReactElement, useRef } from 'react';
+import { FC, MouseEvent, ReactElement, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
 // components
@@ -31,6 +31,10 @@ export type TSelectProps = Omit<TTextFieldProps, 'endAdorment' | 'onChange'> & {
   idContainerOptions?: string;
   isMixed?: boolean;
   onChange: TFunc<[string]>;
+  onMouseEnterSelect?: TFunc<[MouseEvent]>;
+  onMouseEnterOptions?: TFunc<[string]>;
+  onMouseLeaveSelect?: TFunc<[MouseEvent]>;
+  onMouseLeaveOptions?: TFunc<[string]>;
   translationNameSpace?: string;
   value: string;
 };
@@ -44,6 +48,10 @@ export const Select: FC<TSelectProps> = ({
   idContainerOptions,
   isMixed = false,
   onChange,
+  onMouseEnterSelect,
+  onMouseEnterOptions,
+  onMouseLeaveSelect,
+  onMouseLeaveOptions,
   translationNameSpace = '',
   variant = TextFieldVariant.outlined,
   value,
@@ -68,6 +76,8 @@ export const Select: FC<TSelectProps> = ({
       e2eAttribute={E2EAttribute.select}
       e2eValue={e2eValue}
       onClick={onClickSelect}
+      onMouseEnter={onMouseEnterSelect}
+      onMouseLeave={onMouseLeaveSelect}
       ref={selectRef}
     >
       <TextField
@@ -83,6 +93,8 @@ export const Select: FC<TSelectProps> = ({
         e2eValue={e2eValue}
         idContainer={idContainerOptions}
         onClick={onClickOption}
+        onMouseEnterOptions={onMouseEnterOptions}
+        onMouseLeaveOptions={onMouseLeaveOptions}
         ref={optionsRef}
         selected={selected}
         value={targetValue}
