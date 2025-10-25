@@ -22,6 +22,18 @@ exports[`PopoverAutoLayoutSettings snapshots should render PopoverAutoLayoutSett
     />
   </div>
   <div
+    class="css-1scdc72"
+    data-test-popover-header=""
+  >
+    <p
+      class="css-1jnxvbp Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--p Typography--p--light"
+      data-test-text=""
+      style="opacity: 0.5; text-align: inherit;"
+    >
+      Preview
+    </p>
+  </div>
+  <div
     class="css-1jnxvbp Select Select--light"
     data-test-select="box-sizing"
   >

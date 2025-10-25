@@ -4,16 +4,16 @@ import { FC, ReactNode } from 'react';
 import { PopoverRootProvider } from './core/PopoverRootProvider';
 
 // types
-import { TContext } from './core/types';
+import { TContext, TPreviewData } from './core/types';
 
-export type TPopoverRootProps = TContext & {
+export type TPopoverRootProps = Omit<TContext, keyof TPreviewData> & {
+  activeOption?: TPreviewData['activeOption'];
   children: ReactNode;
+  previewId?: TPreviewData['previewId'];
 };
 
-export const PopoverRoot: FC<TPopoverRootProps> = ({ children, selected, setSelected }) => (
-  <PopoverRootProvider selected={selected} setSelected={setSelected}>
-    {children}
-  </PopoverRootProvider>
+export const PopoverRoot: FC<TPopoverRootProps> = ({ children, ...restProps }) => (
+  <PopoverRootProvider {...restProps}>{children}</PopoverRootProvider>
 );
 
 export default PopoverRoot;

@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PopoverPreview snapshots should render PopoverPreview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1scdc72"
+    data-test-popover-header=""
+  >
+    <p
+      class="css-1jnxvbp Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--p Typography--p--light"
+      data-test-text=""
+      style="opacity: 0.5; text-align: inherit;"
+    >
+      Preview
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`PopoverPreview snapshots should render when active preview 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1scdc72"
+    data-test-popover-header=""
+  />
+</DocumentFragment>
+`;

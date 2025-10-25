@@ -24,6 +24,7 @@ const PopoverAutoLayoutSettings: FC<TPopoverAutoLayoutSettingsProps> = ({ isMixe
   return (
     <>
       <PopoverCompound.PopoverHeader title={t(`${translationNameSpace}.header`)} />
+      <PopoverCompound.PopoverPreview />
       <PopoverAutoLayoutBoxSizing isMixedBoxSizing={isMixedBoxSizing} layout={layout} />
     </>
   );

@@ -48,6 +48,7 @@
   "pageBuilder.viewBox.elements.frame.label.createFrame": "Frame",
   "pageBuilder.viewBox.elements.element.newElementButton.label": "Add section",
   "pageBuilder.viewBox.elements.possibleElement.label.createFrame": "Frame",
+  "popover.preview": "Preview",
   "select.noOptions": "No options",
   "tooltip.alignHorizontalCenter": "Align center",
   "tooltip.alignHorizontalLeft": "Align left",

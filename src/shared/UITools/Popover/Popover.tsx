@@ -6,6 +6,7 @@ import Box from 'shared/UI/Box/Box';
 import E2EDataAttribute, { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute';
 import PopoverHeader from './PopoverHeader/PopoverHeader';
 import PopoverItem from './PopoverItem/PopoverItem';
+import PopoverPreview from './PopoverPreview/PopoverPreview';
 import PopoverRoot from './PopoverRoot/PopoverRoot';
 import PopoverSeparator from './PopoverSeparator/PopoverSeparator';
 
@@ -89,6 +90,7 @@ export const Popover: FC<TPopoverProps> = ({
 export const PopoverCompound = {
   PopoverHeader,
   PopoverItem,
+  PopoverPreview,
   PopoverRoot,
   PopoverSeparator,
 };

@@ -1,25 +1,39 @@
-import { createContext, useContext, FC, ReactNode, useMemo } from 'react';
+import { createContext, useContext, FC, ReactNode, useMemo, useState } from 'react';
 
 // types
-import { TContext } from './types';
+import { TContext, TPreviewData } from './types';
 
 const PopoverRootContent: React.Context<TContext> = createContext(null);
 
 export const usePopoverRoot = (): TContext => useContext(PopoverRootContent);
 
 export type TPopoverRootProvider = {
+  activeOption?: TPreviewData['activeOption'];
   children: ReactNode;
+  previewId?: TPreviewData['previewId'];
   selected: boolean;
   setSelected: TContext['setSelected'];
 };
 
-export const PopoverRootProvider: FC<TPopoverRootProvider> = ({ children, selected, setSelected }) => {
+export const PopoverRootProvider: FC<TPopoverRootProvider> = ({
+  activeOption: initialActiveOption = '',
+  children,
+  previewId: initialPreviewId = '',
+  selected,
+  setSelected,
+}) => {
+  const [activeOption, setActiveOption] = useState(initialActiveOption);
+  const [previewId, setPreviewId] = useState(initialPreviewId);
+
   const value = useMemo(
-    () =>
-      ({
-        selected,
-        setSelected,
-      }) as TContext,
+    () => ({
+      activeOption,
+      previewId,
+      selected,
+      setActiveOption,
+      setPreviewId,
+      setSelected,
+    }),
     [selected],
   );
 
