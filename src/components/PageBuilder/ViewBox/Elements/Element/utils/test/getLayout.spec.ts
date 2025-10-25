@@ -45,17 +45,17 @@ describe('getLayout', () => {
     });
   });
 
-  it(`should return for horizontal`, () => {
+  it(`should return for grid`, () => {
     // before
     const result = getLayout({ ...layoutMock, type: LayoutType.grid });
 
     // result
     expect(result).toStrictEqual({
-      alignContent: 'flex-start',
       boxSizing: 'content-box',
       columnGap: '0px',
       display: 'grid',
-      justifyContent: 'flex-end',
+      gridTemplateColumns: 'repeat(0, 1fr)',
+      gridTemplateRows: 'repeat(0, 1fr)',
       rowGap: '0px',
     });
   });

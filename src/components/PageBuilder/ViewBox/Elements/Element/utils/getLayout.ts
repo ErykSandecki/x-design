@@ -8,7 +8,7 @@ import { getAlignmentLayout } from './getAlignmentLayout';
 import { getBoxSizing } from './getBoxSizing';
 
 export const getLayout = (layout: TElement['layout']): CSSProperties => {
-  const { alignment, boxSizing, gap, type } = layout;
+  const { alignment, boxSizing, gap, grid, type } = layout;
   const { alignItems, justifyContent } = getAlignmentLayout(alignment);
   const common = { boxSizing: getBoxSizing(boxSizing) } as CSSProperties;
 
@@ -35,10 +35,10 @@ export const getLayout = (layout: TElement['layout']): CSSProperties => {
     default:
       return {
         ...common,
-        alignContent: alignItems,
         columnGap: `${gap.column.value}px`,
         display: 'grid',
-        justifyContent,
+        gridTemplateColumns: `repeat(${grid.columns}, 1fr)`,
+        gridTemplateRows: `repeat(${grid.rows}, 1fr)`,
         rowGap: `${gap.row.value}px`,
       };
   }
