@@ -5,16 +5,19 @@ import { LayoutType, TElement } from 'types';
 
 // utils
 import { getAlignmentLayout } from './getAlignmentLayout';
+import { getBoxSizing } from './getBoxSizing';
 
 export const getLayout = (layout: TElement['layout']): CSSProperties => {
-  const { alignment, gap, type } = layout;
+  const { alignment, boxSizing, gap, type } = layout;
   const { alignItems, justifyContent } = getAlignmentLayout(alignment);
+  const common = { boxSizing: getBoxSizing(boxSizing) } as CSSProperties;
 
   switch (type) {
     case LayoutType.freeForm:
       return {};
     case LayoutType.vertical:
       return {
+        ...common,
         alignItems: justifyContent,
         display: 'flex',
         flexDirection: 'column',
@@ -23,6 +26,7 @@ export const getLayout = (layout: TElement['layout']): CSSProperties => {
       };
     case LayoutType.horizontal:
       return {
+        ...common,
         alignItems,
         columnGap: `${gap.column.value}px`,
         display: 'flex',
@@ -30,6 +34,7 @@ export const getLayout = (layout: TElement['layout']): CSSProperties => {
       };
     default:
       return {
+        ...common,
         alignContent: alignItems,
         columnGap: `${gap.column.value}px`,
         display: 'grid',

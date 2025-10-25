@@ -28,7 +28,7 @@ exports[`ViewBox snapshots should render ViewBox 1`] = `
         data-status="false"
         data-test-element="mh4tqqqh1761308731096"
         id="mh4tqqqh1761308731096"
-        style="align-items: flex-start; display: flex; flex-direction: column; justify-content: flex-start; row-gap: 0px; left: 533px; top: 387px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; background-color: rgb(255, 255, 255); height: 257px; position: absolute; width: 287px;"
+        style="box-sizing: content-box; align-items: flex-start; display: flex; flex-direction: column; justify-content: flex-start; row-gap: 0px; left: 533px; top: 387px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; background-color: rgb(255, 255, 255); height: 257px; position: absolute; width: 287px;"
       >
         <div
           class="css-1jnxvbp Frame__wrapper Frame__wrapper--light"

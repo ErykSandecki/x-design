@@ -23,6 +23,7 @@ describe('getLayout', () => {
     // result
     expect(result).toStrictEqual({
       alignItems: 'flex-end',
+      boxSizing: 'content-box',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'flex-start',
@@ -37,6 +38,7 @@ describe('getLayout', () => {
     // result
     expect(result).toStrictEqual({
       alignItems: 'flex-start',
+      boxSizing: 'content-box',
       columnGap: '0px',
       display: 'flex',
       justifyContent: 'flex-end',
@@ -50,6 +52,7 @@ describe('getLayout', () => {
     // result
     expect(result).toStrictEqual({
       alignContent: 'flex-start',
+      boxSizing: 'content-box',
       columnGap: '0px',
       display: 'grid',
       justifyContent: 'flex-end',
