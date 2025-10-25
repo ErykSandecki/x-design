@@ -44,6 +44,7 @@ export const handleCreateElement = (
         alignment: AlignmentLayout.none,
         boxSizing: 'excluded',
         gap: { column: { value: 0 }, row: { value: 0 } },
+        grid: { columns: 0, rows: 0 },
         type: LayoutType.freeForm,
       },
       parentId: possibleElement.parentId,

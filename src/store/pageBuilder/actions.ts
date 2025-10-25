@@ -9,6 +9,7 @@ import {
   CHANGE_LAYOUT,
   CHANGE_LAYOUT_ALIGNMENT,
   CHANGE_LAYOUT_BOX_SIZING,
+  CHANGE_LAYOUT_GRID,
   CHANGE_PARENT,
   CHANGE_POSITION,
   CLEAR_PREV_STATE,
@@ -47,6 +48,7 @@ import {
   TChangeLayoutAction,
   TChangeLayoutAlignmentAction,
   TChangeLayoutBoxSizingAction,
+  TChangeLayoutGridAction,
   TChangeParentAction,
   TChangePositionAction,
   TClearPrevStateAction,
@@ -128,6 +130,11 @@ export const changeLayoutBoxSizing = (
 ): TChangeLayoutBoxSizingAction => ({
   payload: boxSizing,
   type: CHANGE_LAYOUT_BOX_SIZING,
+});
+
+export const changeLayoutGrid = (grid: TChangeLayoutGridAction['payload']): TChangeLayoutGridAction => ({
+  payload: grid,
+  type: CHANGE_LAYOUT_GRID,
 });
 
 export const changeParent = (): TChangeParentAction => ({

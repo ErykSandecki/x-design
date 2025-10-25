@@ -8,6 +8,7 @@ import {
   CHANGE_LAYOUT,
   CHANGE_LAYOUT_ALIGNMENT,
   CHANGE_LAYOUT_BOX_SIZING,
+  CHANGE_LAYOUT_GRID,
   CHANGE_PARENT,
   CHANGE_POSITION,
   CLEAR_PREV_STATE,
@@ -45,6 +46,7 @@ import {
   TElement,
   TGap,
   TGapProperties,
+  TGrid,
   TObject,
   TScore,
   TSize,
@@ -165,6 +167,11 @@ export type TChangeLayoutAlignmentAction = {
 export type TChangeLayoutBoxSizingAction = {
   payload: TElement['layout']['boxSizing'];
   type: typeof CHANGE_LAYOUT_BOX_SIZING;
+};
+
+export type TChangeLayoutGridAction = {
+  payload: Partial<TGrid>;
+  type: typeof CHANGE_LAYOUT_GRID;
 };
 
 export type TChangeParentAction = {

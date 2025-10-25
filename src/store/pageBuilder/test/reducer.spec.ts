@@ -22,35 +22,36 @@ import { ZOOM_CONTENT_ID } from 'shared';
 import pageBuilder from '../reducer';
 import {
   addElement,
-  selectElement,
-  unselectElement,
-  selectElements,
-  setAreCoordinates,
-  setElementsCoordinates,
-  updateEventsStatus,
-  resizeElement,
-  rotateElements,
-  changeParent,
-  updatePrevState,
+  applyElementsGapType,
+  applyElementsSizeType,
+  changeAlignment,
   changeBackground,
+  changeLayout,
+  changeLayoutAlignment,
+  changeLayoutBoxSizing,
+  changeLayoutGrid,
+  changeParent,
+  changePosition,
+  clearPrevState,
+  fitLayout,
+  flipElements,
   reducerHistoryRedo,
   reducerHistorySave,
   reducerHistoryUndo,
-  changePosition,
-  changeAlignment,
-  clearPrevState,
-  flipElements,
-  changeLayout,
-  fitLayout,
-  setElementsSizes,
-  applyElementsSizeType,
-  setElementsSizesMinMax,
-  setElementsScoreToCurrentSize,
-  toggleAspectRatio,
-  changeLayoutAlignment,
+  resizeElement,
+  rotateElements,
+  selectElement,
+  selectElements,
+  setAreCoordinates,
+  setElementsCoordinates,
   setElementsGap,
-  applyElementsGapType,
-  changeLayoutBoxSizing,
+  setElementsScoreToCurrentSize,
+  setElementsSizes,
+  setElementsSizesMinMax,
+  toggleAspectRatio,
+  unselectElement,
+  updateEventsStatus,
+  updatePrevState,
 } from '../actions';
 
 // types
@@ -612,6 +613,60 @@ describe('PageBuilderReducer', () => {
               layout: {
                 ...layoutMock,
                 boxSizing: 'included',
+              },
+            },
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+  });
+
+  it('should handle CHANGE_LAYOUT_GRID', () => {
+    // mock
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+
+    // before
+    const state = reducer(changeLayoutGrid({ columns: 100, rows: 100 }), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [selectedElementMock.id, 'test-2'],
+            },
+            [elementMock.id]: elementMock,
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [selectedElementMock.id, 'test-2'],
+            },
+            [elementMock.id]: {
+              ...elementMock,
+              layout: {
+                ...layoutMock,
+                grid: {
+                  columns: 100,
+                  rows: 100,
+                },
               },
             },
           },

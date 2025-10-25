@@ -37,10 +37,16 @@ export type TGap = {
   row: TGapProperties;
 };
 
+export type TGrid = {
+  columns: number;
+  rows: number;
+};
+
 export type TLayout = {
   alignment: AlignmentLayout;
   boxSizing: 'included' | 'excluded';
   gap: TGap;
+  grid: TGrid;
   type: LayoutType;
 };
 
