@@ -4,7 +4,7 @@ exports[`PopoverPreview snapshots should render PopoverPreview 1`] = `
 <DocumentFragment>
   <div
     class="css-1scdc72"
-    data-test-popover-header=""
+    data-test-popover-preview=""
   >
     <p
       class="css-1jnxvbp Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--p Typography--p--light"
@@ -21,7 +21,7 @@ exports[`PopoverPreview snapshots should render when active preview 1`] = `
 <DocumentFragment>
   <div
     class="css-1scdc72"
-    data-test-popover-header=""
+    data-test-popover-preview=""
   />
 </DocumentFragment>
 `;
