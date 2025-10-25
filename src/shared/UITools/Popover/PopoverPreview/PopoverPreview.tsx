@@ -15,12 +15,12 @@ import { translationNameSpace } from '../constants';
 import { E2EAttribute } from 'types';
 
 export const PopoverPreview: FC = () => {
-  const { t } = useTranslation();
   const { previewId } = usePopoverRoot();
+  const { t } = useTranslation();
 
   return (
     <Box
-      e2eAttribute={E2EAttribute.popoverHeader}
+      e2eAttribute={E2EAttribute.popoverPreview}
       sx={{
         alignItems: 'center',
         bg: 'neutral4',

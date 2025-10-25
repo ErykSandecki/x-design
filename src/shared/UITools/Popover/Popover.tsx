@@ -7,6 +7,7 @@ import E2EDataAttribute, { TE2EDataAttributeProps } from '../../E2EDataAttribute
 import PopoverHeader from './PopoverHeader/PopoverHeader';
 import PopoverItem from './PopoverItem/PopoverItem';
 import PopoverPreview from './PopoverPreview/PopoverPreview';
+import PopoverPreviewItem from './PopoverPreview/PopoverPreviewItem/PopoverPreviewItem';
 import PopoverRoot from './PopoverRoot/PopoverRoot';
 import PopoverSeparator from './PopoverSeparator/PopoverSeparator';
 
@@ -91,6 +92,7 @@ export const PopoverCompound = {
   PopoverHeader,
   PopoverItem,
   PopoverPreview,
+  PopoverPreviewItem,
   PopoverRoot,
   PopoverSeparator,
 };

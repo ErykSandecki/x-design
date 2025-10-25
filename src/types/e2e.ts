@@ -24,6 +24,7 @@ export enum E2EAttribute {
   popover = 'popover',
   popoverHeader = 'popover-header',
   popoverItem = 'popover-item',
+  popoverPreview = 'popover-preview',
   rect = 'rect',
   resize = 'resize',
   section = 'section',

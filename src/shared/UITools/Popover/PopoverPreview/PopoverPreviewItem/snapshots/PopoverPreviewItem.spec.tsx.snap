@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PopoverPreviewItem snapshots should not render when id is different 1`] = `<DocumentFragment />`;
+
+exports[`PopoverPreviewItem snapshots should render PopoverPreviewItem 1`] = `
+<DocumentFragment>
+  activeOption
+</DocumentFragment>
+`;

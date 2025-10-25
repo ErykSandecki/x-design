@@ -1,6 +1,6 @@
 // components
-import PopoverRoot from '../PopoverRoot/PopoverRoot';
 import PopoverPreview from './PopoverPreview';
+import PopoverRoot from '../PopoverRoot/PopoverRoot';
 
 // utils
 import { customRender } from 'test';
@@ -32,5 +32,3 @@ describe('PopoverPreview snapshots', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 });
-
-describe('PopoverPreview behaviors', () => {});
