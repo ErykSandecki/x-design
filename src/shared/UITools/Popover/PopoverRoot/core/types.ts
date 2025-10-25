@@ -2,7 +2,7 @@ export type TPreviewData = {
   activeOption: string;
   previewId: string;
   setActiveOption: TFunc<[string]>;
-  setPreviewId: TFunc<[string]>;
+  setPreviewIdHandler: TFunc<[string, string]>;
 };
 
 export type TContext = TPreviewData & {

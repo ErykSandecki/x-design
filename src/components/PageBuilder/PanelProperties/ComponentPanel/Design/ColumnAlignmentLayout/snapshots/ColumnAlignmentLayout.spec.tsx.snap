@@ -514,10 +514,10 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
                 data-test-box=""
                 data-test-popover="popover"
                 id="popoverAutoLayoutSettings"
-                style="width: 240px; left: 30px; top: 0px;"
+                style="width: 240px; left: 32.5px; top: 0px;"
               >
                 <div
-                  class="css-11hn3ec"
+                  class="css-1h1jb7x"
                   data-test-popover-header=""
                 >
                   <small
@@ -561,7 +561,7 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
                       data-test-text=""
                       style="text-align: inherit;"
                     >
-                      Stroke
+                      Strokes
                     </small>
                     <div
                       class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--outlined TextFieldLabel--outlined--light"
@@ -1219,10 +1219,10 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 data-test-box=""
                 data-test-popover="popover"
                 id="popoverAutoLayoutSettings"
-                style="width: 240px; left: 30px; top: 0px;"
+                style="width: 240px; left: 32.5px; top: 0px;"
               >
                 <div
-                  class="css-11hn3ec"
+                  class="css-1h1jb7x"
                   data-test-popover-header=""
                 >
                   <small
@@ -1266,7 +1266,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                       data-test-text=""
                       style="text-align: inherit;"
                     >
-                      Stroke
+                      Strokes
                     </small>
                     <div
                       class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--outlined TextFieldLabel--outlined--light"
@@ -1926,10 +1926,10 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 data-test-box=""
                 data-test-popover="popover"
                 id="popoverAutoLayoutSettings"
-                style="width: 240px; left: 30px; top: 0px;"
+                style="width: 240px; left: 32.5px; top: 0px;"
               >
                 <div
-                  class="css-11hn3ec"
+                  class="css-1h1jb7x"
                   data-test-popover-header=""
                 >
                   <small
@@ -1973,7 +1973,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                       data-test-text=""
                       style="text-align: inherit;"
                     >
-                      Stroke
+                      Strokes
                     </small>
                     <div
                       class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--outlined TextFieldLabel--outlined--light"
@@ -2538,10 +2538,10 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
                 data-test-box=""
                 data-test-popover="popover"
                 id="popoverAutoLayoutSettings"
-                style="width: 240px; left: 30px; top: 0px;"
+                style="width: 240px; left: 32.5px; top: 0px;"
               >
                 <div
-                  class="css-11hn3ec"
+                  class="css-1h1jb7x"
                   data-test-popover-header=""
                 >
                   <small
@@ -2585,7 +2585,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
                       data-test-text=""
                       style="text-align: inherit;"
                     >
-                      Stroke
+                      Strokes
                     </small>
                     <div
                       class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--outlined TextFieldLabel--outlined--light"
@@ -3150,10 +3150,10 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
                 data-test-box=""
                 data-test-popover="popover"
                 id="popoverAutoLayoutSettings"
-                style="width: 240px; left: 30px; top: 0px;"
+                style="width: 240px; left: 32.5px; top: 0px;"
               >
                 <div
-                  class="css-11hn3ec"
+                  class="css-1h1jb7x"
                   data-test-popover-header=""
                 >
                   <small
@@ -3197,7 +3197,7 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
                       data-test-text=""
                       style="text-align: inherit;"
                     >
-                      Stroke
+                      Strokes
                     </small>
                     <div
                       class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--outlined TextFieldLabel--outlined--light"

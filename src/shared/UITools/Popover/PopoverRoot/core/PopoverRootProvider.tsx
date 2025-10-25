@@ -25,16 +25,24 @@ export const PopoverRootProvider: FC<TPopoverRootProvider> = ({
   const [activeOption, setActiveOption] = useState(initialActiveOption);
   const [previewId, setPreviewId] = useState(initialPreviewId);
 
+  const setPreviewIdHandler = (
+    activeOption: TPreviewData['activeOption'],
+    previewId: TPreviewData['previewId'],
+  ): void => {
+    setActiveOption(activeOption);
+    setPreviewId(previewId);
+  };
+
   const value = useMemo(
     () => ({
       activeOption,
       previewId,
       selected,
       setActiveOption,
-      setPreviewId,
+      setPreviewIdHandler,
       setSelected,
     }),
-    [selected],
+    [activeOption, previewId, selected],
   );
 
   return <PopoverRootContent.Provider value={value}>{children}</PopoverRootContent.Provider>;

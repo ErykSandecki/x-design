@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PopoverAutoLayoutSettings snapshots should render PreviewBoxSizing 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1jnxvbp PreviewBoxSizing PreviewBoxSizing--light"
+    data-test-box=""
+  >
+    <div
+      class="css-1jnxvbp PreviewBoxSizing__tileLeft PreviewBoxSizing__tileLeft--light"
+      data-test-box=""
+    >
+      <div
+        class="css-1jnxvbp PreviewBoxSizing__tileChildren PreviewBoxSizing__tileChildren--light"
+        data-test-box=""
+      />
+    </div>
+    <div
+      class="css-1jnxvbp PreviewBoxSizing__tileRight PreviewBoxSizing__tileRight--light"
+      data-test-box=""
+    >
+      <div
+        class="css-1jnxvbp PreviewBoxSizing__tileChildren PreviewBoxSizing__tileChildren--light"
+        data-test-box=""
+      />
+    </div>
+    <div
+      class="css-1jnxvbp PreviewBoxSizing__stroke PreviewBoxSizing__stroke--light"
+      data-test-box=""
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`PopoverAutoLayoutSettings snapshots should render when excluded 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1jnxvbp PreviewBoxSizing PreviewBoxSizing--light PreviewBoxSizing--excluded PreviewBoxSizing--excluded--light"
+    data-test-box=""
+  >
+    <div
+      class="css-1jnxvbp PreviewBoxSizing__tileLeft PreviewBoxSizing__tileLeft--light"
+      data-test-box=""
+    >
+      <div
+        class="css-1jnxvbp PreviewBoxSizing__tileChildren PreviewBoxSizing__tileChildren--light"
+        data-test-box=""
+      />
+    </div>
+    <div
+      class="css-1jnxvbp PreviewBoxSizing__tileRight PreviewBoxSizing__tileRight--light"
+      data-test-box=""
+    >
+      <div
+        class="css-1jnxvbp PreviewBoxSizing__tileChildren PreviewBoxSizing__tileChildren--light"
+        data-test-box=""
+      />
+    </div>
+    <div
+      class="css-1jnxvbp PreviewBoxSizing__stroke PreviewBoxSizing__stroke--light PreviewBoxSizing__stroke--excluded PreviewBoxSizing__stroke--excluded--light"
+      data-test-box=""
+    />
+  </div>
+</DocumentFragment>
+`;

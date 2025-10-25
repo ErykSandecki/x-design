@@ -3,7 +3,7 @@
 exports[`PopoverAutoLayoutSettings snapshots should render PopoverAutoLayoutSettings 1`] = `
 <DocumentFragment>
   <div
-    class="css-11hn3ec"
+    class="css-1h1jb7x"
     data-test-popover-header=""
   >
     <small
@@ -47,7 +47,7 @@ exports[`PopoverAutoLayoutSettings snapshots should render PopoverAutoLayoutSett
         data-test-text=""
         style="text-align: inherit;"
       >
-        Stroke
+        Strokes
       </small>
       <div
         class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--outlined TextFieldLabel--outlined--light"

@@ -3,7 +3,7 @@
 exports[`PopoverHeader snapshots should render PopoverHeader 1`] = `
 <DocumentFragment>
   <div
-    class="css-11hn3ec"
+    class="css-1h1jb7x"
     data-test-popover-header=""
   >
     <small

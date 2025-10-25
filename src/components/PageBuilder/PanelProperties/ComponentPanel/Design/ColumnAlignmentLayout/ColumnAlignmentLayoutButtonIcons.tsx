@@ -25,7 +25,7 @@ const ColumnAlignmentLayoutButtonIcons = (
     name="Properties"
     popoverChildren={<PopoverAutoLayoutSettings isMixedBoxSizing={isMixedBoxSizing} layout={layout} />}
     popoverId={POPOVER_AUTO_LAYOUT_SETTINGS_ID}
-    popoverOffset={{ x: width - 30, y: 0 }}
+    popoverOffset={{ x: width - 32.5, y: 0 }}
     popoverStyle={{ width: '240px' }}
     tooltip={{ autoPositioning: true, content: t(`${TOOLTIP_TRANSLATION_KEY}.autoLayoutSettings`) }}
     selected={false}

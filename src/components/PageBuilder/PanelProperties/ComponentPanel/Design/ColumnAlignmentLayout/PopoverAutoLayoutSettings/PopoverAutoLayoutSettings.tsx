@@ -3,10 +3,11 @@ import { useTranslation } from 'react-i18next';
 
 // components
 import PopoverAutoLayoutBoxSizing from './PopoverAutoLayoutBoxSizing';
+import PreviewBoxSizing from './PreviewBoxSizing/PreviewBoxSizing';
 import { UITools } from 'shared';
 
 // others
-import { translationNameSpace } from './constants';
+import { PREVIEW_BOX_SIZING_ID, translationNameSpace } from './constants';
 
 // types
 import { TElement } from 'types';
@@ -24,7 +25,11 @@ const PopoverAutoLayoutSettings: FC<TPopoverAutoLayoutSettingsProps> = ({ isMixe
   return (
     <>
       <PopoverCompound.PopoverHeader title={t(`${translationNameSpace}.header`)} />
-      <PopoverCompound.PopoverPreview />
+      <PopoverCompound.PopoverPreview>
+        <PopoverCompound.PopoverPreviewItem id={PREVIEW_BOX_SIZING_ID}>
+          {(activeOption) => <PreviewBoxSizing activeOption={activeOption} />}
+        </PopoverCompound.PopoverPreviewItem>
+      </PopoverCompound.PopoverPreview>
       <PopoverAutoLayoutBoxSizing isMixedBoxSizing={isMixedBoxSizing} layout={layout} />
     </>
   );

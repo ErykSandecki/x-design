@@ -25,8 +25,9 @@ export const PopoverHeader: FC<TPopoverHeaderProps> = ({ title }) => {
         alignItems: 'center',
         columnGap: '25px',
         display: 'flex',
-        height: '40px',
+        height: '30px',
         justifyContent: 'space-between',
+        mb: 5,
       }}
     >
       <Small style={{ fontSize: '11px' }}>{title}</Small>

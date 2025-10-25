@@ -3,11 +3,11 @@ import { useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
 // components
-import { UITools } from 'shared';
+import { UITools, usePopoverRoot } from 'shared';
 
 // others
 import { POPOVER_AUTO_LAYOUT_SETTINGS_ID } from '../constants';
-import { translationNameSpace } from './constants';
+import { PREVIEW_BOX_SIZING_ID, translationNameSpace } from './constants';
 
 // store
 import { changeLayoutBoxSizing } from 'store/pageBuilder/actions';
@@ -15,13 +15,14 @@ import { changeLayoutBoxSizing } from 'store/pageBuilder/actions';
 // types
 import { TElement, TLayout } from 'types';
 
-export type TPopoverAutoLayoutBoxSizing = {
+export type TPopoverAutoLayoutBoxSizingProps = {
   isMixedBoxSizing: boolean;
   layout: TElement['layout'];
 };
 
-const PopoverAutoLayoutBoxSizing: FC<TPopoverAutoLayoutBoxSizing> = ({ isMixedBoxSizing, layout }) => {
+const PopoverAutoLayoutBoxSizing: FC<TPopoverAutoLayoutBoxSizingProps> = ({ isMixedBoxSizing, layout }) => {
   const dispatch = useDispatch();
+  const { setActiveOption, setPreviewIdHandler } = usePopoverRoot();
   const { t } = useTranslation();
 
   return (
@@ -31,6 +32,9 @@ const PopoverAutoLayoutBoxSizing: FC<TPopoverAutoLayoutBoxSizing> = ({ isMixedBo
       isMixed={isMixedBoxSizing}
       label={t(`${translationNameSpace}.label.boxSizing`)}
       onChange={(value) => dispatch(changeLayoutBoxSizing(value as TLayout['boxSizing']))}
+      onMouseEnterSelect={() => setPreviewIdHandler(layout.boxSizing, PREVIEW_BOX_SIZING_ID)}
+      onMouseLeaveSelect={() => setPreviewIdHandler('', '')}
+      onMouseEnterOptions={setActiveOption}
       style={{ width: '112px' }}
       translationNameSpace={`${translationNameSpace}.options`}
       value={layout.boxSizing}

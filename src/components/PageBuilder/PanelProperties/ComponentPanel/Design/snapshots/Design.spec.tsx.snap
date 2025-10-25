@@ -1936,10 +1936,10 @@ exports[`Design snapshots should render Design 1`] = `
                   data-test-box=""
                   data-test-popover="popover"
                   id="popoverAutoLayoutSettings"
-                  style="width: 240px; left: 30px; top: 0px;"
+                  style="width: 240px; left: 32.5px; top: 0px;"
                 >
                   <div
-                    class="css-11hn3ec"
+                    class="css-1h1jb7x"
                     data-test-popover-header=""
                   >
                     <small
@@ -1983,7 +1983,7 @@ exports[`Design snapshots should render Design 1`] = `
                         data-test-text=""
                         style="text-align: inherit;"
                       >
-                        Stroke
+                        Strokes
                       </small>
                       <div
                         class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--outlined TextFieldLabel--outlined--light"

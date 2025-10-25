@@ -118,12 +118,12 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
                         <div
                           class="css-agg4zg Color__picker Color__picker--light"
                           data-test-box=""
-                          style="background-color: rgb(30, 38, 47);"
+                          style="background-color: rgb(241, 242, 246);"
                         />
                         <div
                           class="css-agg4zg Color__pickerAlpha Color__pickerAlpha--light"
                           data-test-box=""
-                          style="background-color: rgb(30, 38, 47);"
+                          style="background-color: rgb(241, 242, 246);"
                         />
                         <div
                           class="css-hnxq09 Color__pickerTexture Color__pickerTexture--light"
@@ -135,7 +135,7 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
                       class="TextFieldLabel__input TextFieldLabel__input--light"
                       data-test-text-field-input="color"
                       maxlength="6"
-                      value="1e262f"
+                      value="f1f2f6"
                     />
                   </div>
                 </div>
@@ -1727,12 +1727,12 @@ exports[`PanelProperties snapshots should render with changed width 1`] = `
                         <div
                           class="css-agg4zg Color__picker Color__picker--light"
                           data-test-box=""
-                          style="background-color: rgb(30, 38, 47);"
+                          style="background-color: rgb(241, 242, 246);"
                         />
                         <div
                           class="css-agg4zg Color__pickerAlpha Color__pickerAlpha--light"
                           data-test-box=""
-                          style="background-color: rgb(30, 38, 47);"
+                          style="background-color: rgb(241, 242, 246);"
                         />
                         <div
                           class="css-hnxq09 Color__pickerTexture Color__pickerTexture--light"
@@ -1744,7 +1744,7 @@ exports[`PanelProperties snapshots should render with changed width 1`] = `
                       class="TextFieldLabel__input TextFieldLabel__input--light"
                       data-test-text-field-input="color"
                       maxlength="6"
-                      value="1e262f"
+                      value="f1f2f6"
                     />
                   </div>
                 </div>

@@ -1,0 +1,62 @@
+.PreviewBoxSizing {
+  $self: &;
+
+  align-items: center;
+  column-gap: 10px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  transform-origin: center center;
+  transition: 100ms linear;
+
+  &--excluded {
+    transform: scale(1.2);
+  }
+
+  & * {
+    transition: 100ms linear;
+  }
+
+  &__tile-left,
+  &__tile-right {
+    @include theme('neutral-3', background-color);
+
+    align-items: center;
+    border-radius: 2.5px;
+    display: flex;
+    height: 48px;
+    justify-content: center;
+  }
+
+  &__tile-left {
+    width: 48px;
+  }
+
+  &__tile-right {
+    width: 92px;
+  }
+
+  &__tile-children {
+    @include theme('neutral-5', background-color);
+
+    height: 36px;
+    width: calc(100% - 12px);
+  }
+
+  &__stroke {
+    @include theme('neutral-2', border, '1px dashed');
+
+    border-radius: 2.5px;
+    height: 48px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+
+    &--excluded {
+      height: calc(48px - 12px);
+      width: calc(150px - 12px);
+    }
+  }
+}

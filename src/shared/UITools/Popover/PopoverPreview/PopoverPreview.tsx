@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 
 // components
@@ -14,7 +14,11 @@ import { translationNameSpace } from '../constants';
 // types
 import { E2EAttribute } from 'types';
 
-export const PopoverPreview: FC = () => {
+export type TPopoverPreviewProps = {
+  children: ReactNode;
+};
+
+export const PopoverPreview: FC<TPopoverPreviewProps> = ({ children }) => {
   const { previewId } = usePopoverRoot();
   const { t } = useTranslation();
 
@@ -36,6 +40,7 @@ export const PopoverPreview: FC = () => {
       }}
     >
       {!previewId && <P style={{ opacity: 0.5 }}>{t(`${translationNameSpace}.preview`)}</P>}
+      {children}
     </Box>
   );
 };
