@@ -3,7 +3,7 @@ import { RefObject } from 'react';
 
 // hooks
 import { useForceHideOptions } from './useForceHideOptions';
-import { useOutsideClick } from 'hooks';
+import { useOutsideClickMultiple } from 'hooks';
 
 // types
 import { TUseClickEvents, useClickEvents } from './useClickEvents';
@@ -15,9 +15,10 @@ export type TUseSelectEvents = TUseClickEvents & {
 export const useSelectEvents = (
   idContainer: string | undefined,
   onChange: TFunc<[string]>,
+  optionsRef: RefObject<HTMLDivElement>,
   selectRef: RefObject<HTMLDivElement>,
 ): TUseSelectEvents => {
-  const { selected, setSelected } = useOutsideClick([], selectRef, noop, idContainer);
+  const { selected, setSelected } = useOutsideClickMultiple([], [optionsRef, selectRef], noop, idContainer);
   const onClickEvents = useClickEvents(onChange, setSelected);
 
   useForceHideOptions(selected, setSelected);

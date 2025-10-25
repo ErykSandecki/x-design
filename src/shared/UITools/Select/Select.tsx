@@ -63,7 +63,7 @@ export const Select: FC<TSelectProps> = ({
   const wrapperRef = useRef(null);
   const { t } = useTranslation();
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-  const { onClickOption, onClickSelect, selected } = useSelectEvents(idContainer, onChange, selectRef);
+  const { onClickOption, onClickSelect, selected } = useSelectEvents(idContainer, onChange, optionsRef, selectRef);
 
   return (
     <Box
