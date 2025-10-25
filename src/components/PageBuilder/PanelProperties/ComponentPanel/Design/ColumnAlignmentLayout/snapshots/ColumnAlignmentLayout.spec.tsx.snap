@@ -549,7 +549,7 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
                       data-test-text=""
                       style="text-align: inherit;"
                     >
-                      Box sizing
+                      Stroke
                     </small>
                     <div
                       class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--outlined TextFieldLabel--outlined--light"
@@ -1242,7 +1242,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                       data-test-text=""
                       style="text-align: inherit;"
                     >
-                      Box sizing
+                      Stroke
                     </small>
                     <div
                       class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--outlined TextFieldLabel--outlined--light"
@@ -1937,7 +1937,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                       data-test-text=""
                       style="text-align: inherit;"
                     >
-                      Box sizing
+                      Stroke
                     </small>
                     <div
                       class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--outlined TextFieldLabel--outlined--light"
@@ -2537,7 +2537,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
                       data-test-text=""
                       style="text-align: inherit;"
                     >
-                      Box sizing
+                      Stroke
                     </small>
                     <div
                       class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--outlined TextFieldLabel--outlined--light"
@@ -3137,7 +3137,7 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
                       data-test-text=""
                       style="text-align: inherit;"
                     >
-                      Box sizing
+                      Stroke
                     </small>
                     <div
                       class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--outlined TextFieldLabel--outlined--light"

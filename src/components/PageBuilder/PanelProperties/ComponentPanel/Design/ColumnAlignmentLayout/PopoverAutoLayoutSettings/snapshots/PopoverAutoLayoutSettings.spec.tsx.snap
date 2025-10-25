@@ -35,7 +35,7 @@ exports[`PopoverAutoLayoutSettings snapshots should render PopoverAutoLayoutSett
         data-test-text=""
         style="text-align: inherit;"
       >
-        Box sizing
+        Stroke
       </small>
       <div
         class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--outlined TextFieldLabel--outlined--light"
