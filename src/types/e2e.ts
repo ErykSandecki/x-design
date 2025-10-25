@@ -18,6 +18,7 @@ export enum E2EAttribute {
   element = 'element',
   fieldGroup = 'field-group',
   form = 'form',
+  gridArea = 'grid-area',
   icon = 'icon',
   logo = 'logo',
   outline = 'outline',

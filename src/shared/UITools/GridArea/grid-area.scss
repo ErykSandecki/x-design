@@ -1,0 +1,15 @@
+.GridArea {
+  @include theme('neutral-3', background-color);
+  @include theme('neutral-3', border, '1px solid');
+
+  align-items: center;
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: grid;
+  height: 56px;
+  justify-content: center;
+
+  &--full-width {
+    width: 100%;
+  }
+}

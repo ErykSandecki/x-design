@@ -6,15 +6,16 @@ import Chip from './Chip/Chip';
 import Color from './Color/Color';
 import ColorPicker from './ColorPicker/ColorPicker';
 import FieldGroup from './FieldGroup/FieldGroup';
+import GridArea from './GridArea/GridArea';
 import Popover, { PopoverCompound } from './Popover/Popover';
 import SectionColumn from './SectionColumn/SectionColumn';
-import { GridColumnType } from './SectionColumn/enums';
 import Section from './Section/Section';
 import Select from './Select/Select';
 import SelectItem from './Select/SelectItem/SelectItem';
 import Tabs, { TTabsProps } from './Tabs/Tabs';
 import TextField from './TextField/TextField';
 import ToggleButtonGroup from './ToggleButtonGroup/ToggleButtonGroup';
+import { GridColumnType } from './SectionColumn/enums';
 
 export const UITools = {
   AlignmentArea,
@@ -24,6 +25,7 @@ export const UITools = {
   Color,
   ColorPicker,
   FieldGroup,
+  GridArea,
   GridColumnType,
   Popover,
   PopoverCompound,

@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GridArea snapshots should render GridArea 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1jnxvbp GridArea GridArea GridArea--light"
+    data-test-grid-area=""
+  />
+</DocumentFragment>
+`;
