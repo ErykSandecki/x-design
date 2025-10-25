@@ -10,7 +10,7 @@ import { filterDraggableElements } from '../filterDraggableElements';
 describe('filterDraggableElements', () => {
   it('should return filtered elements', () => {
     // before
-    const result = filterDraggableElements([{ id: 'test-2', type: ElementType.frame }], {
+    const result = filterDraggableElements([{ id: 'test-2', type: ElementType.frame }], false, {
       ...elementMock,
       children: [
         { ...childrenMock, id: 'test-2' },
@@ -24,7 +24,7 @@ describe('filterDraggableElements', () => {
 
   it('should return filtered elements when grid', () => {
     // before
-    const result = filterDraggableElements([{ id: 'test-2', type: ElementType.frame }], {
+    const result = filterDraggableElements([{ id: 'test-2', type: ElementType.frame }], true, {
       ...elementMock,
       children: [
         { ...childrenMock, id: 'test-2' },

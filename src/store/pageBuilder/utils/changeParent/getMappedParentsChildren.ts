@@ -30,7 +30,7 @@ export const replaceChildrenPosition = (
   parentHasChanged: boolean,
   prevParent: TElement,
 ): void => {
-  const prevParentChildren = filterDraggableElements(draggableElements, prevParent);
+  const prevParentChildren = filterDraggableElements(draggableElements, parentHasChanged, prevParent);
   const nextParentChildren = getNextParentChildren(
     index,
     isGridDropArea,

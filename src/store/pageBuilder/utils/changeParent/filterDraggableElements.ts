@@ -7,9 +7,10 @@ export const hasChildToExclude = (draggableElements: TEvents['draggableElements'
 
 export const filterDraggableElements = (
   draggableElements: TEvents['draggableElements'],
+  parentHasChanged: boolean,
   { children, layout: { type } }: TElement,
 ): Array<TChildren> =>
-  type === LayoutType.grid
+  parentHasChanged && type === LayoutType.grid
     ? children.map((child) =>
         hasChildToExclude(draggableElements, child.id) ? { id: 'unknown', type: ElementType.grid } : child,
       )
