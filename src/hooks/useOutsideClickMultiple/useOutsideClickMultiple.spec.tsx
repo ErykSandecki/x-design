@@ -5,7 +5,7 @@ import { RefObject } from 'react';
 import { useOutsideClickMultiple } from './useOutsideClickMultiple';
 
 // types
-import { KeyboardKeys } from '../../types/enums';
+import { KeyboardKeys } from 'types';
 
 const mockCallBack = jest.fn();
 

@@ -1,7 +1,7 @@
 import { RefObject, useEffect, useState } from 'react';
 
 // types
-import { KeyboardKeys } from '../../types/enums';
+import { KeyboardKeys } from 'types';
 
 export type TUseOutsideClickMultiple = {
   selected: boolean;
