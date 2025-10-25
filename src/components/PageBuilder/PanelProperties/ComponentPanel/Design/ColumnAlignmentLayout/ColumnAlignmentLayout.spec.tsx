@@ -58,6 +58,11 @@ const stateMock = {
 };
 
 describe('ColumnAlignmentLayout snapshots', () => {
+  beforeAll(() => {
+    // mock
+    document.body.appendChild(dropdownContainer);
+  });
+
   it('should render ColumnAlignmentLayout', () => {
     // mock
     const store = configureStore(stateMock);
@@ -337,6 +342,110 @@ describe('ColumnAlignmentLayout snapshots', () => {
         <ColumnAlignmentLayout width={0} />
       </Provider>,
     );
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('should render when is included option hover', () => {
+    // mock
+    const store = configureStore({
+      ...stateMock,
+      [PAGE_BUILDER]: {
+        ...stateMock[PAGE_BUILDER],
+        pages: {
+          ['0']: {
+            ...stateMock[PAGE_BUILDER].pages['0'],
+            elements: {
+              ...stateMock[PAGE_BUILDER].pages['0'].elements,
+              ['test-1']: {
+                ...elementMock,
+                id: 'test-1',
+                layout: {
+                  ...layoutMock,
+                  alignment: AlignmentLayout.topLeft,
+                  type: LayoutType.vertical,
+                },
+              },
+            },
+            selectedElements: [...stateMock[PAGE_BUILDER].pages['0'].selectedElements],
+          },
+        },
+      },
+    });
+
+    // before
+    const { asFragment, container } = customRender(
+      <Provider store={store}>
+        <ColumnAlignmentLayout width={0} />
+      </Provider>,
+    );
+
+    // find
+    const buttonIcon = getByE2EAttribute(container, E2EAttribute.buttonIcon, 'properties');
+
+    // action
+    fireEvent.click(buttonIcon);
+
+    // find
+    const select = getByE2EAttribute(container, E2EAttribute.select, 'box-sizing');
+    const selectOptions = getByE2EAttribute(select, E2EAttribute.selectOptions);
+    const selectItem = getByE2EAttribute(selectOptions, E2EAttribute.selectItem, 0);
+
+    // action
+    fireEvent.mouseEnter(select);
+    fireEvent.mouseEnter(selectItem);
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('should render when is is enter and leave', () => {
+    // mock
+    const store = configureStore({
+      ...stateMock,
+      [PAGE_BUILDER]: {
+        ...stateMock[PAGE_BUILDER],
+        pages: {
+          ['0']: {
+            ...stateMock[PAGE_BUILDER].pages['0'],
+            elements: {
+              ...stateMock[PAGE_BUILDER].pages['0'].elements,
+              ['test-1']: {
+                ...elementMock,
+                id: 'test-1',
+                layout: {
+                  ...layoutMock,
+                  alignment: AlignmentLayout.topLeft,
+                  type: LayoutType.vertical,
+                },
+              },
+            },
+            selectedElements: [...stateMock[PAGE_BUILDER].pages['0'].selectedElements],
+          },
+        },
+      },
+    });
+
+    // before
+    const { asFragment, container } = customRender(
+      <Provider store={store}>
+        <ColumnAlignmentLayout width={0} />
+      </Provider>,
+    );
+
+    // find
+    const buttonIcon = getByE2EAttribute(container, E2EAttribute.buttonIcon, 'properties');
+
+    // action
+    fireEvent.click(buttonIcon);
+
+    // find
+    const select = getByE2EAttribute(container, E2EAttribute.select, 'box-sizing');
+
+    // action
+    fireEvent.mouseEnter(select);
+    fireEvent.mouseLeave(select);
 
     // result
     expect(asFragment()).toMatchSnapshot();
