@@ -70,7 +70,7 @@ import { handleAddElement } from './utils/handleAddElement';
 import { handleApplyElementsSizeType } from './utils/applyElementsSizeType/handleApplyElementsSizeType';
 import { handleChangeAlignment } from './utils/changeAligment/handleChangeAlignment';
 import { handleChangeBackground } from './utils/handleChangeBackground';
-import { handleChangeLayout } from './utils/handleChangeLayout';
+import { handleChangeLayout } from './utils/changeLayout/handleChangeLayout';
 import { handleChangeLayoutAlignment } from './utils/handleChangeLayoutAlignment';
 import { handleChangeLayoutBoxSizing } from './utils/handleChangeLayoutBoxSizing';
 import { handleChangeLayoutGrid } from './utils/handleChangeLayoutGrid';

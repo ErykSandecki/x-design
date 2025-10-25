@@ -3,11 +3,12 @@ import { BASE_2D } from 'shared';
 
 // types
 import { AlignmentLayout, LayoutType } from 'types';
-import { TChangeLayoutAction, TPageBuilderState } from '../types';
+import { TChangeLayoutAction, TPageBuilderState } from '../../types';
 
 // utils
-import { calculateCoordinatesAbsoluteToParent } from './calculateCoordinatesAbsoluteToParent';
+import { calculateCoordinatesAbsoluteToParent } from '../calculateCoordinatesAbsoluteToParent';
 import { extractObjectValues, mapFilteredValues } from 'utils';
+import { getGridLayout } from './getGridLayout';
 
 export const handleChangeLayout = (
   layoutType: TChangeLayoutAction['payload'],
@@ -34,6 +35,7 @@ export const handleChangeLayout = (
               ...element.layout,
               alignment: isFreeForm ? AlignmentLayout.none : AlignmentLayout.topLeft,
               gap: { column: { value: 0 }, row: { value: 0 } },
+              grid: getGridLayout(element, layoutType),
               type: layoutType,
             },
           })),
