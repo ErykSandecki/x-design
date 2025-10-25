@@ -61,6 +61,7 @@ export type TEvents = {
   colorSampler: boolean;
   draggableElements: Array<TChildren>;
   hoverOnElement: TElement['id'];
+  isGridDropArea: boolean;
   isMultipleMoving: boolean;
   isResizing: boolean;
   isRotating: boolean;

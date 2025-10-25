@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 
 // components
 import Frame from './Frame/Frame';
+import GridDropArea from './GridDropArea/GridDropArea';
 import PossibleElement from './PossibleElement/PossibleElement';
 
 // hooks
@@ -53,7 +54,7 @@ const Elements: FC<TElementsProps> = ({ eventsDisabled, id, mouseMode, parentId 
               />
             );
           default:
-            return <></>;
+            return <GridDropArea index={index} mouseMode={mouseMode} parentId={id} />;
         }
       })}
       {hasPossibleElement && <PossibleElement parentId={id} />}

@@ -1,0 +1,12 @@
+.GridDropArea {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+
+  &--hovered {
+    @include theme('blue-2', border, '1px solid');
+    @include theme('blue-1', background-color);
+
+    opacity: 0.4;
+  }
+}

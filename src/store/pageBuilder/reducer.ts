@@ -98,6 +98,7 @@ const initialState: TPageBuilderState = {
     colorSampler: false,
     draggableElements: [],
     hoverOnElement: '-1',
+    isGridDropArea: false,
     isMultipleMoving: false,
     isResizing: false,
     isRotating: false,
@@ -112,9 +113,226 @@ const initialState: TPageBuilderState = {
   },
   isLoading: true,
   isPending: false,
+  // @ts-ignore
   pages: {
     [BASE_PAGE.id]: {
       ...BASE_PAGE,
+      // elements: {
+      //   '-1': {
+      //     alignment: {},
+      //     angle: 0,
+      //     aspectRatio: false,
+      //     background: {
+      //       properties: {
+      //         alpha: '100',
+      //         color: '#1e262f',
+      //         format: 'hex',
+      //       },
+      //       visible: true,
+      //     },
+      //     children: [
+      //       {
+      //         id: 'mh6pixe11761422580360',
+      //         type: 'frame',
+      //       },
+      //     ],
+      //     coordinates: {
+      //       x: 0,
+      //       y: 0,
+      //     },
+      //     deepLevel: 0,
+      //     flip: {
+      //       x: false,
+      //       y: false,
+      //     },
+      //     height: {
+      //       value: 0,
+      //     },
+      //     id: '-1',
+      //     layout: {
+      //       alignment: 'none',
+      //       boxSizing: 'excluded',
+      //       gap: {
+      //         column: {
+      //           value: 0,
+      //         },
+      //         row: {
+      //           value: 0,
+      //         },
+      //       },
+      //       grid: {
+      //         columns: 1,
+      //         rows: 1,
+      //       },
+      //       type: 'freeForm',
+      //     },
+      //     parentId: '-1',
+      //     position: 'absolute',
+      //     type: 'base',
+      //     width: {
+      //       value: 0,
+      //     },
+      //   },
+      //   mh6pixe11761422580360: {
+      //     alignment: {},
+      //     angle: 0,
+      //     aspectRatio: false,
+      //     background: {
+      //       properties: {
+      //         alpha: '100',
+      //         color: '#ffffff',
+      //         format: 'hex',
+      //       },
+      //       visible: true,
+      //     },
+      //     children: [
+      //       {
+      //         id: 'mh6piy641761422581372',
+      //         type: 'frame',
+      //       },
+      //       {
+      //         id: 'mh6pj1iw1761422585720',
+      //         type: 'frame',
+      //       },
+      //     ],
+      //     coordinates: {
+      //       x: 642,
+      //       y: 468,
+      //     },
+      //     deepLevel: 1,
+      //     flip: {
+      //       x: false,
+      //       y: false,
+      //     },
+      //     height: {
+      //       value: 225,
+      //     },
+      //     id: 'mh6pixe11761422580360',
+      //     layout: {
+      //       alignment: 'topLeft',
+      //       boxSizing: 'excluded',
+      //       gap: {
+      //         column: {
+      //           value: 0,
+      //         },
+      //         row: {
+      //           value: 0,
+      //         },
+      //       },
+      //       grid: {
+      //         columns: 1,
+      //         rows: 2,
+      //       },
+      //       type: 'grid',
+      //     },
+      //     parentId: '-1',
+      //     position: 'absolute',
+      //     type: 'frame',
+      //     width: {
+      //       value: 300,
+      //     },
+      //   },
+      //   mh6piy641761422581372: {
+      //     alignment: {},
+      //     angle: 0,
+      //     aspectRatio: false,
+      //     background: {
+      //       properties: {
+      //         alpha: '100',
+      //         color: '#a42626ff',
+      //         format: 'hex',
+      //       },
+      //       visible: true,
+      //     },
+      //     children: [],
+      //     coordinates: {
+      //       x: 0,
+      //       y: 0,
+      //     },
+      //     deepLevel: 2,
+      //     flip: {
+      //       x: false,
+      //       y: false,
+      //     },
+      //     height: {
+      //       value: 95,
+      //     },
+      //     id: 'mh6piy641761422581372',
+      //     layout: {
+      //       alignment: 'none',
+      //       boxSizing: 'excluded',
+      //       gap: {
+      //         column: {
+      //           value: 0,
+      //         },
+      //         row: {
+      //           value: 0,
+      //         },
+      //       },
+      //       grid: {
+      //         columns: 1,
+      //         rows: 1,
+      //       },
+      //       type: 'freeForm',
+      //     },
+      //     parentId: 'mh6pixe11761422580360',
+      //     position: 'relative',
+      //     type: 'frame',
+      //     width: {
+      //       value: 141,
+      //     },
+      //   },
+      //   mh6pj1iw1761422585720: {
+      //     alignment: {},
+      //     angle: 0,
+      //     aspectRatio: false,
+      //     background: {
+      //       properties: {
+      //         alpha: '100',
+      //         color: '#1d9c6bff',
+      //         format: 'hex',
+      //       },
+      //       visible: true,
+      //     },
+      //     children: [],
+      //     coordinates: {
+      //       x: 0,
+      //       y: 0,
+      //     },
+      //     deepLevel: 2,
+      //     flip: {
+      //       x: false,
+      //       y: false,
+      //     },
+      //     height: {
+      //       value: 84,
+      //     },
+      //     id: 'mh6pj1iw1761422585720',
+      //     layout: {
+      //       alignment: 'none',
+      //       boxSizing: 'excluded',
+      //       gap: {
+      //         column: {
+      //           value: 0,
+      //         },
+      //         row: {
+      //           value: 0,
+      //         },
+      //       },
+      //       grid: {
+      //         columns: 1,
+      //         rows: 1,
+      //       },
+      //       type: 'freeForm',
+      //     },
+      //     parentId: 'mh6pixe11761422580360',
+      //     position: 'relative',
+      //     type: 'frame',
+      //     width: {
+      //       value: 98,
+      //     },
+      //   },
+      // },
     },
   },
 };

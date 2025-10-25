@@ -6,6 +6,7 @@ import { TElements, TEvents, TPageBuilderState } from 'store/pageBuilder/types';
 
 // utils
 import { filterDraggableElements } from './filterDraggableElements';
+import { getNextParentChildren } from './getNextParentChildren';
 
 export const getTargetIndex = (
   nextParent: TElement,
@@ -23,13 +24,20 @@ export const getTargetIndex = (
 
 export const replaceChildrenPosition = (
   draggableElements: TEvents['draggableElements'],
+  isGridDropArea: TEvents['isGridDropArea'],
   nextParent: TElement,
   index: number,
   parentHasChanged: boolean,
   prevParent: TElement,
 ): void => {
   const prevParentChildren = filterDraggableElements(draggableElements, prevParent);
-  const nextParentChildren = parentHasChanged ? nextParent.children : [...prevParentChildren];
+  const nextParentChildren = getNextParentChildren(
+    index,
+    isGridDropArea,
+    nextParent.children,
+    parentHasChanged,
+    prevParentChildren,
+  );
 
   prevParent.children = prevParentChildren;
   nextParent.children =
@@ -40,13 +48,13 @@ export const replaceChildrenPosition = (
 
 export const getMappedParentsChildren = (parentHasChanged: boolean, state: TPageBuilderState): TElements => {
   const { elements } = state.pages[state.currentPage];
-  const { draggableElements, possibleIndexPosition, possibleParent } = state.events;
+  const { draggableElements, isGridDropArea, possibleIndexPosition, possibleParent } = state.events;
   const draggableElement = first(draggableElements);
   const prevParent = cloneDeep(elements[elements[draggableElement.id].parentId]);
   const nextParent = cloneDeep(elements[possibleParent]);
   const index = getTargetIndex(nextParent, parentHasChanged, possibleIndexPosition);
 
-  replaceChildrenPosition(draggableElements, nextParent, index, parentHasChanged, prevParent);
+  replaceChildrenPosition(draggableElements, isGridDropArea, nextParent, index, parentHasChanged, prevParent);
 
   return {
     [prevParent.id]: prevParent,

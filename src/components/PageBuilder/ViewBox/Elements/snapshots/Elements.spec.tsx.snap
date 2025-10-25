@@ -83,7 +83,14 @@ exports[`Elements snapshots should render Frame 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Elements snapshots should render default Element 1`] = `<DocumentFragment />`;
+exports[`Elements snapshots should render default Element 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1jnxvbp GridDropArea GridDropArea--light"
+    data-test-box="grid-drop-area"
+  />
+</DocumentFragment>
+`;
 
 exports[`Elements snapshots should render when possible Element 1`] = `
 <DocumentFragment>
