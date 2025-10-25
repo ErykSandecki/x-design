@@ -2,7 +2,7 @@
 import { BASE_2D } from 'shared';
 
 // types
-import { AlignmentLayout, LayoutType } from 'types';
+import { AlignmentLayout, ElementType, LayoutType } from 'types';
 import { TChangeLayoutAction, TPageBuilderState } from '../../types';
 
 // utils
@@ -31,6 +31,7 @@ export const handleChangeLayout = (
           ...currentPage.elements,
           ...mapFilteredValues(currentPage.elements, ids, (element) => ({
             ...element,
+            children: element.children.filter(({ type }) => type !== ElementType.grid),
             layout: {
               ...element.layout,
               alignment: isFreeForm ? AlignmentLayout.none : AlignmentLayout.topLeft,

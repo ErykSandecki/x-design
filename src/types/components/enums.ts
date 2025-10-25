@@ -13,6 +13,7 @@ export enum AlignmentVertical {
 export enum ElementType {
   base = 'base',
   frame = 'frame',
+  grid = 'grid',
   none = 'none',
   rect = 'rect',
 }

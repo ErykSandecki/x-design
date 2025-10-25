@@ -35,6 +35,21 @@ describe('getGridLayout', () => {
     expect(result).toStrictEqual({ columns: 1, rows: 3 });
   });
 
+  it(`should return grid when prev was vertical but children empty`, () => {
+    // before
+    const result = getGridLayout(
+      {
+        ...elementMock,
+        children: [],
+        layout: { ...layoutMock, type: LayoutType.vertical },
+      },
+      LayoutType.grid,
+    );
+
+    // result
+    expect(result).toStrictEqual({ columns: 1, rows: 1 });
+  });
+
   it(`should return grid when prev was horizontal`, () => {
     // before
     const result = getGridLayout(
@@ -52,5 +67,20 @@ describe('getGridLayout', () => {
 
     // result
     expect(result).toStrictEqual({ columns: 3, rows: 1 });
+  });
+
+  it(`should return grid when prev was horizontal but children empty`, () => {
+    // before
+    const result = getGridLayout(
+      {
+        ...elementMock,
+        children: [],
+        layout: { ...layoutMock, type: LayoutType.horizontal },
+      },
+      LayoutType.grid,
+    );
+
+    // result
+    expect(result).toStrictEqual({ columns: 1, rows: 1 });
   });
 });

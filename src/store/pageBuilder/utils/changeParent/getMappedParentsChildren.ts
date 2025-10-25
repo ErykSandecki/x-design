@@ -1,8 +1,11 @@
 import { cloneDeep, first } from 'lodash';
 
 // types
-import { TChildren, TElement } from 'types';
+import { TElement } from 'types';
 import { TElements, TEvents, TPageBuilderState } from 'store/pageBuilder/types';
+
+// utils
+import { filterDraggableElements } from './filterDraggableElements';
 
 export const getTargetIndex = (
   nextParent: TElement,
@@ -18,12 +21,6 @@ export const getTargetIndex = (
   return hasTargetIndex ? possibleIndexPosition : -1;
 };
 
-export const filterDraggableElements = (
-  children: Array<TChildren>,
-  draggableElements: TEvents['draggableElements'],
-): Array<TChildren> =>
-  children.filter(({ id }) => !draggableElements.some((draggableElement) => draggableElement.id === id));
-
 export const replaceChildrenPosition = (
   draggableElements: TEvents['draggableElements'],
   nextParent: TElement,
@@ -31,7 +28,7 @@ export const replaceChildrenPosition = (
   parentHasChanged: boolean,
   prevParent: TElement,
 ): void => {
-  const prevParentChildren = filterDraggableElements(prevParent.children, draggableElements);
+  const prevParentChildren = filterDraggableElements(draggableElements, prevParent);
   const nextParentChildren = parentHasChanged ? nextParent.children : [...prevParentChildren];
 
   prevParent.children = prevParentChildren;

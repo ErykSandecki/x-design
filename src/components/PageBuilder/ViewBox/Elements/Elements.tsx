@@ -35,8 +35,8 @@ const Elements: FC<TElementsProps> = ({ eventsDisabled, id, mouseMode, parentId 
 
   return (
     <>
-      {children.map(({ id, type }, index) => {
-        switch (type) {
+      {children.map((child, index) => {
+        switch (child.type) {
           case ElementType.frame:
             return (
               <Frame
@@ -44,12 +44,12 @@ const Elements: FC<TElementsProps> = ({ eventsDisabled, id, mouseMode, parentId 
                   classNamesWithTheme.element.modificators.eventsDisabled,
                   eventsDisabled,
                 ])}
-                id={id}
+                id={child.id}
                 index={index}
-                key={id}
+                key={child.id}
                 mouseMode={mouseMode}
                 parentId={parentId}
-                type={type}
+                type={child.type}
               />
             );
           default:
