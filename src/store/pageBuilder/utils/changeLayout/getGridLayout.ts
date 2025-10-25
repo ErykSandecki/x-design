@@ -6,7 +6,9 @@ export const getGridLayout = (element: TElement, targetLayoutType: TElement['lay
   const sizes = children.length;
 
   if (targetLayoutType === LayoutType.grid) {
-    return prevLayout.type === LayoutType.horizontal ? { columns: sizes, rows: 1 } : { columns: 1, rows: sizes };
+    return prevLayout.type === LayoutType.horizontal
+      ? { columns: sizes || 1, rows: 1 }
+      : { columns: 1, rows: sizes || 1 };
   }
 
   return { columns: 1, rows: 1 };
