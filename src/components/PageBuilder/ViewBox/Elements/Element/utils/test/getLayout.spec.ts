@@ -54,8 +54,8 @@ describe('getLayout', () => {
       boxSizing: 'content-box',
       columnGap: '0px',
       display: 'grid',
-      gridTemplateColumns: 'repeat(0, 1fr)',
-      gridTemplateRows: 'repeat(0, 1fr)',
+      gridTemplateColumns: 'repeat(1, 1fr)',
+      gridTemplateRows: 'repeat(1, 1fr)',
       rowGap: '0px',
     });
   });
