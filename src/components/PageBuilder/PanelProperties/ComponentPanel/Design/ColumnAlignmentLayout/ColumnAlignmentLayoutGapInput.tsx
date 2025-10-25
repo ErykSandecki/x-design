@@ -6,7 +6,7 @@ import PopoverGap from './PopoverGap/PopoverGap';
 import { ScrubbableInput, UITools } from 'shared';
 
 // others
-import { MAX, PANEL_PROPERTIES_ID } from '../../../../constants';
+import { MAX, MIN, PANEL_PROPERTIES_ID } from '../../../../constants';
 import { TOOLTIP_TRANSLATION_KEY } from 'constant/constants';
 
 // types
@@ -61,7 +61,7 @@ const ColumnAlignmentLayoutGapInput: FC<TColumnAlignmentLayoutGapInputProps> = (
           iconHeight={8}
           iconWidth={8}
           max={MAX}
-          min={0}
+          min={MIN}
           onChange={(value) => onChange(value.toString(), true)}
           value={isMixed ? 0 : parseFloat(value)}
         />
