@@ -5,7 +5,6 @@ import { TElement } from 'types';
 import { TElements, TEvents, TPageBuilderState } from 'store/pageBuilder/types';
 
 // utils
-import { getNextParentChildren } from './getNextParentChildren';
 import { getPrevParentChildren } from './getPrevParentChildren';
 import { extendNextParentChildrenAfterGridChanged } from './extendNextParentChildrenAfterGridChanges';
 import { extendNextParentGrid } from './extendNextParentGrid';
@@ -32,14 +31,8 @@ export const replaceChildrenPosition = (
   parentHasChanged: boolean,
   prevParent: TElement,
 ): void => {
-  const prevParentChildren = getPrevParentChildren(draggableElements, parentHasChanged, prevParent);
-  const nextParentChildren = getNextParentChildren(
-    index,
-    isGridDropArea,
-    nextParent.children,
-    parentHasChanged,
-    prevParentChildren,
-  );
+  const prevParentChildren = getPrevParentChildren(draggableElements, prevParent);
+  const nextParentChildren = parentHasChanged ? nextParent.children : cloneDeep(prevParent.children);
 
   prevParent.children = prevParentChildren;
   nextParent.children =
