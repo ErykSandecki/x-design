@@ -31,8 +31,8 @@ export const replaceChildrenPosition = (
   parentHasChanged: boolean,
   prevParent: TElement,
 ): void => {
-  const prevParentChildren = getPrevParentChildren(draggableElements, prevParent);
-  const nextParentChildren = parentHasChanged ? nextParent.children : cloneDeep(prevParent.children);
+  const prevParentChildren = getPrevParentChildren(draggableElements, prevParent.children);
+  const nextParentChildren = parentHasChanged ? nextParent.children : [...prevParentChildren];
 
   prevParent.children = prevParentChildren;
   nextParent.children =
