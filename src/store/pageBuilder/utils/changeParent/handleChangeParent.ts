@@ -14,7 +14,8 @@ export const handleWithPossibleParent = (
   currentPage: TPage,
   events: TPageBuilderState['events'],
   id: string,
-  possibleParent: string,
+  possibleAnchorPosition: TEvents['possibleAnchorPosition'],
+  possibleParent: TEvents['possibleParent'],
   state: TPageBuilderState,
   stateCopy: TPageBuilderState,
 ): TPageBuilderState => {
@@ -22,7 +23,7 @@ export const handleWithPossibleParent = (
   const parentHasChanged = prevParentId !== possibleParent;
   const children = getMappedElementsToMove(parentHasChanged, stateCopy);
   const nestedChildren = getMappedNestedChildren(currentPage, children);
-  const parents = getMappedParentsChildren(parentHasChanged, state);
+  const parents = getMappedParentsChildren(parentHasChanged, possibleAnchorPosition, state);
 
   return {
     ...state,
@@ -71,7 +72,7 @@ export const handleWithResetPosition = (
 };
 
 export const handleChangeParent = (state: TPageBuilderState): TPageBuilderState => {
-  const { draggableElements, possibleParent } = state.events;
+  const { draggableElements, possibleAnchorPosition, possibleParent } = state.events;
   const currentPage = state.pages[state.currentPage];
   const stateCopy = cloneDeep(state);
   const draggableElement = first(draggableElements);
@@ -80,6 +81,7 @@ export const handleChangeParent = (state: TPageBuilderState): TPageBuilderState 
   const events: TEvents = {
     ...state.events,
     draggableElements: [],
+    isGridDropArea: false,
     isMultipleMoving: false,
     possibleAnchorElementId: null,
     possibleAnchorPosition: null,
@@ -88,7 +90,15 @@ export const handleChangeParent = (state: TPageBuilderState): TPageBuilderState 
   };
 
   if (!hasAnomalies && possibleParent && !draggableElementsId.includes(possibleParent)) {
-    return handleWithPossibleParent(currentPage, events, draggableElement.id, possibleParent, state, stateCopy);
+    return handleWithPossibleParent(
+      currentPage,
+      events,
+      draggableElement.id,
+      possibleAnchorPosition,
+      possibleParent,
+      state,
+      stateCopy,
+    );
   }
 
   return handleWithResetPosition(currentPage, events, state);

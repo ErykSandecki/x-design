@@ -5,7 +5,7 @@ import { TEvents } from '../../types';
 export const hasChildToExclude = (draggableElements: TEvents['draggableElements'], id: TElement['id']): boolean =>
   draggableElements.some((draggableElement) => draggableElement.id === id);
 
-export const filterDraggableElements = (
+export const getPrevParentChildren = (
   draggableElements: TEvents['draggableElements'],
   parentHasChanged: boolean,
   { children, layout: { type } }: TElement,

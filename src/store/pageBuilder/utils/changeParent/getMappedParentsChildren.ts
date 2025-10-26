@@ -5,8 +5,10 @@ import { TElement } from 'types';
 import { TElements, TEvents, TPageBuilderState } from 'store/pageBuilder/types';
 
 // utils
-import { filterDraggableElements } from './filterDraggableElements';
 import { getNextParentChildren } from './getNextParentChildren';
+import { getPrevParentChildren } from './getPrevParentChildren';
+import { extendNextParentChildrenAfterGridChanged } from './extendNextParentChildrenAfterGridChanges';
+import { extendNextParentGrid } from './extendNextParentGrid';
 
 export const getTargetIndex = (
   nextParent: TElement,
@@ -30,7 +32,7 @@ export const replaceChildrenPosition = (
   parentHasChanged: boolean,
   prevParent: TElement,
 ): void => {
-  const prevParentChildren = filterDraggableElements(draggableElements, parentHasChanged, prevParent);
+  const prevParentChildren = getPrevParentChildren(draggableElements, parentHasChanged, prevParent);
   const nextParentChildren = getNextParentChildren(
     index,
     isGridDropArea,
@@ -46,7 +48,11 @@ export const replaceChildrenPosition = (
       : nextParent.children;
 };
 
-export const getMappedParentsChildren = (parentHasChanged: boolean, state: TPageBuilderState): TElements => {
+export const getMappedParentsChildren = (
+  parentHasChanged: boolean,
+  possibleAnchorPosition: TEvents['possibleAnchorPosition'],
+  state: TPageBuilderState,
+): TElements => {
   const { elements } = state.pages[state.currentPage];
   const { draggableElements, isGridDropArea, possibleIndexPosition, possibleParent } = state.events;
   const draggableElement = first(draggableElements);
@@ -55,6 +61,8 @@ export const getMappedParentsChildren = (parentHasChanged: boolean, state: TPage
   const index = getTargetIndex(nextParent, parentHasChanged, possibleIndexPosition);
 
   replaceChildrenPosition(draggableElements, isGridDropArea, nextParent, index, parentHasChanged, prevParent);
+  extendNextParentGrid(draggableElements, nextParent, possibleAnchorPosition);
+  extendNextParentChildrenAfterGridChanged(nextParent);
 
   return {
     [prevParent.id]: prevParent,

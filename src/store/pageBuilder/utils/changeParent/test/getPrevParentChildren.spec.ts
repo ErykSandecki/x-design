@@ -5,12 +5,12 @@ import { childrenMock, elementMock, layoutMock } from 'test/mocks/reducer/pageBu
 import { ElementType, LayoutType } from 'types';
 
 // utils
-import { filterDraggableElements } from '../filterDraggableElements';
+import { getPrevParentChildren } from '../getPrevParentChildren';
 
-describe('filterDraggableElements', () => {
+describe('getPrevParentChildren', () => {
   it('should return filtered elements', () => {
     // before
-    const result = filterDraggableElements([{ id: 'test-2', type: ElementType.frame }], false, {
+    const result = getPrevParentChildren([{ id: 'test-2', type: ElementType.frame }], false, {
       ...elementMock,
       children: [
         { ...childrenMock, id: 'test-2' },
@@ -24,7 +24,7 @@ describe('filterDraggableElements', () => {
 
   it('should return filtered elements when grid', () => {
     // before
-    const result = filterDraggableElements([{ id: 'test-2', type: ElementType.frame }], true, {
+    const result = getPrevParentChildren([{ id: 'test-2', type: ElementType.frame }], true, {
       ...elementMock,
       children: [
         { ...childrenMock, id: 'test-2' },
