@@ -5,9 +5,10 @@ import { TElement } from 'types';
 import { TElements, TEvents, TPageBuilderState } from 'store/pageBuilder/types';
 
 // utils
-import { getPrevParentChildren } from './getPrevParentChildren';
-import { extendNextParentChildrenAfterGridChanged } from './extendNextParentChildrenAfterGridChanges';
+import { extendNextParentChildrenAfterGridChanged } from './extendNextParentChildrenAfterGridChanged';
 import { extendNextParentGrid } from './extendNextParentGrid';
+import { getNextParentChildren } from './getNextParentChildren';
+import { getPrevParentChildren } from './getPrevParentChildren';
 
 export const getTargetIndex = (
   nextParent: TElement,
@@ -25,20 +26,17 @@ export const getTargetIndex = (
 
 export const replaceChildrenPosition = (
   draggableElements: TEvents['draggableElements'],
-  isGridDropArea: TEvents['isGridDropArea'],
   nextParent: TElement,
   index: number,
   parentHasChanged: boolean,
+  possibleAnchorPosition: TEvents['possibleAnchorPosition'],
   prevParent: TElement,
 ): void => {
-  const prevParentChildren = getPrevParentChildren(draggableElements, prevParent.children);
+  const prevParentChildren = getPrevParentChildren(draggableElements, prevParent);
   const nextParentChildren = parentHasChanged ? nextParent.children : [...prevParentChildren];
 
   prevParent.children = prevParentChildren;
-  nextParent.children =
-    index !== -1
-      ? [...nextParentChildren.slice(0, index), ...draggableElements, ...nextParentChildren.slice(index)]
-      : nextParent.children;
+  nextParent.children = getNextParentChildren(draggableElements, index, nextParentChildren, possibleAnchorPosition);
 };
 
 export const getMappedParentsChildren = (
@@ -47,15 +45,17 @@ export const getMappedParentsChildren = (
   state: TPageBuilderState,
 ): TElements => {
   const { elements } = state.pages[state.currentPage];
-  const { draggableElements, isGridDropArea, possibleIndexPosition, possibleParent } = state.events;
+  const { draggableElements, possibleIndexPosition, possibleParent } = state.events;
   const draggableElement = first(draggableElements);
   const prevParent = cloneDeep(elements[elements[draggableElement.id].parentId]);
   const nextParent = cloneDeep(elements[possibleParent]);
   const index = getTargetIndex(nextParent, parentHasChanged, possibleIndexPosition);
 
-  replaceChildrenPosition(draggableElements, isGridDropArea, nextParent, index, parentHasChanged, prevParent);
-  extendNextParentGrid(draggableElements, nextParent, possibleAnchorPosition);
-  extendNextParentChildrenAfterGridChanged(nextParent);
+  if (index !== -1) {
+    replaceChildrenPosition(draggableElements, nextParent, index, parentHasChanged, possibleAnchorPosition, prevParent);
+    extendNextParentGrid(nextParent, possibleAnchorPosition);
+    extendNextParentChildrenAfterGridChanged(nextParent);
+  }
 
   return {
     [prevParent.id]: prevParent,

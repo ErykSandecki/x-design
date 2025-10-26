@@ -13,7 +13,7 @@ describe('getMappedParentsChildren', () => {
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
     // before
-    const result = getMappedParentsChildren(false, {
+    const result = getMappedParentsChildren(false, null, {
       ...pageBuilderStateMock[PAGE_BUILDER],
       events: {
         ...eventsMock,
@@ -54,7 +54,7 @@ describe('getMappedParentsChildren', () => {
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
     // before
-    const result = getMappedParentsChildren(true, {
+    const result = getMappedParentsChildren(true, null, {
       ...pageBuilderStateMock[PAGE_BUILDER],
       events: {
         ...eventsMock,
@@ -105,7 +105,7 @@ describe('getMappedParentsChildren', () => {
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
     // before
-    const result = getMappedParentsChildren(false, {
+    const result = getMappedParentsChildren(false, null, {
       ...pageBuilderStateMock[PAGE_BUILDER],
       events: {
         ...eventsMock,
@@ -164,7 +164,7 @@ describe('getMappedParentsChildren', () => {
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
     // before
-    const result = getMappedParentsChildren(true, {
+    const result = getMappedParentsChildren(true, null, {
       ...pageBuilderStateMock[PAGE_BUILDER],
       events: {
         ...eventsMock,

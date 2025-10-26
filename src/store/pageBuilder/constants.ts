@@ -86,6 +86,7 @@ export const BASE_PAGE: TPage = {
 };
 
 export const MAX_LENGTH_HISTORY = 50;
+export const PREV_ID = 'prev';
 
 export const REDUCER_HISTORY_SAVE_ACTIONS = [
   ADD_ELEMENT,

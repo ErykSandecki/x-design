@@ -1,5 +1,5 @@
 // types
-import { TChildren, TElement } from 'types';
+import { ElementType, LayoutType, TChildren, TElement } from 'types';
 import { TEvents } from '../../types';
 
 export const hasChildToExclude = (draggableElements: TEvents['draggableElements'], id: TElement['id']): boolean =>
@@ -7,5 +7,10 @@ export const hasChildToExclude = (draggableElements: TEvents['draggableElements'
 
 export const getPrevParentChildren = (
   draggableElements: TEvents['draggableElements'],
-  prevParentChildren,
-): Array<TChildren> => prevParentChildren.filter(({ id }) => !hasChildToExclude(draggableElements, id));
+  prevParent: TElement,
+): Array<TChildren> =>
+  prevParent.layout.type === LayoutType.grid
+    ? prevParent.children.map((child) =>
+        hasChildToExclude(draggableElements, child.id) ? { id: 'unknown', type: ElementType.grid } : child,
+      )
+    : prevParent.children.filter(({ id }) => !hasChildToExclude(draggableElements, id));

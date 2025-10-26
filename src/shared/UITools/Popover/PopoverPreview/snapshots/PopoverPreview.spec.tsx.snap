@@ -13,6 +13,7 @@ exports[`PopoverPreview snapshots should render PopoverPreview 1`] = `
     >
       Preview
     </p>
+    children
   </div>
 </DocumentFragment>
 `;
@@ -22,6 +23,8 @@ exports[`PopoverPreview snapshots should render when active preview 1`] = `
   <div
     class="css-1scdc72"
     data-test-popover-preview=""
-  />
+  >
+    children
+  </div>
 </DocumentFragment>
 `;

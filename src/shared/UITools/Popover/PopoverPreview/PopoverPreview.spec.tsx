@@ -12,7 +12,7 @@ describe('PopoverPreview snapshots', () => {
     // before
     const { asFragment } = customRender(
       <PopoverRoot selected={false} setSelected={mockCallBack}>
-        <PopoverPreview />
+        <PopoverPreview>children</PopoverPreview>
       </PopoverRoot>,
     );
 
@@ -24,7 +24,7 @@ describe('PopoverPreview snapshots', () => {
     // before
     const { asFragment } = customRender(
       <PopoverRoot previewId="previewId" selected={false} setSelected={mockCallBack}>
-        <PopoverPreview />
+        <PopoverPreview>children</PopoverPreview>
       </PopoverRoot>,
     );
 
