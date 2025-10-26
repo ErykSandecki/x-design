@@ -213,6 +213,7 @@ describe('ColumnRotation behaviors', () => {
                   { ...childrenMock, id: 'test-3' },
                 ],
                 layout: {
+                  ...layoutMock,
                   type: LayoutType.horizontal,
                 },
               },
