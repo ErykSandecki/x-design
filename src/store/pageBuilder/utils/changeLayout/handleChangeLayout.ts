@@ -20,6 +20,8 @@ export const handleChangeLayout = (
   const children = selectedElements.map(({ id }) => elements[id].children).flat();
   const childrenIds = extractObjectValues(children, ['id']);
   const isFreeForm = layoutType === LayoutType.freeForm;
+  const isGrid = layoutType === LayoutType.grid;
+  const allowedAbsolute = isFreeForm && !isGrid;
 
   return {
     ...state,
@@ -34,7 +36,7 @@ export const handleChangeLayout = (
             children: element.children.filter(({ type }) => type !== ElementType.grid),
             layout: {
               ...element.layout,
-              alignment: isFreeForm ? AlignmentLayout.none : AlignmentLayout.topLeft,
+              alignment: allowedAbsolute ? AlignmentLayout.none : AlignmentLayout.topLeft,
               gap: { column: { value: 0 }, row: { value: 0 } },
               grid: getGridLayout(element, layoutType),
               type: layoutType,
@@ -43,10 +45,10 @@ export const handleChangeLayout = (
           ...mapFilteredValues(currentPage.elements, childrenIds, (element) => ({
             ...element,
             alignment: {},
-            coordinates: isFreeForm
+            coordinates: allowedAbsolute
               ? calculateCoordinatesAbsoluteToParent(currentPage, element.id, element.parentId)
               : BASE_2D,
-            position: isFreeForm ? 'absolute' : 'relative',
+            position: allowedAbsolute ? 'absolute' : 'relative',
           })),
         },
       },

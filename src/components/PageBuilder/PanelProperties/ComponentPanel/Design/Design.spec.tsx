@@ -39,7 +39,7 @@ const stateMock = {
             children: ['test-2'],
             layout: {
               ...layoutMock,
-              type: LayoutType.grid,
+              type: LayoutType.horizontal,
             },
           },
           ['test-2']: {

@@ -1,7 +1,7 @@
+import { Dispatch } from 'redux';
 import { first } from 'lodash';
 import { ReactNode } from 'react';
 import { UseSelector } from 'react-redux';
-import { Dispatch } from 'redux';
 
 // components
 import { UITools } from 'shared';
@@ -24,7 +24,8 @@ const DesignPositionButtonIcons = (
   const parent = useSelector(elementDataSelectorCreator(firstElement.parentId));
   const isBaseParent = firstElement.parentId === '-1';
   const isFreeForm = parent.layout.type === LayoutType.freeForm;
-  const showButtons = !isBaseParent && !isFreeForm && areParentsTheSame;
+  const isGrid = parent.layout.type === LayoutType.grid;
+  const showButtons = !isBaseParent && !isFreeForm && !isGrid && areParentsTheSame;
 
   return showButtons
     ? [
