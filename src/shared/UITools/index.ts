@@ -15,9 +15,12 @@ import SelectItem from './Select/SelectItem/SelectItem';
 import Tabs, { TTabsProps } from './Tabs/Tabs';
 import TextField from './TextField/TextField';
 import ToggleButtonGroup from './ToggleButtonGroup/ToggleButtonGroup';
+import { AlignPopoverHorizontally, AlignPopoverVertically } from './Popover/enums';
 import { GridColumnType } from './SectionColumn/enums';
 
 export const UITools = {
+  AlignPopoverHorizontally,
+  AlignPopoverVertically,
   AlignmentArea,
   ButtonGroup,
   ButtonIcon,

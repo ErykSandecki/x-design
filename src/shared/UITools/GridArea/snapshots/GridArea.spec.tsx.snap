@@ -28,6 +28,14 @@ exports[`GridArea snapshots should render GridArea 1`] = `
          1
       </small>
     </div>
+    <div
+      class="css-6wln18 Popover Popover--light"
+      data-test-box=""
+      data-test-popover="popover"
+      style="height: 180px; width: 210px; left: -12.5px; top: -48.5px;"
+    >
+      children
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -554,6 +562,54 @@ exports[`GridArea snapshots should render when exceed 10x10 1`] = `
         </span>
          100
       </small>
+    </div>
+    <div
+      class="css-6wln18 Popover Popover--light"
+      data-test-box=""
+      data-test-popover="popover"
+      style="height: 180px; width: 210px; left: -12.5px; top: -48.5px;"
+    >
+      children
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`GridArea snapshots should render wner popover selected 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1jnxvbp GridArea GridArea GridArea--light"
+    data-test-grid-area=""
+  >
+    <div
+      class="css-1jnxvbp Cells Cells Cells--light"
+      data-test-grid-area=""
+      style="grid-template-columns: repeat(1, 1fr); grid-template-rows: repeat(1, 1fr);"
+    >
+      <div
+        class="css-1jnxvbp Cells__cell Cells__cell--light"
+        data-test-box=""
+        style="border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; border-top-left-radius: 5px; border-top-right-radius: 5px;"
+      />
+      <small
+        class="css-1jnxvbp Cells__sizes Cells__sizes--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        data-test-text=""
+        style="text-align: inherit;"
+      >
+        1 
+        <span>
+          x
+        </span>
+         1
+      </small>
+    </div>
+    <div
+      class="css-6wln18 Popover Popover--light Popover--selected Popover--selected--light"
+      data-test-box=""
+      data-test-popover="popover"
+      style="height: 180px; width: 210px; left: -12.5px; top: -48.5px;"
+    >
+      children
     </div>
   </div>
 </DocumentFragment>

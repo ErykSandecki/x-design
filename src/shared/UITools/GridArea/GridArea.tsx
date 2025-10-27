@@ -1,11 +1,13 @@
-import { FC } from 'react';
+import { FC, useRef } from 'react';
+import { noop } from 'lodash';
 
 // components
 import Box from '../../UI/Box/Box';
 import Cells, { TCellsProps } from './Cells/Cells';
+import GridAreaPopover from './GridAreaPopover/GridAreaPopover';
 
 // hooks
-import { useTheme } from 'hooks';
+import { useOutsideClick, useTheme } from 'hooks';
 
 // others
 import { className, classNames } from './classNames';
@@ -20,9 +22,12 @@ import { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute
 export type TGridAreaProps = TCellsProps & {
   e2eValue?: TE2EDataAttributeProps['value'];
   fullWidth?: boolean;
+  idContainer?: string;
 };
 
-export const GridArea: FC<TGridAreaProps> = ({ columns, e2eValue = '', fullWidth = false, rows }) => {
+export const GridArea: FC<TGridAreaProps> = ({ columns, e2eValue = '', fullWidth = false, idContainer, rows }) => {
+  const ref = useRef(null);
+  const { selected, setSelected } = useOutsideClick([], ref, noop, idContainer);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   return (
@@ -35,8 +40,11 @@ export const GridArea: FC<TGridAreaProps> = ({ columns, e2eValue = '', fullWidth
       }}
       e2eAttribute={E2EAttribute.gridArea}
       e2eValue={e2eValue}
+      onClick={() => setSelected(true)}
+      ref={ref}
     >
       <Cells columns={columns} rows={rows} />
+      <GridAreaPopover ref={ref} selected={selected} setSelected={setSelected} />
     </Box>
   );
 };

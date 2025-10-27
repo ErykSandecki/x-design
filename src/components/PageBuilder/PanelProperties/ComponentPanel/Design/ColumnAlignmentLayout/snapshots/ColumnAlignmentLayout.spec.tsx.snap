@@ -712,6 +712,14 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                1
             </small>
           </div>
+          <div
+            class="css-6wln18 Popover Popover--light"
+            data-test-box=""
+            data-test-popover="popover"
+            style="height: 180px; width: 210px; left: -12.5px; top: -48.5px;"
+          >
+            children
+          </div>
         </div>
         <div
           class="css-1jnxvbp TextField TextField--light"
@@ -1128,6 +1136,14 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
               </span>
                1
             </small>
+          </div>
+          <div
+            class="css-6wln18 Popover Popover--light"
+            data-test-box=""
+            data-test-popover="popover"
+            style="height: 180px; width: 210px; left: -12.5px; top: -48.5px;"
+          >
+            children
           </div>
         </div>
         <div

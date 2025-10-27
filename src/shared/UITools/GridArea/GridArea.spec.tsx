@@ -1,16 +1,17 @@
+import { fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';
 
 // components
 import GridArea from './GridArea';
 
-// mocks
-import 'test/mocks/sagas/allSagas';
-
 // store
 import { configureStore } from 'store/store';
 
+// types
+import { E2EAttribute } from 'types';
+
 // utils
-import { customRender } from 'test';
+import { customRender, getByE2EAttribute } from 'test';
 
 describe('GridArea snapshots', () => {
   it('should render GridArea', () => {
@@ -38,6 +39,24 @@ describe('GridArea snapshots', () => {
         <GridArea columns={100} rows={100} />
       </Provider>,
     );
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('should render wner popover selected', () => {
+    // mock
+    const store = configureStore();
+
+    // before
+    const { asFragment, container } = customRender(
+      <Provider store={store}>
+        <GridArea columns={1} rows={1} />
+      </Provider>,
+    );
+
+    // action
+    fireEvent.click(getByE2EAttribute(container, E2EAttribute.gridArea));
 
     // result
     expect(asFragment()).toMatchSnapshot();

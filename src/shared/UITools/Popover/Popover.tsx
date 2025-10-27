@@ -22,6 +22,7 @@ import { className, classNames } from './classNames';
 import styles from './popover.scss';
 
 // types
+import { AlignPopoverHorizontally, AlignPopoverVertically } from './enums';
 import { E2EAttribute } from 'types';
 import { TSXColor } from '../../UI/hooks/sx/types/types';
 
@@ -30,6 +31,8 @@ import { getPosition } from './utils/getPosition';
 import { stopPropagation } from 'utils';
 
 export type TPopoverProps = {
+  alignHorizontally?: AlignPopoverHorizontally;
+  alignVertically?: AlignPopoverVertically;
   backgroundColor?: TSXColor;
   children: ReactNode;
   e2eValue?: TE2EDataAttributeProps['value'];
@@ -41,6 +44,8 @@ export type TPopoverProps = {
 };
 
 export const Popover: FC<TPopoverProps> = ({
+  alignHorizontally = AlignPopoverHorizontally.right,
+  alignVertically = AlignPopoverVertically.center,
   backgroundColor = 'neutral4',
   children,
   e2eValue,
@@ -52,7 +57,7 @@ export const Popover: FC<TPopoverProps> = ({
 }) => {
   const refPopover = useRef(null);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-  const { left, top } = getPosition(refItem, refPopover);
+  const { left, top } = getPosition(alignHorizontally, alignVertically, refItem, refPopover);
   const x = left - offset.x;
   const y = top - offset.y;
 

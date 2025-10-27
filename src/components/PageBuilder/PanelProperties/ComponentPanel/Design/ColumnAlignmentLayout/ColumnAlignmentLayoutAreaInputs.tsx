@@ -3,6 +3,9 @@ import { FC } from 'react';
 // components
 import { UITools } from 'shared';
 
+// others
+import { PANEL_PROPERTIES_ID } from 'components/PageBuilder/constants';
+
 // types
 import { AlignmentLayout } from 'types';
 import { TUseChangeAlignmentLayoutEvent } from './hooks/useChangeAlignmentEvent';
@@ -28,7 +31,14 @@ const ColumnAlignmentLayoutAreaInputs: FC<TColumnAlignmentLayoutAreaInputsProps>
   return (
     <>
       {!isGrid && <UITools.AlignmentArea e2eValue="alignment-flow" onClick={onChangeAlignment} value={alignment} />}
-      {isGrid && <UITools.GridArea columns={targetColumns} e2eValue="grid-flow" rows={targetRows} />}
+      {isGrid && (
+        <UITools.GridArea
+          columns={targetColumns}
+          e2eValue="grid-flow"
+          idContainer={PANEL_PROPERTIES_ID}
+          rows={targetRows}
+        />
+      )}
     </>
   );
 };
