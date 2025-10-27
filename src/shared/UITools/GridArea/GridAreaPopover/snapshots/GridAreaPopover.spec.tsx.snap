@@ -18,8 +18,8 @@ exports[`GridAreaPopover snapshots should render GridAreaPopover 1`] = `
         data-test-tooltip=""
       >
         <div
-          class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--filled TextFieldLabel--filled--light"
-          data-test-box=""
+          class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+          data-test-text-field-wrapper=""
         >
           <div
             class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -35,7 +35,7 @@ exports[`GridAreaPopover snapshots should render GridAreaPopover 1`] = `
             />
           </div>
           <input
-            class="TextFieldLabel__input TextFieldLabel__input--light"
+            class="TextFieldWrapper__input TextFieldWrapper__input--light"
             data-test-text-field-input="columns"
             maxlength="6"
             type="text"
@@ -72,8 +72,8 @@ exports[`GridAreaPopover snapshots should render GridAreaPopover 1`] = `
         data-test-tooltip=""
       >
         <div
-          class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--filled TextFieldLabel--filled--light"
-          data-test-box=""
+          class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+          data-test-text-field-wrapper=""
         >
           <div
             class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -89,7 +89,7 @@ exports[`GridAreaPopover snapshots should render GridAreaPopover 1`] = `
             />
           </div>
           <input
-            class="TextFieldLabel__input TextFieldLabel__input--light"
+            class="TextFieldWrapper__input TextFieldWrapper__input--light"
             data-test-text-field-input="rows"
             maxlength="6"
             type="text"
@@ -136,8 +136,8 @@ exports[`GridAreaPopover snapshots should render with opened popover 1`] = `
         data-test-tooltip=""
       >
         <div
-          class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--filled TextFieldLabel--filled--light"
-          data-test-box=""
+          class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+          data-test-text-field-wrapper=""
         >
           <div
             class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -153,7 +153,7 @@ exports[`GridAreaPopover snapshots should render with opened popover 1`] = `
             />
           </div>
           <input
-            class="TextFieldLabel__input TextFieldLabel__input--light"
+            class="TextFieldWrapper__input TextFieldWrapper__input--light"
             data-test-text-field-input="columns"
             maxlength="6"
             type="text"
@@ -190,8 +190,8 @@ exports[`GridAreaPopover snapshots should render with opened popover 1`] = `
         data-test-tooltip=""
       >
         <div
-          class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--filled TextFieldLabel--filled--light"
-          data-test-box=""
+          class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+          data-test-text-field-wrapper=""
         >
           <div
             class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -207,7 +207,7 @@ exports[`GridAreaPopover snapshots should render with opened popover 1`] = `
             />
           </div>
           <input
-            class="TextFieldLabel__input TextFieldLabel__input--light"
+            class="TextFieldWrapper__input TextFieldWrapper__input--light"
             data-test-text-field-input="rows"
             maxlength="6"
             type="text"

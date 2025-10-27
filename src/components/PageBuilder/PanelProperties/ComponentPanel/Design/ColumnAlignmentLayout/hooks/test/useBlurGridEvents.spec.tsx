@@ -16,16 +16,38 @@ jest.mock('react-redux', () => ({
 describe('useBlurGridEvents', () => {
   it(`should trigger blur columns`, () => {
     // before
-    const { result } = renderHook(() => useBlurGridEvents('0', elementMock, '0', mockCallBack, mockCallBack));
+    const { result } = renderHook(() => useBlurGridEvents('1', elementMock, '1', mockCallBack, mockCallBack));
 
     // action
     result.current.onBlurColumns();
 
     // result
-    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({ columns: 0 });
+    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({ columns: 1 });
   });
 
   it(`should reset value columns`, () => {
+    // before
+    const { result } = renderHook(() => useBlurGridEvents('', elementMock, '1', mockCallBack, mockCallBack));
+
+    // action
+    result.current.onBlurColumns();
+
+    // result
+    expect(mockCallBack.mock.calls[0][0]).toBe('1');
+  });
+
+  it(`should reset value columns when exceed`, () => {
+    // before
+    const { result } = renderHook(() => useBlurGridEvents('', elementMock, '101', mockCallBack, mockCallBack));
+
+    // action
+    result.current.onBlurColumns();
+
+    // result
+    expect(mockCallBack.mock.calls[0][0]).toBe('1');
+  });
+
+  it(`should reset value columns when exceed`, () => {
     // before
     const { result } = renderHook(() => useBlurGridEvents('', elementMock, '0', mockCallBack, mockCallBack));
 
@@ -38,16 +60,38 @@ describe('useBlurGridEvents', () => {
 
   it(`should trigger blur rows`, () => {
     // before
-    const { result } = renderHook(() => useBlurGridEvents('0', elementMock, '0', mockCallBack, mockCallBack));
+    const { result } = renderHook(() => useBlurGridEvents('1', elementMock, '1', mockCallBack, mockCallBack));
 
     // action
     result.current.onBlurRows();
 
     // result
-    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({ rows: 0 });
+    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({ rows: 1 });
   });
 
   it(`should reset value rows`, () => {
+    // before
+    const { result } = renderHook(() => useBlurGridEvents('1', elementMock, '', mockCallBack, mockCallBack));
+
+    // action
+    result.current.onBlurRows();
+
+    // result
+    expect(mockCallBack.mock.calls[0][0]).toBe('1');
+  });
+
+  it(`should reset value rows when exceed`, () => {
+    // before
+    const { result } = renderHook(() => useBlurGridEvents('101', elementMock, '', mockCallBack, mockCallBack));
+
+    // action
+    result.current.onBlurRows();
+
+    // result
+    expect(mockCallBack.mock.calls[0][0]).toBe('1');
+  });
+
+  it(`should reset value rows when exceed`, () => {
     // before
     const { result } = renderHook(() => useBlurGridEvents('0', elementMock, '', mockCallBack, mockCallBack));
 

@@ -35,6 +35,8 @@ export * from './jest/isJestRunning';
 export * from './math/computeCounterRotation';
 export * from './math/distanceHasChanged';
 export * from './math/getCornerBounds';
+export * from './math/gridSize';
+export * from './math/isOdd';
 export * from './math/negateValue';
 export * from './math/normalizeAngle';
 export * from './math/sort';

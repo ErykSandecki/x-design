@@ -68,6 +68,7 @@ export const TextFieldWrapper: FC<TTextFieldWrapperProps> = ({
           classNamesWithTheme[className].modificators[variant],
         ),
       }}
+      e2eAttribute={E2EAttribute.textFieldWrapper}
       ref={wrapperRef}
       style={style}
     >

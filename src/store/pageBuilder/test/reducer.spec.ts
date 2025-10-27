@@ -55,7 +55,16 @@ import {
 } from '../actions';
 
 // types
-import { AlignmentLayout, AlignmentHorizontal, AlignmentVertical, LayoutType, TAction, TBackground, Unit } from 'types';
+import {
+  AlignmentLayout,
+  AlignmentHorizontal,
+  AlignmentVertical,
+  LayoutType,
+  TAction,
+  TBackground,
+  Unit,
+  ElementType,
+} from 'types';
 import { AnchorResize } from '../enums';
 import { TPageBuilderState } from '../types';
 
@@ -627,7 +636,7 @@ describe('PageBuilderReducer', () => {
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
     // before
-    const state = reducer(changeLayoutGrid({ columns: 100, rows: 100 }), {
+    const state = reducer(changeLayoutGrid({ columns: 10 }), {
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -661,11 +670,12 @@ describe('PageBuilderReducer', () => {
             },
             [elementMock.id]: {
               ...elementMock,
+              children: Array.from(Array(10), () => ({ id: 'unknown', type: ElementType.grid })),
               layout: {
                 ...layoutMock,
                 grid: {
-                  columns: 100,
-                  rows: 100,
+                  columns: 10,
+                  rows: 1,
                 },
               },
             },

@@ -2,7 +2,10 @@
 import { elementMock, layoutMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
-import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
+import { REDUCER_KEY as PAGE_BUILDER } from '../../../actionsType';
+
+// types
+import { ElementType } from 'types';
 
 // utils
 import { handleChangeLayoutGrid } from '../handleChangeLayoutGrid';
@@ -14,7 +17,7 @@ describe('handleChangeLayoutGrid', () => {
 
     // before
     const result = handleChangeLayoutGrid(
-      { columns: 100, rows: 100 },
+      { columns: 10 },
       {
         ...pageBuilderStateMock[PAGE_BUILDER],
         pages: {
@@ -42,11 +45,12 @@ describe('handleChangeLayoutGrid', () => {
             ...currentPage.elements,
             [elementMock.id]: {
               ...elementMock,
+              children: Array.from(Array(10), () => ({ id: 'unknown', type: ElementType.grid })),
               layout: {
                 ...layoutMock,
                 grid: {
-                  columns: 100,
-                  rows: 100,
+                  columns: 10,
+                  rows: 1,
                 },
               },
             },

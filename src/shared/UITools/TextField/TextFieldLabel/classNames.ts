@@ -1,5 +1,3 @@
-import { values } from 'lodash';
-
 // utils
 import { composeClassNames } from 'utils';
 

@@ -42,7 +42,7 @@ export const GridInputCells: FC<TGridInputsProps> = ({ name, onBlur, onChange, v
         <ScrubbableInput
           e2eValue={targetName}
           max={100}
-          min={0}
+          min={1}
           onChange={(value) => onChange(value.toString(), true)}
           value={parseInt(value)}
         >

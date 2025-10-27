@@ -73,7 +73,7 @@ import { handleChangeBackground } from './utils/handleChangeBackground';
 import { handleChangeLayout } from './utils/changeLayout/handleChangeLayout';
 import { handleChangeLayoutAlignment } from './utils/handleChangeLayoutAlignment';
 import { handleChangeLayoutBoxSizing } from './utils/handleChangeLayoutBoxSizing';
-import { handleChangeLayoutGrid } from './utils/handleChangeLayoutGrid';
+import { handleChangeLayoutGrid } from './utils/changeLayoutGrid/handleChangeLayoutGrid';
 import { handleChangeParent } from './utils/changeParent/handleChangeParent';
 import { handleChangePosition } from './utils/handleChangePosition';
 import { handleFitLayout } from './utils/handleFitLayout';
@@ -199,8 +199,24 @@ const initialState: TPageBuilderState = {
       //         type: 'frame',
       //       },
       //       {
-      //         id: 'unknown',
-      //         type: 'grid',
+      //         id: 'mh9h7pwb1761590019035',
+      //         type: 'frame',
+      //       },
+      //       {
+      //         id: 'mh9h7nkc1761590016011',
+      //         type: 'frame',
+      //       },
+      //       {
+      //         id: 'mh9h7t501761590023236',
+      //         type: 'frame',
+      //       },
+      //       {
+      //         id: 'mh9h7vqr1761590026611',
+      //         type: 'frame',
+      //       },
+      //       {
+      //         id: 'mh9h7v8r1761590025963',
+      //         type: 'frame',
       //       },
       //     ],
       //     coordinates: {
@@ -229,7 +245,7 @@ const initialState: TPageBuilderState = {
       //       },
       //       grid: {
       //         columns: 2,
-      //         rows: 2,
+      //         rows: 4,
       //       },
       //       type: 'grid',
       //     },
@@ -366,6 +382,256 @@ const initialState: TPageBuilderState = {
       //       value: 'auto',
       //     },
       //     id: 'mh90kmvn1761562068179',
+      //     layout: {
+      //       alignment: 'none',
+      //       boxSizing: 'excluded',
+      //       gap: {
+      //         column: {
+      //           value: 0,
+      //         },
+      //         row: {
+      //           value: 0,
+      //         },
+      //       },
+      //       grid: {
+      //         columns: 1,
+      //         rows: 1,
+      //       },
+      //       type: 'freeForm',
+      //     },
+      //     parentId: 'mh90kecu1761562057133',
+      //     position: 'relative',
+      //     type: 'frame',
+      //     width: {
+      //       value: 'auto',
+      //     },
+      //   },
+      //   mh9h7nkc1761590016011: {
+      //     alignment: {},
+      //     angle: 0,
+      //     aspectRatio: false,
+      //     background: {
+      //       properties: {
+      //         alpha: '100',
+      //         color: '#ffffff',
+      //         format: 'hex',
+      //       },
+      //       visible: true,
+      //     },
+      //     children: [],
+      //     coordinates: {
+      //       x: 0,
+      //       y: 0,
+      //     },
+      //     deepLevel: 2,
+      //     flip: {
+      //       x: false,
+      //       y: false,
+      //     },
+      //     height: {
+      //       value: 'auto',
+      //     },
+      //     id: 'mh9h7nkc1761590016011',
+      //     layout: {
+      //       alignment: 'none',
+      //       boxSizing: 'excluded',
+      //       gap: {
+      //         column: {
+      //           value: 0,
+      //         },
+      //         row: {
+      //           value: 0,
+      //         },
+      //       },
+      //       grid: {
+      //         columns: 1,
+      //         rows: 1,
+      //       },
+      //       type: 'freeForm',
+      //     },
+      //     parentId: 'mh90kecu1761562057133',
+      //     position: 'relative',
+      //     type: 'frame',
+      //     width: {
+      //       value: 'auto',
+      //     },
+      //   },
+      //   mh9h7pwb1761590019035: {
+      //     alignment: {},
+      //     angle: 0,
+      //     aspectRatio: false,
+      //     background: {
+      //       properties: {
+      //         alpha: '100',
+      //         color: '#ffffff',
+      //         format: 'hex',
+      //       },
+      //       visible: true,
+      //     },
+      //     children: [],
+      //     coordinates: {
+      //       x: 0,
+      //       y: 0,
+      //     },
+      //     deepLevel: 2,
+      //     flip: {
+      //       x: false,
+      //       y: false,
+      //     },
+      //     height: {
+      //       value: 'auto',
+      //     },
+      //     id: 'mh9h7pwb1761590019035',
+      //     layout: {
+      //       alignment: 'none',
+      //       boxSizing: 'excluded',
+      //       gap: {
+      //         column: {
+      //           value: 0,
+      //         },
+      //         row: {
+      //           value: 0,
+      //         },
+      //       },
+      //       grid: {
+      //         columns: 1,
+      //         rows: 1,
+      //       },
+      //       type: 'freeForm',
+      //     },
+      //     parentId: 'mh90kecu1761562057133',
+      //     position: 'relative',
+      //     type: 'frame',
+      //     width: {
+      //       value: 'auto',
+      //     },
+      //   },
+      //   mh9h7t501761590023236: {
+      //     alignment: {},
+      //     angle: 0,
+      //     aspectRatio: false,
+      //     background: {
+      //       properties: {
+      //         alpha: '100',
+      //         color: '#ffffff',
+      //         format: 'hex',
+      //       },
+      //       visible: true,
+      //     },
+      //     children: [],
+      //     coordinates: {
+      //       x: 0,
+      //       y: 0,
+      //     },
+      //     deepLevel: 2,
+      //     flip: {
+      //       x: false,
+      //       y: false,
+      //     },
+      //     height: {
+      //       value: 'auto',
+      //     },
+      //     id: 'mh9h7t501761590023236',
+      //     layout: {
+      //       alignment: 'none',
+      //       boxSizing: 'excluded',
+      //       gap: {
+      //         column: {
+      //           value: 0,
+      //         },
+      //         row: {
+      //           value: 0,
+      //         },
+      //       },
+      //       grid: {
+      //         columns: 1,
+      //         rows: 1,
+      //       },
+      //       type: 'freeForm',
+      //     },
+      //     parentId: 'mh90kecu1761562057133',
+      //     position: 'relative',
+      //     type: 'frame',
+      //     width: {
+      //       value: 'auto',
+      //     },
+      //   },
+      //   mh9h7v8r1761590025963: {
+      //     alignment: {},
+      //     angle: 0,
+      //     aspectRatio: false,
+      //     background: {
+      //       properties: {
+      //         alpha: '100',
+      //         color: '#ffffff',
+      //         format: 'hex',
+      //       },
+      //       visible: true,
+      //     },
+      //     children: [],
+      //     coordinates: {
+      //       x: 0,
+      //       y: 0,
+      //     },
+      //     deepLevel: 2,
+      //     flip: {
+      //       x: false,
+      //       y: false,
+      //     },
+      //     height: {
+      //       value: 'auto',
+      //     },
+      //     id: 'mh9h7v8r1761590025963',
+      //     layout: {
+      //       alignment: 'none',
+      //       boxSizing: 'excluded',
+      //       gap: {
+      //         column: {
+      //           value: 0,
+      //         },
+      //         row: {
+      //           value: 0,
+      //         },
+      //       },
+      //       grid: {
+      //         columns: 1,
+      //         rows: 1,
+      //       },
+      //       type: 'freeForm',
+      //     },
+      //     parentId: 'mh90kecu1761562057133',
+      //     position: 'relative',
+      //     type: 'frame',
+      //     width: {
+      //       value: 'auto',
+      //     },
+      //   },
+      //   mh9h7vqr1761590026611: {
+      //     alignment: {},
+      //     angle: 0,
+      //     aspectRatio: false,
+      //     background: {
+      //       properties: {
+      //         alpha: '100',
+      //         color: '#ffffff',
+      //         format: 'hex',
+      //       },
+      //       visible: true,
+      //     },
+      //     children: [],
+      //     coordinates: {
+      //       x: 0,
+      //       y: 0,
+      //     },
+      //     deepLevel: 2,
+      //     flip: {
+      //       x: false,
+      //       y: false,
+      //     },
+      //     height: {
+      //       value: 'auto',
+      //     },
+      //     id: 'mh9h7vqr1761590026611',
       //     layout: {
       //       alignment: 'none',
       //       boxSizing: 'excluded',

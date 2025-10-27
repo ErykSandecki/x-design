@@ -21,19 +21,19 @@ export const useUpdateStates = (
 ): TUseChangeAlignmentLayoutEvent => {
   useEffect(() => {
     setAlignment(isMixedAlignment ? AlignmentLayout.none : layout.alignment);
-  }, [layout.alignment, isMultiple]);
+  }, [isMixedAlignment, isMultiple, layout.alignment]);
 
   useEffect(() => {
     const { column, row } = layout.gap;
 
     setColumnGap(isMixedColumnGap ? 'Mixed' : column.value.toString());
     setRowGap(isMixedColumnRow ? 'Mixed' : row.value.toString());
-  }, [layout.gap.column, layout.gap.row, isMultiple]);
+  }, [isMixedColumnGap, isMixedColumnRow, isMultiple, layout.gap.column, layout.gap.row]);
 
   useEffect(() => {
     const { columns, rows } = layout.grid;
 
     setColumns(isMixedColumns ? 'Mixed' : columns.toString());
     setRows(isMixedRows ? 'Mixed' : rows.toString());
-  }, [layout.grid.columns, layout.grid.rows, isMultiple]);
+  }, [isMixedColumns, isMixedRows, isMultiple, layout.grid]);
 };

@@ -34,8 +34,8 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--fullWidth TextFieldLabel--fullWidth--light TextFieldLabel--filled TextFieldLabel--filled--light"
-            data-test-box=""
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            data-test-text-field-wrapper=""
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -51,7 +51,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
               </small>
             </div>
             <input
-              class="TextFieldLabel__input TextFieldLabel__input--light"
+              class="TextFieldWrapper__input TextFieldWrapper__input--light"
               data-test-text-field-input="width"
               maxlength="6"
               type="number"
@@ -62,7 +62,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldLabel__icon TextFieldLabel__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
@@ -223,8 +223,8 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--fullWidth TextFieldLabel--fullWidth--light TextFieldLabel--filled TextFieldLabel--filled--light"
-            data-test-box=""
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            data-test-text-field-wrapper=""
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -240,7 +240,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
               </small>
             </div>
             <input
-              class="TextFieldLabel__input TextFieldLabel__input--light"
+              class="TextFieldWrapper__input TextFieldWrapper__input--light"
               data-test-text-field-input="height"
               maxlength="6"
               type="number"
@@ -251,7 +251,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldLabel__icon TextFieldLabel__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
@@ -485,8 +485,8 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--fullWidth TextFieldLabel--fullWidth--light TextFieldLabel--filled TextFieldLabel--filled--light"
-            data-test-box=""
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            data-test-text-field-wrapper=""
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light ScrubbableInput--disabled ScrubbableInput--disabled--light"
@@ -502,7 +502,7 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
               />
             </div>
             <input
-              class="TextFieldLabel__input TextFieldLabel__input--light"
+              class="TextFieldWrapper__input TextFieldWrapper__input--light"
               data-test-text-field-input="width"
               maxlength="6"
               type="text"
@@ -513,7 +513,7 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldLabel__icon TextFieldLabel__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
@@ -616,8 +616,8 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--fullWidth TextFieldLabel--fullWidth--light TextFieldLabel--filled TextFieldLabel--filled--light"
-            data-test-box=""
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            data-test-text-field-wrapper=""
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light ScrubbableInput--disabled ScrubbableInput--disabled--light"
@@ -633,7 +633,7 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
               />
             </div>
             <input
-              class="TextFieldLabel__input TextFieldLabel__input--light"
+              class="TextFieldWrapper__input TextFieldWrapper__input--light"
               data-test-text-field-input="height"
               maxlength="6"
               type="text"
@@ -644,7 +644,7 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldLabel__icon TextFieldLabel__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"

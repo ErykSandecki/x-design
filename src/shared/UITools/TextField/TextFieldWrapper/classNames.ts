@@ -6,7 +6,7 @@ import { TextFieldVariant } from '../enums';
 // utils
 import { composeClassNames } from 'utils';
 
-export const className = 'TextFieldLabel';
+export const className = 'TextFieldWrapper';
 
 export const classNames = composeClassNames(
   className,

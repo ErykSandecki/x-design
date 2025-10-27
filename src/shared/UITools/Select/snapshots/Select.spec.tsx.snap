@@ -12,11 +12,11 @@ exports[`Select snapshots should render Select 1`] = `
       data-test-tooltip=""
     >
       <div
-        class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--outlined TextFieldLabel--outlined--light"
-        data-test-box=""
+        class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--outlined TextFieldWrapper--outlined--light"
+        data-test-text-field-wrapper=""
       >
         <input
-          class="TextFieldLabel__input TextFieldLabel__input--light"
+          class="TextFieldWrapper__input TextFieldWrapper__input--light"
           data-test-text-field-input=""
           maxlength="6"
           readonly=""
@@ -103,11 +103,11 @@ exports[`Select snapshots should render when mixed 1`] = `
       data-test-tooltip=""
     >
       <div
-        class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--outlined TextFieldLabel--outlined--light"
-        data-test-box=""
+        class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--outlined TextFieldWrapper--outlined--light"
+        data-test-text-field-wrapper=""
       >
         <input
-          class="TextFieldLabel__input TextFieldLabel__input--light"
+          class="TextFieldWrapper__input TextFieldWrapper__input--light"
           data-test-text-field-input=""
           maxlength="6"
           readonly=""
@@ -194,11 +194,11 @@ exports[`Select snapshots should render with no options 1`] = `
       data-test-tooltip=""
     >
       <div
-        class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--outlined TextFieldLabel--outlined--light"
-        data-test-box=""
+        class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--outlined TextFieldWrapper--outlined--light"
+        data-test-text-field-wrapper=""
       >
         <input
-          class="TextFieldLabel__input TextFieldLabel__input--light"
+          class="TextFieldWrapper__input TextFieldWrapper__input--light"
           data-test-text-field-input=""
           maxlength="6"
           readonly=""
@@ -253,11 +253,11 @@ exports[`Select snapshots should render with one option 1`] = `
       data-test-tooltip=""
     >
       <div
-        class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--outlined TextFieldLabel--outlined--light"
-        data-test-box=""
+        class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--outlined TextFieldWrapper--outlined--light"
+        data-test-text-field-wrapper=""
       >
         <input
-          class="TextFieldLabel__input TextFieldLabel__input--light"
+          class="TextFieldWrapper__input TextFieldWrapper__input--light"
           data-test-text-field-input=""
           maxlength="6"
           readonly=""

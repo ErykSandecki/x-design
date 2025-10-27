@@ -397,8 +397,8 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--fullWidth TextFieldLabel--fullWidth--light TextFieldLabel--filled TextFieldLabel--filled--light"
-            data-test-box=""
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            data-test-text-field-wrapper=""
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -414,7 +414,7 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
               />
             </div>
             <input
-              class="TextFieldLabel__input TextFieldLabel__input--light"
+              class="TextFieldWrapper__input TextFieldWrapper__input--light"
               data-test-text-field-input="column"
               maxlength="6"
               type="number"
@@ -425,7 +425,7 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldLabel__icon TextFieldLabel__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
@@ -564,12 +564,12 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
                       Strokes
                     </small>
                     <div
-                      class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--outlined TextFieldLabel--outlined--light"
-                      data-test-box=""
+                      class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--outlined TextFieldWrapper--outlined--light"
+                      data-test-text-field-wrapper=""
                       style="width: 112px;"
                     >
                       <input
-                        class="TextFieldLabel__input TextFieldLabel__input--light"
+                        class="TextFieldWrapper__input TextFieldWrapper__input--light"
                         data-test-text-field-input=""
                         maxlength="6"
                         readonly=""
@@ -728,8 +728,8 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 data-test-tooltip=""
               >
                 <div
-                  class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--filled TextFieldLabel--filled--light"
-                  data-test-box=""
+                  class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+                  data-test-text-field-wrapper=""
                 >
                   <div
                     class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -745,7 +745,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                     />
                   </div>
                   <input
-                    class="TextFieldLabel__input TextFieldLabel__input--light"
+                    class="TextFieldWrapper__input TextFieldWrapper__input--light"
                     data-test-text-field-input="columns"
                     maxlength="6"
                     type="text"
@@ -782,8 +782,8 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 data-test-tooltip=""
               >
                 <div
-                  class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--filled TextFieldLabel--filled--light"
-                  data-test-box=""
+                  class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+                  data-test-text-field-wrapper=""
                 >
                   <div
                     class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -799,7 +799,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                     />
                   </div>
                   <input
-                    class="TextFieldLabel__input TextFieldLabel__input--light"
+                    class="TextFieldWrapper__input TextFieldWrapper__input--light"
                     data-test-text-field-input="rows"
                     maxlength="6"
                     type="text"
@@ -832,8 +832,8 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--fullWidth TextFieldLabel--fullWidth--light TextFieldLabel--filled TextFieldLabel--filled--light"
-            data-test-box=""
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            data-test-text-field-wrapper=""
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -849,7 +849,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
               />
             </div>
             <input
-              class="TextFieldLabel__input TextFieldLabel__input--light"
+              class="TextFieldWrapper__input TextFieldWrapper__input--light"
               data-test-text-field-input="column"
               maxlength="6"
               type="string"
@@ -860,7 +860,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldLabel__icon TextFieldLabel__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
@@ -925,8 +925,8 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--fullWidth TextFieldLabel--fullWidth--light TextFieldLabel--filled TextFieldLabel--filled--light"
-            data-test-box=""
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            data-test-text-field-wrapper=""
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -942,7 +942,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
               />
             </div>
             <input
-              class="TextFieldLabel__input TextFieldLabel__input--light"
+              class="TextFieldWrapper__input TextFieldWrapper__input--light"
               data-test-text-field-input="row"
               maxlength="6"
               type="string"
@@ -953,7 +953,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldLabel__icon TextFieldLabel__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
@@ -1092,12 +1092,12 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                       Strokes
                     </small>
                     <div
-                      class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--outlined TextFieldLabel--outlined--light"
-                      data-test-box=""
+                      class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--outlined TextFieldWrapper--outlined--light"
+                      data-test-text-field-wrapper=""
                       style="width: 112px;"
                     >
                       <input
-                        class="TextFieldLabel__input TextFieldLabel__input--light"
+                        class="TextFieldWrapper__input TextFieldWrapper__input--light"
                         data-test-text-field-input=""
                         maxlength="6"
                         readonly=""
@@ -1258,8 +1258,8 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 data-test-tooltip=""
               >
                 <div
-                  class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--filled TextFieldLabel--filled--light"
-                  data-test-box=""
+                  class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+                  data-test-text-field-wrapper=""
                 >
                   <div
                     class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -1275,7 +1275,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                     />
                   </div>
                   <input
-                    class="TextFieldLabel__input TextFieldLabel__input--light"
+                    class="TextFieldWrapper__input TextFieldWrapper__input--light"
                     data-test-text-field-input="columns"
                     maxlength="6"
                     type="text"
@@ -1312,8 +1312,8 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 data-test-tooltip=""
               >
                 <div
-                  class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--filled TextFieldLabel--filled--light"
-                  data-test-box=""
+                  class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+                  data-test-text-field-wrapper=""
                 >
                   <div
                     class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -1329,7 +1329,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                     />
                   </div>
                   <input
-                    class="TextFieldLabel__input TextFieldLabel__input--light"
+                    class="TextFieldWrapper__input TextFieldWrapper__input--light"
                     data-test-text-field-input="rows"
                     maxlength="6"
                     type="text"
@@ -1362,8 +1362,8 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--fullWidth TextFieldLabel--fullWidth--light TextFieldLabel--filled TextFieldLabel--filled--light"
-            data-test-box=""
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            data-test-text-field-wrapper=""
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -1379,7 +1379,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
               />
             </div>
             <input
-              class="TextFieldLabel__input TextFieldLabel__input--light"
+              class="TextFieldWrapper__input TextFieldWrapper__input--light"
               data-test-text-field-input="column"
               maxlength="6"
               type="number"
@@ -1390,7 +1390,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldLabel__icon TextFieldLabel__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
@@ -1455,8 +1455,8 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--fullWidth TextFieldLabel--fullWidth--light TextFieldLabel--filled TextFieldLabel--filled--light"
-            data-test-box=""
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            data-test-text-field-wrapper=""
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -1472,7 +1472,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
               />
             </div>
             <input
-              class="TextFieldLabel__input TextFieldLabel__input--light"
+              class="TextFieldWrapper__input TextFieldWrapper__input--light"
               data-test-text-field-input="row"
               maxlength="6"
               type="number"
@@ -1483,7 +1483,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldLabel__icon TextFieldLabel__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
@@ -1622,12 +1622,12 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                       Strokes
                     </small>
                     <div
-                      class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--outlined TextFieldLabel--outlined--light"
-                      data-test-box=""
+                      class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--outlined TextFieldWrapper--outlined--light"
+                      data-test-text-field-wrapper=""
                       style="width: 112px;"
                     >
                       <input
-                        class="TextFieldLabel__input TextFieldLabel__input--light"
+                        class="TextFieldWrapper__input TextFieldWrapper__input--light"
                         data-test-text-field-input=""
                         maxlength="6"
                         readonly=""
@@ -2106,8 +2106,8 @@ exports[`ColumnAlignmentLayout snapshots should render when is included option h
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--fullWidth TextFieldLabel--fullWidth--light TextFieldLabel--filled TextFieldLabel--filled--light"
-            data-test-box=""
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            data-test-text-field-wrapper=""
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -2123,7 +2123,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is included option h
               />
             </div>
             <input
-              class="TextFieldLabel__input TextFieldLabel__input--light"
+              class="TextFieldWrapper__input TextFieldWrapper__input--light"
               data-test-text-field-input="row"
               maxlength="6"
               type="number"
@@ -2134,7 +2134,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is included option h
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldLabel__icon TextFieldLabel__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
@@ -2293,12 +2293,12 @@ exports[`ColumnAlignmentLayout snapshots should render when is included option h
                       Strokes
                     </small>
                     <div
-                      class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--outlined TextFieldLabel--outlined--light"
-                      data-test-box=""
+                      class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--outlined TextFieldWrapper--outlined--light"
+                      data-test-text-field-wrapper=""
                       style="width: 112px;"
                     >
                       <input
-                        class="TextFieldLabel__input TextFieldLabel__input--light"
+                        class="TextFieldWrapper__input TextFieldWrapper__input--light"
                         data-test-text-field-input=""
                         maxlength="6"
                         readonly=""
@@ -2777,8 +2777,8 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--fullWidth TextFieldLabel--fullWidth--light TextFieldLabel--filled TextFieldLabel--filled--light"
-            data-test-box=""
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            data-test-text-field-wrapper=""
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -2794,7 +2794,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
               />
             </div>
             <input
-              class="TextFieldLabel__input TextFieldLabel__input--light"
+              class="TextFieldWrapper__input TextFieldWrapper__input--light"
               data-test-text-field-input="row"
               maxlength="6"
               type="number"
@@ -2805,7 +2805,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldLabel__icon TextFieldLabel__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
@@ -2944,12 +2944,12 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
                       Strokes
                     </small>
                     <div
-                      class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--outlined TextFieldLabel--outlined--light"
-                      data-test-box=""
+                      class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--outlined TextFieldWrapper--outlined--light"
+                      data-test-text-field-wrapper=""
                       style="width: 112px;"
                     >
                       <input
-                        class="TextFieldLabel__input TextFieldLabel__input--light"
+                        class="TextFieldWrapper__input TextFieldWrapper__input--light"
                         data-test-text-field-input=""
                         maxlength="6"
                         readonly=""
@@ -3428,8 +3428,8 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--fullWidth TextFieldLabel--fullWidth--light TextFieldLabel--filled TextFieldLabel--filled--light"
-            data-test-box=""
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            data-test-text-field-wrapper=""
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -3445,7 +3445,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
               />
             </div>
             <input
-              class="TextFieldLabel__input TextFieldLabel__input--light"
+              class="TextFieldWrapper__input TextFieldWrapper__input--light"
               data-test-text-field-input="row"
               maxlength="6"
               type="number"
@@ -3456,7 +3456,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldLabel__icon TextFieldLabel__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
@@ -3595,12 +3595,12 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
                       Strokes
                     </small>
                     <div
-                      class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--outlined TextFieldLabel--outlined--light"
-                      data-test-box=""
+                      class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--outlined TextFieldWrapper--outlined--light"
+                      data-test-text-field-wrapper=""
                       style="width: 112px;"
                     >
                       <input
-                        class="TextFieldLabel__input TextFieldLabel__input--light"
+                        class="TextFieldWrapper__input TextFieldWrapper__input--light"
                         data-test-text-field-input=""
                         maxlength="6"
                         readonly=""
@@ -4079,8 +4079,8 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--fullWidth TextFieldLabel--fullWidth--light TextFieldLabel--filled TextFieldLabel--filled--light"
-            data-test-box=""
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            data-test-text-field-wrapper=""
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -4096,7 +4096,7 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
               />
             </div>
             <input
-              class="TextFieldLabel__input TextFieldLabel__input--light"
+              class="TextFieldWrapper__input TextFieldWrapper__input--light"
               data-test-text-field-input="column"
               maxlength="6"
               type="number"
@@ -4107,7 +4107,7 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldLabel__icon TextFieldLabel__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
@@ -4246,12 +4246,12 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
                       Strokes
                     </small>
                     <div
-                      class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--outlined TextFieldLabel--outlined--light"
-                      data-test-box=""
+                      class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--outlined TextFieldWrapper--outlined--light"
+                      data-test-text-field-wrapper=""
                       style="width: 112px;"
                     >
                       <input
-                        class="TextFieldLabel__input TextFieldLabel__input--light"
+                        class="TextFieldWrapper__input TextFieldWrapper__input--light"
                         data-test-text-field-input=""
                         maxlength="6"
                         readonly=""

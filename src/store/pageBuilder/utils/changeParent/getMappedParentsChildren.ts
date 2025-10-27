@@ -5,8 +5,8 @@ import { TElement } from 'types';
 import { TElements, TEvents, TPageBuilderState } from 'store/pageBuilder/types';
 
 // utils
-import { extendChildrenAfterGridChanged } from '../extendChildrenAfterGridChanged';
-import { extendGrid } from '../extendGrid';
+import { extendChildrenAfterGridChanged } from './extendChildrenAfterGridChanged';
+import { extendGrid } from './extendGrid';
 import { getNextParentChildren } from './getNextParentChildren';
 import { getPrevParentChildren } from './getPrevParentChildren';
 

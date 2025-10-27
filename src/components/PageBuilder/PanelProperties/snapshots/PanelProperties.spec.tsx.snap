@@ -103,8 +103,8 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
                   data-test-tooltip=""
                 >
                   <div
-                    class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--filled TextFieldLabel--filled--light"
-                    data-test-box=""
+                    class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+                    data-test-text-field-wrapper=""
                   >
                     <div
                       aria-describedby="test-id"
@@ -132,7 +132,7 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
                       </div>
                     </div>
                     <input
-                      class="TextFieldLabel__input TextFieldLabel__input--light"
+                      class="TextFieldWrapper__input TextFieldWrapper__input--light"
                       data-test-text-field-input="color"
                       maxlength="6"
                       value="f1f2f6"
@@ -145,11 +145,11 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
                   data-test-tooltip=""
                 >
                   <div
-                    class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--filled TextFieldLabel--filled--light"
-                    data-test-box=""
+                    class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+                    data-test-text-field-wrapper=""
                   >
                     <input
-                      class="TextFieldLabel__input TextFieldLabel__input--light"
+                      class="TextFieldWrapper__input TextFieldWrapper__input--light"
                       data-test-text-field-input="alpha"
                       max="100"
                       maxlength="6"
@@ -643,8 +643,8 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                 data-test-tooltip=""
               >
                 <div
-                  class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--fullWidth TextFieldLabel--fullWidth--light TextFieldLabel--filled TextFieldLabel--filled--light"
-                  data-test-box=""
+                  class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+                  data-test-text-field-wrapper=""
                 >
                   <div
                     class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -660,7 +660,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                     </small>
                   </div>
                   <input
-                    class="TextFieldLabel__input TextFieldLabel__input--light"
+                    class="TextFieldWrapper__input TextFieldWrapper__input--light"
                     data-test-text-field-input="x"
                     maxlength="6"
                     type="number"
@@ -690,8 +690,8 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                 data-test-tooltip=""
               >
                 <div
-                  class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--fullWidth TextFieldLabel--fullWidth--light TextFieldLabel--filled TextFieldLabel--filled--light"
-                  data-test-box=""
+                  class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+                  data-test-text-field-wrapper=""
                 >
                   <div
                     class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -707,7 +707,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                     </small>
                   </div>
                   <input
-                    class="TextFieldLabel__input TextFieldLabel__input--light"
+                    class="TextFieldWrapper__input TextFieldWrapper__input--light"
                     data-test-text-field-input="y"
                     maxlength="6"
                     type="number"
@@ -775,8 +775,8 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                 data-test-tooltip=""
               >
                 <div
-                  class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--fullWidth TextFieldLabel--fullWidth--light TextFieldLabel--filled TextFieldLabel--filled--light"
-                  data-test-box=""
+                  class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+                  data-test-text-field-wrapper=""
                 >
                   <div
                     class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -792,7 +792,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                     />
                   </div>
                   <input
-                    class="TextFieldLabel__input TextFieldLabel__input--light"
+                    class="TextFieldWrapper__input TextFieldWrapper__input--light"
                     data-test-text-field-input="angle"
                     maxlength="6"
                     type="text"
@@ -1189,8 +1189,8 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                 data-test-tooltip=""
               >
                 <div
-                  class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--fullWidth TextFieldLabel--fullWidth--light TextFieldLabel--filled TextFieldLabel--filled--light"
-                  data-test-box=""
+                  class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+                  data-test-text-field-wrapper=""
                 >
                   <div
                     class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -1206,7 +1206,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                     </small>
                   </div>
                   <input
-                    class="TextFieldLabel__input TextFieldLabel__input--light"
+                    class="TextFieldWrapper__input TextFieldWrapper__input--light"
                     data-test-text-field-input="width"
                     maxlength="6"
                     type="number"
@@ -1217,7 +1217,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                     data-test-box=""
                   >
                     <div
-                      class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldLabel__icon TextFieldLabel__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                      class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
                       data-test-icon="variant"
                       height="12"
                       name="Variant"
@@ -1378,8 +1378,8 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                 data-test-tooltip=""
               >
                 <div
-                  class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--fullWidth TextFieldLabel--fullWidth--light TextFieldLabel--filled TextFieldLabel--filled--light"
-                  data-test-box=""
+                  class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+                  data-test-text-field-wrapper=""
                 >
                   <div
                     class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -1395,7 +1395,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                     </small>
                   </div>
                   <input
-                    class="TextFieldLabel__input TextFieldLabel__input--light"
+                    class="TextFieldWrapper__input TextFieldWrapper__input--light"
                     data-test-text-field-input="height"
                     maxlength="6"
                     type="number"
@@ -1406,7 +1406,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                     data-test-box=""
                   >
                     <div
-                      class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldLabel__icon TextFieldLabel__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                      class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
                       data-test-icon="variant"
                       height="12"
                       name="Variant"
@@ -1712,8 +1712,8 @@ exports[`PanelProperties snapshots should render with changed width 1`] = `
                   data-test-tooltip=""
                 >
                   <div
-                    class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--filled TextFieldLabel--filled--light"
-                    data-test-box=""
+                    class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+                    data-test-text-field-wrapper=""
                   >
                     <div
                       aria-describedby="test-id"
@@ -1741,7 +1741,7 @@ exports[`PanelProperties snapshots should render with changed width 1`] = `
                       </div>
                     </div>
                     <input
-                      class="TextFieldLabel__input TextFieldLabel__input--light"
+                      class="TextFieldWrapper__input TextFieldWrapper__input--light"
                       data-test-text-field-input="color"
                       maxlength="6"
                       value="f1f2f6"
@@ -1754,11 +1754,11 @@ exports[`PanelProperties snapshots should render with changed width 1`] = `
                   data-test-tooltip=""
                 >
                   <div
-                    class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--filled TextFieldLabel--filled--light"
-                    data-test-box=""
+                    class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+                    data-test-text-field-wrapper=""
                   >
                     <input
-                      class="TextFieldLabel__input TextFieldLabel__input--light"
+                      class="TextFieldWrapper__input TextFieldWrapper__input--light"
                       data-test-text-field-input="alpha"
                       max="100"
                       maxlength="6"

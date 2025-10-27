@@ -50,8 +50,8 @@ exports[`Design snapshots should render Design 1`] = `
               data-test-tooltip=""
             >
               <div
-                class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--filled TextFieldLabel--filled--light"
-                data-test-box=""
+                class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+                data-test-text-field-wrapper=""
               >
                 <div
                   aria-describedby="test-id"
@@ -79,7 +79,7 @@ exports[`Design snapshots should render Design 1`] = `
                   </div>
                 </div>
                 <input
-                  class="TextFieldLabel__input TextFieldLabel__input--light"
+                  class="TextFieldWrapper__input TextFieldWrapper__input--light"
                   data-test-text-field-input="color"
                   maxlength="6"
                   value="f1f2f6"
@@ -92,11 +92,11 @@ exports[`Design snapshots should render Design 1`] = `
               data-test-tooltip=""
             >
               <div
-                class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--filled TextFieldLabel--filled--light"
-                data-test-box=""
+                class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+                data-test-text-field-wrapper=""
               >
                 <input
-                  class="TextFieldLabel__input TextFieldLabel__input--light"
+                  class="TextFieldWrapper__input TextFieldWrapper__input--light"
                   data-test-text-field-input="alpha"
                   max="100"
                   maxlength="6"

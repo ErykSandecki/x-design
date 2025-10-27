@@ -20,8 +20,13 @@ export const useBlurGridEvents = (
 ): TUseBlurGridEvents => {
   const dispatch = useDispatch();
 
+  const exceedRange = (value: string): boolean => {
+    const amount = parseInt(value);
+    return amount <= 0 || amount > 100;
+  };
+
   const handleBlurColumns = (): void => {
-    if (columns === '') {
+    if (columns === '' || exceedRange(columns)) {
       setColumns(element.layout.grid.columns.toString());
     } else {
       dispatch(changeLayoutGrid({ columns: parseInt(columns) }));
@@ -29,7 +34,7 @@ export const useBlurGridEvents = (
   };
 
   const handleBlurRows = (): void => {
-    if (rows === '') {
+    if (rows === '' || exceedRange(rows)) {
       setRows(element.layout.grid.rows.toString());
     } else {
       dispatch(changeLayoutGrid({ rows: parseInt(rows) }));

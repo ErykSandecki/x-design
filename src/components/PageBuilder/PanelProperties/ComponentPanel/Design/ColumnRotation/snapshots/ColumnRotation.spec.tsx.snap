@@ -34,8 +34,8 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--fullWidth TextFieldLabel--fullWidth--light TextFieldLabel--filled TextFieldLabel--filled--light"
-            data-test-box=""
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            data-test-text-field-wrapper=""
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -51,7 +51,7 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
               />
             </div>
             <input
-              class="TextFieldLabel__input TextFieldLabel__input--light"
+              class="TextFieldWrapper__input TextFieldWrapper__input--light"
               data-test-text-field-input="angle"
               maxlength="6"
               type="text"
@@ -213,8 +213,8 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--fullWidth TextFieldLabel--fullWidth--light TextFieldLabel--filled TextFieldLabel--filled--light"
-            data-test-box=""
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            data-test-text-field-wrapper=""
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -230,7 +230,7 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
               />
             </div>
             <input
-              class="TextFieldLabel__input TextFieldLabel__input--light"
+              class="TextFieldWrapper__input TextFieldWrapper__input--light"
               data-test-text-field-input="angle"
               maxlength="6"
               type="text"

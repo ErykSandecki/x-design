@@ -50,12 +50,12 @@ exports[`PopoverAutoLayoutSettings snapshots should render PopoverAutoLayoutSett
         Strokes
       </small>
       <div
-        class="css-1jnxvbp TextFieldLabel TextFieldLabel--light TextFieldLabel--outlined TextFieldLabel--outlined--light"
-        data-test-box=""
+        class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--outlined TextFieldWrapper--outlined--light"
+        data-test-text-field-wrapper=""
         style="width: 112px;"
       >
         <input
-          class="TextFieldLabel__input TextFieldLabel__input--light"
+          class="TextFieldWrapper__input TextFieldWrapper__input--light"
           data-test-text-field-input=""
           maxlength="6"
           readonly=""
