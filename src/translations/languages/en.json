@@ -5,6 +5,7 @@
   "pageBuilder.panelProperties.componentPanel.design.columnAlignment.label": "Alignment",
   "pageBuilder.panelProperties.componentPanel.design.columnAlignmentLayout.label.alignment": "Alignment",
   "pageBuilder.panelProperties.componentPanel.design.columnAlignmentLayout.label.gap": "Gap",
+  "pageBuilder.panelProperties.componentPanel.design.columnAlignmentLayout.label.grid": "Grid",
   "pageBuilder.panelProperties.componentPanel.design.columnAlignmentLayout.popover.autoLayoutSettings.header": "Auto layout settings",
   "pageBuilder.panelProperties.componentPanel.design.columnAlignmentLayout.popover.autoLayoutSettings.label.boxSizing": "Strokes",
   "pageBuilder.panelProperties.componentPanel.design.columnAlignmentLayout.popover.autoLayoutSettings.options.included": "Included",

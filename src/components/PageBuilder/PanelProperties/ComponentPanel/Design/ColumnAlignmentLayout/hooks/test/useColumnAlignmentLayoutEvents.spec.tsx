@@ -50,7 +50,9 @@ describe('useColumnAlignmentLayoutEvents', () => {
     expect(result.current).toStrictEqual({
       alignment: 'none',
       columnGap: '0',
+      columns: '1',
       isFreeForm: true,
+      isGrid: false,
       isMixedBoxSizing: false,
       isMixedColumnGap: false,
       isMixedColumnRow: false,
@@ -62,6 +64,7 @@ describe('useColumnAlignmentLayoutEvents', () => {
       onChangeColumnGap: expect.any(Function),
       onChangeRowGap: expect.any(Function),
       rowGap: '0',
+      rows: '1',
       showColumnGap: false,
       showRowGap: false,
     });

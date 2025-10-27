@@ -113,9 +113,292 @@ const initialState: TPageBuilderState = {
   },
   isLoading: true,
   isPending: false,
+  // @ts-ignore
   pages: {
     [BASE_PAGE.id]: {
       ...BASE_PAGE,
+      // elements: {
+      //   '-1': {
+      //     alignment: {},
+      //     angle: 0,
+      //     aspectRatio: false,
+      //     background: {
+      //       properties: {
+      //         alpha: '100',
+      //         color: '#1e262f',
+      //         format: 'hex',
+      //       },
+      //       visible: true,
+      //     },
+      //     children: [
+      //       {
+      //         id: 'mh90kecu1761562057133',
+      //         type: 'frame',
+      //       },
+      //     ],
+      //     coordinates: {
+      //       x: 0,
+      //       y: 0,
+      //     },
+      //     deepLevel: 0,
+      //     flip: {
+      //       x: false,
+      //       y: false,
+      //     },
+      //     height: {
+      //       value: 0,
+      //     },
+      //     id: '-1',
+      //     layout: {
+      //       alignment: 'none',
+      //       boxSizing: 'excluded',
+      //       gap: {
+      //         column: {
+      //           value: 0,
+      //         },
+      //         row: {
+      //           value: 0,
+      //         },
+      //       },
+      //       grid: {
+      //         columns: 1,
+      //         rows: 1,
+      //       },
+      //       type: 'freeForm',
+      //     },
+      //     parentId: '-1',
+      //     position: 'absolute',
+      //     type: 'base',
+      //     width: {
+      //       value: 0,
+      //     },
+      //   },
+      //   mh90kecu1761562057133: {
+      //     alignment: {},
+      //     angle: 0,
+      //     aspectRatio: false,
+      //     background: {
+      //       properties: {
+      //         alpha: '100',
+      //         color: '#ffffff',
+      //         format: 'hex',
+      //       },
+      //       visible: true,
+      //     },
+      //     children: [
+      //       {
+      //         id: 'mh90kfc11761562058401',
+      //         type: 'frame',
+      //       },
+      //       {
+      //         id: 'mh90kmvn1761562068179',
+      //         type: 'frame',
+      //       },
+      //       {
+      //         id: 'mh90key11761562057897',
+      //         type: 'frame',
+      //       },
+      //       {
+      //         id: 'unknown',
+      //         type: 'grid',
+      //       },
+      //     ],
+      //     coordinates: {
+      //       x: 675,
+      //       y: 449,
+      //     },
+      //     deepLevel: 1,
+      //     flip: {
+      //       x: false,
+      //       y: false,
+      //     },
+      //     height: {
+      //       value: 201,
+      //     },
+      //     id: 'mh90kecu1761562057133',
+      //     layout: {
+      //       alignment: 'topLeft',
+      //       boxSizing: 'excluded',
+      //       gap: {
+      //         column: {
+      //           value: 0,
+      //         },
+      //         row: {
+      //           value: 0,
+      //         },
+      //       },
+      //       grid: {
+      //         columns: 2,
+      //         rows: 2,
+      //       },
+      //       type: 'grid',
+      //     },
+      //     parentId: '-1',
+      //     position: 'absolute',
+      //     type: 'frame',
+      //     width: {
+      //       value: 267,
+      //     },
+      //   },
+      //   mh90key11761562057897: {
+      //     alignment: {},
+      //     angle: 0,
+      //     aspectRatio: false,
+      //     background: {
+      //       properties: {
+      //         alpha: '100',
+      //         color: '#d12323ff',
+      //         format: 'hex',
+      //       },
+      //       visible: true,
+      //     },
+      //     children: [],
+      //     coordinates: {
+      //       x: 0,
+      //       y: 0,
+      //     },
+      //     deepLevel: 2,
+      //     flip: {
+      //       x: false,
+      //       y: false,
+      //     },
+      //     height: {
+      //       value: 'auto',
+      //     },
+      //     id: 'mh90key11761562057897',
+      //     layout: {
+      //       alignment: 'none',
+      //       boxSizing: 'excluded',
+      //       gap: {
+      //         column: {
+      //           value: 0,
+      //         },
+      //         row: {
+      //           value: 0,
+      //         },
+      //       },
+      //       grid: {
+      //         columns: 1,
+      //         rows: 1,
+      //       },
+      //       type: 'freeForm',
+      //     },
+      //     parentId: 'mh90kecu1761562057133',
+      //     position: 'relative',
+      //     type: 'frame',
+      //     width: {
+      //       value: 'auto',
+      //     },
+      //   },
+      //   mh90kfc11761562058401: {
+      //     alignment: {},
+      //     angle: 0,
+      //     aspectRatio: false,
+      //     background: {
+      //       properties: {
+      //         alpha: '100',
+      //         color: '#2ba54aff',
+      //         format: 'hex',
+      //       },
+      //       visible: true,
+      //     },
+      //     children: [],
+      //     coordinates: {
+      //       x: 0,
+      //       y: 0,
+      //     },
+      //     deepLevel: 2,
+      //     flip: {
+      //       x: false,
+      //       y: false,
+      //     },
+      //     height: {
+      //       value: 'auto',
+      //     },
+      //     id: 'mh90kfc11761562058401',
+      //     layout: {
+      //       alignment: 'none',
+      //       boxSizing: 'excluded',
+      //       gap: {
+      //         column: {
+      //           value: 0,
+      //         },
+      //         row: {
+      //           value: 0,
+      //         },
+      //       },
+      //       grid: {
+      //         columns: 1,
+      //         rows: 1,
+      //       },
+      //       type: 'freeForm',
+      //     },
+      //     parentId: 'mh90kecu1761562057133',
+      //     position: 'relative',
+      //     type: 'frame',
+      //     width: {
+      //       value: 'auto',
+      //     },
+      //   },
+      //   mh90kmvn1761562068179: {
+      //     alignment: {},
+      //     angle: 0,
+      //     aspectRatio: false,
+      //     background: {
+      //       properties: {
+      //         alpha: '100',
+      //         color: '#1b2a9dff',
+      //         format: 'hex',
+      //       },
+      //       visible: true,
+      //     },
+      //     children: [],
+      //     coordinates: {
+      //       x: 0,
+      //       y: 0,
+      //     },
+      //     deepLevel: 2,
+      //     flip: {
+      //       x: false,
+      //       y: false,
+      //     },
+      //     height: {
+      //       value: 'auto',
+      //     },
+      //     id: 'mh90kmvn1761562068179',
+      //     layout: {
+      //       alignment: 'none',
+      //       boxSizing: 'excluded',
+      //       gap: {
+      //         column: {
+      //           value: 0,
+      //         },
+      //         row: {
+      //           value: 0,
+      //         },
+      //       },
+      //       grid: {
+      //         columns: 1,
+      //         rows: 1,
+      //       },
+      //       type: 'freeForm',
+      //     },
+      //     parentId: 'mh90kecu1761562057133',
+      //     position: 'relative',
+      //     type: 'frame',
+      //     width: {
+      //       value: 'auto',
+      //     },
+      //   },
+      // },
+      // selectedElements: [
+      //   {
+      //     id: 'mh90kecu1761562057133',
+      //     parentId: '-1',
+      //     position: 'absolute',
+      //     type: 'frame',
+      //   },
+      // ],
     },
   },
 };

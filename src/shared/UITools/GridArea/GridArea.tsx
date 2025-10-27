@@ -2,6 +2,7 @@ import { FC } from 'react';
 
 // components
 import Box from '../../UI/Box/Box';
+import Cells, { TCellsProps } from './Cells/Cells';
 
 // hooks
 import { useTheme } from 'hooks';
@@ -16,12 +17,12 @@ import styles from './grid-area.scss';
 import { E2EAttribute } from 'types';
 import { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute';
 
-export type TGridAreaProps = {
+export type TGridAreaProps = TCellsProps & {
   e2eValue?: TE2EDataAttributeProps['value'];
   fullWidth?: boolean;
 };
 
-export const GridArea: FC<TGridAreaProps> = ({ e2eValue = '', fullWidth = false }) => {
+export const GridArea: FC<TGridAreaProps> = ({ columns, e2eValue = '', fullWidth = false, rows }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   return (
@@ -34,7 +35,9 @@ export const GridArea: FC<TGridAreaProps> = ({ e2eValue = '', fullWidth = false 
       }}
       e2eAttribute={E2EAttribute.gridArea}
       e2eValue={e2eValue}
-    ></Box>
+    >
+      <Cells columns={columns} rows={rows} />
+    </Box>
   );
 };
 

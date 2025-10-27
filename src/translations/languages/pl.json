@@ -5,6 +5,7 @@
   "pageBuilder.panelProperties.componentPanel.design.columnAlignment.label": "Wyrównanie",
   "pageBuilder.panelProperties.componentPanel.design.columnAlignmentLayout.label.alignment": "Wyrównanie",
   "pageBuilder.panelProperties.componentPanel.design.columnAlignmentLayout.label.gap": "Odstęp",
+  "pageBuilder.panelProperties.componentPanel.design.columnAlignmentLayout.label.grid": "Siatka",
   "pageBuilder.panelProperties.componentPanel.design.columnAlignmentLayout.popover.autoLayoutSettings.header": "Ustawienia układu widoku",
   "pageBuilder.panelProperties.componentPanel.design.columnAlignmentLayout.popover.autoLayoutSettings.label.boxSizing": "Obrys",
   "pageBuilder.panelProperties.componentPanel.design.columnAlignmentLayout.popover.autoLayoutSettings.options.included": "Uwzględniony",

@@ -20,7 +20,7 @@ describe('GridArea snapshots', () => {
     // before
     const { asFragment } = customRender(
       <Provider store={store}>
-        <GridArea />
+        <GridArea columns={10} rows={10} />
       </Provider>,
     );
 

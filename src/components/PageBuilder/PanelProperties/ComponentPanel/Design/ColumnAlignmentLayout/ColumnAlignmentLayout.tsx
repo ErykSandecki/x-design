@@ -11,6 +11,7 @@ import { useColumnAlignmentLayoutEvents } from './hooks/useColumnAlignmentLayout
 
 // others
 import { translationNameSpace } from './constants';
+import ColumnAlignmentLayoutAreaInputs from './ColumnAlignmentLayoutAreaInputs';
 
 export type TColumnAlignmentLayoutProps = {
   width: number;
@@ -22,7 +23,9 @@ const ColumnAlignmentLayout: FC<TColumnAlignmentLayoutProps> = ({ width }) => {
   const {
     alignment,
     columnGap,
+    columns,
     isFreeForm,
+    isGrid,
     isMixedBoxSizing,
     isMixedColumnGap,
     isMixedColumnRow,
@@ -34,6 +37,7 @@ const ColumnAlignmentLayout: FC<TColumnAlignmentLayoutProps> = ({ width }) => {
     onChangeColumnGap,
     onChangeRowGap,
     rowGap,
+    rows,
     showColumnGap,
     showRowGap,
   } = useColumnAlignmentLayoutEvents();
@@ -46,10 +50,19 @@ const ColumnAlignmentLayout: FC<TColumnAlignmentLayoutProps> = ({ width }) => {
     <UITools.SectionColumn
       buttonsIcon={ColumnAlignmentLayoutButtonIcons(isMixedBoxSizing, layout, t, width)}
       gridColumnType={UITools.GridColumnType.oneByTwo}
-      labels={[t(`${translationNameSpace}.label.alignment`), t(`${translationNameSpace}.label.gap`)]}
+      labels={[
+        t(`${translationNameSpace}.label.${isGrid ? 'grid' : 'alignment'}`),
+        t(`${translationNameSpace}.label.gap`),
+      ]}
       withMargin
     >
-      <UITools.AlignmentArea e2eValue="alignment-flow" onClick={onChangeAlignment} value={alignment} />
+      <ColumnAlignmentLayoutAreaInputs
+        alignment={alignment}
+        columns={columns}
+        isGrid={isGrid}
+        onChangeAlignment={onChangeAlignment}
+        rows={rows}
+      />
       <ColumnAlignmentLayoutGapInput
         gap="column"
         gapProperties={layout.gap.column}
