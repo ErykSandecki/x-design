@@ -21,11 +21,8 @@ export const getExtraCells = (
   return 0;
 };
 
-export const extendNextParentGrid = (
-  nextParent: TElement,
-  possibleAnchorPosition: TEvents['possibleAnchorPosition'],
-): void => {
-  const { children, id, layout } = nextParent;
+export const extendGrid = (element: TElement, possibleAnchorPosition: TEvents['possibleAnchorPosition']): void => {
+  const { children, id, layout } = element;
   const { grid, type } = layout;
   const { columns, rows } = grid;
 
@@ -45,7 +42,7 @@ export const extendNextParentGrid = (
     const totalColumns = needColumns ? extraColumns : columns;
     const totalRows = needRows ? extraRows : rows;
 
-    nextParent.layout.grid = {
+    element.layout.grid = {
       columns: totalColumns,
       rows: totalRows,
     };

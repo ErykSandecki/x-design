@@ -9,14 +9,18 @@ import { useUpdateStates } from './useUpdateStates';
 // types
 import { AlignmentLayout, LayoutType, TLayout } from 'types';
 import { TUseBlurGapEvents, useBlurGapEvents } from './useBlurGapEvents';
+import { TUseBlurGridEvents, useBlurGridEvents } from './useBlurGridEvents';
 import { TUseChangeAlignmentLayoutEvent, useChangeAlignmentLayoutEvent } from './useChangeAlignmentEvent';
 import { TUseChangeGapEvents, useChangeGapEvents } from './useChangeGapEvents';
+import { TUseChangeGridEvents, useChangeGridEvents } from './useChangeGridEvents';
 
 // utils
 import { isMixed } from '../../utils/isMixed';
 
 export type TUseColumnAlignmentLayoutEvents = TUseBlurGapEvents &
-  TUseChangeGapEvents & {
+  TUseBlurGridEvents &
+  TUseChangeGapEvents &
+  TUseChangeGridEvents & {
     alignment: AlignmentLayout;
     columnGap: string;
     columns: string;
@@ -59,8 +63,10 @@ export const useColumnAlignmentLayoutEvents = (): TUseColumnAlignmentLayoutEvent
   const showColumnGap = type === LayoutType.horizontal || type === LayoutType.grid;
   const showRowGap = type === LayoutType.vertical || type === LayoutType.grid;
   const onBlurGapEvents = useBlurGapEvents(columnGap, element, rowGap, setColumnGap, setRowGap);
-  const onChangeGapEvents = useChangeGapEvents(setColumnGap, setRowGap);
+  const onBlurGridEvents = useBlurGridEvents(columns, element, rows, setColumns, setRows);
   const onChangeAlignment = useChangeAlignmentLayoutEvent(setAlignment);
+  const onChangeGapEvents = useChangeGapEvents(setColumnGap, setRowGap);
+  const onChangeGridEvents = useChangeGridEvents(setColumns, setRows);
 
   useUpdateStates(
     isMixedAlignment,
@@ -79,7 +85,9 @@ export const useColumnAlignmentLayoutEvents = (): TUseColumnAlignmentLayoutEvent
 
   return {
     ...onBlurGapEvents,
+    ...onBlurGridEvents,
     ...onChangeGapEvents,
+    ...onChangeGridEvents,
     alignment,
     columnGap,
     columns,

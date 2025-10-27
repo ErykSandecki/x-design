@@ -5,12 +5,12 @@ import { childrenMock, elementMock, layoutMock } from 'test/mocks/reducer/pageBu
 import { ElementType, LayoutType } from 'types';
 
 // utils
-import { extendNextParentChildrenAfterGridChanged } from '../extendNextParentChildrenAfterGridChanged';
+import { extendChildrenAfterGridChanged } from '../extendChildrenAfterGridChanged';
 
-describe('extendNextParentChildrenAfterGridChanged', () => {
+describe('extendChildrenAfterGridChanged', () => {
   it('should not modify childrens element', () => {
     // before
-    extendNextParentChildrenAfterGridChanged(elementMock);
+    extendChildrenAfterGridChanged(elementMock);
 
     // result
     expect(elementMock.children).toStrictEqual(elementMock.children);
@@ -32,7 +32,7 @@ describe('extendNextParentChildrenAfterGridChanged', () => {
     };
 
     // before
-    extendNextParentChildrenAfterGridChanged(element);
+    extendChildrenAfterGridChanged(element);
 
     // result
     expect(element.children).toStrictEqual([

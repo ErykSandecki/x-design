@@ -6,12 +6,12 @@ import { DropAnchorsPosition } from 'store/pageBuilder/enums';
 import { LayoutType } from 'types';
 
 // utils
-import { extendNextParentGrid } from '../extendNextParentGrid';
+import { extendGrid } from '../extendGrid';
 
-describe('extendNextParentGrid', () => {
+describe('extendGrid', () => {
   it('should not modify grid', () => {
     // before
-    extendNextParentGrid(elementMock, null);
+    extendGrid(elementMock, null);
 
     // result
     expect(elementMock.layout.grid).toStrictEqual(elementMock.layout.grid);
@@ -33,7 +33,7 @@ describe('extendNextParentGrid', () => {
     };
 
     // before
-    extendNextParentGrid(element, null);
+    extendGrid(element, null);
 
     // result
     expect(element.layout.grid).toStrictEqual({ columns: 3, rows: 4 });
@@ -55,7 +55,7 @@ describe('extendNextParentGrid', () => {
     };
 
     // before
-    extendNextParentGrid(element, null);
+    extendGrid(element, null);
 
     // result
     expect(element.layout.grid).toStrictEqual({ columns: 4, rows: 3 });
@@ -77,7 +77,7 @@ describe('extendNextParentGrid', () => {
     };
 
     // before
-    extendNextParentGrid(element, DropAnchorsPosition.bottom);
+    extendGrid(element, DropAnchorsPosition.bottom);
 
     // result
     expect(element.layout.grid).toStrictEqual({ columns: 4, rows: 4 });
@@ -99,7 +99,7 @@ describe('extendNextParentGrid', () => {
     };
 
     // before
-    extendNextParentGrid(element, DropAnchorsPosition.top);
+    extendGrid(element, DropAnchorsPosition.top);
 
     // result
     expect(element.layout.grid).toStrictEqual({ columns: 4, rows: 4 });
@@ -121,7 +121,7 @@ describe('extendNextParentGrid', () => {
     };
 
     // before
-    extendNextParentGrid(element, DropAnchorsPosition.left);
+    extendGrid(element, DropAnchorsPosition.left);
 
     // result
     expect(element.layout.grid).toStrictEqual({ columns: 4, rows: 4 });
@@ -143,7 +143,7 @@ describe('extendNextParentGrid', () => {
     };
 
     // before
-    extendNextParentGrid(element, DropAnchorsPosition.right);
+    extendGrid(element, DropAnchorsPosition.right);
 
     // result
     expect(element.layout.grid).toStrictEqual({ columns: 4, rows: 4 });

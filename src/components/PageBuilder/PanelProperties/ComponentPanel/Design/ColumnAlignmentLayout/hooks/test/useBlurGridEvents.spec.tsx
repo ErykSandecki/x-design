@@ -1,0 +1,60 @@
+import { renderHook } from '@testing-library/react';
+
+// hooks
+import { useBlurGridEvents } from '../useBlurGridEvents';
+
+// mocks
+import { elementMock } from 'test/mocks/reducer/pageBuilderMock';
+
+const mockCallBack = jest.fn();
+
+jest.mock('react-redux', () => ({
+  ...jest.requireActual('react-redux'),
+  useDispatch: (): any => mockCallBack,
+}));
+
+describe('useBlurGridEvents', () => {
+  it(`should trigger blur columns`, () => {
+    // before
+    const { result } = renderHook(() => useBlurGridEvents('0', elementMock, '0', mockCallBack, mockCallBack));
+
+    // action
+    result.current.onBlurColumns();
+
+    // result
+    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({ columns: 0 });
+  });
+
+  it(`should reset value columns`, () => {
+    // before
+    const { result } = renderHook(() => useBlurGridEvents('', elementMock, '0', mockCallBack, mockCallBack));
+
+    // action
+    result.current.onBlurColumns();
+
+    // result
+    expect(mockCallBack.mock.calls[0][0]).toBe('1');
+  });
+
+  it(`should trigger blur rows`, () => {
+    // before
+    const { result } = renderHook(() => useBlurGridEvents('0', elementMock, '0', mockCallBack, mockCallBack));
+
+    // action
+    result.current.onBlurRows();
+
+    // result
+    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({ rows: 0 });
+  });
+
+  it(`should reset value rows`, () => {
+    // before
+    const { result } = renderHook(() => useBlurGridEvents('0', elementMock, '', mockCallBack, mockCallBack));
+
+    // action
+    result.current.onBlurRows();
+
+    // result
+    expect(mockCallBack.mock.calls[0][0]).toBe('1');
+  });
+});

@@ -5,8 +5,8 @@ import { TElement } from 'types';
 import { TElements, TEvents, TPageBuilderState } from 'store/pageBuilder/types';
 
 // utils
-import { extendNextParentChildrenAfterGridChanged } from './extendNextParentChildrenAfterGridChanged';
-import { extendNextParentGrid } from './extendNextParentGrid';
+import { extendChildrenAfterGridChanged } from '../extendChildrenAfterGridChanged';
+import { extendGrid } from '../extendGrid';
 import { getNextParentChildren } from './getNextParentChildren';
 import { getPrevParentChildren } from './getPrevParentChildren';
 
@@ -53,8 +53,8 @@ export const getMappedParentsChildren = (
 
   if (index !== -1) {
     replaceChildrenPosition(draggableElements, nextParent, index, parentHasChanged, possibleAnchorPosition, prevParent);
-    extendNextParentGrid(nextParent, possibleAnchorPosition);
-    extendNextParentChildrenAfterGridChanged(nextParent);
+    extendGrid(nextParent, possibleAnchorPosition);
+    extendChildrenAfterGridChanged(nextParent);
   }
 
   return {
