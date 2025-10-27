@@ -99,6 +99,67 @@ describe('handleChangeLayout', () => {
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
     // before
+    const result = handleChangeLayout(LayoutType.grid, {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            [elementMock.id]: {
+              ...elementMock,
+              children: [{ ...childrenMock, id: 'test-2' }],
+            },
+            ['test-2']: {
+              ...elementMock,
+              id: 'test-2',
+              parentId: elementMock.id,
+            },
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+
+    // result
+    expect(result).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            [elementMock.id]: {
+              ...elementMock,
+              children: [{ ...childrenMock, id: 'test-2' }],
+              layout: {
+                ...layoutMock,
+                alignment: AlignmentLayout.topLeft,
+                type: LayoutType.grid,
+              },
+            },
+            ['test-2']: {
+              ...elementMock,
+              height: { unit: undefined, value: 'auto' },
+              id: 'test-2',
+              parentId: elementMock.id,
+              position: 'relative',
+              width: { unit: undefined, value: 'auto' },
+            },
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+  });
+
+  it(`should return data with changed layout type`, () => {
+    // mock
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+
+    // before
     const result = handleChangeLayout(LayoutType.freeForm, {
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {

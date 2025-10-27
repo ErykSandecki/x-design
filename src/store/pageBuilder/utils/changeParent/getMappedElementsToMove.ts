@@ -2,7 +2,7 @@
 import { BASE_2D } from 'shared';
 
 // types
-import { TElement } from 'types';
+import { LayoutType, TElement } from 'types';
 import { TElements, TEvents, TPageBuilderState } from '../../types';
 
 // utils
@@ -11,10 +11,14 @@ import { extractObjectValues, mapFilteredValues } from 'utils';
 import { getTargetPosition } from './getTargetPosition';
 
 export const getSizes = (
-  element: Pick<TElement, 'height' | 'width'>,
+  element: TElement,
   id: TElement['id'],
+  parent: TElement,
   possibleParent: TElement['parentId'],
 ): Pick<TElement, 'height' | 'width'> => {
+  const { type } = parent.layout;
+  const isGrid = type === LayoutType.grid;
+
   if (possibleParent === '-1') {
     const element = document.getElementById(id);
     const height = parseInt(getComputedStyle(element).height);
@@ -29,8 +33,8 @@ export const getSizes = (
   }
 
   return {
-    height: element.height,
-    width: element.width,
+    height: isGrid ? { ...element.height, unit: undefined, value: 'auto' } : element.height,
+    width: isGrid ? { ...element.width, unit: undefined, value: 'auto' } : element.width,
   };
 };
 
@@ -44,7 +48,7 @@ export const getPartialData = (
 ): Partial<TElement> => {
   const deepLevel = possibleParent !== '-1' ? parent.deepLevel + 1 : 0;
   const targetPosition = getTargetPosition(parent, possibleParent);
-  const sizes = getSizes({ height: element.height, width: element.width }, id, possibleParent);
+  const sizes = getSizes(element, id, parent, possibleParent);
 
   return {
     coordinates: parentHasChanged

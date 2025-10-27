@@ -48,7 +48,9 @@ export const handleChangeLayout = (
             coordinates: allowedAbsolute
               ? calculateCoordinatesAbsoluteToParent(currentPage, element.id, element.parentId)
               : BASE_2D,
+            height: isGrid ? { ...element.height, unit: undefined, value: 'auto' } : element.height,
             position: allowedAbsolute ? 'absolute' : 'relative',
+            width: isGrid ? { ...element.width, unit: undefined, value: 'auto' } : element.width,
           })),
         },
       },

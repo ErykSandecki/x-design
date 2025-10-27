@@ -217,9 +217,11 @@ describe('getMappedElementsToMove', () => {
         ...elementMock,
         children: [],
         deepLevel: elementMock.deepLevel + 1,
+        height: { unit: undefined, value: 'auto' },
         id: 'test-2',
         parentId: elementMock.id,
         position: 'relative',
+        width: { unit: undefined, value: 'auto' },
       },
     });
   });
