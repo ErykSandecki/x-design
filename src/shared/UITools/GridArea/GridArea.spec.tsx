@@ -21,7 +21,7 @@ describe('GridArea snapshots', () => {
     // before
     const { asFragment } = customRender(
       <Provider store={store}>
-        <GridArea columns={1} rows={1} />
+        <GridArea columns="1" rows="1" />
       </Provider>,
     );
 
@@ -36,7 +36,7 @@ describe('GridArea snapshots', () => {
     // before
     const { asFragment } = customRender(
       <Provider store={store}>
-        <GridArea columns={100} rows={100} />
+        <GridArea columns="100" rows="100" />
       </Provider>,
     );
 
@@ -51,7 +51,7 @@ describe('GridArea snapshots', () => {
     // before
     const { asFragment, container } = customRender(
       <Provider store={store}>
-        <GridArea columns={1} rows={1} />
+        <GridArea columns="1" rows="1" />
       </Provider>,
     );
 

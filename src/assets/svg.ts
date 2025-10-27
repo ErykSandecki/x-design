@@ -15,6 +15,7 @@ import { ReactComponent as ChevronLeft } from './svg/chevron-left.svg';
 import { ReactComponent as ChevronRight } from './svg/chevron-right.svg';
 import { ReactComponent as ChevronUp } from './svg/chevron-up.svg';
 import { ReactComponent as Close } from './svg/close.svg';
+import { ReactComponent as Columns } from './svg/columns.svg';
 import { ReactComponent as Comment } from './svg/comment.svg';
 import { ReactComponent as Component } from './svg/component.svg';
 import { ReactComponent as EWResize } from './svg/ew-resize.svg';
@@ -48,6 +49,7 @@ import { ReactComponent as PlusOutlined } from './svg/plus-outlined.svg';
 import { ReactComponent as PositionSwitcher } from './svg/position-switcher.svg';
 import { ReactComponent as Properties } from './svg/properties.svg';
 import { ReactComponent as Protractor } from './svg/protractor.svg';
+import { ReactComponent as Rows } from './svg/rows.svg';
 import { ReactComponent as Sample } from './svg/sample.svg';
 import { ReactComponent as StepBackwardOutlined } from './svg/step-backward-outlined.svg';
 import { ReactComponent as ToggleRotate } from './svg/toggle-rotate.svg';
@@ -72,6 +74,7 @@ export const Icons = {
   ChevronRight,
   ChevronUp,
   Close,
+  Columns,
   Comment,
   Component,
   EWResize,
@@ -105,6 +108,7 @@ export const Icons = {
   PositionSwitcher,
   Properties,
   Protractor,
+  Rows,
   Sample,
   StepBackwardOutlined,
   ToggleRotate,

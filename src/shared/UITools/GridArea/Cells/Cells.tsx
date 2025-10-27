@@ -14,15 +14,20 @@ import { className, classNames } from './classNames';
 import styles from './cells.scss';
 
 // types
-import { E2EAttribute, TGrid } from 'types';
+import { E2EAttribute } from 'types';
 
-export type TCellsProps = TGrid;
+export type TCellsProps = {
+  columns: string;
+  rows: string;
+};
 
 export const Cells: FC<TCellsProps> = ({ columns, rows }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-  const targetColumns = columns > 10 ? 10 : columns;
-  const targetRows = rows > 10 ? 10 : rows;
-  const total = targetColumns * targetRows;
+  const parsedColumns = parseInt(columns) || 0;
+  const parsedRows = parseInt(rows) || 0;
+  const targetColumns = parsedColumns > 10 ? 10 : parsedColumns;
+  const targetRows = parsedRows > 10 ? 10 : parsedRows;
+  const total = parsedColumns * parsedRows;
 
   return (
     <Box

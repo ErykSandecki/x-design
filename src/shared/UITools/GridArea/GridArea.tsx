@@ -44,7 +44,7 @@ export const GridArea: FC<TGridAreaProps> = ({ columns, e2eValue = '', fullWidth
       ref={ref}
     >
       <Cells columns={columns} rows={rows} />
-      <GridAreaPopover ref={ref} selected={selected} setSelected={setSelected} />
+      <GridAreaPopover columns={columns} ref={ref} rows={rows} selected={selected} setSelected={setSelected} />
     </Box>
   );
 };

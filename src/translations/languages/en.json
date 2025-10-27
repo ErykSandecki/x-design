@@ -78,6 +78,8 @@
   "tooltip.flow.vertical": "Vertical",
   "tooltip.gap.column": "Gap between columns",
   "tooltip.gap.row": "Gap between rows",
+  "tooltip.grid.columns": "Number of columns",
+  "tooltip.grid.rows": "Number of rows",
   "tooltip.lookAspectRatio": "Look aspect ratio",
   "tooltip.readyForDevStatus": "Toggle ready for dev status",
   "tooltip.resizeToFit": "Resize to fit",

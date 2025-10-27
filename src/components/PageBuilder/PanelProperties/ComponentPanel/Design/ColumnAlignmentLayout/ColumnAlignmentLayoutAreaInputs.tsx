@@ -24,23 +24,13 @@ const ColumnAlignmentLayoutAreaInputs: FC<TColumnAlignmentLayoutAreaInputsProps>
   isGrid,
   onChangeAlignment,
   rows,
-}) => {
-  const targetColumns = parseInt(columns) || 0;
-  const targetRows = parseInt(rows) || 0;
-
-  return (
-    <>
-      {!isGrid && <UITools.AlignmentArea e2eValue="alignment-flow" onClick={onChangeAlignment} value={alignment} />}
-      {isGrid && (
-        <UITools.GridArea
-          columns={targetColumns}
-          e2eValue="grid-flow"
-          idContainer={PANEL_PROPERTIES_ID}
-          rows={targetRows}
-        />
-      )}
-    </>
-  );
-};
+}) => (
+  <>
+    {!isGrid && <UITools.AlignmentArea e2eValue="alignment-flow" onClick={onChangeAlignment} value={alignment} />}
+    {isGrid && (
+      <UITools.GridArea columns={columns} e2eValue="grid-flow" idContainer={PANEL_PROPERTIES_ID} rows={rows} />
+    )}
+  </>
+);
 
 export default ColumnAlignmentLayoutAreaInputs;

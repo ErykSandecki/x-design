@@ -79,6 +79,8 @@
   "tooltip.flow.vertical": "Pionowy układ",
   "tooltip.gap.column": "Odstęp między kolumnami",
   "tooltip.gap.row": "Przerwa między wierszami",
+  "tooltip.grid.columns": "Liczba kolumn",
+  "tooltip.grid.rows": "Liczba wierszy",
   "tooltip.lookAspectRatio": "Współczynnik proporcji",
   "tooltip.readyForDevStatus": "Przełącz gotowość dla statusu dewelopera",
   "tooltip.resizeToFit": "Dopasuj do rozmiaru",
