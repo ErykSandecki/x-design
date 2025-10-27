@@ -1,7 +1,5 @@
 import { useEffect } from 'react';
 
-// types
-
 // utils
 import { handleUpdateMousePosition } from '../utils/handleUpdateMousePosition';
 import { getRevertValue } from '../utils/getRevertValue';

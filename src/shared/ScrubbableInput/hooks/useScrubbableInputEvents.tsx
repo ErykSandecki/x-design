@@ -5,8 +5,6 @@ import { useMouseDownEvent } from './useMouseDownEvent';
 import { useMouseMoveEvent } from './useMouseMoveEvent';
 import { useMouseUpEvent } from './useMouseUpEvent';
 
-// types
-
 export type TUseScrubbableInputEvents = {
   mousePosition: T2DCoordinates;
   onMouseDown: TFunc<[React.MouseEvent<HTMLElement, MouseEvent>]>;

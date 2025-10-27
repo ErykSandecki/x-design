@@ -102,6 +102,6 @@ describe('GridInputs behaviors', () => {
 
     // result
     expect(mockCallBack.mock.calls[0][0]).toBe('100');
-    expect(mockCallBack.mock.calls[1][0]).toBe('100');
+    expect(mockCallBack.mock.calls[2][0]).toBe('100');
   });
 });

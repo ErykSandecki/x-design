@@ -43,7 +43,8 @@ export const GridInputCells: FC<TGridInputsProps> = ({ name, onBlur, onChange, v
           e2eValue={targetName}
           max={100}
           min={1}
-          onChange={(value) => onChange(value.toString(), true)}
+          onChange={(value) => onChange(value.toString())}
+          onMouseUp={onBlur}
           value={parseInt(value)}
         >
           <Icon height={12} name={name} width={12} />

@@ -19,7 +19,6 @@ export const useBlurGridEvents = (
   setRows: TFunc<[string]>,
 ): TUseBlurGridEvents => {
   const dispatch = useDispatch();
-
   const exceedRange = (value: string): boolean => {
     const amount = parseInt(value);
     return amount <= 0 || amount > 100;

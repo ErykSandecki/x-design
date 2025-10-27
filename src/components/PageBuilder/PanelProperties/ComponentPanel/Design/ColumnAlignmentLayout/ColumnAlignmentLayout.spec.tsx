@@ -25,7 +25,7 @@ import { PopoverItem } from './enums';
 
 // utils
 import { createHtmlElement } from 'utils';
-import { customRender, getByE2EAttribute } from 'test';
+import { customRender, getByE2EAttribute, sleep } from 'test';
 
 const dropdownContainer = createHtmlElement('div', { id: HTMLContainerId.dropdown });
 const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
@@ -905,5 +905,146 @@ describe('ColumnAlignmentLayout behaviors', () => {
     // result
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].layout.boxSizing).toBe('included');
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-2'].layout.boxSizing).toBe('included');
+  });
+
+  it('should change columns & rows when enter value on inputs', () => {
+    // mock
+    const store = configureStore({
+      ...stateMock,
+      [PAGE_BUILDER]: {
+        ...stateMock[PAGE_BUILDER],
+        pages: {
+          ['0']: {
+            ...stateMock[PAGE_BUILDER].pages['0'],
+            elements: {
+              ...stateMock[PAGE_BUILDER].pages['0'].elements,
+              ['test-1']: {
+                ...elementMock,
+                id: 'test-1',
+                layout: {
+                  ...layoutMock,
+                  alignment: AlignmentLayout.topLeft,
+                  type: LayoutType.grid,
+                },
+              },
+            },
+            selectedElements: [...stateMock[PAGE_BUILDER].pages['0'].selectedElements],
+          },
+        },
+      },
+    });
+
+    // before
+    const { container } = customRender(
+      <Provider store={store}>
+        <ColumnAlignmentLayout width={0} />
+      </Provider>,
+    );
+
+    // find
+    const area = getByE2EAttribute(container, E2EAttribute.gridArea, 'grid-flow');
+
+    // action
+    fireEvent.click(area);
+
+    // find
+    const inputColumns = getByE2EAttribute(area, E2EAttribute.textFieldInput, 'columns');
+    const inputRows = getByE2EAttribute(area, E2EAttribute.textFieldInput, 'rows');
+
+    // action
+    fireEvent.click(inputColumns);
+    fireEvent.change(inputColumns, { target: { value: '100' } });
+    fireEvent.keyDown(inputColumns, { key: KeyboardKeys.enter });
+    fireEvent.blur(inputColumns);
+    fireEvent.click(inputRows);
+    fireEvent.change(inputRows, { target: { value: '100' } });
+    fireEvent.keyDown(inputRows, { key: KeyboardKeys.enter });
+    fireEvent.blur(inputRows);
+
+    // result
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].layout.grid).toStrictEqual({
+      columns: 100,
+      rows: 100,
+    });
+  });
+
+  it('should change columns & rows when triger ScrubbableInput', async () => {
+    // mock
+    const store = configureStore({
+      ...stateMock,
+      [PAGE_BUILDER]: {
+        ...stateMock[PAGE_BUILDER],
+        pages: {
+          ['0']: {
+            ...stateMock[PAGE_BUILDER].pages['0'],
+            elements: {
+              ...stateMock[PAGE_BUILDER].pages['0'].elements,
+              ['test-1']: {
+                ...elementMock,
+                id: 'test-1',
+                layout: {
+                  ...layoutMock,
+                  alignment: AlignmentLayout.topLeft,
+                  type: LayoutType.grid,
+                },
+              },
+            },
+            selectedElements: [...stateMock[PAGE_BUILDER].pages['0'].selectedElements],
+          },
+        },
+      },
+    });
+
+    // mock
+    const mouseMoveEvent = new MouseEvent('mousemove', {
+      bubbles: true,
+      cancelable: true,
+      shiftKey: false,
+      view: window,
+    });
+    Object.defineProperty(mouseMoveEvent, 'movementX', { value: 200 });
+
+    // before
+    const { container } = customRender(
+      <Provider store={store}>
+        <ColumnAlignmentLayout width={0} />
+      </Provider>,
+    );
+
+    // find
+    const area = getByE2EAttribute(container, E2EAttribute.gridArea, 'grid-flow');
+
+    // action
+    fireEvent.click(area);
+
+    // find
+    const scrubbableInputColumns = getByE2EAttribute(area, E2EAttribute.scrubbableInput, 'columns');
+    const scrubbableInputRows = getByE2EAttribute(area, E2EAttribute.scrubbableInput, 'rows');
+
+    // action { columns }
+    fireEvent.mouseDown(scrubbableInputColumns, { clientX: 0, clientY: 0 });
+    window.dispatchEvent(mouseMoveEvent);
+
+    // wait { it's a problem with mouse up & state is not refreshed }
+    await sleep(100);
+
+    // action
+    fireEvent.mouseUp(scrubbableInputColumns);
+
+    // action { rows }
+    fireEvent.mouseDown(scrubbableInputRows, { clientX: 0, clientY: 0 });
+    window.dispatchEvent(mouseMoveEvent);
+
+    // wait { it's a problem with mouse up & state is not refreshed }
+    await sleep(100);
+
+    // action
+    fireEvent.mouseUp(scrubbableInputRows);
+
+    // result
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].layout.grid).toStrictEqual({
+      columns: 100,
+      rows: 100,
+    });
   });
 });

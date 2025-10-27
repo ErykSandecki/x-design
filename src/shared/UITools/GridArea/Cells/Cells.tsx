@@ -27,7 +27,7 @@ export const Cells: FC<TCellsProps> = ({ columns, rows }) => {
   const parsedRows = parseInt(rows) || 0;
   const targetColumns = parsedColumns > 10 ? 10 : parsedColumns;
   const targetRows = parsedRows > 10 ? 10 : parsedRows;
-  const total = parsedColumns * parsedRows;
+  const total = targetColumns * targetRows;
 
   return (
     <Box
