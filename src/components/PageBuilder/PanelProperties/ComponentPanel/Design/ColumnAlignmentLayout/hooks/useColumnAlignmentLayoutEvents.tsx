@@ -1,9 +1,10 @@
 import { first, size } from 'lodash';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useSelector } from 'react-redux';
 
 // store
 import { elementDataSelectorCreator, elementsSelector, selectedElementsSelector } from 'store/pageBuilder/selectors';
+import { useUpdateStates } from './useUpdateStates';
 
 // types
 import { AlignmentLayout, LayoutType, TLayout } from 'types';
@@ -23,8 +24,8 @@ export type TUseColumnAlignmentLayoutEvents = TUseBlurGapEvents &
     isGrid: boolean;
     isMixedBoxSizing: boolean;
     isMixedColumnGap: boolean;
-    isMixedLayout: boolean;
     isMixedColumnRow: boolean;
+    isMixedLayout: boolean;
     layout: TLayout;
     onChangeAlignment: TUseChangeAlignmentLayoutEvent;
     rowGap: string;
@@ -59,24 +60,22 @@ export const useColumnAlignmentLayoutEvents = (): TUseColumnAlignmentLayoutEvent
   const showRowGap = type === LayoutType.vertical || type === LayoutType.grid;
   const onBlurGapEvents = useBlurGapEvents(columnGap, element, rowGap, setColumnGap, setRowGap);
   const onChangeGapEvents = useChangeGapEvents(setColumnGap, setRowGap);
+  const onChangeAlignment = useChangeAlignmentLayoutEvent(setAlignment);
 
-  useEffect(() => {
-    setAlignment(isMixedAlignment ? AlignmentLayout.none : layout.alignment);
-  }, [layout.alignment, isMultiple]);
-
-  useEffect(() => {
-    const { column, row } = element.layout.gap;
-
-    setColumnGap(isMixedColumnGap ? 'Mixed' : column.value.toString());
-    setRowGap(isMixedColumnRow ? 'Mixed' : row.value.toString());
-  }, [layout.gap.column, layout.gap.row, isMultiple]);
-
-  useEffect(() => {
-    const { columns, rows } = element.layout.grid;
-
-    setColumns(isMixedColumns ? 'Mixed' : columns.toString());
-    setRows(isMixedRows ? 'Mixed' : rows.toString());
-  }, [layout.grid.columns, layout.grid.rows, isMultiple]);
+  useUpdateStates(
+    isMixedAlignment,
+    isMixedColumnGap,
+    isMixedColumnRow,
+    isMixedColumns,
+    isMixedRows,
+    isMultiple,
+    layout,
+    setAlignment,
+    setColumnGap,
+    setColumns,
+    setRowGap,
+    setRows,
+  );
 
   return {
     ...onBlurGapEvents,
@@ -91,7 +90,7 @@ export const useColumnAlignmentLayoutEvents = (): TUseColumnAlignmentLayoutEvent
     isMixedColumnRow,
     isMixedLayout,
     layout,
-    onChangeAlignment: useChangeAlignmentLayoutEvent(setAlignment),
+    onChangeAlignment,
     rowGap,
     rows,
     showColumnGap,

@@ -20,7 +20,22 @@ describe('GridArea snapshots', () => {
     // before
     const { asFragment } = customRender(
       <Provider store={store}>
-        <GridArea columns={10} rows={10} />
+        <GridArea columns={1} rows={1} />
+      </Provider>,
+    );
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('should render when exceed 10x10', () => {
+    // mock
+    const store = configureStore();
+
+    // before
+    const { asFragment } = customRender(
+      <Provider store={store}>
+        <GridArea columns={100} rows={100} />
       </Provider>,
     );
 
