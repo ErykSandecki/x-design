@@ -32,10 +32,14 @@ const ColumnAlignmentLayout: FC<TColumnAlignmentLayoutProps> = ({ width }) => {
     isMixedLayout,
     layout,
     onBlurColumnGap,
+    onBlurColumns,
     onBlurRowGap,
+    onBlurRows,
     onChangeAlignment,
     onChangeColumnGap,
+    onChangeColumns,
     onChangeRowGap,
+    onChangeRows,
     rowGap,
     rows,
     showColumnGap,
@@ -60,7 +64,11 @@ const ColumnAlignmentLayout: FC<TColumnAlignmentLayoutProps> = ({ width }) => {
         alignment={alignment}
         columns={columns}
         isGrid={isGrid}
+        onBlurColumns={onBlurColumns}
+        onBlurRows={onBlurRows}
         onChangeAlignment={onChangeAlignment}
+        onChangeColumns={onChangeColumns}
+        onChangeRows={onChangeRows}
         rows={rows}
       />
       <ColumnAlignmentLayoutGapInput

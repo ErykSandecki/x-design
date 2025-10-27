@@ -1,4 +1,5 @@
 import { fireEvent } from '@testing-library/react';
+import { noop } from 'lodash';
 import { Provider } from 'react-redux';
 
 // components
@@ -21,7 +22,14 @@ describe('GridArea snapshots', () => {
     // before
     const { asFragment } = customRender(
       <Provider store={store}>
-        <GridArea columns="1" rows="1" />
+        <GridArea
+          columns="1"
+          onBlurColumns={noop}
+          onBlurRows={noop}
+          onChangeColumns={noop}
+          onChangeRows={noop}
+          rows="1"
+        />
       </Provider>,
     );
 
@@ -36,7 +44,14 @@ describe('GridArea snapshots', () => {
     // before
     const { asFragment } = customRender(
       <Provider store={store}>
-        <GridArea columns="100" rows="100" />
+        <GridArea
+          columns="100"
+          onBlurColumns={noop}
+          onBlurRows={noop}
+          onChangeColumns={noop}
+          onChangeRows={noop}
+          rows="100"
+        />
       </Provider>,
     );
 
@@ -51,7 +66,14 @@ describe('GridArea snapshots', () => {
     // before
     const { asFragment, container } = customRender(
       <Provider store={store}>
-        <GridArea columns="1" rows="1" />
+        <GridArea
+          columns="1"
+          onBlurColumns={noop}
+          onBlurRows={noop}
+          onChangeColumns={noop}
+          onChangeRows={noop}
+          rows="1"
+        />
       </Provider>,
     );
 

@@ -732,16 +732,23 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                   data-test-box=""
                 >
                   <div
-                    class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-                    data-test-icon="columns"
-                    height="16"
-                    name="Columns"
-                    width="16"
-                  />
+                    class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+                    data-test-box=""
+                    data-test-scrubbable-input="columns"
+                  >
+                    <div
+                      class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      data-test-icon="columns"
+                      height="12"
+                      name="Columns"
+                      width="12"
+                    />
+                  </div>
                   <input
                     class="TextFieldLabel__input TextFieldLabel__input--light"
                     data-test-text-field-input="columns"
                     maxlength="6"
+                    type="text"
                     value="1"
                   />
                 </div>
@@ -779,16 +786,23 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                   data-test-box=""
                 >
                   <div
-                    class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-                    data-test-icon="rows"
-                    height="16"
-                    name="Rows"
-                    width="16"
-                  />
+                    class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+                    data-test-box=""
+                    data-test-scrubbable-input="rows"
+                  >
+                    <div
+                      class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      data-test-icon="rows"
+                      height="12"
+                      name="Rows"
+                      width="12"
+                    />
+                  </div>
                   <input
                     class="TextFieldLabel__input TextFieldLabel__input--light"
                     data-test-text-field-input="rows"
                     maxlength="6"
+                    type="text"
                     value="1"
                   />
                 </div>
@@ -1248,16 +1262,23 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                   data-test-box=""
                 >
                   <div
-                    class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-                    data-test-icon="columns"
-                    height="16"
-                    name="Columns"
-                    width="16"
-                  />
+                    class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+                    data-test-box=""
+                    data-test-scrubbable-input="columns"
+                  >
+                    <div
+                      class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      data-test-icon="columns"
+                      height="12"
+                      name="Columns"
+                      width="12"
+                    />
+                  </div>
                   <input
                     class="TextFieldLabel__input TextFieldLabel__input--light"
                     data-test-text-field-input="columns"
                     maxlength="6"
+                    type="text"
                     value="1"
                   />
                 </div>
@@ -1295,16 +1316,23 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                   data-test-box=""
                 >
                   <div
-                    class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-                    data-test-icon="rows"
-                    height="16"
-                    name="Rows"
-                    width="16"
-                  />
+                    class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+                    data-test-box=""
+                    data-test-scrubbable-input="rows"
+                  >
+                    <div
+                      class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      data-test-icon="rows"
+                      height="12"
+                      name="Rows"
+                      width="12"
+                    />
+                  </div>
                   <input
                     class="TextFieldLabel__input TextFieldLabel__input--light"
                     data-test-text-field-input="rows"
                     maxlength="6"
+                    type="text"
                     value="1"
                   />
                 </div>

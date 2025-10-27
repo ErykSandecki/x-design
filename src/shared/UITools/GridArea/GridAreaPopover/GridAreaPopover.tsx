@@ -1,21 +1,22 @@
 import { FC, RefObject } from 'react';
 
 // components
-import GridInputs from './GridInputs/GridInputs';
+import GridInputs, { TGridInputsProps } from './GridInputs/GridInputs';
 import Popover, { PopoverCompound, TPopoverProps } from '../../Popover/Popover';
 
 // types
 import { AlignPopoverHorizontally, AlignPopoverVertically } from '../../Popover/enums';
 
-export type TGridAreaPopoverProps = Pick<TPopoverProps, 'id'> & {
-  columns: string;
-  ref: RefObject<HTMLDivElement>;
-  rows: string;
-  selected: boolean;
-  setSelected: TFunc<[boolean]>;
-};
+export type TGridAreaPopoverProps = Pick<TPopoverProps, 'id'> &
+  Pick<TGridInputsProps, 'onBlurColumns' | 'onBlurRows' | 'onChangeColumns' | 'onChangeRows'> & {
+    columns: string;
+    ref: RefObject<HTMLDivElement>;
+    rows: string;
+    selected: boolean;
+    setSelected: TFunc<[boolean]>;
+  };
 
-export const GridAreaPopover: FC<TGridAreaPopoverProps> = ({ columns, id, ref, rows, selected, setSelected }) => (
+export const GridAreaPopover: FC<TGridAreaPopoverProps> = ({ id, ref, selected, setSelected, ...restProps }) => (
   <Popover
     alignHorizontally={AlignPopoverHorizontally.left}
     alignVertically={AlignPopoverVertically.top}
@@ -28,7 +29,7 @@ export const GridAreaPopover: FC<TGridAreaPopoverProps> = ({ columns, id, ref, r
     style={{ height: '180px', width: '210px' }}
   >
     <PopoverCompound.PopoverRoot selected={selected} setSelected={setSelected}>
-      <GridInputs columns={columns} rows={rows} />
+      <GridInputs {...restProps} />
     </PopoverCompound.PopoverRoot>
   </Popover>
 );

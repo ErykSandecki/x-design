@@ -19,10 +19,21 @@ import { E2EAttribute } from 'types';
 
 export type TGridInputsProps = {
   columns: string;
+  onBlurColumns: TFunc;
+  onBlurRows: TFunc;
+  onChangeColumns: TFunc<[string, boolean?]>;
+  onChangeRows: TFunc<[string, boolean?]>;
   rows: string;
 };
 
-export const GridInputs: FC<TGridInputsProps> = ({ columns, rows }) => {
+export const GridInputs: FC<TGridInputsProps> = ({
+  columns,
+  onBlurColumns,
+  onBlurRows,
+  onChangeColumns,
+  onChangeRows,
+  rows,
+}) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   return (
@@ -32,9 +43,9 @@ export const GridInputs: FC<TGridInputsProps> = ({ columns, rows }) => {
       }}
       e2eAttribute={E2EAttribute.gridInputs}
     >
-      <GridInputCells name="Columns" value={columns} />
+      <GridInputCells onBlur={onBlurColumns} onChange={onChangeColumns} name="Columns" value={columns} />
       <Small classes={{ className: cx(classNamesWithTheme.separator) }}>x</Small>
-      <GridInputCells name="Rows" value={rows} />
+      <GridInputCells onBlur={onBlurRows} onChange={onChangeRows} name="Rows" value={rows} />
     </Box>
   );
 };
