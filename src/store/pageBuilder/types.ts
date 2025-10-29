@@ -9,7 +9,7 @@ import {
   CHANGE_LAYOUT_ALIGNMENT,
   CHANGE_LAYOUT_BOX_SIZING,
   CHANGE_LAYOUT_GRID,
-  CHANGE_PADDING,
+  CHANGE_INSETS,
   CHANGE_PARENT,
   CHANGE_POSITION,
   CLEAR_PREV_STATE,
@@ -49,7 +49,7 @@ import {
   TGapProperties,
   TGrid,
   TObject,
-  TPadding,
+  TInsets,
   TScore,
   TSize,
 } from 'types';
@@ -157,6 +157,16 @@ export type TChangeBackgroundAction = {
   type: typeof CHANGE_BACKGROUND;
 };
 
+export type TChangeInsetsActionPayload = {
+  insets: Partial<TInsets>;
+  name: keyof Pick<TElement, 'padding'>;
+};
+
+export type TChangeInsetsAction = {
+  payload: TChangeInsetsActionPayload;
+  type: typeof CHANGE_INSETS;
+};
+
 export type TChangeLayoutAction = {
   payload: TElement['layout']['type'];
   type: typeof CHANGE_LAYOUT;
@@ -175,11 +185,6 @@ export type TChangeLayoutBoxSizingAction = {
 export type TChangeLayoutGridAction = {
   payload: Partial<TGrid>;
   type: typeof CHANGE_LAYOUT_GRID;
-};
-
-export type TChangePaddingAction = {
-  payload: Partial<TPadding>;
-  type: typeof CHANGE_PADDING;
 };
 
 export type TChangeParentAction = {

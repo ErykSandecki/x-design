@@ -31,7 +31,7 @@ import {
   APPLY_ELEMENTS_GAP_TYPE,
   CHANGE_LAYOUT_BOX_SIZING,
   CHANGE_LAYOUT_GRID,
-  CHANGE_PADDING,
+  CHANGE_INSETS,
 } from './actionsType';
 import { BASE_PAGE } from './constants';
 
@@ -63,7 +63,7 @@ import {
   TApplyElementsGapTypeAction,
   TChangeLayoutBoxSizingAction,
   TChangeLayoutGridAction,
-  TChangePaddingAction,
+  TChangeInsetsAction,
 } from './types';
 
 // utils
@@ -72,11 +72,11 @@ import { handleAddElement } from './utils/handleAddElement';
 import { handleApplyElementsSizeType } from './utils/applyElementsSizeType/handleApplyElementsSizeType';
 import { handleChangeAlignment } from './utils/changeAligment/handleChangeAlignment';
 import { handleChangeBackground } from './utils/handleChangeBackground';
+import { handleChangeInsets } from './utils/handleChangeInsets';
 import { handleChangeLayout } from './utils/changeLayout/handleChangeLayout';
 import { handleChangeLayoutAlignment } from './utils/handleChangeLayoutAlignment';
 import { handleChangeLayoutBoxSizing } from './utils/handleChangeLayoutBoxSizing';
 import { handleChangeLayoutGrid } from './utils/changeLayoutGrid/handleChangeLayoutGrid';
-import { handleChangePadding } from './utils/handleChangePadding';
 import { handleChangeParent } from './utils/changeParent/handleChangeParent';
 import { handleChangePosition } from './utils/handleChangePosition';
 import { handleFitLayout } from './utils/handleFitLayout';
@@ -697,6 +697,11 @@ const changeBackground = (
   { payload }: TAction<TChangeBackgroundAction['payload']>,
 ): TPageBuilderState => handleChangeBackground(payload, state);
 
+const changeInsets = (
+  state: TPageBuilderState,
+  { payload }: TAction<TChangeInsetsAction['payload']>,
+): TPageBuilderState => handleChangeInsets(payload, state);
+
 const changeLayout = (
   state: TPageBuilderState,
   { payload }: TAction<TChangeLayoutAction['payload']>,
@@ -716,11 +721,6 @@ const changeLayoutGrid = (
   state: TPageBuilderState,
   { payload }: TAction<TChangeLayoutGridAction['payload']>,
 ): TPageBuilderState => handleChangeLayoutGrid(payload, state);
-
-const changePadding = (
-  state: TPageBuilderState,
-  { payload }: TAction<TChangePaddingAction['payload']>,
-): TPageBuilderState => handleChangePadding(payload, state);
 
 const changeParent = (state: TPageBuilderState): TPageBuilderState => handleChangeParent(state);
 
@@ -886,6 +886,8 @@ const pageBuilder = (state: TPageBuilderState = initialState, action: TAction): 
       return changeAlignment(state, action);
     case CHANGE_BACKGROUND:
       return changeBackground(state, action);
+    case CHANGE_INSETS:
+      return changeInsets(state, action);
     case CHANGE_LAYOUT:
       return changeLayout(state, action);
     case CHANGE_LAYOUT_ALIGNMENT:
@@ -894,8 +896,6 @@ const pageBuilder = (state: TPageBuilderState = initialState, action: TAction): 
       return changeLayoutBoxSizing(state, action);
     case CHANGE_LAYOUT_GRID:
       return changeLayoutGrid(state, action);
-    case CHANGE_PADDING:
-      return changePadding(state, action);
     case CHANGE_PARENT:
       return changeParent(state);
     case CHANGE_POSITION:

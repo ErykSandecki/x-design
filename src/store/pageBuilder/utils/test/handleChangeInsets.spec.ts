@@ -10,16 +10,16 @@ import {
 import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
 
 // utils
-import { handleChangePadding } from '../handleChangePadding';
+import { handleChangeInsets } from '../handleChangeInsets';
 
-describe('handleChangePadding', () => {
-  it(`should return data with changed padding`, () => {
+describe('handleChangeInsets', () => {
+  it(`should return data with changed paddings`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
     // before
-    const result = handleChangePadding(
-      { b: 1, l: 1, r: 1, t: 1 },
+    const result = handleChangeInsets(
+      { insets: { b: 1, l: 1, r: 1, t: 1 }, name: 'padding' },
       {
         ...pageBuilderStateMock[PAGE_BUILDER],
         pages: {

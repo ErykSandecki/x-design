@@ -50,7 +50,7 @@ export type TLayout = {
   type: LayoutType;
 };
 
-export type TPadding = {
+export type TInsets = {
   b: number;
   l: number;
   r: number;
@@ -79,7 +79,7 @@ export type TElement = {
   height: TSize;
   id: string;
   layout: TLayout;
-  padding: TPadding;
+  padding: TInsets;
   parentId: TElement['id'] | '-1';
   position: CSSProperties['position'];
   type: ElementType;

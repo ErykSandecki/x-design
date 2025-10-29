@@ -27,11 +27,11 @@ import {
   applyElementsSizeType,
   changeAlignment,
   changeBackground,
+  changeInsets,
   changeLayout,
   changeLayoutAlignment,
   changeLayoutBoxSizing,
   changeLayoutGrid,
-  changePadding,
   changeParent,
   changePosition,
   clearPrevState,
@@ -688,13 +688,13 @@ describe('PageBuilderReducer', () => {
     });
   });
 
-  it('should handle CHANGE_PADDING', () => {
+  it('should handle CHANGE_INSSETS', () => {
     // mock
-    const padding = { b: 1, l: 1, r: 1, t: 1 };
+    const insets = { b: 1, l: 1, r: 1, t: 1 };
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
     // before
-    const state = reducer(changePadding(padding), {
+    const state = reducer(changeInsets(insets, 'padding'), {
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,

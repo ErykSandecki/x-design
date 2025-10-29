@@ -9,7 +9,7 @@ import {
   CHANGE_LAYOUT_ALIGNMENT,
   CHANGE_LAYOUT_BOX_SIZING,
   CHANGE_LAYOUT_GRID,
-  CHANGE_PADDING,
+  CHANGE_INSETS,
   CHANGE_PARENT,
   CHANGE_POSITION,
   CLEAR_PREV_STATE,
@@ -49,7 +49,7 @@ import {
   TChangeLayoutAlignmentAction,
   TChangeLayoutBoxSizingAction,
   TChangeLayoutGridAction,
-  TChangePaddingAction,
+  TChangeInsetsAction,
   TChangeParentAction,
   TChangePositionAction,
   TClearPrevStateAction,
@@ -78,6 +78,7 @@ import {
   TUnselectElementAction,
   TUpdateEventsStatusAction,
   TUpdatePrevStateAction,
+  TChangeInsetsActionPayload,
 } from './types';
 import { TElement } from 'types';
 
@@ -115,6 +116,14 @@ export const changeBackground = (
   type: CHANGE_BACKGROUND,
 });
 
+export const changeInsets = (
+  insets: TChangeInsetsActionPayload['insets'],
+  name: TChangeInsetsActionPayload['name'],
+): TChangeInsetsAction => ({
+  payload: { insets, name },
+  type: CHANGE_INSETS,
+});
+
 export const changeLayout = (layoutType: TChangeLayoutAction['payload']): TChangeLayoutAction => ({
   payload: layoutType,
   type: CHANGE_LAYOUT,
@@ -137,11 +146,6 @@ export const changeLayoutBoxSizing = (
 export const changeLayoutGrid = (grid: TChangeLayoutGridAction['payload']): TChangeLayoutGridAction => ({
   payload: grid,
   type: CHANGE_LAYOUT_GRID,
-});
-
-export const changePadding = (padding: TChangePaddingAction['payload']): TChangePaddingAction => ({
-  payload: padding,
-  type: CHANGE_PADDING,
 });
 
 export const changeParent = (): TChangeParentAction => ({

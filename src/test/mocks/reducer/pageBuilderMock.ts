@@ -17,7 +17,7 @@ import {
   TFlip,
   TLayout,
   TGapProperties,
-  TPadding,
+  TInsets,
 } from 'types';
 import { AnchorResize, AnchorRotate } from 'store/pageBuilder/enums';
 import {
@@ -183,7 +183,7 @@ export const childrenMock: TChildren = {
   type: ElementType.frame,
 };
 
-export const paddingMock: TPadding = {
+export const paddingMock: TInsets = {
   b: 0,
   l: 0,
   r: 0,

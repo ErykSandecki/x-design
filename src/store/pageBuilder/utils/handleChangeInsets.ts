@@ -1,11 +1,11 @@
 // types
-import { TChangePaddingAction, TPageBuilderState } from '../types';
+import { TChangeInsetsAction, TPageBuilderState } from '../types';
 
 // utils
 import { extractObjectValues, mapFilteredValues } from 'utils';
 
-export const handleChangePadding = (
-  padding: TChangePaddingAction['payload'],
+export const handleChangeInsets = (
+  { insets, name }: TChangeInsetsAction['payload'],
   state: TPageBuilderState,
 ): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];
@@ -22,9 +22,9 @@ export const handleChangePadding = (
           ...currentPage.elements,
           ...mapFilteredValues(currentPage.elements, ids, (element) => ({
             ...element,
-            padding: {
-              ...element.padding,
-              ...padding,
+            [name]: {
+              ...element[name],
+              ...insets,
             },
           })),
         },
