@@ -9,6 +9,7 @@ import {
   CHANGE_LAYOUT_ALIGNMENT,
   CHANGE_LAYOUT_BOX_SIZING,
   CHANGE_LAYOUT_GRID,
+  CHANGE_PADDING,
   CHANGE_PARENT,
   CHANGE_POSITION,
   CLEAR_PREV_STATE,
@@ -48,6 +49,7 @@ import {
   TGapProperties,
   TGrid,
   TObject,
+  TPadding,
   TScore,
   TSize,
 } from 'types';
@@ -173,6 +175,11 @@ export type TChangeLayoutBoxSizingAction = {
 export type TChangeLayoutGridAction = {
   payload: Partial<TGrid>;
   type: typeof CHANGE_LAYOUT_GRID;
+};
+
+export type TChangePaddingAction = {
+  payload: Partial<TPadding>;
+  type: typeof CHANGE_PADDING;
 };
 
 export type TChangeParentAction = {

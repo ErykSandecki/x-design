@@ -12,6 +12,7 @@ import {
   flipMock,
   eventsMock,
   gapMock,
+  paddingMock,
 } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
@@ -30,6 +31,7 @@ import {
   changeLayoutAlignment,
   changeLayoutBoxSizing,
   changeLayoutGrid,
+  changePadding,
   changeParent,
   changePosition,
   clearPrevState,
@@ -677,6 +679,63 @@ describe('PageBuilderReducer', () => {
                   columns: 10,
                   rows: 1,
                 },
+              },
+            },
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+  });
+
+  it('should handle CHANGE_PADDING', () => {
+    // mock
+    const padding = { b: 1, l: 1, r: 1, t: 1 };
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+
+    // before
+    const state = reducer(changePadding(padding), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [childrenMock],
+            },
+            [elementMock.id]: {
+              ...elementMock,
+            },
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [childrenMock],
+            },
+            [elementMock.id]: {
+              ...elementMock,
+              padding: {
+                ...paddingMock,
+                b: 1,
+                l: 1,
+                r: 1,
+                t: 1,
               },
             },
           },

@@ -1,5 +1,4 @@
 // others
-import { TElement } from 'types';
 import {
   ADD_ELEMENT,
   APPLY_ELEMENTS_GAP_TYPE,
@@ -10,6 +9,7 @@ import {
   CHANGE_LAYOUT_ALIGNMENT,
   CHANGE_LAYOUT_BOX_SIZING,
   CHANGE_LAYOUT_GRID,
+  CHANGE_PADDING,
   CHANGE_PARENT,
   CHANGE_POSITION,
   CLEAR_PREV_STATE,
@@ -49,6 +49,7 @@ import {
   TChangeLayoutAlignmentAction,
   TChangeLayoutBoxSizingAction,
   TChangeLayoutGridAction,
+  TChangePaddingAction,
   TChangeParentAction,
   TChangePositionAction,
   TClearPrevStateAction,
@@ -78,6 +79,7 @@ import {
   TUpdateEventsStatusAction,
   TUpdatePrevStateAction,
 } from './types';
+import { TElement } from 'types';
 
 export const addElement = (payload: TAddELementActionPayload): TAddELementAction => ({
   payload,
@@ -135,6 +137,11 @@ export const changeLayoutBoxSizing = (
 export const changeLayoutGrid = (grid: TChangeLayoutGridAction['payload']): TChangeLayoutGridAction => ({
   payload: grid,
   type: CHANGE_LAYOUT_GRID,
+});
+
+export const changePadding = (padding: TChangePaddingAction['payload']): TChangePaddingAction => ({
+  payload: padding,
+  type: CHANGE_PADDING,
 });
 
 export const changeParent = (): TChangeParentAction => ({
