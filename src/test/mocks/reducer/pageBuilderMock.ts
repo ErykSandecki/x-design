@@ -17,6 +17,7 @@ import {
   TFlip,
   TLayout,
   TGapProperties,
+  TPadding,
 } from 'types';
 import { AnchorResize, AnchorRotate } from 'store/pageBuilder/enums';
 import {
@@ -98,6 +99,7 @@ export const elementMock: TElement = {
   },
   id: 'test-1',
   layout: layoutMock,
+  padding: { b: 0, l: 0, r: 0, t: 0 },
   parentId: '-1',
   position: 'absolute',
   type: ElementType.frame,
@@ -123,6 +125,7 @@ export const createFrameMock: TElement = {
   },
   id: 'test-1',
   layout: layoutMock,
+  padding: { b: 0, l: 0, r: 0, t: 0 },
   parentId: '-1',
   position: 'absolute',
   type: ElementType.frame,
@@ -178,6 +181,13 @@ export const reducerHistoryMock: Array<TReducerHistory> = [
 export const childrenMock: TChildren = {
   id: 'test-1',
   type: ElementType.frame,
+};
+
+export const paddingMock: TPadding = {
+  b: 0,
+  l: 0,
+  r: 0,
+  t: 0,
 };
 
 export const selectedElementMock: TSelectedElement = {

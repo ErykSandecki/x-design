@@ -50,6 +50,13 @@ export type TLayout = {
   type: LayoutType;
 };
 
+export type TPadding = {
+  b: number;
+  l: number;
+  r: number;
+  t: number;
+};
+
 export type TScore = {
   max?: number;
   min?: number;
@@ -72,6 +79,7 @@ export type TElement = {
   height: TSize;
   id: string;
   layout: TLayout;
+  padding: TPadding;
   parentId: TElement['id'] | '-1';
   position: CSSProperties['position'];
   type: ElementType;
