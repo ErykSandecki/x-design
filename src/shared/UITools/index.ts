@@ -17,6 +17,7 @@ import TextField from './TextField/TextField';
 import ToggleButtonGroup from './ToggleButtonGroup/ToggleButtonGroup';
 import { AlignPopoverHorizontally, AlignPopoverVertically } from './Popover/enums';
 import { GridColumnType } from './SectionColumn/enums';
+import { TActiveCell } from './GridArea/GridAreaPopover/CellsInput/types';
 
 export const UITools = {
   AlignPopoverHorizontally,
@@ -42,5 +43,6 @@ export const UITools = {
 };
 
 export type TUITypes = {
+  TActiveCell: TActiveCell;
   TTabsProps: TTabsProps;
 };

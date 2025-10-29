@@ -40,6 +40,7 @@ const ColumnAlignmentLayout: FC<TColumnAlignmentLayoutProps> = ({ width }) => {
     onChangeColumns,
     onChangeRowGap,
     onChangeRows,
+    onClickCell,
     rowGap,
     rows,
     showColumnGap,
@@ -69,6 +70,7 @@ const ColumnAlignmentLayout: FC<TColumnAlignmentLayoutProps> = ({ width }) => {
         onChangeAlignment={onChangeAlignment}
         onChangeColumns={onChangeColumns}
         onChangeRows={onChangeRows}
+        onClickCell={onClickCell}
         rows={rows}
       />
       <ColumnAlignmentLayoutGapInput

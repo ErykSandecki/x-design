@@ -1047,4 +1047,58 @@ describe('ColumnAlignmentLayout behaviors', () => {
       rows: 100,
     });
   });
+
+  it('should change columns & rows when click some cell', () => {
+    // mock
+    const store = configureStore({
+      ...stateMock,
+      [PAGE_BUILDER]: {
+        ...stateMock[PAGE_BUILDER],
+        pages: {
+          ['0']: {
+            ...stateMock[PAGE_BUILDER].pages['0'],
+            elements: {
+              ...stateMock[PAGE_BUILDER].pages['0'].elements,
+              ['test-1']: {
+                ...elementMock,
+                id: 'test-1',
+                layout: {
+                  ...layoutMock,
+                  alignment: AlignmentLayout.topLeft,
+                  type: LayoutType.grid,
+                },
+              },
+            },
+            selectedElements: [...stateMock[PAGE_BUILDER].pages['0'].selectedElements],
+          },
+        },
+      },
+    });
+
+    // before
+    const { container } = customRender(
+      <Provider store={store}>
+        <ColumnAlignmentLayout width={0} />
+      </Provider>,
+    );
+
+    // find
+    const area = getByE2EAttribute(container, E2EAttribute.gridArea, 'grid-flow');
+
+    // action
+    fireEvent.click(area);
+
+    // find
+    const gridCellsInput = getByE2EAttribute(area, E2EAttribute.gridCellsInput);
+    const gridCellInput = getByE2EAttribute(gridCellsInput, E2EAttribute.gridCellInput, 96);
+
+    // action
+    fireEvent.click(gridCellInput);
+
+    // result
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].layout.grid).toStrictEqual({
+      columns: 12,
+      rows: 8,
+    });
+  });
 });

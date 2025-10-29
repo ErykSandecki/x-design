@@ -824,6 +824,2124 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 </div>
               </div>
             </div>
+            <div
+              class="css-1jnxvbp CellsInput CellsInput CellsInput--light"
+              data-test-grid-cells-input=""
+              style="grid-template-columns: repeat(12, 1fr); grid-template-rows: repeat(8, 1fr);"
+            >
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light CellsInput__cell--selected CellsInput__cell--selected--light"
+                data-test-grid-cell-input="1"
+                data-test-tooltip=""
+                data-value="1.1"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  1x1
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="2"
+                data-test-tooltip=""
+                data-value="2.1"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  2x1
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="3"
+                data-test-tooltip=""
+                data-value="3.1"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  3x1
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="4"
+                data-test-tooltip=""
+                data-value="4.1"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  4x1
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="5"
+                data-test-tooltip=""
+                data-value="5.1"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  5x1
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="6"
+                data-test-tooltip=""
+                data-value="6.1"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  6x1
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="7"
+                data-test-tooltip=""
+                data-value="7.1"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  7x1
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="8"
+                data-test-tooltip=""
+                data-value="8.1"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  8x1
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="9"
+                data-test-tooltip=""
+                data-value="9.1"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  9x1
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="10"
+                data-test-tooltip=""
+                data-value="10.1"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  10x1
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="11"
+                data-test-tooltip=""
+                data-value="11.1"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  11x1
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="12"
+                data-test-tooltip=""
+                data-value="12.1"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  12x1
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="2"
+                data-test-tooltip=""
+                data-value="1.2"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  1x2
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="4"
+                data-test-tooltip=""
+                data-value="2.2"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  2x2
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="6"
+                data-test-tooltip=""
+                data-value="3.2"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  3x2
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="8"
+                data-test-tooltip=""
+                data-value="4.2"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  4x2
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="10"
+                data-test-tooltip=""
+                data-value="5.2"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  5x2
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="12"
+                data-test-tooltip=""
+                data-value="6.2"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  6x2
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="14"
+                data-test-tooltip=""
+                data-value="7.2"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  7x2
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="16"
+                data-test-tooltip=""
+                data-value="8.2"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  8x2
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="18"
+                data-test-tooltip=""
+                data-value="9.2"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  9x2
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="20"
+                data-test-tooltip=""
+                data-value="10.2"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  10x2
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="22"
+                data-test-tooltip=""
+                data-value="11.2"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  11x2
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="24"
+                data-test-tooltip=""
+                data-value="12.2"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  12x2
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="3"
+                data-test-tooltip=""
+                data-value="1.3"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  1x3
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="6"
+                data-test-tooltip=""
+                data-value="2.3"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  2x3
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="9"
+                data-test-tooltip=""
+                data-value="3.3"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  3x3
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="12"
+                data-test-tooltip=""
+                data-value="4.3"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  4x3
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="15"
+                data-test-tooltip=""
+                data-value="5.3"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  5x3
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="18"
+                data-test-tooltip=""
+                data-value="6.3"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  6x3
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="21"
+                data-test-tooltip=""
+                data-value="7.3"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  7x3
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="24"
+                data-test-tooltip=""
+                data-value="8.3"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  8x3
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="27"
+                data-test-tooltip=""
+                data-value="9.3"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  9x3
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="30"
+                data-test-tooltip=""
+                data-value="10.3"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  10x3
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="33"
+                data-test-tooltip=""
+                data-value="11.3"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  11x3
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="36"
+                data-test-tooltip=""
+                data-value="12.3"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  12x3
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="4"
+                data-test-tooltip=""
+                data-value="1.4"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  1x4
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="8"
+                data-test-tooltip=""
+                data-value="2.4"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  2x4
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="12"
+                data-test-tooltip=""
+                data-value="3.4"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  3x4
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="16"
+                data-test-tooltip=""
+                data-value="4.4"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  4x4
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="20"
+                data-test-tooltip=""
+                data-value="5.4"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  5x4
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="24"
+                data-test-tooltip=""
+                data-value="6.4"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  6x4
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="28"
+                data-test-tooltip=""
+                data-value="7.4"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  7x4
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="32"
+                data-test-tooltip=""
+                data-value="8.4"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  8x4
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="36"
+                data-test-tooltip=""
+                data-value="9.4"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  9x4
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="40"
+                data-test-tooltip=""
+                data-value="10.4"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  10x4
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="44"
+                data-test-tooltip=""
+                data-value="11.4"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  11x4
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="48"
+                data-test-tooltip=""
+                data-value="12.4"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  12x4
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="5"
+                data-test-tooltip=""
+                data-value="1.5"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  1x5
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="10"
+                data-test-tooltip=""
+                data-value="2.5"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  2x5
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="15"
+                data-test-tooltip=""
+                data-value="3.5"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  3x5
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="20"
+                data-test-tooltip=""
+                data-value="4.5"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  4x5
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="25"
+                data-test-tooltip=""
+                data-value="5.5"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  5x5
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="30"
+                data-test-tooltip=""
+                data-value="6.5"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  6x5
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="35"
+                data-test-tooltip=""
+                data-value="7.5"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  7x5
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="40"
+                data-test-tooltip=""
+                data-value="8.5"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  8x5
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="45"
+                data-test-tooltip=""
+                data-value="9.5"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  9x5
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="50"
+                data-test-tooltip=""
+                data-value="10.5"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  10x5
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="55"
+                data-test-tooltip=""
+                data-value="11.5"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  11x5
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="60"
+                data-test-tooltip=""
+                data-value="12.5"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  12x5
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="6"
+                data-test-tooltip=""
+                data-value="1.6"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  1x6
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="12"
+                data-test-tooltip=""
+                data-value="2.6"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  2x6
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="18"
+                data-test-tooltip=""
+                data-value="3.6"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  3x6
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="24"
+                data-test-tooltip=""
+                data-value="4.6"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  4x6
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="30"
+                data-test-tooltip=""
+                data-value="5.6"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  5x6
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="36"
+                data-test-tooltip=""
+                data-value="6.6"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  6x6
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="42"
+                data-test-tooltip=""
+                data-value="7.6"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  7x6
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="48"
+                data-test-tooltip=""
+                data-value="8.6"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  8x6
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="54"
+                data-test-tooltip=""
+                data-value="9.6"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  9x6
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="60"
+                data-test-tooltip=""
+                data-value="10.6"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  10x6
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="66"
+                data-test-tooltip=""
+                data-value="11.6"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  11x6
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="72"
+                data-test-tooltip=""
+                data-value="12.6"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  12x6
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="7"
+                data-test-tooltip=""
+                data-value="1.7"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  1x7
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="14"
+                data-test-tooltip=""
+                data-value="2.7"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  2x7
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="21"
+                data-test-tooltip=""
+                data-value="3.7"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  3x7
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="28"
+                data-test-tooltip=""
+                data-value="4.7"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  4x7
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="35"
+                data-test-tooltip=""
+                data-value="5.7"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  5x7
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="42"
+                data-test-tooltip=""
+                data-value="6.7"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  6x7
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="49"
+                data-test-tooltip=""
+                data-value="7.7"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  7x7
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="56"
+                data-test-tooltip=""
+                data-value="8.7"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  8x7
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="63"
+                data-test-tooltip=""
+                data-value="9.7"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  9x7
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="70"
+                data-test-tooltip=""
+                data-value="10.7"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  10x7
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="77"
+                data-test-tooltip=""
+                data-value="11.7"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  11x7
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="84"
+                data-test-tooltip=""
+                data-value="12.7"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  12x7
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="8"
+                data-test-tooltip=""
+                data-value="1.8"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  1x8
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="16"
+                data-test-tooltip=""
+                data-value="2.8"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  2x8
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="24"
+                data-test-tooltip=""
+                data-value="3.8"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  3x8
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="32"
+                data-test-tooltip=""
+                data-value="4.8"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  4x8
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="40"
+                data-test-tooltip=""
+                data-value="5.8"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  5x8
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="48"
+                data-test-tooltip=""
+                data-value="6.8"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  6x8
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="56"
+                data-test-tooltip=""
+                data-value="7.8"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  7x8
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="64"
+                data-test-tooltip=""
+                data-value="8.8"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  8x8
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="72"
+                data-test-tooltip=""
+                data-value="9.8"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  9x8
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="80"
+                data-test-tooltip=""
+                data-value="10.8"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  10x8
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="88"
+                data-test-tooltip=""
+                data-value="11.8"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  11x8
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="96"
+                data-test-tooltip=""
+                data-value="12.8"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  12x8
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div
@@ -1344,6 +3462,2124 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                   class="Tooltip__content Tooltip__content--light"
                 >
                   Number of rows
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="css-1jnxvbp CellsInput CellsInput CellsInput--light"
+              data-test-grid-cells-input=""
+              style="grid-template-columns: repeat(12, 1fr); grid-template-rows: repeat(8, 1fr);"
+            >
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light CellsInput__cell--selected CellsInput__cell--selected--light"
+                data-test-grid-cell-input="1"
+                data-test-tooltip=""
+                data-value="1.1"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  1x1
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="2"
+                data-test-tooltip=""
+                data-value="2.1"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  2x1
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="3"
+                data-test-tooltip=""
+                data-value="3.1"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  3x1
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="4"
+                data-test-tooltip=""
+                data-value="4.1"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  4x1
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="5"
+                data-test-tooltip=""
+                data-value="5.1"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  5x1
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="6"
+                data-test-tooltip=""
+                data-value="6.1"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  6x1
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="7"
+                data-test-tooltip=""
+                data-value="7.1"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  7x1
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="8"
+                data-test-tooltip=""
+                data-value="8.1"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  8x1
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="9"
+                data-test-tooltip=""
+                data-value="9.1"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  9x1
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="10"
+                data-test-tooltip=""
+                data-value="10.1"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  10x1
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="11"
+                data-test-tooltip=""
+                data-value="11.1"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  11x1
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="12"
+                data-test-tooltip=""
+                data-value="12.1"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  12x1
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="2"
+                data-test-tooltip=""
+                data-value="1.2"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  1x2
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="4"
+                data-test-tooltip=""
+                data-value="2.2"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  2x2
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="6"
+                data-test-tooltip=""
+                data-value="3.2"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  3x2
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="8"
+                data-test-tooltip=""
+                data-value="4.2"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  4x2
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="10"
+                data-test-tooltip=""
+                data-value="5.2"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  5x2
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="12"
+                data-test-tooltip=""
+                data-value="6.2"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  6x2
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="14"
+                data-test-tooltip=""
+                data-value="7.2"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  7x2
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="16"
+                data-test-tooltip=""
+                data-value="8.2"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  8x2
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="18"
+                data-test-tooltip=""
+                data-value="9.2"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  9x2
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="20"
+                data-test-tooltip=""
+                data-value="10.2"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  10x2
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="22"
+                data-test-tooltip=""
+                data-value="11.2"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  11x2
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="24"
+                data-test-tooltip=""
+                data-value="12.2"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  12x2
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="3"
+                data-test-tooltip=""
+                data-value="1.3"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  1x3
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="6"
+                data-test-tooltip=""
+                data-value="2.3"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  2x3
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="9"
+                data-test-tooltip=""
+                data-value="3.3"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  3x3
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="12"
+                data-test-tooltip=""
+                data-value="4.3"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  4x3
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="15"
+                data-test-tooltip=""
+                data-value="5.3"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  5x3
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="18"
+                data-test-tooltip=""
+                data-value="6.3"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  6x3
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="21"
+                data-test-tooltip=""
+                data-value="7.3"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  7x3
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="24"
+                data-test-tooltip=""
+                data-value="8.3"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  8x3
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="27"
+                data-test-tooltip=""
+                data-value="9.3"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  9x3
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="30"
+                data-test-tooltip=""
+                data-value="10.3"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  10x3
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="33"
+                data-test-tooltip=""
+                data-value="11.3"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  11x3
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="36"
+                data-test-tooltip=""
+                data-value="12.3"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  12x3
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="4"
+                data-test-tooltip=""
+                data-value="1.4"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  1x4
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="8"
+                data-test-tooltip=""
+                data-value="2.4"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  2x4
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="12"
+                data-test-tooltip=""
+                data-value="3.4"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  3x4
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="16"
+                data-test-tooltip=""
+                data-value="4.4"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  4x4
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="20"
+                data-test-tooltip=""
+                data-value="5.4"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  5x4
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="24"
+                data-test-tooltip=""
+                data-value="6.4"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  6x4
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="28"
+                data-test-tooltip=""
+                data-value="7.4"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  7x4
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="32"
+                data-test-tooltip=""
+                data-value="8.4"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  8x4
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="36"
+                data-test-tooltip=""
+                data-value="9.4"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  9x4
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="40"
+                data-test-tooltip=""
+                data-value="10.4"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  10x4
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="44"
+                data-test-tooltip=""
+                data-value="11.4"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  11x4
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="48"
+                data-test-tooltip=""
+                data-value="12.4"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  12x4
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="5"
+                data-test-tooltip=""
+                data-value="1.5"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  1x5
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="10"
+                data-test-tooltip=""
+                data-value="2.5"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  2x5
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="15"
+                data-test-tooltip=""
+                data-value="3.5"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  3x5
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="20"
+                data-test-tooltip=""
+                data-value="4.5"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  4x5
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="25"
+                data-test-tooltip=""
+                data-value="5.5"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  5x5
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="30"
+                data-test-tooltip=""
+                data-value="6.5"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  6x5
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="35"
+                data-test-tooltip=""
+                data-value="7.5"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  7x5
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="40"
+                data-test-tooltip=""
+                data-value="8.5"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  8x5
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="45"
+                data-test-tooltip=""
+                data-value="9.5"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  9x5
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="50"
+                data-test-tooltip=""
+                data-value="10.5"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  10x5
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="55"
+                data-test-tooltip=""
+                data-value="11.5"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  11x5
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="60"
+                data-test-tooltip=""
+                data-value="12.5"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  12x5
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="6"
+                data-test-tooltip=""
+                data-value="1.6"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  1x6
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="12"
+                data-test-tooltip=""
+                data-value="2.6"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  2x6
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="18"
+                data-test-tooltip=""
+                data-value="3.6"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  3x6
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="24"
+                data-test-tooltip=""
+                data-value="4.6"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  4x6
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="30"
+                data-test-tooltip=""
+                data-value="5.6"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  5x6
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="36"
+                data-test-tooltip=""
+                data-value="6.6"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  6x6
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="42"
+                data-test-tooltip=""
+                data-value="7.6"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  7x6
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="48"
+                data-test-tooltip=""
+                data-value="8.6"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  8x6
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="54"
+                data-test-tooltip=""
+                data-value="9.6"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  9x6
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="60"
+                data-test-tooltip=""
+                data-value="10.6"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  10x6
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="66"
+                data-test-tooltip=""
+                data-value="11.6"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  11x6
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="72"
+                data-test-tooltip=""
+                data-value="12.6"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  12x6
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="7"
+                data-test-tooltip=""
+                data-value="1.7"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  1x7
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="14"
+                data-test-tooltip=""
+                data-value="2.7"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  2x7
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="21"
+                data-test-tooltip=""
+                data-value="3.7"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  3x7
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="28"
+                data-test-tooltip=""
+                data-value="4.7"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  4x7
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="35"
+                data-test-tooltip=""
+                data-value="5.7"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  5x7
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="42"
+                data-test-tooltip=""
+                data-value="6.7"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  6x7
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="49"
+                data-test-tooltip=""
+                data-value="7.7"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  7x7
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="56"
+                data-test-tooltip=""
+                data-value="8.7"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  8x7
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="63"
+                data-test-tooltip=""
+                data-value="9.7"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  9x7
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="70"
+                data-test-tooltip=""
+                data-value="10.7"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  10x7
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="77"
+                data-test-tooltip=""
+                data-value="11.7"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  11x7
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="84"
+                data-test-tooltip=""
+                data-value="12.7"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  12x7
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="8"
+                data-test-tooltip=""
+                data-value="1.8"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  1x8
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="16"
+                data-test-tooltip=""
+                data-value="2.8"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  2x8
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="24"
+                data-test-tooltip=""
+                data-value="3.8"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  3x8
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="32"
+                data-test-tooltip=""
+                data-value="4.8"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  4x8
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="40"
+                data-test-tooltip=""
+                data-value="5.8"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  5x8
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="48"
+                data-test-tooltip=""
+                data-value="6.8"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  6x8
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="56"
+                data-test-tooltip=""
+                data-value="7.8"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  7x8
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="64"
+                data-test-tooltip=""
+                data-value="8.8"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  8x8
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="72"
+                data-test-tooltip=""
+                data-value="9.8"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  9x8
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="80"
+                data-test-tooltip=""
+                data-value="10.8"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  10x8
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="88"
+                data-test-tooltip=""
+                data-value="11.8"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  11x8
+                  <div
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="carrot-down"
+                    height="14"
+                    name="CarrotDown"
+                    width="10"
+                  />
+                </div>
+              </div>
+              <div
+                class="css-1jnxvbp CellsInput__cell CellsInput__cell--light"
+                data-test-grid-cell-input="96"
+                data-test-tooltip=""
+                data-value="12.8"
+              />
+              <div
+                class="Tooltip Tooltip--light"
+              >
+                <div
+                  class="Tooltip__content Tooltip__content--light"
+                >
+                  12x8
                   <div
                     class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                     data-test-icon="carrot-down"

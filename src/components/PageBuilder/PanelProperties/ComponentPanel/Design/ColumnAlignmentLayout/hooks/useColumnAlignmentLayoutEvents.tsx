@@ -13,6 +13,7 @@ import { TUseBlurGridEvents, useBlurGridEvents } from './useBlurGridEvents';
 import { TUseChangeAlignmentLayoutEvent, useChangeAlignmentLayoutEvent } from './useChangeAlignmentEvent';
 import { TUseChangeGapEvents, useChangeGapEvents } from './useChangeGapEvents';
 import { TUseChangeGridEvents, useChangeGridEvents } from './useChangeGridEvents';
+import { TUseClickCellEvent, useClickCellEvent } from './useClickCellEvent';
 
 // utils
 import { isMixed } from '../../utils/isMixed';
@@ -32,6 +33,7 @@ export type TUseColumnAlignmentLayoutEvents = TUseBlurGapEvents &
     isMixedLayout: boolean;
     layout: TLayout;
     onChangeAlignment: TUseChangeAlignmentLayoutEvent;
+    onClickCell: TUseClickCellEvent;
     rowGap: string;
     rows: string;
     showColumnGap: boolean;
@@ -67,6 +69,7 @@ export const useColumnAlignmentLayoutEvents = (): TUseColumnAlignmentLayoutEvent
   const onChangeAlignment = useChangeAlignmentLayoutEvent(setAlignment);
   const onChangeGapEvents = useChangeGapEvents(setColumnGap, setRowGap);
   const onChangeGridEvents = useChangeGridEvents(setColumns, setRows);
+  const onClickCell = useClickCellEvent();
 
   useUpdateStates(
     isMixedAlignment,
@@ -99,6 +102,7 @@ export const useColumnAlignmentLayoutEvents = (): TUseColumnAlignmentLayoutEvent
     isMixedLayout,
     layout,
     onChangeAlignment,
+    onClickCell,
     rowGap,
     rows,
     showColumnGap,

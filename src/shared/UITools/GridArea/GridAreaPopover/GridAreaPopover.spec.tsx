@@ -19,6 +19,7 @@ describe('GridAreaPopover snapshots', () => {
         onBlurRows={noop}
         onChangeColumns={noop}
         onChangeRows={noop}
+        onClickCell={noop}
         ref={ref}
         rows="1"
         selected={false}
@@ -39,6 +40,7 @@ describe('GridAreaPopover snapshots', () => {
         onBlurRows={noop}
         onChangeColumns={noop}
         onChangeRows={noop}
+        onClickCell={noop}
         ref={ref}
         rows="1"
         selected

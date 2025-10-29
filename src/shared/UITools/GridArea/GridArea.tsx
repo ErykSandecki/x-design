@@ -20,7 +20,7 @@ import { E2EAttribute } from 'types';
 import { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute';
 
 export type TGridAreaProps = TCellsProps &
-  Pick<TGridAreaPopoverProps, 'onBlurColumns' | 'onBlurRows' | 'onChangeColumns' | 'onChangeRows'> & {
+  Pick<TGridAreaPopoverProps, 'onBlurColumns' | 'onBlurRows' | 'onChangeColumns' | 'onChangeRows' | 'onClickCell'> & {
     e2eValue?: TE2EDataAttributeProps['value'];
     fullWidth?: boolean;
     idContainer?: string;

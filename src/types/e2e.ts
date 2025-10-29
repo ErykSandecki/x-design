@@ -20,6 +20,8 @@ export enum E2EAttribute {
   form = 'form',
   gridArea = 'grid-area',
   gridCells = 'grid-cells',
+  gridCellInput = 'grid-cell-input',
+  gridCellsInput = 'grid-cells-input',
   gridInputs = 'grid-inputs',
   icon = 'icon',
   logo = 'logo',

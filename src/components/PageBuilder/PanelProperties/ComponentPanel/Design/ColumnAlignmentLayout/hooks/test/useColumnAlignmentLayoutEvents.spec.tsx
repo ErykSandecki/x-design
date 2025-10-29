@@ -67,6 +67,7 @@ describe('useColumnAlignmentLayoutEvents', () => {
       onChangeColumns: expect.any(Function),
       onChangeRowGap: expect.any(Function),
       onChangeRows: expect.any(Function),
+      onClickCell: expect.any(Function),
       rowGap: '0',
       rows: '1',
       showColumnGap: false,

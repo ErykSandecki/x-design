@@ -28,6 +28,7 @@ describe('GridArea snapshots', () => {
           onBlurRows={noop}
           onChangeColumns={noop}
           onChangeRows={noop}
+          onClickCell={noop}
           rows="1"
         />
       </Provider>,
@@ -50,6 +51,7 @@ describe('GridArea snapshots', () => {
           onBlurRows={noop}
           onChangeColumns={noop}
           onChangeRows={noop}
+          onClickCell={noop}
           rows="100"
         />
       </Provider>,
@@ -72,6 +74,7 @@ describe('GridArea snapshots', () => {
           onBlurRows={noop}
           onChangeColumns={noop}
           onChangeRows={noop}
+          onClickCell={noop}
           rows="1"
         />
       </Provider>,
