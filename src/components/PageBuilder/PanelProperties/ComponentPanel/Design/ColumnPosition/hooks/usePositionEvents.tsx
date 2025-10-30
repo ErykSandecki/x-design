@@ -20,7 +20,7 @@ import { TSelectedElement } from 'store/pageBuilder/types';
 
 // utils
 import { hasSomeAlignment } from '../utils/hasSomeAlignment';
-import { isMixed } from '../../utils/isMixed';
+import { isMixed } from '../../../../../utils/isMixed';
 
 type TUsePositionEvents = {
   disabledAll: boolean;

@@ -16,6 +16,7 @@
 
   &--two-inputs {
     grid-template-columns: repeat(2, 1fr);
+    row-gap: $--xd-row-gap;
   }
 
   &--one-by-two {

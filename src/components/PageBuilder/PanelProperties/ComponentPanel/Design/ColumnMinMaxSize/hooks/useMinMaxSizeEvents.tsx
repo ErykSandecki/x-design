@@ -11,7 +11,7 @@ import { TUseBlurEvent, useBlurEvent } from './useBlurEvent';
 import { TUseChangeEvent, useChangeEvent } from './useChangeEvent';
 
 // utils
-import { isMixed } from '../../utils/isMixed';
+import { isMixed } from '../../../../../utils/isMixed';
 
 type TUseMinMaxSizeEvents = TUseChangeEvent &
   TUseBlurEvent & {

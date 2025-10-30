@@ -21,6 +21,7 @@ declare global {
     top: number;
     width: number;
   };
+  type TMapValuesTo<T, Type> = { [K in keyof T]: Type };
   type TRectCoordinates = {
     x1: number;
     x2: number;

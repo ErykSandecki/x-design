@@ -48,8 +48,9 @@ import {
   TGap,
   TGapProperties,
   TGrid,
-  TObject,
   TInsets,
+  TInsetsName,
+  TObject,
   TScore,
   TSize,
 } from 'types';
@@ -159,7 +160,7 @@ export type TChangeBackgroundAction = {
 
 export type TChangeInsetsActionPayload = {
   insets: Partial<TInsets>;
-  name: keyof Pick<TElement, 'padding'>;
+  name: TInsetsName;
 };
 
 export type TChangeInsetsAction = {

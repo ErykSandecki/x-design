@@ -12,7 +12,7 @@ import {
   flipMock,
   eventsMock,
   gapMock,
-  paddingMock,
+  insetsMock,
 } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
@@ -731,7 +731,7 @@ describe('PageBuilderReducer', () => {
             [elementMock.id]: {
               ...elementMock,
               padding: {
-                ...paddingMock,
+                ...insetsMock,
                 b: 1,
                 l: 1,
                 r: 1,

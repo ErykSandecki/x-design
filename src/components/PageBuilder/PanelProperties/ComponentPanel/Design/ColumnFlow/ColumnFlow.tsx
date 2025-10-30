@@ -17,7 +17,7 @@ import { elementsSelector, elementDataSelectorCreator, selectedElementsSelector 
 import { LayoutType } from 'types';
 
 // utils
-import { isMixed } from '../utils/isMixed';
+import { isMixed } from '../../../../utils/isMixed';
 
 const ColumnFlow: FC = () => {
   const dispatch = useDispatch();

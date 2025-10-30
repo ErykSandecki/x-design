@@ -14,7 +14,7 @@ import { changeLayout } from 'store/pageBuilder/actions';
 import { LayoutType, TElement } from 'types';
 
 // utils
-import { isMixed } from '../utils/isMixed';
+import { isMixed } from '../../../../utils/isMixed';
 
 export type TUseDesignData = {
   areParentsTheSame: boolean;

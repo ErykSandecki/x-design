@@ -12,7 +12,7 @@ import { TUseChangeEvent, useChangeEvent } from './useChangeEvent';
 import { TUseMouseDownEvent, useMouseDownEvent } from './useMouseDownEvent';
 
 // utils
-import { isMixed } from '../../utils/isMixed';
+import { isMixed } from '../../../../../utils/isMixed';
 
 type TUseRotationEvents = {
   angle: string;

@@ -28,7 +28,7 @@ const Template: StoryFn<typeof Popover> = () => {
       <Button onClick={() => setSelected(!selected)} ref={ref}>
         Open
       </Button>
-      <Popover selected={selected} refItem={ref}>
+      <Popover refItem={ref} selected={selected}>
         <Small> Popover Menu</Small>
       </Popover>
     </StoryComponent>

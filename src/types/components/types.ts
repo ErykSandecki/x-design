@@ -57,6 +57,8 @@ export type TInsets = {
   t: number;
 };
 
+export type TInsetsName = keyof Pick<TElement, 'padding'>;
+
 export type TScore = {
   max?: number;
   min?: number;

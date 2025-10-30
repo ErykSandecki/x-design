@@ -36,6 +36,7 @@ import { ReactComponent as GapColumns } from './svg/gap-columns.svg';
 import { ReactComponent as GapRows } from './svg/gap-rows.svg';
 import { ReactComponent as HeightRestricted } from './svg/height-restricted.svg';
 import { ReactComponent as HtmlTag } from './svg/html-tag.svg';
+import { ReactComponent as IndividualInsets } from './svg/individual-insets.svg';
 import { ReactComponent as InputsConnector } from './svg/inputs-connector.svg';
 import { ReactComponent as Logo } from './svg/logo.svg';
 import { ReactComponent as MaxHeight } from './svg/max-height.svg';
@@ -44,6 +45,12 @@ import { ReactComponent as MinHeight } from './svg/min-height.svg';
 import { ReactComponent as MinWidth } from './svg/min-width.svg';
 import { ReactComponent as MoveHand } from './svg/move-hand.svg';
 import { ReactComponent as MoveTool } from './svg/move-tool.svg';
+import { ReactComponent as PaddingB } from './svg/padding-b.svg';
+import { ReactComponent as PaddingL } from './svg/padding-l.svg';
+import { ReactComponent as PaddingLR } from './svg/padding-lr.svg';
+import { ReactComponent as PaddingR } from './svg/padding-r.svg';
+import { ReactComponent as PaddingT } from './svg/padding-t.svg';
+import { ReactComponent as PaddingTB } from './svg/padding-tb.svg';
 import { ReactComponent as Percentage } from './svg/percentage.svg';
 import { ReactComponent as PlusOutlined } from './svg/plus-outlined.svg';
 import { ReactComponent as PositionSwitcher } from './svg/position-switcher.svg';
@@ -95,6 +102,7 @@ export const Icons = {
   GapRows,
   HeightRestricted,
   HtmlTag,
+  IndividualInsets,
   InputsConnector,
   Logo,
   MaxHeight,
@@ -103,6 +111,12 @@ export const Icons = {
   MinWidth,
   MoveHand,
   MoveTool,
+  PaddingB,
+  PaddingL,
+  PaddingLR,
+  PaddingR,
+  PaddingT,
+  PaddingTB,
   Percentage,
   PlusOutlined,
   PositionSwitcher,

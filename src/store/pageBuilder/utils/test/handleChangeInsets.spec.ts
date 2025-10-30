@@ -1,10 +1,5 @@
 // mocks
-import {
-  elementMock,
-  paddingMock,
-  pageBuilderStateMock,
-  selectedElementMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, insetsMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
@@ -48,7 +43,7 @@ describe('handleChangeInsets', () => {
             [elementMock.id]: {
               ...elementMock,
               padding: {
-                ...paddingMock,
+                ...insetsMock,
                 b: 1,
                 l: 1,
                 r: 1,

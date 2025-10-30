@@ -183,7 +183,7 @@ export const childrenMock: TChildren = {
   type: ElementType.frame,
 };
 
-export const paddingMock: TInsets = {
+export const insetsMock: TInsets = {
   b: 0,
   l: 0,
   r: 0,

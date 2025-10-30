@@ -16,7 +16,7 @@ import { TUseChangeGridEvents, useChangeGridEvents } from './useChangeGridEvents
 import { TUseClickCellEvent, useClickCellEvent } from './useClickCellEvent';
 
 // utils
-import { isMixed } from '../../utils/isMixed';
+import { isMixed } from '../../../../../utils/isMixed';
 
 export type TUseColumnAlignmentLayoutEvents = TUseBlurGapEvents &
   TUseBlurGridEvents &

@@ -13,7 +13,7 @@ import { TUseChangeEvent, useChangeEvent } from './useChangeEvent';
 import { TUseFocusEvent, useFocusEvent } from './useFocusEvent';
 
 // utils
-import { isMixed } from '../../utils/isMixed';
+import { isMixed } from '../../../../../utils/isMixed';
 import { isPureNumber } from 'utils';
 
 type TUseResizingEvents = TUseChangeEvent &
