@@ -26,7 +26,7 @@ exports[`PopoverGap snapshots should render PopoverInsets 1`] = `
       data-test-text=""
       style="text-align: inherit;"
     >
-      Fixed padding (1)
+      pageBuilder.panelProperties.componentPanel.design.columnPadding.popover.blrt.1
     </small>
   </div>
 </DocumentFragment>
@@ -58,7 +58,7 @@ exports[`PopoverGap snapshots should render with mixed value 1`] = `
       data-test-text=""
       style="text-align: inherit;"
     >
-      Fixed padding (1)
+      pageBuilder.panelProperties.componentPanel.design.columnPadding.popover.blrt.1
     </small>
   </div>
 </DocumentFragment>

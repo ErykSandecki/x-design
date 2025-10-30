@@ -98,7 +98,7 @@ exports[`Insets snapshots should render Insets 1`] = `
                     data-test-text=""
                     style="text-align: inherit;"
                   >
-                    Fixed padding (0)
+                    Fixed padding left/right (0)
                   </small>
                 </div>
               </div>
@@ -191,7 +191,7 @@ exports[`Insets snapshots should render Insets 1`] = `
                     data-test-text=""
                     style="text-align: inherit;"
                   >
-                    Fixed padding (0)
+                    Fixed padding top/bottom (0)
                   </small>
                 </div>
               </div>
@@ -357,7 +357,7 @@ exports[`Insets snapshots should render back to merged mode 1`] = `
                     data-test-text=""
                     style="text-align: inherit;"
                   >
-                    Fixed padding (0)
+                    Fixed padding left/right (0)
                   </small>
                 </div>
               </div>
@@ -450,7 +450,7 @@ exports[`Insets snapshots should render back to merged mode 1`] = `
                     data-test-text=""
                     style="text-align: inherit;"
                   >
-                    Fixed padding (0)
+                    Fixed padding top/bottom (0)
                   </small>
                 </div>
               </div>
@@ -616,7 +616,7 @@ exports[`Insets snapshots should render when mose is individual 1`] = `
                     data-test-text=""
                     style="text-align: inherit;"
                   >
-                    Fixed padding (0)
+                    Fixed padding left (0)
                   </small>
                 </div>
               </div>
@@ -709,7 +709,7 @@ exports[`Insets snapshots should render when mose is individual 1`] = `
                     data-test-text=""
                     style="text-align: inherit;"
                   >
-                    Fixed padding (0)
+                    Fixed padding top (0)
                   </small>
                 </div>
               </div>
@@ -802,7 +802,7 @@ exports[`Insets snapshots should render when mose is individual 1`] = `
                     data-test-text=""
                     style="text-align: inherit;"
                   >
-                    Fixed padding (0)
+                    Fixed padding right (0)
                   </small>
                 </div>
               </div>
@@ -895,7 +895,7 @@ exports[`Insets snapshots should render when mose is individual 1`] = `
                     data-test-text=""
                     style="text-align: inherit;"
                   >
-                    Fixed padding (0)
+                    Fixed padding bottom (0)
                   </small>
                 </div>
               </div>

@@ -1699,7 +1699,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                           data-test-text=""
                           style="text-align: inherit;"
                         >
-                          Fixed padding (0)
+                          Fixed padding left/right (0)
                         </small>
                       </div>
                     </div>
@@ -1792,7 +1792,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
                           data-test-text=""
                           style="text-align: inherit;"
                         >
-                          Fixed padding (0)
+                          Fixed padding top/bottom (0)
                         </small>
                       </div>
                     </div>

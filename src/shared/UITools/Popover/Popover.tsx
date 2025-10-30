@@ -73,6 +73,7 @@ export const Popover: FC<TPopoverProps> = ({
         depsSx={[backgroundColor]}
         id={id}
         onClick={stopPropagation}
+        onMouseOver={stopPropagation}
         ref={refPopover}
         style={{ ...style, left: x, top: y }}
         sx={{

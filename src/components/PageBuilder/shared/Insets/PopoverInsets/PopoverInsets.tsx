@@ -27,6 +27,7 @@ export type TPopoverInsetsProps = {
 };
 
 const PopoverInsets: FC<TPopoverInsetsProps> = ({ icon, insetsName, insets, isMixed, translationNameSpace, value }) => {
+  const key = insets.join('');
   const dispatch = useDispatch();
   const { t } = useTranslation();
 
@@ -37,7 +38,7 @@ const PopoverInsets: FC<TPopoverInsetsProps> = ({ icon, insetsName, insets, isMi
         index={PopoverItem.fixed}
         onClick={() => dispatch(applyElementsInsetType(insets, insetsName, 'fixed'))}
         selected={!isMixed && isPureNumber(value)}
-        text={t(`${translationNameSpace}.popover.1`, { value })}
+        text={t(`${translationNameSpace}.popover.${key}.1`, { value })}
       />
     </>
   );

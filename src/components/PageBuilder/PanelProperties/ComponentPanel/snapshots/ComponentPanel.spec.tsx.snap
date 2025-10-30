@@ -1427,7 +1427,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
                       data-test-text=""
                       style="text-align: inherit;"
                     >
-                      Fixed padding (0)
+                      Fixed padding left/right (0)
                     </small>
                   </div>
                 </div>
@@ -1520,7 +1520,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
                       data-test-text=""
                       style="text-align: inherit;"
                     >
-                      Fixed padding (0)
+                      Fixed padding top/bottom (0)
                     </small>
                   </div>
                 </div>
