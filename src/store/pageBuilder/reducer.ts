@@ -138,7 +138,7 @@ const initialState: TPageBuilderState = {
       //     },
       //     children: [
       //       {
-      //         id: 'mhdb5urm1761821719041',
+      //         id: 'mhdkjh8b1761837471226',
       //         type: 'frame',
       //       },
       //     ],
@@ -173,10 +173,18 @@ const initialState: TPageBuilderState = {
       //       type: 'freeForm',
       //     },
       //     padding: {
-      //       b: 0,
-      //       l: 0,
-      //       r: 0,
-      //       t: 0,
+      //       b: {
+      //         value: 0,
+      //       },
+      //       l: {
+      //         value: 0,
+      //       },
+      //       r: {
+      //         value: 0,
+      //       },
+      //       t: {
+      //         value: 0,
+      //       },
       //     },
       //     parentId: '-1',
       //     position: 'absolute',
@@ -185,7 +193,7 @@ const initialState: TPageBuilderState = {
       //       value: 0,
       //     },
       //   },
-      //   mhdb5urm1761821719041: {
+      //   mhdkjh8b1761837471226: {
       //     alignment: {},
       //     angle: 0,
       //     aspectRatio: false,
@@ -199,8 +207,8 @@ const initialState: TPageBuilderState = {
       //     },
       //     children: [],
       //     coordinates: {
-      //       x: 508,
-      //       y: 489,
+      //       x: 483,
+      //       y: 423,
       //     },
       //     deepLevel: 1,
       //     flip: {
@@ -208,9 +216,9 @@ const initialState: TPageBuilderState = {
       //       y: false,
       //     },
       //     height: {
-      //       value: 252,
+      //       value: 141,
       //     },
-      //     id: 'mhdb5urm1761821719041',
+      //     id: 'mhdkjh8b1761837471226',
       //     layout: {
       //       alignment: 'none',
       //       boxSizing: 'excluded',
@@ -229,22 +237,30 @@ const initialState: TPageBuilderState = {
       //       type: 'freeForm',
       //     },
       //     padding: {
-      //       b: 15,
-      //       l: 15,
-      //       r: 15,
-      //       t: 15,
+      //       b: {
+      //         value: 0,
+      //       },
+      //       l: {
+      //         value: 0,
+      //       },
+      //       r: {
+      //         value: 0,
+      //       },
+      //       t: {
+      //         value: 0,
+      //       },
       //     },
       //     parentId: '-1',
       //     position: 'absolute',
       //     type: 'frame',
       //     width: {
-      //       value: 307,
+      //       value: 310,
       //     },
       //   },
       // },
       // selectedElements: [
       //   {
-      //     id: 'mhdb5urm1761821719041',
+      //     id: 'mhdkjh8b1761837471226',
       //     parentId: '-1',
       //     position: 'absolute',
       //     type: 'frame',

@@ -48,12 +48,12 @@ const ColumnAlignmentLayoutGapInput: FC<TColumnAlignmentLayoutGapInputProps> = (
       e2eValue={gap}
       fullWidth
       idContainer={PANEL_PROPERTIES_ID}
+      inputRef={refInputGap}
       onBlur={onBlur}
       onChange={(event) => onChange(event.target.value)}
       onClick={() => refInputGap.current.select()}
       onKeyDown={(event) => handleSubmitInput(KeyboardKeys.enter, refInputGap.current)(event)}
       popoverChildren={<PopoverGap gap={gap} gapProperties={gapProperties} isMixed={isMixed} />}
-      inputRef={refInputGap}
       startAdornment={
         <ScrubbableInput
           e2eValue={gap}

@@ -16,6 +16,7 @@ export type TInsetsInputsModeMergedProps = Pick<TUseBlurEvents, 'onBlurInsetLR' 
     isInsetModeMerged: boolean;
     isMixedLR: boolean;
     isMixedTB: boolean;
+    translationNameSpace: string;
   };
 
 export const InsetsInputsModeMerged: FC<TInsetsInputsModeMergedProps> = ({
@@ -29,6 +30,7 @@ export const InsetsInputsModeMerged: FC<TInsetsInputsModeMergedProps> = ({
   onBlurInsetTB,
   onChangeInsetLR,
   onChangeInsetTB,
+  translationNameSpace,
 }) => {
   if (!isInsetModeMerged) {
     return null;
@@ -37,18 +39,24 @@ export const InsetsInputsModeMerged: FC<TInsetsInputsModeMergedProps> = ({
   return (
     <>
       <InsetsInput
-        insetName={`${insetsName}LR`}
+        insetNameFormatted={`${insetsName}LR`}
+        insets={['l', 'r']}
+        insetsName="padding"
         isMixed={isMixedLR}
         onBlur={onBlurInsetLR}
         onChange={onChangeInsetLR}
+        translationNameSpace={translationNameSpace}
         type="text"
         value={insetLR}
       />
       <InsetsInput
-        insetName={`${insetsName}TB`}
+        insetNameFormatted={`${insetsName}TB`}
+        insets={['t', 'b']}
+        insetsName="padding"
         isMixed={isMixedTB}
         onBlur={onBlurInsetTB}
         onChange={onChangeInsetTB}
+        translationNameSpace={translationNameSpace}
         type="text"
         value={insetTB}
       />

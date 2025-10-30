@@ -56,6 +56,7 @@ export const Insets: FC<TInsetsProps> = ({ insetsName, translationNameSpace }) =
         onBlurInsetTB={onBlurInsetTB}
         onChangeInsetLR={onChangeInsetLR}
         onChangeInsetTB={onChangeInsetTB}
+        translationNameSpace={translationNameSpace}
       />
       <InsetsInputsModeIndividual
         insets={insetAll}
@@ -64,6 +65,7 @@ export const Insets: FC<TInsetsProps> = ({ insetsName, translationNameSpace }) =
         isMixedInset={isMixedInset}
         onBlurInset={onBlurInset}
         onChangeInset={onChangeInset}
+        translationNameSpace={translationNameSpace}
       />
     </UITools.SectionColumn>
   );

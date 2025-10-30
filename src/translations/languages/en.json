@@ -28,6 +28,7 @@
   "pageBuilder.panelProperties.componentPanel.design.columnMinMaxSize.popover.width.min.1": "Set to current width",
   "pageBuilder.panelProperties.componentPanel.design.columnMinMaxSize.popover.width.min.2": "Remove min width",
   "pageBuilder.panelProperties.componentPanel.design.columnPadding.label": "Padding",
+  "pageBuilder.panelProperties.componentPanel.design.columnPadding.popover.1": "Fixed padding ({{ value }})",
   "pageBuilder.panelProperties.componentPanel.design.columnPosition.label": "Position",
   "pageBuilder.panelProperties.componentPanel.design.columnResizing.label": "Resizing",
   "pageBuilder.panelProperties.componentPanel.design.columnResizing.popover.height.1": "Fixed height",

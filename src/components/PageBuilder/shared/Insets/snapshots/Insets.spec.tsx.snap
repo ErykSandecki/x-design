@@ -57,6 +57,52 @@ exports[`Insets snapshots should render Insets 1`] = `
               type="text"
               value="0"
             />
+            <div
+              class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                data-test-icon="variant"
+                height="12"
+                name="Variant"
+                width="12"
+              />
+              <div
+                class="css-1c8p9kb Popover Popover--light"
+                data-test-box=""
+                data-test-popover="popover"
+                style="left: 0px; top: 0px;"
+              >
+                <div
+                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  data-test-box=""
+                  data-test-popover-item="0"
+                >
+                  <div
+                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="check"
+                    height="12"
+                    name="Check"
+                    width="12"
+                  />
+                  <div
+                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="padding-lr"
+                    height="12"
+                    name="PaddingLR"
+                    width="12"
+                  />
+                  <small
+                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    data-test-text=""
+                    style="text-align: inherit;"
+                  >
+                    Fixed padding (0)
+                  </small>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div
@@ -104,6 +150,52 @@ exports[`Insets snapshots should render Insets 1`] = `
               type="text"
               value="0"
             />
+            <div
+              class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                data-test-icon="variant"
+                height="12"
+                name="Variant"
+                width="12"
+              />
+              <div
+                class="css-1c8p9kb Popover Popover--light"
+                data-test-box=""
+                data-test-popover="popover"
+                style="left: 0px; top: 0px;"
+              >
+                <div
+                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  data-test-box=""
+                  data-test-popover-item="0"
+                >
+                  <div
+                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="check"
+                    height="12"
+                    name="Check"
+                    width="12"
+                  />
+                  <div
+                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="padding-tb"
+                    height="12"
+                    name="PaddingTB"
+                    width="12"
+                  />
+                  <small
+                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    data-test-text=""
+                    style="text-align: inherit;"
+                  >
+                    Fixed padding (0)
+                  </small>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div
@@ -224,6 +316,52 @@ exports[`Insets snapshots should render back to merged mode 1`] = `
               type="text"
               value="0"
             />
+            <div
+              class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                data-test-icon="variant"
+                height="12"
+                name="Variant"
+                width="12"
+              />
+              <div
+                class="css-1c8p9kb Popover Popover--light"
+                data-test-box=""
+                data-test-popover="popover"
+                style="left: 0px; top: 0px;"
+              >
+                <div
+                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  data-test-box=""
+                  data-test-popover-item="0"
+                >
+                  <div
+                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="check"
+                    height="12"
+                    name="Check"
+                    width="12"
+                  />
+                  <div
+                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="padding-lr"
+                    height="12"
+                    name="PaddingLR"
+                    width="12"
+                  />
+                  <small
+                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    data-test-text=""
+                    style="text-align: inherit;"
+                  >
+                    Fixed padding (0)
+                  </small>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div
@@ -271,6 +409,52 @@ exports[`Insets snapshots should render back to merged mode 1`] = `
               type="text"
               value="0"
             />
+            <div
+              class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                data-test-icon="variant"
+                height="12"
+                name="Variant"
+                width="12"
+              />
+              <div
+                class="css-1c8p9kb Popover Popover--light"
+                data-test-box=""
+                data-test-popover="popover"
+                style="left: 0px; top: 0px;"
+              >
+                <div
+                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  data-test-box=""
+                  data-test-popover-item="0"
+                >
+                  <div
+                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="check"
+                    height="12"
+                    name="Check"
+                    width="12"
+                  />
+                  <div
+                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="padding-tb"
+                    height="12"
+                    name="PaddingTB"
+                    width="12"
+                  />
+                  <small
+                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    data-test-text=""
+                    style="text-align: inherit;"
+                  >
+                    Fixed padding (0)
+                  </small>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div
@@ -391,6 +575,52 @@ exports[`Insets snapshots should render when mose is individual 1`] = `
               type="number"
               value="0"
             />
+            <div
+              class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                data-test-icon="variant"
+                height="12"
+                name="Variant"
+                width="12"
+              />
+              <div
+                class="css-1c8p9kb Popover Popover--light"
+                data-test-box=""
+                data-test-popover="popover"
+                style="left: 0px; top: 0px;"
+              >
+                <div
+                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  data-test-box=""
+                  data-test-popover-item="0"
+                >
+                  <div
+                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="check"
+                    height="12"
+                    name="Check"
+                    width="12"
+                  />
+                  <div
+                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="padding-l"
+                    height="12"
+                    name="PaddingL"
+                    width="12"
+                  />
+                  <small
+                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    data-test-text=""
+                    style="text-align: inherit;"
+                  >
+                    Fixed padding (0)
+                  </small>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div
@@ -438,6 +668,52 @@ exports[`Insets snapshots should render when mose is individual 1`] = `
               type="number"
               value="0"
             />
+            <div
+              class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                data-test-icon="variant"
+                height="12"
+                name="Variant"
+                width="12"
+              />
+              <div
+                class="css-1c8p9kb Popover Popover--light"
+                data-test-box=""
+                data-test-popover="popover"
+                style="left: 0px; top: 0px;"
+              >
+                <div
+                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  data-test-box=""
+                  data-test-popover-item="0"
+                >
+                  <div
+                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="check"
+                    height="12"
+                    name="Check"
+                    width="12"
+                  />
+                  <div
+                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="padding-t"
+                    height="12"
+                    name="PaddingT"
+                    width="12"
+                  />
+                  <small
+                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    data-test-text=""
+                    style="text-align: inherit;"
+                  >
+                    Fixed padding (0)
+                  </small>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div
@@ -485,6 +761,52 @@ exports[`Insets snapshots should render when mose is individual 1`] = `
               type="number"
               value="0"
             />
+            <div
+              class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                data-test-icon="variant"
+                height="12"
+                name="Variant"
+                width="12"
+              />
+              <div
+                class="css-1c8p9kb Popover Popover--light"
+                data-test-box=""
+                data-test-popover="popover"
+                style="left: 0px; top: 0px;"
+              >
+                <div
+                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  data-test-box=""
+                  data-test-popover-item="0"
+                >
+                  <div
+                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="check"
+                    height="12"
+                    name="Check"
+                    width="12"
+                  />
+                  <div
+                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="padding-r"
+                    height="12"
+                    name="PaddingR"
+                    width="12"
+                  />
+                  <small
+                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    data-test-text=""
+                    style="text-align: inherit;"
+                  >
+                    Fixed padding (0)
+                  </small>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div
@@ -532,6 +854,52 @@ exports[`Insets snapshots should render when mose is individual 1`] = `
               type="number"
               value="0"
             />
+            <div
+              class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                data-test-icon="variant"
+                height="12"
+                name="Variant"
+                width="12"
+              />
+              <div
+                class="css-1c8p9kb Popover Popover--light"
+                data-test-box=""
+                data-test-popover="popover"
+                style="left: 0px; top: 0px;"
+              >
+                <div
+                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  data-test-box=""
+                  data-test-popover-item="0"
+                >
+                  <div
+                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="check"
+                    height="12"
+                    name="Check"
+                    width="12"
+                  />
+                  <div
+                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="padding-b"
+                    height="12"
+                    name="PaddingB"
+                    width="12"
+                  />
+                  <small
+                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    data-test-text=""
+                    style="text-align: inherit;"
+                  >
+                    Fixed padding (0)
+                  </small>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div

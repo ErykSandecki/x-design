@@ -19,6 +19,7 @@ import { E2EAttribute, KeyboardKeys } from 'types';
 
 // utils
 import { customRender, getByE2EAttribute } from 'test';
+import { PopoverItem } from './enums';
 
 const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 const stateMock = {
@@ -517,6 +518,48 @@ describe('Insets behaviors', () => {
       l: { value: 100 },
       r: { value: 100 },
       t: { value: 100 },
+    });
+  });
+
+  it('should change padding lr & tb', () => {
+    // mock
+    const store = configureStore(stateMock);
+
+    // before
+    const { container } = customRender(
+      <Provider store={store}>
+        <Insets insetsName="padding" translationNameSpace={paddingTranslationNameSpace} />
+      </Provider>,
+    );
+
+    // find
+    const inputLR = getByE2EAttribute(container, E2EAttribute.textField, 'padding-lr');
+    const inputTB = getByE2EAttribute(container, E2EAttribute.textField, 'padding-tb');
+
+    // find { icons }
+    const iconLR = getByE2EAttribute(inputLR, E2EAttribute.icon, 'variant');
+    const iconTB = getByE2EAttribute(inputTB, E2EAttribute.icon, 'variant');
+
+    // find { popovers }
+    const popoverLR = getByE2EAttribute(inputLR, E2EAttribute.popover, 'popover');
+    const popoverTB = getByE2EAttribute(inputTB, E2EAttribute.popover, 'popover');
+
+    // find { popover items }
+    const popoverGapItemLR = getByE2EAttribute(popoverLR, E2EAttribute.popoverItem, PopoverItem.fixed);
+    const popoverGapItemTB = getByE2EAttribute(popoverTB, E2EAttribute.popoverItem, PopoverItem.fixed);
+
+    // action
+    fireEvent.click(iconLR);
+    fireEvent.click(popoverGapItemLR);
+    fireEvent.click(iconTB);
+    fireEvent.click(popoverGapItemTB);
+
+    // result
+    expect(store.getState()[PAGE_BUILDER].pages[0].elements['test-1'].padding).toStrictEqual({
+      b: { value: 0 },
+      l: { value: 0 },
+      r: { value: 0 },
+      t: { value: 0 },
     });
   });
 });

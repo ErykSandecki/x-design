@@ -15,6 +15,7 @@ export type TInsetsInputsModeIndividualProps = Pick<TUseBlurEvents, 'onBlurInset
     insetsName: TInsetsName;
     isInsetModeMerged: boolean;
     isMixedInset: TMapValuesTo<TInsets, boolean>;
+    translationNameSpace: string;
   };
 
 export const InsetsInputsModeIndividual: FC<TInsetsInputsModeIndividualProps> = ({
@@ -24,6 +25,7 @@ export const InsetsInputsModeIndividual: FC<TInsetsInputsModeIndividualProps> = 
   isMixedInset,
   onBlurInset,
   onChangeInset,
+  translationNameSpace,
 }) => {
   if (isInsetModeMerged) {
     return null;
@@ -31,11 +33,14 @@ export const InsetsInputsModeIndividual: FC<TInsetsInputsModeIndividualProps> = 
 
   return ['l', 't', 'r', 'b'].map((key: keyof TInsets) => (
     <InsetsInput
-      insetName={`${insetsName}${upperCase(key)}`}
+      insetNameFormatted={`${insetsName}${upperCase(key)}`}
+      insets={[key]}
+      insetsName={insetsName}
       isMixed={isMixedInset[key]}
       key={key}
       onBlur={() => onBlurInset(key)}
       onChange={(value, isScrubbableInput) => onChangeInset(value, key, isScrubbableInput)}
+      translationNameSpace={translationNameSpace}
       type="number"
       value={insets[key]}
     />
