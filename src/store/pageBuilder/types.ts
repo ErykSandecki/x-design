@@ -32,6 +32,7 @@ import {
   UNSELECT_ELEMENT,
   UPDATE_EVENTS_STATUS,
   UPDATE_PREV_STATE,
+  APPLY_ELEMENTS_INSET_TYPE,
 } from './actionsType';
 
 // types
@@ -127,6 +128,17 @@ export type TApplyElementsGapTypeActionPaylad = {
 export type TApplyElementsGapTypeAction = {
   payload: TApplyElementsGapTypeActionPaylad;
   type: typeof APPLY_ELEMENTS_GAP_TYPE;
+};
+
+export type TApplyElementsInsetTypeActionPaylad = {
+  insets: Array<keyof TInsets>;
+  name: TInsetsName;
+  type: 'fixed';
+};
+
+export type TApplyElementsInsetTypeAction = {
+  payload: TApplyElementsInsetTypeActionPaylad;
+  type: typeof APPLY_ELEMENTS_INSET_TYPE;
 };
 
 export type TApplyElementsSizeTypeActionPaylad = {

@@ -32,6 +32,7 @@ import {
   UNSELECT_ELEMENT,
   UPDATE_EVENTS_STATUS,
   UPDATE_PREV_STATE,
+  APPLY_ELEMENTS_INSET_TYPE,
 } from './actionsType';
 
 // types
@@ -79,6 +80,8 @@ import {
   TUpdateEventsStatusAction,
   TUpdatePrevStateAction,
   TChangeInsetsActionPayload,
+  TApplyElementsInsetTypeActionPaylad,
+  TApplyElementsInsetTypeAction,
 } from './types';
 import { TElement } from 'types';
 
@@ -93,6 +96,15 @@ export const applyElementsGapType = (
 ): TApplyElementsGapTypeAction => ({
   payload: { gap, type },
   type: APPLY_ELEMENTS_GAP_TYPE,
+});
+
+export const applyElementsInsetType = (
+  insets: TApplyElementsInsetTypeActionPaylad['insets'],
+  name: TApplyElementsInsetTypeActionPaylad['name'],
+  type: TApplyElementsInsetTypeActionPaylad['type'],
+): TApplyElementsInsetTypeAction => ({
+  payload: { insets, name, type },
+  type: APPLY_ELEMENTS_INSET_TYPE,
 });
 
 export const applyElementsSizeType = (

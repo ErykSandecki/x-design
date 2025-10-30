@@ -24,6 +24,7 @@ import pageBuilder from '../reducer';
 import {
   addElement,
   applyElementsGapType,
+  applyElementsInsetType,
   applyElementsSizeType,
   changeAlignment,
   changeBackground,
@@ -127,6 +128,43 @@ describe('PageBuilderReducer', () => {
 
     // before
     const state = reducer(applyElementsGapType('column', 'fixed'), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            [elementMock.id]: elementMock,
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            [elementMock.id]: elementMock,
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+  });
+
+  it('should handle APPLY_ELEMENTS_INSET_TYPE', () => {
+    // mock
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+
+    // before
+    const state = reducer(applyElementsInsetType(['b', 'l', 'r', 't'], 'padding', 'fixed'), {
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -690,7 +728,7 @@ describe('PageBuilderReducer', () => {
 
   it('should handle CHANGE_INSSETS', () => {
     // mock
-    const insets = { b: 1, l: 1, r: 1, t: 1 };
+    const insets = { b: { value: 1 }, l: { value: 1 }, r: { value: 1 }, t: { value: 1 } };
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
     // before
@@ -732,10 +770,10 @@ describe('PageBuilderReducer', () => {
               ...elementMock,
               padding: {
                 ...insetsMock,
-                b: 1,
-                l: 1,
-                r: 1,
-                t: 1,
+                b: { value: 1 },
+                l: { value: 1 },
+                r: { value: 1 },
+                t: { value: 1 },
               },
             },
           },
