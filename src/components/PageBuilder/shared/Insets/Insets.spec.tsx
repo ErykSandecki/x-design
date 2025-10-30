@@ -124,10 +124,10 @@ describe('Insets behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages[0].elements['test-1'].padding).toStrictEqual({
-      b: 100,
-      l: 100,
-      r: 100,
-      t: 100,
+      b: { value: 100 },
+      l: { value: 100 },
+      r: { value: 100 },
+      t: { value: 100 },
     });
   });
 
@@ -188,16 +188,16 @@ describe('Insets behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages[0].elements['test-1'].padding).toStrictEqual({
-      b: 100,
-      l: 100,
-      r: 100,
-      t: 100,
+      b: { value: 100 },
+      l: { value: 100 },
+      r: { value: 100 },
+      t: { value: 100 },
     });
     expect(store.getState()[PAGE_BUILDER].pages[0].elements['test-2'].padding).toStrictEqual({
-      b: 100,
-      l: 100,
-      r: 100,
-      t: 100,
+      b: { value: 100 },
+      l: { value: 100 },
+      r: { value: 100 },
+      t: { value: 100 },
     });
   });
 
@@ -228,10 +228,10 @@ describe('Insets behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages[0].elements['test-1'].padding).toStrictEqual({
-      b: 50,
-      l: 100,
-      r: 50,
-      t: 100,
+      b: { value: 50 },
+      l: { value: 100 },
+      r: { value: 50 },
+      t: { value: 100 },
     });
   });
 
@@ -267,10 +267,10 @@ describe('Insets behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages[0].elements['test-1'].padding).toStrictEqual({
-      b: 100,
-      l: 100,
-      r: 100,
-      t: 100,
+      b: { value: 100 },
+      l: { value: 100 },
+      r: { value: 100 },
+      t: { value: 100 },
     });
   });
 
@@ -294,8 +294,8 @@ describe('Insets behaviors', () => {
                 ...elementMock,
                 padding: {
                   ...insetsMock,
-                  b: 50,
-                  r: 50,
+                  b: { value: 50 },
+                  r: { value: 50 },
                 },
               },
             },
@@ -335,10 +335,10 @@ describe('Insets behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages[0].elements['test-1'].padding).toStrictEqual({
-      b: 150,
-      l: 100,
-      r: 150,
-      t: 100,
+      b: { value: 150 },
+      l: { value: 100 },
+      r: { value: 150 },
+      t: { value: 100 },
     });
   });
 
@@ -381,10 +381,10 @@ describe('Insets behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages[0].elements['test-1'].padding).toStrictEqual({
-      b: 100,
-      l: 100,
-      r: 100,
-      t: 100,
+      b: { value: 100 },
+      l: { value: 100 },
+      r: { value: 100 },
+      t: { value: 100 },
     });
   });
 
@@ -457,16 +457,16 @@ describe('Insets behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages[0].elements['test-1'].padding).toStrictEqual({
-      b: 100,
-      l: 100,
-      r: 100,
-      t: 100,
+      b: { value: 100 },
+      l: { value: 100 },
+      r: { value: 100 },
+      t: { value: 100 },
     });
     expect(store.getState()[PAGE_BUILDER].pages[0].elements['test-2'].padding).toStrictEqual({
-      b: 100,
-      l: 100,
-      r: 100,
-      t: 100,
+      b: { value: 100 },
+      l: { value: 100 },
+      r: { value: 100 },
+      t: { value: 100 },
     });
   });
 
@@ -513,10 +513,10 @@ describe('Insets behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages[0].elements['test-1'].padding).toStrictEqual({
-      b: 100,
-      l: 100,
-      r: 100,
-      t: 100,
+      b: { value: 100 },
+      l: { value: 100 },
+      r: { value: 100 },
+      t: { value: 100 },
     });
   });
 });

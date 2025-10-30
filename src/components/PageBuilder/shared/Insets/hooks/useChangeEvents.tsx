@@ -35,18 +35,18 @@ export const useChangeEvents = (
 
   const handleChangeInset = (value: string, inset: keyof TInsets, isScrubbableInput: boolean): void => {
     setInsetAll({ ...insetAll, [inset]: value });
-    updateStore(isScrubbableInput, { [inset]: parseInt(value) });
+    updateStore(isScrubbableInput, { [inset]: { value: parseInt(value) } });
   };
 
   const handleChangeInsetLR = (value: string, isScrubbableInput: boolean): void => {
-    const targetValue = getScrubbableInputValue(insetLR, insets.l, isScrubbableInput, ['l', 'r'], value);
+    const targetValue = getScrubbableInputValue(insetLR, insets.l.value, isScrubbableInput, ['l', 'r'], value);
 
     setInsetLR(targetValue.valueInput);
     updateStore(isScrubbableInput, targetValue.valueStore);
   };
 
   const handleChangeInsetTB = (value: string, isScrubbableInput: boolean): void => {
-    const targetValue = getScrubbableInputValue(insetTB, insets.t, isScrubbableInput, ['t', 'b'], value);
+    const targetValue = getScrubbableInputValue(insetTB, insets.t.value, isScrubbableInput, ['t', 'b'], value);
 
     setInsetTB(targetValue.valueInput);
     updateStore(isScrubbableInput, targetValue.valueStore);

@@ -48,10 +48,10 @@ export const useInsetsEvents = (insetsName: TInsetsName): TUseInsetsEvents => {
   const isInsetModeMerged = insetMode === InsetMode.merged;
 
   useEffect(() => {
-    const b = isMixedB ? 'Mixed' : insets.b.toString();
-    const l = isMixedL ? 'Mixed' : insets.l.toString();
-    const r = isMixedR ? 'Mixed' : insets.r.toString();
-    const t = isMixedT ? 'Mixed' : insets.t.toString();
+    const b = isMixedB ? 'Mixed' : insets.b.value.toString();
+    const l = isMixedL ? 'Mixed' : insets.l.value.toString();
+    const r = isMixedR ? 'Mixed' : insets.r.value.toString();
+    const t = isMixedT ? 'Mixed' : insets.t.value.toString();
 
     setInsetAll({ b, l, r, t });
     setInsetLR(isMixedLR ? 'Mixed' : getInsetValue(insets, ['l', 'r']));

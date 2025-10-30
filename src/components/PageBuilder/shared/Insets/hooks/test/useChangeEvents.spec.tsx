@@ -56,7 +56,7 @@ describe('useBlurEvent', () => {
 
     // result
     expect(mockCallBack.mock.calls[0][0]).toStrictEqual({ b: '1', l: '0', r: '0', t: '0' });
-    expect(mockCallBack.mock.calls[1][0].payload).toStrictEqual({ insets: { b: 1 }, name: 'padding' });
+    expect(mockCallBack.mock.calls[1][0].payload).toStrictEqual({ insets: { b: { value: 1 } }, name: 'padding' });
   });
 
   it(`should trigger change insetLR to state`, () => {
@@ -101,7 +101,10 @@ describe('useBlurEvent', () => {
 
     // result
     expect(mockCallBack.mock.calls[0][0]).toBe('1, 2');
-    expect(mockCallBack.mock.calls[1][0].payload).toStrictEqual({ insets: { l: 1, r: 2 }, name: 'padding' });
+    expect(mockCallBack.mock.calls[1][0].payload).toStrictEqual({
+      insets: { l: { value: 1 }, r: { value: 2 } },
+      name: 'padding',
+    });
   });
 
   it(`should trigger change insetTB to state`, () => {
@@ -146,6 +149,9 @@ describe('useBlurEvent', () => {
 
     // result
     expect(mockCallBack.mock.calls[0][0]).toBe('1, 2');
-    expect(mockCallBack.mock.calls[1][0].payload).toStrictEqual({ insets: { b: 2, t: 1 }, name: 'padding' });
+    expect(mockCallBack.mock.calls[1][0].payload).toStrictEqual({
+      insets: { b: { value: 2 }, t: { value: 1 } },
+      name: 'padding',
+    });
   });
 });

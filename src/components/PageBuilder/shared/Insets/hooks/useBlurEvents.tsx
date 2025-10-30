@@ -30,9 +30,9 @@ export const useBlurEvents = (
 
   const handleBlurInset = (inset: keyof TInsets): void => {
     if (insetAll[inset] === '') {
-      setInsetAll({ ...insetAll, [inset]: element[insetsName][inset].toString() });
+      setInsetAll({ ...insetAll, [inset]: element[insetsName][inset].value.toString() });
     } else {
-      dispatch(changeInsets({ [inset]: parseInt(insetAll[inset]) }, insetsName));
+      dispatch(changeInsets({ [inset]: { value: parseInt(insetAll[inset]) } }, insetsName));
     }
   };
 

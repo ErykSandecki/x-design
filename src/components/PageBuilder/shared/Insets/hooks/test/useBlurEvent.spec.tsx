@@ -33,7 +33,7 @@ describe('useBlurEvent', () => {
     result.current.onBlurInset('b');
 
     // result
-    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({ insets: { b: 0 }, name: 'padding' });
+    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({ insets: { b: { value: 0 } }, name: 'padding' });
   });
 
   it(`should trigger blur reset value`, () => {
@@ -78,14 +78,17 @@ describe('useBlurEvent', () => {
 
     // result
     expect(mockCallBack.mock.calls[0][0]).toBe('0, 1');
-    expect(mockCallBack.mock.calls[1][0].payload).toStrictEqual({ insets: { l: 0, r: 1 }, name: 'padding' });
+    expect(mockCallBack.mock.calls[1][0].payload).toStrictEqual({
+      insets: { l: { value: 0 }, r: { value: 1 } },
+      name: 'padding',
+    });
   });
 
   it(`should trigger blur reset value`, () => {
     // before
     const { result } = renderHook(() =>
       useBlurEvents(
-        { ...elementMock, padding: { ...insetsMock, l: 0, r: 1 } },
+        { ...elementMock, padding: { ...insetsMock, l: { value: 0 }, r: { value: 1 } } },
         { b: '0', l: '0', r: '0', t: '0' },
         '',
         '0',
@@ -123,14 +126,17 @@ describe('useBlurEvent', () => {
 
     // result
     expect(mockCallBack.mock.calls[0][0]).toBe('0, 1');
-    expect(mockCallBack.mock.calls[1][0].payload).toStrictEqual({ insets: { b: 1, t: 0 }, name: 'padding' });
+    expect(mockCallBack.mock.calls[1][0].payload).toStrictEqual({
+      insets: { b: { value: 1 }, t: { value: 0 } },
+      name: 'padding',
+    });
   });
 
   it(`should trigger blur reset value`, () => {
     // before
     const { result } = renderHook(() =>
       useBlurEvents(
-        { ...elementMock, padding: { ...insetsMock, b: 1, t: 0 } },
+        { ...elementMock, padding: { ...insetsMock, b: { value: 1 }, t: { value: 0 } } },
         { b: '0', l: '0', r: '0', t: '0' },
         '0',
         '',

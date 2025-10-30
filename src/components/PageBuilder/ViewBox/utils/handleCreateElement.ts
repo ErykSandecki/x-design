@@ -47,7 +47,7 @@ export const handleCreateElement = (
         grid: { columns: 1, rows: 1 },
         type: LayoutType.freeForm,
       },
-      padding: { b: 0, l: 0, r: 0, t: 0 },
+      padding: { b: { value: 0 }, l: { value: 0 }, r: { value: 0 }, t: { value: 0 } },
       parentId: possibleElement.parentId,
       position: 'absolute',
       type: ElementType.frame,

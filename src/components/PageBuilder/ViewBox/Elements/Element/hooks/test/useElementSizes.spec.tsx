@@ -51,10 +51,10 @@ describe('useElementEvents', () => {
                   min: 100,
                 },
                 padding: {
-                  b: 10,
-                  l: 10,
-                  r: 10,
-                  t: 10,
+                  b: { value: 10 },
+                  l: { value: 10 },
+                  r: { value: 10 },
+                  t: { value: 10 },
                 },
                 width: {
                   ...elementMock.width,
@@ -123,10 +123,10 @@ describe('useElementEvents', () => {
                   boxSizing: 'included',
                 },
                 padding: {
-                  b: 10,
-                  l: 10,
-                  r: 10,
-                  t: 10,
+                  b: { value: 10 },
+                  l: { value: 10 },
+                  r: { value: 10 },
+                  t: { value: 10 },
                 },
                 width: {
                   ...elementMock.width,

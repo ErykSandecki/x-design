@@ -15,7 +15,7 @@ describe('getInsetValue', () => {
 
   it(`should return separeted value`, () => {
     // before
-    const result = getInsetValue({ ...insetsMock, r: 1 }, ['l', 'r']);
+    const result = getInsetValue({ ...insetsMock, r: { value: 1 } }, ['l', 'r']);
 
     // result
     expect(result).toBe('0, 1');

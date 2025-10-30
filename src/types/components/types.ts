@@ -49,12 +49,15 @@ export type TLayout = {
   grid: TGrid;
   type: LayoutType;
 };
+export type TInsetProperties = {
+  value: number;
+};
 
 export type TInsets = {
-  b: number;
-  l: number;
-  r: number;
-  t: number;
+  b: TInsetProperties;
+  l: TInsetProperties;
+  r: TInsetProperties;
+  t: TInsetProperties;
 };
 
 export type TInsetsName = keyof Pick<TElement, 'padding'>;

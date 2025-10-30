@@ -99,7 +99,7 @@ export const elementMock: TElement = {
   },
   id: 'test-1',
   layout: layoutMock,
-  padding: { b: 0, l: 0, r: 0, t: 0 },
+  padding: { b: { value: 0 }, l: { value: 0 }, r: { value: 0 }, t: { value: 0 } },
   parentId: '-1',
   position: 'absolute',
   type: ElementType.frame,
@@ -125,7 +125,7 @@ export const createFrameMock: TElement = {
   },
   id: 'test-1',
   layout: layoutMock,
-  padding: { b: 0, l: 0, r: 0, t: 0 },
+  padding: { b: { value: 0 }, l: { value: 0 }, r: { value: 0 }, t: { value: 0 } },
   parentId: '-1',
   position: 'absolute',
   type: ElementType.frame,
@@ -183,12 +183,7 @@ export const childrenMock: TChildren = {
   type: ElementType.frame,
 };
 
-export const insetsMock: TInsets = {
-  b: 0,
-  l: 0,
-  r: 0,
-  t: 0,
-};
+export const insetsMock: TInsets = { b: { value: 0 }, l: { value: 0 }, r: { value: 0 }, t: { value: 0 } };
 
 export const selectedElementMock: TSelectedElement = {
   id: 'test-1',

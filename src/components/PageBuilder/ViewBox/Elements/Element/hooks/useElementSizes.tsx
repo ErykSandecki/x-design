@@ -33,8 +33,8 @@ export const useElementSizes = (id: TElement['id']): TUseElementSizes => {
   const cssHeight = `${relativeHeight}${unitHeight ?? ''}`;
   const cssWidth = `${relativeWidth}${unitWidth ?? ''}`;
   const isExcluded = boxSizing === 'excluded';
-  const additionalHeight = padding.b + padding.t;
-  const additionalWidth = padding.l + padding.r;
+  const additionalHeight = padding.b.value + padding.t.value;
+  const additionalWidth = padding.l.value + padding.r.value;
 
   const height =
     (isPureNumber(relativeHeight) || !itemsRefs[id]) && !unitHeight

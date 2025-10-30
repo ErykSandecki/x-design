@@ -11,12 +11,12 @@ export const extractInsetValue = (
   value: string;
 } => {
   const [first, second] = cleanValue(value);
-  const firstInset = parseInt(first);
-  const secondInset = parseInt(second ? second : first);
-  const isDifference = firstInset !== secondInset;
+  const firstInsetValue = parseInt(first);
+  const secondInsetValue = parseInt(second ? second : first);
+  const isDifference = firstInsetValue !== secondInsetValue;
 
   return {
-    insets: { [keys[0]]: firstInset, [keys[1]]: secondInset },
+    insets: { [keys[0]]: { value: firstInsetValue }, [keys[1]]: { value: secondInsetValue } },
     value: isDifference ? `${first}, ${second}` : `${first}`,
   };
 };
