@@ -7,7 +7,7 @@ import { RefsProvider } from 'pages/PageBuilderPage/core/RefsProvider';
 import { useElementSizes } from '../useElementSizes';
 
 // mocks
-import { elementMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, layoutMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
@@ -49,6 +49,84 @@ describe('useElementEvents', () => {
                   ...elementMock.height,
                   max: 100,
                   min: 100,
+                },
+                padding: {
+                  b: 10,
+                  l: 10,
+                  r: 10,
+                  t: 10,
+                },
+                width: {
+                  ...elementMock.width,
+                  max: 100,
+                  min: 100,
+                },
+              },
+            },
+            selectedElements: [selectedElementMock],
+          },
+        },
+      },
+    });
+
+    // before
+    const { result } = renderHook(() => useElementSizes(selectedElementMock.id), {
+      wrapper: ({ children }) => {
+        const Wrapper = getProviderWrapper(store);
+
+        return (
+          <Wrapper>
+            <RefsProvider>{children}</RefsProvider>
+          </Wrapper>
+        );
+      },
+    });
+
+    // result
+    expect(result.current).toStrictEqual({
+      cssHeight: '100px',
+      cssWidth: '100px',
+      height: 120,
+      maxHeight: '100px',
+      maxWidth: '100px',
+      minHeight: '100px',
+      minWidth: '100px',
+      width: 120,
+    });
+  });
+
+  it(`should return sizes from html when included`, () => {
+    // mock
+    const store = configureStore({
+      ...pageBuilderStateMock,
+      [PAGE_BUILDER]: {
+        ...pageBuilderStateMock[PAGE_BUILDER],
+        pages: {
+          ...pageBuilderStateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...currentPage,
+            elements: {
+              ...currentPage.elements,
+              ['-1']: {
+                ...currentPage.elements['-1'],
+                children: [elementMock.id],
+              },
+              [elementMock.id]: {
+                ...elementMock,
+                height: {
+                  ...elementMock.height,
+                  max: 100,
+                  min: 100,
+                },
+                layout: {
+                  ...layoutMock,
+                  boxSizing: 'included',
+                },
+                padding: {
+                  b: 10,
+                  l: 10,
+                  r: 10,
+                  t: 10,
                 },
                 width: {
                   ...elementMock.width,

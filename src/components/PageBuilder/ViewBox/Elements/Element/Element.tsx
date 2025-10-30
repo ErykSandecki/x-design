@@ -22,6 +22,7 @@ import { TElementChildren } from './types';
 
 // utils
 import { getLayout } from './utils/getLayout';
+import { getPaddings } from './utils/getPaddings';
 import { getPosition } from './utils/getPosition';
 
 export type TElementProps = {
@@ -57,6 +58,7 @@ const Element: FC<TElementProps> = ({ classes, children, id, index, mouseMode, p
     maxWidth,
     minHeight,
     minWidth,
+    padding,
     position,
     showDropAnchors,
     width,
@@ -89,6 +91,7 @@ const Element: FC<TElementProps> = ({ classes, children, id, index, mouseMode, p
         maxWidth,
         minHeight,
         minWidth,
+        padding: getPaddings(padding),
         position,
         width: cssWidth,
       }}

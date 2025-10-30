@@ -23,7 +23,7 @@ import {
 
 // types
 import { MouseMode } from 'types/enums/mouseMode';
-import { TElement } from 'types';
+import { TElement, TInsets } from 'types';
 import { TUseElementSizes, useElementSizes } from './useElementSizes';
 import { TUseMouseDownEvent, useMouseDownEvent } from './useMouseDownEvent';
 import { TUseMouseEnterEvent, useMouseEnterEvent } from './useMouseEnterEvent';
@@ -44,6 +44,7 @@ export type TUseElementEvents = TUseElementSizes & {
   onMouseDown: TUseMouseDownEvent;
   onMouseEnter: TUseMouseEnterEvent;
   onMouseLeave: TUseMouseLeaveEvent;
+  padding: TInsets;
   position: TElement['position'];
   showDropAnchors: boolean;
   x: TElement['coordinates']['x'];
@@ -70,7 +71,7 @@ export const useElementEvents = (
   const displayEventsArea = !isDraggable && !isMultiple && isSelected;
   const displayOutline = isFocused;
   const [isPressing, setIsPressing] = useState(false);
-  const { alignment, angle, background, coordinates, flip, layout, position } = elementData;
+  const { coordinates, position } = elementData;
   const { x, y } = coordinates;
   const sizes = useElementSizes(id);
   const showDropAnchors = !isSelected && position === 'relative';
@@ -83,17 +84,17 @@ export const useElementEvents = (
 
   return {
     ...sizes,
-    alignment,
-    angle,
-    background,
+    alignment: elementData.alignment,
+    angle: elementData.angle,
+    background: elementData.background,
     coordinates,
     displayEventsArea,
     displayOutline,
-    flip,
+    flip: elementData.flip,
     isHover,
     isMoving,
     isSelected,
-    layout,
+    layout: elementData.layout,
     onMouseDown: useMouseDownEvent(
       cursorPosition,
       cursorPositionBase,
@@ -110,6 +111,7 @@ export const useElementEvents = (
     ),
     onMouseEnter: useMouseEnterEvent(id, isSelected, mouseMode),
     onMouseLeave: useMouseLeaveEvent(mouseMode, parentId),
+    padding: elementData.padding,
     position,
     showDropAnchors,
     x,

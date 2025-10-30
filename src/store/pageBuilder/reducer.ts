@@ -120,6 +120,133 @@ const initialState: TPageBuilderState = {
   pages: {
     [BASE_PAGE.id]: {
       ...BASE_PAGE,
+      // elements: {
+      //   '-1': {
+      //     alignment: {},
+      //     angle: 0,
+      //     aspectRatio: false,
+      //     background: {
+      //       properties: {
+      //         alpha: '100',
+      //         color: '#1e262f',
+      //         format: 'hex',
+      //       },
+      //       visible: true,
+      //     },
+      //     children: [
+      //       {
+      //         id: 'mhdb5urm1761821719041',
+      //         type: 'frame',
+      //       },
+      //     ],
+      //     coordinates: {
+      //       x: 0,
+      //       y: 0,
+      //     },
+      //     deepLevel: 0,
+      //     flip: {
+      //       x: false,
+      //       y: false,
+      //     },
+      //     height: {
+      //       value: 0,
+      //     },
+      //     id: '-1',
+      //     layout: {
+      //       alignment: 'none',
+      //       boxSizing: 'excluded',
+      //       gap: {
+      //         column: {
+      //           value: 0,
+      //         },
+      //         row: {
+      //           value: 0,
+      //         },
+      //       },
+      //       grid: {
+      //         columns: 1,
+      //         rows: 1,
+      //       },
+      //       type: 'freeForm',
+      //     },
+      //     padding: {
+      //       b: 0,
+      //       l: 0,
+      //       r: 0,
+      //       t: 0,
+      //     },
+      //     parentId: '-1',
+      //     position: 'absolute',
+      //     type: 'base',
+      //     width: {
+      //       value: 0,
+      //     },
+      //   },
+      //   mhdb5urm1761821719041: {
+      //     alignment: {},
+      //     angle: 0,
+      //     aspectRatio: false,
+      //     background: {
+      //       properties: {
+      //         alpha: '100',
+      //         color: '#ffffff',
+      //         format: 'hex',
+      //       },
+      //       visible: true,
+      //     },
+      //     children: [],
+      //     coordinates: {
+      //       x: 508,
+      //       y: 489,
+      //     },
+      //     deepLevel: 1,
+      //     flip: {
+      //       x: false,
+      //       y: false,
+      //     },
+      //     height: {
+      //       value: 252,
+      //     },
+      //     id: 'mhdb5urm1761821719041',
+      //     layout: {
+      //       alignment: 'none',
+      //       boxSizing: 'excluded',
+      //       gap: {
+      //         column: {
+      //           value: 0,
+      //         },
+      //         row: {
+      //           value: 0,
+      //         },
+      //       },
+      //       grid: {
+      //         columns: 1,
+      //         rows: 1,
+      //       },
+      //       type: 'freeForm',
+      //     },
+      //     padding: {
+      //       b: 15,
+      //       l: 15,
+      //       r: 15,
+      //       t: 15,
+      //     },
+      //     parentId: '-1',
+      //     position: 'absolute',
+      //     type: 'frame',
+      //     width: {
+      //       value: 307,
+      //     },
+      //   },
+      // },
+      // selectedElements: [
+      //   {
+      //     id: 'mhdb5urm1761821719041',
+      //     parentId: '-1',
+      //     position: 'absolute',
+      //     type: 'frame',
+      //   },
+      // ],
     },
   },
 };

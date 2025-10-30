@@ -25,12 +25,16 @@ export type TUseElementSizes = {
 
 export const useElementSizes = (id: TElement['id']): TUseElementSizes => {
   const { itemsRefs } = useRefs();
-  const elementDynamicData = useSelector(elementDataSelectorCreator(id));
-  const { height: elHeight, width: elWidth } = elementDynamicData;
+  const elementData = useSelector(elementDataSelectorCreator(id));
+  const { height: elHeight, layout, padding, width: elWidth } = elementData;
+  const { boxSizing } = layout;
   const { unit: unitHeight, value: relativeHeight } = elHeight;
   const { unit: unitWidth, value: relativeWidth } = elWidth;
   const cssHeight = `${relativeHeight}${unitHeight ?? ''}`;
   const cssWidth = `${relativeWidth}${unitWidth ?? ''}`;
+  const isExcluded = boxSizing === 'excluded';
+  const additionalHeight = padding.b + padding.t;
+  const additionalWidth = padding.l + padding.r;
 
   const height =
     (isPureNumber(relativeHeight) || !itemsRefs[id]) && !unitHeight
@@ -45,11 +49,11 @@ export const useElementSizes = (id: TElement['id']): TUseElementSizes => {
   return {
     cssHeight: isPureNumber(cssHeight) ? `${cssHeight}px` : cssHeight,
     cssWidth: isPureNumber(cssWidth) ? `${cssWidth}px` : cssWidth,
-    height,
+    height: isExcluded ? parseFloat(height.toString()) + additionalHeight : height,
     maxHeight: elHeight.max ? `${elHeight.max}px` : '',
     maxWidth: elWidth.max ? `${elWidth.max}px` : '',
     minHeight: elHeight.min ? `${elHeight.min}px` : '',
     minWidth: elWidth.min ? `${elWidth.min}px` : '',
-    width,
+    width: isExcluded ? parseFloat(width.toString()) + additionalWidth : width,
   };
 };

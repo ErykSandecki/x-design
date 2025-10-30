@@ -11,6 +11,7 @@ import { useElementEvents } from '../useElementEvents';
 import {
   elementMock,
   flipMock,
+  insetsMock,
   layoutMock,
   pageBuilderStateMock,
   selectedElementMock,
@@ -114,6 +115,7 @@ describe('useElementEvents', () => {
       onMouseDown: expect.any(Function),
       onMouseEnter: expect.any(Function),
       onMouseLeave: expect.any(Function),
+      padding: insetsMock,
       position: 'absolute',
       showDropAnchors: false,
       width: 100,
