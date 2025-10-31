@@ -68,10 +68,12 @@ export type TScore = {
 };
 
 export type TSize = TScore & {
-  type: 'auto' | 'fixed';
+  type: 'auto' | TValueType;
   unit?: Unit;
   value: number | CSSProperties['height'] | CSSProperties['width'];
 };
+
+export type TValueType = 'fixed' | 'variable';
 
 export type TElement = {
   alignment: TAlignment;
