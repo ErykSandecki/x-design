@@ -5,13 +5,19 @@ import { setElementsSizes } from 'store/pageBuilder/actions';
 
 // types
 import { TSetElementsSizesActionPayload } from 'store/pageBuilder/types';
+import { Unit } from 'types';
 
 export type TUseChangeEvent = {
   onChangeHeight: TFunc<[string, boolean?]>;
   onChangeWidth: TFunc<[string, boolean?]>;
 };
 
-export const useChangeEvent = (setHeight: TFunc<[string]>, setWidth: TFunc<[string]>): TUseChangeEvent => {
+export const useChangeEvent = (
+  setHeight: TFunc<[string]>,
+  setWidth: TFunc<[string]>,
+  unitHeight: Unit,
+  unitWidth: Unit,
+): TUseChangeEvent => {
   const dispatch = useDispatch();
 
   const updateStore = (
@@ -24,13 +30,16 @@ export const useChangeEvent = (setHeight: TFunc<[string]>, setWidth: TFunc<[stri
     }
   };
 
+  const transformValue = (isScrubbableInput: boolean, unit: Unit, value: string): string =>
+    isScrubbableInput ? `${value}${unit ?? ''}` : value;
+
   const handleChangeHeight = (value: string, isScrubbableInput: boolean): void => {
-    setHeight(value);
+    setHeight(transformValue(isScrubbableInput, unitHeight, value));
     updateStore(value, isScrubbableInput, 'height');
   };
 
   const handleChangeWidth = (value: string, isScrubbableInput: boolean): void => {
-    setWidth(value);
+    setWidth(transformValue(isScrubbableInput, unitWidth, value));
     updateStore(value, isScrubbableInput, 'width');
   };
 

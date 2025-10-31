@@ -3,6 +3,9 @@ import { renderHook } from '@testing-library/react';
 // hooks
 import { useChangeEvent } from '../useChangeEvent';
 
+// types
+import { Unit } from 'types';
+
 const mockCallBack = jest.fn();
 
 jest.mock('react-redux', () => ({
@@ -13,7 +16,7 @@ jest.mock('react-redux', () => ({
 describe('useChangeEvent', () => {
   it(`should trigger change height from text field`, () => {
     // before
-    const { result } = renderHook(() => useChangeEvent(mockCallBack, mockCallBack));
+    const { result } = renderHook(() => useChangeEvent(mockCallBack, mockCallBack, Unit.percentage, Unit.percentage));
 
     // action
     result.current.onChangeHeight('100', false);
@@ -24,13 +27,13 @@ describe('useChangeEvent', () => {
 
   it(`should trigger change x from scrubbable input`, () => {
     // before
-    const { result } = renderHook(() => useChangeEvent(mockCallBack, mockCallBack));
+    const { result } = renderHook(() => useChangeEvent(mockCallBack, mockCallBack, Unit.percentage, Unit.percentage));
 
     // action
     result.current.onChangeHeight('100', true);
 
     // result
-    expect(mockCallBack.mock.calls[0][0]).toBe('100');
+    expect(mockCallBack.mock.calls[0][0]).toBe('100%');
     expect(mockCallBack.mock.calls[1][0].payload).toStrictEqual({
       sizeType: 'height',
       value: 100,
@@ -39,7 +42,7 @@ describe('useChangeEvent', () => {
 
   it(`should trigger change width from text field`, () => {
     // before
-    const { result } = renderHook(() => useChangeEvent(mockCallBack, mockCallBack));
+    const { result } = renderHook(() => useChangeEvent(mockCallBack, mockCallBack, Unit.percentage, Unit.percentage));
 
     // action
     result.current.onChangeWidth('100', false);
@@ -50,13 +53,13 @@ describe('useChangeEvent', () => {
 
   it(`should trigger change x from scrubbable input`, () => {
     // before
-    const { result } = renderHook(() => useChangeEvent(mockCallBack, mockCallBack));
+    const { result } = renderHook(() => useChangeEvent(mockCallBack, mockCallBack, Unit.percentage, Unit.percentage));
 
     // action
     result.current.onChangeWidth('100', true);
 
     // result
-    expect(mockCallBack.mock.calls[0][0]).toBe('100');
+    expect(mockCallBack.mock.calls[0][0]).toBe('100%');
     expect(mockCallBack.mock.calls[1][0].payload).toStrictEqual({
       sizeType: 'width',
       value: 100,

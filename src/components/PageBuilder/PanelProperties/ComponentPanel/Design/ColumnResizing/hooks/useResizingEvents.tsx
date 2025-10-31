@@ -47,7 +47,7 @@ export const useResizingEvents = (): TUseResizingEvents => {
   const hasPureSizes = isPureHeight && isPureWidth;
   const hasNoUnit = unitHeight === undefined && unitWidth === undefined;
   const onBlurEvents = useBlurEvent(element, height, setHeight, setWidth, width);
-  const onChangeEvents = useChangeEvent(setHeight, setWidth);
+  const onChangeEvents = useChangeEvent(setHeight, setWidth, unitHeight, unitWidth);
   const showHeightChip = typeHeight !== 'fixed' && !isMixedHeight;
   const showWidthChip = typeWidth !== 'fixed' && !isMixedWidth;
   const valueScrubbaleInputHeight = isMultiple ? 0 : parseFloat(height);
