@@ -7,7 +7,7 @@ import { TElements, TEvents, TPageBuilderState } from '../../types';
 
 // utils
 import { calculateCoordinates } from './calculateCoordinates';
-import { extractObjectValues, mapFilteredValues } from 'utils';
+import { extractObjectValues, isBaseParent, mapFilteredValues } from 'utils';
 import { getTargetPosition } from './getTargetPosition';
 
 export const getSizes = (
@@ -70,14 +70,17 @@ export const getMappedElementsToMove = (parentHasChanged: boolean, state: TPageB
   const ids = extractObjectValues(draggableElements, ['id']);
 
   return mapFilteredValues(elements, ids, ({ id }) => {
+    const element = elements[id];
     const data = getPartialData(elements[id], id, elements[possibleParent], parentHasChanged, possibleParent, state);
     const shouldResetCoordinates = data.position === 'relative';
+    const initialMargin = { b: { value: 0 }, l: { value: 0 }, r: { value: 0 }, t: { value: 0 } };
 
     return {
-      ...elements[id],
+      ...element,
       coordinates: shouldResetCoordinates ? BASE_2D : data.coordinates,
       deepLevel: data.deepLevel,
       height: data.height,
+      margin: isBaseParent(data.parentId) ? initialMargin : element.margin,
       parentId: data.parentId,
       position: data.position,
       width: data.width,
