@@ -6,14 +6,17 @@ import {
   layoutMock,
   pageBuilderStateMock,
   selectedElementMock,
+  sizeMock,
 } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from '../../../actionsType';
 
+// types
+import { LayoutType } from 'types';
+
 // utils
 import { getMappedElementsToMove } from '../getMappedElementsToMove';
-import { LayoutType } from 'types';
 
 describe('getMappedElementsToMove', () => {
   beforeEach(() => {
@@ -217,11 +220,11 @@ describe('getMappedElementsToMove', () => {
         ...elementMock,
         children: [],
         deepLevel: elementMock.deepLevel + 1,
-        height: { unit: undefined, value: 'auto' },
+        height: { ...sizeMock, unit: undefined, value: 'auto' },
         id: 'test-2',
         parentId: elementMock.id,
         position: 'relative',
-        width: { unit: undefined, value: 'auto' },
+        width: { ...sizeMock, unit: undefined, value: 'auto' },
       },
     });
   });

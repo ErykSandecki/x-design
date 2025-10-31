@@ -13,6 +13,7 @@ import {
   eventsMock,
   gapMock,
   insetsMock,
+  sizeMock,
 } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
@@ -228,7 +229,7 @@ describe('PageBuilderReducer', () => {
             ...currentPage.elements,
             [elementMock.id]: {
               ...elementMock,
-              height: { unit: Unit.percentage, value: 100 },
+              height: { ...sizeMock, unit: Unit.percentage, value: 100 },
             },
           },
           selectedElements: [selectedElementMock],
@@ -1014,8 +1015,8 @@ describe('PageBuilderReducer', () => {
             ...currentPage.elements,
             [elementMock.id]: {
               ...elementMock,
-              height: { value: 'auto' },
-              width: { value: 'auto' },
+              height: { ...sizeMock, value: 'auto' },
+              width: { ...sizeMock, value: 'auto' },
             },
           },
           selectedElements: [selectedElementMock],
@@ -1166,8 +1167,8 @@ describe('PageBuilderReducer', () => {
             [elementMock.id]: {
               ...elementMock,
               coordinates: { x: 0, y: 0 },
-              height: { value: 100 },
-              width: { value: 300 },
+              height: { ...sizeMock, value: 100 },
+              width: { ...sizeMock, value: 300 },
             },
           },
           selectedElements: {
@@ -1475,7 +1476,7 @@ describe('PageBuilderReducer', () => {
             ...currentPage.elements,
             [elementMock.id]: {
               ...elementMock,
-              height: { value: 'auto' },
+              height: { ...sizeMock, value: 'auto' },
             },
           },
           selectedElements: [selectedElementMock],

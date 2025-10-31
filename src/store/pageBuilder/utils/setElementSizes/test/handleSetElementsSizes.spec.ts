@@ -1,5 +1,5 @@
 // mocks
-import { elementMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, pageBuilderStateMock, selectedElementMock, sizeMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from '../../../actionsType';
@@ -43,7 +43,7 @@ describe('handleSetElementsSizes', () => {
             ...currentPage.elements,
             [elementMock.id]: {
               ...elementMock,
-              height: { value: 'auto' },
+              height: { ...sizeMock, value: 'auto' },
             },
           },
           selectedElements: [selectedElementMock],

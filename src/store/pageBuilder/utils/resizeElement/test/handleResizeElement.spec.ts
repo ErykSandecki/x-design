@@ -1,5 +1,11 @@
 // mocks
-import { elementMock, flipMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
+import {
+  elementMock,
+  flipMock,
+  pageBuilderStateMock,
+  selectedElementMock,
+  sizeMock,
+} from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from '../../../actionsType';
@@ -53,9 +59,9 @@ describe('handleResizeElement', () => {
             ...currentPage.elements,
             [elementMock.id]: {
               ...elementMock,
-              height: { value: 100 },
+              height: { ...sizeMock, value: 100 },
               position: 'absolute',
-              width: { value: 300 },
+              width: { ...sizeMock, value: 300 },
             },
           },
           selectedElements: [selectedElementMock],

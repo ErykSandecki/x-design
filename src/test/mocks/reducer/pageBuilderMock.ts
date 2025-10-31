@@ -18,6 +18,7 @@ import {
   TLayout,
   TGapProperties,
   TInsets,
+  TSize,
 } from 'types';
 import { AnchorResize, AnchorRotate } from 'store/pageBuilder/enums';
 import {
@@ -95,6 +96,7 @@ export const elementMock: TElement = {
   deepLevel: 0,
   flip: flipMock,
   height: {
+    type: 'fixed',
     value: 100,
   },
   id: 'test-1',
@@ -104,6 +106,7 @@ export const elementMock: TElement = {
   position: 'absolute',
   type: ElementType.frame,
   width: {
+    type: 'fixed',
     value: 100,
   },
 };
@@ -121,6 +124,7 @@ export const createFrameMock: TElement = {
   deepLevel: 1,
   flip: flipMock,
   height: {
+    type: 'fixed',
     value: 0,
   },
   id: 'test-1',
@@ -130,6 +134,7 @@ export const createFrameMock: TElement = {
   position: 'absolute',
   type: ElementType.frame,
   width: {
+    type: 'fixed',
     value: 0,
   },
 };
@@ -190,4 +195,9 @@ export const selectedElementMock: TSelectedElement = {
   parentId: '-1',
   position: 'absolute',
   type: ElementType.frame,
+};
+
+export const sizeMock: TSize = {
+  type: 'fixed',
+  value: 0,
 };

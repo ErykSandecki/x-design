@@ -37,6 +37,7 @@ export const handleCreateElement = (
       deepLevel: 0,
       flip: { x: false, y: false },
       height: {
+        type: 'fixed',
         value: Math.abs(y1 - y2),
       },
       id: generateJestID(elementsSelector(window.store.getState())),
@@ -52,6 +53,7 @@ export const handleCreateElement = (
       position: 'absolute',
       type: ElementType.frame,
       width: {
+        type: 'fixed',
         value: Math.abs(x1 - x2),
       },
     };

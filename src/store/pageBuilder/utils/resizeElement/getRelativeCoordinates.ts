@@ -9,7 +9,7 @@ export const getVerticalAnchorCoordinates = (
   baseWidth: number,
   ratio: number,
   y: number,
-): Pick<TElement, 'height' | 'width'> => {
+): Partial<TSizeCoordinates> => {
   const offsetY = baseHeight + y;
   const height = offsetY < 0 ? 0 : offsetY;
 
@@ -25,7 +25,7 @@ export const getHorizontalAnchorCoordinates = (
   baseWidth: number,
   ratio: number,
   x: number,
-): Pick<TElement, 'height' | 'width'> => {
+): Partial<TSizeCoordinates> => {
   const offsetX = baseWidth + x;
   const width = offsetX < 0 ? 0 : offsetX;
 
@@ -42,7 +42,7 @@ export const getRelativePositionByAspectRatio = (
   ratio: number,
   x: number,
   y: number,
-): Pick<TElement, 'height' | 'width'> => {
+): Partial<TSizeCoordinates> => {
   let newWidth = baseWidth + x;
   let newHeight = baseHeight + y;
   let deltaX = x;
@@ -83,17 +83,17 @@ export const getRelativeCoordinates = (
       return {
         coordinates: { x: x1, y: y1 },
         ...getVerticalAnchorCoordinates(aspectRatio, baseHeight, baseWidth, ratio, y),
-      };
+      } as TSizeCoordinates;
     case AnchorResize.east:
     case AnchorResize.west:
       return {
         coordinates: { x: x1, y: y1 },
         ...getHorizontalAnchorCoordinates(aspectRatio, baseHeight, baseWidth, ratio, x),
-      };
+      } as TSizeCoordinates;
     default:
       return {
         coordinates: { x: x1, y: y1 },
         ...getRelativePositionByAspectRatio(aspectRatio, baseHeight, baseWidth, ratio, x, y),
-      };
+      } as TSizeCoordinates;
   }
 };

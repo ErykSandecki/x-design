@@ -20,13 +20,14 @@ export const getSizes = (
   const isGrid = type === LayoutType.grid;
 
   if (possibleParent === '-1') {
-    const element = document.getElementById(id);
-    const height = parseInt(getComputedStyle(element).height);
-    const width = parseInt(getComputedStyle(element).width);
+    const elementHTML = document.getElementById(id);
+    const height = parseInt(getComputedStyle(elementHTML).height);
+    const width = parseInt(getComputedStyle(elementHTML).width);
 
     return {
-      height: { value: height },
+      height: { ...element.height, value: height },
       width: {
+        ...element.width,
         value: width,
       },
     };

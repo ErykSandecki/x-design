@@ -4,6 +4,7 @@ import {
   eventsMock,
   pageBuilderStateMock,
   possibleElementMock,
+  sizeMock,
 } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
@@ -75,8 +76,8 @@ describe('handleCreateElement', () => {
         y: 0,
       },
       deepLevel: 0,
-      height: { value: 100 },
-      width: { value: 100 },
+      height: { ...sizeMock, value: 100 },
+      width: { ...sizeMock, value: 100 },
     });
     expect(mockCallBack.mock.calls[1][0]).toBe(MouseMode.default);
   });

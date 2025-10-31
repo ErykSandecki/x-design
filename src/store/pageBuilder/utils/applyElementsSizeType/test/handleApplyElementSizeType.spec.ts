@@ -1,7 +1,7 @@
 import { noop } from 'lodash';
 
 // mocks
-import { elementMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, pageBuilderStateMock, selectedElementMock, sizeMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from '../../../actionsType';
@@ -53,7 +53,7 @@ describe('handleApplyElementSizeType', () => {
             ...currentPage.elements,
             [elementMock.id]: {
               ...elementMock,
-              height: { unit: Unit.percentage, value: 100 },
+              height: { ...sizeMock, unit: Unit.percentage, value: 100 },
             },
           },
           selectedElements: [selectedElementMock],

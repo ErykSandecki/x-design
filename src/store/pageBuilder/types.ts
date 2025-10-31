@@ -101,7 +101,10 @@ export type TPage = {
   selectedElements: TSelectedElements;
 };
 
-export type TSizeCoordinates = Pick<TElement, 'coordinates' | 'height' | 'width'>;
+export type TSizeCoordinates = Pick<TElement, 'coordinates'> & {
+  height: Partial<TSize>;
+  width: Partial<TSize>;
+};
 
 export type TStrictAxis = [] | [keyof T2DCoordinates] | [keyof T2DCoordinates, keyof T2DCoordinates];
 

@@ -51,7 +51,7 @@ export const BASE_ELEMENTS: TElement = {
   coordinates: BASE_2D,
   deepLevel: 0,
   flip: { x: false, y: false },
-  height: { value: 0 },
+  height: { type: 'fixed', value: 0 },
   id: '-1',
   layout: {
     alignment: AlignmentLayout.none,
@@ -64,7 +64,7 @@ export const BASE_ELEMENTS: TElement = {
   parentId: '-1',
   position: 'absolute',
   type: ElementType.base,
-  width: { value: 0 },
+  width: { type: 'fixed', value: 0 },
 };
 
 export const BASE_PAGE_ELEMENTS: TElements = {

@@ -68,6 +68,7 @@ export type TScore = {
 };
 
 export type TSize = TScore & {
+  type: 'auto' | 'fixed' | 'max' | 'min' | 'unit';
   unit?: Unit;
   value: number | CSSProperties['height'] | CSSProperties['width'];
 };
