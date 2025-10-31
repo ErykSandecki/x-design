@@ -67,7 +67,7 @@ export type TScore = {
   min?: number;
 };
 
-export type TSize = TScore & {
+export type TSize = {
   type: 'auto' | TValueType;
   unit?: Unit;
   value: number | CSSProperties['height'] | CSSProperties['width'];
@@ -84,12 +84,12 @@ export type TElement = {
   coordinates: T2DCoordinates;
   deepLevel: number;
   flip: TFlip;
-  height: TSize;
+  height: TScore & TSize;
   id: string;
   layout: TLayout;
   padding: TInsets;
   parentId: TElement['id'] | '-1';
   position: CSSProperties['position'];
   type: ElementType;
-  width: TSize;
+  width: TScore & TSize;
 };
