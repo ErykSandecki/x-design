@@ -1,10 +1,13 @@
+// others
+import { LOCKED, MIXED } from 'constant/constants';
+
 export const getValue = (disabledAll: boolean, hasAlignment: boolean, isMultiple: boolean, value: string): string => {
   if (disabledAll) {
-    return 'Locked';
+    return LOCKED;
   }
 
   if (hasAlignment) {
-    return isMultiple ? 'Mixed' : 'auto';
+    return isMultiple ? MIXED : 'auto';
   }
 
   return value;

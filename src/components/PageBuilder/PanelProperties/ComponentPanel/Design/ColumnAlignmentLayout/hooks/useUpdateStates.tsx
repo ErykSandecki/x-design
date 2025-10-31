@@ -3,6 +3,9 @@ import { useEffect } from 'react';
 // types
 import { AlignmentLayout, TLayout } from 'types';
 
+// utils
+import { normalizeMultipleValue } from '../../../../../utils/normalizeMultipleValue';
+
 export type TUseChangeAlignmentLayoutEvent = void;
 
 export const useUpdateStates = (
@@ -26,14 +29,14 @@ export const useUpdateStates = (
   useEffect(() => {
     const { column, row } = layout.gap;
 
-    setColumnGap(isMixedColumnGap ? 'Mixed' : column.value.toString());
-    setRowGap(isMixedColumnRow ? 'Mixed' : row.value.toString());
+    setColumnGap(normalizeMultipleValue(isMixedColumnGap, column.value));
+    setRowGap(normalizeMultipleValue(isMixedColumnRow, row.value));
   }, [isMixedColumnGap, isMixedColumnRow, isMultiple, layout.gap.column, layout.gap.row]);
 
   useEffect(() => {
     const { columns, rows } = layout.grid;
 
-    setColumns(isMixedColumns ? 'Mixed' : columns.toString());
-    setRows(isMixedRows ? 'Mixed' : rows.toString());
+    setColumns(normalizeMultipleValue(isMixedColumns, columns));
+    setRows(normalizeMultipleValue(isMixedRows, rows));
   }, [isMixedColumns, isMixedRows, isMultiple, layout.grid]);
 };

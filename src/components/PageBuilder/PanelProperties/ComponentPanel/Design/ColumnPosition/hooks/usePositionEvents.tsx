@@ -21,6 +21,7 @@ import { TSelectedElement } from 'store/pageBuilder/types';
 // utils
 import { hasSomeAlignment } from '../utils/hasSomeAlignment';
 import { isMixed } from '../../../../../utils/isMixed';
+import { normalizeMultipleValue } from '../../../../../utils/normalizeMultipleValue';
 
 type TUsePositionEvents = {
   disabledAll: boolean;
@@ -70,8 +71,8 @@ export const usePositionEvents = (): TUsePositionEvents => {
     if (!isRelative) {
       const { x, y } = element.coordinates;
 
-      setX(isMixedX ? 'Mixed' : x.toString());
-      setY(isMixedY ? 'Mixed' : y.toString());
+      setX(normalizeMultipleValue(isMixedX, x));
+      setY(normalizeMultipleValue(isMixedY, y));
     } else {
       setX('0');
       setY('0');

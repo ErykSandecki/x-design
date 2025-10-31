@@ -1,5 +1,9 @@
-import { TInsets } from 'types';
+// others
+import { MIXED } from 'constant/constants';
+
+// types
 import { TInsetKeysGroup } from '../types';
+import { TInsets } from 'types';
 
 export const getScrubbableInputValue = (
   baseValue: string,
@@ -11,7 +15,7 @@ export const getScrubbableInputValue = (
   valueInput: string;
   valueStore: Partial<TInsets>;
 } => {
-  if (isScrubbableInput && value !== 'Mixed') {
+  if (isScrubbableInput && value !== MIXED) {
     const [, second] = baseValue.split(',');
 
     if (second) {

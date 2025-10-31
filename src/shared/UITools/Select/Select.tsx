@@ -13,6 +13,7 @@ import { useTheme } from 'hooks';
 
 // others
 import { className, classNames } from './classNames';
+import { MIXED } from 'constant/constants';
 
 // styles
 import styles from './select.scss';
@@ -57,7 +58,7 @@ export const Select: FC<TSelectProps> = ({
   value,
   ...restProps
 }) => {
-  const targetValue = isMixed ? 'Mixed' : value;
+  const targetValue = isMixed ? MIXED : value;
   const optionsRef = useRef<HTMLDivElement>(null);
   const selectRef = useRef(null);
   const wrapperRef = useRef(null);

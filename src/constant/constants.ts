@@ -18,6 +18,8 @@ export const DATE_FORMAT_HOURS_MINUTES_SECONDS = 'DD-MM-YYYY HH:mm:ss';
 export const DATE_FORMATS = [DATE_FORMAT, DATE_FORMAT_HOURS_MINUTES, DATE_FORMAT_HOURS_MINUTES_SECONDS] as const;
 
 export const DEBOUNCE_TIME = 250;
+export const LOCKED = 'Locked';
+export const MIXED = 'Mixed';
 
 export const ROWS_PER_PAGE = [5, 25, 50, 100] as const;
 export const TOOLTIP_TRANSLATION_KEY = 'tooltip';

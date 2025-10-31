@@ -13,7 +13,7 @@ import { TUseChangeEvent, useChangeEvent } from './useChangeEvent';
 // utils
 import { isMixed } from '../../../../../utils/isMixed';
 import { isPureNumber } from 'utils';
-import { normalizeInputValue } from 'components/PageBuilder/utils/normalizeInputValue';
+import { normalizeMultipleValue } from '../../../../../utils/normalizeMultipleValue';
 
 type TUseResizingEvents = TUseChangeEvent &
   TUseBlurEvent & {
@@ -57,8 +57,8 @@ export const useResizingEvents = (): TUseResizingEvents => {
   const visibleAspectRatioButton = !isMixedAspectRatio && !hasMixedSizes && hasPureSizes && hasNoUnit;
 
   useEffect(() => {
-    setHeight(normalizeInputValue(isMixedHeight, currentHeight, unitHeight));
-    setWidth(normalizeInputValue(isMixedWidth, currentWidth, unitWidth));
+    setHeight(normalizeMultipleValue(isMixedHeight, currentHeight, unitHeight));
+    setWidth(normalizeMultipleValue(isMixedWidth, currentWidth, unitWidth));
   }, [currentHeight, currentWidth, isMultiple, unitHeight, unitWidth]);
 
   return {

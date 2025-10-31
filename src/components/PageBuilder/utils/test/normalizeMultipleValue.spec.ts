@@ -2,12 +2,12 @@
 import { Unit } from 'types';
 
 // utils
-import { normalizeInputValue } from '../normalizeInputValue';
+import { normalizeMultipleValue } from '../normalizeMultipleValue';
 
-describe('isMixed', () => {
-  it(`should not be mixed`, () => {
+describe('normalizeMultipleValue', () => {
+  it(`should be mixed`, () => {
     // before
-    const result = normalizeInputValue(true, 0);
+    const result = normalizeMultipleValue(true, 0);
 
     // result
     expect(result).toBe('Mixed');
@@ -15,7 +15,7 @@ describe('isMixed', () => {
 
   it(`should return value`, () => {
     // before
-    const result = normalizeInputValue(false, 0);
+    const result = normalizeMultipleValue(false, 0);
 
     // result
     expect(result).toBe('0');
@@ -23,7 +23,7 @@ describe('isMixed', () => {
 
   it(`should return value with unit`, () => {
     // before
-    const result = normalizeInputValue(false, 0, Unit.percentage);
+    const result = normalizeMultipleValue(false, 0, Unit.percentage);
 
     // result
     expect(result).toBe('0%');

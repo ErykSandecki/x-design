@@ -13,6 +13,7 @@ import { TUseMouseDownEvent, useMouseDownEvent } from './useMouseDownEvent';
 
 // utils
 import { isMixed } from '../../../../../utils/isMixed';
+import { normalizeMultipleValue } from '../../../../../utils/normalizeMultipleValue';
 
 type TUseRotationEvents = {
   angle: string;
@@ -36,7 +37,7 @@ export const useRotationEvents = (): TUseRotationEvents => {
   const onChange = useChangeEvent(setAngle);
 
   useEffect(() => {
-    defer(() => setAngle(isMixedAngle ? 'Mixed' : `${currentAngle.toString()}°`));
+    defer(() => setAngle(normalizeMultipleValue(isMixedAngle, `${currentAngle.toString()}°`)));
   }, [currentAngle, isMultiple]);
 
   return {

@@ -14,6 +14,7 @@ import { TUseChangeEvents, useChangeEvents } from './useChangeEvents';
 // utils
 import { getInsetValue } from '../utils/getInsetValue';
 import { isMixed } from '../../../utils/isMixed';
+import { normalizeMultipleValue } from '../../../utils/normalizeMultipleValue';
 
 type TUseInsetsEvents = TUseBlurEvents &
   TUseChangeEvents & {
@@ -48,14 +49,14 @@ export const useInsetsEvents = (insetsName: TInsetsName): TUseInsetsEvents => {
   const isInsetModeMerged = insetMode === InsetMode.merged;
 
   useEffect(() => {
-    const b = isMixedB ? 'Mixed' : insets.b.value.toString();
-    const l = isMixedL ? 'Mixed' : insets.l.value.toString();
-    const r = isMixedR ? 'Mixed' : insets.r.value.toString();
-    const t = isMixedT ? 'Mixed' : insets.t.value.toString();
+    const b = normalizeMultipleValue(isMixedB, insets.b.value);
+    const l = normalizeMultipleValue(isMixedL, insets.l.value);
+    const r = normalizeMultipleValue(isMixedR, insets.r.value);
+    const t = normalizeMultipleValue(isMixedT, insets.t.value);
 
     setInsetAll({ b, l, r, t });
-    setInsetLR(isMixedLR ? 'Mixed' : getInsetValue(insets, ['l', 'r']));
-    setInsetTB(isMixedTB ? 'Mixed' : getInsetValue(insets, ['t', 'b']));
+    setInsetLR(normalizeMultipleValue(isMixedLR, getInsetValue(insets, ['l', 'r'])));
+    setInsetTB(normalizeMultipleValue(isMixedTB, getInsetValue(insets, ['t', 'b'])));
   }, [insets, isMultiple]);
 
   return {
