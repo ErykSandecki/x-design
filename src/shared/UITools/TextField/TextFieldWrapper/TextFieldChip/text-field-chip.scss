@@ -1,4 +1,7 @@
 .TextFieldChip {
+  border: 1px solid;
+  border-color: rgba($color: #000000, $alpha: 0%);
+  box-sizing: border-box;
   left: 22px;
   position: absolute;
   top: 50%;

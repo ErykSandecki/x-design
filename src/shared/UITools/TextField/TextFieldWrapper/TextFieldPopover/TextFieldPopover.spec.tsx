@@ -25,7 +25,33 @@ describe('TextFieldPopover snapshots', () => {
   it('should render TextFieldPopover', () => {
     // before
     const { asFragment } = customRender(
-      <TextFieldPopover classNameIcon="classNameIcon" ref={ref} selected={false} setSelected={mockCallBack}>
+      <TextFieldPopover
+        attachedValue={false}
+        classNameIcon="classNameIcon"
+        onClick={mockCallBack}
+        ref={ref}
+        selected={false}
+        setSelected={mockCallBack}
+      >
+        children
+      </TextFieldPopover>,
+    );
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('should render when attached value', () => {
+    // before
+    const { asFragment } = customRender(
+      <TextFieldPopover
+        attachedValue
+        classNameIcon="classNameIcon"
+        onClick={mockCallBack}
+        ref={ref}
+        selected={false}
+        setSelected={mockCallBack}
+      >
         children
       </TextFieldPopover>,
     );
@@ -37,7 +63,14 @@ describe('TextFieldPopover snapshots', () => {
   it('should render with opened popover', () => {
     // before
     const { asFragment, container } = customRender(
-      <TextFieldPopover classNameIcon="classNameIcon" ref={ref} selected={true} setSelected={mockCallBack}>
+      <TextFieldPopover
+        attachedValue={false}
+        classNameIcon="classNameIcon"
+        onClick={mockCallBack}
+        ref={ref}
+        selected={true}
+        setSelected={mockCallBack}
+      >
         children
       </TextFieldPopover>,
     );

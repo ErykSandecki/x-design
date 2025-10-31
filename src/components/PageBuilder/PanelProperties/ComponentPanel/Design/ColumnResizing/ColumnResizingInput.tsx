@@ -1,10 +1,14 @@
 import { FC, ReactNode, useRef } from 'react';
+import { useDispatch } from 'react-redux';
 
 // components
 import { Icon, ScrubbableInput, Small, TE2EValue, UITools } from 'shared';
 
 // others
 import { MAX, PANEL_PROPERTIES_ID } from '../../../../constants';
+
+// store
+import { applyElementsSizeType } from 'store/pageBuilder/actions';
 
 // types
 import { ColorsTheme, TElement } from 'types';
@@ -33,6 +37,7 @@ const ColumnResizingInput: FC<TColumnResizingInputProps> = ({
   value,
   valueScrubbaleInput,
 }) => {
+  const dispatch = useDispatch();
   const refInput = useRef<HTMLInputElement>(null);
   const label = sizeType === 'height' ? 'H' : 'W';
   const iconName = sizeType === 'height' ? 'HeightRestricted' : 'WidthRestricted';
@@ -46,6 +51,7 @@ const ColumnResizingInput: FC<TColumnResizingInputProps> = ({
       inputRef={refInput}
       onBlur={onBlur}
       onChange={(event) => onChange(sanitizeNumberInput(event.target.value))}
+      onDetachedValue={() => dispatch(applyElementsSizeType(sizeType, 'fixed'))}
       popoverChildren={popoverChildren}
       startAdornment={
         <ScrubbableInput

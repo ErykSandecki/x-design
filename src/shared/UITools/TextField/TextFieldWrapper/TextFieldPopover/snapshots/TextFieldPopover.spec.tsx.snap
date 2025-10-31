@@ -25,6 +25,31 @@ exports[`TextFieldPopover snapshots should render TextFieldPopover 1`] = `
 </DocumentFragment>
 `;
 
+exports[`TextFieldPopover snapshots should render when attached value 1`] = `
+<DocumentFragment>
+  <div
+    class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+    data-test-box=""
+  >
+    <div
+      class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light classNameIcon Icon Icon--light Icon--clickable Icon--clickable--light"
+      data-test-icon="detached"
+      height="12"
+      name="Detached"
+      width="12"
+    />
+    <div
+      class="css-1c8p9kb Popover Popover--light"
+      data-test-box=""
+      data-test-popover="popover"
+      style="left: 0px; top: 0px;"
+    >
+      children
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`TextFieldPopover snapshots should render with opened popover 1`] = `
 <DocumentFragment>
   <div

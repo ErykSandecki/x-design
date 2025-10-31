@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import ColumnResizing from './ColumnResizing';
 
 // mocks
-import { elementMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, pageBuilderStateMock, selectedElementMock, sizeMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
@@ -218,9 +218,11 @@ describe('ColumnResizing behaviors', () => {
               [elementMock.id]: {
                 ...elementMock,
                 height: {
+                  ...sizeMock,
                   value: 'auto',
                 },
                 width: {
+                  ...sizeMock,
                   value: 'auto',
                 },
               },
@@ -545,5 +547,58 @@ describe('ColumnResizing behaviors', () => {
     // result
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.max).toBe(elementMock.height.value);
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.max).toBe(elementMock.width.value);
+  });
+
+  it('should detached value', () => {
+    // mock
+    const store = configureStore({
+      ...stateMock,
+      [PAGE_BUILDER]: {
+        ...stateMock[PAGE_BUILDER],
+        pages: {
+          ['0']: {
+            ...stateMock[PAGE_BUILDER].pages['0'],
+            elements: {
+              ...stateMock[PAGE_BUILDER].pages['0'].elements,
+              [elementMock.id]: {
+                ...elementMock,
+                height: {
+                  ...sizeMock,
+                  type: 'auto',
+                },
+                width: {
+                  ...sizeMock,
+                  type: 'auto',
+                },
+              },
+            },
+            selectedElements: [selectedElementMock],
+          },
+        },
+      },
+    });
+
+    // before
+    const { container } = customRender(
+      <Provider store={store}>
+        <ColumnResizing />
+      </Provider>,
+    );
+
+    // find { inputs }
+    const inputHeight = getByE2EAttribute(container, E2EAttribute.textField, 'height');
+    const inputWidth = getByE2EAttribute(container, E2EAttribute.textField, 'width');
+
+    // find { icons }
+    const iconHeight = getByE2EAttribute(inputHeight, E2EAttribute.icon, 'detached');
+    const iconWidth = getByE2EAttribute(inputWidth, E2EAttribute.icon, 'detached');
+
+    // action
+    fireEvent.click(iconHeight);
+    fireEvent.click(iconWidth);
+
+    // result
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.type).toBe('fixed');
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.type).toBe('fixed');
   });
 });

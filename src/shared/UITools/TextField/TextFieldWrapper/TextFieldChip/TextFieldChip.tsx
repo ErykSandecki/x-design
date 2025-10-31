@@ -7,7 +7,7 @@ import Chip from '../../../Chip/Chip';
 import { useTheme } from 'hooks';
 
 // others
-import { className, classNames } from './classNames';
+import { className as classNameChip, classNames } from './classNames';
 
 // styles
 import styles from './text-field-chip.scss';
@@ -15,16 +15,17 @@ import styles from './text-field-chip.scss';
 export type TTextFieldChipProps = {
   attachedValue: boolean;
   children: ReactNode;
+  className: string;
 };
 
-export const TextFieldChip: FC<TTextFieldChipProps> = ({ attachedValue, children }) => {
+export const TextFieldChip: FC<TTextFieldChipProps> = ({ attachedValue, children, className }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   if (!attachedValue) {
     return null;
   }
 
-  return <Chip className={cx(classNamesWithTheme[className])}>{children}</Chip>;
+  return <Chip className={cx(className, classNamesWithTheme[classNameChip])}>{children}</Chip>;
 };
 
 export default TextFieldChip;

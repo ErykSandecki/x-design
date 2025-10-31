@@ -32,6 +32,7 @@ export type TTextFieldWrapperProps = Omit<InputHTMLAttributes<HTMLInputElement>,
   fullWidth?: boolean;
   idContainer?: string;
   inputRef?: RefObject<HTMLInputElement>;
+  onDetachedValue?: TFunc;
   popoverChildren?: TPopoverProps['children'];
   popoverOffset?: TPopoverProps['offset'];
   popoverStyle?: TPopoverProps['style'];
@@ -48,6 +49,7 @@ export const TextFieldWrapper: FC<TTextFieldWrapperProps> = ({
   fullWidth = false,
   idContainer = undefined,
   inputRef,
+  onDetachedValue = noop,
   popoverChildren,
   popoverOffset,
   popoverStyle,
@@ -93,8 +95,10 @@ export const TextFieldWrapper: FC<TTextFieldWrapperProps> = ({
       />
       {popoverChildren ? (
         <TextFieldPopover
+          attachedValue={attachedValue}
           classNameIcon={cx(classNamesWithTheme.icon)}
           offset={popoverOffset}
+          onClick={onDetachedValue}
           ref={refPopover}
           selected={selected}
           setSelected={setSelected}
@@ -105,7 +109,15 @@ export const TextFieldWrapper: FC<TTextFieldWrapperProps> = ({
       ) : (
         endAdorment
       )}
-      <TextFieldChip attachedValue={attachedValue}>{value}</TextFieldChip>
+      <TextFieldChip
+        attachedValue={attachedValue}
+        className={cx(classNamesWithTheme.chip.name, [
+          classNamesWithTheme.chip.modificators.attachedValue,
+          attachedValue,
+        ])}
+      >
+        {value}
+      </TextFieldChip>
     </Box>
   );
 };

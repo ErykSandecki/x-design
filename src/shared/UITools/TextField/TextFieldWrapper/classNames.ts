@@ -13,4 +13,5 @@ export const classNames = composeClassNames(
   [className, 'disabled', 'chip', 'fullWidth', ...values(TextFieldVariant)] as const,
   ['input'] as const,
   ['icon'] as const,
+  ['chip', 'attachedValue'] as const,
 );

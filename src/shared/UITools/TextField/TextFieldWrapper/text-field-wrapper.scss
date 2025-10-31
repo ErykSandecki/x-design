@@ -16,6 +16,8 @@ $--xd-font-size: 11px;
 .TextFieldWrapper {
   @include theme('neutral-3', background-color);
   @include theme('neutral-3', border, '1px solid');
+  @include theme-selector('blue-1', border-color, '&:hover .TextFieldWrapper__chip--attached-value');
+  @include theme-selector('neutral-5', background-color, '&:hover .TextFieldWrapper__chip--attached-value');
 
   align-items: center;
   border-radius: 5px;
