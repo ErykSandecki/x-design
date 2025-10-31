@@ -1,12 +1,15 @@
 {
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
     "allowJs": true,
     "baseUrl": "./src",
-    "esModuleInterop": true,
     "jsx": "react-jsx",
     "lib": ["dom", "dom.iterable", "esnext", "es5"],
     "outDir": "./dist",
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "moduleResolution": "NodeNext",
+    "module": "nodenext",
+    "esModuleInterop": true
   },
   "include": ["src", "scripts/test.js", "config/sass", "config/imports.js"]
 }
