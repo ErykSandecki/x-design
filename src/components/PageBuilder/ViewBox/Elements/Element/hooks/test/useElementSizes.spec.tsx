@@ -7,7 +7,13 @@ import { RefsProvider } from 'pages/PageBuilderPage/core/RefsProvider';
 import { useElementSizes } from '../useElementSizes';
 
 // mocks
-import { elementMock, layoutMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
+import {
+  elementMock,
+  layoutMock,
+  pageBuilderStateMock,
+  selectedElementMock,
+  sizeMock,
+} from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
@@ -47,8 +53,8 @@ describe('useElementEvents', () => {
                 ...elementMock,
                 height: {
                   ...elementMock.height,
-                  max: 100,
-                  min: 100,
+                  max: { ...sizeMock, value: 100 },
+                  min: { ...sizeMock, value: 100 },
                 },
                 padding: {
                   b: { value: 10 },
@@ -58,8 +64,8 @@ describe('useElementEvents', () => {
                 },
                 width: {
                   ...elementMock.width,
-                  max: 100,
-                  min: 100,
+                  max: { ...sizeMock, value: 100 },
+                  min: { ...sizeMock, value: 100 },
                 },
               },
             },
@@ -115,8 +121,8 @@ describe('useElementEvents', () => {
                 ...elementMock,
                 height: {
                   ...elementMock.height,
-                  max: 100,
-                  min: 100,
+                  max: { ...sizeMock, value: 100 },
+                  min: { ...sizeMock, value: 100 },
                 },
                 layout: {
                   ...layoutMock,
@@ -130,8 +136,8 @@ describe('useElementEvents', () => {
                 },
                 width: {
                   ...elementMock.width,
-                  max: 100,
-                  min: 100,
+                  max: { ...sizeMock, value: 100 },
+                  min: { ...sizeMock, value: 100 },
                 },
               },
             },

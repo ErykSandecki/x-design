@@ -1,5 +1,5 @@
 // mocks
-import { elementMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, pageBuilderStateMock, selectedElementMock, sizeMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
@@ -24,7 +24,16 @@ describe('handleSetElementsSizesMinMax', () => {
             ...currentPage,
             elements: {
               ...currentPage.elements,
-              [elementMock.id]: elementMock,
+              [elementMock.id]: {
+                ...elementMock,
+                height: {
+                  ...elementMock.height,
+                  min: {
+                    ...sizeMock,
+                    value: 0,
+                  },
+                },
+              },
             },
             selectedElements: [selectedElementMock],
           },
@@ -44,7 +53,13 @@ describe('handleSetElementsSizesMinMax', () => {
             ...currentPage.elements,
             [elementMock.id]: {
               ...elementMock,
-              height: { ...elementMock.height, min: 100 },
+              height: {
+                ...elementMock.height,
+                min: {
+                  ...sizeMock,
+                  value: 100,
+                },
+              },
             },
           },
           selectedElements: [selectedElementMock],

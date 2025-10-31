@@ -45,8 +45,8 @@ export const useMinMaxSizeEvents = (score: keyof TScore): TUseMinMaxSizeEvents =
   const visibleWidth = widthScore !== undefined && !isMixedWidth;
 
   useEffect(() => {
-    setHeightScore(currentHeightScore?.toString());
-    setWidthScore(currentWidthScore?.toString());
+    setHeightScore(currentHeightScore?.value?.toString());
+    setWidthScore(currentWidthScore?.value?.toString());
   }, [currentHeightScore, currentWidthScore, isMultiple]);
 
   return {

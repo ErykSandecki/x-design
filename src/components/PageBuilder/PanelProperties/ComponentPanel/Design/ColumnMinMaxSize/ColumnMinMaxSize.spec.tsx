@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import ColumnMinSizeInput from './ColumnMinMaxSize';
 
 // mocks
-import { elementMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, pageBuilderStateMock, selectedElementMock, sizeMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
@@ -43,13 +43,25 @@ const stateMock = {
             ...elementMock,
             height: {
               ...elementMock.height,
-              max: (elementMock.height.value as number) * 2,
-              min: (elementMock.height.value as number) * 2,
+              max: {
+                ...sizeMock,
+                value: (elementMock.height.value as number) * 2,
+              },
+              min: {
+                ...sizeMock,
+                value: (elementMock.height.value as number) * 2,
+              },
             },
             width: {
               ...elementMock.width,
-              max: (elementMock.width.value as number) * 2,
-              min: (elementMock.width.value as number) * 2,
+              max: {
+                ...sizeMock,
+                value: (elementMock.width.value as number) * 2,
+              },
+              min: {
+                ...sizeMock,
+                value: (elementMock.width.value as number) * 2,
+              },
             },
           },
           ['test-2']: { ...elementMock, id: 'test-2' },
@@ -107,11 +119,17 @@ describe('ColumnResizing snapshots', () => {
                 ...elementMock,
                 height: {
                   ...elementMock.height,
-                  max: (elementMock.height.value as number) * 4,
+                  max: {
+                    ...sizeMock,
+                    value: (elementMock.height.value as number) * 4,
+                  },
                 },
                 width: {
                   ...elementMock.width,
-                  max: (elementMock.width.value as number) * 4,
+                  max: {
+                    ...sizeMock,
+                    value: (elementMock.width.value as number) * 4,
+                  },
                 },
               },
             },
@@ -150,11 +168,17 @@ describe('ColumnResizing snapshots', () => {
                 ...elementMock,
                 height: {
                   ...elementMock.height,
-                  min: (elementMock.height.value as number) * 4,
+                  min: {
+                    ...sizeMock,
+                    value: (elementMock.height.value as number) * 4,
+                  },
                 },
                 width: {
                   ...elementMock.width,
-                  min: (elementMock.width.value as number) * 4,
+                  min: {
+                    ...sizeMock,
+                    value: (elementMock.width.value as number) * 4,
+                  },
                 },
               },
             },
@@ -219,8 +243,14 @@ describe('ColumnResizing behaviors', () => {
     fireEvent.blur(inputWidth);
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.max).toBe(10000);
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.max).toBe(10000);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.max).toStrictEqual({
+      type: 'fixed',
+      value: 10000,
+    });
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.max).toStrictEqual({
+      type: 'fixed',
+      value: 10000,
+    });
   });
 
   it('should set min height and width', () => {
@@ -251,8 +281,14 @@ describe('ColumnResizing behaviors', () => {
     fireEvent.blur(inputWidth);
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.min).toBe(10000);
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.min).toBe(10000);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.min).toStrictEqual({
+      type: 'fixed',
+      value: 10000,
+    });
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.min).toStrictEqual({
+      type: 'fixed',
+      value: 10000,
+    });
   });
 
   it('should change max width & height when triger ScrubbableInput', () => {
@@ -286,8 +322,14 @@ describe('ColumnResizing behaviors', () => {
     fireEvent.mouseUp(scrubbableInputWidth);
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.max).toBe(150);
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.max).toBe(150);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.max).toStrictEqual({
+      type: 'fixed',
+      value: 150,
+    });
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.max).toStrictEqual({
+      type: 'fixed',
+      value: 150,
+    });
   });
 
   it('should change min width & height when triger ScrubbableInput', () => {
@@ -321,8 +363,14 @@ describe('ColumnResizing behaviors', () => {
     fireEvent.mouseUp(scrubbableInputWidth);
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.min).toBe(150);
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.min).toBe(150);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.min).toStrictEqual({
+      type: 'fixed',
+      value: 150,
+    });
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.min).toStrictEqual({
+      type: 'fixed',
+      value: 150,
+    });
   });
 
   it('should apply current size for max for height & width', () => {

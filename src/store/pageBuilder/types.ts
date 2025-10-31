@@ -313,7 +313,11 @@ export type TSetElementsSizesAction = {
 export type TSetElementsSizesMinMaxActionPayload = {
   scoreType: keyof TScore;
   sizeType: keyof Pick<TElement, 'height' | 'width'>;
-  value: TElement['height']['max'] | TElement['height']['min'] | TElement['width']['max'] | TElement['width']['min'];
+  value:
+    | TElement['height']['max']['value']
+    | TElement['height']['min']['value']
+    | TElement['width']['max']['value']
+    | TElement['width']['min']['value'];
 };
 
 export type TSetElementsSizesMinMaxAction = {

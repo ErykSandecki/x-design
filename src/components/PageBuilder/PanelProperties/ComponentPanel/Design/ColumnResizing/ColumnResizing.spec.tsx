@@ -507,8 +507,14 @@ describe('ColumnResizing behaviors', () => {
     fireEvent.click(popoverWidthItem);
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.min).toBe(elementMock.height.value);
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.min).toBe(elementMock.width.value);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.min).toStrictEqual({
+      ...sizeMock,
+      value: 100,
+    });
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.min).toStrictEqual({
+      ...sizeMock,
+      value: 100,
+    });
   });
 
   it('should apply max score for height & width', () => {
@@ -545,8 +551,14 @@ describe('ColumnResizing behaviors', () => {
     fireEvent.click(popoverWidthItem);
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.max).toBe(elementMock.height.value);
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.max).toBe(elementMock.width.value);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.max).toStrictEqual({
+      ...sizeMock,
+      value: 100,
+    });
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.max).toStrictEqual({
+      ...sizeMock,
+      value: 100,
+    });
   });
 
   it('should detached value', () => {

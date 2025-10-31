@@ -24,7 +24,7 @@ export const handleSetElementsSizesMinMax = (
           ...currentPage.elements,
           ...mapFilteredValues(currentPage.elements, ids, (element) => ({
             ...element,
-            [sizeType]: { ...element[sizeType], [scoreType]: value },
+            [sizeType]: { ...element[sizeType], [scoreType]: { ...element[sizeType][scoreType], value } },
           })),
         },
       },

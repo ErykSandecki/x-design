@@ -1498,7 +1498,16 @@ describe('PageBuilderReducer', () => {
           ...currentPage,
           elements: {
             ...currentPage.elements,
-            [elementMock.id]: elementMock,
+            [elementMock.id]: {
+              ...elementMock,
+              height: {
+                ...elementMock.height,
+                min: {
+                  ...sizeMock,
+                  value: 0,
+                },
+              },
+            },
           },
           selectedElements: [selectedElementMock],
         },
@@ -1516,7 +1525,13 @@ describe('PageBuilderReducer', () => {
             ...currentPage.elements,
             [elementMock.id]: {
               ...elementMock,
-              height: { ...elementMock.height, min: 100 },
+              height: {
+                ...elementMock.height,
+                min: {
+                  ...sizeMock,
+                  value: 100,
+                },
+              },
             },
           },
           selectedElements: [selectedElementMock],

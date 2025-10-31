@@ -1,7 +1,7 @@
 import { noop } from 'lodash';
 
 // mocks
-import { elementMock } from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, sizeMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // types
 import { Unit } from 'types';
@@ -41,12 +41,12 @@ describe('applyTypeSize', () => {
     const result1 = applyTypeSize(elementMock, 100, 'height', 'max');
 
     // result
-    expect(result1.max).toBe(100);
+    expect(result1.max).toStrictEqual({ type: 'fixed', value: 100 });
     expect(result1.type).toBe('fixed');
 
     // before
     const result2 = applyTypeSize(
-      { ...elementMock, height: { ...elementMock.height, max: 100 } },
+      { ...elementMock, height: { ...elementMock.height, max: { ...sizeMock, value: 100 } } },
       100,
       'height',
       'max',
@@ -62,12 +62,12 @@ describe('applyTypeSize', () => {
     const result1 = applyTypeSize(elementMock, 100, 'height', 'min');
 
     // result
-    expect(result1.min).toBe(100);
+    expect(result1.min).toStrictEqual({ type: 'fixed', value: 100 });
     expect(result1.type).toBe('fixed');
 
     // before
     const result2 = applyTypeSize(
-      { ...elementMock, height: { ...elementMock.height, min: 100 } },
+      { ...elementMock, height: { ...elementMock.height, min: { ...sizeMock, value: 100 } } },
       100,
       'height',
       'min',
