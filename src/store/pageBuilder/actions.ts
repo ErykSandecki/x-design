@@ -2,14 +2,16 @@
 import {
   ADD_ELEMENT,
   APPLY_ELEMENTS_GAP_TYPE,
+  APPLY_ELEMENTS_INSET_TYPE,
+  APPLY_ELEMENTS_SIZE_MIN_MAX_TYPE,
   APPLY_ELEMENTS_SIZE_TYPE,
   CHANGE_ALIGNMENT,
   CHANGE_BACKGROUND,
+  CHANGE_INSETS,
   CHANGE_LAYOUT,
   CHANGE_LAYOUT_ALIGNMENT,
   CHANGE_LAYOUT_BOX_SIZING,
   CHANGE_LAYOUT_GRID,
-  CHANGE_INSETS,
   CHANGE_PARENT,
   CHANGE_POSITION,
   CLEAR_PREV_STATE,
@@ -32,7 +34,6 @@ import {
   UNSELECT_ELEMENT,
   UPDATE_EVENTS_STATUS,
   UPDATE_PREV_STATE,
-  APPLY_ELEMENTS_INSET_TYPE,
 } from './actionsType';
 
 // types
@@ -80,8 +81,10 @@ import {
   TUpdateEventsStatusAction,
   TUpdatePrevStateAction,
   TChangeInsetsActionPayload,
-  TApplyElementsInsetTypeActionPaylad,
+  TApplyElementsInsetTypeActionPayload,
   TApplyElementsInsetTypeAction,
+  TApplyElementsSizeMinMaxTypeActionPayload,
+  TApplyElementsSizeMinMaxTypeAction,
 } from './types';
 import { TElement } from 'types';
 
@@ -99,12 +102,21 @@ export const applyElementsGapType = (
 });
 
 export const applyElementsInsetType = (
-  insets: TApplyElementsInsetTypeActionPaylad['insets'],
-  name: TApplyElementsInsetTypeActionPaylad['name'],
-  type: TApplyElementsInsetTypeActionPaylad['type'],
+  insets: TApplyElementsInsetTypeActionPayload['insets'],
+  name: TApplyElementsInsetTypeActionPayload['name'],
+  type: TApplyElementsInsetTypeActionPayload['type'],
 ): TApplyElementsInsetTypeAction => ({
   payload: { insets, name, type },
   type: APPLY_ELEMENTS_INSET_TYPE,
+});
+
+export const applyElementsSizeMinMaxType = (
+  scoreType: TApplyElementsSizeMinMaxTypeActionPayload['scoreType'],
+  sizeType: TApplyElementsSizeMinMaxTypeActionPayload['sizeType'],
+  type: TApplyElementsSizeMinMaxTypeActionPayload['type'],
+): TApplyElementsSizeMinMaxTypeAction => ({
+  payload: { scoreType, sizeType, type },
+  type: APPLY_ELEMENTS_SIZE_MIN_MAX_TYPE,
 });
 
 export const applyElementsSizeType = (

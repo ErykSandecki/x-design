@@ -26,6 +26,7 @@ import {
   addElement,
   applyElementsGapType,
   applyElementsInsetType,
+  applyElementsSizeMinMaxType,
   applyElementsSizeType,
   changeAlignment,
   changeBackground,
@@ -190,6 +191,63 @@ describe('PageBuilderReducer', () => {
           elements: {
             ...currentPage.elements,
             [elementMock.id]: elementMock,
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+  });
+
+  it('should handle APPLY_ELEMENTS_SIZE_MIN_MAX_TYPE', () => {
+    // mock
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+    window.getComputedStyle = (): any => ({ height: '100px', width: '100px' }) as CSSStyleDeclaration;
+
+    // before
+    const state = reducer(applyElementsSizeMinMaxType('min', 'height', 'unit'), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            [elementMock.id]: {
+              ...elementMock,
+              height: {
+                ...sizeMock,
+                min: {
+                  ...sizeMock,
+                  value: 0,
+                },
+              },
+            },
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            [elementMock.id]: {
+              ...elementMock,
+              height: {
+                ...sizeMock,
+                min: {
+                  ...sizeMock,
+                  unit: Unit.percentage,
+                  value: 100,
+                },
+              },
+            },
           },
           selectedElements: [selectedElementMock],
         },

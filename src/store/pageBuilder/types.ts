@@ -33,6 +33,7 @@ import {
   UPDATE_EVENTS_STATUS,
   UPDATE_PREV_STATE,
   APPLY_ELEMENTS_INSET_TYPE,
+  APPLY_ELEMENTS_SIZE_MIN_MAX_TYPE,
 } from './actionsType';
 
 // types
@@ -133,15 +134,26 @@ export type TApplyElementsGapTypeAction = {
   type: typeof APPLY_ELEMENTS_GAP_TYPE;
 };
 
-export type TApplyElementsInsetTypeActionPaylad = {
+export type TApplyElementsInsetTypeActionPayload = {
   insets: Array<keyof TInsets>;
   name: TInsetsName;
   type: 'fixed';
 };
 
 export type TApplyElementsInsetTypeAction = {
-  payload: TApplyElementsInsetTypeActionPaylad;
+  payload: TApplyElementsInsetTypeActionPayload;
   type: typeof APPLY_ELEMENTS_INSET_TYPE;
+};
+
+export type TApplyElementsSizeMinMaxTypeActionPayload = {
+  scoreType: keyof TScore;
+  sizeType: keyof Pick<TElement, 'height' | 'width'>;
+  type: 'auto' | 'fixed' | 'unit';
+};
+
+export type TApplyElementsSizeMinMaxTypeAction = {
+  payload: TApplyElementsSizeMinMaxTypeActionPayload;
+  type: typeof APPLY_ELEMENTS_SIZE_MIN_MAX_TYPE;
 };
 
 export type TApplyElementsSizeTypeActionPayload = {

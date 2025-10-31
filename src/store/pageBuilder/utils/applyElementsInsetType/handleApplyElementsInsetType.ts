@@ -1,12 +1,12 @@
 // types
-import { TApplyElementsInsetTypeActionPaylad, TPageBuilderState } from '../../types';
+import { TApplyElementsInsetTypeActionPayload, TPageBuilderState } from '../../types';
 
 // utils
 import { applyInsetType } from './applyInsetType';
 import { extractObjectValues, mapFilteredValues } from 'utils';
 
 export const handleApplyElementsInsetType = (
-  payload: TApplyElementsInsetTypeActionPaylad,
+  payload: TApplyElementsInsetTypeActionPayload,
   state: TPageBuilderState,
 ): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];
