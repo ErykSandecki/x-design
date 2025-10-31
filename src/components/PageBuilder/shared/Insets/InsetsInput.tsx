@@ -1,4 +1,4 @@
-import { FC, useRef } from 'react';
+import { FC } from 'react';
 import { kebabCase, upperFirst } from 'lodash';
 import { useTranslation } from 'react-i18next';
 
@@ -37,7 +37,6 @@ const InsetsInput: FC<TInsetsInputProps> = ({
   value,
 }) => {
   const e2eValue = kebabCase(insetNameFormatted);
-  const refInput = useRef<HTMLInputElement>(null);
   const { t } = useTranslation();
 
   return (
@@ -45,10 +44,8 @@ const InsetsInput: FC<TInsetsInputProps> = ({
       e2eValue={e2eValue}
       fullWidth
       idContainer={PANEL_PROPERTIES_ID}
-      inputRef={refInput}
       onBlur={onBlur}
       onChange={(event) => onChange(event.target.value)}
-      onClick={() => refInput.current.select()}
       popoverChildren={
         <PopoverInsets
           icon={upperFirst(insetNameFormatted) as TIconProps['name']}

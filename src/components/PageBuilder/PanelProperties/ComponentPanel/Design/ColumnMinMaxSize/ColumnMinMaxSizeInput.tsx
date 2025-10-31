@@ -1,5 +1,5 @@
 import { capitalize } from 'lodash';
-import { FC, ReactNode, useRef } from 'react';
+import { FC, ReactNode } from 'react';
 
 // components
 import { Icon, ScrubbableInput, TE2EValue, TIconProps, UITools } from 'shared';
@@ -34,7 +34,6 @@ const ColumnMinMaxSizeInput: FC<TColumnResizingInputProps> = ({
   value,
   valueScrubbaleInput,
 }) => {
-  const refInput = useRef<HTMLInputElement>(null);
   const iconName = `${capitalize(score)}${capitalize(sizeType)}` as TIconProps['name'];
 
   return (
@@ -44,9 +43,7 @@ const ColumnMinMaxSizeInput: FC<TColumnResizingInputProps> = ({
       idContainer={PANEL_PROPERTIES_ID}
       onBlur={onBlur}
       onChange={(event) => onChange(sanitizeNumberInput(event.target.value))}
-      onClick={() => refInput.current.select()}
       popoverChildren={popoverChildren}
-      inputRef={refInput}
       startAdornment={
         <ScrubbableInput
           e2eValue={e2eValue}

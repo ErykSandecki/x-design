@@ -1,4 +1,4 @@
-import { FC, useRef } from 'react';
+import { FC } from 'react';
 import { kebabCase } from 'lodash';
 import { useTranslation } from 'react-i18next';
 
@@ -19,16 +19,13 @@ export type TGridInputsProps = {
 
 export const GridInputCells: FC<TGridInputsProps> = ({ name, onBlur, onChange, value }) => {
   const { t } = useTranslation();
-  const refInput = useRef<HTMLInputElement>(null);
   const targetName = kebabCase(name);
 
   return (
     <TextField
       e2eValue={targetName}
-      inputRef={refInput}
       onBlur={onBlur}
       onChange={(event) => onChange(event.target.value)}
-      onClick={() => refInput.current.select()}
       tooltip={{ content: t(`${TOOLTIP_TRANSLATION_KEY}.grid.${targetName}`) }}
       type="text"
       startAdornment={

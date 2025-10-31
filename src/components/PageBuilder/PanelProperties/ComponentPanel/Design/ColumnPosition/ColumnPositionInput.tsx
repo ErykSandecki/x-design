@@ -1,4 +1,4 @@
-import { FC, useRef } from 'react';
+import { FC } from 'react';
 import { lowerCase } from 'lodash';
 import { useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
@@ -47,7 +47,6 @@ const ColumnPositionInput: FC<TColumnPositionInputProps> = ({
   value,
 }) => {
   const dispatch = useDispatch();
-  const refInput = useRef<HTMLInputElement>(null);
   const { t } = useTranslation();
 
   return (
@@ -57,8 +56,6 @@ const ColumnPositionInput: FC<TColumnPositionInputProps> = ({
       fullWidth
       onBlur={onBlur}
       onChange={(event) => onChange(event.target.value)}
-      onClick={() => refInput.current.select()}
-      inputRef={refInput}
       startAdornment={
         <ScrubbableInput
           disabled={disabled}
