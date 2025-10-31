@@ -49,6 +49,9 @@ describe('useResizingEvents', () => {
     // result
     expect(result.current).toStrictEqual({
       aspectRatio: false,
+      attachedValueHeight: false,
+      attachedValueWidth: false,
+      element: elementMock,
       height: '100',
       isMixedHeight: false,
       isMixedWidth: false,
@@ -56,8 +59,6 @@ describe('useResizingEvents', () => {
       onBlurWidth: expect.any(Function),
       onChangeHeight: expect.any(Function),
       onChangeWidth: expect.any(Function),
-      showHeightChip: false,
-      showWidthChip: false,
       valueScrubbaleInputHeight: 100,
       valueScrubbaleInputWidth: 100,
       visibleAspectRatioButton: true,

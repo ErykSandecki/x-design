@@ -13,13 +13,14 @@ import { className, classNames } from './classNames';
 import styles from './text-field-chip.scss';
 
 export type TTextFieldChipProps = {
+  attachedValue: boolean;
   children: ReactNode;
 };
 
-export const TextFieldChip: FC<TTextFieldChipProps> = ({ children }) => {
+export const TextFieldChip: FC<TTextFieldChipProps> = ({ attachedValue, children }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
-  if (!children) {
+  if (!attachedValue) {
     return null;
   }
 

@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 import { elementDataSelectorCreator, elementsSelector, selectedElementsSelector } from 'store/pageBuilder/selectors';
 
 // types
+import { TElement } from 'types';
 import { TUseBlurEvent, useBlurEvent } from './useBlurEvent';
 import { TUseChangeEvent, useChangeEvent } from './useChangeEvent';
 
@@ -17,11 +18,12 @@ import { normalizeInputValue } from 'components/PageBuilder/utils/normalizeInput
 type TUseResizingEvents = TUseChangeEvent &
   TUseBlurEvent & {
     aspectRatio: boolean;
+    attachedValueHeight: boolean;
+    attachedValueWidth: boolean;
+    element: TElement;
     height: string;
     isMixedHeight: boolean;
     isMixedWidth: boolean;
-    showHeightChip: boolean;
-    showWidthChip: boolean;
     valueScrubbaleInputHeight: number;
     valueScrubbaleInputWidth: number;
     visibleAspectRatioButton: boolean;
@@ -48,8 +50,8 @@ export const useResizingEvents = (): TUseResizingEvents => {
   const hasNoUnit = unitHeight === undefined && unitWidth === undefined;
   const onBlurEvents = useBlurEvent(element, height, setHeight, setWidth, width);
   const onChangeEvents = useChangeEvent(setHeight, setWidth, unitHeight, unitWidth);
-  const showHeightChip = typeHeight !== 'fixed' && !isMixedHeight;
-  const showWidthChip = typeWidth !== 'fixed' && !isMixedWidth;
+  const attachedValueHeight = typeHeight !== 'fixed' && !isMixedHeight;
+  const attachedValueWidth = typeWidth !== 'fixed' && !isMixedWidth;
   const valueScrubbaleInputHeight = isMultiple ? 0 : parseFloat(height);
   const valueScrubbaleInputWidth = isMultiple ? 0 : parseFloat(width);
   const visibleAspectRatioButton = !isMixedAspectRatio && !hasMixedSizes && hasPureSizes && hasNoUnit;
@@ -63,11 +65,12 @@ export const useResizingEvents = (): TUseResizingEvents => {
     ...onBlurEvents,
     ...onChangeEvents,
     aspectRatio: element.aspectRatio,
+    attachedValueHeight,
+    attachedValueWidth,
+    element,
     height,
     isMixedHeight,
     isMixedWidth,
-    showHeightChip,
-    showWidthChip,
     valueScrubbaleInputHeight,
     valueScrubbaleInputWidth,
     visibleAspectRatioButton,

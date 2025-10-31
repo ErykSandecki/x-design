@@ -1,6 +1,5 @@
 import { FC } from 'react';
-import { first } from 'lodash';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
 // components
@@ -16,18 +15,15 @@ import { useResizingEvents } from './hooks/useResizingEvents';
 // others
 import { translationNameSpace } from './constants';
 
-// store
-import { elementsSelector, selectedElementsSelector } from 'store/pageBuilder/selectors';
-
 const ColumnResizing: FC = () => {
-  const elements = useSelector(elementsSelector);
-  const selectedElements = useSelector(selectedElementsSelector);
-  const firstElement = first(selectedElements);
   const dispatch = useDispatch();
   const { t } = useTranslation();
 
   const {
     aspectRatio,
+    attachedValueHeight,
+    attachedValueWidth,
+    element,
     height,
     isMixedHeight,
     isMixedWidth,
@@ -35,8 +31,6 @@ const ColumnResizing: FC = () => {
     onBlurWidth,
     onChangeHeight,
     onChangeWidth,
-    showHeightChip,
-    showWidthChip,
     valueScrubbaleInputHeight,
     valueScrubbaleInputWidth,
     visibleAspectRatioButton,
@@ -52,21 +46,21 @@ const ColumnResizing: FC = () => {
       withMargin
     >
       <ColumnResizingInput
+        attachedValue={attachedValueWidth}
         e2eValue="width"
         onBlur={onBlurWidth}
         onChange={onChangeWidth}
-        popoverChildren={<PopoverWidth isMixed={isMixedWidth} width={elements[firstElement.id].width} />}
-        showChip={showWidthChip}
+        popoverChildren={<PopoverWidth isMixed={isMixedWidth} width={element.width} />}
         sizeType="width"
         value={width}
         valueScrubbaleInput={valueScrubbaleInputWidth}
       />
       <ColumnResizingInput
+        attachedValue={attachedValueHeight}
         e2eValue="height"
         onBlur={onBlurHeight}
         onChange={onChangeHeight}
-        popoverChildren={<PopoverHeight height={elements[firstElement.id].height} isMixed={isMixedHeight} />}
-        showChip={showHeightChip}
+        popoverChildren={<PopoverHeight height={element.height} isMixed={isMixedHeight} />}
         sizeType="height"
         value={height}
         valueScrubbaleInput={valueScrubbaleInputHeight}

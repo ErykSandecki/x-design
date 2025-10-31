@@ -10,6 +10,7 @@ exports[`TextFieldWrapper snapshots should click and open popover 1`] = `
       class="TextFieldWrapper__input TextFieldWrapper__input--light"
       data-test-text-field-input="text-field"
       maxlength="6"
+      value="value"
     />
     <div
       class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
@@ -38,7 +39,7 @@ exports[`TextFieldWrapper snapshots should click and open popover 1`] = `
       class="css-1jnxvbp Chip Chip--light TextFieldChip TextFieldChip--light"
       data-test-chip=""
     >
-      chip
+      value
     </div>
   </div>
 </DocumentFragment>
@@ -84,12 +85,13 @@ exports[`TextFieldWrapper snapshots should render with chip 1`] = `
       class="TextFieldWrapper__input TextFieldWrapper__input--light"
       data-test-text-field-input="text-field"
       maxlength="6"
+      value="value"
     />
     <div
       class="css-1jnxvbp Chip Chip--light TextFieldChip TextFieldChip--light"
       data-test-chip=""
     >
-      chip
+      value
     </div>
   </div>
 </DocumentFragment>
