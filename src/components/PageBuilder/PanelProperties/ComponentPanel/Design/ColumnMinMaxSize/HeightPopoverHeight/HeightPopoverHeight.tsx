@@ -1,3 +1,4 @@
+import { capitalize } from 'lodash';
 import { FC } from 'react';
 import { useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
@@ -27,11 +28,13 @@ const HeightPopoverHeight: FC<THeightPopoverHeightProps> = ({ score }) => {
   return (
     <>
       <PopoverCompound.PopoverItem
+        icon={`${capitalize(score)}Height`}
         index={0}
         onClick={() => dispatch(setElementsScoreToCurrentSize(score, 'height'))}
         text={t(`${translationNameSpace}.${score}.1`)}
       />
       <PopoverCompound.PopoverItem
+        icon="Close"
         index={1}
         onClick={() => dispatch(applyElementsSizeType('height', score))}
         text={t(`${translationNameSpace}.${score}.2`)}

@@ -93,6 +93,13 @@ exports[`ColumnResizing snapshots should render ColumnResizing{max} 1`] = `
                     name="Check"
                     width="12"
                   />
+                  <div
+                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="max-width"
+                    height="12"
+                    name="MaxWidth"
+                    width="12"
+                  />
                   <small
                     class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
                     data-test-text=""
@@ -111,6 +118,13 @@ exports[`ColumnResizing snapshots should render ColumnResizing{max} 1`] = `
                     data-test-icon="check"
                     height="12"
                     name="Check"
+                    width="12"
+                  />
+                  <div
+                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="close"
+                    height="12"
+                    name="Close"
                     width="12"
                   />
                   <small
@@ -183,6 +197,13 @@ exports[`ColumnResizing snapshots should render ColumnResizing{max} 1`] = `
                     name="Check"
                     width="12"
                   />
+                  <div
+                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="max-height"
+                    height="12"
+                    name="MaxHeight"
+                    width="12"
+                  />
                   <small
                     class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
                     data-test-text=""
@@ -201,6 +222,13 @@ exports[`ColumnResizing snapshots should render ColumnResizing{max} 1`] = `
                     data-test-icon="check"
                     height="12"
                     name="Check"
+                    width="12"
+                  />
+                  <div
+                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="close"
+                    height="12"
+                    name="Close"
                     width="12"
                   />
                   <small
@@ -323,6 +351,13 @@ exports[`ColumnResizing snapshots should render ColumnResizing{min} 1`] = `
                     name="Check"
                     width="12"
                   />
+                  <div
+                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="min-width"
+                    height="12"
+                    name="MinWidth"
+                    width="12"
+                  />
                   <small
                     class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
                     data-test-text=""
@@ -341,6 +376,13 @@ exports[`ColumnResizing snapshots should render ColumnResizing{min} 1`] = `
                     data-test-icon="check"
                     height="12"
                     name="Check"
+                    width="12"
+                  />
+                  <div
+                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="close"
+                    height="12"
+                    name="Close"
                     width="12"
                   />
                   <small
@@ -413,6 +455,13 @@ exports[`ColumnResizing snapshots should render ColumnResizing{min} 1`] = `
                     name="Check"
                     width="12"
                   />
+                  <div
+                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="min-height"
+                    height="12"
+                    name="MinHeight"
+                    width="12"
+                  />
                   <small
                     class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
                     data-test-text=""
@@ -431,6 +480,13 @@ exports[`ColumnResizing snapshots should render ColumnResizing{min} 1`] = `
                     data-test-icon="check"
                     height="12"
                     name="Check"
+                    width="12"
+                  />
+                  <div
+                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="close"
+                    height="12"
+                    name="Close"
                     width="12"
                   />
                   <small
