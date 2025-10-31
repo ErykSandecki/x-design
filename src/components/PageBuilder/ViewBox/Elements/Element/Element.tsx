@@ -21,8 +21,8 @@ import { MouseMode } from 'types/enums/mouseMode';
 import { TElementChildren } from './types';
 
 // utils
+import { getInsets } from './utils/getInsets';
 import { getLayout } from './utils/getLayout';
-import { getPaddings } from './utils/getPaddings';
 import { getPosition } from './utils/getPosition';
 
 export type TElementProps = {
@@ -54,6 +54,7 @@ const Element: FC<TElementProps> = ({ classes, children, id, index, mouseMode, p
     isMoving,
     isSelected,
     layout,
+    margin,
     maxHeight,
     maxWidth,
     minHeight,
@@ -87,11 +88,12 @@ const Element: FC<TElementProps> = ({ classes, children, id, index, mouseMode, p
         ...getPosition(alignment, angle, x, y),
         backgroundColor: (background.properties as TColor).color,
         height: cssHeight,
+        margin: getInsets(margin),
         maxHeight,
         maxWidth,
         minHeight,
         minWidth,
-        padding: getPaddings(padding),
+        padding: getInsets(padding),
         position,
         width: cssWidth,
       }}

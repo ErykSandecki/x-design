@@ -113,6 +113,7 @@ describe('useElementEvents', () => {
       isMoving: false,
       isSelected: true,
       layout: layoutMock,
+      margin: insetsMock,
       maxHeight: '',
       maxWidth: '',
       minHeight: '',

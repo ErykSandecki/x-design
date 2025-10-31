@@ -2,12 +2,12 @@
 import { insetsMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // utils
-import { getPaddings } from '../getPaddings';
+import { getInsets } from '../getInsets';
 
-describe('getPaddings', () => {
-  it(`should return paddings`, () => {
+describe('getInsets', () => {
+  it(`should return insets`, () => {
     // before
-    const result = getPaddings(insetsMock);
+    const result = getInsets(insetsMock);
 
     // result
     expect(result).toBe('0px 0px 0px 0px');

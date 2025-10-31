@@ -41,6 +41,7 @@ export type TUseElementEvents = TUseElementSizes & {
   isMoving: boolean;
   isSelected: boolean;
   layout: TElement['layout'];
+  margin: TInsets;
   onMouseDown: TUseMouseDownEvent;
   onMouseEnter: TUseMouseEnterEvent;
   onMouseLeave: TUseMouseLeaveEvent;
@@ -95,6 +96,7 @@ export const useElementEvents = (
     isMoving,
     isSelected,
     layout: elementData.layout,
+    margin: elementData.margin,
     onMouseDown: useMouseDownEvent(
       cursorPosition,
       cursorPositionBase,
