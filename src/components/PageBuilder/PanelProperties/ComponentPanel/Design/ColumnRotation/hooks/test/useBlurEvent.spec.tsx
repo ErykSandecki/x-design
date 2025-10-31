@@ -34,6 +34,6 @@ describe('useBlurEvent', () => {
     result.current();
 
     // result
-    expect(mockCallBack.mock.calls[0][0]).toBe('0');
+    expect(mockCallBack.mock.calls[0][0]).toBe('0°');
   });
 });

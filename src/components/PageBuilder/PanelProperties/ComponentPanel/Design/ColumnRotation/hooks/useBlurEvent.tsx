@@ -16,7 +16,7 @@ export const useBlurEvent = (angle: string, element: TElement, setAngle: TFunc<[
 
   const handleBlur = (): void => {
     if (angle === '' || isNaN(parseFloat(angle))) {
-      setAngle(element.angle.toString());
+      setAngle(`${element.angle.toString()}°`);
     } else {
       const targetAngle = clampAngle(parseInt(angle));
 
