@@ -29,23 +29,14 @@ const ColumnResizing: FC = () => {
   const {
     aspectRatio,
     height,
-    inputHeightType,
-    inputWidthType,
     isMixedHeight,
     isMixedWidth,
-    isPureHeight,
-    isPureWidth,
     onBlurHeight,
     onBlurWidth,
     onChangeHeight,
     onChangeWidth,
-    onFocus,
     showHeightChip,
     showWidthChip,
-    unitHeight,
-    unitWidth,
-    valueInputHeight,
-    valueInputWidth,
     valueScrubbaleInputHeight,
     valueScrubbaleInputWidth,
     visibleAspectRatioButton,
@@ -62,32 +53,22 @@ const ColumnResizing: FC = () => {
     >
       <ColumnResizingInput
         e2eValue="width"
-        inputType={inputWidthType}
-        isPure={isPureWidth}
         onBlur={onBlurWidth}
         onChange={onChangeWidth}
-        onFocus={onFocus}
         popoverChildren={<PopoverWidth isMixed={isMixedWidth} width={elements[firstElement.id].width} />}
         showChip={showWidthChip}
-        size={width}
         sizeType="width"
-        unitSize={unitWidth}
-        valueInput={valueInputWidth}
+        value={width}
         valueScrubbaleInput={valueScrubbaleInputWidth}
       />
       <ColumnResizingInput
         e2eValue="height"
-        inputType={inputHeightType}
-        isPure={isPureHeight}
         onBlur={onBlurHeight}
         onChange={onChangeHeight}
-        onFocus={onFocus}
         popoverChildren={<PopoverHeight height={elements[firstElement.id].height} isMixed={isMixedHeight} />}
         showChip={showHeightChip}
-        size={height}
         sizeType="height"
-        unitSize={unitHeight}
-        valueInput={valueInputHeight}
+        value={height}
         valueScrubbaleInput={valueScrubbaleInputHeight}
       />
     </UITools.SectionColumn>

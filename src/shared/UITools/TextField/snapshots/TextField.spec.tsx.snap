@@ -21,33 +21,6 @@ exports[`TextField snapshots should render TextField 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TextField snapshots should render with chip 1`] = `
-<DocumentFragment>
-  <div
-    class="css-1jnxvbp TextField TextField--light"
-    data-test-text-field=""
-    data-test-tooltip=""
-  >
-    <div
-      class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-      data-test-text-field-wrapper=""
-    >
-      <input
-        class="TextFieldWrapper__input TextFieldWrapper__input--light"
-        data-test-text-field-input=""
-        maxlength="6"
-      />
-      <div
-        class="css-1jnxvbp Chip Chip--light TextFieldChip TextFieldChip--light"
-        data-test-chip=""
-      >
-        chip
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
 exports[`TextField snapshots should render with label 1`] = `
 <DocumentFragment>
   <div
@@ -71,50 +44,6 @@ exports[`TextField snapshots should render with label 1`] = `
         data-test-text-field-input=""
         maxlength="6"
       />
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`TextField snapshots should render with popover 1`] = `
-<DocumentFragment>
-  <div
-    class="css-1jnxvbp TextField TextField--light"
-    data-test-text-field=""
-    data-test-tooltip=""
-  >
-    <div
-      class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-      data-test-text-field-wrapper=""
-    >
-      <input
-        class="TextFieldWrapper__input TextFieldWrapper__input--light"
-        data-test-text-field-input=""
-        maxlength="6"
-      />
-      <div
-        class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
-        data-test-box=""
-      >
-        <div
-          class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
-          data-test-icon="variant"
-          height="12"
-          name="Variant"
-          width="12"
-        />
-        <div
-          class="css-1c8p9kb Popover Popover--light"
-          data-test-box=""
-          data-test-popover="popover"
-          style="left: 0px; top: 0px;"
-        >
-          <div
-            class="css-qef3st"
-            data-test-box=""
-          />
-        </div>
-      </div>
     </div>
   </div>
 </DocumentFragment>

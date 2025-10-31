@@ -35,7 +35,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper=""
+            data-test-text-field-wrapper="width"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -54,7 +54,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
               class="TextFieldWrapper__input TextFieldWrapper__input--light"
               data-test-text-field-input="width"
               maxlength="6"
-              type="number"
+              type="text"
               value="100"
             />
             <div
@@ -224,7 +224,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper=""
+            data-test-text-field-wrapper="height"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -243,7 +243,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
               class="TextFieldWrapper__input TextFieldWrapper__input--light"
               data-test-text-field-input="height"
               maxlength="6"
-              type="number"
+              type="text"
               value="100"
             />
             <div
@@ -486,20 +486,20 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper=""
+            data-test-text-field-wrapper="width"
           >
             <div
-              class="css-e5vky9 ScrubbableInput ScrubbableInput--light ScrubbableInput--disabled ScrubbableInput--disabled--light"
+              class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
               data-test-box=""
               data-test-scrubbable-input="width"
             >
-              <div
-                class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
-                data-test-icon="width-restricted"
-                height="12"
-                name="WidthRestricted"
-                width="12"
-              />
+              <small
+                class="css-1jnxvbp Typography Typography--light Typography--neutral2 Typography--neutral2--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                data-test-text=""
+                style="text-align: inherit;"
+              >
+                W
+              </small>
             </div>
             <input
               class="TextFieldWrapper__input TextFieldWrapper__input--light"
@@ -617,20 +617,20 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper=""
+            data-test-text-field-wrapper="height"
           >
             <div
-              class="css-e5vky9 ScrubbableInput ScrubbableInput--light ScrubbableInput--disabled ScrubbableInput--disabled--light"
+              class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
               data-test-box=""
               data-test-scrubbable-input="height"
             >
-              <div
-                class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
-                data-test-icon="height-restricted"
-                height="12"
-                name="HeightRestricted"
-                width="12"
-              />
+              <small
+                class="css-1jnxvbp Typography Typography--light Typography--neutral2 Typography--neutral2--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                data-test-text=""
+                style="text-align: inherit;"
+              >
+                H
+              </small>
             </div>
             <input
               class="TextFieldWrapper__input TextFieldWrapper__input--light"

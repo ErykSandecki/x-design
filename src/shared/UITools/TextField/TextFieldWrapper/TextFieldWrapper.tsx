@@ -1,4 +1,5 @@
-import { FC, InputHTMLAttributes, ReactNode, RefObject } from 'react';
+import { FC, InputHTMLAttributes, ReactNode, RefObject, useRef } from 'react';
+import { noop } from 'lodash';
 
 // components
 import Box from '../../../UI/Box/Box';
@@ -7,7 +8,7 @@ import TextFieldPopover from './TextFieldPopover/TextFieldPopover';
 import { TPopoverProps } from '../../Popover/Popover';
 
 // hooks
-import { useTheme } from 'hooks';
+import { useOutsideClick, useTheme } from 'hooks';
 
 // others
 import { className, classNames } from './classNames';
@@ -26,14 +27,14 @@ import { stopPropagation } from 'utils';
 
 export type TTextFieldWrapperProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'className' | 'color' | 'popover'> & {
   chipChildren?: TTextFieldChipProps['children'];
-  e2eValue?: TE2EDataAttributeProps['value'];
+  e2eValue: TE2EDataAttributeProps['value'];
   endAdorment?: ReactNode;
   fullWidth?: boolean;
   idContainer?: string;
+  inputRef?: RefObject<HTMLInputElement>;
   popoverChildren?: TPopoverProps['children'];
   popoverOffset?: TPopoverProps['offset'];
   popoverStyle?: TPopoverProps['style'];
-  inputRef?: RefObject<HTMLInputElement>;
   startAdornment?: ReactNode;
   variant?: TextFieldVariant;
   wrapperRef?: RefObject<HTMLInputElement>;
@@ -56,19 +57,24 @@ export const TextFieldWrapper: FC<TTextFieldWrapperProps> = ({
   wrapperRef,
   ...restProps
 }) => {
+  const refPopover = useRef(null);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
+  const { selected, setSelected } = useOutsideClick([], refPopover, noop, idContainer);
 
   return (
     <Box
       classes={{
         className: cx(
           classNamesWithTheme[className].name,
+          [classNamesWithTheme[className].modificators.chip, !!chipChildren],
           [classNamesWithTheme[className].modificators.disabled, disabled],
           [classNamesWithTheme[className].modificators.fullWidth, fullWidth],
           classNamesWithTheme[className].modificators[variant],
         ),
       }}
       e2eAttribute={E2EAttribute.textFieldWrapper}
+      e2eValue={e2eValue}
+      onClick={() => chipChildren && setSelected(true)}
       ref={wrapperRef}
       style={style}
     >
@@ -77,6 +83,7 @@ export const TextFieldWrapper: FC<TTextFieldWrapperProps> = ({
         className={cx(classNamesWithTheme.input)}
         disabled={disabled}
         maxLength={6}
+        onClick={() => !chipChildren && inputRef.current.select()}
         onKeyDown={stopPropagation}
         ref={inputRef}
         {...getAttributes(E2EAttribute.textFieldInput, e2eValue)}
@@ -85,8 +92,10 @@ export const TextFieldWrapper: FC<TTextFieldWrapperProps> = ({
       {popoverChildren ? (
         <TextFieldPopover
           classNameIcon={cx(classNamesWithTheme.icon)}
-          idContainer={idContainer}
           offset={popoverOffset}
+          ref={refPopover}
+          selected={selected}
+          setSelected={setSelected}
           style={popoverStyle}
         >
           {popoverChildren}
@@ -94,7 +103,7 @@ export const TextFieldWrapper: FC<TTextFieldWrapperProps> = ({
       ) : (
         endAdorment
       )}
-      <TextFieldChip onClick={() => inputRef.current.focus()}>{chipChildren}</TextFieldChip>
+      <TextFieldChip>{chipChildren}</TextFieldChip>
     </Box>
   );
 };

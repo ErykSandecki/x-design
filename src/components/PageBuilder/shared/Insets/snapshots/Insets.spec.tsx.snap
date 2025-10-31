@@ -35,7 +35,7 @@ exports[`Insets snapshots should render Insets 1`] = `
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper=""
+            data-test-text-field-wrapper="padding-lr"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -128,7 +128,7 @@ exports[`Insets snapshots should render Insets 1`] = `
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper=""
+            data-test-text-field-wrapper="padding-tb"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -294,7 +294,7 @@ exports[`Insets snapshots should render back to merged mode 1`] = `
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper=""
+            data-test-text-field-wrapper="padding-lr"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -387,7 +387,7 @@ exports[`Insets snapshots should render back to merged mode 1`] = `
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper=""
+            data-test-text-field-wrapper="padding-tb"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -553,7 +553,7 @@ exports[`Insets snapshots should render when mose is individual 1`] = `
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper=""
+            data-test-text-field-wrapper="padding-l"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -646,7 +646,7 @@ exports[`Insets snapshots should render when mose is individual 1`] = `
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper=""
+            data-test-text-field-wrapper="padding-t"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -739,7 +739,7 @@ exports[`Insets snapshots should render when mose is individual 1`] = `
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper=""
+            data-test-text-field-wrapper="padding-r"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -832,7 +832,7 @@ exports[`Insets snapshots should render when mose is individual 1`] = `
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper=""
+            data-test-text-field-wrapper="padding-b"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"

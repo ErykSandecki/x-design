@@ -35,7 +35,7 @@ exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper=""
+            data-test-text-field-wrapper="x"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -82,7 +82,7 @@ exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper=""
+            data-test-text-field-wrapper="y"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -172,7 +172,7 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--disabled TextFieldWrapper--disabled--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper=""
+            data-test-text-field-wrapper="x"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light ScrubbableInput--disabled ScrubbableInput--disabled--light"
@@ -220,7 +220,7 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--disabled TextFieldWrapper--disabled--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper=""
+            data-test-text-field-wrapper="y"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light ScrubbableInput--disabled ScrubbableInput--disabled--light"
@@ -335,7 +335,7 @@ exports[`ColumnPosition snapshots should render when values are mixed 1`] = `
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper=""
+            data-test-text-field-wrapper="x"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -382,7 +382,7 @@ exports[`ColumnPosition snapshots should render when values are mixed 1`] = `
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper=""
+            data-test-text-field-wrapper="y"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"

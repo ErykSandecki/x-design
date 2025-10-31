@@ -13,7 +13,7 @@ exports[`GridInputs snapshots should render GridInputs 1`] = `
     >
       <div
         class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-        data-test-text-field-wrapper=""
+        data-test-text-field-wrapper="columns"
       >
         <div
           class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -67,7 +67,7 @@ exports[`GridInputs snapshots should render GridInputs 1`] = `
     >
       <div
         class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-        data-test-text-field-wrapper=""
+        data-test-text-field-wrapper="rows"
       >
         <div
           class="css-e5vky9 ScrubbableInput ScrubbableInput--light"

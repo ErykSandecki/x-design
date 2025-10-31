@@ -51,7 +51,7 @@ exports[`Design snapshots should render Design 1`] = `
             >
               <div
                 class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-                data-test-text-field-wrapper=""
+                data-test-text-field-wrapper="color"
               >
                 <div
                   aria-describedby="test-id"
@@ -93,7 +93,7 @@ exports[`Design snapshots should render Design 1`] = `
             >
               <div
                 class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-                data-test-text-field-wrapper=""
+                data-test-text-field-wrapper="alpha"
               >
                 <input
                   class="TextFieldWrapper__input TextFieldWrapper__input--light"

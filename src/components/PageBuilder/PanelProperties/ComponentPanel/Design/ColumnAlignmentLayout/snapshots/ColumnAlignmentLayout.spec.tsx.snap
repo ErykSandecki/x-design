@@ -398,7 +398,7 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper=""
+            data-test-text-field-wrapper="column"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -729,7 +729,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
               >
                 <div
                   class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-                  data-test-text-field-wrapper=""
+                  data-test-text-field-wrapper="columns"
                 >
                   <div
                     class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -783,7 +783,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
               >
                 <div
                   class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-                  data-test-text-field-wrapper=""
+                  data-test-text-field-wrapper="rows"
                 >
                   <div
                     class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -2951,7 +2951,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper=""
+            data-test-text-field-wrapper="column"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -3044,7 +3044,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper=""
+            data-test-text-field-wrapper="row"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -3377,7 +3377,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
               >
                 <div
                   class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-                  data-test-text-field-wrapper=""
+                  data-test-text-field-wrapper="columns"
                 >
                   <div
                     class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -3431,7 +3431,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
               >
                 <div
                   class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-                  data-test-text-field-wrapper=""
+                  data-test-text-field-wrapper="rows"
                 >
                   <div
                     class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -5599,7 +5599,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper=""
+            data-test-text-field-wrapper="column"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -5692,7 +5692,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper=""
+            data-test-text-field-wrapper="row"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -6343,7 +6343,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is included option h
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper=""
+            data-test-text-field-wrapper="row"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -7014,7 +7014,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper=""
+            data-test-text-field-wrapper="row"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -7665,7 +7665,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper=""
+            data-test-text-field-wrapper="row"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -8316,7 +8316,7 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper=""
+            data-test-text-field-wrapper="column"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"

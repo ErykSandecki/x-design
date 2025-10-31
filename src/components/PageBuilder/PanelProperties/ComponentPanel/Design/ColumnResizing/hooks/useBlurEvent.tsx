@@ -5,7 +5,6 @@ import { setElementsSizes } from 'store/pageBuilder/actions';
 
 // types
 import { TElement } from 'types';
-import { TFocusElement } from '../types';
 
 // utils
 import { isPureNumber } from 'utils';
@@ -19,15 +18,12 @@ export const useBlurEvent = (
   element: TElement,
   height: string,
   setHeight: TFunc<[string]>,
-  setIsFocused: TFunc<[TFocusElement]>,
   setWidth: TFunc<[string]>,
   width: string,
 ): TUseBlurEvent => {
   const dispatch = useDispatch();
 
   const handleBlurHeight = (): void => {
-    setIsFocused('');
-
     if (height === '') {
       setHeight(element.height.value.toString());
     } else {
@@ -37,8 +33,6 @@ export const useBlurEvent = (
   };
 
   const handleBlurWidth = (): void => {
-    setIsFocused('');
-
     if (width === '') {
       setWidth(element.width.value.toString());
     } else {

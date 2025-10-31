@@ -7,45 +7,34 @@ import { Icon, ScrubbableInput, Small, TE2EValue, UITools } from 'shared';
 import { MAX, PANEL_PROPERTIES_ID } from '../../../../constants';
 
 // types
-import { ColorsTheme, KeyboardKeys, TElement, Unit } from 'types';
-import { TFocusElement } from './types';
+import { ColorsTheme, KeyboardKeys, TElement } from 'types';
 
 // utils
 import { handleSubmitInput, sanitizeNumberInput } from 'utils';
 
 export type TColumnResizingInputProps = {
   e2eValue: TE2EValue;
-  inputType: HTMLInputElement['type'];
-  isPure: boolean;
   onBlur: TFunc;
   onChange: TFunc<[string, boolean?]>;
-  onFocus: TFunc<[TFocusElement]>;
   popoverChildren: ReactNode;
   showChip: boolean;
-  size: string;
   sizeType: keyof Pick<TElement, 'height' | 'width'>;
-  unitSize: Unit;
-  valueInput: string;
+  value: string;
   valueScrubbaleInput: number;
 };
 
 const ColumnResizingInput: FC<TColumnResizingInputProps> = ({
   e2eValue,
-  inputType,
-  isPure,
   onBlur,
   onChange,
-  onFocus,
   showChip,
   popoverChildren,
-  size,
   sizeType,
-  unitSize,
-  valueInput,
+  value,
   valueScrubbaleInput,
 }) => {
-  // prettier-ignore
-  const chipChildren = showChip && <>{size}{unitSize ?? ''}</>
+  const disabled = showChip;
+  const chipChildren = showChip && <>{value}</>;
   const refInput = useRef<HTMLInputElement>(null);
   const label = sizeType === 'height' ? 'H' : 'W';
   const iconName = sizeType === 'height' ? 'HeightRestricted' : 'WidthRestricted';
@@ -56,31 +45,29 @@ const ColumnResizingInput: FC<TColumnResizingInputProps> = ({
       e2eValue={e2eValue}
       fullWidth
       idContainer={PANEL_PROPERTIES_ID}
+      inputRef={refInput}
       onBlur={onBlur}
       onChange={(event) => onChange(sanitizeNumberInput(event.target.value))}
-      onClick={() => refInput.current.select()}
-      onFocus={() => onFocus(sizeType)}
       onKeyDown={(event) => handleSubmitInput(KeyboardKeys.enter, refInput.current)(event)}
       popoverChildren={popoverChildren}
-      inputRef={refInput}
       startAdornment={
         <ScrubbableInput
-          disabled={!isPure}
+          disabled={disabled}
           e2eValue={e2eValue}
           max={MAX}
           min={0}
           onChange={(value) => onChange(value.toString(), true)}
           value={valueScrubbaleInput}
         >
-          {isPure ? (
+          {!disabled ? (
             <Small color={ColorsTheme.neutral2}>{label}</Small>
           ) : (
             <Icon color={ColorsTheme.neutral2} height={12} name={iconName} width={12} />
           )}
         </ScrubbableInput>
       }
-      type={inputType}
-      value={valueInput}
+      type="text"
+      value={value}
     />
   );
 };

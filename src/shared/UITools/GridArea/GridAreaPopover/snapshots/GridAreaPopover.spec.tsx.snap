@@ -19,7 +19,7 @@ exports[`GridAreaPopover snapshots should render GridAreaPopover 1`] = `
       >
         <div
           class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-          data-test-text-field-wrapper=""
+          data-test-text-field-wrapper="columns"
         >
           <div
             class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -73,7 +73,7 @@ exports[`GridAreaPopover snapshots should render GridAreaPopover 1`] = `
       >
         <div
           class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-          data-test-text-field-wrapper=""
+          data-test-text-field-wrapper="rows"
         >
           <div
             class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -2255,7 +2255,7 @@ exports[`GridAreaPopover snapshots should render with opened popover 1`] = `
       >
         <div
           class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-          data-test-text-field-wrapper=""
+          data-test-text-field-wrapper="columns"
         >
           <div
             class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -2309,7 +2309,7 @@ exports[`GridAreaPopover snapshots should render with opened popover 1`] = `
       >
         <div
           class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-          data-test-text-field-wrapper=""
+          data-test-text-field-wrapper="rows"
         >
           <div
             class="css-e5vky9 ScrubbableInput ScrubbableInput--light"

@@ -42,7 +42,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing{max} 1`] = `
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper=""
+            data-test-text-field-wrapper="maxWidth"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -132,7 +132,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing{max} 1`] = `
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper=""
+            data-test-text-field-wrapper="maxHeight"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -272,7 +272,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing{min} 1`] = `
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper=""
+            data-test-text-field-wrapper="minWidth"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -362,7 +362,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing{min} 1`] = `
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper=""
+            data-test-text-field-wrapper="minHeight"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"

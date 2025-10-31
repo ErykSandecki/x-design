@@ -1,5 +1,4 @@
-import { FC, HTMLAttributes, useRef } from 'react';
-import { noop } from 'lodash';
+import { FC, RefObject } from 'react';
 
 // components
 import Box from '../../../../UI/Box/Box';
@@ -7,7 +6,7 @@ import Icon from '../../../../UI/Icon/Icon';
 import Popover, { PopoverCompound, TPopoverProps } from '../../../Popover/Popover';
 
 // hooks
-import { useOutsideClick, useTheme } from 'hooks';
+import { useTheme } from 'hooks';
 
 // others
 import { className, classNames } from './classNames';
@@ -17,19 +16,21 @@ import styles from './text-field-popover.scss';
 
 export type TTextFieldPopoverProps = Pick<TPopoverProps, 'children' | 'offset' | 'style'> & {
   classNameIcon: string;
-  idContainer: HTMLAttributes<any>['id'];
+  ref: RefObject<HTMLDivElement>;
+  selected: boolean;
+  setSelected: TFunc<[boolean]>;
 };
 
 export const TextFieldPopover: FC<TTextFieldPopoverProps> = ({
   children,
   classNameIcon,
-  idContainer,
   offset,
+  ref,
+  selected,
+  setSelected,
   style,
 }) => {
-  const ref = useRef(null);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-  const { selected, setSelected } = useOutsideClick([], ref, noop, idContainer);
 
   return (
     <Box

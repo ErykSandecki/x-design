@@ -1,7 +1,7 @@
 @import '../../styles/z-indexes';
 
 .ScrubbableInput {
-  cursor: ew-resize;
+  cursor: ew-resize !important;
   user-select: none;
 
   &--disabled {

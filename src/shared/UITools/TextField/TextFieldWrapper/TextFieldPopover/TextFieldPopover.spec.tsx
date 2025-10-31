@@ -1,4 +1,5 @@
 import { fireEvent } from '@testing-library/react';
+import { RefObject } from 'react';
 
 // components
 import TextFieldPopover from './TextFieldPopover';
@@ -12,6 +13,8 @@ import { customRender, getByE2EAttribute } from 'test';
 
 const id = 'id';
 const element = createHtmlElement('div', { id });
+const mockCallBack = jest.fn();
+const ref = { current: null } as unknown as RefObject<HTMLInputElement>;
 
 describe('TextFieldPopover snapshots', () => {
   beforeAll(() => {
@@ -22,7 +25,7 @@ describe('TextFieldPopover snapshots', () => {
   it('should render TextFieldPopover', () => {
     // before
     const { asFragment } = customRender(
-      <TextFieldPopover classNameIcon="classNameIcon" idContainer="idContainer">
+      <TextFieldPopover classNameIcon="classNameIcon" ref={ref} selected={false} setSelected={mockCallBack}>
         children
       </TextFieldPopover>,
     );
@@ -34,7 +37,7 @@ describe('TextFieldPopover snapshots', () => {
   it('should render with opened popover', () => {
     // before
     const { asFragment, container } = customRender(
-      <TextFieldPopover classNameIcon="classNameIcon" idContainer="idContainer">
+      <TextFieldPopover classNameIcon="classNameIcon" ref={ref} selected={true} setSelected={mockCallBack}>
         children
       </TextFieldPopover>,
     );

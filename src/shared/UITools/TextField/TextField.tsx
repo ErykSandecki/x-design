@@ -19,7 +19,7 @@ import styles from './text-field.scss';
 import { E2EAttribute } from 'types';
 import { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute';
 
-export type TTextFieldProps = TTextFieldWrapperProps & {
+export type TTextFieldProps = Omit<TTextFieldWrapperProps, 'e2eValue'> & {
   className?: string;
   e2eValue?: TE2EDataAttributeProps['value'];
   label?: string;

@@ -167,7 +167,7 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
                   >
                     <div
                       class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-                      data-test-text-field-wrapper=""
+                      data-test-text-field-wrapper="color"
                     >
                       <div
                         aria-describedby="test-id"
@@ -209,7 +209,7 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
                   >
                     <div
                       class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-                      data-test-text-field-wrapper=""
+                      data-test-text-field-wrapper="alpha"
                     >
                       <input
                         class="TextFieldWrapper__input TextFieldWrapper__input--light"

@@ -42,6 +42,14 @@ $--xd-font-size: 11px;
     width: 100%;
   }
 
+  &--chip {
+    cursor: pointer;
+
+    & * {
+      cursor: pointer;
+    }
+  }
+
   &:hover &__icon {
     opacity: 1;
   }

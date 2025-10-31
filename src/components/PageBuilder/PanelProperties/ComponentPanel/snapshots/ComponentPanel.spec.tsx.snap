@@ -372,7 +372,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
           >
             <div
               class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-              data-test-text-field-wrapper=""
+              data-test-text-field-wrapper="x"
             >
               <div
                 class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -419,7 +419,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
           >
             <div
               class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-              data-test-text-field-wrapper=""
+              data-test-text-field-wrapper="y"
             >
               <div
                 class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -504,7 +504,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
           >
             <div
               class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-              data-test-text-field-wrapper=""
+              data-test-text-field-wrapper="angle"
             >
               <div
                 class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -918,7 +918,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
           >
             <div
               class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-              data-test-text-field-wrapper=""
+              data-test-text-field-wrapper="width"
             >
               <div
                 class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -937,7 +937,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
                 class="TextFieldWrapper__input TextFieldWrapper__input--light"
                 data-test-text-field-input="width"
                 maxlength="6"
-                type="number"
+                type="text"
                 value="100"
               />
               <div
@@ -1107,7 +1107,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
           >
             <div
               class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-              data-test-text-field-wrapper=""
+              data-test-text-field-wrapper="height"
             >
               <div
                 class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -1126,7 +1126,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
                 class="TextFieldWrapper__input TextFieldWrapper__input--light"
                 data-test-text-field-input="height"
                 maxlength="6"
-                type="number"
+                type="text"
                 value="100"
               />
               <div
@@ -1364,7 +1364,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
           >
             <div
               class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-              data-test-text-field-wrapper=""
+              data-test-text-field-wrapper="padding-lr"
             >
               <div
                 class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
@@ -1457,7 +1457,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
           >
             <div
               class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-              data-test-text-field-wrapper=""
+              data-test-text-field-wrapper="padding-tb"
             >
               <div
                 class="css-e5vky9 ScrubbableInput ScrubbableInput--light"

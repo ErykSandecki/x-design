@@ -16,13 +16,13 @@ jest.mock('react-redux', () => ({
 describe('useBlurEvent', () => {
   it(`should trigger blur height`, () => {
     // before
-    const { result } = renderHook(() => useBlurEvent(elementMock, '0', mockCallBack, mockCallBack, mockCallBack, '0'));
+    const { result } = renderHook(() => useBlurEvent(elementMock, '0', mockCallBack, mockCallBack, '0'));
 
     // action
     result.current.onBlurHeight();
 
     // result
-    expect(mockCallBack.mock.calls[1][0].payload).toStrictEqual({
+    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
       sizeType: 'height',
       value: 0,
     });
@@ -30,15 +30,13 @@ describe('useBlurEvent', () => {
 
   it(`should trigger blur height`, () => {
     // before
-    const { result } = renderHook(() =>
-      useBlurEvent(elementMock, 'auto', mockCallBack, mockCallBack, mockCallBack, '0'),
-    );
+    const { result } = renderHook(() => useBlurEvent(elementMock, 'auto', mockCallBack, mockCallBack, '0'));
 
     // action
     result.current.onBlurHeight();
 
     // result
-    expect(mockCallBack.mock.calls[1][0].payload).toStrictEqual({
+    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
       sizeType: 'height',
       value: 'auto',
     });
@@ -46,24 +44,24 @@ describe('useBlurEvent', () => {
 
   it(`should reset value height`, () => {
     // before
-    const { result } = renderHook(() => useBlurEvent(elementMock, '', mockCallBack, mockCallBack, mockCallBack, '0'));
+    const { result } = renderHook(() => useBlurEvent(elementMock, '', mockCallBack, mockCallBack, '0'));
 
     // action
     result.current.onBlurHeight();
 
     // result
-    expect(mockCallBack.mock.calls[1][0]).toBe('100');
+    expect(mockCallBack.mock.calls[0][0]).toBe('100');
   });
 
   it(`should trigger blur width`, () => {
     // before
-    const { result } = renderHook(() => useBlurEvent(elementMock, '0', mockCallBack, mockCallBack, mockCallBack, '0'));
+    const { result } = renderHook(() => useBlurEvent(elementMock, '0', mockCallBack, mockCallBack, '0'));
 
     // action
     result.current.onBlurWidth();
 
     // result
-    expect(mockCallBack.mock.calls[1][0].payload).toStrictEqual({
+    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
       sizeType: 'width',
       value: 0,
     });
@@ -71,15 +69,13 @@ describe('useBlurEvent', () => {
 
   it(`should trigger blur width`, () => {
     // before
-    const { result } = renderHook(() =>
-      useBlurEvent(elementMock, '0', mockCallBack, mockCallBack, mockCallBack, 'auto'),
-    );
+    const { result } = renderHook(() => useBlurEvent(elementMock, '0', mockCallBack, mockCallBack, 'auto'));
 
     // action
     result.current.onBlurWidth();
 
     // result
-    expect(mockCallBack.mock.calls[1][0].payload).toStrictEqual({
+    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
       sizeType: 'width',
       value: 'auto',
     });
@@ -87,12 +83,12 @@ describe('useBlurEvent', () => {
 
   it(`should reset value width`, () => {
     // before
-    const { result } = renderHook(() => useBlurEvent(elementMock, '0', mockCallBack, mockCallBack, mockCallBack, ''));
+    const { result } = renderHook(() => useBlurEvent(elementMock, '0', mockCallBack, mockCallBack, ''));
 
     // action
     result.current.onBlurWidth();
 
     // result
-    expect(mockCallBack.mock.calls[1][0]).toBe('100');
+    expect(mockCallBack.mock.calls[0][0]).toBe('100');
   });
 });
