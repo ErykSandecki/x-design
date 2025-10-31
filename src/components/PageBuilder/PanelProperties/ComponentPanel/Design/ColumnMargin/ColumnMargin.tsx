@@ -11,9 +11,6 @@ import { translationNameSpace } from './constants';
 // store
 import { elementDataSelectorCreator, elementsSelector, selectedElementsSelector } from 'store/pageBuilder/selectors';
 
-// types
-import { LayoutType } from 'types';
-
 // utils
 import { isBaseParent } from 'utils';
 import { isMixed } from '../../../../utils/isMixed';
@@ -25,7 +22,7 @@ const ColumnMargin: FC = () => {
   const element = useSelector(elementDataSelectorCreator(firstElement.id));
   const isMixedLayout = isMixed(elements, firstElement, 'layout.type', selectedElements);
 
-  if (element.layout.type === LayoutType.freeForm || isMixedLayout || isBaseParent(element.parentId)) {
+  if (isMixedLayout || isBaseParent(element.parentId)) {
     return null;
   }
 
