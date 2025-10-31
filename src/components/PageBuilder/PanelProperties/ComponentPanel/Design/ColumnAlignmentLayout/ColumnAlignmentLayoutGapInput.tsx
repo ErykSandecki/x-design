@@ -10,10 +10,7 @@ import { MAX, MIN, PANEL_PROPERTIES_ID } from '../../../../constants';
 import { TOOLTIP_TRANSLATION_KEY } from 'constant/constants';
 
 // types
-import { KeyboardKeys, TGap, TGapProperties } from 'types';
-
-// utils
-import { handleSubmitInput } from 'utils';
+import { TGap, TGapProperties } from 'types';
 
 export type TColumnAlignmentLayoutGapInputProps = {
   gap: keyof TGap;
@@ -52,7 +49,6 @@ const ColumnAlignmentLayoutGapInput: FC<TColumnAlignmentLayoutGapInputProps> = (
       onBlur={onBlur}
       onChange={(event) => onChange(event.target.value)}
       onClick={() => refInputGap.current.select()}
-      onKeyDown={(event) => handleSubmitInput(KeyboardKeys.enter, refInputGap.current)(event)}
       popoverChildren={<PopoverGap gap={gap} gapProperties={gapProperties} isMixed={isMixed} />}
       startAdornment={
         <ScrubbableInput

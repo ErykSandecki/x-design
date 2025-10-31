@@ -10,12 +10,6 @@ import TextField from '../../../TextField/TextField';
 // others
 import { TOOLTIP_TRANSLATION_KEY } from 'constant/constants';
 
-// types
-import { KeyboardKeys } from 'types';
-
-// utils
-import { handleSubmitInput } from 'utils';
-
 export type TGridInputsProps = {
   name: TIconProps['name'];
   onBlur: TFunc;
@@ -35,7 +29,6 @@ export const GridInputCells: FC<TGridInputsProps> = ({ name, onBlur, onChange, v
       onBlur={onBlur}
       onChange={(event) => onChange(event.target.value)}
       onClick={() => refInput.current.select()}
-      onKeyDown={(event) => handleSubmitInput(KeyboardKeys.enter, refInput.current)(event)}
       tooltip={{ content: t(`${TOOLTIP_TRANSLATION_KEY}.grid.${targetName}`) }}
       type="text"
       startAdornment={

@@ -11,10 +11,7 @@ import { MAX, MIN, PANEL_PROPERTIES_ID } from '../../constants';
 import { TOOLTIP_TRANSLATION_KEY } from 'constant/constants';
 
 // types
-import { KeyboardKeys, TInsets, TInsetsName } from 'types';
-
-// utils
-import { handleSubmitInput } from 'utils';
+import { TInsets, TInsetsName } from 'types';
 
 export type TInsetsInputProps = {
   insetNameFormatted: string;
@@ -52,7 +49,6 @@ const InsetsInput: FC<TInsetsInputProps> = ({
       onBlur={onBlur}
       onChange={(event) => onChange(event.target.value)}
       onClick={() => refInput.current.select()}
-      onKeyDown={(event) => handleSubmitInput(KeyboardKeys.enter, refInput.current)(event)}
       popoverChildren={
         <PopoverInsets
           icon={upperFirst(insetNameFormatted) as TIconProps['name']}

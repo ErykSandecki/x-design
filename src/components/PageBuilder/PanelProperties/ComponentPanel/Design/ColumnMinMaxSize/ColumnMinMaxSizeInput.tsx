@@ -8,10 +8,10 @@ import { Icon, ScrubbableInput, TE2EValue, TIconProps, UITools } from 'shared';
 import { MAX, PANEL_PROPERTIES_ID } from '../../../../constants';
 
 // types
-import { ColorsTheme, KeyboardKeys, TElement, TScore } from 'types';
+import { ColorsTheme, TElement, TScore } from 'types';
 
 // utils
-import { handleSubmitInput, sanitizeNumberInput } from 'utils';
+import { sanitizeNumberInput } from 'utils';
 
 export type TColumnResizingInputProps = {
   e2eValue: TE2EValue;
@@ -45,7 +45,6 @@ const ColumnMinMaxSizeInput: FC<TColumnResizingInputProps> = ({
       onBlur={onBlur}
       onChange={(event) => onChange(sanitizeNumberInput(event.target.value))}
       onClick={() => refInput.current.select()}
-      onKeyDown={(event) => handleSubmitInput(KeyboardKeys.enter, refInput.current)(event)}
       popoverChildren={popoverChildren}
       inputRef={refInput}
       startAdornment={

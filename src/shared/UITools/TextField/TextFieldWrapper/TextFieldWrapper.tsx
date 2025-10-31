@@ -17,13 +17,13 @@ import { className, classNames } from './classNames';
 import styles from './text-field-wrapper.scss';
 
 // types
-import { E2EAttribute } from 'types';
+import { E2EAttribute, KeyboardKeys } from 'types';
 import { TE2EDataAttributeProps } from '../../../E2EDataAttributes/E2EDataAttribute';
 import { TextFieldVariant } from '../enums';
 
 // utils
 import { getAttributes } from '../../../E2EDataAttributes/utils';
-import { stopPropagation } from 'utils';
+import { handleSubmitInput } from 'utils';
 
 export type TTextFieldWrapperProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'className' | 'color' | 'popover'> & {
   chipChildren?: TTextFieldChipProps['children'];
@@ -84,7 +84,7 @@ export const TextFieldWrapper: FC<TTextFieldWrapperProps> = ({
         disabled={disabled}
         maxLength={6}
         onClick={() => !chipChildren && inputRef.current.select()}
-        onKeyDown={stopPropagation}
+        onKeyDown={(event) => handleSubmitInput(KeyboardKeys.enter, inputRef.current)(event)}
         ref={inputRef}
         {...getAttributes(E2EAttribute.textFieldInput, e2eValue)}
         {...restProps}

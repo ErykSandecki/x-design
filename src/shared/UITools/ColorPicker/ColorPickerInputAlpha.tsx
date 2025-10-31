@@ -5,11 +5,8 @@ import ScrubbableInput from '../../ScrubbableInput/ScrubbableInput';
 import TextField from '../TextField/TextField';
 
 // types
-import { KeyboardKeys, TColor } from 'types';
+import { TColor } from 'types';
 import { TUseColorPickerEvents } from './hooks/useColorPickerEvents';
-
-// utils
-import { handleSubmitInput } from 'utils';
 
 export type TColorPickerInputAlphaProps = {
   alpha: TColor['alpha'];
@@ -49,7 +46,6 @@ export const ColorPickerInputAlpha: FC<TColorPickerInputAlphaProps> = ({
       min={0}
       onBlur={onBlur}
       onChange={onChangeAlpha}
-      onKeyDown={(event) => handleSubmitInput(KeyboardKeys.enter, inputAlpha.current)(event)}
       inputRef={inputAlpha}
       type="number"
       value={alphaValue}

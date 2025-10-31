@@ -12,13 +12,9 @@ import { TOOLTIP_TRANSLATION_KEY } from 'constant/constants';
 import { updateEventsStatus } from 'store/pageBuilder/actions';
 
 // types
-import { KeyboardKeys } from 'types';
 import { TUseBlurEvent } from './hooks/useBlurEvent';
 import { TUseChangeEvent } from './hooks/useChangeEvent';
 import { TUseMouseDownEvent } from './hooks/useMouseDownEvent';
-
-// utils
-import { handleSubmitInput } from 'utils';
 
 export type TColumnRotationInputProps = {
   angle: string;
@@ -40,7 +36,6 @@ const ColumnRotationInput: FC<TColumnRotationInputProps> = ({ angle, isMixedAngl
       onBlur={onBlur}
       onChange={(event) => onChange(event.target.value)}
       onClick={() => refInputAngle.current.select()}
-      onKeyDown={(event) => handleSubmitInput(KeyboardKeys.enter, refInputAngle.current)(event)}
       inputRef={refInputAngle}
       startAdornment={
         <ScrubbableInput

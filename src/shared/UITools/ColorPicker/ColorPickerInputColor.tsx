@@ -12,14 +12,14 @@ import TextField from '../TextField/TextField';
 import { classes } from './classNames';
 
 // types
-import { E2EAttribute, KeyboardKeys, TColor } from 'types';
+import { E2EAttribute, TColor } from 'types';
 import { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute';
 import { TUIProps } from '../../UI/types';
 import { TUseColorPickerEvents } from './hooks/useColorPickerEvents';
 
 // utils
 import { getAttributes } from '../../E2EDataAttributes/utils';
-import { handleSubmitInput, hexToRgb } from 'utils';
+import { hexToRgb } from 'utils';
 
 export type TColorPickerInputColorProps = Pick<
   TPanelProps,
@@ -64,7 +64,6 @@ export const ColorPickerInputColor: FC<TColorPickerInputColorProps> = ({
       e2eValue="color"
       onBlur={onBlur}
       onChange={onChangeColor}
-      onKeyDown={(event) => handleSubmitInput(KeyboardKeys.enter, inputColor.current)(event)}
       inputRef={inputColor}
       startAdornment={
         <ColorPickerAntd

@@ -14,11 +14,10 @@ import { TOOLTIP_TRANSLATION_KEY } from 'constant/constants';
 import { updateEventsStatus } from 'store/pageBuilder/actions';
 
 // types
-import { ColorsTheme, KeyboardKeys } from 'types';
+import { ColorsTheme } from 'types';
 
 // utils
 import { getValue } from './utils/getValue';
-import { handleSubmitInput } from 'utils';
 
 export type TColumnPositionInputProps = {
   disabled: boolean;
@@ -59,7 +58,6 @@ const ColumnPositionInput: FC<TColumnPositionInputProps> = ({
       onBlur={onBlur}
       onChange={(event) => onChange(event.target.value)}
       onClick={() => refInput.current.select()}
-      onKeyDown={(event) => handleSubmitInput(KeyboardKeys.enter, refInput.current)(event)}
       inputRef={refInput}
       startAdornment={
         <ScrubbableInput
