@@ -7,6 +7,7 @@ import ColumnAlignment from './ColumnAlignment/ColumnAlignment';
 import ColumnAlignmentLayout from './ColumnAlignmentLayout/ColumnAlignmentLayout';
 import ColumnFlow from './ColumnFlow/ColumnFlow';
 import ColumnHeader from './ColumnHeader/ColumnHeader';
+import ColumnMargin from './ColumnMargin/ColumnMargin';
 import ColumnMinMaxSize from './ColumnMinMaxSize/ColumnMinMaxSize';
 import ColumnPadding from './ColumnPadding/ColumnPadding';
 import ColumnPosition from './ColumnPosition/ColumnPosition';
@@ -54,6 +55,7 @@ const Design: FC<TDesignProps> = ({ width }) => {
         <ColumnMinMaxSize scoreKey="max" />
         <ColumnAlignmentLayout width={width} />
         <ColumnPadding />
+        <ColumnMargin />
       </UITools.Section>
     </>
   );

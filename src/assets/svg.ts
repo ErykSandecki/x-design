@@ -40,6 +40,12 @@ import { ReactComponent as HtmlTag } from './svg/html-tag.svg';
 import { ReactComponent as IndividualInsets } from './svg/individual-insets.svg';
 import { ReactComponent as InputsConnector } from './svg/inputs-connector.svg';
 import { ReactComponent as Logo } from './svg/logo.svg';
+import { ReactComponent as MarginB } from './svg/margin-b.svg';
+import { ReactComponent as MarginL } from './svg/margin-l.svg';
+import { ReactComponent as MarginLR } from './svg/margin-lr.svg';
+import { ReactComponent as MarginR } from './svg/margin-r.svg';
+import { ReactComponent as MarginT } from './svg/margin-t.svg';
+import { ReactComponent as MarginTB } from './svg/margin-tb.svg';
 import { ReactComponent as MaxHeight } from './svg/max-height.svg';
 import { ReactComponent as MaxWidth } from './svg/max-width.svg';
 import { ReactComponent as MinHeight } from './svg/min-height.svg';
@@ -107,6 +113,12 @@ export const Icons = {
   IndividualInsets,
   InputsConnector,
   Logo,
+  MarginB,
+  MarginL,
+  MarginLR,
+  MarginR,
+  MarginT,
+  MarginTB,
   MaxHeight,
   MaxWidth,
   MinHeight,

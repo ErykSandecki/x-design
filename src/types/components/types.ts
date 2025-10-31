@@ -60,7 +60,7 @@ export type TInsets = {
   t: TInsetProperties;
 };
 
-export type TInsetsName = keyof Pick<TElement, 'padding'>;
+export type TInsetsName = keyof Pick<TElement, 'margin' | 'padding'>;
 
 export type TScore = {
   max?: TSize;
