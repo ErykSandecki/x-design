@@ -48,9 +48,10 @@ describe('useMinMaxSizeEvents', () => {
 
     // result
     expect(result.current).toStrictEqual({
-      height: undefined,
-      isMixedHeight: false,
-      isMixedWidth: false,
+      attachedValueHeight: true,
+      attachedValueWidth: true,
+      height: '',
+      heightScore: undefined,
       onBlurHeight: expect.any(Function),
       onBlurWidth: expect.any(Function),
       onChangeHeight: expect.any(Function),
@@ -59,7 +60,8 @@ describe('useMinMaxSizeEvents', () => {
       valueScrubbaleInputWidth: NaN,
       visibleHeight: false,
       visibleWidth: false,
-      width: undefined,
+      width: '',
+      widthScore: undefined,
     });
   });
 });

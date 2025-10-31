@@ -16,13 +16,16 @@ import { translationNameSpace } from './constants';
 // types
 import { TScore } from 'types';
 
-export type TColumnMinMaxSizeProps = { score: keyof TScore };
+export type TColumnMinMaxSizeProps = { scoreKey: keyof TScore };
 
-const ColumnMinMaxSize: FC<TColumnMinMaxSizeProps> = ({ score }) => {
+const ColumnMinMaxSize: FC<TColumnMinMaxSizeProps> = ({ scoreKey }) => {
   const { t } = useTranslation();
 
   const {
+    attachedValueHeight,
+    attachedValueWidth,
     height,
+    heightScore,
     onBlurHeight,
     onBlurWidth,
     onChangeHeight,
@@ -32,7 +35,8 @@ const ColumnMinMaxSize: FC<TColumnMinMaxSizeProps> = ({ score }) => {
     visibleHeight,
     visibleWidth,
     width,
-  } = useMinMaxSizeEvents(score);
+    widthScore,
+  } = useMinMaxSizeEvents(scoreKey);
 
   if (!visibleHeight && !visibleWidth) {
     return null;
@@ -43,19 +47,20 @@ const ColumnMinMaxSize: FC<TColumnMinMaxSizeProps> = ({ score }) => {
       gridColumnType={UITools.GridColumnType.twoInputs}
       labels={
         [
-          visibleWidth && t(`${translationNameSpace}.${score}.label.width`),
-          visibleHeight && t(`${translationNameSpace}.${score}.label.height`),
+          visibleWidth && t(`${translationNameSpace}.${scoreKey}.label.width`),
+          visibleHeight && t(`${translationNameSpace}.${scoreKey}.label.height`),
         ].filter(Boolean) as [string] | [string, string]
       }
       withMargin
     >
       {visibleWidth && (
         <ColumnMinMaxSizeInput
-          e2eValue={`${score}Width`}
+          attachedValue={attachedValueWidth}
+          e2eValue={`${scoreKey}Width`}
           onBlur={onBlurWidth}
           onChange={onChangeWidth}
-          popoverChildren={<HeightPopoverWidth score={score} />}
-          score={score}
+          popoverChildren={<HeightPopoverWidth score={widthScore} scoreKey={scoreKey} />}
+          scoreKey={scoreKey}
           sizeType="width"
           value={width}
           valueScrubbaleInput={valueScrubbaleInputWidth}
@@ -63,11 +68,12 @@ const ColumnMinMaxSize: FC<TColumnMinMaxSizeProps> = ({ score }) => {
       )}
       {visibleHeight && (
         <ColumnMinMaxSizeInput
-          e2eValue={`${score}Height`}
+          attachedValue={attachedValueHeight}
+          e2eValue={`${scoreKey}Height`}
           onBlur={onBlurHeight}
           onChange={onChangeHeight}
-          popoverChildren={<HeightPopoverHeight score={score} />}
-          score={score}
+          popoverChildren={<HeightPopoverHeight score={heightScore} scoreKey={scoreKey} />}
+          scoreKey={scoreKey}
           sizeType="height"
           value={height}
           valueScrubbaleInput={valueScrubbaleInputHeight}

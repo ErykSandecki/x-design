@@ -50,8 +50,8 @@ const Design: FC<TDesignProps> = ({ width }) => {
       >
         <ColumnFlow />
         <ColumnResizing />
-        <ColumnMinMaxSize score="min" />
-        <ColumnMinMaxSize score="max" />
+        <ColumnMinMaxSize scoreKey="min" />
+        <ColumnMinMaxSize scoreKey="max" />
         <ColumnAlignmentLayout width={width} />
         <ColumnPadding />
       </UITools.Section>

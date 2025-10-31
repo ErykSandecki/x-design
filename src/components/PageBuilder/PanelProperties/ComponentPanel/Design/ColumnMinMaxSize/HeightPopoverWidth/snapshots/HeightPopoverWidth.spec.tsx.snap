@@ -43,6 +43,60 @@ exports[`HeightPopoverWidth snapshots should render HeightPopoverWidth{max} 1`] 
     />
     <div
       class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      data-test-icon="auto-width"
+      height="12"
+      name="AutoWidth"
+      width="12"
+    />
+    <small
+      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      data-test-text=""
+      style="text-align: inherit;"
+    >
+      Auto max width
+    </small>
+  </div>
+  <div
+    class="css-1wfopar PopoverItem PopoverItem--light"
+    data-test-box=""
+    data-test-popover-item="2"
+  >
+    <div
+      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      data-test-icon="check"
+      height="12"
+      name="Check"
+      width="12"
+    />
+    <div
+      class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      data-test-icon="percentage"
+      height="12"
+      name="Percentage"
+      width="12"
+    />
+    <small
+      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      data-test-text=""
+      style="text-align: inherit;"
+    >
+      Percentage
+    </small>
+  </div>
+  <div
+    class="css-1wfopar PopoverItem PopoverItem--light"
+    data-test-box=""
+    data-test-popover-item="3"
+  >
+    <div
+      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      data-test-icon="check"
+      height="12"
+      name="Check"
+      width="12"
+    />
+    <div
+      class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
       data-test-icon="close"
       height="12"
       name="Close"
@@ -92,6 +146,60 @@ exports[`HeightPopoverWidth snapshots should render HeightPopoverWidth{min} 1`] 
     class="css-1wfopar PopoverItem PopoverItem--light"
     data-test-box=""
     data-test-popover-item="1"
+  >
+    <div
+      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      data-test-icon="check"
+      height="12"
+      name="Check"
+      width="12"
+    />
+    <div
+      class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      data-test-icon="auto-width"
+      height="12"
+      name="AutoWidth"
+      width="12"
+    />
+    <small
+      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      data-test-text=""
+      style="text-align: inherit;"
+    >
+      Auto min width
+    </small>
+  </div>
+  <div
+    class="css-1wfopar PopoverItem PopoverItem--light"
+    data-test-box=""
+    data-test-popover-item="2"
+  >
+    <div
+      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      data-test-icon="check"
+      height="12"
+      name="Check"
+      width="12"
+    />
+    <div
+      class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      data-test-icon="percentage"
+      height="12"
+      name="Percentage"
+      width="12"
+    />
+    <small
+      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      data-test-text=""
+      style="text-align: inherit;"
+    >
+      Percentage
+    </small>
+  </div>
+  <div
+    class="css-1wfopar PopoverItem PopoverItem--light"
+    data-test-box=""
+    data-test-popover-item="3"
   >
     <div
       class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"

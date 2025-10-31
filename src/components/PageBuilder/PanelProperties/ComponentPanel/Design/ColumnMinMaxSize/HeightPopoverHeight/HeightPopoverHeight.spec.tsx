@@ -4,6 +4,9 @@ import { noop } from 'lodash';
 import HeightPopoverHeight from './HeightPopoverHeight';
 import { UITools } from 'shared';
 
+// mocks
+import { sizeMock } from 'test/mocks/reducer/pageBuilderMock';
+
 // utils
 import { customRender } from 'test';
 
@@ -17,7 +20,7 @@ describe('HeightPopoverHeight snapshots', () => {
     // before
     const { asFragment } = customRender(
       <UITools.PopoverCompound.PopoverRoot selected={false} setSelected={noop}>
-        <HeightPopoverHeight score="max" />
+        <HeightPopoverHeight score={sizeMock} scoreKey="max" />
       </UITools.PopoverCompound.PopoverRoot>,
     );
 
@@ -29,7 +32,7 @@ describe('HeightPopoverHeight snapshots', () => {
     // before
     const { asFragment } = customRender(
       <UITools.PopoverCompound.PopoverRoot selected={false} setSelected={noop}>
-        <HeightPopoverHeight score="min" />
+        <HeightPopoverHeight score={sizeMock} scoreKey="min" />
       </UITools.PopoverCompound.PopoverRoot>,
     );
 

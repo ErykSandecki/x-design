@@ -12,6 +12,7 @@ import { translationNameSpace } from './constants';
 import { applyElementsSizeType } from 'store/pageBuilder/actions';
 
 // types
+import { PopoverItem } from '../enums';
 import { TElement } from 'types';
 
 // utils
@@ -32,21 +33,21 @@ const PopoverHeight: FC<TPopoverHeightProps> = ({ height, isMixed }) => {
     <>
       <PopoverCompound.PopoverItem
         icon="FixedHeight"
-        index={0}
+        index={PopoverItem.fixed}
         onClick={() => dispatch(applyElementsSizeType('height', 'fixed'))}
         selected={!isMixed && !height.unit && isPureNumber(height.value)}
         text={t(`${translationNameSpace}.1`)}
       />
       <PopoverCompound.PopoverItem
         icon="AutoHeight"
-        index={1}
+        index={PopoverItem.auto}
         onClick={() => dispatch(applyElementsSizeType('height', 'auto'))}
         selected={!isMixed && height.value === 'auto'}
         text={t(`${translationNameSpace}.2`)}
       />
       <PopoverCompound.PopoverItem
         icon="Percentage"
-        index={2}
+        index={PopoverItem.unit}
         onClick={() => dispatch(applyElementsSizeType('height', 'unit'))}
         selected={!isMixed && !!height.unit}
         text={t(`${translationNameSpace}.3`)}
@@ -54,7 +55,7 @@ const PopoverHeight: FC<TPopoverHeightProps> = ({ height, isMixed }) => {
       <PopoverCompound.PopoverSeparator visible={!isMixed} />
       <PopoverCompound.PopoverItem
         icon="MinHeight"
-        index={3}
+        index={PopoverItem.minScore}
         onClick={() => dispatch(applyElementsSizeType('height', 'min'))}
         selected={!!height.min}
         text={t(`${translationNameSpace}.4`)}
@@ -62,7 +63,7 @@ const PopoverHeight: FC<TPopoverHeightProps> = ({ height, isMixed }) => {
       />
       <PopoverCompound.PopoverItem
         icon="MaxHeight"
-        index={4}
+        index={PopoverItem.maxScore}
         onClick={() => dispatch(applyElementsSizeType('height', 'max'))}
         selected={!!height.max}
         text={t(`${translationNameSpace}.5`)}

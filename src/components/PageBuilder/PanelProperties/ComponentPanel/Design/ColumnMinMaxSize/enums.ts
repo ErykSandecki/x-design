@@ -1,4 +1,6 @@
 export enum PopoverItem {
   currentValue = 0,
-  removeScore = 1,
+  auto = 1,
+  unit = 2,
+  removeScore = 3,
 }

@@ -10,34 +10,58 @@ import { UITools } from 'shared';
 import { translationNameSpace } from './constants';
 
 // store
-import { applyElementsSizeType, setElementsScoreToCurrentSize } from 'store/pageBuilder/actions';
+import {
+  applyElementsSizeMinMaxType,
+  applyElementsSizeType,
+  setElementsScoreToCurrentSize,
+} from 'store/pageBuilder/actions';
 
 // types
-import { TScore } from 'types';
+import { PopoverItem } from '../enums';
+import { TScore, TSize } from 'types';
+
+// utils
+import { isPureNumber } from 'utils';
 
 const { PopoverCompound } = UITools;
 
 export type THeightPopoverHeightProps = {
-  score: keyof TScore;
+  score: TSize;
+  scoreKey: keyof TScore;
 };
 
-const HeightPopoverHeight: FC<THeightPopoverHeightProps> = ({ score }) => {
+const HeightPopoverHeight: FC<THeightPopoverHeightProps> = ({ score, scoreKey }) => {
   const dispatch = useDispatch();
   const { t } = useTranslation();
 
   return (
     <>
       <PopoverCompound.PopoverItem
-        icon={`${capitalize(score)}Height`}
-        index={0}
-        onClick={() => dispatch(setElementsScoreToCurrentSize(score, 'height'))}
-        text={t(`${translationNameSpace}.${score}.1`)}
+        icon={`${capitalize(scoreKey)}Height`}
+        index={PopoverItem.currentValue}
+        onClick={() => dispatch(setElementsScoreToCurrentSize(scoreKey, 'height'))}
+        selected={!score.unit && isPureNumber(score?.value || '')}
+        text={t(`${translationNameSpace}.${scoreKey}.1`)}
+      />
+      <PopoverCompound.PopoverItem
+        icon="AutoHeight"
+        index={PopoverItem.auto}
+        onClick={() => dispatch(applyElementsSizeMinMaxType(scoreKey, 'height', 'auto'))}
+        selected={score.value === 'auto'}
+        text={t(`${translationNameSpace}.${scoreKey}.2`)}
+      />
+      <PopoverCompound.PopoverItem
+        icon="Percentage"
+        index={PopoverItem.unit}
+        onClick={() => dispatch(applyElementsSizeMinMaxType(scoreKey, 'height', 'unit'))}
+        selected={!!score.unit}
+        text={t(`${translationNameSpace}.${scoreKey}.3`)}
       />
       <PopoverCompound.PopoverItem
         icon="Close"
-        index={1}
-        onClick={() => dispatch(applyElementsSizeType('height', score))}
-        text={t(`${translationNameSpace}.${score}.2`)}
+        index={PopoverItem.removeScore}
+        onClick={() => dispatch(applyElementsSizeType('height', scoreKey))}
+        text={t(`${translationNameSpace}.${scoreKey}.4`)}
       />
     </>
   );

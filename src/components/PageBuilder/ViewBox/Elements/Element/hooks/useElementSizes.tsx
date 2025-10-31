@@ -11,6 +11,7 @@ import { TElement } from 'types';
 
 // utils
 import { isPureNumber } from 'utils';
+import { getScoreValue } from '../utils/getScoreValue';
 
 export type TUseElementSizes = {
   cssHeight: TElement['height']['value'];
@@ -39,21 +40,25 @@ export const useElementSizes = (id: TElement['id']): TUseElementSizes => {
   const height =
     (isPureNumber(relativeHeight) || !itemsRefs[id]) && !unitHeight
       ? relativeHeight
-      : parseInt(getComputedStyle(itemsRefs[id]).height);
+      : itemsRefs[id]
+        ? parseInt(getComputedStyle(itemsRefs[id]).height)
+        : 0;
 
   const width =
     (isPureNumber(relativeWidth) || !itemsRefs[id]) && !unitWidth
       ? relativeWidth
-      : parseInt(getComputedStyle(itemsRefs[id]).width);
+      : itemsRefs[id]
+        ? parseInt(getComputedStyle(itemsRefs[id]).width)
+        : 0;
 
   return {
     cssHeight: isPureNumber(cssHeight) ? `${cssHeight}px` : cssHeight,
     cssWidth: isPureNumber(cssWidth) ? `${cssWidth}px` : cssWidth,
     height: isExcluded ? parseFloat(height.toString()) + additionalHeight : height,
-    maxHeight: maxH ? `${maxH.value}${maxH.unit || 'px'}` : '',
-    maxWidth: maxW ? `${maxW.value}${maxW.unit || 'px'}` : '',
-    minHeight: minH ? `${minH.value}${minH.unit || 'px'}` : '',
-    minWidth: minW ? `${minW.value}${minW.unit || 'px'}` : '',
+    maxHeight: getScoreValue(maxH),
+    maxWidth: getScoreValue(maxW),
+    minHeight: getScoreValue(minH),
+    minWidth: getScoreValue(minW),
     width: isExcluded ? parseFloat(width.toString()) + additionalWidth : width,
   };
 };

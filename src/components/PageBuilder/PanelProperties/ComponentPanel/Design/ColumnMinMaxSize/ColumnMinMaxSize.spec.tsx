@@ -81,7 +81,7 @@ describe('ColumnResizing snapshots', () => {
     // before
     const { asFragment } = customRender(
       <Provider store={store}>
-        <ColumnMinSizeInput score="max" />
+        <ColumnMinSizeInput scoreKey="max" />
       </Provider>,
     );
 
@@ -96,7 +96,7 @@ describe('ColumnResizing snapshots', () => {
     // before
     const { asFragment } = customRender(
       <Provider store={store}>
-        <ColumnMinSizeInput score="min" />
+        <ColumnMinSizeInput scoreKey="min" />
       </Provider>,
     );
 
@@ -145,7 +145,7 @@ describe('ColumnResizing snapshots', () => {
     // before
     const { asFragment } = customRender(
       <Provider store={store}>
-        <ColumnMinSizeInput score="max" />
+        <ColumnMinSizeInput scoreKey="max" />
       </Provider>,
     );
 
@@ -194,7 +194,7 @@ describe('ColumnResizing snapshots', () => {
     // before
     const { asFragment } = customRender(
       <Provider store={store}>
-        <ColumnMinSizeInput score="min" />
+        <ColumnMinSizeInput scoreKey="min" />
       </Provider>,
     );
 
@@ -222,7 +222,7 @@ describe('ColumnResizing behaviors', () => {
     // before
     const { container } = customRender(
       <Provider store={store}>
-        <ColumnMinSizeInput score="max" />
+        <ColumnMinSizeInput scoreKey="max" />
       </Provider>,
     );
 
@@ -260,7 +260,7 @@ describe('ColumnResizing behaviors', () => {
     // before
     const { container } = customRender(
       <Provider store={store}>
-        <ColumnMinSizeInput score="min" />
+        <ColumnMinSizeInput scoreKey="min" />
       </Provider>,
     );
 
@@ -305,7 +305,7 @@ describe('ColumnResizing behaviors', () => {
     // before
     const { container } = customRender(
       <Provider store={store}>
-        <ColumnMinSizeInput score="max" />
+        <ColumnMinSizeInput scoreKey="max" />
       </Provider>,
     );
 
@@ -346,7 +346,7 @@ describe('ColumnResizing behaviors', () => {
     // before
     const { container } = customRender(
       <Provider store={store}>
-        <ColumnMinSizeInput score="min" />
+        <ColumnMinSizeInput scoreKey="min" />
       </Provider>,
     );
 
@@ -379,7 +379,7 @@ describe('ColumnResizing behaviors', () => {
     // before
     const { container } = customRender(
       <Provider store={store}>
-        <ColumnMinSizeInput score="max" />
+        <ColumnMinSizeInput scoreKey="max" />
       </Provider>,
     );
 
@@ -416,7 +416,7 @@ describe('ColumnResizing behaviors', () => {
     // before
     const { container } = customRender(
       <Provider store={store}>
-        <ColumnMinSizeInput score="min" />
+        <ColumnMinSizeInput scoreKey="min" />
       </Provider>,
     );
 
@@ -453,7 +453,7 @@ describe('ColumnResizing behaviors', () => {
     // before
     const { container } = customRender(
       <Provider store={store}>
-        <ColumnMinSizeInput score="max" />
+        <ColumnMinSizeInput scoreKey="max" />
       </Provider>,
     );
 
@@ -490,7 +490,7 @@ describe('ColumnResizing behaviors', () => {
     // before
     const { container } = customRender(
       <Provider store={store}>
-        <ColumnMinSizeInput score="min" />
+        <ColumnMinSizeInput scoreKey="min" />
       </Provider>,
     );
 

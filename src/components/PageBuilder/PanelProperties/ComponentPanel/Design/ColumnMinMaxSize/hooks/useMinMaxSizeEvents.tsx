@@ -3,62 +3,67 @@ import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 // store
-import { elementDataSelectorCreator, elementsSelector, selectedElementsSelector } from 'store/pageBuilder/selectors';
+import { elementDataSelectorCreator, selectedElementsSelector } from 'store/pageBuilder/selectors';
 
 // types
-import { TScore } from 'types';
+import { TScore, TSize } from 'types';
 import { TUseBlurEvent, useBlurEvent } from './useBlurEvent';
 import { TUseChangeEvent, useChangeEvent } from './useChangeEvent';
 
 // utils
-import { isMixed } from '../../../../../utils/isMixed';
+import { normalizeMultipleValue } from 'components/PageBuilder/utils/normalizeMultipleValue';
 
 type TUseMinMaxSizeEvents = TUseChangeEvent &
   TUseBlurEvent & {
+    attachedValueHeight: boolean;
+    attachedValueWidth: boolean;
     height: string;
-    isMixedHeight: boolean;
-    isMixedWidth: boolean;
+    heightScore: TSize;
     valueScrubbaleInputHeight: number;
     valueScrubbaleInputWidth: number;
     visibleHeight: boolean;
     visibleWidth: boolean;
     width: string;
+    widthScore: TSize;
   };
 
 export const useMinMaxSizeEvents = (score: keyof TScore): TUseMinMaxSizeEvents => {
-  const elements = useSelector(elementsSelector);
   const selectedElements = useSelector(selectedElementsSelector);
   const firstElement = first(selectedElements);
   const element = useSelector(elementDataSelectorCreator(firstElement.id));
   const isMultiple = size(selectedElements) > 1;
-  const isMixedHeight = isMixed(elements, firstElement, `height.${score}`, selectedElements);
-  const isMixedWidth = isMixed(elements, firstElement, `width.${score}`, selectedElements);
   const { [score]: currentHeightScore } = element.height;
   const { [score]: currentWidthScore } = element.width;
+  const { type: typeHeight, unit: unitHeight } = currentHeightScore || {};
+  const { type: typeWidth, unit: unitWidth } = currentWidthScore || {};
   const [heightScore, setHeightScore] = useState('');
   const [widthScore, setWidthScore] = useState('');
+  const attachedValueHeight = typeHeight !== 'fixed';
+  const attachedValueWidth = typeWidth !== 'fixed';
   const onBlurEvents = useBlurEvent(element, heightScore, score, setHeightScore, setWidthScore, widthScore);
   const onChangeEvents = useChangeEvent(score, setHeightScore, setWidthScore);
   const valueScrubbaleInputHeight = parseFloat(heightScore);
   const valueScrubbaleInputWidth = parseFloat(widthScore);
-  const visibleHeight = heightScore !== undefined && !isMixedHeight;
-  const visibleWidth = widthScore !== undefined && !isMixedWidth;
+  const visibleHeight = currentHeightScore !== undefined;
+  const visibleWidth = currentWidthScore !== undefined;
 
   useEffect(() => {
-    setHeightScore(currentHeightScore?.value?.toString());
-    setWidthScore(currentWidthScore?.value?.toString());
-  }, [currentHeightScore, currentWidthScore, isMultiple]);
+    setHeightScore(normalizeMultipleValue(false, currentHeightScore?.value || '', unitHeight));
+    setWidthScore(normalizeMultipleValue(false, currentWidthScore?.value || '', unitWidth));
+  }, [currentHeightScore, currentWidthScore, isMultiple, unitHeight, unitWidth]);
 
   return {
     ...onBlurEvents,
     ...onChangeEvents,
+    attachedValueHeight,
+    attachedValueWidth,
     height: heightScore,
-    isMixedHeight,
-    isMixedWidth,
+    heightScore: currentHeightScore,
     valueScrubbaleInputHeight,
     valueScrubbaleInputWidth,
     visibleHeight,
     visibleWidth,
     width: widthScore,
+    widthScore: currentWidthScore,
   };
 };

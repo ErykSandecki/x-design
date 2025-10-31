@@ -12,6 +12,7 @@ import { translationNameSpace } from './constants';
 import { applyElementsSizeType } from 'store/pageBuilder/actions';
 
 // types
+import { PopoverItem } from '../enums';
 import { TElement } from 'types';
 
 // utils
@@ -32,21 +33,21 @@ const PopoverWidth: FC<TPopoverWidthProps> = ({ width, isMixed }) => {
     <>
       <PopoverCompound.PopoverItem
         icon="FixedWidth"
-        index={0}
+        index={PopoverItem.fixed}
         onClick={() => dispatch(applyElementsSizeType('width', 'fixed'))}
         selected={!isMixed && !width.unit && isPureNumber(width.value)}
         text={t(`${translationNameSpace}.1`)}
       />
       <PopoverCompound.PopoverItem
         icon="AutoWidth"
-        index={1}
+        index={PopoverItem.auto}
         onClick={() => dispatch(applyElementsSizeType('width', 'auto'))}
         selected={!isMixed && width.value === 'auto'}
         text={t(`${translationNameSpace}.2`)}
       />
       <PopoverCompound.PopoverItem
         icon="Percentage"
-        index={2}
+        index={PopoverItem.unit}
         onClick={() => dispatch(applyElementsSizeType('width', 'unit'))}
         selected={!isMixed && !!width.unit}
         text={t(`${translationNameSpace}.3`)}
@@ -54,7 +55,7 @@ const PopoverWidth: FC<TPopoverWidthProps> = ({ width, isMixed }) => {
       <PopoverCompound.PopoverSeparator visible={!isMixed} />
       <PopoverCompound.PopoverItem
         icon="MinWidth"
-        index={3}
+        index={PopoverItem.minScore}
         onClick={() => dispatch(applyElementsSizeType('width', 'min'))}
         selected={!!width.min}
         text={t(`${translationNameSpace}.4`)}
@@ -62,7 +63,7 @@ const PopoverWidth: FC<TPopoverWidthProps> = ({ width, isMixed }) => {
       />
       <PopoverCompound.PopoverItem
         icon="MaxWidth"
-        index={4}
+        index={PopoverItem.maxScore}
         onClick={() => dispatch(applyElementsSizeType('width', 'max'))}
         selected={!!width.max}
         text={t(`${translationNameSpace}.5`)}
