@@ -36,22 +36,8 @@ export const useElementSizes = (id: TElement['id']): TUseElementSizes => {
   const isExcluded = boxSizing === 'excluded';
   const additionalHeight = padding.b.value + padding.t.value;
   const additionalWidth = padding.l.value + padding.r.value;
-
-  /* istanbul ignore next */ // @html delayed
-  const height =
-    (isPureNumber(relativeHeight) || !itemsRefs[id]) && !unitHeight
-      ? relativeHeight
-      : itemsRefs[id]
-        ? parseInt(getComputedStyle(itemsRefs[id]).height)
-        : 0;
-
-  /* istanbul ignore next */ // @html delayed
-  const width =
-    (isPureNumber(relativeWidth) || !itemsRefs[id]) && !unitWidth
-      ? relativeWidth
-      : itemsRefs[id]
-        ? parseInt(getComputedStyle(itemsRefs[id]).width)
-        : 0;
+  const height = itemsRefs[id] ? parseInt(getComputedStyle(itemsRefs[id]).height) : 0;
+  const width = itemsRefs[id] ? parseInt(getComputedStyle(itemsRefs[id]).width) : 0;
 
   return {
     cssHeight: isPureNumber(cssHeight) ? `${cssHeight}px` : cssHeight,

@@ -42,16 +42,26 @@ export const handleChangeLayout = (
               type: layoutType,
             },
           })),
-          ...mapFilteredValues(currentPage.elements, childrenIds, (element) => ({
-            ...element,
-            alignment: {},
-            coordinates: allowedAbsolute
-              ? calculateCoordinatesAbsoluteToParent(currentPage, element.id, element.parentId)
-              : BASE_2D,
-            height: isGrid ? { ...element.height, unit: undefined, value: 'auto' } : element.height,
-            position: allowedAbsolute ? 'absolute' : 'relative',
-            width: isGrid ? { ...element.width, unit: undefined, value: 'auto' } : element.width,
-          })),
+          ...mapFilteredValues(currentPage.elements, childrenIds, (element) => {
+            const elementHtml = document.getElementById(element.id);
+            const valueHeight = parseInt(getComputedStyle(elementHtml).height);
+            const valueWidth = parseInt(getComputedStyle(elementHtml).width);
+
+            return {
+              ...element,
+              alignment: {},
+              coordinates: allowedAbsolute
+                ? calculateCoordinatesAbsoluteToParent(currentPage, element.id, element.parentId)
+                : BASE_2D,
+              height: isGrid
+                ? { ...element.height, unit: undefined, value: 'auto' }
+                : { ...element.height, value: valueHeight },
+              position: allowedAbsolute ? 'absolute' : 'relative',
+              width: isGrid
+                ? { ...element.width, unit: undefined, value: 'auto' }
+                : { ...element.width, value: valueWidth },
+            };
+          }),
         },
       },
     },

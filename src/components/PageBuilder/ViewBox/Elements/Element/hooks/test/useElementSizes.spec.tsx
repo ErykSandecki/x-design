@@ -92,12 +92,12 @@ describe('useElementEvents', () => {
     expect(result.current).toStrictEqual({
       cssHeight: '100px',
       cssWidth: '100px',
-      height: 120,
+      height: 20,
       maxHeight: '100px',
       maxWidth: '100px',
       minHeight: '100px',
       minWidth: '100px',
-      width: 120,
+      width: 20,
     });
   });
 
@@ -164,12 +164,12 @@ describe('useElementEvents', () => {
     expect(result.current).toStrictEqual({
       cssHeight: '100px',
       cssWidth: '100px',
-      height: 100,
+      height: 0,
       maxHeight: '100px',
       maxWidth: '100px',
       minHeight: '100px',
       minWidth: '100px',
-      width: 100,
+      width: 0,
     });
   });
 

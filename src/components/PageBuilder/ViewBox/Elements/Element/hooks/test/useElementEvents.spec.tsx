@@ -55,6 +55,11 @@ const stateMock = {
 };
 
 describe('useElementEvents', () => {
+  beforeAll(() => {
+    // mock
+    window.getComputedStyle = (): any => ({ height: '100px', width: '100px' }) as CSSStyleDeclaration;
+  });
+
   it(`should return view moveable events and data`, () => {
     // mock
     const store = configureStore(stateMock);
