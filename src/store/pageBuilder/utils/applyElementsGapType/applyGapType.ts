@@ -1,12 +1,12 @@
 // types
-import { TApplyElementsSizeTypeActionPaylad } from 'store/pageBuilder/types';
+import { TApplyElementsSizeTypeActionPayload } from 'store/pageBuilder/types';
 import { TElement, TGap, TGapProperties } from 'types';
 
 export const applyGapType = (
   element: TElement,
   gap: keyof TGap,
   gapValue: TGapProperties['value'],
-  type: TApplyElementsSizeTypeActionPaylad['type'],
+  type: TApplyElementsSizeTypeActionPayload['type'],
 ): TGapProperties => {
   switch (type) {
     default:

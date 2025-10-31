@@ -141,13 +141,13 @@ export type TApplyElementsInsetTypeAction = {
   type: typeof APPLY_ELEMENTS_INSET_TYPE;
 };
 
-export type TApplyElementsSizeTypeActionPaylad = {
+export type TApplyElementsSizeTypeActionPayload = {
   sizeType: keyof Pick<TElement, 'height' | 'width'>;
   type: 'auto' | 'fixed' | 'max' | 'min' | 'unit';
 };
 
 export type TApplyElementsSizeTypeAction = {
-  payload: TApplyElementsSizeTypeActionPaylad;
+  payload: TApplyElementsSizeTypeActionPayload;
   type: typeof APPLY_ELEMENTS_SIZE_TYPE;
 };
 

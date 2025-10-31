@@ -1,12 +1,12 @@
 // types
-import { TApplyElementsSizeTypeActionPaylad } from 'store/pageBuilder/types';
+import { TApplyElementsSizeTypeActionPayload } from 'store/pageBuilder/types';
 import { TElement, Unit } from 'types';
 
 export const applyTypeSize = (
   element: TElement,
   size: number,
-  sizeType: TApplyElementsSizeTypeActionPaylad['sizeType'],
-  type: TApplyElementsSizeTypeActionPaylad['type'],
+  sizeType: TApplyElementsSizeTypeActionPayload['sizeType'],
+  type: TApplyElementsSizeTypeActionPayload['type'],
 ): TElement['height'] | TElement['width'] => {
   switch (type) {
     case 'auto':

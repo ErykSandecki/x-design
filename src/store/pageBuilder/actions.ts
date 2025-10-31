@@ -42,7 +42,7 @@ import {
   TApplyElementsGapTypeAction,
   TApplyElementsGapTypeActionPaylad,
   TApplyElementsSizeTypeAction,
-  TApplyElementsSizeTypeActionPaylad,
+  TApplyElementsSizeTypeActionPayload,
   TChangeAlignmentAction,
   TChangeBackgroundAction,
   TChangeBackgroundActionPayload,
@@ -108,8 +108,8 @@ export const applyElementsInsetType = (
 });
 
 export const applyElementsSizeType = (
-  sizeType: TApplyElementsSizeTypeActionPaylad['sizeType'],
-  type: TApplyElementsSizeTypeActionPaylad['type'],
+  sizeType: TApplyElementsSizeTypeActionPayload['sizeType'],
+  type: TApplyElementsSizeTypeActionPayload['type'],
 ): TApplyElementsSizeTypeAction => ({
   payload: { sizeType, type },
   type: APPLY_ELEMENTS_SIZE_TYPE,

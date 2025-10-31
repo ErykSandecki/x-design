@@ -2,7 +2,7 @@
 import { ZOOM_CONTENT_ID } from 'shared';
 
 // types
-import { TApplyElementsSizeTypeActionPaylad, TPageBuilderState } from '../../types';
+import { TApplyElementsSizeTypeActionPayload, TPageBuilderState } from '../../types';
 import { TElement } from 'types';
 
 // utils
@@ -11,8 +11,8 @@ import { extractObjectValues, mapFilteredValues } from 'utils';
 
 export const getSizeData = (
   element: TElement,
-  sizeType: TApplyElementsSizeTypeActionPaylad['sizeType'],
-  type: TApplyElementsSizeTypeActionPaylad['type'],
+  sizeType: TApplyElementsSizeTypeActionPayload['sizeType'],
+  type: TApplyElementsSizeTypeActionPayload['type'],
   zoomContent: HTMLElement,
 ): TElement['height'] | TElement['width'] => {
   const elementHTML = zoomContent.querySelector(`#${element.id}`);
@@ -22,7 +22,7 @@ export const getSizeData = (
 };
 
 export const handleApplyElementsSizeType = (
-  payload: TApplyElementsSizeTypeActionPaylad,
+  payload: TApplyElementsSizeTypeActionPayload,
   state: TPageBuilderState,
 ): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];
