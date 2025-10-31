@@ -21,6 +21,7 @@ describe('applyTypeSize', () => {
     const result = applyTypeSize(elementMock, 100, 'height', 'auto');
 
     // result
+    expect(result.type).toBe('auto');
     expect(result.unit).toBe(undefined);
     expect(result.value).toBe('auto');
   });
@@ -30,6 +31,7 @@ describe('applyTypeSize', () => {
     const result = applyTypeSize(elementMock, 100, 'height', 'fixed');
 
     // result
+    expect(result.type).toBe('fixed');
     expect(result.unit).toBe(undefined);
     expect(result.value).toBe(100);
   });
@@ -40,6 +42,7 @@ describe('applyTypeSize', () => {
 
     // result
     expect(result1.max).toBe(100);
+    expect(result1.type).toBe('fixed');
 
     // before
     const result2 = applyTypeSize(
@@ -51,6 +54,7 @@ describe('applyTypeSize', () => {
 
     // result
     expect(result2.max).toBe(undefined);
+    expect(result2.type).toBe('fixed');
   });
 
   it(`should apply min and remove`, () => {
@@ -59,6 +63,7 @@ describe('applyTypeSize', () => {
 
     // result
     expect(result1.min).toBe(100);
+    expect(result1.type).toBe('fixed');
 
     // before
     const result2 = applyTypeSize(
@@ -70,6 +75,7 @@ describe('applyTypeSize', () => {
 
     // result
     expect(result2.min).toBe(undefined);
+    expect(result2.type).toBe('fixed');
   });
 
   it(`should apply unit`, () => {
@@ -77,6 +83,7 @@ describe('applyTypeSize', () => {
     const result = applyTypeSize(elementMock, 100, 'height', 'unit');
 
     // result
+    expect(result.type).toBe('fixed');
     expect(result.unit).toBe(Unit.percentage);
     expect(result.value).toBe(100);
   });

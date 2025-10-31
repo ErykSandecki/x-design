@@ -12,12 +12,14 @@ export const applyTypeSize = (
     case 'auto':
       return {
         ...element[sizeType],
+        type: 'auto',
         unit: undefined,
         value: 'auto',
       };
     case 'fixed':
       return {
         ...element[sizeType],
+        type: 'fixed',
         unit: undefined,
         value: size,
       };
@@ -38,6 +40,7 @@ export const applyTypeSize = (
     default:
       return {
         ...element[sizeType],
+        type: 'fixed',
         unit: Unit.percentage,
         value: size,
       };
