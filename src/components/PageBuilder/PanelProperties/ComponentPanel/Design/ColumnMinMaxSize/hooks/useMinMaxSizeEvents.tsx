@@ -48,8 +48,8 @@ export const useMinMaxSizeEvents = (score: keyof TScore): TUseMinMaxSizeEvents =
   const visibleWidth = currentWidthScore !== undefined;
 
   useEffect(() => {
-    setHeightScore(normalizeMultipleValue(false, currentHeightScore?.value || '', unitHeight));
-    setWidthScore(normalizeMultipleValue(false, currentWidthScore?.value || '', unitWidth));
+    setHeightScore(normalizeMultipleValue(false, currentHeightScore?.value ?? '', unitHeight));
+    setWidthScore(normalizeMultipleValue(false, currentWidthScore?.value ?? '', unitWidth));
   }, [currentHeightScore, currentWidthScore, isMultiple, unitHeight, unitWidth]);
 
   return {

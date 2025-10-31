@@ -561,7 +561,7 @@ describe('ColumnResizing behaviors', () => {
     });
   });
 
-  it('should detached value', () => {
+  it('should detach value', () => {
     // mock
     const store = configureStore({
       ...stateMock,

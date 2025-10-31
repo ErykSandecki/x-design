@@ -447,6 +447,186 @@ describe('ColumnResizing behaviors', () => {
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.min).toBe(100);
   });
 
+  it('should apply max auto for height & width', () => {
+    // mock
+    const store = configureStore(stateMock);
+    // before
+    const { container } = customRender(
+      <Provider store={store}>
+        <ColumnMinSizeInput scoreKey="max" />
+      </Provider>,
+    );
+
+    // find { inputs }
+    const inputHeight = getByE2EAttribute(container, E2EAttribute.textField, 'maxHeight');
+    const inputWidth = getByE2EAttribute(container, E2EAttribute.textField, 'maxWidth');
+
+    // find { icons }
+    const iconHeight = getByE2EAttribute(inputHeight, E2EAttribute.icon, 'variant');
+    const iconWidth = getByE2EAttribute(inputWidth, E2EAttribute.icon, 'variant');
+
+    // find { popovers }
+    const popoverHeight = getByE2EAttribute(inputHeight, E2EAttribute.popover, 'popover');
+    const popoverWidth = getByE2EAttribute(inputWidth, E2EAttribute.popover, 'popover');
+
+    // find { popover items }
+    const popoverHeightItem = getByE2EAttribute(popoverHeight, E2EAttribute.popoverItem, PopoverItem.auto);
+    const popoverWidthItem = getByE2EAttribute(popoverWidth, E2EAttribute.popoverItem, PopoverItem.auto);
+
+    // action
+    fireEvent.click(iconHeight);
+    fireEvent.click(popoverHeightItem);
+    fireEvent.click(iconWidth);
+    fireEvent.click(popoverWidthItem);
+
+    // result
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.max).toStrictEqual({
+      type: 'auto',
+      unit: undefined,
+      value: 'auto',
+    });
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.max).toStrictEqual({
+      type: 'auto',
+      unit: undefined,
+      value: 'auto',
+    });
+  });
+
+  it('should apply min auto for height & width', () => {
+    // mock
+    const store = configureStore(stateMock);
+    // before
+    const { container } = customRender(
+      <Provider store={store}>
+        <ColumnMinSizeInput scoreKey="min" />
+      </Provider>,
+    );
+
+    // find { inputs }
+    const inputHeight = getByE2EAttribute(container, E2EAttribute.textField, 'minHeight');
+    const inputWidth = getByE2EAttribute(container, E2EAttribute.textField, 'minWidth');
+
+    // find { icons }
+    const iconHeight = getByE2EAttribute(inputHeight, E2EAttribute.icon, 'variant');
+    const iconWidth = getByE2EAttribute(inputWidth, E2EAttribute.icon, 'variant');
+
+    // find { popovers }
+    const popoverHeight = getByE2EAttribute(inputHeight, E2EAttribute.popover, 'popover');
+    const popoverWidth = getByE2EAttribute(inputWidth, E2EAttribute.popover, 'popover');
+
+    // find { popover items }
+    const popoverHeightItem = getByE2EAttribute(popoverHeight, E2EAttribute.popoverItem, PopoverItem.auto);
+    const popoverWidthItem = getByE2EAttribute(popoverWidth, E2EAttribute.popoverItem, PopoverItem.auto);
+
+    // action
+    fireEvent.click(iconHeight);
+    fireEvent.click(popoverHeightItem);
+    fireEvent.click(iconWidth);
+    fireEvent.click(popoverWidthItem);
+
+    // result
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.min).toStrictEqual({
+      type: 'auto',
+      unit: undefined,
+      value: 'auto',
+    });
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.min).toStrictEqual({
+      type: 'auto',
+      unit: undefined,
+      value: 'auto',
+    });
+  });
+
+  it('should apply max unit for height & width', () => {
+    // mock
+    const store = configureStore(stateMock);
+    // before
+    const { container } = customRender(
+      <Provider store={store}>
+        <ColumnMinSizeInput scoreKey="max" />
+      </Provider>,
+    );
+
+    // find { inputs }
+    const inputHeight = getByE2EAttribute(container, E2EAttribute.textField, 'maxHeight');
+    const inputWidth = getByE2EAttribute(container, E2EAttribute.textField, 'maxWidth');
+
+    // find { icons }
+    const iconHeight = getByE2EAttribute(inputHeight, E2EAttribute.icon, 'variant');
+    const iconWidth = getByE2EAttribute(inputWidth, E2EAttribute.icon, 'variant');
+
+    // find { popovers }
+    const popoverHeight = getByE2EAttribute(inputHeight, E2EAttribute.popover, 'popover');
+    const popoverWidth = getByE2EAttribute(inputWidth, E2EAttribute.popover, 'popover');
+
+    // find { popover items }
+    const popoverHeightItem = getByE2EAttribute(popoverHeight, E2EAttribute.popoverItem, PopoverItem.unit);
+    const popoverWidthItem = getByE2EAttribute(popoverWidth, E2EAttribute.popoverItem, PopoverItem.unit);
+
+    // action
+    fireEvent.click(iconHeight);
+    fireEvent.click(popoverHeightItem);
+    fireEvent.click(iconWidth);
+    fireEvent.click(popoverWidthItem);
+
+    // result
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.max).toStrictEqual({
+      type: 'fixed',
+      unit: '%',
+      value: 100,
+    });
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.max).toStrictEqual({
+      type: 'fixed',
+      unit: '%',
+      value: 100,
+    });
+  });
+
+  it('should apply min unit for height & width', () => {
+    // mock
+    const store = configureStore(stateMock);
+    // before
+    const { container } = customRender(
+      <Provider store={store}>
+        <ColumnMinSizeInput scoreKey="min" />
+      </Provider>,
+    );
+
+    // find { inputs }
+    const inputHeight = getByE2EAttribute(container, E2EAttribute.textField, 'minHeight');
+    const inputWidth = getByE2EAttribute(container, E2EAttribute.textField, 'minWidth');
+
+    // find { icons }
+    const iconHeight = getByE2EAttribute(inputHeight, E2EAttribute.icon, 'variant');
+    const iconWidth = getByE2EAttribute(inputWidth, E2EAttribute.icon, 'variant');
+
+    // find { popovers }
+    const popoverHeight = getByE2EAttribute(inputHeight, E2EAttribute.popover, 'popover');
+    const popoverWidth = getByE2EAttribute(inputWidth, E2EAttribute.popover, 'popover');
+
+    // find { popover items }
+    const popoverHeightItem = getByE2EAttribute(popoverHeight, E2EAttribute.popoverItem, PopoverItem.unit);
+    const popoverWidthItem = getByE2EAttribute(popoverWidth, E2EAttribute.popoverItem, PopoverItem.unit);
+
+    // action
+    fireEvent.click(iconHeight);
+    fireEvent.click(popoverHeightItem);
+    fireEvent.click(iconWidth);
+    fireEvent.click(popoverWidthItem);
+
+    // result
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.min).toStrictEqual({
+      type: 'fixed',
+      unit: '%',
+      value: 100,
+    });
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.min).toStrictEqual({
+      type: 'fixed',
+      unit: '%',
+      value: 100,
+    });
+  });
+
   it('should remove max for height & width', () => {
     // mock
     const store = configureStore(stateMock);
@@ -519,5 +699,139 @@ describe('ColumnResizing behaviors', () => {
     // result
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.min).toBe(undefined);
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.min).toBe(undefined);
+  });
+
+  it('should detach value max for height & width', () => {
+    // mock
+    const store = configureStore({
+      ...stateMock,
+      [PAGE_BUILDER]: {
+        ...stateMock[PAGE_BUILDER],
+        pages: {
+          ['0']: {
+            ...stateMock[PAGE_BUILDER].pages['0'],
+            elements: {
+              ...stateMock[PAGE_BUILDER].pages['0'].elements,
+              [elementMock.id]: {
+                ...elementMock,
+                height: {
+                  ...sizeMock,
+                  max: {
+                    ...sizeMock,
+                    type: 'auto',
+                  },
+                },
+                width: {
+                  ...sizeMock,
+                  max: {
+                    ...sizeMock,
+                    type: 'auto',
+                  },
+                },
+              },
+            },
+            selectedElements: [selectedElementMock],
+          },
+        },
+      },
+    });
+
+    // before
+    const { container } = customRender(
+      <Provider store={store}>
+        <ColumnMinSizeInput scoreKey="max" />
+      </Provider>,
+    );
+
+    // find { inputs }
+    const inputHeight = getByE2EAttribute(container, E2EAttribute.textField, 'maxHeight');
+    const inputWidth = getByE2EAttribute(container, E2EAttribute.textField, 'maxWidth');
+
+    // find { icons }
+    const iconHeight = getByE2EAttribute(inputHeight, E2EAttribute.icon, 'detached');
+    const iconWidth = getByE2EAttribute(inputWidth, E2EAttribute.icon, 'detached');
+
+    // action
+    fireEvent.click(iconHeight);
+    fireEvent.click(iconWidth);
+
+    // result
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.max).toStrictEqual({
+      type: 'fixed',
+      unit: undefined,
+      value: 100,
+    });
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.max).toStrictEqual({
+      type: 'fixed',
+      unit: undefined,
+      value: 100,
+    });
+  });
+
+  it('should detach value min for height & width', () => {
+    // mock
+    const store = configureStore({
+      ...stateMock,
+      [PAGE_BUILDER]: {
+        ...stateMock[PAGE_BUILDER],
+        pages: {
+          ['0']: {
+            ...stateMock[PAGE_BUILDER].pages['0'],
+            elements: {
+              ...stateMock[PAGE_BUILDER].pages['0'].elements,
+              [elementMock.id]: {
+                ...elementMock,
+                height: {
+                  ...sizeMock,
+                  min: {
+                    ...sizeMock,
+                    type: 'auto',
+                  },
+                },
+                width: {
+                  ...sizeMock,
+                  min: {
+                    ...sizeMock,
+                    type: 'auto',
+                  },
+                },
+              },
+            },
+            selectedElements: [selectedElementMock],
+          },
+        },
+      },
+    });
+
+    // before
+    const { container } = customRender(
+      <Provider store={store}>
+        <ColumnMinSizeInput scoreKey="min" />
+      </Provider>,
+    );
+
+    // find { inputs }
+    const inputHeight = getByE2EAttribute(container, E2EAttribute.textField, 'minHeight');
+    const inputWidth = getByE2EAttribute(container, E2EAttribute.textField, 'minWidth');
+
+    // find { icons }
+    const iconHeight = getByE2EAttribute(inputHeight, E2EAttribute.icon, 'detached');
+    const iconWidth = getByE2EAttribute(inputWidth, E2EAttribute.icon, 'detached');
+
+    // action
+    fireEvent.click(iconHeight);
+    fireEvent.click(iconWidth);
+
+    // result
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.min).toStrictEqual({
+      type: 'fixed',
+      unit: undefined,
+      value: 100,
+    });
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.min).toStrictEqual({
+      type: 'fixed',
+      unit: undefined,
+      value: 100,
+    });
   });
 });

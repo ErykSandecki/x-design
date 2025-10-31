@@ -10,8 +10,8 @@ import { elementDataSelectorCreator } from 'store/pageBuilder/selectors';
 import { TElement } from 'types';
 
 // utils
-import { isPureNumber } from 'utils';
 import { getScoreValue } from '../utils/getScoreValue';
+import { isPureNumber } from 'utils';
 
 export type TUseElementSizes = {
   cssHeight: TElement['height']['value'];
@@ -37,6 +37,7 @@ export const useElementSizes = (id: TElement['id']): TUseElementSizes => {
   const additionalHeight = padding.b.value + padding.t.value;
   const additionalWidth = padding.l.value + padding.r.value;
 
+  /* istanbul ignore next */ // @html delayed
   const height =
     (isPureNumber(relativeHeight) || !itemsRefs[id]) && !unitHeight
       ? relativeHeight
@@ -44,6 +45,7 @@ export const useElementSizes = (id: TElement['id']): TUseElementSizes => {
         ? parseInt(getComputedStyle(itemsRefs[id]).height)
         : 0;
 
+  /* istanbul ignore next */ // @html delayed
   const width =
     (isPureNumber(relativeWidth) || !itemsRefs[id]) && !unitWidth
       ? relativeWidth
