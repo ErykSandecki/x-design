@@ -87,6 +87,7 @@ export type TElement = {
   height: TScore & TSize;
   id: string;
   layout: TLayout;
+  margin: TInsets;
   padding: TInsets;
   parentId: TElement['id'] | '-1';
   position: CSSProperties['position'];
