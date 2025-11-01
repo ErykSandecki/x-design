@@ -1,9 +1,12 @@
-import { first, size } from 'lodash';
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 // store
-import { elementDataSelectorCreator, selectedElementsSelector } from 'store/pageBuilder/selectors';
+import {
+  elementAttributeSelectorCreator,
+  firstSelectedElementIdSelector,
+  multipleSelectedElementsSelector,
+} from 'store/pageBuilder/selectors';
 
 // types
 import { TScore, TSize } from 'types';
@@ -28,24 +31,32 @@ type TUseMinMaxSizeEvents = TUseChangeEvent &
   };
 
 export const useMinMaxSizeEvents = (score: keyof TScore): TUseMinMaxSizeEvents => {
-  const selectedElements = useSelector(selectedElementsSelector);
-  const firstElement = first(selectedElements);
-  const element = useSelector(elementDataSelectorCreator(firstElement.id));
-  const isMultiple = size(selectedElements) > 1;
-  const { [score]: currentHeightScore } = element.height;
-  const { [score]: currentWidthScore } = element.width;
+  const firstElementId = useSelector(firstSelectedElementIdSelector);
+  const isMultiple = useSelector(multipleSelectedElementsSelector);
+  const elementHeight = useSelector(elementAttributeSelectorCreator('height', firstElementId));
+  const elementWidth = useSelector(elementAttributeSelectorCreator('width', firstElementId));
+  const { [score]: currentHeightScore } = elementHeight;
+  const { [score]: currentWidthScore } = elementWidth;
   const { type: typeHeight, unit: unitHeight } = currentHeightScore || {};
   const { type: typeWidth, unit: unitWidth } = currentWidthScore || {};
   const [heightScore, setHeightScore] = useState('');
   const [widthScore, setWidthScore] = useState('');
   const attachedValueHeight = typeHeight !== 'fixed';
   const attachedValueWidth = typeWidth !== 'fixed';
-  const onBlurEvents = useBlurEvent(element, heightScore, score, setHeightScore, setWidthScore, widthScore);
   const onChangeEvents = useChangeEvent(score, setHeightScore, setWidthScore);
   const valueScrubbaleInputHeight = parseFloat(heightScore);
   const valueScrubbaleInputWidth = parseFloat(widthScore);
   const visibleHeight = currentHeightScore !== undefined;
   const visibleWidth = currentWidthScore !== undefined;
+  const onBlurEvents = useBlurEvent(
+    elementHeight,
+    elementWidth,
+    heightScore,
+    score,
+    setHeightScore,
+    setWidthScore,
+    widthScore,
+  );
 
   useEffect(() => {
     setHeightScore(normalizeMultipleValue(false, currentHeightScore?.value ?? '', unitHeight));
