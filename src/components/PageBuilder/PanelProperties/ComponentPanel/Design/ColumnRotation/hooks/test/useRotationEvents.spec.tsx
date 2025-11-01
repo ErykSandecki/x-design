@@ -54,7 +54,7 @@ describe('useRotationEvents', () => {
     // result
     expect(result.current).toStrictEqual({
       angle: '0°',
-      element: elementMock,
+      currentAngle: 0,
       isMixedAngle: false,
       onBlur: expect.any(Function),
       onChange: expect.any(Function),

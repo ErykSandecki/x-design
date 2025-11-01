@@ -1,9 +1,14 @@
-import { defer, first, size } from 'lodash';
+import { defer } from 'lodash';
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 // store
-import { elementDataSelectorCreator, elementsSelector, selectedElementsSelector } from 'store/pageBuilder/selectors';
+import {
+  elementAttributeSelectorCreator,
+  firstSelectedElementIdSelector,
+  isMixedSelectorCreator,
+  multipleSelectedElementsSelector,
+} from 'store/pageBuilder/selectors';
 
 // types
 import { TElement } from 'types';
@@ -12,12 +17,11 @@ import { TUseChangeEvent, useChangeEvent } from './useChangeEvent';
 import { TUseMouseDownEvent, useMouseDownEvent } from './useMouseDownEvent';
 
 // utils
-import { isMixed } from '../../../../../utils/isMixed';
 import { normalizeMultipleValue } from '../../../../../utils/normalizeMultipleValue';
 
 type TUseRotationEvents = {
   angle: string;
-  element: TElement;
+  currentAngle: TElement['angle'];
   isMixedAngle: boolean;
   onBlur: TUseBlurEvent;
   onChange: TUseChangeEvent;
@@ -25,15 +29,12 @@ type TUseRotationEvents = {
 };
 
 export const useRotationEvents = (): TUseRotationEvents => {
-  const elements = useSelector(elementsSelector);
-  const selectedElements = useSelector(selectedElementsSelector);
-  const firstElement = first(selectedElements);
-  const element = useSelector(elementDataSelectorCreator(firstElement.id));
-  const isMixedAngle = isMixed(elements, firstElement, 'angle', selectedElements);
-  const isMultiple = size(selectedElements) > 1;
-  const { angle: currentAngle } = element;
+  const firstElementId = useSelector(firstSelectedElementIdSelector);
+  const currentAngle = useSelector(elementAttributeSelectorCreator('angle', firstElementId));
+  const isMixedAngle = useSelector(isMixedSelectorCreator('angle'));
+  const isMultiple = useSelector(multipleSelectedElementsSelector);
   const [angle, setAngle] = useState('');
-  const onBlur = useBlurEvent(angle, element, setAngle);
+  const onBlur = useBlurEvent(angle, currentAngle, setAngle);
   const onChange = useChangeEvent(setAngle);
 
   useEffect(() => {
@@ -42,7 +43,7 @@ export const useRotationEvents = (): TUseRotationEvents => {
 
   return {
     angle,
-    element,
+    currentAngle,
     isMixedAngle,
     onBlur,
     onChange,

@@ -3,9 +3,6 @@ import { renderHook } from '@testing-library/react';
 // hooks
 import { useBlurEvent } from '../useBlurEvent';
 
-// mocks
-import { elementMock } from 'test/mocks/reducer/pageBuilderMock';
-
 const mockCallBack = jest.fn();
 
 jest.mock('react-redux', () => ({
@@ -16,7 +13,7 @@ jest.mock('react-redux', () => ({
 describe('useBlurEvent', () => {
   it(`should trigger blur`, () => {
     // before
-    const { result } = renderHook(() => useBlurEvent('0', elementMock, mockCallBack));
+    const { result } = renderHook(() => useBlurEvent('0', 0, mockCallBack));
 
     // action
     result.current();
@@ -28,7 +25,7 @@ describe('useBlurEvent', () => {
 
   it(`should reset angle`, () => {
     // before
-    const { result } = renderHook(() => useBlurEvent('', elementMock, mockCallBack));
+    const { result } = renderHook(() => useBlurEvent('', 0, mockCallBack));
 
     // action
     result.current();

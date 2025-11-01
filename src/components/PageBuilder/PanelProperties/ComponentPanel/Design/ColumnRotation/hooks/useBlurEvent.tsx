@@ -11,12 +11,16 @@ import { clampAngle } from 'utils/math/clampAngle';
 
 export type TUseBlurEvent = TFunc;
 
-export const useBlurEvent = (angle: string, element: TElement, setAngle: TFunc<[string]>): TUseBlurEvent => {
+export const useBlurEvent = (
+  angle: string,
+  currentAngle: TElement['angle'],
+  setAngle: TFunc<[string]>,
+): TUseBlurEvent => {
   const dispatch = useDispatch();
 
   const handleBlur = (): void => {
     if (angle === '' || isNaN(parseFloat(angle))) {
-      setAngle(`${element.angle.toString()}°`);
+      setAngle(`${currentAngle.toString()}°`);
     } else {
       const targetAngle = clampAngle(parseInt(angle));
 
