@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import { first } from 'lodash';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
@@ -11,18 +10,17 @@ import { translationNameSpace } from './constants';
 
 // store
 import { changeClipContent } from 'store/pageBuilder/actions';
-import { elementDataSelectorCreator, elementsSelector, selectedElementsSelector } from 'store/pageBuilder/selectors';
-
-// utils
-import { isMixed } from 'components/PageBuilder/utils/isMixed';
+import {
+  elementAttributeSelectorCreator,
+  firstSelectedElementIdSelector,
+  isMixedSelectorCreator,
+} from 'store/pageBuilder/selectors';
 
 const ColumnClipContent: FC = () => {
   const dispatch = useDispatch();
-  const elements = useSelector(elementsSelector);
-  const selectedElements = useSelector(selectedElementsSelector);
-  const firstElement = first(selectedElements);
-  const isMixedClipContent = isMixed(elements, firstElement, 'clipContent', selectedElements);
-  const { clipContent } = useSelector(elementDataSelectorCreator(firstElement.id));
+  const firstElementId = useSelector(firstSelectedElementIdSelector);
+  const isMixedClipContent = useSelector(isMixedSelectorCreator('clipContent'));
+  const clipContent = useSelector(elementAttributeSelectorCreator('clipContent', firstElementId));
   const { t } = useTranslation();
 
   return (

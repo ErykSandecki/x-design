@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import { first } from 'lodash';
 import { useSelector } from 'react-redux';
 
 // components
@@ -9,20 +8,21 @@ import Insets from '../../../../shared/Insets/Insets';
 import { translationNameSpace } from './constants';
 
 // store
-import { elementDataSelectorCreator, elementsSelector, selectedElementsSelector } from 'store/pageBuilder/selectors';
+import {
+  elementAttributeSelectorCreator,
+  firstSelectedElementIdSelector,
+  isMixedSelectorCreator,
+} from 'store/pageBuilder/selectors';
 
 // utils
 import { isBaseParent } from 'utils';
-import { isMixed } from '../../../../utils/isMixed';
 
 const ColumnMargin: FC = () => {
-  const elements = useSelector(elementsSelector);
-  const selectedElements = useSelector(selectedElementsSelector);
-  const firstElement = first(selectedElements);
-  const element = useSelector(elementDataSelectorCreator(firstElement.id));
-  const isMixedLayout = isMixed(elements, firstElement, 'layout.type', selectedElements);
+  const firstElementId = useSelector(firstSelectedElementIdSelector);
+  const isMixedLayout = useSelector(isMixedSelectorCreator('layout.type'));
+  const parentId = useSelector(elementAttributeSelectorCreator('parentId', firstElementId));
 
-  if (isMixedLayout || isBaseParent(element.parentId)) {
+  if (isMixedLayout || isBaseParent(parentId)) {
     return null;
   }
 
