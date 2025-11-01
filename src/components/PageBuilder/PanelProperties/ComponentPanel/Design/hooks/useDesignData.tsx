@@ -1,20 +1,16 @@
-import { first } from 'lodash';
 import { useDispatch, useSelector } from 'react-redux';
 
 // store
 import {
   areParentsTheSameSelector,
-  elementDataSelectorCreator,
-  elementsSelector,
-  selectedElementsSelector,
+  elementAttributeSelectorCreator,
+  firstSelectedElementIdSelector,
+  isMixedSelectorCreator,
 } from 'store/pageBuilder/selectors';
 import { changeLayout } from 'store/pageBuilder/actions';
 
 // types
 import { LayoutType, TElement } from 'types';
-
-// utils
-import { isMixed } from '../../../../utils/isMixed';
 
 export type TUseDesignData = {
   areParentsTheSame: boolean;
@@ -27,11 +23,10 @@ export type TUseDesignData = {
 export const useDesignData = (): TUseDesignData => {
   const areParentsTheSame = useSelector(areParentsTheSameSelector);
   const dispatch = useDispatch();
-  const elements = useSelector(elementsSelector);
-  const selectedElements = useSelector(selectedElementsSelector);
-  const firstElement = first(selectedElements);
-  const isMixedLayoutType = isMixed(elements, firstElement, 'layout.type', selectedElements);
-  const { position, layout } = useSelector(elementDataSelectorCreator(firstElement.id));
+  const firstElementId = useSelector(firstSelectedElementIdSelector);
+  const isMixedLayoutType = useSelector(isMixedSelectorCreator('layout.type'));
+  const position = useSelector(elementAttributeSelectorCreator('position', firstElementId));
+  const layout = useSelector(elementAttributeSelectorCreator('layout', firstElementId));
 
   const onChangeLayoutType = (): void => {
     if (isMixedLayoutType) {
@@ -47,7 +42,7 @@ export const useDesignData = (): TUseDesignData => {
   return {
     areParentsTheSame,
     isMixedLayoutType,
-    layoutType: layout.type,
+    layoutType: LayoutType.freeForm,
     onChangeLayoutType,
     position,
   };

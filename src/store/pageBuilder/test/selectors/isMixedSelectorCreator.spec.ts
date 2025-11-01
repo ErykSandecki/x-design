@@ -13,7 +13,7 @@ describe('isMixedSelectorCreator', () => {
     expect(
       selectorFunction(
         { [elementMock.id]: elementMock, ['test-2']: { ...elementMock, clipContent: false, id: 'test-2' } },
-        selectedElementMock,
+        selectedElementMock.id,
         [selectedElementMock, { ...selectedElementMock, id: 'test-2' }],
       ),
     ).toBe(true);
@@ -27,7 +27,7 @@ describe('isMixedSelectorCreator', () => {
     expect(
       selectorFunction(
         { [elementMock.id]: elementMock, ['test-2']: { ...elementMock, id: 'test-2' } },
-        selectedElementMock,
+        selectedElementMock.id,
         [selectedElementMock, { ...selectedElementMock, id: 'test-2' }],
       ),
     ).toBe(false);

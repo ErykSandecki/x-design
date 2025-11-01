@@ -1,6 +1,6 @@
 import { createSelector, Selector } from 'reselect';
-import { get as getFp, head as headFp } from 'lodash/fp';
-import { get, size } from 'lodash';
+import { get as getFp } from 'lodash/fp';
+import { get, head, size } from 'lodash';
 
 // others
 import { REDUCER_KEY } from './actionsType';
@@ -101,9 +101,14 @@ export const selectedElementsSelector: Selector<TMainState, TSelectedElements> =
   getFp('selectedElements'),
 );
 
-export const firstSelectedElementSelector: Selector<TMainState, TSelectedElement> = createSelector(
+export const firstSelectedElementIdSelector: Selector<TMainState, TSelectedElement['id']> = createSelector(
   selectedElementsSelector,
-  headFp,
+  (selectedElements) => head(selectedElements)?.id,
+);
+
+export const firstSelectedElementParentIdSelector: Selector<TMainState, TSelectedElement['id']> = createSelector(
+  selectedElementsSelector,
+  (selectedElements) => head(selectedElements)?.parentId,
 );
 
 export const anySelectedElementSelector: Selector<TMainState, boolean> = createSelector(
@@ -148,10 +153,10 @@ export const counterAngleSelectorCreator = (parentId: TElement['parentId']): Sel
 export const isMixedSelectorCreator = (key: TNestedKeyOf<TElement>): Selector<TMainState, boolean> =>
   createSelector(
     elementsSelector,
-    firstSelectedElementSelector,
+    firstSelectedElementIdSelector,
     selectedElementsSelector,
-    (elements, firstElement, selectedElements) =>
+    (elements, firstElementId, selectedElements) =>
       selectedElements
-        .filter(({ id }) => id !== firstElement.id)
-        .some(({ id }) => get(elements[id], key) !== get(elements[firstElement.id], key)),
+        .filter(({ id }) => id !== firstElementId)
+        .some(({ id }) => get(elements[id], key) !== get(elements[firstElementId], key)),
   );

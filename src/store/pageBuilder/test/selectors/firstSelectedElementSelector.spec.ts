@@ -2,12 +2,12 @@
 import { selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // store
-import { firstSelectedElementSelector } from '../../selectors';
+import { firstSelectedElementIdSelector } from '../../selectors';
 
-describe('firstSelectedElementSelector', () => {
+describe('firstSelectedElementIdSelector', () => {
   it('should return undefined', () => {
     // before
-    const selectorFunction = (firstSelectedElementSelector as any).resultFunc;
+    const selectorFunction = (firstSelectedElementIdSelector as any).resultFunc;
 
     // result
     expect(selectorFunction([])).toBe(undefined);
@@ -15,9 +15,9 @@ describe('firstSelectedElementSelector', () => {
 
   it('should not anyone be selected', () => {
     // before
-    const selectorFunction = (firstSelectedElementSelector as any).resultFunc;
+    const selectorFunction = (firstSelectedElementIdSelector as any).resultFunc;
 
     // result
-    expect(selectorFunction([selectedElementMock])).toBe(selectedElementMock);
+    expect(selectorFunction([selectedElementMock])).toBe(selectedElementMock.id);
   });
 });

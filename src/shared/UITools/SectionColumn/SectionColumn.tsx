@@ -1,4 +1,4 @@
-import { FC, memo, ReactNode } from 'react';
+import { FC, ReactNode } from 'react';
 import { size } from 'lodash';
 
 // components
@@ -63,4 +63,4 @@ export const SectionColumn: FC<TSectionColumnProps> = ({
   );
 };
 
-export default memo(SectionColumn);
+export default SectionColumn;
