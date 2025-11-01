@@ -28,7 +28,6 @@ export const useHandleUpdateCoordinates = (
   useEffect(() => {
     defer(() => {
       const coordinates = getCoordinatesData(isMultipleMoving, itemsRefs, selectedElements, zoomContentRef);
-
       setCoordinatesData(coordinates);
     });
   }, [angle, isMultipleMoving, selectedElements]);
