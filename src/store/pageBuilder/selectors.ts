@@ -106,6 +106,11 @@ export const anySelectedElementSelector: Selector<TMainState, boolean> = createS
   (selectedElements) => !!selectedElements.length,
 );
 
+export const selectedElementsSizeSelector: Selector<TMainState, number> = createSelector(
+  selectedElementsSelector,
+  (selectedElements) => selectedElements.length,
+);
+
 export const isSelectedElementSelectorCreator = (elementId: TElement['id']): Selector<TMainState, boolean> =>
   createSelector(selectedElementsSelector, (selectedElements) => !!selectedElements.find(({ id }) => id === elementId));
 

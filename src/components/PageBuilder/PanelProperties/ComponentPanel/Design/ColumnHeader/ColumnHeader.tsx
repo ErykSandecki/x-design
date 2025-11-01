@@ -1,5 +1,4 @@
-import { FC } from 'react';
-import { head, size } from 'lodash';
+import { FC, memo } from 'react';
 import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
@@ -11,24 +10,23 @@ import { Small, UITools } from 'shared';
 import { translationNameSpace } from './constants';
 
 // store
-import { selectedElementsSelector } from 'store/pageBuilder/selectors';
+import { selectedElementsSizeSelector } from 'store/pageBuilder/selectors';
 
 const ColumnHeader: FC = () => {
-  const selectedElements = useSelector(selectedElementsSelector);
-  const amountElements = size(selectedElements);
-  const text = amountElements === 1 ? `header.${head(selectedElements).type}` : `header`;
+  const selectedElementsSize = useSelector(selectedElementsSizeSelector);
+  const text = selectedElementsSize === 1 ? `header.frame` : `header`;
   const { t } = useTranslation();
 
   return (
     <UITools.SectionColumn buttonsIcon={ColumnHeaderButtonIcons(t)}>
       <Small>
         {t(`${translationNameSpace}.${text}`, {
-          amount: amountElements,
-          count: amountElements,
+          amount: selectedElementsSize,
+          count: selectedElementsSize,
         })}
       </Small>
     </UITools.SectionColumn>
   );
 };
 
-export default ColumnHeader;
+export default memo(ColumnHeader);

@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, memo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
@@ -63,4 +63,4 @@ const Design: FC<TDesignProps> = ({ width }) => {
   );
 };
 
-export default Design;
+export default memo(Design);

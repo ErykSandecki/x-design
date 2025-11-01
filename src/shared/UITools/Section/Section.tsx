@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react';
+import { FC, memo, ReactNode } from 'react';
 
 // components
 import Box from '../../UI/Box/Box';
@@ -46,4 +46,4 @@ export const Section: FC<TSectionProps> = ({ buttonsIcon = [], children, e2eValu
   );
 };
 
-export default Section;
+export default memo(Section);
