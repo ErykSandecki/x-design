@@ -19,7 +19,7 @@ const ColumnHeader: FC = () => {
 
   return (
     <UITools.SectionColumn buttonsIcon={ColumnHeaderButtonIcons(t)}>
-      <Small>
+      <Small style={{ alignItems: 'center', display: 'flex' }}>
         {t(`${translationNameSpace}.${text}`, {
           amount: selectedElementsSize,
           count: selectedElementsSize,

@@ -27,7 +27,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
           <small
             class="css-1jnxvbp Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
             data-test-text=""
-            style="text-align: inherit;"
+            style="align-items: center; display: flex; text-align: inherit;"
           >
             Frame
           </small>
