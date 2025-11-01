@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { changeInsets } from 'store/pageBuilder/actions';
 
 // types
-import { TElement, TInsets, TInsetsName } from 'types';
+import { TInsets, TInsetsName } from 'types';
 
 // utils
 import { extractInsetValue } from '../utils/extractInsetValue';
@@ -17,7 +17,7 @@ export type TUseBlurEvents = {
 };
 
 export const useBlurEvents = (
-  element: TElement,
+  insets: TInsets,
   insetAll: TMapValuesTo<TInsets, string>,
   insetLR: string,
   insetTB: string,
@@ -30,7 +30,7 @@ export const useBlurEvents = (
 
   const handleBlurInset = (inset: keyof TInsets): void => {
     if (insetAll[inset] === '') {
-      setInsetAll({ ...insetAll, [inset]: element[insetsName][inset].value.toString() });
+      setInsetAll({ ...insetAll, [inset]: insets[inset].value.toString() });
     } else {
       dispatch(changeInsets({ [inset]: { value: parseInt(insetAll[inset]) } }, insetsName));
     }
@@ -38,7 +38,7 @@ export const useBlurEvents = (
 
   const handleBlurInsetLR = (): void => {
     if (insetLR === '') {
-      setInsetLR(getInsetValue(element[insetsName], ['l', 'r']));
+      setInsetLR(getInsetValue(insets, ['l', 'r']));
     } else {
       const { insets, value } = extractInsetValue(['l', 'r'], insetLR);
 
@@ -49,7 +49,7 @@ export const useBlurEvents = (
 
   const handleBlurInsetTB = (): void => {
     if (insetTB === '') {
-      setInsetTB(getInsetValue(element[insetsName], ['t', 'b']));
+      setInsetTB(getInsetValue(insets, ['t', 'b']));
     } else {
       const { insets, value } = extractInsetValue(['t', 'b'], insetTB);
 

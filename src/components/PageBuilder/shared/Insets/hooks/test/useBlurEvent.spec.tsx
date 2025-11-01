@@ -4,7 +4,7 @@ import { renderHook } from '@testing-library/react';
 import { useBlurEvents } from '../useBlurEvents';
 
 // mocks
-import { elementMock, insetsMock } from 'test/mocks/reducer/pageBuilderMock';
+import { insetsMock } from 'test/mocks/reducer/pageBuilderMock';
 
 const mockCallBack = jest.fn();
 
@@ -18,7 +18,7 @@ describe('useBlurEvent', () => {
     // before
     const { result } = renderHook(() =>
       useBlurEvents(
-        elementMock,
+        insetsMock,
         { b: '0', l: '0', r: '0', t: '0' },
         '0',
         '0',
@@ -40,7 +40,7 @@ describe('useBlurEvent', () => {
     // before
     const { result } = renderHook(() =>
       useBlurEvents(
-        elementMock,
+        insetsMock,
         { b: '', l: '0', r: '0', t: '0' },
         '0',
         '0',
@@ -62,7 +62,7 @@ describe('useBlurEvent', () => {
     // before
     const { result } = renderHook(() =>
       useBlurEvents(
-        elementMock,
+        insetsMock,
         { b: '0', l: '0', r: '0', t: '0' },
         '0, 1',
         '0',
@@ -88,7 +88,7 @@ describe('useBlurEvent', () => {
     // before
     const { result } = renderHook(() =>
       useBlurEvents(
-        { ...elementMock, padding: { ...insetsMock, l: { value: 0 }, r: { value: 1 } } },
+        { ...insetsMock, l: { value: 0 }, r: { value: 1 } },
         { b: '0', l: '0', r: '0', t: '0' },
         '',
         '0',
@@ -110,7 +110,7 @@ describe('useBlurEvent', () => {
     // before
     const { result } = renderHook(() =>
       useBlurEvents(
-        elementMock,
+        insetsMock,
         { b: '0', l: '0', r: '0', t: '0' },
         '0',
         '0, 1',
@@ -136,7 +136,7 @@ describe('useBlurEvent', () => {
     // before
     const { result } = renderHook(() =>
       useBlurEvents(
-        { ...elementMock, padding: { ...insetsMock, b: { value: 1 }, t: { value: 0 } } },
+        { ...insetsMock, b: { value: 1 }, t: { value: 0 } },
         { b: '0', l: '0', r: '0', t: '0' },
         '0',
         '',

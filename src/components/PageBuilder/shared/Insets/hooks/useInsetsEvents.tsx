@@ -1,9 +1,13 @@
-import { first, size } from 'lodash';
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 // store
-import { elementDataSelectorCreator, elementsSelector, selectedElementsSelector } from 'store/pageBuilder/selectors';
+import {
+  elementAttributeSelectorCreator,
+  firstSelectedElementIdSelector,
+  isMixedSelectorCreator,
+  multipleSelectedElementsSelector,
+} from 'store/pageBuilder/selectors';
 
 // types
 import { InsetMode } from '../enums';
@@ -13,7 +17,6 @@ import { TUseChangeEvents, useChangeEvents } from './useChangeEvents';
 
 // utils
 import { getInsetValue } from '../utils/getInsetValue';
-import { isMixed } from '../../../utils/isMixed';
 import { normalizeMultipleValue } from '../../../utils/normalizeMultipleValue';
 
 type TUseInsetsEvents = TUseBlurEvents &
@@ -29,19 +32,16 @@ type TUseInsetsEvents = TUseBlurEvents &
   };
 
 export const useInsetsEvents = (insetsName: TInsetsName): TUseInsetsEvents => {
-  const elements = useSelector(elementsSelector);
-  const selectedElements = useSelector(selectedElementsSelector);
-  const firstElement = first(selectedElements);
-  const element = useSelector(elementDataSelectorCreator(firstElement.id));
-  const isMultiple = size(selectedElements) > 1;
-  const isMixedB = isMixed(elements, firstElement, `${insetsName}.b`, selectedElements);
-  const isMixedL = isMixed(elements, firstElement, `${insetsName}.l`, selectedElements);
-  const isMixedR = isMixed(elements, firstElement, `${insetsName}.r`, selectedElements);
-  const isMixedT = isMixed(elements, firstElement, `${insetsName}.t`, selectedElements);
+  const firstElementId = useSelector(firstSelectedElementIdSelector);
+  const isMultiple = useSelector(multipleSelectedElementsSelector);
+  const isMixedB = useSelector(isMixedSelectorCreator(`${insetsName}.b`));
+  const isMixedL = useSelector(isMixedSelectorCreator(`${insetsName}.l`));
+  const isMixedR = useSelector(isMixedSelectorCreator(`${insetsName}.r`));
+  const isMixedT = useSelector(isMixedSelectorCreator(`${insetsName}.t`));
   const isMixedInset = { b: isMixedB, l: isMixedL, r: isMixedR, t: isMixedT };
   const isMixedLR = isMixedL || isMixedR;
   const isMixedTB = isMixedT || isMixedB;
-  const insets = element[insetsName];
+  const insets = useSelector(elementAttributeSelectorCreator(insetsName, firstElementId));
   const [insetLR, setInsetLR] = useState('');
   const [insetTB, setInsetTB] = useState('');
   const [insetAll, setInsetAll] = useState({ b: '', l: '', r: '', t: '' });
@@ -60,7 +60,7 @@ export const useInsetsEvents = (insetsName: TInsetsName): TUseInsetsEvents => {
   }, [insets, isMultiple]);
 
   return {
-    ...useBlurEvents(element, insetAll, insetLR, insetTB, insetsName, setInsetAll, setInsetLR, setInsetTB),
+    ...useBlurEvents(insets, insetAll, insetLR, insetTB, insetsName, setInsetAll, setInsetLR, setInsetTB),
     ...useChangeEvents(insetAll, insetLR, insets, insetTB, insetsName, setInsetAll, setInsetLR, setInsetTB),
     insetAll,
     insetLR,
