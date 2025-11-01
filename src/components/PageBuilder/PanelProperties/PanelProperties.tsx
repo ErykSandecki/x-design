@@ -16,7 +16,7 @@ import { TABS, translationNameSpace } from './constants';
 import { PANEL_PROPERTIES_ID } from '../constants';
 
 // store
-import { selectedElementsSelector } from 'store/pageBuilder/selectors';
+import { anySelectedElementSelector } from 'store/pageBuilder/selectors';
 
 // styles
 import styles from './panel-properties.scss';
@@ -28,13 +28,12 @@ import { Tab } from './enums';
 export type TPanelPropertiesProps = {};
 
 const PanelProperties: FC<TPanelPropertiesProps> = () => {
+  const anySelectedElement = useSelector(anySelectedElementSelector);
   const boxRef = useRef(null);
-  const selectedElements = useSelector(selectedElementsSelector);
-  const isSelected = !!selectedElements.length;
-  const { t } = useTranslation();
-  const [activeTab, setActiveTab] = useState(Tab.design);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { onMouseDownX, width } = useResizeHandler(0, 240, window.innerHeight, 500, 0, 240, boxRef);
+  const { t } = useTranslation();
+  const [activeTab, setActiveTab] = useState(Tab.design);
 
   return (
     <Box
@@ -72,7 +71,11 @@ const PanelProperties: FC<TPanelPropertiesProps> = () => {
         />
       </UITools.Section>
       <div className={cx(classNamesWithTheme.sections)}>
-        {isSelected ? <ComponentPanel activeTab={activeTab} width={width} /> : <MainPanel activeTab={activeTab} />}
+        {anySelectedElement ? (
+          <ComponentPanel activeTab={activeTab} width={width} />
+        ) : (
+          <MainPanel activeTab={activeTab} />
+        )}
       </div>
     </Box>
   );

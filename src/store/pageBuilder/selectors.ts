@@ -101,6 +101,11 @@ export const selectedElementsSelector: Selector<TMainState, TSelectedElements> =
   getFp('selectedElements'),
 );
 
+export const anySelectedElementSelector: Selector<TMainState, boolean> = createSelector(
+  selectedElementsSelector,
+  (selectedElements) => !!selectedElements.length,
+);
+
 export const isSelectedElementSelectorCreator = (elementId: TElement['id']): Selector<TMainState, boolean> =>
   createSelector(selectedElementsSelector, (selectedElements) => !!selectedElements.find(({ id }) => id === elementId));
 
