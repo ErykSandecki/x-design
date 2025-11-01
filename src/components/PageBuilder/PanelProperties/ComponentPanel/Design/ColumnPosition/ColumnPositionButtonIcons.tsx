@@ -4,19 +4,15 @@ import { ReactNode } from 'react';
 import ConstrainsView from '../../../../shared/ConstrainsView/ConstrainsView';
 
 // store
-import { elementsSelector } from 'store/pageBuilder/selectors';
+import { elementAttributeSelectorCreator, firstSelectedElementIdSelector } from 'store/pageBuilder/selectors';
 
-import { TSelectedElement } from 'store/pageBuilder/types';
 import { UseSelector } from 'react-redux';
 
-const ColumnPositionButtonIcons = (
-  firstElement: TSelectedElement,
-  showConstrains: boolean,
-  useSelector: UseSelector,
-): Array<ReactNode> => {
-  const elements = useSelector(elementsSelector);
+const ColumnPositionButtonIcons = (showConstrains: boolean, useSelector: UseSelector): Array<ReactNode> => {
+  const firstElementId = useSelector(firstSelectedElementIdSelector);
+  const alignment = useSelector(elementAttributeSelectorCreator('alignment', firstElementId));
 
-  return showConstrains ? [<ConstrainsView alignment={elements[firstElement.id].alignment} key={0} />] : [];
+  return showConstrains ? [<ConstrainsView alignment={alignment} key={0} />] : [];
 };
 
 export default ColumnPositionButtonIcons;

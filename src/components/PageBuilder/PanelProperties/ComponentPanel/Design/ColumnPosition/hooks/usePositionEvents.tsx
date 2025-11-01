@@ -1,4 +1,3 @@
-import { first, size } from 'lodash';
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
@@ -10,24 +9,22 @@ import { useMouseDownEvent } from './useMouseDownEvent';
 // store
 import {
   areParentsTheSameSelector,
-  elementDataSelectorCreator,
-  elementsSelector,
-  selectedElementsSelector,
+  elementAttributeNestedSelectorCreator,
+  elementAttributeSelectorCreator,
+  firstSelectedElementIdSelector,
+  hasSomeAlignmentSelectorCreator,
+  hasSomeRelativePositionSelector,
+  isMixedSelectorCreator,
+  multipleSelectedElementsSelector,
 } from 'store/pageBuilder/selectors';
 
-// types
-import { TSelectedElement } from 'store/pageBuilder/types';
-
 // utils
-import { hasSomeAlignment } from '../utils/hasSomeAlignment';
-import { isMixed } from '../../../../../utils/isMixed';
 import { normalizeMultipleValue } from '../../../../../utils/normalizeMultipleValue';
 
 type TUsePositionEvents = {
   disabledAll: boolean;
   disabledX: boolean;
   disabledY: boolean;
-  firstElement: TSelectedElement;
   hasAlignmentHorizontal: boolean;
   hasAlignmentVertical: boolean;
   isMultiple: boolean;
@@ -46,19 +43,20 @@ type TUsePositionEvents = {
 export const usePositionEvents = (): TUsePositionEvents => {
   const [x, setX] = useState('');
   const [y, setY] = useState('');
-  const selectedElements = useSelector(selectedElementsSelector);
-  const firstElement = first(selectedElements);
-  const element = useSelector(elementDataSelectorCreator(firstElement.id));
-  const { alignment, coordinates, parentId, position } = element;
+  const isMultiple = useSelector(multipleSelectedElementsSelector);
+  const firstElementId = useSelector(firstSelectedElementIdSelector);
+  const alignment = useSelector(elementAttributeSelectorCreator('alignment', firstElementId));
+  const currentX = useSelector(elementAttributeNestedSelectorCreator<number>('coordinates.x', firstElementId));
+  const currentY = useSelector(elementAttributeNestedSelectorCreator<number>('coordinates.y', firstElementId));
+  const parentId = useSelector(elementAttributeSelectorCreator('parentId', firstElementId));
+  const position = useSelector(elementAttributeSelectorCreator('position', firstElementId));
   const areParentsTheSame = useSelector(areParentsTheSameSelector);
-  const elements = useSelector(elementsSelector);
-  const hasAlignmentHorizontal = hasSomeAlignment('horizontal', elements, selectedElements);
-  const hasAlignmentVertical = hasSomeAlignment('vertical', elements, selectedElements);
-  const isRelative = selectedElements.some(({ position }) => position === 'relative');
-  const isMixedX = isMixed(elements, firstElement, 'coordinates.x', selectedElements);
-  const isMixedY = isMixed(elements, firstElement, 'coordinates.y', selectedElements);
-  const isMultiple = size(selectedElements) > 1;
-  const onBlurEvents = useBlurEvent(element, setX, setY, x, y);
+  const hasAlignmentHorizontal = useSelector(hasSomeAlignmentSelectorCreator('horizontal'));
+  const hasAlignmentVertical = useSelector(hasSomeAlignmentSelectorCreator('vertical'));
+  const isRelative = useSelector(hasSomeRelativePositionSelector);
+  const isMixedX = useSelector(isMixedSelectorCreator('coordinates.x'));
+  const isMixedY = useSelector(isMixedSelectorCreator('coordinates.y'));
+  const onBlurEvents = useBlurEvent(currentX, currentY, setX, setY, x, y);
   const onChangeEvents = useChangeEvent(isMultiple, isMixedX, isMixedY, setX, setY);
   const disabledAll = (hasAlignmentHorizontal || hasAlignmentVertical) && isMultiple;
   const disabledX = hasAlignmentHorizontal || isRelative || disabledAll;
@@ -69,15 +67,13 @@ export const usePositionEvents = (): TUsePositionEvents => {
 
   useEffect(() => {
     if (!isRelative) {
-      const { x, y } = element.coordinates;
-
-      setX(normalizeMultipleValue(isMixedX, x));
-      setY(normalizeMultipleValue(isMixedY, y));
+      setX(normalizeMultipleValue(isMixedX, currentX));
+      setY(normalizeMultipleValue(isMixedY, currentY));
     } else {
       setX('0');
       setY('0');
     }
-  }, [alignment, coordinates, parentId, position, isMultiple, isRelative]);
+  }, [alignment, currentX, currentY, parentId, position, isMultiple, isRelative]);
 
   return {
     ...onBlurEvents,
@@ -85,7 +81,6 @@ export const usePositionEvents = (): TUsePositionEvents => {
     disabledAll,
     disabledX,
     disabledY,
-    firstElement,
     hasAlignmentHorizontal,
     hasAlignmentVertical,
     isMultiple,

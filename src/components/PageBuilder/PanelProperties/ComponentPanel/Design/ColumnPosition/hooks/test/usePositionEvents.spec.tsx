@@ -51,12 +51,6 @@ describe('usePositionEvents', () => {
       disabledAll: false,
       disabledX: false,
       disabledY: false,
-      firstElement: {
-        id: 'test-1',
-        parentId: '-1',
-        position: 'absolute',
-        type: 'frame',
-      },
       hasAlignmentHorizontal: false,
       hasAlignmentVertical: false,
       isMultiple: false,

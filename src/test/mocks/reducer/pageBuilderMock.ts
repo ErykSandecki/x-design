@@ -58,7 +58,7 @@ export const pageBuilderStateMock: Record<typeof PAGE_BUILDER, TPageBuilderState
   },
 };
 
-export const alignmetnMock: TAlignment = {
+export const alignmentMock: TAlignment = {
   horizontal: AlignmentHorizontal.center,
   vertical: AlignmentVertical.center,
 };

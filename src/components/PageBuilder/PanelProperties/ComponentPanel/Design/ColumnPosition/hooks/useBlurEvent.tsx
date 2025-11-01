@@ -3,16 +3,14 @@ import { useDispatch } from 'react-redux';
 // store
 import { setElementsCoordinates } from 'store/pageBuilder/actions';
 
-// types
-import { TElement } from 'types';
-
 export type TUseBlurEvent = {
   onBlurX: TFunc;
   onBlurY: TFunc;
 };
 
 export const useBlurEvent = (
-  element: TElement,
+  currentX: T2DCoordinates['x'],
+  currentY: T2DCoordinates['y'],
   setX: TFunc<[string]>,
   setY: TFunc<[string]>,
   x: string,
@@ -27,7 +25,7 @@ export const useBlurEvent = (
 
   const handleBlurX = (): void => {
     if (x === '') {
-      setX(element.coordinates.x.toString());
+      setX(currentX.toString());
     } else {
       handleBlur();
     }
@@ -35,7 +33,7 @@ export const useBlurEvent = (
 
   const handleBlurY = (): void => {
     if (y === '') {
-      setY(element.coordinates.y.toString());
+      setY(currentY.toString());
     } else {
       handleBlur();
     }

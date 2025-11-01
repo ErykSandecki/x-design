@@ -20,7 +20,6 @@ const ColumnPosition: FC = () => {
     disabledAll,
     disabledX,
     disabledY,
-    firstElement,
     hasAlignmentHorizontal,
     hasAlignmentVertical,
     isMultiple,
@@ -38,7 +37,7 @@ const ColumnPosition: FC = () => {
 
   return (
     <UITools.SectionColumn
-      buttonsIcon={ColumnPositionButtonIcons(firstElement, showConstrains, useSelector)}
+      buttonsIcon={ColumnPositionButtonIcons(showConstrains, useSelector)}
       gridColumnType={UITools.GridColumnType.twoInputs}
       labels={[t(`${translationNameSpace}.label`)]}
       withMargin

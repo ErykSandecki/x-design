@@ -18,10 +18,10 @@ import { HORIZONTAL_BUTTONS, translationNameSpace, VERTICAL_BUTTONS } from './co
 import { disabledAlignment } from '../../../../utils/disabledAlignment';
 
 const ColumnAlignment: FC = () => {
+  const disabled = disabledAlignment();
   const onClickHorizontalAlignment = useClickHorizontalAlignmentEvent();
   const onClickVerticalAlignment = useClickVerticalAlignmentEvent();
   const { t } = useTranslation();
-  const disabled = disabledAlignment();
 
   return (
     <UITools.SectionColumn

@@ -6,7 +6,7 @@ import { get, head, size } from 'lodash';
 import { REDUCER_KEY } from './actionsType';
 
 // types
-import { TElement, TNestedKeyOf } from 'types';
+import { TAlignment, TElement, TNestedKeyOf } from 'types';
 import { TElements, TEvents, TPage, TPageBuilderState, TSelectedElement, TSelectedElements } from './types';
 import { TMainState } from 'types/reducers';
 
@@ -40,6 +40,11 @@ export const elementAttributeSelectorCreator = <K extends keyof TElement>(
   attribute: K,
   elementId: TElement['id'],
 ): Selector<TMainState, TElement[K]> => createSelector(elementDataSelectorCreator(elementId), getFp(attribute));
+
+export const elementAttributeNestedSelectorCreator = <K>(
+  attribute: TNestedKeyOf<TElement>,
+  elementId: TElement['id'],
+): Selector<TMainState, K> => createSelector(elementDataSelectorCreator(elementId), getFp(attribute));
 
 export const childrenSelectorCreator = (id: TElement['id'] | '-1'): Selector<TMainState, TElement['children']> =>
   createSelector(elementDataSelectorCreator(id), (elements) => get(elements, 'children'));
@@ -160,3 +165,13 @@ export const isMixedSelectorCreator = (key: TNestedKeyOf<TElement>): Selector<TM
         .filter(({ id }) => id !== firstElementId)
         .some(({ id }) => get(elements[id], key) !== get(elements[firstElementId], key)),
   );
+
+export const hasSomeAlignmentSelectorCreator = (direction: keyof TAlignment): Selector<TMainState, boolean> =>
+  createSelector(elementsSelector, selectedElementsSelector, (elements, selectedElements) =>
+    selectedElements.some(({ id }) => elements[id].alignment[direction] !== undefined),
+  );
+
+export const hasSomeRelativePositionSelector: Selector<TMainState, boolean> = createSelector(
+  selectedElementsSelector,
+  (selectedElements) => selectedElements.some(({ position }) => position === 'relative'),
+);
