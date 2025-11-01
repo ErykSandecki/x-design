@@ -89,6 +89,7 @@ export const elementMock: TElement = {
     visible: true,
   },
   children: [],
+  clipContent: true,
   coordinates: {
     x: 0,
     y: 0,
@@ -121,6 +122,7 @@ export const createFrameMock: TElement = {
     visible: true,
   },
   children: [],
+  clipContent: true,
   coordinates: { x: 0, y: 0 },
   deepLevel: 1,
   flip: flipMock,

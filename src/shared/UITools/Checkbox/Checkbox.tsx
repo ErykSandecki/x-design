@@ -27,12 +27,21 @@ export type TCheckboxProps = Omit<
 > & {
   className?: string;
   e2eValue?: TE2EDataAttributeProps['value'];
+  isMixed?: boolean;
   label: string;
   onChange: TFunc<[boolean]>;
   value: boolean;
 };
 
-export const Checkbox: FC<TCheckboxProps> = ({ className, e2eValue = '', label, onChange, value, ...restProps }) => {
+export const Checkbox: FC<TCheckboxProps> = ({
+  className,
+  e2eValue = '',
+  isMixed = false,
+  label,
+  onChange,
+  value,
+  ...restProps
+}) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   return (
@@ -51,7 +60,8 @@ export const Checkbox: FC<TCheckboxProps> = ({ className, e2eValue = '', label, 
         {...restProps}
       />
       <Box classes={{ className: cx(classNamesWithTheme.inputWrapper) }}>
-        {value && <Icon name="Checkbox" height={8} width={8} />}
+        {value && !isMixed && <Icon name="Checkbox" height={8} width={8} />}
+        {isMixed && <Icon name="CheckboxMixed" height={8} width={8} />}
       </Box>
       <Small classes={{ className: cx(classNamesWithTheme.label) }}>{label}</Small>
     </Box>

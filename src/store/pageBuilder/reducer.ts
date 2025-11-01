@@ -34,6 +34,7 @@ import {
   CHANGE_LAYOUT_ALIGNMENT,
   SET_ELEMENTS_GAP,
   APPLY_ELEMENTS_GAP_TYPE,
+  CHANGE_CLIP_CONTENT,
 } from './actionsType';
 import { BASE_PAGE } from './constants';
 
@@ -68,6 +69,7 @@ import {
   TChangeInsetsAction,
   TApplyElementsInsetTypeAction,
   TApplyElementsSizeMinMaxTypeAction,
+  TChangeClipContentAction,
 } from './types';
 
 // utils
@@ -79,6 +81,7 @@ import { handleApplyElementsSizeMinMaxType } from './utils/applyElementsSizeMinM
 import { handleApplyElementsSizeType } from './utils/applyElementsSizeType/handleApplyElementsSizeType';
 import { handleChangeAlignment } from './utils/changeAligment/handleChangeAlignment';
 import { handleChangeBackground } from './utils/handleChangeBackground';
+import { handleChangeClipContent } from './utils/handleChangeClipContent';
 import { handleChangeInsets } from './utils/handleChangeInsets';
 import { handleChangeLayout } from './utils/changeLayout/handleChangeLayout';
 import { handleChangeLayoutAlignment } from './utils/handleChangeLayoutAlignment';
@@ -164,6 +167,11 @@ const changeBackground = (
   state: TPageBuilderState,
   { payload }: TAction<TChangeBackgroundAction['payload']>,
 ): TPageBuilderState => handleChangeBackground(payload, state);
+
+const changeClipContent = (
+  state: TPageBuilderState,
+  { payload }: TAction<TChangeClipContentAction['payload']>,
+): TPageBuilderState => handleChangeClipContent(payload, state);
 
 const changeInsets = (
   state: TPageBuilderState,
@@ -358,6 +366,8 @@ const pageBuilder = (state: TPageBuilderState = initialState, action: TAction): 
       return changeAlignment(state, action);
     case CHANGE_BACKGROUND:
       return changeBackground(state, action);
+    case CHANGE_CLIP_CONTENT:
+      return changeClipContent(state, action);
     case CHANGE_INSETS:
       return changeInsets(state, action);
     case CHANGE_LAYOUT:

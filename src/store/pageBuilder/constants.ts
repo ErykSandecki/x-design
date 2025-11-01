@@ -49,6 +49,7 @@ export const BASE_ELEMENTS: TElement = {
     visible: true,
   },
   children: [],
+  clipContent: true,
   coordinates: BASE_2D,
   deepLevel: 0,
   flip: { x: false, y: false },

@@ -30,6 +30,7 @@ import {
   applyElementsSizeType,
   changeAlignment,
   changeBackground,
+  changeClipContent,
   changeInsets,
   changeLayout,
   changeLayoutAlignment,
@@ -69,6 +70,7 @@ import {
   TBackground,
   Unit,
   ElementType,
+  TElement,
 } from 'types';
 import { AnchorResize } from '../enums';
 import { TPageBuilderState } from '../types';
@@ -555,6 +557,61 @@ describe('PageBuilderReducer', () => {
               },
             },
           },
+        },
+      },
+    });
+  });
+
+  it('should handle CHANGE_CLIP_CONTENT', () => {
+    // mock
+    const clipContent: TElement['clipContent'] = false;
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+
+    // before
+    const state = reducer(changeClipContent(clipContent), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [selectedElementMock.id, 'test-2'],
+            },
+            [elementMock.id]: {
+              ...elementMock,
+              layout: {
+                ...layoutMock,
+                type: LayoutType.freeForm,
+              },
+            },
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [selectedElementMock.id, 'test-2'],
+            },
+            [elementMock.id]: {
+              ...elementMock,
+              clipContent,
+            },
+          },
+          selectedElements: [selectedElementMock],
         },
       },
     });

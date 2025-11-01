@@ -14,9 +14,7 @@ const mockCallBack = jest.fn();
 describe('Checkbox snapshots', () => {
   it('should render Checkbox', () => {
     // before
-    const { asFragment } = customRender(
-      <Checkbox e2eValue="chip" label="label" onChange={mockCallBack} value={false} />,
-    );
+    const { asFragment } = customRender(<Checkbox label="label" onChange={mockCallBack} value={false} />);
 
     // result
     expect(asFragment()).toMatchSnapshot();
@@ -24,7 +22,17 @@ describe('Checkbox snapshots', () => {
 
   it('should render when checked', () => {
     // before
-    const { asFragment } = customRender(<Checkbox e2eValue="chip" label="label" onChange={mockCallBack} value />);
+    const { asFragment } = customRender(<Checkbox e2eValue="checkbox" label="label" onChange={mockCallBack} value />);
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('should render when mixed', () => {
+    // before
+    const { asFragment } = customRender(
+      <Checkbox e2eValue="checkbox" isMixed label="label" onChange={mockCallBack} value />,
+    );
 
     // result
     expect(asFragment()).toMatchSnapshot();
@@ -35,7 +43,7 @@ describe('Checkbox behaviors', () => {
   it('should toggle value', () => {
     // before
     const { container } = customRender(
-      <Checkbox e2eValue="chip" label="label" onChange={mockCallBack} value={false} />,
+      <Checkbox e2eValue="checkbox" label="label" onChange={mockCallBack} value={false} />,
     );
 
     // action

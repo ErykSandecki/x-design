@@ -33,6 +33,7 @@ export const handleCreateElement = (
         visible: true,
       },
       children: [],
+      clipContent: true,
       coordinates: { x, y },
       deepLevel: 0,
       flip: { x: false, y: false },

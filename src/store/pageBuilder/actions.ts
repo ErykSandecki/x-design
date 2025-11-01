@@ -7,6 +7,7 @@ import {
   APPLY_ELEMENTS_SIZE_TYPE,
   CHANGE_ALIGNMENT,
   CHANGE_BACKGROUND,
+  CHANGE_CLIP_CONTENT,
   CHANGE_INSETS,
   CHANGE_LAYOUT,
   CHANGE_LAYOUT_ALIGNMENT,
@@ -85,6 +86,7 @@ import {
   TApplyElementsInsetTypeAction,
   TApplyElementsSizeMinMaxTypeActionPayload,
   TApplyElementsSizeMinMaxTypeAction,
+  TChangeClipContentAction,
 } from './types';
 import { TElement } from 'types';
 
@@ -138,6 +140,11 @@ export const changeBackground = (
 ): TChangeBackgroundAction => ({
   payload: { background, id },
   type: CHANGE_BACKGROUND,
+});
+
+export const changeClipContent = (clipContent: TChangeClipContentAction['payload']): TChangeClipContentAction => ({
+  payload: clipContent,
+  type: CHANGE_CLIP_CONTENT,
 });
 
 export const changeInsets = (

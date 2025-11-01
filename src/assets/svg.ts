@@ -11,6 +11,7 @@ import { ReactComponent as AutoWidth } from './svg/auto-width.svg';
 import { ReactComponent as CarrotDown } from './svg/carrot-down.svg';
 import { ReactComponent as Check } from './svg/check.svg';
 import { ReactComponent as Checkbox } from './svg/checkbox.svg';
+import { ReactComponent as CheckboxMixed } from './svg/checkbox-mixed.svg';
 import { ReactComponent as ChevronDown } from './svg/chevron-down.svg';
 import { ReactComponent as ChevronLeft } from './svg/chevron-left.svg';
 import { ReactComponent as ChevronRight } from './svg/chevron-right.svg';
@@ -85,6 +86,7 @@ export const Icons = {
   CarrotDown,
   Check,
   Checkbox,
+  CheckboxMixed,
   ChevronDown,
   ChevronLeft,
   ChevronRight,

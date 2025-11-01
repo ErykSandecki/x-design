@@ -81,6 +81,7 @@ export type TElement = {
   aspectRatio: boolean;
   background: TBackground;
   children: Array<TChildren>;
+  clipContent: boolean;
   coordinates: T2DCoordinates;
   deepLevel: number;
   flip: TFlip;

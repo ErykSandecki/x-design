@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 // components
 import ColumnAlignment from './ColumnAlignment/ColumnAlignment';
 import ColumnAlignmentLayout from './ColumnAlignmentLayout/ColumnAlignmentLayout';
+import ColumnClipContent from './ColumnClipContent/ColumnClipContent';
 import ColumnFlow from './ColumnFlow/ColumnFlow';
 import ColumnHeader from './ColumnHeader/ColumnHeader';
 import ColumnMargin from './ColumnMargin/ColumnMargin';
@@ -29,8 +30,8 @@ export type TDesignProps = {
 
 const Design: FC<TDesignProps> = ({ width }) => {
   const dispatch = useDispatch();
-  const { t } = useTranslation();
   const { areParentsTheSame, isMixedLayoutType, layoutType, onChangeLayoutType, position } = useDesignData();
+  const { t } = useTranslation();
 
   return (
     <>
@@ -56,6 +57,7 @@ const Design: FC<TDesignProps> = ({ width }) => {
         <ColumnAlignmentLayout width={width} />
         <ColumnPadding />
         <ColumnMargin />
+        <ColumnClipContent />
       </UITools.Section>
     </>
   );

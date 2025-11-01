@@ -34,6 +34,7 @@ import {
   UPDATE_PREV_STATE,
   APPLY_ELEMENTS_INSET_TYPE,
   APPLY_ELEMENTS_SIZE_MIN_MAX_TYPE,
+  CHANGE_CLIP_CONTENT,
 } from './actionsType';
 
 // types
@@ -183,6 +184,11 @@ export type TChangeBackgroundActionPayload = Pick<TElement, 'id'> & {
 export type TChangeBackgroundAction = {
   payload: TChangeBackgroundActionPayload;
   type: typeof CHANGE_BACKGROUND;
+};
+
+export type TChangeClipContentAction = {
+  payload: TElement['clipContent'];
+  type: typeof CHANGE_CLIP_CONTENT;
 };
 
 export type TChangeInsetsActionPayload = {
