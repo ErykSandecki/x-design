@@ -3,7 +3,7 @@
 exports[`Insets snapshots should render Insets 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
     data-test-section=""
   >
     <div
@@ -262,7 +262,7 @@ exports[`Insets snapshots should render Insets 1`] = `
 exports[`Insets snapshots should render back to merged mode 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
     data-test-section=""
   >
     <div
@@ -521,7 +521,7 @@ exports[`Insets snapshots should render back to merged mode 1`] = `
 exports[`Insets snapshots should render when mose is individual 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
     data-test-section=""
   >
     <div

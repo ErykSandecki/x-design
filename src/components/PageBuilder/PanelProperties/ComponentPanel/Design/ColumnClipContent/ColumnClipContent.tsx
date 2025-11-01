@@ -24,7 +24,7 @@ const ColumnClipContent: FC = () => {
   const { t } = useTranslation();
 
   return (
-    <UITools.SectionColumn withMargin>
+    <UITools.SectionColumn withTopMargin withBottomMargin>
       <UITools.Checkbox
         e2eValue="clip-content"
         label={t(`${translationNameSpace}.label`)}

@@ -44,7 +44,7 @@ const ColumnResizing: FC = () => {
       gridColumnType={UITools.GridColumnType.twoInputs}
       labels={[t(`${translationNameSpace}.label`)]}
       withInputConnector={aspectRatio}
-      withMargin
+      withBottomMargin
     >
       <ColumnResizingInput
         attachedValue={attachedValueWidth}

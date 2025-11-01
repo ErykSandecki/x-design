@@ -26,7 +26,8 @@ export type TSectionColumnProps = {
   gridColumnType?: GridColumnType;
   labels?: [string] | [string, string];
   withInputConnector?: boolean;
-  withMargin?: boolean;
+  withBottomMargin?: boolean;
+  withTopMargin?: boolean;
 };
 
 export const SectionColumn: FC<TSectionColumnProps> = ({
@@ -35,7 +36,8 @@ export const SectionColumn: FC<TSectionColumnProps> = ({
   gridColumnType,
   labels,
   withInputConnector,
-  withMargin = false,
+  withTopMargin = false,
+  withBottomMargin = false,
 }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const buttonsWidthTotal = (size(buttonsIcon) || 1) * 24;
@@ -45,10 +47,11 @@ export const SectionColumn: FC<TSectionColumnProps> = ({
   return (
     <Box
       classes={{
-        className: cx(classNamesWithTheme[className].name, [
-          classNamesWithTheme[className].modificators.withMargin,
-          withMargin,
-        ]),
+        className: cx(
+          classNamesWithTheme[className].name,
+          [classNamesWithTheme[className].modificators.withBottomMargin, withBottomMargin],
+          [classNamesWithTheme[className].modificators.withTopMargin, withTopMargin],
+        ),
       }}
       e2eAttribute={E2EAttribute.section}
     >

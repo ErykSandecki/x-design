@@ -3,7 +3,7 @@
 exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
     data-test-section=""
   >
     <div
@@ -168,7 +168,7 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
 exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
     data-test-section=""
   >
     <div

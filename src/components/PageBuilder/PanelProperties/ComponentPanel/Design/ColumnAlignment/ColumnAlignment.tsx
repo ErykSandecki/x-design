@@ -27,7 +27,7 @@ const ColumnAlignment: FC = () => {
     <UITools.SectionColumn
       gridColumnType={UITools.GridColumnType.twoInputs}
       labels={[t(`${translationNameSpace}.label`)]}
-      withMargin
+      withBottomMargin
     >
       <ColumnAlignmentButtonsGroup
         buttonGroups={HORIZONTAL_BUTTONS}

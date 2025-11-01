@@ -43,7 +43,7 @@ export const Insets: FC<TInsetsProps> = ({ insetsName, translationNameSpace }) =
       buttonsIcon={InsetsButtonIcons(insetsName, isInsetModeMerged, setInsetMode, t)}
       gridColumnType={UITools.GridColumnType.twoInputs}
       labels={[t(`${translationNameSpace}.label`)]}
-      withMargin
+      withBottomMargin
     >
       <InsetsInputsModeMerged
         insetLR={insetLR}

@@ -3,7 +3,7 @@
 exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
     data-test-section=""
   >
     <div
@@ -454,7 +454,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
 exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
     data-test-section=""
   >
     <div

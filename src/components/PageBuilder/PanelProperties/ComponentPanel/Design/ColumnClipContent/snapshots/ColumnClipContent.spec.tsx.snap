@@ -3,7 +3,7 @@
 exports[`ColumnMargin snapshots should render ColumnMargin 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light SectionColumn--withTopMargin SectionColumn--withTopMargin--light"
     data-test-section=""
   >
     <div
@@ -67,7 +67,7 @@ exports[`ColumnMargin snapshots should render ColumnMargin 1`] = `
 exports[`ColumnMargin snapshots should render when is free form 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light SectionColumn--withTopMargin SectionColumn--withTopMargin--light"
     data-test-section=""
   >
     <div

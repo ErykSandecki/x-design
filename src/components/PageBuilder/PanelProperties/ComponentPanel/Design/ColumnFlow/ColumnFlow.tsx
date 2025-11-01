@@ -30,7 +30,7 @@ const ColumnFlow: FC = () => {
     <UITools.SectionColumn
       gridColumnType={UITools.GridColumnType.single}
       labels={[t(`${translationNameSpace}.label`)]}
-      withMargin
+      withBottomMargin
     >
       <UITools.ToggleButtonGroup
         alwaysSelected

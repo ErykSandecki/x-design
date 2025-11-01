@@ -51,7 +51,7 @@ const ColumnMinMaxSize: FC<TColumnMinMaxSizeProps> = ({ scoreKey }) => {
           visibleHeight && t(`${translationNameSpace}.${scoreKey}.label.height`),
         ].filter(Boolean) as [string] | [string, string]
       }
-      withMargin
+      withBottomMargin
     >
       {visibleWidth && (
         <ColumnMinMaxSizeInput

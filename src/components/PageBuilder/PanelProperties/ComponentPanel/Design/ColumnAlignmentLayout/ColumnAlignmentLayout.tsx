@@ -59,7 +59,7 @@ const ColumnAlignmentLayout: FC<TColumnAlignmentLayoutProps> = ({ width }) => {
         t(`${translationNameSpace}.label.${isGrid ? 'grid' : 'alignment'}`),
         t(`${translationNameSpace}.label.gap`),
       ]}
-      withMargin
+      withBottomMargin
     >
       <ColumnAlignmentLayoutAreaInputs
         alignment={alignment}

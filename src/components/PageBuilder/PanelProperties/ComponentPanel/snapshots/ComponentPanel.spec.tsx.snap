@@ -124,7 +124,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
       />
     </div>
     <div
-      class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
+      class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
       data-test-section=""
     >
       <div
@@ -340,7 +340,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
+      class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
       data-test-section=""
     >
       <div
@@ -726,7 +726,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
+      class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
       data-test-section=""
     >
       <div
@@ -886,7 +886,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
+      class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
       data-test-section=""
     >
       <div
@@ -1332,7 +1332,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
+      class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light SectionColumn--withTopMargin SectionColumn--withTopMargin--light"
       data-test-section=""
     >
       <div

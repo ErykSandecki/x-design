@@ -2,7 +2,11 @@ $--xd-column-gap: 10px;
 $--xd-row-gap: 8px;
 
 .SectionColumn {
-  &--with-margin {
+  &--with-bottom-margin {
     margin-bottom: 7.5px;
+  }
+
+  &--with-top-margin {
+    margin-top: 15px;
   }
 }

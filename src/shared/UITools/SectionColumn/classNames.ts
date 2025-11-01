@@ -8,4 +8,4 @@ import { composeClassNames } from 'utils';
 
 export const className = 'SectionColumn';
 
-export const classNames = composeClassNames(className, [className, 'withMargin'] as const);
+export const classNames = composeClassNames(className, [className, 'withBottomMargin', 'withTopMargin'] as const);

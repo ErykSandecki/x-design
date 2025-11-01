@@ -40,7 +40,7 @@ const ColumnPosition: FC = () => {
       buttonsIcon={ColumnPositionButtonIcons(showConstrains, useSelector)}
       gridColumnType={UITools.GridColumnType.twoInputs}
       labels={[t(`${translationNameSpace}.label`)]}
-      withMargin
+      withBottomMargin
     >
       <ColumnPositionInput
         disabled={disabledX}

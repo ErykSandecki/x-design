@@ -3,7 +3,7 @@
 exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
     data-test-section=""
   >
     <div
@@ -654,7 +654,7 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
 exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
     data-test-section=""
   >
     <div
@@ -3302,7 +3302,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is free form 1`] = `
 exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
     data-test-section=""
   >
     <div
@@ -5948,7 +5948,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
 exports[`ColumnAlignmentLayout snapshots should render when is included option hover 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
     data-test-section=""
   >
     <div
@@ -6619,7 +6619,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is included option h
 exports[`ColumnAlignmentLayout snapshots should render when is is enter and leave 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
     data-test-section=""
   >
     <div
@@ -7270,7 +7270,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
 exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
     data-test-section=""
   >
     <div
@@ -7921,7 +7921,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
 exports[`ColumnAlignmentLayout snapshots should render when layout alignment are mixed 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withMargin SectionColumn--withMargin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
     data-test-section=""
   >
     <div
