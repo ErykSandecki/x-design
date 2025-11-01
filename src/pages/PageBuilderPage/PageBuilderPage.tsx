@@ -10,6 +10,7 @@ import ViewBox from 'components/PageBuilder/ViewBox/ViewBox';
 import { RefsProvider } from './core/RefsProvider';
 
 // hooks
+import { useApplyCssStyles } from './hooks/useApplyCssStyles';
 import { useKeyDown } from './hooks/useKeyDown';
 import { useWheelEvent } from './hooks/useWheelEvent';
 
@@ -27,6 +28,7 @@ const PageBuilderPage: FC = () => {
   const [coordinates, setCoordinates] = useState(areaCoordinates);
   const [mouseMode, setMouseMode] = useState(MouseMode.default);
 
+  useApplyCssStyles();
   useKeyDown(setMouseMode);
   useWheelEvent();
 
