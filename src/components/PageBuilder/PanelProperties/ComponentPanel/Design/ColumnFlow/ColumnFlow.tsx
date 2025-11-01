@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import { first } from 'lodash';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
@@ -11,21 +10,20 @@ import { toggleButtons, translationNameSpace } from './constants';
 
 // store
 import { changeLayout } from 'store/pageBuilder/actions';
-import { elementsSelector, elementDataSelectorCreator, selectedElementsSelector } from 'store/pageBuilder/selectors';
+import {
+  isMixedSelectorCreator,
+  firstSelectedElementIdSelector,
+  elementAttributeNestedSelectorCreator,
+} from 'store/pageBuilder/selectors';
 
 // types
-import { LayoutType } from 'types';
-
-// utils
-import { isMixed } from '../../../../utils/isMixed';
+import { LayoutType, TLayout } from 'types';
 
 const ColumnFlow: FC = () => {
   const dispatch = useDispatch();
-  const elements = useSelector(elementsSelector);
-  const selectedElements = useSelector(selectedElementsSelector);
-  const firstElement = first(selectedElements);
-  const element = useSelector(elementDataSelectorCreator(firstElement.id));
-  const isMixedLayoutType = isMixed(elements, firstElement, 'layout.type', selectedElements);
+  const firstElementId = useSelector(firstSelectedElementIdSelector);
+  const isMixedLayoutType = useSelector(isMixedSelectorCreator('layout.type'));
+  const layoutType = useSelector(elementAttributeNestedSelectorCreator<TLayout['type']>('layout.type', firstElementId));
   const { t } = useTranslation();
 
   return (
@@ -36,7 +34,7 @@ const ColumnFlow: FC = () => {
     >
       <UITools.ToggleButtonGroup
         alwaysSelected
-        defaultValue={isMixedLayoutType ? '' : element.layout.type}
+        defaultValue={isMixedLayoutType ? '' : layoutType}
         disabledWhenSelected
         e2eValue="flow"
         fullWidth
