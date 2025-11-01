@@ -42,7 +42,7 @@ export const useDesignData = (): TUseDesignData => {
   return {
     areParentsTheSame,
     isMixedLayoutType,
-    layoutType: LayoutType.freeForm,
+    layoutType: layout.type,
     onChangeLayoutType,
     position,
   };
