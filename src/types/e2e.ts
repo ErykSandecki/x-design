@@ -10,6 +10,8 @@ export enum E2EAttribute {
   buttonGroup = 'button-group',
   buttonGroupInput = 'button-group-input',
   buttonIcon = 'button-icon',
+  checkbox = 'checkbox',
+  checkboxInput = 'checkbox-input',
   chip = 'chip',
   color = 'color',
   colorPicker = 'color-picker',

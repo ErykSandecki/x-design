@@ -10,6 +10,7 @@ import { ReactComponent as AutoLayout } from './svg/auto-layout.svg';
 import { ReactComponent as AutoWidth } from './svg/auto-width.svg';
 import { ReactComponent as CarrotDown } from './svg/carrot-down.svg';
 import { ReactComponent as Check } from './svg/check.svg';
+import { ReactComponent as Checkbox } from './svg/checkbox.svg';
 import { ReactComponent as ChevronDown } from './svg/chevron-down.svg';
 import { ReactComponent as ChevronLeft } from './svg/chevron-left.svg';
 import { ReactComponent as ChevronRight } from './svg/chevron-right.svg';
@@ -83,6 +84,7 @@ export const Icons = {
   AutoWidth,
   CarrotDown,
   Check,
+  Checkbox,
   ChevronDown,
   ChevronLeft,
   ChevronRight,

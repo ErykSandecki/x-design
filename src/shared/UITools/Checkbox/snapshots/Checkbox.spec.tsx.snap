@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox snapshots should render Checkbox 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1jnxvbp Checkbox Checkbox--light"
+    data-test-checkbox="chip"
+  >
+    <input
+      class="Checkbox__input Checkbox__input--light"
+      data-test-checkbox-input="chip"
+      type="checkbox"
+    />
+    <div
+      class="css-1jnxvbp Checkbox__inputWrapper Checkbox__inputWrapper--light"
+      data-test-box=""
+    />
+    <small
+      class="css-1jnxvbp Checkbox__label Checkbox__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      data-test-text=""
+      style="text-align: inherit;"
+    >
+      label
+    </small>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Checkbox snapshots should render when checked 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1jnxvbp Checkbox Checkbox--light"
+    data-test-checkbox="chip"
+  >
+    <input
+      class="Checkbox__input Checkbox__input--light"
+      data-test-checkbox-input="chip"
+      type="checkbox"
+    />
+    <div
+      class="css-1jnxvbp Checkbox__inputWrapper Checkbox__inputWrapper--light"
+      data-test-box=""
+    >
+      <div
+        class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+        data-test-icon="checkbox"
+        height="8"
+        name="Checkbox"
+        width="8"
+      />
+    </div>
+    <small
+      class="css-1jnxvbp Checkbox__label Checkbox__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      data-test-text=""
+      style="text-align: inherit;"
+    >
+      label
+    </small>
+  </div>
+</DocumentFragment>
+`;

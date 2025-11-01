@@ -2,6 +2,7 @@
 import AlignmentArea from './AlignmentArea/AlignmentArea';
 import ButtonGroup from './ButtonGroup/ButtonGroup';
 import ButtonIcon from './ButtonIcon/ButtonIcon';
+import Checkbox from './Checkbox/Checkbox';
 import Chip from './Chip/Chip';
 import Color from './Color/Color';
 import ColorPicker from './ColorPicker/ColorPicker';
@@ -25,6 +26,7 @@ export const UITools = {
   AlignmentArea,
   ButtonGroup,
   ButtonIcon,
+  Checkbox,
   Chip,
   Color,
   ColorPicker,
