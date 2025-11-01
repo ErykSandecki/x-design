@@ -1,4 +1,4 @@
-import { RefObject, useRef, useState } from 'react';
+import { CSSProperties, RefObject, useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 // hooks
@@ -45,6 +45,7 @@ export type TUseElementEvents = TUseElementSizes & {
   onMouseDown: TUseMouseDownEvent;
   onMouseEnter: TUseMouseEnterEvent;
   onMouseLeave: TUseMouseLeaveEvent;
+  overflow: CSSProperties['overflow'];
   padding: TInsets;
   position: TElement['position'];
   showDropAnchors: boolean;
@@ -76,6 +77,7 @@ export const useElementEvents = (
   const { x, y } = coordinates;
   const sizes = useElementSizes(id);
   const showDropAnchors = !isSelected && position === 'relative';
+  const overflow: CSSProperties['overflow'] = elementData.clipContent ? 'hidden' : 'visible';
 
   useForceRerender([coordinates]);
   useInitializeRef(elementRef, id);
@@ -113,6 +115,7 @@ export const useElementEvents = (
     ),
     onMouseEnter: useMouseEnterEvent(id, isSelected, mouseMode),
     onMouseLeave: useMouseLeaveEvent(mouseMode, parentId),
+    overflow,
     padding: elementData.padding,
     position,
     showDropAnchors,
