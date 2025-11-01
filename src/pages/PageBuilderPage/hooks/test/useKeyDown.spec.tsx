@@ -8,7 +8,7 @@ import { pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // store
 import { canRedoReduxHistorySelector, canUndoReduxHistorySelector } from 'store/pageBuilder/selectors';
-import { configureStore } from 'store';
+import { configureStore, store } from 'store';
 
 // types
 import { KeyboardKeys } from 'types';
@@ -35,6 +35,11 @@ jest.mock('react-redux', () => ({
 }));
 
 describe('useWheelEvent', () => {
+  beforeAll(() => {
+    // mock
+    window.store = store;
+  });
+
   it(`should triger redo`, () => {
     // mock
     const store = configureStore(stateMock);

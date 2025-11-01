@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC, memo, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 // components
@@ -46,4 +46,4 @@ const PageBuilderPage: FC = () => {
   );
 };
 
-export default PageBuilderPage;
+export default memo(PageBuilderPage);

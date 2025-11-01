@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 // hooks
 import { useKeyboardHandler } from 'hooks';
@@ -7,7 +7,7 @@ import { useKeyboardHandler } from 'hooks';
 import { KEYBOARD_SHORTCUTS } from '../keys';
 
 // store
-import { canRedoReduxHistorySelector, canUndoReduxHistorySelector, pageSelector } from 'store/pageBuilder/selectors';
+import { canRedoReduxHistorySelector, canUndoReduxHistorySelector } from 'store/pageBuilder/selectors';
 import { reducerHistoryRedo, reducerHistoryUndo } from 'store/pageBuilder/actions';
 
 // types
@@ -20,23 +20,20 @@ type TUseKeyDown = void;
 
 export const useKeyDown = (setMouseMode: TFunc<[MouseMode]>): TUseKeyDown => {
   const dispatch = useDispatch();
-  const canRedo = useSelector(canRedoReduxHistorySelector);
-  const canUndo = useSelector(canUndoReduxHistorySelector);
-  const page = useSelector(pageSelector);
 
   useKeyboardHandler(
     true,
-    [page],
+    [],
     [
       {
         action: (): any => dispatch(reducerHistoryRedo()),
-        conditions: [canRedo],
+        conditions: [canRedoReduxHistorySelector(window.store.getState())],
         primaryKeys: KEYBOARD_SHORTCUTS.historyRedo[0].primaryKeys,
         secondaryKey: KEYBOARD_SHORTCUTS.historyRedo[0].secondaryKey,
       },
       {
         action: (): any => dispatch(reducerHistoryUndo()),
-        conditions: [canUndo],
+        conditions: [canUndoReduxHistorySelector(window.store.getState())],
         primaryKeys: KEYBOARD_SHORTCUTS.historyUndo[0].primaryKeys,
         secondaryKey: KEYBOARD_SHORTCUTS.historyUndo[0].secondaryKey,
       },

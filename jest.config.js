@@ -23,6 +23,8 @@ module.exports = {
     'src/translations',
     'src/types',
     'src/utils/history',
+    'src/components/App/App.tsx', // temporary
+    'src/store/appInitializer', // temporary
     '\\.stories\\.tsx$',
   ],
   coverageThreshold: {

@@ -7,12 +7,17 @@ import PageBuilderPage from './PageBuilderPage';
 import 'test/mocks/sagas/allSagas';
 
 // store
-import { configureStore } from 'store/store';
+import { configureStore, store } from 'store/store';
 
 // utils
 import { customRender } from 'test';
 
 describe('PageBuilderPage snapshots', () => {
+  beforeAll(() => {
+    // mock
+    window.store = store;
+  });
+
   it('should render PageBuilderPage', () => {
     // mock
     const store = configureStore();

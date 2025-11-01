@@ -36,6 +36,8 @@ export const useElementSizes = (id: TElement['id']): TUseElementSizes => {
   const isExcluded = boxSizing === 'excluded';
   const additionalHeight = padding.b.value + padding.t.value;
   const additionalWidth = padding.l.value + padding.r.value;
+
+  // @html delay
   const height = itemsRefs[id] ? parseInt(getComputedStyle(itemsRefs[id]).height) : 0;
   const width = itemsRefs[id] ? parseInt(getComputedStyle(itemsRefs[id]).width) : 0;
 
