@@ -1,13 +1,13 @@
 import { createSelector, Selector } from 'reselect';
-import { get as getFp } from 'lodash/fp';
+import { get as getFp, head as headFp } from 'lodash/fp';
 import { get, size } from 'lodash';
 
 // others
 import { REDUCER_KEY } from './actionsType';
 
 // types
-import { TElement } from 'types';
-import { TElements, TEvents, TPage, TPageBuilderState, TSelectedElements } from './types';
+import { TElement, TNestedKeyOf } from 'types';
+import { TElements, TEvents, TPage, TPageBuilderState, TSelectedElement, TSelectedElements } from './types';
 import { TMainState } from 'types/reducers';
 
 // utils
@@ -101,6 +101,11 @@ export const selectedElementsSelector: Selector<TMainState, TSelectedElements> =
   getFp('selectedElements'),
 );
 
+export const firstSelectedElementSelector: Selector<TMainState, TSelectedElement> = createSelector(
+  selectedElementsSelector,
+  headFp,
+);
+
 export const anySelectedElementSelector: Selector<TMainState, boolean> = createSelector(
   selectedElementsSelector,
   (selectedElements) => !!selectedElements.length,
@@ -138,4 +143,15 @@ export const areParentsTheSameSelector: Selector<TMainState, boolean> = createSe
 export const counterAngleSelectorCreator = (parentId: TElement['parentId']): Selector<TMainState, number> =>
   createSelector(elementsSelector, (elements) =>
     parentId === '-1' ? 0 : computeCounterRotation(getParentsAngles([], elements, parentId)).counterAngle,
+  );
+
+export const isMixedSelectorCreator = (key: TNestedKeyOf<TElement>): Selector<TMainState, boolean> =>
+  createSelector(
+    elementsSelector,
+    firstSelectedElementSelector,
+    selectedElementsSelector,
+    (elements, firstElement, selectedElements) =>
+      selectedElements
+        .filter(({ id }) => id !== firstElement.id)
+        .some(({ id }) => get(elements[id], key) !== get(elements[firstElement.id], key)),
   );
