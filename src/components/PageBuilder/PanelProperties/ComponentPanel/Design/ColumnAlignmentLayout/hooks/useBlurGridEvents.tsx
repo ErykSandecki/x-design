@@ -13,12 +13,13 @@ export type TUseBlurGridEvents = {
 
 export const useBlurGridEvents = (
   columns: string,
-  element: TElement,
+  layout: TElement['layout'],
   rows: string,
   setColumns: TFunc<[string]>,
   setRows: TFunc<[string]>,
 ): TUseBlurGridEvents => {
   const dispatch = useDispatch();
+
   const exceedRange = (value: string): boolean => {
     const amount = parseInt(value);
     return amount <= 0 || amount > 100;
@@ -26,7 +27,7 @@ export const useBlurGridEvents = (
 
   const handleBlurColumns = (): void => {
     if (columns === '' || exceedRange(columns)) {
-      setColumns(element.layout.grid.columns.toString());
+      setColumns(layout.grid.columns.toString());
     } else {
       dispatch(changeLayoutGrid({ columns: parseInt(columns) }));
     }
@@ -34,7 +35,7 @@ export const useBlurGridEvents = (
 
   const handleBlurRows = (): void => {
     if (rows === '' || exceedRange(rows)) {
-      setRows(element.layout.grid.rows.toString());
+      setRows(layout.grid.rows.toString());
     } else {
       dispatch(changeLayoutGrid({ rows: parseInt(rows) }));
     }

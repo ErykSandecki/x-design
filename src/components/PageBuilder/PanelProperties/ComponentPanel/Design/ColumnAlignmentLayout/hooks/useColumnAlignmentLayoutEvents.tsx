@@ -1,9 +1,13 @@
-import { first, size } from 'lodash';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 
 // store
-import { elementDataSelectorCreator, elementsSelector, selectedElementsSelector } from 'store/pageBuilder/selectors';
+import {
+  elementAttributeSelectorCreator,
+  firstSelectedElementIdSelector,
+  isMixedSelectorCreator,
+  multipleSelectedElementsSelector,
+} from 'store/pageBuilder/selectors';
 import { useUpdateStates } from './useUpdateStates';
 
 // types
@@ -14,9 +18,6 @@ import { TUseChangeAlignmentLayoutEvent, useChangeAlignmentLayoutEvent } from '.
 import { TUseChangeGapEvents, useChangeGapEvents } from './useChangeGapEvents';
 import { TUseChangeGridEvents, useChangeGridEvents } from './useChangeGridEvents';
 import { TUseClickCellEvent, useClickCellEvent } from './useClickCellEvent';
-
-// utils
-import { isMixed } from '../../../../../utils/isMixed';
 
 export type TUseColumnAlignmentLayoutEvents = TUseBlurGapEvents &
   TUseBlurGridEvents &
@@ -46,26 +47,23 @@ export const useColumnAlignmentLayoutEvents = (): TUseColumnAlignmentLayoutEvent
   const [columns, setColumns] = useState('');
   const [rowGap, setRowGap] = useState('');
   const [rows, setRows] = useState('');
-  const elements = useSelector(elementsSelector);
-  const selectedElements = useSelector(selectedElementsSelector);
-  const firstElement = first(selectedElements);
-  const element = useSelector(elementDataSelectorCreator(firstElement.id));
-  const isMixedAlignment = isMixed(elements, firstElement, 'layout.alignment', selectedElements);
-  const isMixedBoxSizing = isMixed(elements, firstElement, 'layout.boxSizing', selectedElements);
-  const isMixedColumnGap = isMixed(elements, firstElement, 'layout.gap.column.value', selectedElements);
-  const isMixedColumns = isMixed(elements, firstElement, 'layout.grid.columns', selectedElements);
-  const isMixedColumnRow = isMixed(elements, firstElement, 'layout.gap.row.value', selectedElements);
-  const isMixedRows = isMixed(elements, firstElement, 'layout.grid.rows', selectedElements);
-  const isMixedLayout = isMixed(elements, firstElement, 'layout.type', selectedElements);
-  const isMultiple = size(selectedElements) > 1;
-  const { layout } = element;
+  const firstElementId = useSelector(firstSelectedElementIdSelector);
+  const isMixedAlignment = useSelector(isMixedSelectorCreator('layout.alignment'));
+  const isMixedBoxSizing = useSelector(isMixedSelectorCreator('layout.boxSizing'));
+  const isMixedColumnGap = useSelector(isMixedSelectorCreator('layout.gap.column.value'));
+  const isMixedColumns = useSelector(isMixedSelectorCreator('layout.grid.columns'));
+  const isMixedColumnRow = useSelector(isMixedSelectorCreator('layout.gap.row.value'));
+  const isMixedRows = useSelector(isMixedSelectorCreator('layout.grid.rows'));
+  const isMixedLayout = useSelector(isMixedSelectorCreator('layout.type'));
+  const isMultiple = useSelector(multipleSelectedElementsSelector);
+  const layout = useSelector(elementAttributeSelectorCreator('layout', firstElementId));
   const { type } = layout;
   const isFreeForm = type === LayoutType.freeForm;
   const isGrid = type === LayoutType.grid;
   const showColumnGap = type === LayoutType.horizontal || type === LayoutType.grid;
   const showRowGap = type === LayoutType.vertical || type === LayoutType.grid;
-  const onBlurGapEvents = useBlurGapEvents(columnGap, element, rowGap, setColumnGap, setRowGap);
-  const onBlurGridEvents = useBlurGridEvents(columns, element, rows, setColumns, setRows);
+  const onBlurGapEvents = useBlurGapEvents(columnGap, layout, rowGap, setColumnGap, setRowGap);
+  const onBlurGridEvents = useBlurGridEvents(columns, layout, rows, setColumns, setRows);
   const onChangeAlignment = useChangeAlignmentLayoutEvent(setAlignment);
   const onChangeGapEvents = useChangeGapEvents(setColumnGap, setRowGap);
   const onChangeGridEvents = useChangeGridEvents(setColumns, setRows);

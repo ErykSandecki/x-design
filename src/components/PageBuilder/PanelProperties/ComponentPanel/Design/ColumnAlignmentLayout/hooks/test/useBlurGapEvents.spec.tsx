@@ -16,7 +16,7 @@ jest.mock('react-redux', () => ({
 describe('useBlurGapEvents', () => {
   it(`should trigger blur column gap`, () => {
     // before
-    const { result } = renderHook(() => useBlurGapEvents('0', elementMock, '0', mockCallBack, mockCallBack));
+    const { result } = renderHook(() => useBlurGapEvents('0', elementMock.layout, '0', mockCallBack, mockCallBack));
 
     // action
     result.current.onBlurColumnGap();
@@ -27,7 +27,7 @@ describe('useBlurGapEvents', () => {
 
   it(`should reset value column gap`, () => {
     // before
-    const { result } = renderHook(() => useBlurGapEvents('', elementMock, '0', mockCallBack, mockCallBack));
+    const { result } = renderHook(() => useBlurGapEvents('', elementMock.layout, '0', mockCallBack, mockCallBack));
 
     // action
     result.current.onBlurColumnGap();
@@ -38,7 +38,7 @@ describe('useBlurGapEvents', () => {
 
   it(`should trigger blur row gap`, () => {
     // before
-    const { result } = renderHook(() => useBlurGapEvents('0', elementMock, '0', mockCallBack, mockCallBack));
+    const { result } = renderHook(() => useBlurGapEvents('0', elementMock.layout, '0', mockCallBack, mockCallBack));
 
     // action
     result.current.onBlurRowGap();
@@ -49,7 +49,7 @@ describe('useBlurGapEvents', () => {
 
   it(`should reset value row gap`, () => {
     // before
-    const { result } = renderHook(() => useBlurGapEvents('0', elementMock, '', mockCallBack, mockCallBack));
+    const { result } = renderHook(() => useBlurGapEvents('0', elementMock.layout, '', mockCallBack, mockCallBack));
 
     // action
     result.current.onBlurRowGap();

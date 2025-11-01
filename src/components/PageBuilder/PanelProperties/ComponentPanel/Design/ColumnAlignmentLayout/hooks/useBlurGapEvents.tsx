@@ -13,7 +13,7 @@ export type TUseBlurGapEvents = {
 
 export const useBlurGapEvents = (
   columnGap: string,
-  element: TElement,
+  layout: TElement['layout'],
   rowGap: string,
   setColumnGap: TFunc<[string]>,
   setRowGap: TFunc<[string]>,
@@ -22,7 +22,7 @@ export const useBlurGapEvents = (
 
   const handleBlurColumnGap = (): void => {
     if (columnGap === '') {
-      setColumnGap(element.layout.gap.column.value.toString());
+      setColumnGap(layout.gap.column.value.toString());
     } else {
       dispatch(setElementsGap('column', parseFloat(columnGap)));
     }
@@ -30,7 +30,7 @@ export const useBlurGapEvents = (
 
   const handleBlurRowGap = (): void => {
     if (rowGap === '') {
-      setRowGap(element.layout.gap.row.value.toString());
+      setRowGap(layout.gap.row.value.toString());
     } else {
       dispatch(setElementsGap('row', parseFloat(rowGap)));
     }
