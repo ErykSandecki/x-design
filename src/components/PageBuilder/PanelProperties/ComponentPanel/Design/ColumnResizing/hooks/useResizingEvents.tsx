@@ -1,9 +1,13 @@
-import { first, size } from 'lodash';
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 // store
-import { elementDataSelectorCreator, elementsSelector, selectedElementsSelector } from 'store/pageBuilder/selectors';
+import {
+  elementAttributeSelectorCreator,
+  firstSelectedElementIdSelector,
+  isMixedSelectorCreator,
+  multipleSelectedElementsSelector,
+} from 'store/pageBuilder/selectors';
 
 // types
 import { TElement } from 'types';
@@ -11,7 +15,6 @@ import { TUseBlurEvent, useBlurEvent } from './useBlurEvent';
 import { TUseChangeEvent, useChangeEvent } from './useChangeEvent';
 
 // utils
-import { isMixed } from '../../../../../utils/isMixed';
 import { isPureNumber } from 'utils';
 import { normalizeMultipleValue } from '../../../../../utils/normalizeMultipleValue';
 
@@ -20,7 +23,8 @@ type TUseResizingEvents = TUseChangeEvent &
     aspectRatio: boolean;
     attachedValueHeight: boolean;
     attachedValueWidth: boolean;
-    element: TElement;
+    elementHeight: TElement['height'];
+    elementWidth: TElement['width'];
     height: string;
     isMixedHeight: boolean;
     isMixedWidth: boolean;
@@ -31,16 +35,16 @@ type TUseResizingEvents = TUseChangeEvent &
   };
 
 export const useResizingEvents = (): TUseResizingEvents => {
-  const elements = useSelector(elementsSelector);
-  const selectedElements = useSelector(selectedElementsSelector);
-  const firstElement = first(selectedElements);
-  const element = useSelector(elementDataSelectorCreator(firstElement.id));
-  const isMultiple = size(selectedElements) > 1;
-  const isMixedAspectRatio = isMixed(elements, firstElement, 'aspectRatio', selectedElements);
-  const isMixedHeight = isMixed(elements, firstElement, 'height.value', selectedElements);
-  const isMixedWidth = isMixed(elements, firstElement, 'width.value', selectedElements);
-  const { type: typeHeight, unit: unitHeight, value: currentHeight } = element.height;
-  const { type: typeWidth, unit: unitWidth, value: currentWidth } = element.width;
+  const firstElementId = useSelector(firstSelectedElementIdSelector);
+  const isMultiple = useSelector(multipleSelectedElementsSelector);
+  const isMixedAspectRatio = useSelector(isMixedSelectorCreator('aspectRatio'));
+  const isMixedHeight = useSelector(isMixedSelectorCreator('height.value'));
+  const isMixedWidth = useSelector(isMixedSelectorCreator('width.value'));
+  const aspectRatio = useSelector(elementAttributeSelectorCreator('aspectRatio', firstElementId));
+  const elementHeight = useSelector(elementAttributeSelectorCreator('height', firstElementId));
+  const elementWidth = useSelector(elementAttributeSelectorCreator('width', firstElementId));
+  const { type: typeHeight, unit: unitHeight, value: currentHeight } = elementHeight;
+  const { type: typeWidth, unit: unitWidth, value: currentWidth } = elementWidth;
   const [height, setHeight] = useState('');
   const [width, setWidth] = useState('');
   const isPureHeight = isPureNumber(height);
@@ -48,7 +52,7 @@ export const useResizingEvents = (): TUseResizingEvents => {
   const hasMixedSizes = isMixedHeight || isMixedWidth;
   const hasPureSizes = isPureHeight && isPureWidth;
   const hasNoUnit = unitHeight === undefined && unitWidth === undefined;
-  const onBlurEvents = useBlurEvent(element, height, setHeight, setWidth, width);
+  const onBlurEvents = useBlurEvent(elementHeight, elementWidth, height, setHeight, setWidth, width);
   const onChangeEvents = useChangeEvent(setHeight, setWidth, unitHeight, unitWidth);
   const attachedValueHeight = typeHeight !== 'fixed' && !isMixedHeight;
   const attachedValueWidth = typeWidth !== 'fixed' && !isMixedWidth;
@@ -64,10 +68,11 @@ export const useResizingEvents = (): TUseResizingEvents => {
   return {
     ...onBlurEvents,
     ...onChangeEvents,
-    aspectRatio: element.aspectRatio,
+    aspectRatio,
     attachedValueHeight,
     attachedValueWidth,
-    element,
+    elementHeight,
+    elementWidth,
     height,
     isMixedHeight,
     isMixedWidth,

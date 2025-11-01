@@ -15,7 +15,8 @@ export type TUseBlurEvent = {
 };
 
 export const useBlurEvent = (
-  element: TElement,
+  elementHeight: TElement['height'],
+  elementWidth: TElement['width'],
   height: string,
   setHeight: TFunc<[string]>,
   setWidth: TFunc<[string]>,
@@ -25,7 +26,7 @@ export const useBlurEvent = (
 
   const handleBlurHeight = (): void => {
     if (height === '') {
-      setHeight(element.height.value.toString());
+      setHeight(elementHeight.value.toString());
     } else {
       const targetHeight = isPureNumber(height) ? parseFloat(height) : height;
       dispatch(setElementsSizes('height', targetHeight));
@@ -34,7 +35,7 @@ export const useBlurEvent = (
 
   const handleBlurWidth = (): void => {
     if (width === '') {
-      setWidth(element.width.value.toString());
+      setWidth(elementWidth.value.toString());
     } else {
       const targetWidth = isPureNumber(width) ? parseFloat(width) : width;
       dispatch(setElementsSizes('width', targetWidth));

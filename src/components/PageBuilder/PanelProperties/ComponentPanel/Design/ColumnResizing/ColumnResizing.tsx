@@ -23,7 +23,8 @@ const ColumnResizing: FC = () => {
     aspectRatio,
     attachedValueHeight,
     attachedValueWidth,
-    element,
+    elementHeight,
+    elementWidth,
     height,
     isMixedHeight,
     isMixedWidth,
@@ -50,7 +51,7 @@ const ColumnResizing: FC = () => {
         e2eValue="width"
         onBlur={onBlurWidth}
         onChange={onChangeWidth}
-        popoverChildren={<PopoverWidth isMixed={isMixedWidth} width={element.width} />}
+        popoverChildren={<PopoverWidth isMixed={isMixedWidth} width={elementWidth} />}
         sizeType="width"
         value={width}
         valueScrubbaleInput={valueScrubbaleInputWidth}
@@ -60,7 +61,7 @@ const ColumnResizing: FC = () => {
         e2eValue="height"
         onBlur={onBlurHeight}
         onChange={onChangeHeight}
-        popoverChildren={<PopoverHeight height={element.height} isMixed={isMixedHeight} />}
+        popoverChildren={<PopoverHeight height={elementHeight} isMixed={isMixedHeight} />}
         sizeType="height"
         value={height}
         valueScrubbaleInput={valueScrubbaleInputHeight}
