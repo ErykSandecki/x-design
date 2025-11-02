@@ -21,6 +21,8 @@ import { ReactComponent as Columns } from './svg/columns.svg';
 import { ReactComponent as Comment } from './svg/comment.svg';
 import { ReactComponent as Component } from './svg/component.svg';
 import { ReactComponent as Detached } from './svg/detached.svg';
+import { ReactComponent as DropEmpty } from './svg/drop-empty.svg';
+import { ReactComponent as DropFilled } from './svg/drop-filled.svg';
 import { ReactComponent as EWResize } from './svg/ew-resize.svg';
 import { ReactComponent as EyesClosed } from './svg/eyes-closed.svg';
 import { ReactComponent as EyesDropper } from './svg/eyes-dropper.svg';
@@ -96,6 +98,8 @@ export const Icons = {
   Comment,
   Component,
   Detached,
+  DropEmpty,
+  DropFilled,
   EWResize,
   EyesClosed,
   EyesDropper,
