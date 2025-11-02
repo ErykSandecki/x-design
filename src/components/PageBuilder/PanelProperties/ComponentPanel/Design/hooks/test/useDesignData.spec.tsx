@@ -71,6 +71,7 @@ describe('useDesignData', () => {
       layoutType: LayoutType.freeForm,
       onChangeLayoutType: expect.any(Function),
       position: 'absolute',
+      visible: true,
     });
   });
 });
