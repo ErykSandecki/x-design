@@ -1,4 +1,4 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 // hooks
 import { useKeyboardHandler } from 'hooks';
@@ -19,21 +19,23 @@ import { onEscapeChangeMouseModeHandler } from '../utils/onEscapeChangeMouseMode
 type TUseKeyDown = void;
 
 export const useKeyDown = (setMouseMode: TFunc<[MouseMode]>): TUseKeyDown => {
+  const canRedo = useSelector(canRedoReduxHistorySelector);
+  const canUndo = useSelector(canUndoReduxHistorySelector);
   const dispatch = useDispatch();
 
   useKeyboardHandler(
     true,
-    [],
+    [canRedo, canUndo],
     [
       {
         action: (): any => dispatch(reducerHistoryRedo()),
-        conditions: [canRedoReduxHistorySelector(window.store.getState())],
+        conditions: [canRedo],
         primaryKeys: KEYBOARD_SHORTCUTS.historyRedo[0].primaryKeys,
         secondaryKey: KEYBOARD_SHORTCUTS.historyRedo[0].secondaryKey,
       },
       {
         action: (): any => dispatch(reducerHistoryUndo()),
-        conditions: [canUndoReduxHistorySelector(window.store.getState())],
+        conditions: [canUndo],
         primaryKeys: KEYBOARD_SHORTCUTS.historyUndo[0].primaryKeys,
         secondaryKey: KEYBOARD_SHORTCUTS.historyUndo[0].secondaryKey,
       },

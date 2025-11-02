@@ -54,6 +54,7 @@ export const handleCreateElement = (
       parentId: possibleElement.parentId,
       position: 'absolute',
       type: ElementType.frame,
+      visible: true,
       width: {
         type: 'fixed',
         value: Math.abs(x1 - x2),

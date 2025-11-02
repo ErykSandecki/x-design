@@ -36,6 +36,7 @@ import {
   APPLY_ELEMENTS_SIZE_MIN_MAX_TYPE,
   CHANGE_CLIP_CONTENT,
   UNSELECT_ELEMENTS,
+  CHANGE_VISIBILITY,
 } from './actionsType';
 
 // types
@@ -228,6 +229,11 @@ export type TChangeParentAction = {
 
 export type TChangePositionAction = {
   type: typeof CHANGE_POSITION;
+};
+
+export type TChangeVisibilityAction = {
+  payload: TElement['visible'];
+  type: typeof CHANGE_VISIBILITY;
 };
 
 export type TClearPrevStateAction = {

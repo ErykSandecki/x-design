@@ -93,5 +93,6 @@ export type TElement = {
   parentId: TElement['id'] | '-1';
   position: CSSProperties['position'];
   type: ElementType;
+  visible: boolean;
   width: TScore & TSize;
 };

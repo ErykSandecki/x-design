@@ -67,6 +67,7 @@ export const BASE_ELEMENTS: TElement = {
   parentId: '-1',
   position: 'absolute',
   type: ElementType.base,
+  visible: true,
   width: { type: 'fixed', value: 0 },
 };
 

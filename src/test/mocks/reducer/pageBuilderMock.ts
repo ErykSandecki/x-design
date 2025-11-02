@@ -107,6 +107,7 @@ export const elementMock: TElement = {
   parentId: '-1',
   position: 'absolute',
   type: ElementType.frame,
+  visible: true,
   width: {
     type: 'fixed',
     value: 100,
@@ -137,6 +138,7 @@ export const createFrameMock: TElement = {
   parentId: '-1',
   position: 'absolute',
   type: ElementType.frame,
+  visible: true,
   width: {
     type: 'fixed',
     value: 0,

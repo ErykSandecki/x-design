@@ -38,6 +38,7 @@ import {
   changeLayoutGrid,
   changeParent,
   changePosition,
+  changeVisibility,
   clearPrevState,
   fitLayout,
   flipElements,
@@ -414,111 +415,6 @@ describe('PageBuilderReducer', () => {
             { ...selectedElementMock, id: 'test-2', parentId: 'test-1' },
             { ...selectedElementMock, id: 'test-3', parentId: 'test-1' },
           ],
-        },
-      },
-    });
-  });
-
-  it('should handle CHANGE_POSITION', () => {
-    // mock
-    const el1 = document.createElement('div');
-    const el2 = document.createElement('div');
-    const el3 = document.createElement('div');
-    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-
-    // before
-    el1.setAttribute('id', selectedElementMock.id);
-    el1.style.height = '100px';
-    el1.style.width = '100px';
-    el2.setAttribute('id', 'test-2');
-    el2.style.height = '100px';
-    el2.style.width = '100px';
-    el3.setAttribute('id', 'test-3');
-    el3.style.height = '100px';
-    el3.style.width = '100px';
-    document.body.appendChild(el1);
-    document.body.appendChild(el2);
-    document.body.appendChild(el3);
-
-    // before
-    const state = reducer(changePosition(), {
-      ...pageBuilderStateMock[PAGE_BUILDER],
-      pages: {
-        ...pageBuilderStateMock[PAGE_BUILDER].pages,
-        ['0']: {
-          ...currentPage,
-          elements: {
-            ...currentPage.elements,
-            ['-1']: {
-              ...currentPage.elements['-1'],
-              children: [childrenMock],
-            },
-            [elementMock.id]: {
-              ...elementMock,
-              children: [
-                { ...childrenMock, id: 'test-2' },
-                { ...childrenMock, id: 'test-3' },
-              ],
-              position: 'absolute',
-            },
-            ['test-2']: {
-              ...elementMock,
-              children: [],
-              id: 'test-2',
-              parentId: 'test-1',
-              position: 'relative',
-            },
-            ['test-3']: {
-              ...elementMock,
-              children: [],
-              id: 'test-3',
-              parentId: 'test-1',
-              position: 'relative',
-            },
-          },
-          selectedElements: [{ ...selectedElementMock, id: 'test-2', parentId: 'test-1' }],
-        },
-      },
-    });
-
-    // result
-    expect(state).toStrictEqual({
-      ...pageBuilderStateMock[PAGE_BUILDER],
-      pages: {
-        ...pageBuilderStateMock[PAGE_BUILDER].pages,
-        ['0']: {
-          ...currentPage,
-          elements: {
-            ...currentPage.elements,
-            ['-1']: {
-              ...currentPage.elements['-1'],
-              children: [childrenMock],
-            },
-            [elementMock.id]: {
-              ...elementMock,
-              children: [
-                { ...childrenMock, id: 'test-3' },
-                { ...childrenMock, id: 'test-2' },
-              ],
-              position: 'absolute',
-            },
-            ['test-2']: {
-              ...elementMock,
-              alignment: {},
-              children: [],
-              id: 'test-2',
-              parentId: 'test-1',
-              position: 'absolute',
-            },
-            ['test-3']: {
-              ...elementMock,
-              children: [],
-              id: 'test-3',
-              parentId: 'test-1',
-              position: 'relative',
-            },
-          },
-          selectedElements: [{ ...selectedElementMock, id: 'test-2', parentId: 'test-1' }],
         },
       },
     });
@@ -974,6 +870,160 @@ describe('PageBuilderReducer', () => {
               parentId: '-1',
             },
           },
+        },
+      },
+    });
+  });
+
+  it('should handle CHANGE_POSITION', () => {
+    // mock
+    const el1 = document.createElement('div');
+    const el2 = document.createElement('div');
+    const el3 = document.createElement('div');
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+
+    // before
+    el1.setAttribute('id', selectedElementMock.id);
+    el1.style.height = '100px';
+    el1.style.width = '100px';
+    el2.setAttribute('id', 'test-2');
+    el2.style.height = '100px';
+    el2.style.width = '100px';
+    el3.setAttribute('id', 'test-3');
+    el3.style.height = '100px';
+    el3.style.width = '100px';
+    document.body.appendChild(el1);
+    document.body.appendChild(el2);
+    document.body.appendChild(el3);
+
+    // before
+    const state = reducer(changePosition(), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [childrenMock],
+            },
+            [elementMock.id]: {
+              ...elementMock,
+              children: [
+                { ...childrenMock, id: 'test-2' },
+                { ...childrenMock, id: 'test-3' },
+              ],
+              position: 'absolute',
+            },
+            ['test-2']: {
+              ...elementMock,
+              children: [],
+              id: 'test-2',
+              parentId: 'test-1',
+              position: 'relative',
+            },
+            ['test-3']: {
+              ...elementMock,
+              children: [],
+              id: 'test-3',
+              parentId: 'test-1',
+              position: 'relative',
+            },
+          },
+          selectedElements: [{ ...selectedElementMock, id: 'test-2', parentId: 'test-1' }],
+        },
+      },
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [childrenMock],
+            },
+            [elementMock.id]: {
+              ...elementMock,
+              children: [
+                { ...childrenMock, id: 'test-3' },
+                { ...childrenMock, id: 'test-2' },
+              ],
+              position: 'absolute',
+            },
+            ['test-2']: {
+              ...elementMock,
+              alignment: {},
+              children: [],
+              id: 'test-2',
+              parentId: 'test-1',
+              position: 'absolute',
+            },
+            ['test-3']: {
+              ...elementMock,
+              children: [],
+              id: 'test-3',
+              parentId: 'test-1',
+              position: 'relative',
+            },
+          },
+          selectedElements: [{ ...selectedElementMock, id: 'test-2', parentId: 'test-1' }],
+        },
+      },
+    });
+  });
+
+  it('should handle CHANGE_VISIBILITY', () => {
+    // mock
+    const visible: TElement['visible'] = false;
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+
+    // before
+    const state = reducer(changeVisibility(visible), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [selectedElementMock.id, 'test-2'],
+            },
+            [elementMock.id]: elementMock,
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [selectedElementMock.id, 'test-2'],
+            },
+            [elementMock.id]: {
+              ...elementMock,
+              visible,
+            },
+          },
+          selectedElements: [selectedElementMock],
         },
       },
     });
