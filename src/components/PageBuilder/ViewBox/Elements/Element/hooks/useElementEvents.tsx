@@ -42,6 +42,7 @@ export type TUseElementEvents = TUseElementSizes & {
   isSelected: boolean;
   layout: TElement['layout'];
   margin: TInsets;
+  mixBlendMode: TElement['mixBlendMode'];
   onMouseDown: TUseMouseDownEvent;
   onMouseEnter: TUseMouseEnterEvent;
   onMouseLeave: TUseMouseLeaveEvent;
@@ -100,6 +101,7 @@ export const useElementEvents = (
     isSelected,
     layout: elementData.layout,
     margin: elementData.margin,
+    mixBlendMode: elementData.mixBlendMode,
     onMouseDown: useMouseDownEvent(
       cursorPosition,
       cursorPositionBase,

@@ -36,7 +36,7 @@ const DesignAppearanceButtonIcons = (
     <UITools.ButtonIcon
       idContainer={PANEL_PROPERTIES_ID}
       key={1}
-      name={mixBlendMode === 'initial' ? 'DropEmpty' : 'DropFilled'}
+      name={currentMixBlendMode === 'initial' ? 'DropEmpty' : 'DropFilled'}
       popoverAlignVertically={UITools.AlignPopoverVertically.top}
       popoverChildren={
         <PopoverBlendMode
