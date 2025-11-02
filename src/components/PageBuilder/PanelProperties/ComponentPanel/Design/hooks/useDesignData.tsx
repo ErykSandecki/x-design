@@ -18,6 +18,7 @@ export type TUseDesignData = {
   layoutType: TElement['layout']['type'];
   onChangeLayoutType: TFunc;
   position: TElement['position'];
+  visible: TElement['visible'];
 };
 
 export const useDesignData = (): TUseDesignData => {
@@ -27,6 +28,7 @@ export const useDesignData = (): TUseDesignData => {
   const isMixedLayoutType = useSelector(isMixedSelectorCreator('layout.type'));
   const position = useSelector(elementAttributeSelectorCreator('position', firstElementId));
   const layout = useSelector(elementAttributeSelectorCreator('layout', firstElementId));
+  const visible = useSelector(elementAttributeSelectorCreator('visible', firstElementId));
 
   const onChangeLayoutType = (): void => {
     if (isMixedLayoutType) {
@@ -45,5 +47,6 @@ export const useDesignData = (): TUseDesignData => {
     layoutType: layout.type,
     onChangeLayoutType,
     position,
+    visible,
   };
 };

@@ -23,6 +23,7 @@ import { useDesignData } from './hooks/useDesignData';
 
 // others
 import { translationNameSpace } from './constants';
+import DesignAppearanceButtonIcons from './DesignAppearanceButtonIcons';
 
 export type TDesignProps = {
   width: number;
@@ -30,8 +31,8 @@ export type TDesignProps = {
 
 const Design: FC<TDesignProps> = ({ width }) => {
   const dispatch = useDispatch();
-  const { areParentsTheSame, isMixedLayoutType, layoutType, onChangeLayoutType, position } = useDesignData();
   const { t } = useTranslation();
+  const { areParentsTheSame, isMixedLayoutType, layoutType, onChangeLayoutType, position, visible } = useDesignData();
 
   return (
     <>
@@ -58,6 +59,12 @@ const Design: FC<TDesignProps> = ({ width }) => {
         <ColumnPadding />
         <ColumnMargin />
         <ColumnClipContent />
+      </UITools.Section>
+      <UITools.Section
+        buttonsIcon={DesignAppearanceButtonIcons(dispatch, visible)}
+        label={t(`${translationNameSpace}.section.4.label`)}
+      >
+        <></>
       </UITools.Section>
     </>
   );

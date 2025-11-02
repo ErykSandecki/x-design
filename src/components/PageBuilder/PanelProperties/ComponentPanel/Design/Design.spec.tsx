@@ -268,4 +268,34 @@ describe('Design behaviors', () => {
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.value).toBe('auto');
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.value).toBe('auto');
   });
+
+  it('should change visibility', () => {
+    // mock
+    const store = configureStore({
+      ...stateMock,
+      [PAGE_BUILDER]: {
+        ...stateMock[PAGE_BUILDER],
+        pages: {
+          ...stateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...stateMock[PAGE_BUILDER].pages['0'],
+            selectedElements: [{ ...selectedElementMock, id: 'test-2', parentId: 'test-1' }],
+          },
+        },
+      },
+    });
+
+    // before
+    const { container } = customRender(
+      <Provider store={store}>
+        <Design width={0} />
+      </Provider>,
+    );
+
+    // action
+    fireEvent.click(getByE2EAttribute(container, E2EAttribute.icon, 'eyes-opened'));
+
+    // result
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-2'].visible).toBe(false);
+  });
 });
