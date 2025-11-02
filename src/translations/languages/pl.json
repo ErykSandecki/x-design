@@ -91,6 +91,8 @@
   "tooltip.alignVerticalBottom": "Wyr. do dołu",
   "tooltip.alignVerticalCenter": "Wyr. do środka",
   "tooltip.alignVerticalTop": "Wyr. do góry",
+  "tooltip.appearance.hide": "Ukryj",
+  "tooltip.appearance.show": "Pokaż",
   "tooltip.autoLayoutSettings": "Ustawienia układu widoku",
   "tooltip.coordinates.x": "X - pozycja",
   "tooltip.coordinates.y": "Y - pozycja",

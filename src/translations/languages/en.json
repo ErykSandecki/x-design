@@ -90,6 +90,8 @@
   "tooltip.alignVerticalBottom": "Align bottom",
   "tooltip.alignVerticalCenter": "Align center",
   "tooltip.alignVerticalTop": "Align top",
+  "tooltip.appearance.hide": "Hide",
+  "tooltip.appearance.show": "Show",
   "tooltip.autoLayoutSettings": "Auto layout settings",
   "tooltip.coordinates.x": "X - position",
   "tooltip.coordinates.y": "Y - position",

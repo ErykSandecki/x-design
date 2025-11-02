@@ -61,7 +61,7 @@ const Design: FC<TDesignProps> = ({ width }) => {
         <ColumnClipContent />
       </UITools.Section>
       <UITools.Section
-        buttonsIcon={DesignAppearanceButtonIcons(dispatch, visible)}
+        buttonsIcon={DesignAppearanceButtonIcons(dispatch, t, visible)}
         label={t(`${translationNameSpace}.section.4.label`)}
       >
         <></>
