@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useRef } from 'react';
 import { useSelector } from 'react-redux';
 
 // components
@@ -28,12 +28,13 @@ export type TClickableAreaProps = {
 };
 
 const ClickableArea: FC<TClickableAreaProps> = ({ elementsCoordinates, outlineCoordinates }) => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-  const { isMultipleMoving } = useSelector(eventsSelector);
-  const { onMouseDown } = useClickableAreaEvents();
   const areParentsTheSame = useSelector(areParentsTheSameSelector);
+  const areaRef = useRef(null);
   const height = outlineCoordinates.y2 - outlineCoordinates.y1;
   const width = outlineCoordinates.x2 - outlineCoordinates.x1;
+  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
+  const { isMultipleMoving } = useSelector(eventsSelector);
+  const { onMouseDown } = useClickableAreaEvents(areaRef);
 
   if (isMultipleMoving) {
     return null;
@@ -46,6 +47,7 @@ const ClickableArea: FC<TClickableAreaProps> = ({ elementsCoordinates, outlineCo
         <E2EDataAttribute type={E2EAttribute.outline}>
           <svg
             className={cx(classNamesWithTheme[className])}
+            ref={areaRef}
             style={{
               height: `${height}px`,
               left: `${outlineCoordinates.x1}px`,

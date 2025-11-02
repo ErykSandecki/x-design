@@ -3,6 +3,10 @@
   position: relative;
   z-index: 1;
 
+  * {
+    -webkit-user-drag: none;
+  }
+
   &--color-sampler {
     cursor:
       url('assets/icons/cursors/sampler.svg') 8 24,

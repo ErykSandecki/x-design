@@ -33,6 +33,7 @@ import {
   SET_ELEMENTS_SIZES_MIN_MAX,
   TOGGLE_ASPECT_RATIO,
   UNSELECT_ELEMENT,
+  UNSELECT_ELEMENTS,
   UPDATE_EVENTS_STATUS,
   UPDATE_PREV_STATE,
 } from './actionsType';
@@ -87,6 +88,7 @@ import {
   TApplyElementsSizeMinMaxTypeActionPayload,
   TApplyElementsSizeMinMaxTypeAction,
   TChangeClipContentAction,
+  TUnselectElementsAction,
 } from './types';
 import { TElement } from 'types';
 
@@ -301,4 +303,8 @@ export const updatePrevState = (): TUpdatePrevStateAction => ({
 export const unselectElement = (payload: TUnselectElementAction['payload']): TUnselectElementAction => ({
   payload,
   type: UNSELECT_ELEMENT,
+});
+
+export const unselectElements = (): TUnselectElementsAction => ({
+  type: UNSELECT_ELEMENTS,
 });

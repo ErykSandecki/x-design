@@ -35,6 +35,7 @@ import {
   SET_ELEMENTS_GAP,
   APPLY_ELEMENTS_GAP_TYPE,
   CHANGE_CLIP_CONTENT,
+  UNSELECT_ELEMENTS,
 } from './actionsType';
 import { BASE_PAGE } from './constants';
 
@@ -350,6 +351,17 @@ const unselectElement = (
   },
 });
 
+const unselectElements = (state: TPageBuilderState): TPageBuilderState => ({
+  ...state,
+  pages: {
+    ...state.pages,
+    [state.currentPage]: {
+      ...state.pages[state.currentPage],
+      selectedElements: [],
+    },
+  },
+});
+
 const pageBuilder = (state: TPageBuilderState = initialState, action: TAction): TPageBuilderState => {
   switch (action.type) {
     case ADD_ELEMENT:
@@ -422,6 +434,8 @@ const pageBuilder = (state: TPageBuilderState = initialState, action: TAction): 
       return updatePrevState(state);
     case UNSELECT_ELEMENT:
       return unselectElement(state, action);
+    case UNSELECT_ELEMENTS:
+      return unselectElements(state);
     default:
       return state;
   }

@@ -56,6 +56,7 @@ import {
   setElementsSizesMinMax,
   toggleAspectRatio,
   unselectElement,
+  unselectElements,
   updateEventsStatus,
   updatePrevState,
 } from '../actions';
@@ -1740,6 +1741,28 @@ describe('PageBuilderReducer', () => {
 
     // before
     const state = reducer(unselectElement(id), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+    });
+  });
+
+  it('should handle UNSELECT_ELEMENTS', () => {
+    // mock
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+
+    // before
+    const state = reducer(unselectElements(), {
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,

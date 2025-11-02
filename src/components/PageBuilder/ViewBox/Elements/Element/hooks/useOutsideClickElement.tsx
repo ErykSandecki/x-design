@@ -1,8 +1,10 @@
 import { defer } from 'lodash';
 import { RefObject, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import { store } from 'store';
 
 // store
+import { multipleSelectedElementsSelector } from 'store/pageBuilder/selectors';
 import { unselectElement } from 'store/pageBuilder/actions';
 
 // types
@@ -23,7 +25,8 @@ export const useOutsideClickElement = (
       event.buttons === MouseButton.lmb &&
       isSelected &&
       elementRef.current &&
-      !elementRef.current.contains(event.target)
+      !elementRef.current.contains(event.target) &&
+      !multipleSelectedElementsSelector(store.getState())
     ) {
       defer(() => {
         dispatch(unselectElement(id));

@@ -35,6 +35,7 @@ import {
   APPLY_ELEMENTS_INSET_TYPE,
   APPLY_ELEMENTS_SIZE_MIN_MAX_TYPE,
   CHANGE_CLIP_CONTENT,
+  UNSELECT_ELEMENTS,
 } from './actionsType';
 
 // types
@@ -359,4 +360,8 @@ export type TUpdatePrevStateAction = {
 export type TUnselectElementAction = {
   payload: TElement['id'];
   type: typeof UNSELECT_ELEMENT;
+};
+
+export type TUnselectElementsAction = {
+  type: typeof UNSELECT_ELEMENTS;
 };
