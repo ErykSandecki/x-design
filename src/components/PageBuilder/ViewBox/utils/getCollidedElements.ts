@@ -31,13 +31,13 @@ export const getCollidedElements = (
   const isControlPressed = [KeyboardKeys.meta, KeyboardKeys.control].includes(pressedKey);
 
   for (const [id, coordinates] of Object.entries(rectCoordinates.current)) {
-    const { parentId, position, type } = elements[id];
+    const { parentId, position, type, visible } = elements[id];
 
     const conditionPassed = isControlPressed
       ? x1 <= coordinates.x1 && x2 >= coordinates.x2 && y1 <= coordinates.y1 && y2 >= coordinates.y2
       : !(coordinates.x2 < x1 || coordinates.x1 > x2 || coordinates.y2 < y1 || coordinates.y1 > y2);
 
-    if (conditionPassed) {
+    if (conditionPassed && visible) {
       if (!prevIds.includes(id)) {
         collidedElements.push({
           id,
