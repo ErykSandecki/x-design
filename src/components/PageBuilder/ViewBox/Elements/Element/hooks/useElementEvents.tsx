@@ -49,6 +49,7 @@ export type TUseElementEvents = TUseElementSizes & {
   padding: TInsets;
   position: TElement['position'];
   showDropAnchors: boolean;
+  visible: boolean;
   x: TElement['coordinates']['x'];
   y: TElement['coordinates']['y'];
 };
@@ -119,6 +120,7 @@ export const useElementEvents = (
     padding: elementData.padding,
     position,
     showDropAnchors,
+    visible: elementData.visible,
     x,
     y,
   };

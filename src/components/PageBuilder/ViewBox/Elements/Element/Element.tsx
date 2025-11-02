@@ -63,6 +63,7 @@ const Element: FC<TElementProps> = ({ classes, children, id, index, mouseMode, p
     padding,
     position,
     showDropAnchors,
+    visible,
     width,
     x,
     y,
@@ -97,31 +98,34 @@ const Element: FC<TElementProps> = ({ classes, children, id, index, mouseMode, p
         overflow,
         padding: getInsets(padding),
         position,
+        visibility: visible ? 'visible' : 'hidden',
         width: cssWidth,
       }}
       {...events}
     >
-      <ElementChildren
-        angle={angle}
-        coordinates={coordinates}
-        displayEventsArea={displayEventsArea}
-        displayOutline={displayOutline}
-        elementRef={elementRef}
-        flip={flip}
-        height={height}
-        id={id}
-        index={index}
-        isHover={isHover}
-        isSelected={isSelected}
-        mouseMode={mouseMode}
-        parentId={parentId}
-        showDropAnchors={showDropAnchors}
-        width={width}
-        x={x}
-        y={y}
-      >
-        {children}
-      </ElementChildren>
+      {visible && (
+        <ElementChildren
+          angle={angle}
+          coordinates={coordinates}
+          displayEventsArea={displayEventsArea}
+          displayOutline={displayOutline}
+          elementRef={elementRef}
+          flip={flip}
+          height={height}
+          id={id}
+          index={index}
+          isHover={isHover}
+          isSelected={isSelected}
+          mouseMode={mouseMode}
+          parentId={parentId}
+          showDropAnchors={showDropAnchors}
+          width={width}
+          x={x}
+          y={y}
+        >
+          {children}
+        </ElementChildren>
+      )}
     </Box>
   );
 };

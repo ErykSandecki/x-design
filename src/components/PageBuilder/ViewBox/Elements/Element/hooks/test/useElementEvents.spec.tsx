@@ -128,6 +128,7 @@ describe('useElementEvents', () => {
       padding: insetsMock,
       position: 'absolute',
       showDropAnchors: false,
+      visible: true,
       width: 100,
       x: 0,
       y: 0,
