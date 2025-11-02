@@ -22,14 +22,23 @@ import { E2EAttribute } from 'types';
 
 export type TPopoverItemProps = {
   icon?: TIconProps['name'];
-  index: number;
+  index: number | string;
   onClick?: TFunc;
+  onMouseEnter?: TFunc;
   selected?: boolean;
   text: string;
   visible?: boolean;
 };
 
-export const PopoverItem: FC<TPopoverItemProps> = ({ icon, index, onClick, selected, text, visible = true }) => {
+export const PopoverItem: FC<TPopoverItemProps> = ({
+  icon,
+  index,
+  onClick,
+  onMouseEnter,
+  selected,
+  text,
+  visible = true,
+}) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { setSelected } = usePopoverRoot();
   const onClickHandler = useClickEvent(onClick, setSelected);
@@ -43,6 +52,7 @@ export const PopoverItem: FC<TPopoverItemProps> = ({ icon, index, onClick, selec
       <Box
         classes={{ className: cx(classNamesWithTheme[className]) }}
         onClick={onClickHandler}
+        onMouseEnter={onMouseEnter}
         sx={{
           alignItems: 'center',
           borderRadius: '5px',

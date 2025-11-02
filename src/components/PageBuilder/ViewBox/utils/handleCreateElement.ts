@@ -50,7 +50,7 @@ export const handleCreateElement = (
         type: LayoutType.freeForm,
       },
       margin: { b: { value: 0 }, l: { value: 0 }, r: { value: 0 }, t: { value: 0 } },
-      mixBlendMode: 'normal',
+      mixBlendMode: 'initial',
       padding: { b: { value: 0 }, l: { value: 0 }, r: { value: 0 }, t: { value: 0 } },
       parentId: possibleElement.parentId,
       position: 'absolute',

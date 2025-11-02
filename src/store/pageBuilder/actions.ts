@@ -191,8 +191,8 @@ export const changePosition = (): TChangePositionAction => ({
   type: CHANGE_POSITION,
 });
 
-export const changeProperties = (visible: TChangePropertiesAction['payload']): TChangePropertiesAction => ({
-  payload: visible,
+export const changeProperties = (payload: TChangePropertiesAction['payload']): TChangePropertiesAction => ({
+  payload,
   type: CHANGE_PROPERTIES,
 });
 

@@ -6,6 +6,7 @@ import { TPrimaryKey } from 'hooks';
 export const APPLICATION_NAME = 'R|X /Architect';
 
 export const CHARACTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+export const COMMON_TRANSLATION_KEY = 'common';
 
 export const CONTROL = isMacOs ? ('meta' as TPrimaryKey) : ('control' as TPrimaryKey);
 

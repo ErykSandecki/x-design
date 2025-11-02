@@ -6,6 +6,7 @@ import Icon from '../../../../UI/Icon/Icon';
 import Popover, { PopoverCompound, TPopoverProps } from '../../../Popover/Popover';
 
 // hooks
+import { useClickEvent } from './hooks/useClickEvent';
 import { useTheme } from 'hooks';
 
 // others
@@ -13,7 +14,6 @@ import { className, classNames } from './classNames';
 
 // styles
 import styles from './text-field-popover.scss';
-import { useClickEvent } from './hooks/useClickEvent';
 
 export type TTextFieldPopoverProps = Pick<TPopoverProps, 'children' | 'offset' | 'style'> & {
   attachedValue: boolean;

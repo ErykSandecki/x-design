@@ -8,14 +8,14 @@ import ColumnAlignmentLayout from './ColumnAlignmentLayout/ColumnAlignmentLayout
 import ColumnClipContent from './ColumnClipContent/ColumnClipContent';
 import ColumnFlow from './ColumnFlow/ColumnFlow';
 import ColumnHeader from './ColumnHeader/ColumnHeader';
+import DesignLayoutButtonIcons from './DesignLayoutButtonIcons';
 import ColumnMargin from './ColumnMargin/ColumnMargin';
 import ColumnMinMaxSize from './ColumnMinMaxSize/ColumnMinMaxSize';
 import ColumnPadding from './ColumnPadding/ColumnPadding';
 import ColumnPosition from './ColumnPosition/ColumnPosition';
+import DesignPositionButtonIcons from './DesignPositionButtonIcons';
 import ColumnResizing from './ColumnResizing/ColumnResizing';
 import ColumnRotation from './ColumnRotation/ColumnRotation';
-import DesignLayoutButtonIcons from './DesignLayoutButtonIcons';
-import DesignPositionButtonIcons from './DesignPositionButtonIcons';
 import { UITools } from 'shared';
 
 // hooks
@@ -32,7 +32,9 @@ export type TDesignProps = {
 const Design: FC<TDesignProps> = ({ width }) => {
   const dispatch = useDispatch();
   const { t } = useTranslation();
-  const { areParentsTheSame, isMixedLayoutType, layoutType, onChangeLayoutType, position, visible } = useDesignData();
+
+  const { areParentsTheSame, isMixedBlendMode, isMixedLayoutType, layoutType, onChangeLayoutType, position } =
+    useDesignData();
 
   return (
     <>
@@ -61,7 +63,7 @@ const Design: FC<TDesignProps> = ({ width }) => {
         <ColumnClipContent />
       </UITools.Section>
       <UITools.Section
-        buttonsIcon={DesignAppearanceButtonIcons(dispatch, t, visible)}
+        buttonsIcon={DesignAppearanceButtonIcons(dispatch, isMixedBlendMode, t, useSelector)}
         label={t(`${translationNameSpace}.section.4.label`)}
       >
         <></>

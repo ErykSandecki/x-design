@@ -1439,6 +1439,403 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
             />
           </div>
         </div>
+        <div
+          class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+          data-test-button-icon=""
+          data-test-tooltip=""
+        >
+          <div
+            class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            data-test-icon="drop-empty"
+            height="14"
+            name="DropEmpty"
+            width="14"
+          />
+          <div
+            class="css-zcp5dz"
+            data-test-box=""
+          >
+            <div
+              class="css-6wln18 Popover Popover--light"
+              data-test-box=""
+              data-test-popover="popover"
+              style="left: 28px; top: 28px;"
+            >
+              <div
+                class="css-1wfopar PopoverItem PopoverItem--light"
+                data-test-box=""
+                data-test-popover-item="initial"
+              >
+                <div
+                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="check"
+                  height="12"
+                  name="Check"
+                  width="12"
+                />
+                <small
+                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  data-test-text=""
+                  style="text-align: inherit;"
+                >
+                  Pass through
+                </small>
+              </div>
+              <div
+                class="css-1wfopar PopoverItem PopoverItem--light"
+                data-test-box=""
+                data-test-popover-item="normal"
+              >
+                <div
+                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="check"
+                  height="12"
+                  name="Check"
+                  width="12"
+                />
+                <small
+                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  data-test-text=""
+                  style="text-align: inherit;"
+                >
+                  Normal
+                </small>
+              </div>
+              <div
+                class="css-qef3st"
+                data-test-box=""
+              />
+              <div
+                class="css-1wfopar PopoverItem PopoverItem--light"
+                data-test-box=""
+                data-test-popover-item="darken"
+              >
+                <div
+                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="check"
+                  height="12"
+                  name="Check"
+                  width="12"
+                />
+                <small
+                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  data-test-text=""
+                  style="text-align: inherit;"
+                >
+                  Darken
+                </small>
+              </div>
+              <div
+                class="css-1wfopar PopoverItem PopoverItem--light"
+                data-test-box=""
+                data-test-popover-item="multiply"
+              >
+                <div
+                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="check"
+                  height="12"
+                  name="Check"
+                  width="12"
+                />
+                <small
+                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  data-test-text=""
+                  style="text-align: inherit;"
+                >
+                  Multiply
+                </small>
+              </div>
+              <div
+                class="css-1wfopar PopoverItem PopoverItem--light"
+                data-test-box=""
+                data-test-popover-item="color-burn"
+              >
+                <div
+                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="check"
+                  height="12"
+                  name="Check"
+                  width="12"
+                />
+                <small
+                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  data-test-text=""
+                  style="text-align: inherit;"
+                >
+                  Color burn
+                </small>
+              </div>
+              <div
+                class="css-qef3st"
+                data-test-box=""
+              />
+              <div
+                class="css-1wfopar PopoverItem PopoverItem--light"
+                data-test-box=""
+                data-test-popover-item="lighten"
+              >
+                <div
+                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="check"
+                  height="12"
+                  name="Check"
+                  width="12"
+                />
+                <small
+                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  data-test-text=""
+                  style="text-align: inherit;"
+                >
+                  Lighten
+                </small>
+              </div>
+              <div
+                class="css-1wfopar PopoverItem PopoverItem--light"
+                data-test-box=""
+                data-test-popover-item="screen"
+              >
+                <div
+                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="check"
+                  height="12"
+                  name="Check"
+                  width="12"
+                />
+                <small
+                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  data-test-text=""
+                  style="text-align: inherit;"
+                >
+                  Screen
+                </small>
+              </div>
+              <div
+                class="css-1wfopar PopoverItem PopoverItem--light"
+                data-test-box=""
+                data-test-popover-item="plus-lighter"
+              >
+                <div
+                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="check"
+                  height="12"
+                  name="Check"
+                  width="12"
+                />
+                <small
+                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  data-test-text=""
+                  style="text-align: inherit;"
+                >
+                  Plus lighter
+                </small>
+              </div>
+              <div
+                class="css-1wfopar PopoverItem PopoverItem--light"
+                data-test-box=""
+                data-test-popover-item="color-dodge"
+              >
+                <div
+                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="check"
+                  height="12"
+                  name="Check"
+                  width="12"
+                />
+                <small
+                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  data-test-text=""
+                  style="text-align: inherit;"
+                >
+                  Color dodge
+                </small>
+              </div>
+              <div
+                class="css-qef3st"
+                data-test-box=""
+              />
+              <div
+                class="css-1wfopar PopoverItem PopoverItem--light"
+                data-test-box=""
+                data-test-popover-item="overlay"
+              >
+                <div
+                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="check"
+                  height="12"
+                  name="Check"
+                  width="12"
+                />
+                <small
+                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  data-test-text=""
+                  style="text-align: inherit;"
+                >
+                  Overlay
+                </small>
+              </div>
+              <div
+                class="css-1wfopar PopoverItem PopoverItem--light"
+                data-test-box=""
+                data-test-popover-item="soft-light"
+              >
+                <div
+                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="check"
+                  height="12"
+                  name="Check"
+                  width="12"
+                />
+                <small
+                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  data-test-text=""
+                  style="text-align: inherit;"
+                >
+                  Soft Light
+                </small>
+              </div>
+              <div
+                class="css-1wfopar PopoverItem PopoverItem--light"
+                data-test-box=""
+                data-test-popover-item="hard-light"
+              >
+                <div
+                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="check"
+                  height="12"
+                  name="Check"
+                  width="12"
+                />
+                <small
+                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  data-test-text=""
+                  style="text-align: inherit;"
+                >
+                  Hard light
+                </small>
+              </div>
+              <div
+                class="css-1wfopar PopoverItem PopoverItem--light"
+                data-test-box=""
+                data-test-popover-item="difference"
+              >
+                <div
+                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="check"
+                  height="12"
+                  name="Check"
+                  width="12"
+                />
+                <small
+                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  data-test-text=""
+                  style="text-align: inherit;"
+                >
+                  Difference
+                </small>
+              </div>
+              <div
+                class="css-1wfopar PopoverItem PopoverItem--light"
+                data-test-box=""
+                data-test-popover-item="exclusion"
+              >
+                <div
+                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="check"
+                  height="12"
+                  name="Check"
+                  width="12"
+                />
+                <small
+                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  data-test-text=""
+                  style="text-align: inherit;"
+                >
+                  Exclusion
+                </small>
+              </div>
+              <div
+                class="css-qef3st"
+                data-test-box=""
+              />
+              <div
+                class="css-1wfopar PopoverItem PopoverItem--light"
+                data-test-box=""
+                data-test-popover-item="hue"
+              >
+                <div
+                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="check"
+                  height="12"
+                  name="Check"
+                  width="12"
+                />
+                <small
+                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  data-test-text=""
+                  style="text-align: inherit;"
+                >
+                  Hue
+                </small>
+              </div>
+              <div
+                class="css-1wfopar PopoverItem PopoverItem--light"
+                data-test-box=""
+                data-test-popover-item="saturation"
+              >
+                <div
+                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="check"
+                  height="12"
+                  name="Check"
+                  width="12"
+                />
+                <small
+                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  data-test-text=""
+                  style="text-align: inherit;"
+                >
+                  Saturation
+                </small>
+              </div>
+              <div
+                class="css-1wfopar PopoverItem PopoverItem--light"
+                data-test-box=""
+                data-test-popover-item="color"
+              >
+                <div
+                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="check"
+                  height="12"
+                  name="Check"
+                  width="12"
+                />
+                <small
+                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  data-test-text=""
+                  style="text-align: inherit;"
+                >
+                  Color
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="Tooltip Tooltip--light"
+        >
+          <div
+            class="Tooltip__content Tooltip__content--light"
+          >
+            Apply blend mode
+            <div
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="carrot-down"
+              height="14"
+              name="CarrotDown"
+              width="10"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </div>

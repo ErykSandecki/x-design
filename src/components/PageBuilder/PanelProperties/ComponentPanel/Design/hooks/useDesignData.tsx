@@ -14,21 +14,21 @@ import { LayoutType, TElement } from 'types';
 
 export type TUseDesignData = {
   areParentsTheSame: boolean;
+  isMixedBlendMode: boolean;
   isMixedLayoutType: boolean;
   layoutType: TElement['layout']['type'];
   onChangeLayoutType: TFunc;
   position: TElement['position'];
-  visible: TElement['visible'];
 };
 
 export const useDesignData = (): TUseDesignData => {
   const areParentsTheSame = useSelector(areParentsTheSameSelector);
   const dispatch = useDispatch();
   const firstElementId = useSelector(firstSelectedElementIdSelector);
+  const isMixedBlendMode = useSelector(isMixedSelectorCreator('mixBlendMode'));
   const isMixedLayoutType = useSelector(isMixedSelectorCreator('layout.type'));
   const position = useSelector(elementAttributeSelectorCreator('position', firstElementId));
   const layout = useSelector(elementAttributeSelectorCreator('layout', firstElementId));
-  const visible = useSelector(elementAttributeSelectorCreator('visible', firstElementId));
 
   const onChangeLayoutType = (): void => {
     if (isMixedLayoutType) {
@@ -43,10 +43,10 @@ export const useDesignData = (): TUseDesignData => {
 
   return {
     areParentsTheSame,
+    isMixedBlendMode,
     isMixedLayoutType,
     layoutType: layout.type,
     onChangeLayoutType,
     position,
-    visible,
   };
 };

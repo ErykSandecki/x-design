@@ -26,9 +26,12 @@ export type TSectionProps = Pick<TIconProps, 'name'> &
   TBoxProps & {
     e2eValue?: TE2EDataAttributeProps['value'];
     idContainer?: string;
+    popoverAlignHorizontally?: TPopoverProps['alignHorizontally'];
+    popoverAlignVertically?: TPopoverProps['alignVertically'];
     popoverChildren?: TPopoverProps['children'];
     popoverId?: TPopoverProps['id'];
     popoverOffset?: TPopoverProps['offset'];
+    popoverOnClose?: TFunc;
     popoverStyle?: TPopoverProps['style'];
     selected?: boolean;
     tooltip?: Omit<TTooltipProps, 'children'>;
@@ -39,19 +42,22 @@ export const ButtonIcon: FC<TSectionProps> = ({
   idContainer,
   name,
   onClick,
+  popoverAlignHorizontally,
+  popoverAlignVertically,
   popoverChildren,
   popoverId,
+  popoverOnClose = noop,
   popoverOffset,
   popoverStyle,
-  selected = false,
+  selected: selectedButtonIcon = false,
   tooltip,
   ...restProps
 }) => {
   const ref = useRef(null);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-  const { selected: selectedPopover, setSelected: setSelectedPopover } = useOutsideClick([], ref, noop, idContainer);
-  const isSelected = selectedPopover || selected;
-  const onClickHandler = useClickEvent(onClick, selectedPopover, setSelectedPopover);
+  const { selected, setSelected } = useOutsideClick([], ref, popoverOnClose, idContainer);
+  const isSelected = selected || selectedButtonIcon;
+  const onClickHandler = useClickEvent(onClick, selected, setSelected);
 
   return (
     <Tooltip ref={ref} {...tooltip}>
@@ -67,13 +73,20 @@ export const ButtonIcon: FC<TSectionProps> = ({
         onClick={onClickHandler}
         {...restProps}
       >
-        <Icon color={selected ? ColorsTheme.blue1 : ColorsTheme.neutral1} height={14} name={name} width={14} />
+        <Icon
+          color={selectedButtonIcon ? ColorsTheme.blue1 : ColorsTheme.neutral1}
+          height={14}
+          name={name}
+          width={14}
+        />
         {popoverChildren && (
           <ButtonIconPopover
+            alignHorizontally={popoverAlignHorizontally}
+            alignVertically={popoverAlignVertically}
             id={popoverId}
             ref={ref}
-            selected={selectedPopover}
-            setSelected={setSelectedPopover}
+            selected={selected}
+            setSelected={setSelected}
             offset={popoverOffset}
             style={popoverStyle}
           >

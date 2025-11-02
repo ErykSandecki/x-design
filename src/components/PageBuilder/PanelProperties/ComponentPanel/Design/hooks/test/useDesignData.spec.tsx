@@ -67,11 +67,11 @@ describe('useDesignData', () => {
     // result
     expect(result.current).toStrictEqual({
       areParentsTheSame: true,
+      isMixedBlendMode: false,
       isMixedLayoutType: false,
       layoutType: LayoutType.freeForm,
       onChangeLayoutType: expect.any(Function),
       position: 'absolute',
-      visible: true,
     });
   });
 });

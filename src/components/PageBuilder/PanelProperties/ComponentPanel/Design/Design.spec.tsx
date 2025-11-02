@@ -8,17 +8,20 @@ import Design from './Design';
 import { elementMock, layoutMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
+import { PANEL_PROPERTIES_ID } from '../../../constants';
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 
 // store
 import { configureStore } from 'store/store';
 
 // types
-import { E2EAttribute, LayoutType } from 'types';
+import { BlendMode, E2EAttribute, LayoutType } from 'types';
 
 // utils
 import { customRender, getByE2EAttribute } from 'test';
+import { createHtmlElement } from 'utils';
 
+const element = createHtmlElement('div', { id: PANEL_PROPERTIES_ID });
 const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 const stateMock = {
   ...pageBuilderStateMock,
@@ -77,6 +80,11 @@ describe('Design snapshots', () => {
 });
 
 describe('Design behaviors', () => {
+  beforeAll(() => {
+    // mock
+    document.body.appendChild(element);
+  });
+
   it('should change position', () => {
     // mock
     const store = configureStore({
@@ -297,5 +305,79 @@ describe('Design behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-2'].visible).toBe(false);
+  });
+
+  it('should change blend mode', () => {
+    // mock
+    const store = configureStore({
+      ...stateMock,
+      [PAGE_BUILDER]: {
+        ...stateMock[PAGE_BUILDER],
+        pages: {
+          ...stateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...stateMock[PAGE_BUILDER].pages['0'],
+            selectedElements: [{ ...selectedElementMock, id: 'test-2', parentId: 'test-1' }],
+          },
+        },
+      },
+    });
+
+    // before
+    const { container } = customRender(
+      <Provider store={store}>
+        <Design width={0} />
+      </Provider>,
+    );
+
+    // action
+    fireEvent.click(getByE2EAttribute(container, E2EAttribute.icon, 'drop-empty'));
+
+    // find
+    const popoverItem = getByE2EAttribute(container, E2EAttribute.popoverItem, BlendMode.color);
+
+    // action
+    fireEvent.mouseEnter(popoverItem);
+    fireEvent.click(popoverItem);
+
+    // result
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-2'].mixBlendMode).toBe(BlendMode.color);
+  });
+
+  it('should not blend mode when click outside', () => {
+    // mock
+    const store = configureStore({
+      ...stateMock,
+      [PAGE_BUILDER]: {
+        ...stateMock[PAGE_BUILDER],
+        pages: {
+          ...stateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...stateMock[PAGE_BUILDER].pages['0'],
+            selectedElements: [{ ...selectedElementMock, id: 'test-2', parentId: 'test-1' }],
+          },
+        },
+      },
+    });
+
+    // before
+    const { container } = customRender(
+      <Provider store={store}>
+        <Design width={0} />
+      </Provider>,
+    );
+
+    // action
+    fireEvent.click(getByE2EAttribute(container, E2EAttribute.icon, 'drop-empty'));
+
+    // find
+    const popoverItem = getByE2EAttribute(container, E2EAttribute.popoverItem, BlendMode.color);
+
+    // action
+    fireEvent.mouseEnter(popoverItem);
+    fireEvent.mouseDown(document.getElementById(PANEL_PROPERTIES_ID));
+
+    // result
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-2'].mixBlendMode).not.toBe(BlendMode.color);
   });
 });
