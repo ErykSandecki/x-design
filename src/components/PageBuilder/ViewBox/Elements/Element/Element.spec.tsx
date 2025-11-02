@@ -208,4 +208,49 @@ describe('Element snapshots', () => {
     // result
     expect(asFragment()).toMatchSnapshot();
   });
+
+  it('should render Element when is hidden', () => {
+    // mock
+    // mock
+    const store = configureStore({
+      ...stateMock,
+      [PAGE_BUILDER]: {
+        ...stateMock[PAGE_BUILDER],
+        pages: {
+          ...stateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...stateMock[PAGE_BUILDER].pages['0'],
+            elements: {
+              ...stateMock[PAGE_BUILDER].pages['0'].elements,
+              [elementMock.id]: {
+                ...elementMock,
+                visible: false,
+              },
+            },
+          },
+        },
+      },
+    });
+
+    // before
+    const { asFragment } = render(
+      <Provider store={store}>
+        <RefsProvider itemsRefs={sharedRefs} overlayContainerRefHtml={overlayContainer}>
+          <Element
+            classes={{ className: 'className' }}
+            id={selectedElementMock.id}
+            index={0}
+            mouseMode={MouseMode.default}
+            parentId={selectedElementMock.parentId}
+            type={ElementType.frame}
+          >
+            {() => <></>}
+          </Element>
+        </RefsProvider>
+      </Provider>,
+    );
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
 });
