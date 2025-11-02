@@ -36,7 +36,7 @@ import {
   APPLY_ELEMENTS_GAP_TYPE,
   CHANGE_CLIP_CONTENT,
   UNSELECT_ELEMENTS,
-  CHANGE_VISIBILITY,
+  CHANGE_PROPERTIES,
 } from './actionsType';
 import { BASE_PAGE } from './constants';
 
@@ -72,7 +72,7 @@ import {
   TApplyElementsInsetTypeAction,
   TApplyElementsSizeMinMaxTypeAction,
   TChangeClipContentAction,
-  TChangeVisibilityAction,
+  TChangePropertiesAction,
 } from './types';
 
 // utils
@@ -105,7 +105,7 @@ import { handleSetElementsScoreToCurrentSize } from './utils/handleSetElementsSc
 import { handleSetElementsSizes } from './utils/setElementSizes/handleSetElementsSizes';
 import { handleSetElementsSizesMinMax } from './utils/handleSetElementsSizesMinMax';
 import { handleToggleAspectRatio } from './utils/handleToggleAspectRatio';
-import { handleChangeVisibility } from './utils/handleChangeVisibility';
+import { handleChangeProperties } from './utils/handleChangeProperties';
 
 const initialState: TPageBuilderState = {
   currentPage: '0',
@@ -208,8 +208,8 @@ const changePosition = (state: TPageBuilderState): TPageBuilderState => handleCh
 
 const changeVisibility = (
   state: TPageBuilderState,
-  { payload }: TAction<TChangeVisibilityAction['payload']>,
-): TPageBuilderState => handleChangeVisibility(payload, state);
+  { payload }: TAction<TChangePropertiesAction['payload']>,
+): TPageBuilderState => handleChangeProperties(payload, state);
 
 const clearPrevState = (state: TPageBuilderState): TPageBuilderState => ({
   ...state,
@@ -402,7 +402,7 @@ const pageBuilder = (state: TPageBuilderState = initialState, action: TAction): 
       return changeParent(state);
     case CHANGE_POSITION:
       return changePosition(state);
-    case CHANGE_VISIBILITY:
+    case CHANGE_PROPERTIES:
       return changeVisibility(state, action);
     case CLEAR_PREV_STATE:
       return clearPrevState(state);

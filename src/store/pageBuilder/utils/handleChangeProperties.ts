@@ -1,11 +1,11 @@
 // types
-import { TChangeVisibilityAction, TPageBuilderState } from '../types';
+import { TChangePropertiesAction, TPageBuilderState } from '../types';
 
 // utils
 import { extractObjectValues, mapFilteredValues } from 'utils';
 
-export const handleChangeVisibility = (
-  visible: TChangeVisibilityAction['payload'],
+export const handleChangeProperties = (
+  properties: TChangePropertiesAction['payload'],
   state: TPageBuilderState,
 ): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];
@@ -22,7 +22,7 @@ export const handleChangeVisibility = (
           ...currentPage.elements,
           ...mapFilteredValues(currentPage.elements, ids, (element) => ({
             ...element,
-            visible,
+            ...properties,
           })),
         },
       },

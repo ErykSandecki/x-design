@@ -8,7 +8,7 @@ import { UITools } from 'shared';
 import { TOOLTIP_TRANSLATION_KEY } from 'constant/constants';
 
 // store
-import { changeVisibility } from 'store/pageBuilder/actions';
+import { changeProperties } from 'store/pageBuilder/actions';
 
 // types
 import { TElement } from 'types';
@@ -17,7 +17,7 @@ const DesignAppearanceButtonIcons = (dispatch: Dispatch, t: TT, visible: TElemen
   <UITools.ButtonIcon
     key={0}
     name={visible ? 'EyesOpened' : 'EyesClosed'}
-    onClick={() => dispatch(changeVisibility(!visible))}
+    onClick={() => dispatch(changeProperties({ visible: !visible }))}
     tooltip={{ content: t(`${TOOLTIP_TRANSLATION_KEY}.appearance.${visible ? 'hide' : 'show'}`) }}
     selected={!visible}
   />,

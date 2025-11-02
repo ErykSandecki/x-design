@@ -15,7 +15,7 @@ import {
   CHANGE_LAYOUT_GRID,
   CHANGE_PARENT,
   CHANGE_POSITION,
-  CHANGE_VISIBILITY,
+  CHANGE_PROPERTIES,
   CLEAR_PREV_STATE,
   FIT_LAYOUT,
   FLIP_ELEMENTS,
@@ -90,7 +90,7 @@ import {
   TApplyElementsSizeMinMaxTypeAction,
   TChangeClipContentAction,
   TUnselectElementsAction,
-  TChangeVisibilityAction,
+  TChangePropertiesAction,
 } from './types';
 import { TElement } from 'types';
 
@@ -191,9 +191,9 @@ export const changePosition = (): TChangePositionAction => ({
   type: CHANGE_POSITION,
 });
 
-export const changeVisibility = (visible: TChangeVisibilityAction['payload']): TChangeVisibilityAction => ({
+export const changeProperties = (visible: TChangePropertiesAction['payload']): TChangePropertiesAction => ({
   payload: visible,
-  type: CHANGE_VISIBILITY,
+  type: CHANGE_PROPERTIES,
 });
 
 export const clearPrevState = (): TClearPrevStateAction => ({

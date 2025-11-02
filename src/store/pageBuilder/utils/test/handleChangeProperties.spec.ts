@@ -5,7 +5,7 @@ import { elementMock, pageBuilderStateMock, selectedElementMock } from 'test/moc
 import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
 
 // utils
-import { handleChangeVisibility } from '../handleChangeVisibility';
+import { handleChangeProperties } from '../handleChangeProperties';
 
 describe('handleChangeVisibility', () => {
   it(`should return data with changed visibility`, () => {
@@ -13,20 +13,23 @@ describe('handleChangeVisibility', () => {
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
     // before
-    const result = handleChangeVisibility(false, {
-      ...pageBuilderStateMock[PAGE_BUILDER],
-      pages: {
-        ...pageBuilderStateMock[PAGE_BUILDER].pages,
-        ['0']: {
-          ...currentPage,
-          elements: {
-            ...currentPage.elements,
-            [elementMock.id]: elementMock,
+    const result = handleChangeProperties(
+      { visible: false },
+      {
+        ...pageBuilderStateMock[PAGE_BUILDER],
+        pages: {
+          ...pageBuilderStateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...currentPage,
+            elements: {
+              ...currentPage.elements,
+              [elementMock.id]: elementMock,
+            },
+            selectedElements: [selectedElementMock],
           },
-          selectedElements: [selectedElementMock],
         },
       },
-    });
+    );
 
     // result
     expect(result).toStrictEqual({

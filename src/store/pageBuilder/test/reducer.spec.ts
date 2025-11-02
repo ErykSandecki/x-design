@@ -38,7 +38,7 @@ import {
   changeLayoutGrid,
   changeParent,
   changePosition,
-  changeVisibility,
+  changeProperties,
   clearPrevState,
   fitLayout,
   flipElements,
@@ -980,13 +980,13 @@ describe('PageBuilderReducer', () => {
     });
   });
 
-  it('should handle CHANGE_VISIBILITY', () => {
+  it('should handle CHANGE_PROPERTIES', () => {
     // mock
     const visible: TElement['visible'] = false;
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
     // before
-    const state = reducer(changeVisibility(visible), {
+    const state = reducer(changeProperties({ visible }), {
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,

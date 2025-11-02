@@ -63,6 +63,7 @@ export const BASE_ELEMENTS: TElement = {
     type: LayoutType.freeForm,
   },
   margin: { b: { value: 0 }, l: { value: 0 }, r: { value: 0 }, t: { value: 0 } },
+  mixBlendMode: 'normal',
   padding: { b: { value: 0 }, l: { value: 0 }, r: { value: 0 }, t: { value: 0 } },
   parentId: '-1',
   position: 'absolute',

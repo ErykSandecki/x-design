@@ -89,6 +89,7 @@ export type TElement = {
   id: string;
   layout: TLayout;
   margin: TInsets;
+  mixBlendMode: CSSProperties['mixBlendMode'];
   padding: TInsets;
   parentId: TElement['id'] | '-1';
   position: CSSProperties['position'];
