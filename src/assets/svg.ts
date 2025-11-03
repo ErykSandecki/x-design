@@ -56,6 +56,7 @@ import { ReactComponent as MinHeight } from './svg/min-height.svg';
 import { ReactComponent as MinWidth } from './svg/min-width.svg';
 import { ReactComponent as MoveHand } from './svg/move-hand.svg';
 import { ReactComponent as MoveTool } from './svg/move-tool.svg';
+import { ReactComponent as Opacity } from './svg/opacity.svg';
 import { ReactComponent as PaddingB } from './svg/padding-b.svg';
 import { ReactComponent as PaddingL } from './svg/padding-l.svg';
 import { ReactComponent as PaddingLR } from './svg/padding-lr.svg';
@@ -133,6 +134,7 @@ export const Icons = {
   MinWidth,
   MoveHand,
   MoveTool,
+  Opacity,
   PaddingB,
   PaddingL,
   PaddingLR,

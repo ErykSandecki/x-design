@@ -90,6 +90,7 @@ export type TElement = {
   layout: TLayout;
   margin: TInsets;
   mixBlendMode: CSSProperties['mixBlendMode'];
+  opacity: number;
   padding: TInsets;
   parentId: TElement['id'] | '-1';
   position: CSSProperties['position'];

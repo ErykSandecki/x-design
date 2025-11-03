@@ -51,6 +51,7 @@ export const handleCreateElement = (
       },
       margin: { b: { value: 0 }, l: { value: 0 }, r: { value: 0 }, t: { value: 0 } },
       mixBlendMode: 'initial',
+      opacity: 100,
       padding: { b: { value: 0 }, l: { value: 0 }, r: { value: 0 }, t: { value: 0 } },
       parentId: possibleElement.parentId,
       position: 'absolute',
