@@ -46,6 +46,7 @@ export type TUseElementEvents = TUseElementSizes & {
   onMouseDown: TUseMouseDownEvent;
   onMouseEnter: TUseMouseEnterEvent;
   onMouseLeave: TUseMouseLeaveEvent;
+  opacity: number;
   overflow: CSSProperties['overflow'];
   padding: TInsets;
   position: TElement['position'];
@@ -118,6 +119,7 @@ export const useElementEvents = (
     ),
     onMouseEnter: useMouseEnterEvent(id, isSelected, mouseMode),
     onMouseLeave: useMouseLeaveEvent(mouseMode, parentId),
+    opacity: elementData.opacity.value / 100,
     overflow,
     padding: elementData.padding,
     position,

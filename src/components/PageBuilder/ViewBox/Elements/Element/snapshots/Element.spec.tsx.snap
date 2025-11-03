@@ -7,7 +7,7 @@ exports[`Element snapshots should render Element 1`] = `
     data-status="false"
     data-test-element="test-1"
     id="test-1"
-    style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; background-color: rgb(255, 255, 255); height: 100px; margin: 0px 0px 0px 0px; mix-blend-mode: initial; overflow: hidden; padding: 0px 0px 0px 0px; position: absolute; visibility: visible; width: 100px;"
+    style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; background-color: rgb(255, 255, 255); height: 100px; margin: 0px 0px 0px 0px; mix-blend-mode: initial; opacity: 1; overflow: hidden; padding: 0px 0px 0px 0px; position: absolute; visibility: visible; width: 100px;"
   />
 </DocumentFragment>
 `;
@@ -19,7 +19,7 @@ exports[`Element snapshots should render Element when is hidden 1`] = `
     data-status="false"
     data-test-element="test-1"
     id="test-1"
-    style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; background-color: rgb(255, 255, 255); height: 100px; margin: 0px 0px 0px 0px; mix-blend-mode: initial; overflow: hidden; padding: 0px 0px 0px 0px; position: absolute; visibility: hidden; width: 100px;"
+    style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; background-color: rgb(255, 255, 255); height: 100px; margin: 0px 0px 0px 0px; mix-blend-mode: initial; opacity: 1; overflow: hidden; padding: 0px 0px 0px 0px; position: absolute; visibility: hidden; width: 100px;"
   />
 </DocumentFragment>
 `;
@@ -31,7 +31,7 @@ exports[`Element snapshots should render Element when is selected & is multiple 
     data-status="true"
     data-test-element="test-1"
     id="test-1"
-    style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; background-color: rgb(255, 255, 255); height: 100px; margin: 0px 0px 0px 0px; mix-blend-mode: initial; overflow: hidden; padding: 0px 0px 0px 0px; position: absolute; visibility: visible; width: 100px;"
+    style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; background-color: rgb(255, 255, 255); height: 100px; margin: 0px 0px 0px 0px; mix-blend-mode: initial; opacity: 1; overflow: hidden; padding: 0px 0px 0px 0px; position: absolute; visibility: visible; width: 100px;"
   >
     <div
       class="css-1jnxvbp Outline Outline--light"
@@ -146,7 +146,7 @@ exports[`Element snapshots should render Element when is selected 1`] = `
     data-status="true"
     data-test-element="test-1"
     id="test-1"
-    style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; background-color: rgb(255, 255, 255); height: 100px; margin: 0px 0px 0px 0px; mix-blend-mode: initial; overflow: hidden; padding: 0px 0px 0px 0px; position: absolute; visibility: visible; width: 100px;"
+    style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; background-color: rgb(255, 255, 255); height: 100px; margin: 0px 0px 0px 0px; mix-blend-mode: initial; opacity: 1; overflow: hidden; padding: 0px 0px 0px 0px; position: absolute; visibility: visible; width: 100px;"
   >
     <div
       class="css-1jnxvbp Outline Outline--light"
@@ -261,7 +261,7 @@ exports[`Element snapshots should render Element when width & height is auto 1`]
     data-status="false"
     data-test-element="test-1"
     id="test-1"
-    style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; background-color: rgb(255, 255, 255); height: auto; margin: 0px 0px 0px 0px; mix-blend-mode: initial; overflow: hidden; padding: 0px 0px 0px 0px; position: absolute; visibility: visible; width: auto;"
+    style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; background-color: rgb(255, 255, 255); height: auto; margin: 0px 0px 0px 0px; mix-blend-mode: initial; opacity: 1; overflow: hidden; padding: 0px 0px 0px 0px; position: absolute; visibility: visible; width: auto;"
   />
 </DocumentFragment>
 `;

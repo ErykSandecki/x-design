@@ -125,6 +125,7 @@ describe('useElementEvents', () => {
       onMouseDown: expect.any(Function),
       onMouseEnter: expect.any(Function),
       onMouseLeave: expect.any(Function),
+      opacity: 1,
       overflow: 'visible',
       padding: insetsMock,
       position: 'absolute',
