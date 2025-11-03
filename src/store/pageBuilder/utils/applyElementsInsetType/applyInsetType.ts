@@ -1,6 +1,6 @@
 // types
 import { TApplyElementsSizeTypeActionPayload } from 'store/pageBuilder/types';
-import { TElement, TBaseProperties, TInsets, TInsetsName } from 'types';
+import { TElement, TBaseProperties, TInsets, TInsetsName, TValueExtended } from 'types';
 
 export const applyInsetType = (
   element: TElement,
@@ -8,7 +8,7 @@ export const applyInsetType = (
   insetValue: TBaseProperties['value'],
   name: TInsetsName,
   type: TApplyElementsSizeTypeActionPayload['type'],
-): TBaseProperties => {
+): TValueExtended => {
   switch (type) {
     default:
       return {

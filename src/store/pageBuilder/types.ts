@@ -37,7 +37,7 @@ import {
   CHANGE_CLIP_CONTENT,
   UNSELECT_ELEMENTS,
   CHANGE_PROPERTIES,
-  APPLY_ELEMENTS_OPACITY_TYPE,
+  APPLY_ELEMENTS_TYPE,
 } from './actionsType';
 
 // types
@@ -55,6 +55,7 @@ import {
   TGrid,
   TInsets,
   TInsetsName,
+  TNestedKeyOf,
   TObject,
   TScore,
   TSize,
@@ -150,11 +151,6 @@ export type TApplyElementsInsetTypeAction = {
   type: typeof APPLY_ELEMENTS_INSET_TYPE;
 };
 
-export type TApplyElementsOpacityTypeAction = {
-  payload: TValueExtended['mode'];
-  type: typeof APPLY_ELEMENTS_OPACITY_TYPE;
-};
-
 export type TApplyElementsSizeMinMaxTypeActionPayload = {
   scoreType: keyof TScore;
   sizeType: keyof Pick<TElement, 'height' | 'width'>;
@@ -174,6 +170,16 @@ export type TApplyElementsSizeTypeActionPayload = {
 export type TApplyElementsSizeTypeAction = {
   payload: TApplyElementsSizeTypeActionPayload;
   type: typeof APPLY_ELEMENTS_SIZE_TYPE;
+};
+
+export type TApplyElementsTypeActionPayload = {
+  mode: TValueExtended['mode'];
+  properties: Array<TNestedKeyOf<TElement>>;
+};
+
+export type TApplyElementsTypeAction = {
+  payload: TApplyElementsTypeActionPayload;
+  type: typeof APPLY_ELEMENTS_TYPE;
 };
 
 export type TChangeAlignmentActionPayload = {

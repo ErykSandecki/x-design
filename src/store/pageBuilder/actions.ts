@@ -3,7 +3,7 @@ import {
   ADD_ELEMENT,
   APPLY_ELEMENTS_GAP_TYPE,
   APPLY_ELEMENTS_INSET_TYPE,
-  APPLY_ELEMENTS_OPACITY_TYPE,
+  APPLY_ELEMENTS_TYPE,
   APPLY_ELEMENTS_SIZE_MIN_MAX_TYPE,
   APPLY_ELEMENTS_SIZE_TYPE,
   CHANGE_ALIGNMENT,
@@ -92,7 +92,8 @@ import {
   TChangeClipContentAction,
   TUnselectElementsAction,
   TChangePropertiesAction,
-  TApplyElementsOpacityTypeAction,
+  TApplyElementsTypeAction,
+  TApplyElementsTypeActionPayload,
 } from './types';
 import { TElement } from 'types';
 
@@ -118,13 +119,6 @@ export const applyElementsInsetType = (
   type: APPLY_ELEMENTS_INSET_TYPE,
 });
 
-export const applyElementsOpacityType = (
-  type: TApplyElementsOpacityTypeAction['payload'],
-): TApplyElementsOpacityTypeAction => ({
-  payload: type,
-  type: APPLY_ELEMENTS_OPACITY_TYPE,
-});
-
 export const applyElementsSizeMinMaxType = (
   scoreType: TApplyElementsSizeMinMaxTypeActionPayload['scoreType'],
   sizeType: TApplyElementsSizeMinMaxTypeActionPayload['sizeType'],
@@ -140,6 +134,14 @@ export const applyElementsSizeType = (
 ): TApplyElementsSizeTypeAction => ({
   payload: { sizeType, type },
   type: APPLY_ELEMENTS_SIZE_TYPE,
+});
+
+export const applyElementsType = (
+  mode: TApplyElementsTypeActionPayload['mode'],
+  property: TApplyElementsTypeActionPayload['properties'],
+): TApplyElementsTypeAction => ({
+  payload: { mode, properties: property },
+  type: APPLY_ELEMENTS_TYPE,
 });
 
 export const changeAlignment = (payload: TChangeAlignmentAction['payload']): TChangeAlignmentAction => ({

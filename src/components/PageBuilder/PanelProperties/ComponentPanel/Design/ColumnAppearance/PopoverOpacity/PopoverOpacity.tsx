@@ -9,7 +9,7 @@ import { UITools } from 'shared';
 import { translationNameSpace } from './constants';
 
 // store
-import { applyElementsOpacityType } from 'store/pageBuilder/actions';
+import { applyElementsType } from 'store/pageBuilder/actions';
 
 // types
 import { PopoverItem } from '../enums';
@@ -32,7 +32,7 @@ const PopoverOpacity: FC<TPopoverInsetsProps> = ({ isMixed, mode, value }) => {
       <PopoverCompound.PopoverItem
         icon="Opacity"
         index={PopoverItem.fixed}
-        onClick={() => dispatch(applyElementsOpacityType('fixed'))}
+        onClick={() => dispatch(applyElementsType('fixed', ['opacity']))}
         selected={!isMixed && mode === 'fixed'}
         text={t(`${translationNameSpace}.1`, { value })}
       />

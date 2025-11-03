@@ -13,6 +13,7 @@ import {
   eventsMock,
   gapMock,
   sizeMock,
+  valueExtendMock,
 } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
@@ -25,7 +26,7 @@ import {
   addElement,
   applyElementsGapType,
   applyElementsInsetType,
-  applyElementsOpacityType,
+  applyElementsType,
   applyElementsSizeMinMaxType,
   applyElementsSizeType,
   changeAlignment,
@@ -203,43 +204,6 @@ describe('PageBuilderReducer', () => {
     });
   });
 
-  it('should handle APPLY_ELEMENTS_OPACITY_TYPE', () => {
-    // mock
-    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-
-    // before
-    const state = reducer(applyElementsOpacityType('fixed'), {
-      ...pageBuilderStateMock[PAGE_BUILDER],
-      pages: {
-        ...pageBuilderStateMock[PAGE_BUILDER].pages,
-        ['0']: {
-          ...currentPage,
-          elements: {
-            ...currentPage.elements,
-            [elementMock.id]: elementMock,
-          },
-          selectedElements: [selectedElementMock],
-        },
-      },
-    });
-
-    // result
-    expect(state).toStrictEqual({
-      ...pageBuilderStateMock[PAGE_BUILDER],
-      pages: {
-        ...pageBuilderStateMock[PAGE_BUILDER].pages,
-        ['0']: {
-          ...currentPage,
-          elements: {
-            ...currentPage.elements,
-            [elementMock.id]: elementMock,
-          },
-          selectedElements: [selectedElementMock],
-        },
-      },
-    });
-  });
-
   it('should handle APPLY_ELEMENTS_SIZE_MIN_MAX_TYPE', () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
@@ -330,6 +294,50 @@ describe('PageBuilderReducer', () => {
             [elementMock.id]: {
               ...elementMock,
               height: { ...sizeMock, unit: Unit.percentage, value: 100 },
+            },
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+  });
+
+  it('should handle APPLY_ELEMENTS_TYPE', () => {
+    // mock
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+
+    // before
+    const state = reducer(applyElementsType('variable', ['opacity']), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            [elementMock.id]: elementMock,
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            [elementMock.id]: {
+              ...elementMock,
+              opacity: {
+                ...valueExtendMock,
+                mode: 'variable',
+                value: 100,
+              },
             },
           },
           selectedElements: [selectedElementMock],
@@ -780,10 +788,10 @@ describe('PageBuilderReducer', () => {
   it('should handle CHANGE_INSSETS', () => {
     // mock
     const insets = {
-      b: { type: 'fixed', value: 1 },
-      l: { type: 'fixed', value: 1 },
-      r: { type: 'fixed', value: 1 },
-      t: { type: 'fixed', value: 1 },
+      b: { mode: 'fixed', value: 1 },
+      l: { mode: 'fixed', value: 1 },
+      r: { mode: 'fixed', value: 1 },
+      t: { mode: 'fixed', value: 1 },
     } as TInsets;
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 

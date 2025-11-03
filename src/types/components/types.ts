@@ -40,10 +40,10 @@ export type TBaseProperties = {
 };
 
 export type TInsets = {
-  b: TBaseProperties;
-  l: TBaseProperties;
-  r: TBaseProperties;
-  t: TBaseProperties;
+  b: TValueExtended;
+  l: TValueExtended;
+  r: TValueExtended;
+  t: TValueExtended;
 };
 
 export type TInsetsName = keyof Pick<TElement, 'margin' | 'padding'>;

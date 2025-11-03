@@ -2,7 +2,7 @@
 import { BASE_2D } from 'shared';
 
 // types
-import { LayoutType, TElement } from 'types';
+import { LayoutType, TElement, TInsets } from 'types';
 import { TElements, TEvents, TPageBuilderState } from '../../types';
 
 // utils
@@ -74,11 +74,11 @@ export const getMappedElementsToMove = (parentHasChanged: boolean, state: TPageB
     const data = getPartialData(elements[id], id, elements[possibleParent], parentHasChanged, possibleParent, state);
     const shouldResetCoordinates = data.position === 'relative';
     const initialMargin = {
-      b: { type: 'fixed', value: 0 },
-      l: { type: 'fixed', value: 0 },
-      r: { type: 'fixed', value: 0 },
-      t: { type: 'fixed', value: 0 },
-    };
+      b: { mode: 'fixed', value: 0 },
+      l: { mode: 'fixed', value: 0 },
+      r: { mode: 'fixed', value: 0 },
+      t: { mode: 'fixed', value: 0 },
+    } as TInsets;
 
     return {
       ...element,
@@ -89,6 +89,6 @@ export const getMappedElementsToMove = (parentHasChanged: boolean, state: TPageB
       parentId: data.parentId,
       position: data.position,
       width: data.width,
-    } as TElement;
+    };
   });
 };

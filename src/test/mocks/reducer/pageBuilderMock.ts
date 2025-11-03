@@ -19,6 +19,7 @@ import {
   TInsets,
   TSize,
   TValue,
+  TValueExtended,
 } from 'types';
 import { AnchorResize, AnchorRotate } from 'store/pageBuilder/enums';
 import {
@@ -103,18 +104,18 @@ export const elementMock: TElement = {
   id: 'test-1',
   layout: layoutMock,
   margin: {
-    b: { type: 'fixed', value: 0 },
-    l: { type: 'fixed', value: 0 },
-    r: { type: 'fixed', value: 0 },
-    t: { type: 'fixed', value: 0 },
+    b: { mode: 'fixed', value: 0 },
+    l: { mode: 'fixed', value: 0 },
+    r: { mode: 'fixed', value: 0 },
+    t: { mode: 'fixed', value: 0 },
   },
   mixBlendMode: 'initial',
   opacity: { mode: 'fixed', value: 100 },
   padding: {
-    b: { type: 'fixed', value: 0 },
-    l: { type: 'fixed', value: 0 },
-    r: { type: 'fixed', value: 0 },
-    t: { type: 'fixed', value: 0 },
+    b: { mode: 'fixed', value: 0 },
+    l: { mode: 'fixed', value: 0 },
+    r: { mode: 'fixed', value: 0 },
+    t: { mode: 'fixed', value: 0 },
   },
   parentId: '-1',
   position: 'absolute',
@@ -146,18 +147,18 @@ export const createFrameMock: TElement = {
   id: 'test-1',
   layout: layoutMock,
   margin: {
-    b: { type: 'fixed', value: 0 },
-    l: { type: 'fixed', value: 0 },
-    r: { type: 'fixed', value: 0 },
-    t: { type: 'fixed', value: 0 },
+    b: { mode: 'fixed', value: 0 },
+    l: { mode: 'fixed', value: 0 },
+    r: { mode: 'fixed', value: 0 },
+    t: { mode: 'fixed', value: 0 },
   },
   mixBlendMode: 'initial',
   opacity: { mode: 'fixed', value: 100 },
   padding: {
-    b: { type: 'fixed', value: 0 },
-    l: { type: 'fixed', value: 0 },
-    r: { type: 'fixed', value: 0 },
-    t: { type: 'fixed', value: 0 },
+    b: { mode: 'fixed', value: 0 },
+    l: { mode: 'fixed', value: 0 },
+    r: { mode: 'fixed', value: 0 },
+    t: { mode: 'fixed', value: 0 },
   },
   parentId: '-1',
   position: 'absolute',
@@ -219,10 +220,10 @@ export const childrenMock: TChildren = {
 };
 
 export const insetsMock: TInsets = {
-  b: { type: 'fixed', value: 0 },
-  l: { type: 'fixed', value: 0 },
-  r: { type: 'fixed', value: 0 },
-  t: { type: 'fixed', value: 0 },
+  b: { mode: 'fixed', value: 0 },
+  l: { mode: 'fixed', value: 0 },
+  r: { mode: 'fixed', value: 0 },
+  t: { mode: 'fixed', value: 0 },
 };
 
 export const selectedElementMock: TSelectedElement = {
@@ -234,5 +235,14 @@ export const selectedElementMock: TSelectedElement = {
 
 export const sizeMock: TSize = {
   type: 'fixed',
+  value: 0,
+};
+
+export const valueMock: TValue = {
+  value: 0,
+};
+
+export const valueExtendMock: TValueExtended = {
+  mode: 'fixed',
   value: 0,
 };

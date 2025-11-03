@@ -2,12 +2,12 @@
 import { elementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // utils
-import { applyOpacityType } from '../applyOpacityType';
+import { applyMode } from '../applyMode';
 
-describe('applyOpacityType', () => {
-  it(`should apply fixed`, () => {
+describe('applyMode', () => {
+  it(`should apply mode`, () => {
     // before
-    const result = applyOpacityType(elementMock, 'fixed');
+    const result = applyMode(elementMock, 'fixed', 'opacity');
 
     // result
     expect(result).toStrictEqual({ mode: 'fixed', value: 100 });

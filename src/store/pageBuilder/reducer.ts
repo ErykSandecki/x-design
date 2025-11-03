@@ -37,7 +37,7 @@ import {
   CHANGE_CLIP_CONTENT,
   UNSELECT_ELEMENTS,
   CHANGE_PROPERTIES,
-  APPLY_ELEMENTS_OPACITY_TYPE,
+  APPLY_ELEMENTS_TYPE,
 } from './actionsType';
 import { BASE_PAGE } from './constants';
 
@@ -74,7 +74,7 @@ import {
   TApplyElementsSizeMinMaxTypeAction,
   TChangeClipContentAction,
   TChangePropertiesAction,
-  TApplyElementsOpacityTypeAction,
+  TApplyElementsTypeAction,
 } from './types';
 
 // utils
@@ -82,9 +82,9 @@ import { filterSelectedElements } from './utils/filterSelectedElements';
 import { handleAddElement } from './utils/handleAddElement';
 import { handleApplyElementsGapType } from './utils/applyElementsGapType/handleApplyElementsGapType';
 import { handleApplyElementsInsetType } from './utils/applyElementsInsetType/handleApplyElementsInsetType';
-import { handleApplyElementsOpacityType } from './utils/applyElementsOpacityType/handleApplyElementsOpacityType';
 import { handleApplyElementsSizeMinMaxType } from './utils/applyElementsSizeMinMaxType/handleApplyElementsSizeMinMaxType';
 import { handleApplyElementsSizeType } from './utils/applyElementsSizeType/handleApplyElementsSizeType';
+import { handleApplyElementsType } from './utils/applyElementsType/handleApplyElementsType';
 import { handleChangeAlignment } from './utils/changeAligment/handleChangeAlignment';
 import { handleChangeBackground } from './utils/handleChangeBackground';
 import { handleChangeClipContent } from './utils/handleChangeClipContent';
@@ -155,11 +155,6 @@ const applyElementsInsetType = (
   { payload }: TAction<TApplyElementsInsetTypeAction['payload']>,
 ): TPageBuilderState => handleApplyElementsInsetType(payload, state);
 
-const applyElementsOpacityType = (
-  state: TPageBuilderState,
-  { payload }: TAction<TApplyElementsOpacityTypeAction['payload']>,
-): TPageBuilderState => handleApplyElementsOpacityType(payload, state);
-
 const applyElementsSizeMinMaxType = (
   state: TPageBuilderState,
   { payload }: TAction<TApplyElementsSizeMinMaxTypeAction['payload']>,
@@ -169,6 +164,11 @@ const applyElementsSizeType = (
   state: TPageBuilderState,
   { payload }: TAction<TApplyElementsSizeTypeAction['payload']>,
 ): TPageBuilderState => handleApplyElementsSizeType(payload, state);
+
+const applyElementsType = (
+  state: TPageBuilderState,
+  { payload }: TAction<TApplyElementsTypeAction['payload']>,
+): TPageBuilderState => handleApplyElementsType(payload, state);
 
 const changeAlignment = (
   state: TPageBuilderState,
@@ -386,12 +386,12 @@ const pageBuilder = (state: TPageBuilderState = initialState, action: TAction): 
       return applyElementsGapType(state, action);
     case APPLY_ELEMENTS_INSET_TYPE:
       return applyElementsInsetType(state, action);
-    case APPLY_ELEMENTS_OPACITY_TYPE:
-      return applyElementsOpacityType(state, action);
     case APPLY_ELEMENTS_SIZE_MIN_MAX_TYPE:
       return applyElementsSizeMinMaxType(state, action);
     case APPLY_ELEMENTS_SIZE_TYPE:
       return applyElementsSizeType(state, action);
+    case APPLY_ELEMENTS_TYPE:
+      return applyElementsType(state, action);
     case CHANGE_ALIGNMENT:
       return changeAlignment(state, action);
     case CHANGE_BACKGROUND:
