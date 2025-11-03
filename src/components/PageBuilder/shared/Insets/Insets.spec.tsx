@@ -556,10 +556,10 @@ describe('Insets behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages[0].elements['test-1'].padding).toStrictEqual({
-      b: { value: 0 },
-      l: { value: 0 },
-      r: { value: 0 },
-      t: { value: 0 },
+      b: { type: 'fixed', value: 0 },
+      l: { type: 'fixed', value: 0 },
+      r: { type: 'fixed', value: 0 },
+      t: { type: 'fixed', value: 0 },
     });
   });
 });

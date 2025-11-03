@@ -49,15 +49,17 @@ export type TLayout = {
   grid: TGrid;
   type: LayoutType;
 };
-export type TInsetProperties = {
+
+export type TBaseProperties = {
+  type: TValueType;
   value: number;
 };
 
 export type TInsets = {
-  b: TInsetProperties;
-  l: TInsetProperties;
-  r: TInsetProperties;
-  t: TInsetProperties;
+  b: TBaseProperties;
+  l: TBaseProperties;
+  r: TBaseProperties;
+  t: TBaseProperties;
 };
 
 export type TInsetsName = keyof Pick<TElement, 'margin' | 'padding'>;
@@ -90,7 +92,7 @@ export type TElement = {
   layout: TLayout;
   margin: TInsets;
   mixBlendMode: CSSProperties['mixBlendMode'];
-  opacity: number;
+  opacity: TBaseProperties;
   padding: TInsets;
   parentId: TElement['id'] | '-1';
   position: CSSProperties['position'];

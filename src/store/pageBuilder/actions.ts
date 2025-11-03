@@ -3,6 +3,7 @@ import {
   ADD_ELEMENT,
   APPLY_ELEMENTS_GAP_TYPE,
   APPLY_ELEMENTS_INSET_TYPE,
+  APPLY_ELEMENTS_OPACITY_TYPE,
   APPLY_ELEMENTS_SIZE_MIN_MAX_TYPE,
   APPLY_ELEMENTS_SIZE_TYPE,
   CHANGE_ALIGNMENT,
@@ -91,6 +92,7 @@ import {
   TChangeClipContentAction,
   TUnselectElementsAction,
   TChangePropertiesAction,
+  TApplyElementsOpacityTypeAction,
 } from './types';
 import { TElement } from 'types';
 
@@ -114,6 +116,13 @@ export const applyElementsInsetType = (
 ): TApplyElementsInsetTypeAction => ({
   payload: { insets, name, type },
   type: APPLY_ELEMENTS_INSET_TYPE,
+});
+
+export const applyElementsOpacityType = (
+  type: TApplyElementsOpacityTypeAction['payload'],
+): TApplyElementsOpacityTypeAction => ({
+  payload: type,
+  type: APPLY_ELEMENTS_OPACITY_TYPE,
 });
 
 export const applyElementsSizeMinMaxType = (

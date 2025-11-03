@@ -73,7 +73,12 @@ export const getMappedElementsToMove = (parentHasChanged: boolean, state: TPageB
     const element = elements[id];
     const data = getPartialData(elements[id], id, elements[possibleParent], parentHasChanged, possibleParent, state);
     const shouldResetCoordinates = data.position === 'relative';
-    const initialMargin = { b: { value: 0 }, l: { value: 0 }, r: { value: 0 }, t: { value: 0 } };
+    const initialMargin = {
+      b: { type: 'fixed', value: 0 },
+      l: { type: 'fixed', value: 0 },
+      r: { type: 'fixed', value: 0 },
+      t: { type: 'fixed', value: 0 },
+    };
 
     return {
       ...element,
@@ -84,6 +89,6 @@ export const getMappedElementsToMove = (parentHasChanged: boolean, state: TPageB
       parentId: data.parentId,
       position: data.position,
       width: data.width,
-    };
+    } as TElement;
   });
 };

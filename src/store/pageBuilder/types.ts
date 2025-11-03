@@ -37,6 +37,7 @@ import {
   CHANGE_CLIP_CONTENT,
   UNSELECT_ELEMENTS,
   CHANGE_PROPERTIES,
+  APPLY_ELEMENTS_OPACITY_TYPE,
 } from './actionsType';
 
 // types
@@ -58,6 +59,7 @@ import {
   TObject,
   TScore,
   TSize,
+  TValueType,
 } from 'types';
 
 export type TElements = TObject<TElement>;
@@ -146,6 +148,11 @@ export type TApplyElementsInsetTypeActionPayload = {
 export type TApplyElementsInsetTypeAction = {
   payload: TApplyElementsInsetTypeActionPayload;
   type: typeof APPLY_ELEMENTS_INSET_TYPE;
+};
+
+export type TApplyElementsOpacityTypeAction = {
+  payload: TValueType;
+  type: typeof APPLY_ELEMENTS_OPACITY_TYPE;
 };
 
 export type TApplyElementsSizeMinMaxTypeActionPayload = {

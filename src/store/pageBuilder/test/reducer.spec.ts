@@ -12,7 +12,6 @@ import {
   flipMock,
   eventsMock,
   gapMock,
-  insetsMock,
   sizeMock,
 } from 'test/mocks/reducer/pageBuilderMock';
 
@@ -26,6 +25,7 @@ import {
   addElement,
   applyElementsGapType,
   applyElementsInsetType,
+  applyElementsOpacityType,
   applyElementsSizeMinMaxType,
   applyElementsSizeType,
   changeAlignment,
@@ -73,6 +73,7 @@ import {
   Unit,
   ElementType,
   TElement,
+  TInsets,
 } from 'types';
 import { AnchorResize } from '../enums';
 import { TPageBuilderState } from '../types';
@@ -171,6 +172,43 @@ describe('PageBuilderReducer', () => {
 
     // before
     const state = reducer(applyElementsInsetType(['b', 'l', 'r', 't'], 'padding', 'fixed'), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            [elementMock.id]: elementMock,
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            [elementMock.id]: elementMock,
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+  });
+
+  it('should handle APPLY_ELEMENTS_OPACITY_TYPE', () => {
+    // mock
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+
+    // before
+    const state = reducer(applyElementsOpacityType('fixed'), {
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -741,7 +779,12 @@ describe('PageBuilderReducer', () => {
 
   it('should handle CHANGE_INSSETS', () => {
     // mock
-    const insets = { b: { value: 1 }, l: { value: 1 }, r: { value: 1 }, t: { value: 1 } };
+    const insets = {
+      b: { type: 'fixed', value: 1 },
+      l: { type: 'fixed', value: 1 },
+      r: { type: 'fixed', value: 1 },
+      t: { type: 'fixed', value: 1 },
+    } as TInsets;
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
     // before
@@ -781,13 +824,7 @@ describe('PageBuilderReducer', () => {
             },
             [elementMock.id]: {
               ...elementMock,
-              padding: {
-                ...insetsMock,
-                b: { value: 1 },
-                l: { value: 1 },
-                r: { value: 1 },
-                t: { value: 1 },
-              },
+              padding: insets,
             },
           },
           selectedElements: [selectedElementMock],

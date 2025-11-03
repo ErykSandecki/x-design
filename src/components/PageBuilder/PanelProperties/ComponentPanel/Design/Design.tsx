@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 // components
 import ColumnAlignment from './ColumnAlignment/ColumnAlignment';
 import ColumnAlignmentLayout from './ColumnAlignmentLayout/ColumnAlignmentLayout';
+import ColumnAppearance from './ColumnAppearance/ColumnAppearance';
 import ColumnClipContent from './ColumnClipContent/ColumnClipContent';
 import ColumnFlow from './ColumnFlow/ColumnFlow';
 import ColumnHeader from './ColumnHeader/ColumnHeader';
@@ -56,7 +57,7 @@ const Design: FC<TDesignProps> = ({ width }) => {
         <ColumnClipContent />
       </UITools.Section>
       <UITools.Section component={<DesignAppearanceButtonIcons />} label={t(`${translationNameSpace}.section.4.label`)}>
-        <></>
+        <ColumnAppearance />
       </UITools.Section>
     </>
   );
