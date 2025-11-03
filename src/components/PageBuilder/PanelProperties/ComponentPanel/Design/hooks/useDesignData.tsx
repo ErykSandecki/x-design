@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from 'react-redux';
 
 // store
 import {
-  areParentsTheSameSelector,
   elementAttributeSelectorCreator,
   firstSelectedElementIdSelector,
   isMixedSelectorCreator,
@@ -10,24 +9,16 @@ import {
 import { changeLayout } from 'store/pageBuilder/actions';
 
 // types
-import { LayoutType, TElement } from 'types';
+import { LayoutType } from 'types';
 
 export type TUseDesignData = {
-  areParentsTheSame: boolean;
-  isMixedBlendMode: boolean;
-  isMixedLayoutType: boolean;
-  layoutType: TElement['layout']['type'];
   onChangeLayoutType: TFunc;
-  position: TElement['position'];
 };
 
 export const useDesignData = (): TUseDesignData => {
-  const areParentsTheSame = useSelector(areParentsTheSameSelector);
   const dispatch = useDispatch();
   const firstElementId = useSelector(firstSelectedElementIdSelector);
-  const isMixedBlendMode = useSelector(isMixedSelectorCreator('mixBlendMode'));
   const isMixedLayoutType = useSelector(isMixedSelectorCreator('layout.type'));
-  const position = useSelector(elementAttributeSelectorCreator('position', firstElementId));
   const layout = useSelector(elementAttributeSelectorCreator('layout', firstElementId));
 
   const onChangeLayoutType = (): void => {
@@ -42,11 +33,6 @@ export const useDesignData = (): TUseDesignData => {
   };
 
   return {
-    areParentsTheSame,
-    isMixedBlendMode,
-    isMixedLayoutType,
-    layoutType: layout.type,
     onChangeLayoutType,
-    position,
   };
 };

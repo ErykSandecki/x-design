@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react';
+import { FC, ReactElement, ReactNode } from 'react';
 
 // components
 import Box from '../../UI/Box/Box';
@@ -18,13 +18,13 @@ import { E2EAttribute } from 'types';
 import { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute';
 
 export type TSectionProps = {
-  buttonsIcon?: Array<ReactNode>;
   children: ReactNode;
+  component?: ReactElement;
   e2eValue?: TE2EDataAttributeProps['value'];
   label?: string;
 };
 
-export const Section: FC<TSectionProps> = ({ buttonsIcon = [], children, e2eValue = '', label }) => {
+export const Section: FC<TSectionProps> = ({ children, component, e2eValue = '', label }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   return (
@@ -37,7 +37,7 @@ export const Section: FC<TSectionProps> = ({ buttonsIcon = [], children, e2eValu
         <Box sx={{ alignItems: 'center', display: 'flex', justifyContent: 'space-between', mb: 10 }}>
           <Small classes={{ className: cx(classNamesWithTheme.label) }}>{label}</Small>
           <Box sx={{ alignItems: 'center', columnGap: '2.5px', display: 'flex', justifyContent: 'center' }}>
-            {buttonsIcon.map((buttonIcon) => buttonIcon)}
+            {component}
           </Box>
         </Box>
       )}

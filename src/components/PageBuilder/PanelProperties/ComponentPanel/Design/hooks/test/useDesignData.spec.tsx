@@ -15,9 +15,6 @@ import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 // store
 import { configureStore } from 'store';
 
-// types
-import { LayoutType } from 'types';
-
 // utils
 import { getProviderWrapper } from 'test';
 
@@ -66,12 +63,7 @@ describe('useDesignData', () => {
 
     // result
     expect(result.current).toStrictEqual({
-      areParentsTheSame: true,
-      isMixedBlendMode: false,
-      isMixedLayoutType: false,
-      layoutType: LayoutType.freeForm,
       onChangeLayoutType: expect.any(Function),
-      position: 'absolute',
     });
   });
 });

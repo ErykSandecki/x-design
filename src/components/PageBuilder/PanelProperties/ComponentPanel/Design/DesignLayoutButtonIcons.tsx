@@ -1,5 +1,5 @@
-import { Dispatch } from 'redux';
-import { ReactNode } from 'react';
+import { FC } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 // components
 import { KeyboardKeysGroup, UITools } from 'shared';
@@ -13,14 +13,22 @@ import { fitLayout } from 'store/pageBuilder/actions';
 
 // types
 import { LayoutType } from 'types';
+import {
+  elementAttributeSelectorCreator,
+  firstSelectedElementIdSelector,
+  isMixedSelectorCreator,
+} from 'store/pageBuilder/selectors';
 
-const DesignLayoutButtonIcons = (
-  dispatch: Dispatch,
-  isMixedLayoutType: boolean,
-  layoutType: LayoutType,
-  onChangeLayoutType: TFunc,
-): Array<ReactNode> => {
+export type TDesignLayoutButtonIconsProps = {
+  onChangeLayoutType: TFunc;
+};
+
+const DesignLayoutButtonIcons: FC<TDesignLayoutButtonIconsProps> = ({ onChangeLayoutType }) => {
+  const dispatch = useDispatch();
+  const firstElementId = useSelector(firstSelectedElementIdSelector);
+  const layoutType = useSelector(elementAttributeSelectorCreator('layout', firstElementId)).type;
   const isFlexible = layoutType !== LayoutType.freeForm;
+  const isMixedLayoutType = useSelector(isMixedSelectorCreator('layout.type'));
   const isSelected = !isMixedLayoutType && isFlexible;
 
   return [

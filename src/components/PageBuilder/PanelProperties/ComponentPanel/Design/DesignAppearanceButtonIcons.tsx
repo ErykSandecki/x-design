@@ -1,6 +1,6 @@
-import { Dispatch } from 'redux';
-import { ReactNode, useState } from 'react';
-import { UseSelector } from 'react-redux';
+import { FC, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
 // components
 import PopoverBlendMode from './PopoverBlendMode/PopoverBlendMode';
@@ -12,18 +12,20 @@ import { TOOLTIP_TRANSLATION_KEY } from 'constant/constants';
 
 // store
 import { changeProperties } from 'store/pageBuilder/actions';
-import { elementAttributeSelectorCreator, firstSelectedElementIdSelector } from 'store/pageBuilder/selectors';
+import {
+  elementAttributeSelectorCreator,
+  firstSelectedElementIdSelector,
+  isMixedSelectorCreator,
+} from 'store/pageBuilder/selectors';
 
-const DesignAppearanceButtonIcons = (
-  dispatch: Dispatch,
-  isMixed: boolean,
-  t: TT,
-  useSelector: UseSelector,
-): Array<ReactNode> => {
+const DesignAppearanceButtonIcons: FC = () => {
+  const dispatch = useDispatch();
   const firstElementId = useSelector(firstSelectedElementIdSelector);
+  const isMixed = useSelector(isMixedSelectorCreator('mixBlendMode'));
   const mixBlendMode = useSelector(elementAttributeSelectorCreator('mixBlendMode', firstElementId));
   const visible = useSelector(elementAttributeSelectorCreator('visible', firstElementId));
   const [currentMixBlendMode, setCurrentMixBlendMode] = useState(mixBlendMode);
+  const { t } = useTranslation();
 
   return [
     <UITools.ButtonIcon

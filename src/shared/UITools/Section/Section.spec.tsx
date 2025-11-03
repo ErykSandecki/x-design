@@ -17,7 +17,7 @@ describe('Section snapshots', () => {
   it('should render with buttons', () => {
     // before
     const { asFragment } = customRender(
-      <Section buttonsIcon={[<ButtonIcon name="Close" key={0} />]} label="label">
+      <Section component={<ButtonIcon name="Close" key={0} />} label="label">
         children
       </Section>,
     );
