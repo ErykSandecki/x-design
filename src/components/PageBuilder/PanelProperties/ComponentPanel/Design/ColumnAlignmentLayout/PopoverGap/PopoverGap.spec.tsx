@@ -20,7 +20,7 @@ describe('PopoverGap snapshots', () => {
     // before
     const { asFragment } = customRender(
       <UITools.PopoverCompound.PopoverRoot selected={false} setSelected={noop}>
-        <PopoverGap gap="column" gapProperties={gapMock} isMixed={false} />
+        <PopoverGap gapKey="column" gapValue={gapMock} isMixed={false} />
       </UITools.PopoverCompound.PopoverRoot>,
     );
 
@@ -32,7 +32,7 @@ describe('PopoverGap snapshots', () => {
     // before
     const { asFragment } = customRender(
       <UITools.PopoverCompound.PopoverRoot selected={false} setSelected={noop}>
-        <PopoverGap gap="column" gapProperties={gapMock} isMixed />
+        <PopoverGap gapKey="column" gapValue={gapMock} isMixed />
       </UITools.PopoverCompound.PopoverRoot>,
     );
 

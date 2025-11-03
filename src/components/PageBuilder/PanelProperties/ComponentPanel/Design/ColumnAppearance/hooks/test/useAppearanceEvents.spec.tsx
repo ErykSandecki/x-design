@@ -53,7 +53,7 @@ describe('useAppearanceEvents', () => {
       onBlurOpacity: expect.any(Function),
       onChangeOpacity: expect.any(Function),
       opacity: '100',
-      opacityType: 'fixed',
+      opacityMode: 'fixed',
     });
   });
 });

@@ -17,7 +17,7 @@ describe('PopoverOpacity snapshots', () => {
     // before
     const { asFragment } = customRender(
       <UITools.PopoverCompound.PopoverRoot selected={false} setSelected={noop}>
-        <PopoverOpacity isMixed={false} type="fixed" value="100" />
+        <PopoverOpacity isMixed={false} mode="fixed" value="100" />
       </UITools.PopoverCompound.PopoverRoot>,
     );
 
@@ -29,7 +29,7 @@ describe('PopoverOpacity snapshots', () => {
     // before
     const { asFragment } = customRender(
       <UITools.PopoverCompound.PopoverRoot selected={false} setSelected={noop}>
-        <PopoverOpacity isMixed type="fixed" value="100" />
+        <PopoverOpacity isMixed mode="fixed" value="100" />
       </UITools.PopoverCompound.PopoverRoot>,
     );
 

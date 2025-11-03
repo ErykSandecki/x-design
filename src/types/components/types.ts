@@ -3,7 +3,8 @@ import { CSSProperties } from 'react';
 // types
 import { AlignmentLayout, AlignmentHorizontal, AlignmentVertical, ElementType, LayoutType, Unit } from './enums';
 import { TColor, TColorGradient } from './background/types';
-import { TValue } from './generic';
+import { TGap, TGrid } from './layout/types';
+import { TValueExtended } from './generic';
 
 export type TAlignment = {
   horizontal?: AlignmentHorizontal;
@@ -25,16 +26,6 @@ export type TFlip = {
   y: boolean;
 };
 
-export type TGap = {
-  column: TValue;
-  row: TValue;
-};
-
-export type TGrid = {
-  columns: number;
-  rows: number;
-};
-
 export type TLayout = {
   alignment: AlignmentLayout;
   boxSizing: 'included' | 'excluded';
@@ -44,7 +35,7 @@ export type TLayout = {
 };
 
 export type TBaseProperties = {
-  type: TValueType;
+  type: TValueExtended['mode'];
   value: number;
 };
 
@@ -63,12 +54,10 @@ export type TScore = {
 };
 
 export type TSize = {
-  type: 'auto' | TValueType;
+  type: 'auto' | TValueExtended['mode'];
   unit?: Unit;
   value: number | CSSProperties['height'] | CSSProperties['width'];
 };
-
-export type TValueType = 'fixed' | 'variable';
 
 export type TElement = {
   alignment: TAlignment;
@@ -85,7 +74,7 @@ export type TElement = {
   layout: TLayout;
   margin: TInsets;
   mixBlendMode: CSSProperties['mixBlendMode'];
-  opacity: TBaseProperties;
+  opacity: TValueExtended;
   padding: TInsets;
   parentId: TElement['id'] | '-1';
   position: CSSProperties['position'];

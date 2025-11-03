@@ -13,17 +13,17 @@ import { applyElementsOpacityType } from 'store/pageBuilder/actions';
 
 // types
 import { PopoverItem } from '../enums';
-import { TValueType } from 'types';
+import { TValueExtended } from 'types';
 
 const { PopoverCompound } = UITools;
 
 export type TPopoverInsetsProps = {
   isMixed: boolean;
-  type: TValueType;
+  mode: TValueExtended['mode'];
   value: string;
 };
 
-const PopoverOpacity: FC<TPopoverInsetsProps> = ({ isMixed, type, value }) => {
+const PopoverOpacity: FC<TPopoverInsetsProps> = ({ isMixed, mode, value }) => {
   const dispatch = useDispatch();
   const { t } = useTranslation();
 
@@ -33,7 +33,7 @@ const PopoverOpacity: FC<TPopoverInsetsProps> = ({ isMixed, type, value }) => {
         icon="Opacity"
         index={PopoverItem.fixed}
         onClick={() => dispatch(applyElementsOpacityType('fixed'))}
-        selected={!isMixed && type === 'fixed'}
+        selected={!isMixed && mode === 'fixed'}
         text={t(`${translationNameSpace}.1`, { value })}
       />
     </>

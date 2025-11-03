@@ -10,6 +10,6 @@ describe('applyOpacityType', () => {
     const result = applyOpacityType(elementMock, 'fixed');
 
     // result
-    expect(result).toStrictEqual({ type: 'fixed', value: 100 });
+    expect(result).toStrictEqual({ mode: 'fixed', value: 100 });
   });
 });

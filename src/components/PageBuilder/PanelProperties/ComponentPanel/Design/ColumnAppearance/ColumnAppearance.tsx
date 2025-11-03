@@ -14,7 +14,7 @@ import { translationNameSpace } from './constants';
 
 const ColumnAppearance: FC = () => {
   const { t } = useTranslation();
-  const { attachedOpacity, isMixedOpacity, onBlurOpacity, onChangeOpacity, opacity, opacityType } =
+  const { attachedOpacity, isMixedOpacity, onBlurOpacity, onChangeOpacity, opacity, opacityMode } =
     useAppearanceEvents();
 
   return (
@@ -30,7 +30,7 @@ const ColumnAppearance: FC = () => {
         name="Opacity"
         onBlur={onBlurOpacity}
         onChange={onChangeOpacity}
-        popoverChildren={<PopoverOpacity isMixed={isMixedOpacity} type={opacityType} value={opacity} />}
+        popoverChildren={<PopoverOpacity isMixed={isMixedOpacity} mode={opacityMode} value={opacity} />}
         value={opacity}
       />
     </UITools.SectionColumn>

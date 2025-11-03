@@ -56,7 +56,7 @@ export const handleCreateElement = (
         t: { type: 'fixed', value: 0 },
       },
       mixBlendMode: 'initial',
-      opacity: { type: 'fixed', value: 100 },
+      opacity: { mode: 'fixed', value: 100 },
       padding: {
         b: { type: 'fixed', value: 0 },
         l: { type: 'fixed', value: 0 },

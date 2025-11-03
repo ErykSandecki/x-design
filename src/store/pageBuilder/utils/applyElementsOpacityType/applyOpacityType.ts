@@ -4,13 +4,13 @@ import { TElement } from 'types';
 
 export const applyOpacityType = (
   element: TElement,
-  type: TApplyElementsOpacityTypeAction['payload'],
+  mode: TApplyElementsOpacityTypeAction['payload'],
 ): TElement['opacity'] => {
-  switch (type) {
+  switch (mode) {
     default:
       return {
         ...element.opacity,
-        type,
+        mode,
       };
   }
 };

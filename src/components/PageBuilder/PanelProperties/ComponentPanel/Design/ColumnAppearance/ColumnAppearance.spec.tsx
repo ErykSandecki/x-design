@@ -198,6 +198,6 @@ describe('ColumnAppearance behaviors', () => {
     fireEvent.click(popoverOpacityItem);
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].opacity.type).toBe('fixed');
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].opacity.mode).toBe('fixed');
   });
 });

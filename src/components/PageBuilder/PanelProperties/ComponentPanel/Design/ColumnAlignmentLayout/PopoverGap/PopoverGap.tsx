@@ -21,13 +21,13 @@ import { isPureNumber } from 'utils';
 const { PopoverCompound } = UITools;
 
 export type TPopoverGapProps = {
-  gap: keyof TGap;
+  gapKey: keyof TGap;
   gapValue: TValue;
   isMixed: boolean;
 };
 
-const PopoverGap: FC<TPopoverGapProps> = ({ gap, gapValue, isMixed }) => {
-  const icon = useMemo(() => (gap === 'column' ? 'GapColumns' : 'GapRows'), []);
+const PopoverGap: FC<TPopoverGapProps> = ({ gapKey, gapValue, isMixed }) => {
+  const icon = useMemo(() => (gapKey === 'column' ? 'GapColumns' : 'GapRows'), []);
   const dispatch = useDispatch();
   const { t } = useTranslation();
 
@@ -36,9 +36,9 @@ const PopoverGap: FC<TPopoverGapProps> = ({ gap, gapValue, isMixed }) => {
       <PopoverCompound.PopoverItem
         icon={icon}
         index={PopoverItem.fixed}
-        onClick={() => dispatch(applyElementsGapType(gap, 'fixed'))}
+        onClick={() => dispatch(applyElementsGapType(gapKey, 'fixed'))}
         selected={!isMixed && isPureNumber(gapValue.value)}
-        text={t(`${translationNameSpace}.${gap}.1`, { value: gapValue.value })}
+        text={t(`${translationNameSpace}.${gapKey}.1`, { value: gapValue.value })}
       />
     </>
   );

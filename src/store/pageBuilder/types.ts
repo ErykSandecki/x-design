@@ -59,7 +59,7 @@ import {
   TScore,
   TSize,
   TValue,
-  TValueType,
+  TValueExtended,
 } from 'types';
 
 export type TElements = TObject<TElement>;
@@ -151,7 +151,7 @@ export type TApplyElementsInsetTypeAction = {
 };
 
 export type TApplyElementsOpacityTypeAction = {
-  payload: TValueType;
+  payload: TValueExtended['mode'];
   type: typeof APPLY_ELEMENTS_OPACITY_TYPE;
 };
 
