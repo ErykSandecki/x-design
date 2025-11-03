@@ -75,7 +75,7 @@ const ColumnAlignmentLayout: FC<TColumnAlignmentLayoutProps> = ({ width }) => {
       />
       <ColumnAlignmentLayoutGapInput
         gap="column"
-        gapProperties={layout.gap.column}
+        gapValue={layout.gap.column}
         isMixed={isMixedColumnGap}
         onBlur={onBlurColumnGap}
         onChange={onChangeColumnGap}
@@ -84,7 +84,7 @@ const ColumnAlignmentLayout: FC<TColumnAlignmentLayoutProps> = ({ width }) => {
       />
       <ColumnAlignmentLayoutGapInput
         gap="row"
-        gapProperties={layout.gap.row}
+        gapValue={layout.gap.row}
         isMixed={isMixedColumnRow}
         onBlur={onBlurRowGap}
         onChange={onChangeRowGap}

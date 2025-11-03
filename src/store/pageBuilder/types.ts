@@ -52,13 +52,13 @@ import {
   TChildren,
   TElement,
   TGap,
-  TGapProperties,
   TGrid,
   TInsets,
   TInsetsName,
   TObject,
   TScore,
   TSize,
+  TValue,
   TValueType,
 } from 'types';
 
@@ -314,7 +314,7 @@ export type TSetElementsCoordinatesAction = {
 
 export type TSetElementsGapActionPayload = {
   gap: keyof TGap;
-  value: TGapProperties['value'];
+  value: TValue['value'];
 };
 
 export type TSetElementsGapAction = {

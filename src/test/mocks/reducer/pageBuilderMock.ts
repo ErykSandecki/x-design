@@ -16,9 +16,9 @@ import {
   TElement,
   TFlip,
   TLayout,
-  TGapProperties,
   TInsets,
   TSize,
+  TValue,
 } from 'types';
 import { AnchorResize, AnchorRotate } from 'store/pageBuilder/enums';
 import {
@@ -63,7 +63,7 @@ export const alignmentMock: TAlignment = {
   vertical: AlignmentVertical.center,
 };
 
-export const gapMock: TGapProperties = {
+export const gapMock: TValue = {
   value: 0,
 };
 

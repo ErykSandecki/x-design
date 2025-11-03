@@ -10,11 +10,11 @@ import { MAX, MIN, PANEL_PROPERTIES_ID } from '../../../../constants';
 import { TOOLTIP_TRANSLATION_KEY } from 'constant/constants';
 
 // types
-import { TGap, TGapProperties } from 'types';
+import { TGap, TValue } from 'types';
 
 export type TColumnAlignmentLayoutGapInputProps = {
   gap: keyof TGap;
-  gapProperties: TGapProperties;
+  gapValue: TValue;
   isMixed: boolean;
   onBlur: TFunc;
   onChange: TFunc<[string, boolean?]>;
@@ -24,7 +24,7 @@ export type TColumnAlignmentLayoutGapInputProps = {
 
 const ColumnAlignmentLayoutGapInput: FC<TColumnAlignmentLayoutGapInputProps> = ({
   gap,
-  gapProperties,
+  gapValue,
   isMixed,
   onBlur,
   onChange,
@@ -49,7 +49,7 @@ const ColumnAlignmentLayoutGapInput: FC<TColumnAlignmentLayoutGapInputProps> = (
       onBlur={onBlur}
       onChange={(event) => onChange(event.target.value)}
       onClick={() => refInputGap.current.select()}
-      popoverChildren={<PopoverGap gap={gap} gapProperties={gapProperties} isMixed={isMixed} />}
+      popoverChildren={<PopoverGap gap={gap} gapValue={gapValue} isMixed={isMixed} />}
       startAdornment={
         <ScrubbableInput
           e2eValue={gap}

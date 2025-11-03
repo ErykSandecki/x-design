@@ -1,17 +1,14 @@
-import { ColorFormatType } from 'antd/es/color-picker/interface';
 import { CSSProperties } from 'react';
 
 // types
 import { AlignmentLayout, AlignmentHorizontal, AlignmentVertical, ElementType, LayoutType, Unit } from './enums';
+import { TColor, TColorGradient } from './background/types';
+import { TValue } from './generic';
 
 export type TAlignment = {
   horizontal?: AlignmentHorizontal;
   vertical?: AlignmentVertical;
 };
-
-export type TColor = { alpha: string; color: string; format: ColorFormatType };
-
-export type TColorGradient = Array<TColor & { direction: 'linear' }>;
 
 export type TBackground = {
   properties: TColor | TColorGradient;
@@ -28,13 +25,9 @@ export type TFlip = {
   y: boolean;
 };
 
-export type TGapProperties = {
-  value: number;
-};
-
 export type TGap = {
-  column: TGapProperties;
-  row: TGapProperties;
+  column: TValue;
+  row: TValue;
 };
 
 export type TGrid = {
