@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 
 // store
-import { changeInsets } from 'store/pageBuilder/actions';
+import { changeProperties } from 'store/pageBuilder/actions';
 
 // types
 import { TInsets, TInsetsName } from 'types';
@@ -32,7 +32,14 @@ export const useBlurEvents = (
     if (insetAll[inset] === '') {
       setInsetAll({ ...insetAll, [inset]: insets[inset].value.toString() });
     } else {
-      dispatch(changeInsets({ [inset]: { value: parseInt(insetAll[inset]) } }, insetsName));
+      dispatch(
+        changeProperties({
+          [insetsName]: {
+            ...insets,
+            [inset]: { ...insets[inset], value: parseInt(insetAll[inset]) },
+          },
+        }),
+      );
     }
   };
 
@@ -40,10 +47,17 @@ export const useBlurEvents = (
     if (insetLR === '') {
       setInsetLR(getInsetValue(insets, ['l', 'r']));
     } else {
-      const { insets, value } = extractInsetValue(['l', 'r'], insetLR);
+      const data = extractInsetValue(insets, ['l', 'r'], insetLR);
 
-      setInsetLR(value);
-      dispatch(changeInsets(insets, insetsName));
+      setInsetLR(data.value);
+      dispatch(
+        changeProperties({
+          [insetsName]: {
+            ...insets,
+            ...data.insets,
+          },
+        }),
+      );
     }
   };
 
@@ -51,10 +65,17 @@ export const useBlurEvents = (
     if (insetTB === '') {
       setInsetTB(getInsetValue(insets, ['t', 'b']));
     } else {
-      const { insets, value } = extractInsetValue(['t', 'b'], insetTB);
+      const data = extractInsetValue(insets, ['t', 'b'], insetTB);
 
-      setInsetTB(value);
-      dispatch(changeInsets(insets, insetsName));
+      setInsetTB(data.value);
+      dispatch(
+        changeProperties({
+          [insetsName]: {
+            ...insets,
+            ...data.insets,
+          },
+        }),
+      );
     }
   };
 

@@ -9,7 +9,6 @@ import {
   CLEAR_PREV_STATE,
   CHANGE_LAYOUT_BOX_SIZING,
   CHANGE_LAYOUT_GRID,
-  CHANGE_INSETS,
   FIT_LAYOUT,
   FLIP_ELEMENTS,
   REDUCER_HISTORY_REDO,
@@ -30,7 +29,6 @@ import {
   TOGGLE_ASPECT_RATIO,
   CHANGE_LAYOUT_ALIGNMENT,
   SET_ELEMENTS_GAP,
-  CHANGE_CLIP_CONTENT,
   UNSELECT_ELEMENTS,
   CHANGE_PROPERTIES,
   APPLY_ELEMENTS_TYPE,
@@ -63,8 +61,6 @@ import {
   TSetElementsGapAction,
   TChangeLayoutBoxSizingAction,
   TChangeLayoutGridAction,
-  TChangeInsetsAction,
-  TChangeClipContentAction,
   TChangePropertiesAction,
   TApplyElementsTypeAction,
 } from './types';
@@ -75,8 +71,6 @@ import { handleAddElement } from './utils/handleAddElement';
 import { handleApplyElementsType } from './utils/applyElementsType/handleApplyElementsType';
 import { handleChangeAlignment } from './utils/changeAligment/handleChangeAlignment';
 import { handleChangeBackground } from './utils/handleChangeBackground';
-import { handleChangeClipContent } from './utils/handleChangeClipContent';
-import { handleChangeInsets } from './utils/handleChangeInsets';
 import { handleChangeLayout } from './utils/changeLayout/handleChangeLayout';
 import { handleChangeLayoutAlignment } from './utils/handleChangeLayoutAlignment';
 import { handleChangeLayoutBoxSizing } from './utils/handleChangeLayoutBoxSizing';
@@ -147,16 +141,6 @@ const changeBackground = (
   state: TPageBuilderState,
   { payload }: TAction<TChangeBackgroundAction['payload']>,
 ): TPageBuilderState => handleChangeBackground(payload, state);
-
-const changeClipContent = (
-  state: TPageBuilderState,
-  { payload }: TAction<TChangeClipContentAction['payload']>,
-): TPageBuilderState => handleChangeClipContent(payload, state);
-
-const changeInsets = (
-  state: TPageBuilderState,
-  { payload }: TAction<TChangeInsetsAction['payload']>,
-): TPageBuilderState => handleChangeInsets(payload, state);
 
 const changeLayout = (
   state: TPageBuilderState,
@@ -356,10 +340,6 @@ const pageBuilder = (state: TPageBuilderState = initialState, action: TAction): 
       return changeAlignment(state, action);
     case CHANGE_BACKGROUND:
       return changeBackground(state, action);
-    case CHANGE_CLIP_CONTENT:
-      return changeClipContent(state, action);
-    case CHANGE_INSETS:
-      return changeInsets(state, action);
     case CHANGE_LAYOUT:
       return changeLayout(state, action);
     case CHANGE_LAYOUT_ALIGNMENT:

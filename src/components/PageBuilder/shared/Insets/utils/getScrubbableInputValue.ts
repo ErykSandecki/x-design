@@ -8,6 +8,7 @@ import { TInsets } from 'types';
 export const getScrubbableInputValue = (
   baseValue: string,
   inset: number,
+  insets: TInsets,
   isScrubbableInput: boolean,
   keys: TInsetKeysGroup,
   value: string,
@@ -25,13 +26,19 @@ export const getScrubbableInputValue = (
 
       return {
         valueInput: `${firstValue}, ${secondValue}`,
-        valueStore: { [keys[0]]: { value: firstValue }, [keys[1]]: { value: secondValue } },
+        valueStore: {
+          [keys[0]]: { ...insets[keys[0]], value: firstValue },
+          [keys[1]]: { ...insets[keys[1]], value: secondValue },
+        },
       };
     }
   }
 
   return {
     valueInput: value,
-    valueStore: { [keys[0]]: { value: parseInt(value) }, [keys[1]]: { value: parseInt(value) } },
+    valueStore: {
+      [keys[0]]: { ...insets[keys[0]], value: parseInt(value) },
+      [keys[1]]: { ...insets[keys[1]], value: parseInt(value) },
+    },
   };
 };

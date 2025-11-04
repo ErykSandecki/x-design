@@ -4,6 +4,7 @@ import { TInsets } from 'types';
 export const cleanValue = (value: string): Array<string> => value.replace(/[^\d,]/g, '').split(',');
 
 export const extractInsetValue = (
+  insets: TInsets,
   keys: [keyof Pick<TInsets, 'l' | 't'>, keyof Pick<TInsets, 'b' | 'r'>],
   value: string,
 ): {
@@ -16,7 +17,10 @@ export const extractInsetValue = (
   const isDifference = firstInsetValue !== secondInsetValue;
 
   return {
-    insets: { [keys[0]]: { value: firstInsetValue }, [keys[1]]: { value: secondInsetValue } },
+    insets: {
+      [keys[0]]: { ...insets[keys[0]], value: firstInsetValue },
+      [keys[1]]: { ...insets[keys[1]], value: secondInsetValue },
+    },
     value: isDifference ? `${first}, ${second}` : `${first}`,
   };
 };

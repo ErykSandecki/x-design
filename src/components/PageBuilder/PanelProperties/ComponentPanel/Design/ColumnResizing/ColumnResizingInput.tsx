@@ -56,6 +56,7 @@ const ColumnResizingInput: FC<TColumnResizingInputProps> = ({
       popoverChildren={popoverChildren}
       startAdornment={
         <ScrubbableInput
+          disabled={attached}
           e2eValue={e2eValue}
           max={MAX}
           min={0}

@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 
 // store
-import { changeInsets } from 'store/pageBuilder/actions';
+import { changeProperties } from 'store/pageBuilder/actions';
 
 // types
 import { TInsets, TInsetsName } from 'types';
@@ -27,29 +27,36 @@ export const useChangeEvents = (
 ): TUseChangeEvents => {
   const dispatch = useDispatch();
 
-  const updateStore = (isScrubbableInput: boolean, value: Partial<TInsets>): void => {
+  const updateStore = (insetsPartial: Partial<TInsets>, isScrubbableInput: boolean): void => {
     if (isScrubbableInput) {
-      dispatch(changeInsets(value, insetsName));
+      dispatch(
+        changeProperties({
+          [insetsName]: {
+            ...insets,
+            ...insetsPartial,
+          },
+        }),
+      );
     }
   };
 
   const handleChangeInset = (value: string, inset: keyof TInsets, isScrubbableInput: boolean): void => {
     setInsetAll({ ...insetAll, [inset]: value });
-    updateStore(isScrubbableInput, { [inset]: { value: parseInt(value) } });
+    updateStore({ [inset]: { ...insets[inset], value: parseInt(value) } }, isScrubbableInput);
   };
 
   const handleChangeInsetLR = (value: string, isScrubbableInput: boolean): void => {
-    const targetValue = getScrubbableInputValue(insetLR, insets.l.value, isScrubbableInput, ['l', 'r'], value);
+    const targetValue = getScrubbableInputValue(insetLR, insets.l.value, insets, isScrubbableInput, ['l', 'r'], value);
 
     setInsetLR(targetValue.valueInput);
-    updateStore(isScrubbableInput, targetValue.valueStore);
+    updateStore(targetValue.valueStore, isScrubbableInput);
   };
 
   const handleChangeInsetTB = (value: string, isScrubbableInput: boolean): void => {
-    const targetValue = getScrubbableInputValue(insetTB, insets.t.value, isScrubbableInput, ['t', 'b'], value);
+    const targetValue = getScrubbableInputValue(insetTB, insets.t.value, insets, isScrubbableInput, ['t', 'b'], value);
 
     setInsetTB(targetValue.valueInput);
-    updateStore(isScrubbableInput, targetValue.valueStore);
+    updateStore(targetValue.valueStore, isScrubbableInput);
   };
 
   return {

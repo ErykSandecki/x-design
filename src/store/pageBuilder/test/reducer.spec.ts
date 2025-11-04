@@ -26,8 +26,6 @@ import {
   applyElementsType,
   changeAlignment,
   changeBackground,
-  changeClipContent,
-  changeInsets,
   changeLayout,
   changeLayoutAlignment,
   changeLayoutBoxSizing,
@@ -68,7 +66,6 @@ import {
   TBackground,
   ElementType,
   TElement,
-  TInsets,
 } from 'types';
 import { AnchorResize } from '../enums';
 import { TPageBuilderState } from '../types';
@@ -327,61 +324,6 @@ describe('PageBuilderReducer', () => {
     });
   });
 
-  it('should handle CHANGE_CLIP_CONTENT', () => {
-    // mock
-    const clipContent: TElement['clipContent'] = false;
-    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-
-    // before
-    const state = reducer(changeClipContent(clipContent), {
-      ...pageBuilderStateMock[PAGE_BUILDER],
-      pages: {
-        ...pageBuilderStateMock[PAGE_BUILDER].pages,
-        ['0']: {
-          ...currentPage,
-          elements: {
-            ...currentPage.elements,
-            ['-1']: {
-              ...currentPage.elements['-1'],
-              children: [selectedElementMock.id, 'test-2'],
-            },
-            [elementMock.id]: {
-              ...elementMock,
-              layout: {
-                ...layoutMock,
-                type: LayoutType.freeForm,
-              },
-            },
-          },
-          selectedElements: [selectedElementMock],
-        },
-      },
-    });
-
-    // result
-    expect(state).toStrictEqual({
-      ...pageBuilderStateMock[PAGE_BUILDER],
-      pages: {
-        ...pageBuilderStateMock[PAGE_BUILDER].pages,
-        ['0']: {
-          ...currentPage,
-          elements: {
-            ...currentPage.elements,
-            ['-1']: {
-              ...currentPage.elements['-1'],
-              children: [selectedElementMock.id, 'test-2'],
-            },
-            [elementMock.id]: {
-              ...elementMock,
-              clipContent,
-            },
-          },
-          selectedElements: [selectedElementMock],
-        },
-      },
-    });
-  });
-
   it('should handle CHANGE_LAYOUT', () => {
     // mock
     const layoutType = LayoutType.vertical;
@@ -599,62 +541,6 @@ describe('PageBuilderReducer', () => {
                   rows: 1,
                 },
               },
-            },
-          },
-          selectedElements: [selectedElementMock],
-        },
-      },
-    });
-  });
-
-  it('should handle CHANGE_INSSETS', () => {
-    // mock
-    const insets = {
-      b: { mode: 'fixed', value: 1 },
-      l: { mode: 'fixed', value: 1 },
-      r: { mode: 'fixed', value: 1 },
-      t: { mode: 'fixed', value: 1 },
-    } as TInsets;
-    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-
-    // before
-    const state = reducer(changeInsets(insets, 'padding'), {
-      ...pageBuilderStateMock[PAGE_BUILDER],
-      pages: {
-        ...pageBuilderStateMock[PAGE_BUILDER].pages,
-        ['0']: {
-          ...currentPage,
-          elements: {
-            ...currentPage.elements,
-            ['-1']: {
-              ...currentPage.elements['-1'],
-              children: [childrenMock],
-            },
-            [elementMock.id]: {
-              ...elementMock,
-            },
-          },
-          selectedElements: [selectedElementMock],
-        },
-      },
-    });
-
-    // result
-    expect(state).toStrictEqual({
-      ...pageBuilderStateMock[PAGE_BUILDER],
-      pages: {
-        ...pageBuilderStateMock[PAGE_BUILDER].pages,
-        ['0']: {
-          ...currentPage,
-          elements: {
-            ...currentPage.elements,
-            ['-1']: {
-              ...currentPage.elements['-1'],
-              children: [childrenMock],
-            },
-            [elementMock.id]: {
-              ...elementMock,
-              padding: insets,
             },
           },
           selectedElements: [selectedElementMock],

@@ -7,7 +7,6 @@ import {
   CHANGE_LAYOUT_ALIGNMENT,
   CHANGE_LAYOUT_BOX_SIZING,
   CHANGE_LAYOUT_GRID,
-  CHANGE_INSETS,
   CHANGE_PARENT,
   CHANGE_POSITION,
   CLEAR_PREV_STATE,
@@ -30,7 +29,6 @@ import {
   UNSELECT_ELEMENT,
   UPDATE_EVENTS_STATUS,
   UPDATE_PREV_STATE,
-  CHANGE_CLIP_CONTENT,
   UNSELECT_ELEMENTS,
   CHANGE_PROPERTIES,
   APPLY_ELEMENTS_TYPE,
@@ -160,21 +158,6 @@ export type TChangeBackgroundActionPayload = Pick<TElement, 'id'> & {
 export type TChangeBackgroundAction = {
   payload: TChangeBackgroundActionPayload;
   type: typeof CHANGE_BACKGROUND;
-};
-
-export type TChangeClipContentAction = {
-  payload: TElement['clipContent'];
-  type: typeof CHANGE_CLIP_CONTENT;
-};
-
-export type TChangeInsetsActionPayload = {
-  insets: Partial<TInsets>;
-  name: TInsetsName;
-};
-
-export type TChangeInsetsAction = {
-  payload: TChangeInsetsActionPayload;
-  type: typeof CHANGE_INSETS;
 };
 
 export type TChangeLayoutAction = {

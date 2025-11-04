@@ -9,7 +9,7 @@ import { UITools } from 'shared';
 import { translationNameSpace } from './constants';
 
 // store
-import { changeClipContent } from 'store/pageBuilder/actions';
+import { changeProperties } from 'store/pageBuilder/actions';
 import {
   elementAttributeSelectorCreator,
   firstSelectedElementIdSelector,
@@ -29,7 +29,7 @@ const ColumnClipContent: FC = () => {
         e2eValue="clip-content"
         label={t(`${translationNameSpace}.label`)}
         isMixed={isMixedClipContent}
-        onChange={() => dispatch(changeClipContent(!clipContent))}
+        onChange={() => dispatch(changeProperties({ clipContent: !clipContent }))}
         value={clipContent}
       />
     </UITools.SectionColumn>

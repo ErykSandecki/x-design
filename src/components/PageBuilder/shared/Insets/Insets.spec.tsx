@@ -131,10 +131,10 @@ describe('Insets behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages[0].elements['test-1'].padding).toStrictEqual({
-      b: { value: 100 },
-      l: { value: 100 },
-      r: { value: 100 },
-      t: { value: 100 },
+      b: { mode: 'fixed', value: 100 },
+      l: { mode: 'fixed', value: 100 },
+      r: { mode: 'fixed', value: 100 },
+      t: { mode: 'fixed', value: 100 },
     });
   });
 
@@ -159,10 +159,10 @@ describe('Insets behaviors', () => {
                 ...elementMock,
                 id: 'test-2',
                 padding: {
-                  b: 1,
-                  l: 1,
-                  r: 1,
-                  t: 1,
+                  b: { mode: 'fixed', value: 1 },
+                  l: { mode: 'fixed', value: 1 },
+                  r: { mode: 'fixed', value: 1 },
+                  t: { mode: 'fixed', value: 1 },
                 },
               },
             },
@@ -195,16 +195,16 @@ describe('Insets behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages[0].elements['test-1'].padding).toStrictEqual({
-      b: { value: 100 },
-      l: { value: 100 },
-      r: { value: 100 },
-      t: { value: 100 },
+      b: { mode: 'fixed', value: 100 },
+      l: { mode: 'fixed', value: 100 },
+      r: { mode: 'fixed', value: 100 },
+      t: { mode: 'fixed', value: 100 },
     });
     expect(store.getState()[PAGE_BUILDER].pages[0].elements['test-2'].padding).toStrictEqual({
-      b: { value: 100 },
-      l: { value: 100 },
-      r: { value: 100 },
-      t: { value: 100 },
+      b: { mode: 'fixed', value: 100 },
+      l: { mode: 'fixed', value: 100 },
+      r: { mode: 'fixed', value: 100 },
+      t: { mode: 'fixed', value: 100 },
     });
   });
 
@@ -235,10 +235,10 @@ describe('Insets behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages[0].elements['test-1'].padding).toStrictEqual({
-      b: { value: 50 },
-      l: { value: 100 },
-      r: { value: 50 },
-      t: { value: 100 },
+      b: { mode: 'fixed', value: 50 },
+      l: { mode: 'fixed', value: 100 },
+      r: { mode: 'fixed', value: 50 },
+      t: { mode: 'fixed', value: 100 },
     });
   });
 
@@ -274,10 +274,10 @@ describe('Insets behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages[0].elements['test-1'].padding).toStrictEqual({
-      b: { value: 100 },
-      l: { value: 100 },
-      r: { value: 100 },
-      t: { value: 100 },
+      b: { mode: 'fixed', value: 100 },
+      l: { mode: 'fixed', value: 100 },
+      r: { mode: 'fixed', value: 100 },
+      t: { mode: 'fixed', value: 100 },
     });
   });
 
@@ -301,8 +301,8 @@ describe('Insets behaviors', () => {
                 ...elementMock,
                 padding: {
                   ...insetsMock,
-                  b: { value: 50 },
-                  r: { value: 50 },
+                  b: { mode: 'fixed', value: 50 },
+                  r: { mode: 'fixed', value: 50 },
                 },
               },
             },
@@ -342,10 +342,10 @@ describe('Insets behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages[0].elements['test-1'].padding).toStrictEqual({
-      b: { value: 150 },
-      l: { value: 100 },
-      r: { value: 150 },
-      t: { value: 100 },
+      b: { mode: 'fixed', value: 150 },
+      l: { mode: 'fixed', value: 100 },
+      r: { mode: 'fixed', value: 150 },
+      t: { mode: 'fixed', value: 100 },
     });
   });
 
@@ -388,10 +388,10 @@ describe('Insets behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages[0].elements['test-1'].padding).toStrictEqual({
-      b: { value: 100 },
-      l: { value: 100 },
-      r: { value: 100 },
-      t: { value: 100 },
+      b: { mode: 'fixed', value: 100 },
+      l: { mode: 'fixed', value: 100 },
+      r: { mode: 'fixed', value: 100 },
+      t: { mode: 'fixed', value: 100 },
     });
   });
 
@@ -464,16 +464,16 @@ describe('Insets behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages[0].elements['test-1'].padding).toStrictEqual({
-      b: { value: 100 },
-      l: { value: 100 },
-      r: { value: 100 },
-      t: { value: 100 },
+      b: { mode: 'fixed', value: 100 },
+      l: { mode: 'fixed', value: 100 },
+      r: { mode: 'fixed', value: 100 },
+      t: { mode: 'fixed', value: 100 },
     });
     expect(store.getState()[PAGE_BUILDER].pages[0].elements['test-2'].padding).toStrictEqual({
-      b: { value: 100 },
-      l: { value: 100 },
-      r: { value: 100 },
-      t: { value: 100 },
+      b: { mode: 'fixed', value: 100 },
+      l: { mode: 'fixed', value: 100 },
+      r: { mode: 'fixed', value: 100 },
+      t: { mode: 'fixed', value: 100 },
     });
   });
 
@@ -520,10 +520,10 @@ describe('Insets behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages[0].elements['test-1'].padding).toStrictEqual({
-      b: { value: 100 },
-      l: { value: 100 },
-      r: { value: 100 },
-      t: { value: 100 },
+      b: { mode: 'fixed', value: 100 },
+      l: { mode: 'fixed', value: 100 },
+      r: { mode: 'fixed', value: 100 },
+      t: { mode: 'fixed', value: 100 },
     });
   });
 

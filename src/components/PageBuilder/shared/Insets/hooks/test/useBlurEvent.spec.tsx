@@ -33,7 +33,14 @@ describe('useBlurEvent', () => {
     result.current.onBlurInset('b');
 
     // result
-    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({ insets: { b: { value: 0 } }, name: 'padding' });
+    expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
+      padding: {
+        b: { mode: 'fixed', value: 0 },
+        l: { mode: 'fixed', value: 0 },
+        r: { mode: 'fixed', value: 0 },
+        t: { mode: 'fixed', value: 0 },
+      },
+    });
   });
 
   it(`should trigger blur reset value`, () => {
@@ -79,8 +86,12 @@ describe('useBlurEvent', () => {
     // result
     expect(mockCallBack.mock.calls[0][0]).toBe('0, 1');
     expect(mockCallBack.mock.calls[1][0].payload).toStrictEqual({
-      insets: { l: { value: 0 }, r: { value: 1 } },
-      name: 'padding',
+      padding: {
+        b: { mode: 'fixed', value: 0 },
+        l: { mode: 'fixed', value: 0 },
+        r: { mode: 'fixed', value: 1 },
+        t: { mode: 'fixed', value: 0 },
+      },
     });
   });
 
@@ -88,7 +99,7 @@ describe('useBlurEvent', () => {
     // before
     const { result } = renderHook(() =>
       useBlurEvents(
-        { ...insetsMock, l: { value: 0 }, r: { value: 1 } },
+        { ...insetsMock, l: { mode: 'fixed', value: 0 }, r: { mode: 'fixed', value: 1 } },
         { b: '0', l: '0', r: '0', t: '0' },
         '',
         '0',
@@ -127,8 +138,12 @@ describe('useBlurEvent', () => {
     // result
     expect(mockCallBack.mock.calls[0][0]).toBe('0, 1');
     expect(mockCallBack.mock.calls[1][0].payload).toStrictEqual({
-      insets: { b: { value: 1 }, t: { value: 0 } },
-      name: 'padding',
+      padding: {
+        b: { mode: 'fixed', value: 1 },
+        l: { mode: 'fixed', value: 0 },
+        r: { mode: 'fixed', value: 0 },
+        t: { mode: 'fixed', value: 0 },
+      },
     });
   });
 
@@ -136,7 +151,7 @@ describe('useBlurEvent', () => {
     // before
     const { result } = renderHook(() =>
       useBlurEvents(
-        { ...insetsMock, b: { value: 1 }, t: { value: 0 } },
+        { ...insetsMock, b: { mode: 'fixed', value: 1 }, t: { mode: 'fixed', value: 0 } },
         { b: '0', l: '0', r: '0', t: '0' },
         '0',
         '',

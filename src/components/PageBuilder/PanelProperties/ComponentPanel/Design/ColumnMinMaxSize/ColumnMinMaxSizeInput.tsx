@@ -15,7 +15,7 @@ import { applyElementsType } from 'store/pageBuilder/actions';
 import { ColorsTheme, TElement, TValueExtended, TValueScore } from 'types';
 
 // utils
-import { sanitizeNumberInput } from 'utils';
+import { sanitizeNumberInput, valueAttached } from 'utils';
 
 export type TColumnResizingInputProps = {
   e2eValue: TE2EValue;
@@ -40,6 +40,7 @@ const ColumnMinMaxSizeInput: FC<TColumnResizingInputProps> = ({
   value,
   valueScrubbaleInput,
 }) => {
+  const attached = valueAttached(mode);
   const dispatch = useDispatch();
   const iconName = `${capitalize(scoreKey)}${capitalize(sizeType)}` as TIconProps['name'];
 
@@ -55,6 +56,7 @@ const ColumnMinMaxSizeInput: FC<TColumnResizingInputProps> = ({
       popoverChildren={popoverChildren}
       startAdornment={
         <ScrubbableInput
+          disabled={attached}
           e2eValue={e2eValue}
           max={MAX}
           min={0}

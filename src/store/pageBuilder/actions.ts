@@ -4,8 +4,6 @@ import {
   APPLY_ELEMENTS_TYPE,
   CHANGE_ALIGNMENT,
   CHANGE_BACKGROUND,
-  CHANGE_CLIP_CONTENT,
-  CHANGE_INSETS,
   CHANGE_LAYOUT,
   CHANGE_LAYOUT_ALIGNMENT,
   CHANGE_LAYOUT_BOX_SIZING,
@@ -47,7 +45,6 @@ import {
   TChangeLayoutAlignmentAction,
   TChangeLayoutBoxSizingAction,
   TChangeLayoutGridAction,
-  TChangeInsetsAction,
   TChangeParentAction,
   TChangePositionAction,
   TClearPrevStateAction,
@@ -76,8 +73,6 @@ import {
   TUnselectElementAction,
   TUpdateEventsStatusAction,
   TUpdatePrevStateAction,
-  TChangeInsetsActionPayload,
-  TChangeClipContentAction,
   TUnselectElementsAction,
   TChangePropertiesAction,
   TApplyElementsTypeAction,
@@ -110,19 +105,6 @@ export const changeBackground = (
 ): TChangeBackgroundAction => ({
   payload: { background, id },
   type: CHANGE_BACKGROUND,
-});
-
-export const changeClipContent = (clipContent: TChangeClipContentAction['payload']): TChangeClipContentAction => ({
-  payload: clipContent,
-  type: CHANGE_CLIP_CONTENT,
-});
-
-export const changeInsets = (
-  insets: TChangeInsetsActionPayload['insets'],
-  name: TChangeInsetsActionPayload['name'],
-): TChangeInsetsAction => ({
-  payload: { insets, name },
-  type: CHANGE_INSETS,
 });
 
 export const changeLayout = (layoutType: TChangeLayoutAction['payload']): TChangeLayoutAction => ({
