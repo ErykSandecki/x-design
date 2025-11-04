@@ -1,8 +1,6 @@
 // others
 import {
   ADD_ELEMENT,
-  APPLY_ELEMENTS_GAP_TYPE,
-  APPLY_ELEMENTS_INSET_TYPE,
   APPLY_ELEMENTS_TYPE,
   APPLY_ELEMENTS_SIZE_MIN_MAX_TYPE,
   APPLY_ELEMENTS_SIZE_TYPE,
@@ -44,8 +42,6 @@ import {
 import {
   TAddELementAction,
   TAddELementActionPayload,
-  TApplyElementsGapTypeAction,
-  TApplyElementsGapTypeActionPaylad,
   TApplyElementsSizeTypeAction,
   TApplyElementsSizeTypeActionPayload,
   TChangeAlignmentAction,
@@ -85,8 +81,6 @@ import {
   TUpdateEventsStatusAction,
   TUpdatePrevStateAction,
   TChangeInsetsActionPayload,
-  TApplyElementsInsetTypeActionPayload,
-  TApplyElementsInsetTypeAction,
   TApplyElementsSizeMinMaxTypeActionPayload,
   TApplyElementsSizeMinMaxTypeAction,
   TChangeClipContentAction,
@@ -100,23 +94,6 @@ import { TElement } from 'types';
 export const addElement = (payload: TAddELementActionPayload): TAddELementAction => ({
   payload,
   type: ADD_ELEMENT,
-});
-
-export const applyElementsGapType = (
-  gap: TApplyElementsGapTypeActionPaylad['gap'],
-  type: TApplyElementsGapTypeActionPaylad['type'],
-): TApplyElementsGapTypeAction => ({
-  payload: { gap, type },
-  type: APPLY_ELEMENTS_GAP_TYPE,
-});
-
-export const applyElementsInsetType = (
-  insets: TApplyElementsInsetTypeActionPayload['insets'],
-  name: TApplyElementsInsetTypeActionPayload['name'],
-  type: TApplyElementsInsetTypeActionPayload['type'],
-): TApplyElementsInsetTypeAction => ({
-  payload: { insets, name, type },
-  type: APPLY_ELEMENTS_INSET_TYPE,
 });
 
 export const applyElementsSizeMinMaxType = (
@@ -138,9 +115,9 @@ export const applyElementsSizeType = (
 
 export const applyElementsType = (
   mode: TApplyElementsTypeActionPayload['mode'],
-  property: TApplyElementsTypeActionPayload['properties'],
+  properties: TApplyElementsTypeActionPayload['properties'],
 ): TApplyElementsTypeAction => ({
-  payload: { mode, properties: property },
+  payload: { mode, properties },
   type: APPLY_ELEMENTS_TYPE,
 });
 

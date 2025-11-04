@@ -9,7 +9,7 @@ import { UITools } from 'shared';
 import { translationNameSpace } from './constants';
 
 // store
-import { applyElementsGapType } from 'store/pageBuilder/actions';
+import { applyElementsType } from 'store/pageBuilder/actions';
 
 // types
 import { PopoverItem } from '../enums';
@@ -27,8 +27,8 @@ export type TPopoverGapProps = {
 };
 
 const PopoverGap: FC<TPopoverGapProps> = ({ gapKey, gapValue, isMixed }) => {
-  const icon = useMemo(() => (gapKey === 'column' ? 'GapColumns' : 'GapRows'), []);
   const dispatch = useDispatch();
+  const icon = useMemo(() => (gapKey === 'column' ? 'GapColumns' : 'GapRows'), []);
   const { t } = useTranslation();
 
   return (
@@ -36,7 +36,7 @@ const PopoverGap: FC<TPopoverGapProps> = ({ gapKey, gapValue, isMixed }) => {
       <PopoverCompound.PopoverItem
         icon={icon}
         index={PopoverItem.fixed}
-        onClick={() => dispatch(applyElementsGapType(gapKey, 'fixed'))}
+        onClick={() => dispatch(applyElementsType('fixed', [`layout.gap.${gapKey}`]))}
         selected={!isMixed && isPureNumber(gapValue.value)}
         text={t(`${translationNameSpace}.${gapKey}.1`, { value: gapValue.value })}
       />

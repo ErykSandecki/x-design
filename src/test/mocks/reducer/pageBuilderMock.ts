@@ -64,7 +64,8 @@ export const alignmentMock: TAlignment = {
   vertical: AlignmentVertical.center,
 };
 
-export const gapMock: TValue = {
+export const gapMock: TValueExtended = {
+  mode: 'fixed',
   value: 0,
 };
 

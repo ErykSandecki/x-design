@@ -1,7 +1,6 @@
 // others
 import {
   ADD_ELEMENT,
-  APPLY_ELEMENTS_GAP_TYPE,
   APPLY_ELEMENTS_SIZE_TYPE,
   CHANGE_ALIGNMENT,
   CHANGE_BACKGROUND,
@@ -32,7 +31,6 @@ import {
   UNSELECT_ELEMENT,
   UPDATE_EVENTS_STATUS,
   UPDATE_PREV_STATE,
-  APPLY_ELEMENTS_INSET_TYPE,
   APPLY_ELEMENTS_SIZE_MIN_MAX_TYPE,
   CHANGE_CLIP_CONTENT,
   UNSELECT_ELEMENTS,
@@ -130,25 +128,10 @@ export type TAddELementAction = {
   type: typeof ADD_ELEMENT;
 };
 
-export type TApplyElementsGapTypeActionPaylad = {
-  gap: keyof TGap;
-  type: 'fixed';
-};
-
-export type TApplyElementsGapTypeAction = {
-  payload: TApplyElementsGapTypeActionPaylad;
-  type: typeof APPLY_ELEMENTS_GAP_TYPE;
-};
-
 export type TApplyElementsInsetTypeActionPayload = {
   insets: Array<keyof TInsets>;
   name: TInsetsName;
   type: 'fixed';
-};
-
-export type TApplyElementsInsetTypeAction = {
-  payload: TApplyElementsInsetTypeActionPayload;
-  type: typeof APPLY_ELEMENTS_INSET_TYPE;
 };
 
 export type TApplyElementsSizeMinMaxTypeActionPayload = {

@@ -588,8 +588,8 @@ describe('ColumnAlignmentLayout behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].layout.gap).toStrictEqual({
-      column: { value: 100 },
-      row: { value: 100 },
+      column: { mode: 'fixed', value: 100 },
+      row: { mode: 'fixed', value: 100 },
     });
   });
 
@@ -650,8 +650,8 @@ describe('ColumnAlignmentLayout behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].layout.gap).toStrictEqual({
-      column: { value: 100 },
-      row: { value: 100 },
+      column: { mode: 'fixed', value: 100 },
+      row: { mode: 'fixed', value: 100 },
     });
   });
 
@@ -739,12 +739,12 @@ describe('ColumnAlignmentLayout behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].layout.gap).toStrictEqual({
-      column: { value: 100 },
-      row: { value: 100 },
+      column: { mode: 'fixed', value: 100 },
+      row: { mode: 'fixed', value: 100 },
     });
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-2'].layout.gap).toStrictEqual({
-      column: { value: 100 },
-      row: { value: 100 },
+      column: { mode: 'fixed', value: 100 },
+      row: { mode: 'fixed', value: 100 },
     });
   });
 
@@ -806,8 +806,8 @@ describe('ColumnAlignmentLayout behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].layout.gap).toStrictEqual({
-      column: { value: 0 },
-      row: { value: 0 },
+      column: { mode: 'fixed', value: 0 },
+      row: { mode: 'fixed', value: 0 },
     });
   });
 

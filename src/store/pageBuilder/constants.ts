@@ -1,8 +1,6 @@
 // others
 import {
   ADD_ELEMENT,
-  APPLY_ELEMENTS_GAP_TYPE,
-  APPLY_ELEMENTS_INSET_TYPE,
   APPLY_ELEMENTS_TYPE,
   APPLY_ELEMENTS_SIZE_MIN_MAX_TYPE,
   APPLY_ELEMENTS_SIZE_TYPE,
@@ -60,7 +58,7 @@ export const BASE_ELEMENTS: TElement = {
   layout: {
     alignment: AlignmentLayout.none,
     boxSizing: 'excluded',
-    gap: { column: { value: 0 }, row: { value: 0 } },
+    gap: { column: { mode: 'fixed', value: 0 }, row: { mode: 'fixed', value: 0 } },
     grid: { columns: 1, rows: 1 },
     type: LayoutType.freeForm,
   },
@@ -111,8 +109,6 @@ export const PREV_ID = 'prev';
 
 export const REDUCER_HISTORY_SAVE_ACTIONS = [
   ADD_ELEMENT,
-  APPLY_ELEMENTS_GAP_TYPE,
-  APPLY_ELEMENTS_INSET_TYPE,
   APPLY_ELEMENTS_TYPE,
   APPLY_ELEMENTS_SIZE_MIN_MAX_TYPE,
   APPLY_ELEMENTS_SIZE_TYPE,

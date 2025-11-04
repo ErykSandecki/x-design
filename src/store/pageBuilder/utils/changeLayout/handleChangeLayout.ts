@@ -37,7 +37,7 @@ export const handleChangeLayout = (
             layout: {
               ...element.layout,
               alignment: allowedAbsolute ? AlignmentLayout.none : AlignmentLayout.topLeft,
-              gap: { column: { value: 0 }, row: { value: 0 } },
+              gap: { column: { mode: 'fixed', value: 0 }, row: { mode: 'fixed', value: 0 } },
               grid: getGridLayout(element, layoutType),
               type: layoutType,
             },

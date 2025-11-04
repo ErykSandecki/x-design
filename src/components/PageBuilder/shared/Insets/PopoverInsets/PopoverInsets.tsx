@@ -6,10 +6,11 @@ import { useTranslation } from 'react-i18next';
 import { TIconProps, UITools } from 'shared';
 
 // store
-import { applyElementsInsetType } from 'store/pageBuilder/actions';
+import { applyElementsType } from 'store/pageBuilder/actions';
 
 // types
 import { PopoverItem } from '../enums';
+import { TApplyElementsTypeActionPayload } from 'store/pageBuilder/types';
 import { TInsets, TInsetsName } from 'types';
 
 // utils
@@ -29,6 +30,7 @@ export type TPopoverInsetsProps = {
 const PopoverInsets: FC<TPopoverInsetsProps> = ({ icon, insetsName, insets, isMixed, translationNameSpace, value }) => {
   const key = insets.join('');
   const dispatch = useDispatch();
+  const properties = insets.map((inset) => `${insetsName}.${inset}`) as TApplyElementsTypeActionPayload['properties'];
   const { t } = useTranslation();
 
   return (
@@ -36,7 +38,7 @@ const PopoverInsets: FC<TPopoverInsetsProps> = ({ icon, insetsName, insets, isMi
       <PopoverCompound.PopoverItem
         icon={icon}
         index={PopoverItem.fixed}
-        onClick={() => dispatch(applyElementsInsetType(insets, insetsName, 'fixed'))}
+        onClick={() => dispatch(applyElementsType('fixed', properties))}
         selected={!isMixed && isPureNumber(value)}
         text={t(`${translationNameSpace}.popover.${key}.1`, { value })}
       />

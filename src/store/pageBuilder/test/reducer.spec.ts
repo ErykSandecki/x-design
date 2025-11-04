@@ -24,8 +24,6 @@ import { ZOOM_CONTENT_ID } from 'shared';
 import pageBuilder from '../reducer';
 import {
   addElement,
-  applyElementsGapType,
-  applyElementsInsetType,
   applyElementsType,
   applyElementsSizeMinMaxType,
   applyElementsSizeType,
@@ -125,80 +123,6 @@ describe('PageBuilderReducer', () => {
             },
             [createFrameMock.id]: createFrameMock,
           },
-        },
-      },
-    });
-  });
-
-  it('should handle APPLY_ELEMENTS_GAP_TYPE', () => {
-    // mock
-    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-
-    // before
-    const state = reducer(applyElementsGapType('column', 'fixed'), {
-      ...pageBuilderStateMock[PAGE_BUILDER],
-      pages: {
-        ...pageBuilderStateMock[PAGE_BUILDER].pages,
-        ['0']: {
-          ...currentPage,
-          elements: {
-            ...currentPage.elements,
-            [elementMock.id]: elementMock,
-          },
-          selectedElements: [selectedElementMock],
-        },
-      },
-    });
-
-    // result
-    expect(state).toStrictEqual({
-      ...pageBuilderStateMock[PAGE_BUILDER],
-      pages: {
-        ...pageBuilderStateMock[PAGE_BUILDER].pages,
-        ['0']: {
-          ...currentPage,
-          elements: {
-            ...currentPage.elements,
-            [elementMock.id]: elementMock,
-          },
-          selectedElements: [selectedElementMock],
-        },
-      },
-    });
-  });
-
-  it('should handle APPLY_ELEMENTS_INSET_TYPE', () => {
-    // mock
-    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-
-    // before
-    const state = reducer(applyElementsInsetType(['b', 'l', 'r', 't'], 'padding', 'fixed'), {
-      ...pageBuilderStateMock[PAGE_BUILDER],
-      pages: {
-        ...pageBuilderStateMock[PAGE_BUILDER].pages,
-        ['0']: {
-          ...currentPage,
-          elements: {
-            ...currentPage.elements,
-            [elementMock.id]: elementMock,
-          },
-          selectedElements: [selectedElementMock],
-        },
-      },
-    });
-
-    // result
-    expect(state).toStrictEqual({
-      ...pageBuilderStateMock[PAGE_BUILDER],
-      pages: {
-        ...pageBuilderStateMock[PAGE_BUILDER].pages,
-        ['0']: {
-          ...currentPage,
-          elements: {
-            ...currentPage.elements,
-            [elementMock.id]: elementMock,
-          },
-          selectedElements: [selectedElementMock],
         },
       },
     });

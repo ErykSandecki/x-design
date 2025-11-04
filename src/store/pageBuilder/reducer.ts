@@ -1,7 +1,6 @@
 // others
 import {
   ADD_ELEMENT,
-  APPLY_ELEMENTS_INSET_TYPE,
   APPLY_ELEMENTS_SIZE_MIN_MAX_TYPE,
   CHANGE_ALIGNMENT,
   CHANGE_BACKGROUND,
@@ -33,7 +32,6 @@ import {
   TOGGLE_ASPECT_RATIO,
   CHANGE_LAYOUT_ALIGNMENT,
   SET_ELEMENTS_GAP,
-  APPLY_ELEMENTS_GAP_TYPE,
   CHANGE_CLIP_CONTENT,
   UNSELECT_ELEMENTS,
   CHANGE_PROPERTIES,
@@ -66,11 +64,9 @@ import {
   TSetElementsScoreToCurrentSizeAction,
   TChangeLayoutAlignmentAction,
   TSetElementsGapAction,
-  TApplyElementsGapTypeAction,
   TChangeLayoutBoxSizingAction,
   TChangeLayoutGridAction,
   TChangeInsetsAction,
-  TApplyElementsInsetTypeAction,
   TApplyElementsSizeMinMaxTypeAction,
   TChangeClipContentAction,
   TChangePropertiesAction,
@@ -80,8 +76,6 @@ import {
 // utils
 import { filterSelectedElements } from './utils/filterSelectedElements';
 import { handleAddElement } from './utils/handleAddElement';
-import { handleApplyElementsGapType } from './utils/applyElementsGapType/handleApplyElementsGapType';
-import { handleApplyElementsInsetType } from './utils/applyElementsInsetType/handleApplyElementsInsetType';
 import { handleApplyElementsSizeMinMaxType } from './utils/applyElementsSizeMinMaxType/handleApplyElementsSizeMinMaxType';
 import { handleApplyElementsSizeType } from './utils/applyElementsSizeType/handleApplyElementsSizeType';
 import { handleApplyElementsType } from './utils/applyElementsType/handleApplyElementsType';
@@ -144,16 +138,6 @@ const addElement = (
   state: TPageBuilderState,
   { payload: element }: TAction<TAddELementAction['payload']>,
 ): TPageBuilderState => handleAddElement(element, state);
-
-const applyElementsGapType = (
-  state: TPageBuilderState,
-  { payload }: TAction<TApplyElementsGapTypeAction['payload']>,
-): TPageBuilderState => handleApplyElementsGapType(payload, state);
-
-const applyElementsInsetType = (
-  state: TPageBuilderState,
-  { payload }: TAction<TApplyElementsInsetTypeAction['payload']>,
-): TPageBuilderState => handleApplyElementsInsetType(payload, state);
 
 const applyElementsSizeMinMaxType = (
   state: TPageBuilderState,
@@ -382,10 +366,6 @@ const pageBuilder = (state: TPageBuilderState = initialState, action: TAction): 
   switch (action.type) {
     case ADD_ELEMENT:
       return addElement(state, action);
-    case APPLY_ELEMENTS_GAP_TYPE:
-      return applyElementsGapType(state, action);
-    case APPLY_ELEMENTS_INSET_TYPE:
-      return applyElementsInsetType(state, action);
     case APPLY_ELEMENTS_SIZE_MIN_MAX_TYPE:
       return applyElementsSizeMinMaxType(state, action);
     case APPLY_ELEMENTS_SIZE_TYPE:

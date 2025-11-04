@@ -1,9 +1,9 @@
 // types
-import { TValue } from '../generic';
+import { TValueExtended } from '../generic';
 
 export type TGap = {
-  column: TValue;
-  row: TValue;
+  column: TValueExtended;
+  row: TValueExtended;
 };
 
 export type TGrid = {
