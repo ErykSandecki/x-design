@@ -245,5 +245,6 @@ export const valueMock: TValue = {
 
 export const valueExtendMock: TValueExtended = {
   mode: 'fixed',
+  unit: undefined,
   value: 0,
 };

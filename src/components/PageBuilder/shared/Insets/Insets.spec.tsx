@@ -5,7 +5,13 @@ import { Provider } from 'react-redux';
 import Insets from './Insets';
 
 // mocks
-import { elementMock, insetsMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
+import {
+  elementMock,
+  insetsMock,
+  pageBuilderStateMock,
+  selectedElementMock,
+  valueExtendMock,
+} from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
@@ -556,10 +562,10 @@ describe('Insets behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages[0].elements['test-1'].padding).toStrictEqual({
-      b: { mode: 'fixed', value: 0 },
-      l: { mode: 'fixed', value: 0 },
-      r: { mode: 'fixed', value: 0 },
-      t: { mode: 'fixed', value: 0 },
+      b: { ...valueExtendMock, value: 0 },
+      l: { ...valueExtendMock, value: 0 },
+      r: { ...valueExtendMock, value: 0 },
+      t: { ...valueExtendMock, value: 0 },
     });
   });
 });

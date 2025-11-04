@@ -11,6 +11,7 @@ import {
   layoutMock,
   pageBuilderStateMock,
   selectedElementMock,
+  valueExtendMock,
 } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
@@ -806,8 +807,8 @@ describe('ColumnAlignmentLayout behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].layout.gap).toStrictEqual({
-      column: { mode: 'fixed', value: 0 },
-      row: { mode: 'fixed', value: 0 },
+      column: { ...valueExtendMock, value: 0 },
+      row: { ...valueExtendMock, value: 0 },
     });
   });
 
