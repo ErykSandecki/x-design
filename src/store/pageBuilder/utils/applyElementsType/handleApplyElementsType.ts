@@ -2,7 +2,7 @@ import { cloneDeep, set } from 'lodash';
 
 // types
 import { TApplyElementsTypeActionPayload, TPageBuilderState } from '../../types';
-import { TElement } from 'types';
+import { TElement, Unit } from 'types';
 
 // utils
 import { applyMode } from './applyMode';
@@ -12,16 +12,17 @@ export const applyElementPropertyMode = (
   element: TElement,
   mode: TApplyElementsTypeActionPayload['mode'],
   properties: TApplyElementsTypeActionPayload['properties'],
+  unit: Unit,
 ): TElement => {
   properties.forEach((property) => {
-    set(element, property, applyMode(element, mode, property));
+    set(element, property, applyMode(element, mode, property, unit));
   });
 
   return element;
 };
 
 export const handleApplyElementsType = (
-  { mode, properties }: TApplyElementsTypeActionPayload,
+  { mode, properties, unit }: TApplyElementsTypeActionPayload,
   state: TPageBuilderState,
 ): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];
@@ -38,7 +39,7 @@ export const handleApplyElementsType = (
           ...currentPage.elements,
           ...mapFilteredValues(currentPage.elements, ids, (element) => ({
             ...element,
-            ...applyElementPropertyMode(cloneDeep(element), mode, properties),
+            ...applyElementPropertyMode(cloneDeep(element), mode, properties, unit),
           })),
         },
       },

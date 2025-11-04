@@ -116,8 +116,9 @@ export const applyElementsSizeType = (
 export const applyElementsType = (
   mode: TApplyElementsTypeActionPayload['mode'],
   properties: TApplyElementsTypeActionPayload['properties'],
+  unit?: TApplyElementsTypeActionPayload['unit'],
 ): TApplyElementsTypeAction => ({
-  payload: { mode, properties },
+  payload: { mode, properties, unit },
   type: APPLY_ELEMENTS_TYPE,
 });
 

@@ -59,6 +59,7 @@ import {
   TSize,
   TValue,
   TValueExtended,
+  Unit,
 } from 'types';
 
 export type TElements = TObject<TElement>;
@@ -158,6 +159,7 @@ export type TApplyElementsSizeTypeAction = {
 export type TApplyElementsTypeActionPayload = {
   mode: TValueExtended['mode'];
   properties: Array<TNestedKeyOf<TElement>>;
+  unit?: Unit;
 };
 
 export type TApplyElementsTypeAction = {
