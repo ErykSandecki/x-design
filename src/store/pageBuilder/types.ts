@@ -1,7 +1,6 @@
 // others
 import {
   ADD_ELEMENT,
-  APPLY_ELEMENTS_SIZE_TYPE,
   CHANGE_ALIGNMENT,
   CHANGE_BACKGROUND,
   CHANGE_LAYOUT,
@@ -54,10 +53,9 @@ import {
   TInsetsName,
   TNestedKeyOf,
   TObject,
-  TScore,
-  TSize,
   TValue,
   TValueExtended,
+  TValueScore,
   Unit,
 } from 'types';
 
@@ -107,8 +105,8 @@ export type TPage = {
 };
 
 export type TSizeCoordinates = Pick<TElement, 'coordinates'> & {
-  height: Partial<TSize>;
-  width: Partial<TSize>;
+  height: Partial<TValue['value']>;
+  width: Partial<TValue['value']>;
 };
 
 export type TStrictAxis = [] | [keyof T2DCoordinates] | [keyof T2DCoordinates, keyof T2DCoordinates];
@@ -132,16 +130,6 @@ export type TApplyElementsInsetTypeActionPayload = {
   insets: Array<keyof TInsets>;
   name: TInsetsName;
   type: 'fixed';
-};
-
-export type TApplyElementsSizeTypeActionPayload = {
-  sizeType: keyof Pick<TElement, 'height' | 'width'>;
-  type: 'auto' | 'fixed' | 'max' | 'min' | 'unit';
-};
-
-export type TApplyElementsSizeTypeAction = {
-  payload: TApplyElementsSizeTypeActionPayload;
-  type: typeof APPLY_ELEMENTS_SIZE_TYPE;
 };
 
 export type TApplyElementsTypeActionPayload = {
@@ -251,9 +239,9 @@ export type TReducerHistoryUndoAction = {
 export type TResizeElementActionPayload = Pick<TElement, 'id'> & {
   baseCoordinates: TRectCoordinates;
   flip: TElement['flip'];
-  height: TSize['value'];
+  height: TValue['value'];
   mouseCoordinates: T2DCoordinates;
-  width: TSize['value'];
+  width: TValue['value'];
 };
 
 export type TResizeElementAction = {
@@ -302,7 +290,7 @@ export type TSetElementsGapAction = {
 };
 
 export type TSetElementsScoreToCurrentSizeActionPayload = {
-  scoreType: keyof TScore;
+  scoreType: keyof TValueScore;
   sizeType: keyof Pick<TElement, 'height' | 'width'>;
 };
 
@@ -313,7 +301,7 @@ export type TSetElementsScoreToCurrentSizeAction = {
 
 export type TSetElementsSizesActionPayload = {
   sizeType: keyof Pick<TElement, 'height' | 'width'>;
-  value: TSize['value'];
+  value: TValue['value'];
 };
 
 export type TSetElementsSizesAction = {
@@ -322,7 +310,7 @@ export type TSetElementsSizesAction = {
 };
 
 export type TSetElementsSizesMinMaxActionPayload = {
-  scoreType: keyof TScore;
+  scoreType: keyof TValueScore;
   sizeType: keyof Pick<TElement, 'height' | 'width'>;
   value:
     | TElement['height']['max']['value']

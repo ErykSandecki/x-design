@@ -5,7 +5,7 @@ import { setElementsSizesMinMax } from 'store/pageBuilder/actions';
 
 // types
 import { TSetElementsSizesActionPayload } from 'store/pageBuilder/types';
-import { TScore } from 'types';
+import { TValueScore } from 'types';
 
 export type TUseChangeEvent = {
   onChangeHeight: TFunc<[string, boolean?]>;
@@ -13,7 +13,7 @@ export type TUseChangeEvent = {
 };
 
 export const useChangeEvent = (
-  score: keyof TScore,
+  score: keyof TValueScore,
   setHeightScore: TFunc<[string]>,
   setWidthScore: TFunc<[string]>,
 ): TUseChangeEvent => {

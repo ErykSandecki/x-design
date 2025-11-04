@@ -14,8 +14,8 @@ export const getVerticalAnchorCoordinates = (
   const height = offsetY < 0 ? 0 : offsetY;
 
   return {
-    height: { value: height },
-    width: { value: aspectRatio ? height * ratio : baseWidth },
+    height: height,
+    width: aspectRatio ? height * ratio : baseWidth,
   };
 };
 
@@ -30,8 +30,8 @@ export const getHorizontalAnchorCoordinates = (
   const width = offsetX < 0 ? 0 : offsetX;
 
   return {
-    height: { value: aspectRatio ? width / ratio : baseHeight },
-    width: { value: width },
+    height: aspectRatio ? width / ratio : baseHeight,
+    width: width,
   };
 };
 
@@ -60,8 +60,8 @@ export const getRelativePositionByAspectRatio = (
   }
 
   return {
-    height: { value: newHeight < 0 ? 0 : newHeight },
-    width: { value: newWidth < 0 ? 0 : newWidth },
+    height: newHeight < 0 ? 0 : newHeight,
+    width: newWidth < 0 ? 0 : newWidth,
   };
 };
 

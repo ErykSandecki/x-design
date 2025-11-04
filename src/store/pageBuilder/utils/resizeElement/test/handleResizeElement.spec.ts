@@ -4,7 +4,7 @@ import {
   flipMock,
   pageBuilderStateMock,
   selectedElementMock,
-  sizeMock,
+  valueExtendMock,
 } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
@@ -59,9 +59,9 @@ describe('handleResizeElement', () => {
             ...currentPage.elements,
             [elementMock.id]: {
               ...elementMock,
-              height: { ...sizeMock, value: 100 },
+              height: { ...valueExtendMock, value: 100 },
               position: 'absolute',
-              width: { ...sizeMock, value: 300 },
+              width: { ...valueExtendMock, value: 300 },
             },
           },
           selectedElements: [selectedElementMock],

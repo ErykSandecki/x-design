@@ -1,7 +1,7 @@
 import { CSSProperties } from 'react';
 
 // types
-import { AlignmentLayout, AlignmentHorizontal, AlignmentVertical, ElementType, LayoutType, Unit } from './enums';
+import { AlignmentLayout, AlignmentHorizontal, AlignmentVertical, ElementType, LayoutType } from './enums';
 import { TColor, TColorGradient } from './background/types';
 import { TGap, TGrid } from './layout/types';
 import { TValueExtended } from './generic';
@@ -48,17 +48,6 @@ export type TInsets = {
 
 export type TInsetsName = keyof Pick<TElement, 'margin' | 'padding'>;
 
-export type TScore = {
-  max?: TValueExtended;
-  min?: TValueExtended;
-};
-
-export type TSize = {
-  type: 'auto' | TValueExtended['mode'];
-  unit?: Unit;
-  value: number | CSSProperties['height'] | CSSProperties['width'];
-};
-
 export type TElement = {
   alignment: TAlignment;
   angle: number;
@@ -69,7 +58,7 @@ export type TElement = {
   coordinates: T2DCoordinates;
   deepLevel: number;
   flip: TFlip;
-  height: TScore & TSize;
+  height: TValueExtended;
   id: string;
   layout: TLayout;
   margin: TInsets;
@@ -80,5 +69,5 @@ export type TElement = {
   position: CSSProperties['position'];
   type: ElementType;
   visible: boolean;
-  width: TScore & TSize;
+  width: TValueExtended;
 };

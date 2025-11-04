@@ -12,7 +12,7 @@ import { MAX, PANEL_PROPERTIES_ID } from '../../../../constants';
 import { applyElementsType } from 'store/pageBuilder/actions';
 
 // types
-import { ColorsTheme, TElement, TScore, TValueExtended } from 'types';
+import { ColorsTheme, TElement, TValueExtended, TValueScore } from 'types';
 
 // utils
 import { sanitizeNumberInput } from 'utils';
@@ -23,7 +23,7 @@ export type TColumnResizingInputProps = {
   onBlur: TFunc;
   onChange: TFunc<[string, boolean?]>;
   popoverChildren?: ReactNode;
-  scoreKey: keyof TScore;
+  scoreKey: keyof TValueScore;
   sizeType: keyof Pick<TElement, 'height' | 'width'>;
   value: string;
   valueScrubbaleInput: number;

@@ -1,5 +1,5 @@
 // mocks
-import { sizeMock } from 'test/mocks/reducer/pageBuilderMock';
+import { valueExtendMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // types
 import { Unit } from 'types';
@@ -18,7 +18,7 @@ describe('getScoreValue', () => {
 
   it(`should return value`, () => {
     // before
-    const result = getScoreValue(sizeMock);
+    const result = getScoreValue(valueExtendMock);
 
     // result
     expect(result).toBe('0px');
@@ -26,7 +26,7 @@ describe('getScoreValue', () => {
 
   it(`should return value with unit`, () => {
     // before
-    const result = getScoreValue({ ...sizeMock, unit: Unit.percentage });
+    const result = getScoreValue({ ...valueExtendMock, unit: Unit.percentage });
 
     // result
     expect(result).toBe('0%');
@@ -34,7 +34,7 @@ describe('getScoreValue', () => {
 
   it(`should return auto`, () => {
     // before
-    const result = getScoreValue({ ...sizeMock, type: 'auto' });
+    const result = getScoreValue({ ...valueExtendMock, type: 'auto' });
 
     // result
     expect(result).toBe('auto');

@@ -4,6 +4,7 @@ export * from './common/generateID';
 export * from './common/getCssVariable';
 export * from './common/isBaseParent';
 export * from './common/isPureNumber';
+export * from './common/valueAttached';
 
 // DOM
 export * from './dom/createHtmlElement';

@@ -19,8 +19,8 @@ export const handleFitLayout = (state: TPageBuilderState): TPageBuilderState => 
           ...currentPage.elements,
           ...mapFilteredValues(currentPage.elements, ids, (element) => ({
             ...element,
-            height: { ...element.height, value: 'auto' },
-            width: { ...element.width, value: 'auto' },
+            height: { ...element.height, mode: 'auto' },
+            width: { ...element.width, mode: 'auto' },
           })),
         },
       },

@@ -11,11 +11,11 @@ import { TElement } from 'types';
 
 // utils
 import { getScoreValue } from '../utils/getScoreValue';
-import { isPureNumber } from 'utils';
+import { isPureNumber, valueAttached } from 'utils';
 
 export type TUseElementSizes = {
-  cssHeight: TElement['height']['value'];
-  cssWidth: TElement['height']['value'];
+  cssHeight: string;
+  cssWidth: string;
   height: TElement['height']['value'];
   maxHeight: string;
   maxWidth: string;
@@ -29,10 +29,10 @@ export const useElementSizes = (id: TElement['id']): TUseElementSizes => {
   const elementData = useSelector(elementDataSelectorCreator(id));
   const { height: elHeight, layout, padding, width: elWidth } = elementData;
   const { boxSizing } = layout;
-  const { max: maxH, min: minH, unit: unitHeight, value: relativeHeight } = elHeight;
-  const { max: maxW, min: minW, unit: unitWidth, value: relativeWidth } = elWidth;
-  const cssHeight = `${relativeHeight}${unitHeight ?? ''}`;
-  const cssWidth = `${relativeWidth}${unitWidth ?? ''}`;
+  const { max: maxH, mode: modeH, min: minH, unit: unitH, value: relativeH } = elHeight;
+  const { max: maxW, mode: modeW, min: minW, unit: unitW, value: relativeW } = elWidth;
+  const cssHeight = valueAttached(modeH) ? 'auto' : `${relativeH}${unitH ?? ''}`;
+  const cssWidth = valueAttached(modeW) ? 'auto' : `${relativeW}${unitW ?? ''}`;
   const isExcluded = boxSizing === 'excluded';
   const additionalHeight = padding.b.value + padding.t.value;
   const additionalWidth = padding.l.value + padding.r.value;

@@ -14,8 +14,7 @@ import { translationNameSpace } from './constants';
 
 const ColumnAppearance: FC = () => {
   const { t } = useTranslation();
-  const { attachedOpacity, isMixedOpacity, onBlurOpacity, onChangeOpacity, opacity, opacityMode } =
-    useAppearanceEvents();
+  const { isMixedOpacity, onBlurOpacity, onChangeOpacity, opacity, opacityMode } = useAppearanceEvents();
 
   return (
     <UITools.SectionColumn
@@ -24,9 +23,9 @@ const ColumnAppearance: FC = () => {
       withBottomMargin
     >
       <ColumnAppearanceInput
-        attachedValue={attachedOpacity}
         e2eValue="opacity"
         isMixed={isMixedOpacity}
+        mode={opacityMode}
         name="Opacity"
         onBlur={onBlurOpacity}
         onChange={onChangeOpacity}

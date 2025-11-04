@@ -19,7 +19,6 @@ import { normalizeMultipleValue } from '../../../../../utils/normalizeMultipleVa
 
 type TUseAppearanceEvents = TUseChangeEvent &
   TUseBlurEvent & {
-    attachedOpacity: boolean;
     isMixedOpacity: boolean;
     opacity: string;
     opacityMode: TValueExtended['mode'];
@@ -30,7 +29,6 @@ export const useAppearanceEvents = (): TUseAppearanceEvents => {
   const isMultiple = useSelector(multipleSelectedElementsSelector);
   const isMixedOpacity = useSelector(isMixedSelectorCreator('opacity.value'));
   const currentOpacity = useSelector(elementAttributeSelectorCreator('opacity', firstElementId));
-  const attachedOpacity = !isMixedOpacity && currentOpacity.mode !== 'fixed';
   const [opacity, setOpacity] = useState('');
   const onBlurEvents = useBlurEvent(currentOpacity, opacity, setOpacity);
   const onChangeEvents = useChangeEvent(currentOpacity, setOpacity);
@@ -42,7 +40,6 @@ export const useAppearanceEvents = (): TUseAppearanceEvents => {
   return {
     ...onBlurEvents,
     ...onChangeEvents,
-    attachedOpacity,
     isMixedOpacity,
     opacity,
     opacityMode: currentOpacity.mode,

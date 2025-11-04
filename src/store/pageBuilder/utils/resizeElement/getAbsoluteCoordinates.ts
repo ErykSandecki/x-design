@@ -26,8 +26,8 @@ export const getEastCoordinates = (
       x: reverse ? x2 + x : x1,
       y: y1,
     },
-    height: { value: height },
-    width: { value: width },
+    height,
+    width,
   };
 };
 
@@ -49,8 +49,8 @@ export const getWestCoordinates = (
       x: reverse ? x2 : x1 + x,
       y: y1,
     },
-    height: { value: height },
-    width: { value: width },
+    height,
+    width,
   };
 };
 
@@ -72,8 +72,8 @@ export const getNorthCoordinates = (
       x: x1,
       y: reverse ? y2 : y1 + y,
     },
-    height: { value: height },
-    width: { value: width },
+    height,
+    width,
   };
 };
 
@@ -95,8 +95,8 @@ export const getSouthCoordinates = (
       x: x1,
       y: reverse ? y2 + y : y1,
     },
-    height: { value: height },
-    width: { value: width },
+    height,
+    width,
   };
 };
 
@@ -127,8 +127,8 @@ export const getAbsoluteCoordinates = (
         baseHeight,
         baseWidth,
         correctAnchor,
-        northCoordinates.height.value as number,
-        eastCoordinates.width.value as number,
+        northCoordinates.height,
+        eastCoordinates.width,
         eastCoordinates.coordinates.x,
         northCoordinates.coordinates.y,
       );
@@ -138,8 +138,8 @@ export const getAbsoluteCoordinates = (
         baseHeight,
         baseWidth,
         correctAnchor,
-        northCoordinates.height.value as number,
-        westCoordinates.width.value as number,
+        northCoordinates.height,
+        westCoordinates.width,
         westCoordinates.coordinates.x,
         northCoordinates.coordinates.y,
       );
@@ -149,8 +149,8 @@ export const getAbsoluteCoordinates = (
         baseHeight,
         baseWidth,
         correctAnchor,
-        southCoordinates.height.value as number,
-        eastCoordinates.width.value as number,
+        southCoordinates.height,
+        eastCoordinates.width,
         eastCoordinates.coordinates.x,
         southCoordinates.coordinates.y,
       );
@@ -160,8 +160,8 @@ export const getAbsoluteCoordinates = (
         baseHeight,
         baseWidth,
         correctAnchor,
-        southCoordinates.height.value as number,
-        westCoordinates.width.value as number,
+        southCoordinates.height,
+        westCoordinates.width,
         westCoordinates.coordinates.x,
         southCoordinates.coordinates.y,
       );

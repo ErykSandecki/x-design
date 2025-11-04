@@ -17,7 +17,6 @@ import {
   TFlip,
   TLayout,
   TInsets,
-  TSize,
   TValue,
   TValueExtended,
 } from 'types';
@@ -99,7 +98,7 @@ export const elementMock: TElement = {
   deepLevel: 0,
   flip: flipMock,
   height: {
-    type: 'fixed',
+    mode: 'fixed',
     value: 100,
   },
   id: 'test-1',
@@ -123,7 +122,7 @@ export const elementMock: TElement = {
   type: ElementType.frame,
   visible: true,
   width: {
-    type: 'fixed',
+    mode: 'fixed',
     value: 100,
   },
 };
@@ -142,7 +141,7 @@ export const createFrameMock: TElement = {
   deepLevel: 1,
   flip: flipMock,
   height: {
-    type: 'fixed',
+    mode: 'fixed',
     value: 0,
   },
   id: 'test-1',
@@ -166,7 +165,7 @@ export const createFrameMock: TElement = {
   type: ElementType.frame,
   visible: true,
   width: {
-    type: 'fixed',
+    mode: 'fixed',
     value: 0,
   },
 };
@@ -232,11 +231,6 @@ export const selectedElementMock: TSelectedElement = {
   parentId: '-1',
   position: 'absolute',
   type: ElementType.frame,
-};
-
-export const sizeMock: TSize = {
-  type: 'fixed',
-  value: 0,
 };
 
 export const valueMock: TValue = {

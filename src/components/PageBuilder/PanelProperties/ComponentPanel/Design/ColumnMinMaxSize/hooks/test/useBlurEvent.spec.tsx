@@ -4,7 +4,7 @@ import { renderHook } from '@testing-library/react';
 import { useBlurEvent } from '../useBlurEvent';
 
 // mocks
-import { sizeMock } from 'test/mocks/reducer/pageBuilderMock';
+import { valueExtendMock } from 'test/mocks/reducer/pageBuilderMock';
 
 const mockCallBack = jest.fn();
 
@@ -18,8 +18,8 @@ describe('useBlurEvent', () => {
     // before
     const { result } = renderHook(() =>
       useBlurEvent(
-        { ...sizeMock, value: 100 },
-        { ...sizeMock, value: 100 },
+        { ...valueExtendMock, value: 100 },
+        { ...valueExtendMock, value: 100 },
         '0',
         'max',
         mockCallBack,
@@ -43,8 +43,8 @@ describe('useBlurEvent', () => {
     // before
     const { result } = renderHook(() =>
       useBlurEvent(
-        { ...sizeMock, value: 100 },
-        { ...sizeMock, value: 100 },
+        { ...valueExtendMock, value: 100 },
+        { ...valueExtendMock, value: 100 },
         '',
         'max',
         mockCallBack,
@@ -64,8 +64,8 @@ describe('useBlurEvent', () => {
     // before
     const { result } = renderHook(() =>
       useBlurEvent(
-        { ...sizeMock, value: 100 },
-        { ...sizeMock, value: 100 },
+        { ...valueExtendMock, value: 100 },
+        { ...valueExtendMock, value: 100 },
         '0',
         'max',
         mockCallBack,
@@ -89,8 +89,8 @@ describe('useBlurEvent', () => {
     // before
     const { result } = renderHook(() =>
       useBlurEvent(
-        { ...sizeMock, value: 100 },
-        { ...sizeMock, value: 100 },
+        { ...valueExtendMock, value: 100 },
+        { ...valueExtendMock, value: 100 },
         '0',
         'max',
         mockCallBack,

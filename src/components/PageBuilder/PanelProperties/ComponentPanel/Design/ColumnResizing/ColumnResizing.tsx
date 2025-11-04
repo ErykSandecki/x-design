@@ -21,11 +21,10 @@ const ColumnResizing: FC = () => {
 
   const {
     aspectRatio,
-    attachedValueHeight,
-    attachedValueWidth,
     elementHeight,
     elementWidth,
     height,
+    heightMode,
     isMixedHeight,
     isMixedWidth,
     onBlurHeight,
@@ -36,6 +35,7 @@ const ColumnResizing: FC = () => {
     valueScrubbaleInputWidth,
     visibleAspectRatioButton,
     width,
+    widthMode,
   } = useResizingEvents();
 
   return (
@@ -47,8 +47,8 @@ const ColumnResizing: FC = () => {
       withBottomMargin
     >
       <ColumnResizingInput
-        attachedValue={attachedValueWidth}
         e2eValue="width"
+        mode={widthMode}
         onBlur={onBlurWidth}
         onChange={onChangeWidth}
         popoverChildren={<PopoverWidth isMixed={isMixedWidth} width={elementWidth} />}
@@ -57,8 +57,8 @@ const ColumnResizing: FC = () => {
         valueScrubbaleInput={valueScrubbaleInputWidth}
       />
       <ColumnResizingInput
-        attachedValue={attachedValueHeight}
         e2eValue="height"
+        mode={heightMode}
         onBlur={onBlurHeight}
         onChange={onChangeHeight}
         popoverChildren={<PopoverHeight height={elementHeight} isMixed={isMixedHeight} />}

@@ -12,7 +12,7 @@ import {
   layoutMock,
   pageBuilderStateMock,
   selectedElementMock,
-  sizeMock,
+  valueExtendMock,
 } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
@@ -53,8 +53,8 @@ describe('useElementEvents', () => {
                 ...elementMock,
                 height: {
                   ...elementMock.height,
-                  max: { ...sizeMock, value: 100 },
-                  min: { ...sizeMock, value: 100 },
+                  max: { ...valueExtendMock, value: 100 },
+                  min: { ...valueExtendMock, value: 100 },
                 },
                 padding: {
                   b: { value: 10 },
@@ -64,8 +64,8 @@ describe('useElementEvents', () => {
                 },
                 width: {
                   ...elementMock.width,
-                  max: { ...sizeMock, value: 100 },
-                  min: { ...sizeMock, value: 100 },
+                  max: { ...valueExtendMock, value: 100 },
+                  min: { ...valueExtendMock, value: 100 },
                 },
               },
             },
@@ -121,8 +121,8 @@ describe('useElementEvents', () => {
                 ...elementMock,
                 height: {
                   ...elementMock.height,
-                  max: { ...sizeMock, value: 100 },
-                  min: { ...sizeMock, value: 100 },
+                  max: { ...valueExtendMock, value: 100 },
+                  min: { ...valueExtendMock, value: 100 },
                 },
                 layout: {
                   ...layoutMock,
@@ -136,8 +136,8 @@ describe('useElementEvents', () => {
                 },
                 width: {
                   ...elementMock.width,
-                  max: { ...sizeMock, value: 100 },
-                  min: { ...sizeMock, value: 100 },
+                  max: { ...valueExtendMock, value: 100 },
+                  min: { ...valueExtendMock, value: 100 },
                 },
               },
             },

@@ -9,7 +9,7 @@ import {
 } from 'store/pageBuilder/selectors';
 
 // types
-import { TScore, TValueExtended } from 'types';
+import { TValueExtended, TValueScore } from 'types';
 import { TUseBlurEvent, useBlurEvent } from './useBlurEvent';
 import { TUseChangeEvent, useChangeEvent } from './useChangeEvent';
 
@@ -30,7 +30,7 @@ type TUseMinMaxSizeEvents = TUseChangeEvent &
     widthScore: TValueExtended;
   };
 
-export const useMinMaxSizeEvents = (score: keyof TScore): TUseMinMaxSizeEvents => {
+export const useMinMaxSizeEvents = (score: keyof TValueScore): TUseMinMaxSizeEvents => {
   const firstElementId = useSelector(firstSelectedElementIdSelector);
   const isMultiple = useSelector(multipleSelectedElementsSelector);
   const elementHeight = useSelector(elementAttributeSelectorCreator('height', firstElementId));

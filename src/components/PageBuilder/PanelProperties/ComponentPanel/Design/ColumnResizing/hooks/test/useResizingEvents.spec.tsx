@@ -4,7 +4,12 @@ import { renderHook } from '@testing-library/react';
 import { useResizingEvents } from '../useResizingEvents';
 
 // mocks
-import { elementMock, pageBuilderStateMock, selectedElementMock, sizeMock } from 'test/mocks/reducer/pageBuilderMock';
+import {
+  elementMock,
+  pageBuilderStateMock,
+  selectedElementMock,
+  valueExtendMock,
+} from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
@@ -51,8 +56,8 @@ describe('useResizingEvents', () => {
       aspectRatio: false,
       attachedValueHeight: false,
       attachedValueWidth: false,
-      elementHeight: { ...sizeMock, value: 100 },
-      elementWidth: { ...sizeMock, value: 100 },
+      elementHeight: { ...valueExtendMock, value: 100 },
+      elementWidth: { ...valueExtendMock, value: 100 },
       height: '100',
       isMixedHeight: false,
       isMixedWidth: false,

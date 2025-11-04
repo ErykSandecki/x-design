@@ -25,7 +25,6 @@ import {
   UPDATE_EVENTS_STATUS,
   UPDATE_PREV_STATE,
   SET_ELEMENTS_SIZES,
-  APPLY_ELEMENTS_SIZE_TYPE,
   SET_ELEMENTS_SIZES_MIN_MAX,
   SET_ELEMENTS_SCORE_TO_CURRENT_SIZE,
   TOGGLE_ASPECT_RATIO,
@@ -58,7 +57,6 @@ import {
   TChangeLayoutAction,
   TSetElementsCoordinatesAction,
   TSetElementsSizesAction,
-  TApplyElementsSizeTypeAction,
   TSetElementsSizesMinMaxAction,
   TSetElementsScoreToCurrentSizeAction,
   TChangeLayoutAlignmentAction,
@@ -74,7 +72,6 @@ import {
 // utils
 import { filterSelectedElements } from './utils/filterSelectedElements';
 import { handleAddElement } from './utils/handleAddElement';
-import { handleApplyElementsSizeType } from './utils/applyElementsSizeType/handleApplyElementsSizeType';
 import { handleApplyElementsType } from './utils/applyElementsType/handleApplyElementsType';
 import { handleChangeAlignment } from './utils/changeAligment/handleChangeAlignment';
 import { handleChangeBackground } from './utils/handleChangeBackground';
@@ -135,11 +132,6 @@ const addElement = (
   state: TPageBuilderState,
   { payload: element }: TAction<TAddELementAction['payload']>,
 ): TPageBuilderState => handleAddElement(element, state);
-
-const applyElementsSizeType = (
-  state: TPageBuilderState,
-  { payload }: TAction<TApplyElementsSizeTypeAction['payload']>,
-): TPageBuilderState => handleApplyElementsSizeType(payload, state);
 
 const applyElementsType = (
   state: TPageBuilderState,
@@ -358,8 +350,6 @@ const pageBuilder = (state: TPageBuilderState = initialState, action: TAction): 
   switch (action.type) {
     case ADD_ELEMENT:
       return addElement(state, action);
-    case APPLY_ELEMENTS_SIZE_TYPE:
-      return applyElementsSizeType(state, action);
     case APPLY_ELEMENTS_TYPE:
       return applyElementsType(state, action);
     case CHANGE_ALIGNMENT:

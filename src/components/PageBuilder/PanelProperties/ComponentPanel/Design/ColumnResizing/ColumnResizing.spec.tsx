@@ -5,7 +5,12 @@ import { Provider } from 'react-redux';
 import ColumnResizing from './ColumnResizing';
 
 // mocks
-import { elementMock, pageBuilderStateMock, selectedElementMock, sizeMock } from 'test/mocks/reducer/pageBuilderMock';
+import {
+  elementMock,
+  pageBuilderStateMock,
+  selectedElementMock,
+  valueExtendMock,
+} from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
@@ -218,11 +223,11 @@ describe('ColumnResizing behaviors', () => {
               [elementMock.id]: {
                 ...elementMock,
                 height: {
-                  ...sizeMock,
+                  ...valueExtendMock,
                   value: 'auto',
                 },
                 width: {
-                  ...sizeMock,
+                  ...valueExtendMock,
                   value: 'auto',
                 },
               },
@@ -508,11 +513,11 @@ describe('ColumnResizing behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.min).toStrictEqual({
-      ...sizeMock,
+      ...valueExtendMock,
       value: 100,
     });
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.min).toStrictEqual({
-      ...sizeMock,
+      ...valueExtendMock,
       value: 100,
     });
   });
@@ -552,11 +557,11 @@ describe('ColumnResizing behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.max).toStrictEqual({
-      ...sizeMock,
+      ...valueExtendMock,
       value: 100,
     });
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.max).toStrictEqual({
-      ...sizeMock,
+      ...valueExtendMock,
       value: 100,
     });
   });
@@ -575,11 +580,11 @@ describe('ColumnResizing behaviors', () => {
               [elementMock.id]: {
                 ...elementMock,
                 height: {
-                  ...sizeMock,
+                  ...valueExtendMock,
                   type: 'auto',
                 },
                 width: {
-                  ...sizeMock,
+                  ...valueExtendMock,
                   type: 'auto',
                 },
               },

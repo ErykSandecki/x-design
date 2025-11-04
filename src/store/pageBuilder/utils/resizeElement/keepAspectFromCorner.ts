@@ -51,10 +51,10 @@ export const keepAspectFromCorner = (
 
     return {
       coordinates: { x: correctedXY.x, y: correctedXY.y },
-      height: { value: targetHeight },
-      width: { value: targetWidth },
+      height: targetHeight,
+      width: targetWidth,
     };
   }
 
-  return { coordinates: { x, y }, height: { value: height }, width: { value: width } };
+  return { coordinates: { x, y }, height, width };
 };

@@ -2,7 +2,6 @@
 import {
   ADD_ELEMENT,
   APPLY_ELEMENTS_TYPE,
-  APPLY_ELEMENTS_SIZE_TYPE,
   CHANGE_ALIGNMENT,
   CHANGE_BACKGROUND,
   CHANGE_INSETS,
@@ -52,7 +51,7 @@ export const BASE_ELEMENTS: TElement = {
   coordinates: BASE_2D,
   deepLevel: 0,
   flip: { x: false, y: false },
-  height: { type: 'fixed', value: 0 },
+  height: { mode: 'fixed', value: 0 },
   id: '-1',
   layout: {
     alignment: AlignmentLayout.none,
@@ -79,7 +78,7 @@ export const BASE_ELEMENTS: TElement = {
   position: 'absolute',
   type: ElementType.base,
   visible: true,
-  width: { type: 'fixed', value: 0 },
+  width: { mode: 'fixed', value: 0 },
 };
 
 export const BASE_PAGE_ELEMENTS: TElements = {
@@ -109,7 +108,6 @@ export const PREV_ID = 'prev';
 export const REDUCER_HISTORY_SAVE_ACTIONS = [
   ADD_ELEMENT,
   APPLY_ELEMENTS_TYPE,
-  APPLY_ELEMENTS_SIZE_TYPE,
   CHANGE_ALIGNMENT,
   CHANGE_LAYOUT,
   CHANGE_LAYOUT_ALIGNMENT,

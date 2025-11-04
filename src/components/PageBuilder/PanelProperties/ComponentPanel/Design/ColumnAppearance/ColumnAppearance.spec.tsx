@@ -10,7 +10,7 @@ import {
   elementMock,
   pageBuilderStateMock,
   selectedElementMock,
-  sizeMock,
+  valueExtendMock,
 } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
@@ -89,7 +89,7 @@ describe('ColumnAppearance snapshots', () => {
                 ...elementMock,
                 id: 'test-2',
                 opacity: {
-                  ...sizeMock,
+                  ...valueExtendMock,
                   value: 0,
                 },
               },

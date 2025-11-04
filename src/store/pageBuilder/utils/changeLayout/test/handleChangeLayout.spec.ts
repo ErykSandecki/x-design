@@ -5,7 +5,7 @@ import {
   layoutMock,
   pageBuilderStateMock,
   selectedElementMock,
-  sizeMock,
+  valueExtendMock,
 } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
@@ -143,11 +143,11 @@ describe('handleChangeLayout', () => {
             },
             ['test-2']: {
               ...elementMock,
-              height: { ...sizeMock, unit: undefined, value: 'auto' },
+              height: { ...valueExtendMock, unit: undefined, value: 'auto' },
               id: 'test-2',
               parentId: elementMock.id,
               position: 'relative',
-              width: { ...sizeMock, unit: undefined, value: 'auto' },
+              width: { ...valueExtendMock, unit: undefined, value: 'auto' },
             },
           },
           selectedElements: [selectedElementMock],

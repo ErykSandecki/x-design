@@ -8,17 +8,17 @@ import { Icon, ScrubbableInput, Small, TE2EValue, UITools } from 'shared';
 import { MAX, PANEL_PROPERTIES_ID } from '../../../../constants';
 
 // store
-import { applyElementsSizeType } from 'store/pageBuilder/actions';
+import { applyElementsType } from 'store/pageBuilder/actions';
 
 // types
-import { ColorsTheme, TElement } from 'types';
+import { ColorsTheme, TElement, TValueExtended } from 'types';
 
 // utils
-import { sanitizeNumberInput } from 'utils';
+import { sanitizeNumberInput, valueAttached } from 'utils';
 
 export type TColumnResizingInputProps = {
-  attachedValue: boolean;
   e2eValue: TE2EValue;
+  mode: TValueExtended['mode'];
   onBlur: TFunc;
   onChange: TFunc<[string, boolean?]>;
   popoverChildren: ReactNode;
@@ -28,8 +28,8 @@ export type TColumnResizingInputProps = {
 };
 
 const ColumnResizingInput: FC<TColumnResizingInputProps> = ({
-  attachedValue,
   e2eValue,
+  mode,
   onBlur,
   onChange,
   popoverChildren,
@@ -37,6 +37,7 @@ const ColumnResizingInput: FC<TColumnResizingInputProps> = ({
   value,
   valueScrubbaleInput,
 }) => {
+  const attached = valueAttached(mode);
   const dispatch = useDispatch();
   const refInput = useRef<HTMLInputElement>(null);
   const label = sizeType === 'height' ? 'H' : 'W';
@@ -44,25 +45,24 @@ const ColumnResizingInput: FC<TColumnResizingInputProps> = ({
 
   return (
     <UITools.TextField
-      attachedValue={attachedValue}
       e2eValue={e2eValue}
       fullWidth
       idContainer={PANEL_PROPERTIES_ID}
       inputRef={refInput}
+      mode={mode}
       onBlur={onBlur}
       onChange={(event) => onChange(sanitizeNumberInput(event.target.value))}
-      onDetachedValue={() => dispatch(applyElementsSizeType(sizeType, 'fixed'))}
+      onDetachedValue={() => dispatch(applyElementsType('fixed', [sizeType]))}
       popoverChildren={popoverChildren}
       startAdornment={
         <ScrubbableInput
-          disabled={attachedValue}
           e2eValue={e2eValue}
           max={MAX}
           min={0}
           onChange={(value) => onChange(value.toString(), true)}
           value={valueScrubbaleInput}
         >
-          {!attachedValue ? (
+          {!attached ? (
             <Small color={ColorsTheme.neutral2}>{label}</Small>
           ) : (
             <Icon color={ColorsTheme.neutral2} height={12} name={iconName} width={12} />

@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { setElementsSizesMinMax } from 'store/pageBuilder/actions';
 
 // types
-import { TElement, TScore } from 'types';
+import { TElement, TValueScore } from 'types';
 
 export type TUseBlurEvent = {
   onBlurHeight: TFunc;
@@ -15,7 +15,7 @@ export const useBlurEvent = (
   elementHeight: TElement['height'],
   elementWidth: TElement['width'],
   height: string,
-  score: keyof TScore,
+  score: keyof TValueScore,
   setHeightScore: TFunc<[string]>,
   setWidthScore: TFunc<[string]>,
   width: string,

@@ -14,9 +14,9 @@ import { useMinMaxSizeEvents } from './hooks/useMinMaxSizeEvents';
 import { translationNameSpace } from './constants';
 
 // types
-import { TScore } from 'types';
+import { TValueScore } from 'types';
 
-export type TColumnMinMaxSizeProps = { scoreKey: keyof TScore };
+export type TColumnMinMaxSizeProps = { scoreKey: keyof TValueScore };
 
 const ColumnMinMaxSize: FC<TColumnMinMaxSizeProps> = ({ scoreKey }) => {
   const { t } = useTranslation();

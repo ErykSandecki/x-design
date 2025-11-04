@@ -4,7 +4,7 @@ import { renderHook } from '@testing-library/react';
 import { useBlurEvent } from '../useBlurEvent';
 
 // mocks
-import { sizeMock } from 'test/mocks/reducer/pageBuilderMock';
+import { valueExtendMock } from 'test/mocks/reducer/pageBuilderMock';
 
 const mockCallBack = jest.fn();
 
@@ -17,7 +17,14 @@ describe('useBlurEvent', () => {
   it(`should trigger blur height`, () => {
     // before
     const { result } = renderHook(() =>
-      useBlurEvent({ ...sizeMock, value: 100 }, { ...sizeMock, value: 100 }, '0', mockCallBack, mockCallBack, '0'),
+      useBlurEvent(
+        { ...valueExtendMock, value: 100 },
+        { ...valueExtendMock, value: 100 },
+        '0',
+        mockCallBack,
+        mockCallBack,
+        '0',
+      ),
     );
 
     // action
@@ -33,7 +40,14 @@ describe('useBlurEvent', () => {
   it(`should trigger blur height`, () => {
     // before
     const { result } = renderHook(() =>
-      useBlurEvent({ ...sizeMock, value: 100 }, { ...sizeMock, value: 100 }, 'auto', mockCallBack, mockCallBack, '0'),
+      useBlurEvent(
+        { ...valueExtendMock, value: 100 },
+        { ...valueExtendMock, value: 100 },
+        'auto',
+        mockCallBack,
+        mockCallBack,
+        '0',
+      ),
     );
 
     // action
@@ -49,7 +63,14 @@ describe('useBlurEvent', () => {
   it(`should reset value height`, () => {
     // before
     const { result } = renderHook(() =>
-      useBlurEvent({ ...sizeMock, value: 100 }, { ...sizeMock, value: 100 }, '', mockCallBack, mockCallBack, '0'),
+      useBlurEvent(
+        { ...valueExtendMock, value: 100 },
+        { ...valueExtendMock, value: 100 },
+        '',
+        mockCallBack,
+        mockCallBack,
+        '0',
+      ),
     );
 
     // action
@@ -62,7 +83,14 @@ describe('useBlurEvent', () => {
   it(`should trigger blur width`, () => {
     // before
     const { result } = renderHook(() =>
-      useBlurEvent({ ...sizeMock, value: 100 }, { ...sizeMock, value: 100 }, '0', mockCallBack, mockCallBack, '0'),
+      useBlurEvent(
+        { ...valueExtendMock, value: 100 },
+        { ...valueExtendMock, value: 100 },
+        '0',
+        mockCallBack,
+        mockCallBack,
+        '0',
+      ),
     );
 
     // action
@@ -78,7 +106,14 @@ describe('useBlurEvent', () => {
   it(`should trigger blur width`, () => {
     // before
     const { result } = renderHook(() =>
-      useBlurEvent({ ...sizeMock, value: 100 }, { ...sizeMock, value: 100 }, '0', mockCallBack, mockCallBack, 'auto'),
+      useBlurEvent(
+        { ...valueExtendMock, value: 100 },
+        { ...valueExtendMock, value: 100 },
+        '0',
+        mockCallBack,
+        mockCallBack,
+        'auto',
+      ),
     );
 
     // action
@@ -94,7 +129,14 @@ describe('useBlurEvent', () => {
   it(`should reset value width`, () => {
     // before
     const { result } = renderHook(() =>
-      useBlurEvent({ ...sizeMock, value: 100 }, { ...sizeMock, value: 100 }, '0', mockCallBack, mockCallBack, ''),
+      useBlurEvent(
+        { ...valueExtendMock, value: 100 },
+        { ...valueExtendMock, value: 100 },
+        '0',
+        mockCallBack,
+        mockCallBack,
+        '',
+      ),
     );
 
     // action

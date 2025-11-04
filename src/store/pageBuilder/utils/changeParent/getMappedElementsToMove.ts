@@ -34,8 +34,8 @@ export const getSizes = (
   }
 
   return {
-    height: isGrid ? { ...element.height, unit: undefined, value: 'auto' } : element.height,
-    width: isGrid ? { ...element.width, unit: undefined, value: 'auto' } : element.width,
+    height: isGrid ? { ...element.height, mode: 'auto', unit: undefined } : { ...element.height, mode: 'fixed' },
+    width: isGrid ? { ...element.width, mode: 'auto', unit: undefined } : { ...element.width, mode: 'fixed' },
   };
 };
 

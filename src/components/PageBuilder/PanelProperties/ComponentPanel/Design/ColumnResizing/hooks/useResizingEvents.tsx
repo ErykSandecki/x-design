@@ -10,7 +10,7 @@ import {
 } from 'store/pageBuilder/selectors';
 
 // types
-import { TElement } from 'types';
+import { TElement, TValueExtended } from 'types';
 import { TUseBlurEvent, useBlurEvent } from './useBlurEvent';
 import { TUseChangeEvent, useChangeEvent } from './useChangeEvent';
 
@@ -21,17 +21,17 @@ import { normalizeMultipleValue } from '../../../../../utils/normalizeMultipleVa
 type TUseResizingEvents = TUseChangeEvent &
   TUseBlurEvent & {
     aspectRatio: boolean;
-    attachedValueHeight: boolean;
-    attachedValueWidth: boolean;
     elementHeight: TElement['height'];
     elementWidth: TElement['width'];
     height: string;
+    heightMode: TValueExtended['mode'];
     isMixedHeight: boolean;
     isMixedWidth: boolean;
     valueScrubbaleInputHeight: number;
     valueScrubbaleInputWidth: number;
     visibleAspectRatioButton: boolean;
     width: string;
+    widthMode: TValueExtended['mode'];
   };
 
 export const useResizingEvents = (): TUseResizingEvents => {
@@ -43,8 +43,8 @@ export const useResizingEvents = (): TUseResizingEvents => {
   const aspectRatio = useSelector(elementAttributeSelectorCreator('aspectRatio', firstElementId));
   const elementHeight = useSelector(elementAttributeSelectorCreator('height', firstElementId));
   const elementWidth = useSelector(elementAttributeSelectorCreator('width', firstElementId));
-  const { type: typeHeight, unit: unitHeight, value: currentHeight } = elementHeight;
-  const { type: typeWidth, unit: unitWidth, value: currentWidth } = elementWidth;
+  const { mode: heightMode, unit: unitHeight, value: currentHeight } = elementHeight;
+  const { mode: widthMode, unit: unitWidth, value: currentWidth } = elementWidth;
   const [height, setHeight] = useState('');
   const [width, setWidth] = useState('');
   const isPureHeight = isPureNumber(height);
@@ -54,8 +54,6 @@ export const useResizingEvents = (): TUseResizingEvents => {
   const hasNoUnit = unitHeight === undefined && unitWidth === undefined;
   const onBlurEvents = useBlurEvent(elementHeight, elementWidth, height, setHeight, setWidth, width);
   const onChangeEvents = useChangeEvent(setHeight, setWidth, unitHeight, unitWidth);
-  const attachedValueHeight = typeHeight !== 'fixed' && !isMixedHeight;
-  const attachedValueWidth = typeWidth !== 'fixed' && !isMixedWidth;
   const valueScrubbaleInputHeight = isMultiple ? 0 : parseFloat(height);
   const valueScrubbaleInputWidth = isMultiple ? 0 : parseFloat(width);
   const visibleAspectRatioButton = !isMixedAspectRatio && !hasMixedSizes && hasPureSizes && hasNoUnit;
@@ -69,16 +67,16 @@ export const useResizingEvents = (): TUseResizingEvents => {
     ...onBlurEvents,
     ...onChangeEvents,
     aspectRatio,
-    attachedValueHeight,
-    attachedValueWidth,
     elementHeight,
     elementWidth,
     height,
+    heightMode,
     isMixedHeight,
     isMixedWidth,
     valueScrubbaleInputHeight,
     valueScrubbaleInputWidth,
     visibleAspectRatioButton,
     width,
+    widthMode,
   };
 };

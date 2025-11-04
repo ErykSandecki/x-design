@@ -1,5 +1,5 @@
 // mocks
-import { elementMock, sizeMock } from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, valueExtendMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 
@@ -12,7 +12,10 @@ describe('getElementSizes', () => {
     const result = getElementSizes(elementMock, 'height', 200);
 
     // result
-    expect(result).toStrictEqual({ height: { ...sizeMock, value: 200 }, width: { ...sizeMock, value: 100 } });
+    expect(result).toStrictEqual({
+      height: { ...valueExtendMock, value: 200 },
+      width: { ...valueExtendMock, value: 100 },
+    });
   });
 
   it(`should get element sizes{width}`, () => {
@@ -20,7 +23,10 @@ describe('getElementSizes', () => {
     const result = getElementSizes(elementMock, 'width', 200);
 
     // result
-    expect(result).toStrictEqual({ height: { ...sizeMock, value: 100 }, width: { ...sizeMock, value: 200 } });
+    expect(result).toStrictEqual({
+      height: { ...valueExtendMock, value: 100 },
+      width: { ...valueExtendMock, value: 200 },
+    });
   });
 
   it(`should get element sizes{height} when aspect ratio`, () => {
@@ -28,7 +34,10 @@ describe('getElementSizes', () => {
     const result = getElementSizes({ ...elementMock, aspectRatio: true }, 'height', 200);
 
     // result
-    expect(result).toStrictEqual({ height: { ...sizeMock, value: 200 }, width: { ...sizeMock, value: 200 } });
+    expect(result).toStrictEqual({
+      height: { ...valueExtendMock, value: 200 },
+      width: { ...valueExtendMock, value: 200 },
+    });
   });
 
   it(`should get element sizes{width} when aspect ratio`, () => {
@@ -36,7 +45,10 @@ describe('getElementSizes', () => {
     const result = getElementSizes({ ...elementMock, aspectRatio: true }, 'width', 200);
 
     // result
-    expect(result).toStrictEqual({ height: { ...sizeMock, value: 200 }, width: { ...sizeMock, value: 200 } });
+    expect(result).toStrictEqual({
+      height: { ...valueExtendMock, value: 200 },
+      width: { ...valueExtendMock, value: 200 },
+    });
   });
 
   it(`should get element sizes when both values are zero`, () => {
@@ -53,6 +65,6 @@ describe('getElementSizes', () => {
     );
 
     // result
-    expect(result).toStrictEqual({ height: { ...sizeMock, value: 0 }, width: { ...sizeMock, value: 0 } });
+    expect(result).toStrictEqual({ height: { ...valueExtendMock, value: 0 }, width: { ...valueExtendMock, value: 0 } });
   });
 });

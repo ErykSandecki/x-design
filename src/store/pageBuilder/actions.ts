@@ -2,7 +2,6 @@
 import {
   ADD_ELEMENT,
   APPLY_ELEMENTS_TYPE,
-  APPLY_ELEMENTS_SIZE_TYPE,
   CHANGE_ALIGNMENT,
   CHANGE_BACKGROUND,
   CHANGE_CLIP_CONTENT,
@@ -41,8 +40,6 @@ import {
 import {
   TAddELementAction,
   TAddELementActionPayload,
-  TApplyElementsSizeTypeAction,
-  TApplyElementsSizeTypeActionPayload,
   TChangeAlignmentAction,
   TChangeBackgroundAction,
   TChangeBackgroundActionPayload,
@@ -91,14 +88,6 @@ import { TElement } from 'types';
 export const addElement = (payload: TAddELementActionPayload): TAddELementAction => ({
   payload,
   type: ADD_ELEMENT,
-});
-
-export const applyElementsSizeType = (
-  sizeType: TApplyElementsSizeTypeActionPayload['sizeType'],
-  type: TApplyElementsSizeTypeActionPayload['type'],
-): TApplyElementsSizeTypeAction => ({
-  payload: { sizeType, type },
-  type: APPLY_ELEMENTS_SIZE_TYPE,
 });
 
 export const applyElementsType = (

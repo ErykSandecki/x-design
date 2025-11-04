@@ -1,10 +1,10 @@
 // utils
-import { shouldAttached } from '../shouldAttached';
+import { valueAttached } from '../valueAttached';
 
 describe('shouldAttached', () => {
   it('should attached', () => {
     // before
-    const result = shouldAttached('auto');
+    const result = valueAttached('auto');
 
     // result
     expect(result).toBe(true);
@@ -12,7 +12,7 @@ describe('shouldAttached', () => {
 
   it('should not attached', () => {
     // before
-    const result = shouldAttached('fixed');
+    const result = valueAttached('fixed');
 
     // result
     expect(result).toBe(false);

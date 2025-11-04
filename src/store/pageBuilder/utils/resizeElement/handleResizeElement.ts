@@ -58,11 +58,13 @@ export const handleResizeElement = (
             },
             height: {
               ...element.height,
-              ...height,
+              mode: 'fixed',
+              value: height,
             },
             width: {
               ...element.width,
-              ...width,
+              mode: 'fixed',
+              value: width,
             },
           },
         },

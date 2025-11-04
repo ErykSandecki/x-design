@@ -5,7 +5,12 @@ import { Provider } from 'react-redux';
 import ColumnMinSizeInput from './ColumnMinMaxSize';
 
 // mocks
-import { elementMock, pageBuilderStateMock, selectedElementMock, sizeMock } from 'test/mocks/reducer/pageBuilderMock';
+import {
+  elementMock,
+  pageBuilderStateMock,
+  selectedElementMock,
+  valueExtendMock,
+} from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
@@ -44,22 +49,22 @@ const stateMock = {
             height: {
               ...elementMock.height,
               max: {
-                ...sizeMock,
+                ...valueExtendMock,
                 value: (elementMock.height.value as number) * 2,
               },
               min: {
-                ...sizeMock,
+                ...valueExtendMock,
                 value: (elementMock.height.value as number) * 2,
               },
             },
             width: {
               ...elementMock.width,
               max: {
-                ...sizeMock,
+                ...valueExtendMock,
                 value: (elementMock.width.value as number) * 2,
               },
               min: {
-                ...sizeMock,
+                ...valueExtendMock,
                 value: (elementMock.width.value as number) * 2,
               },
             },
@@ -120,14 +125,14 @@ describe('ColumnResizing snapshots', () => {
                 height: {
                   ...elementMock.height,
                   max: {
-                    ...sizeMock,
+                    ...valueExtendMock,
                     value: (elementMock.height.value as number) * 4,
                   },
                 },
                 width: {
                   ...elementMock.width,
                   max: {
-                    ...sizeMock,
+                    ...valueExtendMock,
                     value: (elementMock.width.value as number) * 4,
                   },
                 },
@@ -169,14 +174,14 @@ describe('ColumnResizing snapshots', () => {
                 height: {
                   ...elementMock.height,
                   min: {
-                    ...sizeMock,
+                    ...valueExtendMock,
                     value: (elementMock.height.value as number) * 4,
                   },
                 },
                 width: {
                   ...elementMock.width,
                   min: {
-                    ...sizeMock,
+                    ...valueExtendMock,
                     value: (elementMock.width.value as number) * 4,
                   },
                 },
@@ -715,16 +720,16 @@ describe('ColumnResizing behaviors', () => {
               [elementMock.id]: {
                 ...elementMock,
                 height: {
-                  ...sizeMock,
+                  ...valueExtendMock,
                   max: {
-                    ...sizeMock,
+                    ...valueExtendMock,
                     type: 'auto',
                   },
                 },
                 width: {
-                  ...sizeMock,
+                  ...valueExtendMock,
                   max: {
-                    ...sizeMock,
+                    ...valueExtendMock,
                     type: 'auto',
                   },
                 },
@@ -782,16 +787,16 @@ describe('ColumnResizing behaviors', () => {
               [elementMock.id]: {
                 ...elementMock,
                 height: {
-                  ...sizeMock,
+                  ...valueExtendMock,
                   min: {
-                    ...sizeMock,
+                    ...valueExtendMock,
                     type: 'auto',
                   },
                 },
                 width: {
-                  ...sizeMock,
+                  ...valueExtendMock,
                   min: {
-                    ...sizeMock,
+                    ...valueExtendMock,
                     type: 'auto',
                   },
                 },

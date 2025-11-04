@@ -10,17 +10,17 @@ import { UITools } from 'shared';
 import { translationNameSpace } from './constants';
 
 // store
-import { applyElementsSizeType, applyElementsType, setElementsScoreToCurrentSize } from 'store/pageBuilder/actions';
+import { applyElementsType, setElementsScoreToCurrentSize } from 'store/pageBuilder/actions';
 
 // types
 import { PopoverItem } from '../enums';
-import { TScore, TValueExtended, Unit } from 'types';
+import { TValueExtended, TValueScore, Unit } from 'types';
 
 const { PopoverCompound } = UITools;
 
 export type THeightPopoverWidthProps = {
   score: TValueExtended;
-  scoreKey: keyof TScore;
+  scoreKey: keyof TValueScore;
 };
 
 const HeightPopoverWidth: FC<THeightPopoverWidthProps> = ({ score, scoreKey }) => {
@@ -54,7 +54,7 @@ const HeightPopoverWidth: FC<THeightPopoverWidthProps> = ({ score, scoreKey }) =
       <PopoverCompound.PopoverItem
         icon="Close"
         index={PopoverItem.removeScore}
-        onClick={() => dispatch(applyElementsSizeType('width', scoreKey))}
+        onClick={() => dispatch(applyElementsType(scoreKey, ['width']))}
         text={t(`${translationNameSpace}.${scoreKey}.4`)}
       />
     </>

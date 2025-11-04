@@ -6,7 +6,7 @@ import {
   layoutMock,
   pageBuilderStateMock,
   selectedElementMock,
-  sizeMock,
+  valueExtendMock,
 } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
@@ -220,11 +220,11 @@ describe('getMappedElementsToMove', () => {
         ...elementMock,
         children: [],
         deepLevel: elementMock.deepLevel + 1,
-        height: { ...sizeMock, unit: undefined, value: 'auto' },
+        height: { ...valueExtendMock, unit: undefined, value: 'auto' },
         id: 'test-2',
         parentId: elementMock.id,
         position: 'relative',
-        width: { ...sizeMock, unit: undefined, value: 'auto' },
+        width: { ...valueExtendMock, unit: undefined, value: 'auto' },
       },
     });
   });

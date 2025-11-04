@@ -24,11 +24,9 @@ import { TextFieldVariant } from '../enums';
 // utils
 import { getAttributes } from '../../../E2EDataAttributes/utils';
 import { getValue } from './utils/getValue';
-import { handleSubmitInput } from 'utils';
-import { shouldAttached } from './utils/shouldAttached';
+import { handleSubmitInput, valueAttached } from 'utils';
 
 export type TTextFieldWrapperProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'className' | 'color' | 'popover'> & {
-  attachedValue?: boolean;
   e2eValue: TE2EDataAttributeProps['value'];
   endAdorment?: ReactNode;
   fullWidth?: boolean;
@@ -63,7 +61,7 @@ export const TextFieldWrapper: FC<TTextFieldWrapperProps> = ({
   wrapperRef,
   ...restProps
 }) => {
-  const attached = shouldAttached(mode);
+  const attached = valueAttached(mode);
   const refPopover = useRef(null);
   const targetValue = getValue(mode, value);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);

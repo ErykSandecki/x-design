@@ -7,15 +7,15 @@ import { Icon, ScrubbableInput, TE2EValue, TIconProps, UITools } from 'shared';
 import { PANEL_PROPERTIES_ID } from '../../../../constants';
 
 // types
-import { ColorsTheme } from 'types';
+import { ColorsTheme, TValueExtended } from 'types';
 
 // utils
-import { sanitizeNumberInput } from 'utils';
+import { sanitizeNumberInput, valueAttached } from 'utils';
 
 export type TColumnAppearanceInputProps = {
-  attachedValue: boolean;
   e2eValue: TE2EValue;
   isMixed: boolean;
+  mode: TValueExtended['mode'];
   name: TIconProps['name'];
   onBlur: TFunc;
   onChange: TFunc<[string, boolean?]>;
@@ -24,20 +24,20 @@ export type TColumnAppearanceInputProps = {
 };
 
 const ColumnAppearanceInput: FC<TColumnAppearanceInputProps> = ({
-  attachedValue,
   e2eValue,
   isMixed,
+  mode,
   name,
   onBlur,
   onChange,
   popoverChildren,
   value,
 }) => {
+  const attached = valueAttached(mode);
   const refInput = useRef<HTMLInputElement>(null);
 
   return (
     <UITools.TextField
-      attachedValue={attachedValue}
       e2eValue={e2eValue}
       fullWidth
       idContainer={PANEL_PROPERTIES_ID}
@@ -47,7 +47,7 @@ const ColumnAppearanceInput: FC<TColumnAppearanceInputProps> = ({
       popoverChildren={popoverChildren}
       startAdornment={
         <ScrubbableInput
-          disabled={attachedValue}
+          disabled={attached}
           e2eValue={e2eValue}
           max={100}
           min={0}

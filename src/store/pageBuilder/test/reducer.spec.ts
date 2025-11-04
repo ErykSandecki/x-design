@@ -12,7 +12,6 @@ import {
   flipMock,
   eventsMock,
   gapMock,
-  sizeMock,
   valueExtendMock,
 } from 'test/mocks/reducer/pageBuilderMock';
 
@@ -25,8 +24,6 @@ import pageBuilder from '../reducer';
 import {
   addElement,
   applyElementsType,
-  applyElementsSizeMinMaxType,
-  applyElementsSizeType,
   changeAlignment,
   changeBackground,
   changeClipContent,
@@ -69,7 +66,6 @@ import {
   LayoutType,
   TAction,
   TBackground,
-  Unit,
   ElementType,
   TElement,
   TInsets,
@@ -123,104 +119,6 @@ describe('PageBuilderReducer', () => {
             },
             [createFrameMock.id]: createFrameMock,
           },
-        },
-      },
-    });
-  });
-
-  it('should handle APPLY_ELEMENTS_SIZE_MIN_MAX_TYPE', () => {
-    // mock
-    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-    window.getComputedStyle = (): any => ({ height: '100px', width: '100px' }) as CSSStyleDeclaration;
-
-    // before
-    const state = reducer(applyElementsSizeMinMaxType('min', 'height', 'unit'), {
-      ...pageBuilderStateMock[PAGE_BUILDER],
-      pages: {
-        ...pageBuilderStateMock[PAGE_BUILDER].pages,
-        ['0']: {
-          ...currentPage,
-          elements: {
-            ...currentPage.elements,
-            [elementMock.id]: {
-              ...elementMock,
-              height: {
-                ...sizeMock,
-                min: {
-                  ...sizeMock,
-                  value: 0,
-                },
-              },
-            },
-          },
-          selectedElements: [selectedElementMock],
-        },
-      },
-    });
-
-    // result
-    expect(state).toStrictEqual({
-      ...pageBuilderStateMock[PAGE_BUILDER],
-      pages: {
-        ...pageBuilderStateMock[PAGE_BUILDER].pages,
-        ['0']: {
-          ...currentPage,
-          elements: {
-            ...currentPage.elements,
-            [elementMock.id]: {
-              ...elementMock,
-              height: {
-                ...sizeMock,
-                min: {
-                  ...sizeMock,
-                  unit: Unit.percentage,
-                  value: 100,
-                },
-              },
-            },
-          },
-          selectedElements: [selectedElementMock],
-        },
-      },
-    });
-  });
-
-  it('should handle APPLY_ELEMENTS_SIZE_TYPE', () => {
-    // mock
-    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-    window.getComputedStyle = (): any => ({ height: '100px', width: '100px' }) as CSSStyleDeclaration;
-
-    // before
-    const state = reducer(applyElementsSizeType('height', 'unit'), {
-      ...pageBuilderStateMock[PAGE_BUILDER],
-      pages: {
-        ...pageBuilderStateMock[PAGE_BUILDER].pages,
-        ['0']: {
-          ...currentPage,
-          elements: {
-            ...currentPage.elements,
-            [elementMock.id]: elementMock,
-          },
-          selectedElements: [selectedElementMock],
-        },
-      },
-    });
-
-    // result
-    expect(state).toStrictEqual({
-      ...pageBuilderStateMock[PAGE_BUILDER],
-      pages: {
-        ...pageBuilderStateMock[PAGE_BUILDER].pages,
-        ['0']: {
-          ...currentPage,
-          elements: {
-            ...currentPage.elements,
-            [elementMock.id]: {
-              ...elementMock,
-              height: { ...sizeMock, unit: Unit.percentage, value: 100 },
-            },
-          },
-          selectedElements: [selectedElementMock],
         },
       },
     });
@@ -1150,8 +1048,8 @@ describe('PageBuilderReducer', () => {
             ...currentPage.elements,
             [elementMock.id]: {
               ...elementMock,
-              height: { ...sizeMock, value: 'auto' },
-              width: { ...sizeMock, value: 'auto' },
+              height: { ...valueExtendMock, value: 'auto' },
+              width: { ...valueExtendMock, value: 'auto' },
             },
           },
           selectedElements: [selectedElementMock],
@@ -1302,8 +1200,8 @@ describe('PageBuilderReducer', () => {
             [elementMock.id]: {
               ...elementMock,
               coordinates: { x: 0, y: 0 },
-              height: { ...sizeMock, value: 100 },
-              width: { ...sizeMock, value: 300 },
+              height: { ...valueExtendMock, value: 100 },
+              width: { ...valueExtendMock, value: 300 },
             },
           },
           selectedElements: {
@@ -1585,7 +1483,7 @@ describe('PageBuilderReducer', () => {
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
     // before
-    const state = reducer(setElementsSizes('height', 'auto'), {
+    const state = reducer(setElementsSizes('height', 0), {
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -1611,7 +1509,7 @@ describe('PageBuilderReducer', () => {
             ...currentPage.elements,
             [elementMock.id]: {
               ...elementMock,
-              height: { ...sizeMock, value: 'auto' },
+              height: { ...valueExtendMock, value: 0 },
             },
           },
           selectedElements: [selectedElementMock],
@@ -1638,7 +1536,7 @@ describe('PageBuilderReducer', () => {
               height: {
                 ...elementMock.height,
                 min: {
-                  ...sizeMock,
+                  ...valueExtendMock,
                   value: 0,
                 },
               },
@@ -1663,7 +1561,7 @@ describe('PageBuilderReducer', () => {
               height: {
                 ...elementMock.height,
                 min: {
-                  ...sizeMock,
+                  ...valueExtendMock,
                   value: 100,
                 },
               },
