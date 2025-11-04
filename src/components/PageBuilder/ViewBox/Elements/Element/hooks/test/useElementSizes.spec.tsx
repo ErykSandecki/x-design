@@ -232,4 +232,64 @@ describe('useElementEvents', () => {
       width: 100,
     });
   });
+
+  it(`should return when is auto`, () => {
+    // mock
+    const store = configureStore({
+      ...pageBuilderStateMock,
+      [PAGE_BUILDER]: {
+        ...pageBuilderStateMock[PAGE_BUILDER],
+        pages: {
+          ...pageBuilderStateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...currentPage,
+            elements: {
+              ...currentPage.elements,
+              ['-1']: {
+                ...currentPage.elements['-1'],
+                children: [elementMock.id],
+              },
+              [elementMock.id]: {
+                ...elementMock,
+                height: { mode: 'auto', value: 100 },
+                width: { mode: 'auto', value: 100 },
+              },
+            },
+            selectedElements: [selectedElementMock],
+          },
+        },
+      },
+    });
+
+    // before
+    const { result } = renderHook(() => useElementSizes(selectedElementMock.id), {
+      wrapper: ({ children }) => {
+        const Wrapper = getProviderWrapper(store);
+
+        return (
+          <Wrapper>
+            <RefsProvider
+              itemsRefs={{
+                [elementMock.id]: createHtmlElement('div'),
+              }}
+            >
+              {children}
+            </RefsProvider>
+          </Wrapper>
+        );
+      },
+    });
+
+    // result
+    expect(result.current).toStrictEqual({
+      cssHeight: 'auto',
+      cssWidth: 'auto',
+      height: 100,
+      maxHeight: '',
+      maxWidth: '',
+      minHeight: '',
+      minWidth: '',
+      width: 100,
+    });
+  });
 });
