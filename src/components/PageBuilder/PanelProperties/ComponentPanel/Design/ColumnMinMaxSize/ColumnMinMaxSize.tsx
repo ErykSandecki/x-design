@@ -22,9 +22,8 @@ const ColumnMinMaxSize: FC<TColumnMinMaxSizeProps> = ({ scoreKey }) => {
   const { t } = useTranslation();
 
   const {
-    attachedValueHeight,
-    attachedValueWidth,
     height,
+    heightMode,
     heightScore,
     onBlurHeight,
     onBlurWidth,
@@ -35,6 +34,7 @@ const ColumnMinMaxSize: FC<TColumnMinMaxSizeProps> = ({ scoreKey }) => {
     visibleHeight,
     visibleWidth,
     width,
+    widthMode,
     widthScore,
   } = useMinMaxSizeEvents(scoreKey);
 
@@ -55,8 +55,8 @@ const ColumnMinMaxSize: FC<TColumnMinMaxSizeProps> = ({ scoreKey }) => {
     >
       {visibleWidth && (
         <ColumnMinMaxSizeInput
-          attachedValue={attachedValueWidth}
           e2eValue={`${scoreKey}Width`}
+          mode={widthMode}
           onBlur={onBlurWidth}
           onChange={onChangeWidth}
           popoverChildren={<HeightPopoverWidth score={widthScore} scoreKey={scoreKey} />}
@@ -68,8 +68,8 @@ const ColumnMinMaxSize: FC<TColumnMinMaxSizeProps> = ({ scoreKey }) => {
       )}
       {visibleHeight && (
         <ColumnMinMaxSizeInput
-          attachedValue={attachedValueHeight}
           e2eValue={`${scoreKey}Height`}
+          mode={heightMode}
           onBlur={onBlurHeight}
           onChange={onChangeHeight}
           popoverChildren={<HeightPopoverHeight score={heightScore} scoreKey={scoreKey} />}

@@ -1,11 +1,11 @@
 // types
-import { TSize } from 'types';
+import { TValueExtended } from 'types';
 
-export const getScoreValue = (score: TSize): string => {
+export const getScoreValue = (score: TValueExtended): string => {
   if (score) {
-    const { type, value, unit } = score;
+    const { mode, value, unit } = score;
 
-    return type === 'fixed' ? `${value}${unit || 'px'}` : 'auto';
+    return mode === 'fixed' ? `${value}${unit || 'px'}` : 'auto';
   }
 
   return '';

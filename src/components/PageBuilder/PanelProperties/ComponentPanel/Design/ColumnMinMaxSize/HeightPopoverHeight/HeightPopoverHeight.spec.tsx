@@ -5,7 +5,7 @@ import HeightPopoverHeight from './HeightPopoverHeight';
 import { UITools } from 'shared';
 
 // mocks
-import { sizeMock } from 'test/mocks/reducer/pageBuilderMock';
+import { valueExtendMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // utils
 import { customRender } from 'test';
@@ -20,7 +20,7 @@ describe('HeightPopoverHeight snapshots', () => {
     // before
     const { asFragment } = customRender(
       <UITools.PopoverCompound.PopoverRoot selected={false} setSelected={noop}>
-        <HeightPopoverHeight score={sizeMock} scoreKey="max" />
+        <HeightPopoverHeight score={valueExtendMock} scoreKey="max" />
       </UITools.PopoverCompound.PopoverRoot>,
     );
 
@@ -32,7 +32,7 @@ describe('HeightPopoverHeight snapshots', () => {
     // before
     const { asFragment } = customRender(
       <UITools.PopoverCompound.PopoverRoot selected={false} setSelected={noop}>
-        <HeightPopoverHeight score={sizeMock} scoreKey="min" />
+        <HeightPopoverHeight score={valueExtendMock} scoreKey="min" />
       </UITools.PopoverCompound.PopoverRoot>,
     );
 

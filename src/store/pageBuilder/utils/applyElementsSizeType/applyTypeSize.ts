@@ -28,14 +28,14 @@ export const applyTypeSize = (
 
       return {
         ...element[sizeType],
-        max: hasMax ? undefined : { type: 'fixed', value: size },
+        max: hasMax ? undefined : { mode: 'fixed', value: size },
       };
     case 'min':
       const hasMin = element[sizeType].min !== undefined;
 
       return {
         ...element[sizeType],
-        min: hasMin ? undefined : { type: 'fixed', value: size },
+        min: hasMin ? undefined : { mode: 'fixed', value: size },
       };
     default:
       return {

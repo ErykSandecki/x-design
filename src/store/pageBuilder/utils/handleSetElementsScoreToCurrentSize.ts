@@ -6,6 +6,7 @@ import { TElement } from 'types';
 import { TPageBuilderState, TSetElementsScoreToCurrentSizeActionPayload } from '../types';
 
 // utils
+import { applyMode } from './applyElementsType/applyMode';
 import { extractObjectValues, mapFilteredValues } from 'utils';
 
 export const getSize = (
@@ -39,7 +40,13 @@ export const handleSetElementsScoreToCurrentSize = (
           ...currentPage.elements,
           ...mapFilteredValues(currentPage.elements, ids, (element) => ({
             ...element,
-            [sizeType]: { ...element[sizeType], [scoreType]: getSize(element, sizeType, zoomContent) },
+            [sizeType]: {
+              ...element[sizeType],
+              [scoreType]: {
+                ...applyMode(element, 'fixed', `${sizeType}.${scoreType}`, undefined),
+                value: getSize(element, sizeType, zoomContent),
+              },
+            },
           })),
         },
       },

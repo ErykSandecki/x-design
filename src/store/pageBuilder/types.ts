@@ -31,7 +31,6 @@ import {
   UNSELECT_ELEMENT,
   UPDATE_EVENTS_STATUS,
   UPDATE_PREV_STATE,
-  APPLY_ELEMENTS_SIZE_MIN_MAX_TYPE,
   CHANGE_CLIP_CONTENT,
   UNSELECT_ELEMENTS,
   CHANGE_PROPERTIES,
@@ -133,17 +132,6 @@ export type TApplyElementsInsetTypeActionPayload = {
   insets: Array<keyof TInsets>;
   name: TInsetsName;
   type: 'fixed';
-};
-
-export type TApplyElementsSizeMinMaxTypeActionPayload = {
-  scoreType: keyof TScore;
-  sizeType: keyof Pick<TElement, 'height' | 'width'>;
-  type: 'auto' | 'fixed' | 'unit';
-};
-
-export type TApplyElementsSizeMinMaxTypeAction = {
-  payload: TApplyElementsSizeMinMaxTypeActionPayload;
-  type: typeof APPLY_ELEMENTS_SIZE_MIN_MAX_TYPE;
 };
 
 export type TApplyElementsSizeTypeActionPayload = {

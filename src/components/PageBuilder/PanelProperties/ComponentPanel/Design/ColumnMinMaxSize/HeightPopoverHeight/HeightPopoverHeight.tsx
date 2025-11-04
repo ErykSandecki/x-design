@@ -10,28 +10,22 @@ import { UITools } from 'shared';
 import { translationNameSpace } from './constants';
 
 // store
-import {
-  applyElementsSizeMinMaxType,
-  applyElementsSizeType,
-  setElementsScoreToCurrentSize,
-} from 'store/pageBuilder/actions';
+import { applyElementsSizeType, applyElementsType, setElementsScoreToCurrentSize } from 'store/pageBuilder/actions';
 
 // types
 import { PopoverItem } from '../enums';
-import { TScore, TSize } from 'types';
-
-// utils
-import { isPureNumber } from 'utils';
+import { TScore, TValueExtended, Unit } from 'types';
 
 const { PopoverCompound } = UITools;
 
 export type THeightPopoverHeightProps = {
-  score: TSize;
+  score: TValueExtended;
   scoreKey: keyof TScore;
 };
 
 const HeightPopoverHeight: FC<THeightPopoverHeightProps> = ({ score, scoreKey }) => {
   const dispatch = useDispatch();
+  const { mode } = score;
   const { t } = useTranslation();
 
   return (
@@ -40,21 +34,21 @@ const HeightPopoverHeight: FC<THeightPopoverHeightProps> = ({ score, scoreKey })
         icon={`${capitalize(scoreKey)}Height`}
         index={PopoverItem.currentValue}
         onClick={() => dispatch(setElementsScoreToCurrentSize(scoreKey, 'height'))}
-        selected={!score.unit && isPureNumber(score?.value || '')}
+        selected={mode === 'fixed'}
         text={t(`${translationNameSpace}.${scoreKey}.1`)}
       />
       <PopoverCompound.PopoverItem
         icon="AutoHeight"
         index={PopoverItem.auto}
-        onClick={() => dispatch(applyElementsSizeMinMaxType(scoreKey, 'height', 'auto'))}
-        selected={score.value === 'auto'}
+        onClick={() => dispatch(applyElementsType('auto', [`height.${scoreKey}`]))}
+        selected={mode === 'auto'}
         text={t(`${translationNameSpace}.${scoreKey}.2`)}
       />
       <PopoverCompound.PopoverItem
         icon="Percentage"
         index={PopoverItem.unit}
-        onClick={() => dispatch(applyElementsSizeMinMaxType(scoreKey, 'height', 'unit'))}
-        selected={!!score.unit}
+        onClick={() => dispatch(applyElementsType('unit', [`height.${scoreKey}`], Unit.percentage))}
+        selected={mode === 'unit'}
         text={t(`${translationNameSpace}.${scoreKey}.3`)}
       />
       <PopoverCompound.PopoverItem

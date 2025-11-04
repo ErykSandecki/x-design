@@ -1,7 +1,6 @@
 // others
 import {
   ADD_ELEMENT,
-  APPLY_ELEMENTS_SIZE_MIN_MAX_TYPE,
   CHANGE_ALIGNMENT,
   CHANGE_BACKGROUND,
   CHANGE_LAYOUT,
@@ -67,7 +66,6 @@ import {
   TChangeLayoutBoxSizingAction,
   TChangeLayoutGridAction,
   TChangeInsetsAction,
-  TApplyElementsSizeMinMaxTypeAction,
   TChangeClipContentAction,
   TChangePropertiesAction,
   TApplyElementsTypeAction,
@@ -76,7 +74,6 @@ import {
 // utils
 import { filterSelectedElements } from './utils/filterSelectedElements';
 import { handleAddElement } from './utils/handleAddElement';
-import { handleApplyElementsSizeMinMaxType } from './utils/applyElementsSizeMinMaxType/handleApplyElementsSizeMinMaxType';
 import { handleApplyElementsSizeType } from './utils/applyElementsSizeType/handleApplyElementsSizeType';
 import { handleApplyElementsType } from './utils/applyElementsType/handleApplyElementsType';
 import { handleChangeAlignment } from './utils/changeAligment/handleChangeAlignment';
@@ -138,11 +135,6 @@ const addElement = (
   state: TPageBuilderState,
   { payload: element }: TAction<TAddELementAction['payload']>,
 ): TPageBuilderState => handleAddElement(element, state);
-
-const applyElementsSizeMinMaxType = (
-  state: TPageBuilderState,
-  { payload }: TAction<TApplyElementsSizeMinMaxTypeAction['payload']>,
-): TPageBuilderState => handleApplyElementsSizeMinMaxType(payload, state);
 
 const applyElementsSizeType = (
   state: TPageBuilderState,
@@ -366,8 +358,6 @@ const pageBuilder = (state: TPageBuilderState = initialState, action: TAction): 
   switch (action.type) {
     case ADD_ELEMENT:
       return addElement(state, action);
-    case APPLY_ELEMENTS_SIZE_MIN_MAX_TYPE:
-      return applyElementsSizeMinMaxType(state, action);
     case APPLY_ELEMENTS_SIZE_TYPE:
       return applyElementsSizeType(state, action);
     case APPLY_ELEMENTS_TYPE:

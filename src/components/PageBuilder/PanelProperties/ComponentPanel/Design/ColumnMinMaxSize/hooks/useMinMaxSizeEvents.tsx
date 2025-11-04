@@ -9,7 +9,7 @@ import {
 } from 'store/pageBuilder/selectors';
 
 // types
-import { TScore, TSize } from 'types';
+import { TScore, TValueExtended } from 'types';
 import { TUseBlurEvent, useBlurEvent } from './useBlurEvent';
 import { TUseChangeEvent, useChangeEvent } from './useChangeEvent';
 
@@ -18,16 +18,16 @@ import { normalizeMultipleValue } from 'components/PageBuilder/utils/normalizeMu
 
 type TUseMinMaxSizeEvents = TUseChangeEvent &
   TUseBlurEvent & {
-    attachedValueHeight: boolean;
-    attachedValueWidth: boolean;
     height: string;
-    heightScore: TSize;
+    heightMode: TValueExtended['mode'];
+    heightScore: TValueExtended;
     valueScrubbaleInputHeight: number;
     valueScrubbaleInputWidth: number;
     visibleHeight: boolean;
     visibleWidth: boolean;
     width: string;
-    widthScore: TSize;
+    widthMode: TValueExtended['mode'];
+    widthScore: TValueExtended;
   };
 
 export const useMinMaxSizeEvents = (score: keyof TScore): TUseMinMaxSizeEvents => {
@@ -37,12 +37,10 @@ export const useMinMaxSizeEvents = (score: keyof TScore): TUseMinMaxSizeEvents =
   const elementWidth = useSelector(elementAttributeSelectorCreator('width', firstElementId));
   const { [score]: currentHeightScore } = elementHeight;
   const { [score]: currentWidthScore } = elementWidth;
-  const { type: typeHeight, unit: unitHeight } = currentHeightScore || {};
-  const { type: typeWidth, unit: unitWidth } = currentWidthScore || {};
+  const { mode: heightMode, unit: unitHeight } = currentHeightScore || {};
+  const { mode: widthMode, unit: unitWidth } = currentWidthScore || {};
   const [heightScore, setHeightScore] = useState('');
   const [widthScore, setWidthScore] = useState('');
-  const attachedValueHeight = typeHeight !== 'fixed';
-  const attachedValueWidth = typeWidth !== 'fixed';
   const onChangeEvents = useChangeEvent(score, setHeightScore, setWidthScore);
   const valueScrubbaleInputHeight = parseFloat(heightScore);
   const valueScrubbaleInputWidth = parseFloat(widthScore);
@@ -66,15 +64,15 @@ export const useMinMaxSizeEvents = (score: keyof TScore): TUseMinMaxSizeEvents =
   return {
     ...onBlurEvents,
     ...onChangeEvents,
-    attachedValueHeight,
-    attachedValueWidth,
     height: heightScore,
+    heightMode,
     heightScore: currentHeightScore,
     valueScrubbaleInputHeight,
     valueScrubbaleInputWidth,
     visibleHeight,
     visibleWidth,
     width: widthScore,
+    widthMode,
     widthScore: currentWidthScore,
   };
 };

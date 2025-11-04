@@ -9,17 +9,17 @@ import { Icon, ScrubbableInput, TE2EValue, TIconProps, UITools } from 'shared';
 import { MAX, PANEL_PROPERTIES_ID } from '../../../../constants';
 
 // store
-import { applyElementsSizeMinMaxType } from 'store/pageBuilder/actions';
+import { applyElementsType } from 'store/pageBuilder/actions';
 
 // types
-import { ColorsTheme, TElement, TScore } from 'types';
+import { ColorsTheme, TElement, TScore, TValueExtended } from 'types';
 
 // utils
 import { sanitizeNumberInput } from 'utils';
 
 export type TColumnResizingInputProps = {
-  attachedValue: boolean;
   e2eValue: TE2EValue;
+  mode: TValueExtended['mode'];
   onBlur: TFunc;
   onChange: TFunc<[string, boolean?]>;
   popoverChildren?: ReactNode;
@@ -30,8 +30,8 @@ export type TColumnResizingInputProps = {
 };
 
 const ColumnMinMaxSizeInput: FC<TColumnResizingInputProps> = ({
-  attachedValue,
   e2eValue,
+  mode,
   onBlur,
   onChange,
   popoverChildren,
@@ -45,13 +45,13 @@ const ColumnMinMaxSizeInput: FC<TColumnResizingInputProps> = ({
 
   return (
     <UITools.TextField
-      attachedValue={attachedValue}
       e2eValue={e2eValue}
       fullWidth
       idContainer={PANEL_PROPERTIES_ID}
+      mode={mode}
       onBlur={onBlur}
       onChange={(event) => onChange(sanitizeNumberInput(event.target.value))}
-      onDetachedValue={() => dispatch(applyElementsSizeMinMaxType(scoreKey, sizeType, 'fixed'))}
+      onDetachedValue={() => dispatch(applyElementsType('fixed', [`${sizeType}.${scoreKey}`]))}
       popoverChildren={popoverChildren}
       startAdornment={
         <ScrubbableInput

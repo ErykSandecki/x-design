@@ -17,13 +17,15 @@ import { className, classNames } from './classNames';
 import styles from './text-field-wrapper.scss';
 
 // types
-import { E2EAttribute, KeyboardKeys } from 'types';
+import { E2EAttribute, KeyboardKeys, TValueExtended } from 'types';
 import { TE2EDataAttributeProps } from '../../../E2EDataAttributes/E2EDataAttribute';
 import { TextFieldVariant } from '../enums';
 
 // utils
 import { getAttributes } from '../../../E2EDataAttributes/utils';
+import { getValue } from './utils/getValue';
 import { handleSubmitInput } from 'utils';
+import { shouldAttached } from './utils/shouldAttached';
 
 export type TTextFieldWrapperProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'className' | 'color' | 'popover'> & {
   attachedValue?: boolean;
@@ -32,6 +34,7 @@ export type TTextFieldWrapperProps = Omit<InputHTMLAttributes<HTMLInputElement>,
   fullWidth?: boolean;
   idContainer?: string;
   inputRef?: RefObject<HTMLInputElement>;
+  mode?: TValueExtended['mode'];
   onDetachedValue?: TFunc;
   popoverChildren?: TPopoverProps['children'];
   popoverOffset?: TPopoverProps['offset'];
@@ -42,13 +45,13 @@ export type TTextFieldWrapperProps = Omit<InputHTMLAttributes<HTMLInputElement>,
 };
 
 export const TextFieldWrapper: FC<TTextFieldWrapperProps> = ({
-  attachedValue,
   disabled,
   e2eValue,
   endAdorment,
   fullWidth = false,
   idContainer = undefined,
   inputRef,
+  mode = 'fixed',
   onDetachedValue = noop,
   popoverChildren,
   popoverOffset,
@@ -60,7 +63,9 @@ export const TextFieldWrapper: FC<TTextFieldWrapperProps> = ({
   wrapperRef,
   ...restProps
 }) => {
+  const attached = shouldAttached(mode);
   const refPopover = useRef(null);
+  const targetValue = getValue(mode, value);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { selected, setSelected } = useOutsideClick([], refPopover, noop, idContainer);
 
@@ -69,7 +74,7 @@ export const TextFieldWrapper: FC<TTextFieldWrapperProps> = ({
       classes={{
         className: cx(
           classNamesWithTheme[className].name,
-          [classNamesWithTheme[className].modificators.chip, attachedValue],
+          [classNamesWithTheme[className].modificators.chip, attached],
           [classNamesWithTheme[className].modificators.disabled, disabled],
           [classNamesWithTheme[className].modificators.fullWidth, fullWidth],
           classNamesWithTheme[className].modificators[variant],
@@ -77,7 +82,7 @@ export const TextFieldWrapper: FC<TTextFieldWrapperProps> = ({
       }}
       e2eAttribute={E2EAttribute.textFieldWrapper}
       e2eValue={e2eValue}
-      onClick={() => attachedValue && setSelected(true)}
+      onClick={() => attached && setSelected(true)}
       ref={wrapperRef}
       style={style}
     >
@@ -86,16 +91,16 @@ export const TextFieldWrapper: FC<TTextFieldWrapperProps> = ({
         className={cx(classNamesWithTheme.input)}
         disabled={disabled}
         maxLength={6}
-        onClick={() => !attachedValue && inputRef.current.select()}
+        onClick={() => !attached && inputRef.current.select()}
         onKeyDown={(event) => handleSubmitInput(KeyboardKeys.enter, inputRef.current)(event)}
         ref={inputRef}
-        value={value}
+        value={targetValue}
         {...getAttributes(E2EAttribute.textFieldInput, e2eValue)}
         {...restProps}
       />
       {popoverChildren ? (
         <TextFieldPopover
-          attachedValue={attachedValue}
+          attachedValue={attached}
           classNameIcon={cx(classNamesWithTheme.icon)}
           offset={popoverOffset}
           onClick={onDetachedValue}
@@ -110,13 +115,10 @@ export const TextFieldWrapper: FC<TTextFieldWrapperProps> = ({
         endAdorment
       )}
       <TextFieldChip
-        attachedValue={attachedValue}
-        className={cx(classNamesWithTheme.chip.name, [
-          classNamesWithTheme.chip.modificators.attachedValue,
-          attachedValue,
-        ])}
+        attachedValue={attached}
+        className={cx(classNamesWithTheme.chip.name, [classNamesWithTheme.chip.modificators.attachedValue, attached])}
       >
-        {value}
+        {targetValue}
       </TextFieldChip>
     </Box>
   );

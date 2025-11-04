@@ -49,8 +49,8 @@ export type TInsets = {
 export type TInsetsName = keyof Pick<TElement, 'margin' | 'padding'>;
 
 export type TScore = {
-  max?: TSize;
-  min?: TSize;
+  max?: TValueExtended;
+  min?: TValueExtended;
 };
 
 export type TSize = {

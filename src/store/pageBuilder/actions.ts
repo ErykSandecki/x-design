@@ -2,7 +2,6 @@
 import {
   ADD_ELEMENT,
   APPLY_ELEMENTS_TYPE,
-  APPLY_ELEMENTS_SIZE_MIN_MAX_TYPE,
   APPLY_ELEMENTS_SIZE_TYPE,
   CHANGE_ALIGNMENT,
   CHANGE_BACKGROUND,
@@ -81,8 +80,6 @@ import {
   TUpdateEventsStatusAction,
   TUpdatePrevStateAction,
   TChangeInsetsActionPayload,
-  TApplyElementsSizeMinMaxTypeActionPayload,
-  TApplyElementsSizeMinMaxTypeAction,
   TChangeClipContentAction,
   TUnselectElementsAction,
   TChangePropertiesAction,
@@ -94,15 +91,6 @@ import { TElement } from 'types';
 export const addElement = (payload: TAddELementActionPayload): TAddELementAction => ({
   payload,
   type: ADD_ELEMENT,
-});
-
-export const applyElementsSizeMinMaxType = (
-  scoreType: TApplyElementsSizeMinMaxTypeActionPayload['scoreType'],
-  sizeType: TApplyElementsSizeMinMaxTypeActionPayload['sizeType'],
-  type: TApplyElementsSizeMinMaxTypeActionPayload['type'],
-): TApplyElementsSizeMinMaxTypeAction => ({
-  payload: { scoreType, sizeType, type },
-  type: APPLY_ELEMENTS_SIZE_MIN_MAX_TYPE,
 });
 
 export const applyElementsSizeType = (
