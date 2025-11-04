@@ -25,7 +25,6 @@ import {
   SET_ELEMENTS_SCORE_TO_CURRENT_SIZE,
   SET_ELEMENTS_SIZES,
   SET_ELEMENTS_SIZES_MIN_MAX,
-  TOGGLE_ASPECT_RATIO,
   UNSELECT_ELEMENT,
   UPDATE_EVENTS_STATUS,
   UPDATE_PREV_STATE,
@@ -305,10 +304,6 @@ export type TSetElementsSizesMinMaxActionPayload = {
 export type TSetElementsSizesMinMaxAction = {
   payload: TSetElementsSizesMinMaxActionPayload;
   type: typeof SET_ELEMENTS_SIZES_MIN_MAX;
-};
-
-export type TToggleAspectRatioAction = {
-  type: typeof TOGGLE_ASPECT_RATIO;
 };
 
 export type TUpdateEventsStatusAction = {

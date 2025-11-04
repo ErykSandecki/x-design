@@ -8,7 +8,7 @@ import { UITools } from 'shared';
 import { TOOLTIP_TRANSLATION_KEY } from 'constant/constants';
 
 // store
-import { toggleAspectRatio } from 'store/pageBuilder/actions';
+import { changeProperties } from 'store/pageBuilder/actions';
 
 const ColumnResizingButtonIcons = (
   aspectRatio: boolean,
@@ -22,7 +22,7 @@ const ColumnResizingButtonIcons = (
           e2eValue="aspect-ratio"
           key={0}
           name="AspectRatio"
-          onClick={() => dispatch(toggleAspectRatio())}
+          onClick={() => dispatch(changeProperties({ aspectRatio: !aspectRatio }))}
           tooltip={{ autoPositioning: true, content: t(`${TOOLTIP_TRANSLATION_KEY}.lookAspectRatio`) }}
           selected={aspectRatio}
         />,

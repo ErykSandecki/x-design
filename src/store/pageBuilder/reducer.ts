@@ -26,7 +26,6 @@ import {
   SET_ELEMENTS_SIZES,
   SET_ELEMENTS_SIZES_MIN_MAX,
   SET_ELEMENTS_SCORE_TO_CURRENT_SIZE,
-  TOGGLE_ASPECT_RATIO,
   CHANGE_LAYOUT_ALIGNMENT,
   SET_ELEMENTS_GAP,
   UNSELECT_ELEMENTS,
@@ -78,7 +77,7 @@ import { handleChangeLayoutGrid } from './utils/changeLayoutGrid/handleChangeLay
 import { handleChangeParent } from './utils/changeParent/handleChangeParent';
 import { handleChangePosition } from './utils/handleChangePosition';
 import { handleFitLayout } from './utils/handleFitLayout';
-import { handleFlipElements } from './utils/handleFlipElements';
+import { handleFlipElements } from './utils/flipElements/handleFlipElements';
 import { handleReducerHistoryRedo } from './utils/reducerHistory/handleReducerHistoryRedo';
 import { handleReducerHistorySave } from './utils/reducerHistory/handleReducerHistorySave';
 import { handleReducerHistoryUndo } from './utils/reducerHistory/handleReducerHistoryUndo';
@@ -89,7 +88,6 @@ import { handleSetElementsGap } from './utils/handleSetElementsGap';
 import { handleSetElementsScoreToCurrentSize } from './utils/handleSetElementsScoreToCurrentSize';
 import { handleSetElementsSizes } from './utils/setElementSizes/handleSetElementsSizes';
 import { handleSetElementsSizesMinMax } from './utils/handleSetElementsSizesMinMax';
-import { handleToggleAspectRatio } from './utils/handleToggleAspectRatio';
 import { handleChangeProperties } from './utils/handleChangeProperties';
 
 const initialState: TPageBuilderState = {
@@ -281,8 +279,6 @@ const setElementsSizesMinMax = (
   { payload: { scoreType, sizeType, value } }: TAction<TSetElementsSizesMinMaxAction['payload']>,
 ): TPageBuilderState => handleSetElementsSizesMinMax(scoreType, sizeType, state, value);
 
-const toggleAspectRatio = (state: TPageBuilderState): TPageBuilderState => handleToggleAspectRatio(state);
-
 const updateEventsStatus = (
   state: TPageBuilderState,
   { payload: events }: TAction<TUpdateEventsStatusAction['payload']>,
@@ -386,8 +382,6 @@ const pageBuilder = (state: TPageBuilderState = initialState, action: TAction): 
       return setElementsSizes(state, action);
     case SET_ELEMENTS_SIZES_MIN_MAX:
       return setElementsSizesMinMax(state, action);
-    case TOGGLE_ASPECT_RATIO:
-      return toggleAspectRatio(state);
     case UPDATE_EVENTS_STATUS:
       return updateEventsStatus(state, action);
     case UPDATE_PREV_STATE:

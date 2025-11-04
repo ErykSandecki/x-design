@@ -1,8 +1,8 @@
 // types
-import { TFlipElementsAction, TPageBuilderState } from '../types';
+import { TFlipElementsAction, TPageBuilderState } from '../../types';
 
 // utils
-import { getFlippedElements } from './flipElements/getFlippedElements';
+import { getFlippedElements } from './getFlippedElements';
 
 export const handleFlipElements = (
   axis: TFlipElementsAction['payload'],

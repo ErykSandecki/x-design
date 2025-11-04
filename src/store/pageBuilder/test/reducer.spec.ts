@@ -49,7 +49,6 @@ import {
   setElementsScoreToCurrentSize,
   setElementsSizes,
   setElementsSizesMinMax,
-  toggleAspectRatio,
   unselectElement,
   unselectElements,
   updateEventsStatus,
@@ -1458,46 +1457,6 @@ describe('PageBuilderReducer', () => {
                   value: 100,
                 },
               },
-            },
-          },
-          selectedElements: [selectedElementMock],
-        },
-      },
-    });
-  });
-
-  it('should handle TOGGLE_ASPECT_RATIO', () => {
-    // mock
-    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-
-    // before
-    const state = reducer(toggleAspectRatio(), {
-      ...pageBuilderStateMock[PAGE_BUILDER],
-      pages: {
-        ...pageBuilderStateMock[PAGE_BUILDER].pages,
-        ['0']: {
-          ...currentPage,
-          elements: {
-            ...currentPage.elements,
-            [elementMock.id]: elementMock,
-          },
-          selectedElements: [selectedElementMock],
-        },
-      },
-    });
-
-    // result
-    expect(state).toStrictEqual({
-      ...pageBuilderStateMock[PAGE_BUILDER],
-      pages: {
-        ...pageBuilderStateMock[PAGE_BUILDER].pages,
-        ['0']: {
-          ...currentPage,
-          elements: {
-            ...currentPage.elements,
-            [elementMock.id]: {
-              ...elementMock,
-              aspectRatio: true,
             },
           },
           selectedElements: [selectedElementMock],

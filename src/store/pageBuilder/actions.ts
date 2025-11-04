@@ -27,7 +27,6 @@ import {
   SET_ELEMENTS_SCORE_TO_CURRENT_SIZE,
   SET_ELEMENTS_SIZES,
   SET_ELEMENTS_SIZES_MIN_MAX,
-  TOGGLE_ASPECT_RATIO,
   UNSELECT_ELEMENT,
   UNSELECT_ELEMENTS,
   UPDATE_EVENTS_STATUS,
@@ -69,7 +68,6 @@ import {
   TSetElementsSizesActionPayload,
   TSetElementsSizesMinMaxAction,
   TSetElementsSizesMinMaxActionPayload,
-  TToggleAspectRatioAction,
   TUnselectElementAction,
   TUpdateEventsStatusAction,
   TUpdatePrevStateAction,
@@ -240,10 +238,6 @@ export const setElementsSizesMinMax = (
 ): TSetElementsSizesMinMaxAction => ({
   payload: { scoreType, sizeType, value },
   type: SET_ELEMENTS_SIZES_MIN_MAX,
-});
-
-export const toggleAspectRatio = (): TToggleAspectRatioAction => ({
-  type: TOGGLE_ASPECT_RATIO,
 });
 
 export const updateEventsStatus = (payload: TUpdateEventsStatusAction['payload']): TUpdateEventsStatusAction => ({
