@@ -8,20 +8,36 @@ import { Unit } from 'types';
 import { applyMode } from '../applyMode';
 
 describe('applyMode', () => {
-  it(`should apply fixed`, () => {
-    // before
-    const result = applyMode(elementMock, 'fixed', 'opacity', undefined);
-
-    // result
-    expect(result).toStrictEqual({ mode: 'fixed', unit: undefined, value: 100 });
-  });
-
   it(`should apply auto`, () => {
     // before
     const result = applyMode(elementMock, 'auto', 'opacity', undefined);
 
     // result
     expect(result).toStrictEqual({ mode: 'auto', unit: undefined, value: 100 });
+  });
+
+  it(`should apply max`, () => {
+    // before
+    const result = applyMode(elementMock, 'max', 'opacity', undefined);
+
+    // result
+    expect(result).toStrictEqual({ max: { mode: 'fixed', value: 0 }, mode: 'fixed', value: 100 });
+  });
+
+  it(`should apply min`, () => {
+    // before
+    const result = applyMode(elementMock, 'min', 'opacity', undefined);
+
+    // result
+    expect(result).toStrictEqual({ min: { mode: 'fixed', value: 0 }, mode: 'fixed', value: 100 });
+  });
+
+  it(`should apply fixed`, () => {
+    // before
+    const result = applyMode(elementMock, 'fixed', 'opacity', undefined);
+
+    // result
+    expect(result).toStrictEqual({ mode: 'fixed', unit: undefined, value: 100 });
   });
 
   it(`should apply unit`, () => {
