@@ -24,6 +24,7 @@ import { TElementChildren } from './types';
 import { getInsets } from './utils/getInsets';
 import { getLayout } from './utils/getLayout';
 import { getPosition } from './utils/getPosition';
+import { getBorderInsets } from './utils/getBorderInsets';
 
 export type TElementProps = {
   classes: typeof classes;
@@ -43,6 +44,7 @@ const Element: FC<TElementProps> = ({ classes, children, id, index, mouseMode, p
     alignment,
     angle,
     background,
+    borderRadius,
     coordinates,
     cssHeight,
     cssWidth,
@@ -88,6 +90,7 @@ const Element: FC<TElementProps> = ({ classes, children, id, index, mouseMode, p
       id={id}
       ref={elementRef}
       style={{
+        ...getBorderInsets(borderRadius),
         ...getLayout(layout),
         ...getPosition(alignment, angle, x, y),
         backgroundColor: (background.properties as TColor).color,

@@ -13,7 +13,7 @@ import { applyElementsType } from 'store/pageBuilder/actions';
 
 // types
 import { PopoverItem } from '../enums';
-import { TValueExtended } from 'types';
+import { TValueExtended, Unit } from 'types';
 
 const { PopoverCompound } = UITools;
 
@@ -37,6 +37,21 @@ const PopoverBorderRadius: FC<TPopoverBorderRadiusProps> = ({ isMixed, mode, val
         }
         selected={!isMixed && mode === 'fixed'}
         text={t(`${translationNameSpace}.1`, { value })}
+      />
+      <PopoverCompound.PopoverItem
+        icon="Percentage"
+        index={PopoverItem.unit}
+        onClick={() =>
+          dispatch(
+            applyElementsType(
+              'unit',
+              ['borderRadius.b', 'borderRadius.l', 'borderRadius.r', 'borderRadius.t'],
+              Unit.percentage,
+            ),
+          )
+        }
+        selected={!isMixed && mode === 'unit'}
+        text={t(`${translationNameSpace}.2`, { value })}
       />
     </>
   );

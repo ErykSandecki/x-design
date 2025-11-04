@@ -11,6 +11,7 @@ import { UITools } from 'shared';
 import { useAppearanceEvents } from './hooks/useAppearanceEvents';
 
 // others
+import { MAX } from '../../../../constants';
 import { translationNameSpace } from './constants';
 
 const ColumnAppearance: FC = () => {
@@ -37,6 +38,8 @@ const ColumnAppearance: FC = () => {
       <ColumnAppearanceInput
         e2eValue="opacity"
         isMixed={isMixedOpacity}
+        max={100}
+        min={0}
         mode={opacityMode}
         name="Opacity"
         onBlur={onBlurOpacity}
@@ -47,6 +50,8 @@ const ColumnAppearance: FC = () => {
       <ColumnAppearanceInput
         e2eValue="border-radius"
         isMixed={isMixedBorderRadius}
+        max={MAX}
+        min={0}
         mode={borderRadiusMode}
         name="Corners"
         onBlur={onBlurBorderRadius}

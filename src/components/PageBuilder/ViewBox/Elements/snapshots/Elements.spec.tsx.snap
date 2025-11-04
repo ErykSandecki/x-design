@@ -7,7 +7,7 @@ exports[`Elements snapshots should render Element in relative position 1`] = `
     data-status="false"
     data-test-element="test-1"
     id="test-1"
-    style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; background-color: rgb(255, 255, 255); height: 100px; margin: 0px 0px 0px 0px; mix-blend-mode: initial; opacity: 1; overflow: hidden; padding: 0px 0px 0px 0px; position: relative; visibility: visible; width: 100px;"
+    style="border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; border-top-left-radius: 0px; border-top-right-radius: 0px; left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; background-color: rgb(255, 255, 255); height: 100px; margin: 0px 0px 0px 0px; mix-blend-mode: initial; opacity: 1; overflow: hidden; padding: 0px 0px 0px 0px; position: relative; visibility: visible; width: 100px;"
   >
     <div
       class="css-hnxq09"
@@ -64,7 +64,7 @@ exports[`Elements snapshots should render Frame 1`] = `
     data-status="false"
     data-test-element="test-1"
     id="test-1"
-    style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; background-color: rgb(255, 255, 255); height: 100px; margin: 0px 0px 0px 0px; mix-blend-mode: initial; opacity: 1; overflow: hidden; padding: 0px 0px 0px 0px; position: absolute; visibility: visible; width: 100px;"
+    style="border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; border-top-left-radius: 0px; border-top-right-radius: 0px; left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; background-color: rgb(255, 255, 255); height: 100px; margin: 0px 0px 0px 0px; mix-blend-mode: initial; opacity: 1; overflow: hidden; padding: 0px 0px 0px 0px; position: absolute; visibility: visible; width: 100px;"
   >
     <div
       class="css-1jnxvbp Frame__wrapper Frame__wrapper--light"
@@ -99,7 +99,7 @@ exports[`Elements snapshots should render when possible Element 1`] = `
     data-status="false"
     data-test-element="test-1"
     id="test-1"
-    style="left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; background-color: rgb(255, 255, 255); height: 100px; margin: 0px 0px 0px 0px; mix-blend-mode: initial; opacity: 1; overflow: hidden; padding: 0px 0px 0px 0px; position: absolute; visibility: visible; width: 100px;"
+    style="border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; border-top-left-radius: 0px; border-top-right-radius: 0px; left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; background-color: rgb(255, 255, 255); height: 100px; margin: 0px 0px 0px 0px; mix-blend-mode: initial; opacity: 1; overflow: hidden; padding: 0px 0px 0px 0px; position: absolute; visibility: visible; width: 100px;"
   >
     <div
       class="css-1jnxvbp Frame__wrapper Frame__wrapper--light"

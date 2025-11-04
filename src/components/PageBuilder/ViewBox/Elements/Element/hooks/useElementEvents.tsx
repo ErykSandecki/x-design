@@ -33,6 +33,7 @@ export type TUseElementEvents = TUseElementSizes & {
   alignment: TElement['alignment'];
   angle: TElement['angle'];
   background: TElement['background'];
+  borderRadius: TInsets;
   coordinates: TElement['coordinates'];
   displayEventsArea: boolean;
   displayOutline: boolean;
@@ -93,6 +94,7 @@ export const useElementEvents = (
     alignment: elementData.alignment,
     angle: elementData.angle,
     background: elementData.background,
+    borderRadius: elementData.borderRadius,
     coordinates,
     displayEventsArea,
     displayOutline,

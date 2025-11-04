@@ -15,6 +15,8 @@ import { sanitizeNumberInput, valueAttached } from 'utils';
 export type TColumnAppearanceInputProps = {
   e2eValue: TE2EValue;
   isMixed: boolean;
+  max: number;
+  min: number;
   mode: TValueExtended['mode'];
   name: TIconProps['name'];
   onBlur: TFunc;
@@ -26,6 +28,8 @@ export type TColumnAppearanceInputProps = {
 const ColumnAppearanceInput: FC<TColumnAppearanceInputProps> = ({
   e2eValue,
   isMixed,
+  max,
+  min,
   mode,
   name,
   onBlur,
@@ -49,8 +53,8 @@ const ColumnAppearanceInput: FC<TColumnAppearanceInputProps> = ({
         <ScrubbableInput
           disabled={attached}
           e2eValue={e2eValue}
-          max={100}
-          min={0}
+          max={max}
+          min={min}
           onChange={(value) => onChange(value.toString(), true)}
           value={isMixed ? 0 : parseInt(value)}
         >

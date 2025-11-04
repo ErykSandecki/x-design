@@ -34,10 +34,10 @@ type TUseInsetsEvents = TUseBlurEvents &
 export const useInsetsEvents = (insetsName: TInsetsName): TUseInsetsEvents => {
   const firstElementId = useSelector(firstSelectedElementIdSelector);
   const isMultiple = useSelector(multipleSelectedElementsSelector);
-  const isMixedB = useSelector(isMixedSelectorCreator(`${insetsName}.b`));
-  const isMixedL = useSelector(isMixedSelectorCreator(`${insetsName}.l`));
-  const isMixedR = useSelector(isMixedSelectorCreator(`${insetsName}.r`));
-  const isMixedT = useSelector(isMixedSelectorCreator(`${insetsName}.t`));
+  const isMixedB = useSelector(isMixedSelectorCreator(`${insetsName}.b.value`));
+  const isMixedL = useSelector(isMixedSelectorCreator(`${insetsName}.l.value`));
+  const isMixedR = useSelector(isMixedSelectorCreator(`${insetsName}.r.value`));
+  const isMixedT = useSelector(isMixedSelectorCreator(`${insetsName}.t.value`));
   const isMixedInset = { b: isMixedB, l: isMixedL, r: isMixedR, t: isMixedT };
   const isMixedLR = isMixedL || isMixedR;
   const isMixedTB = isMixedT || isMixedB;

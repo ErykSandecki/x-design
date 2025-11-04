@@ -6,13 +6,18 @@ import { changeProperties } from 'store/pageBuilder/actions';
 // types
 import { TElement } from 'types';
 
+// utils
+import { transformValueWithUnit } from 'utils';
+
 export type TUseChangeEvent = {
   onChangeBorderRadius: TFunc<[string, boolean?]>;
   onChangeOpacity: TFunc<[string, boolean?]>;
 };
 
 export const useChangeEvent = (
+  currentBorderRadius: TElement['borderRadius'],
   currentOpacity: TElement['opacity'],
+  isMixedBorderRadius: boolean,
   setBorderRadius: TFunc<[string]>,
   setOpacity: TFunc<[string]>,
 ): TUseChangeEvent => {
@@ -27,14 +32,14 @@ export const useChangeEvent = (
   const handleChangeBorderRadius = (value: string, isScrubbableInput: boolean): void => {
     const targetValue = parseFloat(value);
 
-    setBorderRadius(value);
+    setBorderRadius(transformValueWithUnit(isScrubbableInput, currentBorderRadius.b.unit, value));
     updateStore(
       {
         borderRadius: {
-          b: { mode: 'fixed', value: targetValue },
-          l: { mode: 'fixed', value: targetValue },
-          r: { mode: 'fixed', value: targetValue },
-          t: { mode: 'fixed', value: targetValue },
+          b: { ...(isMixedBorderRadius ? { mode: 'fixed' } : currentBorderRadius.b), value: targetValue },
+          l: { ...(isMixedBorderRadius ? { mode: 'fixed' } : currentBorderRadius.l), value: targetValue },
+          r: { ...(isMixedBorderRadius ? { mode: 'fixed' } : currentBorderRadius.r), value: targetValue },
+          t: { ...(isMixedBorderRadius ? { mode: 'fixed' } : currentBorderRadius.t), value: targetValue },
         },
       },
       isScrubbableInput,

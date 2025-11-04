@@ -34,10 +34,10 @@ export const useBlurEvent = (
       dispatch(
         changeProperties({
           borderRadius: {
-            b: { mode: 'fixed', value: targetValue },
-            l: { mode: 'fixed', value: targetValue },
-            r: { mode: 'fixed', value: targetValue },
-            t: { mode: 'fixed', value: targetValue },
+            b: { ...(isMixedBorderRadius ? { mode: 'fixed' } : currentBorderRadius.b), value: targetValue },
+            l: { ...(isMixedBorderRadius ? { mode: 'fixed' } : currentBorderRadius.l), value: targetValue },
+            r: { ...(isMixedBorderRadius ? { mode: 'fixed' } : currentBorderRadius.r), value: targetValue },
+            t: { ...(isMixedBorderRadius ? { mode: 'fixed' } : currentBorderRadius.t), value: targetValue },
           },
         }),
       );

@@ -102,6 +102,7 @@ describe('useElementEvents', () => {
         },
         visible: true,
       },
+      borderRadius: insetsMock,
       coordinates: {
         x: 0,
         y: 0,

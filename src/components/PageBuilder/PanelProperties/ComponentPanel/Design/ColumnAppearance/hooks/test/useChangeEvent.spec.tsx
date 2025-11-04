@@ -2,6 +2,7 @@ import { renderHook } from '@testing-library/react';
 
 // hooks
 import { useChangeEvent } from '../useChangeEvent';
+import { insetsMock } from 'test/mocks/reducer/pageBuilderMock';
 
 const mockCallBack = jest.fn();
 
@@ -13,7 +14,9 @@ jest.mock('react-redux', () => ({
 describe('useChangeEvent', () => {
   it(`should trigger change border radius from text field`, () => {
     // before
-    const { result } = renderHook(() => useChangeEvent({ mode: 'fixed', value: 100 }, mockCallBack, mockCallBack));
+    const { result } = renderHook(() =>
+      useChangeEvent(insetsMock, { mode: 'fixed', value: 100 }, false, mockCallBack, mockCallBack),
+    );
 
     // action
     result.current.onChangeBorderRadius('100', false);
@@ -24,7 +27,9 @@ describe('useChangeEvent', () => {
 
   it(`should trigger change border radius from scrubbable input`, () => {
     // before
-    const { result } = renderHook(() => useChangeEvent({ mode: 'fixed', value: 100 }, mockCallBack, mockCallBack));
+    const { result } = renderHook(() =>
+      useChangeEvent(insetsMock, { mode: 'fixed', value: 100 }, false, mockCallBack, mockCallBack),
+    );
 
     // action
     result.current.onChangeBorderRadius('100', true);
@@ -43,7 +48,9 @@ describe('useChangeEvent', () => {
 
   it(`should trigger change opacity from text field`, () => {
     // before
-    const { result } = renderHook(() => useChangeEvent({ mode: 'fixed', value: 100 }, mockCallBack, mockCallBack));
+    const { result } = renderHook(() =>
+      useChangeEvent(insetsMock, { mode: 'fixed', value: 100 }, false, mockCallBack, mockCallBack),
+    );
 
     // action
     result.current.onChangeOpacity('100', false);
@@ -54,7 +61,9 @@ describe('useChangeEvent', () => {
 
   it(`should trigger change opacity from scrubbable input`, () => {
     // before
-    const { result } = renderHook(() => useChangeEvent({ mode: 'fixed', value: 100 }, mockCallBack, mockCallBack));
+    const { result } = renderHook(() =>
+      useChangeEvent(insetsMock, { mode: 'fixed', value: 100 }, false, mockCallBack, mockCallBack),
+    );
 
     // action
     result.current.onChangeOpacity('100', true);

@@ -32,19 +32,30 @@ export const useAppearanceEvents = (): TUseAppearanceEvents => {
   const currentBorderRadius = useSelector(elementAttributeSelectorCreator('borderRadius', firstElementId));
   const currentOpacity = useSelector(elementAttributeSelectorCreator('opacity', firstElementId));
   const isMultiple = useSelector(multipleSelectedElementsSelector);
-  const isMixedB = useSelector(isMixedSelectorCreator(`borderRadius.b`));
-  const isMixedL = useSelector(isMixedSelectorCreator(`borderRadius.l`));
-  const isMixedR = useSelector(isMixedSelectorCreator(`borderRadius.r`));
-  const isMixedT = useSelector(isMixedSelectorCreator(`borderRadius.t`));
-  const isMixedAnyInset = isMixedB || isMixedL || isMixedR || isMixedT;
+  const isMixedBM = useSelector(isMixedSelectorCreator(`borderRadius.b.mode`));
+  const isMixedBV = useSelector(isMixedSelectorCreator(`borderRadius.b.value`));
+  const isMixedLM = useSelector(isMixedSelectorCreator(`borderRadius.l.mode`));
+  const isMixedLV = useSelector(isMixedSelectorCreator(`borderRadius.l.value`));
+  const isMixedRM = useSelector(isMixedSelectorCreator(`borderRadius.r.mode`));
+  const isMixedRV = useSelector(isMixedSelectorCreator(`borderRadius.r.value`));
+  const isMixedTM = useSelector(isMixedSelectorCreator(`borderRadius.t.mode`));
+  const isMixedTV = useSelector(isMixedSelectorCreator(`borderRadius.t.value`));
+  const isMixedInsetM = isMixedBM || isMixedLM || isMixedRM || isMixedTM;
+  const isMixedInsetV = isMixedBV || isMixedLV || isMixedRV || isMixedTV;
   const { b, l, r, t } = currentBorderRadius;
-  const isMixedBorderRadiusMode = [l, r, t].some((inset) => inset.mode !== b.mode);
-  const isMixedBorderRadiusValue = [l, r, t].some((inset) => inset.value !== b.value);
-  const isMixedBorderRadius = isMixedAnyInset || isMixedBorderRadiusMode || isMixedBorderRadiusValue;
+  const isMixedBorderRadiusM = [l, r, t].some((inset) => inset.mode !== b.mode);
+  const isMixedBorderRadiusV = [l, r, t].some((inset) => inset.value !== b.value);
+  const isMixedBorderRadius = isMixedInsetM || isMixedInsetV || isMixedBorderRadiusM || isMixedBorderRadiusV;
   const isMixedOpacity = useSelector(isMixedSelectorCreator('opacity.value'));
   const [borderRadius, setBorderRadius] = useState('');
   const [opacity, setOpacity] = useState('');
-  const onChangeEvents = useChangeEvent(currentOpacity, setBorderRadius, setOpacity);
+  const onChangeEvents = useChangeEvent(
+    currentBorderRadius,
+    currentOpacity,
+    isMixedBorderRadius,
+    setBorderRadius,
+    setOpacity,
+  );
   const onBlurEvents = useBlurEvent(
     borderRadius,
     currentBorderRadius,
@@ -56,8 +67,8 @@ export const useAppearanceEvents = (): TUseAppearanceEvents => {
   );
 
   useEffect(() => {
-    setBorderRadius(normalizeMultipleValue(isMixedBorderRadius, b.value));
-  }, [b.value, l.value, r.value, t.value, isMultiple]);
+    setBorderRadius(normalizeMultipleValue(isMixedBorderRadius, b.value, b.unit));
+  }, [b.unit, b.value, l.unit, l.value, r.unit, r.value, t.unit, t.value, isMultiple]);
 
   useEffect(() => {
     setOpacity(normalizeMultipleValue(isMixedOpacity, currentOpacity.value));
