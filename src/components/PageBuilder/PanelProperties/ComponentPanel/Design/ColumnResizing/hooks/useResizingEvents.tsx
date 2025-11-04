@@ -39,7 +39,9 @@ export const useResizingEvents = (): TUseResizingEvents => {
   const isMultiple = useSelector(multipleSelectedElementsSelector);
   const isMixedAspectRatio = useSelector(isMixedSelectorCreator('aspectRatio'));
   const isMixedHeight = useSelector(isMixedSelectorCreator('height.value'));
+  const isMixedHeightMode = useSelector(isMixedSelectorCreator('height.mode'));
   const isMixedWidth = useSelector(isMixedSelectorCreator('width.value'));
+  const isMixedWidthMode = useSelector(isMixedSelectorCreator('width.mode'));
   const aspectRatio = useSelector(elementAttributeSelectorCreator('aspectRatio', firstElementId));
   const elementHeight = useSelector(elementAttributeSelectorCreator('height', firstElementId));
   const elementWidth = useSelector(elementAttributeSelectorCreator('width', firstElementId));
@@ -59,8 +61,8 @@ export const useResizingEvents = (): TUseResizingEvents => {
   const visibleAspectRatioButton = !isMixedAspectRatio && !hasMixedSizes && hasPureSizes && hasNoUnit;
 
   useEffect(() => {
-    setHeight(normalizeMultipleValue(isMixedHeight, currentHeight, unitHeight));
-    setWidth(normalizeMultipleValue(isMixedWidth, currentWidth, unitWidth));
+    setHeight(normalizeMultipleValue(isMixedHeight || isMixedHeightMode, currentHeight, unitHeight));
+    setWidth(normalizeMultipleValue(isMixedWidth || isMixedWidthMode, currentWidth, unitWidth));
   }, [currentHeight, currentWidth, isMultiple, unitHeight, unitWidth]);
 
   return {
@@ -71,8 +73,8 @@ export const useResizingEvents = (): TUseResizingEvents => {
     elementWidth,
     height,
     heightMode,
-    isMixedHeight,
-    isMixedWidth,
+    isMixedHeight: isMixedHeight || isMixedHeightMode,
+    isMixedWidth: isMixedWidth || isMixedWidthMode,
     valueScrubbaleInputHeight,
     valueScrubbaleInputWidth,
     visibleAspectRatioButton,
