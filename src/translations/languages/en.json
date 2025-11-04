@@ -31,6 +31,7 @@
   "pageBuilder.panelProperties.componentPanel.design.columnAlignmentLayout.popover.gap.column.1": "Fixed column gap ({{ value }})",
   "pageBuilder.panelProperties.componentPanel.design.columnAlignmentLayout.popover.gap.row.1": "Fixed row gap ({{ value }})",
   "pageBuilder.panelProperties.componentPanel.design.columnAppearance.label": "Opacity",
+  "pageBuilder.panelProperties.componentPanel.design.columnAppearance.popover.borderRadius.1": "Fixed border radius ({{ value }})",
   "pageBuilder.panelProperties.componentPanel.design.columnAppearance.popover.opacity.1": "Fixed opacity ({{ value }})",
   "pageBuilder.panelProperties.componentPanel.design.columnClipContent.label": "Clip content",
   "pageBuilder.panelProperties.componentPanel.design.columnFlow.label": "Flow",

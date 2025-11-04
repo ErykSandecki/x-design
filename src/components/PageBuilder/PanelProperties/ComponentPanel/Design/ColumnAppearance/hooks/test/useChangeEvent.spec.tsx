@@ -11,9 +11,39 @@ jest.mock('react-redux', () => ({
 }));
 
 describe('useChangeEvent', () => {
+  it(`should trigger change border radius from text field`, () => {
+    // before
+    const { result } = renderHook(() => useChangeEvent({ mode: 'fixed', value: 100 }, mockCallBack, mockCallBack));
+
+    // action
+    result.current.onChangeBorderRadius('100', false);
+
+    // result
+    expect(mockCallBack.mock.calls[0][0]).toBe('100');
+  });
+
+  it(`should trigger change border radius from scrubbable input`, () => {
+    // before
+    const { result } = renderHook(() => useChangeEvent({ mode: 'fixed', value: 100 }, mockCallBack, mockCallBack));
+
+    // action
+    result.current.onChangeBorderRadius('100', true);
+
+    // result
+    expect(mockCallBack.mock.calls[0][0]).toBe('100');
+    expect(mockCallBack.mock.calls[1][0].payload).toStrictEqual({
+      borderRadius: {
+        b: { mode: 'fixed', value: 100 },
+        l: { mode: 'fixed', value: 100 },
+        r: { mode: 'fixed', value: 100 },
+        t: { mode: 'fixed', value: 100 },
+      },
+    });
+  });
+
   it(`should trigger change opacity from text field`, () => {
     // before
-    const { result } = renderHook(() => useChangeEvent({ type: 'fixed', value: 100 }, mockCallBack));
+    const { result } = renderHook(() => useChangeEvent({ mode: 'fixed', value: 100 }, mockCallBack, mockCallBack));
 
     // action
     result.current.onChangeOpacity('100', false);
@@ -22,15 +52,15 @@ describe('useChangeEvent', () => {
     expect(mockCallBack.mock.calls[0][0]).toBe('100');
   });
 
-  it(`should trigger change x from scrubbable input`, () => {
+  it(`should trigger change opacity from scrubbable input`, () => {
     // before
-    const { result } = renderHook(() => useChangeEvent({ type: 'fixed', value: 100 }, mockCallBack));
+    const { result } = renderHook(() => useChangeEvent({ mode: 'fixed', value: 100 }, mockCallBack, mockCallBack));
 
     // action
     result.current.onChangeOpacity('100', true);
 
     // result
     expect(mockCallBack.mock.calls[0][0]).toBe('100');
-    expect(mockCallBack.mock.calls[1][0].payload).toStrictEqual({ opacity: { type: 'fixed', value: 100 } });
+    expect(mockCallBack.mock.calls[1][0].payload).toStrictEqual({ opacity: { mode: 'fixed', value: 100 } });
   });
 });

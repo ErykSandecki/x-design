@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 // components
 import ColumnAppearanceInput from './ColumnAppearanceInput';
+import PopoverBorderRadius from './PopoverBorderRadius/PopoverBorderRadius';
 import PopoverOpacity from './PopoverOpacity/PopoverOpacity';
 import { UITools } from 'shared';
 
@@ -14,7 +15,18 @@ import { translationNameSpace } from './constants';
 
 const ColumnAppearance: FC = () => {
   const { t } = useTranslation();
-  const { isMixedOpacity, onBlurOpacity, onChangeOpacity, opacity, opacityMode } = useAppearanceEvents();
+  const {
+    borderRadius,
+    borderRadiusMode,
+    isMixedBorderRadius,
+    isMixedOpacity,
+    onBlurBorderRadius,
+    onBlurOpacity,
+    onChangeBorderRadius,
+    onChangeOpacity,
+    opacity,
+    opacityMode,
+  } = useAppearanceEvents();
 
   return (
     <UITools.SectionColumn
@@ -31,6 +43,18 @@ const ColumnAppearance: FC = () => {
         onChange={onChangeOpacity}
         popoverChildren={<PopoverOpacity isMixed={isMixedOpacity} mode={opacityMode} value={opacity} />}
         value={opacity}
+      />
+      <ColumnAppearanceInput
+        e2eValue="border-radius"
+        isMixed={isMixedBorderRadius}
+        mode={borderRadiusMode}
+        name="Corners"
+        onBlur={onBlurBorderRadius}
+        onChange={onChangeBorderRadius}
+        popoverChildren={
+          <PopoverBorderRadius isMixed={isMixedBorderRadius} mode={borderRadiusMode} value={borderRadius} />
+        }
+        value={borderRadius}
       />
     </UITools.SectionColumn>
   );

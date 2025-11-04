@@ -48,8 +48,13 @@ describe('useAppearanceEvents', () => {
 
     // result
     expect(result.current).toStrictEqual({
+      borderRadius: '0',
+      borderRadiusMode: 'fixed',
+      isMixedBorderRadius: false,
       isMixedOpacity: false,
+      onBlurBorderRadius: expect.any(Function),
       onBlurOpacity: expect.any(Function),
+      onChangeBorderRadius: expect.any(Function),
       onChangeOpacity: expect.any(Function),
       opacity: '100',
       opacityMode: 'fixed',
