@@ -89,6 +89,12 @@ export const elementMock: TElement = {
     properties: { alpha: '100', color: '#ffffff', format: 'hex' },
     visible: true,
   },
+  borderRadius: {
+    b: { mode: 'fixed', value: 0 },
+    l: { mode: 'fixed', value: 0 },
+    r: { mode: 'fixed', value: 0 },
+    t: { mode: 'fixed', value: 0 },
+  },
   children: [],
   clipContent: true,
   coordinates: {
@@ -134,6 +140,12 @@ export const createFrameMock: TElement = {
   background: {
     properties: { alpha: '100', color: '#ffffff', format: 'hex' },
     visible: true,
+  },
+  borderRadius: {
+    b: { mode: 'fixed', value: 0 },
+    l: { mode: 'fixed', value: 0 },
+    r: { mode: 'fixed', value: 0 },
+    t: { mode: 'fixed', value: 0 },
   },
   children: [],
   clipContent: true,

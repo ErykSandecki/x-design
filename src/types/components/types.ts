@@ -53,6 +53,7 @@ export type TElement = {
   angle: number;
   aspectRatio: boolean;
   background: TBackground;
+  borderRadius: TInsets;
   children: Array<TChildren>;
   clipContent: boolean;
   coordinates: T2DCoordinates;

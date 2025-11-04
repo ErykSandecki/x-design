@@ -8,6 +8,8 @@ import { ReactComponent as AspectRatio } from './svg/aspect-ratio.svg';
 import { ReactComponent as AutoHeight } from './svg/auto-height.svg';
 import { ReactComponent as AutoLayout } from './svg/auto-layout.svg';
 import { ReactComponent as AutoWidth } from './svg/auto-width.svg';
+import { ReactComponent as BottomLeftCorner } from './svg/bottom-left-corner.svg';
+import { ReactComponent as BottomRightCorner } from './svg/bottom-right-corner.svg';
 import { ReactComponent as CarrotDown } from './svg/carrot-down.svg';
 import { ReactComponent as Check } from './svg/check.svg';
 import { ReactComponent as Checkbox } from './svg/checkbox.svg';
@@ -20,6 +22,7 @@ import { ReactComponent as Close } from './svg/close.svg';
 import { ReactComponent as Columns } from './svg/columns.svg';
 import { ReactComponent as Comment } from './svg/comment.svg';
 import { ReactComponent as Component } from './svg/component.svg';
+import { ReactComponent as Corners } from './svg/corners.svg';
 import { ReactComponent as Detached } from './svg/detached.svg';
 import { ReactComponent as DropEmpty } from './svg/drop-empty.svg';
 import { ReactComponent as DropFilled } from './svg/drop-filled.svg';
@@ -72,6 +75,8 @@ import { ReactComponent as Rows } from './svg/rows.svg';
 import { ReactComponent as Sample } from './svg/sample.svg';
 import { ReactComponent as StepBackwardOutlined } from './svg/step-backward-outlined.svg';
 import { ReactComponent as ToggleRotate } from './svg/toggle-rotate.svg';
+import { ReactComponent as TopLeftCorner } from './svg/top-left-corner.svg';
+import { ReactComponent as TopRightCorner } from './svg/top-right-corner.svg';
 import { ReactComponent as Variant } from './svg/variant.svg';
 import { ReactComponent as WidthRestricted } from './svg/width-restricted.svg';
 
@@ -86,6 +91,8 @@ export const Icons = {
   AutoHeight,
   AutoLayout,
   AutoWidth,
+  BottomLeftCorner,
+  BottomRightCorner,
   CarrotDown,
   Check,
   Checkbox,
@@ -98,6 +105,7 @@ export const Icons = {
   Columns,
   Comment,
   Component,
+  Corners,
   Detached,
   DropEmpty,
   DropFilled,
@@ -150,6 +158,8 @@ export const Icons = {
   Sample,
   StepBackwardOutlined,
   ToggleRotate,
+  TopLeftCorner,
+  TopRightCorner,
   Variant,
   WidthRestricted,
 };
