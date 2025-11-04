@@ -273,8 +273,8 @@ describe('Design behaviors', () => {
     fireEvent.click(getByE2EAttribute(container, E2EAttribute.icon, 'fit-layout'));
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.value).toBe('auto');
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.value).toBe('auto');
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.mode).toBe('auto');
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.mode).toBe('auto');
   });
 
   it('should change visibility', () => {

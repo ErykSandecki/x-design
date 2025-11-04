@@ -43,7 +43,7 @@ describe('useBlurEvent', () => {
       useBlurEvent(
         { ...valueExtendMock, value: 100 },
         { ...valueExtendMock, value: 100 },
-        'auto',
+        '100',
         mockCallBack,
         mockCallBack,
         '0',
@@ -56,7 +56,7 @@ describe('useBlurEvent', () => {
     // result
     expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
       sizeType: 'height',
-      value: 'auto',
+      value: 100,
     });
   });
 
@@ -112,7 +112,7 @@ describe('useBlurEvent', () => {
         '0',
         mockCallBack,
         mockCallBack,
-        'auto',
+        '100',
       ),
     );
 
@@ -122,7 +122,7 @@ describe('useBlurEvent', () => {
     // result
     expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual({
       sizeType: 'width',
-      value: 'auto',
+      value: 100,
     });
   });
 

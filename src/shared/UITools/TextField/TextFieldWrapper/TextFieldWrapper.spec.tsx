@@ -46,7 +46,7 @@ describe('TextFieldWrapper snapshots', () => {
   it('should render with chip', () => {
     // before
     const { asFragment } = customRender(
-      <TextFieldWrapper attachedValue e2eValue="text-field" idContainer={id} value="value" />,
+      <TextFieldWrapper mode="auto" e2eValue="text-field" idContainer={id} value="value" />,
     );
 
     // result
@@ -71,9 +71,9 @@ describe('TextFieldWrapper snapshots', () => {
     // before
     const { asFragment, container } = customRender(
       <TextFieldWrapper
-        attachedValue
-        inputRef={ref}
         e2eValue="text-field"
+        inputRef={ref}
+        mode="auto"
         popoverChildren={<PopoverCompound.PopoverSeparator />}
         value="value"
       />,
@@ -95,9 +95,8 @@ describe('TextFieldWrapper behaviors', () => {
     // before
     const { container } = customRender(
       <TextFieldWrapper
-        attachedValue
-        inputRef={ref}
         e2eValue="text-field"
+        inputRef={ref}
         popoverChildren={<PopoverCompound.PopoverSeparator />}
         value="value"
       />,

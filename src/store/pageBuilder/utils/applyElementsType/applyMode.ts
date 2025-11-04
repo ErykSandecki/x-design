@@ -11,8 +11,8 @@ export const applyMode = (
   unit: Unit,
 ): TValueExtended => {
   const restData = get(element, property) as TValueExtended;
-  const hasMax = restData.max !== undefined;
-  const hasMin = restData.min !== undefined;
+  const hasMax = restData?.max !== undefined;
+  const hasMin = restData?.min !== undefined;
 
   switch (mode) {
     case 'auto':

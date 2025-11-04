@@ -220,11 +220,11 @@ describe('getMappedElementsToMove', () => {
         ...elementMock,
         children: [],
         deepLevel: elementMock.deepLevel + 1,
-        height: { ...valueExtendMock, unit: undefined, value: 'auto' },
+        height: { ...valueExtendMock, mode: 'auto', value: 100 },
         id: 'test-2',
         parentId: elementMock.id,
         position: 'relative',
-        width: { ...valueExtendMock, unit: undefined, value: 'auto' },
+        width: { ...valueExtendMock, mode: 'auto', unit: undefined, value: 100 },
       },
     });
   });

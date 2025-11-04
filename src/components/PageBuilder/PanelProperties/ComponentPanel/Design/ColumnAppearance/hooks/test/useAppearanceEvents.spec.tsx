@@ -48,7 +48,6 @@ describe('useAppearanceEvents', () => {
 
     // result
     expect(result.current).toStrictEqual({
-      attachedOpacity: false,
       isMixedOpacity: false,
       onBlurOpacity: expect.any(Function),
       onChangeOpacity: expect.any(Function),

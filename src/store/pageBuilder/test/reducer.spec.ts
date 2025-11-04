@@ -1048,8 +1048,8 @@ describe('PageBuilderReducer', () => {
             ...currentPage.elements,
             [elementMock.id]: {
               ...elementMock,
-              height: { ...valueExtendMock, value: 'auto' },
-              width: { ...valueExtendMock, value: 'auto' },
+              height: { mode: 'auto', value: 100 },
+              width: { mode: 'auto', value: 100 },
             },
           },
           selectedElements: [selectedElementMock],
@@ -1200,8 +1200,8 @@ describe('PageBuilderReducer', () => {
             [elementMock.id]: {
               ...elementMock,
               coordinates: { x: 0, y: 0 },
-              height: { ...valueExtendMock, value: 100 },
-              width: { ...valueExtendMock, value: 300 },
+              height: { mode: 'fixed', value: 100 },
+              width: { mode: 'fixed', value: 300 },
             },
           },
           selectedElements: {
@@ -1441,6 +1441,7 @@ describe('PageBuilderReducer', () => {
   it('should handle SET_ELEMENTS_SCORE_TO_CURRENT_SIZE', () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+    window.getComputedStyle = (): any => ({ height: '100px', width: '100px' }) as CSSStyleDeclaration;
 
     // before
     const state = reducer(setElementsScoreToCurrentSize('min', 'height'), {
@@ -1469,7 +1470,13 @@ describe('PageBuilderReducer', () => {
             ...currentPage.elements,
             [elementMock.id]: {
               ...elementMock,
-              height: { ...elementMock.height, min: 100 },
+              height: {
+                ...elementMock.height,
+                min: {
+                  ...valueExtendMock,
+                  value: 100,
+                },
+              },
             },
           },
           selectedElements: [selectedElementMock],
@@ -1509,7 +1516,7 @@ describe('PageBuilderReducer', () => {
             ...currentPage.elements,
             [elementMock.id]: {
               ...elementMock,
-              height: { ...valueExtendMock, value: 0 },
+              height: { mode: 'fixed', value: 0 },
             },
           },
           selectedElements: [selectedElementMock],

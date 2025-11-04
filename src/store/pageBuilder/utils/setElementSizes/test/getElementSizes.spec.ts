@@ -1,5 +1,5 @@
 // mocks
-import { elementMock, valueExtendMock } from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 
@@ -13,8 +13,8 @@ describe('getElementSizes', () => {
 
     // result
     expect(result).toStrictEqual({
-      height: { ...valueExtendMock, value: 200 },
-      width: { ...valueExtendMock, value: 100 },
+      height: { mode: 'fixed', value: 200 },
+      width: { mode: 'fixed', value: 100 },
     });
   });
 
@@ -24,8 +24,8 @@ describe('getElementSizes', () => {
 
     // result
     expect(result).toStrictEqual({
-      height: { ...valueExtendMock, value: 100 },
-      width: { ...valueExtendMock, value: 200 },
+      height: { mode: 'fixed', value: 100 },
+      width: { mode: 'fixed', value: 200 },
     });
   });
 
@@ -35,8 +35,8 @@ describe('getElementSizes', () => {
 
     // result
     expect(result).toStrictEqual({
-      height: { ...valueExtendMock, value: 200 },
-      width: { ...valueExtendMock, value: 200 },
+      height: { mode: 'fixed', value: 200 },
+      width: { mode: 'fixed', value: 200 },
     });
   });
 
@@ -46,8 +46,8 @@ describe('getElementSizes', () => {
 
     // result
     expect(result).toStrictEqual({
-      height: { ...valueExtendMock, value: 200 },
-      width: { ...valueExtendMock, value: 200 },
+      height: { mode: 'fixed', value: 200 },
+      width: { mode: 'fixed', value: 200 },
     });
   });
 
@@ -65,6 +65,6 @@ describe('getElementSizes', () => {
     );
 
     // result
-    expect(result).toStrictEqual({ height: { ...valueExtendMock, value: 0 }, width: { ...valueExtendMock, value: 0 } });
+    expect(result).toStrictEqual({ height: { mode: 'fixed', value: 0 }, width: { mode: 'fixed', value: 0 } });
   });
 });

@@ -34,7 +34,7 @@ describe('getScoreValue', () => {
 
   it(`should return auto`, () => {
     // before
-    const result = getScoreValue({ ...valueExtendMock, type: 'auto' });
+    const result = getScoreValue({ ...valueExtendMock, mode: 'auto' });
 
     // result
     expect(result).toBe('auto');

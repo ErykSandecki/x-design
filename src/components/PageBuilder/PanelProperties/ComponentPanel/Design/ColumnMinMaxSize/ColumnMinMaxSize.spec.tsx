@@ -249,11 +249,13 @@ describe('ColumnResizing behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.max).toStrictEqual({
-      type: 'fixed',
+      mode: 'fixed',
+      unit: undefined,
       value: 10000,
     });
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.max).toStrictEqual({
-      type: 'fixed',
+      mode: 'fixed',
+      unit: undefined,
       value: 10000,
     });
   });
@@ -287,11 +289,13 @@ describe('ColumnResizing behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.min).toStrictEqual({
-      type: 'fixed',
+      mode: 'fixed',
+      unit: undefined,
       value: 10000,
     });
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.min).toStrictEqual({
-      type: 'fixed',
+      mode: 'fixed',
+      unit: undefined,
       value: 10000,
     });
   });
@@ -328,11 +332,13 @@ describe('ColumnResizing behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.max).toStrictEqual({
-      type: 'fixed',
+      mode: 'fixed',
+      unit: undefined,
       value: 150,
     });
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.max).toStrictEqual({
-      type: 'fixed',
+      mode: 'fixed',
+      unit: undefined,
       value: 150,
     });
   });
@@ -369,11 +375,13 @@ describe('ColumnResizing behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.min).toStrictEqual({
-      type: 'fixed',
+      mode: 'fixed',
+      unit: undefined,
       value: 150,
     });
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.min).toStrictEqual({
-      type: 'fixed',
+      mode: 'fixed',
+      unit: undefined,
       value: 150,
     });
   });
@@ -411,8 +419,16 @@ describe('ColumnResizing behaviors', () => {
     fireEvent.click(popoverWidthItem);
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.max).toBe(100);
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.max).toBe(100);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.max).toStrictEqual({
+      mode: 'fixed',
+      unit: undefined,
+      value: 100,
+    });
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.max).toStrictEqual({
+      mode: 'fixed',
+      unit: undefined,
+      value: 100,
+    });
   });
 
   it('should apply current size for min for height & width', () => {
@@ -448,8 +464,16 @@ describe('ColumnResizing behaviors', () => {
     fireEvent.click(popoverWidthItem);
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.min).toBe(100);
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.min).toBe(100);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.min).toStrictEqual({
+      mode: 'fixed',
+      unit: undefined,
+      value: 100,
+    });
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.min).toStrictEqual({
+      mode: 'fixed',
+      unit: undefined,
+      value: 100,
+    });
   });
 
   it('should apply max auto for height & width', () => {
@@ -486,14 +510,14 @@ describe('ColumnResizing behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.max).toStrictEqual({
-      type: 'auto',
+      mode: 'auto',
       unit: undefined,
-      value: 'auto',
+      value: 200,
     });
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.max).toStrictEqual({
-      type: 'auto',
+      mode: 'auto',
       unit: undefined,
-      value: 'auto',
+      value: 200,
     });
   });
 
@@ -531,14 +555,14 @@ describe('ColumnResizing behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.min).toStrictEqual({
-      type: 'auto',
+      mode: 'auto',
       unit: undefined,
-      value: 'auto',
+      value: 200,
     });
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.min).toStrictEqual({
-      type: 'auto',
+      mode: 'auto',
       unit: undefined,
-      value: 'auto',
+      value: 200,
     });
   });
 
@@ -576,14 +600,14 @@ describe('ColumnResizing behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.max).toStrictEqual({
-      type: 'fixed',
+      mode: 'unit',
       unit: '%',
-      value: 100,
+      value: 200,
     });
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.max).toStrictEqual({
-      type: 'fixed',
+      mode: 'unit',
       unit: '%',
-      value: 100,
+      value: 200,
     });
   });
 
@@ -621,14 +645,14 @@ describe('ColumnResizing behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.min).toStrictEqual({
-      type: 'fixed',
+      mode: 'unit',
       unit: '%',
-      value: 100,
+      value: 200,
     });
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.min).toStrictEqual({
-      type: 'fixed',
+      mode: 'unit',
       unit: '%',
-      value: 100,
+      value: 200,
     });
   });
 
@@ -723,14 +747,14 @@ describe('ColumnResizing behaviors', () => {
                   ...valueExtendMock,
                   max: {
                     ...valueExtendMock,
-                    type: 'auto',
+                    mode: 'auto',
                   },
                 },
                 width: {
                   ...valueExtendMock,
                   max: {
                     ...valueExtendMock,
-                    type: 'auto',
+                    mode: 'auto',
                   },
                 },
               },
@@ -762,14 +786,14 @@ describe('ColumnResizing behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.max).toStrictEqual({
-      type: 'fixed',
+      mode: 'fixed',
       unit: undefined,
-      value: 100,
+      value: 0,
     });
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.max).toStrictEqual({
-      type: 'fixed',
+      mode: 'fixed',
       unit: undefined,
-      value: 100,
+      value: 0,
     });
   });
 
@@ -790,14 +814,14 @@ describe('ColumnResizing behaviors', () => {
                   ...valueExtendMock,
                   min: {
                     ...valueExtendMock,
-                    type: 'auto',
+                    mode: 'auto',
                   },
                 },
                 width: {
                   ...valueExtendMock,
                   min: {
                     ...valueExtendMock,
-                    type: 'auto',
+                    mode: 'auto',
                   },
                 },
               },
@@ -829,14 +853,14 @@ describe('ColumnResizing behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.min).toStrictEqual({
-      type: 'fixed',
+      mode: 'fixed',
       unit: undefined,
-      value: 100,
+      value: 0,
     });
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.min).toStrictEqual({
-      type: 'fixed',
+      mode: 'fixed',
       unit: undefined,
-      value: 100,
+      value: 0,
     });
   });
 });

@@ -4,12 +4,7 @@ import { renderHook } from '@testing-library/react';
 import { useResizingEvents } from '../useResizingEvents';
 
 // mocks
-import {
-  elementMock,
-  pageBuilderStateMock,
-  selectedElementMock,
-  valueExtendMock,
-} from 'test/mocks/reducer/pageBuilderMock';
+import { elementMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
@@ -54,11 +49,10 @@ describe('useResizingEvents', () => {
     // result
     expect(result.current).toStrictEqual({
       aspectRatio: false,
-      attachedValueHeight: false,
-      attachedValueWidth: false,
-      elementHeight: { ...valueExtendMock, value: 100 },
-      elementWidth: { ...valueExtendMock, value: 100 },
+      elementHeight: { mode: 'fixed', value: 100 },
+      elementWidth: { mode: 'fixed', value: 100 },
       height: '100',
+      heightMode: 'fixed',
       isMixedHeight: false,
       isMixedWidth: false,
       onBlurHeight: expect.any(Function),
@@ -69,6 +63,7 @@ describe('useResizingEvents', () => {
       valueScrubbaleInputWidth: 100,
       visibleAspectRatioButton: true,
       width: '100',
+      widthMode: 'fixed',
     });
   });
 });

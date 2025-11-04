@@ -15,8 +15,8 @@ describe('getRelativeCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       coordinates: { x: 0, y: 0 },
-      height: { value: 200 },
-      width: { value: 100 },
+      height: 200,
+      width: 100,
     });
   });
 
@@ -27,8 +27,8 @@ describe('getRelativeCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       coordinates: { x: 0, y: 0 },
-      height: { value: 200 },
-      width: { value: 100 },
+      height: 200,
+      width: 100,
     });
   });
 
@@ -39,8 +39,8 @@ describe('getRelativeCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       coordinates: { x: 0, y: 0 },
-      height: { value: 100 },
-      width: { value: 300 },
+      height: 100,
+      width: 300,
     });
   });
 
@@ -51,8 +51,8 @@ describe('getRelativeCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       coordinates: { x: 0, y: 0 },
-      height: { value: 100 },
-      width: { value: 300 },
+      height: 100,
+      width: 300,
     });
   });
 
@@ -63,8 +63,8 @@ describe('getRelativeCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       coordinates: { x: 0, y: 0 },
-      height: { value: 200 },
-      width: { value: 300 },
+      height: 200,
+      width: 300,
     });
   });
 
@@ -82,8 +82,8 @@ describe('getRelativeCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       coordinates: { x: 0, y: 0 },
-      height: { value: 0 },
-      width: { value: 0 },
+      height: 0,
+      width: 0,
     });
   });
 
@@ -97,8 +97,8 @@ describe('getRelativeCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       coordinates: { x: 0, y: 0 },
-      height: { value: 0 },
-      width: { value: 100 },
+      height: 0,
+      width: 100,
     });
   });
 
@@ -112,8 +112,8 @@ describe('getRelativeCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       coordinates: { x: 0, y: 0 },
-      height: { value: 100 },
-      width: { value: 0 },
+      height: 100,
+      width: 0,
     });
   });
 
@@ -124,8 +124,8 @@ describe('getRelativeCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       coordinates: { x: 0, y: 0 },
-      height: { value: 200 },
-      width: { value: 200 },
+      height: 200,
+      width: 200,
     });
   });
 
@@ -136,8 +136,8 @@ describe('getRelativeCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       coordinates: { x: 0, y: 0 },
-      height: { value: 300 },
-      width: { value: 300 },
+      height: 300,
+      width: 300,
     });
   });
 
@@ -148,8 +148,8 @@ describe('getRelativeCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       coordinates: { x: 0, y: 0 },
-      height: { value: 300 },
-      width: { value: 300 },
+      height: 300,
+      width: 300,
     });
   });
 
@@ -160,8 +160,8 @@ describe('getRelativeCoordinates', () => {
     // result
     expect(result).toStrictEqual({
       coordinates: { x: 0, y: 0 },
-      height: { value: 300 },
-      width: { value: 300 },
+      height: 300,
+      width: 300,
     });
   });
 });

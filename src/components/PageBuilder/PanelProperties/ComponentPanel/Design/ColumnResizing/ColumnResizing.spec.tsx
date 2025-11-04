@@ -224,11 +224,11 @@ describe('ColumnResizing behaviors', () => {
                 ...elementMock,
                 height: {
                   ...valueExtendMock,
-                  value: 'auto',
+                  value: 50,
                 },
                 width: {
                   ...valueExtendMock,
-                  value: 'auto',
+                  value: 50,
                 },
               },
             },
@@ -267,8 +267,8 @@ describe('ColumnResizing behaviors', () => {
     fireEvent.click(popoverWidthItem);
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.value).toBe(100);
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.value).toBe(100);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.value).toBe(50);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.value).toBe(50);
   });
 
   it('should apply fixed value for height & width when mixed', () => {
@@ -285,10 +285,10 @@ describe('ColumnResizing behaviors', () => {
               [elementMock.id]: {
                 ...elementMock,
                 height: {
-                  value: 'auto',
+                  value: 50,
                 },
                 width: {
-                  value: 'auto',
+                  value: 50,
                 },
               },
               ['test-2']: {
@@ -337,8 +337,8 @@ describe('ColumnResizing behaviors', () => {
     fireEvent.click(popoverWidthItem);
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.value).toBe(100);
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.value).toBe(100);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.value).toBe(50);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.value).toBe(50);
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-2'].height.value).toBe(100);
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-2'].width.value).toBe(100);
   });
@@ -377,8 +377,8 @@ describe('ColumnResizing behaviors', () => {
     fireEvent.click(popoverWidthItem);
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.value).toBe('auto');
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.value).toBe('auto');
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.mode).toBe('auto');
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.mode).toBe('auto');
   });
 
   it('should apply auto value for height & width when mixed', () => {
@@ -434,10 +434,10 @@ describe('ColumnResizing behaviors', () => {
     fireEvent.click(popoverWidthItem);
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.value).toBe('auto');
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.value).toBe('auto');
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-2'].height.value).toBe('auto');
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-2'].width.value).toBe('auto');
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.mode).toBe('auto');
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.mode).toBe('auto');
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-2'].height.mode).toBe('auto');
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-2'].width.mode).toBe('auto');
   });
 
   it('should apply unit value for height & width', () => {
@@ -513,12 +513,12 @@ describe('ColumnResizing behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.min).toStrictEqual({
-      ...valueExtendMock,
-      value: 100,
+      mode: 'fixed',
+      value: 0,
     });
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.min).toStrictEqual({
-      ...valueExtendMock,
-      value: 100,
+      mode: 'fixed',
+      value: 0,
     });
   });
 
@@ -557,12 +557,12 @@ describe('ColumnResizing behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.max).toStrictEqual({
-      ...valueExtendMock,
-      value: 100,
+      mode: 'fixed',
+      value: 0,
     });
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.max).toStrictEqual({
-      ...valueExtendMock,
-      value: 100,
+      mode: 'fixed',
+      value: 0,
     });
   });
 
@@ -581,11 +581,11 @@ describe('ColumnResizing behaviors', () => {
                 ...elementMock,
                 height: {
                   ...valueExtendMock,
-                  type: 'auto',
+                  mode: 'auto',
                 },
                 width: {
                   ...valueExtendMock,
-                  type: 'auto',
+                  mode: 'auto',
                 },
               },
             },
@@ -615,7 +615,7 @@ describe('ColumnResizing behaviors', () => {
     fireEvent.click(iconWidth);
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.type).toBe('fixed');
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.type).toBe('fixed');
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].height.mode).toBe('fixed');
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].width.mode).toBe('fixed');
   });
 });

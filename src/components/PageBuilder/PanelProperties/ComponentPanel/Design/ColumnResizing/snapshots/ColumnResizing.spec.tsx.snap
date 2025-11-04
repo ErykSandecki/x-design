@@ -531,7 +531,7 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                     data-test-icon="check"
                     height="12"
                     name="Check"
@@ -662,7 +662,7 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                     data-test-icon="check"
                     height="12"
                     name="Check"

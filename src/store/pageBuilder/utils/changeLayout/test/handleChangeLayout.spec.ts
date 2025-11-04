@@ -143,11 +143,11 @@ describe('handleChangeLayout', () => {
             },
             ['test-2']: {
               ...elementMock,
-              height: { ...valueExtendMock, unit: undefined, value: 'auto' },
+              height: { ...valueExtendMock, mode: 'auto', value: 100 },
               id: 'test-2',
               parentId: elementMock.id,
               position: 'relative',
-              width: { ...valueExtendMock, unit: undefined, value: 'auto' },
+              width: { ...valueExtendMock, mode: 'auto', value: 100 },
             },
           },
           selectedElements: [selectedElementMock],

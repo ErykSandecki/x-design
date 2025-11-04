@@ -10,7 +10,7 @@ describe('keepAspectFromCorner', () => {
     const result = keepAspectFromCorner(true, 100, 100, AnchorResize.northWest, 200, 200, 150, 150);
 
     // result
-    expect(result).toStrictEqual({ coordinates: { x: 150, y: 150 }, height: { value: 200 }, width: { value: 200 } });
+    expect(result).toStrictEqual({ coordinates: { x: 150, y: 150 }, height: 200, width: 200 });
   });
 
   it(`should return coords when resize north east`, () => {
@@ -18,7 +18,7 @@ describe('keepAspectFromCorner', () => {
     const result = keepAspectFromCorner(true, 100, 100, AnchorResize.northEast, 200, 200, 150, 150);
 
     // result
-    expect(result).toStrictEqual({ coordinates: { x: 150, y: 150 }, height: { value: 200 }, width: { value: 200 } });
+    expect(result).toStrictEqual({ coordinates: { x: 150, y: 150 }, height: 200, width: 200 });
   });
 
   it(`should return coords when resize south west`, () => {
@@ -26,7 +26,7 @@ describe('keepAspectFromCorner', () => {
     const result = keepAspectFromCorner(true, 100, 100, AnchorResize.southWest, 200, 200, 150, 150);
 
     // result
-    expect(result).toStrictEqual({ coordinates: { x: 150, y: 150 }, height: { value: 200 }, width: { value: 200 } });
+    expect(result).toStrictEqual({ coordinates: { x: 150, y: 150 }, height: 200, width: 200 });
   });
 
   it(`should return coords when resize south east`, () => {
@@ -34,7 +34,7 @@ describe('keepAspectFromCorner', () => {
     const result = keepAspectFromCorner(true, 100, 100, AnchorResize.southEast, 200, 200, 150, 150);
 
     // result
-    expect(result).toStrictEqual({ coordinates: { x: 150, y: 150 }, height: { value: 200 }, width: { value: 200 } });
+    expect(result).toStrictEqual({ coordinates: { x: 150, y: 150 }, height: 200, width: 200 });
   });
 
   it(`should return coords when resize when width is leading`, () => {
@@ -42,7 +42,7 @@ describe('keepAspectFromCorner', () => {
     const result = keepAspectFromCorner(true, 100, 100, AnchorResize.northWest, 200, 300, 150, 150);
 
     // result
-    expect(result).toStrictEqual({ coordinates: { x: 150, y: 50 }, height: { value: 300 }, width: { value: 300 } });
+    expect(result).toStrictEqual({ coordinates: { x: 150, y: 50 }, height: 300, width: 300 });
   });
 
   it(`should return default coordinates when is not aspect ratio`, () => {
@@ -50,6 +50,6 @@ describe('keepAspectFromCorner', () => {
     const result = keepAspectFromCorner(false, 100, 100, AnchorResize.northWest, 200, 200, 150, 150);
 
     // result
-    expect(result).toStrictEqual({ coordinates: { x: 150, y: 150 }, height: { value: 200 }, width: { value: 200 } });
+    expect(result).toStrictEqual({ coordinates: { x: 150, y: 150 }, height: 200, width: 200 });
   });
 });

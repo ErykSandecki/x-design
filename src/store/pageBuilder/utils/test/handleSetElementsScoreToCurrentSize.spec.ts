@@ -1,7 +1,12 @@
 import { noop } from 'lodash';
 
 // mocks
-import { elementMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
+import {
+  elementMock,
+  pageBuilderStateMock,
+  selectedElementMock,
+  valueExtendMock,
+} from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
@@ -47,7 +52,13 @@ describe('handleSetElementsScoreToCurrentSize', () => {
             ...currentPage.elements,
             [elementMock.id]: {
               ...elementMock,
-              height: { ...elementMock.height, min: 100 },
+              height: {
+                ...elementMock.height,
+                min: {
+                  ...valueExtendMock,
+                  value: 100,
+                },
+              },
             },
           },
           selectedElements: [selectedElementMock],
