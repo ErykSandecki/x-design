@@ -34,6 +34,7 @@
   "pageBuilder.panelProperties.componentPanel.design.columnAppearance.popover.borderRadius.1": "Fixed border radius ({{ value }})",
   "pageBuilder.panelProperties.componentPanel.design.columnAppearance.popover.borderRadius.2": "Percentage",
   "pageBuilder.panelProperties.componentPanel.design.columnAppearance.popover.opacity.1": "Fixed opacity ({{ value }})",
+  "pageBuilder.panelProperties.componentPanel.design.columnBlendMode.label": "Blend mode",
   "pageBuilder.panelProperties.componentPanel.design.columnBorderRadiusIndividual.popover.b.1": "Set to current value ({{ value }})",
   "pageBuilder.panelProperties.componentPanel.design.columnBorderRadiusIndividual.popover.l.1": "Set to current value ({{ value }})",
   "pageBuilder.panelProperties.componentPanel.design.columnBorderRadiusIndividual.popover.r.1": "Set to current value ({{ value }})",

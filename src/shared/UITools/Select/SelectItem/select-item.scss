@@ -8,6 +8,7 @@
   column-gap: 10px;
   cursor: pointer;
   display: flex;
+  flex-shrink: 0;
   font-family: Rubik, sans-serif;
   font-size: $--xd-typography-font-size-small;
   height: 24px;

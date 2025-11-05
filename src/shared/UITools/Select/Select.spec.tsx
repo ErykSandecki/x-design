@@ -6,21 +6,14 @@ import SelectItem from './SelectItem/SelectItem';
 import SelectSeparator from './SelectSeparator/SelectSeparator';
 
 // types
-import { E2EAttribute, HTMLContainerId } from 'types';
+import { E2EAttribute } from 'types';
 
 // utils
 import { customRender, getByE2EAttribute } from 'test';
-import { createHtmlElement } from 'utils';
 
-const dropdownContainer = createHtmlElement('div', { id: HTMLContainerId.dropdown });
 const mockCallBack = jest.fn();
 
 describe('Select snapshots', () => {
-  beforeAll(() => {
-    // mock
-    document.body.appendChild(dropdownContainer);
-  });
-
   it('should render Select', () => {
     // before
     const { asFragment } = customRender(
@@ -75,11 +68,6 @@ describe('Select snapshots', () => {
 });
 
 describe('Select behaviors', () => {
-  beforeAll(() => {
-    // mock
-    document.body.appendChild(dropdownContainer);
-  });
-
   it('should change value', () => {
     // before
     const { container } = customRender(

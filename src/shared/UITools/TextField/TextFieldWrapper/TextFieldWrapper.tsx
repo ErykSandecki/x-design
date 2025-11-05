@@ -27,6 +27,7 @@ import { getChipValue } from './utils/getChipValue';
 import { handleSubmitInput, valueAttached } from 'utils';
 
 export type TTextFieldWrapperProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'className' | 'color' | 'popover'> & {
+  disabledSelection?: boolean;
   e2eValue: TE2EDataAttributeProps['value'];
   endAdorment?: ReactNode;
   fullWidth?: boolean;
@@ -44,6 +45,7 @@ export type TTextFieldWrapperProps = Omit<InputHTMLAttributes<HTMLInputElement>,
 };
 
 export const TextFieldWrapper: FC<TTextFieldWrapperProps> = ({
+  disabledSelection = false,
   disabled,
   e2eValue,
   endAdorment,
@@ -91,7 +93,7 @@ export const TextFieldWrapper: FC<TTextFieldWrapperProps> = ({
         className={cx(classNamesWithTheme.input)}
         disabled={disabled}
         maxLength={6}
-        onClick={() => !attached && inputRef.current.select()}
+        onClick={() => !attached && !disabledSelection && inputRef.current.select()}
         onKeyDown={(event) => handleSubmitInput(KeyboardKeys.enter, inputRef.current)(event)}
         ref={inputRef}
         value={value}

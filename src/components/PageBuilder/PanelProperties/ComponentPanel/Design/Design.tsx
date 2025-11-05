@@ -5,6 +5,8 @@ import { useTranslation } from 'react-i18next';
 import ColumnAlignment from './ColumnAlignment/ColumnAlignment';
 import ColumnAlignmentLayout from './ColumnAlignmentLayout/ColumnAlignmentLayout';
 import ColumnAppearance from './ColumnAppearance/ColumnAppearance';
+import ColumnBlendMode from './ColumnBlendMode/ColumnBlendMode';
+import ColumnBorderRadiusIndividual from './ColumnBorderRadiusIndividual/ColumnBorderRadiusIndividual';
 import ColumnClipContent from './ColumnClipContent/ColumnClipContent';
 import ColumnFlow from './ColumnFlow/ColumnFlow';
 import ColumnHeader from './ColumnHeader/ColumnHeader';
@@ -24,7 +26,6 @@ import { useDesignData } from './hooks/useDesignData';
 
 // others
 import { translationNameSpace } from './constants';
-import ColumnBorderRadiusIndividual from './ColumnBorderRadiusIndividual/ColumnBorderRadiusIndividual';
 
 export type TDesignProps = {
   width: number;
@@ -60,6 +61,7 @@ const Design: FC<TDesignProps> = ({ width }) => {
       <UITools.Section component={<DesignAppearanceButtonIcons />} label={t(`${translationNameSpace}.section.4.label`)}>
         <ColumnAppearance isBorderRaiusModeMerged={isBorderRaiusModeMerged} setBorderRadiusMode={setBorderRadiusMode} />
         <ColumnBorderRadiusIndividual isBorderRaiusModeMerged={isBorderRaiusModeMerged} />
+        <ColumnBlendMode />
       </UITools.Section>
     </>
   );

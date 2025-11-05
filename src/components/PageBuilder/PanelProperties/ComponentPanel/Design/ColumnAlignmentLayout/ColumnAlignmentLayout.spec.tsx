@@ -21,14 +21,12 @@ import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 import { configureStore } from 'store/store';
 
 // types
-import { AlignmentLayout, E2EAttribute, HTMLContainerId, KeyboardKeys, LayoutType } from 'types';
+import { AlignmentLayout, E2EAttribute, KeyboardKeys, LayoutType } from 'types';
 import { PopoverItem } from './enums';
 
 // utils
-import { createHtmlElement } from 'utils';
 import { customRender, getByE2EAttribute, sleep } from 'test';
 
-const dropdownContainer = createHtmlElement('div', { id: HTMLContainerId.dropdown });
 const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 const stateMock = {
   ...pageBuilderStateMock,
@@ -59,11 +57,6 @@ const stateMock = {
 };
 
 describe('ColumnAlignmentLayout snapshots', () => {
-  beforeAll(() => {
-    // mock
-    document.body.appendChild(dropdownContainer);
-  });
-
   it('should render ColumnAlignmentLayout', () => {
     // mock
     const store = configureStore(stateMock);
@@ -454,11 +447,6 @@ describe('ColumnAlignmentLayout snapshots', () => {
 });
 
 describe('ColumnAlignmentLayout behaviors', () => {
-  beforeAll(() => {
-    // mock
-    document.body.appendChild(dropdownContainer);
-  });
-
   it('should change alignment', () => {
     // mock
     const store = configureStore(stateMock);

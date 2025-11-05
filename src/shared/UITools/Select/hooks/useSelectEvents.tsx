@@ -1,4 +1,3 @@
-import { noop } from 'lodash';
 import { RefObject } from 'react';
 
 // hooks
@@ -15,10 +14,11 @@ export type TUseSelectEvents = TUseClickEvents & {
 export const useSelectEvents = (
   idContainer: string | undefined,
   onChange: TFunc<[string]>,
+  onClose: TFunc,
   optionsRef: RefObject<HTMLDivElement>,
   selectRef: RefObject<HTMLDivElement>,
 ): TUseSelectEvents => {
-  const { selected, setSelected } = useOutsideClickMultiple([], [optionsRef, selectRef], noop, idContainer);
+  const { selected, setSelected } = useOutsideClickMultiple([], [optionsRef, selectRef], onClose, idContainer);
   const onClickEvents = useClickEvents(onChange, setSelected);
 
   useForceHideOptions(selected, setSelected);

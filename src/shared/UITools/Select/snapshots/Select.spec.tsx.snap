@@ -55,7 +55,7 @@ exports[`Select snapshots should render Select 1`] = `
         0
       </li>
       <div
-        class="css-qef3st"
+        class="css-whbbxj"
         data-test-box=""
       />
       <li
@@ -75,7 +75,7 @@ exports[`Select snapshots should render Select 1`] = `
         1
       </li>
       <div
-        class="css-qef3st"
+        class="css-whbbxj"
         data-test-box=""
       />
       <li
@@ -154,7 +154,7 @@ exports[`Select snapshots should render when mixed 1`] = `
         0
       </li>
       <div
-        class="css-qef3st"
+        class="css-whbbxj"
         data-test-box=""
       />
       <li
@@ -174,7 +174,7 @@ exports[`Select snapshots should render when mixed 1`] = `
         1
       </li>
       <div
-        class="css-qef3st"
+        class="css-whbbxj"
         data-test-box=""
       />
       <li

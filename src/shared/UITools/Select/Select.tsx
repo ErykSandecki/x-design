@@ -1,4 +1,5 @@
 import { FC, MouseEvent, ReactElement, useRef } from 'react';
+import { noop } from 'lodash';
 import { useTranslation } from 'react-i18next';
 
 // components
@@ -32,6 +33,7 @@ export type TSelectProps = Omit<TTextFieldProps, 'endAdorment' | 'onChange'> & {
   idContainerOptions?: string;
   isMixed?: boolean;
   onChange: TFunc<[string]>;
+  onClose?: TFunc;
   onMouseEnterSelect?: TFunc<[MouseEvent]>;
   onMouseEnterOptions?: TFunc<[string]>;
   onMouseLeaveSelect?: TFunc<[MouseEvent]>;
@@ -49,6 +51,7 @@ export const Select: FC<TSelectProps> = ({
   idContainerOptions,
   isMixed = false,
   onChange,
+  onClose = noop,
   onMouseEnterSelect,
   onMouseEnterOptions,
   onMouseLeaveSelect,
@@ -64,7 +67,14 @@ export const Select: FC<TSelectProps> = ({
   const wrapperRef = useRef(null);
   const { t } = useTranslation();
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-  const { onClickOption, onClickSelect, selected } = useSelectEvents(idContainer, onChange, optionsRef, selectRef);
+
+  const { onClickOption, onClickSelect, selected } = useSelectEvents(
+    idContainer,
+    onChange,
+    onClose,
+    optionsRef,
+    selectRef,
+  );
 
   return (
     <Box
@@ -83,6 +93,7 @@ export const Select: FC<TSelectProps> = ({
     >
       <TextField
         disabled={disabled}
+        disabledSelection
         endAdorment={<Icon height={5} name="ChevronDown" style={{ marginRight: '5px' }} width={8} />}
         readOnly={!enableTyping}
         value={getValueAsText(isMixed, t, translationNameSpace, targetValue)}

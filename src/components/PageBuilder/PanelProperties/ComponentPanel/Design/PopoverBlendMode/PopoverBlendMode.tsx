@@ -19,12 +19,11 @@ import { TElement } from 'types';
 const { PopoverCompound } = UITools;
 
 export type TPopoverBlendModeProps = {
-  currentMixBlendMode: TElement['mixBlendMode'];
   isMixed: boolean;
-  setCurrentMixBlendMode: TFunc<[TElement['mixBlendMode']]>;
+  mixdBlendMode: TElement['mixBlendMode'];
 };
 
-const PopoverBlendMode: FC<TPopoverBlendModeProps> = ({ currentMixBlendMode, isMixed, setCurrentMixBlendMode }) => {
+const PopoverBlendMode: FC<TPopoverBlendModeProps> = ({ isMixed, mixdBlendMode }) => {
   const dispatch = useDispatch();
   const { t } = useTranslation();
 
@@ -35,9 +34,8 @@ const PopoverBlendMode: FC<TPopoverBlendModeProps> = ({ currentMixBlendMode, isM
           <PopoverCompound.PopoverItem
             index={blendMode}
             key={blendMode}
-            onClick={() => setCurrentMixBlendMode(blendMode)}
-            onMouseEnter={() => dispatch(changeProperties({ mixBlendMode: blendMode }))}
-            selected={!isMixed && currentMixBlendMode === blendMode}
+            onClick={() => dispatch(changeProperties({ mixBlendMode: blendMode }))}
+            selected={!isMixed && mixdBlendMode === blendMode}
             text={t(`${COMMON_TRANSLATION_KEY}.${camelCase(blendMode)}`)}
           />
         ) : (

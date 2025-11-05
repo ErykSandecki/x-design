@@ -1,0 +1,379 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColumnBlendMode snapshots should not render when initial 1`] = `<DocumentFragment />`;
+
+exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
+    data-test-section=""
+  >
+    <div
+      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+      data-test-box=""
+      style="width: calc(100% - 24px - 0px - 8px);"
+    >
+      <small
+        class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        data-test-text=""
+        style="text-align: inherit;"
+      >
+        Blend mode
+      </small>
+    </div>
+    <div
+      class="css-4ja0ji"
+      data-test-box=""
+    >
+      <div
+        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--single SectionColumnContent--single--light"
+        data-test-box=""
+        style="width: calc(100% - 24px - 0px - 8px);"
+      >
+        <div
+          class="css-1jnxvbp Select Select--light"
+          data-test-select="blend-mode"
+        >
+          <div
+            class="css-1jnxvbp TextField TextField--light"
+            data-test-text-field=""
+            data-test-tooltip=""
+          >
+            <div
+              class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--outlined TextFieldWrapper--outlined--light"
+              data-test-text-field-wrapper=""
+            >
+              <div
+                class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="drop-filled"
+                height="10"
+                name="DropFilled"
+                width="10"
+              />
+              <input
+                class="TextFieldWrapper__input TextFieldWrapper__input--light"
+                data-test-text-field-input=""
+                maxlength="6"
+                readonly=""
+                value="Color"
+              />
+              <div
+                class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="chevron-down"
+                height="5"
+                name="ChevronDown"
+                style="margin-right: 5px;"
+                width="8"
+              />
+            </div>
+          </div>
+          <ul
+            class="css-1jnxvbp SelectOptions SelectOptions--light"
+            data-test-box=""
+            data-test-select-options="blend-mode"
+            style="left: 0px; top: 24px; width: 0px;"
+          >
+            <li
+              class="css-1jnxvbp SelectItem SelectItem--light"
+              data-test-select-item="initial"
+              data-value="initial"
+              role="option"
+              tabindex="0"
+            >
+              <div
+                class="css-1jnxvbp SelectItem__checkIcon SelectItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="check"
+                height="12"
+                name="Check"
+                width="12"
+              />
+              Pass through
+            </li>
+            <li
+              class="css-1jnxvbp SelectItem SelectItem--light"
+              data-test-select-item="normal"
+              data-value="normal"
+              role="option"
+              tabindex="0"
+            >
+              <div
+                class="css-1jnxvbp SelectItem__checkIcon SelectItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="check"
+                height="12"
+                name="Check"
+                width="12"
+              />
+              Normal
+            </li>
+            <div
+              class="css-whbbxj"
+              data-test-box=""
+            />
+            <li
+              class="css-1jnxvbp SelectItem SelectItem--light"
+              data-test-select-item="darken"
+              data-value="darken"
+              role="option"
+              tabindex="0"
+            >
+              <div
+                class="css-1jnxvbp SelectItem__checkIcon SelectItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="check"
+                height="12"
+                name="Check"
+                width="12"
+              />
+              Darken
+            </li>
+            <li
+              class="css-1jnxvbp SelectItem SelectItem--light"
+              data-test-select-item="multiply"
+              data-value="multiply"
+              role="option"
+              tabindex="0"
+            >
+              <div
+                class="css-1jnxvbp SelectItem__checkIcon SelectItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="check"
+                height="12"
+                name="Check"
+                width="12"
+              />
+              Multiply
+            </li>
+            <li
+              class="css-1jnxvbp SelectItem SelectItem--light"
+              data-test-select-item="color-burn"
+              data-value="color-burn"
+              role="option"
+              tabindex="0"
+            >
+              <div
+                class="css-1jnxvbp SelectItem__checkIcon SelectItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="check"
+                height="12"
+                name="Check"
+                width="12"
+              />
+              Color burn
+            </li>
+            <div
+              class="css-whbbxj"
+              data-test-box=""
+            />
+            <li
+              class="css-1jnxvbp SelectItem SelectItem--light"
+              data-test-select-item="lighten"
+              data-value="lighten"
+              role="option"
+              tabindex="0"
+            >
+              <div
+                class="css-1jnxvbp SelectItem__checkIcon SelectItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="check"
+                height="12"
+                name="Check"
+                width="12"
+              />
+              Lighten
+            </li>
+            <li
+              class="css-1jnxvbp SelectItem SelectItem--light"
+              data-test-select-item="screen"
+              data-value="screen"
+              role="option"
+              tabindex="0"
+            >
+              <div
+                class="css-1jnxvbp SelectItem__checkIcon SelectItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="check"
+                height="12"
+                name="Check"
+                width="12"
+              />
+              Screen
+            </li>
+            <li
+              class="css-1jnxvbp SelectItem SelectItem--light"
+              data-test-select-item="plus-lighter"
+              data-value="plus-lighter"
+              role="option"
+              tabindex="0"
+            >
+              <div
+                class="css-1jnxvbp SelectItem__checkIcon SelectItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="check"
+                height="12"
+                name="Check"
+                width="12"
+              />
+              Plus lighter
+            </li>
+            <li
+              class="css-1jnxvbp SelectItem SelectItem--light"
+              data-test-select-item="color-dodge"
+              data-value="color-dodge"
+              role="option"
+              tabindex="0"
+            >
+              <div
+                class="css-1jnxvbp SelectItem__checkIcon SelectItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="check"
+                height="12"
+                name="Check"
+                width="12"
+              />
+              Color dodge
+            </li>
+            <div
+              class="css-whbbxj"
+              data-test-box=""
+            />
+            <li
+              class="css-1jnxvbp SelectItem SelectItem--light"
+              data-test-select-item="overlay"
+              data-value="overlay"
+              role="option"
+              tabindex="0"
+            >
+              <div
+                class="css-1jnxvbp SelectItem__checkIcon SelectItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="check"
+                height="12"
+                name="Check"
+                width="12"
+              />
+              Overlay
+            </li>
+            <li
+              class="css-1jnxvbp SelectItem SelectItem--light"
+              data-test-select-item="soft-light"
+              data-value="soft-light"
+              role="option"
+              tabindex="0"
+            >
+              <div
+                class="css-1jnxvbp SelectItem__checkIcon SelectItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="check"
+                height="12"
+                name="Check"
+                width="12"
+              />
+              Soft Light
+            </li>
+            <li
+              class="css-1jnxvbp SelectItem SelectItem--light"
+              data-test-select-item="hard-light"
+              data-value="hard-light"
+              role="option"
+              tabindex="0"
+            >
+              <div
+                class="css-1jnxvbp SelectItem__checkIcon SelectItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="check"
+                height="12"
+                name="Check"
+                width="12"
+              />
+              Hard light
+            </li>
+            <li
+              class="css-1jnxvbp SelectItem SelectItem--light"
+              data-test-select-item="difference"
+              data-value="difference"
+              role="option"
+              tabindex="0"
+            >
+              <div
+                class="css-1jnxvbp SelectItem__checkIcon SelectItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="check"
+                height="12"
+                name="Check"
+                width="12"
+              />
+              Difference
+            </li>
+            <li
+              class="css-1jnxvbp SelectItem SelectItem--light"
+              data-test-select-item="exclusion"
+              data-value="exclusion"
+              role="option"
+              tabindex="0"
+            >
+              <div
+                class="css-1jnxvbp SelectItem__checkIcon SelectItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="check"
+                height="12"
+                name="Check"
+                width="12"
+              />
+              Exclusion
+            </li>
+            <div
+              class="css-whbbxj"
+              data-test-box=""
+            />
+            <li
+              class="css-1jnxvbp SelectItem SelectItem--light"
+              data-test-select-item="hue"
+              data-value="hue"
+              role="option"
+              tabindex="0"
+            >
+              <div
+                class="css-1jnxvbp SelectItem__checkIcon SelectItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="check"
+                height="12"
+                name="Check"
+                width="12"
+              />
+              Hue
+            </li>
+            <li
+              class="css-1jnxvbp SelectItem SelectItem--light"
+              data-test-select-item="saturation"
+              data-value="saturation"
+              role="option"
+              tabindex="0"
+            >
+              <div
+                class="css-1jnxvbp SelectItem__checkIcon SelectItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="check"
+                height="12"
+                name="Check"
+                width="12"
+              />
+              Saturation
+            </li>
+            <li
+              class="css-1jnxvbp SelectItem SelectItem--light SelectItem--selected SelectItem--selected--light"
+              data-test-select-item="color"
+              data-value="color"
+              role="option"
+              tabindex="0"
+            >
+              <div
+                class="css-1jnxvbp SelectItem__checkIcon SelectItem__checkIcon--light SelectItem__checkIcon--selected SelectItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="check"
+                height="12"
+                name="Check"
+                width="12"
+              />
+              Color
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="css-1jnxvbp"
+        data-test-box=""
+      >
+        <div
+          class="css-c1qms7"
+          data-test-box=""
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

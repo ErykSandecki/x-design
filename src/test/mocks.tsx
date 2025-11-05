@@ -71,9 +71,10 @@ delete (window as any).prompt;
 document.execCommand = jest.fn();
 
 /**
- * Mock tooltip container
+ * Mock containers
  */
 document.body.appendChild(createHtmlElement('div', { id: HTMLContainerId.tooltip }));
+document.body.appendChild(createHtmlElement('div', { id: HTMLContainerId.dropdown }));
 
 /**
  * Mock to avoid other keys when different environment

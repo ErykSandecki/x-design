@@ -34,6 +34,7 @@
   "pageBuilder.panelProperties.componentPanel.design.columnAppearance.popover.borderRadius.1": "Ustaw na obecny promień ramki ({{ value }})",
   "pageBuilder.panelProperties.componentPanel.design.columnAppearance.popover.borderRadius.2": "Procent",
   "pageBuilder.panelProperties.componentPanel.design.columnAppearance.popover.opacity.1": "Ustaw na obecną przezroczystość ({{ value }})",
+  "pageBuilder.panelProperties.componentPanel.design.columnBlendMode.label": "Tryb mieszania",
   "pageBuilder.panelProperties.componentPanel.design.columnBorderRadiusIndividual.popover.b.1": "Ustaw na obecną wartość ({{ value }})",
   "pageBuilder.panelProperties.componentPanel.design.columnBorderRadiusIndividual.popover.l.1": "Ustaw na obecną wartość ({{ value }})",
   "pageBuilder.panelProperties.componentPanel.design.columnBorderRadiusIndividual.popover.r.1": "Ustaw na obecną wartość ({{ value }})",

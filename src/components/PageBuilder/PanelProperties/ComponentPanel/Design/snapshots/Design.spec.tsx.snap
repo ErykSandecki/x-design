@@ -1914,6 +1914,45 @@ exports[`Design snapshots should render Design 1`] = `
                         />
                       </div>
                     </div>
+                    <ul
+                      class="css-1jnxvbp SelectOptions SelectOptions--light"
+                      data-test-box=""
+                      data-test-select-options="box-sizing"
+                      style="left: 0px; top: 24px; width: 0px;"
+                    >
+                      <li
+                        class="css-1jnxvbp SelectItem SelectItem--light"
+                        data-test-select-item="included"
+                        data-value="included"
+                        role="option"
+                        tabindex="0"
+                      >
+                        <div
+                          class="css-1jnxvbp SelectItem__checkIcon SelectItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                          data-test-icon="check"
+                          height="12"
+                          name="Check"
+                          width="12"
+                        />
+                        Included
+                      </li>
+                      <li
+                        class="css-1jnxvbp SelectItem SelectItem--light SelectItem--selected SelectItem--selected--light"
+                        data-test-select-item="excluded"
+                        data-value="excluded"
+                        role="option"
+                        tabindex="0"
+                      >
+                        <div
+                          class="css-1jnxvbp SelectItem__checkIcon SelectItem__checkIcon--light SelectItem__checkIcon--selected SelectItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                          data-test-icon="check"
+                          height="12"
+                          name="Check"
+                          width="12"
+                        />
+                        Excluded
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>

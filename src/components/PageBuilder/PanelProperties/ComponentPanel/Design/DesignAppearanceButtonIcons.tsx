@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
@@ -24,7 +24,6 @@ const DesignAppearanceButtonIcons: FC = () => {
   const isMixed = useSelector(isMixedSelectorCreator('mixBlendMode'));
   const mixBlendMode = useSelector(elementAttributeSelectorCreator('mixBlendMode', firstElementId));
   const visible = useSelector(elementAttributeSelectorCreator('visible', firstElementId));
-  const [currentMixBlendMode, setCurrentMixBlendMode] = useState(mixBlendMode);
   const { t } = useTranslation();
 
   return [
@@ -38,17 +37,10 @@ const DesignAppearanceButtonIcons: FC = () => {
     <UITools.ButtonIcon
       idContainer={PANEL_PROPERTIES_ID}
       key={1}
-      name={currentMixBlendMode === 'initial' ? 'DropEmpty' : 'DropFilled'}
+      name={mixBlendMode === 'initial' ? 'DropEmpty' : 'DropFilled'}
       popoverAlignVertically={UITools.AlignPopoverVertically.top}
-      popoverChildren={
-        <PopoverBlendMode
-          currentMixBlendMode={currentMixBlendMode}
-          isMixed={isMixed}
-          setCurrentMixBlendMode={setCurrentMixBlendMode}
-        />
-      }
+      popoverChildren={<PopoverBlendMode isMixed={isMixed} mixdBlendMode={mixBlendMode} />}
       popoverOffset={{ x: -28, y: -28 }}
-      popoverOnClose={() => dispatch(changeProperties({ mixBlendMode: currentMixBlendMode }))}
       tooltip={{ autoPositioning: true, content: t(`${TOOLTIP_TRANSLATION_KEY}.mixBlendMode`) }}
       selected={!visible}
     />,
