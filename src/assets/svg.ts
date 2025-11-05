@@ -8,8 +8,10 @@ import { ReactComponent as AspectRatio } from './svg/aspect-ratio.svg';
 import { ReactComponent as AutoHeight } from './svg/auto-height.svg';
 import { ReactComponent as AutoLayout } from './svg/auto-layout.svg';
 import { ReactComponent as AutoWidth } from './svg/auto-width.svg';
-import { ReactComponent as BottomLeftCorner } from './svg/bottom-left-corner.svg';
-import { ReactComponent as BottomRightCorner } from './svg/bottom-right-corner.svg';
+import { ReactComponent as BorderB } from './svg/border-b.svg';
+import { ReactComponent as BorderL } from './svg/border-l.svg';
+import { ReactComponent as BorderR } from './svg/border-r.svg';
+import { ReactComponent as BorderT } from './svg/border-t.svg';
 import { ReactComponent as CarrotDown } from './svg/carrot-down.svg';
 import { ReactComponent as Check } from './svg/check.svg';
 import { ReactComponent as Checkbox } from './svg/checkbox.svg';
@@ -75,8 +77,6 @@ import { ReactComponent as Rows } from './svg/rows.svg';
 import { ReactComponent as Sample } from './svg/sample.svg';
 import { ReactComponent as StepBackwardOutlined } from './svg/step-backward-outlined.svg';
 import { ReactComponent as ToggleRotate } from './svg/toggle-rotate.svg';
-import { ReactComponent as TopLeftCorner } from './svg/top-left-corner.svg';
-import { ReactComponent as TopRightCorner } from './svg/top-right-corner.svg';
 import { ReactComponent as Variant } from './svg/variant.svg';
 import { ReactComponent as WidthRestricted } from './svg/width-restricted.svg';
 
@@ -91,8 +91,10 @@ export const Icons = {
   AutoHeight,
   AutoLayout,
   AutoWidth,
-  BottomLeftCorner,
-  BottomRightCorner,
+  BorderB,
+  BorderL,
+  BorderR,
+  BorderT,
   CarrotDown,
   Check,
   Checkbox,
@@ -158,8 +160,6 @@ export const Icons = {
   Sample,
   StepBackwardOutlined,
   ToggleRotate,
-  TopLeftCorner,
-  TopRightCorner,
   Variant,
   WidthRestricted,
 };
