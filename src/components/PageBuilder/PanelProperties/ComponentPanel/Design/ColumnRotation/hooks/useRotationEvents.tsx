@@ -39,7 +39,7 @@ export const useRotationEvents = (): TUseRotationEvents => {
 
   useEffect(() => {
     defer(() => setAngle(normalizeMultipleValue(isMixedAngle, `${currentAngle.toString()}°`)));
-  }, [currentAngle, isMultiple]);
+  }, [currentAngle, isMixedAngle, isMultiple]);
 
   return {
     angle,
