@@ -13,6 +13,7 @@ import SectionColumn from './SectionColumn/SectionColumn';
 import Section from './Section/Section';
 import Select from './Select/Select';
 import SelectItem from './Select/SelectItem/SelectItem';
+import SelectSeparator from './Select/SelectSeparator/SelectSeparator';
 import Tabs, { TTabsProps } from './Tabs/Tabs';
 import TextField from './TextField/TextField';
 import ToggleButtonGroup from './ToggleButtonGroup/ToggleButtonGroup';
@@ -39,6 +40,7 @@ export const UITools = {
   SectionColumn,
   Select,
   SelectItem,
+  SelectSeparator,
   Tabs,
   TextField,
   ToggleButtonGroup,
