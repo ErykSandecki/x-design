@@ -100,8 +100,9 @@ export const changeAlignment = (payload: TChangeAlignmentAction['payload']): TCh
 export const changeBackground = (
   background: TChangeBackgroundActionPayload['background'],
   id: TChangeBackgroundActionPayload['id'],
+  index: TChangeBackgroundActionPayload['index'],
 ): TChangeBackgroundAction => ({
-  payload: { background, id },
+  payload: { background, id, index },
   type: CHANGE_BACKGROUND,
 });
 

@@ -16,15 +16,16 @@ import { DATA_STATUS_ATTRIBUTE } from './constants';
 import styles from './element.scss';
 
 // types
-import { E2EAttribute, ElementType, TColor, TElement } from 'types';
+import { E2EAttribute, ElementType, TElement } from 'types';
 import { MouseMode } from 'types/enums/mouseMode';
 import { TElementChildren } from './types';
 
 // utils
+import { getBackground } from './utils/getBackground';
+import { getBorderInsets } from './utils/getBorderInsets';
 import { getInsets } from './utils/getInsets';
 import { getLayout } from './utils/getLayout';
 import { getPosition } from './utils/getPosition';
-import { getBorderInsets } from './utils/getBorderInsets';
 
 export type TElementProps = {
   classes: typeof classes;
@@ -93,7 +94,7 @@ const Element: FC<TElementProps> = ({ classes, children, id, index, mouseMode, p
         ...getBorderInsets(borderRadius),
         ...getLayout(layout),
         ...getPosition(alignment, angle, x, y),
-        backgroundColor: (background.properties as TColor).color,
+        background: getBackground(background),
         height: cssHeight,
         margin: getInsets(margin),
         maxHeight,

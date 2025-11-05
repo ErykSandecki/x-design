@@ -152,6 +152,7 @@ export type TChangeAlignmentAction = {
 
 export type TChangeBackgroundActionPayload = Pick<TElement, 'id'> & {
   background: Partial<TBackground>;
+  index: number;
 };
 
 export type TChangeBackgroundAction = {

@@ -291,13 +291,14 @@ describe('PageBuilderReducer', () => {
         alpha: '100',
         color: '#ffffff',
         format: 'hex',
+        mode: 'fixed',
       },
       visible: true,
     };
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 
     // before
-    const state = reducer(changeBackground(background, '-1'), {
+    const state = reducer(changeBackground(background, '-1', 0), {
       ...pageBuilderStateMock[PAGE_BUILDER],
     });
 
@@ -312,10 +313,12 @@ describe('PageBuilderReducer', () => {
             ...currentPage.elements,
             ['-1']: {
               ...currentPage.elements['-1'],
-              background: {
-                ...currentPage.elements['-1'].background,
-                ...background,
-              },
+              background: [
+                {
+                  ...currentPage.elements['-1'].background[0],
+                  ...background,
+                },
+              ],
             },
           },
         },

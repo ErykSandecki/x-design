@@ -2,7 +2,7 @@
 import { TChangeBackgroundActionPayload, TPageBuilderState } from '../types';
 
 export const handleChangeBackground = (
-  payload: TChangeBackgroundActionPayload,
+  { background, id, index }: TChangeBackgroundActionPayload,
   state: TPageBuilderState,
 ): TPageBuilderState => ({
   ...state,
@@ -16,12 +16,11 @@ export const handleChangeBackground = (
       ...state.pages[state.currentPage],
       elements: {
         ...state.pages[state.currentPage].elements,
-        [payload.id]: {
-          ...state.pages[state.currentPage].elements[payload.id],
-          background: {
-            ...state.pages[state.currentPage].elements[payload.id].background,
-            ...payload.background,
-          },
+        [id]: {
+          ...state.pages[state.currentPage].elements[id],
+          background: state.pages[state.currentPage].elements[id].background.map((value, i) =>
+            index === i ? { ...value, ...background } : value,
+          ),
         },
       },
     },

@@ -63,6 +63,13 @@ export const alignmentMock: TAlignment = {
   vertical: AlignmentVertical.center,
 };
 
+export const backgroundMock: TElement['background'] = [
+  {
+    properties: { alpha: '100', color: '#ffffff', format: 'hex', mode: 'fixed' },
+    visible: true,
+  },
+];
+
 export const gapMock: TValueExtended = {
   mode: 'fixed',
   value: 0,
@@ -85,10 +92,12 @@ export const elementMock: TElement = {
   alignment: {},
   angle: 0,
   aspectRatio: false,
-  background: {
-    properties: { alpha: '100', color: '#ffffff', format: 'hex', mode: 'fixed' },
-    visible: true,
-  },
+  background: [
+    {
+      properties: { alpha: '100', color: '#ffffff', format: 'hex', mode: 'fixed' },
+      visible: true,
+    },
+  ],
   borderRadius: {
     b: { mode: 'fixed', value: 0 },
     l: { mode: 'fixed', value: 0 },
@@ -137,10 +146,12 @@ export const createFrameMock: TElement = {
   alignment: {},
   angle: 0,
   aspectRatio: false,
-  background: {
-    properties: { alpha: '100', color: '#ffffff', format: 'hex', mode: 'fixed' },
-    visible: true,
-  },
+  background: [
+    {
+      properties: { alpha: '100', color: '#ffffff', format: 'hex', mode: 'fixed' },
+      visible: true,
+    },
+  ],
   borderRadius: {
     b: { mode: 'fixed', value: 0 },
     l: { mode: 'fixed', value: 0 },

@@ -40,7 +40,7 @@ export type TViewBoxProps = {
 const ViewBox: FC<TViewBoxProps> = ({ coordinates, mouseMode, setCoordinates, setMouseMode }) => {
   const colorSampler = useSelector(eventSelectorCreator('colorSampler'));
   const background = useSelector(pageBackgroundSelectorCreator('-1'));
-  const data = background.properties as TColor;
+  const data = background[0].properties as TColor;
   const dispatch = useDispatch();
   const possibleElement = useSelector(eventSelectorCreator('possibleElement'));
   const { zoomBoxRef, zoomContentRef } = useRefs();
@@ -51,7 +51,7 @@ const ViewBox: FC<TViewBoxProps> = ({ coordinates, mouseMode, setCoordinates, se
     <ZoomBox
       alpha={data.alpha}
       backgroundColor={data.color}
-      backgroundVissible={background.visible}
+      backgroundVissible={background[0].visible}
       classes={{
         className: cx(classNamesWithTheme[className].name, [
           classNamesWithTheme[className].modificators.createFrame,

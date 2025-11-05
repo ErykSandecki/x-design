@@ -94,15 +94,17 @@ describe('useElementEvents', () => {
     expect(result.current).toStrictEqual({
       alignment: {},
       angle: 0,
-      background: {
-        properties: {
-          alpha: '100',
-          color: '#ffffff',
-          format: 'hex',
-          mode: 'fixed',
+      background: [
+        {
+          properties: {
+            alpha: '100',
+            color: '#ffffff',
+            format: 'hex',
+            mode: 'fixed',
+          },
+          visible: true,
         },
-        visible: true,
-      },
+      ],
       borderRadius: insetsMock,
       coordinates: {
         x: 0,

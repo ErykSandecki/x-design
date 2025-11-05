@@ -1,9 +1,11 @@
 // mocks
 import { insetsMock } from 'test/mocks/reducer/pageBuilderMock';
 
+// types
+import { Unit } from 'types';
+
 // utils
 import { getBorderInsets } from '../getBorderInsets';
-import { Unit } from 'types';
 
 describe('getBorderInsets', () => {
   it(`should return insets`, () => {

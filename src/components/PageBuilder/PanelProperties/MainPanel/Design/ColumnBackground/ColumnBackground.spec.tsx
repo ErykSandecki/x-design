@@ -61,7 +61,7 @@ describe('ColumnBackground behaviors', () => {
     fireEvent.click(getByE2EAttribute(container, E2EAttribute.icon, 'eyes-opened'));
 
     // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['-1'].background.visible).toBe(false);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['-1'].background[0].visible).toBe(false);
   });
 
   it('should change alpha', async () => {
@@ -85,7 +85,9 @@ describe('ColumnBackground behaviors', () => {
     fireEvent.blur(input);
 
     // result
-    expect((store.getState()[PAGE_BUILDER].pages['0'].elements['-1'].background.properties as TColor).alpha).toBe('50');
+    expect((store.getState()[PAGE_BUILDER].pages['0'].elements['-1'].background[0].properties as TColor).alpha).toBe(
+      '50',
+    );
   });
 
   it('should change color', async () => {
@@ -109,7 +111,7 @@ describe('ColumnBackground behaviors', () => {
     fireEvent.blur(input);
 
     // result
-    expect((store.getState()[PAGE_BUILDER].pages['0'].elements['-1'].background.properties as TColor).color).toBe(
+    expect((store.getState()[PAGE_BUILDER].pages['0'].elements['-1'].background[0].properties as TColor).color).toBe(
       '#ffffff',
     );
   });
@@ -141,7 +143,7 @@ describe('ColumnBackground behaviors', () => {
     fireEvent.click(rgbOption);
 
     // result
-    expect((store.getState()[PAGE_BUILDER].pages['0'].elements['-1'].background.properties as TColor).format).toBe(
+    expect((store.getState()[PAGE_BUILDER].pages['0'].elements['-1'].background[0].properties as TColor).format).toBe(
       'rgb',
     );
   });
@@ -189,7 +191,7 @@ describe('ColumnBackground behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].events.colorSampler).toBe(false);
-    expect((store.getState()[PAGE_BUILDER].pages['0'].elements['-1'].background.properties as TColor).color).toBe(
+    expect((store.getState()[PAGE_BUILDER].pages['0'].elements['-1'].background[0].properties as TColor).color).toBe(
       '#ffffff',
     );
   });

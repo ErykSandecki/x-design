@@ -14,14 +14,14 @@ import { pageBackgroundSelectorCreator } from 'store/pageBuilder/selectors';
 
 const ColumnBackgroundButtonIcons = (dispatch: Dispatch, t: TT, useSelector: UseSelector): Array<ReactNode> => {
   const background = useSelector(pageBackgroundSelectorCreator('-1'));
-  const { visible } = background;
+  const { visible } = background[0];
 
   return [
     <UITools.ButtonIcon
       e2eValue="toggle-visibility"
       key={0}
       name={visible ? 'EyesOpened' : 'EyesClosed'}
-      onClick={() => dispatch(changeBackground({ visible: !visible }, '-1'))}
+      onClick={() => dispatch(changeBackground({ visible: !visible }, '-1', 0))}
       tooltip={{ autoPositioning: true, content: t(`${TOOLTIP_TRANSLATION_KEY}.toggleVisibility`) }}
     />,
   ];

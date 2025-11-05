@@ -52,7 +52,7 @@ export type TElement = {
   alignment: TAlignment;
   angle: number;
   aspectRatio: boolean;
-  background: TBackground;
+  background: Array<TBackground>;
   borderRadius: TInsets;
   children: Array<TChildren>;
   clipContent: boolean;

@@ -40,10 +40,12 @@ export const BASE_ELEMENTS: TElement = {
   alignment: {},
   angle: 0,
   aspectRatio: false,
-  background: {
-    properties: { alpha: '100', color, format: 'hex', mode: 'fixed' },
-    visible: true,
-  },
+  background: [
+    {
+      properties: { alpha: '100', color, format: 'hex', mode: 'fixed' },
+      visible: true,
+    },
+  ],
   borderRadius: {
     b: { mode: 'fixed', value: 0 },
     l: { mode: 'fixed', value: 0 },
