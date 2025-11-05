@@ -21,7 +21,8 @@ type TUseAppearanceEvents = TUseChangeEvent &
   TUseBlurEvent & {
     borderRadius: string;
     borderRadiusMode: TValueExtended['mode'];
-    isMixedBorderRadius: boolean;
+    isMixedBorderRadiusMode: boolean;
+    isMixedBorderRadiusValue: boolean;
     isMixedOpacity: boolean;
     opacity: string;
     opacityMode: TValueExtended['mode'];
@@ -45,41 +46,37 @@ export const useAppearanceEvents = (): TUseAppearanceEvents => {
   const { b, l, r, t } = currentBorderRadius;
   const isMixedBorderRadiusM = [l, r, t].some((inset) => inset.mode !== b.mode);
   const isMixedBorderRadiusV = [l, r, t].some((inset) => inset.value !== b.value);
-  const isMixedBorderRadius = isMixedInsetM || isMixedInsetV || isMixedBorderRadiusM || isMixedBorderRadiusV;
+  const isMixedBorderRadiusMode = isMixedInsetM || isMixedBorderRadiusM;
+  const isMixedBorderRadiusValue = isMixedInsetV || isMixedBorderRadiusV;
   const isMixedOpacity = useSelector(isMixedSelectorCreator('opacity.value'));
   const [borderRadius, setBorderRadius] = useState('');
   const [opacity, setOpacity] = useState('');
-  const onChangeEvents = useChangeEvent(
-    currentBorderRadius,
-    currentOpacity,
-    isMixedBorderRadius,
-    setBorderRadius,
-    setOpacity,
-  );
+  const onChangeEvents = useChangeEvent(currentBorderRadius, currentOpacity, setBorderRadius, setOpacity);
   const onBlurEvents = useBlurEvent(
     borderRadius,
     currentBorderRadius,
     currentOpacity,
-    isMixedBorderRadius,
+    isMixedBorderRadiusValue,
     opacity,
     setBorderRadius,
     setOpacity,
   );
 
   useEffect(() => {
-    setBorderRadius(normalizeMultipleValue(isMixedBorderRadius, b.value, b.unit));
-  }, [b.unit, b.value, l.unit, l.value, r.unit, r.value, t.unit, t.value, isMultiple]);
+    setBorderRadius(normalizeMultipleValue(isMixedBorderRadiusValue, b.value, b.unit));
+  }, [b, isMixedBorderRadiusValue, isMultiple, l, r, t]);
 
   useEffect(() => {
     setOpacity(normalizeMultipleValue(isMixedOpacity, currentOpacity.value));
-  }, [currentOpacity.value, isMultiple]);
+  }, [currentOpacity.value, isMixedOpacity, isMultiple]);
 
   return {
     ...onBlurEvents,
     ...onChangeEvents,
     borderRadius,
     borderRadiusMode: b.mode,
-    isMixedBorderRadius,
+    isMixedBorderRadiusMode,
+    isMixedBorderRadiusValue,
     isMixedOpacity,
     opacity,
     opacityMode: currentOpacity.mode,

@@ -295,7 +295,7 @@ describe('ColumnAppearance behaviors', () => {
     });
   });
 
-  it('should change border radius when values insets modes are mixed', () => {
+  it('should detached when modes border radius are mixed', () => {
     // mock
     const store = configureStore({
       ...stateMock,
@@ -315,7 +315,7 @@ describe('ColumnAppearance behaviors', () => {
                 borderRadius: {
                   ...insetsMock,
                   l: {
-                    mode: 'auto',
+                    mode: 'variable',
                     value: 0,
                   },
                 },
@@ -334,92 +334,27 @@ describe('ColumnAppearance behaviors', () => {
       </Provider>,
     );
 
-    // find
-    const inputBorderRadius = getByE2EAttribute(container, E2EAttribute.textFieldInput, 'border-radius');
+    // find { inputs }
+    const inputBorderRadius = getByE2EAttribute(container, E2EAttribute.textField, 'border-radius');
+
+    // find { icons }
+    const iconBorderRadius = getByE2EAttribute(inputBorderRadius, E2EAttribute.icon, 'detached');
 
     // action
-    fireEvent.click(inputBorderRadius);
-    fireEvent.change(inputBorderRadius, { target: { value: '50' } });
-    fireEvent.keyDown(inputBorderRadius, { key: KeyboardKeys.enter });
-    fireEvent.blur(inputBorderRadius);
+    fireEvent.click(iconBorderRadius);
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].borderRadius).toStrictEqual({
-      b: { mode: 'fixed', value: 50 },
-      l: { mode: 'fixed', value: 50 },
-      r: { mode: 'fixed', value: 50 },
-      t: { mode: 'fixed', value: 50 },
+      b: { mode: 'fixed', unit: undefined, value: 0 },
+      l: { mode: 'fixed', unit: undefined, value: 0 },
+      r: { mode: 'fixed', unit: undefined, value: 0 },
+      t: { mode: 'fixed', unit: undefined, value: 0 },
     });
   });
 
   it('should change border radius when triger ScrubbableInput', () => {
     // mock
     const store = configureStore(stateMock);
-    const mouseMoveEvent = new MouseEvent('mousemove', {
-      bubbles: true,
-      cancelable: true,
-      shiftKey: false,
-      view: window,
-    });
-    Object.defineProperty(mouseMoveEvent, 'movementX', { value: 200 });
-
-    // before
-    const { container } = customRender(
-      <Provider store={store}>
-        <ColumnAppearance />
-      </Provider>,
-    );
-
-    // find
-    const scrubbableInput = getByE2EAttribute(container, E2EAttribute.scrubbableInput, 'border-radius');
-
-    // action
-    fireEvent.mouseDown(scrubbableInput, { clientX: 0, clientY: 0 });
-    window.dispatchEvent(mouseMoveEvent);
-    fireEvent.mouseUp(scrubbableInput);
-
-    // result
-    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].borderRadius).toStrictEqual({
-      b: { mode: 'fixed', value: 100 },
-      l: { mode: 'fixed', value: 100 },
-      r: { mode: 'fixed', value: 100 },
-      t: { mode: 'fixed', value: 100 },
-    });
-  });
-
-  it('should change border radius when triger ScrubbableInput but modes ares mixed', () => {
-    // mock
-    const store = configureStore({
-      ...stateMock,
-      [PAGE_BUILDER]: {
-        ...stateMock[PAGE_BUILDER],
-        pages: {
-          ['0']: {
-            ...stateMock[PAGE_BUILDER].pages['0'],
-            elements: {
-              ...stateMock[PAGE_BUILDER].pages['0'].elements,
-              ['-1']: {
-                ...stateMock[PAGE_BUILDER].pages['0'].elements['-1'],
-                children: [childrenMock, { ...childrenMock, id: 'test-2' }],
-              },
-              [elementMock.id]: {
-                ...elementMock,
-                borderRadius: {
-                  ...insetsMock,
-                  l: {
-                    mode: 'auto',
-                    value: 0,
-                  },
-                },
-              },
-            },
-            selectedElements: [...stateMock[PAGE_BUILDER].pages['0'].selectedElements],
-          },
-        },
-      },
-    });
-
-    // mock
     const mouseMoveEvent = new MouseEvent('mousemove', {
       bubbles: true,
       cancelable: true,

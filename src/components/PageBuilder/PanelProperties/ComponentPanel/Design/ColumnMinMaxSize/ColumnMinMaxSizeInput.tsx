@@ -40,7 +40,7 @@ const ColumnMinMaxSizeInput: FC<TColumnResizingInputProps> = ({
   value,
   valueScrubbaleInput,
 }) => {
-  const attached = valueAttached(mode);
+  const attached = valueAttached(false, mode);
   const dispatch = useDispatch();
   const iconName = `${capitalize(scoreKey)}${capitalize(sizeType)}` as TIconProps['name'];
 

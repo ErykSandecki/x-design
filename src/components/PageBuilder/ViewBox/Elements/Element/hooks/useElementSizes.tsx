@@ -31,8 +31,8 @@ export const useElementSizes = (id: TElement['id']): TUseElementSizes => {
   const { boxSizing } = layout;
   const { max: maxH, mode: modeH, min: minH, unit: unitH, value: relativeH } = elHeight;
   const { max: maxW, mode: modeW, min: minW, unit: unitW, value: relativeW } = elWidth;
-  const cssHeight = valueAttached(modeH) ? 'auto' : `${relativeH}${unitH ?? ''}`;
-  const cssWidth = valueAttached(modeW) ? 'auto' : `${relativeW}${unitW ?? ''}`;
+  const cssHeight = valueAttached(false, modeH) ? 'auto' : `${relativeH}${unitH ?? ''}`;
+  const cssWidth = valueAttached(false, modeW) ? 'auto' : `${relativeW}${unitW ?? ''}`;
   const isExcluded = boxSizing === 'excluded';
   const additionalHeight = padding.b.value + padding.t.value;
   const additionalWidth = padding.l.value + padding.r.value;

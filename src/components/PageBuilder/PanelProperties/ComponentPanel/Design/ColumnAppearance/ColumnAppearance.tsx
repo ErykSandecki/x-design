@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
 // components
@@ -14,12 +15,18 @@ import { useAppearanceEvents } from './hooks/useAppearanceEvents';
 import { MAX } from '../../../../constants';
 import { translationNameSpace } from './constants';
 
+// store
+import { applyElementsType } from 'store/pageBuilder/actions';
+
 const ColumnAppearance: FC = () => {
+  const dispatch = useDispatch();
   const { t } = useTranslation();
+
   const {
     borderRadius,
     borderRadiusMode,
-    isMixedBorderRadius,
+    isMixedBorderRadiusMode,
+    isMixedBorderRadiusValue,
     isMixedOpacity,
     onBlurBorderRadius,
     onBlurOpacity,
@@ -37,7 +44,8 @@ const ColumnAppearance: FC = () => {
     >
       <ColumnAppearanceInput
         e2eValue="opacity"
-        isMixed={isMixedOpacity}
+        isMixedMode={false}
+        isMixedValue={isMixedOpacity}
         max={100}
         min={0}
         mode={opacityMode}
@@ -49,15 +57,19 @@ const ColumnAppearance: FC = () => {
       />
       <ColumnAppearanceInput
         e2eValue="border-radius"
-        isMixed={isMixedBorderRadius}
+        isMixedMode={isMixedBorderRadiusMode}
+        isMixedValue={isMixedBorderRadiusValue}
         max={MAX}
         min={0}
         mode={borderRadiusMode}
         name="Corners"
         onBlur={onBlurBorderRadius}
         onChange={onChangeBorderRadius}
+        onDetachedValue={() =>
+          dispatch(applyElementsType('fixed', ['borderRadius.b', 'borderRadius.l', 'borderRadius.r', 'borderRadius.t']))
+        }
         popoverChildren={
-          <PopoverBorderRadius isMixed={isMixedBorderRadius} mode={borderRadiusMode} value={borderRadius} />
+          <PopoverBorderRadius isMixed={isMixedBorderRadiusMode} mode={borderRadiusMode} value={borderRadius} />
         }
         value={borderRadius}
       />

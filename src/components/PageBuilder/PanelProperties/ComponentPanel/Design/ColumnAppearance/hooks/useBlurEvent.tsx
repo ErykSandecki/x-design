@@ -7,7 +7,7 @@ import { changeProperties } from 'store/pageBuilder/actions';
 import { TElement } from 'types';
 
 // utils
-import { normalizeMultipleValue } from 'components/PageBuilder/utils/normalizeMultipleValue';
+import { normalizeMultipleValue } from '../../../../../utils/normalizeMultipleValue';
 
 export type TUseBlurEvent = {
   onBlurBorderRadius: TFunc;
@@ -34,10 +34,10 @@ export const useBlurEvent = (
       dispatch(
         changeProperties({
           borderRadius: {
-            b: { ...(isMixedBorderRadius ? { mode: 'fixed' } : currentBorderRadius.b), value: targetValue },
-            l: { ...(isMixedBorderRadius ? { mode: 'fixed' } : currentBorderRadius.l), value: targetValue },
-            r: { ...(isMixedBorderRadius ? { mode: 'fixed' } : currentBorderRadius.r), value: targetValue },
-            t: { ...(isMixedBorderRadius ? { mode: 'fixed' } : currentBorderRadius.t), value: targetValue },
+            b: { ...currentBorderRadius.b, value: targetValue },
+            l: { ...currentBorderRadius.l, value: targetValue },
+            r: { ...currentBorderRadius.r, value: targetValue },
+            t: { ...currentBorderRadius.t, value: targetValue },
           },
         }),
       );

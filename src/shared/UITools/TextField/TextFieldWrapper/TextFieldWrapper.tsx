@@ -23,7 +23,7 @@ import { TextFieldVariant } from '../enums';
 
 // utils
 import { getAttributes } from '../../../E2EDataAttributes/utils';
-import { getValue } from './utils/getValue';
+import { getChipValue } from './utils/getChipValue';
 import { handleSubmitInput, valueAttached } from 'utils';
 
 export type TTextFieldWrapperProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'className' | 'color' | 'popover'> & {
@@ -32,6 +32,7 @@ export type TTextFieldWrapperProps = Omit<InputHTMLAttributes<HTMLInputElement>,
   fullWidth?: boolean;
   idContainer?: string;
   inputRef?: RefObject<HTMLInputElement>;
+  isMixedMode?: boolean;
   mode?: TValueExtended['mode'];
   onDetachedValue?: TFunc;
   popoverChildren?: TPopoverProps['children'];
@@ -49,6 +50,7 @@ export const TextFieldWrapper: FC<TTextFieldWrapperProps> = ({
   fullWidth = false,
   idContainer = undefined,
   inputRef,
+  isMixedMode = false,
   mode = 'fixed',
   onDetachedValue = noop,
   popoverChildren,
@@ -61,9 +63,9 @@ export const TextFieldWrapper: FC<TTextFieldWrapperProps> = ({
   wrapperRef,
   ...restProps
 }) => {
-  const attached = valueAttached(mode);
+  const attached = valueAttached(isMixedMode, mode);
+  const chipValue = getChipValue(isMixedMode, mode, value);
   const refPopover = useRef(null);
-  const targetValue = getValue(mode, value);
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { selected, setSelected } = useOutsideClick([], refPopover, noop, idContainer);
 
@@ -92,7 +94,7 @@ export const TextFieldWrapper: FC<TTextFieldWrapperProps> = ({
         onClick={() => !attached && inputRef.current.select()}
         onKeyDown={(event) => handleSubmitInput(KeyboardKeys.enter, inputRef.current)(event)}
         ref={inputRef}
-        value={targetValue}
+        value={value}
         {...getAttributes(E2EAttribute.textFieldInput, e2eValue)}
         {...restProps}
       />
@@ -116,7 +118,7 @@ export const TextFieldWrapper: FC<TTextFieldWrapperProps> = ({
         attachedValue={attached}
         className={cx(classNamesWithTheme.chip.name, [classNamesWithTheme.chip.modificators.attachedValue, attached])}
       >
-        {targetValue}
+        {chipValue}
       </TextFieldChip>
     </Box>
   );

@@ -14,30 +14,34 @@ import { sanitizeNumberInput, valueAttached } from 'utils';
 
 export type TColumnAppearanceInputProps = {
   e2eValue: TE2EValue;
-  isMixed: boolean;
+  isMixedMode: boolean;
+  isMixedValue: boolean;
   max: number;
   min: number;
   mode: TValueExtended['mode'];
   name: TIconProps['name'];
   onBlur: TFunc;
   onChange: TFunc<[string, boolean?]>;
+  onDetachedValue?: TFunc;
   popoverChildren: ReactNode;
   value: string;
 };
 
 const ColumnAppearanceInput: FC<TColumnAppearanceInputProps> = ({
   e2eValue,
-  isMixed,
+  isMixedMode,
+  isMixedValue,
   max,
   min,
   mode,
   name,
   onBlur,
   onChange,
+  onDetachedValue,
   popoverChildren,
   value,
 }) => {
-  const attached = valueAttached(mode);
+  const attached = valueAttached(isMixedMode, mode);
   const refInput = useRef<HTMLInputElement>(null);
 
   return (
@@ -46,8 +50,10 @@ const ColumnAppearanceInput: FC<TColumnAppearanceInputProps> = ({
       fullWidth
       idContainer={PANEL_PROPERTIES_ID}
       inputRef={refInput}
+      isMixedMode={isMixedMode}
       onBlur={onBlur}
       onChange={(event) => onChange(sanitizeNumberInput(event.target.value))}
+      onDetachedValue={onDetachedValue}
       popoverChildren={popoverChildren}
       startAdornment={
         <ScrubbableInput
@@ -56,7 +62,7 @@ const ColumnAppearanceInput: FC<TColumnAppearanceInputProps> = ({
           max={max}
           min={min}
           onChange={(value) => onChange(value.toString(), true)}
-          value={isMixed ? 0 : parseInt(value)}
+          value={isMixedValue ? 0 : parseInt(value)}
         >
           <Icon color={ColorsTheme.neutral2} height={12} name={name} width={12} />
         </ScrubbableInput>

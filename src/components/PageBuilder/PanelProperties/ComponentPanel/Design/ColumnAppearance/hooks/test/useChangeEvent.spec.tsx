@@ -2,6 +2,8 @@ import { renderHook } from '@testing-library/react';
 
 // hooks
 import { useChangeEvent } from '../useChangeEvent';
+
+// mocks
 import { insetsMock } from 'test/mocks/reducer/pageBuilderMock';
 
 const mockCallBack = jest.fn();
@@ -15,7 +17,7 @@ describe('useChangeEvent', () => {
   it(`should trigger change border radius from text field`, () => {
     // before
     const { result } = renderHook(() =>
-      useChangeEvent(insetsMock, { mode: 'fixed', value: 100 }, false, mockCallBack, mockCallBack),
+      useChangeEvent(insetsMock, { mode: 'fixed', value: 100 }, mockCallBack, mockCallBack),
     );
 
     // action
@@ -28,7 +30,7 @@ describe('useChangeEvent', () => {
   it(`should trigger change border radius from scrubbable input`, () => {
     // before
     const { result } = renderHook(() =>
-      useChangeEvent(insetsMock, { mode: 'fixed', value: 100 }, false, mockCallBack, mockCallBack),
+      useChangeEvent(insetsMock, { mode: 'fixed', value: 100 }, mockCallBack, mockCallBack),
     );
 
     // action
@@ -49,7 +51,7 @@ describe('useChangeEvent', () => {
   it(`should trigger change opacity from text field`, () => {
     // before
     const { result } = renderHook(() =>
-      useChangeEvent(insetsMock, { mode: 'fixed', value: 100 }, false, mockCallBack, mockCallBack),
+      useChangeEvent(insetsMock, { mode: 'fixed', value: 100 }, mockCallBack, mockCallBack),
     );
 
     // action
@@ -62,7 +64,7 @@ describe('useChangeEvent', () => {
   it(`should trigger change opacity from scrubbable input`, () => {
     // before
     const { result } = renderHook(() =>
-      useChangeEvent(insetsMock, { mode: 'fixed', value: 100 }, false, mockCallBack, mockCallBack),
+      useChangeEvent(insetsMock, { mode: 'fixed', value: 100 }, mockCallBack, mockCallBack),
     );
 
     // action

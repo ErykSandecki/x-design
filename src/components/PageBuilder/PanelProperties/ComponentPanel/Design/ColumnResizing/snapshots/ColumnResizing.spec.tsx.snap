@@ -485,21 +485,21 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--chip TextFieldWrapper--chip--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
             data-test-text-field-wrapper="width"
           >
             <div
-              class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+              class="css-e5vky9 ScrubbableInput ScrubbableInput--light ScrubbableInput--disabled ScrubbableInput--disabled--light"
               data-test-box=""
               data-test-scrubbable-input="width"
             >
-              <small
-                class="css-1jnxvbp Typography Typography--light Typography--neutral2 Typography--neutral2--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
-                data-test-text=""
-                style="text-align: inherit;"
-              >
-                W
-              </small>
+              <div
+                class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+                data-test-icon="width-restricted"
+                height="12"
+                name="WidthRestricted"
+                width="12"
+              />
             </div>
             <input
               class="TextFieldWrapper__input TextFieldWrapper__input--light"
@@ -514,9 +514,9 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
             >
               <div
                 class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
-                data-test-icon="variant"
+                data-test-icon="detached"
                 height="12"
-                name="Variant"
+                name="Detached"
                 width="12"
               />
               <div
@@ -608,6 +608,12 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
                 </div>
               </div>
             </div>
+            <div
+              class="css-1jnxvbp Chip Chip--light TextFieldWrapper__chip TextFieldWrapper__chip--light TextFieldWrapper__chip--attachedValue TextFieldWrapper__chip--attachedValue--light TextFieldChip TextFieldChip--light"
+              data-test-chip=""
+            >
+              Mixed
+            </div>
           </div>
         </div>
         <div
@@ -616,21 +622,21 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--chip TextFieldWrapper--chip--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
             data-test-text-field-wrapper="height"
           >
             <div
-              class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+              class="css-e5vky9 ScrubbableInput ScrubbableInput--light ScrubbableInput--disabled ScrubbableInput--disabled--light"
               data-test-box=""
               data-test-scrubbable-input="height"
             >
-              <small
-                class="css-1jnxvbp Typography Typography--light Typography--neutral2 Typography--neutral2--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
-                data-test-text=""
-                style="text-align: inherit;"
-              >
-                H
-              </small>
+              <div
+                class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+                data-test-icon="height-restricted"
+                height="12"
+                name="HeightRestricted"
+                width="12"
+              />
             </div>
             <input
               class="TextFieldWrapper__input TextFieldWrapper__input--light"
@@ -645,9 +651,9 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
             >
               <div
                 class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
-                data-test-icon="variant"
+                data-test-icon="detached"
                 height="12"
-                name="Variant"
+                name="Detached"
                 width="12"
               />
               <div
@@ -738,6 +744,12 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
                   </small>
                 </div>
               </div>
+            </div>
+            <div
+              class="css-1jnxvbp Chip Chip--light TextFieldWrapper__chip TextFieldWrapper__chip--light TextFieldWrapper__chip--attachedValue TextFieldWrapper__chip--attachedValue--light TextFieldChip TextFieldChip--light"
+              data-test-chip=""
+            >
+              Mixed
             </div>
           </div>
         </div>

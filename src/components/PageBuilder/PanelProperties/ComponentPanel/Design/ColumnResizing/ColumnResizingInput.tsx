@@ -18,6 +18,7 @@ import { sanitizeNumberInput, valueAttached } from 'utils';
 
 export type TColumnResizingInputProps = {
   e2eValue: TE2EValue;
+  isMixed: boolean;
   mode: TValueExtended['mode'];
   onBlur: TFunc;
   onChange: TFunc<[string, boolean?]>;
@@ -29,6 +30,7 @@ export type TColumnResizingInputProps = {
 
 const ColumnResizingInput: FC<TColumnResizingInputProps> = ({
   e2eValue,
+  isMixed,
   mode,
   onBlur,
   onChange,
@@ -37,7 +39,7 @@ const ColumnResizingInput: FC<TColumnResizingInputProps> = ({
   value,
   valueScrubbaleInput,
 }) => {
-  const attached = valueAttached(mode);
+  const attached = valueAttached(isMixed, mode);
   const dispatch = useDispatch();
   const refInput = useRef<HTMLInputElement>(null);
   const label = sizeType === 'height' ? 'H' : 'W';
@@ -49,6 +51,7 @@ const ColumnResizingInput: FC<TColumnResizingInputProps> = ({
       fullWidth
       idContainer={PANEL_PROPERTIES_ID}
       inputRef={refInput}
+      isMixedMode={isMixed}
       mode={mode}
       onBlur={onBlur}
       onChange={(event) => onChange(sanitizeNumberInput(event.target.value))}

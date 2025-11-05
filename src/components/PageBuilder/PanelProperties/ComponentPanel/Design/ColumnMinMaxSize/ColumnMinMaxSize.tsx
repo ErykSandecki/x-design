@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { kebabCase } from 'lodash';
 import { useTranslation } from 'react-i18next';
 
 // components
@@ -55,7 +56,7 @@ const ColumnMinMaxSize: FC<TColumnMinMaxSizeProps> = ({ scoreKey }) => {
     >
       {visibleWidth && (
         <ColumnMinMaxSizeInput
-          e2eValue={`${scoreKey}Width`}
+          e2eValue={kebabCase(`${scoreKey}Width`)}
           mode={widthMode}
           onBlur={onBlurWidth}
           onChange={onChangeWidth}
@@ -68,7 +69,7 @@ const ColumnMinMaxSize: FC<TColumnMinMaxSizeProps> = ({ scoreKey }) => {
       )}
       {visibleHeight && (
         <ColumnMinMaxSizeInput
-          e2eValue={`${scoreKey}Height`}
+          e2eValue={kebabCase(`${scoreKey}Height`)}
           mode={heightMode}
           onBlur={onBlurHeight}
           onChange={onChangeHeight}

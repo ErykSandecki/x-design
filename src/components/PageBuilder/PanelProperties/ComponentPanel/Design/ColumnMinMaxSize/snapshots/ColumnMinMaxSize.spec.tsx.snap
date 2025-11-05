@@ -37,17 +37,17 @@ exports[`ColumnResizing snapshots should render ColumnResizing{max} 1`] = `
       >
         <div
           class="css-1jnxvbp TextField TextField--light"
-          data-test-text-field="maxWidth"
+          data-test-text-field="max-width"
           data-test-tooltip=""
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper="maxWidth"
+            data-test-text-field-wrapper="max-width"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
               data-test-box=""
-              data-test-scrubbable-input="maxWidth"
+              data-test-scrubbable-input="max-width"
             >
               <div
                 class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
@@ -59,7 +59,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing{max} 1`] = `
             </div>
             <input
               class="TextFieldWrapper__input TextFieldWrapper__input--light"
-              data-test-text-field-input="maxWidth"
+              data-test-text-field-input="max-width"
               maxlength="6"
               type="text"
               value="200"
@@ -195,17 +195,17 @@ exports[`ColumnResizing snapshots should render ColumnResizing{max} 1`] = `
         </div>
         <div
           class="css-1jnxvbp TextField TextField--light"
-          data-test-text-field="maxHeight"
+          data-test-text-field="max-height"
           data-test-tooltip=""
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper="maxHeight"
+            data-test-text-field-wrapper="max-height"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
               data-test-box=""
-              data-test-scrubbable-input="maxHeight"
+              data-test-scrubbable-input="max-height"
             >
               <div
                 class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
@@ -217,7 +217,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing{max} 1`] = `
             </div>
             <input
               class="TextFieldWrapper__input TextFieldWrapper__input--light"
-              data-test-text-field-input="maxHeight"
+              data-test-text-field-input="max-height"
               maxlength="6"
               type="text"
               value="200"
@@ -403,17 +403,17 @@ exports[`ColumnResizing snapshots should render ColumnResizing{min} 1`] = `
       >
         <div
           class="css-1jnxvbp TextField TextField--light"
-          data-test-text-field="minWidth"
+          data-test-text-field="min-width"
           data-test-tooltip=""
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper="minWidth"
+            data-test-text-field-wrapper="min-width"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
               data-test-box=""
-              data-test-scrubbable-input="minWidth"
+              data-test-scrubbable-input="min-width"
             >
               <div
                 class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
@@ -425,7 +425,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing{min} 1`] = `
             </div>
             <input
               class="TextFieldWrapper__input TextFieldWrapper__input--light"
-              data-test-text-field-input="minWidth"
+              data-test-text-field-input="min-width"
               maxlength="6"
               type="text"
               value="200"
@@ -561,17 +561,17 @@ exports[`ColumnResizing snapshots should render ColumnResizing{min} 1`] = `
         </div>
         <div
           class="css-1jnxvbp TextField TextField--light"
-          data-test-text-field="minHeight"
+          data-test-text-field="min-height"
           data-test-tooltip=""
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper="minHeight"
+            data-test-text-field-wrapper="min-height"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
               data-test-box=""
-              data-test-scrubbable-input="minHeight"
+              data-test-scrubbable-input="min-height"
             >
               <div
                 class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
@@ -583,7 +583,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing{min} 1`] = `
             </div>
             <input
               class="TextFieldWrapper__input TextFieldWrapper__input--light"
-              data-test-text-field-input="minHeight"
+              data-test-text-field-input="min-height"
               maxlength="6"
               type="text"
               value="200"
@@ -769,17 +769,17 @@ exports[`ColumnResizing snapshots should render when values are mixed{max} 1`] =
       >
         <div
           class="css-1jnxvbp TextField TextField--light"
-          data-test-text-field="maxWidth"
+          data-test-text-field="max-width"
           data-test-tooltip=""
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper="maxWidth"
+            data-test-text-field-wrapper="max-width"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
               data-test-box=""
-              data-test-scrubbable-input="maxWidth"
+              data-test-scrubbable-input="max-width"
             >
               <div
                 class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
@@ -791,7 +791,7 @@ exports[`ColumnResizing snapshots should render when values are mixed{max} 1`] =
             </div>
             <input
               class="TextFieldWrapper__input TextFieldWrapper__input--light"
-              data-test-text-field-input="maxWidth"
+              data-test-text-field-input="max-width"
               maxlength="6"
               type="text"
               value="200"
@@ -927,17 +927,17 @@ exports[`ColumnResizing snapshots should render when values are mixed{max} 1`] =
         </div>
         <div
           class="css-1jnxvbp TextField TextField--light"
-          data-test-text-field="maxHeight"
+          data-test-text-field="max-height"
           data-test-tooltip=""
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper="maxHeight"
+            data-test-text-field-wrapper="max-height"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
               data-test-box=""
-              data-test-scrubbable-input="maxHeight"
+              data-test-scrubbable-input="max-height"
             >
               <div
                 class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
@@ -949,7 +949,7 @@ exports[`ColumnResizing snapshots should render when values are mixed{max} 1`] =
             </div>
             <input
               class="TextFieldWrapper__input TextFieldWrapper__input--light"
-              data-test-text-field-input="maxHeight"
+              data-test-text-field-input="max-height"
               maxlength="6"
               type="text"
               value="200"
@@ -1135,17 +1135,17 @@ exports[`ColumnResizing snapshots should render when values are mixed{min} 1`] =
       >
         <div
           class="css-1jnxvbp TextField TextField--light"
-          data-test-text-field="minWidth"
+          data-test-text-field="min-width"
           data-test-tooltip=""
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper="minWidth"
+            data-test-text-field-wrapper="min-width"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
               data-test-box=""
-              data-test-scrubbable-input="minWidth"
+              data-test-scrubbable-input="min-width"
             >
               <div
                 class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
@@ -1157,7 +1157,7 @@ exports[`ColumnResizing snapshots should render when values are mixed{min} 1`] =
             </div>
             <input
               class="TextFieldWrapper__input TextFieldWrapper__input--light"
-              data-test-text-field-input="minWidth"
+              data-test-text-field-input="min-width"
               maxlength="6"
               type="text"
               value="200"
@@ -1293,17 +1293,17 @@ exports[`ColumnResizing snapshots should render when values are mixed{min} 1`] =
         </div>
         <div
           class="css-1jnxvbp TextField TextField--light"
-          data-test-text-field="minHeight"
+          data-test-text-field="min-height"
           data-test-tooltip=""
         >
           <div
             class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
-            data-test-text-field-wrapper="minHeight"
+            data-test-text-field-wrapper="min-height"
           >
             <div
               class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
               data-test-box=""
-              data-test-scrubbable-input="minHeight"
+              data-test-scrubbable-input="min-height"
             >
               <div
                 class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
@@ -1315,7 +1315,7 @@ exports[`ColumnResizing snapshots should render when values are mixed{min} 1`] =
             </div>
             <input
               class="TextFieldWrapper__input TextFieldWrapper__input--light"
-              data-test-text-field-input="minHeight"
+              data-test-text-field-input="min-height"
               maxlength="6"
               type="text"
               value="200"

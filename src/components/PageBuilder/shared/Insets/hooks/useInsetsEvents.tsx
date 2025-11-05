@@ -57,7 +57,7 @@ export const useInsetsEvents = (insetsName: TInsetsName): TUseInsetsEvents => {
     setInsetAll({ b, l, r, t });
     setInsetLR(normalizeMultipleValue(isMixedLR, getInsetValue(insets, ['l', 'r'])));
     setInsetTB(normalizeMultipleValue(isMixedTB, getInsetValue(insets, ['t', 'b'])));
-  }, [insets, isMultiple]);
+  }, [insets, isMixedLR, isMixedTB, isMultiple]);
 
   return {
     ...useBlurEvents(insets, insetAll, insetLR, insetTB, insetsName, setInsetAll, setInsetLR, setInsetTB),

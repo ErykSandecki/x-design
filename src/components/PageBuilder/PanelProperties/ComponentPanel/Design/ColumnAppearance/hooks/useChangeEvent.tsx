@@ -17,7 +17,6 @@ export type TUseChangeEvent = {
 export const useChangeEvent = (
   currentBorderRadius: TElement['borderRadius'],
   currentOpacity: TElement['opacity'],
-  isMixedBorderRadius: boolean,
   setBorderRadius: TFunc<[string]>,
   setOpacity: TFunc<[string]>,
 ): TUseChangeEvent => {
@@ -36,10 +35,10 @@ export const useChangeEvent = (
     updateStore(
       {
         borderRadius: {
-          b: { ...(isMixedBorderRadius ? { mode: 'fixed' } : currentBorderRadius.b), value: targetValue },
-          l: { ...(isMixedBorderRadius ? { mode: 'fixed' } : currentBorderRadius.l), value: targetValue },
-          r: { ...(isMixedBorderRadius ? { mode: 'fixed' } : currentBorderRadius.r), value: targetValue },
-          t: { ...(isMixedBorderRadius ? { mode: 'fixed' } : currentBorderRadius.t), value: targetValue },
+          b: { ...currentBorderRadius.b, value: targetValue },
+          l: { ...currentBorderRadius.l, value: targetValue },
+          r: { ...currentBorderRadius.r, value: targetValue },
+          t: { ...currentBorderRadius.t, value: targetValue },
         },
       },
       isScrubbableInput,

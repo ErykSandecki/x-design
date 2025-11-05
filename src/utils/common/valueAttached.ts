@@ -1,4 +1,5 @@
 // types
 import { TValueExtended } from 'types';
 
-export const valueAttached = (mode: TValueExtended['mode']): boolean => mode === 'auto' || mode === 'variable';
+export const valueAttached = (isMixedMode: boolean, mode: TValueExtended['mode']): boolean =>
+  isMixedMode || mode === 'auto' || mode === 'variable';

@@ -25,8 +25,8 @@ const ColumnResizing: FC = () => {
     elementWidth,
     height,
     heightMode,
-    isMixedHeight,
-    isMixedWidth,
+    isMixedHeightMode,
+    isMixedWidthMode,
     onBlurHeight,
     onBlurWidth,
     onChangeHeight,
@@ -48,20 +48,22 @@ const ColumnResizing: FC = () => {
     >
       <ColumnResizingInput
         e2eValue="width"
+        isMixed={isMixedWidthMode}
         mode={widthMode}
         onBlur={onBlurWidth}
         onChange={onChangeWidth}
-        popoverChildren={<PopoverWidth isMixed={isMixedWidth} width={elementWidth} />}
+        popoverChildren={<PopoverWidth isMixed={isMixedWidthMode} width={elementWidth} />}
         sizeType="width"
         value={width}
         valueScrubbaleInput={valueScrubbaleInputWidth}
       />
       <ColumnResizingInput
         e2eValue="height"
+        isMixed={isMixedHeightMode}
         mode={heightMode}
         onBlur={onBlurHeight}
         onChange={onChangeHeight}
-        popoverChildren={<PopoverHeight height={elementHeight} isMixed={isMixedHeight} />}
+        popoverChildren={<PopoverHeight height={elementHeight} isMixed={isMixedHeightMode} />}
         sizeType="height"
         value={height}
         valueScrubbaleInput={valueScrubbaleInputHeight}

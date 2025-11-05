@@ -232,8 +232,8 @@ describe('ColumnResizing behaviors', () => {
     );
 
     // find
-    const inputHeight = getByE2EAttribute(container, E2EAttribute.textFieldInput, 'maxHeight');
-    const inputWidth = getByE2EAttribute(container, E2EAttribute.textFieldInput, 'maxWidth');
+    const inputHeight = getByE2EAttribute(container, E2EAttribute.textFieldInput, 'max-height');
+    const inputWidth = getByE2EAttribute(container, E2EAttribute.textFieldInput, 'max-width');
 
     // action
     fireEvent.focus(inputHeight);
@@ -272,8 +272,8 @@ describe('ColumnResizing behaviors', () => {
     );
 
     // find
-    const inputHeight = getByE2EAttribute(container, E2EAttribute.textFieldInput, 'minHeight');
-    const inputWidth = getByE2EAttribute(container, E2EAttribute.textFieldInput, 'minWidth');
+    const inputHeight = getByE2EAttribute(container, E2EAttribute.textFieldInput, 'min-height');
+    const inputWidth = getByE2EAttribute(container, E2EAttribute.textFieldInput, 'min-width');
 
     // action
     fireEvent.focus(inputHeight);
@@ -319,8 +319,8 @@ describe('ColumnResizing behaviors', () => {
     );
 
     // find
-    const scrubbableInputHeight = getByE2EAttribute(container, E2EAttribute.scrubbableInput, 'maxHeight');
-    const scrubbableInputWidth = getByE2EAttribute(container, E2EAttribute.scrubbableInput, 'maxWidth');
+    const scrubbableInputHeight = getByE2EAttribute(container, E2EAttribute.scrubbableInput, 'max-height');
+    const scrubbableInputWidth = getByE2EAttribute(container, E2EAttribute.scrubbableInput, 'max-width');
 
     // action
     fireEvent.mouseDown(scrubbableInputHeight, { clientX: 0, clientY: 0 });
@@ -362,8 +362,8 @@ describe('ColumnResizing behaviors', () => {
     );
 
     // find
-    const scrubbableInputHeight = getByE2EAttribute(container, E2EAttribute.scrubbableInput, 'minHeight');
-    const scrubbableInputWidth = getByE2EAttribute(container, E2EAttribute.scrubbableInput, 'minWidth');
+    const scrubbableInputHeight = getByE2EAttribute(container, E2EAttribute.scrubbableInput, 'min-height');
+    const scrubbableInputWidth = getByE2EAttribute(container, E2EAttribute.scrubbableInput, 'min-width');
 
     // action
     fireEvent.mouseDown(scrubbableInputHeight, { clientX: 0, clientY: 0 });
@@ -397,8 +397,8 @@ describe('ColumnResizing behaviors', () => {
     );
 
     // find { inputs }
-    const inputHeight = getByE2EAttribute(container, E2EAttribute.textField, 'maxHeight');
-    const inputWidth = getByE2EAttribute(container, E2EAttribute.textField, 'maxWidth');
+    const inputHeight = getByE2EAttribute(container, E2EAttribute.textField, 'max-height');
+    const inputWidth = getByE2EAttribute(container, E2EAttribute.textField, 'max-width');
 
     // find { icons }
     const iconHeight = getByE2EAttribute(inputHeight, E2EAttribute.icon, 'variant');
@@ -442,8 +442,8 @@ describe('ColumnResizing behaviors', () => {
     );
 
     // find { inputs }
-    const inputHeight = getByE2EAttribute(container, E2EAttribute.textField, 'minHeight');
-    const inputWidth = getByE2EAttribute(container, E2EAttribute.textField, 'minWidth');
+    const inputHeight = getByE2EAttribute(container, E2EAttribute.textField, 'min-height');
+    const inputWidth = getByE2EAttribute(container, E2EAttribute.textField, 'min-width');
 
     // find { icons }
     const iconHeight = getByE2EAttribute(inputHeight, E2EAttribute.icon, 'variant');
@@ -487,8 +487,8 @@ describe('ColumnResizing behaviors', () => {
     );
 
     // find { inputs }
-    const inputHeight = getByE2EAttribute(container, E2EAttribute.textField, 'maxHeight');
-    const inputWidth = getByE2EAttribute(container, E2EAttribute.textField, 'maxWidth');
+    const inputHeight = getByE2EAttribute(container, E2EAttribute.textField, 'max-height');
+    const inputWidth = getByE2EAttribute(container, E2EAttribute.textField, 'max-width');
 
     // find { icons }
     const iconHeight = getByE2EAttribute(inputHeight, E2EAttribute.icon, 'variant');
@@ -532,8 +532,8 @@ describe('ColumnResizing behaviors', () => {
     );
 
     // find { inputs }
-    const inputHeight = getByE2EAttribute(container, E2EAttribute.textField, 'minHeight');
-    const inputWidth = getByE2EAttribute(container, E2EAttribute.textField, 'minWidth');
+    const inputHeight = getByE2EAttribute(container, E2EAttribute.textField, 'min-height');
+    const inputWidth = getByE2EAttribute(container, E2EAttribute.textField, 'min-width');
 
     // find { icons }
     const iconHeight = getByE2EAttribute(inputHeight, E2EAttribute.icon, 'variant');
@@ -577,8 +577,8 @@ describe('ColumnResizing behaviors', () => {
     );
 
     // find { inputs }
-    const inputHeight = getByE2EAttribute(container, E2EAttribute.textField, 'maxHeight');
-    const inputWidth = getByE2EAttribute(container, E2EAttribute.textField, 'maxWidth');
+    const inputHeight = getByE2EAttribute(container, E2EAttribute.textField, 'max-height');
+    const inputWidth = getByE2EAttribute(container, E2EAttribute.textField, 'max-width');
 
     // find { icons }
     const iconHeight = getByE2EAttribute(inputHeight, E2EAttribute.icon, 'variant');
@@ -622,8 +622,8 @@ describe('ColumnResizing behaviors', () => {
     );
 
     // find { inputs }
-    const inputHeight = getByE2EAttribute(container, E2EAttribute.textField, 'minHeight');
-    const inputWidth = getByE2EAttribute(container, E2EAttribute.textField, 'minWidth');
+    const inputHeight = getByE2EAttribute(container, E2EAttribute.textField, 'min-height');
+    const inputWidth = getByE2EAttribute(container, E2EAttribute.textField, 'min-width');
 
     // find { icons }
     const iconHeight = getByE2EAttribute(inputHeight, E2EAttribute.icon, 'variant');
@@ -667,8 +667,8 @@ describe('ColumnResizing behaviors', () => {
     );
 
     // find { inputs }
-    const inputHeight = getByE2EAttribute(container, E2EAttribute.textField, 'maxHeight');
-    const inputWidth = getByE2EAttribute(container, E2EAttribute.textField, 'maxWidth');
+    const inputHeight = getByE2EAttribute(container, E2EAttribute.textField, 'max-height');
+    const inputWidth = getByE2EAttribute(container, E2EAttribute.textField, 'max-width');
 
     // find { icons }
     const iconHeight = getByE2EAttribute(inputHeight, E2EAttribute.icon, 'variant');
@@ -704,8 +704,8 @@ describe('ColumnResizing behaviors', () => {
     );
 
     // find { inputs }
-    const inputHeight = getByE2EAttribute(container, E2EAttribute.textField, 'minHeight');
-    const inputWidth = getByE2EAttribute(container, E2EAttribute.textField, 'minWidth');
+    const inputHeight = getByE2EAttribute(container, E2EAttribute.textField, 'min-height');
+    const inputWidth = getByE2EAttribute(container, E2EAttribute.textField, 'min-width');
 
     // find { icons }
     const iconHeight = getByE2EAttribute(inputHeight, E2EAttribute.icon, 'variant');
@@ -773,8 +773,8 @@ describe('ColumnResizing behaviors', () => {
     );
 
     // find { inputs }
-    const inputHeight = getByE2EAttribute(container, E2EAttribute.textField, 'maxHeight');
-    const inputWidth = getByE2EAttribute(container, E2EAttribute.textField, 'maxWidth');
+    const inputHeight = getByE2EAttribute(container, E2EAttribute.textField, 'max-height');
+    const inputWidth = getByE2EAttribute(container, E2EAttribute.textField, 'max-width');
 
     // find { icons }
     const iconHeight = getByE2EAttribute(inputHeight, E2EAttribute.icon, 'detached');
@@ -840,8 +840,8 @@ describe('ColumnResizing behaviors', () => {
     );
 
     // find { inputs }
-    const inputHeight = getByE2EAttribute(container, E2EAttribute.textField, 'minHeight');
-    const inputWidth = getByE2EAttribute(container, E2EAttribute.textField, 'minWidth');
+    const inputHeight = getByE2EAttribute(container, E2EAttribute.textField, 'min-height');
+    const inputWidth = getByE2EAttribute(container, E2EAttribute.textField, 'min-width');
 
     // find { icons }
     const iconHeight = getByE2EAttribute(inputHeight, E2EAttribute.icon, 'detached');
