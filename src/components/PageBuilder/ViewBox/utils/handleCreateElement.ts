@@ -29,7 +29,7 @@ export const handleCreateElement = (
       angle: 0,
       aspectRatio: false,
       background: {
-        properties: { alpha: '100', color: '#ffffff', format: 'hex' },
+        properties: { alpha: '100', color: '#ffffff', format: 'hex', mode: 'fixed' },
         visible: true,
       },
       borderRadius: {

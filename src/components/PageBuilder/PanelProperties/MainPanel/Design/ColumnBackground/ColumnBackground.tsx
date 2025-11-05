@@ -18,7 +18,7 @@ const ColumnBackground: FC = () => {
   const colorSampler = useSelector(eventSelectorCreator('colorSampler'));
   const dispatch = useDispatch();
   const { properties } = background;
-  const { alpha, color, format } = properties as TColor;
+  const { alpha, color, format, mode } = properties as TColor;
   const { t } = useTranslation();
 
   return (
@@ -29,11 +29,13 @@ const ColumnBackground: FC = () => {
         color={color}
         e2eValue="background"
         format={format}
-        onChangeAlpha={(alpha) => dispatch(changeBackground({ properties: { alpha, color, format } }, '-1'))}
-        onChangeColor={(alpha, color) => dispatch(changeBackground({ properties: { alpha, color, format } }, '-1'))}
-        onFormatChange={(format) => dispatch(changeBackground({ properties: { alpha, color, format } }, '-1'))}
+        onChangeAlpha={(alpha) => dispatch(changeBackground({ properties: { alpha, color, format, mode } }, '-1'))}
+        onChangeColor={(alpha, color) =>
+          dispatch(changeBackground({ properties: { alpha, color, format, mode } }, '-1'))
+        }
+        onFormatChange={(format) => dispatch(changeBackground({ properties: { alpha, color, format, mode } }, '-1'))}
         onClickColorSampler={(color) => {
-          dispatch(changeBackground({ properties: { alpha, color, format } }, '-1'));
+          dispatch(changeBackground({ properties: { alpha, color, format, mode } }, '-1'));
         }}
         onClickSampler={() => dispatch(updateEventsStatus({ colorSampler: true }))}
         placement="leftBottom"

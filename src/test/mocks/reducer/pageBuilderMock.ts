@@ -86,7 +86,7 @@ export const elementMock: TElement = {
   angle: 0,
   aspectRatio: false,
   background: {
-    properties: { alpha: '100', color: '#ffffff', format: 'hex' },
+    properties: { alpha: '100', color: '#ffffff', format: 'hex', mode: 'fixed' },
     visible: true,
   },
   borderRadius: {
@@ -138,7 +138,7 @@ export const createFrameMock: TElement = {
   angle: 0,
   aspectRatio: false,
   background: {
-    properties: { alpha: '100', color: '#ffffff', format: 'hex' },
+    properties: { alpha: '100', color: '#ffffff', format: 'hex', mode: 'fixed' },
     visible: true,
   },
   borderRadius: {

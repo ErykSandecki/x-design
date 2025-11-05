@@ -41,7 +41,7 @@ export const BASE_ELEMENTS: TElement = {
   angle: 0,
   aspectRatio: false,
   background: {
-    properties: { alpha: '100', color, format: 'hex' },
+    properties: { alpha: '100', color, format: 'hex', mode: 'fixed' },
     visible: true,
   },
   borderRadius: {
