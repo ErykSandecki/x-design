@@ -99,6 +99,7 @@ describe('useElementEvents', () => {
           alpha: '100',
           color: '#ffffff',
           format: 'hex',
+          mode: 'fixed',
         },
         visible: true,
       },
