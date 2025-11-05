@@ -572,7 +572,7 @@ exports[`Insets snapshots should render when mose is individual 1`] = `
               class="TextFieldWrapper__input TextFieldWrapper__input--light"
               data-test-text-field-input="padding-l"
               maxlength="6"
-              type="number"
+              type="text"
               value="0"
             />
             <div
@@ -665,7 +665,7 @@ exports[`Insets snapshots should render when mose is individual 1`] = `
               class="TextFieldWrapper__input TextFieldWrapper__input--light"
               data-test-text-field-input="padding-t"
               maxlength="6"
-              type="number"
+              type="text"
               value="0"
             />
             <div
@@ -758,7 +758,7 @@ exports[`Insets snapshots should render when mose is individual 1`] = `
               class="TextFieldWrapper__input TextFieldWrapper__input--light"
               data-test-text-field-input="padding-r"
               maxlength="6"
-              type="number"
+              type="text"
               value="0"
             />
             <div
@@ -851,7 +851,7 @@ exports[`Insets snapshots should render when mose is individual 1`] = `
               class="TextFieldWrapper__input TextFieldWrapper__input--light"
               data-test-text-field-input="padding-b"
               maxlength="6"
-              type="number"
+              type="text"
               value="0"
             />
             <div

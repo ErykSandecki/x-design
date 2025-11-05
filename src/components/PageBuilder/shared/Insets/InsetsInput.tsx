@@ -17,7 +17,8 @@ export type TInsetsInputProps = {
   insetNameFormatted: string;
   insets: Array<keyof TInsets>;
   insetsName: TInsetsName;
-  isMixed: boolean;
+  isMixedMode: boolean;
+  isMixedValue: boolean;
   onBlur: TFunc;
   onChange: TFunc<[string, boolean?]>;
   translationNameSpace: string;
@@ -29,7 +30,8 @@ const InsetsInput: FC<TInsetsInputProps> = ({
   insetNameFormatted,
   insets,
   insetsName,
-  isMixed,
+  isMixedMode,
+  isMixedValue,
   onBlur,
   onChange,
   translationNameSpace,
@@ -44,6 +46,7 @@ const InsetsInput: FC<TInsetsInputProps> = ({
       e2eValue={e2eValue}
       fullWidth
       idContainer={PANEL_PROPERTIES_ID}
+      isMixedMode={isMixedMode}
       onBlur={onBlur}
       onChange={(event) => onChange(event.target.value)}
       popoverChildren={
@@ -51,7 +54,7 @@ const InsetsInput: FC<TInsetsInputProps> = ({
           icon={upperFirst(insetNameFormatted) as TIconProps['name']}
           insetsName={insetsName}
           insets={insets}
-          isMixed={isMixed}
+          isMixed={isMixedMode}
           translationNameSpace={translationNameSpace}
           value={value}
         />
@@ -65,7 +68,7 @@ const InsetsInput: FC<TInsetsInputProps> = ({
           max={MAX}
           min={MIN}
           onChange={(value) => onChange(value.toString(), true)}
-          value={isMixed ? 0 : parseInt(value)}
+          value={isMixedValue ? 0 : parseInt(value)}
         />
       }
       tooltip={{ content: t(`${TOOLTIP_TRANSLATION_KEY}.${insetNameFormatted}`) }}

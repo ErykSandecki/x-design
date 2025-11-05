@@ -25,22 +25,32 @@ type TUseInsetsEvents = TUseBlurEvents &
     insetLR: string;
     insetTB: string;
     isInsetModeMerged: boolean;
-    isMixedInset: TMapValuesTo<TInsets, boolean>;
-    isMixedLR: boolean;
-    isMixedTB: boolean;
+    isMixedInsetMode: TMapValuesTo<TInsets, boolean>;
+    isMixedInsetValue: TMapValuesTo<TInsets, boolean>;
+    isMixedLRMode: boolean;
+    isMixedLRValue: boolean;
+    isMixedTBMode: boolean;
+    isMixedTBValue: boolean;
     setInsetMode: TFunc<[InsetMode]>;
   };
 
 export const useInsetsEvents = (insetsName: TInsetsName): TUseInsetsEvents => {
   const firstElementId = useSelector(firstSelectedElementIdSelector);
   const isMultiple = useSelector(multipleSelectedElementsSelector);
-  const isMixedB = useSelector(isMixedSelectorCreator(`${insetsName}.b.value`));
-  const isMixedL = useSelector(isMixedSelectorCreator(`${insetsName}.l.value`));
-  const isMixedR = useSelector(isMixedSelectorCreator(`${insetsName}.r.value`));
-  const isMixedT = useSelector(isMixedSelectorCreator(`${insetsName}.t.value`));
-  const isMixedInset = { b: isMixedB, l: isMixedL, r: isMixedR, t: isMixedT };
-  const isMixedLR = isMixedL || isMixedR;
-  const isMixedTB = isMixedT || isMixedB;
+  const isMixedBM = useSelector(isMixedSelectorCreator(`${insetsName}.b.mode`));
+  const isMixedBV = useSelector(isMixedSelectorCreator(`${insetsName}.b.value`));
+  const isMixedLM = useSelector(isMixedSelectorCreator(`${insetsName}.l.mode`));
+  const isMixedLV = useSelector(isMixedSelectorCreator(`${insetsName}.l.value`));
+  const isMixedRM = useSelector(isMixedSelectorCreator(`${insetsName}.r.mode`));
+  const isMixedRV = useSelector(isMixedSelectorCreator(`${insetsName}.r.value`));
+  const isMixedTM = useSelector(isMixedSelectorCreator(`${insetsName}.t.mode`));
+  const isMixedTV = useSelector(isMixedSelectorCreator(`${insetsName}.t.value`));
+  const isMixedInsetMode = { b: isMixedBM, l: isMixedLM, r: isMixedRM, t: isMixedTM };
+  const isMixedInsetValue = { b: isMixedBV, l: isMixedLV, r: isMixedRV, t: isMixedTV };
+  const isMixedLRMode = isMixedLM || isMixedRM;
+  const isMixedLRValue = isMixedLV || isMixedRV;
+  const isMixedTBMode = isMixedTM || isMixedBM;
+  const isMixedTBValue = isMixedTV || isMixedBV;
   const insets = useSelector(elementAttributeSelectorCreator(insetsName, firstElementId));
   const [insetLR, setInsetLR] = useState('');
   const [insetTB, setInsetTB] = useState('');
@@ -49,15 +59,15 @@ export const useInsetsEvents = (insetsName: TInsetsName): TUseInsetsEvents => {
   const isInsetModeMerged = insetMode === InsetMode.merged;
 
   useEffect(() => {
-    const b = normalizeMultipleValue(isMixedB, insets.b.value);
-    const l = normalizeMultipleValue(isMixedL, insets.l.value);
-    const r = normalizeMultipleValue(isMixedR, insets.r.value);
-    const t = normalizeMultipleValue(isMixedT, insets.t.value);
+    const b = normalizeMultipleValue(isMixedBV, insets.b.value);
+    const l = normalizeMultipleValue(isMixedLV, insets.l.value);
+    const r = normalizeMultipleValue(isMixedRV, insets.r.value);
+    const t = normalizeMultipleValue(isMixedTV, insets.t.value);
 
     setInsetAll({ b, l, r, t });
-    setInsetLR(normalizeMultipleValue(isMixedLR, getInsetValue(insets, ['l', 'r'])));
-    setInsetTB(normalizeMultipleValue(isMixedTB, getInsetValue(insets, ['t', 'b'])));
-  }, [insets, isMixedLR, isMixedTB, isMultiple]);
+    setInsetLR(normalizeMultipleValue(isMixedLRValue, getInsetValue(insets, ['l', 'r'])));
+    setInsetTB(normalizeMultipleValue(isMixedTBValue, getInsetValue(insets, ['t', 'b'])));
+  }, [insets, isMixedLRMode, isMixedLRValue, isMixedTBMode, isMixedTBValue, isMultiple]);
 
   return {
     ...useBlurEvents(insets, insetAll, insetLR, insetTB, insetsName, setInsetAll, setInsetLR, setInsetTB),
@@ -66,9 +76,12 @@ export const useInsetsEvents = (insetsName: TInsetsName): TUseInsetsEvents => {
     insetLR,
     insetTB,
     isInsetModeMerged,
-    isMixedInset,
-    isMixedLR,
-    isMixedTB,
+    isMixedInsetMode,
+    isMixedInsetValue,
+    isMixedLRMode,
+    isMixedLRValue,
+    isMixedTBMode,
+    isMixedTBValue,
     setInsetMode,
   };
 };

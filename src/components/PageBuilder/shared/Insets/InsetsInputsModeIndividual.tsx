@@ -9,12 +9,16 @@ import { TInsets, TInsetsName } from 'types';
 import { TUseBlurEvents } from './hooks/useBlurEvents';
 import { TUseChangeEvents } from './hooks/useChangeEvents';
 
+// utils
+import { sanitizeNumberInput } from 'utils';
+
 export type TInsetsInputsModeIndividualProps = Pick<TUseBlurEvents, 'onBlurInset'> &
   Pick<TUseChangeEvents, 'onChangeInset'> & {
     insets: TMapValuesTo<TInsets, string>;
     insetsName: TInsetsName;
     isInsetModeMerged: boolean;
-    isMixedInset: TMapValuesTo<TInsets, boolean>;
+    isMixedInsetMode: TMapValuesTo<TInsets, boolean>;
+    isMixedInsetValue: TMapValuesTo<TInsets, boolean>;
     translationNameSpace: string;
   };
 
@@ -22,7 +26,8 @@ export const InsetsInputsModeIndividual: FC<TInsetsInputsModeIndividualProps> = 
   insets,
   insetsName,
   isInsetModeMerged,
-  isMixedInset,
+  isMixedInsetMode,
+  isMixedInsetValue,
   onBlurInset,
   onChangeInset,
   translationNameSpace,
@@ -36,12 +41,13 @@ export const InsetsInputsModeIndividual: FC<TInsetsInputsModeIndividualProps> = 
       insetNameFormatted={`${insetsName}${upperCase(key)}`}
       insets={[key]}
       insetsName={insetsName}
-      isMixed={isMixedInset[key]}
+      isMixedMode={isMixedInsetMode[key]}
+      isMixedValue={isMixedInsetValue[key]}
       key={key}
       onBlur={() => onBlurInset(key)}
-      onChange={(value, isScrubbableInput) => onChangeInset(value, key, isScrubbableInput)}
+      onChange={(value, isScrubbableInput) => onChangeInset(sanitizeNumberInput(value), key, isScrubbableInput)}
       translationNameSpace={translationNameSpace}
-      type="number"
+      type="text"
       value={insets[key]}
     />
   ));

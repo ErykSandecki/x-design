@@ -14,8 +14,10 @@ export type TInsetsInputsModeMergedProps = Pick<TUseBlurEvents, 'onBlurInsetLR' 
     insetsName: TInsetsName;
     insetTB: string;
     isInsetModeMerged: boolean;
-    isMixedLR: boolean;
-    isMixedTB: boolean;
+    isMixedLRMode: boolean;
+    isMixedLRValue: boolean;
+    isMixedTBMode: boolean;
+    isMixedTBValue: boolean;
     translationNameSpace: string;
   };
 
@@ -24,8 +26,10 @@ export const InsetsInputsModeMerged: FC<TInsetsInputsModeMergedProps> = ({
   insetsName,
   insetTB,
   isInsetModeMerged,
-  isMixedLR,
-  isMixedTB,
+  isMixedLRMode,
+  isMixedLRValue,
+  isMixedTBMode,
+  isMixedTBValue,
   onBlurInsetLR,
   onBlurInsetTB,
   onChangeInsetLR,
@@ -42,7 +46,8 @@ export const InsetsInputsModeMerged: FC<TInsetsInputsModeMergedProps> = ({
         insetNameFormatted={`${insetsName}LR`}
         insets={['l', 'r']}
         insetsName="padding"
-        isMixed={isMixedLR}
+        isMixedMode={isMixedLRMode}
+        isMixedValue={isMixedLRValue}
         onBlur={onBlurInsetLR}
         onChange={onChangeInsetLR}
         translationNameSpace={translationNameSpace}
@@ -53,7 +58,8 @@ export const InsetsInputsModeMerged: FC<TInsetsInputsModeMergedProps> = ({
         insetNameFormatted={`${insetsName}TB`}
         insets={['t', 'b']}
         insetsName="padding"
-        isMixed={isMixedTB}
+        isMixedMode={isMixedTBMode}
+        isMixedValue={isMixedTBValue}
         onBlur={onBlurInsetTB}
         onChange={onChangeInsetTB}
         translationNameSpace={translationNameSpace}

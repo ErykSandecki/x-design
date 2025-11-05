@@ -25,9 +25,12 @@ export const Insets: FC<TInsetsProps> = ({ insetsName, translationNameSpace }) =
     insetAll,
     insetLR,
     insetTB,
-    isMixedInset,
-    isMixedLR,
-    isMixedTB,
+    isMixedInsetMode,
+    isMixedInsetValue,
+    isMixedLRMode,
+    isMixedLRValue,
+    isMixedTBMode,
+    isMixedTBValue,
     isInsetModeMerged,
     onBlurInset,
     onBlurInsetLR,
@@ -50,8 +53,10 @@ export const Insets: FC<TInsetsProps> = ({ insetsName, translationNameSpace }) =
         insetsName={insetsName}
         insetTB={insetTB}
         isInsetModeMerged={isInsetModeMerged}
-        isMixedLR={isMixedLR}
-        isMixedTB={isMixedTB}
+        isMixedLRMode={isMixedLRMode}
+        isMixedLRValue={isMixedLRValue}
+        isMixedTBMode={isMixedTBMode}
+        isMixedTBValue={isMixedTBValue}
         onBlurInsetLR={onBlurInsetLR}
         onBlurInsetTB={onBlurInsetTB}
         onChangeInsetLR={onChangeInsetLR}
@@ -62,7 +67,8 @@ export const Insets: FC<TInsetsProps> = ({ insetsName, translationNameSpace }) =
         insets={insetAll}
         insetsName={insetsName}
         isInsetModeMerged={isInsetModeMerged}
-        isMixedInset={isMixedInset}
+        isMixedInsetMode={isMixedInsetMode}
+        isMixedInsetValue={isMixedInsetValue}
         onBlurInset={onBlurInset}
         onChangeInset={onChangeInset}
         translationNameSpace={translationNameSpace}
