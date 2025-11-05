@@ -121,6 +121,43 @@ describe('ColumnAppearance snapshots', () => {
     // result
     expect(asFragment()).toMatchSnapshot();
   });
+
+  it('should toggle border radius mode', () => {
+    // mock
+    const store = configureStore(stateMock);
+
+    // before
+    const { asFragment, container } = customRender(
+      <Provider store={store}>
+        <ColumnAppearance />
+      </Provider>,
+    );
+
+    // action
+    fireEvent.click(getByE2EAttribute(container, E2EAttribute.buttonIcon, 'corners-mode'));
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('should toggle border radius mode to the merged', () => {
+    // mock
+    const store = configureStore(stateMock);
+
+    // before
+    const { asFragment, container } = customRender(
+      <Provider store={store}>
+        <ColumnAppearance />
+      </Provider>,
+    );
+
+    // action
+    fireEvent.click(getByE2EAttribute(container, E2EAttribute.buttonIcon, 'corners-mode'));
+    fireEvent.click(getByE2EAttribute(container, E2EAttribute.buttonIcon, 'corners-mode'));
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
 });
 
 describe('ColumnAppearance behaviors', () => {

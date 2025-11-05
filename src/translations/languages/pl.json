@@ -129,6 +129,7 @@
   "tooltip.gap.row": "Przerwa między wierszami",
   "tooltip.grid.columns": "Liczba kolumn",
   "tooltip.grid.rows": "Liczba wierszy",
+  "tooltip.individual.corners": "Indywidualne zaokrąglenia rogów",
   "tooltip.individual.margin": "Indywidualne marginesy",
   "tooltip.individual.padding": "Indywidualne obramowanie",
   "tooltip.lookAspectRatio": "Współczynnik proporcji",

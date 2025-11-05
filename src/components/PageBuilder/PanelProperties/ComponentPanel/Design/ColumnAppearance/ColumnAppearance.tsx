@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
 // components
+import ColumnAppearanceButtonIcons from './ColumnAppearanceButtonIcons';
 import ColumnAppearanceInput from './ColumnAppearanceInput';
 import PopoverBorderRadius from './PopoverBorderRadius/PopoverBorderRadius';
 import PopoverOpacity from './PopoverOpacity/PopoverOpacity';
@@ -25,6 +26,7 @@ const ColumnAppearance: FC = () => {
   const {
     borderRadius,
     borderRadiusMode,
+    isBorderRaiusModeMerged,
     isMixedBorderRadiusMode,
     isMixedBorderRadiusValue,
     isMixedOpacity,
@@ -34,10 +36,12 @@ const ColumnAppearance: FC = () => {
     onChangeOpacity,
     opacity,
     opacityMode,
+    setBorderRadiusMode,
   } = useAppearanceEvents();
 
   return (
     <UITools.SectionColumn
+      buttonsIcon={ColumnAppearanceButtonIcons(isBorderRaiusModeMerged, setBorderRadiusMode, t)}
       gridColumnType={UITools.GridColumnType.twoInputs}
       labels={[t(`${translationNameSpace}.label`)]}
       withBottomMargin

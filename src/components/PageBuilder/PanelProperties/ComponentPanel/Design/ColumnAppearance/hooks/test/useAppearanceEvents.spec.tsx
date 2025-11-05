@@ -50,6 +50,7 @@ describe('useAppearanceEvents', () => {
     expect(result.current).toStrictEqual({
       borderRadius: '0',
       borderRadiusMode: 'fixed',
+      isBorderRaiusModeMerged: true,
       isMixedBorderRadiusMode: false,
       isMixedBorderRadiusValue: false,
       isMixedOpacity: false,
@@ -59,6 +60,7 @@ describe('useAppearanceEvents', () => {
       onChangeOpacity: expect.any(Function),
       opacity: '100',
       opacityMode: 'fixed',
+      setBorderRadiusMode: expect.any(Function),
     });
   });
 });

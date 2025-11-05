@@ -2053,7 +2053,37 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
           <div
             class="css-c1qms7"
             data-test-box=""
-          />
+          >
+            <div
+              class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+              data-test-button-icon="corners-mode"
+              data-test-tooltip=""
+            >
+              <div
+                class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="corners"
+                height="14"
+                name="Corners"
+                width="14"
+              />
+            </div>
+            <div
+              class="Tooltip Tooltip--light"
+            >
+              <div
+                class="Tooltip__content Tooltip__content--light"
+              >
+                Individual corners
+                <div
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  data-test-icon="carrot-down"
+                  height="14"
+                  name="CarrotDown"
+                  width="10"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

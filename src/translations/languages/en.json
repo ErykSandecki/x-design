@@ -128,6 +128,7 @@
   "tooltip.gap.row": "Gap between rows",
   "tooltip.grid.columns": "Number of columns",
   "tooltip.grid.rows": "Number of rows",
+  "tooltip.individual.corners": "Individual corners",
   "tooltip.individual.margin": "Individual margin",
   "tooltip.individual.padding": "Individual padding",
   "tooltip.lookAspectRatio": "Look aspect ratio",
