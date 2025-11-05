@@ -19,14 +19,21 @@ import { translationNameSpace } from './constants';
 // store
 import { applyElementsType } from 'store/pageBuilder/actions';
 
-const ColumnAppearance: FC = () => {
+// types
+import { BorderRadiusMode } from '../enums';
+
+export type TColumnAppearanceProps = {
+  isBorderRaiusModeMerged: boolean;
+  setBorderRadiusMode: TFunc<[BorderRadiusMode]>;
+};
+
+const ColumnAppearance: FC<TColumnAppearanceProps> = ({ isBorderRaiusModeMerged, setBorderRadiusMode }) => {
   const dispatch = useDispatch();
   const { t } = useTranslation();
 
   const {
     borderRadius,
     borderRadiusMode,
-    isBorderRaiusModeMerged,
     isMixedBorderRadiusMode,
     isMixedBorderRadiusValue,
     isMixedOpacity,
@@ -36,7 +43,6 @@ const ColumnAppearance: FC = () => {
     onChangeOpacity,
     opacity,
     opacityMode,
-    setBorderRadiusMode,
   } = useAppearanceEvents();
 
   return (

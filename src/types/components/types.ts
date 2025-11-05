@@ -46,7 +46,7 @@ export type TInsets = {
   t: TValueExtended;
 };
 
-export type TInsetsName = keyof Pick<TElement, 'margin' | 'padding'>;
+export type TInsetsName = keyof Pick<TElement, 'borderRadius' | 'margin' | 'padding'>;
 
 export type TElement = {
   alignment: TAlignment;

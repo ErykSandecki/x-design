@@ -34,7 +34,7 @@ type TUseInsetsEvents = TUseBlurEvents &
     setInsetMode: TFunc<[InsetMode]>;
   };
 
-export const useInsetsEvents = (insetsName: TInsetsName): TUseInsetsEvents => {
+export const useInsetsEvents = (initialInsetMode: InsetMode, insetsName: TInsetsName): TUseInsetsEvents => {
   const firstElementId = useSelector(firstSelectedElementIdSelector);
   const isMultiple = useSelector(multipleSelectedElementsSelector);
   const isMixedBM = useSelector(isMixedSelectorCreator(`${insetsName}.b.mode`));
@@ -55,7 +55,7 @@ export const useInsetsEvents = (insetsName: TInsetsName): TUseInsetsEvents => {
   const [insetLR, setInsetLR] = useState('');
   const [insetTB, setInsetTB] = useState('');
   const [insetAll, setInsetAll] = useState({ b: '', l: '', r: '', t: '' });
-  const [insetMode, setInsetMode] = useState(InsetMode.merged);
+  const [insetMode, setInsetMode] = useState(initialInsetMode);
   const isInsetModeMerged = insetMode === InsetMode.merged;
 
   useEffect(() => {

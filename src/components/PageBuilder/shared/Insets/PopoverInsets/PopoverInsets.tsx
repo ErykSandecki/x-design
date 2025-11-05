@@ -20,6 +20,7 @@ const { PopoverCompound } = UITools;
 
 export type TPopoverInsetsProps = {
   icon: TIconProps['name'];
+  iconSize: number;
   insetsName: TInsetsName;
   insets: Array<keyof TInsets>;
   isMixed: boolean;
@@ -27,7 +28,15 @@ export type TPopoverInsetsProps = {
   value: string;
 };
 
-const PopoverInsets: FC<TPopoverInsetsProps> = ({ icon, insetsName, insets, isMixed, translationNameSpace, value }) => {
+const PopoverInsets: FC<TPopoverInsetsProps> = ({
+  icon,
+  iconSize,
+  insetsName,
+  insets,
+  isMixed,
+  translationNameSpace,
+  value,
+}) => {
   const key = insets.join('');
   const dispatch = useDispatch();
   const properties = insets.map((inset) => `${insetsName}.${inset}`) as TApplyElementsTypeActionPayload['properties'];
@@ -37,6 +46,7 @@ const PopoverInsets: FC<TPopoverInsetsProps> = ({ icon, insetsName, insets, isMi
     <>
       <PopoverCompound.PopoverItem
         icon={icon}
+        iconSize={iconSize}
         index={PopoverItem.fixed}
         onClick={() => dispatch(applyElementsType('fixed', properties))}
         selected={!isMixed && isPureNumber(value)}

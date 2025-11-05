@@ -8,10 +8,10 @@ import { ReactComponent as AspectRatio } from './svg/aspect-ratio.svg';
 import { ReactComponent as AutoHeight } from './svg/auto-height.svg';
 import { ReactComponent as AutoLayout } from './svg/auto-layout.svg';
 import { ReactComponent as AutoWidth } from './svg/auto-width.svg';
-import { ReactComponent as BorderB } from './svg/border-b.svg';
-import { ReactComponent as BorderL } from './svg/border-l.svg';
-import { ReactComponent as BorderR } from './svg/border-r.svg';
-import { ReactComponent as BorderT } from './svg/border-t.svg';
+import { ReactComponent as BorderRadiusB } from './svg/border-radius-b.svg';
+import { ReactComponent as BorderRadiusL } from './svg/border-radius-l.svg';
+import { ReactComponent as BorderRadiusR } from './svg/border-radius-r.svg';
+import { ReactComponent as BorderRadiusT } from './svg/border-radius-t.svg';
 import { ReactComponent as CarrotDown } from './svg/carrot-down.svg';
 import { ReactComponent as Check } from './svg/check.svg';
 import { ReactComponent as Checkbox } from './svg/checkbox.svg';
@@ -91,10 +91,10 @@ export const Icons = {
   AutoHeight,
   AutoLayout,
   AutoWidth,
-  BorderB,
-  BorderL,
-  BorderR,
-  BorderT,
+  BorderRadiusB,
+  BorderRadiusL,
+  BorderRadiusR,
+  BorderRadiusT,
   CarrotDown,
   Check,
   Checkbox,

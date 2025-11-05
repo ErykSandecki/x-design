@@ -10,6 +10,7 @@ import { TUseChangeEvents } from './hooks/useChangeEvents';
 
 export type TInsetsInputsModeMergedProps = Pick<TUseBlurEvents, 'onBlurInsetLR' | 'onBlurInsetTB'> &
   Pick<TUseChangeEvents, 'onChangeInsetLR' | 'onChangeInsetTB'> & {
+    iconSize: number;
     insetLR: string;
     insetsName: TInsetsName;
     insetTB: string;
@@ -22,6 +23,7 @@ export type TInsetsInputsModeMergedProps = Pick<TUseBlurEvents, 'onBlurInsetLR' 
   };
 
 export const InsetsInputsModeMerged: FC<TInsetsInputsModeMergedProps> = ({
+  iconSize,
   insetLR,
   insetsName,
   insetTB,
@@ -43,6 +45,7 @@ export const InsetsInputsModeMerged: FC<TInsetsInputsModeMergedProps> = ({
   return (
     <>
       <InsetsInput
+        iconSize={iconSize}
         insetNameFormatted={`${insetsName}LR`}
         insets={['l', 'r']}
         insetsName="padding"
@@ -55,6 +58,7 @@ export const InsetsInputsModeMerged: FC<TInsetsInputsModeMergedProps> = ({
         value={insetLR}
       />
       <InsetsInput
+        iconSize={iconSize}
         insetNameFormatted={`${insetsName}TB`}
         insets={['t', 'b']}
         insetsName="padding"

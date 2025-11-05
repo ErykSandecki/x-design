@@ -10,7 +10,6 @@ import {
 } from 'store/pageBuilder/selectors';
 
 // types
-import { BorderRadiusMode } from '../enums';
 import { TUseBlurEvent, useBlurEvent } from './useBlurEvent';
 import { TUseChangeEvent, useChangeEvent } from './useChangeEvent';
 import { TValueExtended } from 'types';
@@ -22,13 +21,11 @@ type TUseAppearanceEvents = TUseChangeEvent &
   TUseBlurEvent & {
     borderRadius: string;
     borderRadiusMode: TValueExtended['mode'];
-    isBorderRaiusModeMerged: boolean;
     isMixedBorderRadiusMode: boolean;
     isMixedBorderRadiusValue: boolean;
     isMixedOpacity: boolean;
     opacity: string;
     opacityMode: TValueExtended['mode'];
-    setBorderRadiusMode: TFunc<[BorderRadiusMode]>;
   };
 
 export const useAppearanceEvents = (): TUseAppearanceEvents => {
@@ -54,8 +51,6 @@ export const useAppearanceEvents = (): TUseAppearanceEvents => {
   const isMixedOpacity = useSelector(isMixedSelectorCreator('opacity.value'));
   const [borderRadius, setBorderRadius] = useState('');
   const [opacity, setOpacity] = useState('');
-  const [borderRadiusMode, setBorderRadiusMode] = useState(BorderRadiusMode.merged);
-  const isBorderRaiusModeMerged = borderRadiusMode === BorderRadiusMode.merged;
   const onChangeEvents = useChangeEvent(currentBorderRadius, currentOpacity, setBorderRadius, setOpacity);
   const onBlurEvents = useBlurEvent(
     borderRadius,
@@ -80,12 +75,10 @@ export const useAppearanceEvents = (): TUseAppearanceEvents => {
     ...onChangeEvents,
     borderRadius,
     borderRadiusMode: b.mode,
-    isBorderRaiusModeMerged,
     isMixedBorderRadiusMode,
     isMixedBorderRadiusValue,
     isMixedOpacity,
     opacity,
     opacityMode: currentOpacity.mode,
-    setBorderRadiusMode,
   };
 };

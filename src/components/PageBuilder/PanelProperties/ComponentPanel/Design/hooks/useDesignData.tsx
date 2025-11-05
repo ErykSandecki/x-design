@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
+import { useState } from 'react';
 
 // store
 import {
@@ -9,10 +10,13 @@ import {
 import { changeLayout } from 'store/pageBuilder/actions';
 
 // types
+import { BorderRadiusMode } from '../enums';
 import { LayoutType } from 'types';
 
 export type TUseDesignData = {
+  isBorderRaiusModeMerged: boolean;
   onChangeLayoutType: TFunc;
+  setBorderRadiusMode: TFunc<[BorderRadiusMode]>;
 };
 
 export const useDesignData = (): TUseDesignData => {
@@ -20,6 +24,8 @@ export const useDesignData = (): TUseDesignData => {
   const firstElementId = useSelector(firstSelectedElementIdSelector);
   const isMixedLayoutType = useSelector(isMixedSelectorCreator('layout.type'));
   const layout = useSelector(elementAttributeSelectorCreator('layout', firstElementId));
+  const [borderRadiusMode, setBorderRadiusMode] = useState(BorderRadiusMode.merged);
+  const isBorderRaiusModeMerged = borderRadiusMode === BorderRadiusMode.merged;
 
   const onChangeLayoutType = (): void => {
     if (isMixedLayoutType) {
@@ -33,6 +39,8 @@ export const useDesignData = (): TUseDesignData => {
   };
 
   return {
+    isBorderRaiusModeMerged,
     onChangeLayoutType,
+    setBorderRadiusMode,
   };
 };

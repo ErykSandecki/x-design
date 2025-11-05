@@ -11,14 +11,26 @@ import { UITools } from 'shared';
 import { useInsetsEvents } from './hooks/useInsetsEvents';
 
 // types
+import { InsetMode } from './enums';
 import { TInsetsName } from 'types';
 
 export type TInsetsProps = {
+  iconSize?: number;
+  initialInsetMode?: InsetMode;
   insetsName: TInsetsName;
+  showButtons?: boolean;
+  showLabels?: boolean;
   translationNameSpace: string;
 };
 
-export const Insets: FC<TInsetsProps> = ({ insetsName, translationNameSpace }) => {
+export const Insets: FC<TInsetsProps> = ({
+  iconSize = 12,
+  initialInsetMode = InsetMode.merged,
+  insetsName,
+  showButtons = true,
+  showLabels = true,
+  translationNameSpace,
+}) => {
   const { t } = useTranslation();
 
   const {
@@ -39,16 +51,17 @@ export const Insets: FC<TInsetsProps> = ({ insetsName, translationNameSpace }) =
     onChangeInsetLR,
     onChangeInsetTB,
     setInsetMode,
-  } = useInsetsEvents(insetsName);
+  } = useInsetsEvents(initialInsetMode, insetsName);
 
   return (
     <UITools.SectionColumn
-      buttonsIcon={InsetsButtonIcons(insetsName, isInsetModeMerged, setInsetMode, t)}
+      buttonsIcon={InsetsButtonIcons(insetsName, isInsetModeMerged, setInsetMode, showButtons, t)}
       gridColumnType={UITools.GridColumnType.twoInputs}
-      labels={[t(`${translationNameSpace}.label`)]}
+      labels={showLabels && [t(`${translationNameSpace}.label`)]}
       withBottomMargin
     >
       <InsetsInputsModeMerged
+        iconSize={iconSize}
         insetLR={insetLR}
         insetsName={insetsName}
         insetTB={insetTB}
@@ -64,6 +77,7 @@ export const Insets: FC<TInsetsProps> = ({ insetsName, translationNameSpace }) =
         translationNameSpace={translationNameSpace}
       />
       <InsetsInputsModeIndividual
+        iconSize={iconSize}
         insets={insetAll}
         insetsName={insetsName}
         isInsetModeMerged={isInsetModeMerged}

@@ -7,7 +7,7 @@ import { UITools } from 'shared';
 import { TOOLTIP_TRANSLATION_KEY } from 'constant/constants';
 
 // types
-import { BorderRadiusMode } from './enums';
+import { BorderRadiusMode } from '../enums';
 
 const ColumnAppearanceButtonIcons = (
   isBorderRaiusModeMerged: boolean,

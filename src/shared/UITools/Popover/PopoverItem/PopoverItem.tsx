@@ -22,6 +22,7 @@ import { E2EAttribute } from 'types';
 
 export type TPopoverItemProps = {
   icon?: TIconProps['name'];
+  iconSize?: number;
   index: number | string;
   onClick?: TFunc;
   onMouseEnter?: TFunc;
@@ -32,6 +33,7 @@ export type TPopoverItemProps = {
 
 export const PopoverItem: FC<TPopoverItemProps> = ({
   icon,
+  iconSize = 12,
   index,
   onClick,
   onMouseEnter,
@@ -74,7 +76,9 @@ export const PopoverItem: FC<TPopoverItemProps> = ({
           name="Check"
           width={12}
         />
-        {icon && <Icon classes={{ className: cx(classNamesWithTheme.icon) }} height={12} name={icon} width={12} />}
+        {icon && (
+          <Icon classes={{ className: cx(classNamesWithTheme.icon) }} height={iconSize} name={icon} width={iconSize} />
+        )}
         <Small classes={{ className: cx(classNamesWithTheme.text) }}>{text}</Small>
       </Box>
     </E2EDataAttribute>

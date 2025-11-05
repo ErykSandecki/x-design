@@ -12,6 +12,9 @@ import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 // store
 import { configureStore } from 'store';
 
+// types
+import { InsetMode } from '../../enums';
+
 // utils
 import { getProviderWrapper } from 'test';
 
@@ -44,7 +47,9 @@ describe('useInsetsEvents', () => {
     const store = configureStore(stateMock);
 
     // before
-    const { result } = renderHook(() => useInsetsEvents('padding'), { wrapper: getProviderWrapper(store) });
+    const { result } = renderHook(() => useInsetsEvents(InsetMode.merged, 'padding'), {
+      wrapper: getProviderWrapper(store),
+    });
 
     // result
     expect(result.current).toStrictEqual({

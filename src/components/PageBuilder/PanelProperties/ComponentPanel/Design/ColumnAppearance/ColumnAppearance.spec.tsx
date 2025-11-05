@@ -26,6 +26,7 @@ import { PopoverItem } from './enums';
 
 // utils
 import { customRender, getByE2EAttribute } from 'test';
+import { noop } from 'lodash';
 
 const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 const stateMock = {
@@ -63,7 +64,7 @@ describe('ColumnAppearance snapshots', () => {
     // before
     const { asFragment } = customRender(
       <Provider store={store}>
-        <ColumnAppearance />
+        <ColumnAppearance isBorderRaiusModeMerged={false} setBorderRadiusMode={noop} />
       </Provider>,
     );
 
@@ -114,7 +115,7 @@ describe('ColumnAppearance snapshots', () => {
     // before
     const { asFragment } = customRender(
       <Provider store={store}>
-        <ColumnAppearance />
+        <ColumnAppearance isBorderRaiusModeMerged={false} setBorderRadiusMode={noop} />
       </Provider>,
     );
 
@@ -129,7 +130,7 @@ describe('ColumnAppearance snapshots', () => {
     // before
     const { asFragment, container } = customRender(
       <Provider store={store}>
-        <ColumnAppearance />
+        <ColumnAppearance isBorderRaiusModeMerged setBorderRadiusMode={noop} />
       </Provider>,
     );
 
@@ -147,7 +148,7 @@ describe('ColumnAppearance snapshots', () => {
     // before
     const { asFragment, container } = customRender(
       <Provider store={store}>
-        <ColumnAppearance />
+        <ColumnAppearance isBorderRaiusModeMerged={false} setBorderRadiusMode={noop} />
       </Provider>,
     );
 
@@ -168,7 +169,7 @@ describe('ColumnAppearance behaviors', () => {
     // before
     const { container } = customRender(
       <Provider store={store}>
-        <ColumnAppearance />
+        <ColumnAppearance isBorderRaiusModeMerged={false} setBorderRadiusMode={noop} />
       </Provider>,
     );
 
@@ -199,7 +200,7 @@ describe('ColumnAppearance behaviors', () => {
     // before
     const { container } = customRender(
       <Provider store={store}>
-        <ColumnAppearance />
+        <ColumnAppearance isBorderRaiusModeMerged={false} setBorderRadiusMode={noop} />
       </Provider>,
     );
 
@@ -222,7 +223,7 @@ describe('ColumnAppearance behaviors', () => {
     // before
     const { container } = customRender(
       <Provider store={store}>
-        <ColumnAppearance />
+        <ColumnAppearance isBorderRaiusModeMerged={false} setBorderRadiusMode={noop} />
       </Provider>,
     );
 
@@ -253,7 +254,7 @@ describe('ColumnAppearance behaviors', () => {
     // before
     const { container } = customRender(
       <Provider store={store}>
-        <ColumnAppearance />
+        <ColumnAppearance isBorderRaiusModeMerged={false} setBorderRadiusMode={noop} />
       </Provider>,
     );
 
@@ -310,7 +311,7 @@ describe('ColumnAppearance behaviors', () => {
     // before
     const { container } = customRender(
       <Provider store={store}>
-        <ColumnAppearance />
+        <ColumnAppearance isBorderRaiusModeMerged={false} setBorderRadiusMode={noop} />
       </Provider>,
     );
 
@@ -367,7 +368,7 @@ describe('ColumnAppearance behaviors', () => {
     // before
     const { container } = customRender(
       <Provider store={store}>
-        <ColumnAppearance />
+        <ColumnAppearance isBorderRaiusModeMerged={false} setBorderRadiusMode={noop} />
       </Provider>,
     );
 
@@ -403,7 +404,7 @@ describe('ColumnAppearance behaviors', () => {
     // before
     const { container } = customRender(
       <Provider store={store}>
-        <ColumnAppearance />
+        <ColumnAppearance isBorderRaiusModeMerged={false} setBorderRadiusMode={noop} />
       </Provider>,
     );
 
@@ -431,7 +432,7 @@ describe('ColumnAppearance behaviors', () => {
     // before
     const { container } = customRender(
       <Provider store={store}>
-        <ColumnAppearance />
+        <ColumnAppearance isBorderRaiusModeMerged={false} setBorderRadiusMode={noop} />
       </Provider>,
     );
 
@@ -467,7 +468,7 @@ describe('ColumnAppearance behaviors', () => {
     // before
     const { container } = customRender(
       <Provider store={store}>
-        <ColumnAppearance />
+        <ColumnAppearance isBorderRaiusModeMerged={false} setBorderRadiusMode={noop} />
       </Provider>,
     );
 

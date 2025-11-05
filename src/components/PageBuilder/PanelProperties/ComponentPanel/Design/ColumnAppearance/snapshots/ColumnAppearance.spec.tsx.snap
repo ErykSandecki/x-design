@@ -219,12 +219,12 @@ exports[`ColumnAppearance snapshots should render ColumnAppearance 1`] = `
           data-test-box=""
         >
           <div
-            class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+            class="css-1jnxvbp ButtonIcon ButtonIcon--light ButtonIcon--selected ButtonIcon--selected--light"
             data-test-button-icon="corners-mode"
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--light Icon--blue1 Icon--blue1--light"
               data-test-icon="corners"
               height="14"
               name="Corners"
@@ -479,12 +479,12 @@ exports[`ColumnAppearance snapshots should render when values are mixed 1`] = `
           data-test-box=""
         >
           <div
-            class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+            class="css-1jnxvbp ButtonIcon ButtonIcon--light ButtonIcon--selected ButtonIcon--selected--light"
             data-test-button-icon="corners-mode"
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--light Icon--blue1 Icon--blue1--light"
               data-test-icon="corners"
               height="14"
               name="Corners"
@@ -738,7 +738,7 @@ exports[`ColumnAppearance snapshots should toggle border radius mode 1`] = `
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--blue1 Icon--blue1--light"
+              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="corners"
               height="14"
               name="Corners"
@@ -987,12 +987,12 @@ exports[`ColumnAppearance snapshots should toggle border radius mode to the merg
           data-test-box=""
         >
           <div
-            class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+            class="css-1jnxvbp ButtonIcon ButtonIcon--light ButtonIcon--selected ButtonIcon--selected--light"
             data-test-button-icon="corners-mode"
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--light Icon--blue1 Icon--blue1--light"
               data-test-icon="corners"
               height="14"
               name="Corners"

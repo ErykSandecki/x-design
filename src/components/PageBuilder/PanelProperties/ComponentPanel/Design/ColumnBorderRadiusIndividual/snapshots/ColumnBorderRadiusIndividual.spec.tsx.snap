@@ -1,0 +1,410 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColumnBorderRadiusIndividual snapshots should not render when is merged mode 1`] = `<DocumentFragment />`;
+
+exports[`ColumnBorderRadiusIndividual snapshots should render ColumnBorderRadiusIndividual 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
+    data-test-section=""
+  >
+    <div
+      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+      data-test-box=""
+      style="width: calc(100% - 24px - 0px - 8px);"
+    />
+    <div
+      class="css-4ja0ji"
+      data-test-box=""
+    >
+      <div
+        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--twoInputs SectionColumnContent--twoInputs--light"
+        data-test-box=""
+        style="width: calc(100% - 24px - 0px - 8px);"
+      >
+        <div
+          class="css-1jnxvbp TextField TextField--light"
+          data-test-text-field="border-radius-l"
+          data-test-tooltip=""
+        >
+          <div
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            data-test-text-field-wrapper="border-radius-l"
+          >
+            <div
+              class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+              data-test-box=""
+              data-test-scrubbable-input="border-radius-l"
+            >
+              <div
+                class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+                data-test-icon="border-radius-l"
+                height="8"
+                name="BorderRadiusL"
+                width="8"
+              />
+            </div>
+            <input
+              class="TextFieldWrapper__input TextFieldWrapper__input--light"
+              data-test-text-field-input="border-radius-l"
+              maxlength="6"
+              type="text"
+              value="0"
+            />
+            <div
+              class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                data-test-icon="variant"
+                height="12"
+                name="Variant"
+                width="12"
+              />
+              <div
+                class="css-1c8p9kb Popover Popover--light"
+                data-test-box=""
+                data-test-popover="popover"
+                style="left: 0px; top: 0px;"
+              >
+                <div
+                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  data-test-box=""
+                  data-test-popover-item="0"
+                >
+                  <div
+                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="check"
+                    height="12"
+                    name="Check"
+                    width="12"
+                  />
+                  <div
+                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="border-radius-l"
+                    height="8"
+                    name="BorderRadiusL"
+                    width="8"
+                  />
+                  <small
+                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    data-test-text=""
+                    style="text-align: inherit;"
+                  >
+                    Set to current value (0)
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="Tooltip Tooltip--light"
+        >
+          <div
+            class="Tooltip__content Tooltip__content--light"
+          >
+            Top left corner radius
+            <div
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="carrot-down"
+              height="14"
+              name="CarrotDown"
+              width="10"
+            />
+          </div>
+        </div>
+        <div
+          class="css-1jnxvbp TextField TextField--light"
+          data-test-text-field="border-radius-t"
+          data-test-tooltip=""
+        >
+          <div
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            data-test-text-field-wrapper="border-radius-t"
+          >
+            <div
+              class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+              data-test-box=""
+              data-test-scrubbable-input="border-radius-t"
+            >
+              <div
+                class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+                data-test-icon="border-radius-t"
+                height="8"
+                name="BorderRadiusT"
+                width="8"
+              />
+            </div>
+            <input
+              class="TextFieldWrapper__input TextFieldWrapper__input--light"
+              data-test-text-field-input="border-radius-t"
+              maxlength="6"
+              type="text"
+              value="0"
+            />
+            <div
+              class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                data-test-icon="variant"
+                height="12"
+                name="Variant"
+                width="12"
+              />
+              <div
+                class="css-1c8p9kb Popover Popover--light"
+                data-test-box=""
+                data-test-popover="popover"
+                style="left: 0px; top: 0px;"
+              >
+                <div
+                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  data-test-box=""
+                  data-test-popover-item="0"
+                >
+                  <div
+                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="check"
+                    height="12"
+                    name="Check"
+                    width="12"
+                  />
+                  <div
+                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="border-radius-t"
+                    height="8"
+                    name="BorderRadiusT"
+                    width="8"
+                  />
+                  <small
+                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    data-test-text=""
+                    style="text-align: inherit;"
+                  >
+                    Set to current value (0)
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="Tooltip Tooltip--light"
+        >
+          <div
+            class="Tooltip__content Tooltip__content--light"
+          >
+            Top right corner radius
+            <div
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="carrot-down"
+              height="14"
+              name="CarrotDown"
+              width="10"
+            />
+          </div>
+        </div>
+        <div
+          class="css-1jnxvbp TextField TextField--light"
+          data-test-text-field="border-radius-r"
+          data-test-tooltip=""
+        >
+          <div
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            data-test-text-field-wrapper="border-radius-r"
+          >
+            <div
+              class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+              data-test-box=""
+              data-test-scrubbable-input="border-radius-r"
+            >
+              <div
+                class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+                data-test-icon="border-radius-r"
+                height="8"
+                name="BorderRadiusR"
+                width="8"
+              />
+            </div>
+            <input
+              class="TextFieldWrapper__input TextFieldWrapper__input--light"
+              data-test-text-field-input="border-radius-r"
+              maxlength="6"
+              type="text"
+              value="0"
+            />
+            <div
+              class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                data-test-icon="variant"
+                height="12"
+                name="Variant"
+                width="12"
+              />
+              <div
+                class="css-1c8p9kb Popover Popover--light"
+                data-test-box=""
+                data-test-popover="popover"
+                style="left: 0px; top: 0px;"
+              >
+                <div
+                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  data-test-box=""
+                  data-test-popover-item="0"
+                >
+                  <div
+                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="check"
+                    height="12"
+                    name="Check"
+                    width="12"
+                  />
+                  <div
+                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="border-radius-r"
+                    height="8"
+                    name="BorderRadiusR"
+                    width="8"
+                  />
+                  <small
+                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    data-test-text=""
+                    style="text-align: inherit;"
+                  >
+                    Set to current value (0)
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="Tooltip Tooltip--light"
+        >
+          <div
+            class="Tooltip__content Tooltip__content--light"
+          >
+            bottom left corner radius
+            <div
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="carrot-down"
+              height="14"
+              name="CarrotDown"
+              width="10"
+            />
+          </div>
+        </div>
+        <div
+          class="css-1jnxvbp TextField TextField--light"
+          data-test-text-field="border-radius-b"
+          data-test-tooltip=""
+        >
+          <div
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            data-test-text-field-wrapper="border-radius-b"
+          >
+            <div
+              class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+              data-test-box=""
+              data-test-scrubbable-input="border-radius-b"
+            >
+              <div
+                class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+                data-test-icon="border-radius-b"
+                height="8"
+                name="BorderRadiusB"
+                width="8"
+              />
+            </div>
+            <input
+              class="TextFieldWrapper__input TextFieldWrapper__input--light"
+              data-test-text-field-input="border-radius-b"
+              maxlength="6"
+              type="text"
+              value="0"
+            />
+            <div
+              class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+              data-test-box=""
+            >
+              <div
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                data-test-icon="variant"
+                height="12"
+                name="Variant"
+                width="12"
+              />
+              <div
+                class="css-1c8p9kb Popover Popover--light"
+                data-test-box=""
+                data-test-popover="popover"
+                style="left: 0px; top: 0px;"
+              >
+                <div
+                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  data-test-box=""
+                  data-test-popover-item="0"
+                >
+                  <div
+                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="check"
+                    height="12"
+                    name="Check"
+                    width="12"
+                  />
+                  <div
+                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    data-test-icon="border-radius-b"
+                    height="8"
+                    name="BorderRadiusB"
+                    width="8"
+                  />
+                  <small
+                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    data-test-text=""
+                    style="text-align: inherit;"
+                  >
+                    Set to current value (0)
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="Tooltip Tooltip--light"
+        >
+          <div
+            class="Tooltip__content Tooltip__content--light"
+          >
+            bottom right corner radius
+            <div
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="carrot-down"
+              height="14"
+              name="CarrotDown"
+              width="10"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-1jnxvbp"
+        data-test-box=""
+      >
+        <div
+          class="css-c1qms7"
+          data-test-box=""
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

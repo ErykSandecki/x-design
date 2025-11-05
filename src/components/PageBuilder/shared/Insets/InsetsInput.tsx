@@ -14,6 +14,7 @@ import { TOOLTIP_TRANSLATION_KEY } from 'constant/constants';
 import { TInsets, TInsetsName } from 'types';
 
 export type TInsetsInputProps = {
+  iconSize: number;
   insetNameFormatted: string;
   insets: Array<keyof TInsets>;
   insetsName: TInsetsName;
@@ -27,6 +28,7 @@ export type TInsetsInputProps = {
 };
 
 const InsetsInput: FC<TInsetsInputProps> = ({
+  iconSize,
   insetNameFormatted,
   insets,
   insetsName,
@@ -52,6 +54,7 @@ const InsetsInput: FC<TInsetsInputProps> = ({
       popoverChildren={
         <PopoverInsets
           icon={upperFirst(insetNameFormatted) as TIconProps['name']}
+          iconSize={iconSize}
           insetsName={insetsName}
           insets={insets}
           isMixed={isMixedMode}
@@ -63,8 +66,8 @@ const InsetsInput: FC<TInsetsInputProps> = ({
         <ScrubbableInput
           e2eValue={e2eValue}
           icon={upperFirst(insetNameFormatted) as TIconProps['name']}
-          iconHeight={12}
-          iconWidth={12}
+          iconHeight={iconSize}
+          iconWidth={iconSize}
           max={MAX}
           min={MIN}
           onChange={(value) => onChange(value.toString(), true)}

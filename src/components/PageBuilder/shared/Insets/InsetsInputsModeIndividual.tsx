@@ -14,6 +14,7 @@ import { sanitizeNumberInput } from 'utils';
 
 export type TInsetsInputsModeIndividualProps = Pick<TUseBlurEvents, 'onBlurInset'> &
   Pick<TUseChangeEvents, 'onChangeInset'> & {
+    iconSize: number;
     insets: TMapValuesTo<TInsets, string>;
     insetsName: TInsetsName;
     isInsetModeMerged: boolean;
@@ -23,6 +24,7 @@ export type TInsetsInputsModeIndividualProps = Pick<TUseBlurEvents, 'onBlurInset
   };
 
 export const InsetsInputsModeIndividual: FC<TInsetsInputsModeIndividualProps> = ({
+  iconSize,
   insets,
   insetsName,
   isInsetModeMerged,
@@ -38,6 +40,7 @@ export const InsetsInputsModeIndividual: FC<TInsetsInputsModeIndividualProps> = 
 
   return ['l', 't', 'r', 'b'].map((key: keyof TInsets) => (
     <InsetsInput
+      iconSize={iconSize}
       insetNameFormatted={`${insetsName}${upperCase(key)}`}
       insets={[key]}
       insetsName={insetsName}

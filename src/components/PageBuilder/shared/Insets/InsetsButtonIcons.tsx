@@ -14,16 +14,20 @@ const InsetsButtonIcons = (
   insetsName: TInsetsName,
   isInsetModeMerged: boolean,
   setInsetMode: TFunc<[InsetMode]>,
+  showButtons: boolean,
   t: TT,
-): Array<ReactNode> => [
-  <UITools.ButtonIcon
-    e2eValue="insets-mode"
-    key={0}
-    name="IndividualInsets"
-    onClick={() => setInsetMode(isInsetModeMerged ? InsetMode.individual : InsetMode.merged)}
-    tooltip={{ autoPositioning: true, content: t(`${TOOLTIP_TRANSLATION_KEY}.individual.${insetsName}`) }}
-    selected={false}
-  />,
-];
+): Array<ReactNode> =>
+  showButtons
+    ? [
+        <UITools.ButtonIcon
+          e2eValue="insets-mode"
+          key={0}
+          name="IndividualInsets"
+          onClick={() => setInsetMode(isInsetModeMerged ? InsetMode.individual : InsetMode.merged)}
+          tooltip={{ autoPositioning: true, content: t(`${TOOLTIP_TRANSLATION_KEY}.individual.${insetsName}`) }}
+          selected={false}
+        />,
+      ]
+    : [];
 
 export default InsetsButtonIcons;

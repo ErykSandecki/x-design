@@ -24,6 +24,7 @@ import { useDesignData } from './hooks/useDesignData';
 
 // others
 import { translationNameSpace } from './constants';
+import ColumnBorderRadiusIndividual from './ColumnBorderRadiusIndividual/ColumnBorderRadiusIndividual';
 
 export type TDesignProps = {
   width: number;
@@ -31,7 +32,7 @@ export type TDesignProps = {
 
 const Design: FC<TDesignProps> = ({ width }) => {
   const { t } = useTranslation();
-  const { onChangeLayoutType } = useDesignData();
+  const { isBorderRaiusModeMerged, onChangeLayoutType, setBorderRadiusMode } = useDesignData();
 
   return (
     <>
@@ -57,7 +58,8 @@ const Design: FC<TDesignProps> = ({ width }) => {
         <ColumnClipContent />
       </UITools.Section>
       <UITools.Section component={<DesignAppearanceButtonIcons />} label={t(`${translationNameSpace}.section.4.label`)}>
-        <ColumnAppearance />
+        <ColumnAppearance isBorderRaiusModeMerged={isBorderRaiusModeMerged} setBorderRadiusMode={setBorderRadiusMode} />
+        <ColumnBorderRadiusIndividual isBorderRaiusModeMerged={isBorderRaiusModeMerged} />
       </UITools.Section>
     </>
   );

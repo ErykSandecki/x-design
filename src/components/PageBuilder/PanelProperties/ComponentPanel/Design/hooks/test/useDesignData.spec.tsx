@@ -63,7 +63,9 @@ describe('useDesignData', () => {
 
     // result
     expect(result.current).toStrictEqual({
+      isBorderRaiusModeMerged: true,
       onChangeLayoutType: expect.any(Function),
+      setBorderRadiusMode: expect.any(Function),
     });
   });
 });
