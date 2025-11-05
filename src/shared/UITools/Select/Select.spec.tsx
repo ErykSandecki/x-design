@@ -3,6 +3,7 @@ import { fireEvent } from '@testing-library/react';
 // components
 import Select from './Select';
 import SelectItem from './SelectItem/SelectItem';
+import SelectSeparator from './SelectSeparator/SelectSeparator';
 
 // types
 import { E2EAttribute, HTMLContainerId } from 'types';
@@ -25,7 +26,9 @@ describe('Select snapshots', () => {
     const { asFragment } = customRender(
       <Select onChange={mockCallBack} value="0">
         <SelectItem value="0">0</SelectItem>
+        <SelectSeparator />
         <SelectItem value="1">1</SelectItem>
+        <SelectSeparator />
         <SelectItem value="2">2</SelectItem>
       </Select>,
     );
@@ -39,7 +42,9 @@ describe('Select snapshots', () => {
     const { asFragment } = customRender(
       <Select isMixed onChange={mockCallBack} value="0">
         <SelectItem value="0">0</SelectItem>
+        <SelectSeparator />
         <SelectItem value="1">1</SelectItem>
+        <SelectSeparator />
         <SelectItem value="2">2</SelectItem>
       </Select>,
     );
@@ -80,7 +85,9 @@ describe('Select behaviors', () => {
     const { container } = customRender(
       <Select onChange={mockCallBack} value="0">
         <SelectItem value="0">0</SelectItem>
+        <SelectSeparator />
         <SelectItem value="1">1</SelectItem>
+        <SelectSeparator />
         <SelectItem value="2">2</SelectItem>
       </Select>,
     );

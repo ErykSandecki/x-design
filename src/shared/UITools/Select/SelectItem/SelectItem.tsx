@@ -19,7 +19,6 @@ import { E2EAttribute } from 'types';
 export type TSelectItemProps = {
   children: ReactNode;
   disabled?: boolean;
-  index?: number;
   onMouseEnter?: TFunc<[MouseEvent]>;
   onMouseLeave?: TFunc<[MouseEvent]>;
   selectedValue?: string | Array<string>;
@@ -29,7 +28,6 @@ export type TSelectItemProps = {
 export const SelectItem: FC<TSelectItemProps> = ({
   children,
   disabled = false,
-  index = -1,
   onMouseEnter,
   onMouseLeave,
   selectedValue,
@@ -51,7 +49,7 @@ export const SelectItem: FC<TSelectItemProps> = ({
       component="li"
       data-value={value}
       e2eAttribute={E2EAttribute.selectItem}
-      e2eValue={index}
+      e2eValue={value}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       ref={ref}

@@ -90,7 +90,6 @@ export const SelectOptions: FC<TSelectOptionsProps> = ({
 
                   return cloneElement(children as ReactElement<any>, {
                     ...(children as ReactElement<any>).props,
-                    index,
                     key: targetIndex,
                     onMouseEnter,
                     onMouseLeave,
@@ -99,7 +98,6 @@ export const SelectOptions: FC<TSelectOptionsProps> = ({
                 })
               : cloneElement(children as ReactElement<any>, {
                   ...(children.props as ReactElement<any>),
-                  index: 0,
                   onMouseEnter,
                   onMouseLeave,
                   selectedValue: value,

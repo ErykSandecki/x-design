@@ -593,7 +593,7 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
                   >
                     <li
                       class="css-1jnxvbp SelectItem SelectItem--light"
-                      data-test-select-item="0"
+                      data-test-select-item="included"
                       data-value="included"
                       role="option"
                       tabindex="0"
@@ -609,7 +609,7 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
                     </li>
                     <li
                       class="css-1jnxvbp SelectItem SelectItem--light SelectItem--selected SelectItem--selected--light"
-                      data-test-select-item="1"
+                      data-test-select-item="excluded"
                       data-value="excluded"
                       role="option"
                       tabindex="0"
@@ -3239,7 +3239,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                   >
                     <li
                       class="css-1jnxvbp SelectItem SelectItem--light"
-                      data-test-select-item="0"
+                      data-test-select-item="included"
                       data-value="included"
                       role="option"
                       tabindex="0"
@@ -3255,7 +3255,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                     </li>
                     <li
                       class="css-1jnxvbp SelectItem SelectItem--light SelectItem--selected SelectItem--selected--light"
-                      data-test-select-item="1"
+                      data-test-select-item="excluded"
                       data-value="excluded"
                       role="option"
                       tabindex="0"
@@ -5887,7 +5887,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                   >
                     <li
                       class="css-1jnxvbp SelectItem SelectItem--light"
-                      data-test-select-item="0"
+                      data-test-select-item="included"
                       data-value="included"
                       role="option"
                       tabindex="0"
@@ -5903,7 +5903,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                     </li>
                     <li
                       class="css-1jnxvbp SelectItem SelectItem--light SelectItem--selected SelectItem--selected--light"
-                      data-test-select-item="1"
+                      data-test-select-item="excluded"
                       data-value="excluded"
                       role="option"
                       tabindex="0"
@@ -6558,7 +6558,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is included option h
                   >
                     <li
                       class="css-1jnxvbp SelectItem SelectItem--light"
-                      data-test-select-item="0"
+                      data-test-select-item="included"
                       data-value="included"
                       role="option"
                       tabindex="0"
@@ -6574,7 +6574,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is included option h
                     </li>
                     <li
                       class="css-1jnxvbp SelectItem SelectItem--light SelectItem--selected SelectItem--selected--light"
-                      data-test-select-item="1"
+                      data-test-select-item="excluded"
                       data-value="excluded"
                       role="option"
                       tabindex="0"
@@ -7209,7 +7209,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
                   >
                     <li
                       class="css-1jnxvbp SelectItem SelectItem--light"
-                      data-test-select-item="0"
+                      data-test-select-item="included"
                       data-value="included"
                       role="option"
                       tabindex="0"
@@ -7225,7 +7225,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
                     </li>
                     <li
                       class="css-1jnxvbp SelectItem SelectItem--light SelectItem--selected SelectItem--selected--light"
-                      data-test-select-item="1"
+                      data-test-select-item="excluded"
                       data-value="excluded"
                       role="option"
                       tabindex="0"
@@ -7860,7 +7860,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
                   >
                     <li
                       class="css-1jnxvbp SelectItem SelectItem--light"
-                      data-test-select-item="0"
+                      data-test-select-item="included"
                       data-value="included"
                       role="option"
                       tabindex="0"
@@ -7876,7 +7876,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
                     </li>
                     <li
                       class="css-1jnxvbp SelectItem SelectItem--light SelectItem--selected SelectItem--selected--light"
-                      data-test-select-item="1"
+                      data-test-select-item="excluded"
                       data-value="excluded"
                       role="option"
                       tabindex="0"
@@ -8511,7 +8511,7 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
                   >
                     <li
                       class="css-1jnxvbp SelectItem SelectItem--light"
-                      data-test-select-item="0"
+                      data-test-select-item="included"
                       data-value="included"
                       role="option"
                       tabindex="0"
@@ -8527,7 +8527,7 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
                     </li>
                     <li
                       class="css-1jnxvbp SelectItem SelectItem--light SelectItem--selected SelectItem--selected--light"
-                      data-test-select-item="1"
+                      data-test-select-item="excluded"
                       data-value="excluded"
                       role="option"
                       tabindex="0"

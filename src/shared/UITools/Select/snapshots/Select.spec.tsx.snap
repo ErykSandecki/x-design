@@ -54,6 +54,10 @@ exports[`Select snapshots should render Select 1`] = `
         />
         0
       </li>
+      <div
+        class="css-qef3st"
+        data-test-box=""
+      />
       <li
         class="css-1jnxvbp SelectItem SelectItem--light"
         data-test-select-item="1"
@@ -70,6 +74,10 @@ exports[`Select snapshots should render Select 1`] = `
         />
         1
       </li>
+      <div
+        class="css-qef3st"
+        data-test-box=""
+      />
       <li
         class="css-1jnxvbp SelectItem SelectItem--light"
         data-test-select-item="2"
@@ -145,6 +153,10 @@ exports[`Select snapshots should render when mixed 1`] = `
         />
         0
       </li>
+      <div
+        class="css-qef3st"
+        data-test-box=""
+      />
       <li
         class="css-1jnxvbp SelectItem SelectItem--light"
         data-test-select-item="1"
@@ -161,6 +173,10 @@ exports[`Select snapshots should render when mixed 1`] = `
         />
         1
       </li>
+      <div
+        class="css-qef3st"
+        data-test-box=""
+      />
       <li
         class="css-1jnxvbp SelectItem SelectItem--light"
         data-test-select-item="2"
@@ -222,7 +238,7 @@ exports[`Select snapshots should render with no options 1`] = `
     >
       <li
         class="css-1jnxvbp SelectItem SelectItem--light SelectItem--disabled SelectItem--disabled--light"
-        data-test-select-item="-1"
+        data-test-select-item=""
         data-value=""
         role="option"
         tabindex="0"
