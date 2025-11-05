@@ -121,4 +121,25 @@ describe('ColumnBlendMode behaviors', () => {
     // result
     expect(store.getState()[PAGE_BUILDER].pages[0].elements['test-1'].mixBlendMode).toBe(BlendMode.colorBurn);
   });
+
+  it('should remove blend mode', () => {
+    // mock
+    const store = configureStore(stateMock);
+
+    // before
+    const { container } = customRender(
+      <Provider store={store}>
+        <ColumnBlendMode />
+      </Provider>,
+    );
+
+    // find
+    const buttonIcon = getByE2EAttribute(container, E2EAttribute.buttonIcon, 'remove-blend');
+
+    // action
+    fireEvent.click(buttonIcon);
+
+    // result
+    expect(store.getState()[PAGE_BUILDER].pages[0].elements['test-1'].mixBlendMode).toBe(BlendMode.initial);
+  });
 });

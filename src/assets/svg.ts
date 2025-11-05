@@ -59,6 +59,7 @@ import { ReactComponent as MaxHeight } from './svg/max-height.svg';
 import { ReactComponent as MaxWidth } from './svg/max-width.svg';
 import { ReactComponent as MinHeight } from './svg/min-height.svg';
 import { ReactComponent as MinWidth } from './svg/min-width.svg';
+import { ReactComponent as Minus } from './svg/minus.svg';
 import { ReactComponent as MoveHand } from './svg/move-hand.svg';
 import { ReactComponent as MoveTool } from './svg/move-tool.svg';
 import { ReactComponent as Opacity } from './svg/opacity.svg';
@@ -142,6 +143,7 @@ export const Icons = {
   MaxWidth,
   MinHeight,
   MinWidth,
+  Minus,
   MoveHand,
   MoveTool,
   Opacity,

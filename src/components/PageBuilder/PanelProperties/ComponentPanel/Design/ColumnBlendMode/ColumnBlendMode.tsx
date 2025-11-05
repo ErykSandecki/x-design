@@ -20,6 +20,7 @@ import { changeProperties } from 'store/pageBuilder/actions';
 
 // types
 import { BlendMode } from 'types';
+import ColumnBlendModeButtonIcons from './ColumnBlendModeButtonIcons';
 
 const ColumnBlendMode: FC = () => {
   const dispatch = useDispatch();
@@ -32,6 +33,7 @@ const ColumnBlendMode: FC = () => {
 
   return (
     <UITools.SectionColumn
+      buttonsIcon={ColumnBlendModeButtonIcons(dispatch, t)}
       gridColumnType={UITools.GridColumnType.single}
       labels={[t(`${translationNameSpace}.label`)]}
       withBottomMargin

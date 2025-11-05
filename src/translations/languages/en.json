@@ -155,6 +155,7 @@
   "tooltip.paddingT": "Top padding",
   "tooltip.paddingTB": "Vertical padding",
   "tooltip.readyForDevStatus": "Toggle ready for dev status",
+  "tooltip.remove": "Remove",
   "tooltip.resizeToFit": "Resize to fit",
   "tooltip.rotation": "Rotation",
   "tooltip.rotationNext90": "Rotate 90° right",
