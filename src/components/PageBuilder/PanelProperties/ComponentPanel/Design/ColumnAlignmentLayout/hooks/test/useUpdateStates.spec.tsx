@@ -19,6 +19,8 @@ describe('useUpdateStates', () => {
         false,
         false,
         false,
+        false,
+        false,
         layoutMock,
         mockCallBack,
         mockCallBack,
@@ -40,6 +42,8 @@ describe('useUpdateStates', () => {
     // before
     renderHook(() =>
       useUpdateStates(
+        true,
+        true,
         true,
         true,
         true,

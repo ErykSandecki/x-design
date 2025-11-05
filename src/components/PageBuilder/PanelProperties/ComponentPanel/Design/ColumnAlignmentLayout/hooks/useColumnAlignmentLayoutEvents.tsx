@@ -29,8 +29,10 @@ export type TUseColumnAlignmentLayoutEvents = TUseBlurGapEvents &
     isFreeForm: boolean;
     isGrid: boolean;
     isMixedBoxSizing: boolean;
-    isMixedColumnGap: boolean;
-    isMixedColumnRow: boolean;
+    isMixedColumnGapMode: boolean;
+    isMixedColumnGapValue: boolean;
+    isMixedColumnRowMode: boolean;
+    isMixedColumnRowValue: boolean;
     isMixedLayout: boolean;
     layout: TLayout;
     onChangeAlignment: TUseChangeAlignmentLayoutEvent;
@@ -50,9 +52,11 @@ export const useColumnAlignmentLayoutEvents = (): TUseColumnAlignmentLayoutEvent
   const firstElementId = useSelector(firstSelectedElementIdSelector);
   const isMixedAlignment = useSelector(isMixedSelectorCreator('layout.alignment'));
   const isMixedBoxSizing = useSelector(isMixedSelectorCreator('layout.boxSizing'));
-  const isMixedColumnGap = useSelector(isMixedSelectorCreator('layout.gap.column.value'));
+  const isMixedColumnGapMode = useSelector(isMixedSelectorCreator('layout.gap.column.mode'));
+  const isMixedColumnGapValue = useSelector(isMixedSelectorCreator('layout.gap.column.value'));
+  const isMixedColumnRowMode = useSelector(isMixedSelectorCreator('layout.gap.row.mode'));
+  const isMixedColumnRowValue = useSelector(isMixedSelectorCreator('layout.gap.row.value'));
   const isMixedColumns = useSelector(isMixedSelectorCreator('layout.grid.columns'));
-  const isMixedColumnRow = useSelector(isMixedSelectorCreator('layout.gap.row.value'));
   const isMixedRows = useSelector(isMixedSelectorCreator('layout.grid.rows'));
   const isMixedLayout = useSelector(isMixedSelectorCreator('layout.type'));
   const isMultiple = useSelector(multipleSelectedElementsSelector);
@@ -71,8 +75,10 @@ export const useColumnAlignmentLayoutEvents = (): TUseColumnAlignmentLayoutEvent
 
   useUpdateStates(
     isMixedAlignment,
-    isMixedColumnGap,
-    isMixedColumnRow,
+    isMixedColumnGapMode,
+    isMixedColumnGapValue,
+    isMixedColumnRowMode,
+    isMixedColumnRowValue,
     isMixedColumns,
     isMixedRows,
     isMultiple,
@@ -95,8 +101,10 @@ export const useColumnAlignmentLayoutEvents = (): TUseColumnAlignmentLayoutEvent
     isFreeForm,
     isGrid,
     isMixedBoxSizing,
-    isMixedColumnGap,
-    isMixedColumnRow,
+    isMixedColumnGapMode,
+    isMixedColumnGapValue,
+    isMixedColumnRowMode,
+    isMixedColumnRowValue,
     isMixedLayout,
     layout,
     onChangeAlignment,

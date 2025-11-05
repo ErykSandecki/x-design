@@ -27,8 +27,10 @@ const ColumnAlignmentLayout: FC<TColumnAlignmentLayoutProps> = ({ width }) => {
     isFreeForm,
     isGrid,
     isMixedBoxSizing,
-    isMixedColumnGap,
-    isMixedColumnRow,
+    isMixedColumnGapMode,
+    isMixedColumnGapValue,
+    isMixedColumnRowMode,
+    isMixedColumnRowValue,
     isMixedLayout,
     layout,
     onBlurColumnGap,
@@ -74,18 +76,20 @@ const ColumnAlignmentLayout: FC<TColumnAlignmentLayoutProps> = ({ width }) => {
         rows={rows}
       />
       <ColumnAlignmentLayoutGapInput
-        gap="column"
-        gapValue={layout.gap.column}
-        isMixed={isMixedColumnGap}
+        gap={layout.gap.column}
+        gapKey="column"
+        isMixedMode={isMixedColumnGapMode}
+        isMixedValue={isMixedColumnGapValue}
         onBlur={onBlurColumnGap}
         onChange={onChangeColumnGap}
         showGap={showColumnGap}
         value={columnGap}
       />
       <ColumnAlignmentLayoutGapInput
-        gap="row"
-        gapValue={layout.gap.row}
-        isMixed={isMixedColumnRow}
+        gap={layout.gap.row}
+        gapKey="row"
+        isMixedMode={isMixedColumnRowMode}
+        isMixedValue={isMixedColumnRowValue}
         onBlur={onBlurRowGap}
         onChange={onChangeRowGap}
         showGap={showRowGap}

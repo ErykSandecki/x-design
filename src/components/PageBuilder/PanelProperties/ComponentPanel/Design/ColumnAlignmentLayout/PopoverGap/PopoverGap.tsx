@@ -13,20 +13,17 @@ import { applyElementsType } from 'store/pageBuilder/actions';
 
 // types
 import { PopoverItem } from '../enums';
-import { TGap, TValue } from 'types';
-
-// utils
-import { isPureNumber } from 'utils';
+import { TGap, TValueExtended } from 'types';
 
 const { PopoverCompound } = UITools;
 
 export type TPopoverGapProps = {
+  gap: TValueExtended;
   gapKey: keyof TGap;
-  gapValue: TValue;
   isMixed: boolean;
 };
 
-const PopoverGap: FC<TPopoverGapProps> = ({ gapKey, gapValue, isMixed }) => {
+const PopoverGap: FC<TPopoverGapProps> = ({ gap, gapKey, isMixed }) => {
   const dispatch = useDispatch();
   const icon = useMemo(() => (gapKey === 'column' ? 'GapColumns' : 'GapRows'), []);
   const { t } = useTranslation();
@@ -37,8 +34,8 @@ const PopoverGap: FC<TPopoverGapProps> = ({ gapKey, gapValue, isMixed }) => {
         icon={icon}
         index={PopoverItem.fixed}
         onClick={() => dispatch(applyElementsType('fixed', [`layout.gap.${gapKey}`]))}
-        selected={!isMixed && isPureNumber(gapValue.value)}
-        text={t(`${translationNameSpace}.${gapKey}.1`, { value: gapValue.value })}
+        selected={!isMixed && gap.mode === 'fixed'}
+        text={t(`${translationNameSpace}.${gapKey}.1`, { value: gap.value })}
       />
     </>
   );

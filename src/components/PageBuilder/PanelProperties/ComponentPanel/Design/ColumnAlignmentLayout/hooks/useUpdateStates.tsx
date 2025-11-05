@@ -10,8 +10,10 @@ export type TUseChangeAlignmentLayoutEvent = void;
 
 export const useUpdateStates = (
   isMixedAlignment: boolean,
-  isMixedColumnGap: boolean,
-  isMixedColumnRow: boolean,
+  isMixedColumnGapMode: boolean,
+  isMixedColumnGapValue: boolean,
+  isMixedColumnRowMode: boolean,
+  isMixedColumnRowValue: boolean,
   isMixedColumns: boolean,
   isMixedRows: boolean,
   isMultiple: boolean,
@@ -29,9 +31,17 @@ export const useUpdateStates = (
   useEffect(() => {
     const { column, row } = layout.gap;
 
-    setColumnGap(normalizeMultipleValue(isMixedColumnGap, column.value));
-    setRowGap(normalizeMultipleValue(isMixedColumnRow, row.value));
-  }, [isMixedColumnGap, isMixedColumnRow, isMultiple, layout.gap.column, layout.gap.row]);
+    setColumnGap(normalizeMultipleValue(isMixedColumnGapValue, column.value));
+    setRowGap(normalizeMultipleValue(isMixedColumnRowValue, row.value));
+  }, [
+    isMixedColumnGapMode,
+    isMixedColumnGapValue,
+    isMixedColumnRowMode,
+    isMixedColumnRowValue,
+    isMultiple,
+    layout.gap.column,
+    layout.gap.row,
+  ]);
 
   useEffect(() => {
     const { columns, rows } = layout.grid;
