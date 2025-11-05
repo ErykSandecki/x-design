@@ -23,7 +23,7 @@ exports[`ColumnHeader snapshots should render ColumnHeader 1`] = `
         <small
           class="css-1jnxvbp Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
           data-test-text=""
-          style="align-items: center; display: flex; text-align: inherit;"
+          style="align-items: center; display: flex; user-select: none; text-align: inherit;"
         >
           Frame
         </small>
@@ -124,7 +124,7 @@ exports[`ColumnHeader snapshots should render with multiple selects 1`] = `
         <small
           class="css-1jnxvbp Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
           data-test-text=""
-          style="align-items: center; display: flex; text-align: inherit;"
+          style="align-items: center; display: flex; user-select: none; text-align: inherit;"
         >
           2 selected
         </small>

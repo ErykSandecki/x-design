@@ -25,9 +25,9 @@ export const getSizes = (
     const width = parseInt(getComputedStyle(elementHTML).width);
 
     return {
-      height: { ...element.height, value: height },
+      height: { mode: 'fixed', value: height },
       width: {
-        ...element.width,
+        mode: 'fixed',
         value: width,
       },
     };
