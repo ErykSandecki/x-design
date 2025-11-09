@@ -57,6 +57,7 @@ import { ReactComponent as MarginT } from './svg/margin-t.svg';
 import { ReactComponent as MarginTB } from './svg/margin-tb.svg';
 import { ReactComponent as MaxHeight } from './svg/max-height.svg';
 import { ReactComponent as MaxWidth } from './svg/max-width.svg';
+import { ReactComponent as Menu } from './svg/menu.svg';
 import { ReactComponent as MinHeight } from './svg/min-height.svg';
 import { ReactComponent as MinWidth } from './svg/min-width.svg';
 import { ReactComponent as Minus } from './svg/minus.svg';
@@ -141,6 +142,7 @@ export const Icons = {
   MarginTB,
   MaxHeight,
   MaxWidth,
+  Menu,
   MinHeight,
   MinWidth,
   Minus,

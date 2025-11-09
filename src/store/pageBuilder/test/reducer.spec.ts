@@ -3,6 +3,7 @@ import { cloneDeep } from 'lodash';
 // mocks
 import {
   elementMock,
+  backgroundMock,
   createFrameMock,
   pageBuilderStateMock,
   selectedElementMock,
@@ -23,9 +24,11 @@ import { ZOOM_CONTENT_ID } from 'shared';
 import pageBuilder from '../reducer';
 import {
   addElement,
+  addVariant,
   applyElementsType,
   changeAlignment,
   changeBackground,
+  changeBackgroundOrder,
   changeLayout,
   changeLayoutAlignment,
   changeLayoutBoxSizing,
@@ -39,6 +42,7 @@ import {
   reducerHistoryRedo,
   reducerHistorySave,
   reducerHistoryUndo,
+  removeVariant,
   resizeElement,
   rotateElements,
   selectElement,
@@ -115,6 +119,48 @@ describe('PageBuilderReducer', () => {
             },
             [createFrameMock.id]: createFrameMock,
           },
+        },
+      },
+    });
+  });
+
+  it('should handle ADD_VARIANT', () => {
+    // mock
+    const key = 'background';
+    const value = backgroundMock[0];
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+
+    // before
+    const state = reducer(addVariant(key, value), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            [elementMock.id]: elementMock,
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            [elementMock.id]: {
+              ...elementMock,
+              background: [backgroundMock[0], backgroundMock[0]],
+            },
+          },
+          selectedElements: [selectedElementMock],
         },
       },
     });
@@ -321,6 +367,71 @@ describe('PageBuilderReducer', () => {
               ],
             },
           },
+        },
+      },
+    });
+  });
+
+  it('should handle CHANGE_BACKGROUND_ORDER', () => {
+    // mock
+    const draggableItem = 2;
+    const position = 0;
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+
+    // before
+    const state = reducer(changeBackgroundOrder(draggableItem, position), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            [elementMock.id]: {
+              ...elementMock,
+              background: [
+                backgroundMock[0],
+                backgroundMock[0],
+                {
+                  ...backgroundMock[0],
+                  properties: {
+                    ...backgroundMock[0].properties,
+                    alpha: '0',
+                  },
+                },
+              ],
+            },
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            [elementMock.id]: {
+              ...elementMock,
+              background: [
+                {
+                  ...backgroundMock[0],
+                  properties: {
+                    ...backgroundMock[0].properties,
+                    alpha: '0',
+                  },
+                },
+                backgroundMock[0],
+                backgroundMock[0],
+              ],
+            },
+          },
+          selectedElements: [selectedElementMock],
         },
       },
     });
@@ -1036,6 +1147,51 @@ describe('PageBuilderReducer', () => {
           ...reducerHistoryMock[1],
           reducerHistory: reducerHistoryMock,
           reducerHistoryIndex: 1,
+        },
+      },
+    });
+  });
+
+  it('should handle REMOVE_VARIANT', () => {
+    // mock
+    const index = 0;
+    const key = 'background';
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+
+    // before
+    const state = reducer(removeVariant(index, key), {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            [elementMock.id]: {
+              ...elementMock,
+              background: [
+                { ...backgroundMock[0], properties: { ...backgroundMock[0].properties, color: 'color' } },
+                backgroundMock[0],
+              ],
+            },
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    });
+
+    // result
+    expect(state).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            [elementMock.id]: elementMock,
+          },
+          selectedElements: [selectedElementMock],
         },
       },
     });

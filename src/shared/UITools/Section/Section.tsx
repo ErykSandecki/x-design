@@ -22,9 +22,10 @@ export type TSectionProps = {
   component?: ReactElement;
   e2eValue?: TE2EDataAttributeProps['value'];
   label?: string;
+  separator?: boolean;
 };
 
-export const Section: FC<TSectionProps> = ({ children, component, e2eValue = '', label }) => {
+export const Section: FC<TSectionProps> = ({ children, component, e2eValue = '', label, separator = true }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   return (
@@ -34,7 +35,14 @@ export const Section: FC<TSectionProps> = ({ children, component, e2eValue = '',
       e2eValue={e2eValue}
     >
       {label && (
-        <Box sx={{ alignItems: 'center', display: 'flex', justifyContent: 'space-between', mb: 10 }}>
+        <Box
+          classes={{
+            className: cx(classNamesWithTheme.labelWrapper.name, [
+              classNamesWithTheme.labelWrapper.modificators.separator,
+              separator,
+            ]),
+          }}
+        >
           <Small classes={{ className: cx(classNamesWithTheme.label) }}>{label}</Small>
           <Box sx={{ alignItems: 'center', columnGap: '2.5px', display: 'flex', justifyContent: 'center' }}>
             {component}

@@ -1,5 +1,5 @@
 import { ColorPickerProps } from 'antd';
-import { FC } from 'react';
+import { FC, useState } from 'react';
 
 // components
 import ColorPickerInputAlpha from './ColorPickerInputAlpha';
@@ -44,12 +44,13 @@ export const ColorPicker: FC<TColorPickerProps> = ({
   ...restProps
 }) => {
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
+  const [visible, setVisible] = useState(false);
 
   const { alphaValue, colorValue, onBlurAlpha, onBlurColor, onChangeAlpha, onChangeColor, onChangeColorPicker } =
     useColorPickerEvents(alpha, color, onChangeAlphaHandler, onChangeColorHandler);
 
   return (
-    <FieldGroup e2eValue={e2eValue}>
+    <FieldGroup attributes={{ ['data-visible-color-picker-panel']: visible ? 'true' : 'false' }} e2eValue={e2eValue}>
       <ColorPickerInputColor
         activeSampler={activeSampler}
         alpha={alpha}
@@ -64,6 +65,8 @@ export const ColorPicker: FC<TColorPickerProps> = ({
         onChangeColorPicker={onChangeColorPicker}
         onClickColorSampler={onClickColorSampler}
         onClickSampler={onClickSampler}
+        setVisible={setVisible}
+        visible={visible}
         {...restProps}
       />
       <ColorPickerInputAlpha

@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DraggableSection snapshots should not render 1`] = `<DocumentFragment />`;
+
+exports[`DraggableSection snapshots should render DraggableSection 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1jnxvbp DraggableSectionMenu DraggableSectionMenu--light"
+    data-test-box=""
+  >
+    <div
+      class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      data-test-icon="menu"
+      height="8"
+      name="Menu"
+      width="8"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DraggableSection snapshots should render when force display 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1jnxvbp DraggableSectionMenu DraggableSectionMenu--light DraggableSectionMenu--forceDisplay DraggableSectionMenu--forceDisplay--light"
+    data-test-box=""
+  >
+    <div
+      class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      data-test-icon="menu"
+      height="8"
+      name="Menu"
+      width="8"
+    />
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DraggableSectionAnchor snapshots should hide prompt when mouse leave 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1jnxvbp DraggableSectionAnchor DraggableSectionAnchor--light DraggableSectionAnchor--draggable DraggableSectionAnchor--draggable--light"
+    data-anchor-index="0"
+    data-test-anchor="e2eValue"
+  />
+</DocumentFragment>
+`;
+
+exports[`DraggableSectionAnchor snapshots should render DraggableSectionAnchor 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1jnxvbp DraggableSectionAnchor DraggableSectionAnchor--light"
+    data-anchor-index="0"
+    data-test-anchor="e2eValue"
+  />
+</DocumentFragment>
+`;
+
+exports[`DraggableSectionAnchor snapshots should render prompt when mouse enter 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1jnxvbp DraggableSectionAnchor DraggableSectionAnchor--light DraggableSectionAnchor--draggable DraggableSectionAnchor--draggable--light"
+    data-anchor-index="0"
+    data-test-anchor="e2eValue"
+  >
+    <div
+      class="css-1jnxvbp DraggableSectionAnchor__prompt DraggableSectionAnchor__prompt--light"
+      data-test-box=""
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DraggableSectionAnchor snapshots should render when is draggable 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1jnxvbp DraggableSectionAnchor DraggableSectionAnchor--light DraggableSectionAnchor--draggable DraggableSectionAnchor--draggable--light"
+    data-anchor-index="0"
+    data-test-anchor="e2eValue"
+  />
+</DocumentFragment>
+`;

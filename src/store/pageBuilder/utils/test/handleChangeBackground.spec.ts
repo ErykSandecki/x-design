@@ -67,4 +67,47 @@ describe('handleChangeBackground', () => {
       },
     });
   });
+
+  it(`should return data with changed background for main parent`, () => {
+    // mock
+    const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+
+    // before
+    const result = handleChangeBackground(
+      {
+        background: { ...backgroundMock[0], properties: { ...backgroundMock[0].properties, alpha: '0' } },
+        id: '-1',
+        index: 0,
+      },
+      pageBuilderStateMock[PAGE_BUILDER],
+    );
+
+    // result
+    expect(result).toStrictEqual({
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              background: [
+                {
+                  ...currentPage.elements['-1'].background[0],
+                  properties: {
+                    ...currentPage.elements['-1'].background[0].properties,
+                    alpha: '0',
+                    color: '#ffffff',
+                  },
+                },
+              ],
+            },
+          },
+          selectedElements: [],
+        },
+      },
+    });
+  });
 });

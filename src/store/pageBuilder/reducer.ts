@@ -31,6 +31,9 @@ import {
   UNSELECT_ELEMENTS,
   CHANGE_PROPERTIES,
   APPLY_ELEMENTS_TYPE,
+  CHANGE_BACKGROUND_ORDER,
+  ADD_VARIANT,
+  REMOVE_VARIANT,
 } from './actionsType';
 import { BASE_PAGE } from './constants';
 
@@ -62,14 +65,19 @@ import {
   TChangeLayoutGridAction,
   TChangePropertiesAction,
   TApplyElementsTypeAction,
+  TChangeBackgroundOrderAction,
+  TAddVariantAction,
+  TRemoveVariantAction,
 } from './types';
 
 // utils
 import { filterSelectedElements } from './utils/filterSelectedElements';
 import { handleAddElement } from './utils/handleAddElement';
+import { handleAddVariant } from './utils/handleAddVariant';
 import { handleApplyElementsType } from './utils/applyElementsType/handleApplyElementsType';
 import { handleChangeAlignment } from './utils/changeAligment/handleChangeAlignment';
 import { handleChangeBackground } from './utils/handleChangeBackground';
+import { handleChangeBackgroundOrder } from './utils/handleChangeBackgroundOrder';
 import { handleChangeLayout } from './utils/changeLayout/handleChangeLayout';
 import { handleChangeLayoutAlignment } from './utils/handleChangeLayoutAlignment';
 import { handleChangeLayoutBoxSizing } from './utils/handleChangeLayoutBoxSizing';
@@ -81,6 +89,7 @@ import { handleFlipElements } from './utils/flipElements/handleFlipElements';
 import { handleReducerHistoryRedo } from './utils/reducerHistory/handleReducerHistoryRedo';
 import { handleReducerHistorySave } from './utils/reducerHistory/handleReducerHistorySave';
 import { handleReducerHistoryUndo } from './utils/reducerHistory/handleReducerHistoryUndo';
+import { handleRemoveVariant } from './utils/handleRemoveVariant';
 import { handleResizeElement } from './utils/resizeElement/handleResizeElement';
 import { handleRotateElements } from './utils/handleRotateElements';
 import { handleSetElementsCoordinates } from './utils/handleSetElementsCoordinates';
@@ -125,6 +134,9 @@ const addElement = (
   { payload: element }: TAction<TAddELementAction['payload']>,
 ): TPageBuilderState => handleAddElement(element, state);
 
+const addVariant = (state: TPageBuilderState, { payload }: TAction<TAddVariantAction['payload']>): TPageBuilderState =>
+  handleAddVariant(payload, state);
+
 const applyElementsType = (
   state: TPageBuilderState,
   { payload }: TAction<TApplyElementsTypeAction['payload']>,
@@ -139,6 +151,11 @@ const changeBackground = (
   state: TPageBuilderState,
   { payload }: TAction<TChangeBackgroundAction['payload']>,
 ): TPageBuilderState => handleChangeBackground(payload, state);
+
+const changeBackgroundOrder = (
+  state: TPageBuilderState,
+  { payload }: TAction<TChangeBackgroundOrderAction['payload']>,
+): TPageBuilderState => handleChangeBackgroundOrder(payload, state);
 
 const changeLayout = (
   state: TPageBuilderState,
@@ -195,6 +212,11 @@ const reducerHistorySave = (
 ): TPageBuilderState => handleReducerHistorySave(state, payload);
 
 const reducerHistoryUndo = (state: TPageBuilderState): TPageBuilderState => handleReducerHistoryUndo(state);
+
+const removeVariant = (
+  state: TPageBuilderState,
+  { payload }: TAction<TRemoveVariantAction['payload']>,
+): TPageBuilderState => handleRemoveVariant(payload, state);
 
 const resizeElement = (
   state: TPageBuilderState,
@@ -330,12 +352,16 @@ const pageBuilder = (state: TPageBuilderState = initialState, action: TAction): 
   switch (action.type) {
     case ADD_ELEMENT:
       return addElement(state, action);
+    case ADD_VARIANT:
+      return addVariant(state, action);
     case APPLY_ELEMENTS_TYPE:
       return applyElementsType(state, action);
     case CHANGE_ALIGNMENT:
       return changeAlignment(state, action);
     case CHANGE_BACKGROUND:
       return changeBackground(state, action);
+    case CHANGE_BACKGROUND_ORDER:
+      return changeBackgroundOrder(state, action);
     case CHANGE_LAYOUT:
       return changeLayout(state, action);
     case CHANGE_LAYOUT_ALIGNMENT:
@@ -362,6 +388,8 @@ const pageBuilder = (state: TPageBuilderState = initialState, action: TAction): 
       return reducerHistorySave(state, action);
     case REDUCER_HISTORY_UNDO:
       return reducerHistoryUndo(state);
+    case REMOVE_VARIANT:
+      return removeVariant(state, action);
     case RESIZE_ELEMENT:
       return resizeElement(state, action);
     case ROTATE_ELEMENTS:

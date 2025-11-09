@@ -31,6 +31,9 @@ import {
   UNSELECT_ELEMENTS,
   CHANGE_PROPERTIES,
   APPLY_ELEMENTS_TYPE,
+  CHANGE_BACKGROUND_ORDER,
+  ADD_VARIANT,
+  REMOVE_VARIANT,
 } from './actionsType';
 
 // types
@@ -123,6 +126,13 @@ export type TAddELementAction = {
   type: typeof ADD_ELEMENT;
 };
 
+export type TAddVariantActionPayload = { key: 'background'; value: TBackground };
+
+export type TAddVariantAction = {
+  payload: TAddVariantActionPayload;
+  type: typeof ADD_VARIANT;
+};
+
 export type TApplyElementsInsetTypeActionPayload = {
   insets: Array<keyof TInsets>;
   name: TInsetsName;
@@ -158,6 +168,16 @@ export type TChangeBackgroundActionPayload = Pick<TElement, 'id'> & {
 export type TChangeBackgroundAction = {
   payload: TChangeBackgroundActionPayload;
   type: typeof CHANGE_BACKGROUND;
+};
+
+export type TChangeBackgroundOrderActionPayload = {
+  draggableItem: number;
+  position: number;
+};
+
+export type TChangeBackgroundOrderAction = {
+  payload: TChangeBackgroundOrderActionPayload;
+  type: typeof CHANGE_BACKGROUND_ORDER;
 };
 
 export type TChangeLayoutAction = {
@@ -217,6 +237,16 @@ export type TReducerHistorySaveAction = {
 
 export type TReducerHistoryUndoAction = {
   type: typeof REDUCER_HISTORY_UNDO;
+};
+
+export type TRemoveVariantActionPayload = {
+  index: number;
+  key: 'background';
+};
+
+export type TRemoveVariantAction = {
+  payload: TRemoveVariantActionPayload;
+  type: typeof REMOVE_VARIANT;
 };
 
 export type TResizeElementActionPayload = Pick<TElement, 'id'> & {

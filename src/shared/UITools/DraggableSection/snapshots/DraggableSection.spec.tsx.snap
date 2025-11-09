@@ -1,0 +1,305 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DraggableSection snapshots should render DraggableSection 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1jnxvbp DraggableSection DraggableSection--light"
+    data-test-draggable-section=""
+  />
+</DocumentFragment>
+`;
+
+exports[`DraggableSection snapshots should render items 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1jnxvbp DraggableSection DraggableSection--light"
+    data-test-draggable-section=""
+  >
+    <div
+      class="css-1jnxvbp DraggableSection__item DraggableSection__item--light"
+      data-test-draggable-section-item="0"
+    >
+      <div
+        class="css-1jnxvbp DraggableSectionMenu DraggableSectionMenu--light"
+        data-test-box=""
+      >
+        <div
+          class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          data-test-icon="menu"
+          height="8"
+          name="Menu"
+          width="8"
+        />
+      </div>
+      <div
+        class="css-1jnxvbp DraggableSectionAnchor DraggableSectionAnchor--light"
+        data-anchor-index="0"
+        data-test-anchor="anchor-north"
+      />
+      <div
+        class="css-1jnxvbp DraggableSectionAnchor DraggableSectionAnchor--light"
+        data-anchor-index="0"
+        data-test-anchor="anchor-south"
+      />
+      <div
+        class="css-1jnxvbp"
+        data-test-box=""
+        style="width: 100%;"
+      />
+      <div
+        class="css-1jnxvbp DraggableSectionContent DraggableSectionContent--light"
+        data-test-box=""
+      >
+        <div
+          class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+          data-test-button-icon="toggle-visibility"
+          data-test-tooltip=""
+        >
+          <div
+            class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            data-test-icon="eyes-opened"
+            height="14"
+            name="EyesOpened"
+            width="14"
+          />
+        </div>
+        <div
+          class="Tooltip Tooltip--light"
+        >
+          <div
+            class="Tooltip__content Tooltip__content--light"
+          >
+            Hide
+            <div
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="carrot-down"
+              height="14"
+              name="CarrotDown"
+              width="10"
+            />
+          </div>
+        </div>
+        <div
+          class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+          data-test-button-icon="remove"
+          data-test-tooltip=""
+        >
+          <div
+            class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            data-test-icon="minus"
+            height="14"
+            name="Minus"
+            width="14"
+          />
+        </div>
+        <div
+          class="Tooltip Tooltip--light"
+        >
+          <div
+            class="Tooltip__content Tooltip__content--light"
+          >
+            Remove
+            <div
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="carrot-down"
+              height="14"
+              name="CarrotDown"
+              width="10"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1jnxvbp DraggableSection__item DraggableSection__item--light"
+      data-test-draggable-section-item="1"
+    >
+      <div
+        class="css-1jnxvbp DraggableSectionMenu DraggableSectionMenu--light"
+        data-test-box=""
+      >
+        <div
+          class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          data-test-icon="menu"
+          height="8"
+          name="Menu"
+          width="8"
+        />
+      </div>
+      <div
+        class="css-1jnxvbp DraggableSectionAnchor DraggableSectionAnchor--light"
+        data-anchor-index="1"
+        data-test-anchor="anchor-north"
+      />
+      <div
+        class="css-1jnxvbp DraggableSectionAnchor DraggableSectionAnchor--light"
+        data-anchor-index="1"
+        data-test-anchor="anchor-south"
+      />
+      <div
+        class="css-1jnxvbp"
+        data-test-box=""
+        style="width: 100%;"
+      />
+      <div
+        class="css-1jnxvbp DraggableSectionContent DraggableSectionContent--light"
+        data-test-box=""
+      >
+        <div
+          class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+          data-test-button-icon="toggle-visibility"
+          data-test-tooltip=""
+        >
+          <div
+            class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            data-test-icon="eyes-opened"
+            height="14"
+            name="EyesOpened"
+            width="14"
+          />
+        </div>
+        <div
+          class="Tooltip Tooltip--light"
+        >
+          <div
+            class="Tooltip__content Tooltip__content--light"
+          >
+            Hide
+            <div
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="carrot-down"
+              height="14"
+              name="CarrotDown"
+              width="10"
+            />
+          </div>
+        </div>
+        <div
+          class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+          data-test-button-icon="remove"
+          data-test-tooltip=""
+        >
+          <div
+            class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            data-test-icon="minus"
+            height="14"
+            name="Minus"
+            width="14"
+          />
+        </div>
+        <div
+          class="Tooltip Tooltip--light"
+        >
+          <div
+            class="Tooltip__content Tooltip__content--light"
+          >
+            Remove
+            <div
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="carrot-down"
+              height="14"
+              name="CarrotDown"
+              width="10"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1jnxvbp DraggableSection__item DraggableSection__item--light"
+      data-test-draggable-section-item="2"
+    >
+      <div
+        class="css-1jnxvbp DraggableSectionMenu DraggableSectionMenu--light"
+        data-test-box=""
+      >
+        <div
+          class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          data-test-icon="menu"
+          height="8"
+          name="Menu"
+          width="8"
+        />
+      </div>
+      <div
+        class="css-1jnxvbp DraggableSectionAnchor DraggableSectionAnchor--light"
+        data-anchor-index="2"
+        data-test-anchor="anchor-north"
+      />
+      <div
+        class="css-1jnxvbp DraggableSectionAnchor DraggableSectionAnchor--light"
+        data-anchor-index="2"
+        data-test-anchor="anchor-south"
+      />
+      <div
+        class="css-1jnxvbp"
+        data-test-box=""
+        style="width: 100%;"
+      />
+      <div
+        class="css-1jnxvbp DraggableSectionContent DraggableSectionContent--light"
+        data-test-box=""
+      >
+        <div
+          class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+          data-test-button-icon="toggle-visibility"
+          data-test-tooltip=""
+        >
+          <div
+            class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            data-test-icon="eyes-opened"
+            height="14"
+            name="EyesOpened"
+            width="14"
+          />
+        </div>
+        <div
+          class="Tooltip Tooltip--light"
+        >
+          <div
+            class="Tooltip__content Tooltip__content--light"
+          >
+            Hide
+            <div
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="carrot-down"
+              height="14"
+              name="CarrotDown"
+              width="10"
+            />
+          </div>
+        </div>
+        <div
+          class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+          data-test-button-icon="remove"
+          data-test-tooltip=""
+        >
+          <div
+            class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            data-test-icon="minus"
+            height="14"
+            name="Minus"
+            width="14"
+          />
+        </div>
+        <div
+          class="Tooltip Tooltip--light"
+        >
+          <div
+            class="Tooltip__content Tooltip__content--light"
+          >
+            Remove
+            <div
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="carrot-down"
+              height="14"
+              name="CarrotDown"
+              width="10"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

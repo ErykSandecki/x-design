@@ -24,7 +24,9 @@ import { TPopoverProps } from '../Popover/Popover';
 
 export type TSectionProps = Pick<TIconProps, 'name'> &
   TBoxProps & {
+    disabledSelection?: boolean;
     e2eValue?: TE2EDataAttributeProps['value'];
+    iconSize?: number;
     idContainer?: string;
     popoverAlignHorizontally?: TPopoverProps['alignHorizontally'];
     popoverAlignVertically?: TPopoverProps['alignVertically'];
@@ -38,7 +40,9 @@ export type TSectionProps = Pick<TIconProps, 'name'> &
   };
 
 export const ButtonIcon: FC<TSectionProps> = ({
+  disabledSelection = false,
   e2eValue = '',
+  iconSize = 12,
   idContainer,
   name,
   onClick,
@@ -57,7 +61,7 @@ export const ButtonIcon: FC<TSectionProps> = ({
   const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { selected, setSelected } = useOutsideClick([], ref, popoverOnClose, idContainer);
   const isSelected = selected || selectedButtonIcon;
-  const onClickHandler = useClickEvent(onClick, selected, setSelected);
+  const onClickHandler = useClickEvent(disabledSelection, onClick, selected, setSelected);
 
   return (
     <Tooltip ref={ref} {...tooltip}>
@@ -75,9 +79,9 @@ export const ButtonIcon: FC<TSectionProps> = ({
       >
         <Icon
           color={selectedButtonIcon ? ColorsTheme.blue1 : ColorsTheme.neutral1}
-          height={14}
+          height={iconSize}
           name={name}
-          width={14}
+          width={iconSize}
         />
         {popoverChildren && (
           <ButtonIconPopover

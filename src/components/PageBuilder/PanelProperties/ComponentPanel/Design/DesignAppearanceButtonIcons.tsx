@@ -28,6 +28,7 @@ const DesignAppearanceButtonIcons: FC = () => {
 
   return [
     <UITools.ButtonIcon
+      iconSize={14}
       key={0}
       name={visible ? 'EyesOpened' : 'EyesClosed'}
       onClick={() => dispatch(changeProperties({ visible: !visible }))}
@@ -35,6 +36,7 @@ const DesignAppearanceButtonIcons: FC = () => {
       selected={!visible}
     />,
     <UITools.ButtonIcon
+      iconSize={14}
       idContainer={PANEL_PROPERTIES_ID}
       key={1}
       name={mixBlendMode === 'initial' ? 'DropEmpty' : 'DropFilled'}
@@ -42,7 +44,7 @@ const DesignAppearanceButtonIcons: FC = () => {
       popoverChildren={<PopoverBlendMode isMixed={isMixed} mixdBlendMode={mixBlendMode} />}
       popoverOffset={{ x: -28, y: -28 }}
       tooltip={{ autoPositioning: true, content: t(`${TOOLTIP_TRANSLATION_KEY}.mixBlendMode`) }}
-      selected={!visible}
+      selected={mixBlendMode !== 'initial'}
     />,
   ];
 };

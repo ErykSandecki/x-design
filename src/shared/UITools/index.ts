@@ -6,6 +6,7 @@ import Checkbox from './Checkbox/Checkbox';
 import Chip from './Chip/Chip';
 import Color from './Color/Color';
 import ColorPicker from './ColorPicker/ColorPicker';
+import DraggableSection from './DraggableSection/DraggableSection';
 import FieldGroup from './FieldGroup/FieldGroup';
 import GridArea from './GridArea/GridArea';
 import Popover, { PopoverCompound } from './Popover/Popover';
@@ -31,6 +32,7 @@ export const UITools = {
   Chip,
   Color,
   ColorPicker,
+  DraggableSection,
   FieldGroup,
   GridArea,
   GridColumnType,

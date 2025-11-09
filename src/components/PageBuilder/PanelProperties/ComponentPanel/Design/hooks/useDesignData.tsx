@@ -5,6 +5,7 @@ import { useState } from 'react';
 import {
   elementAttributeSelectorCreator,
   firstSelectedElementIdSelector,
+  hasVariantsSelectorCreator,
   isMixedSelectorCreator,
 } from 'store/pageBuilder/selectors';
 import { changeLayout } from 'store/pageBuilder/actions';
@@ -14,6 +15,7 @@ import { BorderRadiusMode } from '../enums';
 import { LayoutType } from 'types';
 
 export type TUseDesignData = {
+  anyBackground: boolean;
   isBorderRaiusModeMerged: boolean;
   onChangeLayoutType: TFunc;
   setBorderRadiusMode: TFunc<[BorderRadiusMode]>;
@@ -23,6 +25,7 @@ export const useDesignData = (): TUseDesignData => {
   const dispatch = useDispatch();
   const firstElementId = useSelector(firstSelectedElementIdSelector);
   const isMixedLayoutType = useSelector(isMixedSelectorCreator('layout.type'));
+  const anyBackground = useSelector(hasVariantsSelectorCreator('background', firstElementId));
   const layout = useSelector(elementAttributeSelectorCreator('layout', firstElementId));
   const [borderRadiusMode, setBorderRadiusMode] = useState(BorderRadiusMode.merged);
   const isBorderRaiusModeMerged = borderRadiusMode === BorderRadiusMode.merged;
@@ -39,6 +42,7 @@ export const useDesignData = (): TUseDesignData => {
   };
 
   return {
+    anyBackground,
     isBorderRaiusModeMerged,
     onChangeLayoutType,
     setBorderRadiusMode,

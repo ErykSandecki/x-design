@@ -1,9 +1,11 @@
 // others
 import {
   ADD_ELEMENT,
+  ADD_VARIANT,
   APPLY_ELEMENTS_TYPE,
   CHANGE_ALIGNMENT,
   CHANGE_BACKGROUND,
+  CHANGE_BACKGROUND_ORDER,
   CHANGE_LAYOUT,
   CHANGE_LAYOUT_ALIGNMENT,
   CHANGE_LAYOUT_BOX_SIZING,
@@ -17,6 +19,7 @@ import {
   REDUCER_HISTORY_REDO,
   REDUCER_HISTORY_SAVE,
   REDUCER_HISTORY_UNDO,
+  REMOVE_VARIANT,
   RESIZE_ELEMENT,
   ROTATE_ELEMENTS,
   SELECT_ELEMENT,
@@ -75,12 +78,26 @@ import {
   TChangePropertiesAction,
   TApplyElementsTypeAction,
   TApplyElementsTypeActionPayload,
+  TChangeBackgroundOrderActionPayload,
+  TChangeBackgroundOrderAction,
+  TAddVariantActionPayload,
+  TAddVariantAction,
+  TRemoveVariantAction,
+  TRemoveVariantActionPayload,
 } from './types';
 import { TElement } from 'types';
 
 export const addElement = (payload: TAddELementActionPayload): TAddELementAction => ({
   payload,
   type: ADD_ELEMENT,
+});
+
+export const addVariant = (
+  key: TAddVariantActionPayload['key'],
+  value: TAddVariantActionPayload['value'],
+): TAddVariantAction => ({
+  payload: { key, value },
+  type: ADD_VARIANT,
 });
 
 export const applyElementsType = (
@@ -104,6 +121,14 @@ export const changeBackground = (
 ): TChangeBackgroundAction => ({
   payload: { background, id, index },
   type: CHANGE_BACKGROUND,
+});
+
+export const changeBackgroundOrder = (
+  draggableItem: TChangeBackgroundOrderActionPayload['draggableItem'],
+  position: TChangeBackgroundOrderActionPayload['position'],
+): TChangeBackgroundOrderAction => ({
+  payload: { draggableItem, position },
+  type: CHANGE_BACKGROUND_ORDER,
 });
 
 export const changeLayout = (layoutType: TChangeLayoutAction['payload']): TChangeLayoutAction => ({
@@ -168,6 +193,15 @@ export const reducerHistorySave = (payload: TReducerHistorySaveAction['payload']
 export const reducerHistoryUndo = (): TReducerHistoryUndoAction => ({
   type: REDUCER_HISTORY_UNDO,
 });
+
+export const removeVariant = (
+  index: TRemoveVariantActionPayload['index'],
+  key: TRemoveVariantActionPayload['key'],
+): TRemoveVariantAction => ({
+  payload: { index, key },
+  type: REMOVE_VARIANT,
+});
+
 export const resizeElement = (
   baseCoordinates: TResizeElementActionPayload['baseCoordinates'],
   flip: TElement['flip'],

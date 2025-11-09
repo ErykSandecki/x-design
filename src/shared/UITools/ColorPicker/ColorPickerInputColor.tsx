@@ -37,6 +37,8 @@ export type TColorPickerInputColorProps = Pick<
     onBlur: TUseColorPickerEvents['onBlurColor'];
     onChangeColor: TUseColorPickerEvents['onChangeColor'];
     onChangeColorPicker: TUseColorPickerEvents['onChangeColorPicker'];
+    setVisible: TFunc<[boolean]>;
+    visible: boolean;
   };
 
 export const ColorPickerInputColor: FC<TColorPickerInputColorProps> = ({
@@ -53,10 +55,11 @@ export const ColorPickerInputColor: FC<TColorPickerInputColorProps> = ({
   onChangeColorPicker,
   onClickColorSampler,
   onClickSampler,
+  setVisible,
+  visible,
   ...restProps
 }) => {
   const inputColor = useRef(null);
-  const [visible, setVisible] = useState(false);
 
   return (
     <TextField

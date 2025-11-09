@@ -175,3 +175,9 @@ export const hasSomeRelativePositionSelector: Selector<TMainState, boolean> = cr
   selectedElementsSelector,
   (selectedElements) => selectedElements.some(({ position }) => position === 'relative'),
 );
+
+export const hasVariantsSelectorCreator = (
+  attribute: 'background',
+  elementId: TElement['id'],
+): Selector<TMainState, boolean> =>
+  createSelector(elementAttributeSelectorCreator(attribute, elementId), (variants) => !!variants.length);

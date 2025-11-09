@@ -3,6 +3,7 @@ import { MouseEvent } from 'react';
 type TUseClickEvent = TFunc<[MouseEvent]>;
 
 export const useClickEvent = (
+  disabledSelection: boolean,
   onClick: TFunc<[MouseEvent]> | undefined,
   selected: boolean,
   setSelected: TFunc<[boolean]>,
@@ -12,7 +13,9 @@ export const useClickEvent = (
       onClick(event);
     }
 
-    setSelected(!selected);
+    if (!disabledSelection) {
+      setSelected(!selected);
+    }
   };
 
   return handleClick;

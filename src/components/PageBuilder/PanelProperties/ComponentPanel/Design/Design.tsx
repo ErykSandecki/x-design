@@ -8,6 +8,7 @@ import ColumnAppearance from './ColumnAppearance/ColumnAppearance';
 import ColumnBlendMode from './ColumnBlendMode/ColumnBlendMode';
 import ColumnBorderRadiusIndividual from './ColumnBorderRadiusIndividual/ColumnBorderRadiusIndividual';
 import ColumnClipContent from './ColumnClipContent/ColumnClipContent';
+import ColumnFill from './ColumnFill/ColumnFill';
 import DesignFillButtonIcons from './DesignFillButtonIcons';
 import ColumnFlow from './ColumnFlow/ColumnFlow';
 import ColumnHeader from './ColumnHeader/ColumnHeader';
@@ -34,7 +35,7 @@ export type TDesignProps = {
 
 const Design: FC<TDesignProps> = ({ width }) => {
   const { t } = useTranslation();
-  const { isBorderRaiusModeMerged, onChangeLayoutType, setBorderRadiusMode } = useDesignData();
+  const { anyBackground, isBorderRaiusModeMerged, onChangeLayoutType, setBorderRadiusMode } = useDesignData();
 
   return (
     <>
@@ -64,8 +65,12 @@ const Design: FC<TDesignProps> = ({ width }) => {
         <ColumnBorderRadiusIndividual isBorderRaiusModeMerged={isBorderRaiusModeMerged} />
         <ColumnBlendMode />
       </UITools.Section>
-      <UITools.Section component={<DesignFillButtonIcons />} label={t(`${translationNameSpace}.section.5.label`)}>
-        <></>
+      <UITools.Section
+        component={<DesignFillButtonIcons />}
+        label={t(`${translationNameSpace}.section.5.label`)}
+        separator={anyBackground}
+      >
+        <ColumnFill />
       </UITools.Section>
     </>
   );

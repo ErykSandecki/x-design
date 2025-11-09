@@ -1,0 +1,41 @@
+.DraggableSection {
+  margin-left: -16px;
+  position: relative;
+  width: calc(100% + 24px);
+
+  &--draggable {
+    user-select: none;
+  }
+
+  &__item {
+    align-items: center;
+    box-sizing: border-box;
+    column-gap: 10px;
+    display: flex;
+    height: 32px;
+    padding: 0 8px 0 16px;
+    position: relative;
+
+    &--light {
+      &:has([data-visible-color-picker-panel='true']) {
+        background-color: rgba($color: $--xd-neutral-2--light, $alpha: 10%);
+      }
+    }
+
+    &--dark {
+      &:has([data-visible-color-picker-panel='true']) {
+        background-color: rgba($color: $--xd-neutral-2--dark, $alpha: 10%);
+      }
+    }
+
+    &--selected {
+      &--light {
+        background-color: rgba($color: $--xd-blue-2--light, $alpha: 50%);
+      }
+
+      &--dark {
+        background-color: rgba($color: $--xd-blue-1--dark, $alpha: 50%);
+      }
+    }
+  }
+}

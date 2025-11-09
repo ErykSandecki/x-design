@@ -16,6 +16,8 @@ export enum E2EAttribute {
   color = 'color',
   colorPicker = 'color-picker',
   colorPickerPanel = 'color-picker-panel',
+  draggableSection = 'draggable-section',
+  draggableSectionItem = 'draggable-section-item',
   dropdown = 'dropdown',
   element = 'element',
   fieldGroup = 'field-group',

@@ -9,7 +9,7 @@ const mockCallBack = jest.fn();
 describe('useClickEvent', () => {
   it(`should trigger event`, () => {
     // before
-    const { result } = renderHook(() => useClickEvent(mockCallBack, false, mockCallBack));
+    const { result } = renderHook(() => useClickEvent(false, mockCallBack, false, mockCallBack));
 
     // action
     result.current({} as MouseEvent<HTMLButtonElement>);
@@ -18,14 +18,14 @@ describe('useClickEvent', () => {
     expect(mockCallBack.mock.calls.length).toBe(2);
   });
 
-  it(`should trigger only one event`, () => {
+  it(`should not trigger any event`, () => {
     // before
-    const { result } = renderHook(() => useClickEvent(undefined, false, mockCallBack));
+    const { result } = renderHook(() => useClickEvent(true, undefined, false, mockCallBack));
 
     // action
     result.current({} as MouseEvent<HTMLButtonElement>);
 
     // result
-    expect(mockCallBack.mock.calls.length).toBe(1);
+    expect(mockCallBack.mock.calls.length).toBe(0);
   });
 });
