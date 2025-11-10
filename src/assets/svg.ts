@@ -71,7 +71,7 @@ import { ReactComponent as PaddingR } from './svg/padding-r.svg';
 import { ReactComponent as PaddingT } from './svg/padding-t.svg';
 import { ReactComponent as PaddingTB } from './svg/padding-tb.svg';
 import { ReactComponent as Percentage } from './svg/percentage.svg';
-import { ReactComponent as PlusOutlined } from './svg/plus-outlined.svg';
+import { ReactComponent as Plus } from './svg/plus.svg';
 import { ReactComponent as PositionSwitcher } from './svg/position-switcher.svg';
 import { ReactComponent as Properties } from './svg/properties.svg';
 import { ReactComponent as Protractor } from './svg/protractor.svg';
@@ -156,7 +156,7 @@ export const Icons = {
   PaddingT,
   PaddingTB,
   Percentage,
-  PlusOutlined,
+  Plus,
   PositionSwitcher,
   Properties,
   Protractor,

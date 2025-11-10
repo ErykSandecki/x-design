@@ -1,6 +1,6 @@
 import cx from 'classnames';
 import { ColorPicker as ColorPickerAntd, ColorPickerProps } from 'antd';
-import { FC, useRef, useState } from 'react';
+import { FC, useRef } from 'react';
 
 // components
 import Box from '../../UI/Box/Box';

@@ -7,7 +7,7 @@ exports[`Section snapshots should render Section 1`] = `
     data-test-section=""
   >
     <div
-      class="css-kp4ill"
+      class="css-1jnxvbp Section__labelWrapper Section__labelWrapper--light Section__labelWrapper--separator Section__labelWrapper--separator--light"
       data-test-box=""
     >
       <small
@@ -34,7 +34,7 @@ exports[`Section snapshots should render with buttons 1`] = `
     data-test-section=""
   >
     <div
-      class="css-kp4ill"
+      class="css-1jnxvbp Section__labelWrapper Section__labelWrapper--light Section__labelWrapper--separator Section__labelWrapper--separator--light"
       data-test-box=""
     >
       <small
@@ -56,9 +56,9 @@ exports[`Section snapshots should render with buttons 1`] = `
           <div
             class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
             data-test-icon="close"
-            height="14"
+            height="12"
             name="Close"
-            width="14"
+            width="12"
           />
         </div>
       </div>

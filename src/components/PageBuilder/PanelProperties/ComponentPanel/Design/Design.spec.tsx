@@ -380,4 +380,22 @@ describe('Design behaviors', () => {
     // result
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-2'].mixBlendMode).not.toBe(BlendMode.color);
   });
+
+  it('should add background', () => {
+    // mock
+    const store = configureStore(stateMock);
+
+    // before
+    const { container } = customRender(
+      <Provider store={store}>
+        <Design width={0} />
+      </Provider>,
+    );
+
+    // action
+    fireEvent.click(getByE2EAttribute(container, E2EAttribute.icon, 'plus'));
+
+    // result
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].background.length).toBe(2);
+  });
 });

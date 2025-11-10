@@ -10,9 +10,9 @@ exports[`ButtonIcon snapshots should render ButtonIcon 1`] = `
     <div
       class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
       data-test-icon="close"
-      height="14"
+      height="12"
       name="Close"
-      width="14"
+      width="12"
     />
   </div>
 </DocumentFragment>
@@ -28,9 +28,9 @@ exports[`ButtonIcon snapshots should render when is selected 1`] = `
     <div
       class="css-1jnxvbp Icon Icon--light Icon--blue1 Icon--blue1--light"
       data-test-icon="close"
-      height="14"
+      height="12"
       name="Close"
-      width="14"
+      width="12"
     />
   </div>
 </DocumentFragment>
@@ -46,9 +46,9 @@ exports[`ButtonIcon snapshots should render with popover 1`] = `
     <div
       class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
       data-test-icon="close"
-      height="14"
+      height="12"
       name="Close"
-      width="14"
+      width="12"
     />
     <div
       class="css-zcp5dz"

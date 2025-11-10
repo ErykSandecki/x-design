@@ -32,7 +32,10 @@ describe('handleChangeBackground', () => {
             ...currentPage,
             elements: {
               ...currentPage.elements,
-              [elementMock.id]: elementMock,
+              [elementMock.id]: {
+                ...elementMock,
+                background: [backgroundMock[0], backgroundMock[0]],
+              },
             },
             selectedElements: [selectedElementMock],
           },
@@ -59,6 +62,7 @@ describe('handleChangeBackground', () => {
                     alpha: '0',
                   },
                 },
+                backgroundMock[0],
               ],
             },
           },
@@ -79,7 +83,22 @@ describe('handleChangeBackground', () => {
         id: '-1',
         index: 0,
       },
-      pageBuilderStateMock[PAGE_BUILDER],
+      {
+        ...pageBuilderStateMock[PAGE_BUILDER],
+        pages: {
+          ...pageBuilderStateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...currentPage,
+            elements: {
+              ...currentPage.elements,
+              ['-1']: {
+                ...currentPage.elements['-1'],
+                background: [backgroundMock[0], backgroundMock[0]],
+              },
+            },
+          },
+        },
+      },
     );
 
     // result
@@ -102,6 +121,7 @@ describe('handleChangeBackground', () => {
                     color: '#ffffff',
                   },
                 },
+                backgroundMock[0],
               ],
             },
           },

@@ -63,6 +63,7 @@ describe('useDesignData', () => {
 
     // result
     expect(result.current).toStrictEqual({
+      anyBackground: true,
       isBorderRaiusModeMerged: true,
       onChangeLayoutType: expect.any(Function),
       setBorderRadiusMode: expect.any(Function),

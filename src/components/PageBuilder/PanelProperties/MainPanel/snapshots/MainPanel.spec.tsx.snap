@@ -7,7 +7,7 @@ exports[`MainPanel snapshots should render MainPanel 1`] = `
     data-test-section="background"
   >
     <div
-      class="css-kp4ill"
+      class="css-1jnxvbp Section__labelWrapper Section__labelWrapper--light Section__labelWrapper--separator Section__labelWrapper--separator--light"
       data-test-box=""
     >
       <small
@@ -43,6 +43,7 @@ exports[`MainPanel snapshots should render MainPanel 1`] = `
           <div
             class="css-1jnxvbp FieldGroup FieldGroup--light"
             data-test-field-group="background"
+            data-visible-color-picker-panel="false"
           >
             <div
               class="css-1jnxvbp ColorPicker__colorInput ColorPicker__colorInput--light TextField TextField--light"
@@ -135,9 +136,9 @@ exports[`MainPanel snapshots should render MainPanel 1`] = `
               <div
                 class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                 data-test-icon="eyes-opened"
-                height="14"
+                height="12"
                 name="EyesOpened"
-                width="14"
+                width="12"
               />
             </div>
             <div

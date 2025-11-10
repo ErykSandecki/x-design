@@ -108,7 +108,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
     data-test-section=""
   >
     <div
-      class="css-kp4ill"
+      class="css-1jnxvbp Section__labelWrapper Section__labelWrapper--light Section__labelWrapper--separator Section__labelWrapper--separator--light"
       data-test-box=""
     >
       <small
@@ -651,7 +651,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
     data-test-section=""
   >
     <div
-      class="css-kp4ill"
+      class="css-1jnxvbp Section__labelWrapper Section__labelWrapper--light Section__labelWrapper--separator Section__labelWrapper--separator--light"
       data-test-box=""
     >
       <small
@@ -673,9 +673,9 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
           <div
             class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
             data-test-icon="fit-layout"
-            height="14"
+            height="12"
             name="FitLayout"
-            width="14"
+            width="12"
           />
         </div>
         <div
@@ -702,9 +702,9 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
           <div
             class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
             data-test-icon="auto-layout"
-            height="14"
+            height="12"
             name="AutoLayout"
-            width="14"
+            width="12"
           />
         </div>
         <div
@@ -1306,9 +1306,9 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
               <div
                 class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                 data-test-icon="aspect-ratio"
-                height="14"
+                height="12"
                 name="AspectRatio"
-                width="14"
+                width="12"
               />
             </div>
             <div
@@ -1396,7 +1396,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
     data-test-section=""
   >
     <div
-      class="css-kp4ill"
+      class="css-1jnxvbp Section__labelWrapper Section__labelWrapper--light Section__labelWrapper--separator Section__labelWrapper--separator--light"
       data-test-box=""
     >
       <small
@@ -2062,9 +2062,9 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
               <div
                 class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
                 data-test-icon="corners"
-                height="14"
+                height="12"
                 name="Corners"
-                width="14"
+                width="12"
               />
             </div>
             <div
@@ -2093,7 +2093,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
     data-test-section=""
   >
     <div
-      class="css-kp4ill"
+      class="css-1jnxvbp Section__labelWrapper Section__labelWrapper--light Section__labelWrapper--separator Section__labelWrapper--separator--light"
       data-test-box=""
     >
       <small
@@ -2114,9 +2114,9 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
         >
           <div
             class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-            data-test-icon="plus-outlined"
+            data-test-icon="plus"
             height="14"
-            name="PlusOutlined"
+            name="Plus"
             width="14"
           />
         </div>
@@ -2134,6 +2134,164 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
               name="CarrotDown"
               width="10"
             />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1jnxvbp DraggableSection DraggableSection--light"
+      data-test-draggable-section=""
+    >
+      <div
+        class="css-1jnxvbp DraggableSection__item DraggableSection__item--light"
+        data-test-draggable-section-item="0"
+      >
+        <div
+          class="css-1jnxvbp"
+          data-test-box=""
+          style="width: 100%;"
+        >
+          <div
+            class="css-1jnxvbp FieldGroup FieldGroup--light"
+            data-test-field-group="background-0"
+            data-visible-color-picker-panel="false"
+          >
+            <div
+              class="css-1jnxvbp ColorPicker__colorInput ColorPicker__colorInput--light TextField TextField--light"
+              data-test-text-field="color"
+              data-test-tooltip=""
+            >
+              <div
+                class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+                data-test-text-field-wrapper="color"
+              >
+                <div
+                  aria-describedby="test-id"
+                  class="css-1jnxvbp"
+                  data-test-color="background-0"
+                >
+                  <div
+                    class="css-1axzf39 Color Color--light"
+                    data-test-box=""
+                  >
+                    <div
+                      class="css-agg4zg Color__picker Color__picker--light"
+                      data-test-box=""
+                      style="background-color: rgb(255, 255, 255);"
+                    />
+                    <div
+                      class="css-agg4zg Color__pickerAlpha Color__pickerAlpha--light"
+                      data-test-box=""
+                      style="background-color: rgb(255, 255, 255);"
+                    />
+                    <div
+                      class="css-hnxq09 Color__pickerTexture Color__pickerTexture--light"
+                      data-test-box=""
+                    />
+                  </div>
+                </div>
+                <input
+                  class="TextFieldWrapper__input TextFieldWrapper__input--light"
+                  data-test-text-field-input="color"
+                  maxlength="6"
+                  value="ffffff"
+                />
+              </div>
+            </div>
+            <div
+              class="css-1jnxvbp ColorPicker__alphaInput ColorPicker__alphaInput--light TextField TextField--light"
+              data-test-text-field="alpha"
+              data-test-tooltip=""
+            >
+              <div
+                class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+                data-test-text-field-wrapper="alpha"
+              >
+                <input
+                  class="TextFieldWrapper__input TextFieldWrapper__input--light"
+                  data-test-text-field-input="alpha"
+                  max="100"
+                  maxlength="6"
+                  min="0"
+                  type="number"
+                  value="100"
+                />
+                <div
+                  class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+                  data-test-box=""
+                  data-test-scrubbable-input=""
+                >
+                  <div
+                    class="ColorPicker__alphaInputUnit ColorPicker__alphaInputUnit--light"
+                  >
+                    %
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-1jnxvbp DraggableSectionContent DraggableSectionContent--light"
+          data-test-box=""
+        >
+          <div
+            class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+            data-test-button-icon="toggle-visibility"
+            data-test-tooltip=""
+          >
+            <div
+              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="eyes-opened"
+              height="14"
+              name="EyesOpened"
+              width="14"
+            />
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Hide
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <div
+            class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+            data-test-button-icon="remove"
+            data-test-tooltip=""
+          >
+            <div
+              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="minus"
+              height="14"
+              name="Minus"
+              width="14"
+            />
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Remove
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
           </div>
         </div>
       </div>

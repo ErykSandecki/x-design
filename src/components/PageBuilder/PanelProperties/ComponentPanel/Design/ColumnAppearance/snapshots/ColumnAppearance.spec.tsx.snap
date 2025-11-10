@@ -226,9 +226,9 @@ exports[`ColumnAppearance snapshots should render ColumnAppearance 1`] = `
             <div
               class="css-1jnxvbp Icon Icon--light Icon--blue1 Icon--blue1--light"
               data-test-icon="corners"
-              height="14"
+              height="12"
               name="Corners"
-              width="14"
+              width="12"
             />
           </div>
           <div
@@ -486,9 +486,9 @@ exports[`ColumnAppearance snapshots should render when values are mixed 1`] = `
             <div
               class="css-1jnxvbp Icon Icon--light Icon--blue1 Icon--blue1--light"
               data-test-icon="corners"
-              height="14"
+              height="12"
               name="Corners"
-              width="14"
+              width="12"
             />
           </div>
           <div
@@ -740,9 +740,9 @@ exports[`ColumnAppearance snapshots should toggle border radius mode 1`] = `
             <div
               class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="corners"
-              height="14"
+              height="12"
               name="Corners"
-              width="14"
+              width="12"
             />
           </div>
           <div
@@ -994,9 +994,9 @@ exports[`ColumnAppearance snapshots should toggle border radius mode to the merg
             <div
               class="css-1jnxvbp Icon Icon--light Icon--blue1 Icon--blue1--light"
               data-test-icon="corners"
-              height="14"
+              height="12"
               name="Corners"
-              width="14"
+              width="12"
             />
           </div>
           <div

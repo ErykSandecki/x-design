@@ -20,7 +20,7 @@ const DesignFillButtonIcons: FC = () => {
       disabledSelection
       iconSize={14}
       key={0}
-      name="PlusOutlined"
+      name="Plus"
       onClick={() =>
         dispatch(
           addVariant('background', {

@@ -1,28 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ColumnBackground snapshots should render ColumnBackground 1`] = `
+exports[`ColumnFill snapshots should render ColumnFill 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light"
-    data-test-section=""
+    class="css-1jnxvbp DraggableSection DraggableSection--light"
+    data-test-draggable-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
-      data-test-box=""
-      style="width: calc(100% - 24px - 0px - 8px);"
-    />
-    <div
-      class="css-4ja0ji"
-      data-test-box=""
+      class="css-1jnxvbp DraggableSection__item DraggableSection__item--light"
+      data-test-draggable-section-item="0"
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--single SectionColumnContent--single--light"
+        class="css-1jnxvbp"
         data-test-box=""
-        style="width: calc(100% - 24px - 0px - 8px);"
+        style="width: 100%;"
       >
         <div
           class="css-1jnxvbp FieldGroup FieldGroup--light"
-          data-test-field-group="background"
+          data-test-field-group="background-0"
           data-visible-color-picker-panel="false"
         >
           <div
@@ -37,7 +32,7 @@ exports[`ColumnBackground snapshots should render ColumnBackground 1`] = `
               <div
                 aria-describedby="test-id"
                 class="css-1jnxvbp"
-                data-test-color="background"
+                data-test-color="background-0"
               >
                 <div
                   class="css-1axzf39 Color Color--light"
@@ -46,12 +41,12 @@ exports[`ColumnBackground snapshots should render ColumnBackground 1`] = `
                   <div
                     class="css-agg4zg Color__picker Color__picker--light"
                     data-test-box=""
-                    style="background-color: rgb(241, 242, 246);"
+                    style="background-color: rgb(255, 255, 255);"
                   />
                   <div
                     class="css-agg4zg Color__pickerAlpha Color__pickerAlpha--light"
                     data-test-box=""
-                    style="background-color: rgb(241, 242, 246);"
+                    style="background-color: rgb(255, 255, 255);"
                   />
                   <div
                     class="css-hnxq09 Color__pickerTexture Color__pickerTexture--light"
@@ -63,7 +58,7 @@ exports[`ColumnBackground snapshots should render ColumnBackground 1`] = `
                 class="TextFieldWrapper__input TextFieldWrapper__input--light"
                 data-test-text-field-input="color"
                 maxlength="6"
-                value="f1f2f6"
+                value="ffffff"
               />
             </div>
           </div>
@@ -101,41 +96,65 @@ exports[`ColumnBackground snapshots should render ColumnBackground 1`] = `
         </div>
       </div>
       <div
-        class="css-1jnxvbp"
+        class="css-1jnxvbp DraggableSectionContent DraggableSectionContent--light"
         data-test-box=""
       >
         <div
-          class="css-c1qms7"
-          data-test-box=""
+          class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+          data-test-button-icon="toggle-visibility"
+          data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp ButtonIcon ButtonIcon--light"
-            data-test-button-icon="toggle-visibility"
-            data-test-tooltip=""
+            class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            data-test-icon="eyes-opened"
+            height="14"
+            name="EyesOpened"
+            width="14"
+          />
+        </div>
+        <div
+          class="Tooltip Tooltip--light"
+        >
+          <div
+            class="Tooltip__content Tooltip__content--light"
           >
+            Hide
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-              data-test-icon="eyes-opened"
-              height="12"
-              name="EyesOpened"
-              width="12"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="carrot-down"
+              height="14"
+              name="CarrotDown"
+              width="10"
             />
           </div>
+        </div>
+        <div
+          class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+          data-test-button-icon="remove"
+          data-test-tooltip=""
+        >
           <div
-            class="Tooltip Tooltip--light"
+            class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            data-test-icon="minus"
+            height="14"
+            name="Minus"
+            width="14"
+          />
+        </div>
+        <div
+          class="Tooltip Tooltip--light"
+        >
+          <div
+            class="Tooltip__content Tooltip__content--light"
           >
+            Remove
             <div
-              class="Tooltip__content Tooltip__content--light"
-            >
-              Toggle visibility
-              <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
-                data-test-icon="carrot-down"
-                height="14"
-                name="CarrotDown"
-                width="10"
-              />
-            </div>
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="carrot-down"
+              height="14"
+              name="CarrotDown"
+              width="10"
+            />
           </div>
         </div>
       </div>

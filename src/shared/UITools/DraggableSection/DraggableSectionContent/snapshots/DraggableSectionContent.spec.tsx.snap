@@ -72,3 +72,76 @@ exports[`DraggableSectionContent snapshots should render DraggableSectionContent
   </div>
 </DocumentFragment>
 `;
+
+exports[`DraggableSectionContent snapshots should render when is not visible param 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1jnxvbp"
+    data-test-box=""
+    style="width: 100%;"
+  />
+  <div
+    class="css-1jnxvbp DraggableSectionContent DraggableSectionContent--light"
+    data-test-box=""
+  >
+    <div
+      class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+      data-test-button-icon="toggle-visibility"
+      data-test-tooltip=""
+    >
+      <div
+        class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+        data-test-icon="eyes-closed"
+        height="14"
+        name="EyesClosed"
+        width="14"
+      />
+    </div>
+    <div
+      class="Tooltip Tooltip--light"
+    >
+      <div
+        class="Tooltip__content Tooltip__content--light"
+      >
+        Show
+        <div
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          data-test-icon="carrot-down"
+          height="14"
+          name="CarrotDown"
+          width="10"
+        />
+      </div>
+    </div>
+    <div
+      class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+      data-test-button-icon="remove"
+      data-test-tooltip=""
+    >
+      <div
+        class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+        data-test-icon="minus"
+        height="14"
+        name="Minus"
+        width="14"
+      />
+    </div>
+    <div
+      class="Tooltip Tooltip--light"
+    >
+      <div
+        class="Tooltip__content Tooltip__content--light"
+      >
+        Remove
+        <div
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          data-test-icon="carrot-down"
+          height="14"
+          name="CarrotDown"
+          width="10"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -6,7 +6,7 @@ import { UITools } from 'shared';
 
 // others
 import { PANEL_PROPERTIES_ID } from '../../../../constants';
-import { translationNameSpace } from './constants';
+// import { translationNameSpace } from './constants';
 
 // store
 import { changeBackground, changeBackgroundOrder, removeVariant, updateEventsStatus } from 'store/pageBuilder/actions';
@@ -36,7 +36,7 @@ const ColumnFill: FC = () => {
               activeSampler={colorSampler as boolean}
               alpha={alpha}
               color={color}
-              e2eValue="background"
+              e2eValue={`background-${index}`}
               format={format}
               key={index}
               onChangeAlpha={(alpha) =>

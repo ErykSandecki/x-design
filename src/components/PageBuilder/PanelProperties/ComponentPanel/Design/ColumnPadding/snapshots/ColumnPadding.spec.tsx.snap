@@ -231,9 +231,9 @@ exports[`ColumnPadding snapshots should render ColumnPadding 1`] = `
             <div
               class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="individual-insets"
-              height="14"
+              height="12"
               name="IndividualInsets"
-              width="14"
+              width="12"
             />
           </div>
           <div

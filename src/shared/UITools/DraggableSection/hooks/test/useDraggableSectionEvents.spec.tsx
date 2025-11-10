@@ -21,8 +21,10 @@ describe('useDraggableSectionEvents', () => {
     expect(result.current).toStrictEqual({
       draggableItem: -1,
       isDraggable: false,
+      isPressing: false,
       onMouseDown: expect.any(Function),
       selected: false,
+      setIsDraggable: expect.any(Function),
     });
   });
 });

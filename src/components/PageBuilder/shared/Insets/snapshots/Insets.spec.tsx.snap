@@ -231,9 +231,9 @@ exports[`Insets snapshots should render Insets 1`] = `
             <div
               class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="individual-insets"
-              height="14"
+              height="12"
               name="IndividualInsets"
-              width="14"
+              width="12"
             />
           </div>
           <div
@@ -490,9 +490,9 @@ exports[`Insets snapshots should render back to merged mode 1`] = `
             <div
               class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="individual-insets"
-              height="14"
+              height="12"
               name="IndividualInsets"
-              width="14"
+              width="12"
             />
           </div>
           <div
@@ -935,9 +935,9 @@ exports[`Insets snapshots should render when mose is individual 1`] = `
             <div
               class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="individual-insets"
-              height="14"
+              height="12"
               name="IndividualInsets"
-              width="14"
+              width="12"
             />
           </div>
           <div

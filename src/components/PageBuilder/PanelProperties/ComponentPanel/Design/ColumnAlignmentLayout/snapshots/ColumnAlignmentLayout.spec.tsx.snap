@@ -501,9 +501,9 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
             <div
               class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="properties"
-              height="14"
+              height="12"
               name="Properties"
-              width="14"
+              width="12"
             />
             <div
               class="css-zcp5dz"
@@ -3147,9 +3147,9 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
             <div
               class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="properties"
-              height="14"
+              height="12"
               name="Properties"
-              width="14"
+              width="12"
             />
             <div
               class="css-zcp5dz"
@@ -5795,9 +5795,9 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
             <div
               class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="properties"
-              height="14"
+              height="12"
               name="Properties"
-              width="14"
+              width="12"
             />
             <div
               class="css-zcp5dz"
@@ -6446,9 +6446,9 @@ exports[`ColumnAlignmentLayout snapshots should render when is included option h
             <div
               class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="properties"
-              height="14"
+              height="12"
               name="Properties"
-              width="14"
+              width="12"
             />
             <div
               class="css-zcp5dz"
@@ -7117,9 +7117,9 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
             <div
               class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="properties"
-              height="14"
+              height="12"
               name="Properties"
-              width="14"
+              width="12"
             />
             <div
               class="css-zcp5dz"
@@ -7768,9 +7768,9 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
             <div
               class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="properties"
-              height="14"
+              height="12"
               name="Properties"
-              width="14"
+              width="12"
             />
             <div
               class="css-zcp5dz"
@@ -8419,9 +8419,9 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
             <div
               class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
               data-test-icon="properties"
-              height="14"
+              height="12"
               name="Properties"
-              width="14"
+              width="12"
             />
             <div
               class="css-zcp5dz"

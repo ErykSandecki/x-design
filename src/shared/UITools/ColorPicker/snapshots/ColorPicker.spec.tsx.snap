@@ -5,6 +5,7 @@ exports[`ColorPicker snapshots should render ColorPicker 1`] = `
   <div
     class="css-1jnxvbp FieldGroup FieldGroup--light"
     data-test-field-group=""
+    data-visible-color-picker-panel="false"
   >
     <div
       class="css-1jnxvbp ColorPicker__colorInput ColorPicker__colorInput--light TextField TextField--light"

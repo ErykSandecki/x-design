@@ -11,8 +11,8 @@ exports[`DraggableSectionAnchors snapshots should render DraggableSectionAnchors
   />
   <div
     class="css-1jnxvbp DraggableSectionAnchor DraggableSectionAnchor--light DraggableSectionAnchor--draggable DraggableSectionAnchor--draggable--light"
-    data-anchor-index="1"
-    data-test-anchor="anchor-middle"
+    data-anchor-index="0"
+    data-test-anchor="anchor-south"
   />
 </DocumentFragment>
 `;
@@ -21,14 +21,24 @@ exports[`DraggableSectionAnchors snapshots should render when is middle 1`] = `
 <DocumentFragment>
   <div
     class="css-1jnxvbp DraggableSectionAnchor DraggableSectionAnchor--light DraggableSectionAnchor--draggable DraggableSectionAnchor--draggable--light"
-    data-anchor-index="2"
-    data-test-anchor="anchor-middle"
+    data-anchor-index="1"
+    data-test-anchor="anchor-north"
+  />
+  <div
+    class="css-1jnxvbp DraggableSectionAnchor DraggableSectionAnchor--light DraggableSectionAnchor--draggable DraggableSectionAnchor--draggable--light"
+    data-anchor-index="1"
+    data-test-anchor="anchor-south"
   />
 </DocumentFragment>
 `;
 
 exports[`DraggableSectionAnchors snapshots should render when is middle 2`] = `
 <DocumentFragment>
+  <div
+    class="css-1jnxvbp DraggableSectionAnchor DraggableSectionAnchor--light DraggableSectionAnchor--draggable DraggableSectionAnchor--draggable--light"
+    data-anchor-index="2"
+    data-test-anchor="anchor-north"
+  />
   <div
     class="css-1jnxvbp DraggableSectionAnchor DraggableSectionAnchor--light DraggableSectionAnchor--draggable DraggableSectionAnchor--draggable--light"
     data-anchor-index="2"
