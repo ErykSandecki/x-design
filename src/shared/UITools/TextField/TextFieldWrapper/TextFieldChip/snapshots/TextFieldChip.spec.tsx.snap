@@ -5,7 +5,7 @@ exports[`TextFieldChip snapshots should not render 1`] = `<DocumentFragment />`;
 exports[`TextFieldChip snapshots should render TextFieldChip 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp Chip Chip--light TextFieldChip TextFieldChip--light"
+    class="css-1jnxvbp Chip Chip--light className TextFieldChip TextFieldChip--light"
     data-test-chip=""
   >
     children
