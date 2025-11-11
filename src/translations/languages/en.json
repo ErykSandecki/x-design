@@ -20,6 +20,7 @@
   "common.color": "Color",
   "common.luminosity": "Luminosity",
   "keyboardKeysGroup.optional": "or",
+
   "pageBuilder.panelProperties.componentPanel.design.columnAlignment.label": "Alignment",
   "pageBuilder.panelProperties.componentPanel.design.columnAlignmentLayout.label.alignment": "Alignment",
   "pageBuilder.panelProperties.componentPanel.design.columnAlignmentLayout.label.gap": "Gap",
@@ -40,6 +41,7 @@
   "pageBuilder.panelProperties.componentPanel.design.columnBorderRadiusIndividual.popover.r.1": "Set to current value ({{ value }})",
   "pageBuilder.panelProperties.componentPanel.design.columnBorderRadiusIndividual.popover.t.1": "Set to current value ({{ value }})",
   "pageBuilder.panelProperties.componentPanel.design.columnClipContent.label": "Clip content",
+  "pageBuilder.panelProperties.componentPanel.design.columnFill.prompt": "Click + to replace mixed content",
   "pageBuilder.panelProperties.componentPanel.design.columnFlow.label": "Flow",
   "pageBuilder.panelProperties.componentPanel.design.columnHeader.header.frame": "Frame",
   "pageBuilder.panelProperties.componentPanel.design.columnHeader.header_other": "{{ amount }} selected",

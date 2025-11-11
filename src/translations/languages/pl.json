@@ -40,6 +40,7 @@
   "pageBuilder.panelProperties.componentPanel.design.columnBorderRadiusIndividual.popover.r.1": "Ustaw na obecną wartość ({{ value }})",
   "pageBuilder.panelProperties.componentPanel.design.columnBorderRadiusIndividual.popover.t.1": "Ustaw na obecną wartość ({{ value }})",
   "pageBuilder.panelProperties.componentPanel.design.columnClipContent.label": "Ucinaj zawartość",
+  "pageBuilder.panelProperties.componentPanel.design.columnFill.prompt": "Kliknij +, aby zastąpić zawartość nieokreśloną",
   "pageBuilder.panelProperties.componentPanel.design.columnFlow.label": "Typ układu",
   "pageBuilder.panelProperties.componentPanel.design.columnHeader.header.frame": "Ramka",
   "pageBuilder.panelProperties.componentPanel.design.columnHeader.header_few": "{{ amount }} zaznaczone",

@@ -84,6 +84,7 @@ import { handleChangeLayoutBoxSizing } from './utils/handleChangeLayoutBoxSizing
 import { handleChangeLayoutGrid } from './utils/changeLayoutGrid/handleChangeLayoutGrid';
 import { handleChangeParent } from './utils/changeParent/handleChangeParent';
 import { handleChangePosition } from './utils/handleChangePosition';
+import { handleChangeProperties } from './utils/handleChangeProperties';
 import { handleFitLayout } from './utils/handleFitLayout';
 import { handleFlipElements } from './utils/flipElements/handleFlipElements';
 import { handleReducerHistoryRedo } from './utils/reducerHistory/handleReducerHistoryRedo';
@@ -97,7 +98,6 @@ import { handleSetElementsGap } from './utils/handleSetElementsGap';
 import { handleSetElementsScoreToCurrentSize } from './utils/handleSetElementsScoreToCurrentSize';
 import { handleSetElementsSizes } from './utils/setElementSizes/handleSetElementsSizes';
 import { handleSetElementsSizesMinMax } from './utils/handleSetElementsSizesMinMax';
-import { handleChangeProperties } from './utils/handleChangeProperties';
 
 const initialState: TPageBuilderState = {
   currentPage: '0',

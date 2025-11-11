@@ -67,6 +67,45 @@ describe('ColumnFill snapshots', () => {
     // result
     expect(asFragment()).toMatchSnapshot();
   });
+
+  it('should render when mixed', () => {
+    // mock
+    const store = configureStore({
+      ...pageBuilderStateMock,
+      [PAGE_BUILDER]: {
+        ...pageBuilderStateMock[PAGE_BUILDER],
+        pages: {
+          ...pageBuilderStateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...currentPage,
+            elements: {
+              ...currentPage.elements,
+              ['-1']: {
+                ...currentPage.elements['-1'],
+                children: [elementMock.id, 'test-2'],
+              },
+              [elementMock.id]: elementMock,
+              ['test-2']: {
+                ...elementMock,
+                background: [backgroundMock[0], backgroundMock[0]],
+              },
+            },
+            selectedElements: [selectedElementMock, { ...selectedElementMock, id: 'test-2' }],
+          },
+        },
+      },
+    });
+
+    // before
+    const { asFragment } = customRender(
+      <Provider store={store}>
+        <ColumnFill />
+      </Provider>,
+    );
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
 });
 
 describe('ColumnFill behaviors', () => {

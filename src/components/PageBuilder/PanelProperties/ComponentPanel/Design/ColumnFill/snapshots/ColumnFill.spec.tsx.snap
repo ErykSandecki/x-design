@@ -162,3 +162,15 @@ exports[`ColumnFill snapshots should render ColumnFill 1`] = `
   </div>
 </DocumentFragment>
 `;
+
+exports[`ColumnFill snapshots should render when mixed 1`] = `
+<DocumentFragment>
+  <small
+    class="css-1jnxvbp Typography Typography--light Typography--neutral2 Typography--neutral2--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+    data-test-text=""
+    style="font-size: 11px; user-select: none; text-align: inherit;"
+  >
+    Click + to replace mixed content
+  </small>
+</DocumentFragment>
+`;

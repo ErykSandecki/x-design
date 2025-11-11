@@ -6,7 +6,7 @@ import { get, head, size } from 'lodash';
 import { REDUCER_KEY } from './actionsType';
 
 // types
-import { TAlignment, TElement, TNestedKeyOf } from 'types';
+import { TAlignment, TColor, TElement, TNestedKeyOf } from 'types';
 import { TElements, TEvents, TPage, TPageBuilderState, TSelectedElement, TSelectedElements } from './types';
 import { TMainState } from 'types/reducers';
 
@@ -165,6 +165,35 @@ export const isMixedSelectorCreator = (key: TNestedKeyOf<TElement>): Selector<TM
         .filter(({ id }) => id !== firstElementId)
         .some(({ id }) => get(elements[id], key) !== get(elements[firstElementId], key)),
   );
+
+export const isMixedBackgroundSelector: Selector<TMainState, boolean> = createSelector(
+  elementsSelector,
+  firstSelectedElementIdSelector,
+  selectedElementsSelector,
+  (elements, firstElementId, selectedElements) =>
+    selectedElements
+      .filter(({ id }) => id !== firstElementId)
+      .some(({ id }) => {
+        const background1 = elements[id].background;
+        const background2 = elements[firstElementId].background;
+
+        return (
+          background1.length !== background2.length ||
+          background1.some(({ properties, visible }, index) => {
+            const a = properties as TColor;
+            const b = background2[index].properties as TColor;
+
+            return (
+              a.alpha !== b.alpha ||
+              a.color !== b.color ||
+              a.format !== b.format ||
+              a.mode !== b.mode ||
+              visible !== background2[index].visible
+            );
+          })
+        );
+      }),
+);
 
 export const hasSomeAlignmentSelectorCreator = (direction: keyof TAlignment): Selector<TMainState, boolean> =>
   createSelector(elementsSelector, selectedElementsSelector, (elements, selectedElements) =>

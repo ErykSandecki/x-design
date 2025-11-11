@@ -5,7 +5,13 @@ import { Provider } from 'react-redux';
 import Design from './Design';
 
 // mocks
-import { elementMock, layoutMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
+import {
+  backgroundMock,
+  elementMock,
+  layoutMock,
+  pageBuilderStateMock,
+  selectedElementMock,
+} from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { PANEL_PROPERTIES_ID } from '../../../constants';
@@ -397,5 +403,48 @@ describe('Design behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].background.length).toBe(2);
+  });
+
+  it('should add background when mixed', () => {
+    // mock
+    const store = configureStore({
+      ...pageBuilderStateMock,
+      [PAGE_BUILDER]: {
+        ...pageBuilderStateMock[PAGE_BUILDER],
+        pages: {
+          ...pageBuilderStateMock[PAGE_BUILDER].pages,
+          ['0']: {
+            ...currentPage,
+            elements: {
+              ...currentPage.elements,
+              ['-1']: {
+                ...currentPage.elements['-1'],
+                children: [elementMock.id, 'test-2'],
+              },
+              [elementMock.id]: elementMock,
+              ['test-2']: {
+                ...elementMock,
+                background: [backgroundMock[0], backgroundMock[0]],
+              },
+            },
+            selectedElements: [selectedElementMock, { ...selectedElementMock, id: 'test-2' }],
+          },
+        },
+      },
+    });
+
+    // before
+    const { container } = customRender(
+      <Provider store={store}>
+        <Design width={0} />
+      </Provider>,
+    );
+
+    // action
+    fireEvent.click(getByE2EAttribute(container, E2EAttribute.icon, 'plus'));
+
+    // result
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].background.length).toBe(1);
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-2'].background.length).toBe(1);
   });
 });

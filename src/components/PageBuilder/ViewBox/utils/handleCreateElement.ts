@@ -1,5 +1,8 @@
 import { Dispatch } from 'redux';
 
+// others
+import { BACKGROUND } from 'constant/background';
+
 // store
 import { addElement } from 'store/pageBuilder/actions';
 import { elementsSelector, eventSelectorCreator } from 'store/pageBuilder/selectors';
@@ -28,12 +31,7 @@ export const handleCreateElement = (
       alignment: {},
       angle: 0,
       aspectRatio: false,
-      background: [
-        {
-          properties: { alpha: '100', color: '#ffffff', format: 'hex', mode: 'fixed' },
-          visible: true,
-        },
-      ],
+      background: [BACKGROUND],
       borderRadius: {
         b: { mode: 'fixed', value: 0 },
         l: { mode: 'fixed', value: 0 },

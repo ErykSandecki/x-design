@@ -1,12 +1,13 @@
 import { FC } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
 // components
-import { UITools } from 'shared';
+import { Small, UITools } from 'shared';
 
 // others
 import { PANEL_PROPERTIES_ID } from '../../../../constants';
-// import { translationNameSpace } from './constants';
+import { translationNameSpace } from './constants';
 
 // store
 import { changeBackground, changeBackgroundOrder, removeVariant, updateEventsStatus } from 'store/pageBuilder/actions';
@@ -14,16 +15,27 @@ import {
   elementAttributeSelectorCreator,
   eventSelectorCreator,
   firstSelectedElementIdSelector,
+  isMixedBackgroundSelector,
 } from 'store/pageBuilder/selectors';
 
 // types
-import { TColor } from 'types';
+import { ColorsTheme, TColor } from 'types';
 
 const ColumnFill: FC = () => {
   const firstElementId = useSelector(firstSelectedElementIdSelector);
   const backgrounds = useSelector(elementAttributeSelectorCreator('background', firstElementId));
   const colorSampler = useSelector(eventSelectorCreator('colorSampler'));
   const dispatch = useDispatch();
+  const isMixedBackground = useSelector(isMixedBackgroundSelector);
+  const { t } = useTranslation();
+
+  if (isMixedBackground) {
+    return (
+      <Small color={ColorsTheme.neutral2} style={{ fontSize: '11px', userSelect: 'none' }}>
+        {t(`${translationNameSpace}.prompt`)}
+      </Small>
+    );
+  }
 
   return (
     <UITools.DraggableSection
