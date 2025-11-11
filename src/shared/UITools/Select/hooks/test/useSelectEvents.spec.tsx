@@ -11,7 +11,7 @@ const selectRef = { current: { getBoundingClientRect: () => ({ height: 100 }) } 
 describe('useSelectEvents', () => {
   it(`should return data`, () => {
     // before
-    const { result } = renderHook(() => useSelectEvents('', mockCallBack, optionsRef, selectRef));
+    const { result } = renderHook(() => useSelectEvents('', mockCallBack, mockCallBack, optionsRef, selectRef));
 
     // result
     expect(result).toStrictEqual({

@@ -17,7 +17,7 @@ describe('PopoverBlendMode snapshots', () => {
     // before
     const { asFragment } = customRender(
       <UITools.PopoverCompound.PopoverRoot selected={false} setSelected={noop}>
-        <PopoverBlendMode mixdBlendMode="initial" isMixed={false} setCurrentMixBlendMode={noop} />
+        <PopoverBlendMode mixdBlendMode="initial" isMixed={false} />
       </UITools.PopoverCompound.PopoverRoot>,
     );
 
@@ -29,7 +29,7 @@ describe('PopoverBlendMode snapshots', () => {
     // before
     const { asFragment } = customRender(
       <UITools.PopoverCompound.PopoverRoot selected={false} setSelected={noop}>
-        <PopoverBlendMode mixdBlendMode="initial" isMixed setCurrentMixBlendMode={noop} />
+        <PopoverBlendMode mixdBlendMode="initial" isMixed />
       </UITools.PopoverCompound.PopoverRoot>,
     );
 

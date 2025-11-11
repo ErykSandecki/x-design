@@ -22,6 +22,7 @@ describe('PopoverGap snapshots', () => {
       <UITools.PopoverCompound.PopoverRoot selected={false} setSelected={noop}>
         <PopoverInsets
           icon="PaddingB"
+          iconSize={12}
           insets={['b', 'l', 'r', 't']}
           insetsName="padding"
           isMixed={false}
@@ -41,6 +42,7 @@ describe('PopoverGap snapshots', () => {
       <UITools.PopoverCompound.PopoverRoot selected={false} setSelected={noop}>
         <PopoverInsets
           icon="PaddingB"
+          iconSize={12}
           insets={['b', 'l', 'r', 't']}
           insetsName="padding"
           isMixed

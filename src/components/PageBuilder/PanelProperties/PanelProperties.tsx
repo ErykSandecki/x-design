@@ -12,8 +12,8 @@ import { useResizeHandler, useTheme } from 'hooks';
 
 // others
 import { className, classNames } from './classNames';
-import { TABS, translationNameSpace } from './constants';
 import { PANEL_PROPERTIES_ID } from '../constants';
+import { TABS, translationNameSpace } from './constants';
 
 // store
 import { anySelectedElementSelector } from 'store/pageBuilder/selectors';
