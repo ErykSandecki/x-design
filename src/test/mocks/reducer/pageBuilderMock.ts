@@ -81,6 +81,7 @@ export const layoutMock: TLayout = {
   gap: { column: gapMock, row: gapMock },
   grid: { columns: 1, rows: 1 },
   type: LayoutType.freeForm,
+  wrap: false,
 };
 
 export const flipMock: TFlip = {

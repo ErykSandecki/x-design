@@ -81,6 +81,7 @@ import { ReactComponent as StepBackwardOutlined } from './svg/step-backward-outl
 import { ReactComponent as ToggleRotate } from './svg/toggle-rotate.svg';
 import { ReactComponent as Variant } from './svg/variant.svg';
 import { ReactComponent as WidthRestricted } from './svg/width-restricted.svg';
+import { ReactComponent as Wrap } from './svg/wrap.svg';
 
 export const Icons = {
   AlignHorizontalCenter,
@@ -166,4 +167,5 @@ export const Icons = {
   ToggleRotate,
   Variant,
   WidthRestricted,
+  Wrap,
 };

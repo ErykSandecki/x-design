@@ -3,6 +3,7 @@ export * from './color';
 export * from './components/background/types';
 export * from './components/enums';
 export * from './components/generic';
+export * from './components/layout/enums';
 export * from './components/layout/types';
 export * from './components/types';
 export * from './e2e';

@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
 // components
+import ColumnFlowButtonIcons from './ColumnFlowButtonIcons';
 import { UITools } from 'shared';
 
 // others
@@ -23,11 +24,14 @@ const ColumnFlow: FC = () => {
   const dispatch = useDispatch();
   const firstElementId = useSelector(firstSelectedElementIdSelector);
   const isMixedLayoutType = useSelector(isMixedSelectorCreator('layout.type'));
+  const isMixedLayoutWrap = useSelector(isMixedSelectorCreator('layout.wrap'));
+  const layout = useSelector(elementAttributeNestedSelectorCreator<TLayout>('layout', firstElementId));
   const layoutType = useSelector(elementAttributeNestedSelectorCreator<TLayout['type']>('layout.type', firstElementId));
   const { t } = useTranslation();
 
   return (
     <UITools.SectionColumn
+      buttonsIcon={ColumnFlowButtonIcons(dispatch, isMixedLayoutType, isMixedLayoutWrap, layout, t)}
       gridColumnType={UITools.GridColumnType.single}
       labels={[t(`${translationNameSpace}.label`)]}
       withBottomMargin

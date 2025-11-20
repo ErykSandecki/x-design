@@ -1,9 +1,9 @@
 import { CSSProperties } from 'react';
 
 // types
-import { AlignmentLayout, AlignmentHorizontal, AlignmentVertical, ElementType, LayoutType } from './enums';
+import { AlignmentHorizontal, AlignmentVertical, ElementType } from './enums';
 import { TColor, TColorGradient } from './background/types';
-import { TGap, TGrid } from './layout/types';
+import { TLayout } from './layout/types';
 import { TValueExtended } from './generic';
 
 export type TAlignment = {
@@ -24,14 +24,6 @@ export type TChildren = {
 export type TFlip = {
   x: boolean;
   y: boolean;
-};
-
-export type TLayout = {
-  alignment: AlignmentLayout;
-  boxSizing: 'included' | 'excluded';
-  gap: TGap;
-  grid: TGrid;
-  type: LayoutType;
 };
 
 export type TBaseProperties = {

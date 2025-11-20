@@ -165,6 +165,171 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
 </DocumentFragment>
 `;
 
+exports[`ColumnFlow snapshots should render when is horizontal but are mixed 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
+    data-test-section=""
+  >
+    <div
+      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+      data-test-box=""
+      style="width: calc(100% - 24px - 0px - 8px);"
+    >
+      <small
+        class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        data-test-text=""
+        style="text-align: inherit;"
+      >
+        Flow
+      </small>
+    </div>
+    <div
+      class="css-4ja0ji"
+      data-test-box=""
+    >
+      <div
+        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--single SectionColumnContent--single--light"
+        data-test-box=""
+        style="width: calc(100% - 24px - 0px - 8px);"
+      >
+        <div
+          class="css-19um8c2 ToggleButtonGroup ToggleButtonGroup--light ToggleButtonGroup--fullWidth ToggleButtonGroup--fullWidth--light"
+          data-test-box=""
+          data-test-toggle-button-group="flow"
+        >
+          <button
+            class="ToggleButton ToggleButton--light"
+            data-test-toggle-button="0"
+            type="button"
+          >
+            <div
+              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="flow-default"
+              height="12"
+              name="FlowDefault"
+              width="12"
+            />
+          </button>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Free form
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <button
+            class="ToggleButton ToggleButton--light"
+            data-test-toggle-button="1"
+            type="button"
+          >
+            <div
+              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="flow-vertical"
+              height="12"
+              name="FlowVertical"
+              width="12"
+            />
+          </button>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Vertical
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <button
+            class="ToggleButton ToggleButton--light"
+            data-test-toggle-button="2"
+            type="button"
+          >
+            <div
+              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="flow-horizontal"
+              height="12"
+              name="FlowHorizontal"
+              width="12"
+            />
+          </button>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Horizontal
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <button
+            class="ToggleButton ToggleButton--light"
+            data-test-toggle-button="3"
+            type="button"
+          >
+            <div
+              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="flow-grid"
+              height="12"
+              name="FlowGrid"
+              width="12"
+            />
+          </button>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Grid
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-1jnxvbp"
+        data-test-box=""
+      >
+        <div
+          class="css-c1qms7"
+          data-test-box=""
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
 <DocumentFragment>
   <div
@@ -324,6 +489,201 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
           class="css-c1qms7"
           data-test-box=""
         />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ColumnFlow snapshots should render when wrap are mixed 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
+    data-test-section=""
+  >
+    <div
+      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+      data-test-box=""
+      style="width: calc(100% - 24px - 0px - 8px);"
+    >
+      <small
+        class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        data-test-text=""
+        style="text-align: inherit;"
+      >
+        Flow
+      </small>
+    </div>
+    <div
+      class="css-4ja0ji"
+      data-test-box=""
+    >
+      <div
+        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--single SectionColumnContent--single--light"
+        data-test-box=""
+        style="width: calc(100% - 24px - 0px - 8px);"
+      >
+        <div
+          class="css-19um8c2 ToggleButtonGroup ToggleButtonGroup--light ToggleButtonGroup--fullWidth ToggleButtonGroup--fullWidth--light"
+          data-test-box=""
+          data-test-toggle-button-group="flow"
+        >
+          <button
+            class="ToggleButton ToggleButton--light"
+            data-test-toggle-button="0"
+            type="button"
+          >
+            <div
+              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="flow-default"
+              height="12"
+              name="FlowDefault"
+              width="12"
+            />
+          </button>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Free form
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <button
+            class="ToggleButton ToggleButton--light"
+            data-test-toggle-button="1"
+            type="button"
+          >
+            <div
+              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="flow-vertical"
+              height="12"
+              name="FlowVertical"
+              width="12"
+            />
+          </button>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Vertical
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <button
+            class="ToggleButton ToggleButton--light ToggleButton--selected ToggleButton--selected--light"
+            data-test-toggle-button="2"
+            type="button"
+          >
+            <div
+              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="flow-horizontal"
+              height="12"
+              name="FlowHorizontal"
+              width="12"
+            />
+          </button>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Horizontal
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+          <button
+            class="ToggleButton ToggleButton--light"
+            data-test-toggle-button="3"
+            type="button"
+          >
+            <div
+              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="flow-grid"
+              height="12"
+              name="FlowGrid"
+              width="12"
+            />
+          </button>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Grid
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-1jnxvbp"
+        data-test-box=""
+      >
+        <div
+          class="css-c1qms7"
+          data-test-box=""
+        >
+          <div
+            class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+            data-test-button-icon="wrap"
+            data-test-tooltip=""
+          >
+            <div
+              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              data-test-icon="wrap"
+              height="12"
+              name="Wrap"
+              width="12"
+            />
+          </div>
+          <div
+            class="Tooltip Tooltip--light"
+          >
+            <div
+              class="Tooltip__content Tooltip__content--light"
+            >
+              Wrap
+              <div
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                data-test-icon="carrot-down"
+                height="14"
+                name="CarrotDown"
+                width="10"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

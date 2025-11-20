@@ -96,6 +96,102 @@ describe('ColumnFlow snapshots', () => {
     // result
     expect(asFragment()).toMatchSnapshot();
   });
+
+  it('should render when is horizontal but are mixed', () => {
+    // mock
+    const store = configureStore({
+      ...stateMock,
+      [PAGE_BUILDER]: {
+        ...stateMock[PAGE_BUILDER],
+        pages: {
+          ['0']: {
+            ...stateMock[PAGE_BUILDER].pages['0'],
+            elements: {
+              ...stateMock[PAGE_BUILDER].pages['0'].elements,
+              ['test-1']: {
+                ...elementMock,
+                layout: {
+                  ...layoutMock,
+                  type: LayoutType.horizontal,
+                },
+              },
+              ['test-2']: {
+                ...elementMock,
+                id: 'test-2',
+                layout: {
+                  ...layoutMock,
+                  type: LayoutType.vertical,
+                },
+              },
+            },
+            selectedElements: [
+              ...stateMock[PAGE_BUILDER].pages['0'].selectedElements,
+              { ...selectedElementMock, id: 'test-2' },
+            ],
+          },
+        },
+      },
+    });
+
+    // before
+    const { asFragment } = customRender(
+      <Provider store={store}>
+        <ColumnFlow />
+      </Provider>,
+    );
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('should render when wrap are mixed', () => {
+    // mock
+    const store = configureStore({
+      ...stateMock,
+      [PAGE_BUILDER]: {
+        ...stateMock[PAGE_BUILDER],
+        pages: {
+          ['0']: {
+            ...stateMock[PAGE_BUILDER].pages['0'],
+            elements: {
+              ...stateMock[PAGE_BUILDER].pages['0'].elements,
+              ['test-1']: {
+                ...elementMock,
+                layout: {
+                  ...layoutMock,
+                  type: LayoutType.horizontal,
+                  wrap: true,
+                },
+              },
+              ['test-2']: {
+                ...elementMock,
+                id: 'test-2',
+                layout: {
+                  ...layoutMock,
+                  type: LayoutType.horizontal,
+                  wrap: false,
+                },
+              },
+            },
+            selectedElements: [
+              ...stateMock[PAGE_BUILDER].pages['0'].selectedElements,
+              { ...selectedElementMock, id: 'test-2' },
+            ],
+          },
+        },
+      },
+    });
+
+    // before
+    const { asFragment } = customRender(
+      <Provider store={store}>
+        <ColumnFlow />
+      </Provider>,
+    );
+
+    // result
+    expect(asFragment()).toMatchSnapshot();
+  });
 });
 
 describe('ColumnFlow behaviors', () => {
@@ -119,5 +215,47 @@ describe('ColumnFlow behaviors', () => {
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].layout.type).toBe(LayoutType.grid);
+  });
+
+  it('should change wrap', () => {
+    // mock
+    const store = configureStore({
+      ...stateMock,
+      [PAGE_BUILDER]: {
+        ...stateMock[PAGE_BUILDER],
+        pages: {
+          ['0']: {
+            ...stateMock[PAGE_BUILDER].pages['0'],
+            elements: {
+              ...stateMock[PAGE_BUILDER].pages['0'].elements,
+              ['test-1']: {
+                ...elementMock,
+                layout: {
+                  ...layoutMock,
+                  type: LayoutType.horizontal,
+                },
+              },
+            },
+            selectedElements: [...stateMock[PAGE_BUILDER].pages['0'].selectedElements],
+          },
+        },
+      },
+    });
+
+    // before
+    const { container } = customRender(
+      <Provider store={store}>
+        <ColumnFlow />
+      </Provider>,
+    );
+
+    // find
+    const buttonIcon = getByE2EAttribute(container, E2EAttribute.buttonIcon, 'wrap');
+
+    // action
+    fireEvent.click(buttonIcon);
+
+    // result
+    expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].layout.wrap).toBe(true);
   });
 });

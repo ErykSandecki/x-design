@@ -160,5 +160,6 @@
   "tooltip.rotation": "Obrót",
   "tooltip.rotationNext90": "Obróć o 90° w prawo",
   "tooltip.toggleAutoLayout": "Przełącz na automatyczne dostosowanie",
-  "tooltip.toggleVisibility": "Przełącz widoczność"
+  "tooltip.toggleVisibility": "Przełącz widoczność",
+  "tooltip.wrap": "Zawinięcie"
 }

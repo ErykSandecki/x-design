@@ -65,6 +65,7 @@ export const BASE_ELEMENTS: TElement = {
     gap: { column: { mode: 'fixed', value: 0 }, row: { mode: 'fixed', value: 0 } },
     grid: { columns: 1, rows: 1 },
     type: LayoutType.freeForm,
+    wrap: false,
   },
   margin: {
     b: { mode: 'fixed', value: 0 },
