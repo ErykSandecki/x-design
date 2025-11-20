@@ -41,6 +41,22 @@ describe('getLayout', () => {
       boxSizing: 'content-box',
       columnGap: '0px',
       display: 'flex',
+      flexWrap: 'nowrap',
+      justifyContent: 'flex-end',
+    });
+  });
+
+  it(`should return for horizontal when wrap`, () => {
+    // before
+    const result = getLayout({ ...layoutMock, type: LayoutType.horizontal, wrap: true });
+
+    // result
+    expect(result).toStrictEqual({
+      alignItems: 'flex-start',
+      boxSizing: 'content-box',
+      columnGap: '0px',
+      display: 'flex',
+      flexWrap: 'wrap',
       justifyContent: 'flex-end',
     });
   });

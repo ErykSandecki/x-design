@@ -8,7 +8,7 @@ import { getAlignmentLayout } from './getAlignmentLayout';
 import { getBoxSizing } from './getBoxSizing';
 
 export const getLayout = (layout: TElement['layout']): CSSProperties => {
-  const { alignment, boxSizing, gap, grid, type } = layout;
+  const { alignment, boxSizing, gap, grid, type, wrap } = layout;
   const { alignItems, justifyContent } = getAlignmentLayout(alignment);
   const common = { boxSizing: getBoxSizing(boxSizing) } as CSSProperties;
 
@@ -30,6 +30,7 @@ export const getLayout = (layout: TElement['layout']): CSSProperties => {
         alignItems,
         columnGap: `${gap.column.value}px`,
         display: 'flex',
+        flexWrap: wrap ? 'wrap' : 'nowrap',
         justifyContent,
       };
     default:
