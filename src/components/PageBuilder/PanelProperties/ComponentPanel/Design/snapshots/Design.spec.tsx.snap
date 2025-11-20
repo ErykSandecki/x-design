@@ -1767,9 +1767,9 @@ exports[`Design snapshots should render Design 1`] = `
                 <div
                   class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
                   data-test-icon="gap-columns"
-                  height="8"
+                  height="10"
                   name="GapColumns"
-                  width="8"
+                  width="10"
                 />
               </div>
               <input

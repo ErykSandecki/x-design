@@ -57,8 +57,8 @@ const ColumnAlignmentLayoutGapInput: FC<TColumnAlignmentLayoutGapInputProps> = (
         <ScrubbableInput
           e2eValue={gapKey}
           icon={icon}
-          iconHeight={8}
-          iconWidth={8}
+          iconHeight={10}
+          iconWidth={10}
           max={MAX}
           min={MIN}
           onChange={(value) => onChange(value.toString(), true)}

@@ -408,9 +408,9 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
               <div
                 class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
                 data-test-icon="gap-columns"
-                height="8"
+                height="10"
                 name="GapColumns"
-                width="8"
+                width="10"
               />
             </div>
             <input
@@ -2961,9 +2961,9 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
               <div
                 class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
                 data-test-icon="gap-columns"
-                height="8"
+                height="10"
                 name="GapColumns"
-                width="8"
+                width="10"
               />
             </div>
             <input
@@ -3054,9 +3054,9 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
               <div
                 class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
                 data-test-icon="gap-rows"
-                height="8"
+                height="10"
                 name="GapRows"
-                width="8"
+                width="10"
               />
             </div>
             <input
@@ -5609,9 +5609,9 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
               <div
                 class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
                 data-test-icon="gap-columns"
-                height="8"
+                height="10"
                 name="GapColumns"
-                width="8"
+                width="10"
               />
             </div>
             <input
@@ -5702,9 +5702,9 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
               <div
                 class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
                 data-test-icon="gap-rows"
-                height="8"
+                height="10"
                 name="GapRows"
-                width="8"
+                width="10"
               />
             </div>
             <input
@@ -6353,9 +6353,9 @@ exports[`ColumnAlignmentLayout snapshots should render when is included option h
               <div
                 class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
                 data-test-icon="gap-rows"
-                height="8"
+                height="10"
                 name="GapRows"
-                width="8"
+                width="10"
               />
             </div>
             <input
@@ -7024,9 +7024,9 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
               <div
                 class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
                 data-test-icon="gap-rows"
-                height="8"
+                height="10"
                 name="GapRows"
-                width="8"
+                width="10"
               />
             </div>
             <input
@@ -7675,9 +7675,9 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
               <div
                 class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
                 data-test-icon="gap-rows"
-                height="8"
+                height="10"
                 name="GapRows"
-                width="8"
+                width="10"
               />
             </div>
             <input
@@ -8326,9 +8326,9 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
               <div
                 class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
                 data-test-icon="gap-columns"
-                height="8"
+                height="10"
                 name="GapColumns"
-                width="8"
+                width="10"
               />
             </div>
             <input
