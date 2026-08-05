@@ -7,5 +7,6 @@ export const extractObjectValues: {
   if (keys.length === 1) {
     return map(obj, keys[0]);
   }
+
   return map(obj, (item) => pick(item, keys));
 };

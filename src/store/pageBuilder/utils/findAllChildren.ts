@@ -6,7 +6,10 @@ export const findAllChildren = (
   elements: TElements,
   children: TElement['children'],
   nested = true,
-): TElement['children'] => [
-  ...children,
-  ...(nested ? [...children.map(({ id }) => findAllChildren(elements, elements[id].children)).flat()] : []),
-];
+): TElement['children'] =>
+  children
+    ? [
+        ...children,
+        ...(nested ? [...children.map(({ id }) => findAllChildren(elements, elements[id]?.children)).flat()] : []),
+      ]
+    : [];
