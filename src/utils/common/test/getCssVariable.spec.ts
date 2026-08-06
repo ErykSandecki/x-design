@@ -1,15 +1,12 @@
-// others
-import { cssVariables } from 'constant/cssVariables';
-
 // utils
 import { getCssVariable } from '../getCssVariable';
 
 describe('getCssVariable', () => {
   it('should return css schema for style', () => {
     // before
-    const result = getCssVariable(cssVariables.XD_BLUE_1_DARK);
+    const result = getCssVariable('--xd-blue-1-dark');
 
     // result
-    expect(result).toBe(`var(${cssVariables.XD_BLUE_1_DARK})`);
+    expect(result).toBe('var(--xd-blue-1-dark)');
   });
 });

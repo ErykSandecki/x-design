@@ -5,7 +5,6 @@ import { FC } from 'react';
 import { useRefs } from 'pages/PageBuilderPage/core/RefsProvider';
 
 // others
-import { cssVariables } from 'constant/cssVariables';
 import { OVERLAY_CONTAINER_ID } from '../../constants';
 
 // styles
@@ -23,7 +22,7 @@ const OverlayContainer: FC = () => {
       id={OVERLAY_CONTAINER_ID}
       ref={overlayContainerRef}
       style={{
-        zIndex: getCssVariable(cssVariables.XD_PAGE_BUILDER_ZINDEX_OVERLAY_CONTAINER),
+        zIndex: getCssVariable('--xd-page-builder-zindex-overlay-container'),
       }}
     />
   );

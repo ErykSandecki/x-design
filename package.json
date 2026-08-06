@@ -15,7 +15,6 @@
     "eslint-ts": "eslint . --ext .ts --fix --max-warnings=0",
     "eslint-tsx": "eslint . --ext .tsx --fix --max-warnings=0",
     "generate:enums": "node scripts/generateEnums.js & npx prettier --write ./src/types/enums",
-    "generate:enums-sass": "node scripts/generateEnumsSass.js & npx prettier --write ./src/types/enums/scss",
     "generate:figma-svg": "node scripts/extract-svgs.js",
     "prepare": "husky install",
     "prettier:check": "npx prettier --check .",
