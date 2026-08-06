@@ -31,7 +31,7 @@ export const GridInputs: FC<TGridInputsProps> = ({
 }) => {
   return (
     <E2EDataAttribute type={E2EAttribute.gridInputs} value="">
-      <div className={cx('GridInputs', styles.GridInputs)}>
+      <div className={cx(styles.GridInputs)}>
         <GridInputCells onBlur={onBlurColumns} onChange={onChangeColumns} name="Columns" value={columns} />
         <Small classes={{ className: cx(styles.GridInputs__separator) }}>x</Small>
         <GridInputCells onBlur={onBlurRows} onChange={onChangeRows} name="Rows" value={rows} />

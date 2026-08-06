@@ -1,10 +1,6 @@
 import cx from 'classnames';
 import { FC } from 'react';
 
-// components
-
-// others
-
 // styles
 import styles from './preview-box-sizing.scss';
 
@@ -21,18 +17,16 @@ const strokeModificators: Record<string, string> = {
 
 export type TPreviewBoxSizingProps = Pick<TPreviewData, 'activeOption'>;
 
-const PreviewBoxSizing: FC<TPreviewBoxSizingProps> = ({ activeOption }) => {
-  return (
-    <div className={cx(styles.PreviewBoxSizing, styles[previewBoxSizingModificators[activeOption]])}>
-      <div className={cx(styles['PreviewBoxSizing__tile-left'])}>
-        <div className={cx(styles['PreviewBoxSizing__tile-children'])} />
-      </div>
-      <div className={cx(styles['PreviewBoxSizing__tile-right'])}>
-        <div className={cx(styles['PreviewBoxSizing__tile-children'])} />
-      </div>
-      <div className={cx(styles.PreviewBoxSizing__stroke, styles[strokeModificators[activeOption]])} />
+const PreviewBoxSizing: FC<TPreviewBoxSizingProps> = ({ activeOption }) => (
+  <div className={cx(styles.PreviewBoxSizing, styles[previewBoxSizingModificators[activeOption]])}>
+    <div className={cx(styles['PreviewBoxSizing__tile-left'])}>
+      <div className={cx(styles['PreviewBoxSizing__tile-children'])} />
     </div>
-  );
-};
+    <div className={cx(styles['PreviewBoxSizing__tile-right'])}>
+      <div className={cx(styles['PreviewBoxSizing__tile-children'])} />
+    </div>
+    <div className={cx(styles.PreviewBoxSizing__stroke, styles[strokeModificators[activeOption]])} />
+  </div>
+);
 
 export default PreviewBoxSizing;

@@ -3,7 +3,7 @@
 exports[`GridInputs snapshots should render GridInputs 1`] = `
 <DocumentFragment>
   <div
-    class="GridInputs GridInputs"
+    class="GridInputs"
     data-test-grid-inputs=""
   >
     <div

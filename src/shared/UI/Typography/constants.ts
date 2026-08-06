@@ -1,4 +1,4 @@
-export const ICON_MODIFICATORS: Record<string, string> = {
+export const COLORS_MODIFICATORS: Record<string, string> = {
   blue1: 'Typography--blue-1',
   blue2: 'Typography--blue2',
   bold: 'Typography--bold',

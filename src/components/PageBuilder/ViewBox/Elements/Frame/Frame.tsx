@@ -51,6 +51,7 @@ const Frame: FC<TFrameProps> = ({ className, id, index, mouseMode, parentId, typ
     >
       {(angle, coordinates, height, hover, selected, width) => {
         const stickWall = useMemo(() => getElementStickWallPosition(angle), [angle]);
+        const isStickHorizontal = useMemo(() => stickWall === 'top' || stickWall === 'bottom', [stickWall]);
 
         return (
           <>
@@ -75,7 +76,7 @@ const Frame: FC<TFrameProps> = ({ className, id, index, mouseMode, parentId, typ
                       }),
                     }}
                     style={{
-                      width: `${width}px`,
+                      width: `${isStickHorizontal ? width : height}px`,
                     }}
                   >
                     {t(`${translationNameSpace}.label.createFrame`)}

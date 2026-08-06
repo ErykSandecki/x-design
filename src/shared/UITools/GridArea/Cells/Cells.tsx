@@ -26,7 +26,7 @@ export const Cells: FC<TCellsProps> = ({ columns, rows }) => {
   return (
     <E2EDataAttribute type={E2EAttribute.gridArea} value="">
       <div
-        className={cx('Cells', styles.Cells)}
+        className={cx(styles.Cells)}
         style={{
           gridTemplateColumns: `repeat(${targetColumns}, 1fr)`,
           gridTemplateRows: `repeat(${targetRows}, 1fr)`,

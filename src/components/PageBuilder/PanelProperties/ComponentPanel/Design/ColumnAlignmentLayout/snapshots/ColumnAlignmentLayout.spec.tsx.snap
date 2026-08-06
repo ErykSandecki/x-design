@@ -33,7 +33,7 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="AlignmentArea AlignmentArea"
+          class="AlignmentArea"
           data-test-alignment-area="alignment-flow"
         >
           <div
@@ -625,11 +625,11 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="GridArea GridArea"
+          class="GridArea"
           data-test-grid-area="grid-flow"
         >
           <div
-            class="Cells Cells"
+            class="Cells"
             data-test-grid-area=""
             style="grid-template-columns: repeat(1, 1fr); grid-template-rows: repeat(1, 1fr);"
           >
@@ -655,7 +655,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
             style="height: 180px; width: 210px; left: -12.5px; top: -48.5px;"
           >
             <div
-              class="GridInputs GridInputs"
+              class="GridInputs"
               data-test-grid-inputs=""
             >
               <div
@@ -759,7 +759,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
               </div>
             </div>
             <div
-              class="CellsInput CellsInput"
+              class="CellsInput"
               data-test-grid-cells-input=""
               style="grid-template-columns: repeat(12, 1fr); grid-template-rows: repeat(8, 1fr);"
             >
@@ -3251,11 +3251,11 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="GridArea GridArea"
+          class="GridArea"
           data-test-grid-area="grid-flow"
         >
           <div
-            class="Cells Cells"
+            class="Cells"
             data-test-grid-area=""
             style="grid-template-columns: repeat(1, 1fr); grid-template-rows: repeat(1, 1fr);"
           >
@@ -3281,7 +3281,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
             style="height: 180px; width: 210px; left: -12.5px; top: -48.5px;"
           >
             <div
-              class="GridInputs GridInputs"
+              class="GridInputs"
               data-test-grid-inputs=""
             >
               <div
@@ -3385,7 +3385,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
               </div>
             </div>
             <div
-              class="CellsInput CellsInput"
+              class="CellsInput"
               data-test-grid-cells-input=""
               style="grid-template-columns: repeat(12, 1fr); grid-template-rows: repeat(8, 1fr);"
             >
@@ -5875,7 +5875,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is included option h
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="AlignmentArea AlignmentArea"
+          class="AlignmentArea"
           data-test-alignment-area="alignment-flow"
         >
           <div
@@ -6481,7 +6481,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="AlignmentArea AlignmentArea"
+          class="AlignmentArea"
           data-test-alignment-area="alignment-flow"
         >
           <div
@@ -7073,7 +7073,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="AlignmentArea AlignmentArea"
+          class="AlignmentArea"
           data-test-alignment-area="alignment-flow"
         >
           <div
@@ -7665,7 +7665,7 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="AlignmentArea AlignmentArea"
+          class="AlignmentArea"
           data-test-alignment-area="alignment-flow"
         >
           <div

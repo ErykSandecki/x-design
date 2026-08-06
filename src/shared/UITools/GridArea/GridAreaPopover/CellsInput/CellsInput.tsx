@@ -33,7 +33,7 @@ export const CellsInput: FC<TCellsInputProps> = ({ columns, onClickCell, rows })
   return (
     <E2EDataAttribute type={E2EAttribute.gridCellsInput} value="">
       <div
-        className={cx('CellsInput', styles.CellsInput)}
+        className={cx(styles.CellsInput)}
         style={{
           gridTemplateColumns: `repeat(${12}, 1fr)`,
           gridTemplateRows: `repeat(${8}, 1fr)`,

@@ -3,7 +3,7 @@ import { CSSProperties, HTMLAttributes, ReactNode, Ref } from 'react';
 import { camelCase } from 'lodash';
 
 // others
-import { ICON_MODIFICATORS } from './constants';
+import { COLORS_MODIFICATORS } from './constants';
 
 // styles
 import styles from './typography.scss';
@@ -68,10 +68,10 @@ export const Typography = ({
       className: cx(
         classes.className,
         styles.Typography,
-        styles[ICON_MODIFICATORS[color]],
-        styles[ICON_MODIFICATORS[camelCase(fontWeight)]],
-        styles[ICON_MODIFICATORS[fontStyle]],
-        styles[ICON_MODIFICATORS[variant]],
+        styles[COLORS_MODIFICATORS[color]],
+        styles[COLORS_MODIFICATORS[camelCase(fontWeight)]],
+        styles[COLORS_MODIFICATORS[fontStyle]],
+        styles[COLORS_MODIFICATORS[variant]],
         { [styles['Typography--gutter-bottom']]: gutterBottom },
         { [styles['Typography--no-wrap']]: noWrap },
       ),

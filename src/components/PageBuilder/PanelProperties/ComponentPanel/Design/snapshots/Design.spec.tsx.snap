@@ -1324,7 +1324,7 @@ exports[`Design snapshots should render Design 1`] = `
           style="width: calc(100% - 24px - 0px - 8px);"
         >
           <div
-            class="AlignmentArea AlignmentArea"
+            class="AlignmentArea"
             data-test-alignment-area="alignment-flow"
           >
             <div

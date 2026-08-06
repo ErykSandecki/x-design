@@ -82,7 +82,7 @@ const config: StorybookConfig = {
             modules: {
               exportLocalsConvention: 'as-is',
               exportOnlyLocals: false,
-              localIdentName: '[local]',
+              localIdentName: '[local]_[hash:base64:5]',
               namedExport: false,
             },
           },

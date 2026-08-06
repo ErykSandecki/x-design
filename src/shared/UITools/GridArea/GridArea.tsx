@@ -37,7 +37,7 @@ export const GridArea: FC<TGridAreaProps> = ({
   return (
     <E2EDataAttribute type={E2EAttribute.gridArea} value={e2eValue}>
       <div
-        className={cx('GridArea', styles.GridArea, {
+        className={cx(styles.GridArea, {
           [styles['GridArea--full-width']]: fullWidth,
         })}
         onClick={() => setSelected(true)}

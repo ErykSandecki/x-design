@@ -67,7 +67,7 @@ export const ColorPickerInputColor: FC<TColorPickerInputColorProps> = ({
       startAdornment={
         <ColorPickerAntd
           arrow={false}
-          className={cx('ColorPicker', classNameParent)}
+          className={cx(classNameParent)}
           onChange={onChangeColorPicker}
           onOpenChange={(visible) => setVisible(visible)}
           open={visible}

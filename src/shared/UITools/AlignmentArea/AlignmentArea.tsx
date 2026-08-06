@@ -25,7 +25,7 @@ export const AlignmentArea: FC<TAlignmentAreaProps> = ({ e2eValue = '', fullWidt
   return (
     <E2EDataAttribute type={E2EAttribute.alignmentArea} value={e2eValue}>
       <div
-        className={cx('AlignmentArea', styles.AlignmentArea, {
+        className={cx(styles.AlignmentArea, {
           [styles['AlignmentArea--full-width']]: fullWidth,
         })}
       >

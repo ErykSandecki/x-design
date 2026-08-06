@@ -8,7 +8,7 @@ exports[`GridAreaPopover snapshots should render GridAreaPopover 1`] = `
     style="height: 180px; width: 210px; left: -12.5px; top: -48.5px;"
   >
     <div
-      class="GridInputs GridInputs"
+      class="GridInputs"
       data-test-grid-inputs=""
     >
       <div
@@ -112,7 +112,7 @@ exports[`GridAreaPopover snapshots should render GridAreaPopover 1`] = `
       </div>
     </div>
     <div
-      class="CellsInput CellsInput"
+      class="CellsInput"
       data-test-grid-cells-input=""
       style="grid-template-columns: repeat(12, 1fr); grid-template-rows: repeat(8, 1fr);"
     >
@@ -2241,7 +2241,7 @@ exports[`GridAreaPopover snapshots should render with opened popover 1`] = `
     style="height: 180px; width: 210px; left: -12.5px; top: -48.5px;"
   >
     <div
-      class="GridInputs GridInputs"
+      class="GridInputs"
       data-test-grid-inputs=""
     >
       <div
@@ -2345,7 +2345,7 @@ exports[`GridAreaPopover snapshots should render with opened popover 1`] = `
       </div>
     </div>
     <div
-      class="CellsInput CellsInput"
+      class="CellsInput"
       data-test-grid-cells-input=""
       style="grid-template-columns: repeat(12, 1fr); grid-template-rows: repeat(8, 1fr);"
     >

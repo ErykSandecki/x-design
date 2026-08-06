@@ -3,11 +3,11 @@
 exports[`GridArea snapshots should render GridArea 1`] = `
 <DocumentFragment>
   <div
-    class="GridArea GridArea"
+    class="GridArea"
     data-test-grid-area=""
   >
     <div
-      class="Cells Cells"
+      class="Cells"
       data-test-grid-area=""
       style="grid-template-columns: repeat(1, 1fr); grid-template-rows: repeat(1, 1fr);"
     >
@@ -33,7 +33,7 @@ exports[`GridArea snapshots should render GridArea 1`] = `
       style="height: 180px; width: 210px; left: -12.5px; top: -48.5px;"
     >
       <div
-        class="GridInputs GridInputs"
+        class="GridInputs"
         data-test-grid-inputs=""
       >
         <div
@@ -137,7 +137,7 @@ exports[`GridArea snapshots should render GridArea 1`] = `
         </div>
       </div>
       <div
-        class="CellsInput CellsInput"
+        class="CellsInput"
         data-test-grid-cells-input=""
         style="grid-template-columns: repeat(12, 1fr); grid-template-rows: repeat(8, 1fr);"
       >
@@ -2262,11 +2262,11 @@ exports[`GridArea snapshots should render GridArea 1`] = `
 exports[`GridArea snapshots should render when exceed 10x10 1`] = `
 <DocumentFragment>
   <div
-    class="GridArea GridArea"
+    class="GridArea"
     data-test-grid-area=""
   >
     <div
-      class="Cells Cells"
+      class="Cells"
       data-test-grid-area=""
       style="grid-template-columns: repeat(10, 1fr); grid-template-rows: repeat(10, 1fr);"
     >
@@ -2688,7 +2688,7 @@ exports[`GridArea snapshots should render when exceed 10x10 1`] = `
       style="height: 180px; width: 210px; left: -12.5px; top: -48.5px;"
     >
       <div
-        class="GridInputs GridInputs"
+        class="GridInputs"
         data-test-grid-inputs=""
       >
         <div
@@ -2792,7 +2792,7 @@ exports[`GridArea snapshots should render when exceed 10x10 1`] = `
         </div>
       </div>
       <div
-        class="CellsInput CellsInput"
+        class="CellsInput"
         data-test-grid-cells-input=""
         style="grid-template-columns: repeat(12, 1fr); grid-template-rows: repeat(8, 1fr);"
       >
@@ -4917,11 +4917,11 @@ exports[`GridArea snapshots should render when exceed 10x10 1`] = `
 exports[`GridArea snapshots should render wner popover selected 1`] = `
 <DocumentFragment>
   <div
-    class="GridArea GridArea"
+    class="GridArea"
     data-test-grid-area=""
   >
     <div
-      class="Cells Cells"
+      class="Cells"
       data-test-grid-area=""
       style="grid-template-columns: repeat(1, 1fr); grid-template-rows: repeat(1, 1fr);"
     >
@@ -4947,7 +4947,7 @@ exports[`GridArea snapshots should render wner popover selected 1`] = `
       style="height: 180px; width: 210px; left: -12.5px; top: -48.5px;"
     >
       <div
-        class="GridInputs GridInputs"
+        class="GridInputs"
         data-test-grid-inputs=""
       >
         <div
@@ -5051,7 +5051,7 @@ exports[`GridArea snapshots should render wner popover selected 1`] = `
         </div>
       </div>
       <div
-        class="CellsInput CellsInput"
+        class="CellsInput"
         data-test-grid-cells-input=""
         style="grid-template-columns: repeat(12, 1fr); grid-template-rows: repeat(8, 1fr);"
       >

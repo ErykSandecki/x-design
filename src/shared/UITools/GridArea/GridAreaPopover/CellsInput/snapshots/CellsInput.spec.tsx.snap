@@ -3,7 +3,7 @@
 exports[`CellsInput snapshots should render CellsInput 1`] = `
 <DocumentFragment>
   <div
-    class="CellsInput CellsInput"
+    class="CellsInput"
     data-test-grid-cells-input=""
     style="grid-template-columns: repeat(12, 1fr); grid-template-rows: repeat(8, 1fr);"
   >
@@ -2126,7 +2126,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
 exports[`CellsInput snapshots should render when select last cell 1`] = `
 <DocumentFragment>
   <div
-    class="CellsInput CellsInput"
+    class="CellsInput"
     data-test-grid-cells-input=""
     style="grid-template-columns: repeat(12, 1fr); grid-template-rows: repeat(8, 1fr);"
   >
