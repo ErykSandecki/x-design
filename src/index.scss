@@ -5,25 +5,23 @@
 @use './styles/fonts' as *;
 @use './styles/initRoot' as *;
 
-:global {
-  html {
-    height: 100%;
-  }
+html {
+  height: 100%;
+}
 
-  body {
-    align-items: center;
-    font-family: Rubik, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    height: 100%;
-    margin: 0;
-    overflow-y: auto;
-    overscroll-behavior: none;
-  }
+body {
+  align-items: center;
+  font-family: Rubik, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  margin: 0;
+  overflow-y: auto;
+  overscroll-behavior: none;
+}
 
-  #root {
-    height: 100%;
-  }
+#root {
+  height: 100%;
 }
 
 div {

@@ -9,7 +9,7 @@ import Prompts from './Prompts/Prompts';
 import { useDropAnchorsEvents } from './hooks/useDropAnchorsEvents';
 
 // styles
-import styles from './drop-anchors.scss';
+import styles from './drop-anchors.module.scss';
 
 // types
 import { MouseMode } from 'types/enums/mouseMode';

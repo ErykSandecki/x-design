@@ -2,7 +2,7 @@ import cx from 'classnames';
 import { FC } from 'react';
 
 // styles
-import styles from './selectable-area.scss';
+import styles from './selectable-area.module.scss';
 
 // types
 import { TRectAreaExtended } from '../../types';

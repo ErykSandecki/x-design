@@ -11,7 +11,7 @@ import { useToggleButtonGroupEvents } from './hooks/useToggleButtonGroupEvents';
 // others
 
 // styles
-import styles from './toggle-button-group.scss';
+import styles from './toggle-button-group.module.scss';
 
 // types
 import { E2EAttribute } from 'types';

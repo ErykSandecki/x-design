@@ -4,7 +4,7 @@ import { FC } from 'react';
 // others
 
 // styles
-import styles from './story-props-table.scss';
+import styles from './story-props-table.module.scss';
 
 // types
 import { TTableBody } from './types';

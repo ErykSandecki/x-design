@@ -5,7 +5,7 @@ import { FC, ReactNode } from 'react';
 import E2EDataAttribute, { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute';
 
 // styles
-import styles from './field-group.scss';
+import styles from './field-group.module.scss';
 
 // types
 import { E2EAttribute, TObject } from 'types';

@@ -12,7 +12,7 @@ import Tooltip, { TTooltipProps } from '../Tooltip/Tooltip';
 import { ICON_MODIFICATORS } from './constants';
 
 // styles
-import styles from './icon.scss';
+import styles from './icon.module.scss';
 
 // types
 import { ColorsTheme, E2EAttribute } from 'types';

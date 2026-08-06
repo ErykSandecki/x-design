@@ -5,7 +5,7 @@ import { FC, useMemo } from 'react';
 import { PROMPTS_MODIFICATORS } from './constants';
 
 // styles
-import styles from './prompts.scss';
+import styles from './prompts.module.scss';
 
 // types
 import { DropAnchorsPosition } from 'store/pageBuilder/enums';

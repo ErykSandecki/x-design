@@ -8,16 +8,53 @@ const contentRef = {
 } as RefObject<HTMLDivElement>;
 
 describe('updateCursor', () => {
-  it(`should update cursor`, () => {
+  beforeEach(() => {
+    contentRef.current.style.cursor = '';
+
+    // spy
+    jest.spyOn(HTMLCanvasElement.prototype, 'getContext').mockReturnValue({
+      drawImage: jest.fn(),
+      rotate: jest.fn(),
+      translate: jest.fn(),
+    } as unknown as CanvasRenderingContext2D);
+    jest.spyOn(HTMLCanvasElement.prototype, 'toDataURL').mockReturnValue('data:image/png;base64,mock');
+  });
+
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
+  it(`should update cursor synchronously once the image has already loaded`, () => {
+    // mock
+    const mockImage = { complete: true, onload: null, src: '' } as unknown as HTMLImageElement;
+
+    // spy
+    jest.spyOn(window, 'Image').mockImplementation(() => mockImage);
+
     // before
-    updateCursor(360, contentRef, 'cursor');
+    updateCursor(90, contentRef, 'cursor-loaded');
 
     // result
-    expect(contentRef.current).toStrictEqual({
-      style: {
-        cursor:
-          "url(\"data:image/svg+xml,%0A%20%20%20%20%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'32'%20height%3D'32'%3E%0A%20%20%20%20%20%20%3Cimage%20href%3D'cursor'%20width%3D'32'%20height%3D'32'%20transform%3D'rotate(360%2016%2016)'%2F%3E%0A%20%20%20%20%3C%2Fsvg%3E\") 16 16, auto",
-      },
-    });
+    expect(contentRef.current.style.cursor).toBe('url(data:image/png;base64,mock) 16 16, auto');
+  });
+
+  it(`should update cursor once the image finishes loading`, () => {
+    // mock
+    const mockImage = { complete: false, onload: null, src: '' } as unknown as HTMLImageElement;
+
+    // spy
+    jest.spyOn(window, 'Image').mockImplementation(() => mockImage);
+
+    // before
+    updateCursor(90, contentRef, 'cursor-not-loaded-yet');
+
+    // result
+    expect(contentRef.current.style.cursor).toBe('');
+
+    // action
+    mockImage.onload?.({} as Event);
+
+    // result
+    expect(contentRef.current.style.cursor).toBe('url(data:image/png;base64,mock) 16 16, auto');
   });
 });

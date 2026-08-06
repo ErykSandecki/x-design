@@ -5,7 +5,7 @@ import { FC } from 'react';
 import { CONSTRAIN_MODIFICATORS, HORIZONTAL_MODIFICATORS, VERTICAL_MODIFICATORS } from './constants';
 
 // styles
-import styles from './constrains-view.scss';
+import styles from './constrains-view.module.scss';
 
 // types
 import { Constrain } from '../../enums';

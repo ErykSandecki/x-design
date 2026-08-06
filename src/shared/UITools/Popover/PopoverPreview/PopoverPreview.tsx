@@ -13,7 +13,7 @@ import { usePopoverRoot } from '../PopoverRoot/core/PopoverRootProvider';
 import { translationNameSpace } from '../constants';
 
 // styles
-import styles from './popover-preview.scss';
+import styles from './popover-preview.module.scss';
 
 // types
 import { E2EAttribute } from 'types';

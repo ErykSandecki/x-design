@@ -16,7 +16,7 @@ import { BASE_2D } from 'shared/ZoomBox/constants';
 import { colors } from 'constant/colors';
 
 // styles
-import styles from './popover.scss';
+import styles from './popover.module.scss';
 
 // types
 import { AlignPopoverHorizontally, AlignPopoverVertically } from './enums';

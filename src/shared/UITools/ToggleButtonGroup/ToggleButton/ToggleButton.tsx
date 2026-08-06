@@ -8,7 +8,7 @@ import Tooltip, { TTooltipProps } from '../../../UI/Tooltip/Tooltip';
 // others
 
 // styles
-import styles from './toggle-button.scss';
+import styles from './toggle-button.module.scss';
 
 // types
 import { E2EAttribute } from 'types';

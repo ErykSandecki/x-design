@@ -9,7 +9,7 @@ import ButtonIcon from '../../ButtonIcon/ButtonIcon';
 import { TOOLTIP_TRANSLATION_KEY } from 'constant/constants';
 
 // styles
-import styles from './draggable-section-content.scss';
+import styles from './draggable-section-content.module.scss';
 
 // utils
 import { stopPropagation } from 'utils';

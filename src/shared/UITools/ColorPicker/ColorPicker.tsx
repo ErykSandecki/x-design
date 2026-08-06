@@ -14,7 +14,7 @@ import { useColorPickerEvents } from './hooks/useColorPickerEvents';
 // others
 
 // styles
-import styles from './color-picker.scss';
+import styles from './color-picker.module.scss';
 
 // types
 import { TColor } from 'types';

@@ -6,7 +6,7 @@ import E2EDataAttribute from '../../../E2EDataAttributes/E2EDataAttribute';
 import { Small } from '../../../UI/Typography';
 
 // styles
-import styles from './cells.scss';
+import styles from './cells.module.scss';
 
 // types
 import { E2EAttribute } from 'types';

@@ -13,7 +13,7 @@ import { useUpdatePosition } from './hooks/useUpdatePosition';
 import { CARROT_MODIFICATORS } from './constants';
 
 // styles
-import _styles from './styles/tooltip.scss';
+import _styles from './styles/tooltip.module.scss';
 
 // types
 import { E2EAttribute, HTMLContainerId } from 'types';

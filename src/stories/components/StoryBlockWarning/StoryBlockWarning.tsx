@@ -4,7 +4,7 @@ import { FC, ReactNode } from 'react';
 // others
 
 // styles
-import styles from './story-block-warning.scss';
+import styles from './story-block-warning.module.scss';
 
 export type TStroyBlockWarningProps = {
   children: ReactNode;

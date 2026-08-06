@@ -17,7 +17,7 @@ import { E2EAttribute, TElement } from 'types';
 import { MouseMode } from 'types/enums/mouseMode';
 
 // styles
-import styles from './transform-area.scss';
+import styles from './transform-area.module.scss';
 
 // utils
 import { enumToArray } from 'utils';

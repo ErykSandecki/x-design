@@ -5,7 +5,7 @@ import { FC } from 'react';
 import Icon from '../../../UI/Icon/Icon';
 
 // styles
-import styles from './draggable-section-menu.scss';
+import styles from './draggable-section-menu.module.scss';
 
 export type TDraggableSectionMenuProps = {
   forceDisplay: boolean;

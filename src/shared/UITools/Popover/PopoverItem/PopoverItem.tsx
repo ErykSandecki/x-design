@@ -14,7 +14,7 @@ import { useClickEvent } from './hooks/useClickEvent';
 // others
 
 // styles
-import styles from './popover-item.scss';
+import styles from './popover-item.module.scss';
 
 // types
 import { E2EAttribute } from 'types';

@@ -15,7 +15,7 @@ import { useOutsideClick } from 'hooks';
 import { TEXT_FIELD_WRAPPER_MODIFICATORS } from './constants';
 
 // styles
-import styles from './text-field-wrapper.scss';
+import styles from './text-field-wrapper.module.scss';
 
 // types
 import { E2EAttribute, KeyboardKeys, TValueExtended } from 'types';

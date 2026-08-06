@@ -2,7 +2,7 @@ import cx from 'classnames';
 import { FC } from 'react';
 
 // styles
-import styles from './popover-separator.scss';
+import styles from './popover-separator.module.scss';
 
 export type TPopoverSeparatorProps = {
   visible?: boolean;

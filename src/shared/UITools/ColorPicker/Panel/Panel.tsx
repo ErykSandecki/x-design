@@ -17,7 +17,7 @@ import { antColorPickerSliderContainerClassName, TABS } from './constants';
 import { BASE_2D } from 'shared/ZoomBox/constants';
 
 // styles
-import styles from './panel.scss';
+import styles from './panel.module.scss';
 
 // types
 import { E2EAttribute } from 'types';

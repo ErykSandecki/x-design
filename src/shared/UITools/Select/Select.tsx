@@ -16,7 +16,7 @@ import { useSelectEvents } from './hooks/useSelectEvents';
 import { MIXED } from 'constant/constants';
 
 // styles
-import styles from './select.scss';
+import styles from './select.module.scss';
 
 // types
 import { E2EAttribute } from 'types';

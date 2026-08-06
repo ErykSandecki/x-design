@@ -5,7 +5,7 @@ import { FC } from 'react';
 import { PREVIEW_BOX_SIZING_MODIFICATORS, STROKE_MODIFICATORS } from './constants';
 
 // styles
-import styles from './preview-box-sizing.scss';
+import styles from './preview-box-sizing.module.scss';
 
 // types
 import { TPreviewData } from 'shared';

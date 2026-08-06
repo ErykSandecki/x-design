@@ -3,7 +3,7 @@ import { FC } from 'react';
 import { Spin } from 'antd';
 
 // styles
-import styles from './color-grid.scss';
+import styles from './color-grid.module.scss';
 
 // types
 import { TUseColorSamplerEvents } from '../hooks/useColorSamplerEvents';

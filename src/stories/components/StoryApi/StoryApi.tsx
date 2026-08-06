@@ -8,7 +8,7 @@ import StoryPropsTable, { TPropsStoryPropsTable } from '../StoryPropsTable/Story
 // others
 
 // styles
-import styles from './story-api.scss';
+import styles from './story-api.module.scss';
 
 // types
 import { TStoryBlockCodeProps } from '../StoryBlockCode/StoryBlockCode';

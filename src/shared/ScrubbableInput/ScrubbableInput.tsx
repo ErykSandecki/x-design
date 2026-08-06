@@ -13,7 +13,7 @@ import { useScrubbableInputEvents } from './hooks/useScrubbableInputEvents';
 // others
 
 // styles
-import styles from './scrubbable-input.scss';
+import styles from './scrubbable-input.module.scss';
 
 // types
 import { ColorsTheme, E2EAttribute } from 'types';

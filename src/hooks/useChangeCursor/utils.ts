@@ -1,14 +1,37 @@
 import { RefObject } from 'react';
 
+const cursorSize = 32;
+const cursorImageCache = new Map<string, HTMLImageElement>();
+
+const getCursorImage = (cursor: string): HTMLImageElement => {
+  const cached = cursorImageCache.get(cursor);
+
+  if (!cached) {
+    const image = new Image();
+    image.src = cursor;
+    cursorImageCache.set(cursor, image);
+
+    return image;
+  }
+
+  return cached;
+};
+
 export const getPNGUrl = (cursor: string): string => `url(${cursor}), auto`;
 
-export const getSVGUrl = (angle: number, cursor: string): string => {
-  const svgRaw = `
-    <svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'>
-      <image href='${cursor}' width='32' height='32' transform='rotate(${angle} 16 16)'/>
-    </svg>`;
+export const getRotatedPNGUrl = (angle: number, cursor: string): string => {
+  const image = getCursorImage(cursor);
+  const canvas = document.createElement('canvas');
+  const context = canvas.getContext('2d');
+  const halfCursorSize = cursorSize / 2;
 
-  return `url("data:image/svg+xml,${encodeURIComponent(svgRaw)}") 16 16, auto`;
+  canvas.width = cursorSize;
+  canvas.height = cursorSize;
+  context!.translate(halfCursorSize, halfCursorSize);
+  context!.rotate((angle * Math.PI) / 180);
+  context!.drawImage(image, -halfCursorSize, -halfCursorSize, cursorSize, cursorSize);
+
+  return `url(${canvas.toDataURL('image/png')}) 16 16, auto`;
 };
 
 export const toggleCursor = (contentRef: RefObject<HTMLElement>, url: string): void => {
@@ -21,6 +44,11 @@ export const resetCursor = (contentRef: RefObject<HTMLElement>, cursorDefault: s
 };
 
 export const updateCursor = (angle: number, contentRef: RefObject<HTMLElement>, cursor: string): void => {
-  const url = getSVGUrl(angle, cursor);
-  toggleCursor(contentRef, url);
+  const image = getCursorImage(cursor);
+
+  if (image.complete) {
+    toggleCursor(contentRef, getRotatedPNGUrl(angle, cursor));
+  } else {
+    image.onload = (): void => toggleCursor(contentRef, getRotatedPNGUrl(angle, cursor));
+  }
 };

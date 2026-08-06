@@ -11,7 +11,7 @@ import GridAreaPopover, { TGridAreaPopoverProps } from './GridAreaPopover/GridAr
 import { useOutsideClick } from 'hooks';
 
 // styles
-import styles from './grid-area.scss';
+import styles from './grid-area.module.scss';
 
 // types
 import { E2EAttribute } from 'types';

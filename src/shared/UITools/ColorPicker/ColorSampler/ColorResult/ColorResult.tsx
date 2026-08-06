@@ -8,7 +8,7 @@ import { Small } from '../../../../UI/Typography';
 import { MIDDLE_ARRAY } from '../constants';
 
 // styles
-import styles from './color-result.scss';
+import styles from './color-result.module.scss';
 
 // types
 import { TUseColorSamplerEvents } from '../hooks/useColorSamplerEvents';

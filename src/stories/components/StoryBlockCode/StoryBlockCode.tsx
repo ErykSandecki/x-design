@@ -4,7 +4,7 @@ import { FC } from 'react';
 // others
 
 // styles
-import styles from './story-block-code.scss';
+import styles from './story-block-code.module.scss';
 
 // types
 import { TStoryBlockCode } from './types';

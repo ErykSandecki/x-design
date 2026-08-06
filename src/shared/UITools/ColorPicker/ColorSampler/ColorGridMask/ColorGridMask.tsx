@@ -8,7 +8,7 @@ import E2EDataAttribute from '../../../../E2EDataAttributes/E2EDataAttribute';
 import { MIDDLE_ARRAY } from '../constants';
 
 // styles
-import styles from './color-grid-mask.scss';
+import styles from './color-grid-mask.module.scss';
 
 // types
 import { E2EAttribute } from 'types';

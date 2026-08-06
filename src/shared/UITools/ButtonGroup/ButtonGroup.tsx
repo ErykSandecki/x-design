@@ -8,7 +8,7 @@ import Icon from '../../UI/Icon/Icon';
 import Tooltip from '../../UI/Tooltip/Tooltip';
 
 // styles
-import styles from './button-group.scss';
+import styles from './button-group.module.scss';
 
 // types
 import { E2EAttribute } from 'types';

@@ -2,7 +2,7 @@ import cx from 'classnames';
 import { FC } from 'react';
 
 // styles
-import styles from './color.scss';
+import styles from './color.module.scss';
 
 // utils
 import { hexToRgb } from 'utils';

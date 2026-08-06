@@ -10,7 +10,7 @@ import { Small } from '../../../UI/Typography';
 import { usePopoverRoot } from '../PopoverRoot/core/PopoverRootProvider';
 
 // styles
-import styles from './popover-header.scss';
+import styles from './popover-header.module.scss';
 
 // types
 import { E2EAttribute } from 'types';

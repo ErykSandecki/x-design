@@ -8,7 +8,7 @@ import { E2EDataAttribute } from 'shared';
 import { useGridDropAreaEvents } from './hooks/useGridDropAreaEvents';
 
 // styles
-import styles from './grid-drop-area.scss';
+import styles from './grid-drop-area.module.scss';
 
 // types
 import { E2EAttribute, MouseMode, TElement } from 'types';

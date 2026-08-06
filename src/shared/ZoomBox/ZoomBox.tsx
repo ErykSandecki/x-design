@@ -12,7 +12,7 @@ import { CURSOR_STATES } from 'constant/constants';
 import { ZOOM_BOX_MODIFICATORS, ZOOM_CONTENT_ID } from './constants';
 
 // styles
-import styles from './zoom-box.scss';
+import styles from './zoom-box.module.scss';
 
 // types
 import { E2EAttribute, TColor } from 'types';

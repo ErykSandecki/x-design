@@ -16,7 +16,7 @@ import { useSelectOptionsEvents } from './hooks/useSelectOptionsEvents';
 import { translationNameSpace } from '../constants';
 
 // styles
-import styles from './select-options.scss';
+import styles from './select-options.module.scss';
 
 // types
 import { E2EAttribute, HTMLContainerId } from 'types';

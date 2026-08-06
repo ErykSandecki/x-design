@@ -15,7 +15,7 @@ import { useRefs } from 'pages/PageBuilderPage/core/RefsProvider';
 import { LABEL_MODIFICATORS, translationNameSpace } from './constants';
 
 // styles
-import styles from './frame.scss';
+import styles from './frame.module.scss';
 
 // types
 import { TElementProps } from '../types';

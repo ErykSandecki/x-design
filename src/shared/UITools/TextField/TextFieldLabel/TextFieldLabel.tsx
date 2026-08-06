@@ -7,7 +7,7 @@ import { Small } from '../../../UI/Typography';
 // others
 
 // styles
-import styles from './text-field-label.scss';
+import styles from './text-field-label.module.scss';
 
 export type TTextFieldLabelProps = {
   label?: string;

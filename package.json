@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "build": "node scripts/build.js",
+    "build": "vite build",
     "cypress": "cypress open REACT_APP_CYPRESS_IS_RUNNING=false",
     "cypress:record": "npx cypress run --record --key ea7b8000-4064-4d74-a53d-eaaab551f0f9",
     "eslint-ts": "eslint . --ext .ts --fix --max-warnings=0",
@@ -19,7 +19,7 @@
     "prepare": "husky install",
     "prettier:check": "npx prettier --check .",
     "prettier:write": "npx prettier --write .",
-    "start": "node scripts/start.js",
+    "start": "vite",
     "test": "node scripts/test.js --watchAll",
     "test:check": "node scripts/test.js --watchAll=false  --passWithNoTests --coverage",
     "test:coverage": "node scripts/test.js  --colors --coverage --watchAll",
@@ -47,6 +47,7 @@
     "react-redux": "^9.2.0",
     "react-router": "^7.9.2",
     "react-router-dom": "^7.9.2",
+    "redux": "^5.0.0",
     "redux-saga": "^1.3.0",
     "reselect": "^5.1.1",
     "uniqid": "^5.4.0"
@@ -61,6 +62,7 @@
     "@storybook/addon-onboarding": "^10.0.2",
     "@storybook/addon-webpack5-compiler-swc": "^4.0.1",
     "@storybook/react-webpack5": "^10.0.2",
+    "@svgr/core": "^8.1.0",
     "@svgr/webpack": "^8.1.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
@@ -73,6 +75,7 @@
     "@types/react-router-dom": "^5.3.3",
     "@types/redux": "^3.6.31",
     "@typescript-eslint/eslint-plugin": "^8.44.1",
+    "@vitejs/plugin-react": "^6.0.5",
     "babel-loader": "^9.2.1",
     "babel-plugin-module-resolver": "^5.0.2",
     "bfj": "^9.1.2",
@@ -120,10 +123,19 @@
     "timekeeper": "^2.3.1",
     "ts-loader": "^9.5.2",
     "typescript": "^5.9.3",
+    "vite": "^8.2.1",
+    "vite-plugin-checker": "^0.14.5",
+    "vite-tsconfig-paths": "^6.1.1",
     "webpack": "^5.97.1",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.0",
     "webpack-manifest-plugin": "^5.0.0"
+  },
+  "overrides": {
+    "vite-plugin-checker": {
+      "eslint": "$eslint",
+      "stylelint": "$stylelint"
+    }
   },
   "browserslist": {
     "production": [

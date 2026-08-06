@@ -10,7 +10,7 @@ import { OPTION_VIEW_MODIFICATORS } from './constants';
 import { TOOLTIP_TRANSLATION_KEY } from 'constant/constants';
 
 // styles
-import styles from './alignment-option.scss';
+import styles from './alignment-option.module.scss';
 
 // types
 import { AlignmentLayout, E2EAttribute } from 'types';

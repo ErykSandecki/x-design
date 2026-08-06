@@ -6,7 +6,7 @@ import AlignmentOption from './AlignmentOption/AlignmentOption';
 import E2EDataAttribute, { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute';
 
 // styles
-import styles from './alignment-area.scss';
+import styles from './alignment-area.module.scss';
 
 // types
 import { AlignmentLayout, E2EAttribute } from 'types';

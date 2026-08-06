@@ -6,7 +6,7 @@ import E2EDataAttribute, { TE2EDataAttributeProps } from '../../E2EDataAttribute
 import { Small } from '../../UI/Typography';
 
 // styles
-import styles from './section.scss';
+import styles from './section.module.scss';
 
 // types
 import { E2EAttribute } from 'types';

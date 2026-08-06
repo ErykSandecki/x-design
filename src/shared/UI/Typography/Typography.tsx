@@ -6,7 +6,7 @@ import { camelCase } from 'lodash';
 import { COLORS_MODIFICATORS } from './constants';
 
 // styles
-import styles from './typography.scss';
+import styles from './typography.module.scss';
 
 // types
 import { ColorsTheme, E2EAttribute } from 'types';

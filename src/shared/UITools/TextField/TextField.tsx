@@ -10,7 +10,7 @@ import Tooltip, { TTooltipProps } from '../../UI/Tooltip/Tooltip';
 import { getAttributes } from '../../E2EDataAttributes/utils';
 
 // styles
-import styles from './text-field.scss';
+import styles from './text-field.module.scss';
 
 // types
 import { E2EAttribute } from 'types';

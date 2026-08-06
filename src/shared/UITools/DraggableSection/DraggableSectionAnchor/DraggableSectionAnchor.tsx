@@ -8,7 +8,7 @@ import E2EDataAttribute, { TE2EDataAttributeProps } from 'shared/E2EDataAttribut
 import { ANCHOR_INDEX } from '../constants';
 
 // styles
-import styles from './draggable-section-anchor.scss';
+import styles from './draggable-section-anchor.module.scss';
 
 // types
 import { E2EAttribute } from 'types';

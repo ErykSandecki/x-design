@@ -1,5 +1,5 @@
-@forward '../section-column';
-@use '../section-column' as *;
+@forward '../section-column.module';
+@use '../section-column.module' as *;
 
 .SectionColumnLabels {
   column-gap: $column-gap;

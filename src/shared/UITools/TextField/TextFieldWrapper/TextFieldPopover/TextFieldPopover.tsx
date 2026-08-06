@@ -11,7 +11,7 @@ import { useClickEvent } from './hooks/useClickEvent';
 // others
 
 // styles
-import styles from './text-field-popover.scss';
+import styles from './text-field-popover.module.scss';
 
 export type TTextFieldPopoverProps = Pick<TPopoverProps, 'children' | 'offset' | 'style'> & {
   attachedValue: boolean;

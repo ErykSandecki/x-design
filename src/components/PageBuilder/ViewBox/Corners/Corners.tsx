@@ -5,7 +5,7 @@ import { FC } from 'react';
 import { BORDER, HHW, RX, SHW } from './constants';
 
 // styles
-import styles from './corners.scss';
+import styles from './corners.module.scss';
 
 export type TCornersProps = {
   rectCoordinates: TRectCoordinates;

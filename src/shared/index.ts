@@ -24,7 +24,7 @@ export * from './UI/Typography/types';
 
 // UI tools
 export * from './UITools';
-export { TPreviewData } from './UITools/Popover/PopoverRoot/core/types';
+export type { TPreviewData } from './UITools/Popover/PopoverRoot/core/types';
 export { usePopoverRoot } from './UITools/Popover/PopoverRoot/core/PopoverRootProvider';
 
 // Zoombox

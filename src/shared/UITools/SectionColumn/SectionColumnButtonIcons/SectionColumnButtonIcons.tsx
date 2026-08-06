@@ -2,7 +2,7 @@ import cx from 'classnames';
 import { FC, ReactNode } from 'react';
 
 // styles
-import styles from './section-column-button-icons.scss';
+import styles from './section-column-button-icons.module.scss';
 
 export type TSectionColumnButtonIconsProps = {
   buttonsIcon?: Array<ReactNode>;

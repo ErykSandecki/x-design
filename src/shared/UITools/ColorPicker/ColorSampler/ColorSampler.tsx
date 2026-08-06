@@ -15,7 +15,7 @@ import { useColorSamplerEvents } from './hooks/useColorSamplerEvents';
 import { BOX_OFFSET, MIDDLE_ARRAY } from './constants';
 
 // styles
-import styles from './color-sampler.scss';
+import styles from './color-sampler.module.scss';
 
 export type TColorSamplerProps = {
   initialMousePosition: T2DCoordinates;

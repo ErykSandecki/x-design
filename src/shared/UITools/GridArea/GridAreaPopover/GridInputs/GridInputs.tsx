@@ -7,7 +7,7 @@ import GridInputCells from './GridInputCells';
 import { Small } from '../../../../UI/Typography';
 
 // styles
-import styles from './grid-inputs.scss';
+import styles from './grid-inputs.module.scss';
 
 // types
 import { E2EAttribute } from 'types';

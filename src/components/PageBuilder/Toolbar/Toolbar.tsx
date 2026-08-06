@@ -5,7 +5,7 @@ import { FC, memo } from 'react';
 import MouseModes, { TMouseModeProps } from './MouseModes/MouseModes';
 
 // styles
-import styles from './toolbar.scss';
+import styles from './toolbar.module.scss';
 
 export type TToolbarProps = Pick<TMouseModeProps, 'mouseMode' | 'setMouseMode'>;
 

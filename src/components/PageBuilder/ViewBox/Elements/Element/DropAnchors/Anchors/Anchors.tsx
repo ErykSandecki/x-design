@@ -8,7 +8,7 @@ import { E2EDataAttribute } from 'shared';
 import { ANCHORS_MODIFICATORS } from './constants';
 
 // styles
-import styles from './anchors.scss';
+import styles from './anchors.module.scss';
 
 // types
 import { DropAnchorsPosition } from 'store/pageBuilder/enums';

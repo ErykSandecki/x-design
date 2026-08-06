@@ -8,7 +8,7 @@ import { useRefs } from 'pages/PageBuilderPage/core/RefsProvider';
 import { OVERLAY_CONTAINER_ID } from '../../constants';
 
 // styles
-import styles from './overlay-container.scss';
+import styles from './overlay-container.module.scss';
 
 // utils
 import { getCssVariable } from 'utils';

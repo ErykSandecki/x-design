@@ -8,7 +8,7 @@ import { Small } from '../../../UI/Typography';
 // others
 
 // styles
-import styles from './section-column-labels.scss';
+import styles from './section-column-labels.module.scss';
 
 export type TSectionColumnLabelsProps = {
   labels?: [string] | [string, string];

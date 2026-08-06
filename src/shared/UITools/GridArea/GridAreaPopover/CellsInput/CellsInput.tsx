@@ -13,7 +13,7 @@ import { getAttributes } from '../../../../E2EDataAttributes/utils';
 import { SEPARATOR } from './constants';
 
 // styles
-import styles from './cells-input.scss';
+import styles from './cells-input.module.scss';
 
 // types
 import { E2EAttribute } from 'types';

@@ -13,7 +13,7 @@ import { colors } from 'constant/colors';
 import { CONTENT_MODIFICATORS } from './constants';
 
 // styles
-import styles from './story-component.scss';
+import styles from './story-component.module.scss';
 
 // types
 import { ContentAlignItems, ContentDisplay, ContentGridFlow } from './enums';

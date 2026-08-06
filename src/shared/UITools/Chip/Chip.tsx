@@ -5,7 +5,7 @@ import { FC, ReactNode } from 'react';
 import E2EDataAttribute, { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute';
 
 // styles
-import styles from './chip.scss';
+import styles from './chip.module.scss';
 
 // types
 import { E2EAttribute } from 'types';

@@ -13,7 +13,7 @@ import { useRippleEffect } from 'hooks/useRippleEffect/useRippleEffect';
 import { BUTTON_MODIFICATORS } from './constants';
 
 // styles
-import styles from './styles/button.scss';
+import styles from './styles/button.module.scss';
 
 // types
 import { ButtonColor, ButtonVariant } from './enums';

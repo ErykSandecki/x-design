@@ -8,7 +8,7 @@ import { E2EDataAttribute, Icon } from 'shared';
 import { MOUSE_MODE_ICON } from '../constants';
 
 // styles
-import styles from './mouse-modes.scss';
+import styles from './mouse-modes.module.scss';
 
 // types
 import { E2EAttribute } from 'types';

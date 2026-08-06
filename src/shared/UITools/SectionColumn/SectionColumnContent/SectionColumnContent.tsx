@@ -8,7 +8,7 @@ import Icon from '../../../UI/Icon/Icon';
 import { SECTION_COLUMN_CONTENT_MODIFICATORS } from './constants';
 
 // styles
-import styles from './section-column-content.scss';
+import styles from './section-column-content.module.scss';
 
 // types
 import { ColorsTheme } from 'types';

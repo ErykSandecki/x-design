@@ -13,7 +13,7 @@ import PossibleElement from './PossibleElement/PossibleElement';
 import { elementAttributeSelectorCreator, hasPossibleElementSelectorCreator } from 'store/pageBuilder/selectors';
 
 // styles
-import styles from './elements.scss';
+import styles from './elements.module.scss';
 
 // types
 import { ElementType, TElement } from 'types';

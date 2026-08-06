@@ -15,7 +15,7 @@ import { useOutsideClick } from 'hooks';
 import { getAttributes } from '../../E2EDataAttributes/utils';
 
 // styles
-import styles from './button-icon.scss';
+import styles from './button-icon.module.scss';
 
 // types
 import { ColorsTheme, E2EAttribute } from 'types';

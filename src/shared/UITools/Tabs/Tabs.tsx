@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import E2EDataAttribute, { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute';
 
 // styles
-import styles from './tabs.scss';
+import styles from './tabs.module.scss';
 
 // types
 import { E2EAttribute } from 'types';

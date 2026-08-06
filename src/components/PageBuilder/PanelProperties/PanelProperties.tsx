@@ -19,7 +19,7 @@ import { TABS, translationNameSpace } from './constants';
 import { anySelectedElementSelector } from 'store/pageBuilder/selectors';
 
 // styles
-import styles from './panel-properties.scss';
+import styles from './panel-properties.module.scss';
 
 // types
 import { E2EAttribute } from 'types';

@@ -23,7 +23,7 @@ import { eventSelectorCreator, pageBackgroundSelectorCreator } from 'store/pageB
 import { setAreCoordinates } from 'store/pageBuilder/actions';
 
 // styles
-import styles from './view-box.scss';
+import styles from './view-box.module.scss';
 
 // types
 import { MouseMode } from 'types/enums/mouseMode';

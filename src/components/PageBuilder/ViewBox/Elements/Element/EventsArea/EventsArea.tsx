@@ -10,7 +10,7 @@ import TransformArea from './TransformArea/TransformArea';
 import { useRefs } from 'pages/PageBuilderPage/core/RefsProvider';
 
 // styles
-import styles from './events-area.scss';
+import styles from './events-area.module.scss';
 
 // types
 import { MouseMode, TElement } from 'types';

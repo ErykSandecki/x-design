@@ -10,7 +10,7 @@ import { Small } from '../../../../UI/Typography';
 import { translationNameSpace } from './constants';
 
 // styles
-import styles from './color-prompt.scss';
+import styles from './color-prompt.module.scss';
 
 // types
 import { ColorsTheme } from 'types';

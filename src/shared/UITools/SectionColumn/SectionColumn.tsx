@@ -9,7 +9,7 @@ import SectionColumnContent from './SectionColumnContent/SectionColumnContent';
 import SectionColumnLabels from './SectionColumnLabels/SectionColumnLabels';
 
 // styles
-import styles from './section-column.scss';
+import styles from './section-column.module.scss';
 
 // types
 import { E2EAttribute } from 'types';

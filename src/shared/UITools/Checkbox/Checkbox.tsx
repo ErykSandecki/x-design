@@ -7,7 +7,7 @@ import Icon from '../../UI/Icon/Icon';
 import { Small } from 'shared/UI/Typography';
 
 // styles
-import styles from './checkbox.scss';
+import styles from './checkbox.module.scss';
 
 // types
 import { E2EAttribute } from 'types';

@@ -7,7 +7,7 @@ import Chip from '../../../Chip/Chip';
 // others
 
 // styles
-import styles from './text-field-chip.scss';
+import styles from './text-field-chip.module.scss';
 
 export type TTextFieldChipProps = {
   attachedValue: boolean;

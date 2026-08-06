@@ -15,7 +15,7 @@ import { SW } from './constants';
 import { areParentsTheSameSelector, eventsSelector } from 'store/pageBuilder/selectors';
 
 // styles
-import styles from './clickable-area.scss';
+import styles from './clickable-area.module.scss';
 
 // types
 import { E2EAttribute } from 'types';

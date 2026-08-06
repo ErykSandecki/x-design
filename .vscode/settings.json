@@ -191,6 +191,15 @@
       "italic": false
     },
     {
+      "tag": "spy",
+      "color": "#ffffff",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
       "tag": "utils",
       "color": "#7CB342",
       "strikethrough": false,

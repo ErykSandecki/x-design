@@ -12,7 +12,7 @@ import { useElementEvents } from './hooks/useElementEvents';
 import { DATA_STATUS_ATTRIBUTE } from './constants';
 
 // styles
-import styles from './element.scss';
+import styles from './element.module.scss';
 
 // types
 import { E2EAttribute, ElementType, TElement } from 'types';

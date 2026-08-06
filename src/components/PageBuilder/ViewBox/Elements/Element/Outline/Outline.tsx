@@ -8,7 +8,7 @@ import { useRefs } from 'pages/PageBuilderPage/core/RefsProvider';
 // others
 
 // styles
-import styles from './outline.scss';
+import styles from './outline.module.scss';
 
 // types
 import { TElement } from 'types';

@@ -14,7 +14,7 @@ import E2EDataAttribute, { TE2EDataAttributeProps } from '../../E2EDataAttribute
 import { useDraggableSectionEvents } from './hooks/useDraggableSectionEvents';
 
 // styles
-import styles from './draggable-section.scss';
+import styles from './draggable-section.module.scss';
 
 // types
 import { E2EAttribute } from 'types';

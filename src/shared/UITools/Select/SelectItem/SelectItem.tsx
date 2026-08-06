@@ -6,7 +6,7 @@ import E2EDataAttribute from '../../../E2EDataAttributes/E2EDataAttribute';
 import Icon from '../../../UI/Icon/Icon';
 
 // styles
-import styles from './select-item.scss';
+import styles from './select-item.module.scss';
 
 // types
 import { E2EAttribute } from 'types';

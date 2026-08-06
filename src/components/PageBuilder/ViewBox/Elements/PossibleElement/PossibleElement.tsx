@@ -14,7 +14,7 @@ import { translationNameSpace } from './constants';
 import { elementAttributeSelectorCreator, eventSelectorCreator } from 'store/pageBuilder/selectors';
 
 // styles
-import styles from './possible-element.scss';
+import styles from './possible-element.module.scss';
 
 // types
 import { ColorsTheme, LayoutType, TElement } from 'types';

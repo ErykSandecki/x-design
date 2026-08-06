@@ -5,7 +5,7 @@ import { FC, RefObject } from 'react';
 import Popover, { PopoverCompound, TPopoverProps } from '../../Popover/Popover';
 
 // styles
-import styles from './button-icon-popover.scss';
+import styles from './button-icon-popover.module.scss';
 
 // utils
 import { stopPropagation } from 'utils';
