@@ -13,6 +13,7 @@ import PopoverSeparator from './PopoverSeparator/PopoverSeparator';
 
 // others
 import { BASE_2D } from 'shared/ZoomBox/constants';
+import { colors } from 'constant/colors';
 
 // styles
 import styles from './popover.scss';
@@ -20,7 +21,6 @@ import styles from './popover.scss';
 // types
 import { AlignPopoverHorizontally, AlignPopoverVertically } from './enums';
 import { E2EAttribute } from 'types';
-import { TSXColor } from '../../UI/hooks/sx/types/types';
 
 // utils
 import { getPosition } from './utils/getPosition';
@@ -29,7 +29,7 @@ import { stopPropagation } from 'utils';
 export type TPopoverProps = {
   alignHorizontally?: AlignPopoverHorizontally;
   alignVertically?: AlignPopoverVertically;
-  backgroundColor?: TSXColor;
+  backgroundColor?: keyof typeof colors;
   children: ReactNode;
   e2eValue?: TE2EDataAttributeProps['value'];
   id?: string;

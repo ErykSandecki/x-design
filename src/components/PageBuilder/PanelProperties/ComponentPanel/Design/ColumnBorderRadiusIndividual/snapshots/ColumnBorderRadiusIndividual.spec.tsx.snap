@@ -33,7 +33,7 @@ exports[`ColumnBorderRadiusIndividual snapshots should render ColumnBorderRadius
               data-test-scrubbable-input="border-radius-l"
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral-2"
+                class="Icon Icon--neutral-2"
                 data-test-icon="border-radius-l"
                 height="8"
                 name="BorderRadiusL"
@@ -51,7 +51,7 @@ exports[`ColumnBorderRadiusIndividual snapshots should render ColumnBorderRadius
               class="TextFieldPopover"
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
+                class="TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
@@ -67,21 +67,21 @@ exports[`ColumnBorderRadiusIndividual snapshots should render ColumnBorderRadius
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
+                    class="PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                    class="PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="border-radius-l"
                     height="8"
                     name="BorderRadiusL"
                     width="8"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                    class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -100,7 +100,7 @@ exports[`ColumnBorderRadiusIndividual snapshots should render ColumnBorderRadius
           >
             Top left corner radius
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+              class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -122,7 +122,7 @@ exports[`ColumnBorderRadiusIndividual snapshots should render ColumnBorderRadius
               data-test-scrubbable-input="border-radius-t"
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral-2"
+                class="Icon Icon--neutral-2"
                 data-test-icon="border-radius-t"
                 height="8"
                 name="BorderRadiusT"
@@ -140,7 +140,7 @@ exports[`ColumnBorderRadiusIndividual snapshots should render ColumnBorderRadius
               class="TextFieldPopover"
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
+                class="TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
@@ -156,21 +156,21 @@ exports[`ColumnBorderRadiusIndividual snapshots should render ColumnBorderRadius
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
+                    class="PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                    class="PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="border-radius-t"
                     height="8"
                     name="BorderRadiusT"
                     width="8"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                    class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -189,7 +189,7 @@ exports[`ColumnBorderRadiusIndividual snapshots should render ColumnBorderRadius
           >
             Top right corner radius
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+              class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -211,7 +211,7 @@ exports[`ColumnBorderRadiusIndividual snapshots should render ColumnBorderRadius
               data-test-scrubbable-input="border-radius-r"
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral-2"
+                class="Icon Icon--neutral-2"
                 data-test-icon="border-radius-r"
                 height="8"
                 name="BorderRadiusR"
@@ -229,7 +229,7 @@ exports[`ColumnBorderRadiusIndividual snapshots should render ColumnBorderRadius
               class="TextFieldPopover"
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
+                class="TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
@@ -245,21 +245,21 @@ exports[`ColumnBorderRadiusIndividual snapshots should render ColumnBorderRadius
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
+                    class="PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                    class="PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="border-radius-r"
                     height="8"
                     name="BorderRadiusR"
                     width="8"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                    class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -278,7 +278,7 @@ exports[`ColumnBorderRadiusIndividual snapshots should render ColumnBorderRadius
           >
             bottom left corner radius
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+              class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -300,7 +300,7 @@ exports[`ColumnBorderRadiusIndividual snapshots should render ColumnBorderRadius
               data-test-scrubbable-input="border-radius-b"
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral-2"
+                class="Icon Icon--neutral-2"
                 data-test-icon="border-radius-b"
                 height="8"
                 name="BorderRadiusB"
@@ -318,7 +318,7 @@ exports[`ColumnBorderRadiusIndividual snapshots should render ColumnBorderRadius
               class="TextFieldPopover"
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
+                class="TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
@@ -334,21 +334,21 @@ exports[`ColumnBorderRadiusIndividual snapshots should render ColumnBorderRadius
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
+                    class="PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                    class="PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="border-radius-b"
                     height="8"
                     name="BorderRadiusB"
                     width="8"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                    class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -367,7 +367,7 @@ exports[`ColumnBorderRadiusIndividual snapshots should render ColumnBorderRadius
           >
             bottom right corner radius
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+              class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"

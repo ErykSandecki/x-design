@@ -16,7 +16,7 @@ exports[`TextFieldWrapper snapshots should click and open popover 1`] = `
       class="TextFieldPopover"
     >
       <div
-        class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
+        class="TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
         data-test-icon="detached"
         height="12"
         name="Detached"
@@ -109,7 +109,7 @@ exports[`TextFieldWrapper snapshots should render with popover 1`] = `
       class="TextFieldPopover"
     >
       <div
-        class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
+        class="TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
         data-test-icon="variant"
         height="12"
         name="Variant"

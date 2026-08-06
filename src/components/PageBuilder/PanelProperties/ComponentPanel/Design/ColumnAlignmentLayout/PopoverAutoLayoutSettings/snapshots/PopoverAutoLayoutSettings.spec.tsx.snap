@@ -7,14 +7,14 @@ exports[`PopoverAutoLayoutSettings snapshots should render PopoverAutoLayoutSett
     data-test-popover-header=""
   >
     <small
-      class="css-1jnxvbp Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+      class="Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="font-size: 11px; text-align: inherit;"
     >
       Auto layout settings
     </small>
     <div
-      class="css-1jnxvbp Icon Icon--clickable"
+      class="Icon Icon--clickable"
       data-test-icon="close"
       height="10"
       name="Close"
@@ -26,7 +26,7 @@ exports[`PopoverAutoLayoutSettings snapshots should render PopoverAutoLayoutSett
     data-test-popover-preview=""
   >
     <p
-      class="css-1jnxvbp Typography Typography--neutral-1 Typography--regular Typography--normal Typography--p"
+      class="Typography Typography--neutral-1 Typography--regular Typography--normal Typography--p"
       data-test-text=""
       style="opacity: 0.5; text-align: inherit;"
     >
@@ -43,7 +43,7 @@ exports[`PopoverAutoLayoutSettings snapshots should render PopoverAutoLayoutSett
       data-test-tooltip=""
     >
       <small
-        class="css-1jnxvbp TextFieldLabel Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+        class="TextFieldLabel Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -62,7 +62,7 @@ exports[`PopoverAutoLayoutSettings snapshots should render PopoverAutoLayoutSett
           value="Excluded"
         />
         <div
-          class="css-1jnxvbp Icon Icon--neutral-1"
+          class="Icon Icon--neutral-1"
           data-test-icon="chevron-down"
           height="5"
           name="ChevronDown"
@@ -84,7 +84,7 @@ exports[`PopoverAutoLayoutSettings snapshots should render PopoverAutoLayoutSett
         tabindex="0"
       >
         <div
-          class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral-1"
+          class="SelectItem__check-icon Icon Icon--neutral-1"
           data-test-icon="check"
           height="12"
           name="Check"
@@ -100,7 +100,7 @@ exports[`PopoverAutoLayoutSettings snapshots should render PopoverAutoLayoutSett
         tabindex="0"
       >
         <div
-          class="css-1jnxvbp SelectItem__check-icon SelectItem__check-icon--selected Icon Icon--neutral-1"
+          class="SelectItem__check-icon SelectItem__check-icon--selected Icon Icon--neutral-1"
           data-test-icon="check"
           height="12"
           name="Check"

@@ -11,7 +11,7 @@ exports[`ColumnAppearance snapshots should render ColumnAppearance 1`] = `
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+        class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -39,7 +39,7 @@ exports[`ColumnAppearance snapshots should render ColumnAppearance 1`] = `
               data-test-scrubbable-input="opacity"
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral-2"
+                class="Icon Icon--neutral-2"
                 data-test-icon="opacity"
                 height="12"
                 name="Opacity"
@@ -57,7 +57,7 @@ exports[`ColumnAppearance snapshots should render ColumnAppearance 1`] = `
               class="TextFieldPopover"
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
+                class="TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
@@ -73,21 +73,21 @@ exports[`ColumnAppearance snapshots should render ColumnAppearance 1`] = `
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
+                    class="PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                    class="PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="opacity"
                     height="12"
                     name="Opacity"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                    class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -112,7 +112,7 @@ exports[`ColumnAppearance snapshots should render ColumnAppearance 1`] = `
               data-test-scrubbable-input="border-radius"
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral-2"
+                class="Icon Icon--neutral-2"
                 data-test-icon="corners"
                 height="12"
                 name="Corners"
@@ -130,7 +130,7 @@ exports[`ColumnAppearance snapshots should render ColumnAppearance 1`] = `
               class="TextFieldPopover"
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
+                class="TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
@@ -146,21 +146,21 @@ exports[`ColumnAppearance snapshots should render ColumnAppearance 1`] = `
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
+                    class="PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                    class="PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="corners"
                     height="12"
                     name="Corners"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                    class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -172,21 +172,21 @@ exports[`ColumnAppearance snapshots should render ColumnAppearance 1`] = `
                   data-test-popover-item="1"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                    class="PopoverItem__check-icon Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                    class="PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="percentage"
                     height="12"
                     name="Percentage"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                    class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -208,7 +208,7 @@ exports[`ColumnAppearance snapshots should render ColumnAppearance 1`] = `
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--blue-1"
+              class="Icon Icon--blue-1"
               data-test-icon="corners"
               height="12"
               name="Corners"
@@ -223,7 +223,7 @@ exports[`ColumnAppearance snapshots should render ColumnAppearance 1`] = `
             >
               Individual corners
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -249,7 +249,7 @@ exports[`ColumnAppearance snapshots should render when values are mixed 1`] = `
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+        class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -277,7 +277,7 @@ exports[`ColumnAppearance snapshots should render when values are mixed 1`] = `
               data-test-scrubbable-input="opacity"
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral-2"
+                class="Icon Icon--neutral-2"
                 data-test-icon="opacity"
                 height="12"
                 name="Opacity"
@@ -295,7 +295,7 @@ exports[`ColumnAppearance snapshots should render when values are mixed 1`] = `
               class="TextFieldPopover"
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
+                class="TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
@@ -311,21 +311,21 @@ exports[`ColumnAppearance snapshots should render when values are mixed 1`] = `
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                    class="PopoverItem__check-icon Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                    class="PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="opacity"
                     height="12"
                     name="Opacity"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                    class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -350,7 +350,7 @@ exports[`ColumnAppearance snapshots should render when values are mixed 1`] = `
               data-test-scrubbable-input="border-radius"
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral-2"
+                class="Icon Icon--neutral-2"
                 data-test-icon="corners"
                 height="12"
                 name="Corners"
@@ -368,7 +368,7 @@ exports[`ColumnAppearance snapshots should render when values are mixed 1`] = `
               class="TextFieldPopover"
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
+                class="TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                 data-test-icon="detached"
                 height="12"
                 name="Detached"
@@ -384,21 +384,21 @@ exports[`ColumnAppearance snapshots should render when values are mixed 1`] = `
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                    class="PopoverItem__check-icon Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                    class="PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="corners"
                     height="12"
                     name="Corners"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                    class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -410,21 +410,21 @@ exports[`ColumnAppearance snapshots should render when values are mixed 1`] = `
                   data-test-popover-item="1"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                    class="PopoverItem__check-icon Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                    class="PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="percentage"
                     height="12"
                     name="Percentage"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                    class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -452,7 +452,7 @@ exports[`ColumnAppearance snapshots should render when values are mixed 1`] = `
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--blue-1"
+              class="Icon Icon--blue-1"
               data-test-icon="corners"
               height="12"
               name="Corners"
@@ -467,7 +467,7 @@ exports[`ColumnAppearance snapshots should render when values are mixed 1`] = `
             >
               Individual corners
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -493,7 +493,7 @@ exports[`ColumnAppearance snapshots should toggle border radius mode 1`] = `
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+        class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -521,7 +521,7 @@ exports[`ColumnAppearance snapshots should toggle border radius mode 1`] = `
               data-test-scrubbable-input="opacity"
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral-2"
+                class="Icon Icon--neutral-2"
                 data-test-icon="opacity"
                 height="12"
                 name="Opacity"
@@ -539,7 +539,7 @@ exports[`ColumnAppearance snapshots should toggle border radius mode 1`] = `
               class="TextFieldPopover"
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
+                class="TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
@@ -555,21 +555,21 @@ exports[`ColumnAppearance snapshots should toggle border radius mode 1`] = `
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
+                    class="PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                    class="PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="opacity"
                     height="12"
                     name="Opacity"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                    class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -594,7 +594,7 @@ exports[`ColumnAppearance snapshots should toggle border radius mode 1`] = `
               data-test-scrubbable-input="border-radius"
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral-2"
+                class="Icon Icon--neutral-2"
                 data-test-icon="corners"
                 height="12"
                 name="Corners"
@@ -612,7 +612,7 @@ exports[`ColumnAppearance snapshots should toggle border radius mode 1`] = `
               class="TextFieldPopover"
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
+                class="TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
@@ -628,21 +628,21 @@ exports[`ColumnAppearance snapshots should toggle border radius mode 1`] = `
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
+                    class="PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                    class="PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="corners"
                     height="12"
                     name="Corners"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                    class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -654,21 +654,21 @@ exports[`ColumnAppearance snapshots should toggle border radius mode 1`] = `
                   data-test-popover-item="1"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                    class="PopoverItem__check-icon Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                    class="PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="percentage"
                     height="12"
                     name="Percentage"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                    class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -690,7 +690,7 @@ exports[`ColumnAppearance snapshots should toggle border radius mode 1`] = `
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral-1"
+              class="Icon Icon--neutral-1"
               data-test-icon="corners"
               height="12"
               name="Corners"
@@ -705,7 +705,7 @@ exports[`ColumnAppearance snapshots should toggle border radius mode 1`] = `
             >
               Individual corners
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -731,7 +731,7 @@ exports[`ColumnAppearance snapshots should toggle border radius mode to the merg
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+        class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -759,7 +759,7 @@ exports[`ColumnAppearance snapshots should toggle border radius mode to the merg
               data-test-scrubbable-input="opacity"
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral-2"
+                class="Icon Icon--neutral-2"
                 data-test-icon="opacity"
                 height="12"
                 name="Opacity"
@@ -777,7 +777,7 @@ exports[`ColumnAppearance snapshots should toggle border radius mode to the merg
               class="TextFieldPopover"
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
+                class="TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
@@ -793,21 +793,21 @@ exports[`ColumnAppearance snapshots should toggle border radius mode to the merg
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
+                    class="PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                    class="PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="opacity"
                     height="12"
                     name="Opacity"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                    class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -832,7 +832,7 @@ exports[`ColumnAppearance snapshots should toggle border radius mode to the merg
               data-test-scrubbable-input="border-radius"
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral-2"
+                class="Icon Icon--neutral-2"
                 data-test-icon="corners"
                 height="12"
                 name="Corners"
@@ -850,7 +850,7 @@ exports[`ColumnAppearance snapshots should toggle border radius mode to the merg
               class="TextFieldPopover"
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
+                class="TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
@@ -866,21 +866,21 @@ exports[`ColumnAppearance snapshots should toggle border radius mode to the merg
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
+                    class="PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                    class="PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="corners"
                     height="12"
                     name="Corners"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                    class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -892,21 +892,21 @@ exports[`ColumnAppearance snapshots should toggle border radius mode to the merg
                   data-test-popover-item="1"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                    class="PopoverItem__check-icon Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                    class="PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="percentage"
                     height="12"
                     name="Percentage"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                    class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -928,7 +928,7 @@ exports[`ColumnAppearance snapshots should toggle border radius mode to the merg
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--blue-1"
+              class="Icon Icon--blue-1"
               data-test-icon="corners"
               height="12"
               name="Corners"
@@ -943,7 +943,7 @@ exports[`ColumnAppearance snapshots should toggle border radius mode to the merg
             >
               Individual corners
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"

@@ -14,7 +14,7 @@ exports[`DraggableSectionContent snapshots should render DraggableSectionContent
       data-test-tooltip=""
     >
       <div
-        class="css-1jnxvbp Icon Icon--neutral-1"
+        class="Icon Icon--neutral-1"
         data-test-icon="eyes-opened"
         height="14"
         name="EyesOpened"
@@ -29,7 +29,7 @@ exports[`DraggableSectionContent snapshots should render DraggableSectionContent
       >
         Hide
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+          class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -43,7 +43,7 @@ exports[`DraggableSectionContent snapshots should render DraggableSectionContent
       data-test-tooltip=""
     >
       <div
-        class="css-1jnxvbp Icon Icon--neutral-1"
+        class="Icon Icon--neutral-1"
         data-test-icon="minus"
         height="14"
         name="Minus"
@@ -58,7 +58,7 @@ exports[`DraggableSectionContent snapshots should render DraggableSectionContent
       >
         Remove
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+          class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -84,7 +84,7 @@ exports[`DraggableSectionContent snapshots should render when is not visible par
       data-test-tooltip=""
     >
       <div
-        class="css-1jnxvbp Icon Icon--neutral-1"
+        class="Icon Icon--neutral-1"
         data-test-icon="eyes-closed"
         height="14"
         name="EyesClosed"
@@ -99,7 +99,7 @@ exports[`DraggableSectionContent snapshots should render when is not visible par
       >
         Show
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+          class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -113,7 +113,7 @@ exports[`DraggableSectionContent snapshots should render when is not visible par
       data-test-tooltip=""
     >
       <div
-        class="css-1jnxvbp Icon Icon--neutral-1"
+        class="Icon Icon--neutral-1"
         data-test-icon="minus"
         height="14"
         name="Minus"
@@ -128,7 +128,7 @@ exports[`DraggableSectionContent snapshots should render when is not visible par
       >
         Remove
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+          class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"

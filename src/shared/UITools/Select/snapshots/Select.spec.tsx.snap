@@ -23,7 +23,7 @@ exports[`Select snapshots should render Select 1`] = `
           value="0"
         />
         <div
-          class="css-1jnxvbp Icon Icon--neutral-1"
+          class="Icon Icon--neutral-1"
           data-test-icon="chevron-down"
           height="5"
           name="ChevronDown"
@@ -45,7 +45,7 @@ exports[`Select snapshots should render Select 1`] = `
         tabindex="0"
       >
         <div
-          class="css-1jnxvbp SelectItem__check-icon SelectItem__check-icon--selected Icon Icon--neutral-1"
+          class="SelectItem__check-icon SelectItem__check-icon--selected Icon Icon--neutral-1"
           data-test-icon="check"
           height="12"
           name="Check"
@@ -64,7 +64,7 @@ exports[`Select snapshots should render Select 1`] = `
         tabindex="0"
       >
         <div
-          class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral-1"
+          class="SelectItem__check-icon Icon Icon--neutral-1"
           data-test-icon="check"
           height="12"
           name="Check"
@@ -83,7 +83,7 @@ exports[`Select snapshots should render Select 1`] = `
         tabindex="0"
       >
         <div
-          class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral-1"
+          class="SelectItem__check-icon Icon Icon--neutral-1"
           data-test-icon="check"
           height="12"
           name="Check"
@@ -119,7 +119,7 @@ exports[`Select snapshots should render when mixed 1`] = `
           value="Mixed"
         />
         <div
-          class="css-1jnxvbp Icon Icon--neutral-1"
+          class="Icon Icon--neutral-1"
           data-test-icon="chevron-down"
           height="5"
           name="ChevronDown"
@@ -141,7 +141,7 @@ exports[`Select snapshots should render when mixed 1`] = `
         tabindex="0"
       >
         <div
-          class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral-1"
+          class="SelectItem__check-icon Icon Icon--neutral-1"
           data-test-icon="check"
           height="12"
           name="Check"
@@ -160,7 +160,7 @@ exports[`Select snapshots should render when mixed 1`] = `
         tabindex="0"
       >
         <div
-          class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral-1"
+          class="SelectItem__check-icon Icon Icon--neutral-1"
           data-test-icon="check"
           height="12"
           name="Check"
@@ -179,7 +179,7 @@ exports[`Select snapshots should render when mixed 1`] = `
         tabindex="0"
       >
         <div
-          class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral-1"
+          class="SelectItem__check-icon Icon Icon--neutral-1"
           data-test-icon="check"
           height="12"
           name="Check"
@@ -215,7 +215,7 @@ exports[`Select snapshots should render with no options 1`] = `
           value="0"
         />
         <div
-          class="css-1jnxvbp Icon Icon--neutral-1"
+          class="Icon Icon--neutral-1"
           data-test-icon="chevron-down"
           height="5"
           name="ChevronDown"
@@ -237,7 +237,7 @@ exports[`Select snapshots should render with no options 1`] = `
         tabindex="0"
       >
         <div
-          class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral-1"
+          class="SelectItem__check-icon Icon Icon--neutral-1"
           data-test-icon="check"
           height="12"
           name="Check"
@@ -273,7 +273,7 @@ exports[`Select snapshots should render with one option 1`] = `
           value="0"
         />
         <div
-          class="css-1jnxvbp Icon Icon--neutral-1"
+          class="Icon Icon--neutral-1"
           data-test-icon="chevron-down"
           height="5"
           name="ChevronDown"
@@ -295,7 +295,7 @@ exports[`Select snapshots should render with one option 1`] = `
         tabindex="0"
       >
         <div
-          class="css-1jnxvbp SelectItem__check-icon SelectItem__check-icon--selected Icon Icon--neutral-1"
+          class="SelectItem__check-icon SelectItem__check-icon--selected Icon Icon--neutral-1"
           data-test-icon="check"
           height="12"
           name="Check"

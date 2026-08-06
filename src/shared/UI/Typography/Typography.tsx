@@ -2,9 +2,6 @@ import cx from 'classnames';
 import { CSSProperties, HTMLAttributes, ReactNode, Ref } from 'react';
 import { camelCase } from 'lodash';
 
-// hooks
-import { useSX } from '../hooks/sx/useSX';
-
 // others
 import { ICON_MODIFICATORS } from './constants';
 
@@ -46,7 +43,6 @@ export const Typography = ({
   classes = { className: '' },
   color = ColorsTheme.neutral1,
   component = null,
-  depsSx = [],
   e2eAttribute = E2EAttribute.text,
   e2eValue = '',
   fontStyle = TypographyFontStyle.normal,
@@ -56,13 +52,10 @@ export const Typography = ({
   noWrap = false,
   ref,
   style = {},
-  sx = {},
   variant = TypographyVariant.p,
   variantMapping = {},
   ...restProps
 }: TTypographyProps): ReactNode => {
-  const sxClassName = useSX(depsSx, sx);
-
   if (!children && !innerHtml) {
     return null;
   }
@@ -73,7 +66,6 @@ export const Typography = ({
     {
       ...restProps,
       className: cx(
-        sxClassName,
         classes.className,
         styles.Typography,
         styles[ICON_MODIFICATORS[color]],

@@ -8,7 +8,6 @@ import E2EDataAttribute, { TE2EDataAttributeProps } from '../../E2EDataAttribute
 import { useClickEvent } from './hooks/useClickEvent';
 import { useIcon } from './hooks/useIcon';
 import { useRippleEffect } from 'hooks/useRippleEffect/useRippleEffect';
-import { useSX } from '../hooks/sx/useSX';
 
 // others
 
@@ -58,7 +57,6 @@ export const Button: FC<TButtonProps> = ({
   children,
   classes = { className: '' },
   color = ButtonColor.primary,
-  depsSx = [],
   disabled = false,
   disabledRippleEffect = false,
   endIcon = null,
@@ -68,7 +66,6 @@ export const Button: FC<TButtonProps> = ({
   fullWidth = false,
   onClick,
   ref,
-  sx = {},
   size = InputSize.medium,
   startIcon = null,
   type = 'button',
@@ -78,13 +75,11 @@ export const Button: FC<TButtonProps> = ({
   const { rippleEffect, triggerRippleEffect } = useRippleEffect('Button', styles);
   const Icon = useIcon(styles, size);
   const onClickHandler = useClickEvent(disabledRippleEffect, onClick, triggerRippleEffect);
-  const sxClassName = useSX(depsSx, sx);
 
   return (
     <E2EDataAttribute type={e2eAttribute} value={e2eValue}>
       <button
         className={cx(
-          sxClassName,
           classes.className,
           styles.Button,
           styles[buttonModificators[color]],

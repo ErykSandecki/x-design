@@ -6,7 +6,7 @@ exports[`TextFieldPopover snapshots should render TextFieldPopover 1`] = `
     class="TextFieldPopover"
   >
     <div
-      class="css-1jnxvbp TextFieldPopover__icon classNameIcon Icon Icon--clickable"
+      class="TextFieldPopover__icon classNameIcon Icon Icon--clickable"
       data-test-icon="variant"
       height="12"
       name="Variant"
@@ -29,7 +29,7 @@ exports[`TextFieldPopover snapshots should render when attached value 1`] = `
     class="TextFieldPopover"
   >
     <div
-      class="css-1jnxvbp TextFieldPopover__icon classNameIcon Icon Icon--clickable"
+      class="TextFieldPopover__icon classNameIcon Icon Icon--clickable"
       data-test-icon="detached"
       height="12"
       name="Detached"
@@ -52,7 +52,7 @@ exports[`TextFieldPopover snapshots should render with opened popover 1`] = `
     class="TextFieldPopover"
   >
     <div
-      class="css-1jnxvbp TextFieldPopover__icon classNameIcon Icon Icon--clickable"
+      class="TextFieldPopover__icon classNameIcon Icon Icon--clickable"
       data-test-icon="variant"
       height="12"
       name="Variant"

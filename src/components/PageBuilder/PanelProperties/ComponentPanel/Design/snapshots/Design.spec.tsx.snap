@@ -22,7 +22,7 @@ exports[`Design snapshots should render Design 1`] = `
           style="width: calc(100% - 48px - 2.5px - 8px);"
         >
           <small
-            class="css-1jnxvbp Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+            class="Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
             data-test-text=""
             style="align-items: center; display: flex; user-select: none; text-align: inherit;"
           >
@@ -39,7 +39,7 @@ exports[`Design snapshots should render Design 1`] = `
               data-test-tooltip=""
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral-1"
+                class="Icon Icon--neutral-1"
                 data-test-icon="html-tag"
                 height="14"
                 name="HtmlTag"
@@ -54,7 +54,7 @@ exports[`Design snapshots should render Design 1`] = `
               >
                 Toggle ready for dev status
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                  class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -68,7 +68,7 @@ exports[`Design snapshots should render Design 1`] = `
               data-test-tooltip=""
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral-1"
+                class="Icon Icon--neutral-1"
                 data-test-icon="component"
                 height="14"
                 name="Component"
@@ -83,7 +83,7 @@ exports[`Design snapshots should render Design 1`] = `
               >
                 Create component
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                  class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -104,7 +104,7 @@ exports[`Design snapshots should render Design 1`] = `
       class="Section__label-wrapper Section__label-wrapper--separator"
     >
       <small
-        class="css-1jnxvbp Section__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+        class="Section__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -123,7 +123,7 @@ exports[`Design snapshots should render Design 1`] = `
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <small
-          class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+          class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
           data-test-text=""
           style="text-align: inherit;"
         >
@@ -146,7 +146,7 @@ exports[`Design snapshots should render Design 1`] = `
               data-test-button-group-input="align-horizontal-left"
             >
               <div
-                class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--disabled Icon Icon--neutral-1"
+                class="ButtonGroup__icon ButtonGroup__icon--disabled Icon Icon--neutral-1"
                 data-test-icon="align-horizontal-left"
                 height="12"
                 name="AlignHorizontalLeft"
@@ -161,7 +161,7 @@ exports[`Design snapshots should render Design 1`] = `
               >
                 Align left  ⌥A
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                  class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -174,7 +174,7 @@ exports[`Design snapshots should render Design 1`] = `
               data-test-button-group-input="align-horizontal-center"
             >
               <div
-                class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--disabled Icon Icon--neutral-1"
+                class="ButtonGroup__icon ButtonGroup__icon--disabled Icon Icon--neutral-1"
                 data-test-icon="align-horizontal-center"
                 height="12"
                 name="AlignHorizontalCenter"
@@ -189,7 +189,7 @@ exports[`Design snapshots should render Design 1`] = `
               >
                 Align center  ⌥H
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                  class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -202,7 +202,7 @@ exports[`Design snapshots should render Design 1`] = `
               data-test-button-group-input="align-horizontal-right"
             >
               <div
-                class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--disabled Icon Icon--neutral-1"
+                class="ButtonGroup__icon ButtonGroup__icon--disabled Icon Icon--neutral-1"
                 data-test-icon="align-horizontal-right"
                 height="12"
                 name="AlignHorizontalRight"
@@ -217,7 +217,7 @@ exports[`Design snapshots should render Design 1`] = `
               >
                 Align right  ⌥D
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                  class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -235,7 +235,7 @@ exports[`Design snapshots should render Design 1`] = `
               data-test-button-group-input="align-vertical-top"
             >
               <div
-                class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--disabled Icon Icon--neutral-1"
+                class="ButtonGroup__icon ButtonGroup__icon--disabled Icon Icon--neutral-1"
                 data-test-icon="align-vertical-top"
                 height="12"
                 name="AlignVerticalTop"
@@ -250,7 +250,7 @@ exports[`Design snapshots should render Design 1`] = `
               >
                 Align top  ⌥W
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                  class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -263,7 +263,7 @@ exports[`Design snapshots should render Design 1`] = `
               data-test-button-group-input="align-vertical-center"
             >
               <div
-                class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--disabled Icon Icon--neutral-1"
+                class="ButtonGroup__icon ButtonGroup__icon--disabled Icon Icon--neutral-1"
                 data-test-icon="align-vertical-center"
                 height="12"
                 name="AlignVerticalCenter"
@@ -278,7 +278,7 @@ exports[`Design snapshots should render Design 1`] = `
               >
                 Align center  ⌥V
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                  class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -291,7 +291,7 @@ exports[`Design snapshots should render Design 1`] = `
               data-test-button-group-input="align-vertical-bottom"
             >
               <div
-                class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--disabled Icon Icon--neutral-1"
+                class="ButtonGroup__icon ButtonGroup__icon--disabled Icon Icon--neutral-1"
                 data-test-icon="align-vertical-bottom"
                 height="12"
                 name="AlignVerticalBottom"
@@ -306,7 +306,7 @@ exports[`Design snapshots should render Design 1`] = `
               >
                 Align bottom  ⌥S
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                  class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -332,7 +332,7 @@ exports[`Design snapshots should render Design 1`] = `
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <small
-          class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+          class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
           data-test-text=""
           style="text-align: inherit;"
         >
@@ -360,7 +360,7 @@ exports[`Design snapshots should render Design 1`] = `
                 data-test-scrubbable-input="x"
               >
                 <small
-                  class="css-1jnxvbp Typography Typography--neutral-2 Typography--regular Typography--normal Typography--small"
+                  class="Typography Typography--neutral-2 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -384,7 +384,7 @@ exports[`Design snapshots should render Design 1`] = `
             >
               X - position
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -406,7 +406,7 @@ exports[`Design snapshots should render Design 1`] = `
                 data-test-scrubbable-input="y"
               >
                 <small
-                  class="css-1jnxvbp Typography Typography--neutral-2 Typography--regular Typography--normal Typography--small"
+                  class="Typography Typography--neutral-2 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -430,7 +430,7 @@ exports[`Design snapshots should render Design 1`] = `
             >
               Y - position
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -455,7 +455,7 @@ exports[`Design snapshots should render Design 1`] = `
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <small
-          class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+          class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
           data-test-text=""
           style="text-align: inherit;"
         >
@@ -483,7 +483,7 @@ exports[`Design snapshots should render Design 1`] = `
                 data-test-scrubbable-input="angle"
               >
                 <div
-                  class="css-1jnxvbp Icon Icon--neutral-2"
+                  class="Icon Icon--neutral-2"
                   data-test-icon="protractor"
                   height="8"
                   name="Protractor"
@@ -507,7 +507,7 @@ exports[`Design snapshots should render Design 1`] = `
             >
               Rotation
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -524,7 +524,7 @@ exports[`Design snapshots should render Design 1`] = `
               data-test-button-group-input="toggle-rotate"
             >
               <div
-                class="css-1jnxvbp ButtonGroup__icon Icon Icon--neutral-1"
+                class="ButtonGroup__icon Icon Icon--neutral-1"
                 data-test-icon="toggle-rotate"
                 height="12"
                 name="ToggleRotate"
@@ -539,7 +539,7 @@ exports[`Design snapshots should render Design 1`] = `
               >
                 Rotate 90° right
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                  class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -552,7 +552,7 @@ exports[`Design snapshots should render Design 1`] = `
               data-test-button-group-input="flip-horizontal"
             >
               <div
-                class="css-1jnxvbp ButtonGroup__icon Icon Icon--neutral-1"
+                class="ButtonGroup__icon Icon Icon--neutral-1"
                 data-test-icon="flip-horizontal"
                 height="12"
                 name="FlipHorizontal"
@@ -567,7 +567,7 @@ exports[`Design snapshots should render Design 1`] = `
               >
                 Flip horizontal  ⇧H
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                  class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -580,7 +580,7 @@ exports[`Design snapshots should render Design 1`] = `
               data-test-button-group-input="flip-vertical"
             >
               <div
-                class="css-1jnxvbp ButtonGroup__icon Icon Icon--neutral-1"
+                class="ButtonGroup__icon Icon Icon--neutral-1"
                 data-test-icon="flip-vertical"
                 height="12"
                 name="FlipVertical"
@@ -595,7 +595,7 @@ exports[`Design snapshots should render Design 1`] = `
               >
                 Flip vertical  ⇧V
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                  class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -621,7 +621,7 @@ exports[`Design snapshots should render Design 1`] = `
       class="Section__label-wrapper Section__label-wrapper--separator"
     >
       <small
-        class="css-1jnxvbp Section__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+        class="Section__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -636,7 +636,7 @@ exports[`Design snapshots should render Design 1`] = `
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp Icon Icon--neutral-1"
+            class="Icon Icon--neutral-1"
             data-test-icon="fit-layout"
             height="12"
             name="FitLayout"
@@ -651,7 +651,7 @@ exports[`Design snapshots should render Design 1`] = `
           >
             Resize to fit  ⌥⌘⇧R
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+              class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -665,7 +665,7 @@ exports[`Design snapshots should render Design 1`] = `
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp Icon Icon--blue-1"
+            class="Icon Icon--blue-1"
             data-test-icon="auto-layout"
             height="12"
             name="AutoLayout"
@@ -680,7 +680,7 @@ exports[`Design snapshots should render Design 1`] = `
           >
             Toggle auto layout  ⇧A
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+              class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -699,7 +699,7 @@ exports[`Design snapshots should render Design 1`] = `
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <small
-          class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+          class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
           data-test-text=""
           style="text-align: inherit;"
         >
@@ -723,7 +723,7 @@ exports[`Design snapshots should render Design 1`] = `
               type="button"
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral-1"
+                class="Icon Icon--neutral-1"
                 data-test-icon="flow-default"
                 height="12"
                 name="FlowDefault"
@@ -738,7 +738,7 @@ exports[`Design snapshots should render Design 1`] = `
               >
                 Free form
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                  class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -752,7 +752,7 @@ exports[`Design snapshots should render Design 1`] = `
               type="button"
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral-1"
+                class="Icon Icon--neutral-1"
                 data-test-icon="flow-vertical"
                 height="12"
                 name="FlowVertical"
@@ -767,7 +767,7 @@ exports[`Design snapshots should render Design 1`] = `
               >
                 Vertical
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                  class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -781,7 +781,7 @@ exports[`Design snapshots should render Design 1`] = `
               type="button"
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral-1"
+                class="Icon Icon--neutral-1"
                 data-test-icon="flow-horizontal"
                 height="12"
                 name="FlowHorizontal"
@@ -796,7 +796,7 @@ exports[`Design snapshots should render Design 1`] = `
               >
                 Horizontal
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                  class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -810,7 +810,7 @@ exports[`Design snapshots should render Design 1`] = `
               type="button"
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral-1"
+                class="Icon Icon--neutral-1"
                 data-test-icon="flow-grid"
                 height="12"
                 name="FlowGrid"
@@ -825,7 +825,7 @@ exports[`Design snapshots should render Design 1`] = `
               >
                 Grid
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                  class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -845,7 +845,7 @@ exports[`Design snapshots should render Design 1`] = `
               data-test-tooltip=""
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral-1"
+                class="Icon Icon--neutral-1"
                 data-test-icon="wrap"
                 height="12"
                 name="Wrap"
@@ -860,7 +860,7 @@ exports[`Design snapshots should render Design 1`] = `
               >
                 Wrap
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                  class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -881,7 +881,7 @@ exports[`Design snapshots should render Design 1`] = `
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <small
-          class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+          class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
           data-test-text=""
           style="text-align: inherit;"
         >
@@ -909,7 +909,7 @@ exports[`Design snapshots should render Design 1`] = `
                 data-test-scrubbable-input="width"
               >
                 <small
-                  class="css-1jnxvbp Typography Typography--neutral-2 Typography--regular Typography--normal Typography--small"
+                  class="Typography Typography--neutral-2 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -927,7 +927,7 @@ exports[`Design snapshots should render Design 1`] = `
                 class="TextFieldPopover"
               >
                 <div
-                  class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
+                  class="TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                   data-test-icon="variant"
                   height="12"
                   name="Variant"
@@ -943,21 +943,21 @@ exports[`Design snapshots should render Design 1`] = `
                     data-test-popover-item="0"
                   >
                     <div
-                      class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
+                      class="PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
                       data-test-icon="check"
                       height="12"
                       name="Check"
                       width="12"
                     />
                     <div
-                      class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                      class="PopoverItem__icon Icon Icon--neutral-1"
                       data-test-icon="fixed-width"
                       height="12"
                       name="FixedWidth"
                       width="12"
                     />
                     <small
-                      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                      class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -969,21 +969,21 @@ exports[`Design snapshots should render Design 1`] = `
                     data-test-popover-item="1"
                   >
                     <div
-                      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                      class="PopoverItem__check-icon Icon Icon--neutral-1"
                       data-test-icon="check"
                       height="12"
                       name="Check"
                       width="12"
                     />
                     <div
-                      class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                      class="PopoverItem__icon Icon Icon--neutral-1"
                       data-test-icon="auto-width"
                       height="12"
                       name="AutoWidth"
                       width="12"
                     />
                     <small
-                      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                      class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -995,21 +995,21 @@ exports[`Design snapshots should render Design 1`] = `
                     data-test-popover-item="2"
                   >
                     <div
-                      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                      class="PopoverItem__check-icon Icon Icon--neutral-1"
                       data-test-icon="check"
                       height="12"
                       name="Check"
                       width="12"
                     />
                     <div
-                      class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                      class="PopoverItem__icon Icon Icon--neutral-1"
                       data-test-icon="percentage"
                       height="12"
                       name="Percentage"
                       width="12"
                     />
                     <small
-                      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                      class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -1024,21 +1024,21 @@ exports[`Design snapshots should render Design 1`] = `
                     data-test-popover-item="3"
                   >
                     <div
-                      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                      class="PopoverItem__check-icon Icon Icon--neutral-1"
                       data-test-icon="check"
                       height="12"
                       name="Check"
                       width="12"
                     />
                     <div
-                      class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                      class="PopoverItem__icon Icon Icon--neutral-1"
                       data-test-icon="min-width"
                       height="12"
                       name="MinWidth"
                       width="12"
                     />
                     <small
-                      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                      class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -1050,21 +1050,21 @@ exports[`Design snapshots should render Design 1`] = `
                     data-test-popover-item="4"
                   >
                     <div
-                      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                      class="PopoverItem__check-icon Icon Icon--neutral-1"
                       data-test-icon="check"
                       height="12"
                       name="Check"
                       width="12"
                     />
                     <div
-                      class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                      class="PopoverItem__icon Icon Icon--neutral-1"
                       data-test-icon="max-width"
                       height="12"
                       name="MaxWidth"
                       width="12"
                     />
                     <small
-                      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                      class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -1089,7 +1089,7 @@ exports[`Design snapshots should render Design 1`] = `
                 data-test-scrubbable-input="height"
               >
                 <small
-                  class="css-1jnxvbp Typography Typography--neutral-2 Typography--regular Typography--normal Typography--small"
+                  class="Typography Typography--neutral-2 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -1107,7 +1107,7 @@ exports[`Design snapshots should render Design 1`] = `
                 class="TextFieldPopover"
               >
                 <div
-                  class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
+                  class="TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                   data-test-icon="variant"
                   height="12"
                   name="Variant"
@@ -1123,21 +1123,21 @@ exports[`Design snapshots should render Design 1`] = `
                     data-test-popover-item="0"
                   >
                     <div
-                      class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
+                      class="PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
                       data-test-icon="check"
                       height="12"
                       name="Check"
                       width="12"
                     />
                     <div
-                      class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                      class="PopoverItem__icon Icon Icon--neutral-1"
                       data-test-icon="fixed-height"
                       height="12"
                       name="FixedHeight"
                       width="12"
                     />
                     <small
-                      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                      class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -1149,21 +1149,21 @@ exports[`Design snapshots should render Design 1`] = `
                     data-test-popover-item="1"
                   >
                     <div
-                      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                      class="PopoverItem__check-icon Icon Icon--neutral-1"
                       data-test-icon="check"
                       height="12"
                       name="Check"
                       width="12"
                     />
                     <div
-                      class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                      class="PopoverItem__icon Icon Icon--neutral-1"
                       data-test-icon="auto-height"
                       height="12"
                       name="AutoHeight"
                       width="12"
                     />
                     <small
-                      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                      class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -1175,21 +1175,21 @@ exports[`Design snapshots should render Design 1`] = `
                     data-test-popover-item="2"
                   >
                     <div
-                      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                      class="PopoverItem__check-icon Icon Icon--neutral-1"
                       data-test-icon="check"
                       height="12"
                       name="Check"
                       width="12"
                     />
                     <div
-                      class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                      class="PopoverItem__icon Icon Icon--neutral-1"
                       data-test-icon="percentage"
                       height="12"
                       name="Percentage"
                       width="12"
                     />
                     <small
-                      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                      class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -1204,21 +1204,21 @@ exports[`Design snapshots should render Design 1`] = `
                     data-test-popover-item="3"
                   >
                     <div
-                      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                      class="PopoverItem__check-icon Icon Icon--neutral-1"
                       data-test-icon="check"
                       height="12"
                       name="Check"
                       width="12"
                     />
                     <div
-                      class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                      class="PopoverItem__icon Icon Icon--neutral-1"
                       data-test-icon="min-height"
                       height="12"
                       name="MinHeight"
                       width="12"
                     />
                     <small
-                      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                      class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -1230,21 +1230,21 @@ exports[`Design snapshots should render Design 1`] = `
                     data-test-popover-item="4"
                   >
                     <div
-                      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                      class="PopoverItem__check-icon Icon Icon--neutral-1"
                       data-test-icon="check"
                       height="12"
                       name="Check"
                       width="12"
                     />
                     <div
-                      class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                      class="PopoverItem__icon Icon Icon--neutral-1"
                       data-test-icon="max-height"
                       height="12"
                       name="MaxHeight"
                       width="12"
                     />
                     <small
-                      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                      class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -1266,7 +1266,7 @@ exports[`Design snapshots should render Design 1`] = `
               data-test-tooltip=""
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral-1"
+                class="Icon Icon--neutral-1"
                 data-test-icon="aspect-ratio"
                 height="12"
                 name="AspectRatio"
@@ -1281,7 +1281,7 @@ exports[`Design snapshots should render Design 1`] = `
               >
                 Look aspect ratio
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                  class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -1302,14 +1302,14 @@ exports[`Design snapshots should render Design 1`] = `
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <small
-          class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+          class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
           data-test-text=""
           style="text-align: inherit;"
         >
           Alignment
         </small>
         <small
-          class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+          class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
           data-test-text=""
           style="text-align: inherit;"
         >
@@ -1353,7 +1353,7 @@ exports[`Design snapshots should render Design 1`] = `
               >
                 Align top left
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                  class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -1387,7 +1387,7 @@ exports[`Design snapshots should render Design 1`] = `
               >
                 Align top center
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                  class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -1421,7 +1421,7 @@ exports[`Design snapshots should render Design 1`] = `
               >
                 Align top right
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                  class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -1455,7 +1455,7 @@ exports[`Design snapshots should render Design 1`] = `
               >
                 Align left
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                  class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -1489,7 +1489,7 @@ exports[`Design snapshots should render Design 1`] = `
               >
                 Align center
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                  class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -1523,7 +1523,7 @@ exports[`Design snapshots should render Design 1`] = `
               >
                 Align right
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                  class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -1557,7 +1557,7 @@ exports[`Design snapshots should render Design 1`] = `
               >
                 Align bottom left
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                  class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -1591,7 +1591,7 @@ exports[`Design snapshots should render Design 1`] = `
               >
                 Align bottom center
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                  class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -1625,7 +1625,7 @@ exports[`Design snapshots should render Design 1`] = `
               >
                 Align bottom right
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                  class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -1648,7 +1648,7 @@ exports[`Design snapshots should render Design 1`] = `
                 data-test-scrubbable-input="column"
               >
                 <div
-                  class="css-1jnxvbp Icon Icon--neutral-2"
+                  class="Icon Icon--neutral-2"
                   data-test-icon="gap-columns"
                   height="10"
                   name="GapColumns"
@@ -1666,7 +1666,7 @@ exports[`Design snapshots should render Design 1`] = `
                 class="TextFieldPopover"
               >
                 <div
-                  class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
+                  class="TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                   data-test-icon="variant"
                   height="12"
                   name="Variant"
@@ -1682,21 +1682,21 @@ exports[`Design snapshots should render Design 1`] = `
                     data-test-popover-item="0"
                   >
                     <div
-                      class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
+                      class="PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
                       data-test-icon="check"
                       height="12"
                       name="Check"
                       width="12"
                     />
                     <div
-                      class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                      class="PopoverItem__icon Icon Icon--neutral-1"
                       data-test-icon="gap-columns"
                       height="12"
                       name="GapColumns"
                       width="12"
                     />
                     <small
-                      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                      class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -1715,7 +1715,7 @@ exports[`Design snapshots should render Design 1`] = `
             >
               Gap between columns
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -1734,7 +1734,7 @@ exports[`Design snapshots should render Design 1`] = `
               data-test-tooltip=""
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral-1"
+                class="Icon Icon--neutral-1"
                 data-test-icon="properties"
                 height="12"
                 name="Properties"
@@ -1754,14 +1754,14 @@ exports[`Design snapshots should render Design 1`] = `
                     data-test-popover-header=""
                   >
                     <small
-                      class="css-1jnxvbp Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                      class="Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="font-size: 11px; text-align: inherit;"
                     >
                       Auto layout settings
                     </small>
                     <div
-                      class="css-1jnxvbp Icon Icon--clickable"
+                      class="Icon Icon--clickable"
                       data-test-icon="close"
                       height="10"
                       name="Close"
@@ -1773,7 +1773,7 @@ exports[`Design snapshots should render Design 1`] = `
                     data-test-popover-preview=""
                   >
                     <p
-                      class="css-1jnxvbp Typography Typography--neutral-1 Typography--regular Typography--normal Typography--p"
+                      class="Typography Typography--neutral-1 Typography--regular Typography--normal Typography--p"
                       data-test-text=""
                       style="opacity: 0.5; text-align: inherit;"
                     >
@@ -1790,7 +1790,7 @@ exports[`Design snapshots should render Design 1`] = `
                       data-test-tooltip=""
                     >
                       <small
-                        class="css-1jnxvbp TextFieldLabel Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                        class="TextFieldLabel Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                         data-test-text=""
                         style="text-align: inherit;"
                       >
@@ -1809,7 +1809,7 @@ exports[`Design snapshots should render Design 1`] = `
                           value="Excluded"
                         />
                         <div
-                          class="css-1jnxvbp Icon Icon--neutral-1"
+                          class="Icon Icon--neutral-1"
                           data-test-icon="chevron-down"
                           height="5"
                           name="ChevronDown"
@@ -1831,7 +1831,7 @@ exports[`Design snapshots should render Design 1`] = `
                         tabindex="0"
                       >
                         <div
-                          class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral-1"
+                          class="SelectItem__check-icon Icon Icon--neutral-1"
                           data-test-icon="check"
                           height="12"
                           name="Check"
@@ -1847,7 +1847,7 @@ exports[`Design snapshots should render Design 1`] = `
                         tabindex="0"
                       >
                         <div
-                          class="css-1jnxvbp SelectItem__check-icon SelectItem__check-icon--selected Icon Icon--neutral-1"
+                          class="SelectItem__check-icon SelectItem__check-icon--selected Icon Icon--neutral-1"
                           data-test-icon="check"
                           height="12"
                           name="Check"
@@ -1868,7 +1868,7 @@ exports[`Design snapshots should render Design 1`] = `
               >
                 Auto layout settings
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                  class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -1889,7 +1889,7 @@ exports[`Design snapshots should render Design 1`] = `
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <small
-          class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+          class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
           data-test-text=""
           style="text-align: inherit;"
         >
@@ -1917,7 +1917,7 @@ exports[`Design snapshots should render Design 1`] = `
                 data-test-scrubbable-input="padding-lr"
               >
                 <div
-                  class="css-1jnxvbp Icon Icon--neutral-2"
+                  class="Icon Icon--neutral-2"
                   data-test-icon="padding-lr"
                   height="12"
                   name="PaddingLR"
@@ -1935,7 +1935,7 @@ exports[`Design snapshots should render Design 1`] = `
                 class="TextFieldPopover"
               >
                 <div
-                  class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
+                  class="TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                   data-test-icon="variant"
                   height="12"
                   name="Variant"
@@ -1951,21 +1951,21 @@ exports[`Design snapshots should render Design 1`] = `
                     data-test-popover-item="0"
                   >
                     <div
-                      class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
+                      class="PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
                       data-test-icon="check"
                       height="12"
                       name="Check"
                       width="12"
                     />
                     <div
-                      class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                      class="PopoverItem__icon Icon Icon--neutral-1"
                       data-test-icon="padding-lr"
                       height="12"
                       name="PaddingLR"
                       width="12"
                     />
                     <small
-                      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                      class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -1984,7 +1984,7 @@ exports[`Design snapshots should render Design 1`] = `
             >
               Horizontal padding
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -2006,7 +2006,7 @@ exports[`Design snapshots should render Design 1`] = `
                 data-test-scrubbable-input="padding-tb"
               >
                 <div
-                  class="css-1jnxvbp Icon Icon--neutral-2"
+                  class="Icon Icon--neutral-2"
                   data-test-icon="padding-tb"
                   height="12"
                   name="PaddingTB"
@@ -2024,7 +2024,7 @@ exports[`Design snapshots should render Design 1`] = `
                 class="TextFieldPopover"
               >
                 <div
-                  class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
+                  class="TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                   data-test-icon="variant"
                   height="12"
                   name="Variant"
@@ -2040,21 +2040,21 @@ exports[`Design snapshots should render Design 1`] = `
                     data-test-popover-item="0"
                   >
                     <div
-                      class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
+                      class="PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
                       data-test-icon="check"
                       height="12"
                       name="Check"
                       width="12"
                     />
                     <div
-                      class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                      class="PopoverItem__icon Icon Icon--neutral-1"
                       data-test-icon="padding-tb"
                       height="12"
                       name="PaddingTB"
                       width="12"
                     />
                     <small
-                      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                      class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -2073,7 +2073,7 @@ exports[`Design snapshots should render Design 1`] = `
             >
               Vertical padding
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -2092,7 +2092,7 @@ exports[`Design snapshots should render Design 1`] = `
               data-test-tooltip=""
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral-1"
+                class="Icon Icon--neutral-1"
                 data-test-icon="individual-insets"
                 height="12"
                 name="IndividualInsets"
@@ -2107,7 +2107,7 @@ exports[`Design snapshots should render Design 1`] = `
               >
                 Individual padding
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                  class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -2147,7 +2147,7 @@ exports[`Design snapshots should render Design 1`] = `
               class="Checkbox__input-wrapper"
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral-1"
+                class="Icon Icon--neutral-1"
                 data-test-icon="checkbox"
                 height="8"
                 name="Checkbox"
@@ -2155,7 +2155,7 @@ exports[`Design snapshots should render Design 1`] = `
               />
             </div>
             <small
-              class="css-1jnxvbp Checkbox__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+              class="Checkbox__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
               data-test-text=""
               style="text-align: inherit;"
             >
@@ -2179,7 +2179,7 @@ exports[`Design snapshots should render Design 1`] = `
       class="Section__label-wrapper Section__label-wrapper--separator"
     >
       <small
-        class="css-1jnxvbp Section__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+        class="Section__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -2194,7 +2194,7 @@ exports[`Design snapshots should render Design 1`] = `
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp Icon Icon--neutral-1"
+            class="Icon Icon--neutral-1"
             data-test-icon="eyes-opened"
             height="14"
             name="EyesOpened"
@@ -2209,7 +2209,7 @@ exports[`Design snapshots should render Design 1`] = `
           >
             Hide
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+              class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -2223,7 +2223,7 @@ exports[`Design snapshots should render Design 1`] = `
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp Icon Icon--neutral-1"
+            class="Icon Icon--neutral-1"
             data-test-icon="drop-empty"
             height="14"
             name="DropEmpty"
@@ -2242,14 +2242,14 @@ exports[`Design snapshots should render Design 1`] = `
                 data-test-popover-item="initial"
               >
                 <div
-                  class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
+                  class="PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
                   data-test-icon="check"
                   height="12"
                   name="Check"
                   width="12"
                 />
                 <small
-                  class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                  class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -2261,14 +2261,14 @@ exports[`Design snapshots should render Design 1`] = `
                 data-test-popover-item="normal"
               >
                 <div
-                  class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                  class="PopoverItem__check-icon Icon Icon--neutral-1"
                   data-test-icon="check"
                   height="12"
                   name="Check"
                   width="12"
                 />
                 <small
-                  class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                  class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -2283,14 +2283,14 @@ exports[`Design snapshots should render Design 1`] = `
                 data-test-popover-item="darken"
               >
                 <div
-                  class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                  class="PopoverItem__check-icon Icon Icon--neutral-1"
                   data-test-icon="check"
                   height="12"
                   name="Check"
                   width="12"
                 />
                 <small
-                  class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                  class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -2302,14 +2302,14 @@ exports[`Design snapshots should render Design 1`] = `
                 data-test-popover-item="multiply"
               >
                 <div
-                  class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                  class="PopoverItem__check-icon Icon Icon--neutral-1"
                   data-test-icon="check"
                   height="12"
                   name="Check"
                   width="12"
                 />
                 <small
-                  class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                  class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -2321,14 +2321,14 @@ exports[`Design snapshots should render Design 1`] = `
                 data-test-popover-item="color-burn"
               >
                 <div
-                  class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                  class="PopoverItem__check-icon Icon Icon--neutral-1"
                   data-test-icon="check"
                   height="12"
                   name="Check"
                   width="12"
                 />
                 <small
-                  class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                  class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -2343,14 +2343,14 @@ exports[`Design snapshots should render Design 1`] = `
                 data-test-popover-item="lighten"
               >
                 <div
-                  class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                  class="PopoverItem__check-icon Icon Icon--neutral-1"
                   data-test-icon="check"
                   height="12"
                   name="Check"
                   width="12"
                 />
                 <small
-                  class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                  class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -2362,14 +2362,14 @@ exports[`Design snapshots should render Design 1`] = `
                 data-test-popover-item="screen"
               >
                 <div
-                  class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                  class="PopoverItem__check-icon Icon Icon--neutral-1"
                   data-test-icon="check"
                   height="12"
                   name="Check"
                   width="12"
                 />
                 <small
-                  class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                  class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -2381,14 +2381,14 @@ exports[`Design snapshots should render Design 1`] = `
                 data-test-popover-item="plus-lighter"
               >
                 <div
-                  class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                  class="PopoverItem__check-icon Icon Icon--neutral-1"
                   data-test-icon="check"
                   height="12"
                   name="Check"
                   width="12"
                 />
                 <small
-                  class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                  class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -2400,14 +2400,14 @@ exports[`Design snapshots should render Design 1`] = `
                 data-test-popover-item="color-dodge"
               >
                 <div
-                  class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                  class="PopoverItem__check-icon Icon Icon--neutral-1"
                   data-test-icon="check"
                   height="12"
                   name="Check"
                   width="12"
                 />
                 <small
-                  class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                  class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -2422,14 +2422,14 @@ exports[`Design snapshots should render Design 1`] = `
                 data-test-popover-item="overlay"
               >
                 <div
-                  class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                  class="PopoverItem__check-icon Icon Icon--neutral-1"
                   data-test-icon="check"
                   height="12"
                   name="Check"
                   width="12"
                 />
                 <small
-                  class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                  class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -2441,14 +2441,14 @@ exports[`Design snapshots should render Design 1`] = `
                 data-test-popover-item="soft-light"
               >
                 <div
-                  class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                  class="PopoverItem__check-icon Icon Icon--neutral-1"
                   data-test-icon="check"
                   height="12"
                   name="Check"
                   width="12"
                 />
                 <small
-                  class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                  class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -2460,14 +2460,14 @@ exports[`Design snapshots should render Design 1`] = `
                 data-test-popover-item="hard-light"
               >
                 <div
-                  class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                  class="PopoverItem__check-icon Icon Icon--neutral-1"
                   data-test-icon="check"
                   height="12"
                   name="Check"
                   width="12"
                 />
                 <small
-                  class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                  class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -2479,14 +2479,14 @@ exports[`Design snapshots should render Design 1`] = `
                 data-test-popover-item="difference"
               >
                 <div
-                  class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                  class="PopoverItem__check-icon Icon Icon--neutral-1"
                   data-test-icon="check"
                   height="12"
                   name="Check"
                   width="12"
                 />
                 <small
-                  class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                  class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -2498,14 +2498,14 @@ exports[`Design snapshots should render Design 1`] = `
                 data-test-popover-item="exclusion"
               >
                 <div
-                  class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                  class="PopoverItem__check-icon Icon Icon--neutral-1"
                   data-test-icon="check"
                   height="12"
                   name="Check"
                   width="12"
                 />
                 <small
-                  class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                  class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -2520,14 +2520,14 @@ exports[`Design snapshots should render Design 1`] = `
                 data-test-popover-item="hue"
               >
                 <div
-                  class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                  class="PopoverItem__check-icon Icon Icon--neutral-1"
                   data-test-icon="check"
                   height="12"
                   name="Check"
                   width="12"
                 />
                 <small
-                  class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                  class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -2539,14 +2539,14 @@ exports[`Design snapshots should render Design 1`] = `
                 data-test-popover-item="saturation"
               >
                 <div
-                  class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                  class="PopoverItem__check-icon Icon Icon--neutral-1"
                   data-test-icon="check"
                   height="12"
                   name="Check"
                   width="12"
                 />
                 <small
-                  class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                  class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -2558,14 +2558,14 @@ exports[`Design snapshots should render Design 1`] = `
                 data-test-popover-item="color"
               >
                 <div
-                  class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                  class="PopoverItem__check-icon Icon Icon--neutral-1"
                   data-test-icon="check"
                   height="12"
                   name="Check"
                   width="12"
                 />
                 <small
-                  class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                  class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -2583,7 +2583,7 @@ exports[`Design snapshots should render Design 1`] = `
           >
             Apply blend mode
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+              class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -2602,7 +2602,7 @@ exports[`Design snapshots should render Design 1`] = `
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <small
-          class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+          class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
           data-test-text=""
           style="text-align: inherit;"
         >
@@ -2630,7 +2630,7 @@ exports[`Design snapshots should render Design 1`] = `
                 data-test-scrubbable-input="opacity"
               >
                 <div
-                  class="css-1jnxvbp Icon Icon--neutral-2"
+                  class="Icon Icon--neutral-2"
                   data-test-icon="opacity"
                   height="12"
                   name="Opacity"
@@ -2648,7 +2648,7 @@ exports[`Design snapshots should render Design 1`] = `
                 class="TextFieldPopover"
               >
                 <div
-                  class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
+                  class="TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                   data-test-icon="variant"
                   height="12"
                   name="Variant"
@@ -2664,21 +2664,21 @@ exports[`Design snapshots should render Design 1`] = `
                     data-test-popover-item="0"
                   >
                     <div
-                      class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
+                      class="PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
                       data-test-icon="check"
                       height="12"
                       name="Check"
                       width="12"
                     />
                     <div
-                      class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                      class="PopoverItem__icon Icon Icon--neutral-1"
                       data-test-icon="opacity"
                       height="12"
                       name="Opacity"
                       width="12"
                     />
                     <small
-                      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                      class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -2703,7 +2703,7 @@ exports[`Design snapshots should render Design 1`] = `
                 data-test-scrubbable-input="border-radius"
               >
                 <div
-                  class="css-1jnxvbp Icon Icon--neutral-2"
+                  class="Icon Icon--neutral-2"
                   data-test-icon="corners"
                   height="12"
                   name="Corners"
@@ -2721,7 +2721,7 @@ exports[`Design snapshots should render Design 1`] = `
                 class="TextFieldPopover"
               >
                 <div
-                  class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
+                  class="TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                   data-test-icon="variant"
                   height="12"
                   name="Variant"
@@ -2737,21 +2737,21 @@ exports[`Design snapshots should render Design 1`] = `
                     data-test-popover-item="0"
                   >
                     <div
-                      class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
+                      class="PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
                       data-test-icon="check"
                       height="12"
                       name="Check"
                       width="12"
                     />
                     <div
-                      class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                      class="PopoverItem__icon Icon Icon--neutral-1"
                       data-test-icon="corners"
                       height="12"
                       name="Corners"
                       width="12"
                     />
                     <small
-                      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                      class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -2763,21 +2763,21 @@ exports[`Design snapshots should render Design 1`] = `
                     data-test-popover-item="1"
                   >
                     <div
-                      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                      class="PopoverItem__check-icon Icon Icon--neutral-1"
                       data-test-icon="check"
                       height="12"
                       name="Check"
                       width="12"
                     />
                     <div
-                      class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                      class="PopoverItem__icon Icon Icon--neutral-1"
                       data-test-icon="percentage"
                       height="12"
                       name="Percentage"
                       width="12"
                     />
                     <small
-                      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                      class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -2799,7 +2799,7 @@ exports[`Design snapshots should render Design 1`] = `
               data-test-tooltip=""
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral-1"
+                class="Icon Icon--neutral-1"
                 data-test-icon="corners"
                 height="12"
                 name="Corners"
@@ -2814,7 +2814,7 @@ exports[`Design snapshots should render Design 1`] = `
               >
                 Individual corners
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                  class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -2835,7 +2835,7 @@ exports[`Design snapshots should render Design 1`] = `
       class="Section__label-wrapper Section__label-wrapper--separator"
     >
       <small
-        class="css-1jnxvbp Section__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+        class="Section__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -2850,7 +2850,7 @@ exports[`Design snapshots should render Design 1`] = `
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp Icon Icon--neutral-1"
+            class="Icon Icon--neutral-1"
             data-test-icon="plus"
             height="14"
             name="Plus"
@@ -2865,7 +2865,7 @@ exports[`Design snapshots should render Design 1`] = `
           >
             Add fill
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+              class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -2969,7 +2969,7 @@ exports[`Design snapshots should render Design 1`] = `
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral-1"
+              class="Icon Icon--neutral-1"
               data-test-icon="eyes-opened"
               height="14"
               name="EyesOpened"
@@ -2984,7 +2984,7 @@ exports[`Design snapshots should render Design 1`] = `
             >
               Hide
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -2998,7 +2998,7 @@ exports[`Design snapshots should render Design 1`] = `
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral-1"
+              class="Icon Icon--neutral-1"
               data-test-icon="minus"
               height="14"
               name="Minus"
@@ -3013,7 +3013,7 @@ exports[`Design snapshots should render Design 1`] = `
             >
               Remove
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"

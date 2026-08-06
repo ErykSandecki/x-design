@@ -5,7 +5,7 @@ exports[`Typography snapshots should render empty 1`] = `<DocumentFragment />`;
 exports[`Typography snapshots should render with passed inner html 1`] = `
 <DocumentFragment>
   <p
-    class="css-1jnxvbp Typography Typography--neutral-1 Typography--regular Typography--normal Typography--p"
+    class="Typography Typography--neutral-1 Typography--regular Typography--normal Typography--p"
     data-test-text=""
     style="text-align: inherit;"
   />
@@ -19,7 +19,7 @@ exports[`Typography snapshots should render with passed inner html 1`] = `
 exports[`Typography snapshots should render with some text 1`] = `
 <DocumentFragment>
   <p
-    class="css-1jnxvbp Typography Typography--neutral-1 Typography--regular Typography--normal Typography--p"
+    class="Typography Typography--neutral-1 Typography--regular Typography--normal Typography--p"
     data-test-text=""
     style="text-align: inherit;"
   >

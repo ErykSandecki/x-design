@@ -11,7 +11,7 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+        class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -35,7 +35,7 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
             type="button"
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral-1"
+              class="Icon Icon--neutral-1"
               data-test-icon="flow-default"
               height="12"
               name="FlowDefault"
@@ -50,7 +50,7 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
             >
               Free form
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -64,7 +64,7 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
             type="button"
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral-1"
+              class="Icon Icon--neutral-1"
               data-test-icon="flow-vertical"
               height="12"
               name="FlowVertical"
@@ -79,7 +79,7 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
             >
               Vertical
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -93,7 +93,7 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
             type="button"
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral-1"
+              class="Icon Icon--neutral-1"
               data-test-icon="flow-horizontal"
               height="12"
               name="FlowHorizontal"
@@ -108,7 +108,7 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
             >
               Horizontal
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -122,7 +122,7 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
             type="button"
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral-1"
+              class="Icon Icon--neutral-1"
               data-test-icon="flow-grid"
               height="12"
               name="FlowGrid"
@@ -137,7 +137,7 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
             >
               Grid
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -168,7 +168,7 @@ exports[`ColumnFlow snapshots should render when is horizontal but are mixed 1`]
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+        class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -192,7 +192,7 @@ exports[`ColumnFlow snapshots should render when is horizontal but are mixed 1`]
             type="button"
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral-1"
+              class="Icon Icon--neutral-1"
               data-test-icon="flow-default"
               height="12"
               name="FlowDefault"
@@ -207,7 +207,7 @@ exports[`ColumnFlow snapshots should render when is horizontal but are mixed 1`]
             >
               Free form
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -221,7 +221,7 @@ exports[`ColumnFlow snapshots should render when is horizontal but are mixed 1`]
             type="button"
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral-1"
+              class="Icon Icon--neutral-1"
               data-test-icon="flow-vertical"
               height="12"
               name="FlowVertical"
@@ -236,7 +236,7 @@ exports[`ColumnFlow snapshots should render when is horizontal but are mixed 1`]
             >
               Vertical
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -250,7 +250,7 @@ exports[`ColumnFlow snapshots should render when is horizontal but are mixed 1`]
             type="button"
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral-1"
+              class="Icon Icon--neutral-1"
               data-test-icon="flow-horizontal"
               height="12"
               name="FlowHorizontal"
@@ -265,7 +265,7 @@ exports[`ColumnFlow snapshots should render when is horizontal but are mixed 1`]
             >
               Horizontal
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -279,7 +279,7 @@ exports[`ColumnFlow snapshots should render when is horizontal but are mixed 1`]
             type="button"
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral-1"
+              class="Icon Icon--neutral-1"
               data-test-icon="flow-grid"
               height="12"
               name="FlowGrid"
@@ -294,7 +294,7 @@ exports[`ColumnFlow snapshots should render when is horizontal but are mixed 1`]
             >
               Grid
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -325,7 +325,7 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+        class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -349,7 +349,7 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
             type="button"
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral-1"
+              class="Icon Icon--neutral-1"
               data-test-icon="flow-default"
               height="12"
               name="FlowDefault"
@@ -364,7 +364,7 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
             >
               Free form
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -378,7 +378,7 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
             type="button"
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral-1"
+              class="Icon Icon--neutral-1"
               data-test-icon="flow-vertical"
               height="12"
               name="FlowVertical"
@@ -393,7 +393,7 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
             >
               Vertical
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -407,7 +407,7 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
             type="button"
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral-1"
+              class="Icon Icon--neutral-1"
               data-test-icon="flow-horizontal"
               height="12"
               name="FlowHorizontal"
@@ -422,7 +422,7 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
             >
               Horizontal
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -436,7 +436,7 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
             type="button"
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral-1"
+              class="Icon Icon--neutral-1"
               data-test-icon="flow-grid"
               height="12"
               name="FlowGrid"
@@ -451,7 +451,7 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
             >
               Grid
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -482,7 +482,7 @@ exports[`ColumnFlow snapshots should render when wrap are mixed 1`] = `
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+        class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -506,7 +506,7 @@ exports[`ColumnFlow snapshots should render when wrap are mixed 1`] = `
             type="button"
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral-1"
+              class="Icon Icon--neutral-1"
               data-test-icon="flow-default"
               height="12"
               name="FlowDefault"
@@ -521,7 +521,7 @@ exports[`ColumnFlow snapshots should render when wrap are mixed 1`] = `
             >
               Free form
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -535,7 +535,7 @@ exports[`ColumnFlow snapshots should render when wrap are mixed 1`] = `
             type="button"
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral-1"
+              class="Icon Icon--neutral-1"
               data-test-icon="flow-vertical"
               height="12"
               name="FlowVertical"
@@ -550,7 +550,7 @@ exports[`ColumnFlow snapshots should render when wrap are mixed 1`] = `
             >
               Vertical
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -564,7 +564,7 @@ exports[`ColumnFlow snapshots should render when wrap are mixed 1`] = `
             type="button"
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral-1"
+              class="Icon Icon--neutral-1"
               data-test-icon="flow-horizontal"
               height="12"
               name="FlowHorizontal"
@@ -579,7 +579,7 @@ exports[`ColumnFlow snapshots should render when wrap are mixed 1`] = `
             >
               Horizontal
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -593,7 +593,7 @@ exports[`ColumnFlow snapshots should render when wrap are mixed 1`] = `
             type="button"
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral-1"
+              class="Icon Icon--neutral-1"
               data-test-icon="flow-grid"
               height="12"
               name="FlowGrid"
@@ -608,7 +608,7 @@ exports[`ColumnFlow snapshots should render when wrap are mixed 1`] = `
             >
               Grid
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -628,7 +628,7 @@ exports[`ColumnFlow snapshots should render when wrap are mixed 1`] = `
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral-1"
+              class="Icon Icon--neutral-1"
               data-test-icon="wrap"
               height="12"
               name="Wrap"
@@ -643,7 +643,7 @@ exports[`ColumnFlow snapshots should render when wrap are mixed 1`] = `
             >
               Wrap
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"

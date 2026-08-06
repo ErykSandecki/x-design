@@ -11,7 +11,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+        class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -39,7 +39,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
               data-test-scrubbable-input="width"
             >
               <small
-                class="css-1jnxvbp Typography Typography--neutral-2 Typography--regular Typography--normal Typography--small"
+                class="Typography Typography--neutral-2 Typography--regular Typography--normal Typography--small"
                 data-test-text=""
                 style="text-align: inherit;"
               >
@@ -57,7 +57,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
               class="TextFieldPopover"
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
+                class="TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
@@ -73,21 +73,21 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
+                    class="PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                    class="PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="fixed-width"
                     height="12"
                     name="FixedWidth"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                    class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -99,21 +99,21 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
                   data-test-popover-item="1"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                    class="PopoverItem__check-icon Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                    class="PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="auto-width"
                     height="12"
                     name="AutoWidth"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                    class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -125,21 +125,21 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
                   data-test-popover-item="2"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                    class="PopoverItem__check-icon Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                    class="PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="percentage"
                     height="12"
                     name="Percentage"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                    class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -154,21 +154,21 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
                   data-test-popover-item="3"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                    class="PopoverItem__check-icon Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                    class="PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="min-width"
                     height="12"
                     name="MinWidth"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                    class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -180,21 +180,21 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
                   data-test-popover-item="4"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                    class="PopoverItem__check-icon Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                    class="PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="max-width"
                     height="12"
                     name="MaxWidth"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                    class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -219,7 +219,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
               data-test-scrubbable-input="height"
             >
               <small
-                class="css-1jnxvbp Typography Typography--neutral-2 Typography--regular Typography--normal Typography--small"
+                class="Typography Typography--neutral-2 Typography--regular Typography--normal Typography--small"
                 data-test-text=""
                 style="text-align: inherit;"
               >
@@ -237,7 +237,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
               class="TextFieldPopover"
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
+                class="TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
@@ -253,21 +253,21 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
+                    class="PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                    class="PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="fixed-height"
                     height="12"
                     name="FixedHeight"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                    class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -279,21 +279,21 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
                   data-test-popover-item="1"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                    class="PopoverItem__check-icon Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                    class="PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="auto-height"
                     height="12"
                     name="AutoHeight"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                    class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -305,21 +305,21 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
                   data-test-popover-item="2"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                    class="PopoverItem__check-icon Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                    class="PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="percentage"
                     height="12"
                     name="Percentage"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                    class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -334,21 +334,21 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
                   data-test-popover-item="3"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                    class="PopoverItem__check-icon Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                    class="PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="min-height"
                     height="12"
                     name="MinHeight"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                    class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -360,21 +360,21 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
                   data-test-popover-item="4"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                    class="PopoverItem__check-icon Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                    class="PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="max-height"
                     height="12"
                     name="MaxHeight"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                    class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -396,7 +396,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral-1"
+              class="Icon Icon--neutral-1"
               data-test-icon="aspect-ratio"
               height="12"
               name="AspectRatio"
@@ -411,7 +411,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
             >
               Look aspect ratio
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -437,7 +437,7 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+        class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -465,7 +465,7 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
               data-test-scrubbable-input="width"
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral-2"
+                class="Icon Icon--neutral-2"
                 data-test-icon="width-restricted"
                 height="12"
                 name="WidthRestricted"
@@ -483,7 +483,7 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
               class="TextFieldPopover"
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
+                class="TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                 data-test-icon="detached"
                 height="12"
                 name="Detached"
@@ -499,21 +499,21 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
+                    class="PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                    class="PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="fixed-width"
                     height="12"
                     name="FixedWidth"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                    class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -525,21 +525,21 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
                   data-test-popover-item="1"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                    class="PopoverItem__check-icon Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                    class="PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="auto-width"
                     height="12"
                     name="AutoWidth"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                    class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -551,21 +551,21 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
                   data-test-popover-item="2"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                    class="PopoverItem__check-icon Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                    class="PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="percentage"
                     height="12"
                     name="Percentage"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                    class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -596,7 +596,7 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
               data-test-scrubbable-input="height"
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral-2"
+                class="Icon Icon--neutral-2"
                 data-test-icon="height-restricted"
                 height="12"
                 name="HeightRestricted"
@@ -614,7 +614,7 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
               class="TextFieldPopover"
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
+                class="TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                 data-test-icon="detached"
                 height="12"
                 name="Detached"
@@ -630,21 +630,21 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
+                    class="PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                    class="PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="fixed-height"
                     height="12"
                     name="FixedHeight"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                    class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -656,21 +656,21 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
                   data-test-popover-item="1"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                    class="PopoverItem__check-icon Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                    class="PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="auto-height"
                     height="12"
                     name="AutoHeight"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                    class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -682,21 +682,21 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
                   data-test-popover-item="2"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
+                    class="PopoverItem__check-icon Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
+                    class="PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="percentage"
                     height="12"
                     name="Percentage"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+                    class="PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >

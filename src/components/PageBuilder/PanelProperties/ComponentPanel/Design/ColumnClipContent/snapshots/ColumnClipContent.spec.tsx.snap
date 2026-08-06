@@ -30,7 +30,7 @@ exports[`ColumnMargin snapshots should render ColumnMargin 1`] = `
             class="Checkbox__input-wrapper"
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral-1"
+              class="Icon Icon--neutral-1"
               data-test-icon="checkbox"
               height="8"
               name="Checkbox"
@@ -38,7 +38,7 @@ exports[`ColumnMargin snapshots should render ColumnMargin 1`] = `
             />
           </div>
           <small
-            class="css-1jnxvbp Checkbox__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+            class="Checkbox__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
             data-test-text=""
             style="text-align: inherit;"
           >
@@ -86,7 +86,7 @@ exports[`ColumnMargin snapshots should render when is free form 1`] = `
             class="Checkbox__input-wrapper"
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral-1"
+              class="Icon Icon--neutral-1"
               data-test-icon="checkbox"
               height="8"
               name="Checkbox"
@@ -94,7 +94,7 @@ exports[`ColumnMargin snapshots should render when is free form 1`] = `
             />
           </div>
           <small
-            class="css-1jnxvbp Checkbox__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+            class="Checkbox__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
             data-test-text=""
             style="text-align: inherit;"
           >

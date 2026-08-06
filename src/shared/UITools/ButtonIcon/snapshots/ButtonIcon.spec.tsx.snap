@@ -8,7 +8,7 @@ exports[`ButtonIcon snapshots should render ButtonIcon 1`] = `
     data-test-tooltip=""
   >
     <div
-      class="css-1jnxvbp Icon Icon--neutral-1"
+      class="Icon Icon--neutral-1"
       data-test-icon="close"
       height="12"
       name="Close"
@@ -26,7 +26,7 @@ exports[`ButtonIcon snapshots should render when is selected 1`] = `
     data-test-tooltip=""
   >
     <div
-      class="css-1jnxvbp Icon Icon--blue-1"
+      class="Icon Icon--blue-1"
       data-test-icon="close"
       height="12"
       name="Close"
@@ -44,7 +44,7 @@ exports[`ButtonIcon snapshots should render with popover 1`] = `
     data-test-tooltip=""
   >
     <div
-      class="css-1jnxvbp Icon Icon--neutral-1"
+      class="Icon Icon--neutral-1"
       data-test-icon="close"
       height="12"
       name="Close"

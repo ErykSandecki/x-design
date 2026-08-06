@@ -7,14 +7,14 @@ exports[`PopoverHeader snapshots should render PopoverHeader 1`] = `
     data-test-popover-header=""
   >
     <small
-      class="css-1jnxvbp Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+      class="Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="font-size: 11px; text-align: inherit;"
     >
       title
     </small>
     <div
-      class="css-1jnxvbp Icon Icon--clickable"
+      class="Icon Icon--clickable"
       data-test-icon="close"
       height="10"
       name="Close"

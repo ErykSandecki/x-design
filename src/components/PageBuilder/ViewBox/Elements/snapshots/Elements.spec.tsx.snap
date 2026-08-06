@@ -38,7 +38,7 @@ exports[`Elements snapshots should render Element in relative position 1`] = `
       style="left: 0px; top: 0px; transform: rotate(0deg); height: 100px; width: 100px;"
     >
       <small
-        class="css-1jnxvbp Frame__label Frame__label--top Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+        class="Frame__label Frame__label--top Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit; width: 100px;"
       >
@@ -65,7 +65,7 @@ exports[`Elements snapshots should render Frame 1`] = `
       style="height: 100px; left: 0px; top: 0px; transform: rotate(0deg); width: 100px;"
     >
       <small
-        class="css-1jnxvbp Frame__label Frame__label--top Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+        class="Frame__label Frame__label--top Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="width: 100px; text-align: inherit;"
       >
@@ -99,7 +99,7 @@ exports[`Elements snapshots should render when possible Element 1`] = `
       style="height: 100px; left: 0px; top: 0px; transform: rotate(0deg); width: 100px;"
     >
       <small
-        class="css-1jnxvbp Frame__label Frame__label--top Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+        class="Frame__label Frame__label--top Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="width: 100px; text-align: inherit;"
       >
@@ -112,7 +112,7 @@ exports[`Elements snapshots should render when possible Element 1`] = `
     style="height: 0px; left: 0px; position: absolute; top: 0px; width: 0px;"
   >
     <small
-      class="css-2lfa8s PossibleElement__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+      class="PossibleElement__label Typography Typography--blue-1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="width: 0px; text-align: inherit;"
     >

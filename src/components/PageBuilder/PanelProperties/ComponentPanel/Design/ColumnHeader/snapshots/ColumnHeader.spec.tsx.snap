@@ -18,7 +18,7 @@ exports[`ColumnHeader snapshots should render ColumnHeader 1`] = `
         style="width: calc(100% - 48px - 2.5px - 8px);"
       >
         <small
-          class="css-1jnxvbp Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+          class="Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
           data-test-text=""
           style="align-items: center; display: flex; user-select: none; text-align: inherit;"
         >
@@ -35,7 +35,7 @@ exports[`ColumnHeader snapshots should render ColumnHeader 1`] = `
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral-1"
+              class="Icon Icon--neutral-1"
               data-test-icon="html-tag"
               height="14"
               name="HtmlTag"
@@ -50,7 +50,7 @@ exports[`ColumnHeader snapshots should render ColumnHeader 1`] = `
             >
               Toggle ready for dev status
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -64,7 +64,7 @@ exports[`ColumnHeader snapshots should render ColumnHeader 1`] = `
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral-1"
+              class="Icon Icon--neutral-1"
               data-test-icon="component"
               height="14"
               name="Component"
@@ -79,7 +79,7 @@ exports[`ColumnHeader snapshots should render ColumnHeader 1`] = `
             >
               Create component
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -112,7 +112,7 @@ exports[`ColumnHeader snapshots should render with multiple selects 1`] = `
         style="width: calc(100% - 48px - 2.5px - 8px);"
       >
         <small
-          class="css-1jnxvbp Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+          class="Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
           data-test-text=""
           style="align-items: center; display: flex; user-select: none; text-align: inherit;"
         >
@@ -129,7 +129,7 @@ exports[`ColumnHeader snapshots should render with multiple selects 1`] = `
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral-1"
+              class="Icon Icon--neutral-1"
               data-test-icon="html-tag"
               height="14"
               name="HtmlTag"
@@ -144,7 +144,7 @@ exports[`ColumnHeader snapshots should render with multiple selects 1`] = `
             >
               Toggle ready for dev status
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -158,7 +158,7 @@ exports[`ColumnHeader snapshots should render with multiple selects 1`] = `
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral-1"
+              class="Icon Icon--neutral-1"
               data-test-icon="component"
               height="14"
               name="Component"
@@ -173,7 +173,7 @@ exports[`ColumnHeader snapshots should render with multiple selects 1`] = `
             >
               Create component
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"

@@ -40,7 +40,7 @@ exports[`SectionColumn snapshots should render with buttons & labels 1`] = `
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+        class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -66,7 +66,7 @@ exports[`SectionColumn snapshots should render with buttons & labels 1`] = `
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral-1"
+              class="Icon Icon--neutral-1"
               data-test-icon="close"
               height="12"
               name="Close"
@@ -109,7 +109,7 @@ exports[`SectionColumn snapshots should render with buttons 1`] = `
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral-1"
+              class="Icon Icon--neutral-1"
               data-test-icon="close"
               height="12"
               name="Close"
@@ -145,7 +145,7 @@ exports[`SectionColumn snapshots should render with buttons and input connector 
           class="SectionColumnContent__input-connector"
         >
           <div
-            class="css-1jnxvbp Icon Icon--neutral-3"
+            class="Icon Icon--neutral-3"
             data-test-icon="inputs-connector"
             height="24"
             name="InputsConnector"
@@ -163,7 +163,7 @@ exports[`SectionColumn snapshots should render with buttons and input connector 
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral-1"
+              class="Icon Icon--neutral-1"
               data-test-icon="close"
               height="12"
               name="Close"

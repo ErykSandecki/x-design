@@ -16,7 +16,7 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
           data-test-box="default"
         >
           <div
-            class="css-1jnxvbp Icon Icon--neutral-1"
+            class="Icon Icon--neutral-1"
             data-test-icon="default"
             height="16"
             name="MoveTool"
@@ -28,7 +28,7 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
           data-test-box="toolBeltA"
         >
           <div
-            class="css-1jnxvbp Icon Icon--neutral-1"
+            class="Icon Icon--neutral-1"
             data-test-icon="toolBeltA"
             height="16"
             name="FrameTool"
@@ -40,7 +40,7 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
           data-test-box="move"
         >
           <div
-            class="css-1jnxvbp Icon Icon--neutral-1"
+            class="Icon Icon--neutral-1"
             data-test-icon="move"
             height="16"
             name="MoveHand"
@@ -52,7 +52,7 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
           data-test-box="comment"
         >
           <div
-            class="css-1jnxvbp Icon Icon--neutral-1"
+            class="Icon Icon--neutral-1"
             data-test-icon="comment"
             height="16"
             name="Comment"
@@ -79,7 +79,7 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
           class="Section__label-wrapper Section__label-wrapper--separator"
         >
           <small
-            class="css-1jnxvbp Section__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+            class="Section__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
             data-test-text=""
             style="text-align: inherit;"
           >
@@ -119,7 +119,7 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
             class="Section__label-wrapper Section__label-wrapper--separator"
           >
             <small
-              class="css-1jnxvbp Section__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+              class="Section__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
               data-test-text=""
               style="text-align: inherit;"
             >
@@ -228,7 +228,7 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
                     data-test-tooltip=""
                   >
                     <div
-                      class="css-1jnxvbp Icon Icon--neutral-1"
+                      class="Icon Icon--neutral-1"
                       data-test-icon="eyes-opened"
                       height="12"
                       name="EyesOpened"
@@ -243,7 +243,7 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
                     >
                       Toggle visibility
                       <div
-                        class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                        class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                         data-test-icon="carrot-down"
                         height="14"
                         name="CarrotDown"

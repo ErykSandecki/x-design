@@ -11,7 +11,7 @@ exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+        class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -39,7 +39,7 @@ exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
               data-test-scrubbable-input="x"
             >
               <small
-                class="css-1jnxvbp Typography Typography--neutral-2 Typography--regular Typography--normal Typography--small"
+                class="Typography Typography--neutral-2 Typography--regular Typography--normal Typography--small"
                 data-test-text=""
                 style="text-align: inherit;"
               >
@@ -63,7 +63,7 @@ exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
           >
             X - position
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+              class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -85,7 +85,7 @@ exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
               data-test-scrubbable-input="y"
             >
               <small
-                class="css-1jnxvbp Typography Typography--neutral-2 Typography--regular Typography--normal Typography--small"
+                class="Typography Typography--neutral-2 Typography--regular Typography--normal Typography--small"
                 data-test-text=""
                 style="text-align: inherit;"
               >
@@ -109,7 +109,7 @@ exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
           >
             Y - position
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+              class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -139,7 +139,7 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+        class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -167,7 +167,7 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
               data-test-scrubbable-input="x"
             >
               <small
-                class="css-1jnxvbp Typography Typography--neutral-2 Typography--regular Typography--normal Typography--small"
+                class="Typography Typography--neutral-2 Typography--regular Typography--normal Typography--small"
                 data-test-text=""
                 style="text-align: inherit;"
               >
@@ -192,7 +192,7 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
           >
             X - position
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+              class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -214,7 +214,7 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
               data-test-scrubbable-input="y"
             >
               <small
-                class="css-1jnxvbp Typography Typography--neutral-2 Typography--regular Typography--normal Typography--small"
+                class="Typography Typography--neutral-2 Typography--regular Typography--normal Typography--small"
                 data-test-text=""
                 style="text-align: inherit;"
               >
@@ -239,7 +239,7 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
           >
             Y - position
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+              class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -292,7 +292,7 @@ exports[`ColumnPosition snapshots should render when values are mixed 1`] = `
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+        class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -320,7 +320,7 @@ exports[`ColumnPosition snapshots should render when values are mixed 1`] = `
               data-test-scrubbable-input="x"
             >
               <small
-                class="css-1jnxvbp Typography Typography--neutral-2 Typography--regular Typography--normal Typography--small"
+                class="Typography Typography--neutral-2 Typography--regular Typography--normal Typography--small"
                 data-test-text=""
                 style="text-align: inherit;"
               >
@@ -344,7 +344,7 @@ exports[`ColumnPosition snapshots should render when values are mixed 1`] = `
           >
             X - position
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+              class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -366,7 +366,7 @@ exports[`ColumnPosition snapshots should render when values are mixed 1`] = `
               data-test-scrubbable-input="y"
             >
               <small
-                class="css-1jnxvbp Typography Typography--neutral-2 Typography--regular Typography--normal Typography--small"
+                class="Typography Typography--neutral-2 Typography--regular Typography--normal Typography--small"
                 data-test-text=""
                 style="text-align: inherit;"
               >
@@ -390,7 +390,7 @@ exports[`ColumnPosition snapshots should render when values are mixed 1`] = `
           >
             Y - position
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+              class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"

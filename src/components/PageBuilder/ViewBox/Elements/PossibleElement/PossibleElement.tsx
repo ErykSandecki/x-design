@@ -17,7 +17,7 @@ import { elementAttributeSelectorCreator, eventSelectorCreator } from 'store/pag
 import styles from './possible-element.scss';
 
 // types
-import { LayoutType, TElement } from 'types';
+import { ColorsTheme, LayoutType, TElement } from 'types';
 
 // utils
 import { getCoordinates } from './utils/getCoordinates';
@@ -48,10 +48,10 @@ const PossibleElement: FC<TPossibleElementProps> = ({ parentId }) => {
       {isBaseParent(parentId) && (
         <Small
           classes={{ className: cx(styles.PossibleElement__label) }}
+          color={ColorsTheme.blue1}
           style={{
             width: x2,
           }}
-          sx={{ cl: 'blue1', position: 'absolute' }}
         >
           {t(`${translationNameSpace}.label.createFrame`)}
         </Small>

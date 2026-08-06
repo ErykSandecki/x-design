@@ -10,7 +10,7 @@ exports[`ColorResult snapshots should render ColorResult 1`] = `
       style="background-color: rgba(0, 0, 0, 0);"
     />
     <small
-      class="css-1jnxvbp Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+      class="Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >

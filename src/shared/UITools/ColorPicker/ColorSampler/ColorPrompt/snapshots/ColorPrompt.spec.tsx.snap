@@ -6,14 +6,14 @@ exports[`ColorPrompt snapshots should render ColorPrompt 1`] = `
     class="ColorPrompt"
   >
     <div
-      class="css-1jnxvbp Icon Icon--neutral-1"
+      class="Icon Icon--neutral-1"
       data-test-icon="eyes-dropper"
       height="12"
       name="EyesDropper"
       width="12"
     />
     <small
-      class="css-kw3w48 ColorPrompt__description Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
+      class="ColorPrompt__description Typography Typography--neutral-2 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >

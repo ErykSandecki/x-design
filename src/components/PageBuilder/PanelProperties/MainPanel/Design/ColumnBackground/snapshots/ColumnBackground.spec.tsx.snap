@@ -101,7 +101,7 @@ exports[`ColumnBackground snapshots should render ColumnBackground 1`] = `
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral-1"
+              class="Icon Icon--neutral-1"
               data-test-icon="eyes-opened"
               height="12"
               name="EyesOpened"
@@ -116,7 +116,7 @@ exports[`ColumnBackground snapshots should render ColumnBackground 1`] = `
             >
               Toggle visibility
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
+                class="Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
