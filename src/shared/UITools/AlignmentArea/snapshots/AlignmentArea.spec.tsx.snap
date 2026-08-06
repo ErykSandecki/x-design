@@ -37,7 +37,7 @@ exports[`AlignmentArea snapshots should render AlignmentArea 1`] = `
       >
         Align top left
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -76,7 +76,7 @@ exports[`AlignmentArea snapshots should render AlignmentArea 1`] = `
       >
         Align top center
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -115,7 +115,7 @@ exports[`AlignmentArea snapshots should render AlignmentArea 1`] = `
       >
         Align top right
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -154,7 +154,7 @@ exports[`AlignmentArea snapshots should render AlignmentArea 1`] = `
       >
         Align left
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -193,7 +193,7 @@ exports[`AlignmentArea snapshots should render AlignmentArea 1`] = `
       >
         Align center
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -232,7 +232,7 @@ exports[`AlignmentArea snapshots should render AlignmentArea 1`] = `
       >
         Align right
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -271,7 +271,7 @@ exports[`AlignmentArea snapshots should render AlignmentArea 1`] = `
       >
         Align bottom left
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -310,7 +310,7 @@ exports[`AlignmentArea snapshots should render AlignmentArea 1`] = `
       >
         Align bottom center
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -349,7 +349,7 @@ exports[`AlignmentArea snapshots should render AlignmentArea 1`] = `
       >
         Align bottom right
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"

@@ -21,7 +21,7 @@ exports[`GridInputs snapshots should render GridInputs 1`] = `
           data-test-scrubbable-input="columns"
         >
           <div
-            class="css-1jnxvbp Icon Icon--neutral1"
+            class="css-1jnxvbp Icon Icon--neutral-1"
             data-test-icon="columns"
             height="12"
             name="Columns"
@@ -45,7 +45,7 @@ exports[`GridInputs snapshots should render GridInputs 1`] = `
       >
         Number of columns
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -54,7 +54,7 @@ exports[`GridInputs snapshots should render GridInputs 1`] = `
       </div>
     </div>
     <small
-      class="css-1jnxvbp GridInputs__separator Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+      class="css-1jnxvbp GridInputs__separator Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -75,7 +75,7 @@ exports[`GridInputs snapshots should render GridInputs 1`] = `
           data-test-scrubbable-input="rows"
         >
           <div
-            class="css-1jnxvbp Icon Icon--neutral1"
+            class="css-1jnxvbp Icon Icon--neutral-1"
             data-test-icon="rows"
             height="12"
             name="Rows"
@@ -99,7 +99,7 @@ exports[`GridInputs snapshots should render GridInputs 1`] = `
       >
         Number of rows
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"

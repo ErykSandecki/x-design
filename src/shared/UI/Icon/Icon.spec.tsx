@@ -35,7 +35,7 @@ describe('Typography props', () => {
     const { container } = customRender(<Icon color={ColorsTheme.blue1} name="StepBackwardOutlined" />);
 
     // result
-    expect(container.querySelector(`.${'Icon'}`)).toHaveClass('Icon--blue1');
+    expect(container.querySelector(`.${'Icon'}`)).toHaveClass('Icon--blue-1');
   });
 
   it('should pass disabled', () => {

@@ -14,7 +14,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -44,7 +44,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
               data-test-text-field-wrapper=""
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral1"
+                class="css-1jnxvbp Icon Icon--neutral-1"
                 data-test-icon="drop-filled"
                 height="10"
                 name="DropFilled"
@@ -58,7 +58,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
                 value="Color"
               />
               <div
-                class="css-1jnxvbp Icon Icon--neutral1"
+                class="css-1jnxvbp Icon Icon--neutral-1"
                 data-test-icon="chevron-down"
                 height="5"
                 name="ChevronDown"
@@ -81,7 +81,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
               tabindex="0"
             >
               <div
-                class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral1"
+                class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral-1"
                 data-test-icon="check"
                 height="12"
                 name="Check"
@@ -97,7 +97,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
               tabindex="0"
             >
               <div
-                class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral1"
+                class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral-1"
                 data-test-icon="check"
                 height="12"
                 name="Check"
@@ -117,7 +117,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
               tabindex="0"
             >
               <div
-                class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral1"
+                class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral-1"
                 data-test-icon="check"
                 height="12"
                 name="Check"
@@ -133,7 +133,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
               tabindex="0"
             >
               <div
-                class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral1"
+                class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral-1"
                 data-test-icon="check"
                 height="12"
                 name="Check"
@@ -149,7 +149,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
               tabindex="0"
             >
               <div
-                class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral1"
+                class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral-1"
                 data-test-icon="check"
                 height="12"
                 name="Check"
@@ -169,7 +169,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
               tabindex="0"
             >
               <div
-                class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral1"
+                class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral-1"
                 data-test-icon="check"
                 height="12"
                 name="Check"
@@ -185,7 +185,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
               tabindex="0"
             >
               <div
-                class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral1"
+                class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral-1"
                 data-test-icon="check"
                 height="12"
                 name="Check"
@@ -201,7 +201,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
               tabindex="0"
             >
               <div
-                class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral1"
+                class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral-1"
                 data-test-icon="check"
                 height="12"
                 name="Check"
@@ -217,7 +217,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
               tabindex="0"
             >
               <div
-                class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral1"
+                class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral-1"
                 data-test-icon="check"
                 height="12"
                 name="Check"
@@ -237,7 +237,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
               tabindex="0"
             >
               <div
-                class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral1"
+                class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral-1"
                 data-test-icon="check"
                 height="12"
                 name="Check"
@@ -253,7 +253,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
               tabindex="0"
             >
               <div
-                class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral1"
+                class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral-1"
                 data-test-icon="check"
                 height="12"
                 name="Check"
@@ -269,7 +269,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
               tabindex="0"
             >
               <div
-                class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral1"
+                class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral-1"
                 data-test-icon="check"
                 height="12"
                 name="Check"
@@ -285,7 +285,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
               tabindex="0"
             >
               <div
-                class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral1"
+                class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral-1"
                 data-test-icon="check"
                 height="12"
                 name="Check"
@@ -301,7 +301,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
               tabindex="0"
             >
               <div
-                class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral1"
+                class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral-1"
                 data-test-icon="check"
                 height="12"
                 name="Check"
@@ -321,7 +321,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
               tabindex="0"
             >
               <div
-                class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral1"
+                class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral-1"
                 data-test-icon="check"
                 height="12"
                 name="Check"
@@ -337,7 +337,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
               tabindex="0"
             >
               <div
-                class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral1"
+                class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral-1"
                 data-test-icon="check"
                 height="12"
                 name="Check"
@@ -353,7 +353,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
               tabindex="0"
             >
               <div
-                class="css-1jnxvbp SelectItem__check-icon SelectItem__check-icon--selected Icon Icon--neutral1"
+                class="css-1jnxvbp SelectItem__check-icon SelectItem__check-icon--selected Icon Icon--neutral-1"
                 data-test-icon="check"
                 height="12"
                 name="Check"
@@ -378,7 +378,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral1"
+              class="css-1jnxvbp Icon Icon--neutral-1"
               data-test-icon="minus"
               height="12"
               name="Minus"
@@ -393,7 +393,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
             >
               Remove
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"

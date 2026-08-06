@@ -7,7 +7,7 @@ exports[`PopoverHeader snapshots should render PopoverHeader 1`] = `
     data-test-popover-header=""
   >
     <small
-      class="css-1jnxvbp Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+      class="css-1jnxvbp Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="font-size: 11px; text-align: inherit;"
     >

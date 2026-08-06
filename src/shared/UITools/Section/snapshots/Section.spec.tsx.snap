@@ -11,7 +11,7 @@ exports[`Section snapshots should render Section 1`] = `
       data-test-box=""
     >
       <small
-        class="css-1jnxvbp Section__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+        class="css-1jnxvbp Section__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -38,7 +38,7 @@ exports[`Section snapshots should render with buttons 1`] = `
       data-test-box=""
     >
       <small
-        class="css-1jnxvbp Section__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+        class="css-1jnxvbp Section__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -54,7 +54,7 @@ exports[`Section snapshots should render with buttons 1`] = `
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp Icon Icon--neutral1"
+            class="css-1jnxvbp Icon Icon--neutral-1"
             data-test-icon="close"
             height="12"
             name="Close"

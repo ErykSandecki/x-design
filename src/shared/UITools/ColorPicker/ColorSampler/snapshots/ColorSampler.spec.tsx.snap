@@ -290,14 +290,14 @@ exports[`ColorSampler snapshots should render ColorSampler 1`] = `
         data-test-box=""
       >
         <div
-          class="css-1jnxvbp Icon Icon--neutral1"
+          class="css-1jnxvbp Icon Icon--neutral-1"
           data-test-icon="eyes-dropper"
           height="12"
           name="EyesDropper"
           width="12"
         />
         <small
-          class="css-kw3w48 ColorPrompt__description Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+          class="css-kw3w48 ColorPrompt__description Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
           data-test-text=""
           style="text-align: inherit;"
         >

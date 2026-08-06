@@ -12,14 +12,14 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
         Alignment
       </small>
       <small
-        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -70,7 +70,7 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
             >
               Align top left
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -109,7 +109,7 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
             >
               Align top center
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -148,7 +148,7 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
             >
               Align top right
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -187,7 +187,7 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
             >
               Align left
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -226,7 +226,7 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
             >
               Align center
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -265,7 +265,7 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
             >
               Align right
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -304,7 +304,7 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
             >
               Align bottom left
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -343,7 +343,7 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
             >
               Align bottom center
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -382,7 +382,7 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
             >
               Align bottom right
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -406,7 +406,7 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
               data-test-scrubbable-input="column"
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral2"
+                class="css-1jnxvbp Icon Icon--neutral-2"
                 data-test-icon="gap-columns"
                 height="10"
                 name="GapColumns"
@@ -443,21 +443,21 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral1"
+                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
+                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="gap-columns"
                     height="12"
                     name="GapColumns"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -476,7 +476,7 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
           >
             Gap between columns
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -499,7 +499,7 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral1"
+              class="css-1jnxvbp Icon Icon--neutral-1"
               data-test-icon="properties"
               height="12"
               name="Properties"
@@ -521,7 +521,7 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
                   data-test-popover-header=""
                 >
                   <small
-                    class="css-1jnxvbp Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+                    class="css-1jnxvbp Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="font-size: 11px; text-align: inherit;"
                   >
@@ -540,7 +540,7 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
                   data-test-popover-preview=""
                 >
                   <p
-                    class="css-1jnxvbp Typography Typography--neutral1 Typography--regular Typography--normal Typography--p"
+                    class="css-1jnxvbp Typography Typography--neutral-1 Typography--regular Typography--normal Typography--p"
                     data-test-text=""
                     style="opacity: 0.5; text-align: inherit;"
                   >
@@ -557,7 +557,7 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
                     data-test-tooltip=""
                   >
                     <small
-                      class="css-1jnxvbp TextFieldLabel Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+                      class="css-1jnxvbp TextFieldLabel Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -576,7 +576,7 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
                         value="Excluded"
                       />
                       <div
-                        class="css-1jnxvbp Icon Icon--neutral1"
+                        class="css-1jnxvbp Icon Icon--neutral-1"
                         data-test-icon="chevron-down"
                         height="5"
                         name="ChevronDown"
@@ -599,7 +599,7 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
                       tabindex="0"
                     >
                       <div
-                        class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral1"
+                        class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral-1"
                         data-test-icon="check"
                         height="12"
                         name="Check"
@@ -615,7 +615,7 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
                       tabindex="0"
                     >
                       <div
-                        class="css-1jnxvbp SelectItem__check-icon SelectItem__check-icon--selected Icon Icon--neutral1"
+                        class="css-1jnxvbp SelectItem__check-icon SelectItem__check-icon--selected Icon Icon--neutral-1"
                         data-test-icon="check"
                         height="12"
                         name="Check"
@@ -636,7 +636,7 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
             >
               Auto layout settings
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -663,14 +663,14 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
         Grid
       </small>
       <small
-        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -701,7 +701,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
               style="border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; border-top-left-radius: 5px; border-top-right-radius: 5px;"
             />
             <small
-              class="css-1jnxvbp Cells__sizes Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+              class="css-1jnxvbp Cells__sizes Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
               data-test-text=""
               style="text-align: inherit;"
             >
@@ -737,7 +737,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                     data-test-scrubbable-input="columns"
                   >
                     <div
-                      class="css-1jnxvbp Icon Icon--neutral1"
+                      class="css-1jnxvbp Icon Icon--neutral-1"
                       data-test-icon="columns"
                       height="12"
                       name="Columns"
@@ -761,7 +761,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   Number of columns
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -770,7 +770,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 </div>
               </div>
               <small
-                class="css-1jnxvbp GridInputs__separator Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+                class="css-1jnxvbp GridInputs__separator Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                 data-test-text=""
                 style="text-align: inherit;"
               >
@@ -791,7 +791,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                     data-test-scrubbable-input="rows"
                   >
                     <div
-                      class="css-1jnxvbp Icon Icon--neutral1"
+                      class="css-1jnxvbp Icon Icon--neutral-1"
                       data-test-icon="rows"
                       height="12"
                       name="Rows"
@@ -815,7 +815,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   Number of rows
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -843,7 +843,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   1x1
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -865,7 +865,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   2x1
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -887,7 +887,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   3x1
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -909,7 +909,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   4x1
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -931,7 +931,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   5x1
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -953,7 +953,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   6x1
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -975,7 +975,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   7x1
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -997,7 +997,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   8x1
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1019,7 +1019,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   9x1
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1041,7 +1041,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   10x1
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1063,7 +1063,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   11x1
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1085,7 +1085,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   12x1
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1107,7 +1107,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   1x2
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1129,7 +1129,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   2x2
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1151,7 +1151,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   3x2
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1173,7 +1173,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   4x2
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1195,7 +1195,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   5x2
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1217,7 +1217,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   6x2
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1239,7 +1239,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   7x2
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1261,7 +1261,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   8x2
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1283,7 +1283,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   9x2
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1305,7 +1305,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   10x2
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1327,7 +1327,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   11x2
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1349,7 +1349,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   12x2
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1371,7 +1371,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   1x3
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1393,7 +1393,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   2x3
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1415,7 +1415,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   3x3
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1437,7 +1437,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   4x3
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1459,7 +1459,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   5x3
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1481,7 +1481,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   6x3
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1503,7 +1503,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   7x3
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1525,7 +1525,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   8x3
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1547,7 +1547,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   9x3
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1569,7 +1569,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   10x3
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1591,7 +1591,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   11x3
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1613,7 +1613,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   12x3
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1635,7 +1635,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   1x4
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1657,7 +1657,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   2x4
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1679,7 +1679,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   3x4
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1701,7 +1701,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   4x4
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1723,7 +1723,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   5x4
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1745,7 +1745,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   6x4
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1767,7 +1767,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   7x4
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1789,7 +1789,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   8x4
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1811,7 +1811,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   9x4
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1833,7 +1833,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   10x4
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1855,7 +1855,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   11x4
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1877,7 +1877,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   12x4
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1899,7 +1899,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   1x5
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1921,7 +1921,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   2x5
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1943,7 +1943,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   3x5
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1965,7 +1965,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   4x5
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -1987,7 +1987,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   5x5
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2009,7 +2009,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   6x5
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2031,7 +2031,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   7x5
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2053,7 +2053,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   8x5
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2075,7 +2075,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   9x5
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2097,7 +2097,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   10x5
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2119,7 +2119,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   11x5
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2141,7 +2141,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   12x5
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2163,7 +2163,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   1x6
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2185,7 +2185,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   2x6
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2207,7 +2207,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   3x6
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2229,7 +2229,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   4x6
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2251,7 +2251,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   5x6
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2273,7 +2273,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   6x6
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2295,7 +2295,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   7x6
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2317,7 +2317,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   8x6
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2339,7 +2339,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   9x6
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2361,7 +2361,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   10x6
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2383,7 +2383,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   11x6
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2405,7 +2405,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   12x6
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2427,7 +2427,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   1x7
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2449,7 +2449,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   2x7
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2471,7 +2471,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   3x7
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2493,7 +2493,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   4x7
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2515,7 +2515,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   5x7
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2537,7 +2537,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   6x7
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2559,7 +2559,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   7x7
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2581,7 +2581,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   8x7
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2603,7 +2603,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   9x7
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2625,7 +2625,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   10x7
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2647,7 +2647,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   11x7
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2669,7 +2669,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   12x7
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2691,7 +2691,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   1x8
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2713,7 +2713,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   2x8
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2735,7 +2735,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   3x8
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2757,7 +2757,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   4x8
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2779,7 +2779,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   5x8
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2801,7 +2801,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   6x8
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2823,7 +2823,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   7x8
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2845,7 +2845,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   8x8
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2867,7 +2867,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   9x8
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2889,7 +2889,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   10x8
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2911,7 +2911,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   11x8
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2933,7 +2933,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                 >
                   12x8
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -2959,7 +2959,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
               data-test-scrubbable-input="column"
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral2"
+                class="css-1jnxvbp Icon Icon--neutral-2"
                 data-test-icon="gap-columns"
                 height="10"
                 name="GapColumns"
@@ -2996,21 +2996,21 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
+                    class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
+                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="gap-columns"
                     height="12"
                     name="GapColumns"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -3029,7 +3029,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
           >
             Gap between columns
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -3052,7 +3052,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
               data-test-scrubbable-input="row"
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral2"
+                class="css-1jnxvbp Icon Icon--neutral-2"
                 data-test-icon="gap-rows"
                 height="10"
                 name="GapRows"
@@ -3089,21 +3089,21 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
+                    class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
+                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="gap-rows"
                     height="12"
                     name="GapRows"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -3122,7 +3122,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
           >
             Gap between rows
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -3145,7 +3145,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral1"
+              class="css-1jnxvbp Icon Icon--neutral-1"
               data-test-icon="properties"
               height="12"
               name="Properties"
@@ -3167,7 +3167,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                   data-test-popover-header=""
                 >
                   <small
-                    class="css-1jnxvbp Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+                    class="css-1jnxvbp Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="font-size: 11px; text-align: inherit;"
                   >
@@ -3186,7 +3186,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                   data-test-popover-preview=""
                 >
                   <p
-                    class="css-1jnxvbp Typography Typography--neutral1 Typography--regular Typography--normal Typography--p"
+                    class="css-1jnxvbp Typography Typography--neutral-1 Typography--regular Typography--normal Typography--p"
                     data-test-text=""
                     style="opacity: 0.5; text-align: inherit;"
                   >
@@ -3203,7 +3203,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                     data-test-tooltip=""
                   >
                     <small
-                      class="css-1jnxvbp TextFieldLabel Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+                      class="css-1jnxvbp TextFieldLabel Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -3222,7 +3222,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                         value="Excluded"
                       />
                       <div
-                        class="css-1jnxvbp Icon Icon--neutral1"
+                        class="css-1jnxvbp Icon Icon--neutral-1"
                         data-test-icon="chevron-down"
                         height="5"
                         name="ChevronDown"
@@ -3245,7 +3245,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                       tabindex="0"
                     >
                       <div
-                        class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral1"
+                        class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral-1"
                         data-test-icon="check"
                         height="12"
                         name="Check"
@@ -3261,7 +3261,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
                       tabindex="0"
                     >
                       <div
-                        class="css-1jnxvbp SelectItem__check-icon SelectItem__check-icon--selected Icon Icon--neutral1"
+                        class="css-1jnxvbp SelectItem__check-icon SelectItem__check-icon--selected Icon Icon--neutral-1"
                         data-test-icon="check"
                         height="12"
                         name="Check"
@@ -3282,7 +3282,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
             >
               Auto layout settings
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -3311,14 +3311,14 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
         Grid
       </small>
       <small
-        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -3349,7 +3349,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
               style="border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; border-top-left-radius: 5px; border-top-right-radius: 5px;"
             />
             <small
-              class="css-1jnxvbp Cells__sizes Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+              class="css-1jnxvbp Cells__sizes Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
               data-test-text=""
               style="text-align: inherit;"
             >
@@ -3385,7 +3385,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                     data-test-scrubbable-input="columns"
                   >
                     <div
-                      class="css-1jnxvbp Icon Icon--neutral1"
+                      class="css-1jnxvbp Icon Icon--neutral-1"
                       data-test-icon="columns"
                       height="12"
                       name="Columns"
@@ -3409,7 +3409,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   Number of columns
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -3418,7 +3418,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 </div>
               </div>
               <small
-                class="css-1jnxvbp GridInputs__separator Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+                class="css-1jnxvbp GridInputs__separator Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                 data-test-text=""
                 style="text-align: inherit;"
               >
@@ -3439,7 +3439,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                     data-test-scrubbable-input="rows"
                   >
                     <div
-                      class="css-1jnxvbp Icon Icon--neutral1"
+                      class="css-1jnxvbp Icon Icon--neutral-1"
                       data-test-icon="rows"
                       height="12"
                       name="Rows"
@@ -3463,7 +3463,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   Number of rows
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -3491,7 +3491,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   1x1
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -3513,7 +3513,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   2x1
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -3535,7 +3535,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   3x1
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -3557,7 +3557,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   4x1
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -3579,7 +3579,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   5x1
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -3601,7 +3601,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   6x1
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -3623,7 +3623,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   7x1
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -3645,7 +3645,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   8x1
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -3667,7 +3667,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   9x1
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -3689,7 +3689,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   10x1
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -3711,7 +3711,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   11x1
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -3733,7 +3733,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   12x1
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -3755,7 +3755,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   1x2
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -3777,7 +3777,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   2x2
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -3799,7 +3799,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   3x2
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -3821,7 +3821,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   4x2
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -3843,7 +3843,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   5x2
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -3865,7 +3865,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   6x2
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -3887,7 +3887,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   7x2
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -3909,7 +3909,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   8x2
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -3931,7 +3931,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   9x2
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -3953,7 +3953,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   10x2
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -3975,7 +3975,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   11x2
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -3997,7 +3997,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   12x2
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4019,7 +4019,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   1x3
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4041,7 +4041,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   2x3
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4063,7 +4063,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   3x3
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4085,7 +4085,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   4x3
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4107,7 +4107,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   5x3
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4129,7 +4129,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   6x3
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4151,7 +4151,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   7x3
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4173,7 +4173,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   8x3
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4195,7 +4195,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   9x3
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4217,7 +4217,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   10x3
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4239,7 +4239,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   11x3
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4261,7 +4261,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   12x3
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4283,7 +4283,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   1x4
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4305,7 +4305,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   2x4
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4327,7 +4327,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   3x4
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4349,7 +4349,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   4x4
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4371,7 +4371,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   5x4
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4393,7 +4393,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   6x4
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4415,7 +4415,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   7x4
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4437,7 +4437,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   8x4
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4459,7 +4459,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   9x4
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4481,7 +4481,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   10x4
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4503,7 +4503,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   11x4
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4525,7 +4525,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   12x4
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4547,7 +4547,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   1x5
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4569,7 +4569,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   2x5
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4591,7 +4591,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   3x5
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4613,7 +4613,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   4x5
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4635,7 +4635,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   5x5
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4657,7 +4657,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   6x5
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4679,7 +4679,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   7x5
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4701,7 +4701,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   8x5
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4723,7 +4723,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   9x5
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4745,7 +4745,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   10x5
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4767,7 +4767,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   11x5
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4789,7 +4789,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   12x5
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4811,7 +4811,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   1x6
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4833,7 +4833,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   2x6
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4855,7 +4855,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   3x6
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4877,7 +4877,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   4x6
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4899,7 +4899,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   5x6
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4921,7 +4921,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   6x6
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4943,7 +4943,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   7x6
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4965,7 +4965,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   8x6
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -4987,7 +4987,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   9x6
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -5009,7 +5009,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   10x6
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -5031,7 +5031,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   11x6
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -5053,7 +5053,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   12x6
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -5075,7 +5075,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   1x7
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -5097,7 +5097,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   2x7
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -5119,7 +5119,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   3x7
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -5141,7 +5141,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   4x7
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -5163,7 +5163,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   5x7
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -5185,7 +5185,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   6x7
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -5207,7 +5207,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   7x7
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -5229,7 +5229,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   8x7
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -5251,7 +5251,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   9x7
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -5273,7 +5273,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   10x7
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -5295,7 +5295,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   11x7
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -5317,7 +5317,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   12x7
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -5339,7 +5339,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   1x8
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -5361,7 +5361,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   2x8
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -5383,7 +5383,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   3x8
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -5405,7 +5405,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   4x8
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -5427,7 +5427,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   5x8
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -5449,7 +5449,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   6x8
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -5471,7 +5471,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   7x8
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -5493,7 +5493,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   8x8
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -5515,7 +5515,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   9x8
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -5537,7 +5537,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   10x8
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -5559,7 +5559,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   11x8
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -5581,7 +5581,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                 >
                   12x8
                   <div
-                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                    class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                     data-test-icon="carrot-down"
                     height="14"
                     name="CarrotDown"
@@ -5607,7 +5607,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
               data-test-scrubbable-input="column"
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral2"
+                class="css-1jnxvbp Icon Icon--neutral-2"
                 data-test-icon="gap-columns"
                 height="10"
                 name="GapColumns"
@@ -5644,21 +5644,21 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral1"
+                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
+                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="gap-columns"
                     height="12"
                     name="GapColumns"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -5677,7 +5677,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
           >
             Gap between columns
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -5700,7 +5700,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
               data-test-scrubbable-input="row"
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral2"
+                class="css-1jnxvbp Icon Icon--neutral-2"
                 data-test-icon="gap-rows"
                 height="10"
                 name="GapRows"
@@ -5737,21 +5737,21 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral1"
+                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
+                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="gap-rows"
                     height="12"
                     name="GapRows"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -5770,7 +5770,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
           >
             Gap between rows
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -5793,7 +5793,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral1"
+              class="css-1jnxvbp Icon Icon--neutral-1"
               data-test-icon="properties"
               height="12"
               name="Properties"
@@ -5815,7 +5815,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                   data-test-popover-header=""
                 >
                   <small
-                    class="css-1jnxvbp Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+                    class="css-1jnxvbp Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="font-size: 11px; text-align: inherit;"
                   >
@@ -5834,7 +5834,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                   data-test-popover-preview=""
                 >
                   <p
-                    class="css-1jnxvbp Typography Typography--neutral1 Typography--regular Typography--normal Typography--p"
+                    class="css-1jnxvbp Typography Typography--neutral-1 Typography--regular Typography--normal Typography--p"
                     data-test-text=""
                     style="opacity: 0.5; text-align: inherit;"
                   >
@@ -5851,7 +5851,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                     data-test-tooltip=""
                   >
                     <small
-                      class="css-1jnxvbp TextFieldLabel Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+                      class="css-1jnxvbp TextFieldLabel Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -5870,7 +5870,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                         value="Excluded"
                       />
                       <div
-                        class="css-1jnxvbp Icon Icon--neutral1"
+                        class="css-1jnxvbp Icon Icon--neutral-1"
                         data-test-icon="chevron-down"
                         height="5"
                         name="ChevronDown"
@@ -5893,7 +5893,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                       tabindex="0"
                     >
                       <div
-                        class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral1"
+                        class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral-1"
                         data-test-icon="check"
                         height="12"
                         name="Check"
@@ -5909,7 +5909,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
                       tabindex="0"
                     >
                       <div
-                        class="css-1jnxvbp SelectItem__check-icon SelectItem__check-icon--selected Icon Icon--neutral1"
+                        class="css-1jnxvbp SelectItem__check-icon SelectItem__check-icon--selected Icon Icon--neutral-1"
                         data-test-icon="check"
                         height="12"
                         name="Check"
@@ -5930,7 +5930,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
             >
               Auto layout settings
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -5957,14 +5957,14 @@ exports[`ColumnAlignmentLayout snapshots should render when is included option h
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
         Alignment
       </small>
       <small
-        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -6015,7 +6015,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is included option h
             >
               Align top left
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -6054,7 +6054,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is included option h
             >
               Align top center
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -6093,7 +6093,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is included option h
             >
               Align top right
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -6132,7 +6132,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is included option h
             >
               Align left
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -6171,7 +6171,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is included option h
             >
               Align center
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -6210,7 +6210,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is included option h
             >
               Align right
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -6249,7 +6249,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is included option h
             >
               Align bottom left
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -6288,7 +6288,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is included option h
             >
               Align bottom center
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -6327,7 +6327,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is included option h
             >
               Align bottom right
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -6351,7 +6351,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is included option h
               data-test-scrubbable-input="row"
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral2"
+                class="css-1jnxvbp Icon Icon--neutral-2"
                 data-test-icon="gap-rows"
                 height="10"
                 name="GapRows"
@@ -6388,21 +6388,21 @@ exports[`ColumnAlignmentLayout snapshots should render when is included option h
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral1"
+                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
+                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="gap-rows"
                     height="12"
                     name="GapRows"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -6421,7 +6421,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is included option h
           >
             Gap between rows
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -6444,7 +6444,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is included option h
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral1"
+              class="css-1jnxvbp Icon Icon--neutral-1"
               data-test-icon="properties"
               height="12"
               name="Properties"
@@ -6466,7 +6466,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is included option h
                   data-test-popover-header=""
                 >
                   <small
-                    class="css-1jnxvbp Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+                    class="css-1jnxvbp Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="font-size: 11px; text-align: inherit;"
                   >
@@ -6522,7 +6522,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is included option h
                     data-test-tooltip=""
                   >
                     <small
-                      class="css-1jnxvbp TextFieldLabel Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+                      class="css-1jnxvbp TextFieldLabel Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -6541,7 +6541,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is included option h
                         value="Excluded"
                       />
                       <div
-                        class="css-1jnxvbp Icon Icon--neutral1"
+                        class="css-1jnxvbp Icon Icon--neutral-1"
                         data-test-icon="chevron-down"
                         height="5"
                         name="ChevronDown"
@@ -6564,7 +6564,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is included option h
                       tabindex="0"
                     >
                       <div
-                        class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral1"
+                        class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral-1"
                         data-test-icon="check"
                         height="12"
                         name="Check"
@@ -6580,7 +6580,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is included option h
                       tabindex="0"
                     >
                       <div
-                        class="css-1jnxvbp SelectItem__check-icon SelectItem__check-icon--selected Icon Icon--neutral1"
+                        class="css-1jnxvbp SelectItem__check-icon SelectItem__check-icon--selected Icon Icon--neutral-1"
                         data-test-icon="check"
                         height="12"
                         name="Check"
@@ -6601,7 +6601,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is included option h
             >
               Auto layout settings
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -6628,14 +6628,14 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
         Alignment
       </small>
       <small
-        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -6686,7 +6686,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
             >
               Align top left
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -6725,7 +6725,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
             >
               Align top center
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -6764,7 +6764,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
             >
               Align top right
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -6803,7 +6803,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
             >
               Align left
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -6842,7 +6842,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
             >
               Align center
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -6881,7 +6881,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
             >
               Align right
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -6920,7 +6920,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
             >
               Align bottom left
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -6959,7 +6959,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
             >
               Align bottom center
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -6998,7 +6998,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
             >
               Align bottom right
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -7022,7 +7022,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
               data-test-scrubbable-input="row"
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral2"
+                class="css-1jnxvbp Icon Icon--neutral-2"
                 data-test-icon="gap-rows"
                 height="10"
                 name="GapRows"
@@ -7059,21 +7059,21 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral1"
+                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
+                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="gap-rows"
                     height="12"
                     name="GapRows"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -7092,7 +7092,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
           >
             Gap between rows
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -7115,7 +7115,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral1"
+              class="css-1jnxvbp Icon Icon--neutral-1"
               data-test-icon="properties"
               height="12"
               name="Properties"
@@ -7137,7 +7137,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
                   data-test-popover-header=""
                 >
                   <small
-                    class="css-1jnxvbp Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+                    class="css-1jnxvbp Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="font-size: 11px; text-align: inherit;"
                   >
@@ -7156,7 +7156,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
                   data-test-popover-preview=""
                 >
                   <p
-                    class="css-1jnxvbp Typography Typography--neutral1 Typography--regular Typography--normal Typography--p"
+                    class="css-1jnxvbp Typography Typography--neutral-1 Typography--regular Typography--normal Typography--p"
                     data-test-text=""
                     style="opacity: 0.5; text-align: inherit;"
                   >
@@ -7173,7 +7173,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
                     data-test-tooltip=""
                   >
                     <small
-                      class="css-1jnxvbp TextFieldLabel Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+                      class="css-1jnxvbp TextFieldLabel Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -7192,7 +7192,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
                         value="Excluded"
                       />
                       <div
-                        class="css-1jnxvbp Icon Icon--neutral1"
+                        class="css-1jnxvbp Icon Icon--neutral-1"
                         data-test-icon="chevron-down"
                         height="5"
                         name="ChevronDown"
@@ -7215,7 +7215,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
                       tabindex="0"
                     >
                       <div
-                        class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral1"
+                        class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral-1"
                         data-test-icon="check"
                         height="12"
                         name="Check"
@@ -7231,7 +7231,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
                       tabindex="0"
                     >
                       <div
-                        class="css-1jnxvbp SelectItem__check-icon SelectItem__check-icon--selected Icon Icon--neutral1"
+                        class="css-1jnxvbp SelectItem__check-icon SelectItem__check-icon--selected Icon Icon--neutral-1"
                         data-test-icon="check"
                         height="12"
                         name="Check"
@@ -7252,7 +7252,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
             >
               Auto layout settings
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -7279,14 +7279,14 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
         Alignment
       </small>
       <small
-        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -7337,7 +7337,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
             >
               Align top left
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -7376,7 +7376,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
             >
               Align top center
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -7415,7 +7415,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
             >
               Align top right
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -7454,7 +7454,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
             >
               Align left
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -7493,7 +7493,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
             >
               Align center
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -7532,7 +7532,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
             >
               Align right
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -7571,7 +7571,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
             >
               Align bottom left
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -7610,7 +7610,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
             >
               Align bottom center
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -7649,7 +7649,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
             >
               Align bottom right
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -7673,7 +7673,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
               data-test-scrubbable-input="row"
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral2"
+                class="css-1jnxvbp Icon Icon--neutral-2"
                 data-test-icon="gap-rows"
                 height="10"
                 name="GapRows"
@@ -7710,21 +7710,21 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral1"
+                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
+                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="gap-rows"
                     height="12"
                     name="GapRows"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -7743,7 +7743,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
           >
             Gap between rows
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -7766,7 +7766,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral1"
+              class="css-1jnxvbp Icon Icon--neutral-1"
               data-test-icon="properties"
               height="12"
               name="Properties"
@@ -7788,7 +7788,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
                   data-test-popover-header=""
                 >
                   <small
-                    class="css-1jnxvbp Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+                    class="css-1jnxvbp Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="font-size: 11px; text-align: inherit;"
                   >
@@ -7807,7 +7807,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
                   data-test-popover-preview=""
                 >
                   <p
-                    class="css-1jnxvbp Typography Typography--neutral1 Typography--regular Typography--normal Typography--p"
+                    class="css-1jnxvbp Typography Typography--neutral-1 Typography--regular Typography--normal Typography--p"
                     data-test-text=""
                     style="opacity: 0.5; text-align: inherit;"
                   >
@@ -7824,7 +7824,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
                     data-test-tooltip=""
                   >
                     <small
-                      class="css-1jnxvbp TextFieldLabel Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+                      class="css-1jnxvbp TextFieldLabel Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -7843,7 +7843,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
                         value="Excluded"
                       />
                       <div
-                        class="css-1jnxvbp Icon Icon--neutral1"
+                        class="css-1jnxvbp Icon Icon--neutral-1"
                         data-test-icon="chevron-down"
                         height="5"
                         name="ChevronDown"
@@ -7866,7 +7866,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
                       tabindex="0"
                     >
                       <div
-                        class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral1"
+                        class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral-1"
                         data-test-icon="check"
                         height="12"
                         name="Check"
@@ -7882,7 +7882,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
                       tabindex="0"
                     >
                       <div
-                        class="css-1jnxvbp SelectItem__check-icon SelectItem__check-icon--selected Icon Icon--neutral1"
+                        class="css-1jnxvbp SelectItem__check-icon SelectItem__check-icon--selected Icon Icon--neutral-1"
                         data-test-icon="check"
                         height="12"
                         name="Check"
@@ -7903,7 +7903,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
             >
               Auto layout settings
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -7930,14 +7930,14 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
         Alignment
       </small>
       <small
-        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -7988,7 +7988,7 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
             >
               Align top left
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -8027,7 +8027,7 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
             >
               Align top center
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -8066,7 +8066,7 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
             >
               Align top right
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -8105,7 +8105,7 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
             >
               Align left
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -8144,7 +8144,7 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
             >
               Align center
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -8183,7 +8183,7 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
             >
               Align right
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -8222,7 +8222,7 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
             >
               Align bottom left
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -8261,7 +8261,7 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
             >
               Align bottom center
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -8300,7 +8300,7 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
             >
               Align bottom right
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -8324,7 +8324,7 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
               data-test-scrubbable-input="column"
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral2"
+                class="css-1jnxvbp Icon Icon--neutral-2"
                 data-test-icon="gap-columns"
                 height="10"
                 name="GapColumns"
@@ -8361,21 +8361,21 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral1"
+                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
+                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
                     data-test-icon="gap-columns"
                     height="12"
                     name="GapColumns"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -8394,7 +8394,7 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
           >
             Gap between columns
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -8417,7 +8417,7 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--neutral1"
+              class="css-1jnxvbp Icon Icon--neutral-1"
               data-test-icon="properties"
               height="12"
               name="Properties"
@@ -8439,7 +8439,7 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
                   data-test-popover-header=""
                 >
                   <small
-                    class="css-1jnxvbp Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+                    class="css-1jnxvbp Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="font-size: 11px; text-align: inherit;"
                   >
@@ -8458,7 +8458,7 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
                   data-test-popover-preview=""
                 >
                   <p
-                    class="css-1jnxvbp Typography Typography--neutral1 Typography--regular Typography--normal Typography--p"
+                    class="css-1jnxvbp Typography Typography--neutral-1 Typography--regular Typography--normal Typography--p"
                     data-test-text=""
                     style="opacity: 0.5; text-align: inherit;"
                   >
@@ -8475,7 +8475,7 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
                     data-test-tooltip=""
                   >
                     <small
-                      class="css-1jnxvbp TextFieldLabel Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+                      class="css-1jnxvbp TextFieldLabel Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -8494,7 +8494,7 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
                         value="Excluded"
                       />
                       <div
-                        class="css-1jnxvbp Icon Icon--neutral1"
+                        class="css-1jnxvbp Icon Icon--neutral-1"
                         data-test-icon="chevron-down"
                         height="5"
                         name="ChevronDown"
@@ -8517,7 +8517,7 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
                       tabindex="0"
                     >
                       <div
-                        class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral1"
+                        class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral-1"
                         data-test-icon="check"
                         height="12"
                         name="Check"
@@ -8533,7 +8533,7 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
                       tabindex="0"
                     >
                       <div
-                        class="css-1jnxvbp SelectItem__check-icon SelectItem__check-icon--selected Icon Icon--neutral1"
+                        class="css-1jnxvbp SelectItem__check-icon SelectItem__check-icon--selected Icon Icon--neutral-1"
                         data-test-icon="check"
                         height="12"
                         name="Check"
@@ -8554,7 +8554,7 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
             >
               Auto layout settings
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"

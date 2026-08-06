@@ -13,7 +13,7 @@ exports[`ToggleButtonGroup snapshots should render ToggleButtonGroup 1`] = `
       type="button"
     >
       <div
-        class="css-1jnxvbp Icon Icon--neutral1"
+        class="css-1jnxvbp Icon Icon--neutral-1"
         data-test-icon="align-horizontal-center"
         height="12"
         name="AlignHorizontalCenter"
@@ -26,7 +26,7 @@ exports[`ToggleButtonGroup snapshots should render ToggleButtonGroup 1`] = `
       type="button"
     >
       <div
-        class="css-1jnxvbp Icon Icon--neutral1"
+        class="css-1jnxvbp Icon Icon--neutral-1"
         data-test-icon="align-horizontal-center"
         height="12"
         name="AlignHorizontalCenter"
@@ -39,7 +39,7 @@ exports[`ToggleButtonGroup snapshots should render ToggleButtonGroup 1`] = `
       type="button"
     >
       <div
-        class="css-1jnxvbp Icon Icon--neutral1"
+        class="css-1jnxvbp Icon Icon--neutral-1"
         data-test-icon="align-horizontal-center"
         height="12"
         name="AlignHorizontalCenter"

@@ -3,7 +3,7 @@
 exports[`P snapshots should render P 1`] = `
 <DocumentFragment>
   <p
-    class="css-1jnxvbp Typography Typography--neutral1 Typography--regular Typography--normal Typography--p"
+    class="css-1jnxvbp Typography Typography--neutral-1 Typography--regular Typography--normal Typography--p"
     data-test-text=""
     style="text-align: inherit;"
   >

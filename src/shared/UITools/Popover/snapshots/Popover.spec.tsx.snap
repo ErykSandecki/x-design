@@ -14,21 +14,21 @@ exports[`Popover snapshots should render Popover 1`] = `
       data-test-popover-item="0"
     >
       <div
-        class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
+        class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
         data-test-icon="check"
         height="12"
         name="Check"
         width="12"
       />
       <div
-        class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
+        class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
         data-test-icon="align-horizontal-center"
         height="12"
         name="AlignHorizontalCenter"
         width="12"
       />
       <small
-        class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+        class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -41,21 +41,21 @@ exports[`Popover snapshots should render Popover 1`] = `
       data-test-popover-item="1"
     >
       <div
-        class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral1"
+        class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
         data-test-icon="check"
         height="12"
         name="Check"
         width="12"
       />
       <div
-        class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
+        class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
         data-test-icon="align-horizontal-center"
         height="12"
         name="AlignHorizontalCenter"
         width="12"
       />
       <small
-        class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+        class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -84,21 +84,21 @@ exports[`Popover snapshots should render not visible item 1`] = `
       data-test-popover-item="0"
     >
       <div
-        class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
+        class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
         data-test-icon="check"
         height="12"
         name="Check"
         width="12"
       />
       <div
-        class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
+        class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
         data-test-icon="align-horizontal-center"
         height="12"
         name="AlignHorizontalCenter"
         width="12"
       />
       <small
-        class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+        class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -111,21 +111,21 @@ exports[`Popover snapshots should render not visible item 1`] = `
       data-test-popover-item="1"
     >
       <div
-        class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral1"
+        class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
         data-test-icon="check"
         height="12"
         name="Check"
         width="12"
       />
       <div
-        class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
+        class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
         data-test-icon="align-horizontal-center"
         height="12"
         name="AlignHorizontalCenter"
         width="12"
       />
       <small
-        class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+        class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -154,21 +154,21 @@ exports[`Popover snapshots should render selected 1`] = `
       data-test-popover-item="0"
     >
       <div
-        class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
+        class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral-1"
         data-test-icon="check"
         height="12"
         name="Check"
         width="12"
       />
       <div
-        class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
+        class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
         data-test-icon="align-horizontal-center"
         height="12"
         name="AlignHorizontalCenter"
         width="12"
       />
       <small
-        class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+        class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -181,21 +181,21 @@ exports[`Popover snapshots should render selected 1`] = `
       data-test-popover-item="1"
     >
       <div
-        class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral1"
+        class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral-1"
         data-test-icon="check"
         height="12"
         name="Check"
         width="12"
       />
       <div
-        class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
+        class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral-1"
         data-test-icon="align-horizontal-center"
         height="12"
         name="AlignHorizontalCenter"
         width="12"
       />
       <small
-        class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+        class="css-1jnxvbp PopoverItem__text Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >

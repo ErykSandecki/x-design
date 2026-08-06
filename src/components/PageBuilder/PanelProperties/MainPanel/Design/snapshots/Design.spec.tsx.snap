@@ -11,7 +11,7 @@ exports[`Design snapshots should render Design 1`] = `
       data-test-box=""
     >
       <small
-        class="css-1jnxvbp Section__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+        class="css-1jnxvbp Section__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -134,7 +134,7 @@ exports[`Design snapshots should render Design 1`] = `
               data-test-tooltip=""
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral1"
+                class="css-1jnxvbp Icon Icon--neutral-1"
                 data-test-icon="eyes-opened"
                 height="12"
                 name="EyesOpened"
@@ -149,7 +149,7 @@ exports[`Design snapshots should render Design 1`] = `
               >
                 Toggle visibility
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"

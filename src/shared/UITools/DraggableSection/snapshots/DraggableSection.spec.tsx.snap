@@ -24,7 +24,7 @@ exports[`DraggableSection snapshots should render items 1`] = `
         data-test-box=""
       >
         <div
-          class="css-1jnxvbp Icon Icon--neutral1"
+          class="css-1jnxvbp Icon Icon--neutral-1"
           data-test-icon="menu"
           height="8"
           name="Menu"
@@ -56,7 +56,7 @@ exports[`DraggableSection snapshots should render items 1`] = `
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp Icon Icon--neutral1"
+            class="css-1jnxvbp Icon Icon--neutral-1"
             data-test-icon="eyes-opened"
             height="14"
             name="EyesOpened"
@@ -71,7 +71,7 @@ exports[`DraggableSection snapshots should render items 1`] = `
           >
             Hide
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -85,7 +85,7 @@ exports[`DraggableSection snapshots should render items 1`] = `
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp Icon Icon--neutral1"
+            class="css-1jnxvbp Icon Icon--neutral-1"
             data-test-icon="minus"
             height="14"
             name="Minus"
@@ -100,7 +100,7 @@ exports[`DraggableSection snapshots should render items 1`] = `
           >
             Remove
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -119,7 +119,7 @@ exports[`DraggableSection snapshots should render items 1`] = `
         data-test-box=""
       >
         <div
-          class="css-1jnxvbp Icon Icon--neutral1"
+          class="css-1jnxvbp Icon Icon--neutral-1"
           data-test-icon="menu"
           height="8"
           name="Menu"
@@ -151,7 +151,7 @@ exports[`DraggableSection snapshots should render items 1`] = `
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp Icon Icon--neutral1"
+            class="css-1jnxvbp Icon Icon--neutral-1"
             data-test-icon="eyes-opened"
             height="14"
             name="EyesOpened"
@@ -166,7 +166,7 @@ exports[`DraggableSection snapshots should render items 1`] = `
           >
             Hide
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -180,7 +180,7 @@ exports[`DraggableSection snapshots should render items 1`] = `
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp Icon Icon--neutral1"
+            class="css-1jnxvbp Icon Icon--neutral-1"
             data-test-icon="minus"
             height="14"
             name="Minus"
@@ -195,7 +195,7 @@ exports[`DraggableSection snapshots should render items 1`] = `
           >
             Remove
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -214,7 +214,7 @@ exports[`DraggableSection snapshots should render items 1`] = `
         data-test-box=""
       >
         <div
-          class="css-1jnxvbp Icon Icon--neutral1"
+          class="css-1jnxvbp Icon Icon--neutral-1"
           data-test-icon="menu"
           height="8"
           name="Menu"
@@ -246,7 +246,7 @@ exports[`DraggableSection snapshots should render items 1`] = `
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp Icon Icon--neutral1"
+            class="css-1jnxvbp Icon Icon--neutral-1"
             data-test-icon="eyes-opened"
             height="14"
             name="EyesOpened"
@@ -261,7 +261,7 @@ exports[`DraggableSection snapshots should render items 1`] = `
           >
             Hide
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -275,7 +275,7 @@ exports[`DraggableSection snapshots should render items 1`] = `
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp Icon Icon--neutral1"
+            class="css-1jnxvbp Icon Icon--neutral-1"
             data-test-icon="minus"
             height="14"
             name="Minus"
@@ -290,7 +290,7 @@ exports[`DraggableSection snapshots should render items 1`] = `
           >
             Remove
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"

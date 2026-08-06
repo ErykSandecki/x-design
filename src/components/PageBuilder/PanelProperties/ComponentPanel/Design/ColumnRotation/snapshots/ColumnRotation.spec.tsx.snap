@@ -12,7 +12,7 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -43,7 +43,7 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
               data-test-scrubbable-input="angle"
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral2"
+                class="css-1jnxvbp Icon Icon--neutral-2"
                 data-test-icon="protractor"
                 height="8"
                 name="Protractor"
@@ -67,7 +67,7 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
           >
             Rotation
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -84,7 +84,7 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
             data-test-button-group-input="toggle-rotate"
           >
             <div
-              class="css-1jnxvbp ButtonGroup__icon Icon Icon--neutral1"
+              class="css-1jnxvbp ButtonGroup__icon Icon Icon--neutral-1"
               data-test-icon="toggle-rotate"
               height="12"
               name="ToggleRotate"
@@ -99,7 +99,7 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
             >
               Rotate 90° right
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -112,7 +112,7 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
             data-test-button-group-input="flip-horizontal"
           >
             <div
-              class="css-1jnxvbp ButtonGroup__icon Icon Icon--neutral1"
+              class="css-1jnxvbp ButtonGroup__icon Icon Icon--neutral-1"
               data-test-icon="flip-horizontal"
               height="12"
               name="FlipHorizontal"
@@ -127,7 +127,7 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
             >
               Flip horizontal  ⇧H
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -140,7 +140,7 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
             data-test-button-group-input="flip-vertical"
           >
             <div
-              class="css-1jnxvbp ButtonGroup__icon Icon Icon--neutral1"
+              class="css-1jnxvbp ButtonGroup__icon Icon Icon--neutral-1"
               data-test-icon="flip-vertical"
               height="12"
               name="FlipVertical"
@@ -155,7 +155,7 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
             >
               Flip vertical  ⇧V
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -191,7 +191,7 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -222,7 +222,7 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
               data-test-scrubbable-input="angle"
             >
               <div
-                class="css-1jnxvbp Icon Icon--neutral2"
+                class="css-1jnxvbp Icon Icon--neutral-2"
                 data-test-icon="protractor"
                 height="8"
                 name="Protractor"
@@ -246,7 +246,7 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
           >
             Rotation
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -263,7 +263,7 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
             data-test-button-group-input="toggle-rotate"
           >
             <div
-              class="css-1jnxvbp ButtonGroup__icon Icon Icon--neutral1"
+              class="css-1jnxvbp ButtonGroup__icon Icon Icon--neutral-1"
               data-test-icon="toggle-rotate"
               height="12"
               name="ToggleRotate"
@@ -278,7 +278,7 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
             >
               Rotate 90° right
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -291,7 +291,7 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
             data-test-button-group-input="flip-horizontal"
           >
             <div
-              class="css-1jnxvbp ButtonGroup__icon Icon Icon--neutral1"
+              class="css-1jnxvbp ButtonGroup__icon Icon Icon--neutral-1"
               data-test-icon="flip-horizontal"
               height="12"
               name="FlipHorizontal"
@@ -306,7 +306,7 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
             >
               Flip horizontal  ⇧H
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -319,7 +319,7 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
             data-test-button-group-input="flip-vertical"
           >
             <div
-              class="css-1jnxvbp ButtonGroup__icon Icon Icon--neutral1"
+              class="css-1jnxvbp ButtonGroup__icon Icon Icon--neutral-1"
               data-test-icon="flip-vertical"
               height="12"
               name="FlipVertical"
@@ -334,7 +334,7 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
             >
               Flip vertical  ⇧V
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"

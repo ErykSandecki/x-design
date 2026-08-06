@@ -7,7 +7,7 @@ exports[`PopoverPreview snapshots should render PopoverPreview 1`] = `
     data-test-popover-preview=""
   >
     <p
-      class="css-1jnxvbp Typography Typography--neutral1 Typography--regular Typography--normal Typography--p"
+      class="css-1jnxvbp Typography Typography--neutral-1 Typography--regular Typography--normal Typography--p"
       data-test-text=""
       style="opacity: 0.5; text-align: inherit;"
     >

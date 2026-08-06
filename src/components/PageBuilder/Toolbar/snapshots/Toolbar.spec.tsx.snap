@@ -16,7 +16,7 @@ exports[`Toolbar snapshots should render Toolbar 1`] = `
         data-test-box="default"
       >
         <div
-          class="css-1jnxvbp Icon Icon--neutral1"
+          class="css-1jnxvbp Icon Icon--neutral-1"
           data-test-icon="default"
           height="16"
           name="MoveTool"
@@ -28,7 +28,7 @@ exports[`Toolbar snapshots should render Toolbar 1`] = `
         data-test-box="toolBeltA"
       >
         <div
-          class="css-1jnxvbp Icon Icon--neutral1"
+          class="css-1jnxvbp Icon Icon--neutral-1"
           data-test-icon="toolBeltA"
           height="16"
           name="FrameTool"
@@ -40,7 +40,7 @@ exports[`Toolbar snapshots should render Toolbar 1`] = `
         data-test-box="move"
       >
         <div
-          class="css-1jnxvbp Icon Icon--neutral1"
+          class="css-1jnxvbp Icon Icon--neutral-1"
           data-test-icon="move"
           height="16"
           name="MoveHand"
@@ -52,7 +52,7 @@ exports[`Toolbar snapshots should render Toolbar 1`] = `
         data-test-box="comment"
       >
         <div
-          class="css-1jnxvbp Icon Icon--neutral1"
+          class="css-1jnxvbp Icon Icon--neutral-1"
           data-test-icon="comment"
           height="16"
           name="Comment"

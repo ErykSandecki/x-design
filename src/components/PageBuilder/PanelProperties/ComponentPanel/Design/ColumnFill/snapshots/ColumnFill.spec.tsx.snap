@@ -105,7 +105,7 @@ exports[`ColumnFill snapshots should render ColumnFill 1`] = `
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp Icon Icon--neutral1"
+            class="css-1jnxvbp Icon Icon--neutral-1"
             data-test-icon="eyes-opened"
             height="14"
             name="EyesOpened"
@@ -120,7 +120,7 @@ exports[`ColumnFill snapshots should render ColumnFill 1`] = `
           >
             Hide
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -134,7 +134,7 @@ exports[`ColumnFill snapshots should render ColumnFill 1`] = `
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp Icon Icon--neutral1"
+            class="css-1jnxvbp Icon Icon--neutral-1"
             data-test-icon="minus"
             height="14"
             name="Minus"
@@ -149,7 +149,7 @@ exports[`ColumnFill snapshots should render ColumnFill 1`] = `
           >
             Remove
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -166,7 +166,7 @@ exports[`ColumnFill snapshots should render ColumnFill 1`] = `
 exports[`ColumnFill snapshots should render when mixed 1`] = `
 <DocumentFragment>
   <small
-    class="css-1jnxvbp Typography Typography--neutral2 Typography--regular Typography--normal Typography--small"
+    class="css-1jnxvbp Typography Typography--neutral-2 Typography--regular Typography--normal Typography--small"
     data-test-text=""
     style="font-size: 11px; user-select: none; text-align: inherit;"
   >

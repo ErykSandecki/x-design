@@ -9,7 +9,7 @@ exports[`DraggableSection snapshots should render DraggableSection 1`] = `
     data-test-box=""
   >
     <div
-      class="css-1jnxvbp Icon Icon--neutral1"
+      class="css-1jnxvbp Icon Icon--neutral-1"
       data-test-icon="menu"
       height="8"
       name="Menu"
@@ -26,7 +26,7 @@ exports[`DraggableSection snapshots should render when force display 1`] = `
     data-test-box=""
   >
     <div
-      class="css-1jnxvbp Icon Icon--neutral1"
+      class="css-1jnxvbp Icon Icon--neutral-1"
       data-test-icon="menu"
       height="8"
       name="Menu"

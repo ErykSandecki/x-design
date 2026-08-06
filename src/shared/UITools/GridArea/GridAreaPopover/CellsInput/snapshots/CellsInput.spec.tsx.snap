@@ -21,7 +21,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         1x1
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -43,7 +43,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         2x1
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -65,7 +65,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         3x1
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -87,7 +87,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         4x1
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -109,7 +109,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         5x1
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -131,7 +131,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         6x1
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -153,7 +153,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         7x1
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -175,7 +175,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         8x1
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -197,7 +197,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         9x1
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -219,7 +219,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         10x1
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -241,7 +241,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         11x1
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -263,7 +263,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         12x1
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -285,7 +285,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         1x2
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -307,7 +307,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         2x2
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -329,7 +329,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         3x2
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -351,7 +351,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         4x2
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -373,7 +373,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         5x2
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -395,7 +395,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         6x2
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -417,7 +417,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         7x2
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -439,7 +439,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         8x2
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -461,7 +461,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         9x2
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -483,7 +483,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         10x2
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -505,7 +505,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         11x2
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -527,7 +527,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         12x2
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -549,7 +549,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         1x3
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -571,7 +571,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         2x3
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -593,7 +593,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         3x3
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -615,7 +615,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         4x3
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -637,7 +637,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         5x3
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -659,7 +659,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         6x3
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -681,7 +681,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         7x3
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -703,7 +703,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         8x3
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -725,7 +725,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         9x3
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -747,7 +747,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         10x3
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -769,7 +769,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         11x3
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -791,7 +791,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         12x3
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -813,7 +813,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         1x4
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -835,7 +835,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         2x4
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -857,7 +857,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         3x4
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -879,7 +879,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         4x4
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -901,7 +901,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         5x4
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -923,7 +923,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         6x4
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -945,7 +945,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         7x4
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -967,7 +967,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         8x4
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -989,7 +989,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         9x4
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1011,7 +1011,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         10x4
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1033,7 +1033,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         11x4
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1055,7 +1055,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         12x4
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1077,7 +1077,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         1x5
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1099,7 +1099,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         2x5
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1121,7 +1121,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         3x5
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1143,7 +1143,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         4x5
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1165,7 +1165,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         5x5
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1187,7 +1187,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         6x5
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1209,7 +1209,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         7x5
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1231,7 +1231,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         8x5
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1253,7 +1253,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         9x5
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1275,7 +1275,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         10x5
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1297,7 +1297,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         11x5
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1319,7 +1319,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         12x5
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1341,7 +1341,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         1x6
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1363,7 +1363,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         2x6
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1385,7 +1385,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         3x6
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1407,7 +1407,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         4x6
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1429,7 +1429,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         5x6
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1451,7 +1451,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         6x6
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1473,7 +1473,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         7x6
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1495,7 +1495,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         8x6
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1517,7 +1517,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         9x6
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1539,7 +1539,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         10x6
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1561,7 +1561,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         11x6
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1583,7 +1583,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         12x6
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1605,7 +1605,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         1x7
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1627,7 +1627,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         2x7
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1649,7 +1649,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         3x7
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1671,7 +1671,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         4x7
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1693,7 +1693,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         5x7
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1715,7 +1715,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         6x7
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1737,7 +1737,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         7x7
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1759,7 +1759,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         8x7
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1781,7 +1781,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         9x7
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1803,7 +1803,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         10x7
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1825,7 +1825,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         11x7
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1847,7 +1847,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         12x7
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1869,7 +1869,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         1x8
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1891,7 +1891,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         2x8
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1913,7 +1913,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         3x8
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1935,7 +1935,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         4x8
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1957,7 +1957,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         5x8
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -1979,7 +1979,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         6x8
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2001,7 +2001,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         7x8
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2023,7 +2023,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         8x8
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2045,7 +2045,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         9x8
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2067,7 +2067,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         10x8
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2089,7 +2089,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         11x8
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2111,7 +2111,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       >
         12x8
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2144,7 +2144,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         1x1
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2166,7 +2166,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         2x1
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2188,7 +2188,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         3x1
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2210,7 +2210,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         4x1
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2232,7 +2232,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         5x1
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2254,7 +2254,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         6x1
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2276,7 +2276,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         7x1
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2298,7 +2298,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         8x1
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2320,7 +2320,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         9x1
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2342,7 +2342,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         10x1
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2364,7 +2364,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         11x1
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2386,7 +2386,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         12x1
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2408,7 +2408,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         1x2
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2430,7 +2430,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         2x2
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2452,7 +2452,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         3x2
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2474,7 +2474,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         4x2
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2496,7 +2496,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         5x2
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2518,7 +2518,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         6x2
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2540,7 +2540,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         7x2
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2562,7 +2562,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         8x2
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2584,7 +2584,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         9x2
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2606,7 +2606,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         10x2
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2628,7 +2628,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         11x2
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2650,7 +2650,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         12x2
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2672,7 +2672,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         1x3
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2694,7 +2694,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         2x3
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2716,7 +2716,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         3x3
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2738,7 +2738,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         4x3
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2760,7 +2760,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         5x3
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2782,7 +2782,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         6x3
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2804,7 +2804,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         7x3
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2826,7 +2826,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         8x3
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2848,7 +2848,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         9x3
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2870,7 +2870,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         10x3
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2892,7 +2892,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         11x3
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2914,7 +2914,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         12x3
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2936,7 +2936,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         1x4
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2958,7 +2958,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         2x4
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -2980,7 +2980,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         3x4
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3002,7 +3002,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         4x4
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3024,7 +3024,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         5x4
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3046,7 +3046,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         6x4
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3068,7 +3068,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         7x4
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3090,7 +3090,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         8x4
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3112,7 +3112,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         9x4
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3134,7 +3134,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         10x4
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3156,7 +3156,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         11x4
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3178,7 +3178,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         12x4
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3200,7 +3200,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         1x5
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3222,7 +3222,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         2x5
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3244,7 +3244,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         3x5
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3266,7 +3266,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         4x5
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3288,7 +3288,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         5x5
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3310,7 +3310,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         6x5
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3332,7 +3332,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         7x5
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3354,7 +3354,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         8x5
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3376,7 +3376,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         9x5
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3398,7 +3398,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         10x5
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3420,7 +3420,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         11x5
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3442,7 +3442,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         12x5
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3464,7 +3464,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         1x6
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3486,7 +3486,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         2x6
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3508,7 +3508,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         3x6
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3530,7 +3530,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         4x6
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3552,7 +3552,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         5x6
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3574,7 +3574,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         6x6
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3596,7 +3596,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         7x6
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3618,7 +3618,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         8x6
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3640,7 +3640,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         9x6
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3662,7 +3662,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         10x6
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3684,7 +3684,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         11x6
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3706,7 +3706,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         12x6
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3728,7 +3728,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         1x7
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3750,7 +3750,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         2x7
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3772,7 +3772,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         3x7
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3794,7 +3794,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         4x7
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3816,7 +3816,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         5x7
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3838,7 +3838,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         6x7
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3860,7 +3860,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         7x7
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3882,7 +3882,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         8x7
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3904,7 +3904,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         9x7
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3926,7 +3926,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         10x7
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3948,7 +3948,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         11x7
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3970,7 +3970,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         12x7
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -3992,7 +3992,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         1x8
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -4014,7 +4014,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         2x8
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -4036,7 +4036,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         3x8
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -4058,7 +4058,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         4x8
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -4080,7 +4080,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         5x8
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -4102,7 +4102,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         6x8
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -4124,7 +4124,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         7x8
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -4146,7 +4146,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         8x8
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -4168,7 +4168,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         9x8
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -4190,7 +4190,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         10x8
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -4212,7 +4212,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         11x8
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -4234,7 +4234,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       >
         12x8
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral-1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"

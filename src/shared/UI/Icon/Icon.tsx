@@ -24,22 +24,22 @@ import { TSXPallete } from '../hooks/sx/types/pallete';
 import { TUIProps } from '../types';
 
 const iconModificators: Record<string, string> = {
-  blue1: 'Icon--blue1',
+  blue1: 'Icon--blue-1',
   blue2: 'Icon--blue2',
   clickable: 'Icon--clickable',
   disabled: 'Icon--disabled',
-  green1: 'Icon--green1',
-  green2: 'Icon--green2',
-  neutral1: 'Icon--neutral1',
-  neutral2: 'Icon--neutral2',
-  neutral3: 'Icon--neutral3',
-  neutral4: 'Icon--neutral4',
-  neutral5: 'Icon--neutral5',
-  orange1: 'Icon--orange1',
-  pink1: 'Icon--pink1',
-  red1: 'Icon--red1',
-  skyBlue1: 'Icon--skyBlue1',
-  violet1: 'Icon--violet1',
+  green1: 'Icon--green-1',
+  green2: 'Icon--green-2',
+  neutral1: 'Icon--neutral-1',
+  neutral2: 'Icon--neutral-2',
+  neutral3: 'Icon--neutral-3',
+  neutral4: 'Icon--neutral-4',
+  neutral5: 'Icon--neutral-5',
+  orange1: 'Icon--orange-1',
+  pink1: 'Icon--pink-1',
+  red1: 'Icon--red-1',
+  skyBlue1: 'Icon--sky-blue-1',
+  violet1: 'Icon--violet-1',
 };
 
 export type TIconProps = Omit<HTMLAttributes<HTMLOrSVGElement>, 'className'> &

@@ -16,11 +16,11 @@ import { getByE2EAttribute } from 'test/testHelpers';
 import { getDataTestAttribute } from '../../E2EDataAttributes/utils';
 
 const typographyModificators: Record<string, string> = {
-  blue1: 'Typography--blue1',
+  blue1: 'Typography--blue-1',
   blue2: 'Typography--blue2',
   bold: 'Typography--bold',
-  green1: 'Typography--green1',
-  green2: 'Typography--green2',
+  green1: 'Typography--green-1',
+  green2: 'Typography--green-2',
   gutterBottom: 'Typography--gutter-bottom',
   h1: 'Typography--h1',
   h2: 'Typography--h2',
@@ -30,21 +30,21 @@ const typographyModificators: Record<string, string> = {
   h6: 'Typography--h6',
   italic: 'Typography--italic',
   medium: 'Typography--medium',
-  neutral1: 'Typography--neutral1',
-  neutral2: 'Typography--neutral2',
-  neutral3: 'Typography--neutral3',
-  neutral4: 'Typography--neutral4',
-  neutral5: 'Typography--neutral5',
+  neutral1: 'Typography--neutral-1',
+  neutral2: 'Typography--neutral-2',
+  neutral3: 'Typography--neutral-3',
+  neutral4: 'Typography--neutral-4',
+  neutral5: 'Typography--neutral-5',
   noWrap: 'Typography--no-wrap',
   normal: 'Typography--normal',
-  orange1: 'Typography--orange1',
+  orange1: 'Typography--orange-1',
   p: 'Typography--p',
-  pink1: 'Typography--pink1',
-  red1: 'Typography--red1',
+  pink1: 'Typography--pink-1',
+  red1: 'Typography--red-1',
   regular: 'Typography--regular',
-  skyBlue1: 'Typography--skyBlue1',
+  skyBlue1: 'Typography--sky-blue-1',
   small: 'Typography--small',
-  violet1: 'Typography--violet1',
+  violet1: 'Typography--violet-1',
 };
 
 const className = 'className';
@@ -89,7 +89,7 @@ describe('Typography props', () => {
     );
 
     // result
-    expect(container.querySelector(`.${className}`)).toHaveClass(`${'Typography'}--${ColorsTheme.blue1}`);
+    expect(container.querySelector(`.${className}`)).toHaveClass('Typography--blue-1');
   });
 
   it('should pass component', () => {

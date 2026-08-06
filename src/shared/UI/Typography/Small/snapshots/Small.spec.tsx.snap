@@ -3,7 +3,7 @@
 exports[`Small snapshots should render Small 1`] = `
 <DocumentFragment>
   <small
-    class="css-1jnxvbp Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
+    class="css-1jnxvbp Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
     data-test-text=""
     style="text-align: inherit;"
   >
