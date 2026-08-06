@@ -50,7 +50,7 @@ export const ScrubbableInput: FC<TScrubbableInputProps> = ({
   onMouseUp = noop,
   value,
 }) => {
-  const inputRef = useRef(null);
+  const inputRef = useRef<HTMLDivElement>(null);
 
   const { mousePosition, ...events } = useScrubbableInputEvents(
     inputRef,

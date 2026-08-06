@@ -12,7 +12,7 @@ import { TKeysMap } from './types';
 import { triggerActions } from './utils/triggerActions';
 
 export type TUseKeyboardHandler = {
-  onKeyDown: TFunc<[KeyboardEvent | React.KeyboardEvent]>;
+  onKeyDown: TFunc<[KeyboardEvent | React.KeyboardEvent<HTMLElement>]>;
 };
 
 export const useKeyboardHandler = (
@@ -29,25 +29,30 @@ export const useKeyboardHandler = (
   const isPrimaryKey = (key: string): boolean =>
     [KeyboardKeys.alt, KeyboardKeys.control, KeyboardKeys.shift].includes(key as KeyboardKeys);
 
-  const handleKeyDown = (event: KeyboardEvent | React.KeyboardEvent<HTMLElement>): void => {
+  const handleKeyDown = (
+    event: KeyboardEvent | React.KeyboardEvent<HTMLElement> | Event,
+  ): void => {
     if (stopPropagation) {
-      event.stopPropagation();
+      // Event has stopPropagation
+      (event as Event).stopPropagation();
     }
 
-    if (!isPrimaryKey(event.key)) {
-      triggerActions(event, keysMap, lockBrowserEvents);
+    // Only proceed if event has a keyboard 'key' property
+    const maybeKeyboardEvent = event as KeyboardEvent | React.KeyboardEvent<HTMLElement>;
+    if ('key' in maybeKeyboardEvent && !isPrimaryKey(maybeKeyboardEvent.key)) {
+      triggerActions(maybeKeyboardEvent, keysMap, lockBrowserEvents);
     }
   };
 
   const updateEventHandler = (
-    callback: TFunc<[KeyboardEvent]>,
+    callback: (event: KeyboardEvent | React.KeyboardEvent<HTMLElement> | Event) => void,
     key: 'addEventListener' | 'removeEventListener',
     type: keyof WindowEventMap,
   ): void => {
     if (id) {
-      document.getElementById(id)?.[key](type, callback);
+      document.getElementById(id)?.[key](type, callback as EventListener);
     } else {
-      window[key](type, callback);
+      window[key](type, callback as EventListener);
     }
   };
 

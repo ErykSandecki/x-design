@@ -12,7 +12,7 @@ export type TUseScrubbableInputEvents = {
 };
 
 export const useScrubbableInputEvents = (
-  inputRef: RefObject<HTMLDivElement>,
+  inputRef: RefObject<HTMLDivElement | null>,
   loop: boolean,
   max: number,
   min: number,

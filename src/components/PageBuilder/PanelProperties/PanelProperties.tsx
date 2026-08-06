@@ -25,9 +25,7 @@ import styles from './panel-properties.scss';
 import { E2EAttribute, ZIndex } from 'types';
 import { Tab } from './enums';
 
-export type TPanelPropertiesProps = {};
-
-const PanelProperties: FC<TPanelPropertiesProps> = () => {
+const PanelProperties: FC = () => {
   const anySelectedElement = useSelector(anySelectedElementSelector);
   const boxRef = useRef(null);
   const { onMouseDownX, width } = useResizeHandler(0, 240, window.innerHeight, 500, 0, 240, boxRef);

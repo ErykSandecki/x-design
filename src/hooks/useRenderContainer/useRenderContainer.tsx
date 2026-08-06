@@ -10,8 +10,8 @@ export type TUseRenderContainer = HTMLElement;
 
 export const useRenderContainer = (customId: string, htmlContainerId?: HTMLContainerId): HTMLElement | null => {
   const maxNumberOfTries = 10;
-  const timeout = useRef(null);
-  const [container, setContainer] = useState(null);
+  const timeout = useRef<number | null>(null);
+  const [container, setContainer] = useState<HTMLElement | null>(null);
 
   const tryFindContainer = (numberOfTries = 0): void => {
     if (numberOfTries <= maxNumberOfTries) {
@@ -20,7 +20,7 @@ export const useRenderContainer = (customId: string, htmlContainerId?: HTMLConta
       if (container) {
         setContainer(container);
       } else {
-        timeout.current = setTimeout(() => {
+        timeout.current = window.setTimeout(() => {
           tryFindContainer(numberOfTries + 1);
         }, 100);
       }
@@ -31,11 +31,13 @@ export const useRenderContainer = (customId: string, htmlContainerId?: HTMLConta
     if (customId && !isJestRunning()) {
       tryFindContainer();
     } else {
-      setContainer(document.getElementById(htmlContainerId));
+      setContainer(document.getElementById(htmlContainerId!));
     }
 
     return (): void => {
-      clearTimeout(timeout.current);
+      if (timeout.current) {
+        clearTimeout(timeout.current);
+      }
     };
   }, []);
 

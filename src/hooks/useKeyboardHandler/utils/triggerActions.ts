@@ -15,7 +15,7 @@ export const getPressedKeys = ({
 export const triggerActions = (
   event: KeyboardEvent | React.KeyboardEvent<HTMLElement>,
   keysMap: TKeysMap,
-  lockBrowserEvents: boolean,
+  lockBrowserEvents?: boolean,
 ): void => {
   const { code } = event;
 

@@ -18,15 +18,17 @@ export const useOutsideClickMultiple = (
 ): TUseOutsideClickMultiple => {
   const [selected, setSelected] = useState(false);
 
-  const handleClickOutside = (event: MouseEvent): void => {
+  const handleClickOutside = (event: Event): void => {
+    const mouseEvent = event as MouseEvent;
+
     if (
-      event.button === 0 &&
+      mouseEvent.button === 0 &&
       refs.every((ref) => ref.current) &&
-      refs.every((ref) => !ref.current.contains(event.target)) &&
+      refs.every((ref) => !ref.current.contains(mouseEvent.target)) &&
       (ignoreLastCondition || selected)
     ) {
       if (callback) {
-        callback(event);
+        callback(mouseEvent);
       }
 
       setSelected(false);

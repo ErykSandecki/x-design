@@ -17,11 +17,11 @@ type TUseResizeHandler = {
 export const useResizeHandler = (
   initialHeight: number,
   initialWidth: number,
-  maxHeight,
+  maxHeight: number,
   maxWidth: number,
   minHeight: number,
   minWidth: number,
-  ref: RefObject<HTMLElement>,
+  ref: RefObject<HTMLElement | null>,
 ): TUseResizeHandler => {
   const [height, setHeight] = useState(initialHeight);
   const [isInvertedX, setIsInvertedX] = useState(false);
@@ -40,7 +40,7 @@ export const useResizeHandler = (
 
   const handleMouseMoveX = (event: MouseEvent): void => {
     if (isPressingX) {
-      const { left, right } = ref.current.getBoundingClientRect();
+      const { left, right } = ref.current?.getBoundingClientRect() || { left: 0, right: 0 };
       const position = isInvertedX ? Math.abs(event.clientX - right) : event.clientX - left;
 
       switch (true) {
@@ -59,7 +59,7 @@ export const useResizeHandler = (
 
   const handleMouseMoveY = (event: MouseEvent): void => {
     if (isPressingY) {
-      const { top, bottom } = ref.current.getBoundingClientRect();
+      const { top, bottom } = ref.current?.getBoundingClientRect() || { bottom: 0, top: 0 };
       const position = isInvertedY ? event.clientY - bottom : event.clientY - top;
 
       switch (true) {

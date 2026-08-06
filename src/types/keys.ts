@@ -8,4 +8,4 @@ export type TKeyboardShortcuts = {
   primaryKeys?: TKeyMap['primaryKeys'];
   secondaryKey: TKeyboardSecondaryKey;
 };
-export type TKeyboardShortcutsGroup = TObject<[TKeyboardShortcuts] | [TKeyboardShortcuts, TKeyboardShortcuts]>;
+export type TKeyboardShortcutsGroup = TObject<TKeyboardShortcuts[]>;

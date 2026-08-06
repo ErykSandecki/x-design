@@ -18,12 +18,13 @@ export const useOutsideClick = (
 ): TUseOutsideClick => {
   const [selected, setSelected] = useState(false);
 
-  const handleClickOutside = (event: MouseEvent): void => {
+  const handleClickOutside = (event: Event): void => {
     if (
+      event instanceof MouseEvent &&
       event.button === 0 &&
       ref &&
       ref.current &&
-      !ref.current.contains(event.target) &&
+      !ref.current.contains(event.target as Node) &&
       (ignoreLastCondition || selected)
     ) {
       if (callback) {
