@@ -13,7 +13,6 @@ export * from './KeyboardKeysGroup/KeyboardKeysGroup';
 export * from './ScrubbableInput/ScrubbableInput';
 
 // UI
-export * from './UI/Box/Box';
 export * from './UI/Button/Button';
 export * from './UI/Icon/Icon';
 export * from './UI/Tooltip/Tooltip';

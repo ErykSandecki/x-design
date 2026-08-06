@@ -3,21 +3,20 @@
 exports[`GridInputs snapshots should render GridInputs 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp GridInputs GridInputs"
+    class="GridInputs GridInputs"
     data-test-grid-inputs=""
   >
     <div
-      class="css-1jnxvbp TextField"
+      class="TextField"
       data-test-text-field="columns"
       data-test-tooltip=""
     >
       <div
-        class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled"
+        class="TextFieldWrapper TextFieldWrapper--filled"
         data-test-text-field-wrapper="columns"
       >
         <div
-          class="css-e5vky9 ScrubbableInput"
-          data-test-box=""
+          class="ScrubbableInput"
           data-test-scrubbable-input="columns"
         >
           <div
@@ -61,17 +60,16 @@ exports[`GridInputs snapshots should render GridInputs 1`] = `
       x
     </small>
     <div
-      class="css-1jnxvbp TextField"
+      class="TextField"
       data-test-text-field="rows"
       data-test-tooltip=""
     >
       <div
-        class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled"
+        class="TextFieldWrapper TextFieldWrapper--filled"
         data-test-text-field-wrapper="rows"
       >
         <div
-          class="css-e5vky9 ScrubbableInput"
-          data-test-box=""
+          class="ScrubbableInput"
           data-test-scrubbable-input="rows"
         >
           <div

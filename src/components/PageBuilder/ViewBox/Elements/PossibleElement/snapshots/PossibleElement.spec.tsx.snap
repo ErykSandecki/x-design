@@ -3,8 +3,7 @@
 exports[`PossibleElement snapshots should render PossibleElement 1`] = `
 <DocumentFragment>
   <div
-    class="css-1wum52v PossibleElement"
-    data-test-box=""
+    class="PossibleElement"
     style="height: 0px; left: 0px; position: absolute; top: 0px; width: 0px;"
   >
     <small
@@ -54,8 +53,7 @@ exports[`PossibleElement snapshots should render PossibleElement 1`] = `
 exports[`PossibleElement snapshots should render when parent has position relative 1`] = `
 <DocumentFragment>
   <div
-    class="css-1wum52v PossibleElement"
-    data-test-box=""
+    class="PossibleElement"
     style="height: 0px; left: 0px; position: relative; top: 0px; width: 0px;"
   >
     <small

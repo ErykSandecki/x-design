@@ -4,5 +4,19 @@
 .Popover {
   @include overlay-menu;
 
+  background-color: var(--xd-color-neutral-4);
   border: 1px solid var(--xd-color-neutral-3);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 7.5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 7.5px;
+  position: fixed;
+  width: max-content;
+
+  &--bg-neutral5 {
+    background-color: var(--xd-color-neutral-5);
+  }
 }

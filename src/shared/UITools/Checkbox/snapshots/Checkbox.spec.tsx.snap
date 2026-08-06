@@ -3,7 +3,7 @@
 exports[`Checkbox snapshots should render Checkbox 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp Checkbox"
+    class="Checkbox"
     data-test-checkbox=""
   >
     <input
@@ -12,8 +12,7 @@ exports[`Checkbox snapshots should render Checkbox 1`] = `
       type="checkbox"
     />
     <div
-      class="css-1jnxvbp Checkbox__input-wrapper"
-      data-test-box=""
+      class="Checkbox__input-wrapper"
     />
     <small
       class="css-1jnxvbp Checkbox__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -29,7 +28,7 @@ exports[`Checkbox snapshots should render Checkbox 1`] = `
 exports[`Checkbox snapshots should render when checked 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp Checkbox"
+    class="Checkbox"
     data-test-checkbox="checkbox"
   >
     <input
@@ -38,8 +37,7 @@ exports[`Checkbox snapshots should render when checked 1`] = `
       type="checkbox"
     />
     <div
-      class="css-1jnxvbp Checkbox__input-wrapper"
-      data-test-box=""
+      class="Checkbox__input-wrapper"
     >
       <div
         class="css-1jnxvbp Icon Icon--neutral-1"
@@ -63,7 +61,7 @@ exports[`Checkbox snapshots should render when checked 1`] = `
 exports[`Checkbox snapshots should render when mixed 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp Checkbox"
+    class="Checkbox"
     data-test-checkbox="checkbox"
   >
     <input
@@ -72,8 +70,7 @@ exports[`Checkbox snapshots should render when mixed 1`] = `
       type="checkbox"
     />
     <div
-      class="css-1jnxvbp Checkbox__input-wrapper"
-      data-test-box=""
+      class="Checkbox__input-wrapper"
     >
       <div
         class="css-1jnxvbp Icon Icon--neutral-1"

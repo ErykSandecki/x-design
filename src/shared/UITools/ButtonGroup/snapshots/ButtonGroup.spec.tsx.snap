@@ -3,7 +3,7 @@
 exports[`ButtonGroup snapshots should render ButtonGroup 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp ButtonGroup"
+    class="ButtonGroup"
     data-test-button-group=""
   >
     <div
@@ -49,7 +49,7 @@ exports[`ButtonGroup snapshots should render ButtonGroup 1`] = `
 exports[`ButtonGroup snapshots should render with disabled states 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp ButtonGroup"
+    class="ButtonGroup"
     data-test-button-group=""
   >
     <div

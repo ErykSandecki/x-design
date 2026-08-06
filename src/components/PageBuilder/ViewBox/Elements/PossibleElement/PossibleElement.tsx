@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 // components
 import Corners from '../../Corners/Corners';
-import { Box, Small } from 'shared';
+import { Small } from 'shared';
 
 // others
 import { translationNameSpace } from './constants';
@@ -35,19 +35,14 @@ const PossibleElement: FC<TPossibleElementProps> = ({ parentId }) => {
   const isFreeForm = type === LayoutType.freeForm;
 
   return (
-    <Box
-      classes={{
-        className: cx(styles.PossibleElement),
-      }}
+    <div
+      className={cx(styles.PossibleElement)}
       style={{
         height: y1,
         left: x1,
         position: isFreeForm ? 'absolute' : 'relative',
         top: y1,
         width: x2,
-      }}
-      sx={{
-        overflow: 'visible',
       }}
     >
       {isBaseParent(parentId) && (
@@ -69,7 +64,7 @@ const PossibleElement: FC<TPossibleElementProps> = ({ parentId }) => {
           y2: y2,
         }}
       />
-    </Box>
+    </div>
   );
 };
 

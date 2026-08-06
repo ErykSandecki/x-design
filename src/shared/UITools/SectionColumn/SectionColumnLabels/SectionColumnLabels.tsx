@@ -3,7 +3,6 @@ import { FC } from 'react';
 import { size } from 'lodash';
 
 // components
-import Box from '../../../UI/Box/Box';
 import { Small } from '../../../UI/Typography';
 
 // others
@@ -18,18 +17,14 @@ export type TSectionColumnLabelsProps = {
 
 export const SectionColumnLabels: FC<TSectionColumnLabelsProps> = ({ labels = [], width }) => {
   return (
-    <Box
-      classes={{ className: cx(styles.SectionColumnLabels) }}
-      style={{ width }}
-      sx={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)' }}
-    >
+    <div className={cx(styles.SectionColumnLabels)} style={{ width }}>
       {!!size(labels) &&
         labels.map((label, index) => (
           <Small classes={{ className: cx(styles.SectionColumnLabels__label) }} key={index}>
             {label}
           </Small>
         ))}
-    </Box>
+    </div>
   );
 };
 

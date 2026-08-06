@@ -2,8 +2,22 @@
 @use '../../../styles/mixins/scrollbar' as *;
 
 .PanelProperties {
+  background-color: var(--xd-color-neutral-5);
+  border-left: 1px solid var(--xd-color-neutral-3);
+  box-sizing: border-box;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: var(--xd-zindex-standard);
+
   &__area-handle-resize {
     cursor: ew-resize;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 8px;
   }
 
   &__sections {

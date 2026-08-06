@@ -1,11 +1,22 @@
 .Tabs {
+  align-items: center;
+  column-gap: 5px;
+  display: flex;
   user-select: none;
 
   &__tab {
+    align-items: center;
+    border-radius: 5px;
+    box-sizing: border-box;
     color: var(--xd-color-neutral-2);
     cursor: pointer;
+    display: flex;
     font-size: 11px;
+    height: 24px;
+    justify-content: center;
     line-height: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
 
     &:hover {
       background-color: var(--xd-color-neutral-3);

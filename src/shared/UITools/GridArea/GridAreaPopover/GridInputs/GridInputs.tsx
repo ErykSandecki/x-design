@@ -2,11 +2,9 @@ import cx from 'classnames';
 import { FC } from 'react';
 
 // components
-import Box from '../../../../UI/Box/Box';
+import E2EDataAttribute from '../../../../E2EDataAttributes/E2EDataAttribute';
 import GridInputCells from './GridInputCells';
 import { Small } from '../../../../UI/Typography';
-
-// others
 
 // styles
 import styles from './grid-inputs.scss';
@@ -32,16 +30,13 @@ export const GridInputs: FC<TGridInputsProps> = ({
   rows,
 }) => {
   return (
-    <Box
-      classes={{
-        className: cx('GridInputs', styles.GridInputs),
-      }}
-      e2eAttribute={E2EAttribute.gridInputs}
-    >
-      <GridInputCells onBlur={onBlurColumns} onChange={onChangeColumns} name="Columns" value={columns} />
-      <Small classes={{ className: cx(styles.GridInputs__separator) }}>x</Small>
-      <GridInputCells onBlur={onBlurRows} onChange={onChangeRows} name="Rows" value={rows} />
-    </Box>
+    <E2EDataAttribute type={E2EAttribute.gridInputs} value="">
+      <div className={cx('GridInputs', styles.GridInputs)}>
+        <GridInputCells onBlur={onBlurColumns} onChange={onChangeColumns} name="Columns" value={columns} />
+        <Small classes={{ className: cx(styles.GridInputs__separator) }}>x</Small>
+        <GridInputCells onBlur={onBlurRows} onChange={onChangeRows} name="Rows" value={rows} />
+      </div>
+    </E2EDataAttribute>
   );
 };
 

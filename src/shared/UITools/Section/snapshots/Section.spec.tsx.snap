@@ -3,12 +3,11 @@
 exports[`Section snapshots should render Section 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp Section"
+    class="Section"
     data-test-section=""
   >
     <div
-      class="css-1jnxvbp Section__label-wrapper Section__label-wrapper--separator"
-      data-test-box=""
+      class="Section__label-wrapper Section__label-wrapper--separator"
     >
       <small
         class="css-1jnxvbp Section__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -18,8 +17,7 @@ exports[`Section snapshots should render Section 1`] = `
         label
       </small>
       <div
-        class="css-1f1atqu"
-        data-test-box=""
+        class="Section__label-component"
       />
     </div>
     children
@@ -30,12 +28,11 @@ exports[`Section snapshots should render Section 1`] = `
 exports[`Section snapshots should render with buttons 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp Section"
+    class="Section"
     data-test-section=""
   >
     <div
-      class="css-1jnxvbp Section__label-wrapper Section__label-wrapper--separator"
-      data-test-box=""
+      class="Section__label-wrapper Section__label-wrapper--separator"
     >
       <small
         class="css-1jnxvbp Section__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -45,11 +42,10 @@ exports[`Section snapshots should render with buttons 1`] = `
         label
       </small>
       <div
-        class="css-1f1atqu"
-        data-test-box=""
+        class="Section__label-component"
       >
         <div
-          class="css-1jnxvbp ButtonIcon"
+          class="ButtonIcon"
           data-test-button-icon=""
           data-test-tooltip=""
         >

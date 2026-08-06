@@ -3,7 +3,6 @@ import { createPortal } from 'react-dom';
 import { FC } from 'react';
 
 // components
-import Box from '../../../UI/Box/Box';
 import ColorGrid from './ColorGrid/ColorGrid';
 import ColorGridMask from './ColorGridMask/ColorGridMask';
 import ColorPrompt from './ColorPrompt/ColorPrompt';
@@ -28,23 +27,22 @@ export const ColorSampler: FC<TColorSamplerProps> = ({ initialMousePosition, onC
   const showResult = !!colors[MIDDLE_ARRAY];
 
   return createPortal(
-    <Box
-      classes={{ className: cx(styles.ColorSampler) }}
+    <div
+      className={cx(styles.ColorSampler)}
       style={{
         left: `${mousePosition.x + BOX_OFFSET}px`,
         top: `${mousePosition.y + BOX_OFFSET}px`,
       }}
-      sx={{ bg: 'neutral5' }}
     >
       <ColorGridMask colors={colors} onClickColorSampler={onClickColorSampler} />
       <ColorGrid colors={colors} isPending={isPending} />
       {showResult && (
-        <Box>
+        <div>
           <ColorResult colors={colors} />
           <ColorPrompt />
-        </Box>
+        </div>
       )}
-    </Box>,
+    </div>,
     document.body,
   );
 };

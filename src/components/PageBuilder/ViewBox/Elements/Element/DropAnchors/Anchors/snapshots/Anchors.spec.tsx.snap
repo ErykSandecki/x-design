@@ -3,11 +3,11 @@
 exports[`Prompts snapshots should render Prompts 1`] = `
 <DocumentFragment>
   <div
-    class="css-1xpffs9 Anchors Anchors--bottom"
+    class="Anchors Anchors--bottom"
     data-test-anchor="bottom"
   />
   <div
-    class="css-1xpffs9 Anchors Anchors--top"
+    class="Anchors Anchors--top"
     data-test-anchor="top"
   />
 </DocumentFragment>
@@ -16,19 +16,19 @@ exports[`Prompts snapshots should render Prompts 1`] = `
 exports[`Prompts snapshots should render all anchors 1`] = `
 <DocumentFragment>
   <div
-    class="css-1xpffs9 Anchors Anchors--left"
+    class="Anchors Anchors--left"
     data-test-anchor="left"
   />
   <div
-    class="css-1xpffs9 Anchors Anchors--right"
+    class="Anchors Anchors--right"
     data-test-anchor="right"
   />
   <div
-    class="css-1xpffs9 Anchors Anchors--bottom"
+    class="Anchors Anchors--bottom"
     data-test-anchor="bottom"
   />
   <div
-    class="css-1xpffs9 Anchors Anchors--top"
+    class="Anchors Anchors--top"
     data-test-anchor="top"
   />
 </DocumentFragment>

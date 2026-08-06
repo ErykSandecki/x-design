@@ -15,7 +15,7 @@ export const useSelectEvents = (
   idContainer: string | undefined,
   onChange: TFunc<[string]>,
   onClose: TFunc,
-  optionsRef: RefObject<HTMLDivElement>,
+  optionsRef: RefObject<HTMLUListElement>,
   selectRef: RefObject<HTMLDivElement>,
 ): TUseSelectEvents => {
   const { selected, setSelected } = useOutsideClickMultiple([], [optionsRef, selectRef], onClose, idContainer);

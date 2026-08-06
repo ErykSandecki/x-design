@@ -1,8 +1,11 @@
+import cx from 'classnames';
 import { FC, RefObject } from 'react';
 
 // components
-import Box from '../../../UI/Box/Box';
 import Popover, { PopoverCompound, TPopoverProps } from '../../Popover/Popover';
+
+// styles
+import styles from './button-icon-popover.scss';
 
 // utils
 import { stopPropagation } from 'utils';
@@ -27,10 +30,7 @@ export const ButtonIconPopover: FC<TButtonIconPopoverProps> = ({
   setSelected,
   style,
 }) => (
-  <Box
-    onMouseOver={stopPropagation}
-    sx={{ alignItems: 'center', display: 'flex', justifyContent: 'center', position: 'relative' }}
-  >
+  <div className={cx(styles.ButtonIconPopover)} onMouseOver={stopPropagation}>
     <Popover
       alignHorizontally={alignHorizontally}
       alignVertically={alignVertically}
@@ -46,7 +46,7 @@ export const ButtonIconPopover: FC<TButtonIconPopoverProps> = ({
         {children}
       </PopoverCompound.PopoverRoot>
     </Popover>
-  </Box>
+  </div>
 );
 
 export default ButtonIconPopover;

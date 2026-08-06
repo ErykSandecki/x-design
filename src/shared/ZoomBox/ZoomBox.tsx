@@ -2,7 +2,7 @@ import cx from 'classnames';
 import React, { FC, KeyboardEvent, ReactNode, RefObject } from 'react';
 
 // components
-import Box from '../UI/Box/Box';
+import E2EDataAttribute from '../E2EDataAttributes/E2EDataAttribute';
 
 // hooks
 import { useZoomBoxEvents } from './hooks/useZoomBoxEvents';
@@ -15,8 +15,8 @@ import { ZOOM_CONTENT_ID } from './constants';
 import styles from './zoom-box.scss';
 
 // types
+import { E2EAttribute, TColor } from 'types';
 import { MouseMode } from 'types/enums/mouseMode';
-import { TColor } from 'types';
 
 // utils
 import { hexToRgb } from 'utils';
@@ -92,9 +92,9 @@ export const ZoomBox: FC<TZoomBoxProps> = ({
   );
 
   return (
-    <Box
-      classes={{
-        className: cx(
+    <E2EDataAttribute type={E2EAttribute.box} value="zoom-box">
+      <div
+        className={cx(
           classes.className,
           styles.ZoomBox,
           styles[zoomBoxModificators[cursorState]],
@@ -103,45 +103,40 @@ export const ZoomBox: FC<TZoomBoxProps> = ({
             [styles['ZoomBox--color-sampler']]: colorSampler,
             [styles['ZoomBox--pressing']]: mouseMode === MouseMode.move && cursorState === CURSOR_STATES[1],
           },
-        ),
-      }}
-      e2eValue="zoom-box"
-      onKeyDown={onKeyDown}
-      onKeyUp={onKeyUp}
-      ref={zoomBoxRef}
-      tabIndex={0}
-      sx={{
-        height: '100%',
-        overflow: 'hidden',
-      }}
-      {...events}
-    >
-      <Box
-        classes={{ className: cx(styles['ZoomBox__background-mask']) }}
-        e2eValue="zoom-box-background-mask"
-        style={{
-          backgroundColor: hexToRgb(backgroundColor, parseInt(alpha)),
-          display: backgroundVissible ? 'initial' : 'none',
-        }}
-      />
-      <Box
-        classes={{ className: cx(styles['ZoomBox__texture-blank']) }}
-        style={{
-          transform: `translate(${coordinates.x}px, ${coordinates.y}px) scale(${coordinates.z})`,
-        }}
-      />
-      <Box
-        classes={{ className: cx(styles['ZoomBox__zoom-content']) }}
-        id={ZOOM_CONTENT_ID}
-        ref={zoomContentRef}
-        sx={{ height: '100vh', position: 'relative' }}
-        style={{
-          transform: `translate(${coordinates.x}px, ${coordinates.y}px) scale(${coordinates.z})`,
-        }}
+        )}
+        onKeyDown={onKeyDown}
+        onKeyUp={onKeyUp}
+        ref={zoomBoxRef}
+        tabIndex={0}
+        {...events}
       >
-        {children}
-      </Box>
-    </Box>
+        <E2EDataAttribute type={E2EAttribute.box} value="zoom-box-background-mask">
+          <div
+            className={cx(styles['ZoomBox__background-mask'])}
+            style={{
+              backgroundColor: hexToRgb(backgroundColor, parseInt(alpha)),
+              display: backgroundVissible ? 'initial' : 'none',
+            }}
+          />
+        </E2EDataAttribute>
+        <div
+          className={cx(styles['ZoomBox__texture-blank'])}
+          style={{
+            transform: `translate(${coordinates.x}px, ${coordinates.y}px) scale(${coordinates.z})`,
+          }}
+        />
+        <div
+          className={cx(styles['ZoomBox__zoom-content'])}
+          id={ZOOM_CONTENT_ID}
+          ref={zoomContentRef}
+          style={{
+            transform: `translate(${coordinates.x}px, ${coordinates.y}px) scale(${coordinates.z})`,
+          }}
+        >
+          {children}
+        </div>
+      </div>
+    </E2EDataAttribute>
   );
 };
 

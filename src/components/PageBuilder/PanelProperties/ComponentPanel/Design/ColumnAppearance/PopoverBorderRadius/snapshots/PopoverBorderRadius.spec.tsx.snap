@@ -3,8 +3,7 @@
 exports[`PopoverBorderRadius snapshots should render PopoverBorderRadius 1`] = `
 <DocumentFragment>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="0"
   >
     <div
@@ -30,8 +29,7 @@ exports[`PopoverBorderRadius snapshots should render PopoverBorderRadius 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="1"
   >
     <div
@@ -62,8 +60,7 @@ exports[`PopoverBorderRadius snapshots should render PopoverBorderRadius 1`] = `
 exports[`PopoverBorderRadius snapshots should render with mixed value 1`] = `
 <DocumentFragment>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="0"
   >
     <div
@@ -89,8 +86,7 @@ exports[`PopoverBorderRadius snapshots should render with mixed value 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="1"
   >
     <div

@@ -1,13 +1,16 @@
+import cx from 'classnames';
 import { createPortal } from 'react-dom';
 import { FC, RefObject } from 'react';
 
 // components
 import Corners from '../../../Corners/Corners';
 import TransformArea from './TransformArea/TransformArea';
-import { Box } from 'shared';
 
 // core
 import { useRefs } from 'pages/PageBuilderPage/core/RefsProvider';
+
+// styles
+import styles from './events-area.scss';
 
 // types
 import { MouseMode, TElement } from 'types';
@@ -46,7 +49,8 @@ const EventsArea: FC<TOutlineProps> = ({
   return (
     overlayContainerRef.current &&
     createPortal(
-      <Box
+      <div
+        className={cx(styles.EventsArea)}
         style={{
           height,
           left: `${absoluteCoordinates.x}px`,
@@ -55,10 +59,9 @@ const EventsArea: FC<TOutlineProps> = ({
           transformOrigin: 'center center',
           width,
         }}
-        sx={{ position: 'absolute' }}
       >
-        {/* // Technical note: Box blank to allow move block when overflow */}
-        <Box style={{ height, width }} />
+        {/* // Technical note: div blank to allow move block when overflow */}
+        <div style={{ height, width }} />
         <Corners rectCoordinates={rectCoordinates} />
         <TransformArea
           angle={angle}
@@ -72,7 +75,7 @@ const EventsArea: FC<TOutlineProps> = ({
           y={relativeCoordinates.y}
           width={width}
         />
-      </Box>,
+      </div>,
       overlayContainerRef.current,
     )
   );

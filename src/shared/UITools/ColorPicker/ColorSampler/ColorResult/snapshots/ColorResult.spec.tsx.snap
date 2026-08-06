@@ -3,12 +3,10 @@
 exports[`ColorResult snapshots should render ColorResult 1`] = `
 <DocumentFragment>
   <div
-    class="css-e5vky9 ColorResult"
-    data-test-box=""
+    class="ColorResult"
   >
     <div
-      class="css-cc7zgu ColorResult__selected-color"
-      data-test-box=""
+      class="ColorResult__selected-color"
       style="background-color: rgba(0, 0, 0, 0);"
     />
     <small

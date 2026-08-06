@@ -1,11 +1,6 @@
 import cx from 'classnames';
 import { FC } from 'react';
 
-// components
-import { Box } from 'shared';
-
-// others
-
 // styles
 import styles from './constrains-view.scss';
 
@@ -44,14 +39,12 @@ export type TConstrainsViewProps = {
 
 export const ConstrainsView: FC<TConstrainsViewProps> = ({ alignment, selected }) => {
   return (
-    <Box
-      classes={{
-        className: cx(styles.ConstrainsView, {
-          [styles['ConstrainsView--selected']]: selected,
-          [styles[horizontalModificators[alignment?.horizontal]]]: !!alignment?.horizontal,
-          [styles[verticalModificators[alignment?.vertical]]]: !!alignment?.vertical,
-        }),
-      }}
+    <div
+      className={cx(styles.ConstrainsView, {
+        [styles['ConstrainsView--selected']]: selected,
+        [styles[horizontalModificators[alignment?.horizontal]]]: !!alignment?.horizontal,
+        [styles[verticalModificators[alignment?.vertical]]]: !!alignment?.vertical,
+      })}
     >
       {enumToArray(Constrain).map((key) => (
         <div
@@ -62,7 +55,7 @@ export const ConstrainsView: FC<TConstrainsViewProps> = ({ alignment, selected }
           key={key as string}
         />
       ))}
-    </Box>
+    </div>
   );
 };
 

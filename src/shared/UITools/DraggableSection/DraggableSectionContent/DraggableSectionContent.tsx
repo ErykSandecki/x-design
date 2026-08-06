@@ -3,7 +3,6 @@ import { FC, ReactElement } from 'react';
 import { useTranslation } from 'react-i18next';
 
 // components
-import Box from '../../../UI/Box/Box';
 import ButtonIcon from '../../ButtonIcon/ButtonIcon';
 
 // others
@@ -34,10 +33,10 @@ export const DraggableSectionContent: FC<TDraggableSectionContentProps> = ({
 
   return (
     <>
-      <Box onMouseDown={stopPropagation} style={{ width: '100%' }}>
+      <div onMouseDown={stopPropagation} style={{ width: '100%' }}>
         {element}
-      </Box>
-      <Box classes={{ className: cx(styles.DraggableSectionContent) }}>
+      </div>
+      <div className={cx(styles.DraggableSectionContent)}>
         <ButtonIcon
           disabledSelection
           e2eValue="toggle-visibility"
@@ -61,7 +60,7 @@ export const DraggableSectionContent: FC<TDraggableSectionContentProps> = ({
           onMouseDown={stopPropagation}
           tooltip={{ autoPositioning: true, content: t(`${TOOLTIP_TRANSLATION_KEY}.remove`) }}
         />
-      </Box>
+      </div>
     </>
   );
 };

@@ -1,5 +1,16 @@
 .Panel {
   &__header {
+    align-items: center;
     border-bottom: 1px solid var(--xd-color-neutral-3);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+  }
+
+  &__sampler {
+    align-items: center;
+    display: flex;
+    justify-content: center;
   }
 }

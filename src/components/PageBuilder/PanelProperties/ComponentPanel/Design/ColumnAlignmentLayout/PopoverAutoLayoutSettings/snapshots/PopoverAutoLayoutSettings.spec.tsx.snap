@@ -3,7 +3,7 @@
 exports[`PopoverAutoLayoutSettings snapshots should render PopoverAutoLayoutSettings 1`] = `
 <DocumentFragment>
   <div
-    class="css-1h1jb7x"
+    class="PopoverHeader"
     data-test-popover-header=""
   >
     <small
@@ -22,7 +22,7 @@ exports[`PopoverAutoLayoutSettings snapshots should render PopoverAutoLayoutSett
     />
   </div>
   <div
-    class="css-196hq3q"
+    class="PopoverPreview"
     data-test-popover-preview=""
   >
     <p
@@ -34,11 +34,11 @@ exports[`PopoverAutoLayoutSettings snapshots should render PopoverAutoLayoutSett
     </p>
   </div>
   <div
-    class="css-1jnxvbp Select"
+    class="Select"
     data-test-select="box-sizing"
   >
     <div
-      class="css-1jnxvbp TextField"
+      class="TextField"
       data-test-text-field=""
       data-test-tooltip=""
     >
@@ -50,7 +50,7 @@ exports[`PopoverAutoLayoutSettings snapshots should render PopoverAutoLayoutSett
         Strokes
       </small>
       <div
-        class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--outlined"
+        class="TextFieldWrapper TextFieldWrapper--outlined"
         data-test-text-field-wrapper=""
         style="width: 112px;"
       >
@@ -72,13 +72,12 @@ exports[`PopoverAutoLayoutSettings snapshots should render PopoverAutoLayoutSett
       </div>
     </div>
     <ul
-      class="css-1jnxvbp SelectOptions"
-      data-test-box=""
+      class="SelectOptions"
       data-test-select-options="box-sizing"
       style="left: 0px; top: 24px; width: 0px;"
     >
       <li
-        class="css-1jnxvbp SelectItem"
+        class="SelectItem"
         data-test-select-item="included"
         data-value="included"
         role="option"
@@ -94,7 +93,7 @@ exports[`PopoverAutoLayoutSettings snapshots should render PopoverAutoLayoutSett
         Included
       </li>
       <li
-        class="css-1jnxvbp SelectItem SelectItem--selected"
+        class="SelectItem SelectItem--selected"
         data-test-select-item="excluded"
         data-value="excluded"
         role="option"

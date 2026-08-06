@@ -1,4 +1,9 @@
 .ColorPrompt {
+  align-items: center;
+  column-gap: 8px;
+  display: flex;
+  margin-left: 12px;
+
   &__description {
     font-size: 11px;
   }

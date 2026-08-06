@@ -2,6 +2,7 @@
 @use '../../../../../styles/z-indexes' as *;
 
 .Anchors {
+  position: absolute;
   z-index: $zindex-element-anchor;
 
   &--bottom {

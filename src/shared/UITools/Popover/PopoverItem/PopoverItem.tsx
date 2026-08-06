@@ -3,7 +3,7 @@ import { FC } from 'react';
 
 // components
 import E2EDataAttribute from '../../../E2EDataAttributes/E2EDataAttribute';
-import { Box, Icon, Small, TIconProps } from 'shared';
+import { Icon, Small, TIconProps } from 'shared';
 
 // core
 import { usePopoverRoot } from '../PopoverRoot/core/PopoverRootProvider';
@@ -49,20 +49,7 @@ export const PopoverItem: FC<TPopoverItemProps> = ({
 
   return (
     <E2EDataAttribute type={E2EAttribute.popoverItem} value={index}>
-      <Box
-        classes={{ className: cx(styles.PopoverItem) }}
-        onClick={onClickHandler}
-        onMouseEnter={onMouseEnter}
-        sx={{
-          alignItems: 'center',
-          borderRadius: '5px',
-          columnGap: '10px',
-          display: 'flex',
-          height: '24px',
-          justifyContent: 'left',
-          px: 5,
-        }}
-      >
+      <div className={cx(styles.PopoverItem)} onClick={onClickHandler} onMouseEnter={onMouseEnter}>
         <Icon
           classes={{
             className: cx(styles['PopoverItem__check-icon'], {
@@ -77,7 +64,7 @@ export const PopoverItem: FC<TPopoverItemProps> = ({
           <Icon classes={{ className: cx(styles.PopoverItem__icon) }} height={iconSize} name={icon} width={iconSize} />
         )}
         <Small classes={{ className: cx(styles.PopoverItem__text) }}>{text}</Small>
-      </Box>
+      </div>
     </E2EDataAttribute>
   );
 };

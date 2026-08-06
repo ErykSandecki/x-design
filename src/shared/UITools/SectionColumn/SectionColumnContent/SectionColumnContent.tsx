@@ -2,7 +2,6 @@ import cx from 'classnames';
 import { FC, ReactNode } from 'react';
 
 // components
-import Box from '../../../UI/Box/Box';
 import Icon from '../../../UI/Icon/Icon';
 
 // others
@@ -34,32 +33,17 @@ export const SectionColumnContent: FC<TSectionColumnContentProps> = ({
   withInputConnector = false,
 }) => {
   return (
-    <Box
-      classes={{
-        className: cx(styles.SectionColumnContent, styles[sectionColumnContentModificators[gridColumnType]]),
-      }}
+    <div
+      className={cx(styles.SectionColumnContent, styles[sectionColumnContentModificators[gridColumnType]])}
       style={{ width }}
-      sx={{ display: 'grid', position: 'relative' }}
     >
       {children}
       {withInputConnector && (
-        <Box
-          classes={{
-            className: cx(styles['SectionColumnContent__input-connector']),
-          }}
-          sx={{
-            alignItems: 'center',
-            display: 'flex',
-            justifyContent: 'center',
-            left: '50%',
-            position: 'absolute',
-            top: '50%',
-          }}
-        >
+        <div className={cx(styles['SectionColumnContent__input-connector'])}>
           <Icon color={ColorsTheme.neutral3} height={24} name="InputsConnector" width={24} />
-        </Box>
+        </div>
       )}
-    </Box>
+    </div>
   );
 };
 

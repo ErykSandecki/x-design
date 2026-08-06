@@ -2,5 +2,10 @@
   cursor:
     url('assets/icons/cursors/sampler.svg') 8 24,
     auto !important;
+  height: 150px;
+  left: -150px;
   pointer-events: all;
+  position: absolute;
+  top: -150px;
+  width: 150px;
 }

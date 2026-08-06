@@ -2,7 +2,6 @@ import cx from 'classnames';
 import { FC, RefObject } from 'react';
 
 // components
-import Box from '../../../../UI/Box/Box';
 import Icon from '../../../../UI/Icon/Icon';
 import Popover, { PopoverCompound, TPopoverProps } from '../../../Popover/Popover';
 
@@ -37,11 +36,7 @@ export const TextFieldPopover: FC<TTextFieldPopoverProps> = ({
   const onClickDetachedValue = useClickEvent(onClick);
 
   return (
-    <Box
-      classes={{ className: cx(styles.TextFieldPopover) }}
-      ref={ref}
-      sx={{ alignItems: 'center', display: 'flex', justifyContent: 'center', position: 'relative' }}
-    >
+    <div className={cx(styles.TextFieldPopover)} ref={ref}>
       {!attachedValue && (
         <Icon
           classes={{ className: cx(styles.TextFieldPopover__icon, classNameIcon) }}
@@ -67,7 +62,7 @@ export const TextFieldPopover: FC<TTextFieldPopoverProps> = ({
           {children}
         </PopoverCompound.PopoverRoot>
       </Popover>
-    </Box>
+    </div>
   );
 };
 

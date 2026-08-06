@@ -3,7 +3,7 @@ import { RefObject, useState, useEffect, CSSProperties } from 'react';
 export type TUseStyle = Pick<CSSProperties, 'left' | 'top' | 'width'>;
 
 export const useStyle = (
-  optionsRef: RefObject<HTMLDivElement>,
+  optionsRef: RefObject<HTMLUListElement>,
   selected: boolean,
   value: string | Array<string>,
   wrapperRef: RefObject<HTMLDivElement>,

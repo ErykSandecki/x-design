@@ -5,7 +5,6 @@ import { noop } from 'lodash';
 
 // components
 import E2EDataAttribute, { TE2EDataAttributeProps } from '../E2EDataAttributes/E2EDataAttribute';
-import Box from '../UI/Box/Box';
 import Icon, { TIconProps } from '../UI/Icon/Icon';
 
 // hooks
@@ -65,14 +64,11 @@ export const ScrubbableInput: FC<TScrubbableInputProps> = ({
 
   return (
     <E2EDataAttribute type={E2EAttribute.scrubbableInput} value={e2eValue}>
-      <Box
-        classes={{
-          className: cx(styles.ScrubbableInput, {
-            [styles['ScrubbableInput--disabled']]: disabled,
-          }),
-        }}
+      <div
+        className={cx(styles.ScrubbableInput, {
+          [styles['ScrubbableInput--disabled']]: disabled,
+        })}
         ref={inputRef}
-        sx={{ alignItems: 'center', display: 'flex' }}
         {...events}
       >
         {children}
@@ -93,7 +89,7 @@ export const ScrubbableInput: FC<TScrubbableInputProps> = ({
             />,
             document.body,
           )}
-      </Box>
+      </div>
     </E2EDataAttribute>
   );
 };

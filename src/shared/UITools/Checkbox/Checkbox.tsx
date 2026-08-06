@@ -2,18 +2,15 @@ import cx from 'classnames';
 import { FC, InputHTMLAttributes } from 'react';
 
 // components
-import Box from '../../UI/Box/Box';
+import E2EDataAttribute, { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute';
 import Icon from '../../UI/Icon/Icon';
 import { Small } from 'shared/UI/Typography';
-
-// others
 
 // styles
 import styles from './checkbox.scss';
 
 // types
 import { E2EAttribute } from 'types';
-import { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute';
 
 // utils
 import { getAttributes } from '../../E2EDataAttributes/utils';
@@ -40,26 +37,22 @@ export const Checkbox: FC<TCheckboxProps> = ({
   ...restProps
 }) => {
   return (
-    <Box
-      classes={{
-        className: cx(styles.Checkbox, className),
-      }}
-      e2eAttribute={E2EAttribute.checkbox}
-      e2eValue={e2eValue}
-    >
-      <input
-        className={cx(styles.Checkbox__input)}
-        onClick={() => onChange(!value)}
-        type="checkbox"
-        {...getAttributes(E2EAttribute.checkboxInput, e2eValue)}
-        {...restProps}
-      />
-      <Box classes={{ className: cx(styles['Checkbox__input-wrapper']) }}>
-        {value && !isMixed && <Icon name="Checkbox" height={8} width={8} />}
-        {isMixed && <Icon name="CheckboxMixed" height={8} width={8} />}
-      </Box>
-      <Small classes={{ className: cx(styles.Checkbox__label) }}>{label}</Small>
-    </Box>
+    <E2EDataAttribute type={E2EAttribute.checkbox} value={e2eValue}>
+      <div className={cx(styles.Checkbox, className)}>
+        <input
+          className={cx(styles.Checkbox__input)}
+          onClick={() => onChange(!value)}
+          type="checkbox"
+          {...getAttributes(E2EAttribute.checkboxInput, e2eValue)}
+          {...restProps}
+        />
+        <div className={cx(styles['Checkbox__input-wrapper'])}>
+          {value && !isMixed && <Icon name="Checkbox" height={8} width={8} />}
+          {isMixed && <Icon name="CheckboxMixed" height={8} width={8} />}
+        </div>
+        <Small classes={{ className: cx(styles.Checkbox__label) }}>{label}</Small>
+      </div>
+    </E2EDataAttribute>
   );
 };
 

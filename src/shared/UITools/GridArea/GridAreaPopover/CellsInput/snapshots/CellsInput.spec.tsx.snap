@@ -3,12 +3,12 @@
 exports[`CellsInput snapshots should render CellsInput 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp CellsInput CellsInput"
+    class="CellsInput CellsInput"
     data-test-grid-cells-input=""
     style="grid-template-columns: repeat(12, 1fr); grid-template-rows: repeat(8, 1fr);"
   >
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--selected"
+      class="CellsInput__cell CellsInput__cell--selected"
       data-test-grid-cell-input="1"
       data-test-tooltip=""
       data-value="1.1"
@@ -30,7 +30,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="2"
       data-test-tooltip=""
       data-value="2.1"
@@ -52,7 +52,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="3"
       data-test-tooltip=""
       data-value="3.1"
@@ -74,7 +74,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="4"
       data-test-tooltip=""
       data-value="4.1"
@@ -96,7 +96,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="5"
       data-test-tooltip=""
       data-value="5.1"
@@ -118,7 +118,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="6"
       data-test-tooltip=""
       data-value="6.1"
@@ -140,7 +140,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="7"
       data-test-tooltip=""
       data-value="7.1"
@@ -162,7 +162,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="8"
       data-test-tooltip=""
       data-value="8.1"
@@ -184,7 +184,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="9"
       data-test-tooltip=""
       data-value="9.1"
@@ -206,7 +206,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="10"
       data-test-tooltip=""
       data-value="10.1"
@@ -228,7 +228,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="11"
       data-test-tooltip=""
       data-value="11.1"
@@ -250,7 +250,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="12"
       data-test-tooltip=""
       data-value="12.1"
@@ -272,7 +272,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="2"
       data-test-tooltip=""
       data-value="1.2"
@@ -294,7 +294,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="4"
       data-test-tooltip=""
       data-value="2.2"
@@ -316,7 +316,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="6"
       data-test-tooltip=""
       data-value="3.2"
@@ -338,7 +338,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="8"
       data-test-tooltip=""
       data-value="4.2"
@@ -360,7 +360,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="10"
       data-test-tooltip=""
       data-value="5.2"
@@ -382,7 +382,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="12"
       data-test-tooltip=""
       data-value="6.2"
@@ -404,7 +404,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="14"
       data-test-tooltip=""
       data-value="7.2"
@@ -426,7 +426,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="16"
       data-test-tooltip=""
       data-value="8.2"
@@ -448,7 +448,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="18"
       data-test-tooltip=""
       data-value="9.2"
@@ -470,7 +470,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="20"
       data-test-tooltip=""
       data-value="10.2"
@@ -492,7 +492,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="22"
       data-test-tooltip=""
       data-value="11.2"
@@ -514,7 +514,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="24"
       data-test-tooltip=""
       data-value="12.2"
@@ -536,7 +536,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="3"
       data-test-tooltip=""
       data-value="1.3"
@@ -558,7 +558,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="6"
       data-test-tooltip=""
       data-value="2.3"
@@ -580,7 +580,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="9"
       data-test-tooltip=""
       data-value="3.3"
@@ -602,7 +602,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="12"
       data-test-tooltip=""
       data-value="4.3"
@@ -624,7 +624,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="15"
       data-test-tooltip=""
       data-value="5.3"
@@ -646,7 +646,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="18"
       data-test-tooltip=""
       data-value="6.3"
@@ -668,7 +668,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="21"
       data-test-tooltip=""
       data-value="7.3"
@@ -690,7 +690,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="24"
       data-test-tooltip=""
       data-value="8.3"
@@ -712,7 +712,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="27"
       data-test-tooltip=""
       data-value="9.3"
@@ -734,7 +734,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="30"
       data-test-tooltip=""
       data-value="10.3"
@@ -756,7 +756,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="33"
       data-test-tooltip=""
       data-value="11.3"
@@ -778,7 +778,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="36"
       data-test-tooltip=""
       data-value="12.3"
@@ -800,7 +800,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="4"
       data-test-tooltip=""
       data-value="1.4"
@@ -822,7 +822,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="8"
       data-test-tooltip=""
       data-value="2.4"
@@ -844,7 +844,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="12"
       data-test-tooltip=""
       data-value="3.4"
@@ -866,7 +866,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="16"
       data-test-tooltip=""
       data-value="4.4"
@@ -888,7 +888,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="20"
       data-test-tooltip=""
       data-value="5.4"
@@ -910,7 +910,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="24"
       data-test-tooltip=""
       data-value="6.4"
@@ -932,7 +932,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="28"
       data-test-tooltip=""
       data-value="7.4"
@@ -954,7 +954,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="32"
       data-test-tooltip=""
       data-value="8.4"
@@ -976,7 +976,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="36"
       data-test-tooltip=""
       data-value="9.4"
@@ -998,7 +998,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="40"
       data-test-tooltip=""
       data-value="10.4"
@@ -1020,7 +1020,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="44"
       data-test-tooltip=""
       data-value="11.4"
@@ -1042,7 +1042,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="48"
       data-test-tooltip=""
       data-value="12.4"
@@ -1064,7 +1064,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="5"
       data-test-tooltip=""
       data-value="1.5"
@@ -1086,7 +1086,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="10"
       data-test-tooltip=""
       data-value="2.5"
@@ -1108,7 +1108,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="15"
       data-test-tooltip=""
       data-value="3.5"
@@ -1130,7 +1130,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="20"
       data-test-tooltip=""
       data-value="4.5"
@@ -1152,7 +1152,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="25"
       data-test-tooltip=""
       data-value="5.5"
@@ -1174,7 +1174,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="30"
       data-test-tooltip=""
       data-value="6.5"
@@ -1196,7 +1196,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="35"
       data-test-tooltip=""
       data-value="7.5"
@@ -1218,7 +1218,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="40"
       data-test-tooltip=""
       data-value="8.5"
@@ -1240,7 +1240,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="45"
       data-test-tooltip=""
       data-value="9.5"
@@ -1262,7 +1262,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="50"
       data-test-tooltip=""
       data-value="10.5"
@@ -1284,7 +1284,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="55"
       data-test-tooltip=""
       data-value="11.5"
@@ -1306,7 +1306,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="60"
       data-test-tooltip=""
       data-value="12.5"
@@ -1328,7 +1328,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="6"
       data-test-tooltip=""
       data-value="1.6"
@@ -1350,7 +1350,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="12"
       data-test-tooltip=""
       data-value="2.6"
@@ -1372,7 +1372,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="18"
       data-test-tooltip=""
       data-value="3.6"
@@ -1394,7 +1394,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="24"
       data-test-tooltip=""
       data-value="4.6"
@@ -1416,7 +1416,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="30"
       data-test-tooltip=""
       data-value="5.6"
@@ -1438,7 +1438,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="36"
       data-test-tooltip=""
       data-value="6.6"
@@ -1460,7 +1460,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="42"
       data-test-tooltip=""
       data-value="7.6"
@@ -1482,7 +1482,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="48"
       data-test-tooltip=""
       data-value="8.6"
@@ -1504,7 +1504,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="54"
       data-test-tooltip=""
       data-value="9.6"
@@ -1526,7 +1526,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="60"
       data-test-tooltip=""
       data-value="10.6"
@@ -1548,7 +1548,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="66"
       data-test-tooltip=""
       data-value="11.6"
@@ -1570,7 +1570,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="72"
       data-test-tooltip=""
       data-value="12.6"
@@ -1592,7 +1592,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="7"
       data-test-tooltip=""
       data-value="1.7"
@@ -1614,7 +1614,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="14"
       data-test-tooltip=""
       data-value="2.7"
@@ -1636,7 +1636,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="21"
       data-test-tooltip=""
       data-value="3.7"
@@ -1658,7 +1658,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="28"
       data-test-tooltip=""
       data-value="4.7"
@@ -1680,7 +1680,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="35"
       data-test-tooltip=""
       data-value="5.7"
@@ -1702,7 +1702,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="42"
       data-test-tooltip=""
       data-value="6.7"
@@ -1724,7 +1724,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="49"
       data-test-tooltip=""
       data-value="7.7"
@@ -1746,7 +1746,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="56"
       data-test-tooltip=""
       data-value="8.7"
@@ -1768,7 +1768,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="63"
       data-test-tooltip=""
       data-value="9.7"
@@ -1790,7 +1790,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="70"
       data-test-tooltip=""
       data-value="10.7"
@@ -1812,7 +1812,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="77"
       data-test-tooltip=""
       data-value="11.7"
@@ -1834,7 +1834,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="84"
       data-test-tooltip=""
       data-value="12.7"
@@ -1856,7 +1856,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="8"
       data-test-tooltip=""
       data-value="1.8"
@@ -1878,7 +1878,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="16"
       data-test-tooltip=""
       data-value="2.8"
@@ -1900,7 +1900,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="24"
       data-test-tooltip=""
       data-value="3.8"
@@ -1922,7 +1922,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="32"
       data-test-tooltip=""
       data-value="4.8"
@@ -1944,7 +1944,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="40"
       data-test-tooltip=""
       data-value="5.8"
@@ -1966,7 +1966,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="48"
       data-test-tooltip=""
       data-value="6.8"
@@ -1988,7 +1988,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="56"
       data-test-tooltip=""
       data-value="7.8"
@@ -2010,7 +2010,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="64"
       data-test-tooltip=""
       data-value="8.8"
@@ -2032,7 +2032,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="72"
       data-test-tooltip=""
       data-value="9.8"
@@ -2054,7 +2054,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="80"
       data-test-tooltip=""
       data-value="10.8"
@@ -2076,7 +2076,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="88"
       data-test-tooltip=""
       data-value="11.8"
@@ -2098,7 +2098,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell"
+      class="CellsInput__cell"
       data-test-grid-cell-input="96"
       data-test-tooltip=""
       data-value="12.8"
@@ -2126,12 +2126,12 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
 exports[`CellsInput snapshots should render when select last cell 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp CellsInput CellsInput"
+    class="CellsInput CellsInput"
     data-test-grid-cells-input=""
     style="grid-template-columns: repeat(12, 1fr); grid-template-rows: repeat(8, 1fr);"
   >
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active CellsInput__cell--selected"
+      class="CellsInput__cell CellsInput__cell--active CellsInput__cell--selected"
       data-test-grid-cell-input="1"
       data-test-tooltip=""
       data-value="1.1"
@@ -2153,7 +2153,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="2"
       data-test-tooltip=""
       data-value="2.1"
@@ -2175,7 +2175,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="3"
       data-test-tooltip=""
       data-value="3.1"
@@ -2197,7 +2197,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="4"
       data-test-tooltip=""
       data-value="4.1"
@@ -2219,7 +2219,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="5"
       data-test-tooltip=""
       data-value="5.1"
@@ -2241,7 +2241,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="6"
       data-test-tooltip=""
       data-value="6.1"
@@ -2263,7 +2263,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="7"
       data-test-tooltip=""
       data-value="7.1"
@@ -2285,7 +2285,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="8"
       data-test-tooltip=""
       data-value="8.1"
@@ -2307,7 +2307,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="9"
       data-test-tooltip=""
       data-value="9.1"
@@ -2329,7 +2329,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="10"
       data-test-tooltip=""
       data-value="10.1"
@@ -2351,7 +2351,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="11"
       data-test-tooltip=""
       data-value="11.1"
@@ -2373,7 +2373,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="12"
       data-test-tooltip=""
       data-value="12.1"
@@ -2395,7 +2395,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="2"
       data-test-tooltip=""
       data-value="1.2"
@@ -2417,7 +2417,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="4"
       data-test-tooltip=""
       data-value="2.2"
@@ -2439,7 +2439,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="6"
       data-test-tooltip=""
       data-value="3.2"
@@ -2461,7 +2461,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="8"
       data-test-tooltip=""
       data-value="4.2"
@@ -2483,7 +2483,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="10"
       data-test-tooltip=""
       data-value="5.2"
@@ -2505,7 +2505,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="12"
       data-test-tooltip=""
       data-value="6.2"
@@ -2527,7 +2527,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="14"
       data-test-tooltip=""
       data-value="7.2"
@@ -2549,7 +2549,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="16"
       data-test-tooltip=""
       data-value="8.2"
@@ -2571,7 +2571,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="18"
       data-test-tooltip=""
       data-value="9.2"
@@ -2593,7 +2593,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="20"
       data-test-tooltip=""
       data-value="10.2"
@@ -2615,7 +2615,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="22"
       data-test-tooltip=""
       data-value="11.2"
@@ -2637,7 +2637,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="24"
       data-test-tooltip=""
       data-value="12.2"
@@ -2659,7 +2659,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="3"
       data-test-tooltip=""
       data-value="1.3"
@@ -2681,7 +2681,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="6"
       data-test-tooltip=""
       data-value="2.3"
@@ -2703,7 +2703,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="9"
       data-test-tooltip=""
       data-value="3.3"
@@ -2725,7 +2725,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="12"
       data-test-tooltip=""
       data-value="4.3"
@@ -2747,7 +2747,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="15"
       data-test-tooltip=""
       data-value="5.3"
@@ -2769,7 +2769,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="18"
       data-test-tooltip=""
       data-value="6.3"
@@ -2791,7 +2791,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="21"
       data-test-tooltip=""
       data-value="7.3"
@@ -2813,7 +2813,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="24"
       data-test-tooltip=""
       data-value="8.3"
@@ -2835,7 +2835,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="27"
       data-test-tooltip=""
       data-value="9.3"
@@ -2857,7 +2857,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="30"
       data-test-tooltip=""
       data-value="10.3"
@@ -2879,7 +2879,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="33"
       data-test-tooltip=""
       data-value="11.3"
@@ -2901,7 +2901,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="36"
       data-test-tooltip=""
       data-value="12.3"
@@ -2923,7 +2923,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="4"
       data-test-tooltip=""
       data-value="1.4"
@@ -2945,7 +2945,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="8"
       data-test-tooltip=""
       data-value="2.4"
@@ -2967,7 +2967,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="12"
       data-test-tooltip=""
       data-value="3.4"
@@ -2989,7 +2989,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="16"
       data-test-tooltip=""
       data-value="4.4"
@@ -3011,7 +3011,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="20"
       data-test-tooltip=""
       data-value="5.4"
@@ -3033,7 +3033,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="24"
       data-test-tooltip=""
       data-value="6.4"
@@ -3055,7 +3055,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="28"
       data-test-tooltip=""
       data-value="7.4"
@@ -3077,7 +3077,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="32"
       data-test-tooltip=""
       data-value="8.4"
@@ -3099,7 +3099,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="36"
       data-test-tooltip=""
       data-value="9.4"
@@ -3121,7 +3121,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="40"
       data-test-tooltip=""
       data-value="10.4"
@@ -3143,7 +3143,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="44"
       data-test-tooltip=""
       data-value="11.4"
@@ -3165,7 +3165,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="48"
       data-test-tooltip=""
       data-value="12.4"
@@ -3187,7 +3187,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="5"
       data-test-tooltip=""
       data-value="1.5"
@@ -3209,7 +3209,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="10"
       data-test-tooltip=""
       data-value="2.5"
@@ -3231,7 +3231,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="15"
       data-test-tooltip=""
       data-value="3.5"
@@ -3253,7 +3253,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="20"
       data-test-tooltip=""
       data-value="4.5"
@@ -3275,7 +3275,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="25"
       data-test-tooltip=""
       data-value="5.5"
@@ -3297,7 +3297,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="30"
       data-test-tooltip=""
       data-value="6.5"
@@ -3319,7 +3319,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="35"
       data-test-tooltip=""
       data-value="7.5"
@@ -3341,7 +3341,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="40"
       data-test-tooltip=""
       data-value="8.5"
@@ -3363,7 +3363,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="45"
       data-test-tooltip=""
       data-value="9.5"
@@ -3385,7 +3385,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="50"
       data-test-tooltip=""
       data-value="10.5"
@@ -3407,7 +3407,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="55"
       data-test-tooltip=""
       data-value="11.5"
@@ -3429,7 +3429,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="60"
       data-test-tooltip=""
       data-value="12.5"
@@ -3451,7 +3451,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="6"
       data-test-tooltip=""
       data-value="1.6"
@@ -3473,7 +3473,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="12"
       data-test-tooltip=""
       data-value="2.6"
@@ -3495,7 +3495,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="18"
       data-test-tooltip=""
       data-value="3.6"
@@ -3517,7 +3517,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="24"
       data-test-tooltip=""
       data-value="4.6"
@@ -3539,7 +3539,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="30"
       data-test-tooltip=""
       data-value="5.6"
@@ -3561,7 +3561,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="36"
       data-test-tooltip=""
       data-value="6.6"
@@ -3583,7 +3583,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="42"
       data-test-tooltip=""
       data-value="7.6"
@@ -3605,7 +3605,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="48"
       data-test-tooltip=""
       data-value="8.6"
@@ -3627,7 +3627,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="54"
       data-test-tooltip=""
       data-value="9.6"
@@ -3649,7 +3649,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="60"
       data-test-tooltip=""
       data-value="10.6"
@@ -3671,7 +3671,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="66"
       data-test-tooltip=""
       data-value="11.6"
@@ -3693,7 +3693,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="72"
       data-test-tooltip=""
       data-value="12.6"
@@ -3715,7 +3715,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="7"
       data-test-tooltip=""
       data-value="1.7"
@@ -3737,7 +3737,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="14"
       data-test-tooltip=""
       data-value="2.7"
@@ -3759,7 +3759,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="21"
       data-test-tooltip=""
       data-value="3.7"
@@ -3781,7 +3781,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="28"
       data-test-tooltip=""
       data-value="4.7"
@@ -3803,7 +3803,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="35"
       data-test-tooltip=""
       data-value="5.7"
@@ -3825,7 +3825,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="42"
       data-test-tooltip=""
       data-value="6.7"
@@ -3847,7 +3847,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="49"
       data-test-tooltip=""
       data-value="7.7"
@@ -3869,7 +3869,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="56"
       data-test-tooltip=""
       data-value="8.7"
@@ -3891,7 +3891,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="63"
       data-test-tooltip=""
       data-value="9.7"
@@ -3913,7 +3913,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="70"
       data-test-tooltip=""
       data-value="10.7"
@@ -3935,7 +3935,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="77"
       data-test-tooltip=""
       data-value="11.7"
@@ -3957,7 +3957,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="84"
       data-test-tooltip=""
       data-value="12.7"
@@ -3979,7 +3979,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="8"
       data-test-tooltip=""
       data-value="1.8"
@@ -4001,7 +4001,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="16"
       data-test-tooltip=""
       data-value="2.8"
@@ -4023,7 +4023,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="24"
       data-test-tooltip=""
       data-value="3.8"
@@ -4045,7 +4045,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="32"
       data-test-tooltip=""
       data-value="4.8"
@@ -4067,7 +4067,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="40"
       data-test-tooltip=""
       data-value="5.8"
@@ -4089,7 +4089,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="48"
       data-test-tooltip=""
       data-value="6.8"
@@ -4111,7 +4111,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="56"
       data-test-tooltip=""
       data-value="7.8"
@@ -4133,7 +4133,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="64"
       data-test-tooltip=""
       data-value="8.8"
@@ -4155,7 +4155,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="72"
       data-test-tooltip=""
       data-value="9.8"
@@ -4177,7 +4177,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="80"
       data-test-tooltip=""
       data-value="10.8"
@@ -4199,7 +4199,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="88"
       data-test-tooltip=""
       data-value="11.8"
@@ -4221,7 +4221,7 @@ exports[`CellsInput snapshots should render when select last cell 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp CellsInput__cell CellsInput__cell--active"
+      class="CellsInput__cell CellsInput__cell--active"
       data-test-grid-cell-input="96"
       data-test-tooltip=""
       data-value="12.8"

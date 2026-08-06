@@ -3,6 +3,8 @@
 
 .SectionColumnLabels {
   column-gap: $column-gap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 
   &__label {
     color: var(--xd-color-neutral-2);

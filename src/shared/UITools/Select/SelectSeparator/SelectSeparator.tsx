@@ -1,8 +1,9 @@
+import cx from 'classnames';
 import { FC } from 'react';
 
-// components
-import Box from '../../../UI/Box/Box';
+// styles
+import styles from './select-separator.scss';
 
-export const SelectSeparator: FC = () => <Box sx={{ bg: 'neutral3', flexShrink: 0, height: '1px', my: 8 }} />;
+export const SelectSeparator: FC = () => <div className={cx(styles.SelectSeparator)} />;
 
 export default SelectSeparator;

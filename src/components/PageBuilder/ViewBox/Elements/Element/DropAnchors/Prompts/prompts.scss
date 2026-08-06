@@ -3,6 +3,9 @@
 
 .Prompts {
   background-color: #0b99ff;
+  border-radius: 1px;
+  box-sizing: border-box;
+  position: absolute;
   z-index: $zindex-element-anchor;
 
   &--bottom {

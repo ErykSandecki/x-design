@@ -4,7 +4,9 @@
 @use '../../styles/z-indexes' as *;
 
 .ScrubbableInput {
+  align-items: center;
   cursor: ew-resize !important;
+  display: flex;
   user-select: none;
 
   &--disabled {

@@ -3,7 +3,6 @@ import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 // components
-import Box from '../../../UI/Box/Box';
 import Tooltip from '../../../UI/Tooltip/Tooltip';
 
 // others
@@ -44,31 +43,25 @@ export const AlignmentOption: FC<TAlignmentOptionProps> = ({ alignmentFlow, isSe
       e2eValue={alignmentFlow}
       key={alignmentFlow}
     >
-      <Box
-        classes={{
-          className: cx(styles.AlignmentOption, {
-            [styles['AlignmentOption--selected']]: isSelected,
-          }),
-        }}
+      <div
+        className={cx(styles.AlignmentOption, {
+          [styles['AlignmentOption--selected']]: isSelected,
+        })}
         onClick={() => onClick(alignmentFlow)}
       >
-        <Box
-          classes={{
-            className: cx(styles['AlignmentOption__option-view'], styles[optionViewModificators[alignmentFlow]]),
-          }}
+        <div
+          className={cx(styles['AlignmentOption__option-view'], styles[optionViewModificators[alignmentFlow]])}
         >
           {Array.from(Array(3), (_, index) => (
-            <Box
-              classes={{
-                className: cx(styles.AlignmentOption__indicator, {
-                  [styles['AlignmentOption__indicator--selected']]: isSelected,
-                }),
-              }}
+            <div
+              className={cx(styles.AlignmentOption__indicator, {
+                [styles['AlignmentOption__indicator--selected']]: isSelected,
+              })}
               key={index}
             />
           ))}
-        </Box>
-      </Box>
+        </div>
+      </div>
     </Tooltip>
   );
 };

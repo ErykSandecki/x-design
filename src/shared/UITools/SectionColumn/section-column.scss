@@ -9,4 +9,9 @@ $row-gap: 8px;
   &--with-top-margin {
     margin-top: 15px;
   }
+
+  &__row {
+    column-gap: 8px;
+    display: flex;
+  }
 }

@@ -3,12 +3,11 @@
 exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn"
+    class="SectionColumn"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels"
-      data-test-box=""
+      class="SectionColumnLabels"
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
@@ -20,26 +19,23 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
       </small>
     </div>
     <div
-      class="css-4ja0ji"
-      data-test-box=""
+      class="SectionColumn__row"
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
-        data-test-box=""
+        class="SectionColumnContent SectionColumnContent--two-inputs"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp TextField"
+          class="TextField"
           data-test-text-field="angle"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+            class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="angle"
           >
             <div
-              class="css-e5vky9 ScrubbableInput"
-              data-test-box=""
+              class="ScrubbableInput"
               data-test-scrubbable-input="angle"
             >
               <div
@@ -76,7 +72,7 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
           </div>
         </div>
         <div
-          class="css-1jnxvbp ButtonGroup ButtonGroup--full-width"
+          class="ButtonGroup ButtonGroup--full-width"
           data-test-button-group="layout-position"
         >
           <div
@@ -165,13 +161,9 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
           </div>
         </div>
       </div>
-      <div
-        class="css-1jnxvbp"
-        data-test-box=""
-      >
+      <div>
         <div
-          class="css-c1qms7"
-          data-test-box=""
+          class="SectionColumnButtonIcons"
         />
       </div>
     </div>
@@ -182,12 +174,11 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
 exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn"
+    class="SectionColumn"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels"
-      data-test-box=""
+      class="SectionColumnLabels"
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
@@ -199,26 +190,23 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
       </small>
     </div>
     <div
-      class="css-4ja0ji"
-      data-test-box=""
+      class="SectionColumn__row"
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
-        data-test-box=""
+        class="SectionColumnContent SectionColumnContent--two-inputs"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp TextField"
+          class="TextField"
           data-test-text-field="angle"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+            class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="angle"
           >
             <div
-              class="css-e5vky9 ScrubbableInput"
-              data-test-box=""
+              class="ScrubbableInput"
               data-test-scrubbable-input="angle"
             >
               <div
@@ -255,7 +243,7 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
           </div>
         </div>
         <div
-          class="css-1jnxvbp ButtonGroup ButtonGroup--full-width"
+          class="ButtonGroup ButtonGroup--full-width"
           data-test-button-group="layout-position"
         >
           <div
@@ -344,13 +332,9 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
           </div>
         </div>
       </div>
-      <div
-        class="css-1jnxvbp"
-        data-test-box=""
-      >
+      <div>
         <div
-          class="css-c1qms7"
-          data-test-box=""
+          class="SectionColumnButtonIcons"
         />
       </div>
     </div>

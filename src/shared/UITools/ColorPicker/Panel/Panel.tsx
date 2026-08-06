@@ -3,7 +3,6 @@ import { createPortal } from 'react-dom';
 import { FC, ReactNode, useEffect, useRef, useState } from 'react';
 
 // components
-import Box from '../../../UI/Box/Box';
 import ButtonIcon from '../../ButtonIcon/ButtonIcon';
 import ColorSampler from '../ColorSampler/ColorSampler';
 import E2EDataAttribute from 'shared/E2EDataAttributes/E2EDataAttribute';
@@ -59,26 +58,23 @@ export const Panel: FC<TPanelProps> = ({
 
   return (
     <E2EDataAttribute type={E2EAttribute.colorPickerPanel} value={e2eValue}>
-      <Box classes={{ className: cx(styles.Panel) }} onKeyDown={(event) => event.stopPropagation()} ref={ref}>
-        <Box
-          classes={{ className: cx(styles.Panel__header) }}
-          sx={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between', p: 8 }}
-        >
+      <div className={cx(styles.Panel)} onKeyDown={(event) => event.stopPropagation()} ref={ref}>
+        <div className={cx(styles.Panel__header)}>
           <Tabs activeTab={activeTab} setActiveTab={setActiveTab as TTabsProps['setActiveTab']} tabs={TABS} />
           <Icon clickable height={11} name="Close" onClick={() => setVisible(false)} width={11} />
-        </Box>
+        </div>
         {children}
         {sampleContainer &&
           createPortal(
-            <Box sx={{ alignItems: 'center', display: 'flex', justifyContent: 'center' }}>
+            <div className={cx(styles.Panel__sampler)}>
               <ButtonIcon e2eValue="sampler" name="Sample" onClick={onClickHandler} selected={activeSampler} />
               {activeSampler && (
                 <ColorSampler initialMousePosition={mousePosition.current} onClickColorSampler={onClickColorSampler} />
               )}
-            </Box>,
+            </div>,
             sampleContainer,
           )}
-      </Box>
+      </div>
     </E2EDataAttribute>
   );
 };

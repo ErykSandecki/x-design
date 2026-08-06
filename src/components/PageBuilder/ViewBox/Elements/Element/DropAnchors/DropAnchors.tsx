@@ -1,12 +1,15 @@
+import cx from 'classnames';
 import { FC } from 'react';
 
 // components
 import Anchors from './Anchors/Anchors';
 import Prompts from './Prompts/Prompts';
-import { Box } from 'shared';
 
 // hooks
 import { useDropAnchorsEvents } from './hooks/useDropAnchorsEvents';
+
+// styles
+import styles from './drop-anchors.scss';
 
 // types
 import { MouseMode } from 'types/enums/mouseMode';
@@ -28,15 +31,7 @@ const DropAnchors: FC<TDropAnchorsProps> = ({ id, index, mouseMode, parentId }) 
   );
 
   return (
-    <Box
-      sx={{
-        height: '100%',
-        left: 0,
-        position: 'absolute',
-        top: 0,
-        width: '100%',
-      }}
-    >
+    <div className={cx(styles.DropAnchors)}>
       <Prompts
         anchorPos={anchorPos}
         displayNextPrompt={displayNextPrompt}
@@ -45,7 +40,7 @@ const DropAnchors: FC<TDropAnchorsProps> = ({ id, index, mouseMode, parentId }) 
         isGrid={isGrid}
       />
       <Anchors isFlowVertical={isFlowVertical} isGrid={isGrid} {...events} />
-    </Box>
+    </div>
   );
 };
 

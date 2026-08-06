@@ -4,7 +4,7 @@ import { noop } from 'lodash';
 import { useTranslation } from 'react-i18next';
 
 // components
-import Box from '../../UI/Box/Box';
+import E2EDataAttribute from '../../E2EDataAttributes/E2EDataAttribute';
 import Icon from '../../UI/Icon/Icon';
 import SelectOptions from './SelectOptions/SelectOptions';
 import TextField, { TTextFieldProps } from '../TextField/TextField';
@@ -61,7 +61,7 @@ export const Select: FC<TSelectProps> = ({
   ...restProps
 }) => {
   const targetValue = isMixed ? MIXED : value;
-  const optionsRef = useRef<HTMLDivElement>(null);
+  const optionsRef = useRef<HTMLUListElement>(null);
   const selectRef = useRef(null);
   const wrapperRef = useRef(null);
   const { t } = useTranslation();
@@ -75,43 +75,41 @@ export const Select: FC<TSelectProps> = ({
   );
 
   return (
-    <Box
-      classes={{
-        className: cx(styles.Select, {
+    <E2EDataAttribute type={E2EAttribute.select} value={e2eValue}>
+      <div
+        className={cx(styles.Select, {
           [styles['Select--disabled']]: disabled,
-        }),
-      }}
-      e2eAttribute={E2EAttribute.select}
-      e2eValue={e2eValue}
-      onClick={onClickSelect}
-      onMouseEnter={onMouseEnterSelect}
-      onMouseLeave={onMouseLeaveSelect}
-      ref={selectRef}
-    >
-      <TextField
-        disabled={disabled}
-        disabledSelection
-        endAdorment={<Icon height={5} name="ChevronDown" style={{ marginRight: '5px' }} width={8} />}
-        readOnly={!enableTyping}
-        value={getValueAsText(isMixed, t, translationNameSpace, targetValue)}
-        variant={variant}
-        wrapperRef={wrapperRef}
-        {...restProps}
-      />
-      <SelectOptions
-        e2eValue={e2eValue}
-        idContainer={idContainerOptions}
-        onClick={onClickOption}
-        onMouseEnterOptions={onMouseEnterOptions}
-        onMouseLeaveOptions={onMouseLeaveOptions}
-        ref={optionsRef}
-        selected={selected}
-        value={targetValue}
-        wrapperRef={wrapperRef}
+        })}
+        onClick={onClickSelect}
+        onMouseEnter={onMouseEnterSelect}
+        onMouseLeave={onMouseLeaveSelect}
+        ref={selectRef}
       >
-        {children}
-      </SelectOptions>
-    </Box>
+        <TextField
+          disabled={disabled}
+          disabledSelection
+          endAdorment={<Icon height={5} name="ChevronDown" style={{ marginRight: '5px' }} width={8} />}
+          readOnly={!enableTyping}
+          value={getValueAsText(isMixed, t, translationNameSpace, targetValue)}
+          variant={variant}
+          wrapperRef={wrapperRef}
+          {...restProps}
+        />
+        <SelectOptions
+          e2eValue={e2eValue}
+          idContainer={idContainerOptions}
+          onClick={onClickOption}
+          onMouseEnterOptions={onMouseEnterOptions}
+          onMouseLeaveOptions={onMouseLeaveOptions}
+          ref={optionsRef}
+          selected={selected}
+          value={targetValue}
+          wrapperRef={wrapperRef}
+        >
+          {children}
+        </SelectOptions>
+      </div>
+    </E2EDataAttribute>
   );
 };
 

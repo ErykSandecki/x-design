@@ -3,12 +3,11 @@
 exports[`ColumnResizing snapshots should render ColumnResizing{max} 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
+    class="SectionColumn SectionColumn--with-bottom-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels"
-      data-test-box=""
+      class="SectionColumnLabels"
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
@@ -27,26 +26,23 @@ exports[`ColumnResizing snapshots should render ColumnResizing{max} 1`] = `
       </small>
     </div>
     <div
-      class="css-4ja0ji"
-      data-test-box=""
+      class="SectionColumn__row"
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
-        data-test-box=""
+        class="SectionColumnContent SectionColumnContent--two-inputs"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp TextField"
+          class="TextField"
           data-test-text-field="max-width"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+            class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="max-width"
           >
             <div
-              class="css-e5vky9 ScrubbableInput"
-              data-test-box=""
+              class="ScrubbableInput"
               data-test-scrubbable-input="max-width"
             >
               <div
@@ -65,8 +61,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing{max} 1`] = `
               value="200"
             />
             <div
-              class="css-zcp5dz TextFieldPopover"
-              data-test-box=""
+              class="TextFieldPopover"
             >
               <div
                 class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
@@ -76,14 +71,12 @@ exports[`ColumnResizing snapshots should render ColumnResizing{max} 1`] = `
                 width="12"
               />
               <div
-                class="css-6i6anv Popover"
-                data-test-box=""
+                class="Popover"
                 data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="0"
                 >
                   <div
@@ -109,8 +102,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing{max} 1`] = `
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="1"
                 >
                   <div
@@ -136,8 +128,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing{max} 1`] = `
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="2"
                 >
                   <div
@@ -163,8 +154,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing{max} 1`] = `
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="3"
                 >
                   <div
@@ -194,17 +184,16 @@ exports[`ColumnResizing snapshots should render ColumnResizing{max} 1`] = `
           </div>
         </div>
         <div
-          class="css-1jnxvbp TextField"
+          class="TextField"
           data-test-text-field="max-height"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+            class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="max-height"
           >
             <div
-              class="css-e5vky9 ScrubbableInput"
-              data-test-box=""
+              class="ScrubbableInput"
               data-test-scrubbable-input="max-height"
             >
               <div
@@ -223,8 +212,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing{max} 1`] = `
               value="200"
             />
             <div
-              class="css-zcp5dz TextFieldPopover"
-              data-test-box=""
+              class="TextFieldPopover"
             >
               <div
                 class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
@@ -234,14 +222,12 @@ exports[`ColumnResizing snapshots should render ColumnResizing{max} 1`] = `
                 width="12"
               />
               <div
-                class="css-6i6anv Popover"
-                data-test-box=""
+                class="Popover"
                 data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="0"
                 >
                   <div
@@ -267,8 +253,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing{max} 1`] = `
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="1"
                 >
                   <div
@@ -294,8 +279,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing{max} 1`] = `
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="2"
                 >
                   <div
@@ -321,8 +305,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing{max} 1`] = `
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="3"
                 >
                   <div
@@ -352,13 +335,9 @@ exports[`ColumnResizing snapshots should render ColumnResizing{max} 1`] = `
           </div>
         </div>
       </div>
-      <div
-        class="css-1jnxvbp"
-        data-test-box=""
-      >
+      <div>
         <div
-          class="css-c1qms7"
-          data-test-box=""
+          class="SectionColumnButtonIcons"
         />
       </div>
     </div>
@@ -369,12 +348,11 @@ exports[`ColumnResizing snapshots should render ColumnResizing{max} 1`] = `
 exports[`ColumnResizing snapshots should render ColumnResizing{min} 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
+    class="SectionColumn SectionColumn--with-bottom-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels"
-      data-test-box=""
+      class="SectionColumnLabels"
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
@@ -393,26 +371,23 @@ exports[`ColumnResizing snapshots should render ColumnResizing{min} 1`] = `
       </small>
     </div>
     <div
-      class="css-4ja0ji"
-      data-test-box=""
+      class="SectionColumn__row"
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
-        data-test-box=""
+        class="SectionColumnContent SectionColumnContent--two-inputs"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp TextField"
+          class="TextField"
           data-test-text-field="min-width"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+            class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="min-width"
           >
             <div
-              class="css-e5vky9 ScrubbableInput"
-              data-test-box=""
+              class="ScrubbableInput"
               data-test-scrubbable-input="min-width"
             >
               <div
@@ -431,8 +406,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing{min} 1`] = `
               value="200"
             />
             <div
-              class="css-zcp5dz TextFieldPopover"
-              data-test-box=""
+              class="TextFieldPopover"
             >
               <div
                 class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
@@ -442,14 +416,12 @@ exports[`ColumnResizing snapshots should render ColumnResizing{min} 1`] = `
                 width="12"
               />
               <div
-                class="css-6i6anv Popover"
-                data-test-box=""
+                class="Popover"
                 data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="0"
                 >
                   <div
@@ -475,8 +447,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing{min} 1`] = `
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="1"
                 >
                   <div
@@ -502,8 +473,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing{min} 1`] = `
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="2"
                 >
                   <div
@@ -529,8 +499,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing{min} 1`] = `
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="3"
                 >
                   <div
@@ -560,17 +529,16 @@ exports[`ColumnResizing snapshots should render ColumnResizing{min} 1`] = `
           </div>
         </div>
         <div
-          class="css-1jnxvbp TextField"
+          class="TextField"
           data-test-text-field="min-height"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+            class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="min-height"
           >
             <div
-              class="css-e5vky9 ScrubbableInput"
-              data-test-box=""
+              class="ScrubbableInput"
               data-test-scrubbable-input="min-height"
             >
               <div
@@ -589,8 +557,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing{min} 1`] = `
               value="200"
             />
             <div
-              class="css-zcp5dz TextFieldPopover"
-              data-test-box=""
+              class="TextFieldPopover"
             >
               <div
                 class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
@@ -600,14 +567,12 @@ exports[`ColumnResizing snapshots should render ColumnResizing{min} 1`] = `
                 width="12"
               />
               <div
-                class="css-6i6anv Popover"
-                data-test-box=""
+                class="Popover"
                 data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="0"
                 >
                   <div
@@ -633,8 +598,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing{min} 1`] = `
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="1"
                 >
                   <div
@@ -660,8 +624,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing{min} 1`] = `
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="2"
                 >
                   <div
@@ -687,8 +650,7 @@ exports[`ColumnResizing snapshots should render ColumnResizing{min} 1`] = `
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="3"
                 >
                   <div
@@ -718,13 +680,9 @@ exports[`ColumnResizing snapshots should render ColumnResizing{min} 1`] = `
           </div>
         </div>
       </div>
-      <div
-        class="css-1jnxvbp"
-        data-test-box=""
-      >
+      <div>
         <div
-          class="css-c1qms7"
-          data-test-box=""
+          class="SectionColumnButtonIcons"
         />
       </div>
     </div>
@@ -735,12 +693,11 @@ exports[`ColumnResizing snapshots should render ColumnResizing{min} 1`] = `
 exports[`ColumnResizing snapshots should render when values are mixed{max} 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
+    class="SectionColumn SectionColumn--with-bottom-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels"
-      data-test-box=""
+      class="SectionColumnLabels"
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
@@ -759,26 +716,23 @@ exports[`ColumnResizing snapshots should render when values are mixed{max} 1`] =
       </small>
     </div>
     <div
-      class="css-4ja0ji"
-      data-test-box=""
+      class="SectionColumn__row"
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
-        data-test-box=""
+        class="SectionColumnContent SectionColumnContent--two-inputs"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp TextField"
+          class="TextField"
           data-test-text-field="max-width"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+            class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="max-width"
           >
             <div
-              class="css-e5vky9 ScrubbableInput"
-              data-test-box=""
+              class="ScrubbableInput"
               data-test-scrubbable-input="max-width"
             >
               <div
@@ -797,8 +751,7 @@ exports[`ColumnResizing snapshots should render when values are mixed{max} 1`] =
               value="200"
             />
             <div
-              class="css-zcp5dz TextFieldPopover"
-              data-test-box=""
+              class="TextFieldPopover"
             >
               <div
                 class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
@@ -808,14 +761,12 @@ exports[`ColumnResizing snapshots should render when values are mixed{max} 1`] =
                 width="12"
               />
               <div
-                class="css-6i6anv Popover"
-                data-test-box=""
+                class="Popover"
                 data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="0"
                 >
                   <div
@@ -841,8 +792,7 @@ exports[`ColumnResizing snapshots should render when values are mixed{max} 1`] =
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="1"
                 >
                   <div
@@ -868,8 +818,7 @@ exports[`ColumnResizing snapshots should render when values are mixed{max} 1`] =
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="2"
                 >
                   <div
@@ -895,8 +844,7 @@ exports[`ColumnResizing snapshots should render when values are mixed{max} 1`] =
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="3"
                 >
                   <div
@@ -926,17 +874,16 @@ exports[`ColumnResizing snapshots should render when values are mixed{max} 1`] =
           </div>
         </div>
         <div
-          class="css-1jnxvbp TextField"
+          class="TextField"
           data-test-text-field="max-height"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+            class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="max-height"
           >
             <div
-              class="css-e5vky9 ScrubbableInput"
-              data-test-box=""
+              class="ScrubbableInput"
               data-test-scrubbable-input="max-height"
             >
               <div
@@ -955,8 +902,7 @@ exports[`ColumnResizing snapshots should render when values are mixed{max} 1`] =
               value="200"
             />
             <div
-              class="css-zcp5dz TextFieldPopover"
-              data-test-box=""
+              class="TextFieldPopover"
             >
               <div
                 class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
@@ -966,14 +912,12 @@ exports[`ColumnResizing snapshots should render when values are mixed{max} 1`] =
                 width="12"
               />
               <div
-                class="css-6i6anv Popover"
-                data-test-box=""
+                class="Popover"
                 data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="0"
                 >
                   <div
@@ -999,8 +943,7 @@ exports[`ColumnResizing snapshots should render when values are mixed{max} 1`] =
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="1"
                 >
                   <div
@@ -1026,8 +969,7 @@ exports[`ColumnResizing snapshots should render when values are mixed{max} 1`] =
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="2"
                 >
                   <div
@@ -1053,8 +995,7 @@ exports[`ColumnResizing snapshots should render when values are mixed{max} 1`] =
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="3"
                 >
                   <div
@@ -1084,13 +1025,9 @@ exports[`ColumnResizing snapshots should render when values are mixed{max} 1`] =
           </div>
         </div>
       </div>
-      <div
-        class="css-1jnxvbp"
-        data-test-box=""
-      >
+      <div>
         <div
-          class="css-c1qms7"
-          data-test-box=""
+          class="SectionColumnButtonIcons"
         />
       </div>
     </div>
@@ -1101,12 +1038,11 @@ exports[`ColumnResizing snapshots should render when values are mixed{max} 1`] =
 exports[`ColumnResizing snapshots should render when values are mixed{min} 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
+    class="SectionColumn SectionColumn--with-bottom-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels"
-      data-test-box=""
+      class="SectionColumnLabels"
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
@@ -1125,26 +1061,23 @@ exports[`ColumnResizing snapshots should render when values are mixed{min} 1`] =
       </small>
     </div>
     <div
-      class="css-4ja0ji"
-      data-test-box=""
+      class="SectionColumn__row"
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
-        data-test-box=""
+        class="SectionColumnContent SectionColumnContent--two-inputs"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp TextField"
+          class="TextField"
           data-test-text-field="min-width"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+            class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="min-width"
           >
             <div
-              class="css-e5vky9 ScrubbableInput"
-              data-test-box=""
+              class="ScrubbableInput"
               data-test-scrubbable-input="min-width"
             >
               <div
@@ -1163,8 +1096,7 @@ exports[`ColumnResizing snapshots should render when values are mixed{min} 1`] =
               value="200"
             />
             <div
-              class="css-zcp5dz TextFieldPopover"
-              data-test-box=""
+              class="TextFieldPopover"
             >
               <div
                 class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
@@ -1174,14 +1106,12 @@ exports[`ColumnResizing snapshots should render when values are mixed{min} 1`] =
                 width="12"
               />
               <div
-                class="css-6i6anv Popover"
-                data-test-box=""
+                class="Popover"
                 data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="0"
                 >
                   <div
@@ -1207,8 +1137,7 @@ exports[`ColumnResizing snapshots should render when values are mixed{min} 1`] =
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="1"
                 >
                   <div
@@ -1234,8 +1163,7 @@ exports[`ColumnResizing snapshots should render when values are mixed{min} 1`] =
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="2"
                 >
                   <div
@@ -1261,8 +1189,7 @@ exports[`ColumnResizing snapshots should render when values are mixed{min} 1`] =
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="3"
                 >
                   <div
@@ -1292,17 +1219,16 @@ exports[`ColumnResizing snapshots should render when values are mixed{min} 1`] =
           </div>
         </div>
         <div
-          class="css-1jnxvbp TextField"
+          class="TextField"
           data-test-text-field="min-height"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+            class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="min-height"
           >
             <div
-              class="css-e5vky9 ScrubbableInput"
-              data-test-box=""
+              class="ScrubbableInput"
               data-test-scrubbable-input="min-height"
             >
               <div
@@ -1321,8 +1247,7 @@ exports[`ColumnResizing snapshots should render when values are mixed{min} 1`] =
               value="200"
             />
             <div
-              class="css-zcp5dz TextFieldPopover"
-              data-test-box=""
+              class="TextFieldPopover"
             >
               <div
                 class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
@@ -1332,14 +1257,12 @@ exports[`ColumnResizing snapshots should render when values are mixed{min} 1`] =
                 width="12"
               />
               <div
-                class="css-6i6anv Popover"
-                data-test-box=""
+                class="Popover"
                 data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="0"
                 >
                   <div
@@ -1365,8 +1288,7 @@ exports[`ColumnResizing snapshots should render when values are mixed{min} 1`] =
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="1"
                 >
                   <div
@@ -1392,8 +1314,7 @@ exports[`ColumnResizing snapshots should render when values are mixed{min} 1`] =
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="2"
                 >
                   <div
@@ -1419,8 +1340,7 @@ exports[`ColumnResizing snapshots should render when values are mixed{min} 1`] =
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="3"
                 >
                   <div
@@ -1450,13 +1370,9 @@ exports[`ColumnResizing snapshots should render when values are mixed{min} 1`] =
           </div>
         </div>
       </div>
-      <div
-        class="css-1jnxvbp"
-        data-test-box=""
-      >
+      <div>
         <div
-          class="css-c1qms7"
-          data-test-box=""
+          class="SectionColumnButtonIcons"
         />
       </div>
     </div>

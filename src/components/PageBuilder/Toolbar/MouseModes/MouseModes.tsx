@@ -2,7 +2,7 @@ import cx from 'classnames';
 import { FC } from 'react';
 
 // components
-import { Box, Icon } from 'shared';
+import { E2EDataAttribute, Icon } from 'shared';
 
 // others
 import { MOUSE_MODE_ICON } from '../constants';
@@ -15,7 +15,7 @@ import { E2EAttribute } from 'types';
 import { MouseMode } from '../../../../types/enums/mouseMode';
 
 // utils
-import { enumToArray } from 'utils';
+import { enumToArray, mapAttributes } from 'utils';
 
 export type TMouseModeProps = {
   mouseMode: MouseMode;
@@ -24,39 +24,27 @@ export type TMouseModeProps = {
 
 const MouseModes: FC<TMouseModeProps> = ({ mouseMode, setMouseMode }) => {
   return (
-    <Box
-      classes={{ className: cx(styles.MouseModes) }}
-      e2eValue="toolbar"
-      sx={{ columnGap: '8px', display: 'flex', height: '100%' }}
-    >
-      {enumToArray<string>(MouseMode).map((name) => {
-        const isActive = mouseMode === name;
+    <E2EDataAttribute type={E2EAttribute.box} value="toolbar">
+      <div className={cx(styles.MouseModes)}>
+        {enumToArray<string>(MouseMode).map((name) => {
+          const isActive = mouseMode === name;
 
-        return (
-          <Box
-            attributes={{ [E2EAttribute.active]: isActive }}
-            classes={{
-              className: cx(styles.MouseModes__button, {
-                [styles['MouseModes__button--active']]: isActive,
-              }),
-            }}
-            e2eValue={name}
-            key={name}
-            onClick={() => setMouseMode(name as MouseMode)}
-            sx={{
-              alignItems: 'center',
-              borderRadius: '5px',
-              display: 'flex',
-              height: '100%',
-              justifyContent: 'center',
-              width: '32px',
-            }}
-          >
-            <Icon e2eValue={name} name={MOUSE_MODE_ICON[name]} />
-          </Box>
-        );
-      })}
-    </Box>
+          return (
+            <E2EDataAttribute key={name} type={E2EAttribute.box} value={name}>
+              <div
+                className={cx(styles.MouseModes__button, {
+                  [styles['MouseModes__button--active']]: isActive,
+                })}
+                onClick={() => setMouseMode(name as MouseMode)}
+                {...mapAttributes({ [E2EAttribute.active]: isActive })}
+              >
+                <Icon e2eValue={name} name={MOUSE_MODE_ICON[name]} />
+              </div>
+            </E2EDataAttribute>
+          );
+        })}
+      </div>
+    </E2EDataAttribute>
   );
 };
 

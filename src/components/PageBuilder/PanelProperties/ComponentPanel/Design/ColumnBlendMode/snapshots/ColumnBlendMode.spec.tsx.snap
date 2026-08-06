@@ -5,12 +5,11 @@ exports[`ColumnBlendMode snapshots should not render when initial 1`] = `<Docume
 exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
+    class="SectionColumn SectionColumn--with-bottom-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels"
-      data-test-box=""
+      class="SectionColumnLabels"
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
@@ -22,25 +21,23 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
       </small>
     </div>
     <div
-      class="css-4ja0ji"
-      data-test-box=""
+      class="SectionColumn__row"
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--single"
-        data-test-box=""
+        class="SectionColumnContent SectionColumnContent--single"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp Select"
+          class="Select"
           data-test-select="blend-mode"
         >
           <div
-            class="css-1jnxvbp TextField"
+            class="TextField"
             data-test-text-field=""
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--outlined"
+              class="TextFieldWrapper TextFieldWrapper--outlined"
               data-test-text-field-wrapper=""
             >
               <div
@@ -68,13 +65,12 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
             </div>
           </div>
           <ul
-            class="css-1jnxvbp SelectOptions"
-            data-test-box=""
+            class="SelectOptions"
             data-test-select-options="blend-mode"
             style="left: 0px; top: 24px; width: 0px;"
           >
             <li
-              class="css-1jnxvbp SelectItem"
+              class="SelectItem"
               data-test-select-item="initial"
               data-value="initial"
               role="option"
@@ -90,7 +86,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
               Pass through
             </li>
             <li
-              class="css-1jnxvbp SelectItem"
+              class="SelectItem"
               data-test-select-item="normal"
               data-value="normal"
               role="option"
@@ -106,11 +102,10 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
               Normal
             </li>
             <div
-              class="css-144d4hh"
-              data-test-box=""
+              class="SelectSeparator"
             />
             <li
-              class="css-1jnxvbp SelectItem"
+              class="SelectItem"
               data-test-select-item="darken"
               data-value="darken"
               role="option"
@@ -126,7 +121,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
               Darken
             </li>
             <li
-              class="css-1jnxvbp SelectItem"
+              class="SelectItem"
               data-test-select-item="multiply"
               data-value="multiply"
               role="option"
@@ -142,7 +137,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
               Multiply
             </li>
             <li
-              class="css-1jnxvbp SelectItem"
+              class="SelectItem"
               data-test-select-item="color-burn"
               data-value="color-burn"
               role="option"
@@ -158,11 +153,10 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
               Color burn
             </li>
             <div
-              class="css-144d4hh"
-              data-test-box=""
+              class="SelectSeparator"
             />
             <li
-              class="css-1jnxvbp SelectItem"
+              class="SelectItem"
               data-test-select-item="lighten"
               data-value="lighten"
               role="option"
@@ -178,7 +172,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
               Lighten
             </li>
             <li
-              class="css-1jnxvbp SelectItem"
+              class="SelectItem"
               data-test-select-item="screen"
               data-value="screen"
               role="option"
@@ -194,7 +188,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
               Screen
             </li>
             <li
-              class="css-1jnxvbp SelectItem"
+              class="SelectItem"
               data-test-select-item="plus-lighter"
               data-value="plus-lighter"
               role="option"
@@ -210,7 +204,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
               Plus lighter
             </li>
             <li
-              class="css-1jnxvbp SelectItem"
+              class="SelectItem"
               data-test-select-item="color-dodge"
               data-value="color-dodge"
               role="option"
@@ -226,11 +220,10 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
               Color dodge
             </li>
             <div
-              class="css-144d4hh"
-              data-test-box=""
+              class="SelectSeparator"
             />
             <li
-              class="css-1jnxvbp SelectItem"
+              class="SelectItem"
               data-test-select-item="overlay"
               data-value="overlay"
               role="option"
@@ -246,7 +239,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
               Overlay
             </li>
             <li
-              class="css-1jnxvbp SelectItem"
+              class="SelectItem"
               data-test-select-item="soft-light"
               data-value="soft-light"
               role="option"
@@ -262,7 +255,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
               Soft Light
             </li>
             <li
-              class="css-1jnxvbp SelectItem"
+              class="SelectItem"
               data-test-select-item="hard-light"
               data-value="hard-light"
               role="option"
@@ -278,7 +271,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
               Hard light
             </li>
             <li
-              class="css-1jnxvbp SelectItem"
+              class="SelectItem"
               data-test-select-item="difference"
               data-value="difference"
               role="option"
@@ -294,7 +287,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
               Difference
             </li>
             <li
-              class="css-1jnxvbp SelectItem"
+              class="SelectItem"
               data-test-select-item="exclusion"
               data-value="exclusion"
               role="option"
@@ -310,11 +303,10 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
               Exclusion
             </li>
             <div
-              class="css-144d4hh"
-              data-test-box=""
+              class="SelectSeparator"
             />
             <li
-              class="css-1jnxvbp SelectItem"
+              class="SelectItem"
               data-test-select-item="hue"
               data-value="hue"
               role="option"
@@ -330,7 +322,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
               Hue
             </li>
             <li
-              class="css-1jnxvbp SelectItem"
+              class="SelectItem"
               data-test-select-item="saturation"
               data-value="saturation"
               role="option"
@@ -346,7 +338,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
               Saturation
             </li>
             <li
-              class="css-1jnxvbp SelectItem SelectItem--selected"
+              class="SelectItem SelectItem--selected"
               data-test-select-item="color"
               data-value="color"
               role="option"
@@ -364,16 +356,12 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
           </ul>
         </div>
       </div>
-      <div
-        class="css-1jnxvbp"
-        data-test-box=""
-      >
+      <div>
         <div
-          class="css-c1qms7"
-          data-test-box=""
+          class="SectionColumnButtonIcons"
         >
           <div
-            class="css-1jnxvbp ButtonIcon"
+            class="ButtonIcon"
             data-test-button-icon="remove-blend"
             data-test-tooltip=""
           >

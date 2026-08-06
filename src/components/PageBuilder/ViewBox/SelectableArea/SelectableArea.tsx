@@ -1,11 +1,6 @@
 import cx from 'classnames';
 import { FC } from 'react';
 
-// components
-import { Box } from 'shared';
-
-// others
-
 // styles
 import styles from './selectable-area.scss';
 
@@ -24,15 +19,11 @@ const SelectableArea: FC<TSelectableAreaProps> = ({ selectableArea }) => {
   }
 
   return (
-    <Box
-      classes={{
-        className: cx(styles.SelectableArea),
-      }}
-    >
+    <div className={cx(styles.SelectableArea)}>
       <svg className={cx(styles.SelectableArea__area)}>
         <path d={`M ${x1},${y1} H ${x2} V ${y2} H ${x1} V ${y1}`} />
       </svg>
-    </Box>
+    </div>
   );
 };
 

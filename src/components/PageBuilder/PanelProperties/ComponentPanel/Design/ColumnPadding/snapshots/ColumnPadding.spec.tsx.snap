@@ -3,12 +3,11 @@
 exports[`ColumnPadding snapshots should render ColumnPadding 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
+    class="SectionColumn SectionColumn--with-bottom-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels"
-      data-test-box=""
+      class="SectionColumnLabels"
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
@@ -20,26 +19,23 @@ exports[`ColumnPadding snapshots should render ColumnPadding 1`] = `
       </small>
     </div>
     <div
-      class="css-4ja0ji"
-      data-test-box=""
+      class="SectionColumn__row"
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
-        data-test-box=""
+        class="SectionColumnContent SectionColumnContent--two-inputs"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp TextField"
+          class="TextField"
           data-test-text-field="padding-lr"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+            class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="padding-lr"
           >
             <div
-              class="css-e5vky9 ScrubbableInput"
-              data-test-box=""
+              class="ScrubbableInput"
               data-test-scrubbable-input="padding-lr"
             >
               <div
@@ -58,8 +54,7 @@ exports[`ColumnPadding snapshots should render ColumnPadding 1`] = `
               value="0"
             />
             <div
-              class="css-zcp5dz TextFieldPopover"
-              data-test-box=""
+              class="TextFieldPopover"
             >
               <div
                 class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
@@ -69,14 +64,12 @@ exports[`ColumnPadding snapshots should render ColumnPadding 1`] = `
                 width="12"
               />
               <div
-                class="css-6i6anv Popover"
-                data-test-box=""
+                class="Popover"
                 data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="0"
                 >
                   <div
@@ -122,17 +115,16 @@ exports[`ColumnPadding snapshots should render ColumnPadding 1`] = `
           </div>
         </div>
         <div
-          class="css-1jnxvbp TextField"
+          class="TextField"
           data-test-text-field="padding-tb"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+            class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="padding-tb"
           >
             <div
-              class="css-e5vky9 ScrubbableInput"
-              data-test-box=""
+              class="ScrubbableInput"
               data-test-scrubbable-input="padding-tb"
             >
               <div
@@ -151,8 +143,7 @@ exports[`ColumnPadding snapshots should render ColumnPadding 1`] = `
               value="0"
             />
             <div
-              class="css-zcp5dz TextFieldPopover"
-              data-test-box=""
+              class="TextFieldPopover"
             >
               <div
                 class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
@@ -162,14 +153,12 @@ exports[`ColumnPadding snapshots should render ColumnPadding 1`] = `
                 width="12"
               />
               <div
-                class="css-6i6anv Popover"
-                data-test-box=""
+                class="Popover"
                 data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="0"
                 >
                   <div
@@ -215,16 +204,12 @@ exports[`ColumnPadding snapshots should render ColumnPadding 1`] = `
           </div>
         </div>
       </div>
-      <div
-        class="css-1jnxvbp"
-        data-test-box=""
-      >
+      <div>
         <div
-          class="css-c1qms7"
-          data-test-box=""
+          class="SectionColumnButtonIcons"
         >
           <div
-            class="css-1jnxvbp ButtonIcon"
+            class="ButtonIcon"
             data-test-button-icon="insets-mode"
             data-test-tooltip=""
           >

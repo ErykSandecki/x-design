@@ -1,0 +1,12 @@
+.PopoverPreview {
+  align-items: center;
+  background-color: var(--xd-color-neutral-4);
+  border-bottom: 1px solid var(--xd-color-neutral-3);
+  border-top: 1px solid var(--xd-color-neutral-3);
+  display: flex;
+  height: 120px;
+  justify-content: center;
+  margin-bottom: 8px;
+  margin-left: -10px;
+  width: calc(100% + 20px);
+}

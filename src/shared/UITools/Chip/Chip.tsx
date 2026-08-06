@@ -2,16 +2,13 @@ import cx from 'classnames';
 import { FC, ReactNode } from 'react';
 
 // components
-import Box from '../../UI/Box/Box';
-
-// others
+import E2EDataAttribute, { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute';
 
 // styles
 import styles from './chip.scss';
 
 // types
 import { E2EAttribute } from 'types';
-import { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute';
 
 export type TChipProps = {
   children: ReactNode;
@@ -26,16 +23,11 @@ export const Chip: FC<TChipProps> = ({ children, className, e2eValue = '', onCli
   }
 
   return (
-    <Box
-      classes={{
-        className: cx(styles.Chip, className),
-      }}
-      e2eAttribute={E2EAttribute.chip}
-      e2eValue={e2eValue}
-      onClick={onClick}
-    >
-      {children}
-    </Box>
+    <E2EDataAttribute type={E2EAttribute.chip} value={e2eValue}>
+      <div className={cx(styles.Chip, className)} onClick={onClick}>
+        {children}
+      </div>
+    </E2EDataAttribute>
   );
 };
 

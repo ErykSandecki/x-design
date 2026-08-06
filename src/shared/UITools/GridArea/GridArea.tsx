@@ -3,21 +3,18 @@ import { FC, useRef } from 'react';
 import { noop } from 'lodash';
 
 // components
-import Box from '../../UI/Box/Box';
 import Cells, { TCellsProps } from './Cells/Cells';
+import E2EDataAttribute, { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute';
 import GridAreaPopover, { TGridAreaPopoverProps } from './GridAreaPopover/GridAreaPopover';
 
 // hooks
 import { useOutsideClick } from 'hooks';
-
-// others
 
 // styles
 import styles from './grid-area.scss';
 
 // types
 import { E2EAttribute } from 'types';
-import { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute';
 
 export type TGridAreaProps = TCellsProps &
   Pick<TGridAreaPopoverProps, 'onBlurColumns' | 'onBlurRows' | 'onChangeColumns' | 'onChangeRows' | 'onClickCell'> & {
@@ -38,27 +35,25 @@ export const GridArea: FC<TGridAreaProps> = ({
   const { selected, setSelected } = useOutsideClick([], ref, noop, idContainer);
 
   return (
-    <Box
-      classes={{
-        className: cx('GridArea', styles.GridArea, {
+    <E2EDataAttribute type={E2EAttribute.gridArea} value={e2eValue}>
+      <div
+        className={cx('GridArea', styles.GridArea, {
           [styles['GridArea--full-width']]: fullWidth,
-        }),
-      }}
-      e2eAttribute={E2EAttribute.gridArea}
-      e2eValue={e2eValue}
-      onClick={() => setSelected(true)}
-      ref={ref}
-    >
-      <Cells columns={columns} rows={rows} />
-      <GridAreaPopover
-        columns={columns}
+        })}
+        onClick={() => setSelected(true)}
         ref={ref}
-        rows={rows}
-        selected={selected}
-        setSelected={setSelected}
-        {...restProps}
-      />
-    </Box>
+      >
+        <Cells columns={columns} rows={rows} />
+        <GridAreaPopover
+          columns={columns}
+          ref={ref}
+          rows={rows}
+          selected={selected}
+          setSelected={setSelected}
+          {...restProps}
+        />
+      </div>
+    </E2EDataAttribute>
   );
 };
 

@@ -3,25 +3,22 @@
 exports[`Design snapshots should render Design 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp Section"
+    class="Section"
     data-test-section=""
   >
     <div
-      class="css-1jnxvbp SectionColumn"
+      class="SectionColumn"
       data-test-section=""
     >
       <div
-        class="css-xdzdnq SectionColumnLabels"
-        data-test-box=""
+        class="SectionColumnLabels"
         style="width: calc(100% - 48px - 2.5px - 8px);"
       />
       <div
-        class="css-4ja0ji"
-        data-test-box=""
+        class="SectionColumn__row"
       >
         <div
-          class="css-biptg5 SectionColumnContent SectionColumnContent--single"
-          data-test-box=""
+          class="SectionColumnContent SectionColumnContent--single"
           style="width: calc(100% - 48px - 2.5px - 8px);"
         >
           <small
@@ -32,16 +29,12 @@ exports[`Design snapshots should render Design 1`] = `
             Frame
           </small>
         </div>
-        <div
-          class="css-1jnxvbp"
-          data-test-box=""
-        >
+        <div>
           <div
-            class="css-c1qms7"
-            data-test-box=""
+            class="SectionColumnButtonIcons"
           >
             <div
-              class="css-1jnxvbp ButtonIcon"
+              class="ButtonIcon"
               data-test-button-icon=""
               data-test-tooltip=""
             >
@@ -70,7 +63,7 @@ exports[`Design snapshots should render Design 1`] = `
               </div>
             </div>
             <div
-              class="css-1jnxvbp ButtonIcon"
+              class="ButtonIcon"
               data-test-button-icon=""
               data-test-tooltip=""
             >
@@ -104,12 +97,11 @@ exports[`Design snapshots should render Design 1`] = `
     </div>
   </div>
   <div
-    class="css-1jnxvbp Section"
+    class="Section"
     data-test-section=""
   >
     <div
-      class="css-1jnxvbp Section__label-wrapper Section__label-wrapper--separator"
-      data-test-box=""
+      class="Section__label-wrapper Section__label-wrapper--separator"
     >
       <small
         class="css-1jnxvbp Section__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -119,17 +111,15 @@ exports[`Design snapshots should render Design 1`] = `
         Position
       </small>
       <div
-        class="css-1f1atqu"
-        data-test-box=""
+        class="Section__label-component"
       />
     </div>
     <div
-      class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
+      class="SectionColumn SectionColumn--with-bottom-margin"
       data-test-section=""
     >
       <div
-        class="css-xdzdnq SectionColumnLabels"
-        data-test-box=""
+        class="SectionColumnLabels"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <small
@@ -141,16 +131,14 @@ exports[`Design snapshots should render Design 1`] = `
         </small>
       </div>
       <div
-        class="css-4ja0ji"
-        data-test-box=""
+        class="SectionColumn__row"
       >
         <div
-          class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
-          data-test-box=""
+          class="SectionColumnContent SectionColumnContent--two-inputs"
           style="width: calc(100% - 24px - 0px - 8px);"
         >
           <div
-            class="css-1jnxvbp ButtonGroup"
+            class="ButtonGroup"
             data-test-button-group="horizontal-alignment"
           >
             <div
@@ -239,7 +227,7 @@ exports[`Design snapshots should render Design 1`] = `
             </div>
           </div>
           <div
-            class="css-1jnxvbp ButtonGroup"
+            class="ButtonGroup"
             data-test-button-group="vertical-alignment"
           >
             <div
@@ -328,24 +316,19 @@ exports[`Design snapshots should render Design 1`] = `
             </div>
           </div>
         </div>
-        <div
-          class="css-1jnxvbp"
-          data-test-box=""
-        >
+        <div>
           <div
-            class="css-c1qms7"
-            data-test-box=""
+            class="SectionColumnButtonIcons"
           />
         </div>
       </div>
     </div>
     <div
-      class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
+      class="SectionColumn SectionColumn--with-bottom-margin"
       data-test-section=""
     >
       <div
-        class="css-xdzdnq SectionColumnLabels"
-        data-test-box=""
+        class="SectionColumnLabels"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <small
@@ -357,26 +340,23 @@ exports[`Design snapshots should render Design 1`] = `
         </small>
       </div>
       <div
-        class="css-4ja0ji"
-        data-test-box=""
+        class="SectionColumn__row"
       >
         <div
-          class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
-          data-test-box=""
+          class="SectionColumnContent SectionColumnContent--two-inputs"
           style="width: calc(100% - 24px - 0px - 8px);"
         >
           <div
-            class="css-1jnxvbp TextField"
+            class="TextField"
             data-test-text-field="x"
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+              class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
               data-test-text-field-wrapper="x"
             >
               <div
-                class="css-e5vky9 ScrubbableInput"
-                data-test-box=""
+                class="ScrubbableInput"
                 data-test-scrubbable-input="x"
               >
                 <small
@@ -413,17 +393,16 @@ exports[`Design snapshots should render Design 1`] = `
             </div>
           </div>
           <div
-            class="css-1jnxvbp TextField"
+            class="TextField"
             data-test-text-field="y"
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+              class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
               data-test-text-field-wrapper="y"
             >
               <div
-                class="css-e5vky9 ScrubbableInput"
-                data-test-box=""
+                class="ScrubbableInput"
                 data-test-scrubbable-input="y"
               >
                 <small
@@ -460,24 +439,19 @@ exports[`Design snapshots should render Design 1`] = `
             </div>
           </div>
         </div>
-        <div
-          class="css-1jnxvbp"
-          data-test-box=""
-        >
+        <div>
           <div
-            class="css-c1qms7"
-            data-test-box=""
+            class="SectionColumnButtonIcons"
           />
         </div>
       </div>
     </div>
     <div
-      class="css-1jnxvbp SectionColumn"
+      class="SectionColumn"
       data-test-section=""
     >
       <div
-        class="css-xdzdnq SectionColumnLabels"
-        data-test-box=""
+        class="SectionColumnLabels"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <small
@@ -489,26 +463,23 @@ exports[`Design snapshots should render Design 1`] = `
         </small>
       </div>
       <div
-        class="css-4ja0ji"
-        data-test-box=""
+        class="SectionColumn__row"
       >
         <div
-          class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
-          data-test-box=""
+          class="SectionColumnContent SectionColumnContent--two-inputs"
           style="width: calc(100% - 24px - 0px - 8px);"
         >
           <div
-            class="css-1jnxvbp TextField"
+            class="TextField"
             data-test-text-field="angle"
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+              class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
               data-test-text-field-wrapper="angle"
             >
               <div
-                class="css-e5vky9 ScrubbableInput"
-                data-test-box=""
+                class="ScrubbableInput"
                 data-test-scrubbable-input="angle"
               >
                 <div
@@ -545,7 +516,7 @@ exports[`Design snapshots should render Design 1`] = `
             </div>
           </div>
           <div
-            class="css-1jnxvbp ButtonGroup ButtonGroup--full-width"
+            class="ButtonGroup ButtonGroup--full-width"
             data-test-button-group="layout-position"
           >
             <div
@@ -634,25 +605,20 @@ exports[`Design snapshots should render Design 1`] = `
             </div>
           </div>
         </div>
-        <div
-          class="css-1jnxvbp"
-          data-test-box=""
-        >
+        <div>
           <div
-            class="css-c1qms7"
-            data-test-box=""
+            class="SectionColumnButtonIcons"
           />
         </div>
       </div>
     </div>
   </div>
   <div
-    class="css-1jnxvbp Section"
+    class="Section"
     data-test-section=""
   >
     <div
-      class="css-1jnxvbp Section__label-wrapper Section__label-wrapper--separator"
-      data-test-box=""
+      class="Section__label-wrapper Section__label-wrapper--separator"
     >
       <small
         class="css-1jnxvbp Section__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -662,11 +628,10 @@ exports[`Design snapshots should render Design 1`] = `
         Layout
       </small>
       <div
-        class="css-1f1atqu"
-        data-test-box=""
+        class="Section__label-component"
       >
         <div
-          class="css-1jnxvbp ButtonIcon"
+          class="ButtonIcon"
           data-test-button-icon=""
           data-test-tooltip=""
         >
@@ -695,7 +660,7 @@ exports[`Design snapshots should render Design 1`] = `
           </div>
         </div>
         <div
-          class="css-1jnxvbp ButtonIcon ButtonIcon--selected"
+          class="ButtonIcon ButtonIcon--selected"
           data-test-button-icon=""
           data-test-tooltip=""
         >
@@ -726,12 +691,11 @@ exports[`Design snapshots should render Design 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
+      class="SectionColumn SectionColumn--with-bottom-margin"
       data-test-section=""
     >
       <div
-        class="css-xdzdnq SectionColumnLabels"
-        data-test-box=""
+        class="SectionColumnLabels"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <small
@@ -743,17 +707,14 @@ exports[`Design snapshots should render Design 1`] = `
         </small>
       </div>
       <div
-        class="css-4ja0ji"
-        data-test-box=""
+        class="SectionColumn__row"
       >
         <div
-          class="css-biptg5 SectionColumnContent SectionColumnContent--single"
-          data-test-box=""
+          class="SectionColumnContent SectionColumnContent--single"
           style="width: calc(100% - 24px - 0px - 8px);"
         >
           <div
-            class="css-19um8c2 ToggleButtonGroup ToggleButtonGroup--full-width"
-            data-test-box=""
+            class="ToggleButtonGroup ToggleButtonGroup--full-width"
             data-test-toggle-button-group="flow"
           >
             <button
@@ -874,16 +835,12 @@ exports[`Design snapshots should render Design 1`] = `
             </div>
           </div>
         </div>
-        <div
-          class="css-1jnxvbp"
-          data-test-box=""
-        >
+        <div>
           <div
-            class="css-c1qms7"
-            data-test-box=""
+            class="SectionColumnButtonIcons"
           >
             <div
-              class="css-1jnxvbp ButtonIcon"
+              class="ButtonIcon"
               data-test-button-icon="wrap"
               data-test-tooltip=""
             >
@@ -916,12 +873,11 @@ exports[`Design snapshots should render Design 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
+      class="SectionColumn SectionColumn--with-bottom-margin"
       data-test-section=""
     >
       <div
-        class="css-xdzdnq SectionColumnLabels"
-        data-test-box=""
+        class="SectionColumnLabels"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <small
@@ -933,26 +889,23 @@ exports[`Design snapshots should render Design 1`] = `
         </small>
       </div>
       <div
-        class="css-4ja0ji"
-        data-test-box=""
+        class="SectionColumn__row"
       >
         <div
-          class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
-          data-test-box=""
+          class="SectionColumnContent SectionColumnContent--two-inputs"
           style="width: calc(100% - 24px - 0px - 8px);"
         >
           <div
-            class="css-1jnxvbp TextField"
+            class="TextField"
             data-test-text-field="width"
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+              class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
               data-test-text-field-wrapper="width"
             >
               <div
-                class="css-e5vky9 ScrubbableInput"
-                data-test-box=""
+                class="ScrubbableInput"
                 data-test-scrubbable-input="width"
               >
                 <small
@@ -971,8 +924,7 @@ exports[`Design snapshots should render Design 1`] = `
                 value="100"
               />
               <div
-                class="css-zcp5dz TextFieldPopover"
-                data-test-box=""
+                class="TextFieldPopover"
               >
                 <div
                   class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
@@ -982,14 +934,12 @@ exports[`Design snapshots should render Design 1`] = `
                   width="12"
                 />
                 <div
-                  class="css-6i6anv Popover"
-                  data-test-box=""
+                  class="Popover"
                   data-test-popover="popover"
                   style="left: 0px; top: 0px;"
                 >
                   <div
-                    class="css-1wfopar PopoverItem"
-                    data-test-box=""
+                    class="PopoverItem"
                     data-test-popover-item="0"
                   >
                     <div
@@ -1015,8 +965,7 @@ exports[`Design snapshots should render Design 1`] = `
                     </small>
                   </div>
                   <div
-                    class="css-1wfopar PopoverItem"
-                    data-test-box=""
+                    class="PopoverItem"
                     data-test-popover-item="1"
                   >
                     <div
@@ -1042,8 +991,7 @@ exports[`Design snapshots should render Design 1`] = `
                     </small>
                   </div>
                   <div
-                    class="css-1wfopar PopoverItem"
-                    data-test-box=""
+                    class="PopoverItem"
                     data-test-popover-item="2"
                   >
                     <div
@@ -1069,12 +1017,10 @@ exports[`Design snapshots should render Design 1`] = `
                     </small>
                   </div>
                   <div
-                    class="css-3q7iqb"
-                    data-test-box=""
+                    class="PopoverSeparator"
                   />
                   <div
-                    class="css-1wfopar PopoverItem"
-                    data-test-box=""
+                    class="PopoverItem"
                     data-test-popover-item="3"
                   >
                     <div
@@ -1100,8 +1046,7 @@ exports[`Design snapshots should render Design 1`] = `
                     </small>
                   </div>
                   <div
-                    class="css-1wfopar PopoverItem"
-                    data-test-box=""
+                    class="PopoverItem"
                     data-test-popover-item="4"
                   >
                     <div
@@ -1131,17 +1076,16 @@ exports[`Design snapshots should render Design 1`] = `
             </div>
           </div>
           <div
-            class="css-1jnxvbp TextField"
+            class="TextField"
             data-test-text-field="height"
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+              class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
               data-test-text-field-wrapper="height"
             >
               <div
-                class="css-e5vky9 ScrubbableInput"
-                data-test-box=""
+                class="ScrubbableInput"
                 data-test-scrubbable-input="height"
               >
                 <small
@@ -1160,8 +1104,7 @@ exports[`Design snapshots should render Design 1`] = `
                 value="100"
               />
               <div
-                class="css-zcp5dz TextFieldPopover"
-                data-test-box=""
+                class="TextFieldPopover"
               >
                 <div
                   class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
@@ -1171,14 +1114,12 @@ exports[`Design snapshots should render Design 1`] = `
                   width="12"
                 />
                 <div
-                  class="css-6i6anv Popover"
-                  data-test-box=""
+                  class="Popover"
                   data-test-popover="popover"
                   style="left: 0px; top: 0px;"
                 >
                   <div
-                    class="css-1wfopar PopoverItem"
-                    data-test-box=""
+                    class="PopoverItem"
                     data-test-popover-item="0"
                   >
                     <div
@@ -1204,8 +1145,7 @@ exports[`Design snapshots should render Design 1`] = `
                     </small>
                   </div>
                   <div
-                    class="css-1wfopar PopoverItem"
-                    data-test-box=""
+                    class="PopoverItem"
                     data-test-popover-item="1"
                   >
                     <div
@@ -1231,8 +1171,7 @@ exports[`Design snapshots should render Design 1`] = `
                     </small>
                   </div>
                   <div
-                    class="css-1wfopar PopoverItem"
-                    data-test-box=""
+                    class="PopoverItem"
                     data-test-popover-item="2"
                   >
                     <div
@@ -1258,12 +1197,10 @@ exports[`Design snapshots should render Design 1`] = `
                     </small>
                   </div>
                   <div
-                    class="css-3q7iqb"
-                    data-test-box=""
+                    class="PopoverSeparator"
                   />
                   <div
-                    class="css-1wfopar PopoverItem"
-                    data-test-box=""
+                    class="PopoverItem"
                     data-test-popover-item="3"
                   >
                     <div
@@ -1289,8 +1226,7 @@ exports[`Design snapshots should render Design 1`] = `
                     </small>
                   </div>
                   <div
-                    class="css-1wfopar PopoverItem"
-                    data-test-box=""
+                    class="PopoverItem"
                     data-test-popover-item="4"
                   >
                     <div
@@ -1320,16 +1256,12 @@ exports[`Design snapshots should render Design 1`] = `
             </div>
           </div>
         </div>
-        <div
-          class="css-1jnxvbp"
-          data-test-box=""
-        >
+        <div>
           <div
-            class="css-c1qms7"
-            data-test-box=""
+            class="SectionColumnButtonIcons"
           >
             <div
-              class="css-1jnxvbp ButtonIcon"
+              class="ButtonIcon"
               data-test-button-icon="aspect-ratio"
               data-test-tooltip=""
             >
@@ -1362,12 +1294,11 @@ exports[`Design snapshots should render Design 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
+      class="SectionColumn SectionColumn--with-bottom-margin"
       data-test-section=""
     >
       <div
-        class="css-xdzdnq SectionColumnLabels"
-        data-test-box=""
+        class="SectionColumnLabels"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <small
@@ -1386,38 +1317,31 @@ exports[`Design snapshots should render Design 1`] = `
         </small>
       </div>
       <div
-        class="css-4ja0ji"
-        data-test-box=""
+        class="SectionColumn__row"
       >
         <div
-          class="css-biptg5 SectionColumnContent SectionColumnContent--one-by-two"
-          data-test-box=""
+          class="SectionColumnContent SectionColumnContent--one-by-two"
           style="width: calc(100% - 24px - 0px - 8px);"
         >
           <div
-            class="css-1jnxvbp AlignmentArea AlignmentArea"
+            class="AlignmentArea AlignmentArea"
             data-test-alignment-area="alignment-flow"
           >
             <div
-              class="css-1jnxvbp AlignmentOption"
+              class="AlignmentOption"
               data-test-alignment-area-option="topLeft"
-              data-test-box=""
             >
               <div
-                class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--topLeft"
-                data-test-box=""
+                class="AlignmentOption__option-view AlignmentOption__option-view--topLeft"
               >
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator"
-                  data-test-box=""
+                  class="AlignmentOption__indicator"
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator"
-                  data-test-box=""
+                  class="AlignmentOption__indicator"
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator"
-                  data-test-box=""
+                  class="AlignmentOption__indicator"
                 />
               </div>
             </div>
@@ -1438,25 +1362,20 @@ exports[`Design snapshots should render Design 1`] = `
               </div>
             </div>
             <div
-              class="css-1jnxvbp AlignmentOption"
+              class="AlignmentOption"
               data-test-alignment-area-option="topCenter"
-              data-test-box=""
             >
               <div
-                class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--top-center"
-                data-test-box=""
+                class="AlignmentOption__option-view AlignmentOption__option-view--top-center"
               >
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator"
-                  data-test-box=""
+                  class="AlignmentOption__indicator"
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator"
-                  data-test-box=""
+                  class="AlignmentOption__indicator"
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator"
-                  data-test-box=""
+                  class="AlignmentOption__indicator"
                 />
               </div>
             </div>
@@ -1477,25 +1396,20 @@ exports[`Design snapshots should render Design 1`] = `
               </div>
             </div>
             <div
-              class="css-1jnxvbp AlignmentOption"
+              class="AlignmentOption"
               data-test-alignment-area-option="topRight"
-              data-test-box=""
             >
               <div
-                class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--top-right"
-                data-test-box=""
+                class="AlignmentOption__option-view AlignmentOption__option-view--top-right"
               >
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator"
-                  data-test-box=""
+                  class="AlignmentOption__indicator"
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator"
-                  data-test-box=""
+                  class="AlignmentOption__indicator"
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator"
-                  data-test-box=""
+                  class="AlignmentOption__indicator"
                 />
               </div>
             </div>
@@ -1516,25 +1430,20 @@ exports[`Design snapshots should render Design 1`] = `
               </div>
             </div>
             <div
-              class="css-1jnxvbp AlignmentOption"
+              class="AlignmentOption"
               data-test-alignment-area-option="left"
-              data-test-box=""
             >
               <div
-                class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--left"
-                data-test-box=""
+                class="AlignmentOption__option-view AlignmentOption__option-view--left"
               >
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator"
-                  data-test-box=""
+                  class="AlignmentOption__indicator"
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator"
-                  data-test-box=""
+                  class="AlignmentOption__indicator"
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator"
-                  data-test-box=""
+                  class="AlignmentOption__indicator"
                 />
               </div>
             </div>
@@ -1555,25 +1464,20 @@ exports[`Design snapshots should render Design 1`] = `
               </div>
             </div>
             <div
-              class="css-1jnxvbp AlignmentOption"
+              class="AlignmentOption"
               data-test-alignment-area-option="center"
-              data-test-box=""
             >
               <div
-                class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--center"
-                data-test-box=""
+                class="AlignmentOption__option-view AlignmentOption__option-view--center"
               >
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator"
-                  data-test-box=""
+                  class="AlignmentOption__indicator"
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator"
-                  data-test-box=""
+                  class="AlignmentOption__indicator"
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator"
-                  data-test-box=""
+                  class="AlignmentOption__indicator"
                 />
               </div>
             </div>
@@ -1594,25 +1498,20 @@ exports[`Design snapshots should render Design 1`] = `
               </div>
             </div>
             <div
-              class="css-1jnxvbp AlignmentOption"
+              class="AlignmentOption"
               data-test-alignment-area-option="right"
-              data-test-box=""
             >
               <div
-                class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--right"
-                data-test-box=""
+                class="AlignmentOption__option-view AlignmentOption__option-view--right"
               >
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator"
-                  data-test-box=""
+                  class="AlignmentOption__indicator"
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator"
-                  data-test-box=""
+                  class="AlignmentOption__indicator"
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator"
-                  data-test-box=""
+                  class="AlignmentOption__indicator"
                 />
               </div>
             </div>
@@ -1633,25 +1532,20 @@ exports[`Design snapshots should render Design 1`] = `
               </div>
             </div>
             <div
-              class="css-1jnxvbp AlignmentOption"
+              class="AlignmentOption"
               data-test-alignment-area-option="bottomLeft"
-              data-test-box=""
             >
               <div
-                class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--bottomLeft"
-                data-test-box=""
+                class="AlignmentOption__option-view AlignmentOption__option-view--bottomLeft"
               >
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator"
-                  data-test-box=""
+                  class="AlignmentOption__indicator"
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator"
-                  data-test-box=""
+                  class="AlignmentOption__indicator"
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator"
-                  data-test-box=""
+                  class="AlignmentOption__indicator"
                 />
               </div>
             </div>
@@ -1672,25 +1566,20 @@ exports[`Design snapshots should render Design 1`] = `
               </div>
             </div>
             <div
-              class="css-1jnxvbp AlignmentOption"
+              class="AlignmentOption"
               data-test-alignment-area-option="bottomCenter"
-              data-test-box=""
             >
               <div
-                class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--bottom-center"
-                data-test-box=""
+                class="AlignmentOption__option-view AlignmentOption__option-view--bottom-center"
               >
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator"
-                  data-test-box=""
+                  class="AlignmentOption__indicator"
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator"
-                  data-test-box=""
+                  class="AlignmentOption__indicator"
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator"
-                  data-test-box=""
+                  class="AlignmentOption__indicator"
                 />
               </div>
             </div>
@@ -1711,25 +1600,20 @@ exports[`Design snapshots should render Design 1`] = `
               </div>
             </div>
             <div
-              class="css-1jnxvbp AlignmentOption"
+              class="AlignmentOption"
               data-test-alignment-area-option="bottomRight"
-              data-test-box=""
             >
               <div
-                class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--bottom-right"
-                data-test-box=""
+                class="AlignmentOption__option-view AlignmentOption__option-view--bottom-right"
               >
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator"
-                  data-test-box=""
+                  class="AlignmentOption__indicator"
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator"
-                  data-test-box=""
+                  class="AlignmentOption__indicator"
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator"
-                  data-test-box=""
+                  class="AlignmentOption__indicator"
                 />
               </div>
             </div>
@@ -1751,17 +1635,16 @@ exports[`Design snapshots should render Design 1`] = `
             </div>
           </div>
           <div
-            class="css-1jnxvbp TextField"
+            class="TextField"
             data-test-text-field="column"
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+              class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
               data-test-text-field-wrapper="column"
             >
               <div
-                class="css-e5vky9 ScrubbableInput"
-                data-test-box=""
+                class="ScrubbableInput"
                 data-test-scrubbable-input="column"
               >
                 <div
@@ -1780,8 +1663,7 @@ exports[`Design snapshots should render Design 1`] = `
                 value="0"
               />
               <div
-                class="css-zcp5dz TextFieldPopover"
-                data-test-box=""
+                class="TextFieldPopover"
               >
                 <div
                   class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
@@ -1791,14 +1673,12 @@ exports[`Design snapshots should render Design 1`] = `
                   width="12"
                 />
                 <div
-                  class="css-6i6anv Popover"
-                  data-test-box=""
+                  class="Popover"
                   data-test-popover="popover"
                   style="left: 0px; top: 0px;"
                 >
                   <div
-                    class="css-1wfopar PopoverItem"
-                    data-test-box=""
+                    class="PopoverItem"
                     data-test-popover-item="0"
                   >
                     <div
@@ -1844,16 +1724,12 @@ exports[`Design snapshots should render Design 1`] = `
             </div>
           </div>
         </div>
-        <div
-          class="css-1jnxvbp"
-          data-test-box=""
-        >
+        <div>
           <div
-            class="css-c1qms7"
-            data-test-box=""
+            class="SectionColumnButtonIcons"
           >
             <div
-              class="css-1jnxvbp ButtonIcon"
+              class="ButtonIcon"
               data-test-button-icon="properties"
               data-test-tooltip=""
             >
@@ -1865,18 +1741,16 @@ exports[`Design snapshots should render Design 1`] = `
                 width="12"
               />
               <div
-                class="css-zcp5dz"
-                data-test-box=""
+                class="ButtonIconPopover"
               >
                 <div
-                  class="css-c6outs Popover"
-                  data-test-box=""
+                  class="Popover Popover--bg-neutral5"
                   data-test-popover="popover"
                   id="popoverAutoLayoutSettings"
                   style="width: 240px; left: 32.5px; top: 0px;"
                 >
                   <div
-                    class="css-1h1jb7x"
+                    class="PopoverHeader"
                     data-test-popover-header=""
                   >
                     <small
@@ -1895,7 +1769,7 @@ exports[`Design snapshots should render Design 1`] = `
                     />
                   </div>
                   <div
-                    class="css-196hq3q"
+                    class="PopoverPreview"
                     data-test-popover-preview=""
                   >
                     <p
@@ -1907,11 +1781,11 @@ exports[`Design snapshots should render Design 1`] = `
                     </p>
                   </div>
                   <div
-                    class="css-1jnxvbp Select"
+                    class="Select"
                     data-test-select="box-sizing"
                   >
                     <div
-                      class="css-1jnxvbp TextField"
+                      class="TextField"
                       data-test-text-field=""
                       data-test-tooltip=""
                     >
@@ -1923,7 +1797,7 @@ exports[`Design snapshots should render Design 1`] = `
                         Strokes
                       </small>
                       <div
-                        class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--outlined"
+                        class="TextFieldWrapper TextFieldWrapper--outlined"
                         data-test-text-field-wrapper=""
                         style="width: 112px;"
                       >
@@ -1945,13 +1819,12 @@ exports[`Design snapshots should render Design 1`] = `
                       </div>
                     </div>
                     <ul
-                      class="css-1jnxvbp SelectOptions"
-                      data-test-box=""
+                      class="SelectOptions"
                       data-test-select-options="box-sizing"
                       style="left: 0px; top: 24px; width: 0px;"
                     >
                       <li
-                        class="css-1jnxvbp SelectItem"
+                        class="SelectItem"
                         data-test-select-item="included"
                         data-value="included"
                         role="option"
@@ -1967,7 +1840,7 @@ exports[`Design snapshots should render Design 1`] = `
                         Included
                       </li>
                       <li
-                        class="css-1jnxvbp SelectItem SelectItem--selected"
+                        class="SelectItem SelectItem--selected"
                         data-test-select-item="excluded"
                         data-value="excluded"
                         role="option"
@@ -2008,12 +1881,11 @@ exports[`Design snapshots should render Design 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
+      class="SectionColumn SectionColumn--with-bottom-margin"
       data-test-section=""
     >
       <div
-        class="css-xdzdnq SectionColumnLabels"
-        data-test-box=""
+        class="SectionColumnLabels"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <small
@@ -2025,26 +1897,23 @@ exports[`Design snapshots should render Design 1`] = `
         </small>
       </div>
       <div
-        class="css-4ja0ji"
-        data-test-box=""
+        class="SectionColumn__row"
       >
         <div
-          class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
-          data-test-box=""
+          class="SectionColumnContent SectionColumnContent--two-inputs"
           style="width: calc(100% - 24px - 0px - 8px);"
         >
           <div
-            class="css-1jnxvbp TextField"
+            class="TextField"
             data-test-text-field="padding-lr"
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+              class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
               data-test-text-field-wrapper="padding-lr"
             >
               <div
-                class="css-e5vky9 ScrubbableInput"
-                data-test-box=""
+                class="ScrubbableInput"
                 data-test-scrubbable-input="padding-lr"
               >
                 <div
@@ -2063,8 +1932,7 @@ exports[`Design snapshots should render Design 1`] = `
                 value="0"
               />
               <div
-                class="css-zcp5dz TextFieldPopover"
-                data-test-box=""
+                class="TextFieldPopover"
               >
                 <div
                   class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
@@ -2074,14 +1942,12 @@ exports[`Design snapshots should render Design 1`] = `
                   width="12"
                 />
                 <div
-                  class="css-6i6anv Popover"
-                  data-test-box=""
+                  class="Popover"
                   data-test-popover="popover"
                   style="left: 0px; top: 0px;"
                 >
                   <div
-                    class="css-1wfopar PopoverItem"
-                    data-test-box=""
+                    class="PopoverItem"
                     data-test-popover-item="0"
                   >
                     <div
@@ -2127,17 +1993,16 @@ exports[`Design snapshots should render Design 1`] = `
             </div>
           </div>
           <div
-            class="css-1jnxvbp TextField"
+            class="TextField"
             data-test-text-field="padding-tb"
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+              class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
               data-test-text-field-wrapper="padding-tb"
             >
               <div
-                class="css-e5vky9 ScrubbableInput"
-                data-test-box=""
+                class="ScrubbableInput"
                 data-test-scrubbable-input="padding-tb"
               >
                 <div
@@ -2156,8 +2021,7 @@ exports[`Design snapshots should render Design 1`] = `
                 value="0"
               />
               <div
-                class="css-zcp5dz TextFieldPopover"
-                data-test-box=""
+                class="TextFieldPopover"
               >
                 <div
                   class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
@@ -2167,14 +2031,12 @@ exports[`Design snapshots should render Design 1`] = `
                   width="12"
                 />
                 <div
-                  class="css-6i6anv Popover"
-                  data-test-box=""
+                  class="Popover"
                   data-test-popover="popover"
                   style="left: 0px; top: 0px;"
                 >
                   <div
-                    class="css-1wfopar PopoverItem"
-                    data-test-box=""
+                    class="PopoverItem"
                     data-test-popover-item="0"
                   >
                     <div
@@ -2220,16 +2082,12 @@ exports[`Design snapshots should render Design 1`] = `
             </div>
           </div>
         </div>
-        <div
-          class="css-1jnxvbp"
-          data-test-box=""
-        >
+        <div>
           <div
-            class="css-c1qms7"
-            data-test-box=""
+            class="SectionColumnButtonIcons"
           >
             <div
-              class="css-1jnxvbp ButtonIcon"
+              class="ButtonIcon"
               data-test-button-icon="insets-mode"
               data-test-tooltip=""
             >
@@ -2262,25 +2120,22 @@ exports[`Design snapshots should render Design 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin SectionColumn--with-top-margin"
+      class="SectionColumn SectionColumn--with-bottom-margin SectionColumn--with-top-margin"
       data-test-section=""
     >
       <div
-        class="css-xdzdnq SectionColumnLabels"
-        data-test-box=""
+        class="SectionColumnLabels"
         style="width: calc(100% - 24px - 0px - 8px);"
       />
       <div
-        class="css-4ja0ji"
-        data-test-box=""
+        class="SectionColumn__row"
       >
         <div
-          class="css-biptg5 SectionColumnContent SectionColumnContent--single"
-          data-test-box=""
+          class="SectionColumnContent SectionColumnContent--single"
           style="width: calc(100% - 24px - 0px - 8px);"
         >
           <div
-            class="css-1jnxvbp Checkbox"
+            class="Checkbox"
             data-test-checkbox="clip-content"
           >
             <input
@@ -2289,8 +2144,7 @@ exports[`Design snapshots should render Design 1`] = `
               type="checkbox"
             />
             <div
-              class="css-1jnxvbp Checkbox__input-wrapper"
-              data-test-box=""
+              class="Checkbox__input-wrapper"
             >
               <div
                 class="css-1jnxvbp Icon Icon--neutral-1"
@@ -2309,25 +2163,20 @@ exports[`Design snapshots should render Design 1`] = `
             </small>
           </div>
         </div>
-        <div
-          class="css-1jnxvbp"
-          data-test-box=""
-        >
+        <div>
           <div
-            class="css-c1qms7"
-            data-test-box=""
+            class="SectionColumnButtonIcons"
           />
         </div>
       </div>
     </div>
   </div>
   <div
-    class="css-1jnxvbp Section"
+    class="Section"
     data-test-section=""
   >
     <div
-      class="css-1jnxvbp Section__label-wrapper Section__label-wrapper--separator"
-      data-test-box=""
+      class="Section__label-wrapper Section__label-wrapper--separator"
     >
       <small
         class="css-1jnxvbp Section__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -2337,11 +2186,10 @@ exports[`Design snapshots should render Design 1`] = `
         Appearance
       </small>
       <div
-        class="css-1f1atqu"
-        data-test-box=""
+        class="Section__label-component"
       >
         <div
-          class="css-1jnxvbp ButtonIcon"
+          class="ButtonIcon"
           data-test-button-icon=""
           data-test-tooltip=""
         >
@@ -2370,7 +2218,7 @@ exports[`Design snapshots should render Design 1`] = `
           </div>
         </div>
         <div
-          class="css-1jnxvbp ButtonIcon"
+          class="ButtonIcon"
           data-test-button-icon=""
           data-test-tooltip=""
         >
@@ -2382,18 +2230,15 @@ exports[`Design snapshots should render Design 1`] = `
             width="14"
           />
           <div
-            class="css-zcp5dz"
-            data-test-box=""
+            class="ButtonIconPopover"
           >
             <div
-              class="css-c6outs Popover"
-              data-test-box=""
+              class="Popover Popover--bg-neutral5"
               data-test-popover="popover"
               style="left: 28px; top: 28px;"
             >
               <div
-                class="css-1wfopar PopoverItem"
-                data-test-box=""
+                class="PopoverItem"
                 data-test-popover-item="initial"
               >
                 <div
@@ -2412,8 +2257,7 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <div
-                class="css-1wfopar PopoverItem"
-                data-test-box=""
+                class="PopoverItem"
                 data-test-popover-item="normal"
               >
                 <div
@@ -2432,12 +2276,10 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <div
-                class="css-3q7iqb"
-                data-test-box=""
+                class="PopoverSeparator"
               />
               <div
-                class="css-1wfopar PopoverItem"
-                data-test-box=""
+                class="PopoverItem"
                 data-test-popover-item="darken"
               >
                 <div
@@ -2456,8 +2298,7 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <div
-                class="css-1wfopar PopoverItem"
-                data-test-box=""
+                class="PopoverItem"
                 data-test-popover-item="multiply"
               >
                 <div
@@ -2476,8 +2317,7 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <div
-                class="css-1wfopar PopoverItem"
-                data-test-box=""
+                class="PopoverItem"
                 data-test-popover-item="color-burn"
               >
                 <div
@@ -2496,12 +2336,10 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <div
-                class="css-3q7iqb"
-                data-test-box=""
+                class="PopoverSeparator"
               />
               <div
-                class="css-1wfopar PopoverItem"
-                data-test-box=""
+                class="PopoverItem"
                 data-test-popover-item="lighten"
               >
                 <div
@@ -2520,8 +2358,7 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <div
-                class="css-1wfopar PopoverItem"
-                data-test-box=""
+                class="PopoverItem"
                 data-test-popover-item="screen"
               >
                 <div
@@ -2540,8 +2377,7 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <div
-                class="css-1wfopar PopoverItem"
-                data-test-box=""
+                class="PopoverItem"
                 data-test-popover-item="plus-lighter"
               >
                 <div
@@ -2560,8 +2396,7 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <div
-                class="css-1wfopar PopoverItem"
-                data-test-box=""
+                class="PopoverItem"
                 data-test-popover-item="color-dodge"
               >
                 <div
@@ -2580,12 +2415,10 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <div
-                class="css-3q7iqb"
-                data-test-box=""
+                class="PopoverSeparator"
               />
               <div
-                class="css-1wfopar PopoverItem"
-                data-test-box=""
+                class="PopoverItem"
                 data-test-popover-item="overlay"
               >
                 <div
@@ -2604,8 +2437,7 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <div
-                class="css-1wfopar PopoverItem"
-                data-test-box=""
+                class="PopoverItem"
                 data-test-popover-item="soft-light"
               >
                 <div
@@ -2624,8 +2456,7 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <div
-                class="css-1wfopar PopoverItem"
-                data-test-box=""
+                class="PopoverItem"
                 data-test-popover-item="hard-light"
               >
                 <div
@@ -2644,8 +2475,7 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <div
-                class="css-1wfopar PopoverItem"
-                data-test-box=""
+                class="PopoverItem"
                 data-test-popover-item="difference"
               >
                 <div
@@ -2664,8 +2494,7 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <div
-                class="css-1wfopar PopoverItem"
-                data-test-box=""
+                class="PopoverItem"
                 data-test-popover-item="exclusion"
               >
                 <div
@@ -2684,12 +2513,10 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <div
-                class="css-3q7iqb"
-                data-test-box=""
+                class="PopoverSeparator"
               />
               <div
-                class="css-1wfopar PopoverItem"
-                data-test-box=""
+                class="PopoverItem"
                 data-test-popover-item="hue"
               >
                 <div
@@ -2708,8 +2535,7 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <div
-                class="css-1wfopar PopoverItem"
-                data-test-box=""
+                class="PopoverItem"
                 data-test-popover-item="saturation"
               >
                 <div
@@ -2728,8 +2554,7 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <div
-                class="css-1wfopar PopoverItem"
-                data-test-box=""
+                class="PopoverItem"
                 data-test-popover-item="color"
               >
                 <div
@@ -2769,12 +2594,11 @@ exports[`Design snapshots should render Design 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
+      class="SectionColumn SectionColumn--with-bottom-margin"
       data-test-section=""
     >
       <div
-        class="css-xdzdnq SectionColumnLabels"
-        data-test-box=""
+        class="SectionColumnLabels"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <small
@@ -2786,26 +2610,23 @@ exports[`Design snapshots should render Design 1`] = `
         </small>
       </div>
       <div
-        class="css-4ja0ji"
-        data-test-box=""
+        class="SectionColumn__row"
       >
         <div
-          class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
-          data-test-box=""
+          class="SectionColumnContent SectionColumnContent--two-inputs"
           style="width: calc(100% - 24px - 0px - 8px);"
         >
           <div
-            class="css-1jnxvbp TextField"
+            class="TextField"
             data-test-text-field="opacity"
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+              class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
               data-test-text-field-wrapper="opacity"
             >
               <div
-                class="css-e5vky9 ScrubbableInput"
-                data-test-box=""
+                class="ScrubbableInput"
                 data-test-scrubbable-input="opacity"
               >
                 <div
@@ -2824,8 +2645,7 @@ exports[`Design snapshots should render Design 1`] = `
                 value="100"
               />
               <div
-                class="css-zcp5dz TextFieldPopover"
-                data-test-box=""
+                class="TextFieldPopover"
               >
                 <div
                   class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
@@ -2835,14 +2655,12 @@ exports[`Design snapshots should render Design 1`] = `
                   width="12"
                 />
                 <div
-                  class="css-6i6anv Popover"
-                  data-test-box=""
+                  class="Popover"
                   data-test-popover="popover"
                   style="left: 0px; top: 0px;"
                 >
                   <div
-                    class="css-1wfopar PopoverItem"
-                    data-test-box=""
+                    class="PopoverItem"
                     data-test-popover-item="0"
                   >
                     <div
@@ -2872,17 +2690,16 @@ exports[`Design snapshots should render Design 1`] = `
             </div>
           </div>
           <div
-            class="css-1jnxvbp TextField"
+            class="TextField"
             data-test-text-field="border-radius"
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+              class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
               data-test-text-field-wrapper="border-radius"
             >
               <div
-                class="css-e5vky9 ScrubbableInput"
-                data-test-box=""
+                class="ScrubbableInput"
                 data-test-scrubbable-input="border-radius"
               >
                 <div
@@ -2901,8 +2718,7 @@ exports[`Design snapshots should render Design 1`] = `
                 value="0"
               />
               <div
-                class="css-zcp5dz TextFieldPopover"
-                data-test-box=""
+                class="TextFieldPopover"
               >
                 <div
                   class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
@@ -2912,14 +2728,12 @@ exports[`Design snapshots should render Design 1`] = `
                   width="12"
                 />
                 <div
-                  class="css-6i6anv Popover"
-                  data-test-box=""
+                  class="Popover"
                   data-test-popover="popover"
                   style="left: 0px; top: 0px;"
                 >
                   <div
-                    class="css-1wfopar PopoverItem"
-                    data-test-box=""
+                    class="PopoverItem"
                     data-test-popover-item="0"
                   >
                     <div
@@ -2945,8 +2759,7 @@ exports[`Design snapshots should render Design 1`] = `
                     </small>
                   </div>
                   <div
-                    class="css-1wfopar PopoverItem"
-                    data-test-box=""
+                    class="PopoverItem"
                     data-test-popover-item="1"
                   >
                     <div
@@ -2976,16 +2789,12 @@ exports[`Design snapshots should render Design 1`] = `
             </div>
           </div>
         </div>
-        <div
-          class="css-1jnxvbp"
-          data-test-box=""
-        >
+        <div>
           <div
-            class="css-c1qms7"
-            data-test-box=""
+            class="SectionColumnButtonIcons"
           >
             <div
-              class="css-1jnxvbp ButtonIcon"
+              class="ButtonIcon"
               data-test-button-icon="corners-mode"
               data-test-tooltip=""
             >
@@ -3019,12 +2828,11 @@ exports[`Design snapshots should render Design 1`] = `
     </div>
   </div>
   <div
-    class="css-1jnxvbp Section"
+    class="Section"
     data-test-section=""
   >
     <div
-      class="css-1jnxvbp Section__label-wrapper Section__label-wrapper--separator"
-      data-test-box=""
+      class="Section__label-wrapper Section__label-wrapper--separator"
     >
       <small
         class="css-1jnxvbp Section__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -3034,11 +2842,10 @@ exports[`Design snapshots should render Design 1`] = `
         Fill
       </small>
       <div
-        class="css-1f1atqu"
-        data-test-box=""
+        class="Section__label-component"
       >
         <div
-          class="css-1jnxvbp ButtonIcon"
+          class="ButtonIcon"
           data-test-button-icon=""
           data-test-tooltip=""
         >
@@ -3069,54 +2876,47 @@ exports[`Design snapshots should render Design 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp DraggableSection"
+      class="DraggableSection"
       data-test-draggable-section=""
     >
       <div
-        class="css-1jnxvbp DraggableSection__item"
+        class="DraggableSection__item"
         data-test-draggable-section-item="0"
       >
         <div
-          class="css-1jnxvbp"
-          data-test-box=""
           style="width: 100%;"
         >
           <div
-            class="css-1jnxvbp FieldGroup"
+            class="FieldGroup"
             data-test-field-group="background-0"
             data-visible-color-picker-panel="false"
           >
             <div
-              class="css-1jnxvbp ColorPicker__color-input TextField"
+              class="ColorPicker__color-input TextField"
               data-test-text-field="color"
               data-test-tooltip=""
             >
               <div
-                class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled"
+                class="TextFieldWrapper TextFieldWrapper--filled"
                 data-test-text-field-wrapper="color"
               >
                 <div
                   aria-describedby="test-id"
-                  class="css-1jnxvbp"
                   data-test-color="background-0"
                 >
                   <div
-                    class="css-1axzf39 Color"
-                    data-test-box=""
+                    class="Color"
                   >
                     <div
-                      class="css-agg4zg Color__picker"
-                      data-test-box=""
+                      class="Color__picker"
                       style="background-color: rgb(255, 255, 255);"
                     />
                     <div
-                      class="css-agg4zg Color__picker-alpha"
-                      data-test-box=""
+                      class="Color__picker-alpha"
                       style="background-color: rgb(255, 255, 255);"
                     />
                     <div
-                      class="css-hnxq09 Color__picker-texture"
-                      data-test-box=""
+                      class="Color__picker-texture"
                     />
                   </div>
                 </div>
@@ -3129,12 +2929,12 @@ exports[`Design snapshots should render Design 1`] = `
               </div>
             </div>
             <div
-              class="css-1jnxvbp ColorPicker__alpha-input TextField"
+              class="ColorPicker__alpha-input TextField"
               data-test-text-field="alpha"
               data-test-tooltip=""
             >
               <div
-                class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled"
+                class="TextFieldWrapper TextFieldWrapper--filled"
                 data-test-text-field-wrapper="alpha"
               >
                 <input
@@ -3147,8 +2947,7 @@ exports[`Design snapshots should render Design 1`] = `
                   value="100"
                 />
                 <div
-                  class="css-e5vky9 ScrubbableInput"
-                  data-test-box=""
+                  class="ScrubbableInput"
                   data-test-scrubbable-input=""
                 >
                   <div
@@ -3162,11 +2961,10 @@ exports[`Design snapshots should render Design 1`] = `
           </div>
         </div>
         <div
-          class="css-1jnxvbp DraggableSectionContent"
-          data-test-box=""
+          class="DraggableSectionContent"
         >
           <div
-            class="css-1jnxvbp ButtonIcon"
+            class="ButtonIcon"
             data-test-button-icon="toggle-visibility"
             data-test-tooltip=""
           >
@@ -3195,7 +2993,7 @@ exports[`Design snapshots should render Design 1`] = `
             </div>
           </div>
           <div
-            class="css-1jnxvbp ButtonIcon"
+            class="ButtonIcon"
             data-test-button-icon="remove"
             data-test-tooltip=""
           >

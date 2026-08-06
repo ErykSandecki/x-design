@@ -1,13 +1,14 @@
+import cx from 'classnames';
 import { FC } from 'react';
 
-// components
-import Box from '../../../UI/Box/Box';
+// styles
+import styles from './popover-separator.scss';
 
 export type TPopoverSeparatorProps = {
   visible?: boolean;
 };
 
 export const PopoverSeparator: FC<TPopoverSeparatorProps> = ({ visible = true }) =>
-  visible ? <Box sx={{ bg: 'neutral3', height: '1px', my: 8 }} /> : null;
+  visible ? <div className={cx(styles.PopoverSeparator)} /> : null;
 
 export default PopoverSeparator;

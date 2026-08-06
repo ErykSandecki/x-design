@@ -5,8 +5,7 @@ exports[`DraggableSection snapshots should not render 1`] = `<DocumentFragment /
 exports[`DraggableSection snapshots should render DraggableSection 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp DraggableSectionMenu"
-    data-test-box=""
+    class="DraggableSectionMenu"
   >
     <div
       class="css-1jnxvbp Icon Icon--neutral-1"
@@ -22,8 +21,7 @@ exports[`DraggableSection snapshots should render DraggableSection 1`] = `
 exports[`DraggableSection snapshots should render when force display 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp DraggableSectionMenu DraggableSectionMenu--force-display"
-    data-test-box=""
+    class="DraggableSectionMenu DraggableSectionMenu--force-display"
   >
     <div
       class="css-1jnxvbp Icon Icon--neutral-1"

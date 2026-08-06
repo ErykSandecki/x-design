@@ -3,8 +3,7 @@
 exports[`ConstrainsView snapshots should render ConstrainsView 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp ConstrainsView"
-    data-test-box=""
+    class="ConstrainsView"
   >
     <div
       class="ConstrainsView__constrain ConstrainsView__constrain--bottom"
@@ -31,8 +30,7 @@ exports[`ConstrainsView snapshots should render ConstrainsView 1`] = `
 exports[`ConstrainsView snapshots should render selected 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp ConstrainsView ConstrainsView--selected"
-    data-test-box=""
+    class="ConstrainsView ConstrainsView--selected"
   >
     <div
       class="ConstrainsView__constrain ConstrainsView__constrain--bottom"
@@ -59,8 +57,7 @@ exports[`ConstrainsView snapshots should render selected 1`] = `
 exports[`ConstrainsView snapshots should render with alignment 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp ConstrainsView ConstrainsView__horizontal--center ConstrainsView__vertical--center"
-    data-test-box=""
+    class="ConstrainsView ConstrainsView__horizontal--center ConstrainsView__vertical--center"
   >
     <div
       class="ConstrainsView__constrain ConstrainsView__constrain--bottom"

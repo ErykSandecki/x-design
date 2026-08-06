@@ -3,7 +3,7 @@ import { FC, InputHTMLAttributes, ReactNode, RefObject, useRef } from 'react';
 import { noop } from 'lodash';
 
 // components
-import Box from '../../../UI/Box/Box';
+import E2EDataAttribute, { TE2EDataAttributeProps } from '../../../E2EDataAttributes/E2EDataAttribute';
 import TextFieldChip from './TextFieldChip/TextFieldChip';
 import TextFieldPopover from './TextFieldPopover/TextFieldPopover';
 import { TPopoverProps } from '../../Popover/Popover';
@@ -11,14 +11,11 @@ import { TPopoverProps } from '../../Popover/Popover';
 // hooks
 import { useOutsideClick } from 'hooks';
 
-// others
-
 // styles
 import styles from './text-field-wrapper.scss';
 
 // types
 import { E2EAttribute, KeyboardKeys, TValueExtended } from 'types';
-import { TE2EDataAttributeProps } from '../../../E2EDataAttributes/E2EDataAttribute';
 import { TextFieldVariant } from '../enums';
 
 // utils
@@ -79,57 +76,55 @@ export const TextFieldWrapper: FC<TTextFieldWrapperProps> = ({
   const { selected, setSelected } = useOutsideClick([], refPopover, noop, idContainer);
 
   return (
-    <Box
-      classes={{
-        className: cx(styles.TextFieldWrapper, styles[textFieldWrapperModificators[variant]], {
+    <E2EDataAttribute type={E2EAttribute.textFieldWrapper} value={e2eValue}>
+      <div
+        className={cx(styles.TextFieldWrapper, styles[textFieldWrapperModificators[variant]], {
           [styles['TextFieldWrapper--chip']]: attached,
           [styles['TextFieldWrapper--disabled']]: disabled,
           [styles['TextFieldWrapper--full-width']]: fullWidth,
-        }),
-      }}
-      e2eAttribute={E2EAttribute.textFieldWrapper}
-      e2eValue={e2eValue}
-      onClick={() => attached && setSelected(true)}
-      ref={wrapperRef}
-      style={style}
-    >
-      {startAdornment}
-      <input
-        className={cx(styles.TextFieldWrapper__input)}
-        disabled={disabled}
-        maxLength={6}
-        onClick={() => !attached && !disabledSelection && inputRef.current.select()}
-        onKeyDown={(event) => handleSubmitInput(KeyboardKeys.enter, inputRef.current)(event)}
-        ref={inputRef}
-        value={value}
-        {...getAttributes(E2EAttribute.textFieldInput, e2eValue)}
-        {...restProps}
-      />
-      {popoverChildren ? (
-        <TextFieldPopover
-          attachedValue={attached}
-          classNameIcon={cx(styles.TextFieldWrapper__icon)}
-          offset={popoverOffset}
-          onClick={onDetachedValue}
-          ref={refPopover}
-          selected={selected}
-          setSelected={setSelected}
-          style={popoverStyle}
-        >
-          {popoverChildren}
-        </TextFieldPopover>
-      ) : (
-        endAdorment
-      )}
-      <TextFieldChip
-        attachedValue={attached}
-        className={cx(styles.TextFieldWrapper__chip, {
-          [styles['TextFieldWrapper__chip--attached-value']]: attached,
         })}
+        onClick={() => attached && setSelected(true)}
+        ref={wrapperRef}
+        style={style}
       >
-        {chipValue}
-      </TextFieldChip>
-    </Box>
+        {startAdornment}
+        <input
+          className={cx(styles.TextFieldWrapper__input)}
+          disabled={disabled}
+          maxLength={6}
+          onClick={() => !attached && !disabledSelection && inputRef.current.select()}
+          onKeyDown={(event) => handleSubmitInput(KeyboardKeys.enter, inputRef.current)(event)}
+          ref={inputRef}
+          value={value}
+          {...getAttributes(E2EAttribute.textFieldInput, e2eValue)}
+          {...restProps}
+        />
+        {popoverChildren ? (
+          <TextFieldPopover
+            attachedValue={attached}
+            classNameIcon={cx(styles.TextFieldWrapper__icon)}
+            offset={popoverOffset}
+            onClick={onDetachedValue}
+            ref={refPopover}
+            selected={selected}
+            setSelected={setSelected}
+            style={popoverStyle}
+          >
+            {popoverChildren}
+          </TextFieldPopover>
+        ) : (
+          endAdorment
+        )}
+        <TextFieldChip
+          attachedValue={attached}
+          className={cx(styles.TextFieldWrapper__chip, {
+            [styles['TextFieldWrapper__chip--attached-value']]: attached,
+          })}
+        >
+          {chipValue}
+        </TextFieldChip>
+      </div>
+    </E2EDataAttribute>
   );
 };
 

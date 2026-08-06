@@ -3,16 +3,16 @@
 exports[`Select snapshots should render Select 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp Select"
+    class="Select"
     data-test-select=""
   >
     <div
-      class="css-1jnxvbp TextField"
+      class="TextField"
       data-test-text-field=""
       data-test-tooltip=""
     >
       <div
-        class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--outlined"
+        class="TextFieldWrapper TextFieldWrapper--outlined"
         data-test-text-field-wrapper=""
       >
         <input
@@ -33,13 +33,12 @@ exports[`Select snapshots should render Select 1`] = `
       </div>
     </div>
     <ul
-      class="css-1jnxvbp SelectOptions"
-      data-test-box=""
+      class="SelectOptions"
       data-test-select-options=""
       style="left: 0px; top: 24px; width: 0px;"
     >
       <li
-        class="css-1jnxvbp SelectItem SelectItem--selected"
+        class="SelectItem SelectItem--selected"
         data-test-select-item="0"
         data-value="0"
         role="option"
@@ -55,11 +54,10 @@ exports[`Select snapshots should render Select 1`] = `
         0
       </li>
       <div
-        class="css-144d4hh"
-        data-test-box=""
+        class="SelectSeparator"
       />
       <li
-        class="css-1jnxvbp SelectItem"
+        class="SelectItem"
         data-test-select-item="1"
         data-value="1"
         role="option"
@@ -75,11 +73,10 @@ exports[`Select snapshots should render Select 1`] = `
         1
       </li>
       <div
-        class="css-144d4hh"
-        data-test-box=""
+        class="SelectSeparator"
       />
       <li
-        class="css-1jnxvbp SelectItem"
+        class="SelectItem"
         data-test-select-item="2"
         data-value="2"
         role="option"
@@ -102,16 +99,16 @@ exports[`Select snapshots should render Select 1`] = `
 exports[`Select snapshots should render when mixed 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp Select"
+    class="Select"
     data-test-select=""
   >
     <div
-      class="css-1jnxvbp TextField"
+      class="TextField"
       data-test-text-field=""
       data-test-tooltip=""
     >
       <div
-        class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--outlined"
+        class="TextFieldWrapper TextFieldWrapper--outlined"
         data-test-text-field-wrapper=""
       >
         <input
@@ -132,13 +129,12 @@ exports[`Select snapshots should render when mixed 1`] = `
       </div>
     </div>
     <ul
-      class="css-1jnxvbp SelectOptions"
-      data-test-box=""
+      class="SelectOptions"
       data-test-select-options=""
       style="left: 0px; top: 24px; width: 0px;"
     >
       <li
-        class="css-1jnxvbp SelectItem"
+        class="SelectItem"
         data-test-select-item="0"
         data-value="0"
         role="option"
@@ -154,11 +150,10 @@ exports[`Select snapshots should render when mixed 1`] = `
         0
       </li>
       <div
-        class="css-144d4hh"
-        data-test-box=""
+        class="SelectSeparator"
       />
       <li
-        class="css-1jnxvbp SelectItem"
+        class="SelectItem"
         data-test-select-item="1"
         data-value="1"
         role="option"
@@ -174,11 +169,10 @@ exports[`Select snapshots should render when mixed 1`] = `
         1
       </li>
       <div
-        class="css-144d4hh"
-        data-test-box=""
+        class="SelectSeparator"
       />
       <li
-        class="css-1jnxvbp SelectItem"
+        class="SelectItem"
         data-test-select-item="2"
         data-value="2"
         role="option"
@@ -201,16 +195,16 @@ exports[`Select snapshots should render when mixed 1`] = `
 exports[`Select snapshots should render with no options 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp Select"
+    class="Select"
     data-test-select=""
   >
     <div
-      class="css-1jnxvbp TextField"
+      class="TextField"
       data-test-text-field=""
       data-test-tooltip=""
     >
       <div
-        class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--outlined"
+        class="TextFieldWrapper TextFieldWrapper--outlined"
         data-test-text-field-wrapper=""
       >
         <input
@@ -231,13 +225,12 @@ exports[`Select snapshots should render with no options 1`] = `
       </div>
     </div>
     <ul
-      class="css-1jnxvbp SelectOptions"
-      data-test-box=""
+      class="SelectOptions"
       data-test-select-options=""
       style="left: 0px; top: 24px; width: 0px;"
     >
       <li
-        class="css-1jnxvbp SelectItem SelectItem--disabled"
+        class="SelectItem SelectItem--disabled"
         data-test-select-item=""
         data-value=""
         role="option"
@@ -260,16 +253,16 @@ exports[`Select snapshots should render with no options 1`] = `
 exports[`Select snapshots should render with one option 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp Select"
+    class="Select"
     data-test-select=""
   >
     <div
-      class="css-1jnxvbp TextField"
+      class="TextField"
       data-test-text-field=""
       data-test-tooltip=""
     >
       <div
-        class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--outlined"
+        class="TextFieldWrapper TextFieldWrapper--outlined"
         data-test-text-field-wrapper=""
       >
         <input
@@ -290,13 +283,12 @@ exports[`Select snapshots should render with one option 1`] = `
       </div>
     </div>
     <ul
-      class="css-1jnxvbp SelectOptions"
-      data-test-box=""
+      class="SelectOptions"
       data-test-select-options=""
       style="left: 0px; top: 24px; width: 0px;"
     >
       <li
-        class="css-1jnxvbp SelectItem SelectItem--selected"
+        class="SelectItem SelectItem--selected"
         data-test-select-item="0"
         data-value="0"
         role="option"

@@ -3,12 +3,11 @@
 exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
+    class="SectionColumn SectionColumn--with-bottom-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels"
-      data-test-box=""
+      class="SectionColumnLabels"
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
@@ -20,26 +19,23 @@ exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
       </small>
     </div>
     <div
-      class="css-4ja0ji"
-      data-test-box=""
+      class="SectionColumn__row"
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
-        data-test-box=""
+        class="SectionColumnContent SectionColumnContent--two-inputs"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp TextField"
+          class="TextField"
           data-test-text-field="x"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+            class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="x"
           >
             <div
-              class="css-e5vky9 ScrubbableInput"
-              data-test-box=""
+              class="ScrubbableInput"
               data-test-scrubbable-input="x"
             >
               <small
@@ -76,17 +72,16 @@ exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
           </div>
         </div>
         <div
-          class="css-1jnxvbp TextField"
+          class="TextField"
           data-test-text-field="y"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+            class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="y"
           >
             <div
-              class="css-e5vky9 ScrubbableInput"
-              data-test-box=""
+              class="ScrubbableInput"
               data-test-scrubbable-input="y"
             >
               <small
@@ -123,13 +118,9 @@ exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
           </div>
         </div>
       </div>
-      <div
-        class="css-1jnxvbp"
-        data-test-box=""
-      >
+      <div>
         <div
-          class="css-c1qms7"
-          data-test-box=""
+          class="SectionColumnButtonIcons"
         />
       </div>
     </div>
@@ -140,12 +131,11 @@ exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
 exports[`ColumnPosition snapshots should render when some element has alignment 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
+    class="SectionColumn SectionColumn--with-bottom-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels"
-      data-test-box=""
+      class="SectionColumnLabels"
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
@@ -157,26 +147,23 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
       </small>
     </div>
     <div
-      class="css-4ja0ji"
-      data-test-box=""
+      class="SectionColumn__row"
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
-        data-test-box=""
+        class="SectionColumnContent SectionColumnContent--two-inputs"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp TextField"
+          class="TextField"
           data-test-text-field="x"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--disabled TextFieldWrapper--full-width"
+            class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--disabled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="x"
           >
             <div
-              class="css-e5vky9 ScrubbableInput ScrubbableInput--disabled"
-              data-test-box=""
+              class="ScrubbableInput ScrubbableInput--disabled"
               data-test-scrubbable-input="x"
             >
               <small
@@ -214,17 +201,16 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
           </div>
         </div>
         <div
-          class="css-1jnxvbp TextField"
+          class="TextField"
           data-test-text-field="y"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--disabled TextFieldWrapper--full-width"
+            class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--disabled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="y"
           >
             <div
-              class="css-e5vky9 ScrubbableInput ScrubbableInput--disabled"
-              data-test-box=""
+              class="ScrubbableInput ScrubbableInput--disabled"
               data-test-scrubbable-input="y"
             >
               <small
@@ -262,17 +248,12 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
           </div>
         </div>
       </div>
-      <div
-        class="css-1jnxvbp"
-        data-test-box=""
-      >
+      <div>
         <div
-          class="css-c1qms7"
-          data-test-box=""
+          class="SectionColumnButtonIcons"
         >
           <div
-            class="css-1jnxvbp ConstrainsView"
-            data-test-box=""
+            class="ConstrainsView"
           >
             <div
               class="ConstrainsView__constrain ConstrainsView__constrain--bottom"
@@ -303,12 +284,11 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
 exports[`ColumnPosition snapshots should render when values are mixed 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
+    class="SectionColumn SectionColumn--with-bottom-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels"
-      data-test-box=""
+      class="SectionColumnLabels"
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
@@ -320,26 +300,23 @@ exports[`ColumnPosition snapshots should render when values are mixed 1`] = `
       </small>
     </div>
     <div
-      class="css-4ja0ji"
-      data-test-box=""
+      class="SectionColumn__row"
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
-        data-test-box=""
+        class="SectionColumnContent SectionColumnContent--two-inputs"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp TextField"
+          class="TextField"
           data-test-text-field="x"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+            class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="x"
           >
             <div
-              class="css-e5vky9 ScrubbableInput"
-              data-test-box=""
+              class="ScrubbableInput"
               data-test-scrubbable-input="x"
             >
               <small
@@ -376,17 +353,16 @@ exports[`ColumnPosition snapshots should render when values are mixed 1`] = `
           </div>
         </div>
         <div
-          class="css-1jnxvbp TextField"
+          class="TextField"
           data-test-text-field="y"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+            class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="y"
           >
             <div
-              class="css-e5vky9 ScrubbableInput"
-              data-test-box=""
+              class="ScrubbableInput"
               data-test-scrubbable-input="y"
             >
               <small
@@ -423,13 +399,9 @@ exports[`ColumnPosition snapshots should render when values are mixed 1`] = `
           </div>
         </div>
       </div>
-      <div
-        class="css-1jnxvbp"
-        data-test-box=""
-      >
+      <div>
         <div
-          class="css-c1qms7"
-          data-test-box=""
+          class="SectionColumnButtonIcons"
         />
       </div>
     </div>

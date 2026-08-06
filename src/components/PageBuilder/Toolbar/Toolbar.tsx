@@ -3,37 +3,20 @@ import { FC, memo } from 'react';
 
 // components
 import MouseModes, { TMouseModeProps } from './MouseModes/MouseModes';
-import { Box } from 'shared';
-
-// others
 
 // styles
 import styles from './toolbar.scss';
 
-// types
-import { ZIndex } from 'types';
-
 export type TToolbarProps = Pick<TMouseModeProps, 'mouseMode' | 'setMouseMode'>;
 
 const Toolbar: FC<TToolbarProps> = ({ ...restProps }) => (
-  <Box
-    classes={{ className: cx(styles.Toolbar) }}
+  <div
+    className={cx(styles.Toolbar)}
     onMouseDown={(event) => event.stopPropagation()}
     style={{ touchAction: 'manipulation' }}
-    sx={{
-      bg: 'neutral5',
-      borderRadius: '12px',
-      bottom: '12px',
-      boxSizing: 'border-box',
-      height: `48px`,
-      left: '50%',
-      p: 8,
-      position: 'absolute',
-      zIndex: ZIndex.standard,
-    }}
   >
     <MouseModes {...restProps} />
-  </Box>
+  </div>
 );
 
 export default memo(Toolbar);

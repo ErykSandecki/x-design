@@ -3,7 +3,7 @@
 exports[`PopoverPreview snapshots should render PopoverPreview 1`] = `
 <DocumentFragment>
   <div
-    class="css-196hq3q"
+    class="PopoverPreview"
     data-test-popover-preview=""
   >
     <p
@@ -21,7 +21,7 @@ exports[`PopoverPreview snapshots should render PopoverPreview 1`] = `
 exports[`PopoverPreview snapshots should render when active preview 1`] = `
 <DocumentFragment>
   <div
-    class="css-196hq3q"
+    class="PopoverPreview"
     data-test-popover-preview=""
   >
     children

@@ -3,8 +3,7 @@
 exports[`PopoverSeparator snapshots should render PopoverSeparator 1`] = `
 <DocumentFragment>
   <div
-    class="css-3q7iqb"
-    data-test-box=""
+    class="PopoverSeparator"
   />
 </DocumentFragment>
 `;

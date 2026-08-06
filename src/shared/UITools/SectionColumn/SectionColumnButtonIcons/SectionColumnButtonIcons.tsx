@@ -1,18 +1,17 @@
+import cx from 'classnames';
 import { FC, ReactNode } from 'react';
 
-// components
-import Box from '../../../UI/Box/Box';
+// styles
+import styles from './section-column-button-icons.scss';
 
 export type TSectionColumnButtonIconsProps = {
   buttonsIcon?: Array<ReactNode>;
 };
 
 export const SectionColumnButtonIcons: FC<TSectionColumnButtonIconsProps> = ({ buttonsIcon = [] }) => (
-  <Box>
-    <Box sx={{ alignItems: 'center', columnGap: '2.5px', display: 'flex', flexGrow: 1, justifyContent: 'center' }}>
-      {buttonsIcon.map((buttonIcon) => buttonIcon)}
-    </Box>
-  </Box>
+  <div>
+    <div className={cx(styles.SectionColumnButtonIcons)}>{buttonsIcon.map((buttonIcon) => buttonIcon)}</div>
+  </div>
 );
 
 export default SectionColumnButtonIcons;

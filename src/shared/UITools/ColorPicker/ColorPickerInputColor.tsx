@@ -3,12 +3,9 @@ import { ColorPicker as ColorPickerAntd, ColorPickerProps } from 'antd';
 import { FC, useRef } from 'react';
 
 // components
-import Box from '../../UI/Box/Box';
 import Color from '../Color/Color';
 import Panel, { TPanelProps } from './Panel/Panel';
 import TextField from '../TextField/TextField';
-
-// others
 
 // types
 import { E2EAttribute, TColor } from 'types';
@@ -89,9 +86,9 @@ export const ColorPickerInputColor: FC<TColorPickerInputColorProps> = ({
           {...getAttributes(E2EAttribute.colorPicker, e2eValue)}
           {...restProps}
         >
-          <Box e2eAttribute={E2EAttribute.color} e2eValue={e2eValue}>
+          <div {...getAttributes(E2EAttribute.color, e2eValue)}>
             <Color alpha={alpha} color={color} />
-          </Box>
+          </div>
         </ColorPickerAntd>
       }
       value={colorValue.replace('#', '')}

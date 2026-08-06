@@ -5,7 +5,6 @@ import { isArray } from 'lodash';
 import { useTranslation } from 'react-i18next';
 
 // components
-import Box from '../../../UI/Box/Box';
 import E2EDataAttribute, { TE2EDataAttributeProps } from '../../../E2EDataAttributes/E2EDataAttribute';
 import SelectItem from '../SelectItem/SelectItem';
 
@@ -29,7 +28,7 @@ export type TSelectOptionsProps = {
   onClick: (event: MouseEvent<HTMLElement>) => void;
   onMouseEnterOptions?: TFunc<[string]>;
   onMouseLeaveOptions?: TFunc<[string]>;
-  ref: RefObject<HTMLDivElement>;
+  ref: RefObject<HTMLUListElement>;
   selected: boolean;
   value: string;
   wrapperRef: RefObject<HTMLDivElement>;
@@ -65,13 +64,10 @@ export const SelectOptions: FC<TSelectOptionsProps> = ({
 
   return createPortal(
     <E2EDataAttribute type={E2EAttribute.selectOptions} value={e2eValue}>
-      <Box
-        classes={{
-          className: cx(styles.SelectOptions, {
-            [styles['SelectOptions--selected']]: selected,
-          }),
-        }}
-        component="ul"
+      <ul
+        className={cx(styles.SelectOptions, {
+          [styles['SelectOptions--selected']]: selected,
+        })}
         onClick={onClick}
         ref={ref}
         style={style}
@@ -102,7 +98,7 @@ export const SelectOptions: FC<TSelectOptionsProps> = ({
                 })}
           </>
         )}
-      </Box>
+      </ul>
     </E2EDataAttribute>,
     container,
   );

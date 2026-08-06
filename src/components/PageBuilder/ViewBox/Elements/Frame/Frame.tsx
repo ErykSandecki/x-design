@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 // components
 import Element from '../Element/Element';
 import Elements from '../Elements';
-import { Box, Small } from 'shared';
+import { Small } from 'shared';
 
 // core
 import { useRefs } from 'pages/PageBuilderPage/core/RefsProvider';
@@ -57,8 +57,8 @@ const Frame: FC<TFrameProps> = ({ className, id, index, mouseMode, parentId, typ
             {overlayContainerRef.current &&
               parentId === '-1' &&
               createPortal(
-                <Box
-                  classes={{ className: cx(styles.Frame__wrapper) }}
+                <div
+                  className={cx(styles.Frame__wrapper)}
                   style={{
                     height: `${height}px`,
                     left: `${coordinates.x}px`,
@@ -74,10 +74,13 @@ const Frame: FC<TFrameProps> = ({ className, id, index, mouseMode, parentId, typ
                         [styles['Frame__label--selected']]: selected,
                       }),
                     }}
+                    style={{
+                      width: `${width}px`,
+                    }}
                   >
                     {t(`${translationNameSpace}.label.createFrame`)}
                   </Small>
-                </Box>,
+                </div>,
                 overlayContainerRef.current,
               )}
             <Elements eventsDisabled={false} id={id} mouseMode={mouseMode} parentId={id} />

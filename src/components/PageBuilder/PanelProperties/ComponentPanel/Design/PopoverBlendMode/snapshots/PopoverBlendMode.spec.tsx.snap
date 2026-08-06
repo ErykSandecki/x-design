@@ -3,8 +3,7 @@
 exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
 <DocumentFragment>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="initial"
   >
     <div
@@ -23,8 +22,7 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="normal"
   >
     <div
@@ -43,12 +41,10 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
     </small>
   </div>
   <div
-    class="css-3q7iqb"
-    data-test-box=""
+    class="PopoverSeparator"
   />
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="darken"
   >
     <div
@@ -67,8 +63,7 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="multiply"
   >
     <div
@@ -87,8 +82,7 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="color-burn"
   >
     <div
@@ -107,12 +101,10 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
     </small>
   </div>
   <div
-    class="css-3q7iqb"
-    data-test-box=""
+    class="PopoverSeparator"
   />
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="lighten"
   >
     <div
@@ -131,8 +123,7 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="screen"
   >
     <div
@@ -151,8 +142,7 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="plus-lighter"
   >
     <div
@@ -171,8 +161,7 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="color-dodge"
   >
     <div
@@ -191,12 +180,10 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
     </small>
   </div>
   <div
-    class="css-3q7iqb"
-    data-test-box=""
+    class="PopoverSeparator"
   />
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="overlay"
   >
     <div
@@ -215,8 +202,7 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="soft-light"
   >
     <div
@@ -235,8 +221,7 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="hard-light"
   >
     <div
@@ -255,8 +240,7 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="difference"
   >
     <div
@@ -275,8 +259,7 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="exclusion"
   >
     <div
@@ -295,12 +278,10 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
     </small>
   </div>
   <div
-    class="css-3q7iqb"
-    data-test-box=""
+    class="PopoverSeparator"
   />
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="hue"
   >
     <div
@@ -319,8 +300,7 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="saturation"
   >
     <div
@@ -339,8 +319,7 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="color"
   >
     <div
@@ -364,8 +343,7 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
 exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
 <DocumentFragment>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="initial"
   >
     <div
@@ -384,8 +362,7 @@ exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="normal"
   >
     <div
@@ -404,12 +381,10 @@ exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="css-3q7iqb"
-    data-test-box=""
+    class="PopoverSeparator"
   />
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="darken"
   >
     <div
@@ -428,8 +403,7 @@ exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="multiply"
   >
     <div
@@ -448,8 +422,7 @@ exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="color-burn"
   >
     <div
@@ -468,12 +441,10 @@ exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="css-3q7iqb"
-    data-test-box=""
+    class="PopoverSeparator"
   />
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="lighten"
   >
     <div
@@ -492,8 +463,7 @@ exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="screen"
   >
     <div
@@ -512,8 +482,7 @@ exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="plus-lighter"
   >
     <div
@@ -532,8 +501,7 @@ exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="color-dodge"
   >
     <div
@@ -552,12 +520,10 @@ exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="css-3q7iqb"
-    data-test-box=""
+    class="PopoverSeparator"
   />
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="overlay"
   >
     <div
@@ -576,8 +542,7 @@ exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="soft-light"
   >
     <div
@@ -596,8 +561,7 @@ exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="hard-light"
   >
     <div
@@ -616,8 +580,7 @@ exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="difference"
   >
     <div
@@ -636,8 +599,7 @@ exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="exclusion"
   >
     <div
@@ -656,12 +618,10 @@ exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="css-3q7iqb"
-    data-test-box=""
+    class="PopoverSeparator"
   />
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="hue"
   >
     <div
@@ -680,8 +640,7 @@ exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="saturation"
   >
     <div
@@ -700,8 +659,7 @@ exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="color"
   >
     <div

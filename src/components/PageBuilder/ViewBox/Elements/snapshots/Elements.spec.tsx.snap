@@ -3,50 +3,44 @@
 exports[`Elements snapshots should render Element in relative position 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp Elements__element Frame Element"
+    class="Elements__element Frame Element"
     data-status="false"
     data-test-element="test-1"
     id="test-1"
     style="border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; border-top-left-radius: 0px; border-top-right-radius: 0px; left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; height: 100px; margin: 0px 0px 0px 0px; mix-blend-mode: initial; opacity: 1; overflow: hidden; padding: 0px 0px 0px 0px; position: relative; visibility: visible; width: 100px;"
   >
     <div
-      class="css-hnxq09"
-      data-test-box=""
+      class="DropAnchors"
     >
       <div
-        class="css-9ljzna Prompts"
-        data-test-box=""
+        class="Prompts"
       />
       <div
-        class="css-9ljzna Prompts"
-        data-test-box=""
+        class="Prompts"
       />
       <div
-        class="css-9ljzna Prompts"
-        data-test-box=""
+        class="Prompts"
       />
       <div
-        class="css-9ljzna Prompts"
-        data-test-box=""
+        class="Prompts"
       />
       <div
-        class="css-1xpffs9 Anchors Anchors--bottom"
+        class="Anchors Anchors--bottom"
         data-test-anchor="bottom"
       />
       <div
-        class="css-1xpffs9 Anchors Anchors--top"
+        class="Anchors Anchors--top"
         data-test-anchor="top"
       />
     </div>
     <div
-      class="css-1jnxvbp Frame__wrapper"
-      data-test-box=""
+      class="Frame__wrapper"
       style="left: 0px; top: 0px; transform: rotate(0deg); height: 100px; width: 100px;"
     >
       <small
         class="css-1jnxvbp Frame__label Frame__label--top Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
-        style="text-align: inherit;"
+        style="text-align: inherit; width: 100px;"
       >
         Frame
       </small>
@@ -60,21 +54,20 @@ exports[`Elements snapshots should render Elements 1`] = `<DocumentFragment />`;
 exports[`Elements snapshots should render Frame 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp Elements__element Frame Element"
+    class="Elements__element Frame Element"
     data-status="false"
     data-test-element="test-1"
     id="test-1"
     style="border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; border-top-left-radius: 0px; border-top-right-radius: 0px; left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; height: 100px; margin: 0px 0px 0px 0px; mix-blend-mode: initial; opacity: 1; overflow: hidden; padding: 0px 0px 0px 0px; position: absolute; visibility: visible; width: 100px;"
   >
     <div
-      class="css-1jnxvbp Frame__wrapper"
-      data-test-box=""
+      class="Frame__wrapper"
       style="height: 100px; left: 0px; top: 0px; transform: rotate(0deg); width: 100px;"
     >
       <small
         class="css-1jnxvbp Frame__label Frame__label--top Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
-        style="text-align: inherit;"
+        style="width: 100px; text-align: inherit;"
       >
         Frame
       </small>
@@ -86,7 +79,7 @@ exports[`Elements snapshots should render Frame 1`] = `
 exports[`Elements snapshots should render default Element 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp GridDropArea"
+    class="GridDropArea"
     data-test-box="grid-drop-area"
   />
 </DocumentFragment>
@@ -95,29 +88,27 @@ exports[`Elements snapshots should render default Element 1`] = `
 exports[`Elements snapshots should render when possible Element 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp Elements__element Frame Element"
+    class="Elements__element Frame Element"
     data-status="false"
     data-test-element="test-1"
     id="test-1"
     style="border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; border-top-left-radius: 0px; border-top-right-radius: 0px; left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; height: 100px; margin: 0px 0px 0px 0px; mix-blend-mode: initial; opacity: 1; overflow: hidden; padding: 0px 0px 0px 0px; position: absolute; visibility: visible; width: 100px;"
   >
     <div
-      class="css-1jnxvbp Frame__wrapper"
-      data-test-box=""
+      class="Frame__wrapper"
       style="height: 100px; left: 0px; top: 0px; transform: rotate(0deg); width: 100px;"
     >
       <small
         class="css-1jnxvbp Frame__label Frame__label--top Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
-        style="text-align: inherit;"
+        style="width: 100px; text-align: inherit;"
       >
         Frame
       </small>
     </div>
   </div>
   <div
-    class="css-1wum52v PossibleElement"
-    data-test-box=""
+    class="PossibleElement"
     style="height: 0px; left: 0px; position: absolute; top: 0px; width: 0px;"
   >
     <small

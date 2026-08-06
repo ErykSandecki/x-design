@@ -3,30 +3,24 @@
 exports[`PopoverAutoLayoutSettings snapshots should render PreviewBoxSizing 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp PreviewBoxSizing undefined"
-    data-test-box=""
+    class="PreviewBoxSizing undefined"
   >
     <div
-      class="css-1jnxvbp PreviewBoxSizing__tile-left"
-      data-test-box=""
+      class="PreviewBoxSizing__tile-left"
     >
       <div
-        class="css-1jnxvbp PreviewBoxSizing__tile-children"
-        data-test-box=""
+        class="PreviewBoxSizing__tile-children"
       />
     </div>
     <div
-      class="css-1jnxvbp PreviewBoxSizing__tile-right"
-      data-test-box=""
+      class="PreviewBoxSizing__tile-right"
     >
       <div
-        class="css-1jnxvbp PreviewBoxSizing__tile-children"
-        data-test-box=""
+        class="PreviewBoxSizing__tile-children"
       />
     </div>
     <div
-      class="css-1jnxvbp PreviewBoxSizing__stroke undefined"
-      data-test-box=""
+      class="PreviewBoxSizing__stroke undefined"
     />
   </div>
 </DocumentFragment>
@@ -35,30 +29,24 @@ exports[`PopoverAutoLayoutSettings snapshots should render PreviewBoxSizing 1`] 
 exports[`PopoverAutoLayoutSettings snapshots should render when excluded 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp PreviewBoxSizing PreviewBoxSizing--excluded"
-    data-test-box=""
+    class="PreviewBoxSizing PreviewBoxSizing--excluded"
   >
     <div
-      class="css-1jnxvbp PreviewBoxSizing__tile-left"
-      data-test-box=""
+      class="PreviewBoxSizing__tile-left"
     >
       <div
-        class="css-1jnxvbp PreviewBoxSizing__tile-children"
-        data-test-box=""
+        class="PreviewBoxSizing__tile-children"
       />
     </div>
     <div
-      class="css-1jnxvbp PreviewBoxSizing__tile-right"
-      data-test-box=""
+      class="PreviewBoxSizing__tile-right"
     >
       <div
-        class="css-1jnxvbp PreviewBoxSizing__tile-children"
-        data-test-box=""
+        class="PreviewBoxSizing__tile-children"
       />
     </div>
     <div
-      class="css-1jnxvbp PreviewBoxSizing__stroke PreviewBoxSizing__stroke--excluded"
-      data-test-box=""
+      class="PreviewBoxSizing__stroke PreviewBoxSizing__stroke--excluded"
     />
   </div>
 </DocumentFragment>

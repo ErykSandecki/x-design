@@ -4,6 +4,7 @@
 @use '../../../../../styles/mixins/text-ellipsis' as *;
 
 .PossibleElement {
+  overflow: visible;
   pointer-events: none;
   z-index: $zindex-element-active;
 

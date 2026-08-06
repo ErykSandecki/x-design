@@ -3,12 +3,11 @@
 exports[`ColumnAppearance snapshots should render ColumnAppearance 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
+    class="SectionColumn SectionColumn--with-bottom-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels"
-      data-test-box=""
+      class="SectionColumnLabels"
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
@@ -20,26 +19,23 @@ exports[`ColumnAppearance snapshots should render ColumnAppearance 1`] = `
       </small>
     </div>
     <div
-      class="css-4ja0ji"
-      data-test-box=""
+      class="SectionColumn__row"
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
-        data-test-box=""
+        class="SectionColumnContent SectionColumnContent--two-inputs"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp TextField"
+          class="TextField"
           data-test-text-field="opacity"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+            class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="opacity"
           >
             <div
-              class="css-e5vky9 ScrubbableInput"
-              data-test-box=""
+              class="ScrubbableInput"
               data-test-scrubbable-input="opacity"
             >
               <div
@@ -58,8 +54,7 @@ exports[`ColumnAppearance snapshots should render ColumnAppearance 1`] = `
               value="100"
             />
             <div
-              class="css-zcp5dz TextFieldPopover"
-              data-test-box=""
+              class="TextFieldPopover"
             >
               <div
                 class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
@@ -69,14 +64,12 @@ exports[`ColumnAppearance snapshots should render ColumnAppearance 1`] = `
                 width="12"
               />
               <div
-                class="css-6i6anv Popover"
-                data-test-box=""
+                class="Popover"
                 data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="0"
                 >
                   <div
@@ -106,17 +99,16 @@ exports[`ColumnAppearance snapshots should render ColumnAppearance 1`] = `
           </div>
         </div>
         <div
-          class="css-1jnxvbp TextField"
+          class="TextField"
           data-test-text-field="border-radius"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+            class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="border-radius"
           >
             <div
-              class="css-e5vky9 ScrubbableInput"
-              data-test-box=""
+              class="ScrubbableInput"
               data-test-scrubbable-input="border-radius"
             >
               <div
@@ -135,8 +127,7 @@ exports[`ColumnAppearance snapshots should render ColumnAppearance 1`] = `
               value="0"
             />
             <div
-              class="css-zcp5dz TextFieldPopover"
-              data-test-box=""
+              class="TextFieldPopover"
             >
               <div
                 class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
@@ -146,14 +137,12 @@ exports[`ColumnAppearance snapshots should render ColumnAppearance 1`] = `
                 width="12"
               />
               <div
-                class="css-6i6anv Popover"
-                data-test-box=""
+                class="Popover"
                 data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="0"
                 >
                   <div
@@ -179,8 +168,7 @@ exports[`ColumnAppearance snapshots should render ColumnAppearance 1`] = `
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="1"
                 >
                   <div
@@ -210,16 +198,12 @@ exports[`ColumnAppearance snapshots should render ColumnAppearance 1`] = `
           </div>
         </div>
       </div>
-      <div
-        class="css-1jnxvbp"
-        data-test-box=""
-      >
+      <div>
         <div
-          class="css-c1qms7"
-          data-test-box=""
+          class="SectionColumnButtonIcons"
         >
           <div
-            class="css-1jnxvbp ButtonIcon ButtonIcon--selected"
+            class="ButtonIcon ButtonIcon--selected"
             data-test-button-icon="corners-mode"
             data-test-tooltip=""
           >
@@ -257,12 +241,11 @@ exports[`ColumnAppearance snapshots should render ColumnAppearance 1`] = `
 exports[`ColumnAppearance snapshots should render when values are mixed 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
+    class="SectionColumn SectionColumn--with-bottom-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels"
-      data-test-box=""
+      class="SectionColumnLabels"
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
@@ -274,26 +257,23 @@ exports[`ColumnAppearance snapshots should render when values are mixed 1`] = `
       </small>
     </div>
     <div
-      class="css-4ja0ji"
-      data-test-box=""
+      class="SectionColumn__row"
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
-        data-test-box=""
+        class="SectionColumnContent SectionColumnContent--two-inputs"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp TextField"
+          class="TextField"
           data-test-text-field="opacity"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+            class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="opacity"
           >
             <div
-              class="css-e5vky9 ScrubbableInput"
-              data-test-box=""
+              class="ScrubbableInput"
               data-test-scrubbable-input="opacity"
             >
               <div
@@ -312,8 +292,7 @@ exports[`ColumnAppearance snapshots should render when values are mixed 1`] = `
               value="Mixed"
             />
             <div
-              class="css-zcp5dz TextFieldPopover"
-              data-test-box=""
+              class="TextFieldPopover"
             >
               <div
                 class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
@@ -323,14 +302,12 @@ exports[`ColumnAppearance snapshots should render when values are mixed 1`] = `
                 width="12"
               />
               <div
-                class="css-6i6anv Popover"
-                data-test-box=""
+                class="Popover"
                 data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="0"
                 >
                   <div
@@ -360,17 +337,16 @@ exports[`ColumnAppearance snapshots should render when values are mixed 1`] = `
           </div>
         </div>
         <div
-          class="css-1jnxvbp TextField"
+          class="TextField"
           data-test-text-field="border-radius"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--chip TextFieldWrapper--full-width"
+            class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--chip TextFieldWrapper--full-width"
             data-test-text-field-wrapper="border-radius"
           >
             <div
-              class="css-e5vky9 ScrubbableInput ScrubbableInput--disabled"
-              data-test-box=""
+              class="ScrubbableInput ScrubbableInput--disabled"
               data-test-scrubbable-input="border-radius"
             >
               <div
@@ -389,8 +365,7 @@ exports[`ColumnAppearance snapshots should render when values are mixed 1`] = `
               value="0"
             />
             <div
-              class="css-zcp5dz TextFieldPopover"
-              data-test-box=""
+              class="TextFieldPopover"
             >
               <div
                 class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
@@ -400,14 +375,12 @@ exports[`ColumnAppearance snapshots should render when values are mixed 1`] = `
                 width="12"
               />
               <div
-                class="css-6i6anv Popover"
-                data-test-box=""
+                class="Popover"
                 data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="0"
                 >
                   <div
@@ -433,8 +406,7 @@ exports[`ColumnAppearance snapshots should render when values are mixed 1`] = `
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="1"
                 >
                   <div
@@ -462,7 +434,7 @@ exports[`ColumnAppearance snapshots should render when values are mixed 1`] = `
               </div>
             </div>
             <div
-              class="css-1jnxvbp Chip TextFieldWrapper__chip TextFieldWrapper__chip--attached-value TextFieldChip"
+              class="Chip TextFieldWrapper__chip TextFieldWrapper__chip--attached-value TextFieldChip"
               data-test-chip=""
             >
               Mixed
@@ -470,16 +442,12 @@ exports[`ColumnAppearance snapshots should render when values are mixed 1`] = `
           </div>
         </div>
       </div>
-      <div
-        class="css-1jnxvbp"
-        data-test-box=""
-      >
+      <div>
         <div
-          class="css-c1qms7"
-          data-test-box=""
+          class="SectionColumnButtonIcons"
         >
           <div
-            class="css-1jnxvbp ButtonIcon ButtonIcon--selected"
+            class="ButtonIcon ButtonIcon--selected"
             data-test-button-icon="corners-mode"
             data-test-tooltip=""
           >
@@ -517,12 +485,11 @@ exports[`ColumnAppearance snapshots should render when values are mixed 1`] = `
 exports[`ColumnAppearance snapshots should toggle border radius mode 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
+    class="SectionColumn SectionColumn--with-bottom-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels"
-      data-test-box=""
+      class="SectionColumnLabels"
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
@@ -534,26 +501,23 @@ exports[`ColumnAppearance snapshots should toggle border radius mode 1`] = `
       </small>
     </div>
     <div
-      class="css-4ja0ji"
-      data-test-box=""
+      class="SectionColumn__row"
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
-        data-test-box=""
+        class="SectionColumnContent SectionColumnContent--two-inputs"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp TextField"
+          class="TextField"
           data-test-text-field="opacity"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+            class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="opacity"
           >
             <div
-              class="css-e5vky9 ScrubbableInput"
-              data-test-box=""
+              class="ScrubbableInput"
               data-test-scrubbable-input="opacity"
             >
               <div
@@ -572,8 +536,7 @@ exports[`ColumnAppearance snapshots should toggle border radius mode 1`] = `
               value="100"
             />
             <div
-              class="css-zcp5dz TextFieldPopover"
-              data-test-box=""
+              class="TextFieldPopover"
             >
               <div
                 class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
@@ -583,14 +546,12 @@ exports[`ColumnAppearance snapshots should toggle border radius mode 1`] = `
                 width="12"
               />
               <div
-                class="css-6i6anv Popover"
-                data-test-box=""
+                class="Popover"
                 data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="0"
                 >
                   <div
@@ -620,17 +581,16 @@ exports[`ColumnAppearance snapshots should toggle border radius mode 1`] = `
           </div>
         </div>
         <div
-          class="css-1jnxvbp TextField"
+          class="TextField"
           data-test-text-field="border-radius"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+            class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="border-radius"
           >
             <div
-              class="css-e5vky9 ScrubbableInput"
-              data-test-box=""
+              class="ScrubbableInput"
               data-test-scrubbable-input="border-radius"
             >
               <div
@@ -649,8 +609,7 @@ exports[`ColumnAppearance snapshots should toggle border radius mode 1`] = `
               value="0"
             />
             <div
-              class="css-zcp5dz TextFieldPopover"
-              data-test-box=""
+              class="TextFieldPopover"
             >
               <div
                 class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
@@ -660,14 +619,12 @@ exports[`ColumnAppearance snapshots should toggle border radius mode 1`] = `
                 width="12"
               />
               <div
-                class="css-6i6anv Popover"
-                data-test-box=""
+                class="Popover"
                 data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="0"
                 >
                   <div
@@ -693,8 +650,7 @@ exports[`ColumnAppearance snapshots should toggle border radius mode 1`] = `
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="1"
                 >
                   <div
@@ -724,16 +680,12 @@ exports[`ColumnAppearance snapshots should toggle border radius mode 1`] = `
           </div>
         </div>
       </div>
-      <div
-        class="css-1jnxvbp"
-        data-test-box=""
-      >
+      <div>
         <div
-          class="css-c1qms7"
-          data-test-box=""
+          class="SectionColumnButtonIcons"
         >
           <div
-            class="css-1jnxvbp ButtonIcon ButtonIcon--selected"
+            class="ButtonIcon ButtonIcon--selected"
             data-test-button-icon="corners-mode"
             data-test-tooltip=""
           >
@@ -771,12 +723,11 @@ exports[`ColumnAppearance snapshots should toggle border radius mode 1`] = `
 exports[`ColumnAppearance snapshots should toggle border radius mode to the merged 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
+    class="SectionColumn SectionColumn--with-bottom-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels"
-      data-test-box=""
+      class="SectionColumnLabels"
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
@@ -788,26 +739,23 @@ exports[`ColumnAppearance snapshots should toggle border radius mode to the merg
       </small>
     </div>
     <div
-      class="css-4ja0ji"
-      data-test-box=""
+      class="SectionColumn__row"
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
-        data-test-box=""
+        class="SectionColumnContent SectionColumnContent--two-inputs"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp TextField"
+          class="TextField"
           data-test-text-field="opacity"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+            class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="opacity"
           >
             <div
-              class="css-e5vky9 ScrubbableInput"
-              data-test-box=""
+              class="ScrubbableInput"
               data-test-scrubbable-input="opacity"
             >
               <div
@@ -826,8 +774,7 @@ exports[`ColumnAppearance snapshots should toggle border radius mode to the merg
               value="100"
             />
             <div
-              class="css-zcp5dz TextFieldPopover"
-              data-test-box=""
+              class="TextFieldPopover"
             >
               <div
                 class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
@@ -837,14 +784,12 @@ exports[`ColumnAppearance snapshots should toggle border radius mode to the merg
                 width="12"
               />
               <div
-                class="css-6i6anv Popover"
-                data-test-box=""
+                class="Popover"
                 data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="0"
                 >
                   <div
@@ -874,17 +819,16 @@ exports[`ColumnAppearance snapshots should toggle border radius mode to the merg
           </div>
         </div>
         <div
-          class="css-1jnxvbp TextField"
+          class="TextField"
           data-test-text-field="border-radius"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+            class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="border-radius"
           >
             <div
-              class="css-e5vky9 ScrubbableInput"
-              data-test-box=""
+              class="ScrubbableInput"
               data-test-scrubbable-input="border-radius"
             >
               <div
@@ -903,8 +847,7 @@ exports[`ColumnAppearance snapshots should toggle border radius mode to the merg
               value="0"
             />
             <div
-              class="css-zcp5dz TextFieldPopover"
-              data-test-box=""
+              class="TextFieldPopover"
             >
               <div
                 class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
@@ -914,14 +857,12 @@ exports[`ColumnAppearance snapshots should toggle border radius mode to the merg
                 width="12"
               />
               <div
-                class="css-6i6anv Popover"
-                data-test-box=""
+                class="Popover"
                 data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="0"
                 >
                   <div
@@ -947,8 +888,7 @@ exports[`ColumnAppearance snapshots should toggle border radius mode to the merg
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="1"
                 >
                   <div
@@ -978,16 +918,12 @@ exports[`ColumnAppearance snapshots should toggle border radius mode to the merg
           </div>
         </div>
       </div>
-      <div
-        class="css-1jnxvbp"
-        data-test-box=""
-      >
+      <div>
         <div
-          class="css-c1qms7"
-          data-test-box=""
+          class="SectionColumnButtonIcons"
         >
           <div
-            class="css-1jnxvbp ButtonIcon ButtonIcon--selected"
+            class="ButtonIcon ButtonIcon--selected"
             data-test-button-icon="corners-mode"
             data-test-tooltip=""
           >

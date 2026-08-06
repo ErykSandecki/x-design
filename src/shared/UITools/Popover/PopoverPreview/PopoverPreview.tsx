@@ -1,8 +1,9 @@
+import cx from 'classnames';
 import { FC, ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 
 // components
-import Box from '../../../UI/Box/Box';
+import E2EDataAttribute from '../../../E2EDataAttributes/E2EDataAttribute';
 import { P } from '../../../UI/Typography';
 
 // core
@@ -10,6 +11,9 @@ import { usePopoverRoot } from '../PopoverRoot/core/PopoverRootProvider';
 
 // others
 import { translationNameSpace } from '../constants';
+
+// styles
+import styles from './popover-preview.scss';
 
 // types
 import { E2EAttribute } from 'types';
@@ -23,25 +27,12 @@ export const PopoverPreview: FC<TPopoverPreviewProps> = ({ children }) => {
   const { t } = useTranslation();
 
   return (
-    <Box
-      e2eAttribute={E2EAttribute.popoverPreview}
-      sx={{
-        alignItems: 'center',
-        bg: 'neutral4',
-        borderBottom: 1,
-        borderColor: 'neutral3',
-        borderTop: 1,
-        display: 'flex',
-        height: '120px',
-        justifyContent: 'center',
-        mb: 8,
-        ml: -10,
-        width: 'calc(100% + 20px)',
-      }}
-    >
-      {!previewId && <P style={{ opacity: 0.5 }}>{t(`${translationNameSpace}.preview`)}</P>}
-      {children}
-    </Box>
+    <E2EDataAttribute type={E2EAttribute.popoverPreview} value="">
+      <div className={cx(styles.PopoverPreview)}>
+        {!previewId && <P style={{ opacity: 0.5 }}>{t(`${translationNameSpace}.preview`)}</P>}
+        {children}
+      </div>
+    </E2EDataAttribute>
   );
 };
 

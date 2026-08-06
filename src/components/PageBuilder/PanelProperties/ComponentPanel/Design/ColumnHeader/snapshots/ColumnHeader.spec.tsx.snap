@@ -3,21 +3,18 @@
 exports[`ColumnHeader snapshots should render ColumnHeader 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn"
+    class="SectionColumn"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels"
-      data-test-box=""
+      class="SectionColumnLabels"
       style="width: calc(100% - 48px - 2.5px - 8px);"
     />
     <div
-      class="css-4ja0ji"
-      data-test-box=""
+      class="SectionColumn__row"
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--single"
-        data-test-box=""
+        class="SectionColumnContent SectionColumnContent--single"
         style="width: calc(100% - 48px - 2.5px - 8px);"
       >
         <small
@@ -28,16 +25,12 @@ exports[`ColumnHeader snapshots should render ColumnHeader 1`] = `
           Frame
         </small>
       </div>
-      <div
-        class="css-1jnxvbp"
-        data-test-box=""
-      >
+      <div>
         <div
-          class="css-c1qms7"
-          data-test-box=""
+          class="SectionColumnButtonIcons"
         >
           <div
-            class="css-1jnxvbp ButtonIcon"
+            class="ButtonIcon"
             data-test-button-icon=""
             data-test-tooltip=""
           >
@@ -66,7 +59,7 @@ exports[`ColumnHeader snapshots should render ColumnHeader 1`] = `
             </div>
           </div>
           <div
-            class="css-1jnxvbp ButtonIcon"
+            class="ButtonIcon"
             data-test-button-icon=""
             data-test-tooltip=""
           >
@@ -104,21 +97,18 @@ exports[`ColumnHeader snapshots should render ColumnHeader 1`] = `
 exports[`ColumnHeader snapshots should render with multiple selects 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn"
+    class="SectionColumn"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels"
-      data-test-box=""
+      class="SectionColumnLabels"
       style="width: calc(100% - 48px - 2.5px - 8px);"
     />
     <div
-      class="css-4ja0ji"
-      data-test-box=""
+      class="SectionColumn__row"
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--single"
-        data-test-box=""
+        class="SectionColumnContent SectionColumnContent--single"
         style="width: calc(100% - 48px - 2.5px - 8px);"
       >
         <small
@@ -129,16 +119,12 @@ exports[`ColumnHeader snapshots should render with multiple selects 1`] = `
           2 selected
         </small>
       </div>
-      <div
-        class="css-1jnxvbp"
-        data-test-box=""
-      >
+      <div>
         <div
-          class="css-c1qms7"
-          data-test-box=""
+          class="SectionColumnButtonIcons"
         >
           <div
-            class="css-1jnxvbp ButtonIcon"
+            class="ButtonIcon"
             data-test-button-icon=""
             data-test-tooltip=""
           >
@@ -167,7 +153,7 @@ exports[`ColumnHeader snapshots should render with multiple selects 1`] = `
             </div>
           </div>
           <div
-            class="css-1jnxvbp ButtonIcon"
+            class="ButtonIcon"
             data-test-button-icon=""
             data-test-tooltip=""
           >

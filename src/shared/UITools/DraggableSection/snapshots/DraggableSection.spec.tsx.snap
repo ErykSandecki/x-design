@@ -3,7 +3,7 @@
 exports[`DraggableSection snapshots should render DraggableSection 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp DraggableSection"
+    class="DraggableSection"
     data-test-draggable-section=""
   />
 </DocumentFragment>
@@ -12,16 +12,15 @@ exports[`DraggableSection snapshots should render DraggableSection 1`] = `
 exports[`DraggableSection snapshots should render items 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp DraggableSection"
+    class="DraggableSection"
     data-test-draggable-section=""
   >
     <div
-      class="css-1jnxvbp DraggableSection__item"
+      class="DraggableSection__item"
       data-test-draggable-section-item="0"
     >
       <div
-        class="css-1jnxvbp DraggableSectionMenu"
-        data-test-box=""
+        class="DraggableSectionMenu"
       >
         <div
           class="css-1jnxvbp Icon Icon--neutral-1"
@@ -32,26 +31,23 @@ exports[`DraggableSection snapshots should render items 1`] = `
         />
       </div>
       <div
-        class="css-1jnxvbp DraggableSectionAnchor"
+        class="DraggableSectionAnchor"
         data-anchor-index="0"
         data-test-anchor="anchor-north"
       />
       <div
-        class="css-1jnxvbp DraggableSectionAnchor"
+        class="DraggableSectionAnchor"
         data-anchor-index="0"
         data-test-anchor="anchor-south"
       />
       <div
-        class="css-1jnxvbp"
-        data-test-box=""
         style="width: 100%;"
       />
       <div
-        class="css-1jnxvbp DraggableSectionContent"
-        data-test-box=""
+        class="DraggableSectionContent"
       >
         <div
-          class="css-1jnxvbp ButtonIcon"
+          class="ButtonIcon"
           data-test-button-icon="toggle-visibility"
           data-test-tooltip=""
         >
@@ -80,7 +76,7 @@ exports[`DraggableSection snapshots should render items 1`] = `
           </div>
         </div>
         <div
-          class="css-1jnxvbp ButtonIcon"
+          class="ButtonIcon"
           data-test-button-icon="remove"
           data-test-tooltip=""
         >
@@ -111,12 +107,11 @@ exports[`DraggableSection snapshots should render items 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp DraggableSection__item"
+      class="DraggableSection__item"
       data-test-draggable-section-item="1"
     >
       <div
-        class="css-1jnxvbp DraggableSectionMenu"
-        data-test-box=""
+        class="DraggableSectionMenu"
       >
         <div
           class="css-1jnxvbp Icon Icon--neutral-1"
@@ -127,26 +122,23 @@ exports[`DraggableSection snapshots should render items 1`] = `
         />
       </div>
       <div
-        class="css-1jnxvbp DraggableSectionAnchor"
+        class="DraggableSectionAnchor"
         data-anchor-index="1"
         data-test-anchor="anchor-north"
       />
       <div
-        class="css-1jnxvbp DraggableSectionAnchor"
+        class="DraggableSectionAnchor"
         data-anchor-index="1"
         data-test-anchor="anchor-south"
       />
       <div
-        class="css-1jnxvbp"
-        data-test-box=""
         style="width: 100%;"
       />
       <div
-        class="css-1jnxvbp DraggableSectionContent"
-        data-test-box=""
+        class="DraggableSectionContent"
       >
         <div
-          class="css-1jnxvbp ButtonIcon"
+          class="ButtonIcon"
           data-test-button-icon="toggle-visibility"
           data-test-tooltip=""
         >
@@ -175,7 +167,7 @@ exports[`DraggableSection snapshots should render items 1`] = `
           </div>
         </div>
         <div
-          class="css-1jnxvbp ButtonIcon"
+          class="ButtonIcon"
           data-test-button-icon="remove"
           data-test-tooltip=""
         >
@@ -206,12 +198,11 @@ exports[`DraggableSection snapshots should render items 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp DraggableSection__item"
+      class="DraggableSection__item"
       data-test-draggable-section-item="2"
     >
       <div
-        class="css-1jnxvbp DraggableSectionMenu"
-        data-test-box=""
+        class="DraggableSectionMenu"
       >
         <div
           class="css-1jnxvbp Icon Icon--neutral-1"
@@ -222,26 +213,23 @@ exports[`DraggableSection snapshots should render items 1`] = `
         />
       </div>
       <div
-        class="css-1jnxvbp DraggableSectionAnchor"
+        class="DraggableSectionAnchor"
         data-anchor-index="2"
         data-test-anchor="anchor-north"
       />
       <div
-        class="css-1jnxvbp DraggableSectionAnchor"
+        class="DraggableSectionAnchor"
         data-anchor-index="2"
         data-test-anchor="anchor-south"
       />
       <div
-        class="css-1jnxvbp"
-        data-test-box=""
         style="width: 100%;"
       />
       <div
-        class="css-1jnxvbp DraggableSectionContent"
-        data-test-box=""
+        class="DraggableSectionContent"
       >
         <div
-          class="css-1jnxvbp ButtonIcon"
+          class="ButtonIcon"
           data-test-button-icon="toggle-visibility"
           data-test-tooltip=""
         >
@@ -270,7 +258,7 @@ exports[`DraggableSection snapshots should render items 1`] = `
           </div>
         </div>
         <div
-          class="css-1jnxvbp ButtonIcon"
+          class="ButtonIcon"
           data-test-button-icon="remove"
           data-test-tooltip=""
         >

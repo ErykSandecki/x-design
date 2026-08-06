@@ -3,23 +3,21 @@
 exports[`ZoomBox snapshots should render Zoombox 1`] = `
 <DocumentFragment>
   <div
-    class="css-117yijb ZoomBox ZoomBox--idle ZoomBox--default"
+    class="ZoomBox ZoomBox--idle ZoomBox--default"
     data-test-box="zoom-box"
     tabindex="0"
   >
     <div
-      class="css-1jnxvbp ZoomBox__background-mask"
+      class="ZoomBox__background-mask"
       data-test-box="zoom-box-background-mask"
       style="background-color: rgb(255, 255, 255); display: initial;"
     />
     <div
-      class="css-1jnxvbp ZoomBox__texture-blank"
-      data-test-box=""
+      class="ZoomBox__texture-blank"
       style="transform: translate(0px, 0px) scale(1);"
     />
     <div
-      class="css-1j4c14e ZoomBox__zoom-content"
-      data-test-box=""
+      class="ZoomBox__zoom-content"
       id="zoomContentId"
       style="transform: translate(0px, 0px) scale(1);"
     >
@@ -32,23 +30,21 @@ exports[`ZoomBox snapshots should render Zoombox 1`] = `
 exports[`ZoomBox snapshots should render when background is hidden 1`] = `
 <DocumentFragment>
   <div
-    class="css-117yijb ZoomBox ZoomBox--idle ZoomBox--default"
+    class="ZoomBox ZoomBox--idle ZoomBox--default"
     data-test-box="zoom-box"
     tabindex="0"
   >
     <div
-      class="css-1jnxvbp ZoomBox__background-mask"
+      class="ZoomBox__background-mask"
       data-test-box="zoom-box-background-mask"
       style="background-color: rgb(255, 255, 255); display: none;"
     />
     <div
-      class="css-1jnxvbp ZoomBox__texture-blank"
-      data-test-box=""
+      class="ZoomBox__texture-blank"
       style="transform: translate(0px, 0px) scale(1);"
     />
     <div
-      class="css-1j4c14e ZoomBox__zoom-content"
-      data-test-box=""
+      class="ZoomBox__zoom-content"
       id="zoomContentId"
       style="transform: translate(0px, 0px) scale(1);"
     >
@@ -61,23 +57,21 @@ exports[`ZoomBox snapshots should render when background is hidden 1`] = `
 exports[`ZoomBox snapshots should render when mouse mode is move & cursor state is pressing 1`] = `
 <DocumentFragment>
   <div
-    class="css-117yijb ZoomBox ZoomBox--lmb ZoomBox--move ZoomBox--pressing"
+    class="ZoomBox ZoomBox--lmb ZoomBox--move ZoomBox--pressing"
     data-test-box="zoom-box"
     tabindex="0"
   >
     <div
-      class="css-1jnxvbp ZoomBox__background-mask"
+      class="ZoomBox__background-mask"
       data-test-box="zoom-box-background-mask"
       style="background-color: rgb(255, 255, 255); display: initial;"
     />
     <div
-      class="css-1jnxvbp ZoomBox__texture-blank"
-      data-test-box=""
+      class="ZoomBox__texture-blank"
       style="transform: translate(0px, 0px) scale(1);"
     />
     <div
-      class="css-1j4c14e ZoomBox__zoom-content"
-      data-test-box=""
+      class="ZoomBox__zoom-content"
       id="zoomContentId"
       style="transform: translate(0px, 0px) scale(1);"
     >

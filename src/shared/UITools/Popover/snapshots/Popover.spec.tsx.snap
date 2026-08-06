@@ -3,14 +3,12 @@
 exports[`Popover snapshots should render Popover 1`] = `
 <DocumentFragment>
   <div
-    class="css-6i6anv Popover"
-    data-test-box=""
+    class="Popover"
     data-test-popover="popover"
     style="left: 0px; top: 0px;"
   >
     <div
-      class="css-1wfopar PopoverItem"
-      data-test-box=""
+      class="PopoverItem"
       data-test-popover-item="0"
     >
       <div
@@ -36,8 +34,7 @@ exports[`Popover snapshots should render Popover 1`] = `
       </small>
     </div>
     <div
-      class="css-1wfopar PopoverItem"
-      data-test-box=""
+      class="PopoverItem"
       data-test-popover-item="1"
     >
       <div
@@ -63,8 +60,7 @@ exports[`Popover snapshots should render Popover 1`] = `
       </small>
     </div>
     <div
-      class="css-3q7iqb"
-      data-test-box=""
+      class="PopoverSeparator"
     />
   </div>
 </DocumentFragment>
@@ -73,14 +69,12 @@ exports[`Popover snapshots should render Popover 1`] = `
 exports[`Popover snapshots should render not visible item 1`] = `
 <DocumentFragment>
   <div
-    class="css-6i6anv Popover Popover--selected"
-    data-test-box=""
+    class="Popover Popover--selected"
     data-test-popover="popover"
     style="left: 0px; top: 0px;"
   >
     <div
-      class="css-1wfopar PopoverItem"
-      data-test-box=""
+      class="PopoverItem"
       data-test-popover-item="0"
     >
       <div
@@ -106,8 +100,7 @@ exports[`Popover snapshots should render not visible item 1`] = `
       </small>
     </div>
     <div
-      class="css-1wfopar PopoverItem"
-      data-test-box=""
+      class="PopoverItem"
       data-test-popover-item="1"
     >
       <div
@@ -133,8 +126,7 @@ exports[`Popover snapshots should render not visible item 1`] = `
       </small>
     </div>
     <div
-      class="css-3q7iqb"
-      data-test-box=""
+      class="PopoverSeparator"
     />
   </div>
 </DocumentFragment>
@@ -143,14 +135,12 @@ exports[`Popover snapshots should render not visible item 1`] = `
 exports[`Popover snapshots should render selected 1`] = `
 <DocumentFragment>
   <div
-    class="css-6i6anv Popover Popover--selected"
-    data-test-box=""
+    class="Popover Popover--selected"
     data-test-popover="popover"
     style="left: 0px; top: 0px;"
   >
     <div
-      class="css-1wfopar PopoverItem"
-      data-test-box=""
+      class="PopoverItem"
       data-test-popover-item="0"
     >
       <div
@@ -176,8 +166,7 @@ exports[`Popover snapshots should render selected 1`] = `
       </small>
     </div>
     <div
-      class="css-1wfopar PopoverItem"
-      data-test-box=""
+      class="PopoverItem"
       data-test-popover-item="1"
     >
       <div
@@ -203,8 +192,7 @@ exports[`Popover snapshots should render selected 1`] = `
       </small>
     </div>
     <div
-      class="css-3q7iqb"
-      data-test-box=""
+      class="PopoverSeparator"
     />
   </div>
 </DocumentFragment>

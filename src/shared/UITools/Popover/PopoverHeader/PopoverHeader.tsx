@@ -1,12 +1,16 @@
+import cx from 'classnames';
 import { FC } from 'react';
 
 // components
-import Box from '../../../UI/Box/Box';
+import E2EDataAttribute from '../../../E2EDataAttributes/E2EDataAttribute';
 import Icon from '../../../UI/Icon/Icon';
 import { Small } from '../../../UI/Typography';
 
 // core
 import { usePopoverRoot } from '../PopoverRoot/core/PopoverRootProvider';
+
+// styles
+import styles from './popover-header.scss';
 
 // types
 import { E2EAttribute } from 'types';
@@ -19,20 +23,12 @@ export const PopoverHeader: FC<TPopoverHeaderProps> = ({ title }) => {
   const { setSelected } = usePopoverRoot();
 
   return (
-    <Box
-      e2eAttribute={E2EAttribute.popoverHeader}
-      sx={{
-        alignItems: 'center',
-        columnGap: '25px',
-        display: 'flex',
-        height: '30px',
-        justifyContent: 'space-between',
-        mb: 5,
-      }}
-    >
-      <Small style={{ fontSize: '11px' }}>{title}</Small>
-      <Icon clickable name="Close" height={10} onClick={() => setSelected(false)} width={10} />
-    </Box>
+    <E2EDataAttribute type={E2EAttribute.popoverHeader} value="">
+      <div className={cx(styles.PopoverHeader)}>
+        <Small style={{ fontSize: '11px' }}>{title}</Small>
+        <Icon clickable name="Close" height={10} onClick={() => setSelected(false)} width={10} />
+      </div>
+    </E2EDataAttribute>
   );
 };
 

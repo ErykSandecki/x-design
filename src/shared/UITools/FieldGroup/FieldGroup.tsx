@@ -2,16 +2,16 @@ import cx from 'classnames';
 import { FC, ReactNode } from 'react';
 
 // components
-import Box from '../../UI/Box/Box';
-
-// others
+import E2EDataAttribute, { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute';
 
 // styles
 import styles from './field-group.scss';
 
 // types
 import { E2EAttribute, TObject } from 'types';
-import { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute';
+
+// utils
+import { mapAttributes } from 'utils';
 
 export type TFieldGroupProps = {
   attributes?: TObject<any>;
@@ -21,16 +21,11 @@ export type TFieldGroupProps = {
 
 export const FieldGroup: FC<TFieldGroupProps> = ({ attributes = {}, children, e2eValue = '' }) => {
   return (
-    <Box
-      attributes={attributes}
-      classes={{
-        className: cx(styles.FieldGroup),
-      }}
-      e2eAttribute={E2EAttribute.fieldGroup}
-      e2eValue={e2eValue}
-    >
-      {children}
-    </Box>
+    <E2EDataAttribute type={E2EAttribute.fieldGroup} value={e2eValue}>
+      <div className={cx(styles.FieldGroup)} {...mapAttributes(attributes)}>
+        {children}
+      </div>
+    </E2EDataAttribute>
   );
 };
 

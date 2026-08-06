@@ -1,5 +1,13 @@
 .ColorResult {
+  align-items: center;
+  display: flex;
+
   &__selected-color {
     border: 1px solid var(--xd-color-neutral-3);
+    border-radius: 2.5px;
+    box-sizing: border-box;
+    height: 16px;
+    margin: 8px;
+    width: 16px;
   }
 }

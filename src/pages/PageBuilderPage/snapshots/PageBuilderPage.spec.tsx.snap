@@ -2,21 +2,17 @@
 
 exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
 <DocumentFragment>
-  <div
-    class="css-1jnxvbp"
-    data-test-box=""
-  >
+  <div>
     <div
-      class="css-hyoj97 Toolbar"
-      data-test-box=""
+      class="Toolbar"
     >
       <div
-        class="css-1douohc MouseModes"
+        class="MouseModes"
         data-test-box="toolbar"
       >
         <div
           active=""
-          class="css-1uzmw43 MouseModes__button MouseModes__button--active"
+          class="MouseModes__button MouseModes__button--active"
           data-test-box="default"
         >
           <div
@@ -28,7 +24,7 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
           />
         </div>
         <div
-          class="css-1uzmw43 MouseModes__button"
+          class="MouseModes__button"
           data-test-box="toolBeltA"
         >
           <div
@@ -40,7 +36,7 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
           />
         </div>
         <div
-          class="css-1uzmw43 MouseModes__button"
+          class="MouseModes__button"
           data-test-box="move"
         >
           <div
@@ -52,7 +48,7 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
           />
         </div>
         <div
-          class="css-1uzmw43 MouseModes__button"
+          class="MouseModes__button"
           data-test-box="comment"
         >
           <div
@@ -66,23 +62,21 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
       </div>
     </div>
     <div
-      class="css-5u8gxq PanelProperties"
+      class="PanelProperties"
       data-test-box="panel-properties"
       id="panelProperties"
       style="width: 240px;"
     >
       <div
-        class="css-xmuf4s PanelProperties__area-handle-resize"
-        data-test-box=""
+        class="PanelProperties__area-handle-resize"
         data-test-resize=""
       />
       <div
-        class="css-1jnxvbp Section"
+        class="Section"
         data-test-section=""
       >
         <div
-          class="css-1jnxvbp Section__label-wrapper Section__label-wrapper--separator"
-          data-test-box=""
+          class="Section__label-wrapper Section__label-wrapper--separator"
         >
           <small
             class="css-1jnxvbp Section__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -92,23 +86,22 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
             Mode
           </small>
           <div
-            class="css-1f1atqu"
-            data-test-box=""
+            class="Section__label-component"
           />
         </div>
         <div
-          class="css-gu5024 Tabs"
+          class="Tabs"
           data-test-tabs="panel-mode"
         >
           <div
             active=""
-            class="css-17z9djj Tabs__tab Tabs__tab--active"
+            class="Tabs__tab Tabs__tab--active"
             data-test-tab="design"
           >
             Design
           </div>
           <div
-            class="css-17z9djj Tabs__tab"
+            class="Tabs__tab"
             data-test-tab="prototype"
           >
             Prototype
@@ -119,12 +112,11 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
         class="PanelProperties__sections"
       >
         <div
-          class="css-1jnxvbp Section"
+          class="Section"
           data-test-section="background"
         >
           <div
-            class="css-1jnxvbp Section__label-wrapper Section__label-wrapper--separator"
-            data-test-box=""
+            class="Section__label-wrapper Section__label-wrapper--separator"
           >
             <small
               class="css-1jnxvbp Section__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -134,64 +126,55 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
               Page
             </small>
             <div
-              class="css-1f1atqu"
-              data-test-box=""
+              class="Section__label-component"
             />
           </div>
           <div
-            class="css-1jnxvbp SectionColumn"
+            class="SectionColumn"
             data-test-section=""
           >
             <div
-              class="css-xdzdnq SectionColumnLabels"
-              data-test-box=""
+              class="SectionColumnLabels"
               style="width: calc(100% - 24px - 0px - 8px);"
             />
             <div
-              class="css-4ja0ji"
-              data-test-box=""
+              class="SectionColumn__row"
             >
               <div
-                class="css-biptg5 SectionColumnContent SectionColumnContent--single"
-                data-test-box=""
+                class="SectionColumnContent SectionColumnContent--single"
                 style="width: calc(100% - 24px - 0px - 8px);"
               >
                 <div
-                  class="css-1jnxvbp FieldGroup"
+                  class="FieldGroup"
                   data-test-field-group="background"
                   data-visible-color-picker-panel="false"
                 >
                   <div
-                    class="css-1jnxvbp ColorPicker__color-input TextField"
+                    class="ColorPicker__color-input TextField"
                     data-test-text-field="color"
                     data-test-tooltip=""
                   >
                     <div
-                      class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled"
+                      class="TextFieldWrapper TextFieldWrapper--filled"
                       data-test-text-field-wrapper="color"
                     >
                       <div
                         aria-describedby="test-id"
-                        class="css-1jnxvbp"
                         data-test-color="background"
                       >
                         <div
-                          class="css-1axzf39 Color"
-                          data-test-box=""
+                          class="Color"
                         >
                           <div
-                            class="css-agg4zg Color__picker"
-                            data-test-box=""
+                            class="Color__picker"
                             style="background-color: rgb(241, 242, 246);"
                           />
                           <div
-                            class="css-agg4zg Color__picker-alpha"
-                            data-test-box=""
+                            class="Color__picker-alpha"
                             style="background-color: rgb(241, 242, 246);"
                           />
                           <div
-                            class="css-hnxq09 Color__picker-texture"
-                            data-test-box=""
+                            class="Color__picker-texture"
                           />
                         </div>
                       </div>
@@ -204,12 +187,12 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
                     </div>
                   </div>
                   <div
-                    class="css-1jnxvbp ColorPicker__alpha-input TextField"
+                    class="ColorPicker__alpha-input TextField"
                     data-test-text-field="alpha"
                     data-test-tooltip=""
                   >
                     <div
-                      class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled"
+                      class="TextFieldWrapper TextFieldWrapper--filled"
                       data-test-text-field-wrapper="alpha"
                     >
                       <input
@@ -222,8 +205,7 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
                         value="100"
                       />
                       <div
-                        class="css-e5vky9 ScrubbableInput"
-                        data-test-box=""
+                        class="ScrubbableInput"
                         data-test-scrubbable-input=""
                       >
                         <div
@@ -236,16 +218,12 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
                   </div>
                 </div>
               </div>
-              <div
-                class="css-1jnxvbp"
-                data-test-box=""
-              >
+              <div>
                 <div
-                  class="css-c1qms7"
-                  data-test-box=""
+                  class="SectionColumnButtonIcons"
                 >
                   <div
-                    class="css-1jnxvbp ButtonIcon"
+                    class="ButtonIcon"
                     data-test-button-icon="toggle-visibility"
                     data-test-tooltip=""
                   >
@@ -281,29 +259,26 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
       </div>
     </div>
     <div
-      class="css-117yijb ViewBox ZoomBox ZoomBox--idle ZoomBox--default"
+      class="ViewBox ZoomBox ZoomBox--idle ZoomBox--default"
       data-test-box="zoom-box"
       tabindex="0"
     >
       <div
-        class="css-1jnxvbp ZoomBox__background-mask"
+        class="ZoomBox__background-mask"
         data-test-box="zoom-box-background-mask"
         style="background-color: rgb(241, 242, 246); display: initial;"
       />
       <div
-        class="css-1jnxvbp ZoomBox__texture-blank"
-        data-test-box=""
+        class="ZoomBox__texture-blank"
         style="transform: translate(0px, 0px) scale(1);"
       />
       <div
-        class="css-1j4c14e ZoomBox__zoom-content"
-        data-test-box=""
+        class="ZoomBox__zoom-content"
         id="zoomContentId"
         style="transform: translate(0px, 0px) scale(1);"
       >
         <div
-          class="css-u5h2b"
-          data-test-box=""
+          class="OverlayContainer"
           id="overlayContainer"
           style="z-index: var(--xd-page-builder-zindex-overlay-container);"
         />

@@ -3,7 +3,7 @@
 exports[`FieldGroup snapshots should render FieldGroup 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp FieldGroup"
+    class="FieldGroup"
     data-test-field-group=""
   >
     children

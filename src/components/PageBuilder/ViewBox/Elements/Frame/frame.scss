@@ -1,5 +1,7 @@
 @forward '../../../styles/z-indexes';
+@forward '../../../../../styles/mixins/text-ellipsis';
 @use '../../../styles/z-indexes' as *;
+@use '../../../../../styles/mixins/text-ellipsis' as *;
 
 .Frame {
   &__wrapper {
@@ -8,6 +10,8 @@
   }
 
   &__label {
+    @include text-ellipsis;
+
     color: var(--xd-color-neutral-2);
     font-size: 11px;
     pointer-events: all;

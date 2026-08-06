@@ -1,10 +1,20 @@
 .MouseModes {
   $self: &;
 
+  column-gap: 8px;
+  display: flex;
+  height: 100%;
+
   &__button {
+    align-items: center;
+    border-radius: 5px;
     cursor:
       url('assets/icons/cursors/pointer.png') 10 6,
       auto;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 32px;
 
     &:not(#{$self}__button--active):hover {
       background-color: var(--xd-color-neutral-3);

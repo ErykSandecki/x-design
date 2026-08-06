@@ -3,7 +3,7 @@ import { FC, memo, useRef } from 'react';
 
 // components
 import ElementChildren from './ElementChildren';
-import { Box } from 'shared';
+import { E2EDataAttribute } from 'shared';
 
 // hooks
 import { useElementEvents } from './hooks/useElementEvents';
@@ -25,6 +25,7 @@ import { getBorderInsets } from './utils/getBorderInsets';
 import { getInsets } from './utils/getInsets';
 import { getLayout } from './utils/getLayout';
 import { getPosition } from './utils/getPosition';
+import { mapAttributes } from 'utils';
 
 export type TElementProps = {
   classes: { className: string };
@@ -74,63 +75,61 @@ const Element: FC<TElementProps> = ({ classes, children, id, index, mouseMode, p
   } = useElementEvents(elementRef, id, mouseMode, parentId, type);
 
   return (
-    <Box
-      attributes={{ [DATA_STATUS_ATTRIBUTE]: isSelected ? 'true' : 'false' }}
-      classes={{
-        className: cx(classes.className, styles.Element, {
+    <E2EDataAttribute type={E2EAttribute.element} value={id}>
+      <div
+        className={cx(classes.className, styles.Element, {
           [styles['Element--hover']]: isHover,
           [styles['Element--moving']]: isMoving,
-        }),
-      }}
-      e2eAttribute={E2EAttribute.element}
-      e2eValue={id}
-      id={id}
-      ref={elementRef}
-      style={{
-        ...getBorderInsets(borderRadius),
-        ...getLayout(layout),
-        ...getPosition(alignment, angle, x, y),
-        background: getBackground(background),
-        height: cssHeight,
-        margin: getInsets(margin),
-        maxHeight,
-        maxWidth,
-        minHeight,
-        minWidth,
-        mixBlendMode,
-        opacity,
-        overflow,
-        padding: getInsets(padding),
-        position,
-        visibility: visible ? 'visible' : 'hidden',
-        width: cssWidth,
-      }}
-      {...events}
-    >
-      {visible && (
-        <ElementChildren
-          angle={angle}
-          coordinates={coordinates}
-          displayEventsArea={displayEventsArea}
-          displayOutline={displayOutline}
-          elementRef={elementRef}
-          flip={flip}
-          height={height}
-          id={id}
-          index={index}
-          isHover={isHover}
-          isSelected={isSelected}
-          mouseMode={mouseMode}
-          parentId={parentId}
-          showDropAnchors={showDropAnchors}
-          width={width}
-          x={x}
-          y={y}
-        >
-          {children}
-        </ElementChildren>
-      )}
-    </Box>
+        })}
+        id={id}
+        ref={elementRef}
+        {...mapAttributes({ [DATA_STATUS_ATTRIBUTE]: isSelected ? 'true' : 'false' })}
+        style={{
+          ...getBorderInsets(borderRadius),
+          ...getLayout(layout),
+          ...getPosition(alignment, angle, x, y),
+          background: getBackground(background),
+          height: cssHeight,
+          margin: getInsets(margin),
+          maxHeight,
+          maxWidth,
+          minHeight,
+          minWidth,
+          mixBlendMode,
+          opacity,
+          overflow,
+          padding: getInsets(padding),
+          position,
+          visibility: visible ? 'visible' : 'hidden',
+          width: cssWidth,
+        }}
+        {...events}
+      >
+        {visible && (
+          <ElementChildren
+            angle={angle}
+            coordinates={coordinates}
+            displayEventsArea={displayEventsArea}
+            displayOutline={displayOutline}
+            elementRef={elementRef}
+            flip={flip}
+            height={height}
+            id={id}
+            index={index}
+            isHover={isHover}
+            isSelected={isSelected}
+            mouseMode={mouseMode}
+            parentId={parentId}
+            showDropAnchors={showDropAnchors}
+            width={width}
+            x={x}
+            y={y}
+          >
+            {children}
+          </ElementChildren>
+        )}
+      </div>
+    </E2EDataAttribute>
   );
 };
 

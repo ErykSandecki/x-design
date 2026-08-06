@@ -2,10 +2,7 @@ import cx from 'classnames';
 import { FC } from 'react';
 
 // components
-import Box from '../../../UI/Box/Box';
 import Icon from '../../../UI/Icon/Icon';
-
-// others
 
 // styles
 import styles from './draggable-section-menu.scss';
@@ -21,15 +18,13 @@ export const DraggableSectionMenu: FC<TDraggableSectionMenuProps> = ({ forceDisp
   }
 
   return (
-    <Box
-      classes={{
-        className: cx(styles.DraggableSectionMenu, {
-          [styles['DraggableSectionMenu--force-display']]: forceDisplay,
-        }),
-      }}
+    <div
+      className={cx(styles.DraggableSectionMenu, {
+        [styles['DraggableSectionMenu--force-display']]: forceDisplay,
+      })}
     >
       <Icon height={8} name="Menu" width={8} />
-    </Box>
+    </div>
   );
 };
 

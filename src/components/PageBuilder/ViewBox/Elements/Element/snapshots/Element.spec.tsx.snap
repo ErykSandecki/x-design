@@ -3,7 +3,7 @@
 exports[`Element snapshots should render Element 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp className Element"
+    class="className Element"
     data-status="false"
     data-test-element="test-1"
     id="test-1"
@@ -15,7 +15,7 @@ exports[`Element snapshots should render Element 1`] = `
 exports[`Element snapshots should render Element when is hidden 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp className Element"
+    class="className Element"
     data-status="false"
     data-test-element="test-1"
     id="test-1"
@@ -27,25 +27,21 @@ exports[`Element snapshots should render Element when is hidden 1`] = `
 exports[`Element snapshots should render Element when is selected & is multiple moving 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp className Element Element--moving"
+    class="className Element Element--moving"
     data-status="true"
     data-test-element="test-1"
     id="test-1"
     style="border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; border-top-left-radius: 0px; border-top-right-radius: 0px; left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; height: 100px; margin: 0px 0px 0px 0px; mix-blend-mode: initial; opacity: 1; overflow: hidden; padding: 0px 0px 0px 0px; position: absolute; visibility: visible; width: 100px;"
   >
     <div
-      class="css-1jnxvbp Outline"
-      data-test-box=""
+      class="Outline"
       style="height: 100px; left: 0px; top: 0px; transform: rotate(0deg); width: 100px;"
     />
     <div
-      class="css-1xpffs9"
-      data-test-box=""
+      class="EventsArea"
       style="height: 100px; left: 0px; top: 0px; transform: rotate(0deg); transform-origin: center center; width: 100px;"
     >
       <div
-        class="css-1jnxvbp"
-        data-test-box=""
         style="height: 100px; width: 100px;"
       />
       <svg
@@ -142,25 +138,21 @@ exports[`Element snapshots should render Element when is selected & is multiple 
 exports[`Element snapshots should render Element when is selected 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp className Element"
+    class="className Element"
     data-status="true"
     data-test-element="test-1"
     id="test-1"
     style="border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; border-top-left-radius: 0px; border-top-right-radius: 0px; left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; height: 100px; margin: 0px 0px 0px 0px; mix-blend-mode: initial; opacity: 1; overflow: hidden; padding: 0px 0px 0px 0px; position: absolute; visibility: visible; width: 100px;"
   >
     <div
-      class="css-1jnxvbp Outline"
-      data-test-box=""
+      class="Outline"
       style="height: 100px; left: 0px; top: 0px; transform: rotate(0deg); width: 100px;"
     />
     <div
-      class="css-1xpffs9"
-      data-test-box=""
+      class="EventsArea"
       style="height: 100px; left: 0px; top: 0px; transform: rotate(0deg); transform-origin: center center; width: 100px;"
     >
       <div
-        class="css-1jnxvbp"
-        data-test-box=""
         style="height: 100px; width: 100px;"
       />
       <svg
@@ -257,7 +249,7 @@ exports[`Element snapshots should render Element when is selected 1`] = `
 exports[`Element snapshots should render Element when width & height is auto 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp className Element"
+    class="className Element"
     data-status="false"
     data-test-element="test-1"
     id="test-1"

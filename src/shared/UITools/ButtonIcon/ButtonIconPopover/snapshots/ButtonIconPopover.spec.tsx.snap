@@ -3,12 +3,10 @@
 exports[`TextFieldPopover snapshots should render ButtonIconPopover 1`] = `
 <DocumentFragment>
   <div
-    class="css-zcp5dz"
-    data-test-box=""
+    class="ButtonIconPopover"
   >
     <div
-      class="css-c6outs Popover"
-      data-test-box=""
+      class="Popover Popover--bg-neutral5"
       data-test-popover="popover"
       style="left: 0px; top: 0px;"
     >
@@ -21,12 +19,10 @@ exports[`TextFieldPopover snapshots should render ButtonIconPopover 1`] = `
 exports[`TextFieldPopover snapshots should render with opened popover 1`] = `
 <DocumentFragment>
   <div
-    class="css-zcp5dz"
-    data-test-box=""
+    class="ButtonIconPopover"
   >
     <div
-      class="css-c6outs Popover Popover--selected"
-      data-test-box=""
+      class="Popover Popover--bg-neutral5 Popover--selected"
       data-test-popover="popover"
       style="left: 0px; top: 0px;"
     >

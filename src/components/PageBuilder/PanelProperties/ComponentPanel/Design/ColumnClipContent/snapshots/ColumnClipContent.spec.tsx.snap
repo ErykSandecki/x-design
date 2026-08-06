@@ -3,25 +3,22 @@
 exports[`ColumnMargin snapshots should render ColumnMargin 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin SectionColumn--with-top-margin"
+    class="SectionColumn SectionColumn--with-bottom-margin SectionColumn--with-top-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels"
-      data-test-box=""
+      class="SectionColumnLabels"
       style="width: calc(100% - 24px - 0px - 8px);"
     />
     <div
-      class="css-4ja0ji"
-      data-test-box=""
+      class="SectionColumn__row"
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--single"
-        data-test-box=""
+        class="SectionColumnContent SectionColumnContent--single"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp Checkbox"
+          class="Checkbox"
           data-test-checkbox="clip-content"
         >
           <input
@@ -30,8 +27,7 @@ exports[`ColumnMargin snapshots should render ColumnMargin 1`] = `
             type="checkbox"
           />
           <div
-            class="css-1jnxvbp Checkbox__input-wrapper"
-            data-test-box=""
+            class="Checkbox__input-wrapper"
           >
             <div
               class="css-1jnxvbp Icon Icon--neutral-1"
@@ -50,13 +46,9 @@ exports[`ColumnMargin snapshots should render ColumnMargin 1`] = `
           </small>
         </div>
       </div>
-      <div
-        class="css-1jnxvbp"
-        data-test-box=""
-      >
+      <div>
         <div
-          class="css-c1qms7"
-          data-test-box=""
+          class="SectionColumnButtonIcons"
         />
       </div>
     </div>
@@ -67,25 +59,22 @@ exports[`ColumnMargin snapshots should render ColumnMargin 1`] = `
 exports[`ColumnMargin snapshots should render when is free form 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin SectionColumn--with-top-margin"
+    class="SectionColumn SectionColumn--with-bottom-margin SectionColumn--with-top-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels"
-      data-test-box=""
+      class="SectionColumnLabels"
       style="width: calc(100% - 24px - 0px - 8px);"
     />
     <div
-      class="css-4ja0ji"
-      data-test-box=""
+      class="SectionColumn__row"
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--single"
-        data-test-box=""
+        class="SectionColumnContent SectionColumnContent--single"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp Checkbox"
+          class="Checkbox"
           data-test-checkbox="clip-content"
         >
           <input
@@ -94,8 +83,7 @@ exports[`ColumnMargin snapshots should render when is free form 1`] = `
             type="checkbox"
           />
           <div
-            class="css-1jnxvbp Checkbox__input-wrapper"
-            data-test-box=""
+            class="Checkbox__input-wrapper"
           >
             <div
               class="css-1jnxvbp Icon Icon--neutral-1"
@@ -114,13 +102,9 @@ exports[`ColumnMargin snapshots should render when is free form 1`] = `
           </small>
         </div>
       </div>
-      <div
-        class="css-1jnxvbp"
-        data-test-box=""
-      >
+      <div>
         <div
-          class="css-c1qms7"
-          data-test-box=""
+          class="SectionColumnButtonIcons"
         />
       </div>
     </div>

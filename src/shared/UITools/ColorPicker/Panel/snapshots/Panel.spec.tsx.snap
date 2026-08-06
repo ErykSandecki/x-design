@@ -3,21 +3,19 @@
 exports[`Panel snapshots should render Panel 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp Panel"
-    data-test-box=""
+    class="Panel"
     data-test-color-picker-panel=""
   >
     <div
-      class="css-1e2q934 Panel__header"
-      data-test-box=""
+      class="Panel__header"
     >
       <div
-        class="css-gu5024 Tabs"
+        class="Tabs"
         data-test-tabs=""
       >
         <div
           active=""
-          class="css-17z9djj Tabs__tab Tabs__tab--active Tabs__tab--disabled"
+          class="Tabs__tab Tabs__tab--active Tabs__tab--disabled"
           data-test-tab="custom"
         >
           Custom
@@ -35,11 +33,10 @@ exports[`Panel snapshots should render Panel 1`] = `
       class="ant-color-picker-slider-container"
     />
     <div
-      class="css-175hdsd"
-      data-test-box=""
+      class="Panel__sampler"
     >
       <div
-        class="css-1jnxvbp ButtonIcon"
+        class="ButtonIcon"
         data-test-button-icon="sampler"
         data-test-tooltip=""
       >
@@ -59,21 +56,19 @@ exports[`Panel snapshots should render Panel 1`] = `
 exports[`Panel snapshots should render with active sampler 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp Panel"
-    data-test-box=""
+    class="Panel"
     data-test-color-picker-panel=""
   >
     <div
-      class="css-1e2q934 Panel__header"
-      data-test-box=""
+      class="Panel__header"
     >
       <div
-        class="css-gu5024 Tabs"
+        class="Tabs"
         data-test-tabs=""
       >
         <div
           active=""
-          class="css-17z9djj Tabs__tab Tabs__tab--active Tabs__tab--disabled"
+          class="Tabs__tab Tabs__tab--active Tabs__tab--disabled"
           data-test-tab="custom"
         >
           Custom
@@ -91,11 +86,10 @@ exports[`Panel snapshots should render with active sampler 1`] = `
       class="ant-color-picker-slider-container"
     />
     <div
-      class="css-175hdsd"
-      data-test-box=""
+      class="Panel__sampler"
     >
       <div
-        class="css-1jnxvbp ButtonIcon ButtonIcon--selected"
+        class="ButtonIcon ButtonIcon--selected"
         data-test-button-icon="sampler"
         data-test-tooltip=""
       >
@@ -108,30 +102,24 @@ exports[`Panel snapshots should render with active sampler 1`] = `
         />
       </div>
       <div
-        class="css-gjryq9 ColorSampler"
-        data-test-box=""
+        class="ColorSampler"
         style="left: 15px; top: 15px;"
       >
         <div
-          class="css-1kjclab ColorGridMask"
-          data-test-box=""
+          class="ColorGridMask"
           data-test-button="color-sampler"
         />
         <div
-          class="css-1odrpt5 ColorGrid"
-          data-test-box=""
+          class="ColorGrid"
         >
           <div
-            class="css-fx1txq"
-            data-test-box=""
+            class="ColorGrid__color-grid"
           />
           <div
-            class="css-tnkbza ColorGrid__picker-target-color"
-            data-test-box=""
+            class="ColorGrid__picker-target-color"
           />
           <div
-            class="css-1s5h6lf"
-            data-test-box=""
+            class="ColorGrid__loader"
           >
             <div
               aria-busy="true"

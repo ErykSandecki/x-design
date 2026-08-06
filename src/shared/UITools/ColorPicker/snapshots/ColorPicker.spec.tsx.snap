@@ -3,41 +3,36 @@
 exports[`ColorPicker snapshots should render ColorPicker 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp FieldGroup"
+    class="FieldGroup"
     data-test-field-group=""
     data-visible-color-picker-panel="false"
   >
     <div
-      class="css-1jnxvbp ColorPicker__color-input TextField"
+      class="ColorPicker__color-input TextField"
       data-test-text-field="color"
       data-test-tooltip=""
     >
       <div
-        class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled"
+        class="TextFieldWrapper TextFieldWrapper--filled"
         data-test-text-field-wrapper="color"
       >
         <div
           aria-describedby="test-id"
-          class="css-1jnxvbp"
           data-test-color=""
         >
           <div
-            class="css-1axzf39 Color"
-            data-test-box=""
+            class="Color"
           >
             <div
-              class="css-agg4zg Color__picker"
-              data-test-box=""
+              class="Color__picker"
               style="background-color: rgb(255, 255, 255);"
             />
             <div
-              class="css-agg4zg Color__picker-alpha"
-              data-test-box=""
+              class="Color__picker-alpha"
               style="background-color: rgb(255, 255, 255);"
             />
             <div
-              class="css-hnxq09 Color__picker-texture"
-              data-test-box=""
+              class="Color__picker-texture"
             />
           </div>
         </div>
@@ -50,12 +45,12 @@ exports[`ColorPicker snapshots should render ColorPicker 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp ColorPicker__alpha-input TextField"
+      class="ColorPicker__alpha-input TextField"
       data-test-text-field="alpha"
       data-test-tooltip=""
     >
       <div
-        class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled"
+        class="TextFieldWrapper TextFieldWrapper--filled"
         data-test-text-field-wrapper="alpha"
       >
         <input
@@ -68,8 +63,7 @@ exports[`ColorPicker snapshots should render ColorPicker 1`] = `
           value="100"
         />
         <div
-          class="css-e5vky9 ScrubbableInput"
-          data-test-box=""
+          class="ScrubbableInput"
           data-test-scrubbable-input=""
         >
           <div

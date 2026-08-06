@@ -3,16 +3,13 @@
 exports[`DraggableSectionContent snapshots should render DraggableSectionContent 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp"
-    data-test-box=""
     style="width: 100%;"
   />
   <div
-    class="css-1jnxvbp DraggableSectionContent"
-    data-test-box=""
+    class="DraggableSectionContent"
   >
     <div
-      class="css-1jnxvbp ButtonIcon"
+      class="ButtonIcon"
       data-test-button-icon="toggle-visibility"
       data-test-tooltip=""
     >
@@ -41,7 +38,7 @@ exports[`DraggableSectionContent snapshots should render DraggableSectionContent
       </div>
     </div>
     <div
-      class="css-1jnxvbp ButtonIcon"
+      class="ButtonIcon"
       data-test-button-icon="remove"
       data-test-tooltip=""
     >
@@ -76,16 +73,13 @@ exports[`DraggableSectionContent snapshots should render DraggableSectionContent
 exports[`DraggableSectionContent snapshots should render when is not visible param 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp"
-    data-test-box=""
     style="width: 100%;"
   />
   <div
-    class="css-1jnxvbp DraggableSectionContent"
-    data-test-box=""
+    class="DraggableSectionContent"
   >
     <div
-      class="css-1jnxvbp ButtonIcon"
+      class="ButtonIcon"
       data-test-button-icon="toggle-visibility"
       data-test-tooltip=""
     >
@@ -114,7 +108,7 @@ exports[`DraggableSectionContent snapshots should render when is not visible par
       </div>
     </div>
     <div
-      class="css-1jnxvbp ButtonIcon"
+      class="ButtonIcon"
       data-test-button-icon="remove"
       data-test-tooltip=""
     >

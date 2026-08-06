@@ -3,291 +3,231 @@
 exports[`ColorSampler snapshots should render ColorSampler 1`] = `
 <DocumentFragment>
   <div
-    class="css-gjryq9 ColorSampler"
-    data-test-box=""
+    class="ColorSampler"
     style="left: 15px; top: 15px;"
   >
     <div
-      class="css-1kjclab ColorGridMask"
-      data-test-box=""
+      class="ColorGridMask"
       data-test-button="color-sampler"
     />
     <div
-      class="css-1odrpt5 ColorGrid"
-      data-test-box=""
+      class="ColorGrid"
     >
       <div
-        class="css-fx1txq"
-        data-test-box=""
+        class="ColorGrid__color-grid"
       >
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
         <div
-          class="css-1jnxvbp ColorGrid__picker-grid"
-          data-test-box=""
+          class="ColorGrid__picker-grid"
           style="background-color: rgba(0, 0, 0, 0);"
         />
       </div>
       <div
-        class="css-tnkbza ColorGrid__picker-target-color"
-        data-test-box=""
+        class="ColorGrid__picker-target-color"
       />
     </div>
-    <div
-      class="css-1jnxvbp"
-      data-test-box=""
-    >
+    <div>
       <div
-        class="css-e5vky9 ColorResult"
-        data-test-box=""
+        class="ColorResult"
       >
         <div
-          class="css-cc7zgu ColorResult__selected-color"
-          data-test-box=""
+          class="ColorResult__selected-color"
           style="background-color: rgba(0, 0, 0, 0);"
         />
       </div>
       <div
-        class="css-6642oy ColorPrompt"
-        data-test-box=""
+        class="ColorPrompt"
       >
         <div
           class="css-1jnxvbp Icon Icon--neutral-1"

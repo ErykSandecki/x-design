@@ -2,10 +2,8 @@ import cx from 'classnames';
 import { FC, MouseEvent, ReactNode, useRef } from 'react';
 
 // components
-import Box from '../../../UI/Box/Box';
+import E2EDataAttribute from '../../../E2EDataAttributes/E2EDataAttribute';
 import Icon from '../../../UI/Icon/Icon';
-
-// others
 
 // styles
 import styles from './select-item.scss';
@@ -34,35 +32,32 @@ export const SelectItem: FC<TSelectItemProps> = ({
   const isSelected = selectedValue === value;
 
   return (
-    <Box
-      classes={{
-        className: cx(styles.SelectItem, {
+    <E2EDataAttribute type={E2EAttribute.selectItem} value={value}>
+      <li
+        className={cx(styles.SelectItem, {
           [styles['SelectItem--disabled']]: disabled,
           [styles['SelectItem--selected']]: isSelected,
-        }),
-      }}
-      component="li"
-      data-value={value}
-      e2eAttribute={E2EAttribute.selectItem}
-      e2eValue={value}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
-      ref={ref}
-      role="option"
-      tabIndex={0}
-    >
-      <Icon
-        classes={{
-          className: cx(styles['SelectItem__check-icon'], {
-            [styles['SelectItem__check-icon--selected']]: isSelected,
-          }),
-        }}
-        height={12}
-        name="Check"
-        width={12}
-      />
-      {children}
-    </Box>
+        })}
+        data-value={value}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+        ref={ref}
+        role="option"
+        tabIndex={0}
+      >
+        <Icon
+          classes={{
+            className: cx(styles['SelectItem__check-icon'], {
+              [styles['SelectItem__check-icon--selected']]: isSelected,
+            }),
+          }}
+          height={12}
+          name="Check"
+          width={12}
+        />
+        {children}
+      </li>
+    </E2EDataAttribute>
   );
 };
 

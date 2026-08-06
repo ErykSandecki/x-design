@@ -3,7 +3,7 @@
 exports[`ButtonIcon snapshots should render ButtonIcon 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp ButtonIcon"
+    class="ButtonIcon"
     data-test-button-icon=""
     data-test-tooltip=""
   >
@@ -21,7 +21,7 @@ exports[`ButtonIcon snapshots should render ButtonIcon 1`] = `
 exports[`ButtonIcon snapshots should render when is selected 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp ButtonIcon ButtonIcon--selected"
+    class="ButtonIcon ButtonIcon--selected"
     data-test-button-icon=""
     data-test-tooltip=""
   >
@@ -39,7 +39,7 @@ exports[`ButtonIcon snapshots should render when is selected 1`] = `
 exports[`ButtonIcon snapshots should render with popover 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp ButtonIcon"
+    class="ButtonIcon"
     data-test-button-icon=""
     data-test-tooltip=""
   >
@@ -51,18 +51,15 @@ exports[`ButtonIcon snapshots should render with popover 1`] = `
       width="12"
     />
     <div
-      class="css-zcp5dz"
-      data-test-box=""
+      class="ButtonIconPopover"
     >
       <div
-        class="css-c6outs Popover"
-        data-test-box=""
+        class="Popover Popover--bg-neutral5"
         data-test-popover="popover"
         style="left: 0px; top: 0px;"
       >
         <div
-          class="css-3q7iqb"
-          data-test-box=""
+          class="PopoverSeparator"
         />
       </div>
     </div>

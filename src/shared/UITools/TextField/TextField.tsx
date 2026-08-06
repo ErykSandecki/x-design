@@ -2,12 +2,12 @@ import cx from 'classnames';
 import { FC, RefObject, useRef } from 'react';
 
 // components
-import Box from '../../UI/Box/Box';
 import TextFieldLabel from './TextFieldLabel/TextFieldLabel';
 import TextFieldWrapper, { TTextFieldWrapperProps } from './TextFieldWrapper/TextFieldWrapper';
 import Tooltip, { TTooltipProps } from '../../UI/Tooltip/Tooltip';
 
 // others
+import { getAttributes } from '../../E2EDataAttributes/utils';
 
 // styles
 import styles from './text-field.scss';
@@ -36,16 +36,10 @@ export const TextField: FC<TTextFieldProps> = ({
 
   return (
     <Tooltip {...tooltip}>
-      <Box
-        classes={{
-          className: cx(className, styles.TextField),
-        }}
-        e2eAttribute={E2EAttribute.textField}
-        e2eValue={e2eValue}
-      >
+      <div className={cx(className, styles.TextField)} {...getAttributes(E2EAttribute.textField, e2eValue)}>
         <TextFieldLabel label={label} />
         <TextFieldWrapper e2eValue={e2eValue} inputRef={inputRef} {...restProps} />
-      </Box>
+      </div>
     </Tooltip>
   );
 };

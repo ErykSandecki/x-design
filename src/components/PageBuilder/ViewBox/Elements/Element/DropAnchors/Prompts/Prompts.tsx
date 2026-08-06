@@ -1,9 +1,6 @@
 import cx from 'classnames';
 import { FC, useMemo } from 'react';
 
-// components
-import { Box } from 'shared';
-
 // others
 
 // styles
@@ -37,14 +34,11 @@ const Prompts: FC<TPromptsProps> = ({ anchorPos, displayNextPrompt, displayPrevP
   );
 
   return prompts.map(({ key, visible }) => (
-    <Box
-      classes={{
-        className: cx(styles.Prompts, {
-          [styles[promptsModificators[key]]]: visible,
-        }),
-      }}
+    <div
+      className={cx(styles.Prompts, {
+        [styles[promptsModificators[key]]]: visible,
+      })}
       key={key}
-      sx={{ borderRadius: '1px', boxSizing: 'border-box', position: 'absolute' }}
     />
   ));
 };

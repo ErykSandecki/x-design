@@ -3,12 +3,11 @@
 exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
+    class="SectionColumn SectionColumn--with-bottom-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels"
-      data-test-box=""
+      class="SectionColumnLabels"
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
@@ -20,17 +19,14 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
       </small>
     </div>
     <div
-      class="css-4ja0ji"
-      data-test-box=""
+      class="SectionColumn__row"
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--single"
-        data-test-box=""
+        class="SectionColumnContent SectionColumnContent--single"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-19um8c2 ToggleButtonGroup ToggleButtonGroup--full-width"
-          data-test-box=""
+          class="ToggleButtonGroup ToggleButtonGroup--full-width"
           data-test-toggle-button-group="flow"
         >
           <button
@@ -151,13 +147,9 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
           </div>
         </div>
       </div>
-      <div
-        class="css-1jnxvbp"
-        data-test-box=""
-      >
+      <div>
         <div
-          class="css-c1qms7"
-          data-test-box=""
+          class="SectionColumnButtonIcons"
         />
       </div>
     </div>
@@ -168,12 +160,11 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
 exports[`ColumnFlow snapshots should render when is horizontal but are mixed 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
+    class="SectionColumn SectionColumn--with-bottom-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels"
-      data-test-box=""
+      class="SectionColumnLabels"
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
@@ -185,17 +176,14 @@ exports[`ColumnFlow snapshots should render when is horizontal but are mixed 1`]
       </small>
     </div>
     <div
-      class="css-4ja0ji"
-      data-test-box=""
+      class="SectionColumn__row"
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--single"
-        data-test-box=""
+        class="SectionColumnContent SectionColumnContent--single"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-19um8c2 ToggleButtonGroup ToggleButtonGroup--full-width"
-          data-test-box=""
+          class="ToggleButtonGroup ToggleButtonGroup--full-width"
           data-test-toggle-button-group="flow"
         >
           <button
@@ -316,13 +304,9 @@ exports[`ColumnFlow snapshots should render when is horizontal but are mixed 1`]
           </div>
         </div>
       </div>
-      <div
-        class="css-1jnxvbp"
-        data-test-box=""
-      >
+      <div>
         <div
-          class="css-c1qms7"
-          data-test-box=""
+          class="SectionColumnButtonIcons"
         />
       </div>
     </div>
@@ -333,12 +317,11 @@ exports[`ColumnFlow snapshots should render when is horizontal but are mixed 1`]
 exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
+    class="SectionColumn SectionColumn--with-bottom-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels"
-      data-test-box=""
+      class="SectionColumnLabels"
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
@@ -350,17 +333,14 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
       </small>
     </div>
     <div
-      class="css-4ja0ji"
-      data-test-box=""
+      class="SectionColumn__row"
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--single"
-        data-test-box=""
+        class="SectionColumnContent SectionColumnContent--single"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-19um8c2 ToggleButtonGroup ToggleButtonGroup--full-width"
-          data-test-box=""
+          class="ToggleButtonGroup ToggleButtonGroup--full-width"
           data-test-toggle-button-group="flow"
         >
           <button
@@ -481,13 +461,9 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
           </div>
         </div>
       </div>
-      <div
-        class="css-1jnxvbp"
-        data-test-box=""
-      >
+      <div>
         <div
-          class="css-c1qms7"
-          data-test-box=""
+          class="SectionColumnButtonIcons"
         />
       </div>
     </div>
@@ -498,12 +474,11 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
 exports[`ColumnFlow snapshots should render when wrap are mixed 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
+    class="SectionColumn SectionColumn--with-bottom-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels"
-      data-test-box=""
+      class="SectionColumnLabels"
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
@@ -515,17 +490,14 @@ exports[`ColumnFlow snapshots should render when wrap are mixed 1`] = `
       </small>
     </div>
     <div
-      class="css-4ja0ji"
-      data-test-box=""
+      class="SectionColumn__row"
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--single"
-        data-test-box=""
+        class="SectionColumnContent SectionColumnContent--single"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-19um8c2 ToggleButtonGroup ToggleButtonGroup--full-width"
-          data-test-box=""
+          class="ToggleButtonGroup ToggleButtonGroup--full-width"
           data-test-toggle-button-group="flow"
         >
           <button
@@ -646,16 +618,12 @@ exports[`ColumnFlow snapshots should render when wrap are mixed 1`] = `
           </div>
         </div>
       </div>
-      <div
-        class="css-1jnxvbp"
-        data-test-box=""
-      >
+      <div>
         <div
-          class="css-c1qms7"
-          data-test-box=""
+          class="SectionColumnButtonIcons"
         >
           <div
-            class="css-1jnxvbp ButtonIcon"
+            class="ButtonIcon"
             data-test-button-icon="wrap"
             data-test-tooltip=""
           >

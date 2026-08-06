@@ -3,12 +3,11 @@
 exports[`MainPanel snapshots should render MainPanel 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp Section"
+    class="Section"
     data-test-section="background"
   >
     <div
-      class="css-1jnxvbp Section__label-wrapper Section__label-wrapper--separator"
-      data-test-box=""
+      class="Section__label-wrapper Section__label-wrapper--separator"
     >
       <small
         class="css-1jnxvbp Section__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -18,64 +17,55 @@ exports[`MainPanel snapshots should render MainPanel 1`] = `
         Page
       </small>
       <div
-        class="css-1f1atqu"
-        data-test-box=""
+        class="Section__label-component"
       />
     </div>
     <div
-      class="css-1jnxvbp SectionColumn"
+      class="SectionColumn"
       data-test-section=""
     >
       <div
-        class="css-xdzdnq SectionColumnLabels"
-        data-test-box=""
+        class="SectionColumnLabels"
         style="width: calc(100% - 24px - 0px - 8px);"
       />
       <div
-        class="css-4ja0ji"
-        data-test-box=""
+        class="SectionColumn__row"
       >
         <div
-          class="css-biptg5 SectionColumnContent SectionColumnContent--single"
-          data-test-box=""
+          class="SectionColumnContent SectionColumnContent--single"
           style="width: calc(100% - 24px - 0px - 8px);"
         >
           <div
-            class="css-1jnxvbp FieldGroup"
+            class="FieldGroup"
             data-test-field-group="background"
             data-visible-color-picker-panel="false"
           >
             <div
-              class="css-1jnxvbp ColorPicker__color-input TextField"
+              class="ColorPicker__color-input TextField"
               data-test-text-field="color"
               data-test-tooltip=""
             >
               <div
-                class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled"
+                class="TextFieldWrapper TextFieldWrapper--filled"
                 data-test-text-field-wrapper="color"
               >
                 <div
                   aria-describedby="test-id"
-                  class="css-1jnxvbp"
                   data-test-color="background"
                 >
                   <div
-                    class="css-1axzf39 Color"
-                    data-test-box=""
+                    class="Color"
                   >
                     <div
-                      class="css-agg4zg Color__picker"
-                      data-test-box=""
+                      class="Color__picker"
                       style="background-color: rgb(241, 242, 246);"
                     />
                     <div
-                      class="css-agg4zg Color__picker-alpha"
-                      data-test-box=""
+                      class="Color__picker-alpha"
                       style="background-color: rgb(241, 242, 246);"
                     />
                     <div
-                      class="css-hnxq09 Color__picker-texture"
-                      data-test-box=""
+                      class="Color__picker-texture"
                     />
                   </div>
                 </div>
@@ -88,12 +78,12 @@ exports[`MainPanel snapshots should render MainPanel 1`] = `
               </div>
             </div>
             <div
-              class="css-1jnxvbp ColorPicker__alpha-input TextField"
+              class="ColorPicker__alpha-input TextField"
               data-test-text-field="alpha"
               data-test-tooltip=""
             >
               <div
-                class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled"
+                class="TextFieldWrapper TextFieldWrapper--filled"
                 data-test-text-field-wrapper="alpha"
               >
                 <input
@@ -106,8 +96,7 @@ exports[`MainPanel snapshots should render MainPanel 1`] = `
                   value="100"
                 />
                 <div
-                  class="css-e5vky9 ScrubbableInput"
-                  data-test-box=""
+                  class="ScrubbableInput"
                   data-test-scrubbable-input=""
                 >
                   <div
@@ -120,16 +109,12 @@ exports[`MainPanel snapshots should render MainPanel 1`] = `
             </div>
           </div>
         </div>
-        <div
-          class="css-1jnxvbp"
-          data-test-box=""
-        >
+        <div>
           <div
-            class="css-c1qms7"
-            data-test-box=""
+            class="SectionColumnButtonIcons"
           >
             <div
-              class="css-1jnxvbp ButtonIcon"
+              class="ButtonIcon"
               data-test-button-icon="toggle-visibility"
               data-test-tooltip=""
             >

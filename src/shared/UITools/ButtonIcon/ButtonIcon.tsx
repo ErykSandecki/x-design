@@ -1,9 +1,8 @@
 import cx from 'classnames';
-import { FC, useRef } from 'react';
+import { FC, HTMLAttributes, useRef } from 'react';
 import { noop } from 'lodash';
 
 // components
-import Box, { TBoxProps } from '../../UI/Box/Box';
 import ButtonIconPopover from './ButtonIconPopover/ButtonIconPopover';
 import Icon, { TIconProps } from '../../UI/Icon/Icon';
 import Tooltip, { TTooltipProps } from '../../UI/Tooltip/Tooltip';
@@ -13,6 +12,7 @@ import { useClickEvent } from './hooks/useClickEvent';
 import { useOutsideClick } from 'hooks';
 
 // others
+import { getAttributes } from '../../E2EDataAttributes/utils';
 
 // styles
 import styles from './button-icon.scss';
@@ -23,7 +23,7 @@ import { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute
 import { TPopoverProps } from '../Popover/Popover';
 
 export type TSectionProps = Pick<TIconProps, 'name'> &
-  TBoxProps & {
+  Omit<HTMLAttributes<HTMLElement>, 'className'> & {
     disabledSelection?: boolean;
     e2eValue?: TE2EDataAttributeProps['value'];
     iconSize?: number;
@@ -64,15 +64,12 @@ export const ButtonIcon: FC<TSectionProps> = ({
 
   return (
     <Tooltip ref={ref} {...tooltip}>
-      <Box
-        classes={{
-          className: cx(styles.ButtonIcon, {
-            [styles['ButtonIcon--selected']]: isSelected,
-          }),
-        }}
-        e2eAttribute={E2EAttribute.buttonIcon}
-        e2eValue={e2eValue}
+      <div
+        className={cx(styles.ButtonIcon, {
+          [styles['ButtonIcon--selected']]: isSelected,
+        })}
         onClick={onClickHandler}
+        {...getAttributes(E2EAttribute.buttonIcon, e2eValue)}
         {...restProps}
       >
         <Icon
@@ -95,7 +92,7 @@ export const ButtonIcon: FC<TSectionProps> = ({
             {popoverChildren}
           </ButtonIconPopover>
         )}
-      </Box>
+      </div>
     </Tooltip>
   );
 };

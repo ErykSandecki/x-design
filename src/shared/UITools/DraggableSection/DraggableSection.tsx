@@ -3,24 +3,21 @@ import { FC, ReactElement, useRef } from 'react';
 import { noop } from 'lodash';
 
 // components
-import Box from '../../UI/Box/Box';
 import DraggableSectionAnchors from './DraggableSectionAnchors/DraggableSectionAnchors';
 import DraggableSectionContent, {
   TDraggableSectionContentProps,
 } from './DraggableSectionContent/DraggableSectionContent';
 import DraggableSectionMenu from './DraggableSectionMenu/DraggableSectionMenu';
+import E2EDataAttribute, { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute';
 
 // hooks
 import { useDraggableSectionEvents } from './hooks/useDraggableSectionEvents';
-
-// others
 
 // styles
 import styles from './draggable-section.scss';
 
 // types
 import { E2EAttribute } from 'types';
-import { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute';
 
 export type TDraggableSectionProps = Pick<TDraggableSectionContentProps, 'onClickRemove' | 'onClickVisible'> & {
   components?: Array<{ element: ReactElement; visible: boolean }>;
@@ -45,41 +42,36 @@ export const DraggableSection: FC<TDraggableSectionProps> = ({
   );
 
   return (
-    <Box
-      classes={{
-        className: cx(styles.DraggableSection, {
+    <E2EDataAttribute type={E2EAttribute.draggableSection} value={e2eValue}>
+      <div
+        className={cx(styles.DraggableSection, {
           [styles['DraggableSection--draggable']]: isDraggable,
-        }),
-      }}
-      e2eAttribute={E2EAttribute.draggableSection}
-      e2eValue={e2eValue}
-      ref={ref}
-    >
-      {components.map(({ element, visible }, index) => {
-        const isSelected = draggableItem === index && selected;
-        const showMenu = components.length > 1;
-        const forceDisplay = draggableItem === index && isDraggable;
+        })}
+        ref={ref}
+      >
+        {components.map(({ element, visible }, index) => {
+          const isSelected = draggableItem === index && selected;
+          const showMenu = components.length > 1;
+          const forceDisplay = draggableItem === index && isDraggable;
 
-        return (
-          <Box
-            classes={{
-              className: cx(styles.DraggableSection__item, {
-                [styles['DraggableSection__item--selected']]: isSelected,
-              }),
-            }}
-            e2eAttribute={E2EAttribute.draggableSectionItem}
-            e2eValue={index}
-            key={index}
-            onMouseDown={() => onMouseDown(index)}
-            onMouseMove={() => isPressing && setIsDraggable(true)}
-          >
-            <DraggableSectionMenu forceDisplay={forceDisplay} show={showMenu} />
-            <DraggableSectionAnchors index={index} isDraggable={isDraggable} length={components.length} />
-            <DraggableSectionContent element={element} index={index} visible={visible} {...restProps} />
-          </Box>
-        );
-      })}
-    </Box>
+          return (
+            <E2EDataAttribute key={index} type={E2EAttribute.draggableSectionItem} value={index}>
+              <div
+                className={cx(styles.DraggableSection__item, {
+                  [styles['DraggableSection__item--selected']]: isSelected,
+                })}
+                onMouseDown={() => onMouseDown(index)}
+                onMouseMove={() => isPressing && setIsDraggable(true)}
+              >
+                <DraggableSectionMenu forceDisplay={forceDisplay} show={showMenu} />
+                <DraggableSectionAnchors index={index} isDraggable={isDraggable} length={components.length} />
+                <DraggableSectionContent element={element} index={index} visible={visible} {...restProps} />
+              </div>
+            </E2EDataAttribute>
+          );
+        })}
+      </div>
+    </E2EDataAttribute>
   );
 };
 

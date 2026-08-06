@@ -3,12 +3,11 @@
 exports[`ColumnAlignment snapshots should render ColumnAlignment 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
+    class="SectionColumn SectionColumn--with-bottom-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels"
-      data-test-box=""
+      class="SectionColumnLabels"
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
@@ -20,16 +19,14 @@ exports[`ColumnAlignment snapshots should render ColumnAlignment 1`] = `
       </small>
     </div>
     <div
-      class="css-4ja0ji"
-      data-test-box=""
+      class="SectionColumn__row"
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
-        data-test-box=""
+        class="SectionColumnContent SectionColumnContent--two-inputs"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp ButtonGroup"
+          class="ButtonGroup"
           data-test-button-group="horizontal-alignment"
         >
           <div
@@ -118,7 +115,7 @@ exports[`ColumnAlignment snapshots should render ColumnAlignment 1`] = `
           </div>
         </div>
         <div
-          class="css-1jnxvbp ButtonGroup"
+          class="ButtonGroup"
           data-test-button-group="vertical-alignment"
         >
           <div
@@ -207,13 +204,9 @@ exports[`ColumnAlignment snapshots should render ColumnAlignment 1`] = `
           </div>
         </div>
       </div>
-      <div
-        class="css-1jnxvbp"
-        data-test-box=""
-      >
+      <div>
         <div
-          class="css-c1qms7"
-          data-test-box=""
+          class="SectionColumnButtonIcons"
         />
       </div>
     </div>
@@ -224,12 +217,11 @@ exports[`ColumnAlignment snapshots should render ColumnAlignment 1`] = `
 exports[`ColumnAlignment snapshots should render when element is on position relative 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
+    class="SectionColumn SectionColumn--with-bottom-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels"
-      data-test-box=""
+      class="SectionColumnLabels"
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
@@ -241,16 +233,14 @@ exports[`ColumnAlignment snapshots should render when element is on position rel
       </small>
     </div>
     <div
-      class="css-4ja0ji"
-      data-test-box=""
+      class="SectionColumn__row"
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
-        data-test-box=""
+        class="SectionColumnContent SectionColumnContent--two-inputs"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp ButtonGroup"
+          class="ButtonGroup"
           data-test-button-group="horizontal-alignment"
         >
           <div
@@ -339,7 +329,7 @@ exports[`ColumnAlignment snapshots should render when element is on position rel
           </div>
         </div>
         <div
-          class="css-1jnxvbp ButtonGroup"
+          class="ButtonGroup"
           data-test-button-group="vertical-alignment"
         >
           <div
@@ -428,13 +418,9 @@ exports[`ColumnAlignment snapshots should render when element is on position rel
           </div>
         </div>
       </div>
-      <div
-        class="css-1jnxvbp"
-        data-test-box=""
-      >
+      <div>
         <div
-          class="css-c1qms7"
-          data-test-box=""
+          class="SectionColumnButtonIcons"
         />
       </div>
     </div>

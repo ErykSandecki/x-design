@@ -1,7 +1,5 @@
+import cx from 'classnames';
 import { FC } from 'react';
-
-// components
-import { Box } from 'shared';
 
 // core
 import { useRefs } from 'pages/PageBuilderPage/core/RefsProvider';
@@ -10,6 +8,9 @@ import { useRefs } from 'pages/PageBuilderPage/core/RefsProvider';
 import { cssVariables } from 'constant/cssVariables';
 import { OVERLAY_CONTAINER_ID } from '../../constants';
 
+// styles
+import styles from './overlay-container.scss';
+
 // utils
 import { getCssVariable } from 'utils';
 
@@ -17,13 +18,13 @@ const OverlayContainer: FC = () => {
   const { overlayContainerRef } = useRefs();
 
   return (
-    <Box
+    <div
+      className={cx(styles.OverlayContainer)}
       id={OVERLAY_CONTAINER_ID}
       ref={overlayContainerRef}
       style={{
         zIndex: getCssVariable(cssVariables.XD_PAGE_BUILDER_ZINDEX_OVERLAY_CONTAINER),
       }}
-      sx={{ left: 0, position: 'absolute', top: 0 }}
     />
   );
 };

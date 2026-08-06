@@ -14,7 +14,7 @@ export type TUseSelectOptionsEvents = {
 export const useSelectOptionsEvents = (
   onMouseEnter: TFunc<[string]>,
   onMouseLeave: TFunc<[string]>,
-  optionsRef: RefObject<HTMLDivElement>,
+  optionsRef: RefObject<HTMLUListElement>,
   selected: boolean,
   value: string | Array<string>,
   wrapperRef: RefObject<HTMLDivElement>,

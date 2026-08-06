@@ -2,7 +2,7 @@ import cx from 'classnames';
 import { FC, useEffect, useState } from 'react';
 
 // components
-import Box from '../../../UI/Box/Box';
+import E2EDataAttribute, { TE2EDataAttributeProps } from 'shared/E2EDataAttributes/E2EDataAttribute';
 
 // others
 import { ANCHOR_INDEX } from '../constants';
@@ -12,7 +12,9 @@ import styles from './draggable-section-anchor.scss';
 
 // types
 import { E2EAttribute } from 'types';
-import { TE2EDataAttributeProps } from 'shared/E2EDataAttributes/E2EDataAttribute';
+
+// utils
+import { mapAttributes } from 'utils';
 
 export type TDraggableSectionAnchorProps = {
   e2eValue: TE2EDataAttributeProps['value'];
@@ -31,20 +33,18 @@ export const DraggableSectionAnchor: FC<TDraggableSectionAnchorProps> = ({ e2eVa
   }, [isDraggable]);
 
   return (
-    <Box
-      attributes={{ [ANCHOR_INDEX]: index }}
-      classes={{
-        className: cx(styles.DraggableSectionAnchor, {
+    <E2EDataAttribute type={E2EAttribute.anchor} value={e2eValue}>
+      <div
+        className={cx(styles.DraggableSectionAnchor, {
           [styles['DraggableSectionAnchor--draggable']]: isDraggable,
-        }),
-      }}
-      e2eAttribute={E2EAttribute.anchor}
-      e2eValue={e2eValue}
-      onMouseEnter={() => isDraggable && setShowPrompt(true)}
-      onMouseLeave={() => isDraggable && setShowPrompt(false)}
-    >
-      {displayPrompt && <Box classes={{ className: cx(styles.DraggableSectionAnchor__prompt) }} />}
-    </Box>
+        })}
+        onMouseEnter={() => isDraggable && setShowPrompt(true)}
+        onMouseLeave={() => isDraggable && setShowPrompt(false)}
+        {...mapAttributes({ [ANCHOR_INDEX]: index })}
+      >
+        {displayPrompt && <div className={cx(styles.DraggableSectionAnchor__prompt)} />}
+      </div>
+    </E2EDataAttribute>
   );
 };
 

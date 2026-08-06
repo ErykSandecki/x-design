@@ -3,29 +3,26 @@
 exports[`ViewBox snapshots should render ViewBox 1`] = `
 <DocumentFragment>
   <div
-    class="css-117yijb ViewBox ZoomBox ZoomBox--idle ZoomBox--default"
+    class="ViewBox ZoomBox ZoomBox--idle ZoomBox--default"
     data-test-box="zoom-box"
     tabindex="0"
   >
     <div
-      class="css-1jnxvbp ZoomBox__background-mask"
+      class="ZoomBox__background-mask"
       data-test-box="zoom-box-background-mask"
       style="background-color: rgb(241, 242, 246); display: initial;"
     />
     <div
-      class="css-1jnxvbp ZoomBox__texture-blank"
-      data-test-box=""
+      class="ZoomBox__texture-blank"
       style="transform: translate(0px, 0px) scale(1);"
     />
     <div
-      class="css-1j4c14e ZoomBox__zoom-content"
-      data-test-box=""
+      class="ZoomBox__zoom-content"
       id="zoomContentId"
       style="transform: translate(0px, 0px) scale(1);"
     >
       <div
-        class="css-u5h2b"
-        data-test-box=""
+        class="OverlayContainer"
         id="overlayContainer"
         style="z-index: var(--xd-page-builder-zindex-overlay-container);"
       />

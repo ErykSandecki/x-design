@@ -3,8 +3,7 @@
 exports[`HeightPopoverWidth snapshots should render HeightPopoverWidth{max} 1`] = `
 <DocumentFragment>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="0"
   >
     <div
@@ -30,8 +29,7 @@ exports[`HeightPopoverWidth snapshots should render HeightPopoverWidth{max} 1`] 
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="1"
   >
     <div
@@ -57,8 +55,7 @@ exports[`HeightPopoverWidth snapshots should render HeightPopoverWidth{max} 1`] 
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="2"
   >
     <div
@@ -84,8 +81,7 @@ exports[`HeightPopoverWidth snapshots should render HeightPopoverWidth{max} 1`] 
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="3"
   >
     <div
@@ -116,8 +112,7 @@ exports[`HeightPopoverWidth snapshots should render HeightPopoverWidth{max} 1`] 
 exports[`HeightPopoverWidth snapshots should render HeightPopoverWidth{min} 1`] = `
 <DocumentFragment>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="0"
   >
     <div
@@ -143,8 +138,7 @@ exports[`HeightPopoverWidth snapshots should render HeightPopoverWidth{min} 1`] 
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="1"
   >
     <div
@@ -170,8 +164,7 @@ exports[`HeightPopoverWidth snapshots should render HeightPopoverWidth{min} 1`] 
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="2"
   >
     <div
@@ -197,8 +190,7 @@ exports[`HeightPopoverWidth snapshots should render HeightPopoverWidth{min} 1`] 
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem"
-    data-test-box=""
+    class="PopoverItem"
     data-test-popover-item="3"
   >
     <div

@@ -3,12 +3,12 @@
 exports[`TextField snapshots should render TextField 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp TextField"
+    class="TextField"
     data-test-text-field=""
     data-test-tooltip=""
   >
     <div
-      class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled"
+      class="TextFieldWrapper TextFieldWrapper--filled"
       data-test-text-field-wrapper=""
     >
       <input
@@ -24,7 +24,7 @@ exports[`TextField snapshots should render TextField 1`] = `
 exports[`TextField snapshots should render with label 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp TextField"
+    class="TextField"
     data-test-text-field=""
     data-test-tooltip=""
   >
@@ -36,7 +36,7 @@ exports[`TextField snapshots should render with label 1`] = `
       label
     </small>
     <div
-      class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled"
+      class="TextFieldWrapper TextFieldWrapper--filled"
       data-test-text-field-wrapper=""
     >
       <input

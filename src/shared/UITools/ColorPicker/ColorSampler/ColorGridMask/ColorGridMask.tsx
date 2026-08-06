@@ -2,7 +2,6 @@ import cx from 'classnames';
 import { FC } from 'react';
 
 // components
-import Box from '../../../../UI/Box/Box';
 import E2EDataAttribute from '../../../../E2EDataAttributes/E2EDataAttribute';
 
 // others
@@ -28,11 +27,7 @@ export const ColorGridMask: FC<TColorGridMaskProps> = ({ colors, onClickColorSam
 
   return (
     <E2EDataAttribute type={E2EAttribute.button} value="color-sampler">
-      <Box
-        classes={{ className: cx(styles.ColorGridMask) }}
-        onClick={() => onClickColorSampler(rgbToHex(r, g, b))}
-        sx={{ height: '150px', left: '-150px', position: 'absolute', top: '-150px', width: '150px' }}
-      />
+      <div className={cx(styles.ColorGridMask)} onClick={() => onClickColorSampler(rgbToHex(r, g, b))} />
     </E2EDataAttribute>
   );
 };

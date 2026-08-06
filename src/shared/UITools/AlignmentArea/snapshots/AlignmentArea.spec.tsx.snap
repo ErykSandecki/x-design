@@ -3,29 +3,24 @@
 exports[`AlignmentArea snapshots should render AlignmentArea 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp AlignmentArea AlignmentArea"
+    class="AlignmentArea AlignmentArea"
     data-test-alignment-area=""
   >
     <div
-      class="css-1jnxvbp AlignmentOption"
+      class="AlignmentOption"
       data-test-alignment-area-option="topLeft"
-      data-test-box=""
     >
       <div
-        class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--topLeft"
-        data-test-box=""
+        class="AlignmentOption__option-view AlignmentOption__option-view--topLeft"
       >
         <div
-          class="css-1jnxvbp AlignmentOption__indicator"
-          data-test-box=""
+          class="AlignmentOption__indicator"
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator"
-          data-test-box=""
+          class="AlignmentOption__indicator"
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator"
-          data-test-box=""
+          class="AlignmentOption__indicator"
         />
       </div>
     </div>
@@ -46,25 +41,20 @@ exports[`AlignmentArea snapshots should render AlignmentArea 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp AlignmentOption"
+      class="AlignmentOption"
       data-test-alignment-area-option="topCenter"
-      data-test-box=""
     >
       <div
-        class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--top-center"
-        data-test-box=""
+        class="AlignmentOption__option-view AlignmentOption__option-view--top-center"
       >
         <div
-          class="css-1jnxvbp AlignmentOption__indicator"
-          data-test-box=""
+          class="AlignmentOption__indicator"
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator"
-          data-test-box=""
+          class="AlignmentOption__indicator"
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator"
-          data-test-box=""
+          class="AlignmentOption__indicator"
         />
       </div>
     </div>
@@ -85,25 +75,20 @@ exports[`AlignmentArea snapshots should render AlignmentArea 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp AlignmentOption"
+      class="AlignmentOption"
       data-test-alignment-area-option="topRight"
-      data-test-box=""
     >
       <div
-        class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--top-right"
-        data-test-box=""
+        class="AlignmentOption__option-view AlignmentOption__option-view--top-right"
       >
         <div
-          class="css-1jnxvbp AlignmentOption__indicator"
-          data-test-box=""
+          class="AlignmentOption__indicator"
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator"
-          data-test-box=""
+          class="AlignmentOption__indicator"
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator"
-          data-test-box=""
+          class="AlignmentOption__indicator"
         />
       </div>
     </div>
@@ -124,25 +109,20 @@ exports[`AlignmentArea snapshots should render AlignmentArea 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp AlignmentOption"
+      class="AlignmentOption"
       data-test-alignment-area-option="left"
-      data-test-box=""
     >
       <div
-        class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--left"
-        data-test-box=""
+        class="AlignmentOption__option-view AlignmentOption__option-view--left"
       >
         <div
-          class="css-1jnxvbp AlignmentOption__indicator"
-          data-test-box=""
+          class="AlignmentOption__indicator"
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator"
-          data-test-box=""
+          class="AlignmentOption__indicator"
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator"
-          data-test-box=""
+          class="AlignmentOption__indicator"
         />
       </div>
     </div>
@@ -163,25 +143,20 @@ exports[`AlignmentArea snapshots should render AlignmentArea 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp AlignmentOption"
+      class="AlignmentOption"
       data-test-alignment-area-option="center"
-      data-test-box=""
     >
       <div
-        class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--center"
-        data-test-box=""
+        class="AlignmentOption__option-view AlignmentOption__option-view--center"
       >
         <div
-          class="css-1jnxvbp AlignmentOption__indicator"
-          data-test-box=""
+          class="AlignmentOption__indicator"
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator"
-          data-test-box=""
+          class="AlignmentOption__indicator"
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator"
-          data-test-box=""
+          class="AlignmentOption__indicator"
         />
       </div>
     </div>
@@ -202,25 +177,20 @@ exports[`AlignmentArea snapshots should render AlignmentArea 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp AlignmentOption"
+      class="AlignmentOption"
       data-test-alignment-area-option="right"
-      data-test-box=""
     >
       <div
-        class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--right"
-        data-test-box=""
+        class="AlignmentOption__option-view AlignmentOption__option-view--right"
       >
         <div
-          class="css-1jnxvbp AlignmentOption__indicator"
-          data-test-box=""
+          class="AlignmentOption__indicator"
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator"
-          data-test-box=""
+          class="AlignmentOption__indicator"
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator"
-          data-test-box=""
+          class="AlignmentOption__indicator"
         />
       </div>
     </div>
@@ -241,25 +211,20 @@ exports[`AlignmentArea snapshots should render AlignmentArea 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp AlignmentOption"
+      class="AlignmentOption"
       data-test-alignment-area-option="bottomLeft"
-      data-test-box=""
     >
       <div
-        class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--bottomLeft"
-        data-test-box=""
+        class="AlignmentOption__option-view AlignmentOption__option-view--bottomLeft"
       >
         <div
-          class="css-1jnxvbp AlignmentOption__indicator"
-          data-test-box=""
+          class="AlignmentOption__indicator"
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator"
-          data-test-box=""
+          class="AlignmentOption__indicator"
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator"
-          data-test-box=""
+          class="AlignmentOption__indicator"
         />
       </div>
     </div>
@@ -280,25 +245,20 @@ exports[`AlignmentArea snapshots should render AlignmentArea 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp AlignmentOption AlignmentOption--selected"
+      class="AlignmentOption AlignmentOption--selected"
       data-test-alignment-area-option="bottomCenter"
-      data-test-box=""
     >
       <div
-        class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--bottom-center"
-        data-test-box=""
+        class="AlignmentOption__option-view AlignmentOption__option-view--bottom-center"
       >
         <div
-          class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--selected"
-          data-test-box=""
+          class="AlignmentOption__indicator AlignmentOption__indicator--selected"
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--selected"
-          data-test-box=""
+          class="AlignmentOption__indicator AlignmentOption__indicator--selected"
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--selected"
-          data-test-box=""
+          class="AlignmentOption__indicator AlignmentOption__indicator--selected"
         />
       </div>
     </div>
@@ -319,25 +279,20 @@ exports[`AlignmentArea snapshots should render AlignmentArea 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp AlignmentOption"
+      class="AlignmentOption"
       data-test-alignment-area-option="bottomRight"
-      data-test-box=""
     >
       <div
-        class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--bottom-right"
-        data-test-box=""
+        class="AlignmentOption__option-view AlignmentOption__option-view--bottom-right"
       >
         <div
-          class="css-1jnxvbp AlignmentOption__indicator"
-          data-test-box=""
+          class="AlignmentOption__indicator"
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator"
-          data-test-box=""
+          class="AlignmentOption__indicator"
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator"
-          data-test-box=""
+          class="AlignmentOption__indicator"
         />
       </div>
     </div>

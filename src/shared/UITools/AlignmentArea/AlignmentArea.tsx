@@ -3,16 +3,13 @@ import { FC } from 'react';
 
 // components
 import AlignmentOption from './AlignmentOption/AlignmentOption';
-import Box from '../../UI/Box/Box';
-
-// others
+import E2EDataAttribute, { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute';
 
 // styles
 import styles from './alignment-area.scss';
 
 // types
 import { AlignmentLayout, E2EAttribute } from 'types';
-import { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute';
 
 // utils
 import { enumToArray } from 'utils';
@@ -26,26 +23,24 @@ export type TAlignmentAreaProps = {
 
 export const AlignmentArea: FC<TAlignmentAreaProps> = ({ e2eValue = '', fullWidth = false, onClick, value }) => {
   return (
-    <Box
-      classes={{
-        className: cx('AlignmentArea', styles.AlignmentArea, {
+    <E2EDataAttribute type={E2EAttribute.alignmentArea} value={e2eValue}>
+      <div
+        className={cx('AlignmentArea', styles.AlignmentArea, {
           [styles['AlignmentArea--full-width']]: fullWidth,
-        }),
-      }}
-      e2eAttribute={E2EAttribute.alignmentArea}
-      e2eValue={e2eValue}
-    >
-      {enumToArray<AlignmentLayout>(AlignmentLayout)
-        .filter((alignmentFlow) => alignmentFlow !== AlignmentLayout.none)
-        .map((alignmentFlow) => (
-          <AlignmentOption
-            alignmentFlow={alignmentFlow}
-            isSelected={value === alignmentFlow}
-            key={alignmentFlow}
-            onClick={onClick}
-          />
-        ))}
-    </Box>
+        })}
+      >
+        {enumToArray<AlignmentLayout>(AlignmentLayout)
+          .filter((alignmentFlow) => alignmentFlow !== AlignmentLayout.none)
+          .map((alignmentFlow) => (
+            <AlignmentOption
+              alignmentFlow={alignmentFlow}
+              isSelected={value === alignmentFlow}
+              key={alignmentFlow}
+              onClick={onClick}
+            />
+          ))}
+      </div>
+    </E2EDataAttribute>
   );
 };
 

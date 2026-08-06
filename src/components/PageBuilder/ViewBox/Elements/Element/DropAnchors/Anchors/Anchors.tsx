@@ -2,9 +2,7 @@ import cx from 'classnames';
 import { FC, useMemo } from 'react';
 
 // components
-import { Box } from 'shared';
-
-// others
+import { E2EDataAttribute } from 'shared';
 
 // styles
 import styles from './anchors.scss';
@@ -36,17 +34,13 @@ const Anchors: FC<TAnchorsProps> = ({ isFlowVertical, isGrid, onMouseEnter, onMo
   const anchors = useMemo(() => getDropAnchorsPosition(isFlowVertical, isGrid), [isFlowVertical, isGrid]);
 
   return anchors.map((position) => (
-    <Box
-      classes={{
-        className: cx(styles.Anchors, styles[anchorsModificators[position as keyof typeof DropAnchorsPosition]]),
-      }}
-      e2eAttribute={E2EAttribute.anchor}
-      e2eValue={position as string}
-      onMouseEnter={() => onMouseEnter(DropAnchorsPosition[position as keyof typeof DropAnchorsPosition])}
-      onMouseLeave={onMouseLeave}
-      key={position as string}
-      sx={{ position: 'absolute' }}
-    />
+    <E2EDataAttribute key={position as string} type={E2EAttribute.anchor} value={position as string}>
+      <div
+        className={cx(styles.Anchors, styles[anchorsModificators[position as keyof typeof DropAnchorsPosition]])}
+        onMouseEnter={() => onMouseEnter(DropAnchorsPosition[position as keyof typeof DropAnchorsPosition])}
+        onMouseLeave={onMouseLeave}
+      />
+    </E2EDataAttribute>
   ));
 };
 

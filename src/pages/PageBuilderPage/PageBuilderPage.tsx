@@ -14,9 +14,6 @@ import { useApplyCssStyles } from './hooks/useApplyCssStyles';
 import { useKeyDown } from './hooks/useKeyDown';
 import { useWheelEvent } from './hooks/useWheelEvent';
 
-// others
-import { Box } from 'shared';
-
 // store
 import { areaCoordinatesSelector } from 'store/pageBuilder/selectors';
 
@@ -34,7 +31,7 @@ const PageBuilderPage: FC = () => {
 
   return (
     <RefsProvider>
-      <Box>
+      <div>
         <Toolbar mouseMode={mouseMode} setMouseMode={setMouseMode} />
         <PanelProperties />
         <ViewBox
@@ -43,7 +40,7 @@ const PageBuilderPage: FC = () => {
           setCoordinates={setCoordinates}
           setMouseMode={setMouseMode}
         />
-      </Box>
+      </div>
     </RefsProvider>
   );
 };

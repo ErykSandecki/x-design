@@ -3,12 +3,10 @@ import { FC, ReactNode } from 'react';
 import { size } from 'lodash';
 
 // components
-import Box from '../../UI/Box/Box';
+import E2EDataAttribute from '../../E2EDataAttributes/E2EDataAttribute';
 import SectionColumnButtonIcons from './SectionColumnButtonIcons/SectionColumnButtonIcons';
 import SectionColumnContent from './SectionColumnContent/SectionColumnContent';
 import SectionColumnLabels from './SectionColumnLabels/SectionColumnLabels';
-
-// others
 
 // styles
 import styles from './section-column.scss';
@@ -41,23 +39,22 @@ export const SectionColumn: FC<TSectionColumnProps> = ({
   const width = `calc(100% - ${buttonsWidthTotal}px - ${additionalGap}px - 8px)`;
 
   return (
-    <Box
-      classes={{
-        className: cx(styles.SectionColumn, {
+    <E2EDataAttribute type={E2EAttribute.section} value="">
+      <div
+        className={cx(styles.SectionColumn, {
           [styles['SectionColumn--with-bottom-margin']]: withBottomMargin,
           [styles['SectionColumn--with-top-margin']]: withTopMargin,
-        }),
-      }}
-      e2eAttribute={E2EAttribute.section}
-    >
-      <SectionColumnLabels labels={labels} width={width} />
-      <Box sx={{ columnGap: '8px', display: 'flex' }}>
-        <SectionColumnContent gridColumnType={gridColumnType} width={width} withInputConnector={withInputConnector}>
-          {children}
-        </SectionColumnContent>
-        <SectionColumnButtonIcons buttonsIcon={buttonsIcon} />
-      </Box>
-    </Box>
+        })}
+      >
+        <SectionColumnLabels labels={labels} width={width} />
+        <div className={cx(styles.SectionColumn__row)}>
+          <SectionColumnContent gridColumnType={gridColumnType} width={width} withInputConnector={withInputConnector}>
+            {children}
+          </SectionColumnContent>
+          <SectionColumnButtonIcons buttonsIcon={buttonsIcon} />
+        </div>
+      </div>
+    </E2EDataAttribute>
   );
 };
 

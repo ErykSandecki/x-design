@@ -3,8 +3,7 @@
 exports[`TextFieldPopover snapshots should render TextFieldPopover 1`] = `
 <DocumentFragment>
   <div
-    class="css-zcp5dz TextFieldPopover"
-    data-test-box=""
+    class="TextFieldPopover"
   >
     <div
       class="css-1jnxvbp TextFieldPopover__icon classNameIcon Icon Icon--clickable"
@@ -14,8 +13,7 @@ exports[`TextFieldPopover snapshots should render TextFieldPopover 1`] = `
       width="12"
     />
     <div
-      class="css-6i6anv Popover"
-      data-test-box=""
+      class="Popover"
       data-test-popover="popover"
       style="left: 0px; top: 0px;"
     >
@@ -28,8 +26,7 @@ exports[`TextFieldPopover snapshots should render TextFieldPopover 1`] = `
 exports[`TextFieldPopover snapshots should render when attached value 1`] = `
 <DocumentFragment>
   <div
-    class="css-zcp5dz TextFieldPopover"
-    data-test-box=""
+    class="TextFieldPopover"
   >
     <div
       class="css-1jnxvbp TextFieldPopover__icon classNameIcon Icon Icon--clickable"
@@ -39,8 +36,7 @@ exports[`TextFieldPopover snapshots should render when attached value 1`] = `
       width="12"
     />
     <div
-      class="css-6i6anv Popover"
-      data-test-box=""
+      class="Popover"
       data-test-popover="popover"
       style="left: 0px; top: 0px;"
     >
@@ -53,8 +49,7 @@ exports[`TextFieldPopover snapshots should render when attached value 1`] = `
 exports[`TextFieldPopover snapshots should render with opened popover 1`] = `
 <DocumentFragment>
   <div
-    class="css-zcp5dz TextFieldPopover"
-    data-test-box=""
+    class="TextFieldPopover"
   >
     <div
       class="css-1jnxvbp TextFieldPopover__icon classNameIcon Icon Icon--clickable"
@@ -64,8 +59,7 @@ exports[`TextFieldPopover snapshots should render with opened popover 1`] = `
       width="12"
     />
     <div
-      class="css-6i6anv Popover Popover--selected"
-      data-test-box=""
+      class="Popover Popover--selected"
       data-test-popover="popover"
       style="left: 0px; top: 0px;"
     >

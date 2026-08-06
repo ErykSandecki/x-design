@@ -9,7 +9,7 @@ import { FC } from 'react';
 import styles from './preview-box-sizing.scss';
 
 // types
-import { Box, TPreviewData } from 'shared';
+import { TPreviewData } from 'shared';
 
 const previewBoxSizingModificators: Record<string, string> = {
   excluded: 'PreviewBoxSizing--excluded',
@@ -23,23 +23,15 @@ export type TPreviewBoxSizingProps = Pick<TPreviewData, 'activeOption'>;
 
 const PreviewBoxSizing: FC<TPreviewBoxSizingProps> = ({ activeOption }) => {
   return (
-    <Box
-      classes={{
-        className: cx(styles.PreviewBoxSizing, styles[previewBoxSizingModificators[activeOption]]),
-      }}
-    >
-      <Box classes={{ className: cx(styles['PreviewBoxSizing__tile-left']) }}>
-        <Box classes={{ className: cx(styles['PreviewBoxSizing__tile-children']) }} />
-      </Box>
-      <Box classes={{ className: cx(styles['PreviewBoxSizing__tile-right']) }}>
-        <Box classes={{ className: cx(styles['PreviewBoxSizing__tile-children']) }} />
-      </Box>
-      <Box
-        classes={{
-          className: cx(styles.PreviewBoxSizing__stroke, styles[strokeModificators[activeOption]]),
-        }}
-      />
-    </Box>
+    <div className={cx(styles.PreviewBoxSizing, styles[previewBoxSizingModificators[activeOption]])}>
+      <div className={cx(styles['PreviewBoxSizing__tile-left'])}>
+        <div className={cx(styles['PreviewBoxSizing__tile-children'])} />
+      </div>
+      <div className={cx(styles['PreviewBoxSizing__tile-right'])}>
+        <div className={cx(styles['PreviewBoxSizing__tile-children'])} />
+      </div>
+      <div className={cx(styles.PreviewBoxSizing__stroke, styles[strokeModificators[activeOption]])} />
+    </div>
   );
 };
 

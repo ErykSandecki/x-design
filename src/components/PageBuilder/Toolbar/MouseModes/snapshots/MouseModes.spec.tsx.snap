@@ -3,12 +3,12 @@
 exports[`MouseModes snapshots should render MouseModes 1`] = `
 <DocumentFragment>
   <div
-    class="css-1douohc MouseModes"
+    class="MouseModes"
     data-test-box="toolbar"
   >
     <div
       active=""
-      class="css-1uzmw43 MouseModes__button MouseModes__button--active"
+      class="MouseModes__button MouseModes__button--active"
       data-test-box="default"
     >
       <div
@@ -20,7 +20,7 @@ exports[`MouseModes snapshots should render MouseModes 1`] = `
       />
     </div>
     <div
-      class="css-1uzmw43 MouseModes__button"
+      class="MouseModes__button"
       data-test-box="toolBeltA"
     >
       <div
@@ -32,7 +32,7 @@ exports[`MouseModes snapshots should render MouseModes 1`] = `
       />
     </div>
     <div
-      class="css-1uzmw43 MouseModes__button"
+      class="MouseModes__button"
       data-test-box="move"
     >
       <div
@@ -44,7 +44,7 @@ exports[`MouseModes snapshots should render MouseModes 1`] = `
       />
     </div>
     <div
-      class="css-1uzmw43 MouseModes__button"
+      class="MouseModes__button"
       data-test-box="comment"
     >
       <div

@@ -1,6 +1,11 @@
 .ToggleButtonGroup {
+  align-items: center;
   background-color: var(--xd-color-neutral-3);
   border: 1px solid var(--xd-color-neutral-3);
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: flex;
+  height: 24px;
 
   &--full-width {
     width: 100%;

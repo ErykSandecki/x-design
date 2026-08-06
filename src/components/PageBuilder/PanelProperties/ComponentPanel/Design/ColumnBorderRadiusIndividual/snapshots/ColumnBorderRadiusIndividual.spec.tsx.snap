@@ -5,35 +5,31 @@ exports[`ColumnBorderRadiusIndividual snapshots should not render when is merged
 exports[`ColumnBorderRadiusIndividual snapshots should render ColumnBorderRadiusIndividual 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
+    class="SectionColumn SectionColumn--with-bottom-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels"
-      data-test-box=""
+      class="SectionColumnLabels"
       style="width: calc(100% - 24px - 0px - 8px);"
     />
     <div
-      class="css-4ja0ji"
-      data-test-box=""
+      class="SectionColumn__row"
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
-        data-test-box=""
+        class="SectionColumnContent SectionColumnContent--two-inputs"
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp TextField"
+          class="TextField"
           data-test-text-field="border-radius-l"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+            class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="border-radius-l"
           >
             <div
-              class="css-e5vky9 ScrubbableInput"
-              data-test-box=""
+              class="ScrubbableInput"
               data-test-scrubbable-input="border-radius-l"
             >
               <div
@@ -52,8 +48,7 @@ exports[`ColumnBorderRadiusIndividual snapshots should render ColumnBorderRadius
               value="0"
             />
             <div
-              class="css-zcp5dz TextFieldPopover"
-              data-test-box=""
+              class="TextFieldPopover"
             >
               <div
                 class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
@@ -63,14 +58,12 @@ exports[`ColumnBorderRadiusIndividual snapshots should render ColumnBorderRadius
                 width="12"
               />
               <div
-                class="css-6i6anv Popover"
-                data-test-box=""
+                class="Popover"
                 data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="0"
                 >
                   <div
@@ -116,17 +109,16 @@ exports[`ColumnBorderRadiusIndividual snapshots should render ColumnBorderRadius
           </div>
         </div>
         <div
-          class="css-1jnxvbp TextField"
+          class="TextField"
           data-test-text-field="border-radius-t"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+            class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="border-radius-t"
           >
             <div
-              class="css-e5vky9 ScrubbableInput"
-              data-test-box=""
+              class="ScrubbableInput"
               data-test-scrubbable-input="border-radius-t"
             >
               <div
@@ -145,8 +137,7 @@ exports[`ColumnBorderRadiusIndividual snapshots should render ColumnBorderRadius
               value="0"
             />
             <div
-              class="css-zcp5dz TextFieldPopover"
-              data-test-box=""
+              class="TextFieldPopover"
             >
               <div
                 class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
@@ -156,14 +147,12 @@ exports[`ColumnBorderRadiusIndividual snapshots should render ColumnBorderRadius
                 width="12"
               />
               <div
-                class="css-6i6anv Popover"
-                data-test-box=""
+                class="Popover"
                 data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="0"
                 >
                   <div
@@ -209,17 +198,16 @@ exports[`ColumnBorderRadiusIndividual snapshots should render ColumnBorderRadius
           </div>
         </div>
         <div
-          class="css-1jnxvbp TextField"
+          class="TextField"
           data-test-text-field="border-radius-r"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+            class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="border-radius-r"
           >
             <div
-              class="css-e5vky9 ScrubbableInput"
-              data-test-box=""
+              class="ScrubbableInput"
               data-test-scrubbable-input="border-radius-r"
             >
               <div
@@ -238,8 +226,7 @@ exports[`ColumnBorderRadiusIndividual snapshots should render ColumnBorderRadius
               value="0"
             />
             <div
-              class="css-zcp5dz TextFieldPopover"
-              data-test-box=""
+              class="TextFieldPopover"
             >
               <div
                 class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
@@ -249,14 +236,12 @@ exports[`ColumnBorderRadiusIndividual snapshots should render ColumnBorderRadius
                 width="12"
               />
               <div
-                class="css-6i6anv Popover"
-                data-test-box=""
+                class="Popover"
                 data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="0"
                 >
                   <div
@@ -302,17 +287,16 @@ exports[`ColumnBorderRadiusIndividual snapshots should render ColumnBorderRadius
           </div>
         </div>
         <div
-          class="css-1jnxvbp TextField"
+          class="TextField"
           data-test-text-field="border-radius-b"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
+            class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="border-radius-b"
           >
             <div
-              class="css-e5vky9 ScrubbableInput"
-              data-test-box=""
+              class="ScrubbableInput"
               data-test-scrubbable-input="border-radius-b"
             >
               <div
@@ -331,8 +315,7 @@ exports[`ColumnBorderRadiusIndividual snapshots should render ColumnBorderRadius
               value="0"
             />
             <div
-              class="css-zcp5dz TextFieldPopover"
-              data-test-box=""
+              class="TextFieldPopover"
             >
               <div
                 class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
@@ -342,14 +325,12 @@ exports[`ColumnBorderRadiusIndividual snapshots should render ColumnBorderRadius
                 width="12"
               />
               <div
-                class="css-6i6anv Popover"
-                data-test-box=""
+                class="Popover"
                 data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
-                  class="css-1wfopar PopoverItem"
-                  data-test-box=""
+                  class="PopoverItem"
                   data-test-popover-item="0"
                 >
                   <div
@@ -395,13 +376,9 @@ exports[`ColumnBorderRadiusIndividual snapshots should render ColumnBorderRadius
           </div>
         </div>
       </div>
-      <div
-        class="css-1jnxvbp"
-        data-test-box=""
-      >
+      <div>
         <div
-          class="css-c1qms7"
-          data-test-box=""
+          class="SectionColumnButtonIcons"
         />
       </div>
     </div>

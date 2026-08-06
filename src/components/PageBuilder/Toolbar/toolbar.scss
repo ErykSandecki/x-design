@@ -1,6 +1,12 @@
-@forward '../../../styles/mixins/scrollbar';
-@use '../../../styles/mixins/scrollbar' as *;
-
 .Toolbar {
+  background-color: var(--xd-color-neutral-5);
+  border-radius: 12px;
+  bottom: 12px;
+  box-sizing: border-box;
+  height: 48px;
+  left: 50%;
+  padding: 8px;
+  position: absolute;
   transform: translateX(-50%);
+  z-index: var(--xd-zindex-standard);
 }

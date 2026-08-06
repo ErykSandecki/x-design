@@ -19,4 +19,11 @@
     font-size: 11px;
     user-select: none;
   }
+
+  &__label-component {
+    align-items: center;
+    column-gap: 2.5px;
+    display: flex;
+    justify-content: center;
+  }
 }
