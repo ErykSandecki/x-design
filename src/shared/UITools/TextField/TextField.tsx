@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import { FC, RefObject, useRef } from 'react';
 
 // components
@@ -6,11 +7,7 @@ import TextFieldLabel from './TextFieldLabel/TextFieldLabel';
 import TextFieldWrapper, { TTextFieldWrapperProps } from './TextFieldWrapper/TextFieldWrapper';
 import Tooltip, { TTooltipProps } from '../../UI/Tooltip/Tooltip';
 
-// hooks
-import { useTheme } from 'hooks';
-
 // others
-import { className as textFieldClassName, classNames } from './classNames';
 
 // styles
 import styles from './text-field.scss';
@@ -36,13 +33,12 @@ export const TextField: FC<TTextFieldProps> = ({
   ...restProps
 }) => {
   const inputRef = ref || useRef(null);
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   return (
     <Tooltip {...tooltip}>
       <Box
         classes={{
-          className: cx(className, classNamesWithTheme[textFieldClassName]),
+          className: cx(className, styles.TextField),
         }}
         e2eAttribute={E2EAttribute.textField}
         e2eValue={e2eValue}

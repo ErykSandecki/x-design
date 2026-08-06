@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import { FC } from 'react';
 import { kebabCase } from 'lodash';
 
@@ -7,11 +8,7 @@ import { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute
 import Icon from '../../UI/Icon/Icon';
 import Tooltip from '../../UI/Tooltip/Tooltip';
 
-// hooks
-import { useTheme } from 'hooks';
-
 // others
-import { className, classNames } from './classNames';
 
 // styles
 import styles from './button-group.scss';
@@ -27,15 +24,12 @@ export type TSectionProps = TBoxProps & {
 };
 
 export const ButtonGroup: FC<TSectionProps> = ({ buttons, e2eValue = '', fullWidth = false, ...restProps }) => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-
   return (
     <Box
       classes={{
-        className: cx(classNamesWithTheme[className].name, [
-          classNamesWithTheme[className].modificators.fullWidth,
-          fullWidth,
-        ]),
+        className: cx(styles.ButtonGroup, {
+          [styles['ButtonGroup--full-width']]: fullWidth,
+        }),
       }}
       e2eAttribute={E2EAttribute.buttonGroup}
       e2eValue={e2eValue}
@@ -49,18 +43,16 @@ export const ButtonGroup: FC<TSectionProps> = ({ buttons, e2eValue = '', fullWid
           {...tooltip}
         >
           <div
-            className={cx(classNamesWithTheme.button.name, [
-              classNamesWithTheme.button.modificators.disabled,
-              disabled,
-            ])}
+            className={cx(styles.ButtonGroup__button, {
+              [styles['ButtonGroup__button--disabled']]: disabled,
+            })}
             onClick={onClick}
           >
             <Icon
               classes={{
-                className: cx(classNamesWithTheme.icon.name, [
-                  classNamesWithTheme.icon.modificators.disabled,
-                  disabled,
-                ]),
+                className: cx(styles.ButtonGroup__icon, {
+                  [styles['ButtonGroup__icon--disabled']]: disabled,
+                }),
               }}
               height={12}
               name={name}

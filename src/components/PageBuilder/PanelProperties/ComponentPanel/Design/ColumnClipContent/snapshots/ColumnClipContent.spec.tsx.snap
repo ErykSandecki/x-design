@@ -3,11 +3,11 @@
 exports[`ColumnMargin snapshots should render ColumnMargin 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light SectionColumn--withTopMargin SectionColumn--withTopMargin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin SectionColumn--with-top-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+      class="css-xdzdnq SectionColumnLabels"
       data-test-box=""
       style="width: calc(100% - 24px - 0px - 8px);"
     />
@@ -16,25 +16,25 @@ exports[`ColumnMargin snapshots should render ColumnMargin 1`] = `
       data-test-box=""
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--single SectionColumnContent--single--light"
+        class="css-biptg5 SectionColumnContent SectionColumnContent--single"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp Checkbox Checkbox--light"
+          class="css-1jnxvbp Checkbox"
           data-test-checkbox="clip-content"
         >
           <input
-            class="Checkbox__input Checkbox__input--light"
+            class="Checkbox__input"
             data-test-checkbox-input="clip-content"
             type="checkbox"
           />
           <div
-            class="css-1jnxvbp Checkbox__inputWrapper Checkbox__inputWrapper--light"
+            class="css-1jnxvbp Checkbox__input-wrapper"
             data-test-box=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--neutral1"
               data-test-icon="checkbox"
               height="8"
               name="Checkbox"
@@ -42,7 +42,7 @@ exports[`ColumnMargin snapshots should render ColumnMargin 1`] = `
             />
           </div>
           <small
-            class="css-1jnxvbp Checkbox__label Checkbox__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+            class="css-1jnxvbp Checkbox__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
             data-test-text=""
             style="text-align: inherit;"
           >
@@ -67,11 +67,11 @@ exports[`ColumnMargin snapshots should render ColumnMargin 1`] = `
 exports[`ColumnMargin snapshots should render when is free form 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light SectionColumn--withTopMargin SectionColumn--withTopMargin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin SectionColumn--with-top-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+      class="css-xdzdnq SectionColumnLabels"
       data-test-box=""
       style="width: calc(100% - 24px - 0px - 8px);"
     />
@@ -80,25 +80,25 @@ exports[`ColumnMargin snapshots should render when is free form 1`] = `
       data-test-box=""
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--single SectionColumnContent--single--light"
+        class="css-biptg5 SectionColumnContent SectionColumnContent--single"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp Checkbox Checkbox--light"
+          class="css-1jnxvbp Checkbox"
           data-test-checkbox="clip-content"
         >
           <input
-            class="Checkbox__input Checkbox__input--light"
+            class="Checkbox__input"
             data-test-checkbox-input="clip-content"
             type="checkbox"
           />
           <div
-            class="css-1jnxvbp Checkbox__inputWrapper Checkbox__inputWrapper--light"
+            class="css-1jnxvbp Checkbox__input-wrapper"
             data-test-box=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--neutral1"
               data-test-icon="checkbox"
               height="8"
               name="Checkbox"
@@ -106,7 +106,7 @@ exports[`ColumnMargin snapshots should render when is free form 1`] = `
             />
           </div>
           <small
-            class="css-1jnxvbp Checkbox__label Checkbox__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+            class="css-1jnxvbp Checkbox__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
             data-test-text=""
             style="text-align: inherit;"
           >

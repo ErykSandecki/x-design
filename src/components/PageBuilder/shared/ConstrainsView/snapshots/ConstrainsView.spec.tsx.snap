@@ -3,26 +3,26 @@
 exports[`ConstrainsView snapshots should render ConstrainsView 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp ConstrainsView ConstrainsView--light"
+    class="css-1jnxvbp ConstrainsView"
     data-test-box=""
   >
     <div
-      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--bottom ConstrainsView__constrain--bottom--light"
+      class="ConstrainsView__constrain ConstrainsView__constrain--bottom"
     />
     <div
-      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--centerHorizontal ConstrainsView__constrain--centerHorizontal--light"
+      class="ConstrainsView__constrain ConstrainsView__constrain--center-horizontal"
     />
     <div
-      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--centerVertical ConstrainsView__constrain--centerVertical--light"
+      class="ConstrainsView__constrain ConstrainsView__constrain--center-vertical"
     />
     <div
-      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--left ConstrainsView__constrain--left--light"
+      class="ConstrainsView__constrain ConstrainsView__constrain--left"
     />
     <div
-      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--right ConstrainsView__constrain--right--light"
+      class="ConstrainsView__constrain ConstrainsView__constrain--right"
     />
     <div
-      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--top ConstrainsView__constrain--top--light"
+      class="ConstrainsView__constrain ConstrainsView__constrain--top"
     />
   </div>
 </DocumentFragment>
@@ -31,26 +31,26 @@ exports[`ConstrainsView snapshots should render ConstrainsView 1`] = `
 exports[`ConstrainsView snapshots should render selected 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp ConstrainsView ConstrainsView--light ConstrainsView--selected ConstrainsView--selected--light"
+    class="css-1jnxvbp ConstrainsView ConstrainsView--selected"
     data-test-box=""
   >
     <div
-      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--bottom ConstrainsView__constrain--bottom--light"
+      class="ConstrainsView__constrain ConstrainsView__constrain--bottom"
     />
     <div
-      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--centerHorizontal ConstrainsView__constrain--centerHorizontal--light"
+      class="ConstrainsView__constrain ConstrainsView__constrain--center-horizontal"
     />
     <div
-      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--centerVertical ConstrainsView__constrain--centerVertical--light"
+      class="ConstrainsView__constrain ConstrainsView__constrain--center-vertical"
     />
     <div
-      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--left ConstrainsView__constrain--left--light"
+      class="ConstrainsView__constrain ConstrainsView__constrain--left"
     />
     <div
-      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--right ConstrainsView__constrain--right--light"
+      class="ConstrainsView__constrain ConstrainsView__constrain--right"
     />
     <div
-      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--top ConstrainsView__constrain--top--light"
+      class="ConstrainsView__constrain ConstrainsView__constrain--top"
     />
   </div>
 </DocumentFragment>
@@ -59,26 +59,26 @@ exports[`ConstrainsView snapshots should render selected 1`] = `
 exports[`ConstrainsView snapshots should render with alignment 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp ConstrainsView ConstrainsView--light ConstrainsView__horizontal--center ConstrainsView__horizontal--center--light ConstrainsView__vertical--center ConstrainsView__vertical--center--light"
+    class="css-1jnxvbp ConstrainsView ConstrainsView__horizontal--center ConstrainsView__vertical--center"
     data-test-box=""
   >
     <div
-      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--bottom ConstrainsView__constrain--bottom--light"
+      class="ConstrainsView__constrain ConstrainsView__constrain--bottom"
     />
     <div
-      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--centerHorizontal ConstrainsView__constrain--centerHorizontal--light"
+      class="ConstrainsView__constrain ConstrainsView__constrain--center-horizontal"
     />
     <div
-      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--centerVertical ConstrainsView__constrain--centerVertical--light"
+      class="ConstrainsView__constrain ConstrainsView__constrain--center-vertical"
     />
     <div
-      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--left ConstrainsView__constrain--left--light"
+      class="ConstrainsView__constrain ConstrainsView__constrain--left"
     />
     <div
-      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--right ConstrainsView__constrain--right--light"
+      class="ConstrainsView__constrain ConstrainsView__constrain--right"
     />
     <div
-      class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--top ConstrainsView__constrain--top--light"
+      class="ConstrainsView__constrain ConstrainsView__constrain--top"
     />
   </div>
 </DocumentFragment>

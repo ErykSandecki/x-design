@@ -1,18 +1,17 @@
 import { isEmpty, kebabCase, pick } from 'lodash';
 
 // others
-import { THEME_COLORS } from 'constant/themeColors';
+import { colors } from 'constant/colors';
 
 // types
 import { Pallete } from '../enums/pallete';
-import { Theme } from 'types';
 import { TSX } from '../types/types';
 import { TSXPallete } from '../types/pallete';
 
 // utils
 import { enumToArray } from 'utils';
 
-export const mappingPallete = (sx: TSX, theme: Theme): string => {
+export const mappingPallete = (sx: TSX): string => {
   const keys = enumToArray<string>(Pallete);
   const pallete = pick(sx, keys) as TSXPallete;
 
@@ -25,7 +24,7 @@ export const mappingPallete = (sx: TSX, theme: Theme): string => {
       const property = Pallete[key];
       const value = pallete[key as keyof TSXPallete];
 
-      return value ? `${kebabCase(property)}: ${THEME_COLORS[theme][value]};` : '';
+      return value ? `${kebabCase(property)}: ${colors[value]};` : '';
     })
     .filter(Boolean)
     .join('\n');

@@ -1,14 +1,11 @@
+import cx from 'classnames';
 import { FC, memo } from 'react';
 
 // components
 import MouseModes, { TMouseModeProps } from './MouseModes/MouseModes';
 import { Box } from 'shared';
 
-// hooks
-import { useTheme } from 'hooks';
-
 // others
-import { className, classNames } from './classNames';
 
 // styles
 import styles from './toolbar.scss';
@@ -19,11 +16,9 @@ import { ZIndex } from 'types';
 export type TToolbarProps = Pick<TMouseModeProps, 'mouseMode' | 'setMouseMode'>;
 
 const Toolbar: FC<TToolbarProps> = ({ ...restProps }) => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-
   return (
     <Box
-      classes={{ className: cx(classNamesWithTheme[className]) }}
+      classes={{ className: cx(styles.Toolbar) }}
       onMouseDown={(event) => event.stopPropagation()}
       style={{ touchAction: 'manipulation' }}
       sx={{

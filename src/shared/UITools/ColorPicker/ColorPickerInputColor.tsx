@@ -9,7 +9,6 @@ import Panel, { TPanelProps } from './Panel/Panel';
 import TextField from '../TextField/TextField';
 
 // others
-import { classes } from './classNames';
 
 // types
 import { E2EAttribute, TColor } from 'types';
@@ -25,7 +24,7 @@ export type TColorPickerInputColorProps = Pick<
   TPanelProps,
   'activeSampler' | 'onClickColorSampler' | 'onClickSampler'
 > &
-  TUIProps<typeof classes> &
+  TUIProps<{ className: string }> &
   Omit<ColorPickerProps, 'arrow' | 'onOpenChange' | 'open' | 'panelRender'> & {
     alpha: TColor['alpha'];
     alphaValue: TUseColorPickerEvents['alphaValue'];
@@ -71,7 +70,7 @@ export const ColorPickerInputColor: FC<TColorPickerInputColorProps> = ({
       startAdornment={
         <ColorPickerAntd
           arrow={false}
-          className={cx(classes.className, classNameParent)}
+          className={cx('ColorPicker', classNameParent)}
           onChange={onChangeColorPicker}
           onOpenChange={(visible) => setVisible(visible)}
           open={visible}

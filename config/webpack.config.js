@@ -81,8 +81,9 @@ module.exports = {
             loader: 'css-loader',
             options: {
               modules: {
+                exportLocalsConvention: 'as-is',
                 exportOnlyLocals: false,
-                localIdentName: `${isDevelopment ? '' : 'cl__'}[local]__[contenthash:base64:5]`,
+                localIdentName: '[local]',
                 namedExport: false,
               },
             },

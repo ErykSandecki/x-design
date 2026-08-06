@@ -1,14 +1,11 @@
+import cx from 'classnames';
 import { FC, ReactNode } from 'react';
 
 // components
 import Box from '../../../UI/Box/Box';
 import Icon from '../../../UI/Icon/Icon';
 
-// hooks
-import { useTheme } from 'hooks';
-
 // others
-import { className, classNames } from './classNames';
 
 // styles
 import styles from './section-column-content.scss';
@@ -16,6 +13,12 @@ import styles from './section-column-content.scss';
 // types
 import { ColorsTheme } from 'types';
 import { GridColumnType } from '../enums';
+
+const sectionColumnContentModificators: Record<string, string> = {
+  oneByTwo: 'SectionColumnContent--one-by-two',
+  single: 'SectionColumnContent--single',
+  twoInputs: 'SectionColumnContent--two-inputs',
+};
 
 export type TSectionColumnContentProps = {
   children: ReactNode;
@@ -30,12 +33,10 @@ export const SectionColumnContent: FC<TSectionColumnContentProps> = ({
   width,
   withInputConnector = false,
 }) => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-
   return (
     <Box
       classes={{
-        className: cx(classNamesWithTheme[className].name, classNamesWithTheme[className].modificators[gridColumnType]),
+        className: cx(styles.SectionColumnContent, styles[sectionColumnContentModificators[gridColumnType]]),
       }}
       style={{ width }}
       sx={{ display: 'grid', position: 'relative' }}
@@ -44,7 +45,7 @@ export const SectionColumnContent: FC<TSectionColumnContentProps> = ({
       {withInputConnector && (
         <Box
           classes={{
-            className: cx(classNamesWithTheme.inputConnector),
+            className: cx(styles['SectionColumnContent__input-connector']),
           }}
           sx={{
             alignItems: 'center',

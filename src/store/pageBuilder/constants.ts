@@ -25,7 +25,7 @@ import {
   UNSELECT_ELEMENT,
 } from './actionsType';
 import { BASE_2D, BASE_3D } from 'shared';
-import { THEME_COLORS } from 'constant/themeColors';
+import { colorsResolved } from 'constant/colors.resolved';
 
 // types
 import { AlignmentLayout, ElementType, LayoutType, TElement, Theme } from 'types';
@@ -34,7 +34,10 @@ import { TElements, TPage } from './types';
 // utils
 import { getThemePreferences } from 'utils';
 
-const color = getThemePreferences() === Theme.dark ? THEME_COLORS.dark.neutral4 : THEME_COLORS.light.neutral4;
+// Deliberately a static hex snapshot, not `colors.neutral4` (a live var(--xd-color-*) reference):
+// this seeds a new design element's own fill color, which must never repaint when the app's UI
+// theme is toggled later. See src/constant/colors.resolved.ts.
+const color = getThemePreferences() === Theme.dark ? colorsResolved.neutral4.dark : colorsResolved.neutral4.light;
 
 export const BASE_ELEMENTS: TElement = {
   alignment: {},

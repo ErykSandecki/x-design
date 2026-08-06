@@ -1,14 +1,11 @@
+import cx from 'classnames';
 import { FC, ReactNode } from 'react';
 
 // components
 import StoryComponent from '../StoryComponent/StoryComponent';
 import StoryPropsTable, { TPropsStoryPropsTable } from '../StoryPropsTable/StoryPropsTable';
 
-// hooks
-import { useTheme } from '../../../hooks/useTheme/useTheme';
-
 // others
-import { className, classNames } from './classNames';
 
 // styles
 import styles from './story-api.scss';
@@ -25,24 +22,23 @@ export type TStoryApiProps = TStoryBlockCodeProps &
 
 export const StoryApi: FC<TStoryApiProps> = ({ children = null, description = [], title, ...restProps }) => {
   const { tableBodyData } = restProps;
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   return (
-    <main className={cx(classNamesWithTheme[className])}>
+    <main className={cx(styles['StoryApi'])}>
       {/* TITLE */}
-      <h1 className={cx(classNamesWithTheme.title)}>{title}</h1>
+      <h1 className={cx(styles['StoryApi__title'])}>{title}</h1>
 
       {/* DESCRIPTION */}
       {description.map((description, key) => (
         <p
-          className={cx(classNamesWithTheme.description)}
+          className={cx(styles['StoryApi__description'])}
           dangerouslySetInnerHTML={{ __html: description }}
           key={key}
         />
       ))}
 
       {/* COMPONENT */}
-      <StoryComponent className={cx(classNamesWithTheme.storyComponent)} title="Import" {...restProps} />
+      <StoryComponent className={cx(styles['StoryApi__story-component'])} title="Import" {...restProps} />
 
       {/* ADDITIONAL CONTENT: BLOCK WARNING */}
       {children}

@@ -2,20 +2,22 @@
   user-select: none;
 
   &__tab {
-    @include theme('neutral-2', color);
-    @include theme-selector('neutral-3', background-color, '&:hover');
-
+    color: var(--xd-color-neutral-2);
     cursor: pointer;
     font-size: 11px;
     line-height: 16px;
 
+    &:hover {
+      background-color: var(--xd-color-neutral-3);
+    }
+
     &--active {
-      @include theme('neutral-1', color);
-      @include theme('neutral-3', background-color);
+      background-color: var(--xd-color-neutral-3);
+      color: var(--xd-color-neutral-1);
     }
 
     &--disabled {
-      @include theme('neutral-1', color);
+      color: var(--xd-color-neutral-1);
 
       background-color: unset;
 

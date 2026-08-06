@@ -10,8 +10,7 @@
   width: 100%;
 
   &__cell {
-    @include theme('neutral-5', background-color);
-
+    background-color: var(--xd-color-neutral-5);
     height: 100%;
     width: 100%;
   }

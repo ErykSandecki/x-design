@@ -3,18 +3,18 @@
 exports[`ColorPrompt snapshots should render ColorPrompt 1`] = `
 <DocumentFragment>
   <div
-    class="css-6642oy ColorPrompt ColorPrompt--light"
+    class="css-6642oy ColorPrompt"
     data-test-box=""
   >
     <div
-      class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp Icon Icon--neutral1"
       data-test-icon="eyes-dropper"
       height="12"
       name="EyesDropper"
       width="12"
     />
     <small
-      class="css-3thidm ColorPrompt__description ColorPrompt__description--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-kw3w48 ColorPrompt__description Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >

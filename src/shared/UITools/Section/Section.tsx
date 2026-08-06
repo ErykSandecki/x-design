@@ -1,14 +1,11 @@
+import cx from 'classnames';
 import { FC, ReactElement, ReactNode } from 'react';
 
 // components
 import Box from '../../UI/Box/Box';
 import { Small } from '../../UI/Typography';
 
-// hooks
-import { useTheme } from 'hooks';
-
 // others
-import { className, classNames } from './classNames';
 
 // styles
 import styles from './section.scss';
@@ -26,24 +23,17 @@ export type TSectionProps = {
 };
 
 export const Section: FC<TSectionProps> = ({ children, component, e2eValue = '', label, separator = true }) => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-
   return (
-    <Box
-      classes={{ className: cx(classNamesWithTheme[className]) }}
-      e2eAttribute={E2EAttribute.section}
-      e2eValue={e2eValue}
-    >
+    <Box classes={{ className: cx(styles.Section) }} e2eAttribute={E2EAttribute.section} e2eValue={e2eValue}>
       {label && (
         <Box
           classes={{
-            className: cx(classNamesWithTheme.labelWrapper.name, [
-              classNamesWithTheme.labelWrapper.modificators.separator,
-              separator,
-            ]),
+            className: cx(styles['Section__label-wrapper'], {
+              [styles['Section__label-wrapper--separator']]: separator,
+            }),
           }}
         >
-          <Small classes={{ className: cx(classNamesWithTheme.label) }}>{label}</Small>
+          <Small classes={{ className: cx(styles.Section__label) }}>{label}</Small>
           <Box sx={{ alignItems: 'center', columnGap: '2.5px', display: 'flex', justifyContent: 'center' }}>
             {component}
           </Box>

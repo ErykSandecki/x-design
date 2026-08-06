@@ -3,27 +3,27 @@
 exports[`Select snapshots should render Select 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp Select Select--light"
+    class="css-1jnxvbp Select"
     data-test-select=""
   >
     <div
-      class="css-1jnxvbp TextField TextField--light"
+      class="css-1jnxvbp TextField"
       data-test-text-field=""
       data-test-tooltip=""
     >
       <div
-        class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--outlined TextFieldWrapper--outlined--light"
+        class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--outlined"
         data-test-text-field-wrapper=""
       >
         <input
-          class="TextFieldWrapper__input TextFieldWrapper__input--light"
+          class="TextFieldWrapper__input"
           data-test-text-field-input=""
           maxlength="6"
           readonly=""
           value="0"
         />
         <div
-          class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          class="css-1jnxvbp Icon Icon--neutral1"
           data-test-icon="chevron-down"
           height="5"
           name="ChevronDown"
@@ -33,20 +33,20 @@ exports[`Select snapshots should render Select 1`] = `
       </div>
     </div>
     <ul
-      class="css-1jnxvbp SelectOptions SelectOptions--light"
+      class="css-1jnxvbp SelectOptions"
       data-test-box=""
       data-test-select-options=""
       style="left: 0px; top: 24px; width: 0px;"
     >
       <li
-        class="css-1jnxvbp SelectItem SelectItem--light SelectItem--selected SelectItem--selected--light"
+        class="css-1jnxvbp SelectItem SelectItem--selected"
         data-test-select-item="0"
         data-value="0"
         role="option"
         tabindex="0"
       >
         <div
-          class="css-1jnxvbp SelectItem__checkIcon SelectItem__checkIcon--light SelectItem__checkIcon--selected SelectItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          class="css-1jnxvbp SelectItem__check-icon SelectItem__check-icon--selected Icon Icon--neutral1"
           data-test-icon="check"
           height="12"
           name="Check"
@@ -55,18 +55,18 @@ exports[`Select snapshots should render Select 1`] = `
         0
       </li>
       <div
-        class="css-whbbxj"
+        class="css-144d4hh"
         data-test-box=""
       />
       <li
-        class="css-1jnxvbp SelectItem SelectItem--light"
+        class="css-1jnxvbp SelectItem"
         data-test-select-item="1"
         data-value="1"
         role="option"
         tabindex="0"
       >
         <div
-          class="css-1jnxvbp SelectItem__checkIcon SelectItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral1"
           data-test-icon="check"
           height="12"
           name="Check"
@@ -75,18 +75,18 @@ exports[`Select snapshots should render Select 1`] = `
         1
       </li>
       <div
-        class="css-whbbxj"
+        class="css-144d4hh"
         data-test-box=""
       />
       <li
-        class="css-1jnxvbp SelectItem SelectItem--light"
+        class="css-1jnxvbp SelectItem"
         data-test-select-item="2"
         data-value="2"
         role="option"
         tabindex="0"
       >
         <div
-          class="css-1jnxvbp SelectItem__checkIcon SelectItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral1"
           data-test-icon="check"
           height="12"
           name="Check"
@@ -102,27 +102,27 @@ exports[`Select snapshots should render Select 1`] = `
 exports[`Select snapshots should render when mixed 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp Select Select--light"
+    class="css-1jnxvbp Select"
     data-test-select=""
   >
     <div
-      class="css-1jnxvbp TextField TextField--light"
+      class="css-1jnxvbp TextField"
       data-test-text-field=""
       data-test-tooltip=""
     >
       <div
-        class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--outlined TextFieldWrapper--outlined--light"
+        class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--outlined"
         data-test-text-field-wrapper=""
       >
         <input
-          class="TextFieldWrapper__input TextFieldWrapper__input--light"
+          class="TextFieldWrapper__input"
           data-test-text-field-input=""
           maxlength="6"
           readonly=""
           value="Mixed"
         />
         <div
-          class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          class="css-1jnxvbp Icon Icon--neutral1"
           data-test-icon="chevron-down"
           height="5"
           name="ChevronDown"
@@ -132,20 +132,20 @@ exports[`Select snapshots should render when mixed 1`] = `
       </div>
     </div>
     <ul
-      class="css-1jnxvbp SelectOptions SelectOptions--light"
+      class="css-1jnxvbp SelectOptions"
       data-test-box=""
       data-test-select-options=""
       style="left: 0px; top: 24px; width: 0px;"
     >
       <li
-        class="css-1jnxvbp SelectItem SelectItem--light"
+        class="css-1jnxvbp SelectItem"
         data-test-select-item="0"
         data-value="0"
         role="option"
         tabindex="0"
       >
         <div
-          class="css-1jnxvbp SelectItem__checkIcon SelectItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral1"
           data-test-icon="check"
           height="12"
           name="Check"
@@ -154,18 +154,18 @@ exports[`Select snapshots should render when mixed 1`] = `
         0
       </li>
       <div
-        class="css-whbbxj"
+        class="css-144d4hh"
         data-test-box=""
       />
       <li
-        class="css-1jnxvbp SelectItem SelectItem--light"
+        class="css-1jnxvbp SelectItem"
         data-test-select-item="1"
         data-value="1"
         role="option"
         tabindex="0"
       >
         <div
-          class="css-1jnxvbp SelectItem__checkIcon SelectItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral1"
           data-test-icon="check"
           height="12"
           name="Check"
@@ -174,18 +174,18 @@ exports[`Select snapshots should render when mixed 1`] = `
         1
       </li>
       <div
-        class="css-whbbxj"
+        class="css-144d4hh"
         data-test-box=""
       />
       <li
-        class="css-1jnxvbp SelectItem SelectItem--light"
+        class="css-1jnxvbp SelectItem"
         data-test-select-item="2"
         data-value="2"
         role="option"
         tabindex="0"
       >
         <div
-          class="css-1jnxvbp SelectItem__checkIcon SelectItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral1"
           data-test-icon="check"
           height="12"
           name="Check"
@@ -201,27 +201,27 @@ exports[`Select snapshots should render when mixed 1`] = `
 exports[`Select snapshots should render with no options 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp Select Select--light"
+    class="css-1jnxvbp Select"
     data-test-select=""
   >
     <div
-      class="css-1jnxvbp TextField TextField--light"
+      class="css-1jnxvbp TextField"
       data-test-text-field=""
       data-test-tooltip=""
     >
       <div
-        class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--outlined TextFieldWrapper--outlined--light"
+        class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--outlined"
         data-test-text-field-wrapper=""
       >
         <input
-          class="TextFieldWrapper__input TextFieldWrapper__input--light"
+          class="TextFieldWrapper__input"
           data-test-text-field-input=""
           maxlength="6"
           readonly=""
           value="0"
         />
         <div
-          class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          class="css-1jnxvbp Icon Icon--neutral1"
           data-test-icon="chevron-down"
           height="5"
           name="ChevronDown"
@@ -231,20 +231,20 @@ exports[`Select snapshots should render with no options 1`] = `
       </div>
     </div>
     <ul
-      class="css-1jnxvbp SelectOptions SelectOptions--light"
+      class="css-1jnxvbp SelectOptions"
       data-test-box=""
       data-test-select-options=""
       style="left: 0px; top: 24px; width: 0px;"
     >
       <li
-        class="css-1jnxvbp SelectItem SelectItem--light SelectItem--disabled SelectItem--disabled--light"
+        class="css-1jnxvbp SelectItem SelectItem--disabled"
         data-test-select-item=""
         data-value=""
         role="option"
         tabindex="0"
       >
         <div
-          class="css-1jnxvbp SelectItem__checkIcon SelectItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral1"
           data-test-icon="check"
           height="12"
           name="Check"
@@ -260,27 +260,27 @@ exports[`Select snapshots should render with no options 1`] = `
 exports[`Select snapshots should render with one option 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp Select Select--light"
+    class="css-1jnxvbp Select"
     data-test-select=""
   >
     <div
-      class="css-1jnxvbp TextField TextField--light"
+      class="css-1jnxvbp TextField"
       data-test-text-field=""
       data-test-tooltip=""
     >
       <div
-        class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--outlined TextFieldWrapper--outlined--light"
+        class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--outlined"
         data-test-text-field-wrapper=""
       >
         <input
-          class="TextFieldWrapper__input TextFieldWrapper__input--light"
+          class="TextFieldWrapper__input"
           data-test-text-field-input=""
           maxlength="6"
           readonly=""
           value="0"
         />
         <div
-          class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          class="css-1jnxvbp Icon Icon--neutral1"
           data-test-icon="chevron-down"
           height="5"
           name="ChevronDown"
@@ -290,20 +290,20 @@ exports[`Select snapshots should render with one option 1`] = `
       </div>
     </div>
     <ul
-      class="css-1jnxvbp SelectOptions SelectOptions--light"
+      class="css-1jnxvbp SelectOptions"
       data-test-box=""
       data-test-select-options=""
       style="left: 0px; top: 24px; width: 0px;"
     >
       <li
-        class="css-1jnxvbp SelectItem SelectItem--light SelectItem--selected SelectItem--selected--light"
+        class="css-1jnxvbp SelectItem SelectItem--selected"
         data-test-select-item="0"
         data-value="0"
         role="option"
         tabindex="0"
       >
         <div
-          class="css-1jnxvbp SelectItem__checkIcon SelectItem__checkIcon--light SelectItem__checkIcon--selected SelectItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          class="css-1jnxvbp SelectItem__check-icon SelectItem__check-icon--selected Icon Icon--neutral1"
           data-test-icon="check"
           height="12"
           name="Check"

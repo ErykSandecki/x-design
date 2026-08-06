@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import { FC } from 'react';
 
 // components
@@ -6,10 +7,8 @@ import Tooltip from '../../../../UI/Tooltip/Tooltip';
 
 // hooks
 import { useCellsInputEvents } from './hooks/useCellsInputEvents';
-import { useTheme } from 'hooks';
 
 // others
-import { className, classNames } from './classNames';
 import { SEPARATOR } from './constants';
 
 // styles
@@ -26,7 +25,6 @@ export type TCellsInputProps = {
 };
 
 export const CellsInput: FC<TCellsInputProps> = ({ columns, onClickCell, rows }) => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const parsedColumns = parseInt(columns) || 0;
   const parsedRows = parseInt(rows) || 0;
   const { activeCell, ...events } = useCellsInputEvents(onClickCell);
@@ -34,7 +32,7 @@ export const CellsInput: FC<TCellsInputProps> = ({ columns, onClickCell, rows })
   return (
     <Box
       classes={{
-        className: cx(className, classNamesWithTheme[className]),
+        className: cx('CellsInput', styles.CellsInput),
       }}
       e2eAttribute={E2EAttribute.gridCellsInput}
       style={{
@@ -53,17 +51,11 @@ export const CellsInput: FC<TCellsInputProps> = ({ columns, onClickCell, rows })
             <Tooltip content={`${targetColumn}x${targetRow}`} key={cellNumber}>
               <Box
                 classes={{
-                  className: cx(
-                    classNamesWithTheme.cell.name,
-                    [
-                      classNamesWithTheme.cell.modificators.active,
+                  className: cx(styles.CellsInput__cell, {
+                    [styles['CellsInput__cell--active']]:
                       targetColumn <= activeCell.columns && targetRow <= activeCell.rows,
-                    ],
-                    [
-                      classNamesWithTheme.cell.modificators.selected,
-                      targetColumn <= parsedColumns && targetRow <= parsedRows,
-                    ],
-                  ),
+                    [styles['CellsInput__cell--selected']]: targetColumn <= parsedColumns && targetRow <= parsedRows,
+                  }),
                 }}
                 data-value={`${targetColumn}${SEPARATOR}${targetRow}`}
                 e2eAttribute={E2EAttribute.gridCellInput}

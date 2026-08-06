@@ -3,12 +3,12 @@
 exports[`ToggleButton snapshots should render ToggleButton 1`] = `
 <DocumentFragment>
   <button
-    class="ToggleButton ToggleButton--light ToggleButton--selected ToggleButton--selected--light"
+    class="ToggleButton ToggleButton--selected"
     data-test-toggle-button=""
     type="button"
   >
     <div
-      class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp Icon Icon--neutral1"
       data-test-icon="align-horizontal-center"
       height="12"
       name="AlignHorizontalCenter"

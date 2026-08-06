@@ -1,14 +1,11 @@
+import cx from 'classnames';
 import { FC } from 'react';
 
 // components
 import AlignmentOption from './AlignmentOption/AlignmentOption';
 import Box from '../../UI/Box/Box';
 
-// hooks
-import { useTheme } from 'hooks';
-
 // others
-import { className, classNames } from './classNames';
 
 // styles
 import styles from './alignment-area.scss';
@@ -28,15 +25,12 @@ export type TAlignmentAreaProps = {
 };
 
 export const AlignmentArea: FC<TAlignmentAreaProps> = ({ e2eValue = '', fullWidth = false, onClick, value }) => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-
   return (
     <Box
       classes={{
-        className: cx(className, classNamesWithTheme[className].name, [
-          classNamesWithTheme[className].modificators.fullWidth,
-          fullWidth,
-        ]),
+        className: cx('AlignmentArea', styles.AlignmentArea, {
+          [styles['AlignmentArea--full-width']]: fullWidth,
+        }),
       }}
       e2eAttribute={E2EAttribute.alignmentArea}
       e2eValue={e2eValue}

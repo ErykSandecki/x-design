@@ -1,25 +1,19 @@
 import { isEmpty, kebabCase, pick } from 'lodash';
 
 // others
-import { THEME_COLORS } from 'constant/themeColors';
+import { colors } from 'constant/colors';
 
 // types
 import { Border } from '../enums/borders';
-import { Theme } from 'types';
 import { TSX } from '../types/types';
 import { TSXBorders } from '../types/borders';
 
 // utils
 import { enumToArray } from 'utils';
 
-export const getBorderValue = (
-  isSubtractive: boolean,
-  selectedBorder: string,
-  theme: Theme,
-  value: number | string,
-): string => {
+export const getBorderValue = (isSubtractive: boolean, selectedBorder: string, value: number | string): string => {
   const targetValue = isSubtractive ? 1 : value;
-  const cssValue = `${targetValue}px solid ${THEME_COLORS[theme].neutral3}`;
+  const cssValue = `${targetValue}px solid ${colors.neutral3}`;
 
   if (isSubtractive) {
     const borders = enumToArray<string>(Border).filter(
@@ -32,7 +26,7 @@ export const getBorderValue = (
   return `${kebabCase(selectedBorder)}: ${cssValue};`;
 };
 
-export const mappingBorders = (sx: TSX, theme: Theme): string => {
+export const mappingBorders = (sx: TSX): string => {
   const keys = enumToArray<string>(Border);
   const borders = pick(sx, keys) as TSXBorders;
 
@@ -45,7 +39,7 @@ export const mappingBorders = (sx: TSX, theme: Theme): string => {
       const value = borders[key as keyof TSXBorders];
       const isSubtractive = (value === 0 || value === '0') && key !== Border.border;
 
-      return value !== undefined ? getBorderValue(isSubtractive, key, theme, value) : '';
+      return value !== undefined ? getBorderValue(isSubtractive, key, value) : '';
     })
     .filter(Boolean)
     .join('\n');

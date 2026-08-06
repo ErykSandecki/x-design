@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import { cloneElement, FC, MouseEvent, ReactElement, RefObject } from 'react';
 import { createPortal } from 'react-dom';
 import { isArray } from 'lodash';
@@ -9,11 +10,10 @@ import E2EDataAttribute, { TE2EDataAttributeProps } from '../../../E2EDataAttrib
 import SelectItem from '../SelectItem/SelectItem';
 
 // hooks
-import { useRenderContainer, useTheme } from 'hooks';
+import { useRenderContainer } from 'hooks';
 import { useSelectOptionsEvents } from './hooks/useSelectOptionsEvents';
 
 // others
-import { className, classNames } from './classNames';
 import { translationNameSpace } from '../constants';
 
 // styles
@@ -47,7 +47,6 @@ export const SelectOptions: FC<TSelectOptionsProps> = ({
   value,
   wrapperRef,
 }) => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { t } = useTranslation();
   const container = useRenderContainer(idContainer, HTMLContainerId.dropdown);
 
@@ -68,10 +67,9 @@ export const SelectOptions: FC<TSelectOptionsProps> = ({
     <E2EDataAttribute type={E2EAttribute.selectOptions} value={e2eValue}>
       <Box
         classes={{
-          className: cx(classNamesWithTheme[className].name, [
-            classNamesWithTheme[className].modificators.selected,
-            selected,
-          ]),
+          className: cx(styles.SelectOptions, {
+            [styles['SelectOptions--selected']]: selected,
+          }),
         }}
         component="ul"
         onClick={onClick}

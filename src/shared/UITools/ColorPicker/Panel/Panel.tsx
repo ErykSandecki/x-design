@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import { createPortal } from 'react-dom';
 import { FC, ReactNode, useEffect, useRef, useState } from 'react';
 
@@ -11,12 +12,10 @@ import Tabs, { TTabsProps } from '../../Tabs/Tabs';
 
 // hooks
 import { useClickEvent } from './hooks/useClickEvent';
-import { useTheme } from 'hooks';
 
 // others
 import { antColorPickerSliderContainerClassName, TABS } from './constants';
 import { BASE_2D } from 'shared/ZoomBox/constants';
-import { className, classNames } from './classNames';
 
 // styles
 import styles from './panel.scss';
@@ -45,7 +44,6 @@ export const Panel: FC<TPanelProps> = ({
 }) => {
   const [activeTab, setActiveTab] = useState(Tab.custom);
   const [sampleContainer, setSampleContainer] = useState<HTMLDivElement>(null);
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const mousePosition = useRef(BASE_2D);
   const onClickHandler = useClickEvent(mousePosition, onClickSampler);
   const ref = useRef<HTMLDivElement>(null);
@@ -61,13 +59,9 @@ export const Panel: FC<TPanelProps> = ({
 
   return (
     <E2EDataAttribute type={E2EAttribute.colorPickerPanel} value={e2eValue}>
-      <Box
-        classes={{ className: cx(classNamesWithTheme[className]) }}
-        onKeyDown={(event) => event.stopPropagation()}
-        ref={ref}
-      >
+      <Box classes={{ className: cx(styles.Panel) }} onKeyDown={(event) => event.stopPropagation()} ref={ref}>
         <Box
-          classes={{ className: cx(classNamesWithTheme.header) }}
+          classes={{ className: cx(styles.Panel__header) }}
           sx={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between', p: 8 }}
         >
           <Tabs activeTab={activeTab} setActiveTab={setActiveTab as TTabsProps['setActiveTab']} tabs={TABS} />

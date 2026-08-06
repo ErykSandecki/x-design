@@ -1,14 +1,11 @@
+import cx from 'classnames';
 import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 // components
 import Box from '../../UI/Box/Box';
 
-// hooks
-import { useTheme } from 'hooks';
-
 // others
-import { className, classNames } from './classNames';
 
 // styles
 import styles from './tabs.scss';
@@ -27,12 +24,11 @@ export type TTabsProps = {
 
 export const Tabs: FC<TTabsProps> = ({ activeTab, setActiveTab, e2eValue, tabs }) => {
   const disabledStates = tabs.length < 2;
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { t } = useTranslation();
 
   return (
     <Box
-      classes={{ className: cx(classNamesWithTheme[className]) }}
+      classes={{ className: cx(styles.Tabs) }}
       e2eAttribute={E2EAttribute.tabs}
       e2eValue={e2eValue}
       sx={{ alignItems: 'center', columnGap: '5px', display: 'flex' }}
@@ -44,11 +40,10 @@ export const Tabs: FC<TTabsProps> = ({ activeTab, setActiveTab, e2eValue, tabs }
           <Box
             attributes={{ [E2EAttribute.active]: isActive }}
             classes={{
-              className: cx(
-                classNamesWithTheme.tab.name,
-                [classNamesWithTheme.tab.modificators.active, isActive],
-                [classNamesWithTheme.tab.modificators.disabled, disabledStates],
-              ),
+              className: cx(styles.Tabs__tab, {
+                [styles['Tabs__tab--active']]: isActive,
+                [styles['Tabs__tab--disabled']]: disabledStates,
+              }),
             }}
             e2eAttribute={E2EAttribute.tab}
             e2eValue={name}

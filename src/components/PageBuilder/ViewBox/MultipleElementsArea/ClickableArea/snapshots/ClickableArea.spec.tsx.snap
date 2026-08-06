@@ -5,18 +5,18 @@ exports[`ClickableArea snapshots should not render when isMultipleMoving 1`] = `
 exports[`ClickableArea snapshots should render ClickableArea 1`] = `
 <DocumentFragment>
   <svg
-    class="ClickableArea ClickableArea--light"
+    class="ClickableArea"
     data-test-outline=""
     style="height: 0px; left: 0px; top: 0px; width: 0px;"
   >
     <path
-      class="ClickableArea__outline ClickableArea__outline--light"
+      class="ClickableArea__outline"
       d="M 0,0 H 0 V 0 H 0 V 0"
       stroke-width="1.5"
     />
   </svg>
   <svg
-    class="ClickableArea ClickableArea--light"
+    class="ClickableArea"
     data-test-rect="1"
     style="height: 0px; left: 0px; pointer-events: all; top: 0px; width: 0px;"
   >

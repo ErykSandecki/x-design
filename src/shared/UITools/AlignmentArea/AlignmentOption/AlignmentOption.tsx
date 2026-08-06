@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -5,11 +6,7 @@ import { useTranslation } from 'react-i18next';
 import Box from '../../../UI/Box/Box';
 import Tooltip from '../../../UI/Tooltip/Tooltip';
 
-// hooks
-import { useTheme } from 'hooks';
-
 // others
-import { className, classNames } from './classNames';
 import { TOOLTIP_TRANSLATION_KEY } from 'constant/constants';
 
 // styles
@@ -18,6 +15,19 @@ import styles from './alignment-option.scss';
 // types
 import { AlignmentLayout, E2EAttribute } from 'types';
 
+const optionViewModificators: Record<string, string> = {
+  bottomCenter: 'AlignmentOption__option-view--bottom-center',
+  bottomLeft: 'AlignmentOption__option-view--bottomLeft',
+  bottomRight: 'AlignmentOption__option-view--bottom-right',
+  center: 'AlignmentOption__option-view--center',
+  left: 'AlignmentOption__option-view--left',
+  none: 'AlignmentOption__option-view--none',
+  right: 'AlignmentOption__option-view--right',
+  topCenter: 'AlignmentOption__option-view--top-center',
+  topLeft: 'AlignmentOption__option-view--topLeft',
+  topRight: 'AlignmentOption__option-view--top-right',
+};
+
 export type TAlignmentOptionProps = {
   alignmentFlow: AlignmentLayout;
   isSelected: boolean;
@@ -25,7 +35,6 @@ export type TAlignmentOptionProps = {
 };
 
 export const AlignmentOption: FC<TAlignmentOptionProps> = ({ alignmentFlow, isSelected, onClick }) => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { t } = useTranslation();
 
   return (
@@ -37,28 +46,23 @@ export const AlignmentOption: FC<TAlignmentOptionProps> = ({ alignmentFlow, isSe
     >
       <Box
         classes={{
-          className: cx(classNamesWithTheme[className].name, [
-            classNamesWithTheme[className].modificators.selected,
-            isSelected,
-          ]),
+          className: cx(styles.AlignmentOption, {
+            [styles['AlignmentOption--selected']]: isSelected,
+          }),
         }}
         onClick={() => onClick(alignmentFlow)}
       >
         <Box
           classes={{
-            className: cx(
-              classNamesWithTheme.optionView.name,
-              classNamesWithTheme.optionView.modificators[alignmentFlow],
-            ),
+            className: cx(styles['AlignmentOption__option-view'], styles[optionViewModificators[alignmentFlow]]),
           }}
         >
           {Array.from(Array(3), (_, index) => (
             <Box
               classes={{
-                className: cx(classNamesWithTheme.indicator.name, [
-                  classNamesWithTheme.indicator.modificators.selected,
-                  isSelected,
-                ]),
+                className: cx(styles.AlignmentOption__indicator, {
+                  [styles['AlignmentOption__indicator--selected']]: isSelected,
+                }),
               }}
               key={index}
             />

@@ -1,6 +1,9 @@
 .FieldGroup {
-  @include theme-selector('blue-1', border, '&:focus-within', '1px solid');
-  @include theme('neutral-3', border, '1px solid');
+  border: 1px solid var(--xd-color-neutral-3);
+
+  &:focus-within {
+    border: 1px solid var(--xd-color-blue-1);
+  }
 
   align-items: center;
   border-radius: 5px;

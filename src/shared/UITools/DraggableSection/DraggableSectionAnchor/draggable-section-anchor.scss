@@ -1,6 +1,4 @@
 .DraggableSectionAnchor {
-  @include theme-selector('neutral-1', background-color, #{&}#{'__prompt'});
-
   display: flex;
   height: 50%;
   left: 0;
@@ -24,6 +22,7 @@
   }
 
   &__prompt {
+    background-color: var(--xd-color-neutral-1);
     height: 2px;
     pointer-events: none;
     width: 100%;

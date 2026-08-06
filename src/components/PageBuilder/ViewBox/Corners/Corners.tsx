@@ -1,11 +1,8 @@
+import cx from 'classnames';
 import { FC } from 'react';
-
-// hooks
-import { useTheme } from 'hooks';
 
 // others
 import { BORDER, HHW, RX, SHW } from './constants';
-import { className, classNames } from './classNames';
 
 // styles
 import styles from './corners.scss';
@@ -16,14 +13,13 @@ export type TCornersProps = {
 };
 
 const Corners: FC<TCornersProps> = ({ rectCoordinates }) => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { x1, x2, y1, y2 } = rectCoordinates;
   const height = y2 - y1;
   const width = x2 - x1;
 
   return (
     <svg
-      className={cx(classNamesWithTheme[className].name)}
+      className={cx(styles.Corners)}
       style={{
         height: `${height}px`,
         left: `${x1}px`,

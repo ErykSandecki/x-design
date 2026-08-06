@@ -1,10 +1,7 @@
+import cx from 'classnames';
 import { FC } from 'react';
 
-// hooks
-import { useTheme } from 'hooks';
-
 // others
-import { className, classNames } from './classNames';
 
 // styles
 import styles from './story-props-table.scss';
@@ -17,18 +14,16 @@ export type TPropsStoryPropsTable = {
 };
 
 const StoryPropsTable: FC<TPropsStoryPropsTable> = ({ tableBodyData }) => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-
   return (
-    <section className={cx(classNamesWithTheme[className])}>
+    <section className={cx(styles['StoryPropsTable'])}>
       {/* TITLE */}
-      <h2 className={cx(classNamesWithTheme.title)}>Props</h2>
+      <h2 className={cx(styles['StoryPropsTable__title'])}>Props</h2>
 
       {/* TABLE */}
-      <table className={cx(classNamesWithTheme.table)}>
+      <table className={cx(styles['StoryPropsTable__table'])}>
         {/* HEADER */}
         <thead>
-          <tr className={cx(classNamesWithTheme.rowHeader)}>
+          <tr className={cx(styles['StoryPropsTable__row-header'])}>
             <th>Name</th>
             <th>Type</th>
             <th>Default</th>
@@ -39,17 +34,17 @@ const StoryPropsTable: FC<TPropsStoryPropsTable> = ({ tableBodyData }) => {
         {/* BODY */}
         <tbody>
           {tableBodyData.map(({ defaultValue = '', description, name, type }, key) => (
-            <tr className={cx(classNamesWithTheme.rowBody)} key={key}>
-              <td className={cx(classNamesWithTheme.columnName)}>{name}</td>
+            <tr className={cx(styles['StoryPropsTable__row-body'])} key={key}>
+              <td className={cx(styles['StoryPropsTable__column-name'])}>{name}</td>
               <td
-                className={cx(classNamesWithTheme.columnType)}
+                className={cx(styles['StoryPropsTable__column-type'])}
                 dangerouslySetInnerHTML={{
                   __html: type,
                 }}
               />
-              <td className={cx(classNamesWithTheme.columnDefaultValue)}>{defaultValue}</td>
+              <td className={cx(styles['StoryPropsTable__column-default-value'])}>{defaultValue}</td>
               <td
-                className={cx(classNamesWithTheme.columnDescription)}
+                className={cx(styles['StoryPropsTable__column-description'])}
                 dangerouslySetInnerHTML={{
                   __html: description,
                 }}

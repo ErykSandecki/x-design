@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import { camelCase } from 'lodash';
 import { FC, ReactNode, useEffect } from 'react';
 
@@ -5,18 +6,33 @@ import { FC, ReactNode, useEffect } from 'react';
 import StoryBlockCode, { TStoryBlockCodeProps as TStoryBlockCodeProps } from '../StoryBlockCode/StoryBlockCode';
 
 // hooks
-import { useTheme } from '../../../hooks/useTheme/useTheme';
+import { useTheme } from 'hooks';
 
 // others
-import { className as classNameStoryComponent, classNames } from './classNames';
-import { THEME_COLORS } from 'constant/themeColors';
+import { colors } from 'constant/colors';
 
 // styles
 import styles from './story-component.scss';
 
 // types
 import { ContentAlignItems, ContentDisplay, ContentGridFlow } from './enums';
-import { Theme } from '../../../types';
+
+const contentModificators: Record<string, string> = {
+  block: 'StoryComponent__content--block',
+  bottom: 'StoryComponent__content--bottom',
+  center: 'StoryComponent__content--center',
+  column: 'StoryComponent__content--column',
+  flex: 'StoryComponent__content--flex',
+  grid: 'StoryComponent__content--grid',
+  maxEightColumns: 'StoryComponent__content--max-eight-columns',
+  maxFiveColumns: 'StoryComponent__content--max-five-columns',
+  maxFourColumns: 'StoryComponent__content--max-four-columns',
+  maxSixColumns: 'StoryComponent__content--max-six-columns',
+  maxThreeColumns: 'StoryComponent__content--max-three-columns',
+  maxTwoColumns: 'StoryComponent__content--max-two-columns',
+  row: 'StoryComponent__content--row',
+  top: 'StoryComponent__content--top',
+};
 
 export type TStoryComponentProps = TStoryBlockCodeProps & {
   applyMaxWidth?: boolean;
@@ -42,29 +58,26 @@ export const StoryComponent: FC<TStoryComponentProps> = ({
   title,
   ...restProps
 }) => {
-  const { classNamesWithTheme, cx, theme } = useTheme(classNames, styles);
+  const { theme } = useTheme();
 
   useEffect(() => {
-    if (theme === Theme.dark) {
-      document.body.style.backgroundColor = THEME_COLORS.dark.neutral4;
-      document.body.style.colorScheme = theme;
-    }
+    document.body.style.backgroundColor = colors.neutral4;
+    document.body.style.colorScheme = theme;
   }, [theme]);
 
   return (
     <section
-      className={cx(className, classNamesWithTheme[classNameStoryComponent].name, [
-        classNamesWithTheme[classNameStoryComponent].modificators.maxWidth,
-        applyMaxWidth,
-      ])}
+      className={cx(className, styles['StoryComponent'], {
+        [styles['StoryComponent--max-width']]: applyMaxWidth,
+      })}
     >
       {/*  TITLE */}
-      <h2 className={cx(classNamesWithTheme.title)}>{title}</h2>
+      <h2 className={cx(styles['StoryComponent__title'])}>{title}</h2>
 
       {/* DESCRIPTION */}
       {description.map((description, key) => (
         <p
-          className={cx(classNamesWithTheme.description)}
+          className={cx(styles['StoryComponent__description'])}
           dangerouslySetInnerHTML={{ __html: description }}
           key={key}
         />
@@ -74,10 +87,10 @@ export const StoryComponent: FC<TStoryComponentProps> = ({
       {children && (
         <section
           className={cx(
-            classNamesWithTheme.content.name,
-            classNamesWithTheme.content.modificators[contentAlignItems],
-            classNamesWithTheme.content.modificators[contentDisplay],
-            classNamesWithTheme.content.modificators[camelCase(contentGridFlow)],
+            styles['StoryComponent__content'],
+            styles[contentModificators[contentAlignItems]],
+            styles[contentModificators[contentDisplay]],
+            styles[contentModificators[camelCase(contentGridFlow)]],
           )}
         >
           {children}
@@ -88,7 +101,7 @@ export const StoryComponent: FC<TStoryComponentProps> = ({
       {blocksCodeData.length > 0 && (
         <StoryBlockCode
           blocksCodeData={blocksCodeData}
-          className={cx(classNamesWithTheme.storyBlockCode)}
+          className={cx(styles['StoryComponent__story-block-code'])}
           {...restProps}
         />
       )}

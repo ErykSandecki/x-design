@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import { FC } from 'react';
 
 // components
@@ -5,11 +6,7 @@ import Box from '../../../../UI/Box/Box';
 import GridInputCells from './GridInputCells';
 import { Small } from '../../../../UI/Typography';
 
-// hooks
-import { useTheme } from 'hooks';
-
 // others
-import { className, classNames } from './classNames';
 
 // styles
 import styles from './grid-inputs.scss';
@@ -34,17 +31,15 @@ export const GridInputs: FC<TGridInputsProps> = ({
   onChangeRows,
   rows,
 }) => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-
   return (
     <Box
       classes={{
-        className: cx(className, classNamesWithTheme[className]),
+        className: cx('GridInputs', styles.GridInputs),
       }}
       e2eAttribute={E2EAttribute.gridInputs}
     >
       <GridInputCells onBlur={onBlurColumns} onChange={onChangeColumns} name="Columns" value={columns} />
-      <Small classes={{ className: cx(classNamesWithTheme.separator) }}>x</Small>
+      <Small classes={{ className: cx(styles.GridInputs__separator) }}>x</Small>
       <GridInputCells onBlur={onBlurRows} onChange={onChangeRows} name="Rows" value={rows} />
     </Box>
   );

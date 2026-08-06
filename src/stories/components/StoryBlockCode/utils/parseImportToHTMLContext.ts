@@ -1,32 +1,25 @@
+import cx from 'classnames';
+
 // others
-import { classNames as classNamesStoryBlockCode } from '../classNames';
 
 // types
-import { TThemeClassNames, TThemeClassNamesApplier } from 'hooks/useTheme/types';
 import { TImport } from '../types';
+import { TObject } from 'types';
 
 // utils
 import { getHTMLElement } from './common';
 
-const getItemWithHighlightWordAs = (
-  itemsToImports: string,
-  classNames: TThemeClassNames<typeof classNamesStoryBlockCode>,
-  cx: TThemeClassNamesApplier,
-): string =>
+const getItemWithHighlightWordAs = (itemsToImports: string, styles: TObject<string>): string =>
   itemsToImports
     .split(' ')
-    .map((item) => (item === 'as' ? getHTMLElement(cx(classNames.importAs), 'as') : item))
+    .map((item) => (item === 'as' ? getHTMLElement(cx(styles['StoryBlockCode__import-as']), 'as') : item))
     .join(' ');
 
-export const parseImportToHTMLContext = (
-  { items: itemsToImports, path }: TImport,
-  classNames: TThemeClassNames<typeof classNamesStoryBlockCode>,
-  cx: TThemeClassNamesApplier,
-): string =>
+export const parseImportToHTMLContext = ({ items: itemsToImports, path }: TImport, styles: TObject<string>): string =>
   [
-    getHTMLElement(cx(classNames.import), 'import'),
-    getHTMLElement(cx(classNames.importItems), getItemWithHighlightWordAs(itemsToImports, classNames, cx)),
-    getHTMLElement(cx(classNames.importFrom), 'from'),
-    getHTMLElement(cx(classNames.importPath), `'${path}'`),
-    getHTMLElement(cx(classNames.importSemicolon), ';'),
+    getHTMLElement(cx(styles['StoryBlockCode__import']), 'import'),
+    getHTMLElement(cx(styles['StoryBlockCode__import-items']), getItemWithHighlightWordAs(itemsToImports, styles)),
+    getHTMLElement(cx(styles['StoryBlockCode__import-from']), 'from'),
+    getHTMLElement(cx(styles['StoryBlockCode__import-path']), `'${path}'`),
+    getHTMLElement(cx(styles['StoryBlockCode__import-semicolon']), ';'),
   ].join(' ');

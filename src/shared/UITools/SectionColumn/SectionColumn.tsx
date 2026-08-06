@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import { FC, ReactNode } from 'react';
 import { size } from 'lodash';
 
@@ -7,11 +8,7 @@ import SectionColumnButtonIcons from './SectionColumnButtonIcons/SectionColumnBu
 import SectionColumnContent from './SectionColumnContent/SectionColumnContent';
 import SectionColumnLabels from './SectionColumnLabels/SectionColumnLabels';
 
-// hooks
-import { useTheme } from 'hooks';
-
 // others
-import { className, classNames } from './classNames';
 
 // styles
 import styles from './section-column.scss';
@@ -39,7 +36,6 @@ export const SectionColumn: FC<TSectionColumnProps> = ({
   withTopMargin = false,
   withBottomMargin = false,
 }) => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const buttonsWidthTotal = (size(buttonsIcon) || 1) * 24;
   const additionalGap = size(buttonsIcon) === 2 ? 2.5 : 0;
   const width = `calc(100% - ${buttonsWidthTotal}px - ${additionalGap}px - 8px)`;
@@ -47,11 +43,10 @@ export const SectionColumn: FC<TSectionColumnProps> = ({
   return (
     <Box
       classes={{
-        className: cx(
-          classNamesWithTheme[className].name,
-          [classNamesWithTheme[className].modificators.withBottomMargin, withBottomMargin],
-          [classNamesWithTheme[className].modificators.withTopMargin, withTopMargin],
-        ),
+        className: cx(styles.SectionColumn, {
+          [styles['SectionColumn--with-bottom-margin']]: withBottomMargin,
+          [styles['SectionColumn--with-top-margin']]: withTopMargin,
+        }),
       }}
       e2eAttribute={E2EAttribute.section}
     >

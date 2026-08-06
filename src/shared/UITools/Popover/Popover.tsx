@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import { createPortal } from 'react-dom';
 import { CSSProperties, FC, ReactNode, RefObject, useRef } from 'react';
 
@@ -11,12 +12,8 @@ import PopoverPreviewItem from './PopoverPreview/PopoverPreviewItem/PopoverPrevi
 import PopoverRoot from './PopoverRoot/PopoverRoot';
 import PopoverSeparator from './PopoverSeparator/PopoverSeparator';
 
-// hooks
-import { useTheme } from 'hooks';
-
 // others
 import { BASE_2D } from 'shared/ZoomBox/constants';
-import { className, classNames } from './classNames';
 
 // styles
 import styles from './popover.scss';
@@ -56,7 +53,6 @@ export const Popover: FC<TPopoverProps> = ({
   style,
 }) => {
   const refPopover = useRef(null);
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { left, top } = getPosition(alignHorizontally, alignVertically, refItem, refPopover);
   const x = left - offset.x;
   const y = top - offset.y;
@@ -65,10 +61,9 @@ export const Popover: FC<TPopoverProps> = ({
     <E2EDataAttribute type={E2EAttribute.popover} value={e2eValue}>
       <Box
         classes={{
-          className: cx(classNamesWithTheme[className].name, [
-            classNamesWithTheme[className].modificators.selected,
-            selected,
-          ]),
+          className: cx(styles.Popover, {
+            [styles['Popover--selected']]: selected,
+          }),
         }}
         depsSx={[backgroundColor]}
         id={id}

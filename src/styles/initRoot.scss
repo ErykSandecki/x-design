@@ -12,30 +12,27 @@
   --xd-box-shadow-12: #{$--xd-box-shadow-12};
   --xd-box-shadow-16: #{$--xd-box-shadow-16};
   --xd-box-shadow-24: #{$--xd-box-shadow-24};
+  --xd-box-shadow-panel: 0 2px 20px 0 #000000b3;
+  --xd-scrollbar-bg: #2b2b2b;
+  --xd-scrollbar-track: #6b6b6b;
 
-  // --colors
-  --xd-blue-1--light: #{$--xd-blue-1--light};
-  --xd-blue-2--light: #{$--xd-blue-2--light};
-  --xd-blue-1--dark: #{$--xd-blue-1--dark};
-  --xd-blue-2--dark: #{$--xd-blue-2--dark};
-  --xd-sky-blue-1: #{$--xd-sky-blue-1};
-  --xd-green-1: #{$--xd-green-1};
-  --xd-green-2: #{$--xd-green-2};
-  --xd-red-1: #{$--xd-red-1};
-  --xd-orange-1--light: #{$--xd-orange-1--light};
-  --xd-orange-1--dark: #{$--xd-orange-1--dark};
-  --xd-pink-1: #{$--xd-pink-1};
-  --xd-violet-1: #{$--xd-violet-1};
-  --xd-neutral-1--light: #{$--xd-neutral-1--light};
-  --xd-neutral-2--light: #{$--xd-neutral-2--light};
-  --xd-neutral-3--light: #{$--xd-neutral-3--light};
-  --xd-neutral-4--light: #{$--xd-neutral-4--light};
-  --xd-neutral-5--light: #{$--xd-neutral-5--light};
-  --xd-neutral-1--dark: #{$--xd-neutral-1--dark};
-  --xd-neutral-2--dark: #{$--xd-neutral-2--dark};
-  --xd-neutral-3--dark: #{$--xd-neutral-3--dark};
-  --xd-neutral-4--dark: #{$--xd-neutral-4--dark};
-  --xd-neutral-5--dark: #{$--xd-neutral-5--dark};
+  // --colors (theme-agnostic — same value in both themes)
+  --xd-color-sky-blue-1: #{$--xd-sky-blue-1};
+  --xd-color-green-1: #{$--xd-green-1};
+  --xd-color-green-2: #{$--xd-green-2};
+  --xd-color-red-1: #{$--xd-red-1};
+  --xd-color-pink-1: #{$--xd-pink-1};
+  --xd-color-violet-1: #{$--xd-violet-1};
+
+  // --colors (theme-switching — dark is the default, overridden below for light)
+  --xd-color-blue-1: #{$--xd-blue-1--dark};
+  --xd-color-blue-2: #{$--xd-blue-2--dark};
+  --xd-color-orange-1: #{$--xd-orange-1--dark};
+  --xd-color-neutral-1: #{$--xd-neutral-1--dark};
+  --xd-color-neutral-2: #{$--xd-neutral-2--dark};
+  --xd-color-neutral-3: #{$--xd-neutral-3--dark};
+  --xd-color-neutral-4: #{$--xd-neutral-4--dark};
+  --xd-color-neutral-5: #{$--xd-neutral-5--dark};
 
   // --zindexes
   --xd-zindex-standard: #{map.get($map: $--xd-z-indexes-map, $key: 'standard')};
@@ -54,4 +51,31 @@
   --xd-page-builder-zindex-element-anchor: #{$--xd-zindex-element-anchor};
   --xd-page-builder-zindex-multiple-area: #{$--xd-zindex-multiple-area};
   --xd-page-builder-zindex-overlay-container: #{$--xd-zindex-overlay-container};
+}
+
+// Light-theme overrides for the theme-switching colors above. An explicit [data-theme='light']
+// always wins over the media query below (higher specificity, no !important needed), so a user's
+// stored preference beats the OS setting; the media query only applies when no preference is stored.
+@mixin xd-light-theme-colors {
+  --xd-color-blue-1: #{$--xd-blue-1--light};
+  --xd-color-blue-2: #{$--xd-blue-2--light};
+  --xd-color-orange-1: #{$--xd-orange-1--light};
+  --xd-color-neutral-1: #{$--xd-neutral-1--light};
+  --xd-color-neutral-2: #{$--xd-neutral-2--light};
+  --xd-color-neutral-3: #{$--xd-neutral-3--light};
+  --xd-color-neutral-4: #{$--xd-neutral-4--light};
+  --xd-color-neutral-5: #{$--xd-neutral-5--light};
+  --xd-box-shadow-panel: 0 2px 20px #78787880;
+  --xd-scrollbar-bg: #fafafa;
+  --xd-scrollbar-track: #c7c7c7;
+}
+
+:root[data-theme='light'] {
+  @include xd-light-theme-colors;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    @include xd-light-theme-colors;
+  }
 }

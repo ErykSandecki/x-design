@@ -2,8 +2,13 @@ $--xd-attr-fill: '*[data-svg-property=' fill ']';
 $--xd-attr-stroke: '*[data-svg-property=' stroke ']';
 
 @mixin apply-icon-styles($color, $selector: '') {
-  @include theme-selector($color, fill, #{$selector}#{$--xd-attr-fill});
-  @include theme-selector($color, stroke, #{$selector}#{$--xd-attr-stroke});
+  #{$selector}#{$--xd-attr-fill} {
+    fill: var(--xd-color-#{$color});
+  }
+
+  #{$selector}#{$--xd-attr-stroke} {
+    stroke: var(--xd-color-#{$color});
+  }
 }
 
 .Icon {

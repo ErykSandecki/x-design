@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import { FC, MouseEvent, ReactElement, useRef } from 'react';
 import { noop } from 'lodash';
 import { useTranslation } from 'react-i18next';
@@ -10,10 +11,8 @@ import TextField, { TTextFieldProps } from '../TextField/TextField';
 
 // hooks
 import { useSelectEvents } from './hooks/useSelectEvents';
-import { useTheme } from 'hooks';
 
 // others
-import { className, classNames } from './classNames';
 import { MIXED } from 'constant/constants';
 
 // styles
@@ -66,7 +65,6 @@ export const Select: FC<TSelectProps> = ({
   const selectRef = useRef(null);
   const wrapperRef = useRef(null);
   const { t } = useTranslation();
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   const { onClickOption, onClickSelect, selected } = useSelectEvents(
     idContainer,
@@ -79,10 +77,9 @@ export const Select: FC<TSelectProps> = ({
   return (
     <Box
       classes={{
-        className: cx(classNamesWithTheme[className].name, [
-          classNamesWithTheme[className].modificators.disabled,
-          disabled,
-        ]),
+        className: cx(styles.Select, {
+          [styles['Select--disabled']]: disabled,
+        }),
       }}
       e2eAttribute={E2EAttribute.select}
       e2eValue={e2eValue}

@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import { cloneElement, FC, ReactNode, useRef, ReactElement, RefObject } from 'react';
 import { createPortal } from 'react-dom';
 
@@ -5,11 +6,10 @@ import { createPortal } from 'react-dom';
 import Icon from '../Icon/Icon';
 
 // hooks
-import { useRenderContainer, useTheme } from 'hooks';
+import { useRenderContainer } from 'hooks';
 import { useUpdatePosition } from './hooks/useUpdatePosition';
 
 // others
-import { className as classNameTooltip, classNames } from './classNames';
 
 // styles
 import _styles from './styles/tooltip.scss';
@@ -22,6 +22,21 @@ import { TooltipPosition } from './enums';
 
 // utils
 import { getAttributes } from '../../E2EDataAttributes/utils';
+
+const carrotModificators: Record<string, string> = {
+  bottomCenter: 'Tooltip__carrot--bottom-center',
+  bottomEnd: 'Tooltip__carrot--bottom-end',
+  bottomStart: 'Tooltip__carrot--bottom-start',
+  leftCenter: 'Tooltip__carrot--left-center',
+  leftEnd: 'Tooltip__carrot--left-end',
+  leftStart: 'Tooltip__carrot--left-start',
+  rightCenter: 'Tooltip__carrot--right-center',
+  rightEnd: 'Tooltip__carrot--right-end',
+  rightStart: 'Tooltip__carrot--right-start',
+  topCenter: 'Tooltip__carrot--top-center',
+  topEnd: 'Tooltip__carrot--top-end',
+  topStart: 'Tooltip__carrot--top-start',
+};
 
 export type TTooltipProps = {
   autoPositioning?: boolean;
@@ -54,7 +69,6 @@ export const Tooltip: FC<TTooltipProps> = ({
   ref,
   visible: initialVisible = false,
 }) => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, _styles);
   const container = useRenderContainer(customId, HTMLContainerId.tooltip);
   const elementRef = ref || useRef<HTMLDivElement>(null);
   const tooltipRef = useRef<HTMLDivElement>(null);
@@ -87,17 +101,16 @@ export const Tooltip: FC<TTooltipProps> = ({
       })}
       {createPortal(
         <div
-          className={cx(className, classNamesWithTheme[classNameTooltip].name, [
-            classNamesWithTheme[classNameTooltip].modificators.visible,
-            visible && !hide,
-          ])}
+          className={cx(className, _styles.Tooltip, {
+            [_styles['Tooltip--visible']]: visible && !hide,
+          })}
           style={styles}
         >
-          <div className={cx(classNamesWithTheme.content)} ref={tooltipRef}>
+          <div className={cx(_styles.Tooltip__content)} ref={tooltipRef}>
             {content}
             <Icon
               classes={{
-                className: cx(classNamesWithTheme.carrot.name, classNamesWithTheme.carrot.modificators[position]),
+                className: cx(_styles.Tooltip__carrot, _styles[carrotModificators[position]]),
               }}
               height={14}
               name="CarrotDown"

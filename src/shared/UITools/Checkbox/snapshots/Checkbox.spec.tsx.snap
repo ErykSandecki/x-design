@@ -3,20 +3,20 @@
 exports[`Checkbox snapshots should render Checkbox 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp Checkbox Checkbox--light"
+    class="css-1jnxvbp Checkbox"
     data-test-checkbox=""
   >
     <input
-      class="Checkbox__input Checkbox__input--light"
+      class="Checkbox__input"
       data-test-checkbox-input=""
       type="checkbox"
     />
     <div
-      class="css-1jnxvbp Checkbox__inputWrapper Checkbox__inputWrapper--light"
+      class="css-1jnxvbp Checkbox__input-wrapper"
       data-test-box=""
     />
     <small
-      class="css-1jnxvbp Checkbox__label Checkbox__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp Checkbox__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -29,20 +29,20 @@ exports[`Checkbox snapshots should render Checkbox 1`] = `
 exports[`Checkbox snapshots should render when checked 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp Checkbox Checkbox--light"
+    class="css-1jnxvbp Checkbox"
     data-test-checkbox="checkbox"
   >
     <input
-      class="Checkbox__input Checkbox__input--light"
+      class="Checkbox__input"
       data-test-checkbox-input="checkbox"
       type="checkbox"
     />
     <div
-      class="css-1jnxvbp Checkbox__inputWrapper Checkbox__inputWrapper--light"
+      class="css-1jnxvbp Checkbox__input-wrapper"
       data-test-box=""
     >
       <div
-        class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+        class="css-1jnxvbp Icon Icon--neutral1"
         data-test-icon="checkbox"
         height="8"
         name="Checkbox"
@@ -50,7 +50,7 @@ exports[`Checkbox snapshots should render when checked 1`] = `
       />
     </div>
     <small
-      class="css-1jnxvbp Checkbox__label Checkbox__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp Checkbox__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -63,20 +63,20 @@ exports[`Checkbox snapshots should render when checked 1`] = `
 exports[`Checkbox snapshots should render when mixed 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp Checkbox Checkbox--light"
+    class="css-1jnxvbp Checkbox"
     data-test-checkbox="checkbox"
   >
     <input
-      class="Checkbox__input Checkbox__input--light"
+      class="Checkbox__input"
       data-test-checkbox-input="checkbox"
       type="checkbox"
     />
     <div
-      class="css-1jnxvbp Checkbox__inputWrapper Checkbox__inputWrapper--light"
+      class="css-1jnxvbp Checkbox__input-wrapper"
       data-test-box=""
     >
       <div
-        class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+        class="css-1jnxvbp Icon Icon--neutral1"
         data-test-icon="checkbox-mixed"
         height="8"
         name="CheckboxMixed"
@@ -84,7 +84,7 @@ exports[`Checkbox snapshots should render when mixed 1`] = `
       />
     </div>
     <small
-      class="css-1jnxvbp Checkbox__label Checkbox__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp Checkbox__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >

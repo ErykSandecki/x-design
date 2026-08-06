@@ -3,16 +3,16 @@
 exports[`Insets snapshots should render Insets 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+      class="css-xdzdnq SectionColumnLabels"
       data-test-box=""
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -24,26 +24,26 @@ exports[`Insets snapshots should render Insets 1`] = `
       data-test-box=""
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--twoInputs SectionColumnContent--twoInputs--light"
+        class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp TextField TextField--light"
+          class="css-1jnxvbp TextField"
           data-test-text-field="padding-lr"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="padding-lr"
           >
             <div
-              class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+              class="css-e5vky9 ScrubbableInput"
               data-test-box=""
               data-test-scrubbable-input="padding-lr"
             >
               <div
-                class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+                class="css-1jnxvbp Icon Icon--neutral2"
                 data-test-icon="padding-lr"
                 height="12"
                 name="PaddingLR"
@@ -51,50 +51,50 @@ exports[`Insets snapshots should render Insets 1`] = `
               />
             </div>
             <input
-              class="TextFieldWrapper__input TextFieldWrapper__input--light"
+              class="TextFieldWrapper__input"
               data-test-text-field-input="padding-lr"
               maxlength="6"
               type="text"
               value="0"
             />
             <div
-              class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+              class="css-zcp5dz TextFieldPopover"
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
                 width="12"
               />
               <div
-                class="css-1c8p9kb Popover Popover--light"
+                class="css-6i6anv Popover"
                 data-test-box=""
                 data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
-                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  class="css-1wfopar PopoverItem"
                   data-test-box=""
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                     data-test-icon="padding-lr"
                     height="12"
                     name="PaddingLR"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -106,14 +106,14 @@ exports[`Insets snapshots should render Insets 1`] = `
           </div>
         </div>
         <div
-          class="Tooltip Tooltip--light"
+          class="Tooltip"
         >
           <div
-            class="Tooltip__content Tooltip__content--light"
+            class="Tooltip__content"
           >
             Horizontal padding
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -122,21 +122,21 @@ exports[`Insets snapshots should render Insets 1`] = `
           </div>
         </div>
         <div
-          class="css-1jnxvbp TextField TextField--light"
+          class="css-1jnxvbp TextField"
           data-test-text-field="padding-tb"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="padding-tb"
           >
             <div
-              class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+              class="css-e5vky9 ScrubbableInput"
               data-test-box=""
               data-test-scrubbable-input="padding-tb"
             >
               <div
-                class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+                class="css-1jnxvbp Icon Icon--neutral2"
                 data-test-icon="padding-tb"
                 height="12"
                 name="PaddingTB"
@@ -144,50 +144,50 @@ exports[`Insets snapshots should render Insets 1`] = `
               />
             </div>
             <input
-              class="TextFieldWrapper__input TextFieldWrapper__input--light"
+              class="TextFieldWrapper__input"
               data-test-text-field-input="padding-tb"
               maxlength="6"
               type="text"
               value="0"
             />
             <div
-              class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+              class="css-zcp5dz TextFieldPopover"
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
                 width="12"
               />
               <div
-                class="css-1c8p9kb Popover Popover--light"
+                class="css-6i6anv Popover"
                 data-test-box=""
                 data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
-                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  class="css-1wfopar PopoverItem"
                   data-test-box=""
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                     data-test-icon="padding-tb"
                     height="12"
                     name="PaddingTB"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -199,14 +199,14 @@ exports[`Insets snapshots should render Insets 1`] = `
           </div>
         </div>
         <div
-          class="Tooltip Tooltip--light"
+          class="Tooltip"
         >
           <div
-            class="Tooltip__content Tooltip__content--light"
+            class="Tooltip__content"
           >
             Vertical padding
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -224,12 +224,12 @@ exports[`Insets snapshots should render Insets 1`] = `
           data-test-box=""
         >
           <div
-            class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+            class="css-1jnxvbp ButtonIcon"
             data-test-button-icon="insets-mode"
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--neutral1"
               data-test-icon="individual-insets"
               height="12"
               name="IndividualInsets"
@@ -237,14 +237,14 @@ exports[`Insets snapshots should render Insets 1`] = `
             />
           </div>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Individual padding
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -262,16 +262,16 @@ exports[`Insets snapshots should render Insets 1`] = `
 exports[`Insets snapshots should render back to merged mode 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+      class="css-xdzdnq SectionColumnLabels"
       data-test-box=""
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -283,26 +283,26 @@ exports[`Insets snapshots should render back to merged mode 1`] = `
       data-test-box=""
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--twoInputs SectionColumnContent--twoInputs--light"
+        class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp TextField TextField--light"
+          class="css-1jnxvbp TextField"
           data-test-text-field="padding-lr"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="padding-lr"
           >
             <div
-              class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+              class="css-e5vky9 ScrubbableInput"
               data-test-box=""
               data-test-scrubbable-input="padding-lr"
             >
               <div
-                class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+                class="css-1jnxvbp Icon Icon--neutral2"
                 data-test-icon="padding-lr"
                 height="12"
                 name="PaddingLR"
@@ -310,50 +310,50 @@ exports[`Insets snapshots should render back to merged mode 1`] = `
               />
             </div>
             <input
-              class="TextFieldWrapper__input TextFieldWrapper__input--light"
+              class="TextFieldWrapper__input"
               data-test-text-field-input="padding-lr"
               maxlength="6"
               type="text"
               value="0"
             />
             <div
-              class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+              class="css-zcp5dz TextFieldPopover"
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
                 width="12"
               />
               <div
-                class="css-1c8p9kb Popover Popover--light"
+                class="css-6i6anv Popover"
                 data-test-box=""
                 data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
-                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  class="css-1wfopar PopoverItem"
                   data-test-box=""
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                     data-test-icon="padding-lr"
                     height="12"
                     name="PaddingLR"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -365,14 +365,14 @@ exports[`Insets snapshots should render back to merged mode 1`] = `
           </div>
         </div>
         <div
-          class="Tooltip Tooltip--light"
+          class="Tooltip"
         >
           <div
-            class="Tooltip__content Tooltip__content--light"
+            class="Tooltip__content"
           >
             Horizontal padding
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -381,21 +381,21 @@ exports[`Insets snapshots should render back to merged mode 1`] = `
           </div>
         </div>
         <div
-          class="css-1jnxvbp TextField TextField--light"
+          class="css-1jnxvbp TextField"
           data-test-text-field="padding-tb"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="padding-tb"
           >
             <div
-              class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+              class="css-e5vky9 ScrubbableInput"
               data-test-box=""
               data-test-scrubbable-input="padding-tb"
             >
               <div
-                class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+                class="css-1jnxvbp Icon Icon--neutral2"
                 data-test-icon="padding-tb"
                 height="12"
                 name="PaddingTB"
@@ -403,50 +403,50 @@ exports[`Insets snapshots should render back to merged mode 1`] = `
               />
             </div>
             <input
-              class="TextFieldWrapper__input TextFieldWrapper__input--light"
+              class="TextFieldWrapper__input"
               data-test-text-field-input="padding-tb"
               maxlength="6"
               type="text"
               value="0"
             />
             <div
-              class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+              class="css-zcp5dz TextFieldPopover"
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
                 width="12"
               />
               <div
-                class="css-1c8p9kb Popover Popover--light"
+                class="css-6i6anv Popover"
                 data-test-box=""
                 data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
-                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  class="css-1wfopar PopoverItem"
                   data-test-box=""
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                     data-test-icon="padding-tb"
                     height="12"
                     name="PaddingTB"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -458,14 +458,14 @@ exports[`Insets snapshots should render back to merged mode 1`] = `
           </div>
         </div>
         <div
-          class="Tooltip Tooltip--light"
+          class="Tooltip"
         >
           <div
-            class="Tooltip__content Tooltip__content--light"
+            class="Tooltip__content"
           >
             Vertical padding
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -483,12 +483,12 @@ exports[`Insets snapshots should render back to merged mode 1`] = `
           data-test-box=""
         >
           <div
-            class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+            class="css-1jnxvbp ButtonIcon"
             data-test-button-icon="insets-mode"
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--neutral1"
               data-test-icon="individual-insets"
               height="12"
               name="IndividualInsets"
@@ -496,14 +496,14 @@ exports[`Insets snapshots should render back to merged mode 1`] = `
             />
           </div>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Individual padding
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -521,16 +521,16 @@ exports[`Insets snapshots should render back to merged mode 1`] = `
 exports[`Insets snapshots should render when mose is individual 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+      class="css-xdzdnq SectionColumnLabels"
       data-test-box=""
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -542,26 +542,26 @@ exports[`Insets snapshots should render when mose is individual 1`] = `
       data-test-box=""
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--twoInputs SectionColumnContent--twoInputs--light"
+        class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp TextField TextField--light"
+          class="css-1jnxvbp TextField"
           data-test-text-field="padding-l"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="padding-l"
           >
             <div
-              class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+              class="css-e5vky9 ScrubbableInput"
               data-test-box=""
               data-test-scrubbable-input="padding-l"
             >
               <div
-                class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+                class="css-1jnxvbp Icon Icon--neutral2"
                 data-test-icon="padding-l"
                 height="12"
                 name="PaddingL"
@@ -569,50 +569,50 @@ exports[`Insets snapshots should render when mose is individual 1`] = `
               />
             </div>
             <input
-              class="TextFieldWrapper__input TextFieldWrapper__input--light"
+              class="TextFieldWrapper__input"
               data-test-text-field-input="padding-l"
               maxlength="6"
               type="text"
               value="0"
             />
             <div
-              class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+              class="css-zcp5dz TextFieldPopover"
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
                 width="12"
               />
               <div
-                class="css-1c8p9kb Popover Popover--light"
+                class="css-6i6anv Popover"
                 data-test-box=""
                 data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
-                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  class="css-1wfopar PopoverItem"
                   data-test-box=""
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                     data-test-icon="padding-l"
                     height="12"
                     name="PaddingL"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -624,14 +624,14 @@ exports[`Insets snapshots should render when mose is individual 1`] = `
           </div>
         </div>
         <div
-          class="Tooltip Tooltip--light"
+          class="Tooltip"
         >
           <div
-            class="Tooltip__content Tooltip__content--light"
+            class="Tooltip__content"
           >
             Left padding
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -640,21 +640,21 @@ exports[`Insets snapshots should render when mose is individual 1`] = `
           </div>
         </div>
         <div
-          class="css-1jnxvbp TextField TextField--light"
+          class="css-1jnxvbp TextField"
           data-test-text-field="padding-t"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="padding-t"
           >
             <div
-              class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+              class="css-e5vky9 ScrubbableInput"
               data-test-box=""
               data-test-scrubbable-input="padding-t"
             >
               <div
-                class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+                class="css-1jnxvbp Icon Icon--neutral2"
                 data-test-icon="padding-t"
                 height="12"
                 name="PaddingT"
@@ -662,50 +662,50 @@ exports[`Insets snapshots should render when mose is individual 1`] = `
               />
             </div>
             <input
-              class="TextFieldWrapper__input TextFieldWrapper__input--light"
+              class="TextFieldWrapper__input"
               data-test-text-field-input="padding-t"
               maxlength="6"
               type="text"
               value="0"
             />
             <div
-              class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+              class="css-zcp5dz TextFieldPopover"
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
                 width="12"
               />
               <div
-                class="css-1c8p9kb Popover Popover--light"
+                class="css-6i6anv Popover"
                 data-test-box=""
                 data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
-                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  class="css-1wfopar PopoverItem"
                   data-test-box=""
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                     data-test-icon="padding-t"
                     height="12"
                     name="PaddingT"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -717,14 +717,14 @@ exports[`Insets snapshots should render when mose is individual 1`] = `
           </div>
         </div>
         <div
-          class="Tooltip Tooltip--light"
+          class="Tooltip"
         >
           <div
-            class="Tooltip__content Tooltip__content--light"
+            class="Tooltip__content"
           >
             Top padding
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -733,21 +733,21 @@ exports[`Insets snapshots should render when mose is individual 1`] = `
           </div>
         </div>
         <div
-          class="css-1jnxvbp TextField TextField--light"
+          class="css-1jnxvbp TextField"
           data-test-text-field="padding-r"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="padding-r"
           >
             <div
-              class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+              class="css-e5vky9 ScrubbableInput"
               data-test-box=""
               data-test-scrubbable-input="padding-r"
             >
               <div
-                class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+                class="css-1jnxvbp Icon Icon--neutral2"
                 data-test-icon="padding-r"
                 height="12"
                 name="PaddingR"
@@ -755,50 +755,50 @@ exports[`Insets snapshots should render when mose is individual 1`] = `
               />
             </div>
             <input
-              class="TextFieldWrapper__input TextFieldWrapper__input--light"
+              class="TextFieldWrapper__input"
               data-test-text-field-input="padding-r"
               maxlength="6"
               type="text"
               value="0"
             />
             <div
-              class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+              class="css-zcp5dz TextFieldPopover"
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
                 width="12"
               />
               <div
-                class="css-1c8p9kb Popover Popover--light"
+                class="css-6i6anv Popover"
                 data-test-box=""
                 data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
-                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  class="css-1wfopar PopoverItem"
                   data-test-box=""
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                     data-test-icon="padding-r"
                     height="12"
                     name="PaddingR"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -810,14 +810,14 @@ exports[`Insets snapshots should render when mose is individual 1`] = `
           </div>
         </div>
         <div
-          class="Tooltip Tooltip--light"
+          class="Tooltip"
         >
           <div
-            class="Tooltip__content Tooltip__content--light"
+            class="Tooltip__content"
           >
             Right padding
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -826,21 +826,21 @@ exports[`Insets snapshots should render when mose is individual 1`] = `
           </div>
         </div>
         <div
-          class="css-1jnxvbp TextField TextField--light"
+          class="css-1jnxvbp TextField"
           data-test-text-field="padding-b"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="padding-b"
           >
             <div
-              class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+              class="css-e5vky9 ScrubbableInput"
               data-test-box=""
               data-test-scrubbable-input="padding-b"
             >
               <div
-                class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+                class="css-1jnxvbp Icon Icon--neutral2"
                 data-test-icon="padding-b"
                 height="12"
                 name="PaddingB"
@@ -848,50 +848,50 @@ exports[`Insets snapshots should render when mose is individual 1`] = `
               />
             </div>
             <input
-              class="TextFieldWrapper__input TextFieldWrapper__input--light"
+              class="TextFieldWrapper__input"
               data-test-text-field-input="padding-b"
               maxlength="6"
               type="text"
               value="0"
             />
             <div
-              class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+              class="css-zcp5dz TextFieldPopover"
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
                 width="12"
               />
               <div
-                class="css-1c8p9kb Popover Popover--light"
+                class="css-6i6anv Popover"
                 data-test-box=""
                 data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
-                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  class="css-1wfopar PopoverItem"
                   data-test-box=""
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                     data-test-icon="padding-b"
                     height="12"
                     name="PaddingB"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -903,14 +903,14 @@ exports[`Insets snapshots should render when mose is individual 1`] = `
           </div>
         </div>
         <div
-          class="Tooltip Tooltip--light"
+          class="Tooltip"
         >
           <div
-            class="Tooltip__content Tooltip__content--light"
+            class="Tooltip__content"
           >
             Bottom padding
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -928,12 +928,12 @@ exports[`Insets snapshots should render when mose is individual 1`] = `
           data-test-box=""
         >
           <div
-            class="css-1jnxvbp ButtonIcon ButtonIcon--light ButtonIcon--selected ButtonIcon--selected--light"
+            class="css-1jnxvbp ButtonIcon ButtonIcon--selected"
             data-test-button-icon="insets-mode"
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--neutral1"
               data-test-icon="individual-insets"
               height="12"
               name="IndividualInsets"
@@ -941,14 +941,14 @@ exports[`Insets snapshots should render when mose is individual 1`] = `
             />
           </div>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Individual padding
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"

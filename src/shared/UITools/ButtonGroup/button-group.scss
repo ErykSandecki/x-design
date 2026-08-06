@@ -11,8 +11,7 @@
   }
 
   &__button {
-    @include theme('neutral-3', background-color);
-
+    background-color: var(--xd-color-neutral-3);
     align-items: center;
     border-radius: 5px;
     display: flex;

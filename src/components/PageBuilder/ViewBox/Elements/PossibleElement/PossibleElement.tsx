@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import { FC } from 'react';
 import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
@@ -6,11 +7,7 @@ import { useTranslation } from 'react-i18next';
 import Corners from '../../Corners/Corners';
 import { Box, Small } from 'shared';
 
-// hooks
-import { useTheme } from 'hooks';
-
 // others
-import { className, classNames } from './classNames';
 import { translationNameSpace } from './constants';
 
 // store
@@ -32,7 +29,6 @@ export type TPossibleElementProps = {
 
 const PossibleElement: FC<TPossibleElementProps> = ({ parentId }) => {
   const possibleElement = useSelector(eventSelectorCreator('possibleElement'));
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { t } = useTranslation();
   const { type } = useSelector(elementAttributeSelectorCreator('layout', parentId));
   const { x1, x2, y1, y2 } = getCoordinates(type, possibleElement);
@@ -41,7 +37,7 @@ const PossibleElement: FC<TPossibleElementProps> = ({ parentId }) => {
   return (
     <Box
       classes={{
-        className: cx(classNamesWithTheme[className]),
+        className: cx(styles.PossibleElement),
       }}
       style={{
         height: y1,
@@ -56,7 +52,7 @@ const PossibleElement: FC<TPossibleElementProps> = ({ parentId }) => {
     >
       {isBaseParent(parentId) && (
         <Small
-          classes={{ className: cx(classNamesWithTheme.label) }}
+          classes={{ className: cx(styles.PossibleElement__label) }}
           style={{
             width: x2,
           }}

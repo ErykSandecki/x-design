@@ -1,20 +1,21 @@
 @mixin apply-selected-background($suffix) {
   .ConstrainsView__constrain--#{$suffix} {
-    @include theme('blue-1', background-color);
-    @include theme('blue-1', border, '0.75px solid');
-
+    background-color: var(--xd-color-blue-1);
+    border: 0.75px solid var(--xd-color-blue-1);
     z-index: 2;
   }
 }
 
 .ConstrainsView {
-  @include theme-selector('neutral-3', background-color, '&:hover:not(.ConstrainsView--selected)');
-
   border-radius: 5px;
   cursor: pointer;
   height: 24px;
   position: relative;
   width: 24px;
+
+  &:hover:not(.ConstrainsView--selected) {
+    background-color: var(--xd-color-neutral-3);
+  }
 
   &__horizontal {
     &--center {
@@ -45,17 +46,11 @@
   }
 
   &--selected {
-    &--light {
-      background-color: rgba($color: $--xd-blue-1--light, $alpha: 30%);
-    }
-
-    &--dark {
-      background-color: rgba($color: $--xd-blue-1--dark, $alpha: 30%);
-    }
+    background-color: color-mix(in srgb, var(--xd-color-blue-1) 30%, transparent);
   }
 
   &__constrain {
-    @include theme('neutral-2', background-color);
+    background-color: var(--xd-color-neutral-2);
     $--xd-size: 1.5px;
     $--xd-length: 7.5px;
 

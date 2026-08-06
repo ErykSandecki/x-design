@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import { FC } from 'react';
 
 // components
@@ -9,10 +10,8 @@ import { usePopoverRoot } from '../PopoverRoot/core/PopoverRootProvider';
 
 // hooks
 import { useClickEvent } from './hooks/useClickEvent';
-import { useTheme } from 'hooks';
 
 // others
-import { className, classNames } from './classNames';
 
 // styles
 import styles from './popover-item.scss';
@@ -41,7 +40,6 @@ export const PopoverItem: FC<TPopoverItemProps> = ({
   text,
   visible = true,
 }) => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { setSelected } = usePopoverRoot();
   const onClickHandler = useClickEvent(onClick, setSelected);
 
@@ -52,7 +50,7 @@ export const PopoverItem: FC<TPopoverItemProps> = ({
   return (
     <E2EDataAttribute type={E2EAttribute.popoverItem} value={index}>
       <Box
-        classes={{ className: cx(classNamesWithTheme[className]) }}
+        classes={{ className: cx(styles.PopoverItem) }}
         onClick={onClickHandler}
         onMouseEnter={onMouseEnter}
         sx={{
@@ -67,19 +65,18 @@ export const PopoverItem: FC<TPopoverItemProps> = ({
       >
         <Icon
           classes={{
-            className: cx(classNamesWithTheme.checkIcon.name, [
-              classNamesWithTheme.checkIcon.modificators.selected,
-              selected,
-            ]),
+            className: cx(styles['PopoverItem__check-icon'], {
+              [styles['PopoverItem__check-icon--selected']]: selected,
+            }),
           }}
           height={12}
           name="Check"
           width={12}
         />
         {icon && (
-          <Icon classes={{ className: cx(classNamesWithTheme.icon) }} height={iconSize} name={icon} width={iconSize} />
+          <Icon classes={{ className: cx(styles.PopoverItem__icon) }} height={iconSize} name={icon} width={iconSize} />
         )}
-        <Small classes={{ className: cx(classNamesWithTheme.text) }}>{text}</Small>
+        <Small classes={{ className: cx(styles.PopoverItem__text) }}>{text}</Small>
       </Box>
     </E2EDataAttribute>
   );

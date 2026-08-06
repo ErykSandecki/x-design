@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import { FC, ReactElement } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -5,11 +6,7 @@ import { useTranslation } from 'react-i18next';
 import Box from '../../../UI/Box/Box';
 import ButtonIcon from '../../ButtonIcon/ButtonIcon';
 
-// hooks
-import { useTheme } from 'hooks';
-
 // others
-import { className, classNames } from './classNames';
 import { TOOLTIP_TRANSLATION_KEY } from 'constant/constants';
 
 // styles
@@ -33,7 +30,6 @@ export const DraggableSectionContent: FC<TDraggableSectionContentProps> = ({
   onClickVisible,
   visible,
 }) => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { t } = useTranslation();
 
   return (
@@ -41,7 +37,7 @@ export const DraggableSectionContent: FC<TDraggableSectionContentProps> = ({
       <Box onMouseDown={stopPropagation} style={{ width: '100%' }}>
         {element}
       </Box>
-      <Box classes={{ className: cx(classNamesWithTheme[className]) }}>
+      <Box classes={{ className: cx(styles.DraggableSectionContent) }}>
         <ButtonIcon
           disabledSelection
           e2eValue="toggle-visibility"

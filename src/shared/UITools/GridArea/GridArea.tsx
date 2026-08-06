@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import { FC, useRef } from 'react';
 import { noop } from 'lodash';
 
@@ -7,10 +8,9 @@ import Cells, { TCellsProps } from './Cells/Cells';
 import GridAreaPopover, { TGridAreaPopoverProps } from './GridAreaPopover/GridAreaPopover';
 
 // hooks
-import { useOutsideClick, useTheme } from 'hooks';
+import { useOutsideClick } from 'hooks';
 
 // others
-import { className, classNames } from './classNames';
 
 // styles
 import styles from './grid-area.scss';
@@ -36,15 +36,13 @@ export const GridArea: FC<TGridAreaProps> = ({
 }) => {
   const ref = useRef(null);
   const { selected, setSelected } = useOutsideClick([], ref, noop, idContainer);
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   return (
     <Box
       classes={{
-        className: cx(className, classNamesWithTheme[className].name, [
-          classNamesWithTheme[className].modificators.fullWidth,
-          fullWidth,
-        ]),
+        className: cx('GridArea', styles.GridArea, {
+          [styles['GridArea--full-width']]: fullWidth,
+        }),
       }}
       e2eAttribute={E2EAttribute.gridArea}
       e2eValue={e2eValue}

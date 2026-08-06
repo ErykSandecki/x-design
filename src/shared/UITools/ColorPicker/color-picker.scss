@@ -8,6 +8,6 @@
   }
 
   &__alpha-input-unit {
-    @include theme('neutral-1', color);
+    color: var(--xd-color-neutral-1);
   }
 }

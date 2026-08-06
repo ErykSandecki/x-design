@@ -3,12 +3,12 @@
 exports[`ButtonIcon snapshots should render ButtonIcon 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+    class="css-1jnxvbp ButtonIcon"
     data-test-button-icon=""
     data-test-tooltip=""
   >
     <div
-      class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp Icon Icon--neutral1"
       data-test-icon="close"
       height="12"
       name="Close"
@@ -21,12 +21,12 @@ exports[`ButtonIcon snapshots should render ButtonIcon 1`] = `
 exports[`ButtonIcon snapshots should render when is selected 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp ButtonIcon ButtonIcon--light ButtonIcon--selected ButtonIcon--selected--light"
+    class="css-1jnxvbp ButtonIcon ButtonIcon--selected"
     data-test-button-icon=""
     data-test-tooltip=""
   >
     <div
-      class="css-1jnxvbp Icon Icon--light Icon--blue1 Icon--blue1--light"
+      class="css-1jnxvbp Icon Icon--blue1"
       data-test-icon="close"
       height="12"
       name="Close"
@@ -39,12 +39,12 @@ exports[`ButtonIcon snapshots should render when is selected 1`] = `
 exports[`ButtonIcon snapshots should render with popover 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+    class="css-1jnxvbp ButtonIcon"
     data-test-button-icon=""
     data-test-tooltip=""
   >
     <div
-      class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp Icon Icon--neutral1"
       data-test-icon="close"
       height="12"
       name="Close"
@@ -55,13 +55,13 @@ exports[`ButtonIcon snapshots should render with popover 1`] = `
       data-test-box=""
     >
       <div
-        class="css-6wln18 Popover Popover--light"
+        class="css-c6outs Popover"
         data-test-box=""
         data-test-popover="popover"
         style="left: 0px; top: 0px;"
       >
         <div
-          class="css-qef3st"
+          class="css-3q7iqb"
           data-test-box=""
         />
       </div>

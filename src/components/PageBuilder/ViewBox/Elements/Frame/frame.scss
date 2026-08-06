@@ -7,8 +7,7 @@
   }
 
   &__label {
-    @include theme('neutral-2', color);
-
+    color: var(--xd-color-neutral-2);
     font-size: 11px;
     pointer-events: all;
     position: absolute;
@@ -16,11 +15,11 @@
     user-select: none;
 
     &--hover {
-      @include theme('blue-1', color);
+      color: var(--xd-color-blue-1);
     }
 
     &--selected {
-      @include theme('blue-1', color);
+      color: var(--xd-color-blue-1);
     }
 
     &--bottom {

@@ -1,5 +1,4 @@
 .TextFieldLabel {
-  @include theme('neutral-2', color);
-
+  color: var(--xd-color-neutral-2);
   font-size: 11px;
 }

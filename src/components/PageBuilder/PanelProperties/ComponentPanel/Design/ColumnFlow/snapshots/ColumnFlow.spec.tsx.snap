@@ -3,16 +3,16 @@
 exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+      class="css-xdzdnq SectionColumnLabels"
       data-test-box=""
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -24,22 +24,22 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
       data-test-box=""
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--single SectionColumnContent--single--light"
+        class="css-biptg5 SectionColumnContent SectionColumnContent--single"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-19um8c2 ToggleButtonGroup ToggleButtonGroup--light ToggleButtonGroup--fullWidth ToggleButtonGroup--fullWidth--light"
+          class="css-19um8c2 ToggleButtonGroup ToggleButtonGroup--full-width"
           data-test-box=""
           data-test-toggle-button-group="flow"
         >
           <button
-            class="ToggleButton ToggleButton--light ToggleButton--selected ToggleButton--selected--light"
+            class="ToggleButton ToggleButton--selected"
             data-test-toggle-button="0"
             type="button"
           >
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--neutral1"
               data-test-icon="flow-default"
               height="12"
               name="FlowDefault"
@@ -47,14 +47,14 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
             />
           </button>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Free form
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -63,12 +63,12 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
             </div>
           </div>
           <button
-            class="ToggleButton ToggleButton--light"
+            class="ToggleButton"
             data-test-toggle-button="1"
             type="button"
           >
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--neutral1"
               data-test-icon="flow-vertical"
               height="12"
               name="FlowVertical"
@@ -76,14 +76,14 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
             />
           </button>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Vertical
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -92,12 +92,12 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
             </div>
           </div>
           <button
-            class="ToggleButton ToggleButton--light"
+            class="ToggleButton"
             data-test-toggle-button="2"
             type="button"
           >
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--neutral1"
               data-test-icon="flow-horizontal"
               height="12"
               name="FlowHorizontal"
@@ -105,14 +105,14 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
             />
           </button>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Horizontal
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -121,12 +121,12 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
             </div>
           </div>
           <button
-            class="ToggleButton ToggleButton--light"
+            class="ToggleButton"
             data-test-toggle-button="3"
             type="button"
           >
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--neutral1"
               data-test-icon="flow-grid"
               height="12"
               name="FlowGrid"
@@ -134,14 +134,14 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
             />
           </button>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Grid
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -168,16 +168,16 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
 exports[`ColumnFlow snapshots should render when is horizontal but are mixed 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+      class="css-xdzdnq SectionColumnLabels"
       data-test-box=""
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -189,22 +189,22 @@ exports[`ColumnFlow snapshots should render when is horizontal but are mixed 1`]
       data-test-box=""
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--single SectionColumnContent--single--light"
+        class="css-biptg5 SectionColumnContent SectionColumnContent--single"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-19um8c2 ToggleButtonGroup ToggleButtonGroup--light ToggleButtonGroup--fullWidth ToggleButtonGroup--fullWidth--light"
+          class="css-19um8c2 ToggleButtonGroup ToggleButtonGroup--full-width"
           data-test-box=""
           data-test-toggle-button-group="flow"
         >
           <button
-            class="ToggleButton ToggleButton--light"
+            class="ToggleButton"
             data-test-toggle-button="0"
             type="button"
           >
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--neutral1"
               data-test-icon="flow-default"
               height="12"
               name="FlowDefault"
@@ -212,14 +212,14 @@ exports[`ColumnFlow snapshots should render when is horizontal but are mixed 1`]
             />
           </button>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Free form
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -228,12 +228,12 @@ exports[`ColumnFlow snapshots should render when is horizontal but are mixed 1`]
             </div>
           </div>
           <button
-            class="ToggleButton ToggleButton--light"
+            class="ToggleButton"
             data-test-toggle-button="1"
             type="button"
           >
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--neutral1"
               data-test-icon="flow-vertical"
               height="12"
               name="FlowVertical"
@@ -241,14 +241,14 @@ exports[`ColumnFlow snapshots should render when is horizontal but are mixed 1`]
             />
           </button>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Vertical
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -257,12 +257,12 @@ exports[`ColumnFlow snapshots should render when is horizontal but are mixed 1`]
             </div>
           </div>
           <button
-            class="ToggleButton ToggleButton--light"
+            class="ToggleButton"
             data-test-toggle-button="2"
             type="button"
           >
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--neutral1"
               data-test-icon="flow-horizontal"
               height="12"
               name="FlowHorizontal"
@@ -270,14 +270,14 @@ exports[`ColumnFlow snapshots should render when is horizontal but are mixed 1`]
             />
           </button>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Horizontal
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -286,12 +286,12 @@ exports[`ColumnFlow snapshots should render when is horizontal but are mixed 1`]
             </div>
           </div>
           <button
-            class="ToggleButton ToggleButton--light"
+            class="ToggleButton"
             data-test-toggle-button="3"
             type="button"
           >
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--neutral1"
               data-test-icon="flow-grid"
               height="12"
               name="FlowGrid"
@@ -299,14 +299,14 @@ exports[`ColumnFlow snapshots should render when is horizontal but are mixed 1`]
             />
           </button>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Grid
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -333,16 +333,16 @@ exports[`ColumnFlow snapshots should render when is horizontal but are mixed 1`]
 exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+      class="css-xdzdnq SectionColumnLabels"
       data-test-box=""
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -354,22 +354,22 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
       data-test-box=""
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--single SectionColumnContent--single--light"
+        class="css-biptg5 SectionColumnContent SectionColumnContent--single"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-19um8c2 ToggleButtonGroup ToggleButtonGroup--light ToggleButtonGroup--fullWidth ToggleButtonGroup--fullWidth--light"
+          class="css-19um8c2 ToggleButtonGroup ToggleButtonGroup--full-width"
           data-test-box=""
           data-test-toggle-button-group="flow"
         >
           <button
-            class="ToggleButton ToggleButton--light"
+            class="ToggleButton"
             data-test-toggle-button="0"
             type="button"
           >
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--neutral1"
               data-test-icon="flow-default"
               height="12"
               name="FlowDefault"
@@ -377,14 +377,14 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
             />
           </button>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Free form
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -393,12 +393,12 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
             </div>
           </div>
           <button
-            class="ToggleButton ToggleButton--light"
+            class="ToggleButton"
             data-test-toggle-button="1"
             type="button"
           >
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--neutral1"
               data-test-icon="flow-vertical"
               height="12"
               name="FlowVertical"
@@ -406,14 +406,14 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
             />
           </button>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Vertical
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -422,12 +422,12 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
             </div>
           </div>
           <button
-            class="ToggleButton ToggleButton--light"
+            class="ToggleButton"
             data-test-toggle-button="2"
             type="button"
           >
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--neutral1"
               data-test-icon="flow-horizontal"
               height="12"
               name="FlowHorizontal"
@@ -435,14 +435,14 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
             />
           </button>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Horizontal
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -451,12 +451,12 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
             </div>
           </div>
           <button
-            class="ToggleButton ToggleButton--light"
+            class="ToggleButton"
             data-test-toggle-button="3"
             type="button"
           >
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--neutral1"
               data-test-icon="flow-grid"
               height="12"
               name="FlowGrid"
@@ -464,14 +464,14 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
             />
           </button>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Grid
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -498,16 +498,16 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
 exports[`ColumnFlow snapshots should render when wrap are mixed 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+      class="css-xdzdnq SectionColumnLabels"
       data-test-box=""
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -519,22 +519,22 @@ exports[`ColumnFlow snapshots should render when wrap are mixed 1`] = `
       data-test-box=""
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--single SectionColumnContent--single--light"
+        class="css-biptg5 SectionColumnContent SectionColumnContent--single"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-19um8c2 ToggleButtonGroup ToggleButtonGroup--light ToggleButtonGroup--fullWidth ToggleButtonGroup--fullWidth--light"
+          class="css-19um8c2 ToggleButtonGroup ToggleButtonGroup--full-width"
           data-test-box=""
           data-test-toggle-button-group="flow"
         >
           <button
-            class="ToggleButton ToggleButton--light"
+            class="ToggleButton"
             data-test-toggle-button="0"
             type="button"
           >
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--neutral1"
               data-test-icon="flow-default"
               height="12"
               name="FlowDefault"
@@ -542,14 +542,14 @@ exports[`ColumnFlow snapshots should render when wrap are mixed 1`] = `
             />
           </button>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Free form
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -558,12 +558,12 @@ exports[`ColumnFlow snapshots should render when wrap are mixed 1`] = `
             </div>
           </div>
           <button
-            class="ToggleButton ToggleButton--light"
+            class="ToggleButton"
             data-test-toggle-button="1"
             type="button"
           >
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--neutral1"
               data-test-icon="flow-vertical"
               height="12"
               name="FlowVertical"
@@ -571,14 +571,14 @@ exports[`ColumnFlow snapshots should render when wrap are mixed 1`] = `
             />
           </button>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Vertical
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -587,12 +587,12 @@ exports[`ColumnFlow snapshots should render when wrap are mixed 1`] = `
             </div>
           </div>
           <button
-            class="ToggleButton ToggleButton--light ToggleButton--selected ToggleButton--selected--light"
+            class="ToggleButton ToggleButton--selected"
             data-test-toggle-button="2"
             type="button"
           >
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--neutral1"
               data-test-icon="flow-horizontal"
               height="12"
               name="FlowHorizontal"
@@ -600,14 +600,14 @@ exports[`ColumnFlow snapshots should render when wrap are mixed 1`] = `
             />
           </button>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Horizontal
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -616,12 +616,12 @@ exports[`ColumnFlow snapshots should render when wrap are mixed 1`] = `
             </div>
           </div>
           <button
-            class="ToggleButton ToggleButton--light"
+            class="ToggleButton"
             data-test-toggle-button="3"
             type="button"
           >
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--neutral1"
               data-test-icon="flow-grid"
               height="12"
               name="FlowGrid"
@@ -629,14 +629,14 @@ exports[`ColumnFlow snapshots should render when wrap are mixed 1`] = `
             />
           </button>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Grid
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -655,12 +655,12 @@ exports[`ColumnFlow snapshots should render when wrap are mixed 1`] = `
           data-test-box=""
         >
           <div
-            class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+            class="css-1jnxvbp ButtonIcon"
             data-test-button-icon="wrap"
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--neutral1"
               data-test-icon="wrap"
               height="12"
               name="Wrap"
@@ -668,14 +668,14 @@ exports[`ColumnFlow snapshots should render when wrap are mixed 1`] = `
             />
           </div>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Wrap
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"

@@ -1,14 +1,11 @@
+import cx from 'classnames';
 import { FC, MouseEvent, ReactNode, useRef } from 'react';
 
 // components
 import Box from '../../../UI/Box/Box';
 import Icon from '../../../UI/Icon/Icon';
 
-// hooks
-import { useTheme } from 'hooks';
-
 // others
-import { className, classNames } from './classNames';
 
 // styles
 import styles from './select-item.scss';
@@ -35,16 +32,14 @@ export const SelectItem: FC<TSelectItemProps> = ({
 }) => {
   const ref = useRef<HTMLLIElement>(null);
   const isSelected = selectedValue === value;
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   return (
     <Box
       classes={{
-        className: cx(
-          classNamesWithTheme[className].name,
-          [classNamesWithTheme[className].modificators.disabled, disabled],
-          [classNamesWithTheme[className].modificators.selected, isSelected],
-        ),
+        className: cx(styles.SelectItem, {
+          [styles['SelectItem--disabled']]: disabled,
+          [styles['SelectItem--selected']]: isSelected,
+        }),
       }}
       component="li"
       data-value={value}
@@ -58,10 +53,9 @@ export const SelectItem: FC<TSelectItemProps> = ({
     >
       <Icon
         classes={{
-          className: cx(classNamesWithTheme.checkIcon.name, [
-            classNamesWithTheme.checkIcon.modificators.selected,
-            isSelected,
-          ]),
+          className: cx(styles['SelectItem__check-icon'], {
+            [styles['SelectItem__check-icon--selected']]: isSelected,
+          }),
         }}
         height={12}
         name="Check"

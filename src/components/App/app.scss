@@ -1,7 +1,6 @@
 .App {
-  @include theme('neutral-4', background-color);
-  @include theme('neutral-1', color);
-
+  background-color: var(--xd-color-neutral-4);
+  color: var(--xd-color-neutral-1);
   min-height: 100%;
   overflow: auto;
 }

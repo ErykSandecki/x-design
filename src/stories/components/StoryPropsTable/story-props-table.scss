@@ -15,13 +15,10 @@
   &__title {
     font-size: 30px;
     margin: 40px 0 10px;
+    color: #eaeef3;
 
-    &--light {
+    [data-theme='light'] & {
       color: #1e2839;
-    }
-
-    &--dark {
-      color: #eaeef3;
     }
   }
 
@@ -35,14 +32,12 @@
     border-bottom: 1px solid;
     font-size: 16px;
 
-    &--light {
+    border-bottom-color: #ffffff1f;
+    color: #ffffff;
+
+    [data-theme='light'] & {
       border-bottom-color: #0000001f;
       color: #000000;
-    }
-
-    &--dark {
-      border-bottom-color: #ffffff1f;
-      color: #ffffff;
     }
 
     & > th {
@@ -56,21 +51,19 @@
     font-size: 13px;
     line-height: 1.5;
 
-    &--light {
+    border-bottom-color: #ffffff1f;
+    color: #ffffff;
+
+    & code {
+      color: #ffffff;
+    }
+
+    [data-theme='light'] & {
       border-bottom-color: #0000001f;
       color: #4b4b4d;
 
       & code {
         color: #1a2027;
-      }
-    }
-
-    &--dark {
-      border-bottom-color: #ffffff1f;
-      color: #ffffff;
-
-      & code {
-        color: #ffffff;
       }
     }
 
@@ -97,13 +90,10 @@
 
     &-type {
       font-family: Consolas, Menlo, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+      color: #a6e22e;
 
-      &--light {
+      [data-theme='light'] & {
         color: #932981;
-      }
-
-      &--dark {
-        color: #a6e22e;
       }
     }
 

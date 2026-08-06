@@ -1,14 +1,11 @@
+import cx from 'classnames';
 import { FC, useEffect, useState } from 'react';
 
 // components
 import Box from '../../../UI/Box/Box';
 
-// hooks
-import { useTheme } from 'hooks';
-
 // others
 import { ANCHOR_INDEX } from '../constants';
-import { className, classNames } from './classNames';
 
 // styles
 import styles from './draggable-section-anchor.scss';
@@ -24,7 +21,6 @@ export type TDraggableSectionAnchorProps = {
 };
 
 export const DraggableSectionAnchor: FC<TDraggableSectionAnchorProps> = ({ e2eValue, index, isDraggable }) => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const [showPrompt, setShowPrompt] = useState(false);
   const displayPrompt = isDraggable && showPrompt;
 
@@ -38,17 +34,16 @@ export const DraggableSectionAnchor: FC<TDraggableSectionAnchorProps> = ({ e2eVa
     <Box
       attributes={{ [ANCHOR_INDEX]: index }}
       classes={{
-        className: cx(classNamesWithTheme[className].name, [
-          classNamesWithTheme[className].modificators.draggable,
-          isDraggable,
-        ]),
+        className: cx(styles.DraggableSectionAnchor, {
+          [styles['DraggableSectionAnchor--draggable']]: isDraggable,
+        }),
       }}
       e2eAttribute={E2EAttribute.anchor}
       e2eValue={e2eValue}
       onMouseEnter={() => isDraggable && setShowPrompt(true)}
       onMouseLeave={() => isDraggable && setShowPrompt(false)}
     >
-      {displayPrompt && <Box classes={{ className: cx(classNamesWithTheme.prompt) }} />}
+      {displayPrompt && <Box classes={{ className: cx(styles.DraggableSectionAnchor__prompt) }} />}
     </Box>
   );
 };

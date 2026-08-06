@@ -55,6 +55,7 @@ export const ContextProvider: FC<TContextProviderProps> = ({
   useEffect(() => {
     document.body.className = `body--${theme}`;
     document.body.style.colorScheme = theme;
+    document.documentElement.dataset.theme = theme;
   }, [theme]);
 
   return (

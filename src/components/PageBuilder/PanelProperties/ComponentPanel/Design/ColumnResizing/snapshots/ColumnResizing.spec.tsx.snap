@@ -3,16 +3,16 @@
 exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+      class="css-xdzdnq SectionColumnLabels"
       data-test-box=""
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -24,26 +24,26 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
       data-test-box=""
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--twoInputs SectionColumnContent--twoInputs--light"
+        class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp TextField TextField--light"
+          class="css-1jnxvbp TextField"
           data-test-text-field="width"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="width"
           >
             <div
-              class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+              class="css-e5vky9 ScrubbableInput"
               data-test-box=""
               data-test-scrubbable-input="width"
             >
               <small
-                class="css-1jnxvbp Typography Typography--light Typography--neutral2 Typography--neutral2--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                class="css-1jnxvbp Typography Typography--neutral2 Typography--regular Typography--normal Typography--small"
                 data-test-text=""
                 style="text-align: inherit;"
               >
@@ -51,50 +51,50 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
               </small>
             </div>
             <input
-              class="TextFieldWrapper__input TextFieldWrapper__input--light"
+              class="TextFieldWrapper__input"
               data-test-text-field-input="width"
               maxlength="6"
               type="text"
               value="100"
             />
             <div
-              class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+              class="css-zcp5dz TextFieldPopover"
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
                 width="12"
               />
               <div
-                class="css-1c8p9kb Popover Popover--light"
+                class="css-6i6anv Popover"
                 data-test-box=""
                 data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
-                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  class="css-1wfopar PopoverItem"
                   data-test-box=""
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                     data-test-icon="fixed-width"
                     height="12"
                     name="FixedWidth"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -102,26 +102,26 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  class="css-1wfopar PopoverItem"
                   data-test-box=""
                   data-test-popover-item="1"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                     data-test-icon="auto-width"
                     height="12"
                     name="AutoWidth"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -129,26 +129,26 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  class="css-1wfopar PopoverItem"
                   data-test-box=""
                   data-test-popover-item="2"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                     data-test-icon="percentage"
                     height="12"
                     name="Percentage"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -156,30 +156,30 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
                   </small>
                 </div>
                 <div
-                  class="css-qef3st"
+                  class="css-3q7iqb"
                   data-test-box=""
                 />
                 <div
-                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  class="css-1wfopar PopoverItem"
                   data-test-box=""
                   data-test-popover-item="3"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                     data-test-icon="min-width"
                     height="12"
                     name="MinWidth"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -187,26 +187,26 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  class="css-1wfopar PopoverItem"
                   data-test-box=""
                   data-test-popover-item="4"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                     data-test-icon="max-width"
                     height="12"
                     name="MaxWidth"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -218,21 +218,21 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
           </div>
         </div>
         <div
-          class="css-1jnxvbp TextField TextField--light"
+          class="css-1jnxvbp TextField"
           data-test-text-field="height"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="height"
           >
             <div
-              class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+              class="css-e5vky9 ScrubbableInput"
               data-test-box=""
               data-test-scrubbable-input="height"
             >
               <small
-                class="css-1jnxvbp Typography Typography--light Typography--neutral2 Typography--neutral2--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                class="css-1jnxvbp Typography Typography--neutral2 Typography--regular Typography--normal Typography--small"
                 data-test-text=""
                 style="text-align: inherit;"
               >
@@ -240,50 +240,50 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
               </small>
             </div>
             <input
-              class="TextFieldWrapper__input TextFieldWrapper__input--light"
+              class="TextFieldWrapper__input"
               data-test-text-field-input="height"
               maxlength="6"
               type="text"
               value="100"
             />
             <div
-              class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+              class="css-zcp5dz TextFieldPopover"
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                 data-test-icon="variant"
                 height="12"
                 name="Variant"
                 width="12"
               />
               <div
-                class="css-1c8p9kb Popover Popover--light"
+                class="css-6i6anv Popover"
                 data-test-box=""
                 data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
-                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  class="css-1wfopar PopoverItem"
                   data-test-box=""
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                     data-test-icon="fixed-height"
                     height="12"
                     name="FixedHeight"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -291,26 +291,26 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  class="css-1wfopar PopoverItem"
                   data-test-box=""
                   data-test-popover-item="1"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                     data-test-icon="auto-height"
                     height="12"
                     name="AutoHeight"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -318,26 +318,26 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  class="css-1wfopar PopoverItem"
                   data-test-box=""
                   data-test-popover-item="2"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                     data-test-icon="percentage"
                     height="12"
                     name="Percentage"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -345,30 +345,30 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
                   </small>
                 </div>
                 <div
-                  class="css-qef3st"
+                  class="css-3q7iqb"
                   data-test-box=""
                 />
                 <div
-                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  class="css-1wfopar PopoverItem"
                   data-test-box=""
                   data-test-popover-item="3"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                     data-test-icon="min-height"
                     height="12"
                     name="MinHeight"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -376,26 +376,26 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  class="css-1wfopar PopoverItem"
                   data-test-box=""
                   data-test-popover-item="4"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                     data-test-icon="max-height"
                     height="12"
                     name="MaxHeight"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -416,12 +416,12 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
           data-test-box=""
         >
           <div
-            class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+            class="css-1jnxvbp ButtonIcon"
             data-test-button-icon="aspect-ratio"
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--neutral1"
               data-test-icon="aspect-ratio"
               height="12"
               name="AspectRatio"
@@ -429,14 +429,14 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
             />
           </div>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Look aspect ratio
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -454,16 +454,16 @@ exports[`ColumnResizing snapshots should render ColumnResizing 1`] = `
 exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+      class="css-xdzdnq SectionColumnLabels"
       data-test-box=""
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -475,26 +475,26 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
       data-test-box=""
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--twoInputs SectionColumnContent--twoInputs--light"
+        class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp TextField TextField--light"
+          class="css-1jnxvbp TextField"
           data-test-text-field="width"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--chip TextFieldWrapper--chip--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--chip TextFieldWrapper--full-width"
             data-test-text-field-wrapper="width"
           >
             <div
-              class="css-e5vky9 ScrubbableInput ScrubbableInput--light ScrubbableInput--disabled ScrubbableInput--disabled--light"
+              class="css-e5vky9 ScrubbableInput ScrubbableInput--disabled"
               data-test-box=""
               data-test-scrubbable-input="width"
             >
               <div
-                class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+                class="css-1jnxvbp Icon Icon--neutral2"
                 data-test-icon="width-restricted"
                 height="12"
                 name="WidthRestricted"
@@ -502,50 +502,50 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
               />
             </div>
             <input
-              class="TextFieldWrapper__input TextFieldWrapper__input--light"
+              class="TextFieldWrapper__input"
               data-test-text-field-input="width"
               maxlength="6"
               type="text"
               value="Mixed"
             />
             <div
-              class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+              class="css-zcp5dz TextFieldPopover"
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                 data-test-icon="detached"
                 height="12"
                 name="Detached"
                 width="12"
               />
               <div
-                class="css-1c8p9kb Popover Popover--light"
+                class="css-6i6anv Popover"
                 data-test-box=""
                 data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
-                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  class="css-1wfopar PopoverItem"
                   data-test-box=""
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                     data-test-icon="fixed-width"
                     height="12"
                     name="FixedWidth"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -553,26 +553,26 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  class="css-1wfopar PopoverItem"
                   data-test-box=""
                   data-test-popover-item="1"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                     data-test-icon="auto-width"
                     height="12"
                     name="AutoWidth"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -580,26 +580,26 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  class="css-1wfopar PopoverItem"
                   data-test-box=""
                   data-test-popover-item="2"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                     data-test-icon="percentage"
                     height="12"
                     name="Percentage"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -609,7 +609,7 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
               </div>
             </div>
             <div
-              class="css-1jnxvbp Chip Chip--light TextFieldWrapper__chip TextFieldWrapper__chip--light TextFieldWrapper__chip--attachedValue TextFieldWrapper__chip--attachedValue--light TextFieldChip TextFieldChip--light"
+              class="css-1jnxvbp Chip TextFieldWrapper__chip TextFieldWrapper__chip--attached-value TextFieldChip"
               data-test-chip=""
             >
               Mixed
@@ -617,21 +617,21 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
           </div>
         </div>
         <div
-          class="css-1jnxvbp TextField TextField--light"
+          class="css-1jnxvbp TextField"
           data-test-text-field="height"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--chip TextFieldWrapper--chip--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--chip TextFieldWrapper--full-width"
             data-test-text-field-wrapper="height"
           >
             <div
-              class="css-e5vky9 ScrubbableInput ScrubbableInput--light ScrubbableInput--disabled ScrubbableInput--disabled--light"
+              class="css-e5vky9 ScrubbableInput ScrubbableInput--disabled"
               data-test-box=""
               data-test-scrubbable-input="height"
             >
               <div
-                class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+                class="css-1jnxvbp Icon Icon--neutral2"
                 data-test-icon="height-restricted"
                 height="12"
                 name="HeightRestricted"
@@ -639,50 +639,50 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
               />
             </div>
             <input
-              class="TextFieldWrapper__input TextFieldWrapper__input--light"
+              class="TextFieldWrapper__input"
               data-test-text-field-input="height"
               maxlength="6"
               type="text"
               value="Mixed"
             />
             <div
-              class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+              class="css-zcp5dz TextFieldPopover"
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                 data-test-icon="detached"
                 height="12"
                 name="Detached"
                 width="12"
               />
               <div
-                class="css-1c8p9kb Popover Popover--light"
+                class="css-6i6anv Popover"
                 data-test-box=""
                 data-test-popover="popover"
                 style="left: 0px; top: 0px;"
               >
                 <div
-                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  class="css-1wfopar PopoverItem"
                   data-test-box=""
                   data-test-popover-item="0"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                     data-test-icon="fixed-height"
                     height="12"
                     name="FixedHeight"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -690,26 +690,26 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  class="css-1wfopar PopoverItem"
                   data-test-box=""
                   data-test-popover-item="1"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                     data-test-icon="auto-height"
                     height="12"
                     name="AutoHeight"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -717,26 +717,26 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
                   </small>
                 </div>
                 <div
-                  class="css-1wfopar PopoverItem PopoverItem--light"
+                  class="css-1wfopar PopoverItem"
                   data-test-box=""
                   data-test-popover-item="2"
                 >
                   <div
-                    class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                     data-test-icon="check"
                     height="12"
                     name="Check"
                     width="12"
                   />
                   <div
-                    class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                    class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                     data-test-icon="percentage"
                     height="12"
                     name="Percentage"
                     width="12"
                   />
                   <small
-                    class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                    class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                     data-test-text=""
                     style="text-align: inherit;"
                   >
@@ -746,7 +746,7 @@ exports[`ColumnResizing snapshots should render when values are mixed 1`] = `
               </div>
             </div>
             <div
-              class="css-1jnxvbp Chip Chip--light TextFieldWrapper__chip TextFieldWrapper__chip--light TextFieldWrapper__chip--attachedValue TextFieldWrapper__chip--attachedValue--light TextFieldChip TextFieldChip--light"
+              class="css-1jnxvbp Chip TextFieldWrapper__chip TextFieldWrapper__chip--attached-value TextFieldChip"
               data-test-chip=""
             >
               Mixed

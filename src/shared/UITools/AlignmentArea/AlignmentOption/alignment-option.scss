@@ -1,5 +1,4 @@
 .AlignmentOption {
-  @include theme-selector('neutral-2', background-color, '&::before');
   $self: &;
 
   align-items: center;
@@ -10,6 +9,7 @@
   width: 100%;
 
   &::before {
+    background-color: var(--xd-color-neutral-2);
     border-radius: 50%;
     content: '';
     height: 2.5px;
@@ -62,14 +62,12 @@
   }
 
   &__indicator {
-    @include theme('neutral-2', background-color);
-
+    background-color: var(--xd-color-neutral-2);
     border-radius: 1px;
     opacity: 0;
 
     &--selected {
-      @include theme('blue-1', background-color);
-
+      background-color: var(--xd-color-blue-1);
       opacity: 1;
     }
   }

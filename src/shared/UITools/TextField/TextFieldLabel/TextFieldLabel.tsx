@@ -1,13 +1,10 @@
+import cx from 'classnames';
 import { FC } from 'react';
 
 // components
 import { Small } from '../../../UI/Typography';
 
-// hooks
-import { useTheme } from 'hooks';
-
 // others
-import { className, classNames } from './classNames';
 
 // styles
 import styles from './text-field-label.scss';
@@ -17,13 +14,11 @@ export type TTextFieldLabelProps = {
 };
 
 export const TextFieldLabel: FC<TTextFieldLabelProps> = ({ label }) => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-
   if (!label) {
     return null;
   }
 
-  return <Small classes={{ className: cx(classNamesWithTheme[className]) }}>{label}</Small>;
+  return <Small classes={{ className: cx(styles.TextFieldLabel) }}>{label}</Small>;
 };
 
 export default TextFieldLabel;

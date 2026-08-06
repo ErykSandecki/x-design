@@ -3,16 +3,16 @@
 exports[`TextField snapshots should render TextField 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp TextField TextField--light"
+    class="css-1jnxvbp TextField"
     data-test-text-field=""
     data-test-tooltip=""
   >
     <div
-      class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+      class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled"
       data-test-text-field-wrapper=""
     >
       <input
-        class="TextFieldWrapper__input TextFieldWrapper__input--light"
+        class="TextFieldWrapper__input"
         data-test-text-field-input=""
         maxlength="6"
       />
@@ -24,23 +24,23 @@ exports[`TextField snapshots should render TextField 1`] = `
 exports[`TextField snapshots should render with label 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp TextField TextField--light"
+    class="css-1jnxvbp TextField"
     data-test-text-field=""
     data-test-tooltip=""
   >
     <small
-      class="css-1jnxvbp TextFieldLabel TextFieldLabel--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp TextFieldLabel Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
       label
     </small>
     <div
-      class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+      class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled"
       data-test-text-field-wrapper=""
     >
       <input
-        class="TextFieldWrapper__input TextFieldWrapper__input--light"
+        class="TextFieldWrapper__input"
         data-test-text-field-input=""
         maxlength="6"
       />

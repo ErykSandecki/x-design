@@ -6,7 +6,7 @@
 .Typography {
   @each $color in $--xd-font-colors {
     &--#{$color} {
-      @include theme($color, color);
+      color: var(--xd-color-#{$color});
     }
   }
 

@@ -13,7 +13,7 @@
   position: relative;
 
   &--selected {
-    @include theme('neutral-4', background-color);
-    @include theme('neutral-4', border);
+    background-color: var(--xd-color-neutral-4);
+    border: var(--xd-color-neutral-4);
   }
 }

@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import { FC, RefObject } from 'react';
 import { kebabCase } from 'lodash';
 
@@ -6,10 +7,8 @@ import { E2EDataAttribute } from 'shared';
 
 // hooks
 import { useTransformAreaEvents } from './hooks/useTransformAreaEvents';
-import { useTheme } from 'hooks';
 
 // others
-import { className, classNames } from './classNames';
 
 // types
 import { AnchorResize, AnchorRotate } from 'store/pageBuilder/enums';
@@ -21,6 +20,26 @@ import styles from './transform-area.scss';
 
 // utils
 import { enumToArray } from 'utils';
+
+const anchorResizeModificators: Record<string, string> = {
+  east: 'TransformArea__anchor-resize--east',
+  none: 'TransformArea__anchor-resize--none',
+  north: 'TransformArea__anchor-resize--north',
+  northEast: 'TransformArea__anchor-resize--north-east',
+  northWest: 'TransformArea__anchor-resize--north-west',
+  south: 'TransformArea__anchor-resize--south',
+  southEast: 'TransformArea__anchor-resize--south-east',
+  southWest: 'TransformArea__anchor-resize--south-west',
+  west: 'TransformArea__anchor-resize--west',
+};
+
+const anchorRotateModificators: Record<string, string> = {
+  none: 'TransformArea__anchor-rotate--none',
+  northEast: 'TransformArea__anchor-rotate--north-east',
+  northWest: 'TransformArea__anchor-rotate--north-west',
+  southEast: 'TransformArea__anchor-rotate--south-east',
+  southWest: 'TransformArea__anchor-rotate--south-west',
+};
 
 export type TTransformAreaProps = {
   angle: TElement['angle'];
@@ -47,8 +66,6 @@ const TransformArea: FC<TTransformAreaProps> = ({
   x,
   y,
 }) => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-
   const {
     onMouseDownAnchorResize,
     onMouseDownAnchorRotate,
@@ -59,7 +76,7 @@ const TransformArea: FC<TTransformAreaProps> = ({
   } = useTransformAreaEvents(angle, counterAngle, elementRef, flip, height, id, moseMode, width, x, y);
 
   return (
-    <div className={cx(classNamesWithTheme[className])} style={{ height, width }}>
+    <div className={cx(styles.TransformArea)} style={{ height, width }}>
       {/* RESIZE AREA */}
       {enumToArray(AnchorResize)
         .filter((anchor) => anchor !== AnchorRotate.none)
@@ -71,8 +88,8 @@ const TransformArea: FC<TTransformAreaProps> = ({
           >
             <div
               className={cx(
-                classNamesWithTheme.anchorResize.name,
-                classNamesWithTheme.anchorResize.modificators[anchor as keyof typeof AnchorResize],
+                styles['TransformArea__anchor-resize'],
+                styles[anchorResizeModificators[anchor as keyof typeof AnchorResize]],
               )}
               onMouseDown={(event) => onMouseDownAnchorResize(anchor as AnchorResize, event)}
               onMouseEnter={() => onMouseEnterAnchorResize(anchor as AnchorResize)}
@@ -92,8 +109,8 @@ const TransformArea: FC<TTransformAreaProps> = ({
           >
             <div
               className={cx(
-                classNamesWithTheme.anchorRotate.name,
-                classNamesWithTheme.anchorRotate.modificators[anchor as keyof typeof AnchorRotate],
+                styles['TransformArea__anchor-rotate'],
+                styles[anchorRotateModificators[anchor as keyof typeof AnchorRotate]],
               )}
               onMouseDown={(event) => onMouseDownAnchorRotate(anchor as AnchorRotate, event)}
               onMouseEnter={() => onMouseEnterAnchorRotate(anchor as AnchorRotate)}

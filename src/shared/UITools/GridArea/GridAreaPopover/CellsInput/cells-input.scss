@@ -1,5 +1,7 @@
 .CellsInput {
-  @include theme-selector('blue-1', border-color, #{&}#{'__cell--active'});
+  &__cell--active {
+    border-color: var(--xd-color-blue-1);
+  }
 
   align-items: center;
   box-sizing: border-box;
@@ -13,9 +15,8 @@
   width: 100%;
 
   &__cell {
-    @include theme('neutral-3', background-color);
-    @include theme('neutral-3', border, '1px solid');
-
+    background-color: var(--xd-color-neutral-3);
+    border: 1px solid var(--xd-color-neutral-3);
     border-radius: 2.5px;
     box-sizing: border-box;
     cursor: pointer;

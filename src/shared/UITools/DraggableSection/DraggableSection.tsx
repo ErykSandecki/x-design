@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import { FC, ReactElement, useRef } from 'react';
 import { noop } from 'lodash';
 
@@ -11,10 +12,8 @@ import DraggableSectionMenu from './DraggableSectionMenu/DraggableSectionMenu';
 
 // hooks
 import { useDraggableSectionEvents } from './hooks/useDraggableSectionEvents';
-import { useTheme } from 'hooks';
 
 // others
-import { className, classNames } from './classNames';
 
 // styles
 import styles from './draggable-section.scss';
@@ -38,7 +37,6 @@ export const DraggableSection: FC<TDraggableSectionProps> = ({
   ...restProps
 }) => {
   const ref = useRef(null);
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   const { draggableItem, isDraggable, isPressing, onMouseDown, selected, setIsDraggable } = useDraggableSectionEvents(
     containerId,
@@ -49,10 +47,9 @@ export const DraggableSection: FC<TDraggableSectionProps> = ({
   return (
     <Box
       classes={{
-        className: cx(classNamesWithTheme[className].name, [
-          classNamesWithTheme[className].modificators.draggable,
-          isDraggable,
-        ]),
+        className: cx(styles.DraggableSection, {
+          [styles['DraggableSection--draggable']]: isDraggable,
+        }),
       }}
       e2eAttribute={E2EAttribute.draggableSection}
       e2eValue={e2eValue}
@@ -66,10 +63,9 @@ export const DraggableSection: FC<TDraggableSectionProps> = ({
         return (
           <Box
             classes={{
-              className: cx(classNamesWithTheme.item.name, [
-                classNamesWithTheme.item.modificators.selected,
-                isSelected,
-              ]),
+              className: cx(styles.DraggableSection__item, {
+                [styles['DraggableSection__item--selected']]: isSelected,
+              }),
             }}
             e2eAttribute={E2EAttribute.draggableSectionItem}
             e2eValue={index}

@@ -3,15 +3,15 @@
 exports[`ButtonGroup snapshots should render ButtonGroup 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp ButtonGroup ButtonGroup--light"
+    class="css-1jnxvbp ButtonGroup"
     data-test-button-group=""
   >
     <div
-      class="ButtonGroup__button ButtonGroup__button--light"
+      class="ButtonGroup__button"
       data-test-button-group-input="align-horizontal-left"
     >
       <div
-        class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+        class="css-1jnxvbp ButtonGroup__icon Icon Icon--neutral1"
         data-test-icon="align-horizontal-left"
         height="12"
         name="AlignHorizontalLeft"
@@ -19,11 +19,11 @@ exports[`ButtonGroup snapshots should render ButtonGroup 1`] = `
       />
     </div>
     <div
-      class="ButtonGroup__button ButtonGroup__button--light"
+      class="ButtonGroup__button"
       data-test-button-group-input="align-horizontal-center"
     >
       <div
-        class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+        class="css-1jnxvbp ButtonGroup__icon Icon Icon--neutral1"
         data-test-icon="align-horizontal-center"
         height="12"
         name="AlignHorizontalCenter"
@@ -31,11 +31,11 @@ exports[`ButtonGroup snapshots should render ButtonGroup 1`] = `
       />
     </div>
     <div
-      class="ButtonGroup__button ButtonGroup__button--light"
+      class="ButtonGroup__button"
       data-test-button-group-input="align-horizontal-right"
     >
       <div
-        class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+        class="css-1jnxvbp ButtonGroup__icon Icon Icon--neutral1"
         data-test-icon="align-horizontal-right"
         height="12"
         name="AlignHorizontalRight"
@@ -49,15 +49,15 @@ exports[`ButtonGroup snapshots should render ButtonGroup 1`] = `
 exports[`ButtonGroup snapshots should render with disabled states 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp ButtonGroup ButtonGroup--light"
+    class="css-1jnxvbp ButtonGroup"
     data-test-button-group=""
   >
     <div
-      class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
+      class="ButtonGroup__button ButtonGroup__button--disabled"
       data-test-button-group-input="align-horizontal-left"
     >
       <div
-        class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+        class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--disabled Icon Icon--neutral1"
         data-test-icon="align-horizontal-left"
         height="12"
         name="AlignHorizontalLeft"
@@ -65,11 +65,11 @@ exports[`ButtonGroup snapshots should render with disabled states 1`] = `
       />
     </div>
     <div
-      class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
+      class="ButtonGroup__button ButtonGroup__button--disabled"
       data-test-button-group-input="align-horizontal-center"
     >
       <div
-        class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+        class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--disabled Icon Icon--neutral1"
         data-test-icon="align-horizontal-center"
         height="12"
         name="AlignHorizontalCenter"
@@ -77,11 +77,11 @@ exports[`ButtonGroup snapshots should render with disabled states 1`] = `
       />
     </div>
     <div
-      class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
+      class="ButtonGroup__button ButtonGroup__button--disabled"
       data-test-button-group-input="align-horizontal-right"
     >
       <div
-        class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+        class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--disabled Icon Icon--neutral1"
         data-test-icon="align-horizontal-right"
         height="12"
         name="AlignHorizontalRight"

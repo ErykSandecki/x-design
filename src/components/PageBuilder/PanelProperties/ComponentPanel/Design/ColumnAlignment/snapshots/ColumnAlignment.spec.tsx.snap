@@ -3,16 +3,16 @@
 exports[`ColumnAlignment snapshots should render ColumnAlignment 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+      class="css-xdzdnq SectionColumnLabels"
       data-test-box=""
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -24,20 +24,20 @@ exports[`ColumnAlignment snapshots should render ColumnAlignment 1`] = `
       data-test-box=""
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--twoInputs SectionColumnContent--twoInputs--light"
+        class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp ButtonGroup ButtonGroup--light"
+          class="css-1jnxvbp ButtonGroup"
           data-test-button-group="horizontal-alignment"
         >
           <div
-            class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
+            class="ButtonGroup__button ButtonGroup__button--disabled"
             data-test-button-group-input="align-horizontal-left"
           >
             <div
-              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--disabled Icon Icon--neutral1"
               data-test-icon="align-horizontal-left"
               height="12"
               name="AlignHorizontalLeft"
@@ -45,14 +45,14 @@ exports[`ColumnAlignment snapshots should render ColumnAlignment 1`] = `
             />
           </div>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Align left  ⌥A
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -61,11 +61,11 @@ exports[`ColumnAlignment snapshots should render ColumnAlignment 1`] = `
             </div>
           </div>
           <div
-            class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
+            class="ButtonGroup__button ButtonGroup__button--disabled"
             data-test-button-group-input="align-horizontal-center"
           >
             <div
-              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--disabled Icon Icon--neutral1"
               data-test-icon="align-horizontal-center"
               height="12"
               name="AlignHorizontalCenter"
@@ -73,14 +73,14 @@ exports[`ColumnAlignment snapshots should render ColumnAlignment 1`] = `
             />
           </div>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Align center  ⌥H
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -89,11 +89,11 @@ exports[`ColumnAlignment snapshots should render ColumnAlignment 1`] = `
             </div>
           </div>
           <div
-            class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
+            class="ButtonGroup__button ButtonGroup__button--disabled"
             data-test-button-group-input="align-horizontal-right"
           >
             <div
-              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--disabled Icon Icon--neutral1"
               data-test-icon="align-horizontal-right"
               height="12"
               name="AlignHorizontalRight"
@@ -101,14 +101,14 @@ exports[`ColumnAlignment snapshots should render ColumnAlignment 1`] = `
             />
           </div>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Align right  ⌥D
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -118,15 +118,15 @@ exports[`ColumnAlignment snapshots should render ColumnAlignment 1`] = `
           </div>
         </div>
         <div
-          class="css-1jnxvbp ButtonGroup ButtonGroup--light"
+          class="css-1jnxvbp ButtonGroup"
           data-test-button-group="vertical-alignment"
         >
           <div
-            class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
+            class="ButtonGroup__button ButtonGroup__button--disabled"
             data-test-button-group-input="align-vertical-top"
           >
             <div
-              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--disabled Icon Icon--neutral1"
               data-test-icon="align-vertical-top"
               height="12"
               name="AlignVerticalTop"
@@ -134,14 +134,14 @@ exports[`ColumnAlignment snapshots should render ColumnAlignment 1`] = `
             />
           </div>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Align top  ⌥W
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -150,11 +150,11 @@ exports[`ColumnAlignment snapshots should render ColumnAlignment 1`] = `
             </div>
           </div>
           <div
-            class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
+            class="ButtonGroup__button ButtonGroup__button--disabled"
             data-test-button-group-input="align-vertical-center"
           >
             <div
-              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--disabled Icon Icon--neutral1"
               data-test-icon="align-vertical-center"
               height="12"
               name="AlignVerticalCenter"
@@ -162,14 +162,14 @@ exports[`ColumnAlignment snapshots should render ColumnAlignment 1`] = `
             />
           </div>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Align center  ⌥V
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -178,11 +178,11 @@ exports[`ColumnAlignment snapshots should render ColumnAlignment 1`] = `
             </div>
           </div>
           <div
-            class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
+            class="ButtonGroup__button ButtonGroup__button--disabled"
             data-test-button-group-input="align-vertical-bottom"
           >
             <div
-              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--disabled Icon Icon--neutral1"
               data-test-icon="align-vertical-bottom"
               height="12"
               name="AlignVerticalBottom"
@@ -190,14 +190,14 @@ exports[`ColumnAlignment snapshots should render ColumnAlignment 1`] = `
             />
           </div>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Align bottom  ⌥S
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -224,16 +224,16 @@ exports[`ColumnAlignment snapshots should render ColumnAlignment 1`] = `
 exports[`ColumnAlignment snapshots should render when element is on position relative 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+      class="css-xdzdnq SectionColumnLabels"
       data-test-box=""
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -245,20 +245,20 @@ exports[`ColumnAlignment snapshots should render when element is on position rel
       data-test-box=""
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--twoInputs SectionColumnContent--twoInputs--light"
+        class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp ButtonGroup ButtonGroup--light"
+          class="css-1jnxvbp ButtonGroup"
           data-test-button-group="horizontal-alignment"
         >
           <div
-            class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
+            class="ButtonGroup__button ButtonGroup__button--disabled"
             data-test-button-group-input="align-horizontal-left"
           >
             <div
-              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--disabled Icon Icon--neutral1"
               data-test-icon="align-horizontal-left"
               height="12"
               name="AlignHorizontalLeft"
@@ -266,14 +266,14 @@ exports[`ColumnAlignment snapshots should render when element is on position rel
             />
           </div>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Align left  ⌥A
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -282,11 +282,11 @@ exports[`ColumnAlignment snapshots should render when element is on position rel
             </div>
           </div>
           <div
-            class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
+            class="ButtonGroup__button ButtonGroup__button--disabled"
             data-test-button-group-input="align-horizontal-center"
           >
             <div
-              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--disabled Icon Icon--neutral1"
               data-test-icon="align-horizontal-center"
               height="12"
               name="AlignHorizontalCenter"
@@ -294,14 +294,14 @@ exports[`ColumnAlignment snapshots should render when element is on position rel
             />
           </div>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Align center  ⌥H
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -310,11 +310,11 @@ exports[`ColumnAlignment snapshots should render when element is on position rel
             </div>
           </div>
           <div
-            class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
+            class="ButtonGroup__button ButtonGroup__button--disabled"
             data-test-button-group-input="align-horizontal-right"
           >
             <div
-              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--disabled Icon Icon--neutral1"
               data-test-icon="align-horizontal-right"
               height="12"
               name="AlignHorizontalRight"
@@ -322,14 +322,14 @@ exports[`ColumnAlignment snapshots should render when element is on position rel
             />
           </div>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Align right  ⌥D
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -339,15 +339,15 @@ exports[`ColumnAlignment snapshots should render when element is on position rel
           </div>
         </div>
         <div
-          class="css-1jnxvbp ButtonGroup ButtonGroup--light"
+          class="css-1jnxvbp ButtonGroup"
           data-test-button-group="vertical-alignment"
         >
           <div
-            class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
+            class="ButtonGroup__button ButtonGroup__button--disabled"
             data-test-button-group-input="align-vertical-top"
           >
             <div
-              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--disabled Icon Icon--neutral1"
               data-test-icon="align-vertical-top"
               height="12"
               name="AlignVerticalTop"
@@ -355,14 +355,14 @@ exports[`ColumnAlignment snapshots should render when element is on position rel
             />
           </div>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Align top  ⌥W
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -371,11 +371,11 @@ exports[`ColumnAlignment snapshots should render when element is on position rel
             </div>
           </div>
           <div
-            class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
+            class="ButtonGroup__button ButtonGroup__button--disabled"
             data-test-button-group-input="align-vertical-center"
           >
             <div
-              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--disabled Icon Icon--neutral1"
               data-test-icon="align-vertical-center"
               height="12"
               name="AlignVerticalCenter"
@@ -383,14 +383,14 @@ exports[`ColumnAlignment snapshots should render when element is on position rel
             />
           </div>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Align center  ⌥V
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -399,11 +399,11 @@ exports[`ColumnAlignment snapshots should render when element is on position rel
             </div>
           </div>
           <div
-            class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
+            class="ButtonGroup__button ButtonGroup__button--disabled"
             data-test-button-group-input="align-vertical-bottom"
           >
             <div
-              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--disabled Icon Icon--neutral1"
               data-test-icon="align-vertical-bottom"
               height="12"
               name="AlignVerticalBottom"
@@ -411,14 +411,14 @@ exports[`ColumnAlignment snapshots should render when element is on position rel
             />
           </div>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Align bottom  ⌥S
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"

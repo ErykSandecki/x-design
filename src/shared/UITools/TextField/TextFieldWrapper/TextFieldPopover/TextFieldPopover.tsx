@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import { FC, RefObject } from 'react';
 
 // components
@@ -7,10 +8,8 @@ import Popover, { PopoverCompound, TPopoverProps } from '../../../Popover/Popove
 
 // hooks
 import { useClickEvent } from './hooks/useClickEvent';
-import { useTheme } from 'hooks';
 
 // others
-import { className, classNames } from './classNames';
 
 // styles
 import styles from './text-field-popover.scss';
@@ -35,18 +34,17 @@ export const TextFieldPopover: FC<TTextFieldPopoverProps> = ({
   setSelected,
   style,
 }) => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const onClickDetachedValue = useClickEvent(onClick);
 
   return (
     <Box
-      classes={{ className: cx(classNamesWithTheme[className]) }}
+      classes={{ className: cx(styles.TextFieldPopover) }}
       ref={ref}
       sx={{ alignItems: 'center', display: 'flex', justifyContent: 'center', position: 'relative' }}
     >
       {!attachedValue && (
         <Icon
-          classes={{ className: cx(classNamesWithTheme.icon, classNameIcon) }}
+          classes={{ className: cx(styles.TextFieldPopover__icon, classNameIcon) }}
           clickable
           height={12}
           name="Variant"
@@ -56,7 +54,7 @@ export const TextFieldPopover: FC<TTextFieldPopoverProps> = ({
       )}
       {attachedValue && (
         <Icon
-          classes={{ className: cx(classNamesWithTheme.icon, classNameIcon) }}
+          classes={{ className: cx(styles.TextFieldPopover__icon, classNameIcon) }}
           clickable
           height={12}
           name="Detached"

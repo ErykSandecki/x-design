@@ -19,8 +19,7 @@
 
   &__tile-left,
   &__tile-right {
-    @include theme('neutral-3', background-color);
-
+    background-color: var(--xd-color-neutral-3);
     align-items: center;
     border-radius: 2.5px;
     display: flex;
@@ -37,15 +36,13 @@
   }
 
   &__tile-children {
-    @include theme('neutral-5', background-color);
-
+    background-color: var(--xd-color-neutral-5);
     height: 36px;
     width: calc(100% - 12px);
   }
 
   &__stroke {
-    @include theme('neutral-2', border, '1px dashed');
-
+    border: 1px dashed var(--xd-color-neutral-2);
     border-radius: 2.5px;
     height: 48px;
     left: 50%;

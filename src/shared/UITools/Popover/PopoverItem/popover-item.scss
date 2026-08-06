@@ -1,7 +1,9 @@
 .PopoverItem {
-  @include theme-selector('blue-2', background-color, '&:hover');
-
   cursor: pointer;
+
+  &:hover {
+    background-color: var(--xd-color-blue-2);
+  }
 
   &__check-icon {
     flex-shrink: 0;

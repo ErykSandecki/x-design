@@ -1,13 +1,10 @@
+import cx from 'classnames';
 import { FC, ReactNode } from 'react';
 
 // components
 import Box from '../../UI/Box/Box';
 
-// hooks
-import { useTheme } from 'hooks';
-
 // others
-import { className as classNameChip, classNames } from './classNames';
 
 // styles
 import styles from './chip.scss';
@@ -24,8 +21,6 @@ export type TChipProps = {
 };
 
 export const Chip: FC<TChipProps> = ({ children, className, e2eValue = '', onClick }) => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-
   if (!children) {
     return null;
   }
@@ -33,7 +28,7 @@ export const Chip: FC<TChipProps> = ({ children, className, e2eValue = '', onCli
   return (
     <Box
       classes={{
-        className: cx(classNamesWithTheme[classNameChip], className),
+        className: cx(styles.Chip, className),
       }}
       e2eAttribute={E2EAttribute.chip}
       e2eValue={e2eValue}

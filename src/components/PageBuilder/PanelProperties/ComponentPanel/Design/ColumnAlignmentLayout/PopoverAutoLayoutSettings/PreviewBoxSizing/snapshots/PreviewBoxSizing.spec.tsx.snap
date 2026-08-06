@@ -3,29 +3,29 @@
 exports[`PopoverAutoLayoutSettings snapshots should render PreviewBoxSizing 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp PreviewBoxSizing PreviewBoxSizing--light"
+    class="css-1jnxvbp PreviewBoxSizing undefined"
     data-test-box=""
   >
     <div
-      class="css-1jnxvbp PreviewBoxSizing__tileLeft PreviewBoxSizing__tileLeft--light"
+      class="css-1jnxvbp PreviewBoxSizing__tile-left"
       data-test-box=""
     >
       <div
-        class="css-1jnxvbp PreviewBoxSizing__tileChildren PreviewBoxSizing__tileChildren--light"
+        class="css-1jnxvbp PreviewBoxSizing__tile-children"
         data-test-box=""
       />
     </div>
     <div
-      class="css-1jnxvbp PreviewBoxSizing__tileRight PreviewBoxSizing__tileRight--light"
+      class="css-1jnxvbp PreviewBoxSizing__tile-right"
       data-test-box=""
     >
       <div
-        class="css-1jnxvbp PreviewBoxSizing__tileChildren PreviewBoxSizing__tileChildren--light"
+        class="css-1jnxvbp PreviewBoxSizing__tile-children"
         data-test-box=""
       />
     </div>
     <div
-      class="css-1jnxvbp PreviewBoxSizing__stroke PreviewBoxSizing__stroke--light"
+      class="css-1jnxvbp PreviewBoxSizing__stroke undefined"
       data-test-box=""
     />
   </div>
@@ -35,29 +35,29 @@ exports[`PopoverAutoLayoutSettings snapshots should render PreviewBoxSizing 1`] 
 exports[`PopoverAutoLayoutSettings snapshots should render when excluded 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp PreviewBoxSizing PreviewBoxSizing--light PreviewBoxSizing--excluded PreviewBoxSizing--excluded--light"
+    class="css-1jnxvbp PreviewBoxSizing PreviewBoxSizing--excluded"
     data-test-box=""
   >
     <div
-      class="css-1jnxvbp PreviewBoxSizing__tileLeft PreviewBoxSizing__tileLeft--light"
+      class="css-1jnxvbp PreviewBoxSizing__tile-left"
       data-test-box=""
     >
       <div
-        class="css-1jnxvbp PreviewBoxSizing__tileChildren PreviewBoxSizing__tileChildren--light"
+        class="css-1jnxvbp PreviewBoxSizing__tile-children"
         data-test-box=""
       />
     </div>
     <div
-      class="css-1jnxvbp PreviewBoxSizing__tileRight PreviewBoxSizing__tileRight--light"
+      class="css-1jnxvbp PreviewBoxSizing__tile-right"
       data-test-box=""
     >
       <div
-        class="css-1jnxvbp PreviewBoxSizing__tileChildren PreviewBoxSizing__tileChildren--light"
+        class="css-1jnxvbp PreviewBoxSizing__tile-children"
         data-test-box=""
       />
     </div>
     <div
-      class="css-1jnxvbp PreviewBoxSizing__stroke PreviewBoxSizing__stroke--light PreviewBoxSizing__stroke--excluded PreviewBoxSizing__stroke--excluded--light"
+      class="css-1jnxvbp PreviewBoxSizing__stroke PreviewBoxSizing__stroke--excluded"
       data-test-box=""
     />
   </div>

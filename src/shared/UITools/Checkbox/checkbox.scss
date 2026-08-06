@@ -1,7 +1,4 @@
 .Checkbox {
-  @include theme-selector('neutral-4', background-color, #{&}#{'__input-wrapper'});
-  @include theme-selector('neutral-3', border, #{&}#{'__input-wrapper'}, '1px solid');
-
   align-items: center;
   column-gap: 5px;
   display: flex;
@@ -20,6 +17,8 @@
   }
 
   &__input-wrapper {
+    background-color: var(--xd-color-neutral-4);
+    border: 1px solid var(--xd-color-neutral-3);
     align-items: center;
     border-radius: 5px;
     box-sizing: border-box;

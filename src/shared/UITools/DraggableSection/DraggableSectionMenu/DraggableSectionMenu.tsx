@@ -1,14 +1,11 @@
+import cx from 'classnames';
 import { FC } from 'react';
 
 // components
 import Box from '../../../UI/Box/Box';
 import Icon from '../../../UI/Icon/Icon';
 
-// hooks
-import { useTheme } from 'hooks';
-
 // others
-import { className, classNames } from './classNames';
 
 // styles
 import styles from './draggable-section-menu.scss';
@@ -19,8 +16,6 @@ export type TDraggableSectionMenuProps = {
 };
 
 export const DraggableSectionMenu: FC<TDraggableSectionMenuProps> = ({ forceDisplay, show }) => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-
   if (!show) {
     return null;
   }
@@ -28,10 +23,9 @@ export const DraggableSectionMenu: FC<TDraggableSectionMenuProps> = ({ forceDisp
   return (
     <Box
       classes={{
-        className: cx(classNamesWithTheme[className].name, [
-          classNamesWithTheme[className].modificators.forceDisplay,
-          forceDisplay,
-        ]),
+        className: cx(styles.DraggableSectionMenu, {
+          [styles['DraggableSectionMenu--force-display']]: forceDisplay,
+        }),
       }}
     >
       <Icon height={8} name="Menu" width={8} />

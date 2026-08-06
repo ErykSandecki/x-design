@@ -5,7 +5,6 @@ import { createElement, FC, HTMLAttributes, ReactNode, Ref } from 'react';
 import { useSX } from '../hooks/sx/useSX';
 
 // others
-import { classes } from './classNames';
 
 // types
 import { E2EAttribute } from 'types';
@@ -18,7 +17,7 @@ import { getAttributes } from '../../E2EDataAttributes/utils';
 import { mapAttributes } from 'utils';
 
 export type TBoxProps = Omit<HTMLAttributes<HTMLElement>, 'className'> &
-  TUIProps<typeof classes> & {
+  TUIProps<{ className: string }> & {
     children?: ReactNode;
     component?: TBoxHTMLTag;
     e2eAttribute?: TE2EDataAttributeProps['type'];

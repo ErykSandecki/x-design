@@ -1,14 +1,11 @@
+import cx from 'classnames';
 import { ReactNode } from 'react';
 
 // components
 import Icon, { TIconProps } from '../../../UI/Icon/Icon';
 import Tooltip, { TTooltipProps } from '../../../UI/Tooltip/Tooltip';
 
-// hooks
-import { useTheme } from 'hooks';
-
 // others
-import { className as classNameToggleButton, classNames } from './classNames';
 
 // styles
 import styles from './toggle-button.scss';
@@ -42,17 +39,15 @@ const ToggleButton = <V extends TToggleButtonGroupValue>({
   tooltip,
   value,
 }: TToggleButtonProps<V>): ReactNode => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const selected = isSelected<V>(currentValue, value);
   const canTriggerChange = !disabledWhenSelected || !selected;
 
   return (
     <Tooltip e2eAttribute={e2eAttribute} e2eValue={e2eValue} {...tooltip}>
       <button
-        className={cx(classNamesWithTheme[classNameToggleButton].name, [
-          classNamesWithTheme[classNameToggleButton].modificators.selected,
-          selected,
-        ])}
+        className={cx(styles.ToggleButton, {
+          [styles['ToggleButton--selected']]: selected,
+        })}
         onClick={() => canTriggerChange && onChange(value)}
         type="button"
       >

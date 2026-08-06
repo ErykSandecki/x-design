@@ -3,11 +3,11 @@
 exports[`SectionColumn snapshots should render SectionColumn 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light"
+    class="css-1jnxvbp SectionColumn"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+      class="css-xdzdnq SectionColumnLabels"
       data-test-box=""
       style="width: calc(100% - 24px - 0px - 8px);"
     />
@@ -16,7 +16,7 @@ exports[`SectionColumn snapshots should render SectionColumn 1`] = `
       data-test-box=""
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--single SectionColumnContent--single--light"
+        class="css-biptg5 SectionColumnContent SectionColumnContent--single"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
@@ -39,16 +39,16 @@ exports[`SectionColumn snapshots should render SectionColumn 1`] = `
 exports[`SectionColumn snapshots should render with buttons & labels 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light"
+    class="css-1jnxvbp SectionColumn"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+      class="css-xdzdnq SectionColumnLabels"
       data-test-box=""
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -60,7 +60,7 @@ exports[`SectionColumn snapshots should render with buttons & labels 1`] = `
       data-test-box=""
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--single SectionColumnContent--single--light"
+        class="css-biptg5 SectionColumnContent SectionColumnContent--single"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
@@ -75,12 +75,12 @@ exports[`SectionColumn snapshots should render with buttons & labels 1`] = `
           data-test-box=""
         >
           <div
-            class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+            class="css-1jnxvbp ButtonIcon"
             data-test-button-icon=""
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--neutral1"
               data-test-icon="close"
               height="12"
               name="Close"
@@ -97,11 +97,11 @@ exports[`SectionColumn snapshots should render with buttons & labels 1`] = `
 exports[`SectionColumn snapshots should render with buttons 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light"
+    class="css-1jnxvbp SectionColumn"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+      class="css-xdzdnq SectionColumnLabels"
       data-test-box=""
       style="width: calc(100% - 24px - 0px - 8px);"
     />
@@ -110,7 +110,7 @@ exports[`SectionColumn snapshots should render with buttons 1`] = `
       data-test-box=""
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--single SectionColumnContent--single--light"
+        class="css-biptg5 SectionColumnContent SectionColumnContent--single"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
@@ -125,12 +125,12 @@ exports[`SectionColumn snapshots should render with buttons 1`] = `
           data-test-box=""
         >
           <div
-            class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+            class="css-1jnxvbp ButtonIcon"
             data-test-button-icon=""
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--neutral1"
               data-test-icon="close"
               height="12"
               name="Close"
@@ -147,11 +147,11 @@ exports[`SectionColumn snapshots should render with buttons 1`] = `
 exports[`SectionColumn snapshots should render with buttons and input connector 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light"
+    class="css-1jnxvbp SectionColumn"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+      class="css-xdzdnq SectionColumnLabels"
       data-test-box=""
       style="width: calc(100% - 24px - 0px - 8px);"
     />
@@ -160,17 +160,17 @@ exports[`SectionColumn snapshots should render with buttons and input connector 
       data-test-box=""
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--single SectionColumnContent--single--light"
+        class="css-biptg5 SectionColumnContent SectionColumnContent--single"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         children
         <div
-          class="css-2ro7w4 SectionColumnContent__inputConnector SectionColumnContent__inputConnector--light"
+          class="css-2ro7w4 SectionColumnContent__input-connector"
           data-test-box=""
         >
           <div
-            class="css-1jnxvbp Icon Icon--light Icon--neutral3 Icon--neutral3--light"
+            class="css-1jnxvbp Icon Icon--neutral3"
             data-test-icon="inputs-connector"
             height="24"
             name="InputsConnector"
@@ -187,12 +187,12 @@ exports[`SectionColumn snapshots should render with buttons and input connector 
           data-test-box=""
         >
           <div
-            class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+            class="css-1jnxvbp ButtonIcon"
             data-test-button-icon=""
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--neutral1"
               data-test-icon="close"
               height="12"
               name="Close"

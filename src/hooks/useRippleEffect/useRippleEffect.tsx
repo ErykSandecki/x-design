@@ -1,5 +1,4 @@
 import cx from 'classnames';
-import { camelCase } from 'lodash';
 import { JSX, MouseEvent, useEffect, useState } from 'react';
 
 // others
@@ -7,9 +6,6 @@ import { RIPPLE_EFFECT_MODIFICATOR } from './constants';
 
 // types
 import { TObject, Theme } from '../../types';
-
-// utils
-import { isJestRunning } from 'utils';
 
 type TUseRippleEffect = {
   rippleEffect: JSX.Element | null;
@@ -19,15 +15,13 @@ type TUseRippleEffect = {
 export const useRippleEffect = (className: string, styles: TObject<string>, delay = 300): TUseRippleEffect => {
   const [coords, setCoords] = useState({ x: -1, y: -1 });
   const [isRippling, setIsRippling] = useState(false);
-  /* istanbul ignore next */
-  const transform = isJestRunning() ? (value: string): string => value : camelCase;
 
   const rippleEffect = isRippling ? (
     <span
       className={cx(
-        styles[transform(`${className}--${RIPPLE_EFFECT_MODIFICATOR}`)],
-        styles[transform(`${className}--${RIPPLE_EFFECT_MODIFICATOR}--${Theme.light}`)],
-        styles[transform(`${className}--${RIPPLE_EFFECT_MODIFICATOR}--${Theme.dark}`)],
+        styles[`${className}--${RIPPLE_EFFECT_MODIFICATOR}`],
+        styles[`${className}--${RIPPLE_EFFECT_MODIFICATOR}--${Theme.light}`],
+        styles[`${className}--${RIPPLE_EFFECT_MODIFICATOR}--${Theme.dark}`],
       )}
       style={{
         left: coords.x,

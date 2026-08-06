@@ -5,12 +5,12 @@ exports[`DraggableSectionAnchors snapshots should not render when lenght is less
 exports[`DraggableSectionAnchors snapshots should render DraggableSectionAnchors 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp DraggableSectionAnchor DraggableSectionAnchor--light DraggableSectionAnchor--draggable DraggableSectionAnchor--draggable--light"
+    class="css-1jnxvbp DraggableSectionAnchor DraggableSectionAnchor--draggable"
     data-anchor-index="0"
     data-test-anchor="anchor-north"
   />
   <div
-    class="css-1jnxvbp DraggableSectionAnchor DraggableSectionAnchor--light DraggableSectionAnchor--draggable DraggableSectionAnchor--draggable--light"
+    class="css-1jnxvbp DraggableSectionAnchor DraggableSectionAnchor--draggable"
     data-anchor-index="0"
     data-test-anchor="anchor-south"
   />
@@ -20,12 +20,12 @@ exports[`DraggableSectionAnchors snapshots should render DraggableSectionAnchors
 exports[`DraggableSectionAnchors snapshots should render when is middle 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp DraggableSectionAnchor DraggableSectionAnchor--light DraggableSectionAnchor--draggable DraggableSectionAnchor--draggable--light"
+    class="css-1jnxvbp DraggableSectionAnchor DraggableSectionAnchor--draggable"
     data-anchor-index="1"
     data-test-anchor="anchor-north"
   />
   <div
-    class="css-1jnxvbp DraggableSectionAnchor DraggableSectionAnchor--light DraggableSectionAnchor--draggable DraggableSectionAnchor--draggable--light"
+    class="css-1jnxvbp DraggableSectionAnchor DraggableSectionAnchor--draggable"
     data-anchor-index="1"
     data-test-anchor="anchor-south"
   />
@@ -35,12 +35,12 @@ exports[`DraggableSectionAnchors snapshots should render when is middle 1`] = `
 exports[`DraggableSectionAnchors snapshots should render when is middle 2`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp DraggableSectionAnchor DraggableSectionAnchor--light DraggableSectionAnchor--draggable DraggableSectionAnchor--draggable--light"
+    class="css-1jnxvbp DraggableSectionAnchor DraggableSectionAnchor--draggable"
     data-anchor-index="2"
     data-test-anchor="anchor-north"
   />
   <div
-    class="css-1jnxvbp DraggableSectionAnchor DraggableSectionAnchor--light DraggableSectionAnchor--draggable DraggableSectionAnchor--draggable--light"
+    class="css-1jnxvbp DraggableSectionAnchor DraggableSectionAnchor--draggable"
     data-anchor-index="2"
     data-test-anchor="anchor-south"
   />

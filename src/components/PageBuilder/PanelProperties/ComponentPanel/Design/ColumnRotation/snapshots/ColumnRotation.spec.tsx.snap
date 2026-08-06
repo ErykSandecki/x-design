@@ -3,16 +3,16 @@
 exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light"
+    class="css-1jnxvbp SectionColumn"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+      class="css-xdzdnq SectionColumnLabels"
       data-test-box=""
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -24,26 +24,26 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
       data-test-box=""
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--twoInputs SectionColumnContent--twoInputs--light"
+        class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp TextField TextField--light"
+          class="css-1jnxvbp TextField"
           data-test-text-field="angle"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="angle"
           >
             <div
-              class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+              class="css-e5vky9 ScrubbableInput"
               data-test-box=""
               data-test-scrubbable-input="angle"
             >
               <div
-                class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+                class="css-1jnxvbp Icon Icon--neutral2"
                 data-test-icon="protractor"
                 height="8"
                 name="Protractor"
@@ -51,7 +51,7 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
               />
             </div>
             <input
-              class="TextFieldWrapper__input TextFieldWrapper__input--light"
+              class="TextFieldWrapper__input"
               data-test-text-field-input="angle"
               maxlength="6"
               type="text"
@@ -60,14 +60,14 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
           </div>
         </div>
         <div
-          class="Tooltip Tooltip--light"
+          class="Tooltip"
         >
           <div
-            class="Tooltip__content Tooltip__content--light"
+            class="Tooltip__content"
           >
             Rotation
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -76,15 +76,15 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
           </div>
         </div>
         <div
-          class="css-1jnxvbp ButtonGroup ButtonGroup--light ButtonGroup--fullWidth ButtonGroup--fullWidth--light"
+          class="css-1jnxvbp ButtonGroup ButtonGroup--full-width"
           data-test-button-group="layout-position"
         >
           <div
-            class="ButtonGroup__button ButtonGroup__button--light"
+            class="ButtonGroup__button"
             data-test-button-group-input="toggle-rotate"
           >
             <div
-              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon Icon Icon--neutral1"
               data-test-icon="toggle-rotate"
               height="12"
               name="ToggleRotate"
@@ -92,14 +92,14 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
             />
           </div>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Rotate 90° right
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -108,11 +108,11 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
             </div>
           </div>
           <div
-            class="ButtonGroup__button ButtonGroup__button--light"
+            class="ButtonGroup__button"
             data-test-button-group-input="flip-horizontal"
           >
             <div
-              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon Icon Icon--neutral1"
               data-test-icon="flip-horizontal"
               height="12"
               name="FlipHorizontal"
@@ -120,14 +120,14 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
             />
           </div>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Flip horizontal  ⇧H
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -136,11 +136,11 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
             </div>
           </div>
           <div
-            class="ButtonGroup__button ButtonGroup__button--light"
+            class="ButtonGroup__button"
             data-test-button-group-input="flip-vertical"
           >
             <div
-              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon Icon Icon--neutral1"
               data-test-icon="flip-vertical"
               height="12"
               name="FlipVertical"
@@ -148,14 +148,14 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
             />
           </div>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Flip vertical  ⇧V
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -182,16 +182,16 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
 exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light"
+    class="css-1jnxvbp SectionColumn"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+      class="css-xdzdnq SectionColumnLabels"
       data-test-box=""
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -203,26 +203,26 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
       data-test-box=""
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--twoInputs SectionColumnContent--twoInputs--light"
+        class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp TextField TextField--light"
+          class="css-1jnxvbp TextField"
           data-test-text-field="angle"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="angle"
           >
             <div
-              class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+              class="css-e5vky9 ScrubbableInput"
               data-test-box=""
               data-test-scrubbable-input="angle"
             >
               <div
-                class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+                class="css-1jnxvbp Icon Icon--neutral2"
                 data-test-icon="protractor"
                 height="8"
                 name="Protractor"
@@ -230,7 +230,7 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
               />
             </div>
             <input
-              class="TextFieldWrapper__input TextFieldWrapper__input--light"
+              class="TextFieldWrapper__input"
               data-test-text-field-input="angle"
               maxlength="6"
               type="text"
@@ -239,14 +239,14 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
           </div>
         </div>
         <div
-          class="Tooltip Tooltip--light"
+          class="Tooltip"
         >
           <div
-            class="Tooltip__content Tooltip__content--light"
+            class="Tooltip__content"
           >
             Rotation
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -255,15 +255,15 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
           </div>
         </div>
         <div
-          class="css-1jnxvbp ButtonGroup ButtonGroup--light ButtonGroup--fullWidth ButtonGroup--fullWidth--light"
+          class="css-1jnxvbp ButtonGroup ButtonGroup--full-width"
           data-test-button-group="layout-position"
         >
           <div
-            class="ButtonGroup__button ButtonGroup__button--light"
+            class="ButtonGroup__button"
             data-test-button-group-input="toggle-rotate"
           >
             <div
-              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon Icon Icon--neutral1"
               data-test-icon="toggle-rotate"
               height="12"
               name="ToggleRotate"
@@ -271,14 +271,14 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
             />
           </div>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Rotate 90° right
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -287,11 +287,11 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
             </div>
           </div>
           <div
-            class="ButtonGroup__button ButtonGroup__button--light"
+            class="ButtonGroup__button"
             data-test-button-group-input="flip-horizontal"
           >
             <div
-              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon Icon Icon--neutral1"
               data-test-icon="flip-horizontal"
               height="12"
               name="FlipHorizontal"
@@ -299,14 +299,14 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
             />
           </div>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Flip horizontal  ⇧H
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -315,11 +315,11 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
             </div>
           </div>
           <div
-            class="ButtonGroup__button ButtonGroup__button--light"
+            class="ButtonGroup__button"
             data-test-button-group-input="flip-vertical"
           >
             <div
-              class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp ButtonGroup__icon Icon Icon--neutral1"
               data-test-icon="flip-vertical"
               height="12"
               name="FlipVertical"
@@ -327,14 +327,14 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
             />
           </div>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Flip vertical  ⇧V
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"

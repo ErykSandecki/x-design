@@ -7,20 +7,20 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
     data-test-box=""
   >
     <div
-      class="css-23f94v Toolbar Toolbar--light"
+      class="css-hyoj97 Toolbar"
       data-test-box=""
     >
       <div
-        class="css-1douohc MouseModes MouseModes--light"
+        class="css-1douohc MouseModes"
         data-test-box="toolbar"
       >
         <div
           active=""
-          class="css-1uzmw43 MouseModes__button MouseModes__button--light MouseModes__button--active MouseModes__button--active--light"
+          class="css-1uzmw43 MouseModes__button MouseModes__button--active"
           data-test-box="default"
         >
           <div
-            class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            class="css-1jnxvbp Icon Icon--neutral1"
             data-test-icon="default"
             height="16"
             name="MoveTool"
@@ -28,11 +28,11 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
           />
         </div>
         <div
-          class="css-1uzmw43 MouseModes__button MouseModes__button--light"
+          class="css-1uzmw43 MouseModes__button"
           data-test-box="toolBeltA"
         >
           <div
-            class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            class="css-1jnxvbp Icon Icon--neutral1"
             data-test-icon="toolBeltA"
             height="16"
             name="FrameTool"
@@ -40,11 +40,11 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
           />
         </div>
         <div
-          class="css-1uzmw43 MouseModes__button MouseModes__button--light"
+          class="css-1uzmw43 MouseModes__button"
           data-test-box="move"
         >
           <div
-            class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            class="css-1jnxvbp Icon Icon--neutral1"
             data-test-icon="move"
             height="16"
             name="MoveHand"
@@ -52,11 +52,11 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
           />
         </div>
         <div
-          class="css-1uzmw43 MouseModes__button MouseModes__button--light"
+          class="css-1uzmw43 MouseModes__button"
           data-test-box="comment"
         >
           <div
-            class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            class="css-1jnxvbp Icon Icon--neutral1"
             data-test-icon="comment"
             height="16"
             name="Comment"
@@ -66,26 +66,26 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
       </div>
     </div>
     <div
-      class="css-k0rgoo PanelProperties PanelProperties--light"
+      class="css-5u8gxq PanelProperties"
       data-test-box="panel-properties"
       id="panelProperties"
       style="width: 240px;"
     >
       <div
-        class="css-xmuf4s PanelProperties__areaHandleResize PanelProperties__areaHandleResize--light"
+        class="css-xmuf4s PanelProperties__area-handle-resize"
         data-test-box=""
         data-test-resize=""
       />
       <div
-        class="css-1jnxvbp Section Section--light"
+        class="css-1jnxvbp Section"
         data-test-section=""
       >
         <div
-          class="css-1jnxvbp Section__labelWrapper Section__labelWrapper--light Section__labelWrapper--separator Section__labelWrapper--separator--light"
+          class="css-1jnxvbp Section__label-wrapper Section__label-wrapper--separator"
           data-test-box=""
         >
           <small
-            class="css-1jnxvbp Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+            class="css-1jnxvbp Section__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
             data-test-text=""
             style="text-align: inherit;"
           >
@@ -97,18 +97,18 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
           />
         </div>
         <div
-          class="css-gu5024 Tabs Tabs--light"
+          class="css-gu5024 Tabs"
           data-test-tabs="panel-mode"
         >
           <div
             active=""
-            class="css-17z9djj Tabs__tab Tabs__tab--light Tabs__tab--active Tabs__tab--active--light"
+            class="css-17z9djj Tabs__tab Tabs__tab--active"
             data-test-tab="design"
           >
             Design
           </div>
           <div
-            class="css-17z9djj Tabs__tab Tabs__tab--light"
+            class="css-17z9djj Tabs__tab"
             data-test-tab="prototype"
           >
             Prototype
@@ -116,18 +116,18 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
         </div>
       </div>
       <div
-        class="PanelProperties__sections PanelProperties__sections--light"
+        class="PanelProperties__sections"
       >
         <div
-          class="css-1jnxvbp Section Section--light"
+          class="css-1jnxvbp Section"
           data-test-section="background"
         >
           <div
-            class="css-1jnxvbp Section__labelWrapper Section__labelWrapper--light Section__labelWrapper--separator Section__labelWrapper--separator--light"
+            class="css-1jnxvbp Section__label-wrapper Section__label-wrapper--separator"
             data-test-box=""
           >
             <small
-              class="css-1jnxvbp Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+              class="css-1jnxvbp Section__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
               data-test-text=""
               style="text-align: inherit;"
             >
@@ -139,11 +139,11 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
             />
           </div>
           <div
-            class="css-1jnxvbp SectionColumn SectionColumn--light"
+            class="css-1jnxvbp SectionColumn"
             data-test-section=""
           >
             <div
-              class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+              class="css-xdzdnq SectionColumnLabels"
               data-test-box=""
               style="width: calc(100% - 24px - 0px - 8px);"
             />
@@ -152,22 +152,22 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
               data-test-box=""
             >
               <div
-                class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--single SectionColumnContent--single--light"
+                class="css-biptg5 SectionColumnContent SectionColumnContent--single"
                 data-test-box=""
                 style="width: calc(100% - 24px - 0px - 8px);"
               >
                 <div
-                  class="css-1jnxvbp FieldGroup FieldGroup--light"
+                  class="css-1jnxvbp FieldGroup"
                   data-test-field-group="background"
                   data-visible-color-picker-panel="false"
                 >
                   <div
-                    class="css-1jnxvbp ColorPicker__colorInput ColorPicker__colorInput--light TextField TextField--light"
+                    class="css-1jnxvbp ColorPicker__color-input TextField"
                     data-test-text-field="color"
                     data-test-tooltip=""
                   >
                     <div
-                      class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+                      class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled"
                       data-test-text-field-wrapper="color"
                     >
                       <div
@@ -176,27 +176,27 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
                         data-test-color="background"
                       >
                         <div
-                          class="css-1axzf39 Color Color--light"
+                          class="css-1axzf39 Color"
                           data-test-box=""
                         >
                           <div
-                            class="css-agg4zg Color__picker Color__picker--light"
+                            class="css-agg4zg Color__picker"
                             data-test-box=""
                             style="background-color: rgb(241, 242, 246);"
                           />
                           <div
-                            class="css-agg4zg Color__pickerAlpha Color__pickerAlpha--light"
+                            class="css-agg4zg Color__picker-alpha"
                             data-test-box=""
                             style="background-color: rgb(241, 242, 246);"
                           />
                           <div
-                            class="css-hnxq09 Color__pickerTexture Color__pickerTexture--light"
+                            class="css-hnxq09 Color__picker-texture"
                             data-test-box=""
                           />
                         </div>
                       </div>
                       <input
-                        class="TextFieldWrapper__input TextFieldWrapper__input--light"
+                        class="TextFieldWrapper__input"
                         data-test-text-field-input="color"
                         maxlength="6"
                         value="f1f2f6"
@@ -204,16 +204,16 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
                     </div>
                   </div>
                   <div
-                    class="css-1jnxvbp ColorPicker__alphaInput ColorPicker__alphaInput--light TextField TextField--light"
+                    class="css-1jnxvbp ColorPicker__alpha-input TextField"
                     data-test-text-field="alpha"
                     data-test-tooltip=""
                   >
                     <div
-                      class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+                      class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled"
                       data-test-text-field-wrapper="alpha"
                     >
                       <input
-                        class="TextFieldWrapper__input TextFieldWrapper__input--light"
+                        class="TextFieldWrapper__input"
                         data-test-text-field-input="alpha"
                         max="100"
                         maxlength="6"
@@ -222,12 +222,12 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
                         value="100"
                       />
                       <div
-                        class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+                        class="css-e5vky9 ScrubbableInput"
                         data-test-box=""
                         data-test-scrubbable-input=""
                       >
                         <div
-                          class="ColorPicker__alphaInputUnit ColorPicker__alphaInputUnit--light"
+                          class="ColorPicker__alpha-input-unit"
                         >
                           %
                         </div>
@@ -245,12 +245,12 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
                   data-test-box=""
                 >
                   <div
-                    class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+                    class="css-1jnxvbp ButtonIcon"
                     data-test-button-icon="toggle-visibility"
                     data-test-tooltip=""
                   >
                     <div
-                      class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      class="css-1jnxvbp Icon Icon--neutral1"
                       data-test-icon="eyes-opened"
                       height="12"
                       name="EyesOpened"
@@ -258,14 +258,14 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
                     />
                   </div>
                   <div
-                    class="Tooltip Tooltip--light"
+                    class="Tooltip"
                   >
                     <div
-                      class="Tooltip__content Tooltip__content--light"
+                      class="Tooltip__content"
                     >
                       Toggle visibility
                       <div
-                        class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                        class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                         data-test-icon="carrot-down"
                         height="14"
                         name="CarrotDown"
@@ -281,22 +281,22 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
       </div>
     </div>
     <div
-      class="css-117yijb ViewBox ViewBox--light ZoomBox ZoomBox--light ZoomBox--idle ZoomBox--idle--light ZoomBox--default ZoomBox--default--light"
+      class="css-117yijb ViewBox ZoomBox ZoomBox--idle ZoomBox--default"
       data-test-box="zoom-box"
       tabindex="0"
     >
       <div
-        class="css-1jnxvbp ZoomBox__backgroundMask ZoomBox__backgroundMask--light"
+        class="css-1jnxvbp ZoomBox__background-mask"
         data-test-box="zoom-box-background-mask"
         style="background-color: rgb(241, 242, 246); display: initial;"
       />
       <div
-        class="css-1jnxvbp ZoomBox__textureBlank ZoomBox__textureBlank--light"
+        class="css-1jnxvbp ZoomBox__texture-blank"
         data-test-box=""
         style="transform: translate(0px, 0px) scale(1);"
       />
       <div
-        class="css-1j4c14e ZoomBox__zoomContent ZoomBox__zoomContent--light"
+        class="css-1j4c14e ZoomBox__zoom-content"
         data-test-box=""
         id="zoomContentId"
         style="transform: translate(0px, 0px) scale(1);"

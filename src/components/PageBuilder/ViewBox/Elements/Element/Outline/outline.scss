@@ -1,6 +1,5 @@
 .Outline {
-  @include theme('blue-1', outline, '1.5px solid');
-
+  outline: 1.5px solid var(--xd-color-blue-1);
   pointer-events: none;
   position: absolute;
   transform-origin: center center;

@@ -4,11 +4,8 @@ import { useContext } from 'react';
 // hooks
 import { useTheme } from './useTheme';
 
-// mocks
-import { classNames, classNamesWithThemeDark, classNamesWithThemeLight } from './mock/classNames';
-
 // types
-import { Theme } from 'types/enums/theme';
+import { Theme } from 'types';
 
 jest.mock('react', () => ({
   ...(jest.requireActual('react') as object),
@@ -16,35 +13,46 @@ jest.mock('react', () => ({
 }));
 
 describe('useTheme', () => {
-  it(`should append light theme modificator for every className`, () => {
+  it('should return current theme', () => {
     // mock
-    (useContext as jest.Mock).mockImplementation(() => ({
-      theme: Theme.light,
-    }));
+    (useContext as jest.Mock).mockImplementation(() => ({ setTheme: jest.fn(), theme: Theme.dark }));
 
     // before
-    const { result } = renderHook(() => useTheme(classNames, {}));
-
-    // action
-    result.current.forceUpdateClassNames();
+    const { result } = renderHook(() => useTheme());
 
     // result
-    expect(result.current.classNamesWithTheme).toEqual(classNamesWithThemeLight);
+    expect(result.current.theme).toBe(Theme.dark);
   });
 
-  it(`should append dark theme modificator for every className`, () => {
+  it('should toggle from dark to light', () => {
     // mock
-    (useContext as jest.Mock).mockImplementation(() => ({
-      theme: Theme.dark,
-    }));
+    const setTheme = jest.fn();
+
+    (useContext as jest.Mock).mockImplementation(() => ({ setTheme, theme: Theme.dark }));
 
     // before
-    const { result } = renderHook(() => useTheme(classNames, {}));
+    const { result } = renderHook(() => useTheme());
 
     // action
-    result.current.forceUpdateClassNames();
+    result.current.toggleTheme();
 
     // result
-    expect(result.current.classNamesWithTheme).toEqual(classNamesWithThemeDark);
+    expect(setTheme).toHaveBeenCalledWith(Theme.light);
+  });
+
+  it('should toggle from light to dark', () => {
+    // mock
+    const setTheme = jest.fn();
+
+    (useContext as jest.Mock).mockImplementation(() => ({ setTheme, theme: Theme.light }));
+
+    // before
+    const { result } = renderHook(() => useTheme());
+
+    // action
+    result.current.toggleTheme();
+
+    // result
+    expect(setTheme).toHaveBeenCalledWith(Theme.dark);
   });
 });

@@ -1,13 +1,10 @@
+import cx from 'classnames';
 import { FC, ReactNode } from 'react';
 
 // components
 import Box from '../../UI/Box/Box';
 
-// hooks
-import { useTheme } from 'hooks';
-
 // others
-import { className, classNames } from './classNames';
 
 // styles
 import styles from './field-group.scss';
@@ -23,13 +20,11 @@ export type TFieldGroupProps = {
 };
 
 export const FieldGroup: FC<TFieldGroupProps> = ({ attributes = {}, children, e2eValue = '' }) => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-
   return (
     <Box
       attributes={attributes}
       classes={{
-        className: cx(classNamesWithTheme[className]),
+        className: cx(styles.FieldGroup),
       }}
       e2eAttribute={E2EAttribute.fieldGroup}
       e2eValue={e2eValue}

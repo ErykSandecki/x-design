@@ -3,41 +3,41 @@
 exports[`AlignmentArea snapshots should render AlignmentArea 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp AlignmentArea AlignmentArea AlignmentArea--light"
+    class="css-1jnxvbp AlignmentArea AlignmentArea"
     data-test-alignment-area=""
   >
     <div
-      class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+      class="css-1jnxvbp AlignmentOption"
       data-test-alignment-area-option="topLeft"
       data-test-box=""
     >
       <div
-        class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--topLeft AlignmentOption__optionView--topLeft--light"
+        class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--topLeft"
         data-test-box=""
       >
         <div
-          class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+          class="css-1jnxvbp AlignmentOption__indicator"
           data-test-box=""
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+          class="css-1jnxvbp AlignmentOption__indicator"
           data-test-box=""
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+          class="css-1jnxvbp AlignmentOption__indicator"
           data-test-box=""
         />
       </div>
     </div>
     <div
-      class="Tooltip Tooltip--light"
+      class="Tooltip"
     >
       <div
-        class="Tooltip__content Tooltip__content--light"
+        class="Tooltip__content"
       >
         Align top left
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -46,37 +46,37 @@ exports[`AlignmentArea snapshots should render AlignmentArea 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+      class="css-1jnxvbp AlignmentOption"
       data-test-alignment-area-option="topCenter"
       data-test-box=""
     >
       <div
-        class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--topCenter AlignmentOption__optionView--topCenter--light"
+        class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--top-center"
         data-test-box=""
       >
         <div
-          class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+          class="css-1jnxvbp AlignmentOption__indicator"
           data-test-box=""
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+          class="css-1jnxvbp AlignmentOption__indicator"
           data-test-box=""
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+          class="css-1jnxvbp AlignmentOption__indicator"
           data-test-box=""
         />
       </div>
     </div>
     <div
-      class="Tooltip Tooltip--light"
+      class="Tooltip"
     >
       <div
-        class="Tooltip__content Tooltip__content--light"
+        class="Tooltip__content"
       >
         Align top center
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -85,37 +85,37 @@ exports[`AlignmentArea snapshots should render AlignmentArea 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+      class="css-1jnxvbp AlignmentOption"
       data-test-alignment-area-option="topRight"
       data-test-box=""
     >
       <div
-        class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--topRight AlignmentOption__optionView--topRight--light"
+        class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--top-right"
         data-test-box=""
       >
         <div
-          class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+          class="css-1jnxvbp AlignmentOption__indicator"
           data-test-box=""
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+          class="css-1jnxvbp AlignmentOption__indicator"
           data-test-box=""
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+          class="css-1jnxvbp AlignmentOption__indicator"
           data-test-box=""
         />
       </div>
     </div>
     <div
-      class="Tooltip Tooltip--light"
+      class="Tooltip"
     >
       <div
-        class="Tooltip__content Tooltip__content--light"
+        class="Tooltip__content"
       >
         Align top right
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -124,37 +124,37 @@ exports[`AlignmentArea snapshots should render AlignmentArea 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+      class="css-1jnxvbp AlignmentOption"
       data-test-alignment-area-option="left"
       data-test-box=""
     >
       <div
-        class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--left AlignmentOption__optionView--left--light"
+        class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--left"
         data-test-box=""
       >
         <div
-          class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+          class="css-1jnxvbp AlignmentOption__indicator"
           data-test-box=""
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+          class="css-1jnxvbp AlignmentOption__indicator"
           data-test-box=""
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+          class="css-1jnxvbp AlignmentOption__indicator"
           data-test-box=""
         />
       </div>
     </div>
     <div
-      class="Tooltip Tooltip--light"
+      class="Tooltip"
     >
       <div
-        class="Tooltip__content Tooltip__content--light"
+        class="Tooltip__content"
       >
         Align left
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -163,37 +163,37 @@ exports[`AlignmentArea snapshots should render AlignmentArea 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+      class="css-1jnxvbp AlignmentOption"
       data-test-alignment-area-option="center"
       data-test-box=""
     >
       <div
-        class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--center AlignmentOption__optionView--center--light"
+        class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--center"
         data-test-box=""
       >
         <div
-          class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+          class="css-1jnxvbp AlignmentOption__indicator"
           data-test-box=""
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+          class="css-1jnxvbp AlignmentOption__indicator"
           data-test-box=""
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+          class="css-1jnxvbp AlignmentOption__indicator"
           data-test-box=""
         />
       </div>
     </div>
     <div
-      class="Tooltip Tooltip--light"
+      class="Tooltip"
     >
       <div
-        class="Tooltip__content Tooltip__content--light"
+        class="Tooltip__content"
       >
         Align center
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -202,37 +202,37 @@ exports[`AlignmentArea snapshots should render AlignmentArea 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+      class="css-1jnxvbp AlignmentOption"
       data-test-alignment-area-option="right"
       data-test-box=""
     >
       <div
-        class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--right AlignmentOption__optionView--right--light"
+        class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--right"
         data-test-box=""
       >
         <div
-          class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+          class="css-1jnxvbp AlignmentOption__indicator"
           data-test-box=""
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+          class="css-1jnxvbp AlignmentOption__indicator"
           data-test-box=""
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+          class="css-1jnxvbp AlignmentOption__indicator"
           data-test-box=""
         />
       </div>
     </div>
     <div
-      class="Tooltip Tooltip--light"
+      class="Tooltip"
     >
       <div
-        class="Tooltip__content Tooltip__content--light"
+        class="Tooltip__content"
       >
         Align right
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -241,37 +241,37 @@ exports[`AlignmentArea snapshots should render AlignmentArea 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+      class="css-1jnxvbp AlignmentOption"
       data-test-alignment-area-option="bottomLeft"
       data-test-box=""
     >
       <div
-        class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--bottomLeft AlignmentOption__optionView--bottomLeft--light"
+        class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--bottomLeft"
         data-test-box=""
       >
         <div
-          class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+          class="css-1jnxvbp AlignmentOption__indicator"
           data-test-box=""
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+          class="css-1jnxvbp AlignmentOption__indicator"
           data-test-box=""
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+          class="css-1jnxvbp AlignmentOption__indicator"
           data-test-box=""
         />
       </div>
     </div>
     <div
-      class="Tooltip Tooltip--light"
+      class="Tooltip"
     >
       <div
-        class="Tooltip__content Tooltip__content--light"
+        class="Tooltip__content"
       >
         Align bottom left
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -280,37 +280,37 @@ exports[`AlignmentArea snapshots should render AlignmentArea 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp AlignmentOption AlignmentOption--light AlignmentOption--selected AlignmentOption--selected--light"
+      class="css-1jnxvbp AlignmentOption AlignmentOption--selected"
       data-test-alignment-area-option="bottomCenter"
       data-test-box=""
     >
       <div
-        class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--bottomCenter AlignmentOption__optionView--bottomCenter--light"
+        class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--bottom-center"
         data-test-box=""
       >
         <div
-          class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light AlignmentOption__indicator--selected AlignmentOption__indicator--selected--light"
+          class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--selected"
           data-test-box=""
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light AlignmentOption__indicator--selected AlignmentOption__indicator--selected--light"
+          class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--selected"
           data-test-box=""
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light AlignmentOption__indicator--selected AlignmentOption__indicator--selected--light"
+          class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--selected"
           data-test-box=""
         />
       </div>
     </div>
     <div
-      class="Tooltip Tooltip--light"
+      class="Tooltip"
     >
       <div
-        class="Tooltip__content Tooltip__content--light"
+        class="Tooltip__content"
       >
         Align bottom center
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"
@@ -319,37 +319,37 @@ exports[`AlignmentArea snapshots should render AlignmentArea 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+      class="css-1jnxvbp AlignmentOption"
       data-test-alignment-area-option="bottomRight"
       data-test-box=""
     >
       <div
-        class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--bottomRight AlignmentOption__optionView--bottomRight--light"
+        class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--bottom-right"
         data-test-box=""
       >
         <div
-          class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+          class="css-1jnxvbp AlignmentOption__indicator"
           data-test-box=""
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+          class="css-1jnxvbp AlignmentOption__indicator"
           data-test-box=""
         />
         <div
-          class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+          class="css-1jnxvbp AlignmentOption__indicator"
           data-test-box=""
         />
       </div>
     </div>
     <div
-      class="Tooltip Tooltip--light"
+      class="Tooltip"
     >
       <div
-        class="Tooltip__content Tooltip__content--light"
+        class="Tooltip__content"
       >
         Align bottom right
         <div
-          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+          class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
           data-test-icon="carrot-down"
           height="14"
           name="CarrotDown"

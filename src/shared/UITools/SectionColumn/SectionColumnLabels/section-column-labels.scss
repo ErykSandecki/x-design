@@ -4,8 +4,7 @@
   column-gap: $--xd-column-gap;
 
   &__label {
-    @include theme('neutral-2', color);
-
+    color: var(--xd-color-neutral-2);
     font-size: 9px;
     margin-bottom: 5px;
     user-select: none;

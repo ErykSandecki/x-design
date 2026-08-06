@@ -3,7 +3,7 @@
 exports[`Element snapshots should render Element 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp className Element Element--light"
+    class="css-1jnxvbp className Element"
     data-status="false"
     data-test-element="test-1"
     id="test-1"
@@ -15,7 +15,7 @@ exports[`Element snapshots should render Element 1`] = `
 exports[`Element snapshots should render Element when is hidden 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp className Element Element--light"
+    class="css-1jnxvbp className Element"
     data-status="false"
     data-test-element="test-1"
     id="test-1"
@@ -27,14 +27,14 @@ exports[`Element snapshots should render Element when is hidden 1`] = `
 exports[`Element snapshots should render Element when is selected & is multiple moving 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp className Element Element--light Element--moving Element--moving--light"
+    class="css-1jnxvbp className Element Element--moving"
     data-status="true"
     data-test-element="test-1"
     id="test-1"
     style="border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; border-top-left-radius: 0px; border-top-right-radius: 0px; left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; height: 100px; margin: 0px 0px 0px 0px; mix-blend-mode: initial; opacity: 1; overflow: hidden; padding: 0px 0px 0px 0px; position: absolute; visibility: visible; width: 100px;"
   >
     <div
-      class="css-1jnxvbp Outline Outline--light"
+      class="css-1jnxvbp Outline"
       data-test-box=""
       style="height: 100px; left: 0px; top: 0px; transform: rotate(0deg); width: 100px;"
     />
@@ -49,7 +49,7 @@ exports[`Element snapshots should render Element when is selected & is multiple 
         style="height: 100px; width: 100px;"
       />
       <svg
-        class="Corners Corners--light"
+        class="Corners"
         style="height: 102px; left: -1px; top: -1px; width: 102px;"
       >
         <rect
@@ -82,55 +82,55 @@ exports[`Element snapshots should render Element when is selected & is multiple 
         />
       </svg>
       <div
-        class="TransformArea TransformArea--light"
+        class="TransformArea"
         style="height: 100px; width: 100px;"
       >
         <div
-          class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--east TransformArea__anchorResize--east--light"
+          class="TransformArea__anchor-resize TransformArea__anchor-resize--east"
           data-test-anchor-resize="east"
         />
         <div
-          class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--north TransformArea__anchorResize--north--light"
+          class="TransformArea__anchor-resize TransformArea__anchor-resize--north"
           data-test-anchor-resize="north"
         />
         <div
-          class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--northEast TransformArea__anchorResize--northEast--light"
+          class="TransformArea__anchor-resize TransformArea__anchor-resize--north-east"
           data-test-anchor-resize="north-east"
         />
         <div
-          class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--northWest TransformArea__anchorResize--northWest--light"
+          class="TransformArea__anchor-resize TransformArea__anchor-resize--north-west"
           data-test-anchor-resize="north-west"
         />
         <div
-          class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--south TransformArea__anchorResize--south--light"
+          class="TransformArea__anchor-resize TransformArea__anchor-resize--south"
           data-test-anchor-resize="south"
         />
         <div
-          class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--southEast TransformArea__anchorResize--southEast--light"
+          class="TransformArea__anchor-resize TransformArea__anchor-resize--south-east"
           data-test-anchor-resize="south-east"
         />
         <div
-          class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--southWest TransformArea__anchorResize--southWest--light"
+          class="TransformArea__anchor-resize TransformArea__anchor-resize--south-west"
           data-test-anchor-resize="south-west"
         />
         <div
-          class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--west TransformArea__anchorResize--west--light"
+          class="TransformArea__anchor-resize TransformArea__anchor-resize--west"
           data-test-anchor-resize="west"
         />
         <div
-          class="TransformArea__anchorRotate TransformArea__anchorRotate--light TransformArea__anchorRotate--northEast TransformArea__anchorRotate--northEast--light"
+          class="TransformArea__anchor-rotate TransformArea__anchor-rotate--north-east"
           data-test-anchor-rotate="north-east"
         />
         <div
-          class="TransformArea__anchorRotate TransformArea__anchorRotate--light TransformArea__anchorRotate--northWest TransformArea__anchorRotate--northWest--light"
+          class="TransformArea__anchor-rotate TransformArea__anchor-rotate--north-west"
           data-test-anchor-rotate="north-west"
         />
         <div
-          class="TransformArea__anchorRotate TransformArea__anchorRotate--light TransformArea__anchorRotate--southEast TransformArea__anchorRotate--southEast--light"
+          class="TransformArea__anchor-rotate TransformArea__anchor-rotate--south-east"
           data-test-anchor-rotate="south-east"
         />
         <div
-          class="TransformArea__anchorRotate TransformArea__anchorRotate--light TransformArea__anchorRotate--southWest TransformArea__anchorRotate--southWest--light"
+          class="TransformArea__anchor-rotate TransformArea__anchor-rotate--south-west"
           data-test-anchor-rotate="south-west"
         />
       </div>
@@ -142,14 +142,14 @@ exports[`Element snapshots should render Element when is selected & is multiple 
 exports[`Element snapshots should render Element when is selected 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp className Element Element--light"
+    class="css-1jnxvbp className Element"
     data-status="true"
     data-test-element="test-1"
     id="test-1"
     style="border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; border-top-left-radius: 0px; border-top-right-radius: 0px; left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; height: 100px; margin: 0px 0px 0px 0px; mix-blend-mode: initial; opacity: 1; overflow: hidden; padding: 0px 0px 0px 0px; position: absolute; visibility: visible; width: 100px;"
   >
     <div
-      class="css-1jnxvbp Outline Outline--light"
+      class="css-1jnxvbp Outline"
       data-test-box=""
       style="height: 100px; left: 0px; top: 0px; transform: rotate(0deg); width: 100px;"
     />
@@ -164,7 +164,7 @@ exports[`Element snapshots should render Element when is selected 1`] = `
         style="height: 100px; width: 100px;"
       />
       <svg
-        class="Corners Corners--light"
+        class="Corners"
         style="height: 102px; left: -1px; top: -1px; width: 102px;"
       >
         <rect
@@ -197,55 +197,55 @@ exports[`Element snapshots should render Element when is selected 1`] = `
         />
       </svg>
       <div
-        class="TransformArea TransformArea--light"
+        class="TransformArea"
         style="height: 100px; width: 100px;"
       >
         <div
-          class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--east TransformArea__anchorResize--east--light"
+          class="TransformArea__anchor-resize TransformArea__anchor-resize--east"
           data-test-anchor-resize="east"
         />
         <div
-          class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--north TransformArea__anchorResize--north--light"
+          class="TransformArea__anchor-resize TransformArea__anchor-resize--north"
           data-test-anchor-resize="north"
         />
         <div
-          class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--northEast TransformArea__anchorResize--northEast--light"
+          class="TransformArea__anchor-resize TransformArea__anchor-resize--north-east"
           data-test-anchor-resize="north-east"
         />
         <div
-          class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--northWest TransformArea__anchorResize--northWest--light"
+          class="TransformArea__anchor-resize TransformArea__anchor-resize--north-west"
           data-test-anchor-resize="north-west"
         />
         <div
-          class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--south TransformArea__anchorResize--south--light"
+          class="TransformArea__anchor-resize TransformArea__anchor-resize--south"
           data-test-anchor-resize="south"
         />
         <div
-          class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--southEast TransformArea__anchorResize--southEast--light"
+          class="TransformArea__anchor-resize TransformArea__anchor-resize--south-east"
           data-test-anchor-resize="south-east"
         />
         <div
-          class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--southWest TransformArea__anchorResize--southWest--light"
+          class="TransformArea__anchor-resize TransformArea__anchor-resize--south-west"
           data-test-anchor-resize="south-west"
         />
         <div
-          class="TransformArea__anchorResize TransformArea__anchorResize--light TransformArea__anchorResize--west TransformArea__anchorResize--west--light"
+          class="TransformArea__anchor-resize TransformArea__anchor-resize--west"
           data-test-anchor-resize="west"
         />
         <div
-          class="TransformArea__anchorRotate TransformArea__anchorRotate--light TransformArea__anchorRotate--northEast TransformArea__anchorRotate--northEast--light"
+          class="TransformArea__anchor-rotate TransformArea__anchor-rotate--north-east"
           data-test-anchor-rotate="north-east"
         />
         <div
-          class="TransformArea__anchorRotate TransformArea__anchorRotate--light TransformArea__anchorRotate--northWest TransformArea__anchorRotate--northWest--light"
+          class="TransformArea__anchor-rotate TransformArea__anchor-rotate--north-west"
           data-test-anchor-rotate="north-west"
         />
         <div
-          class="TransformArea__anchorRotate TransformArea__anchorRotate--light TransformArea__anchorRotate--southEast TransformArea__anchorRotate--southEast--light"
+          class="TransformArea__anchor-rotate TransformArea__anchor-rotate--south-east"
           data-test-anchor-rotate="south-east"
         />
         <div
-          class="TransformArea__anchorRotate TransformArea__anchorRotate--light TransformArea__anchorRotate--southWest TransformArea__anchorRotate--southWest--light"
+          class="TransformArea__anchor-rotate TransformArea__anchor-rotate--south-west"
           data-test-anchor-rotate="south-west"
         />
       </div>
@@ -257,7 +257,7 @@ exports[`Element snapshots should render Element when is selected 1`] = `
 exports[`Element snapshots should render Element when width & height is auto 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp className Element Element--light"
+    class="css-1jnxvbp className Element"
     data-status="false"
     data-test-element="test-1"
     id="test-1"

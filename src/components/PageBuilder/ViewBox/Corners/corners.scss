@@ -3,9 +3,13 @@
 
 .Corners {
   @include enter-delay;
-  @include theme-selector('neutral-1', fill, rect);
-  @include theme-selector('blue-1', stroke, rect);
-  @include theme('blue-1', border, '1px solid');
+
+  border: 1px solid var(--xd-color-blue-1);
+
+  rect {
+    fill: var(--xd-color-neutral-1);
+    stroke: var(--xd-color-blue-1);
+  }
 
   box-sizing: border-box;
   overflow: visible;

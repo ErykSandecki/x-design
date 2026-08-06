@@ -1,43 +1,19 @@
-import { useContext, useLayoutEffect, useMemo, useState } from 'react';
+import { useContext } from 'react';
 
 // core
-import { Context } from 'core';
+import { Context, TContext } from 'core';
 
 // types
 import { Theme } from 'types/enums/theme';
-import { TObject } from 'types';
-import { TThemeClassNames, TThemeClassNamesApplier } from './types';
 
-// utils
-import { getClassNamesWithTheme } from './utils/getClassNamesWithTheme';
-import { themeClassNamesApplier } from './utils/themeClassNamesApplier';
-
-export type TUseTheme<T> = {
-  classNamesWithTheme: TThemeClassNames<T>;
-  cx: TThemeClassNamesApplier;
-  forceUpdateClassNames: TFunc;
-  theme: Theme;
+export type TUseTheme = Pick<TContext, 'setTheme' | 'theme'> & {
+  toggleTheme: () => void;
 };
 
-export const useTheme = <T,>(classNames: T, styles: TObject<string>): TUseTheme<T> => {
-  const { theme } = useContext(Context);
-  const [classNamesWithTheme, setClassNamesWithTheme] = useState(getClassNamesWithTheme(classNames, theme));
-  const cx = useMemo(() => themeClassNamesApplier(styles, theme), [classNamesWithTheme, styles, theme]);
+export const useTheme = (): TUseTheme => {
+  const { setTheme, theme } = useContext(Context);
 
-  const updateClassNames = (): void => {
-    const classNamesWithTheme = getClassNamesWithTheme(classNames, theme);
+  const toggleTheme = (): void => setTheme(theme === Theme.dark ? Theme.light : Theme.dark);
 
-    setClassNamesWithTheme(classNamesWithTheme);
-  };
-
-  useLayoutEffect(() => {
-    updateClassNames();
-  }, [theme]);
-
-  return {
-    classNamesWithTheme,
-    cx,
-    forceUpdateClassNames: updateClassNames,
-    theme,
-  };
+  return { setTheme, theme, toggleTheme };
 };

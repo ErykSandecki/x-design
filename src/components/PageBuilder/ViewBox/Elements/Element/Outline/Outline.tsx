@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import { createPortal } from 'react-dom';
 import { FC } from 'react';
 
@@ -7,11 +8,7 @@ import { Box } from 'shared';
 // core
 import { useRefs } from 'pages/PageBuilderPage/core/RefsProvider';
 
-// hooks
-import { useTheme } from 'hooks';
-
 // others
-import { className, classNames } from './classNames';
 
 // styles
 import styles from './outline.scss';
@@ -29,13 +26,12 @@ type TOutlineProps = {
 
 const Outline: FC<TOutlineProps> = ({ angle, height, width, x, y }) => {
   const { overlayContainerRef } = useRefs();
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   return (
     overlayContainerRef.current &&
     createPortal(
       <Box
-        classes={{ className: cx(classNamesWithTheme[className]) }}
+        classes={{ className: cx(styles.Outline) }}
         style={{
           height,
           left: `${x}px`,

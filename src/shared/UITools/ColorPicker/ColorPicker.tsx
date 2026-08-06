@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import { ColorPickerProps } from 'antd';
 import { FC, useState } from 'react';
 
@@ -9,10 +10,8 @@ import { TPanelProps } from './Panel/Panel';
 
 // hooks
 import { useColorPickerEvents } from './hooks/useColorPickerEvents';
-import { useTheme } from 'hooks';
 
 // others
-import { classes, className, classNames } from './classNames';
 
 // styles
 import styles from './color-picker.scss';
@@ -23,7 +22,7 @@ import { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute
 import { TUIProps } from '../../UI/types';
 
 export type TColorPickerProps = Pick<TPanelProps, 'activeSampler' | 'onClickColorSampler' | 'onClickSampler'> &
-  TUIProps<typeof classes> &
+  TUIProps<{ className: string }> &
   Omit<ColorPickerProps, 'arrow' | 'onOpenChange' | 'open' | 'panelRender'> & {
     alpha: TColor['alpha'];
     color: string;
@@ -43,7 +42,6 @@ export const ColorPicker: FC<TColorPickerProps> = ({
   onClickSampler,
   ...restProps
 }) => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const [visible, setVisible] = useState(false);
 
   const { alphaValue, colorValue, onBlurAlpha, onBlurColor, onChangeAlpha, onChangeColor, onChangeColorPicker } =
@@ -55,8 +53,8 @@ export const ColorPicker: FC<TColorPickerProps> = ({
         activeSampler={activeSampler}
         alpha={alpha}
         alphaValue={alphaValue}
-        className={cx(classNamesWithTheme.colorInput)}
-        classNameParent={cx(classNamesWithTheme[className])}
+        className={cx(styles['ColorPicker__color-input'])}
+        classNameParent={cx(styles.ColorPicker)}
         color={color}
         colorValue={colorValue}
         e2eValue={e2eValue}
@@ -72,8 +70,8 @@ export const ColorPicker: FC<TColorPickerProps> = ({
       <ColorPickerInputAlpha
         alpha={alpha}
         alphaValue={alphaValue}
-        className={cx(classNamesWithTheme.alphaInput)}
-        classNameInputUnit={cx(classNamesWithTheme.alphaInputUnit)}
+        className={cx(styles['ColorPicker__alpha-input'])}
+        classNameInputUnit={cx(styles['ColorPicker__alpha-input-unit'])}
         onBlur={onBlurAlpha}
         onChangeAlpha={onChangeAlpha}
         onChangeAlphaHandler={onChangeAlphaHandler}

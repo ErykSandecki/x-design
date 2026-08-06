@@ -1,6 +1,4 @@
 .ButtonIcon {
-  @include theme-selector('neutral-3', background-color, '&:hover:not(.ButtonIcon--selected)');
-
   align-items: center;
   border-radius: 5px;
   cursor: pointer;
@@ -9,13 +7,11 @@
   justify-content: center;
   width: 24px;
 
-  &--selected {
-    &--light {
-      background-color: rgba($color: $--xd-blue-1--light, $alpha: 30%);
-    }
+  &:hover:not(.ButtonIcon--selected) {
+    background-color: var(--xd-color-neutral-3);
+  }
 
-    &--dark {
-      background-color: rgba($color: $--xd-blue-1--dark, $alpha: 30%);
-    }
+  &--selected {
+    background-color: color-mix(in srgb, var(--xd-color-blue-1) 30%, transparent);
   }
 }

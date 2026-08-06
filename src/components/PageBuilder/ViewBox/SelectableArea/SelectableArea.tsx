@@ -1,13 +1,10 @@
+import cx from 'classnames';
 import { FC } from 'react';
 
 // components
 import { Box } from 'shared';
 
-// hooks
-import { useTheme } from 'hooks';
-
 // others
-import { className, classNames } from './classNames';
 
 // styles
 import styles from './selectable-area.scss';
@@ -20,7 +17,6 @@ export type TSelectableAreaProps = {
 };
 
 const SelectableArea: FC<TSelectableAreaProps> = ({ selectableArea }) => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { x1, x2, y1, y2 } = selectableArea || {};
 
   if (!selectableArea || !selectableArea.visible) {
@@ -30,10 +26,10 @@ const SelectableArea: FC<TSelectableAreaProps> = ({ selectableArea }) => {
   return (
     <Box
       classes={{
-        className: cx(classNamesWithTheme[className]),
+        className: cx(styles.SelectableArea),
       }}
     >
-      <svg className={cx(classNamesWithTheme.area)}>
+      <svg className={cx(styles.SelectableArea__area)}>
         <path d={`M ${x1},${y1} H ${x2} V ${y2} H ${x1} V ${y1}`} />
       </svg>
     </Box>

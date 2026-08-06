@@ -1,7 +1,6 @@
 .SelectOptions {
-  @include theme('neutral-1', color);
-  @include theme('neutral-4', background-color);
-
+  color: var(--xd-color-neutral-1);
+  background-color: var(--xd-color-neutral-4);
   border-radius: 10px;
   box-shadow:
     #00000033 0 5px 5px -3px,

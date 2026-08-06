@@ -1,10 +1,7 @@
+import cx from 'classnames';
 import { FC } from 'react';
 
-// hooks
-import { useTheme } from 'hooks';
-
 // others
-import { className as StoryBlockCodeClassName, classNames } from './classNames';
 
 // styles
 import styles from './story-block-code.scss';
@@ -23,8 +20,6 @@ export type TStoryBlockCodeProps = {
 };
 
 export const StoryBlockCode: FC<TStoryBlockCodeProps> = ({ blocksCodeData, className = '' }) => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-
   const imports = blocksCodeData
     .map(({ imports }) => imports)
     .filter(Boolean)
@@ -41,27 +36,27 @@ export const StoryBlockCode: FC<TStoryBlockCodeProps> = ({ blocksCodeData, class
     .flat();
 
   return (
-    <div className={cx(className, classNamesWithTheme[StoryBlockCodeClassName])}>
+    <div className={cx(className, styles['StoryBlockCode'])}>
       {/* IMPORTS */}
       {imports.map((importObj, key) => (
         <p
-          className={cx(classNamesWithTheme.imports)}
+          className={cx(styles['StoryBlockCode__imports'])}
           dangerouslySetInnerHTML={{
-            __html: parseImportToHTMLContext(importObj, classNamesWithTheme, cx),
+            __html: parseImportToHTMLContext(importObj, styles),
           }}
           key={key}
         />
       ))}
 
       {/* SEPARATOR */}
-      {propsLength > 0 && <div className={cx(classNamesWithTheme.separator)} />}
+      {propsLength > 0 && <div className={cx(styles['StoryBlockCode__separator'])} />}
 
       {/* VARIABLES */}
       {variables.map((variable, key) => (
         <div
-          className={cx(classNamesWithTheme.variables)}
+          className={cx(styles['StoryBlockCode__variables'])}
           dangerouslySetInnerHTML={{
-            __html: parseVariableToHTMLContext(classNamesWithTheme, cx, variable),
+            __html: parseVariableToHTMLContext(styles, variable),
           }}
           key={key}
         />
@@ -73,9 +68,9 @@ export const StoryBlockCode: FC<TStoryBlockCodeProps> = ({ blocksCodeData, class
 
         return props.map((props, key) => (
           <div
-            className={cx(classNamesWithTheme.components)}
+            className={cx(styles['StoryBlockCode__components'])}
             dangerouslySetInnerHTML={{
-              __html: parseComponentToHTMLContext(props, componentName, classNamesWithTheme, cx),
+              __html: parseComponentToHTMLContext(props, componentName, styles),
             }}
             key={key}
           />

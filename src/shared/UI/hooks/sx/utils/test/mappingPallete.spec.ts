@@ -1,38 +1,24 @@
 // others
-import { THEME_COLORS } from 'constant/themeColors';
+import { colors } from 'constant/colors';
 
 // types
-import { ColorsTheme, Theme } from 'types';
+import { ColorsTheme } from 'types';
 
 // utils
 import { mappingPallete } from '../mappingPallete';
 
 describe('mappingPallete', () => {
-  it('should return pallete styles in dark mode', () => {
-    // mock
-    const color = THEME_COLORS[Theme.dark][ColorsTheme.blue1];
-
+  it('should return pallete styles', () => {
     // before
-    const result = mappingPallete({ bg: ColorsTheme.blue1, cl: ColorsTheme.blue1 }, Theme.dark);
+    const result = mappingPallete({ bg: ColorsTheme.blue1, cl: ColorsTheme.blue1 });
 
     // result
-    expect(result).toBe(`color: ${color};\nbackground-color: ${color};`);
-  });
-
-  it('should return pallete styles in light mode', () => {
-    // mock
-    const color = THEME_COLORS[Theme.light][ColorsTheme.blue1];
-
-    // before
-    const result = mappingPallete({ bg: ColorsTheme.blue1, cl: ColorsTheme.blue1 }, Theme.light);
-
-    // result
-    expect(result).toBe(`color: ${color};\nbackground-color: ${color};`);
+    expect(result).toBe(`color: ${colors.blue1};\nbackground-color: ${colors.blue1};`);
   });
 
   it('should return empty data', () => {
     // before
-    const result = mappingPallete({}, Theme.dark);
+    const result = mappingPallete({});
 
     // result
     expect(result).toBe('');

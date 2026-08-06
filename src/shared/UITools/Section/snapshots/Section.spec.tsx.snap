@@ -3,15 +3,15 @@
 exports[`Section snapshots should render Section 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp Section Section--light"
+    class="css-1jnxvbp Section"
     data-test-section=""
   >
     <div
-      class="css-1jnxvbp Section__labelWrapper Section__labelWrapper--light Section__labelWrapper--separator Section__labelWrapper--separator--light"
+      class="css-1jnxvbp Section__label-wrapper Section__label-wrapper--separator"
       data-test-box=""
     >
       <small
-        class="css-1jnxvbp Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp Section__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -30,15 +30,15 @@ exports[`Section snapshots should render Section 1`] = `
 exports[`Section snapshots should render with buttons 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp Section Section--light"
+    class="css-1jnxvbp Section"
     data-test-section=""
   >
     <div
-      class="css-1jnxvbp Section__labelWrapper Section__labelWrapper--light Section__labelWrapper--separator Section__labelWrapper--separator--light"
+      class="css-1jnxvbp Section__label-wrapper Section__label-wrapper--separator"
       data-test-box=""
     >
       <small
-        class="css-1jnxvbp Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp Section__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -49,12 +49,12 @@ exports[`Section snapshots should render with buttons 1`] = `
         data-test-box=""
       >
         <div
-          class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+          class="css-1jnxvbp ButtonIcon"
           data-test-button-icon=""
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            class="css-1jnxvbp Icon Icon--neutral1"
             data-test-icon="close"
             height="12"
             name="Close"

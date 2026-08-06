@@ -14,10 +14,13 @@ $--xd-font-family:
 $--xd-font-size: 11px;
 
 .TextFieldWrapper {
-  @include theme('neutral-3', background-color);
-  @include theme('neutral-3', border, '1px solid');
-  @include theme-selector('blue-1', border-color, '&:hover .TextFieldWrapper__chip--attached-value');
-  @include theme-selector('neutral-5', background-color, '&:hover .TextFieldWrapper__chip--attached-value');
+  background-color: var(--xd-color-neutral-3);
+  border: 1px solid var(--xd-color-neutral-3);
+
+  &:hover .TextFieldWrapper__chip--attached-value {
+    background-color: var(--xd-color-neutral-5);
+    border-color: var(--xd-color-blue-1);
+  }
 
   align-items: center;
   border-radius: 5px;
@@ -58,8 +61,7 @@ $--xd-font-size: 11px;
   }
 
   &__input {
-    @include theme('neutral-1', color);
-
+    color: var(--xd-color-neutral-1);
     background: none;
     border: none;
     outline: none;

@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import { ButtonHTMLAttributes, FC, ReactNode, Ref } from 'react';
 
 // components
@@ -8,10 +9,8 @@ import { useClickEvent } from './hooks/useClickEvent';
 import { useIcon } from './hooks/useIcon';
 import { useRippleEffect } from 'hooks/useRippleEffect/useRippleEffect';
 import { useSX } from '../hooks/sx/useSX';
-import { useTheme } from 'hooks';
 
 // others
-import { classes, className as classNameButton, classNames } from './classNames';
 
 // styles
 import styles from './styles/button.scss';
@@ -23,8 +22,24 @@ import { InputSize } from '../enums';
 import { TIconProps } from '../Icon/Icon';
 import { TUIProps } from '../types';
 
+const buttonModificators: Record<string, string> = {
+  contained: 'Button--contained',
+  error: 'Button--error',
+  forcedHover: 'Button--forced-hover',
+  fullwidth: 'Button--fullwidth',
+  large: 'Button--large',
+  medium: 'Button--medium',
+  outlined: 'Button--outlined',
+  primary: 'Button--primary',
+  secondary: 'Button--secondary',
+  small: 'Button--small',
+  success: 'Button--success',
+  text: 'Button--text',
+  warning: 'Button--warning',
+};
+
 export type TButtonProps = Omit<ButtonHTMLAttributes<HTMLElement>, 'className' | 'color' | 'style'> &
-  TUIProps<typeof classes> & {
+  TUIProps<{ className: string }> & {
     children?: ReactNode;
     color?: ButtonColor;
     disabledRippleEffect?: boolean;
@@ -60,9 +75,8 @@ export const Button: FC<TButtonProps> = ({
   variant = ButtonVariant.contained,
   ...restProps
 }) => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-  const { rippleEffect, triggerRippleEffect } = useRippleEffect(classNames[classNameButton].name, styles);
-  const Icon = useIcon(classNamesWithTheme, cx, size);
+  const { rippleEffect, triggerRippleEffect } = useRippleEffect('Button', styles);
+  const Icon = useIcon(styles, size);
   const onClickHandler = useClickEvent(disabledRippleEffect, onClick, triggerRippleEffect);
   const sxClassName = useSX(depsSx, sx);
 
@@ -72,12 +86,14 @@ export const Button: FC<TButtonProps> = ({
         className={cx(
           sxClassName,
           classes.className,
-          classNamesWithTheme[classNameButton].name,
-          [classNamesWithTheme[classNameButton].modificators.fullwidth, fullWidth],
-          [classNamesWithTheme[classNameButton].modificators.forcedHover, forcedHover],
-          classNamesWithTheme[classNameButton].modificators[color],
-          classNamesWithTheme[classNameButton].modificators[size],
-          classNamesWithTheme[classNameButton].modificators[variant],
+          styles.Button,
+          styles[buttonModificators[color]],
+          styles[buttonModificators[size]],
+          styles[buttonModificators[variant]],
+          {
+            [styles['Button--fullwidth']]: fullWidth,
+            [styles['Button--forced-hover']]: forcedHover,
+          },
         )}
         disabled={disabled}
         onClick={onClickHandler}

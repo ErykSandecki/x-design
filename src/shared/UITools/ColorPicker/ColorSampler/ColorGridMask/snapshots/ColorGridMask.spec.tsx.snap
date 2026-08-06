@@ -3,7 +3,7 @@
 exports[`ColorGrid snapshots should render ColorGrid 1`] = `
 <DocumentFragment>
   <div
-    class="css-1kjclab ColorGridMask ColorGridMask--light"
+    class="css-1kjclab ColorGridMask"
     data-test-box=""
     data-test-button="color-sampler"
   />

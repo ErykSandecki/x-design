@@ -3,7 +3,7 @@
 exports[`Corners snapshots should render Corners 1`] = `
 <DocumentFragment>
   <svg
-    class="Corners Corners--light"
+    class="Corners"
     style="height: 0px; left: 0px; top: 0px; width: 0px;"
   >
     <rect

@@ -1,14 +1,11 @@
+import cx from 'classnames';
 import { FC } from 'react';
 
 // components
 import Box from '../../../UI/Box/Box';
 import { Small } from '../../../UI/Typography';
 
-// hooks
-import { useTheme } from 'hooks';
-
 // others
-import { className, classNames } from './classNames';
 
 // styles
 import styles from './cells.scss';
@@ -22,7 +19,6 @@ export type TCellsProps = {
 };
 
 export const Cells: FC<TCellsProps> = ({ columns, rows }) => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const parsedColumns = parseInt(columns) || 0;
   const parsedRows = parseInt(rows) || 0;
   const targetColumns = parsedColumns > 10 ? 10 : parsedColumns;
@@ -32,7 +28,7 @@ export const Cells: FC<TCellsProps> = ({ columns, rows }) => {
   return (
     <Box
       classes={{
-        className: cx(className, classNamesWithTheme[className]),
+        className: cx('Cells', styles.Cells),
       }}
       e2eAttribute={E2EAttribute.gridArea}
       style={{
@@ -42,7 +38,7 @@ export const Cells: FC<TCellsProps> = ({ columns, rows }) => {
     >
       {Array.from(Array(total), (_, index) => (
         <Box
-          classes={{ className: cx(classNamesWithTheme.cell) }}
+          classes={{ className: cx(styles.Cells__cell) }}
           key={index}
           style={{
             borderBottomLeftRadius: index === total - targetColumns ? '5px' : 'none',
@@ -52,7 +48,7 @@ export const Cells: FC<TCellsProps> = ({ columns, rows }) => {
           }}
         />
       ))}
-      <Small classes={{ className: cx(classNamesWithTheme.sizes) }}>
+      <Small classes={{ className: cx(styles.Cells__sizes) }}>
         {columns} <span>x</span> {rows}
       </Small>
     </Box>

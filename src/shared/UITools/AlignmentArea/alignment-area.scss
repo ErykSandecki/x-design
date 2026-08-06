@@ -1,7 +1,6 @@
 .AlignmentArea {
-  @include theme('neutral-3', background-color);
-  @include theme('neutral-3', border, '1px solid');
-
+  background-color: var(--xd-color-neutral-3);
+  border: 1px solid var(--xd-color-neutral-3);
   align-items: center;
   border-radius: 5px;
   box-sizing: border-box;

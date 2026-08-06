@@ -4,7 +4,6 @@ import { render } from '@testing-library/react';
 import Typography from './Typography';
 
 // others
-import { className as classNameTypography, classNames } from './classNames';
 
 // types
 import { ColorsTheme } from 'types';
@@ -15,6 +14,38 @@ import { TypographyFontStyle, TypographyFontWeight, TypographyVariant } from './
 import { enumToArray } from 'utils';
 import { getByE2EAttribute } from 'test/testHelpers';
 import { getDataTestAttribute } from '../../E2EDataAttributes/utils';
+
+const typographyModificators: Record<string, string> = {
+  blue1: 'Typography--blue1',
+  blue2: 'Typography--blue2',
+  bold: 'Typography--bold',
+  green1: 'Typography--green1',
+  green2: 'Typography--green2',
+  gutterBottom: 'Typography--gutter-bottom',
+  h1: 'Typography--h1',
+  h2: 'Typography--h2',
+  h3: 'Typography--h3',
+  h4: 'Typography--h4',
+  h5: 'Typography--h5',
+  h6: 'Typography--h6',
+  italic: 'Typography--italic',
+  medium: 'Typography--medium',
+  neutral1: 'Typography--neutral1',
+  neutral2: 'Typography--neutral2',
+  neutral3: 'Typography--neutral3',
+  neutral4: 'Typography--neutral4',
+  neutral5: 'Typography--neutral5',
+  noWrap: 'Typography--no-wrap',
+  normal: 'Typography--normal',
+  orange1: 'Typography--orange1',
+  p: 'Typography--p',
+  pink1: 'Typography--pink1',
+  red1: 'Typography--red1',
+  regular: 'Typography--regular',
+  skyBlue1: 'Typography--skyBlue1',
+  small: 'Typography--small',
+  violet1: 'Typography--violet1',
+};
 
 const className = 'className';
 
@@ -58,7 +89,7 @@ describe('Typography props', () => {
     );
 
     // result
-    expect(container.querySelector(`.${className}`)).toHaveClass(`${classNameTypography}--${ColorsTheme.blue1}`);
+    expect(container.querySelector(`.${className}`)).toHaveClass(`${'Typography'}--${ColorsTheme.blue1}`);
   });
 
   it('should pass component', () => {
@@ -112,9 +143,7 @@ describe('Typography props', () => {
 
     // result
     fontStyles.forEach((fontStyle) => {
-      expect(getByE2EAttribute(container, E2EAttribute.text, fontStyle)).toHaveClass(
-        classNames[classNameTypography].modificators[fontStyle],
-      );
+      expect(getByE2EAttribute(container, E2EAttribute.text, fontStyle)).toHaveClass(typographyModificators[fontStyle]);
     });
   });
 
@@ -136,7 +165,7 @@ describe('Typography props', () => {
     // result
     fontWeights.forEach((fontWeight) => {
       expect(getByE2EAttribute(container, E2EAttribute.text, fontWeight)).toHaveClass(
-        classNames[classNameTypography].modificators[fontWeight],
+        typographyModificators[fontWeight],
       );
     });
   });
@@ -150,9 +179,7 @@ describe('Typography props', () => {
     );
 
     // result
-    expect(container.querySelector(`.${className}`)).toHaveClass(
-      classNames[classNameTypography].modificators.gutterBottom,
-    );
+    expect(container.querySelector(`.${className}`)).toHaveClass('Typography--gutter-bottom');
   });
 
   it('should pass innerHtml', () => {
@@ -174,9 +201,7 @@ describe('Typography props', () => {
     const { container } = render(<Typography noWrap>children</Typography>);
 
     // result
-    expect(getByE2EAttribute(container, E2EAttribute.text)).toHaveClass(
-      classNames[classNameTypography].modificators.noWrap,
-    );
+    expect(getByE2EAttribute(container, E2EAttribute.text)).toHaveClass('Typography--no-wrap');
   });
 
   it('should pass variant', () => {
@@ -196,9 +221,7 @@ describe('Typography props', () => {
 
     // result
     variants.forEach((fontType) => {
-      expect(getByE2EAttribute(container, E2EAttribute.text, fontType)).toHaveClass(
-        classNames[classNameTypography].modificators[fontType],
-      );
+      expect(getByE2EAttribute(container, E2EAttribute.text, fontType)).toHaveClass(typographyModificators[fontType]);
 
       expect(container.getElementsByTagName(fontType)[0]).not.toBeNull();
     });

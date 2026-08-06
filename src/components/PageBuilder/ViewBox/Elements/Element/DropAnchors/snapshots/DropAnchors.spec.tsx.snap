@@ -7,27 +7,27 @@ exports[`DropAnchors snapshots should render DropAnchors 1`] = `
     data-test-box=""
   >
     <div
-      class="css-9ljzna Prompts Prompts--light"
+      class="css-9ljzna Prompts"
       data-test-box=""
     />
     <div
-      class="css-9ljzna Prompts Prompts--light"
+      class="css-9ljzna Prompts"
       data-test-box=""
     />
     <div
-      class="css-9ljzna Prompts Prompts--light"
+      class="css-9ljzna Prompts"
       data-test-box=""
     />
     <div
-      class="css-9ljzna Prompts Prompts--light"
+      class="css-9ljzna Prompts"
       data-test-box=""
     />
     <div
-      class="css-1xpffs9 Anchors Anchors--light Anchors--bottom Anchors--bottom--light"
+      class="css-1xpffs9 Anchors Anchors--bottom"
       data-test-anchor="bottom"
     />
     <div
-      class="css-1xpffs9 Anchors Anchors--light Anchors--top Anchors--top--light"
+      class="css-1xpffs9 Anchors Anchors--top"
       data-test-anchor="top"
     />
   </div>
@@ -41,35 +41,35 @@ exports[`DropAnchors snapshots should render some prompt when grid for bottom 1`
     data-test-box=""
   >
     <div
-      class="css-9ljzna Prompts Prompts--light Prompts--bottom Prompts--bottom--light"
+      class="css-9ljzna Prompts Prompts--bottom"
       data-test-box=""
     />
     <div
-      class="css-9ljzna Prompts Prompts--light"
+      class="css-9ljzna Prompts"
       data-test-box=""
     />
     <div
-      class="css-9ljzna Prompts Prompts--light"
+      class="css-9ljzna Prompts"
       data-test-box=""
     />
     <div
-      class="css-9ljzna Prompts Prompts--light"
+      class="css-9ljzna Prompts"
       data-test-box=""
     />
     <div
-      class="css-1xpffs9 Anchors Anchors--light Anchors--left Anchors--left--light"
+      class="css-1xpffs9 Anchors Anchors--left"
       data-test-anchor="left"
     />
     <div
-      class="css-1xpffs9 Anchors Anchors--light Anchors--right Anchors--right--light"
+      class="css-1xpffs9 Anchors Anchors--right"
       data-test-anchor="right"
     />
     <div
-      class="css-1xpffs9 Anchors Anchors--light Anchors--bottom Anchors--bottom--light"
+      class="css-1xpffs9 Anchors Anchors--bottom"
       data-test-anchor="bottom"
     />
     <div
-      class="css-1xpffs9 Anchors Anchors--light Anchors--top Anchors--top--light"
+      class="css-1xpffs9 Anchors Anchors--top"
       data-test-anchor="top"
     />
   </div>
@@ -83,35 +83,35 @@ exports[`DropAnchors snapshots should render some prompt when grid for left 1`] 
     data-test-box=""
   >
     <div
-      class="css-9ljzna Prompts Prompts--light"
+      class="css-9ljzna Prompts"
       data-test-box=""
     />
     <div
-      class="css-9ljzna Prompts Prompts--light Prompts--left Prompts--left--light"
+      class="css-9ljzna Prompts Prompts--left"
       data-test-box=""
     />
     <div
-      class="css-9ljzna Prompts Prompts--light"
+      class="css-9ljzna Prompts"
       data-test-box=""
     />
     <div
-      class="css-9ljzna Prompts Prompts--light"
+      class="css-9ljzna Prompts"
       data-test-box=""
     />
     <div
-      class="css-1xpffs9 Anchors Anchors--light Anchors--left Anchors--left--light"
+      class="css-1xpffs9 Anchors Anchors--left"
       data-test-anchor="left"
     />
     <div
-      class="css-1xpffs9 Anchors Anchors--light Anchors--right Anchors--right--light"
+      class="css-1xpffs9 Anchors Anchors--right"
       data-test-anchor="right"
     />
     <div
-      class="css-1xpffs9 Anchors Anchors--light Anchors--bottom Anchors--bottom--light"
+      class="css-1xpffs9 Anchors Anchors--bottom"
       data-test-anchor="bottom"
     />
     <div
-      class="css-1xpffs9 Anchors Anchors--light Anchors--top Anchors--top--light"
+      class="css-1xpffs9 Anchors Anchors--top"
       data-test-anchor="top"
     />
   </div>
@@ -125,35 +125,35 @@ exports[`DropAnchors snapshots should render some prompt when grid for right 1`]
     data-test-box=""
   >
     <div
-      class="css-9ljzna Prompts Prompts--light"
+      class="css-9ljzna Prompts"
       data-test-box=""
     />
     <div
-      class="css-9ljzna Prompts Prompts--light"
+      class="css-9ljzna Prompts"
       data-test-box=""
     />
     <div
-      class="css-9ljzna Prompts Prompts--light Prompts--right Prompts--right--light"
+      class="css-9ljzna Prompts Prompts--right"
       data-test-box=""
     />
     <div
-      class="css-9ljzna Prompts Prompts--light"
+      class="css-9ljzna Prompts"
       data-test-box=""
     />
     <div
-      class="css-1xpffs9 Anchors Anchors--light Anchors--left Anchors--left--light"
+      class="css-1xpffs9 Anchors Anchors--left"
       data-test-anchor="left"
     />
     <div
-      class="css-1xpffs9 Anchors Anchors--light Anchors--right Anchors--right--light"
+      class="css-1xpffs9 Anchors Anchors--right"
       data-test-anchor="right"
     />
     <div
-      class="css-1xpffs9 Anchors Anchors--light Anchors--bottom Anchors--bottom--light"
+      class="css-1xpffs9 Anchors Anchors--bottom"
       data-test-anchor="bottom"
     />
     <div
-      class="css-1xpffs9 Anchors Anchors--light Anchors--top Anchors--top--light"
+      class="css-1xpffs9 Anchors Anchors--top"
       data-test-anchor="top"
     />
   </div>
@@ -167,35 +167,35 @@ exports[`DropAnchors snapshots should render some prompt when grid for top 1`] =
     data-test-box=""
   >
     <div
-      class="css-9ljzna Prompts Prompts--light"
+      class="css-9ljzna Prompts"
       data-test-box=""
     />
     <div
-      class="css-9ljzna Prompts Prompts--light"
+      class="css-9ljzna Prompts"
       data-test-box=""
     />
     <div
-      class="css-9ljzna Prompts Prompts--light"
+      class="css-9ljzna Prompts"
       data-test-box=""
     />
     <div
-      class="css-9ljzna Prompts Prompts--light Prompts--top Prompts--top--light"
+      class="css-9ljzna Prompts Prompts--top"
       data-test-box=""
     />
     <div
-      class="css-1xpffs9 Anchors Anchors--light Anchors--left Anchors--left--light"
+      class="css-1xpffs9 Anchors Anchors--left"
       data-test-anchor="left"
     />
     <div
-      class="css-1xpffs9 Anchors Anchors--light Anchors--right Anchors--right--light"
+      class="css-1xpffs9 Anchors Anchors--right"
       data-test-anchor="right"
     />
     <div
-      class="css-1xpffs9 Anchors Anchors--light Anchors--bottom Anchors--bottom--light"
+      class="css-1xpffs9 Anchors Anchors--bottom"
       data-test-anchor="bottom"
     />
     <div
-      class="css-1xpffs9 Anchors Anchors--light Anchors--top Anchors--top--light"
+      class="css-1xpffs9 Anchors Anchors--top"
       data-test-anchor="top"
     />
   </div>
@@ -209,27 +209,27 @@ exports[`DropAnchors snapshots should render with next prompt for bottom 1`] = `
     data-test-box=""
   >
     <div
-      class="css-9ljzna Prompts Prompts--light Prompts--bottom Prompts--bottom--light"
+      class="css-9ljzna Prompts Prompts--bottom"
       data-test-box=""
     />
     <div
-      class="css-9ljzna Prompts Prompts--light"
+      class="css-9ljzna Prompts"
       data-test-box=""
     />
     <div
-      class="css-9ljzna Prompts Prompts--light"
+      class="css-9ljzna Prompts"
       data-test-box=""
     />
     <div
-      class="css-9ljzna Prompts Prompts--light"
+      class="css-9ljzna Prompts"
       data-test-box=""
     />
     <div
-      class="css-1xpffs9 Anchors Anchors--light Anchors--bottom Anchors--bottom--light"
+      class="css-1xpffs9 Anchors Anchors--bottom"
       data-test-anchor="bottom"
     />
     <div
-      class="css-1xpffs9 Anchors Anchors--light Anchors--top Anchors--top--light"
+      class="css-1xpffs9 Anchors Anchors--top"
       data-test-anchor="top"
     />
   </div>
@@ -243,27 +243,27 @@ exports[`DropAnchors snapshots should render with next prompt for right 1`] = `
     data-test-box=""
   >
     <div
-      class="css-9ljzna Prompts Prompts--light"
+      class="css-9ljzna Prompts"
       data-test-box=""
     />
     <div
-      class="css-9ljzna Prompts Prompts--light"
+      class="css-9ljzna Prompts"
       data-test-box=""
     />
     <div
-      class="css-9ljzna Prompts Prompts--light Prompts--right Prompts--right--light"
+      class="css-9ljzna Prompts Prompts--right"
       data-test-box=""
     />
     <div
-      class="css-9ljzna Prompts Prompts--light"
+      class="css-9ljzna Prompts"
       data-test-box=""
     />
     <div
-      class="css-1xpffs9 Anchors Anchors--light Anchors--left Anchors--left--light"
+      class="css-1xpffs9 Anchors Anchors--left"
       data-test-anchor="left"
     />
     <div
-      class="css-1xpffs9 Anchors Anchors--light Anchors--right Anchors--right--light"
+      class="css-1xpffs9 Anchors Anchors--right"
       data-test-anchor="right"
     />
   </div>
@@ -277,27 +277,27 @@ exports[`DropAnchors snapshots should render with prev prompt for left 1`] = `
     data-test-box=""
   >
     <div
-      class="css-9ljzna Prompts Prompts--light"
+      class="css-9ljzna Prompts"
       data-test-box=""
     />
     <div
-      class="css-9ljzna Prompts Prompts--light Prompts--left Prompts--left--light"
+      class="css-9ljzna Prompts Prompts--left"
       data-test-box=""
     />
     <div
-      class="css-9ljzna Prompts Prompts--light"
+      class="css-9ljzna Prompts"
       data-test-box=""
     />
     <div
-      class="css-9ljzna Prompts Prompts--light"
+      class="css-9ljzna Prompts"
       data-test-box=""
     />
     <div
-      class="css-1xpffs9 Anchors Anchors--light Anchors--left Anchors--left--light"
+      class="css-1xpffs9 Anchors Anchors--left"
       data-test-anchor="left"
     />
     <div
-      class="css-1xpffs9 Anchors Anchors--light Anchors--right Anchors--right--light"
+      class="css-1xpffs9 Anchors Anchors--right"
       data-test-anchor="right"
     />
   </div>
@@ -311,27 +311,27 @@ exports[`DropAnchors snapshots should render with prev prompt for top 1`] = `
     data-test-box=""
   >
     <div
-      class="css-9ljzna Prompts Prompts--light"
+      class="css-9ljzna Prompts"
       data-test-box=""
     />
     <div
-      class="css-9ljzna Prompts Prompts--light"
+      class="css-9ljzna Prompts"
       data-test-box=""
     />
     <div
-      class="css-9ljzna Prompts Prompts--light"
+      class="css-9ljzna Prompts"
       data-test-box=""
     />
     <div
-      class="css-9ljzna Prompts Prompts--light Prompts--top Prompts--top--light"
+      class="css-9ljzna Prompts Prompts--top"
       data-test-box=""
     />
     <div
-      class="css-1xpffs9 Anchors Anchors--light Anchors--bottom Anchors--bottom--light"
+      class="css-1xpffs9 Anchors Anchors--bottom"
       data-test-anchor="bottom"
     />
     <div
-      class="css-1xpffs9 Anchors Anchors--light Anchors--top Anchors--top--light"
+      class="css-1xpffs9 Anchors Anchors--top"
       data-test-anchor="top"
     />
   </div>

@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import { FC, memo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -12,11 +13,9 @@ import { ZoomBox } from 'shared';
 import { useRefs } from 'pages/PageBuilderPage/core/RefsProvider';
 
 // others
-import { className, classNames } from './classNames';
 import { MOUSE_MODE_DISABLED } from 'pages/PageBuilderPage/constants';
 
 // hooks
-import { useTheme } from 'hooks';
 import { useViewBoxEvents } from './hooks/useViewBoxEvents';
 
 // store
@@ -44,7 +43,6 @@ const ViewBox: FC<TViewBoxProps> = ({ coordinates, mouseMode, setCoordinates, se
   const dispatch = useDispatch();
   const possibleElement = useSelector(eventSelectorCreator('possibleElement'));
   const { zoomBoxRef, zoomContentRef } = useRefs();
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { selectableArea, ...events } = useViewBoxEvents(coordinates, mouseMode, setMouseMode);
 
   return (
@@ -53,10 +51,9 @@ const ViewBox: FC<TViewBoxProps> = ({ coordinates, mouseMode, setCoordinates, se
       backgroundColor={data.color}
       backgroundVissible={background[0].visible}
       classes={{
-        className: cx(classNamesWithTheme[className].name, [
-          classNamesWithTheme[className].modificators.createFrame,
-          mouseMode === MouseMode.toolBeltA,
-        ]),
+        className: cx(styles.ViewBox, {
+          [styles['ViewBox--create-frame']]: mouseMode === MouseMode.toolBeltA,
+        }),
       }}
       colorSampler={colorSampler as boolean}
       coordinates={coordinates}

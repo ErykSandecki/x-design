@@ -1,6 +1,5 @@
 .Section {
-  @include theme('neutral-3', border-bottom, '1px solid');
-
+  border-bottom: 1px solid var(--xd-color-neutral-3);
   padding: 12px 8px 12px 16px;
 
   &__label-wrapper {
@@ -14,8 +13,7 @@
   }
 
   &__label {
-    @include theme('neutral-1', color);
-
+    color: var(--xd-color-neutral-1);
     align-items: center;
     display: flex;
     font-size: 11px;

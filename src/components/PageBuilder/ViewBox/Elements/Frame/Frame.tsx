@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import { createPortal } from 'react-dom';
 import { FC, memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -10,11 +11,7 @@ import { Box, Small } from 'shared';
 // core
 import { useRefs } from 'pages/PageBuilderPage/core/RefsProvider';
 
-// hooks
-import { useTheme } from 'hooks';
-
 // others
-import { className as classNameFrame, classNames } from './classNames';
 import { translationNameSpace } from './contants';
 
 // styles
@@ -26,17 +23,25 @@ import { TElementProps } from '../types';
 // utils
 import { getElementStickWallPosition } from 'components/PageBuilder/ViewBox/utils/getElementStickWallPosition';
 
+const labelModificators: Record<string, string> = {
+  bottom: 'Frame__label--bottom',
+  hover: 'Frame__label--hover',
+  left: 'Frame__label--left',
+  right: 'Frame__label--right',
+  selected: 'Frame__label--selected',
+  top: 'Frame__label--top',
+};
+
 export type TFrameProps = TElementProps;
 
 const Frame: FC<TFrameProps> = ({ className, id, index, mouseMode, parentId, type }) => {
   const { overlayContainerRef } = useRefs();
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { t } = useTranslation();
 
   return (
     <Element
       classes={{
-        className: cx(className, classNamesWithTheme[classNameFrame]),
+        className: cx(className, styles.Frame),
       }}
       id={id}
       index={index}
@@ -53,7 +58,7 @@ const Frame: FC<TFrameProps> = ({ className, id, index, mouseMode, parentId, typ
               parentId === '-1' &&
               createPortal(
                 <Box
-                  classes={{ className: cx(classNamesWithTheme.wrapper) }}
+                  classes={{ className: cx(styles.Frame__wrapper) }}
                   style={{
                     height: `${height}px`,
                     left: `${coordinates.x}px`,
@@ -64,12 +69,10 @@ const Frame: FC<TFrameProps> = ({ className, id, index, mouseMode, parentId, typ
                 >
                   <Small
                     classes={{
-                      className: cx(
-                        classNamesWithTheme.label.name,
-                        [classNamesWithTheme.label.modificators.hover, hover],
-                        [classNamesWithTheme.label.modificators.selected, selected],
-                        classNamesWithTheme.label.modificators[stickWall],
-                      ),
+                      className: cx(styles.Frame__label, styles[labelModificators[stickWall]], {
+                        [styles['Frame__label--hover']]: hover,
+                        [styles['Frame__label--selected']]: selected,
+                      }),
                     }}
                   >
                     {t(`${translationNameSpace}.label.createFrame`)}

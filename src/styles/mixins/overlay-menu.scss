@@ -1,9 +1,11 @@
 @import './box-shadow';
 
 @mixin overlay-menu {
-  @include theme('neutral-5', background-color);
-  @include theme('neutral-3', border-color);
-  @include theme('neutral-1', color);
+  background-color: var(--xd-color-neutral-5);
+  border-color: var(--xd-color-neutral-3);
+  color: var(--xd-color-neutral-1);
+
+  @include box-shadow-panel;
 
   border: 1px solid;
   box-sizing: border-box;
@@ -14,12 +16,6 @@
   transition-property: opacity, transform, visibility;
   visibility: hidden;
   z-index: 2;
-
-  @each $mode in $--xd-theme-list {
-    &--#{$mode} {
-      @include box-shadow-panel($mode);
-    }
-  }
 
   &--selected {
     opacity: 1;

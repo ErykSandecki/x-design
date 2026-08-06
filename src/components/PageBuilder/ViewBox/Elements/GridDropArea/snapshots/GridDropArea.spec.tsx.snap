@@ -3,7 +3,7 @@
 exports[`DropAnchors snapshots should render DropAnchors 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp GridDropArea GridDropArea--light"
+    class="css-1jnxvbp GridDropArea"
     data-test-box="grid-drop-area"
   />
 </DocumentFragment>

@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import { FC, useRef } from 'react';
 import { noop } from 'lodash';
 
@@ -9,10 +10,9 @@ import Tooltip, { TTooltipProps } from '../../UI/Tooltip/Tooltip';
 
 // hooks
 import { useClickEvent } from './hooks/useClickEvent';
-import { useOutsideClick, useTheme } from 'hooks';
+import { useOutsideClick } from 'hooks';
 
 // others
-import { className, classNames } from './classNames';
 
 // styles
 import styles from './button-icon.scss';
@@ -58,7 +58,6 @@ export const ButtonIcon: FC<TSectionProps> = ({
   ...restProps
 }) => {
   const ref = useRef(null);
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { selected, setSelected } = useOutsideClick([], ref, popoverOnClose, idContainer);
   const isSelected = selected || selectedButtonIcon;
   const onClickHandler = useClickEvent(disabledSelection, onClick, selected, setSelected);
@@ -67,10 +66,9 @@ export const ButtonIcon: FC<TSectionProps> = ({
     <Tooltip ref={ref} {...tooltip}>
       <Box
         classes={{
-          className: cx(classNamesWithTheme[className].name, [
-            classNamesWithTheme[className].modificators.selected,
-            isSelected,
-          ]),
+          className: cx(styles.ButtonIcon, {
+            [styles['ButtonIcon--selected']]: isSelected,
+          }),
         }}
         e2eAttribute={E2EAttribute.buttonIcon}
         e2eValue={e2eValue}

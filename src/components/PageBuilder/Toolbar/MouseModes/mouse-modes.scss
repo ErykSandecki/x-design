@@ -2,14 +2,16 @@
   $self: &;
 
   &__button {
-    @include theme-selector('neutral-3', background-color, #{'&:not('}#{$self}#{'__button--active):hover'});
-
     cursor:
       url('assets/icons/cursors/pointer.png') 10 6,
       auto;
 
+    &:not(#{$self}__button--active):hover {
+      background-color: var(--xd-color-neutral-3);
+    }
+
     &--active {
-      @include theme('blue-2', background-color);
+      background-color: var(--xd-color-blue-2);
     }
   }
 }

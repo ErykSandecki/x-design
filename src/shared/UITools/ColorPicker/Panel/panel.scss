@@ -1,5 +1,5 @@
 .Panel {
   &__header {
-    @include theme('neutral-3', border-bottom, '1px solid');
+    border-bottom: 1px solid var(--xd-color-neutral-3);
   }
 }

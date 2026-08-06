@@ -1,4 +1,3 @@
-export * from './classNames';
 export * from './color';
 export * from './components/background/types';
 export * from './components/enums';

@@ -82,8 +82,9 @@ const config: StorybookConfig = {
           loader: 'css-loader',
           options: {
             modules: {
+              exportLocalsConvention: 'as-is',
               exportOnlyLocals: false,
-              localIdentName: `${'cl__'}[local]__[contenthash:base64:5]`,
+              localIdentName: '[local]',
               namedExport: false,
             },
           },

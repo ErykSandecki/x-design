@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import { createPortal } from 'react-dom';
 import { FC, ReactNode, useRef } from 'react';
 import { noop } from 'lodash';
@@ -9,10 +10,8 @@ import Icon, { TIconProps } from '../UI/Icon/Icon';
 
 // hooks
 import { useScrubbableInputEvents } from './hooks/useScrubbableInputEvents';
-import { useTheme } from 'hooks';
 
 // others
-import { className, classNames } from './classNames';
 
 // styles
 import styles from './scrubbable-input.scss';
@@ -52,7 +51,6 @@ export const ScrubbableInput: FC<TScrubbableInputProps> = ({
   value,
 }) => {
   const inputRef = useRef(null);
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   const { mousePosition, ...events } = useScrubbableInputEvents(
     inputRef,
@@ -69,10 +67,9 @@ export const ScrubbableInput: FC<TScrubbableInputProps> = ({
     <E2EDataAttribute type={E2EAttribute.scrubbableInput} value={e2eValue}>
       <Box
         classes={{
-          className: cx(classNamesWithTheme[className].name, [
-            classNamesWithTheme[className].modificators.disabled,
-            disabled,
-          ]),
+          className: cx(styles.ScrubbableInput, {
+            [styles['ScrubbableInput--disabled']]: disabled,
+          }),
         }}
         ref={inputRef}
         sx={{ alignItems: 'center', display: 'flex' }}
@@ -85,7 +82,7 @@ export const ScrubbableInput: FC<TScrubbableInputProps> = ({
         {mousePosition &&
           createPortal(
             <Icon
-              classes={{ className: cx(classNamesWithTheme.handler) }}
+              classes={{ className: cx(styles.ScrubbableInput__handler) }}
               height={14}
               name="EWResize"
               style={{

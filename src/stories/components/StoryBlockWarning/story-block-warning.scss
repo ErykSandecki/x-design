@@ -7,14 +7,12 @@
   margin: 20px 0;
   padding: 10px 20px;
 
-  &--light {
+  background-color: #5a360033;
+  border-color: #dea500;
+
+  [data-theme='light'] & {
     background-color: #fff9eb;
     border-color: #ffdc48;
-  }
-
-  &--dark {
-    background-color: #5a360033;
-    border-color: #dea500;
   }
 
   &__context {
@@ -36,12 +34,10 @@
     line-height: 1.5;
     word-break: break-word;
 
-    &--light {
-      color: #001e3c;
-    }
+    color: #f3f6f9;
 
-    &--dark {
-      color: #f3f6f9;
+    [data-theme='light'] & {
+      color: #001e3c;
     }
   }
 

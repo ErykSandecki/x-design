@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import { FC, memo, useRef } from 'react';
 
 // components
@@ -6,10 +7,8 @@ import { Box } from 'shared';
 
 // hooks
 import { useElementEvents } from './hooks/useElementEvents';
-import { useTheme } from 'hooks';
 
 // others
-import { className as classNameElement, classNames, classes } from './classNames';
 import { DATA_STATUS_ATTRIBUTE } from './constants';
 
 // styles
@@ -28,7 +27,7 @@ import { getLayout } from './utils/getLayout';
 import { getPosition } from './utils/getPosition';
 
 export type TElementProps = {
-  classes: typeof classes;
+  classes: { className: string };
   children: TElementChildren;
   id: TElement['id'];
   index: number;
@@ -39,7 +38,6 @@ export type TElementProps = {
 
 const Element: FC<TElementProps> = ({ classes, children, id, index, mouseMode, parentId, type }) => {
   const elementRef = useRef<HTMLDivElement>(null);
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
 
   const {
     alignment,
@@ -79,12 +77,10 @@ const Element: FC<TElementProps> = ({ classes, children, id, index, mouseMode, p
     <Box
       attributes={{ [DATA_STATUS_ATTRIBUTE]: isSelected ? 'true' : 'false' }}
       classes={{
-        className: cx(
-          classes.className,
-          classNamesWithTheme[classNameElement].name,
-          [classNamesWithTheme[classNameElement].modificators.hover, isHover],
-          [classNamesWithTheme[classNameElement].modificators.moving, isMoving],
-        ),
+        className: cx(classes.className, styles.Element, {
+          [styles['Element--hover']]: isHover,
+          [styles['Element--moving']]: isMoving,
+        }),
       }}
       e2eAttribute={E2EAttribute.element}
       e2eValue={id}

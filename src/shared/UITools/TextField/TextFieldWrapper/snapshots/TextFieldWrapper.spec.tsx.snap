@@ -3,40 +3,40 @@
 exports[`TextFieldWrapper snapshots should click and open popover 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--chip TextFieldWrapper--chip--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+    class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--chip"
     data-test-text-field-wrapper="text-field"
   >
     <input
-      class="TextFieldWrapper__input TextFieldWrapper__input--light"
+      class="TextFieldWrapper__input"
       data-test-text-field-input="text-field"
       maxlength="6"
       value="value"
     />
     <div
-      class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+      class="css-zcp5dz TextFieldPopover"
       data-test-box=""
     >
       <div
-        class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+        class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
         data-test-icon="detached"
         height="12"
         name="Detached"
         width="12"
       />
       <div
-        class="css-1c8p9kb Popover Popover--light Popover--selected Popover--selected--light"
+        class="css-6i6anv Popover Popover--selected"
         data-test-box=""
         data-test-popover="popover"
         style="left: 0px; top: 0px;"
       >
         <div
-          class="css-qef3st"
+          class="css-3q7iqb"
           data-test-box=""
         />
       </div>
     </div>
     <div
-      class="css-1jnxvbp Chip Chip--light TextFieldWrapper__chip TextFieldWrapper__chip--light TextFieldWrapper__chip--attachedValue TextFieldWrapper__chip--attachedValue--light TextFieldChip TextFieldChip--light"
+      class="css-1jnxvbp Chip TextFieldWrapper__chip TextFieldWrapper__chip--attached-value TextFieldChip"
       data-test-chip=""
     >
       auto
@@ -48,11 +48,11 @@ exports[`TextFieldWrapper snapshots should click and open popover 1`] = `
 exports[`TextFieldWrapper snapshots should click on input 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+    class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled"
     data-test-text-field-wrapper="text-field"
   >
     <input
-      class="TextFieldWrapper__input TextFieldWrapper__input--light"
+      class="TextFieldWrapper__input"
       data-test-text-field-input="text-field"
       maxlength="6"
     />
@@ -63,11 +63,11 @@ exports[`TextFieldWrapper snapshots should click on input 1`] = `
 exports[`TextFieldWrapper snapshots should render TextFieldWrapper 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+    class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled"
     data-test-text-field-wrapper="text-field"
   >
     <input
-      class="TextFieldWrapper__input TextFieldWrapper__input--light"
+      class="TextFieldWrapper__input"
       data-test-text-field-input="text-field"
       maxlength="6"
     />
@@ -78,17 +78,17 @@ exports[`TextFieldWrapper snapshots should render TextFieldWrapper 1`] = `
 exports[`TextFieldWrapper snapshots should render with chip 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--chip TextFieldWrapper--chip--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+    class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--chip"
     data-test-text-field-wrapper="text-field"
   >
     <input
-      class="TextFieldWrapper__input TextFieldWrapper__input--light"
+      class="TextFieldWrapper__input"
       data-test-text-field-input="text-field"
       maxlength="6"
       value="value"
     />
     <div
-      class="css-1jnxvbp Chip Chip--light TextFieldWrapper__chip TextFieldWrapper__chip--light TextFieldWrapper__chip--attachedValue TextFieldWrapper__chip--attachedValue--light TextFieldChip TextFieldChip--light"
+      class="css-1jnxvbp Chip TextFieldWrapper__chip TextFieldWrapper__chip--attached-value TextFieldChip"
       data-test-chip=""
     >
       auto
@@ -100,33 +100,33 @@ exports[`TextFieldWrapper snapshots should render with chip 1`] = `
 exports[`TextFieldWrapper snapshots should render with popover 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+    class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled"
     data-test-text-field-wrapper="text-field"
   >
     <input
-      class="TextFieldWrapper__input TextFieldWrapper__input--light"
+      class="TextFieldWrapper__input"
       data-test-text-field-input="text-field"
       maxlength="6"
     />
     <div
-      class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+      class="css-zcp5dz TextFieldPopover"
       data-test-box=""
     >
       <div
-        class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+        class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
         data-test-icon="variant"
         height="12"
         name="Variant"
         width="12"
       />
       <div
-        class="css-1c8p9kb Popover Popover--light"
+        class="css-6i6anv Popover"
         data-test-box=""
         data-test-popover="popover"
         style="left: 0px; top: 0px;"
       >
         <div
-          class="css-qef3st"
+          class="css-3q7iqb"
           data-test-box=""
         />
       </div>

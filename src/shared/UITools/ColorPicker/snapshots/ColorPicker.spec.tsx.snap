@@ -3,17 +3,17 @@
 exports[`ColorPicker snapshots should render ColorPicker 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp FieldGroup FieldGroup--light"
+    class="css-1jnxvbp FieldGroup"
     data-test-field-group=""
     data-visible-color-picker-panel="false"
   >
     <div
-      class="css-1jnxvbp ColorPicker__colorInput ColorPicker__colorInput--light TextField TextField--light"
+      class="css-1jnxvbp ColorPicker__color-input TextField"
       data-test-text-field="color"
       data-test-tooltip=""
     >
       <div
-        class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+        class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled"
         data-test-text-field-wrapper="color"
       >
         <div
@@ -22,27 +22,27 @@ exports[`ColorPicker snapshots should render ColorPicker 1`] = `
           data-test-color=""
         >
           <div
-            class="css-1axzf39 Color Color--light"
+            class="css-1axzf39 Color"
             data-test-box=""
           >
             <div
-              class="css-agg4zg Color__picker Color__picker--light"
+              class="css-agg4zg Color__picker"
               data-test-box=""
               style="background-color: rgb(255, 255, 255);"
             />
             <div
-              class="css-agg4zg Color__pickerAlpha Color__pickerAlpha--light"
+              class="css-agg4zg Color__picker-alpha"
               data-test-box=""
               style="background-color: rgb(255, 255, 255);"
             />
             <div
-              class="css-hnxq09 Color__pickerTexture Color__pickerTexture--light"
+              class="css-hnxq09 Color__picker-texture"
               data-test-box=""
             />
           </div>
         </div>
         <input
-          class="TextFieldWrapper__input TextFieldWrapper__input--light"
+          class="TextFieldWrapper__input"
           data-test-text-field-input="color"
           maxlength="6"
           value="ffffff"
@@ -50,16 +50,16 @@ exports[`ColorPicker snapshots should render ColorPicker 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp ColorPicker__alphaInput ColorPicker__alphaInput--light TextField TextField--light"
+      class="css-1jnxvbp ColorPicker__alpha-input TextField"
       data-test-text-field="alpha"
       data-test-tooltip=""
     >
       <div
-        class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+        class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled"
         data-test-text-field-wrapper="alpha"
       >
         <input
-          class="TextFieldWrapper__input TextFieldWrapper__input--light"
+          class="TextFieldWrapper__input"
           data-test-text-field-input="alpha"
           max="100"
           maxlength="6"
@@ -68,12 +68,12 @@ exports[`ColorPicker snapshots should render ColorPicker 1`] = `
           value="100"
         />
         <div
-          class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+          class="css-e5vky9 ScrubbableInput"
           data-test-box=""
           data-test-scrubbable-input=""
         >
           <div
-            class="ColorPicker__alphaInputUnit ColorPicker__alphaInputUnit--light"
+            class="ColorPicker__alpha-input-unit"
           >
             %
           </div>

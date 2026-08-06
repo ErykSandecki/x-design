@@ -3,16 +3,16 @@
 exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+      class="css-xdzdnq SectionColumnLabels"
       data-test-box=""
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -24,26 +24,26 @@ exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
       data-test-box=""
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--twoInputs SectionColumnContent--twoInputs--light"
+        class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp TextField TextField--light"
+          class="css-1jnxvbp TextField"
           data-test-text-field="x"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="x"
           >
             <div
-              class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+              class="css-e5vky9 ScrubbableInput"
               data-test-box=""
               data-test-scrubbable-input="x"
             >
               <small
-                class="css-1jnxvbp Typography Typography--light Typography--neutral2 Typography--neutral2--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                class="css-1jnxvbp Typography Typography--neutral2 Typography--regular Typography--normal Typography--small"
                 data-test-text=""
                 style="text-align: inherit;"
               >
@@ -51,7 +51,7 @@ exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
               </small>
             </div>
             <input
-              class="TextFieldWrapper__input TextFieldWrapper__input--light"
+              class="TextFieldWrapper__input"
               data-test-text-field-input="x"
               maxlength="6"
               type="number"
@@ -60,14 +60,14 @@ exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
           </div>
         </div>
         <div
-          class="Tooltip Tooltip--light"
+          class="Tooltip"
         >
           <div
-            class="Tooltip__content Tooltip__content--light"
+            class="Tooltip__content"
           >
             X - position
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -76,21 +76,21 @@ exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
           </div>
         </div>
         <div
-          class="css-1jnxvbp TextField TextField--light"
+          class="css-1jnxvbp TextField"
           data-test-text-field="y"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="y"
           >
             <div
-              class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+              class="css-e5vky9 ScrubbableInput"
               data-test-box=""
               data-test-scrubbable-input="y"
             >
               <small
-                class="css-1jnxvbp Typography Typography--light Typography--neutral2 Typography--neutral2--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                class="css-1jnxvbp Typography Typography--neutral2 Typography--regular Typography--normal Typography--small"
                 data-test-text=""
                 style="text-align: inherit;"
               >
@@ -98,7 +98,7 @@ exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
               </small>
             </div>
             <input
-              class="TextFieldWrapper__input TextFieldWrapper__input--light"
+              class="TextFieldWrapper__input"
               data-test-text-field-input="y"
               maxlength="6"
               type="number"
@@ -107,14 +107,14 @@ exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
           </div>
         </div>
         <div
-          class="Tooltip Tooltip--light"
+          class="Tooltip"
         >
           <div
-            class="Tooltip__content Tooltip__content--light"
+            class="Tooltip__content"
           >
             Y - position
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -140,16 +140,16 @@ exports[`ColumnPosition snapshots should render ColumnPosition 1`] = `
 exports[`ColumnPosition snapshots should render when some element has alignment 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+      class="css-xdzdnq SectionColumnLabels"
       data-test-box=""
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -161,26 +161,26 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
       data-test-box=""
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--twoInputs SectionColumnContent--twoInputs--light"
+        class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp TextField TextField--light"
+          class="css-1jnxvbp TextField"
           data-test-text-field="x"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--disabled TextFieldWrapper--disabled--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--disabled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="x"
           >
             <div
-              class="css-e5vky9 ScrubbableInput ScrubbableInput--light ScrubbableInput--disabled ScrubbableInput--disabled--light"
+              class="css-e5vky9 ScrubbableInput ScrubbableInput--disabled"
               data-test-box=""
               data-test-scrubbable-input="x"
             >
               <small
-                class="css-1jnxvbp Typography Typography--light Typography--neutral2 Typography--neutral2--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                class="css-1jnxvbp Typography Typography--neutral2 Typography--regular Typography--normal Typography--small"
                 data-test-text=""
                 style="text-align: inherit;"
               >
@@ -188,7 +188,7 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
               </small>
             </div>
             <input
-              class="TextFieldWrapper__input TextFieldWrapper__input--light"
+              class="TextFieldWrapper__input"
               data-test-text-field-input="x"
               disabled=""
               maxlength="6"
@@ -198,14 +198,14 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
           </div>
         </div>
         <div
-          class="Tooltip Tooltip--light"
+          class="Tooltip"
         >
           <div
-            class="Tooltip__content Tooltip__content--light"
+            class="Tooltip__content"
           >
             X - position
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -214,21 +214,21 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
           </div>
         </div>
         <div
-          class="css-1jnxvbp TextField TextField--light"
+          class="css-1jnxvbp TextField"
           data-test-text-field="y"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--disabled TextFieldWrapper--disabled--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--disabled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="y"
           >
             <div
-              class="css-e5vky9 ScrubbableInput ScrubbableInput--light ScrubbableInput--disabled ScrubbableInput--disabled--light"
+              class="css-e5vky9 ScrubbableInput ScrubbableInput--disabled"
               data-test-box=""
               data-test-scrubbable-input="y"
             >
               <small
-                class="css-1jnxvbp Typography Typography--light Typography--neutral2 Typography--neutral2--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                class="css-1jnxvbp Typography Typography--neutral2 Typography--regular Typography--normal Typography--small"
                 data-test-text=""
                 style="text-align: inherit;"
               >
@@ -236,7 +236,7 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
               </small>
             </div>
             <input
-              class="TextFieldWrapper__input TextFieldWrapper__input--light"
+              class="TextFieldWrapper__input"
               data-test-text-field-input="y"
               disabled=""
               maxlength="6"
@@ -246,14 +246,14 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
           </div>
         </div>
         <div
-          class="Tooltip Tooltip--light"
+          class="Tooltip"
         >
           <div
-            class="Tooltip__content Tooltip__content--light"
+            class="Tooltip__content"
           >
             Y - position
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -271,26 +271,26 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
           data-test-box=""
         >
           <div
-            class="css-1jnxvbp ConstrainsView ConstrainsView--light"
+            class="css-1jnxvbp ConstrainsView"
             data-test-box=""
           >
             <div
-              class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--bottom ConstrainsView__constrain--bottom--light"
+              class="ConstrainsView__constrain ConstrainsView__constrain--bottom"
             />
             <div
-              class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--centerHorizontal ConstrainsView__constrain--centerHorizontal--light"
+              class="ConstrainsView__constrain ConstrainsView__constrain--center-horizontal"
             />
             <div
-              class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--centerVertical ConstrainsView__constrain--centerVertical--light"
+              class="ConstrainsView__constrain ConstrainsView__constrain--center-vertical"
             />
             <div
-              class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--left ConstrainsView__constrain--left--light"
+              class="ConstrainsView__constrain ConstrainsView__constrain--left"
             />
             <div
-              class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--right ConstrainsView__constrain--right--light"
+              class="ConstrainsView__constrain ConstrainsView__constrain--right"
             />
             <div
-              class="ConstrainsView__constrain ConstrainsView__constrain--light ConstrainsView__constrain--top ConstrainsView__constrain--top--light"
+              class="ConstrainsView__constrain ConstrainsView__constrain--top"
             />
           </div>
         </div>
@@ -303,16 +303,16 @@ exports[`ColumnPosition snapshots should render when some element has alignment 
 exports[`ColumnPosition snapshots should render when values are mixed 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
+    class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
     data-test-section=""
   >
     <div
-      class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+      class="css-xdzdnq SectionColumnLabels"
       data-test-box=""
       style="width: calc(100% - 24px - 0px - 8px);"
     >
       <small
-        class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -324,26 +324,26 @@ exports[`ColumnPosition snapshots should render when values are mixed 1`] = `
       data-test-box=""
     >
       <div
-        class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--twoInputs SectionColumnContent--twoInputs--light"
+        class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <div
-          class="css-1jnxvbp TextField TextField--light"
+          class="css-1jnxvbp TextField"
           data-test-text-field="x"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="x"
           >
             <div
-              class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+              class="css-e5vky9 ScrubbableInput"
               data-test-box=""
               data-test-scrubbable-input="x"
             >
               <small
-                class="css-1jnxvbp Typography Typography--light Typography--neutral2 Typography--neutral2--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                class="css-1jnxvbp Typography Typography--neutral2 Typography--regular Typography--normal Typography--small"
                 data-test-text=""
                 style="text-align: inherit;"
               >
@@ -351,7 +351,7 @@ exports[`ColumnPosition snapshots should render when values are mixed 1`] = `
               </small>
             </div>
             <input
-              class="TextFieldWrapper__input TextFieldWrapper__input--light"
+              class="TextFieldWrapper__input"
               data-test-text-field-input="x"
               maxlength="6"
               type="text"
@@ -360,14 +360,14 @@ exports[`ColumnPosition snapshots should render when values are mixed 1`] = `
           </div>
         </div>
         <div
-          class="Tooltip Tooltip--light"
+          class="Tooltip"
         >
           <div
-            class="Tooltip__content Tooltip__content--light"
+            class="Tooltip__content"
           >
             X - position
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -376,21 +376,21 @@ exports[`ColumnPosition snapshots should render when values are mixed 1`] = `
           </div>
         </div>
         <div
-          class="css-1jnxvbp TextField TextField--light"
+          class="css-1jnxvbp TextField"
           data-test-text-field="y"
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+            class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
             data-test-text-field-wrapper="y"
           >
             <div
-              class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+              class="css-e5vky9 ScrubbableInput"
               data-test-box=""
               data-test-scrubbable-input="y"
             >
               <small
-                class="css-1jnxvbp Typography Typography--light Typography--neutral2 Typography--neutral2--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                class="css-1jnxvbp Typography Typography--neutral2 Typography--regular Typography--normal Typography--small"
                 data-test-text=""
                 style="text-align: inherit;"
               >
@@ -398,7 +398,7 @@ exports[`ColumnPosition snapshots should render when values are mixed 1`] = `
               </small>
             </div>
             <input
-              class="TextFieldWrapper__input TextFieldWrapper__input--light"
+              class="TextFieldWrapper__input"
               data-test-text-field-input="y"
               maxlength="6"
               type="text"
@@ -407,14 +407,14 @@ exports[`ColumnPosition snapshots should render when values are mixed 1`] = `
           </div>
         </div>
         <div
-          class="Tooltip Tooltip--light"
+          class="Tooltip"
         >
           <div
-            class="Tooltip__content Tooltip__content--light"
+            class="Tooltip__content"
           >
             Y - position
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"

@@ -1,41 +1,36 @@
+import cx from 'classnames';
 import { isArray } from 'lodash';
 
 // others
-import { classNames as classNamesStoryBlockCode } from '../classNames';
 import { HtmlCode } from '../constants';
 
 // types
 import { TComponentAttributes, TProps } from '../types';
-import { TThemeClassNames, TThemeClassNamesApplier } from '../../../../hooks/useTheme/types';
+import { TObject } from 'types';
 
 // utils
 import { getHTMLElement } from './common';
 
-const parseAttributesToHTML = (
-  attributes: Array<TComponentAttributes>,
-  classNames: TThemeClassNames<typeof classNamesStoryBlockCode>,
-  cx: TThemeClassNamesApplier,
-): string => {
+const parseAttributesToHTML = (attributes: Array<TComponentAttributes>, styles: TObject<string>): string => {
   const context = attributes
     .map(
       ({ name, value }) =>
-        ` ${getHTMLElement(cx(classNames.attributeName), name)}${
-          value ? `="${getHTMLElement(cx(classNames.attributeValue), value)}"` : ''
+        ` ${getHTMLElement(cx(styles['StoryBlockCode__attribute--name']), name)}${
+          value ? `="${getHTMLElement(cx(styles['StoryBlockCode__attribute--value']), value)}"` : ''
         }`,
     )
     .join('');
 
-  return getHTMLElement(cx(classNames.attribute), context);
+  return getHTMLElement(cx(styles['StoryBlockCode__attribute']), context);
 };
 
 export const parseComponentToHTMLContext = (
   { attributes = [], children }: TProps,
   componentName = '',
-  classNames: TThemeClassNames<typeof classNamesStoryBlockCode>,
-  cx: TThemeClassNamesApplier,
+  styles: TObject<string>,
 ): string => {
-  const parsedComponent = getHTMLElement(cx(classNames.componentName), componentName);
-  const parsedAttributes = parseAttributesToHTML(attributes, classNames, cx);
+  const parsedComponent = getHTMLElement(cx(styles['StoryBlockCode__component-name']), componentName);
+  const parsedAttributes = parseAttributesToHTML(attributes, styles);
 
   if (children) {
     let parsedChildren = '';
@@ -47,8 +42,8 @@ export const parseComponentToHTMLContext = (
             return props
               .map((props) =>
                 getHTMLElement(
-                  cx(classNames.children),
-                  parseComponentToHTMLContext(props, componentName, classNames, cx),
+                  cx(styles['StoryBlockCode__children']),
+                  parseComponentToHTMLContext(props, componentName, styles),
                   'div',
                 ),
               )
@@ -56,8 +51,8 @@ export const parseComponentToHTMLContext = (
           }
 
           return getHTMLElement(
-            cx(classNames.children),
-            parseComponentToHTMLContext({}, componentName, classNames, cx),
+            cx(styles['StoryBlockCode__children']),
+            parseComponentToHTMLContext({}, componentName, styles),
             'div',
           );
         })

@@ -3,19 +3,19 @@
 exports[`Prompts snapshots should render Prompts 1`] = `
 <DocumentFragment>
   <div
-    class="css-9ljzna Prompts Prompts--light Prompts--bottom Prompts--bottom--light"
+    class="css-9ljzna Prompts Prompts--bottom"
     data-test-box=""
   />
   <div
-    class="css-9ljzna Prompts Prompts--light"
+    class="css-9ljzna Prompts"
     data-test-box=""
   />
   <div
-    class="css-9ljzna Prompts Prompts--light"
+    class="css-9ljzna Prompts"
     data-test-box=""
   />
   <div
-    class="css-9ljzna Prompts Prompts--light"
+    class="css-9ljzna Prompts"
     data-test-box=""
   />
 </DocumentFragment>
@@ -24,19 +24,19 @@ exports[`Prompts snapshots should render Prompts 1`] = `
 exports[`Prompts snapshots should render with another variant 1`] = `
 <DocumentFragment>
   <div
-    class="css-9ljzna Prompts Prompts--light"
+    class="css-9ljzna Prompts"
     data-test-box=""
   />
   <div
-    class="css-9ljzna Prompts Prompts--light"
+    class="css-9ljzna Prompts"
     data-test-box=""
   />
   <div
-    class="css-9ljzna Prompts Prompts--light"
+    class="css-9ljzna Prompts"
     data-test-box=""
   />
   <div
-    class="css-9ljzna Prompts Prompts--light"
+    class="css-9ljzna Prompts"
     data-test-box=""
   />
 </DocumentFragment>

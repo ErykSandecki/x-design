@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import { FC, useRef } from 'react';
 import { useSelector } from 'react-redux';
 
@@ -6,10 +7,8 @@ import { E2EDataAttribute } from 'shared';
 
 // hooks
 import { useClickableAreaEvents } from './hooks/useClickableAreaEvents';
-import { useTheme } from 'hooks';
 
 // others
-import { className, classNames } from './classNames';
 import { SW } from './constants';
 
 // store
@@ -32,7 +31,6 @@ const ClickableArea: FC<TClickableAreaProps> = ({ elementsCoordinates, outlineCo
   const areaRef = useRef(null);
   const height = outlineCoordinates.y2 - outlineCoordinates.y1;
   const width = outlineCoordinates.x2 - outlineCoordinates.x1;
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { isMultipleMoving } = useSelector(eventsSelector);
   const { onMouseDown } = useClickableAreaEvents(areaRef);
 
@@ -46,7 +44,7 @@ const ClickableArea: FC<TClickableAreaProps> = ({ elementsCoordinates, outlineCo
       {areParentsTheSame && (
         <E2EDataAttribute type={E2EAttribute.outline}>
           <svg
-            className={cx(classNamesWithTheme[className])}
+            className={cx(styles.ClickableArea)}
             ref={areaRef}
             style={{
               height: `${height}px`,
@@ -56,7 +54,7 @@ const ClickableArea: FC<TClickableAreaProps> = ({ elementsCoordinates, outlineCo
             }}
           >
             <path
-              className={cx(classNamesWithTheme.outline)}
+              className={cx(styles.ClickableArea__outline)}
               d={`M ${0},${0} H ${width} V ${height} H ${0} V ${0}`}
               strokeWidth={SW}
               onMouseDown={(event) => onMouseDown(event, '-1')}
@@ -69,7 +67,7 @@ const ClickableArea: FC<TClickableAreaProps> = ({ elementsCoordinates, outlineCo
       {elementsCoordinates.map(({ coordinates: { x1, x2, y1, y2 }, id }) => (
         <E2EDataAttribute key={id} type={E2EAttribute.rect} value={id}>
           <svg
-            className={cx(classNamesWithTheme[className])}
+            className={cx(styles.ClickableArea)}
             style={{
               height: `${y2 - y1}px`,
               left: `${x1}px`,

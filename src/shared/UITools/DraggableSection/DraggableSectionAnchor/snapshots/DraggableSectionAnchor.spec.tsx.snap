@@ -3,7 +3,7 @@
 exports[`DraggableSectionAnchor snapshots should hide prompt when mouse leave 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp DraggableSectionAnchor DraggableSectionAnchor--light DraggableSectionAnchor--draggable DraggableSectionAnchor--draggable--light"
+    class="css-1jnxvbp DraggableSectionAnchor DraggableSectionAnchor--draggable"
     data-anchor-index="0"
     data-test-anchor="e2eValue"
   />
@@ -13,7 +13,7 @@ exports[`DraggableSectionAnchor snapshots should hide prompt when mouse leave 1`
 exports[`DraggableSectionAnchor snapshots should render DraggableSectionAnchor 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp DraggableSectionAnchor DraggableSectionAnchor--light"
+    class="css-1jnxvbp DraggableSectionAnchor"
     data-anchor-index="0"
     data-test-anchor="e2eValue"
   />
@@ -23,12 +23,12 @@ exports[`DraggableSectionAnchor snapshots should render DraggableSectionAnchor 1
 exports[`DraggableSectionAnchor snapshots should render prompt when mouse enter 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp DraggableSectionAnchor DraggableSectionAnchor--light DraggableSectionAnchor--draggable DraggableSectionAnchor--draggable--light"
+    class="css-1jnxvbp DraggableSectionAnchor DraggableSectionAnchor--draggable"
     data-anchor-index="0"
     data-test-anchor="e2eValue"
   >
     <div
-      class="css-1jnxvbp DraggableSectionAnchor__prompt DraggableSectionAnchor__prompt--light"
+      class="css-1jnxvbp DraggableSectionAnchor__prompt"
       data-test-box=""
     />
   </div>
@@ -38,7 +38,7 @@ exports[`DraggableSectionAnchor snapshots should render prompt when mouse enter 
 exports[`DraggableSectionAnchor snapshots should render when is draggable 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp DraggableSectionAnchor DraggableSectionAnchor--light DraggableSectionAnchor--draggable DraggableSectionAnchor--draggable--light"
+    class="css-1jnxvbp DraggableSectionAnchor DraggableSectionAnchor--draggable"
     data-anchor-index="0"
     data-test-anchor="e2eValue"
   />

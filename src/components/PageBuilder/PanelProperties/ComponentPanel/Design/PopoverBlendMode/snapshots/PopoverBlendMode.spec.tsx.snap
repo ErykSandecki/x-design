@@ -3,19 +3,19 @@
 exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
 <DocumentFragment>
   <div
-    class="css-1wfopar PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem"
     data-test-box=""
     data-test-popover-item="initial"
   >
     <div
-      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral1"
       data-test-icon="check"
       height="12"
       name="Check"
       width="12"
     />
     <small
-      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -23,19 +23,19 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem"
     data-test-box=""
     data-test-popover-item="normal"
   >
     <div
-      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
       data-test-icon="check"
       height="12"
       name="Check"
       width="12"
     />
     <small
-      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -43,23 +43,23 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
     </small>
   </div>
   <div
-    class="css-qef3st"
+    class="css-3q7iqb"
     data-test-box=""
   />
   <div
-    class="css-1wfopar PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem"
     data-test-box=""
     data-test-popover-item="darken"
   >
     <div
-      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
       data-test-icon="check"
       height="12"
       name="Check"
       width="12"
     />
     <small
-      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -67,19 +67,19 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem"
     data-test-box=""
     data-test-popover-item="multiply"
   >
     <div
-      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
       data-test-icon="check"
       height="12"
       name="Check"
       width="12"
     />
     <small
-      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -87,19 +87,19 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem"
     data-test-box=""
     data-test-popover-item="color-burn"
   >
     <div
-      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
       data-test-icon="check"
       height="12"
       name="Check"
       width="12"
     />
     <small
-      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -107,23 +107,23 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
     </small>
   </div>
   <div
-    class="css-qef3st"
+    class="css-3q7iqb"
     data-test-box=""
   />
   <div
-    class="css-1wfopar PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem"
     data-test-box=""
     data-test-popover-item="lighten"
   >
     <div
-      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
       data-test-icon="check"
       height="12"
       name="Check"
       width="12"
     />
     <small
-      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -131,19 +131,19 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem"
     data-test-box=""
     data-test-popover-item="screen"
   >
     <div
-      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
       data-test-icon="check"
       height="12"
       name="Check"
       width="12"
     />
     <small
-      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -151,19 +151,19 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem"
     data-test-box=""
     data-test-popover-item="plus-lighter"
   >
     <div
-      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
       data-test-icon="check"
       height="12"
       name="Check"
       width="12"
     />
     <small
-      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -171,19 +171,19 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem"
     data-test-box=""
     data-test-popover-item="color-dodge"
   >
     <div
-      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
       data-test-icon="check"
       height="12"
       name="Check"
       width="12"
     />
     <small
-      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -191,23 +191,23 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
     </small>
   </div>
   <div
-    class="css-qef3st"
+    class="css-3q7iqb"
     data-test-box=""
   />
   <div
-    class="css-1wfopar PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem"
     data-test-box=""
     data-test-popover-item="overlay"
   >
     <div
-      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
       data-test-icon="check"
       height="12"
       name="Check"
       width="12"
     />
     <small
-      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -215,19 +215,19 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem"
     data-test-box=""
     data-test-popover-item="soft-light"
   >
     <div
-      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
       data-test-icon="check"
       height="12"
       name="Check"
       width="12"
     />
     <small
-      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -235,19 +235,19 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem"
     data-test-box=""
     data-test-popover-item="hard-light"
   >
     <div
-      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
       data-test-icon="check"
       height="12"
       name="Check"
       width="12"
     />
     <small
-      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -255,19 +255,19 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem"
     data-test-box=""
     data-test-popover-item="difference"
   >
     <div
-      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
       data-test-icon="check"
       height="12"
       name="Check"
       width="12"
     />
     <small
-      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -275,19 +275,19 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem"
     data-test-box=""
     data-test-popover-item="exclusion"
   >
     <div
-      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
       data-test-icon="check"
       height="12"
       name="Check"
       width="12"
     />
     <small
-      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -295,23 +295,23 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
     </small>
   </div>
   <div
-    class="css-qef3st"
+    class="css-3q7iqb"
     data-test-box=""
   />
   <div
-    class="css-1wfopar PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem"
     data-test-box=""
     data-test-popover-item="hue"
   >
     <div
-      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
       data-test-icon="check"
       height="12"
       name="Check"
       width="12"
     />
     <small
-      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -319,19 +319,19 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem"
     data-test-box=""
     data-test-popover-item="saturation"
   >
     <div
-      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
       data-test-icon="check"
       height="12"
       name="Check"
       width="12"
     />
     <small
-      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -339,19 +339,19 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem"
     data-test-box=""
     data-test-popover-item="color"
   >
     <div
-      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
       data-test-icon="check"
       height="12"
       name="Check"
       width="12"
     />
     <small
-      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -364,19 +364,19 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
 exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
 <DocumentFragment>
   <div
-    class="css-1wfopar PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem"
     data-test-box=""
     data-test-popover-item="initial"
   >
     <div
-      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
       data-test-icon="check"
       height="12"
       name="Check"
       width="12"
     />
     <small
-      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -384,19 +384,19 @@ exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem"
     data-test-box=""
     data-test-popover-item="normal"
   >
     <div
-      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
       data-test-icon="check"
       height="12"
       name="Check"
       width="12"
     />
     <small
-      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -404,23 +404,23 @@ exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="css-qef3st"
+    class="css-3q7iqb"
     data-test-box=""
   />
   <div
-    class="css-1wfopar PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem"
     data-test-box=""
     data-test-popover-item="darken"
   >
     <div
-      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
       data-test-icon="check"
       height="12"
       name="Check"
       width="12"
     />
     <small
-      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -428,19 +428,19 @@ exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem"
     data-test-box=""
     data-test-popover-item="multiply"
   >
     <div
-      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
       data-test-icon="check"
       height="12"
       name="Check"
       width="12"
     />
     <small
-      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -448,19 +448,19 @@ exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem"
     data-test-box=""
     data-test-popover-item="color-burn"
   >
     <div
-      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
       data-test-icon="check"
       height="12"
       name="Check"
       width="12"
     />
     <small
-      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -468,23 +468,23 @@ exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="css-qef3st"
+    class="css-3q7iqb"
     data-test-box=""
   />
   <div
-    class="css-1wfopar PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem"
     data-test-box=""
     data-test-popover-item="lighten"
   >
     <div
-      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
       data-test-icon="check"
       height="12"
       name="Check"
       width="12"
     />
     <small
-      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -492,19 +492,19 @@ exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem"
     data-test-box=""
     data-test-popover-item="screen"
   >
     <div
-      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
       data-test-icon="check"
       height="12"
       name="Check"
       width="12"
     />
     <small
-      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -512,19 +512,19 @@ exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem"
     data-test-box=""
     data-test-popover-item="plus-lighter"
   >
     <div
-      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
       data-test-icon="check"
       height="12"
       name="Check"
       width="12"
     />
     <small
-      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -532,19 +532,19 @@ exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem"
     data-test-box=""
     data-test-popover-item="color-dodge"
   >
     <div
-      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
       data-test-icon="check"
       height="12"
       name="Check"
       width="12"
     />
     <small
-      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -552,23 +552,23 @@ exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="css-qef3st"
+    class="css-3q7iqb"
     data-test-box=""
   />
   <div
-    class="css-1wfopar PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem"
     data-test-box=""
     data-test-popover-item="overlay"
   >
     <div
-      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
       data-test-icon="check"
       height="12"
       name="Check"
       width="12"
     />
     <small
-      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -576,19 +576,19 @@ exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem"
     data-test-box=""
     data-test-popover-item="soft-light"
   >
     <div
-      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
       data-test-icon="check"
       height="12"
       name="Check"
       width="12"
     />
     <small
-      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -596,19 +596,19 @@ exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem"
     data-test-box=""
     data-test-popover-item="hard-light"
   >
     <div
-      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
       data-test-icon="check"
       height="12"
       name="Check"
       width="12"
     />
     <small
-      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -616,19 +616,19 @@ exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem"
     data-test-box=""
     data-test-popover-item="difference"
   >
     <div
-      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
       data-test-icon="check"
       height="12"
       name="Check"
       width="12"
     />
     <small
-      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -636,19 +636,19 @@ exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem"
     data-test-box=""
     data-test-popover-item="exclusion"
   >
     <div
-      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
       data-test-icon="check"
       height="12"
       name="Check"
       width="12"
     />
     <small
-      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -656,23 +656,23 @@ exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="css-qef3st"
+    class="css-3q7iqb"
     data-test-box=""
   />
   <div
-    class="css-1wfopar PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem"
     data-test-box=""
     data-test-popover-item="hue"
   >
     <div
-      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
       data-test-icon="check"
       height="12"
       name="Check"
       width="12"
     />
     <small
-      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -680,19 +680,19 @@ exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem"
     data-test-box=""
     data-test-popover-item="saturation"
   >
     <div
-      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
       data-test-icon="check"
       height="12"
       name="Check"
       width="12"
     />
     <small
-      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >
@@ -700,19 +700,19 @@ exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
     </small>
   </div>
   <div
-    class="css-1wfopar PopoverItem PopoverItem--light"
+    class="css-1wfopar PopoverItem"
     data-test-box=""
     data-test-popover-item="color"
   >
     <div
-      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
       data-test-icon="check"
       height="12"
       name="Check"
       width="12"
     />
     <small
-      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
       data-test-text=""
       style="text-align: inherit;"
     >

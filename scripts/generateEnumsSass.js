@@ -6,16 +6,6 @@ const testFolder = './config/sass/maps';
 const generateEnum = (parsedVariables, variableName) =>
   `export enum ${variableName} { ${parsedVariables.sort().join(',')} }`;
 
-const generateEnumsColorsSass = (variableName, variables) => {
-  const parsedVariables = [];
-
-  for (const [key] of Object.entries(variables)) {
-    parsedVariables.push(`${camelCase(key)} = '${camelCase(key)}'`);
-  }
-
-  return generateEnum(parsedVariables, variableName);
-};
-
 const generateEnumsSass = (variableName, variables) => {
   const parsedVariables = [];
 
@@ -34,12 +24,6 @@ fs.readdir(testFolder, (_, files) => {
     const variableName = `${fileName[0].toUpperCase()}${fileName.substring(1)}`;
 
     switch (fileName) {
-      case 'colorsTheme':
-        stream.once('open', function () {
-          stream.write(generateEnumsColorsSass(variableName, variables.keys));
-          stream.end();
-        });
-        break;
       case 'boxShadow':
         stream.once('open', function () {
           stream.write(generateEnumsSass(variableName, variables(false)));

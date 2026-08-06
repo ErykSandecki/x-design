@@ -3,15 +3,15 @@
 exports[`Design snapshots should render Design 1`] = `
 <DocumentFragment>
   <div
-    class="css-1jnxvbp Section Section--light"
+    class="css-1jnxvbp Section"
     data-test-section=""
   >
     <div
-      class="css-1jnxvbp SectionColumn SectionColumn--light"
+      class="css-1jnxvbp SectionColumn"
       data-test-section=""
     >
       <div
-        class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+        class="css-xdzdnq SectionColumnLabels"
         data-test-box=""
         style="width: calc(100% - 48px - 2.5px - 8px);"
       />
@@ -20,12 +20,12 @@ exports[`Design snapshots should render Design 1`] = `
         data-test-box=""
       >
         <div
-          class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--single SectionColumnContent--single--light"
+          class="css-biptg5 SectionColumnContent SectionColumnContent--single"
           data-test-box=""
           style="width: calc(100% - 48px - 2.5px - 8px);"
         >
           <small
-            class="css-1jnxvbp Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+            class="css-1jnxvbp Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
             data-test-text=""
             style="align-items: center; display: flex; user-select: none; text-align: inherit;"
           >
@@ -41,12 +41,12 @@ exports[`Design snapshots should render Design 1`] = `
             data-test-box=""
           >
             <div
-              class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+              class="css-1jnxvbp ButtonIcon"
               data-test-button-icon=""
               data-test-tooltip=""
             >
               <div
-                class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Icon Icon--neutral1"
                 data-test-icon="html-tag"
                 height="14"
                 name="HtmlTag"
@@ -54,14 +54,14 @@ exports[`Design snapshots should render Design 1`] = `
               />
             </div>
             <div
-              class="Tooltip Tooltip--light"
+              class="Tooltip"
             >
               <div
-                class="Tooltip__content Tooltip__content--light"
+                class="Tooltip__content"
               >
                 Toggle ready for dev status
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -70,12 +70,12 @@ exports[`Design snapshots should render Design 1`] = `
               </div>
             </div>
             <div
-              class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+              class="css-1jnxvbp ButtonIcon"
               data-test-button-icon=""
               data-test-tooltip=""
             >
               <div
-                class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Icon Icon--neutral1"
                 data-test-icon="component"
                 height="14"
                 name="Component"
@@ -83,14 +83,14 @@ exports[`Design snapshots should render Design 1`] = `
               />
             </div>
             <div
-              class="Tooltip Tooltip--light"
+              class="Tooltip"
             >
               <div
-                class="Tooltip__content Tooltip__content--light"
+                class="Tooltip__content"
               >
                 Create component
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -104,15 +104,15 @@ exports[`Design snapshots should render Design 1`] = `
     </div>
   </div>
   <div
-    class="css-1jnxvbp Section Section--light"
+    class="css-1jnxvbp Section"
     data-test-section=""
   >
     <div
-      class="css-1jnxvbp Section__labelWrapper Section__labelWrapper--light Section__labelWrapper--separator Section__labelWrapper--separator--light"
+      class="css-1jnxvbp Section__label-wrapper Section__label-wrapper--separator"
       data-test-box=""
     >
       <small
-        class="css-1jnxvbp Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp Section__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -124,16 +124,16 @@ exports[`Design snapshots should render Design 1`] = `
       />
     </div>
     <div
-      class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
+      class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
       data-test-section=""
     >
       <div
-        class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+        class="css-xdzdnq SectionColumnLabels"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <small
-          class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+          class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
           data-test-text=""
           style="text-align: inherit;"
         >
@@ -145,20 +145,20 @@ exports[`Design snapshots should render Design 1`] = `
         data-test-box=""
       >
         <div
-          class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--twoInputs SectionColumnContent--twoInputs--light"
+          class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
           data-test-box=""
           style="width: calc(100% - 24px - 0px - 8px);"
         >
           <div
-            class="css-1jnxvbp ButtonGroup ButtonGroup--light"
+            class="css-1jnxvbp ButtonGroup"
             data-test-button-group="horizontal-alignment"
           >
             <div
-              class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
+              class="ButtonGroup__button ButtonGroup__button--disabled"
               data-test-button-group-input="align-horizontal-left"
             >
               <div
-                class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--disabled Icon Icon--neutral1"
                 data-test-icon="align-horizontal-left"
                 height="12"
                 name="AlignHorizontalLeft"
@@ -166,14 +166,14 @@ exports[`Design snapshots should render Design 1`] = `
               />
             </div>
             <div
-              class="Tooltip Tooltip--light"
+              class="Tooltip"
             >
               <div
-                class="Tooltip__content Tooltip__content--light"
+                class="Tooltip__content"
               >
                 Align left  ⌥A
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -182,11 +182,11 @@ exports[`Design snapshots should render Design 1`] = `
               </div>
             </div>
             <div
-              class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
+              class="ButtonGroup__button ButtonGroup__button--disabled"
               data-test-button-group-input="align-horizontal-center"
             >
               <div
-                class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--disabled Icon Icon--neutral1"
                 data-test-icon="align-horizontal-center"
                 height="12"
                 name="AlignHorizontalCenter"
@@ -194,14 +194,14 @@ exports[`Design snapshots should render Design 1`] = `
               />
             </div>
             <div
-              class="Tooltip Tooltip--light"
+              class="Tooltip"
             >
               <div
-                class="Tooltip__content Tooltip__content--light"
+                class="Tooltip__content"
               >
                 Align center  ⌥H
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -210,11 +210,11 @@ exports[`Design snapshots should render Design 1`] = `
               </div>
             </div>
             <div
-              class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
+              class="ButtonGroup__button ButtonGroup__button--disabled"
               data-test-button-group-input="align-horizontal-right"
             >
               <div
-                class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--disabled Icon Icon--neutral1"
                 data-test-icon="align-horizontal-right"
                 height="12"
                 name="AlignHorizontalRight"
@@ -222,14 +222,14 @@ exports[`Design snapshots should render Design 1`] = `
               />
             </div>
             <div
-              class="Tooltip Tooltip--light"
+              class="Tooltip"
             >
               <div
-                class="Tooltip__content Tooltip__content--light"
+                class="Tooltip__content"
               >
                 Align right  ⌥D
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -239,15 +239,15 @@ exports[`Design snapshots should render Design 1`] = `
             </div>
           </div>
           <div
-            class="css-1jnxvbp ButtonGroup ButtonGroup--light"
+            class="css-1jnxvbp ButtonGroup"
             data-test-button-group="vertical-alignment"
           >
             <div
-              class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
+              class="ButtonGroup__button ButtonGroup__button--disabled"
               data-test-button-group-input="align-vertical-top"
             >
               <div
-                class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--disabled Icon Icon--neutral1"
                 data-test-icon="align-vertical-top"
                 height="12"
                 name="AlignVerticalTop"
@@ -255,14 +255,14 @@ exports[`Design snapshots should render Design 1`] = `
               />
             </div>
             <div
-              class="Tooltip Tooltip--light"
+              class="Tooltip"
             >
               <div
-                class="Tooltip__content Tooltip__content--light"
+                class="Tooltip__content"
               >
                 Align top  ⌥W
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -271,11 +271,11 @@ exports[`Design snapshots should render Design 1`] = `
               </div>
             </div>
             <div
-              class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
+              class="ButtonGroup__button ButtonGroup__button--disabled"
               data-test-button-group-input="align-vertical-center"
             >
               <div
-                class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--disabled Icon Icon--neutral1"
                 data-test-icon="align-vertical-center"
                 height="12"
                 name="AlignVerticalCenter"
@@ -283,14 +283,14 @@ exports[`Design snapshots should render Design 1`] = `
               />
             </div>
             <div
-              class="Tooltip Tooltip--light"
+              class="Tooltip"
             >
               <div
-                class="Tooltip__content Tooltip__content--light"
+                class="Tooltip__content"
               >
                 Align center  ⌥V
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -299,11 +299,11 @@ exports[`Design snapshots should render Design 1`] = `
               </div>
             </div>
             <div
-              class="ButtonGroup__button ButtonGroup__button--light ButtonGroup__button--disabled ButtonGroup__button--disabled--light"
+              class="ButtonGroup__button ButtonGroup__button--disabled"
               data-test-button-group-input="align-vertical-bottom"
             >
               <div
-                class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light ButtonGroup__icon--disabled ButtonGroup__icon--disabled--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--disabled Icon Icon--neutral1"
                 data-test-icon="align-vertical-bottom"
                 height="12"
                 name="AlignVerticalBottom"
@@ -311,14 +311,14 @@ exports[`Design snapshots should render Design 1`] = `
               />
             </div>
             <div
-              class="Tooltip Tooltip--light"
+              class="Tooltip"
             >
               <div
-                class="Tooltip__content Tooltip__content--light"
+                class="Tooltip__content"
               >
                 Align bottom  ⌥S
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -340,16 +340,16 @@ exports[`Design snapshots should render Design 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
+      class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
       data-test-section=""
     >
       <div
-        class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+        class="css-xdzdnq SectionColumnLabels"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <small
-          class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+          class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
           data-test-text=""
           style="text-align: inherit;"
         >
@@ -361,26 +361,26 @@ exports[`Design snapshots should render Design 1`] = `
         data-test-box=""
       >
         <div
-          class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--twoInputs SectionColumnContent--twoInputs--light"
+          class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
           data-test-box=""
           style="width: calc(100% - 24px - 0px - 8px);"
         >
           <div
-            class="css-1jnxvbp TextField TextField--light"
+            class="css-1jnxvbp TextField"
             data-test-text-field="x"
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+              class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
               data-test-text-field-wrapper="x"
             >
               <div
-                class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+                class="css-e5vky9 ScrubbableInput"
                 data-test-box=""
                 data-test-scrubbable-input="x"
               >
                 <small
-                  class="css-1jnxvbp Typography Typography--light Typography--neutral2 Typography--neutral2--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  class="css-1jnxvbp Typography Typography--neutral2 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -388,7 +388,7 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <input
-                class="TextFieldWrapper__input TextFieldWrapper__input--light"
+                class="TextFieldWrapper__input"
                 data-test-text-field-input="x"
                 maxlength="6"
                 type="number"
@@ -397,14 +397,14 @@ exports[`Design snapshots should render Design 1`] = `
             </div>
           </div>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               X - position
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -413,21 +413,21 @@ exports[`Design snapshots should render Design 1`] = `
             </div>
           </div>
           <div
-            class="css-1jnxvbp TextField TextField--light"
+            class="css-1jnxvbp TextField"
             data-test-text-field="y"
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+              class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
               data-test-text-field-wrapper="y"
             >
               <div
-                class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+                class="css-e5vky9 ScrubbableInput"
                 data-test-box=""
                 data-test-scrubbable-input="y"
               >
                 <small
-                  class="css-1jnxvbp Typography Typography--light Typography--neutral2 Typography--neutral2--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  class="css-1jnxvbp Typography Typography--neutral2 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -435,7 +435,7 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <input
-                class="TextFieldWrapper__input TextFieldWrapper__input--light"
+                class="TextFieldWrapper__input"
                 data-test-text-field-input="y"
                 maxlength="6"
                 type="number"
@@ -444,14 +444,14 @@ exports[`Design snapshots should render Design 1`] = `
             </div>
           </div>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Y - position
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -472,16 +472,16 @@ exports[`Design snapshots should render Design 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp SectionColumn SectionColumn--light"
+      class="css-1jnxvbp SectionColumn"
       data-test-section=""
     >
       <div
-        class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+        class="css-xdzdnq SectionColumnLabels"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <small
-          class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+          class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
           data-test-text=""
           style="text-align: inherit;"
         >
@@ -493,26 +493,26 @@ exports[`Design snapshots should render Design 1`] = `
         data-test-box=""
       >
         <div
-          class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--twoInputs SectionColumnContent--twoInputs--light"
+          class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
           data-test-box=""
           style="width: calc(100% - 24px - 0px - 8px);"
         >
           <div
-            class="css-1jnxvbp TextField TextField--light"
+            class="css-1jnxvbp TextField"
             data-test-text-field="angle"
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+              class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
               data-test-text-field-wrapper="angle"
             >
               <div
-                class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+                class="css-e5vky9 ScrubbableInput"
                 data-test-box=""
                 data-test-scrubbable-input="angle"
               >
                 <div
-                  class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+                  class="css-1jnxvbp Icon Icon--neutral2"
                   data-test-icon="protractor"
                   height="8"
                   name="Protractor"
@@ -520,7 +520,7 @@ exports[`Design snapshots should render Design 1`] = `
                 />
               </div>
               <input
-                class="TextFieldWrapper__input TextFieldWrapper__input--light"
+                class="TextFieldWrapper__input"
                 data-test-text-field-input="angle"
                 maxlength="6"
                 type="text"
@@ -529,14 +529,14 @@ exports[`Design snapshots should render Design 1`] = `
             </div>
           </div>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Rotation
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -545,15 +545,15 @@ exports[`Design snapshots should render Design 1`] = `
             </div>
           </div>
           <div
-            class="css-1jnxvbp ButtonGroup ButtonGroup--light ButtonGroup--fullWidth ButtonGroup--fullWidth--light"
+            class="css-1jnxvbp ButtonGroup ButtonGroup--full-width"
             data-test-button-group="layout-position"
           >
             <div
-              class="ButtonGroup__button ButtonGroup__button--light"
+              class="ButtonGroup__button"
               data-test-button-group-input="toggle-rotate"
             >
               <div
-                class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp ButtonGroup__icon Icon Icon--neutral1"
                 data-test-icon="toggle-rotate"
                 height="12"
                 name="ToggleRotate"
@@ -561,14 +561,14 @@ exports[`Design snapshots should render Design 1`] = `
               />
             </div>
             <div
-              class="Tooltip Tooltip--light"
+              class="Tooltip"
             >
               <div
-                class="Tooltip__content Tooltip__content--light"
+                class="Tooltip__content"
               >
                 Rotate 90° right
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -577,11 +577,11 @@ exports[`Design snapshots should render Design 1`] = `
               </div>
             </div>
             <div
-              class="ButtonGroup__button ButtonGroup__button--light"
+              class="ButtonGroup__button"
               data-test-button-group-input="flip-horizontal"
             >
               <div
-                class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp ButtonGroup__icon Icon Icon--neutral1"
                 data-test-icon="flip-horizontal"
                 height="12"
                 name="FlipHorizontal"
@@ -589,14 +589,14 @@ exports[`Design snapshots should render Design 1`] = `
               />
             </div>
             <div
-              class="Tooltip Tooltip--light"
+              class="Tooltip"
             >
               <div
-                class="Tooltip__content Tooltip__content--light"
+                class="Tooltip__content"
               >
                 Flip horizontal  ⇧H
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -605,11 +605,11 @@ exports[`Design snapshots should render Design 1`] = `
               </div>
             </div>
             <div
-              class="ButtonGroup__button ButtonGroup__button--light"
+              class="ButtonGroup__button"
               data-test-button-group-input="flip-vertical"
             >
               <div
-                class="css-1jnxvbp ButtonGroup__icon ButtonGroup__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp ButtonGroup__icon Icon Icon--neutral1"
                 data-test-icon="flip-vertical"
                 height="12"
                 name="FlipVertical"
@@ -617,14 +617,14 @@ exports[`Design snapshots should render Design 1`] = `
               />
             </div>
             <div
-              class="Tooltip Tooltip--light"
+              class="Tooltip"
             >
               <div
-                class="Tooltip__content Tooltip__content--light"
+                class="Tooltip__content"
               >
                 Flip vertical  ⇧V
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -647,15 +647,15 @@ exports[`Design snapshots should render Design 1`] = `
     </div>
   </div>
   <div
-    class="css-1jnxvbp Section Section--light"
+    class="css-1jnxvbp Section"
     data-test-section=""
   >
     <div
-      class="css-1jnxvbp Section__labelWrapper Section__labelWrapper--light Section__labelWrapper--separator Section__labelWrapper--separator--light"
+      class="css-1jnxvbp Section__label-wrapper Section__label-wrapper--separator"
       data-test-box=""
     >
       <small
-        class="css-1jnxvbp Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp Section__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -666,12 +666,12 @@ exports[`Design snapshots should render Design 1`] = `
         data-test-box=""
       >
         <div
-          class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+          class="css-1jnxvbp ButtonIcon"
           data-test-button-icon=""
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            class="css-1jnxvbp Icon Icon--neutral1"
             data-test-icon="fit-layout"
             height="12"
             name="FitLayout"
@@ -679,14 +679,14 @@ exports[`Design snapshots should render Design 1`] = `
           />
         </div>
         <div
-          class="Tooltip Tooltip--light"
+          class="Tooltip"
         >
           <div
-            class="Tooltip__content Tooltip__content--light"
+            class="Tooltip__content"
           >
             Resize to fit  ⌥⌘⇧R
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -695,12 +695,12 @@ exports[`Design snapshots should render Design 1`] = `
           </div>
         </div>
         <div
-          class="css-1jnxvbp ButtonIcon ButtonIcon--light ButtonIcon--selected ButtonIcon--selected--light"
+          class="css-1jnxvbp ButtonIcon ButtonIcon--selected"
           data-test-button-icon=""
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp Icon Icon--light Icon--blue1 Icon--blue1--light"
+            class="css-1jnxvbp Icon Icon--blue1"
             data-test-icon="auto-layout"
             height="12"
             name="AutoLayout"
@@ -708,14 +708,14 @@ exports[`Design snapshots should render Design 1`] = `
           />
         </div>
         <div
-          class="Tooltip Tooltip--light"
+          class="Tooltip"
         >
           <div
-            class="Tooltip__content Tooltip__content--light"
+            class="Tooltip__content"
           >
             Toggle auto layout  ⇧A
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -726,16 +726,16 @@ exports[`Design snapshots should render Design 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
+      class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
       data-test-section=""
     >
       <div
-        class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+        class="css-xdzdnq SectionColumnLabels"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <small
-          class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+          class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
           data-test-text=""
           style="text-align: inherit;"
         >
@@ -747,22 +747,22 @@ exports[`Design snapshots should render Design 1`] = `
         data-test-box=""
       >
         <div
-          class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--single SectionColumnContent--single--light"
+          class="css-biptg5 SectionColumnContent SectionColumnContent--single"
           data-test-box=""
           style="width: calc(100% - 24px - 0px - 8px);"
         >
           <div
-            class="css-19um8c2 ToggleButtonGroup ToggleButtonGroup--light ToggleButtonGroup--fullWidth ToggleButtonGroup--fullWidth--light"
+            class="css-19um8c2 ToggleButtonGroup ToggleButtonGroup--full-width"
             data-test-box=""
             data-test-toggle-button-group="flow"
           >
             <button
-              class="ToggleButton ToggleButton--light"
+              class="ToggleButton"
               data-test-toggle-button="0"
               type="button"
             >
               <div
-                class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Icon Icon--neutral1"
                 data-test-icon="flow-default"
                 height="12"
                 name="FlowDefault"
@@ -770,14 +770,14 @@ exports[`Design snapshots should render Design 1`] = `
               />
             </button>
             <div
-              class="Tooltip Tooltip--light"
+              class="Tooltip"
             >
               <div
-                class="Tooltip__content Tooltip__content--light"
+                class="Tooltip__content"
               >
                 Free form
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -786,12 +786,12 @@ exports[`Design snapshots should render Design 1`] = `
               </div>
             </div>
             <button
-              class="ToggleButton ToggleButton--light"
+              class="ToggleButton"
               data-test-toggle-button="1"
               type="button"
             >
               <div
-                class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Icon Icon--neutral1"
                 data-test-icon="flow-vertical"
                 height="12"
                 name="FlowVertical"
@@ -799,14 +799,14 @@ exports[`Design snapshots should render Design 1`] = `
               />
             </button>
             <div
-              class="Tooltip Tooltip--light"
+              class="Tooltip"
             >
               <div
-                class="Tooltip__content Tooltip__content--light"
+                class="Tooltip__content"
               >
                 Vertical
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -815,12 +815,12 @@ exports[`Design snapshots should render Design 1`] = `
               </div>
             </div>
             <button
-              class="ToggleButton ToggleButton--light ToggleButton--selected ToggleButton--selected--light"
+              class="ToggleButton ToggleButton--selected"
               data-test-toggle-button="2"
               type="button"
             >
               <div
-                class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Icon Icon--neutral1"
                 data-test-icon="flow-horizontal"
                 height="12"
                 name="FlowHorizontal"
@@ -828,14 +828,14 @@ exports[`Design snapshots should render Design 1`] = `
               />
             </button>
             <div
-              class="Tooltip Tooltip--light"
+              class="Tooltip"
             >
               <div
-                class="Tooltip__content Tooltip__content--light"
+                class="Tooltip__content"
               >
                 Horizontal
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -844,12 +844,12 @@ exports[`Design snapshots should render Design 1`] = `
               </div>
             </div>
             <button
-              class="ToggleButton ToggleButton--light"
+              class="ToggleButton"
               data-test-toggle-button="3"
               type="button"
             >
               <div
-                class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Icon Icon--neutral1"
                 data-test-icon="flow-grid"
                 height="12"
                 name="FlowGrid"
@@ -857,14 +857,14 @@ exports[`Design snapshots should render Design 1`] = `
               />
             </button>
             <div
-              class="Tooltip Tooltip--light"
+              class="Tooltip"
             >
               <div
-                class="Tooltip__content Tooltip__content--light"
+                class="Tooltip__content"
               >
                 Grid
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -883,12 +883,12 @@ exports[`Design snapshots should render Design 1`] = `
             data-test-box=""
           >
             <div
-              class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+              class="css-1jnxvbp ButtonIcon"
               data-test-button-icon="wrap"
               data-test-tooltip=""
             >
               <div
-                class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Icon Icon--neutral1"
                 data-test-icon="wrap"
                 height="12"
                 name="Wrap"
@@ -896,14 +896,14 @@ exports[`Design snapshots should render Design 1`] = `
               />
             </div>
             <div
-              class="Tooltip Tooltip--light"
+              class="Tooltip"
             >
               <div
-                class="Tooltip__content Tooltip__content--light"
+                class="Tooltip__content"
               >
                 Wrap
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -916,16 +916,16 @@ exports[`Design snapshots should render Design 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
+      class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
       data-test-section=""
     >
       <div
-        class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+        class="css-xdzdnq SectionColumnLabels"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <small
-          class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+          class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
           data-test-text=""
           style="text-align: inherit;"
         >
@@ -937,26 +937,26 @@ exports[`Design snapshots should render Design 1`] = `
         data-test-box=""
       >
         <div
-          class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--twoInputs SectionColumnContent--twoInputs--light"
+          class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
           data-test-box=""
           style="width: calc(100% - 24px - 0px - 8px);"
         >
           <div
-            class="css-1jnxvbp TextField TextField--light"
+            class="css-1jnxvbp TextField"
             data-test-text-field="width"
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+              class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
               data-test-text-field-wrapper="width"
             >
               <div
-                class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+                class="css-e5vky9 ScrubbableInput"
                 data-test-box=""
                 data-test-scrubbable-input="width"
               >
                 <small
-                  class="css-1jnxvbp Typography Typography--light Typography--neutral2 Typography--neutral2--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  class="css-1jnxvbp Typography Typography--neutral2 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -964,50 +964,50 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <input
-                class="TextFieldWrapper__input TextFieldWrapper__input--light"
+                class="TextFieldWrapper__input"
                 data-test-text-field-input="width"
                 maxlength="6"
                 type="text"
                 value="100"
               />
               <div
-                class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+                class="css-zcp5dz TextFieldPopover"
                 data-test-box=""
               >
                 <div
-                  class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                  class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                   data-test-icon="variant"
                   height="12"
                   name="Variant"
                   width="12"
                 />
                 <div
-                  class="css-1c8p9kb Popover Popover--light"
+                  class="css-6i6anv Popover"
                   data-test-box=""
                   data-test-popover="popover"
                   style="left: 0px; top: 0px;"
                 >
                   <div
-                    class="css-1wfopar PopoverItem PopoverItem--light"
+                    class="css-1wfopar PopoverItem"
                     data-test-box=""
                     data-test-popover-item="0"
                   >
                     <div
-                      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral1"
                       data-test-icon="check"
                       height="12"
                       name="Check"
                       width="12"
                     />
                     <div
-                      class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                       data-test-icon="fixed-width"
                       height="12"
                       name="FixedWidth"
                       width="12"
                     />
                     <small
-                      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -1015,26 +1015,26 @@ exports[`Design snapshots should render Design 1`] = `
                     </small>
                   </div>
                   <div
-                    class="css-1wfopar PopoverItem PopoverItem--light"
+                    class="css-1wfopar PopoverItem"
                     data-test-box=""
                     data-test-popover-item="1"
                   >
                     <div
-                      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                       data-test-icon="check"
                       height="12"
                       name="Check"
                       width="12"
                     />
                     <div
-                      class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                       data-test-icon="auto-width"
                       height="12"
                       name="AutoWidth"
                       width="12"
                     />
                     <small
-                      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -1042,26 +1042,26 @@ exports[`Design snapshots should render Design 1`] = `
                     </small>
                   </div>
                   <div
-                    class="css-1wfopar PopoverItem PopoverItem--light"
+                    class="css-1wfopar PopoverItem"
                     data-test-box=""
                     data-test-popover-item="2"
                   >
                     <div
-                      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                       data-test-icon="check"
                       height="12"
                       name="Check"
                       width="12"
                     />
                     <div
-                      class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                       data-test-icon="percentage"
                       height="12"
                       name="Percentage"
                       width="12"
                     />
                     <small
-                      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -1069,30 +1069,30 @@ exports[`Design snapshots should render Design 1`] = `
                     </small>
                   </div>
                   <div
-                    class="css-qef3st"
+                    class="css-3q7iqb"
                     data-test-box=""
                   />
                   <div
-                    class="css-1wfopar PopoverItem PopoverItem--light"
+                    class="css-1wfopar PopoverItem"
                     data-test-box=""
                     data-test-popover-item="3"
                   >
                     <div
-                      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                       data-test-icon="check"
                       height="12"
                       name="Check"
                       width="12"
                     />
                     <div
-                      class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                       data-test-icon="min-width"
                       height="12"
                       name="MinWidth"
                       width="12"
                     />
                     <small
-                      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -1100,26 +1100,26 @@ exports[`Design snapshots should render Design 1`] = `
                     </small>
                   </div>
                   <div
-                    class="css-1wfopar PopoverItem PopoverItem--light"
+                    class="css-1wfopar PopoverItem"
                     data-test-box=""
                     data-test-popover-item="4"
                   >
                     <div
-                      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                       data-test-icon="check"
                       height="12"
                       name="Check"
                       width="12"
                     />
                     <div
-                      class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                       data-test-icon="max-width"
                       height="12"
                       name="MaxWidth"
                       width="12"
                     />
                     <small
-                      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -1131,21 +1131,21 @@ exports[`Design snapshots should render Design 1`] = `
             </div>
           </div>
           <div
-            class="css-1jnxvbp TextField TextField--light"
+            class="css-1jnxvbp TextField"
             data-test-text-field="height"
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+              class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
               data-test-text-field-wrapper="height"
             >
               <div
-                class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+                class="css-e5vky9 ScrubbableInput"
                 data-test-box=""
                 data-test-scrubbable-input="height"
               >
                 <small
-                  class="css-1jnxvbp Typography Typography--light Typography--neutral2 Typography--neutral2--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  class="css-1jnxvbp Typography Typography--neutral2 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -1153,50 +1153,50 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <input
-                class="TextFieldWrapper__input TextFieldWrapper__input--light"
+                class="TextFieldWrapper__input"
                 data-test-text-field-input="height"
                 maxlength="6"
                 type="text"
                 value="100"
               />
               <div
-                class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+                class="css-zcp5dz TextFieldPopover"
                 data-test-box=""
               >
                 <div
-                  class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                  class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                   data-test-icon="variant"
                   height="12"
                   name="Variant"
                   width="12"
                 />
                 <div
-                  class="css-1c8p9kb Popover Popover--light"
+                  class="css-6i6anv Popover"
                   data-test-box=""
                   data-test-popover="popover"
                   style="left: 0px; top: 0px;"
                 >
                   <div
-                    class="css-1wfopar PopoverItem PopoverItem--light"
+                    class="css-1wfopar PopoverItem"
                     data-test-box=""
                     data-test-popover-item="0"
                   >
                     <div
-                      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral1"
                       data-test-icon="check"
                       height="12"
                       name="Check"
                       width="12"
                     />
                     <div
-                      class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                       data-test-icon="fixed-height"
                       height="12"
                       name="FixedHeight"
                       width="12"
                     />
                     <small
-                      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -1204,26 +1204,26 @@ exports[`Design snapshots should render Design 1`] = `
                     </small>
                   </div>
                   <div
-                    class="css-1wfopar PopoverItem PopoverItem--light"
+                    class="css-1wfopar PopoverItem"
                     data-test-box=""
                     data-test-popover-item="1"
                   >
                     <div
-                      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                       data-test-icon="check"
                       height="12"
                       name="Check"
                       width="12"
                     />
                     <div
-                      class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                       data-test-icon="auto-height"
                       height="12"
                       name="AutoHeight"
                       width="12"
                     />
                     <small
-                      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -1231,26 +1231,26 @@ exports[`Design snapshots should render Design 1`] = `
                     </small>
                   </div>
                   <div
-                    class="css-1wfopar PopoverItem PopoverItem--light"
+                    class="css-1wfopar PopoverItem"
                     data-test-box=""
                     data-test-popover-item="2"
                   >
                     <div
-                      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                       data-test-icon="check"
                       height="12"
                       name="Check"
                       width="12"
                     />
                     <div
-                      class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                       data-test-icon="percentage"
                       height="12"
                       name="Percentage"
                       width="12"
                     />
                     <small
-                      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -1258,30 +1258,30 @@ exports[`Design snapshots should render Design 1`] = `
                     </small>
                   </div>
                   <div
-                    class="css-qef3st"
+                    class="css-3q7iqb"
                     data-test-box=""
                   />
                   <div
-                    class="css-1wfopar PopoverItem PopoverItem--light"
+                    class="css-1wfopar PopoverItem"
                     data-test-box=""
                     data-test-popover-item="3"
                   >
                     <div
-                      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                       data-test-icon="check"
                       height="12"
                       name="Check"
                       width="12"
                     />
                     <div
-                      class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                       data-test-icon="min-height"
                       height="12"
                       name="MinHeight"
                       width="12"
                     />
                     <small
-                      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -1289,26 +1289,26 @@ exports[`Design snapshots should render Design 1`] = `
                     </small>
                   </div>
                   <div
-                    class="css-1wfopar PopoverItem PopoverItem--light"
+                    class="css-1wfopar PopoverItem"
                     data-test-box=""
                     data-test-popover-item="4"
                   >
                     <div
-                      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                       data-test-icon="check"
                       height="12"
                       name="Check"
                       width="12"
                     />
                     <div
-                      class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                       data-test-icon="max-height"
                       height="12"
                       name="MaxHeight"
                       width="12"
                     />
                     <small
-                      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -1329,12 +1329,12 @@ exports[`Design snapshots should render Design 1`] = `
             data-test-box=""
           >
             <div
-              class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+              class="css-1jnxvbp ButtonIcon"
               data-test-button-icon="aspect-ratio"
               data-test-tooltip=""
             >
               <div
-                class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Icon Icon--neutral1"
                 data-test-icon="aspect-ratio"
                 height="12"
                 name="AspectRatio"
@@ -1342,14 +1342,14 @@ exports[`Design snapshots should render Design 1`] = `
               />
             </div>
             <div
-              class="Tooltip Tooltip--light"
+              class="Tooltip"
             >
               <div
-                class="Tooltip__content Tooltip__content--light"
+                class="Tooltip__content"
               >
                 Look aspect ratio
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -1362,23 +1362,23 @@ exports[`Design snapshots should render Design 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
+      class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
       data-test-section=""
     >
       <div
-        class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+        class="css-xdzdnq SectionColumnLabels"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <small
-          class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+          class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
           data-test-text=""
           style="text-align: inherit;"
         >
           Alignment
         </small>
         <small
-          class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+          class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
           data-test-text=""
           style="text-align: inherit;"
         >
@@ -1390,46 +1390,46 @@ exports[`Design snapshots should render Design 1`] = `
         data-test-box=""
       >
         <div
-          class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--oneByTwo SectionColumnContent--oneByTwo--light"
+          class="css-biptg5 SectionColumnContent SectionColumnContent--one-by-two"
           data-test-box=""
           style="width: calc(100% - 24px - 0px - 8px);"
         >
           <div
-            class="css-1jnxvbp AlignmentArea AlignmentArea AlignmentArea--light"
+            class="css-1jnxvbp AlignmentArea AlignmentArea"
             data-test-alignment-area="alignment-flow"
           >
             <div
-              class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+              class="css-1jnxvbp AlignmentOption"
               data-test-alignment-area-option="topLeft"
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--topLeft AlignmentOption__optionView--topLeft--light"
+                class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--topLeft"
                 data-test-box=""
               >
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                  class="css-1jnxvbp AlignmentOption__indicator"
                   data-test-box=""
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                  class="css-1jnxvbp AlignmentOption__indicator"
                   data-test-box=""
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                  class="css-1jnxvbp AlignmentOption__indicator"
                   data-test-box=""
                 />
               </div>
             </div>
             <div
-              class="Tooltip Tooltip--light"
+              class="Tooltip"
             >
               <div
-                class="Tooltip__content Tooltip__content--light"
+                class="Tooltip__content"
               >
                 Align top left
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -1438,37 +1438,37 @@ exports[`Design snapshots should render Design 1`] = `
               </div>
             </div>
             <div
-              class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+              class="css-1jnxvbp AlignmentOption"
               data-test-alignment-area-option="topCenter"
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--topCenter AlignmentOption__optionView--topCenter--light"
+                class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--top-center"
                 data-test-box=""
               >
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                  class="css-1jnxvbp AlignmentOption__indicator"
                   data-test-box=""
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                  class="css-1jnxvbp AlignmentOption__indicator"
                   data-test-box=""
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                  class="css-1jnxvbp AlignmentOption__indicator"
                   data-test-box=""
                 />
               </div>
             </div>
             <div
-              class="Tooltip Tooltip--light"
+              class="Tooltip"
             >
               <div
-                class="Tooltip__content Tooltip__content--light"
+                class="Tooltip__content"
               >
                 Align top center
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -1477,37 +1477,37 @@ exports[`Design snapshots should render Design 1`] = `
               </div>
             </div>
             <div
-              class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+              class="css-1jnxvbp AlignmentOption"
               data-test-alignment-area-option="topRight"
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--topRight AlignmentOption__optionView--topRight--light"
+                class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--top-right"
                 data-test-box=""
               >
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                  class="css-1jnxvbp AlignmentOption__indicator"
                   data-test-box=""
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                  class="css-1jnxvbp AlignmentOption__indicator"
                   data-test-box=""
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                  class="css-1jnxvbp AlignmentOption__indicator"
                   data-test-box=""
                 />
               </div>
             </div>
             <div
-              class="Tooltip Tooltip--light"
+              class="Tooltip"
             >
               <div
-                class="Tooltip__content Tooltip__content--light"
+                class="Tooltip__content"
               >
                 Align top right
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -1516,37 +1516,37 @@ exports[`Design snapshots should render Design 1`] = `
               </div>
             </div>
             <div
-              class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+              class="css-1jnxvbp AlignmentOption"
               data-test-alignment-area-option="left"
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--left AlignmentOption__optionView--left--light"
+                class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--left"
                 data-test-box=""
               >
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                  class="css-1jnxvbp AlignmentOption__indicator"
                   data-test-box=""
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                  class="css-1jnxvbp AlignmentOption__indicator"
                   data-test-box=""
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                  class="css-1jnxvbp AlignmentOption__indicator"
                   data-test-box=""
                 />
               </div>
             </div>
             <div
-              class="Tooltip Tooltip--light"
+              class="Tooltip"
             >
               <div
-                class="Tooltip__content Tooltip__content--light"
+                class="Tooltip__content"
               >
                 Align left
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -1555,37 +1555,37 @@ exports[`Design snapshots should render Design 1`] = `
               </div>
             </div>
             <div
-              class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+              class="css-1jnxvbp AlignmentOption"
               data-test-alignment-area-option="center"
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--center AlignmentOption__optionView--center--light"
+                class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--center"
                 data-test-box=""
               >
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                  class="css-1jnxvbp AlignmentOption__indicator"
                   data-test-box=""
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                  class="css-1jnxvbp AlignmentOption__indicator"
                   data-test-box=""
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                  class="css-1jnxvbp AlignmentOption__indicator"
                   data-test-box=""
                 />
               </div>
             </div>
             <div
-              class="Tooltip Tooltip--light"
+              class="Tooltip"
             >
               <div
-                class="Tooltip__content Tooltip__content--light"
+                class="Tooltip__content"
               >
                 Align center
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -1594,37 +1594,37 @@ exports[`Design snapshots should render Design 1`] = `
               </div>
             </div>
             <div
-              class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+              class="css-1jnxvbp AlignmentOption"
               data-test-alignment-area-option="right"
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--right AlignmentOption__optionView--right--light"
+                class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--right"
                 data-test-box=""
               >
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                  class="css-1jnxvbp AlignmentOption__indicator"
                   data-test-box=""
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                  class="css-1jnxvbp AlignmentOption__indicator"
                   data-test-box=""
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                  class="css-1jnxvbp AlignmentOption__indicator"
                   data-test-box=""
                 />
               </div>
             </div>
             <div
-              class="Tooltip Tooltip--light"
+              class="Tooltip"
             >
               <div
-                class="Tooltip__content Tooltip__content--light"
+                class="Tooltip__content"
               >
                 Align right
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -1633,37 +1633,37 @@ exports[`Design snapshots should render Design 1`] = `
               </div>
             </div>
             <div
-              class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+              class="css-1jnxvbp AlignmentOption"
               data-test-alignment-area-option="bottomLeft"
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--bottomLeft AlignmentOption__optionView--bottomLeft--light"
+                class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--bottomLeft"
                 data-test-box=""
               >
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                  class="css-1jnxvbp AlignmentOption__indicator"
                   data-test-box=""
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                  class="css-1jnxvbp AlignmentOption__indicator"
                   data-test-box=""
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                  class="css-1jnxvbp AlignmentOption__indicator"
                   data-test-box=""
                 />
               </div>
             </div>
             <div
-              class="Tooltip Tooltip--light"
+              class="Tooltip"
             >
               <div
-                class="Tooltip__content Tooltip__content--light"
+                class="Tooltip__content"
               >
                 Align bottom left
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -1672,37 +1672,37 @@ exports[`Design snapshots should render Design 1`] = `
               </div>
             </div>
             <div
-              class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+              class="css-1jnxvbp AlignmentOption"
               data-test-alignment-area-option="bottomCenter"
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--bottomCenter AlignmentOption__optionView--bottomCenter--light"
+                class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--bottom-center"
                 data-test-box=""
               >
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                  class="css-1jnxvbp AlignmentOption__indicator"
                   data-test-box=""
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                  class="css-1jnxvbp AlignmentOption__indicator"
                   data-test-box=""
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                  class="css-1jnxvbp AlignmentOption__indicator"
                   data-test-box=""
                 />
               </div>
             </div>
             <div
-              class="Tooltip Tooltip--light"
+              class="Tooltip"
             >
               <div
-                class="Tooltip__content Tooltip__content--light"
+                class="Tooltip__content"
               >
                 Align bottom center
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -1711,37 +1711,37 @@ exports[`Design snapshots should render Design 1`] = `
               </div>
             </div>
             <div
-              class="css-1jnxvbp AlignmentOption AlignmentOption--light"
+              class="css-1jnxvbp AlignmentOption"
               data-test-alignment-area-option="bottomRight"
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp AlignmentOption__optionView AlignmentOption__optionView--light AlignmentOption__optionView--bottomRight AlignmentOption__optionView--bottomRight--light"
+                class="css-1jnxvbp AlignmentOption__option-view AlignmentOption__option-view--bottom-right"
                 data-test-box=""
               >
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                  class="css-1jnxvbp AlignmentOption__indicator"
                   data-test-box=""
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                  class="css-1jnxvbp AlignmentOption__indicator"
                   data-test-box=""
                 />
                 <div
-                  class="css-1jnxvbp AlignmentOption__indicator AlignmentOption__indicator--light"
+                  class="css-1jnxvbp AlignmentOption__indicator"
                   data-test-box=""
                 />
               </div>
             </div>
             <div
-              class="Tooltip Tooltip--light"
+              class="Tooltip"
             >
               <div
-                class="Tooltip__content Tooltip__content--light"
+                class="Tooltip__content"
               >
                 Align bottom right
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -1751,21 +1751,21 @@ exports[`Design snapshots should render Design 1`] = `
             </div>
           </div>
           <div
-            class="css-1jnxvbp TextField TextField--light"
+            class="css-1jnxvbp TextField"
             data-test-text-field="column"
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+              class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
               data-test-text-field-wrapper="column"
             >
               <div
-                class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+                class="css-e5vky9 ScrubbableInput"
                 data-test-box=""
                 data-test-scrubbable-input="column"
               >
                 <div
-                  class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+                  class="css-1jnxvbp Icon Icon--neutral2"
                   data-test-icon="gap-columns"
                   height="10"
                   name="GapColumns"
@@ -1773,50 +1773,50 @@ exports[`Design snapshots should render Design 1`] = `
                 />
               </div>
               <input
-                class="TextFieldWrapper__input TextFieldWrapper__input--light"
+                class="TextFieldWrapper__input"
                 data-test-text-field-input="column"
                 maxlength="6"
                 type="number"
                 value="0"
               />
               <div
-                class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+                class="css-zcp5dz TextFieldPopover"
                 data-test-box=""
               >
                 <div
-                  class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                  class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                   data-test-icon="variant"
                   height="12"
                   name="Variant"
                   width="12"
                 />
                 <div
-                  class="css-1c8p9kb Popover Popover--light"
+                  class="css-6i6anv Popover"
                   data-test-box=""
                   data-test-popover="popover"
                   style="left: 0px; top: 0px;"
                 >
                   <div
-                    class="css-1wfopar PopoverItem PopoverItem--light"
+                    class="css-1wfopar PopoverItem"
                     data-test-box=""
                     data-test-popover-item="0"
                   >
                     <div
-                      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral1"
                       data-test-icon="check"
                       height="12"
                       name="Check"
                       width="12"
                     />
                     <div
-                      class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                       data-test-icon="gap-columns"
                       height="12"
                       name="GapColumns"
                       width="12"
                     />
                     <small
-                      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -1828,14 +1828,14 @@ exports[`Design snapshots should render Design 1`] = `
             </div>
           </div>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Gap between columns
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -1853,12 +1853,12 @@ exports[`Design snapshots should render Design 1`] = `
             data-test-box=""
           >
             <div
-              class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+              class="css-1jnxvbp ButtonIcon"
               data-test-button-icon="properties"
               data-test-tooltip=""
             >
               <div
-                class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Icon Icon--neutral1"
                 data-test-icon="properties"
                 height="12"
                 name="Properties"
@@ -1869,7 +1869,7 @@ exports[`Design snapshots should render Design 1`] = `
                 data-test-box=""
               >
                 <div
-                  class="css-6wln18 Popover Popover--light"
+                  class="css-c6outs Popover"
                   data-test-box=""
                   data-test-popover="popover"
                   id="popoverAutoLayoutSettings"
@@ -1880,14 +1880,14 @@ exports[`Design snapshots should render Design 1`] = `
                     data-test-popover-header=""
                   >
                     <small
-                      class="css-1jnxvbp Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                      class="css-1jnxvbp Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="font-size: 11px; text-align: inherit;"
                     >
                       Auto layout settings
                     </small>
                     <div
-                      class="css-1jnxvbp Icon Icon--light Icon--clickable Icon--clickable--light"
+                      class="css-1jnxvbp Icon Icon--clickable"
                       data-test-icon="close"
                       height="10"
                       name="Close"
@@ -1895,11 +1895,11 @@ exports[`Design snapshots should render Design 1`] = `
                     />
                   </div>
                   <div
-                    class="css-1scdc72"
+                    class="css-196hq3q"
                     data-test-popover-preview=""
                   >
                     <p
-                      class="css-1jnxvbp Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--p Typography--p--light"
+                      class="css-1jnxvbp Typography Typography--neutral1 Typography--regular Typography--normal Typography--p"
                       data-test-text=""
                       style="opacity: 0.5; text-align: inherit;"
                     >
@@ -1907,35 +1907,35 @@ exports[`Design snapshots should render Design 1`] = `
                     </p>
                   </div>
                   <div
-                    class="css-1jnxvbp Select Select--light"
+                    class="css-1jnxvbp Select"
                     data-test-select="box-sizing"
                   >
                     <div
-                      class="css-1jnxvbp TextField TextField--light"
+                      class="css-1jnxvbp TextField"
                       data-test-text-field=""
                       data-test-tooltip=""
                     >
                       <small
-                        class="css-1jnxvbp TextFieldLabel TextFieldLabel--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                        class="css-1jnxvbp TextFieldLabel Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                         data-test-text=""
                         style="text-align: inherit;"
                       >
                         Strokes
                       </small>
                       <div
-                        class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--outlined TextFieldWrapper--outlined--light"
+                        class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--outlined"
                         data-test-text-field-wrapper=""
                         style="width: 112px;"
                       >
                         <input
-                          class="TextFieldWrapper__input TextFieldWrapper__input--light"
+                          class="TextFieldWrapper__input"
                           data-test-text-field-input=""
                           maxlength="6"
                           readonly=""
                           value="Excluded"
                         />
                         <div
-                          class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                          class="css-1jnxvbp Icon Icon--neutral1"
                           data-test-icon="chevron-down"
                           height="5"
                           name="ChevronDown"
@@ -1945,20 +1945,20 @@ exports[`Design snapshots should render Design 1`] = `
                       </div>
                     </div>
                     <ul
-                      class="css-1jnxvbp SelectOptions SelectOptions--light"
+                      class="css-1jnxvbp SelectOptions"
                       data-test-box=""
                       data-test-select-options="box-sizing"
                       style="left: 0px; top: 24px; width: 0px;"
                     >
                       <li
-                        class="css-1jnxvbp SelectItem SelectItem--light"
+                        class="css-1jnxvbp SelectItem"
                         data-test-select-item="included"
                         data-value="included"
                         role="option"
                         tabindex="0"
                       >
                         <div
-                          class="css-1jnxvbp SelectItem__checkIcon SelectItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                          class="css-1jnxvbp SelectItem__check-icon Icon Icon--neutral1"
                           data-test-icon="check"
                           height="12"
                           name="Check"
@@ -1967,14 +1967,14 @@ exports[`Design snapshots should render Design 1`] = `
                         Included
                       </li>
                       <li
-                        class="css-1jnxvbp SelectItem SelectItem--light SelectItem--selected SelectItem--selected--light"
+                        class="css-1jnxvbp SelectItem SelectItem--selected"
                         data-test-select-item="excluded"
                         data-value="excluded"
                         role="option"
                         tabindex="0"
                       >
                         <div
-                          class="css-1jnxvbp SelectItem__checkIcon SelectItem__checkIcon--light SelectItem__checkIcon--selected SelectItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                          class="css-1jnxvbp SelectItem__check-icon SelectItem__check-icon--selected Icon Icon--neutral1"
                           data-test-icon="check"
                           height="12"
                           name="Check"
@@ -1988,14 +1988,14 @@ exports[`Design snapshots should render Design 1`] = `
               </div>
             </div>
             <div
-              class="Tooltip Tooltip--light"
+              class="Tooltip"
             >
               <div
-                class="Tooltip__content Tooltip__content--light"
+                class="Tooltip__content"
               >
                 Auto layout settings
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -2008,16 +2008,16 @@ exports[`Design snapshots should render Design 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
+      class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
       data-test-section=""
     >
       <div
-        class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+        class="css-xdzdnq SectionColumnLabels"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <small
-          class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+          class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
           data-test-text=""
           style="text-align: inherit;"
         >
@@ -2029,26 +2029,26 @@ exports[`Design snapshots should render Design 1`] = `
         data-test-box=""
       >
         <div
-          class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--twoInputs SectionColumnContent--twoInputs--light"
+          class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
           data-test-box=""
           style="width: calc(100% - 24px - 0px - 8px);"
         >
           <div
-            class="css-1jnxvbp TextField TextField--light"
+            class="css-1jnxvbp TextField"
             data-test-text-field="padding-lr"
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+              class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
               data-test-text-field-wrapper="padding-lr"
             >
               <div
-                class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+                class="css-e5vky9 ScrubbableInput"
                 data-test-box=""
                 data-test-scrubbable-input="padding-lr"
               >
                 <div
-                  class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+                  class="css-1jnxvbp Icon Icon--neutral2"
                   data-test-icon="padding-lr"
                   height="12"
                   name="PaddingLR"
@@ -2056,50 +2056,50 @@ exports[`Design snapshots should render Design 1`] = `
                 />
               </div>
               <input
-                class="TextFieldWrapper__input TextFieldWrapper__input--light"
+                class="TextFieldWrapper__input"
                 data-test-text-field-input="padding-lr"
                 maxlength="6"
                 type="text"
                 value="0"
               />
               <div
-                class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+                class="css-zcp5dz TextFieldPopover"
                 data-test-box=""
               >
                 <div
-                  class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                  class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                   data-test-icon="variant"
                   height="12"
                   name="Variant"
                   width="12"
                 />
                 <div
-                  class="css-1c8p9kb Popover Popover--light"
+                  class="css-6i6anv Popover"
                   data-test-box=""
                   data-test-popover="popover"
                   style="left: 0px; top: 0px;"
                 >
                   <div
-                    class="css-1wfopar PopoverItem PopoverItem--light"
+                    class="css-1wfopar PopoverItem"
                     data-test-box=""
                     data-test-popover-item="0"
                   >
                     <div
-                      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral1"
                       data-test-icon="check"
                       height="12"
                       name="Check"
                       width="12"
                     />
                     <div
-                      class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                       data-test-icon="padding-lr"
                       height="12"
                       name="PaddingLR"
                       width="12"
                     />
                     <small
-                      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -2111,14 +2111,14 @@ exports[`Design snapshots should render Design 1`] = `
             </div>
           </div>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Horizontal padding
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -2127,21 +2127,21 @@ exports[`Design snapshots should render Design 1`] = `
             </div>
           </div>
           <div
-            class="css-1jnxvbp TextField TextField--light"
+            class="css-1jnxvbp TextField"
             data-test-text-field="padding-tb"
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+              class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
               data-test-text-field-wrapper="padding-tb"
             >
               <div
-                class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+                class="css-e5vky9 ScrubbableInput"
                 data-test-box=""
                 data-test-scrubbable-input="padding-tb"
               >
                 <div
-                  class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+                  class="css-1jnxvbp Icon Icon--neutral2"
                   data-test-icon="padding-tb"
                   height="12"
                   name="PaddingTB"
@@ -2149,50 +2149,50 @@ exports[`Design snapshots should render Design 1`] = `
                 />
               </div>
               <input
-                class="TextFieldWrapper__input TextFieldWrapper__input--light"
+                class="TextFieldWrapper__input"
                 data-test-text-field-input="padding-tb"
                 maxlength="6"
                 type="text"
                 value="0"
               />
               <div
-                class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+                class="css-zcp5dz TextFieldPopover"
                 data-test-box=""
               >
                 <div
-                  class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                  class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                   data-test-icon="variant"
                   height="12"
                   name="Variant"
                   width="12"
                 />
                 <div
-                  class="css-1c8p9kb Popover Popover--light"
+                  class="css-6i6anv Popover"
                   data-test-box=""
                   data-test-popover="popover"
                   style="left: 0px; top: 0px;"
                 >
                   <div
-                    class="css-1wfopar PopoverItem PopoverItem--light"
+                    class="css-1wfopar PopoverItem"
                     data-test-box=""
                     data-test-popover-item="0"
                   >
                     <div
-                      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral1"
                       data-test-icon="check"
                       height="12"
                       name="Check"
                       width="12"
                     />
                     <div
-                      class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                       data-test-icon="padding-tb"
                       height="12"
                       name="PaddingTB"
                       width="12"
                     />
                     <small
-                      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -2204,14 +2204,14 @@ exports[`Design snapshots should render Design 1`] = `
             </div>
           </div>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Vertical padding
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -2229,12 +2229,12 @@ exports[`Design snapshots should render Design 1`] = `
             data-test-box=""
           >
             <div
-              class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+              class="css-1jnxvbp ButtonIcon"
               data-test-button-icon="insets-mode"
               data-test-tooltip=""
             >
               <div
-                class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Icon Icon--neutral1"
                 data-test-icon="individual-insets"
                 height="12"
                 name="IndividualInsets"
@@ -2242,14 +2242,14 @@ exports[`Design snapshots should render Design 1`] = `
               />
             </div>
             <div
-              class="Tooltip Tooltip--light"
+              class="Tooltip"
             >
               <div
-                class="Tooltip__content Tooltip__content--light"
+                class="Tooltip__content"
               >
                 Individual padding
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -2262,11 +2262,11 @@ exports[`Design snapshots should render Design 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light SectionColumn--withTopMargin SectionColumn--withTopMargin--light"
+      class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin SectionColumn--with-top-margin"
       data-test-section=""
     >
       <div
-        class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+        class="css-xdzdnq SectionColumnLabels"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       />
@@ -2275,25 +2275,25 @@ exports[`Design snapshots should render Design 1`] = `
         data-test-box=""
       >
         <div
-          class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--single SectionColumnContent--single--light"
+          class="css-biptg5 SectionColumnContent SectionColumnContent--single"
           data-test-box=""
           style="width: calc(100% - 24px - 0px - 8px);"
         >
           <div
-            class="css-1jnxvbp Checkbox Checkbox--light"
+            class="css-1jnxvbp Checkbox"
             data-test-checkbox="clip-content"
           >
             <input
-              class="Checkbox__input Checkbox__input--light"
+              class="Checkbox__input"
               data-test-checkbox-input="clip-content"
               type="checkbox"
             />
             <div
-              class="css-1jnxvbp Checkbox__inputWrapper Checkbox__inputWrapper--light"
+              class="css-1jnxvbp Checkbox__input-wrapper"
               data-test-box=""
             >
               <div
-                class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Icon Icon--neutral1"
                 data-test-icon="checkbox"
                 height="8"
                 name="Checkbox"
@@ -2301,7 +2301,7 @@ exports[`Design snapshots should render Design 1`] = `
               />
             </div>
             <small
-              class="css-1jnxvbp Checkbox__label Checkbox__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+              class="css-1jnxvbp Checkbox__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
               data-test-text=""
               style="text-align: inherit;"
             >
@@ -2322,15 +2322,15 @@ exports[`Design snapshots should render Design 1`] = `
     </div>
   </div>
   <div
-    class="css-1jnxvbp Section Section--light"
+    class="css-1jnxvbp Section"
     data-test-section=""
   >
     <div
-      class="css-1jnxvbp Section__labelWrapper Section__labelWrapper--light Section__labelWrapper--separator Section__labelWrapper--separator--light"
+      class="css-1jnxvbp Section__label-wrapper Section__label-wrapper--separator"
       data-test-box=""
     >
       <small
-        class="css-1jnxvbp Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp Section__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -2341,12 +2341,12 @@ exports[`Design snapshots should render Design 1`] = `
         data-test-box=""
       >
         <div
-          class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+          class="css-1jnxvbp ButtonIcon"
           data-test-button-icon=""
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            class="css-1jnxvbp Icon Icon--neutral1"
             data-test-icon="eyes-opened"
             height="14"
             name="EyesOpened"
@@ -2354,14 +2354,14 @@ exports[`Design snapshots should render Design 1`] = `
           />
         </div>
         <div
-          class="Tooltip Tooltip--light"
+          class="Tooltip"
         >
           <div
-            class="Tooltip__content Tooltip__content--light"
+            class="Tooltip__content"
           >
             Hide
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -2370,12 +2370,12 @@ exports[`Design snapshots should render Design 1`] = `
           </div>
         </div>
         <div
-          class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+          class="css-1jnxvbp ButtonIcon"
           data-test-button-icon=""
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            class="css-1jnxvbp Icon Icon--neutral1"
             data-test-icon="drop-empty"
             height="14"
             name="DropEmpty"
@@ -2386,25 +2386,25 @@ exports[`Design snapshots should render Design 1`] = `
             data-test-box=""
           >
             <div
-              class="css-6wln18 Popover Popover--light"
+              class="css-c6outs Popover"
               data-test-box=""
               data-test-popover="popover"
               style="left: 28px; top: 28px;"
             >
               <div
-                class="css-1wfopar PopoverItem PopoverItem--light"
+                class="css-1wfopar PopoverItem"
                 data-test-box=""
                 data-test-popover-item="initial"
               >
                 <div
-                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral1"
                   data-test-icon="check"
                   height="12"
                   name="Check"
                   width="12"
                 />
                 <small
-                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -2412,19 +2412,19 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <div
-                class="css-1wfopar PopoverItem PopoverItem--light"
+                class="css-1wfopar PopoverItem"
                 data-test-box=""
                 data-test-popover-item="normal"
               >
                 <div
-                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                   data-test-icon="check"
                   height="12"
                   name="Check"
                   width="12"
                 />
                 <small
-                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -2432,23 +2432,23 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <div
-                class="css-qef3st"
+                class="css-3q7iqb"
                 data-test-box=""
               />
               <div
-                class="css-1wfopar PopoverItem PopoverItem--light"
+                class="css-1wfopar PopoverItem"
                 data-test-box=""
                 data-test-popover-item="darken"
               >
                 <div
-                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                   data-test-icon="check"
                   height="12"
                   name="Check"
                   width="12"
                 />
                 <small
-                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -2456,19 +2456,19 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <div
-                class="css-1wfopar PopoverItem PopoverItem--light"
+                class="css-1wfopar PopoverItem"
                 data-test-box=""
                 data-test-popover-item="multiply"
               >
                 <div
-                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                   data-test-icon="check"
                   height="12"
                   name="Check"
                   width="12"
                 />
                 <small
-                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -2476,19 +2476,19 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <div
-                class="css-1wfopar PopoverItem PopoverItem--light"
+                class="css-1wfopar PopoverItem"
                 data-test-box=""
                 data-test-popover-item="color-burn"
               >
                 <div
-                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                   data-test-icon="check"
                   height="12"
                   name="Check"
                   width="12"
                 />
                 <small
-                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -2496,23 +2496,23 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <div
-                class="css-qef3st"
+                class="css-3q7iqb"
                 data-test-box=""
               />
               <div
-                class="css-1wfopar PopoverItem PopoverItem--light"
+                class="css-1wfopar PopoverItem"
                 data-test-box=""
                 data-test-popover-item="lighten"
               >
                 <div
-                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                   data-test-icon="check"
                   height="12"
                   name="Check"
                   width="12"
                 />
                 <small
-                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -2520,19 +2520,19 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <div
-                class="css-1wfopar PopoverItem PopoverItem--light"
+                class="css-1wfopar PopoverItem"
                 data-test-box=""
                 data-test-popover-item="screen"
               >
                 <div
-                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                   data-test-icon="check"
                   height="12"
                   name="Check"
                   width="12"
                 />
                 <small
-                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -2540,19 +2540,19 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <div
-                class="css-1wfopar PopoverItem PopoverItem--light"
+                class="css-1wfopar PopoverItem"
                 data-test-box=""
                 data-test-popover-item="plus-lighter"
               >
                 <div
-                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                   data-test-icon="check"
                   height="12"
                   name="Check"
                   width="12"
                 />
                 <small
-                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -2560,19 +2560,19 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <div
-                class="css-1wfopar PopoverItem PopoverItem--light"
+                class="css-1wfopar PopoverItem"
                 data-test-box=""
                 data-test-popover-item="color-dodge"
               >
                 <div
-                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                   data-test-icon="check"
                   height="12"
                   name="Check"
                   width="12"
                 />
                 <small
-                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -2580,23 +2580,23 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <div
-                class="css-qef3st"
+                class="css-3q7iqb"
                 data-test-box=""
               />
               <div
-                class="css-1wfopar PopoverItem PopoverItem--light"
+                class="css-1wfopar PopoverItem"
                 data-test-box=""
                 data-test-popover-item="overlay"
               >
                 <div
-                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                   data-test-icon="check"
                   height="12"
                   name="Check"
                   width="12"
                 />
                 <small
-                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -2604,19 +2604,19 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <div
-                class="css-1wfopar PopoverItem PopoverItem--light"
+                class="css-1wfopar PopoverItem"
                 data-test-box=""
                 data-test-popover-item="soft-light"
               >
                 <div
-                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                   data-test-icon="check"
                   height="12"
                   name="Check"
                   width="12"
                 />
                 <small
-                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -2624,19 +2624,19 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <div
-                class="css-1wfopar PopoverItem PopoverItem--light"
+                class="css-1wfopar PopoverItem"
                 data-test-box=""
                 data-test-popover-item="hard-light"
               >
                 <div
-                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                   data-test-icon="check"
                   height="12"
                   name="Check"
                   width="12"
                 />
                 <small
-                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -2644,19 +2644,19 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <div
-                class="css-1wfopar PopoverItem PopoverItem--light"
+                class="css-1wfopar PopoverItem"
                 data-test-box=""
                 data-test-popover-item="difference"
               >
                 <div
-                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                   data-test-icon="check"
                   height="12"
                   name="Check"
                   width="12"
                 />
                 <small
-                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -2664,19 +2664,19 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <div
-                class="css-1wfopar PopoverItem PopoverItem--light"
+                class="css-1wfopar PopoverItem"
                 data-test-box=""
                 data-test-popover-item="exclusion"
               >
                 <div
-                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                   data-test-icon="check"
                   height="12"
                   name="Check"
                   width="12"
                 />
                 <small
-                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -2684,23 +2684,23 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <div
-                class="css-qef3st"
+                class="css-3q7iqb"
                 data-test-box=""
               />
               <div
-                class="css-1wfopar PopoverItem PopoverItem--light"
+                class="css-1wfopar PopoverItem"
                 data-test-box=""
                 data-test-popover-item="hue"
               >
                 <div
-                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                   data-test-icon="check"
                   height="12"
                   name="Check"
                   width="12"
                 />
                 <small
-                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -2708,19 +2708,19 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <div
-                class="css-1wfopar PopoverItem PopoverItem--light"
+                class="css-1wfopar PopoverItem"
                 data-test-box=""
                 data-test-popover-item="saturation"
               >
                 <div
-                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                   data-test-icon="check"
                   height="12"
                   name="Check"
                   width="12"
                 />
                 <small
-                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -2728,19 +2728,19 @@ exports[`Design snapshots should render Design 1`] = `
                 </small>
               </div>
               <div
-                class="css-1wfopar PopoverItem PopoverItem--light"
+                class="css-1wfopar PopoverItem"
                 data-test-box=""
                 data-test-popover-item="color"
               >
                 <div
-                  class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                   data-test-icon="check"
                   height="12"
                   name="Check"
                   width="12"
                 />
                 <small
-                  class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                  class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                   data-test-text=""
                   style="text-align: inherit;"
                 >
@@ -2751,14 +2751,14 @@ exports[`Design snapshots should render Design 1`] = `
           </div>
         </div>
         <div
-          class="Tooltip Tooltip--light"
+          class="Tooltip"
         >
           <div
-            class="Tooltip__content Tooltip__content--light"
+            class="Tooltip__content"
           >
             Apply blend mode
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -2769,16 +2769,16 @@ exports[`Design snapshots should render Design 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp SectionColumn SectionColumn--light SectionColumn--withBottomMargin SectionColumn--withBottomMargin--light"
+      class="css-1jnxvbp SectionColumn SectionColumn--with-bottom-margin"
       data-test-section=""
     >
       <div
-        class="css-xdzdnq SectionColumnLabels SectionColumnLabels--light"
+        class="css-xdzdnq SectionColumnLabels"
         data-test-box=""
         style="width: calc(100% - 24px - 0px - 8px);"
       >
         <small
-          class="css-1jnxvbp SectionColumnLabels__label SectionColumnLabels__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+          class="css-1jnxvbp SectionColumnLabels__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
           data-test-text=""
           style="text-align: inherit;"
         >
@@ -2790,26 +2790,26 @@ exports[`Design snapshots should render Design 1`] = `
         data-test-box=""
       >
         <div
-          class="css-biptg5 SectionColumnContent SectionColumnContent--light SectionColumnContent--twoInputs SectionColumnContent--twoInputs--light"
+          class="css-biptg5 SectionColumnContent SectionColumnContent--two-inputs"
           data-test-box=""
           style="width: calc(100% - 24px - 0px - 8px);"
         >
           <div
-            class="css-1jnxvbp TextField TextField--light"
+            class="css-1jnxvbp TextField"
             data-test-text-field="opacity"
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+              class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
               data-test-text-field-wrapper="opacity"
             >
               <div
-                class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+                class="css-e5vky9 ScrubbableInput"
                 data-test-box=""
                 data-test-scrubbable-input="opacity"
               >
                 <div
-                  class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+                  class="css-1jnxvbp Icon Icon--neutral2"
                   data-test-icon="opacity"
                   height="12"
                   name="Opacity"
@@ -2817,50 +2817,50 @@ exports[`Design snapshots should render Design 1`] = `
                 />
               </div>
               <input
-                class="TextFieldWrapper__input TextFieldWrapper__input--light"
+                class="TextFieldWrapper__input"
                 data-test-text-field-input="opacity"
                 maxlength="6"
                 type="text"
                 value="100"
               />
               <div
-                class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+                class="css-zcp5dz TextFieldPopover"
                 data-test-box=""
               >
                 <div
-                  class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                  class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                   data-test-icon="variant"
                   height="12"
                   name="Variant"
                   width="12"
                 />
                 <div
-                  class="css-1c8p9kb Popover Popover--light"
+                  class="css-6i6anv Popover"
                   data-test-box=""
                   data-test-popover="popover"
                   style="left: 0px; top: 0px;"
                 >
                   <div
-                    class="css-1wfopar PopoverItem PopoverItem--light"
+                    class="css-1wfopar PopoverItem"
                     data-test-box=""
                     data-test-popover-item="0"
                   >
                     <div
-                      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral1"
                       data-test-icon="check"
                       height="12"
                       name="Check"
                       width="12"
                     />
                     <div
-                      class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                       data-test-icon="opacity"
                       height="12"
                       name="Opacity"
                       width="12"
                     />
                     <small
-                      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -2872,21 +2872,21 @@ exports[`Design snapshots should render Design 1`] = `
             </div>
           </div>
           <div
-            class="css-1jnxvbp TextField TextField--light"
+            class="css-1jnxvbp TextField"
             data-test-text-field="border-radius"
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--fullWidth TextFieldWrapper--fullWidth--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+              class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--full-width"
               data-test-text-field-wrapper="border-radius"
             >
               <div
-                class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+                class="css-e5vky9 ScrubbableInput"
                 data-test-box=""
                 data-test-scrubbable-input="border-radius"
               >
                 <div
-                  class="css-1jnxvbp Icon Icon--light Icon--neutral2 Icon--neutral2--light"
+                  class="css-1jnxvbp Icon Icon--neutral2"
                   data-test-icon="corners"
                   height="12"
                   name="Corners"
@@ -2894,50 +2894,50 @@ exports[`Design snapshots should render Design 1`] = `
                 />
               </div>
               <input
-                class="TextFieldWrapper__input TextFieldWrapper__input--light"
+                class="TextFieldWrapper__input"
                 data-test-text-field-input="border-radius"
                 maxlength="6"
                 type="text"
                 value="0"
               />
               <div
-                class="css-zcp5dz TextFieldPopover TextFieldPopover--light"
+                class="css-zcp5dz TextFieldPopover"
                 data-test-box=""
               >
                 <div
-                  class="css-1jnxvbp TextFieldPopover__icon TextFieldPopover__icon--light TextFieldWrapper__icon TextFieldWrapper__icon--light Icon Icon--light Icon--clickable Icon--clickable--light"
+                  class="css-1jnxvbp TextFieldPopover__icon TextFieldWrapper__icon Icon Icon--clickable"
                   data-test-icon="variant"
                   height="12"
                   name="Variant"
                   width="12"
                 />
                 <div
-                  class="css-1c8p9kb Popover Popover--light"
+                  class="css-6i6anv Popover"
                   data-test-box=""
                   data-test-popover="popover"
                   style="left: 0px; top: 0px;"
                 >
                   <div
-                    class="css-1wfopar PopoverItem PopoverItem--light"
+                    class="css-1wfopar PopoverItem"
                     data-test-box=""
                     data-test-popover-item="0"
                   >
                     <div
-                      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light PopoverItem__checkIcon--selected PopoverItem__checkIcon--selected--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      class="css-1jnxvbp PopoverItem__check-icon PopoverItem__check-icon--selected Icon Icon--neutral1"
                       data-test-icon="check"
                       height="12"
                       name="Check"
                       width="12"
                     />
                     <div
-                      class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                       data-test-icon="corners"
                       height="12"
                       name="Corners"
                       width="12"
                     />
                     <small
-                      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -2945,26 +2945,26 @@ exports[`Design snapshots should render Design 1`] = `
                     </small>
                   </div>
                   <div
-                    class="css-1wfopar PopoverItem PopoverItem--light"
+                    class="css-1wfopar PopoverItem"
                     data-test-box=""
                     data-test-popover-item="1"
                   >
                     <div
-                      class="css-1jnxvbp PopoverItem__checkIcon PopoverItem__checkIcon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      class="css-1jnxvbp PopoverItem__check-icon Icon Icon--neutral1"
                       data-test-icon="check"
                       height="12"
                       name="Check"
                       width="12"
                     />
                     <div
-                      class="css-1jnxvbp PopoverItem__icon PopoverItem__icon--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                      class="css-1jnxvbp PopoverItem__icon Icon Icon--neutral1"
                       data-test-icon="percentage"
                       height="12"
                       name="Percentage"
                       width="12"
                     />
                     <small
-                      class="css-1jnxvbp PopoverItem__text PopoverItem__text--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+                      class="css-1jnxvbp PopoverItem__text Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
                       data-test-text=""
                       style="text-align: inherit;"
                     >
@@ -2985,12 +2985,12 @@ exports[`Design snapshots should render Design 1`] = `
             data-test-box=""
           >
             <div
-              class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+              class="css-1jnxvbp ButtonIcon"
               data-test-button-icon="corners-mode"
               data-test-tooltip=""
             >
               <div
-                class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Icon Icon--neutral1"
                 data-test-icon="corners"
                 height="12"
                 name="Corners"
@@ -2998,14 +2998,14 @@ exports[`Design snapshots should render Design 1`] = `
               />
             </div>
             <div
-              class="Tooltip Tooltip--light"
+              class="Tooltip"
             >
               <div
-                class="Tooltip__content Tooltip__content--light"
+                class="Tooltip__content"
               >
                 Individual corners
                 <div
-                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                  class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                   data-test-icon="carrot-down"
                   height="14"
                   name="CarrotDown"
@@ -3019,15 +3019,15 @@ exports[`Design snapshots should render Design 1`] = `
     </div>
   </div>
   <div
-    class="css-1jnxvbp Section Section--light"
+    class="css-1jnxvbp Section"
     data-test-section=""
   >
     <div
-      class="css-1jnxvbp Section__labelWrapper Section__labelWrapper--light Section__labelWrapper--separator Section__labelWrapper--separator--light"
+      class="css-1jnxvbp Section__label-wrapper Section__label-wrapper--separator"
       data-test-box=""
     >
       <small
-        class="css-1jnxvbp Section__label Section__label--light Typography Typography--light Typography--neutral1 Typography--neutral1--light Typography--regular Typography--regular--light Typography--normal Typography--normal--light Typography--small Typography--small--light"
+        class="css-1jnxvbp Section__label Typography Typography--neutral1 Typography--regular Typography--normal Typography--small"
         data-test-text=""
         style="text-align: inherit;"
       >
@@ -3038,12 +3038,12 @@ exports[`Design snapshots should render Design 1`] = `
         data-test-box=""
       >
         <div
-          class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+          class="css-1jnxvbp ButtonIcon"
           data-test-button-icon=""
           data-test-tooltip=""
         >
           <div
-            class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+            class="css-1jnxvbp Icon Icon--neutral1"
             data-test-icon="plus"
             height="14"
             name="Plus"
@@ -3051,14 +3051,14 @@ exports[`Design snapshots should render Design 1`] = `
           />
         </div>
         <div
-          class="Tooltip Tooltip--light"
+          class="Tooltip"
         >
           <div
-            class="Tooltip__content Tooltip__content--light"
+            class="Tooltip__content"
           >
             Add fill
             <div
-              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
               data-test-icon="carrot-down"
               height="14"
               name="CarrotDown"
@@ -3069,11 +3069,11 @@ exports[`Design snapshots should render Design 1`] = `
       </div>
     </div>
     <div
-      class="css-1jnxvbp DraggableSection DraggableSection--light"
+      class="css-1jnxvbp DraggableSection"
       data-test-draggable-section=""
     >
       <div
-        class="css-1jnxvbp DraggableSection__item DraggableSection__item--light"
+        class="css-1jnxvbp DraggableSection__item"
         data-test-draggable-section-item="0"
       >
         <div
@@ -3082,17 +3082,17 @@ exports[`Design snapshots should render Design 1`] = `
           style="width: 100%;"
         >
           <div
-            class="css-1jnxvbp FieldGroup FieldGroup--light"
+            class="css-1jnxvbp FieldGroup"
             data-test-field-group="background-0"
             data-visible-color-picker-panel="false"
           >
             <div
-              class="css-1jnxvbp ColorPicker__colorInput ColorPicker__colorInput--light TextField TextField--light"
+              class="css-1jnxvbp ColorPicker__color-input TextField"
               data-test-text-field="color"
               data-test-tooltip=""
             >
               <div
-                class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+                class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled"
                 data-test-text-field-wrapper="color"
               >
                 <div
@@ -3101,27 +3101,27 @@ exports[`Design snapshots should render Design 1`] = `
                   data-test-color="background-0"
                 >
                   <div
-                    class="css-1axzf39 Color Color--light"
+                    class="css-1axzf39 Color"
                     data-test-box=""
                   >
                     <div
-                      class="css-agg4zg Color__picker Color__picker--light"
+                      class="css-agg4zg Color__picker"
                       data-test-box=""
                       style="background-color: rgb(255, 255, 255);"
                     />
                     <div
-                      class="css-agg4zg Color__pickerAlpha Color__pickerAlpha--light"
+                      class="css-agg4zg Color__picker-alpha"
                       data-test-box=""
                       style="background-color: rgb(255, 255, 255);"
                     />
                     <div
-                      class="css-hnxq09 Color__pickerTexture Color__pickerTexture--light"
+                      class="css-hnxq09 Color__picker-texture"
                       data-test-box=""
                     />
                   </div>
                 </div>
                 <input
-                  class="TextFieldWrapper__input TextFieldWrapper__input--light"
+                  class="TextFieldWrapper__input"
                   data-test-text-field-input="color"
                   maxlength="6"
                   value="ffffff"
@@ -3129,16 +3129,16 @@ exports[`Design snapshots should render Design 1`] = `
               </div>
             </div>
             <div
-              class="css-1jnxvbp ColorPicker__alphaInput ColorPicker__alphaInput--light TextField TextField--light"
+              class="css-1jnxvbp ColorPicker__alpha-input TextField"
               data-test-text-field="alpha"
               data-test-tooltip=""
             >
               <div
-                class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--light TextFieldWrapper--filled TextFieldWrapper--filled--light"
+                class="css-1jnxvbp TextFieldWrapper TextFieldWrapper--filled"
                 data-test-text-field-wrapper="alpha"
               >
                 <input
-                  class="TextFieldWrapper__input TextFieldWrapper__input--light"
+                  class="TextFieldWrapper__input"
                   data-test-text-field-input="alpha"
                   max="100"
                   maxlength="6"
@@ -3147,12 +3147,12 @@ exports[`Design snapshots should render Design 1`] = `
                   value="100"
                 />
                 <div
-                  class="css-e5vky9 ScrubbableInput ScrubbableInput--light"
+                  class="css-e5vky9 ScrubbableInput"
                   data-test-box=""
                   data-test-scrubbable-input=""
                 >
                   <div
-                    class="ColorPicker__alphaInputUnit ColorPicker__alphaInputUnit--light"
+                    class="ColorPicker__alpha-input-unit"
                   >
                     %
                   </div>
@@ -3162,16 +3162,16 @@ exports[`Design snapshots should render Design 1`] = `
           </div>
         </div>
         <div
-          class="css-1jnxvbp DraggableSectionContent DraggableSectionContent--light"
+          class="css-1jnxvbp DraggableSectionContent"
           data-test-box=""
         >
           <div
-            class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+            class="css-1jnxvbp ButtonIcon"
             data-test-button-icon="toggle-visibility"
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--neutral1"
               data-test-icon="eyes-opened"
               height="14"
               name="EyesOpened"
@@ -3179,14 +3179,14 @@ exports[`Design snapshots should render Design 1`] = `
             />
           </div>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Hide
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"
@@ -3195,12 +3195,12 @@ exports[`Design snapshots should render Design 1`] = `
             </div>
           </div>
           <div
-            class="css-1jnxvbp ButtonIcon ButtonIcon--light"
+            class="css-1jnxvbp ButtonIcon"
             data-test-button-icon="remove"
             data-test-tooltip=""
           >
             <div
-              class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+              class="css-1jnxvbp Icon Icon--neutral1"
               data-test-icon="minus"
               height="14"
               name="Minus"
@@ -3208,14 +3208,14 @@ exports[`Design snapshots should render Design 1`] = `
             />
           </div>
           <div
-            class="Tooltip Tooltip--light"
+            class="Tooltip"
           >
             <div
-              class="Tooltip__content Tooltip__content--light"
+              class="Tooltip__content"
             >
               Remove
               <div
-                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--light Tooltip__carrot--topCenter Tooltip__carrot--topCenter--light Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+                class="css-1jnxvbp Tooltip__carrot Tooltip__carrot--top-center Icon Icon--neutral1"
                 data-test-icon="carrot-down"
                 height="14"
                 name="CarrotDown"

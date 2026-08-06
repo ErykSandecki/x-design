@@ -1,15 +1,14 @@
+import cx from 'classnames';
 import React, { FC, KeyboardEvent, ReactNode, RefObject } from 'react';
 
 // components
 import Box from '../UI/Box/Box';
 
 // hooks
-import { useTheme } from 'hooks';
 import { useZoomBoxEvents } from './hooks/useZoomBoxEvents';
 
 // others
 import { CURSOR_STATES } from 'constant/constants';
-import { classes, className, classNames } from './classNames';
 import { ZOOM_CONTENT_ID } from './constants';
 
 // styles
@@ -22,12 +21,26 @@ import { TColor } from 'types';
 // utils
 import { hexToRgb } from 'utils';
 
+const zoomBoxModificators: Record<string, string> = {
+  colorSampler: 'ZoomBox--color-sampler',
+  comment: 'ZoomBox--comment',
+  default: 'ZoomBox--default',
+  idle: 'ZoomBox--idle',
+  lmb: 'ZoomBox--lmb',
+  mmb: 'ZoomBox--mmb',
+  move: 'ZoomBox--move',
+  pressing: 'ZoomBox--pressing',
+  rmb: 'ZoomBox--rmb',
+  toolBeltA: 'ZoomBox--toolBeltA',
+  unknown: 'ZoomBox--unknown',
+};
+
 export type TZoomBoxProps = {
   alpha: string;
   backgroundColor: TColor['color'];
   backgroundVissible: boolean;
   children: ReactNode;
-  classes?: typeof classes;
+  classes?: { className: string };
   colorSampler: boolean;
   coordinates: T3DCoordinates;
   mouseMode: MouseMode;
@@ -65,8 +78,6 @@ export const ZoomBox: FC<TZoomBoxProps> = ({
   zoomBoxRef,
   zoomContentRef,
 }) => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-
   const { cursorState, ...events } = useZoomBoxEvents(
     coordinates,
     mouseMode,
@@ -85,14 +96,13 @@ export const ZoomBox: FC<TZoomBoxProps> = ({
       classes={{
         className: cx(
           classes.className,
-          classNamesWithTheme[className].name,
-          [classNamesWithTheme[className].modificators.colorSampler, colorSampler],
-          classNamesWithTheme[className].modificators[cursorState],
-          classNamesWithTheme[className].modificators[mouseMode],
-          [
-            classNamesWithTheme[className].modificators.pressing,
-            mouseMode === MouseMode.move && cursorState === CURSOR_STATES[1],
-          ],
+          styles.ZoomBox,
+          styles[zoomBoxModificators[cursorState]],
+          styles[zoomBoxModificators[mouseMode]],
+          {
+            [styles['ZoomBox--color-sampler']]: colorSampler,
+            [styles['ZoomBox--pressing']]: mouseMode === MouseMode.move && cursorState === CURSOR_STATES[1],
+          },
         ),
       }}
       e2eValue="zoom-box"
@@ -107,7 +117,7 @@ export const ZoomBox: FC<TZoomBoxProps> = ({
       {...events}
     >
       <Box
-        classes={{ className: cx(classNamesWithTheme.backgroundMask) }}
+        classes={{ className: cx(styles['ZoomBox__background-mask']) }}
         e2eValue="zoom-box-background-mask"
         style={{
           backgroundColor: hexToRgb(backgroundColor, parseInt(alpha)),
@@ -115,13 +125,13 @@ export const ZoomBox: FC<TZoomBoxProps> = ({
         }}
       />
       <Box
-        classes={{ className: cx(classNamesWithTheme.textureBlank) }}
+        classes={{ className: cx(styles['ZoomBox__texture-blank']) }}
         style={{
           transform: `translate(${coordinates.x}px, ${coordinates.y}px) scale(${coordinates.z})`,
         }}
       />
       <Box
-        classes={{ className: cx(classNamesWithTheme.zoomContent) }}
+        classes={{ className: cx(styles['ZoomBox__zoom-content']) }}
         id={ZOOM_CONTENT_ID}
         ref={zoomContentRef}
         sx={{ height: '100vh', position: 'relative' }}

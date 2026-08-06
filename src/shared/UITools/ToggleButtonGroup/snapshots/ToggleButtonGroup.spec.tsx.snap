@@ -3,17 +3,17 @@
 exports[`ToggleButtonGroup snapshots should render ToggleButtonGroup 1`] = `
 <DocumentFragment>
   <div
-    class="css-19um8c2 ToggleButtonGroup ToggleButtonGroup--light"
+    class="css-19um8c2 ToggleButtonGroup"
     data-test-box=""
     data-test-toggle-button-group="test"
   >
     <button
-      class="ToggleButton ToggleButton--light"
+      class="ToggleButton"
       data-test-toggle-button="0"
       type="button"
     >
       <div
-        class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+        class="css-1jnxvbp Icon Icon--neutral1"
         data-test-icon="align-horizontal-center"
         height="12"
         name="AlignHorizontalCenter"
@@ -21,12 +21,12 @@ exports[`ToggleButtonGroup snapshots should render ToggleButtonGroup 1`] = `
       />
     </button>
     <button
-      class="ToggleButton ToggleButton--light"
+      class="ToggleButton"
       data-test-toggle-button="1"
       type="button"
     >
       <div
-        class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+        class="css-1jnxvbp Icon Icon--neutral1"
         data-test-icon="align-horizontal-center"
         height="12"
         name="AlignHorizontalCenter"
@@ -34,12 +34,12 @@ exports[`ToggleButtonGroup snapshots should render ToggleButtonGroup 1`] = `
       />
     </button>
     <button
-      class="ToggleButton ToggleButton--light"
+      class="ToggleButton"
       data-test-toggle-button="2"
       type="button"
     >
       <div
-        class="css-1jnxvbp Icon Icon--light Icon--neutral1 Icon--neutral1--light"
+        class="css-1jnxvbp Icon Icon--neutral1"
         data-test-icon="align-horizontal-center"
         height="12"
         name="AlignHorizontalCenter"

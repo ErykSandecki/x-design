@@ -1,13 +1,10 @@
+import cx from 'classnames';
 import { FC } from 'react';
 
 // components
 import { Box, Icon } from 'shared';
 
-// hooks
-import { useTheme } from 'hooks';
-
 // others
-import { className, classNames } from './classNames';
 import { MOUSE_MODE_ICON } from '../constants';
 
 // styles
@@ -26,11 +23,9 @@ export type TMouseModeProps = {
 };
 
 const MouseModes: FC<TMouseModeProps> = ({ mouseMode, setMouseMode }) => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-
   return (
     <Box
-      classes={{ className: cx(classNamesWithTheme[className]) }}
+      classes={{ className: cx(styles.MouseModes) }}
       e2eValue="toolbar"
       sx={{ columnGap: '8px', display: 'flex', height: '100%' }}
     >
@@ -41,10 +36,9 @@ const MouseModes: FC<TMouseModeProps> = ({ mouseMode, setMouseMode }) => {
           <Box
             attributes={{ [E2EAttribute.active]: isActive }}
             classes={{
-              className: cx(classNamesWithTheme.button.name, [
-                classNamesWithTheme.button.modificators.active,
-                isActive,
-              ]),
+              className: cx(styles.MouseModes__button, {
+                [styles['MouseModes__button--active']]: isActive,
+              }),
             }}
             e2eValue={name}
             key={name}

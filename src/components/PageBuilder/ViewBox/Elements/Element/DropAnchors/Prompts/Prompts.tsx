@@ -1,13 +1,10 @@
+import cx from 'classnames';
 import { FC, useMemo } from 'react';
 
 // components
 import { Box } from 'shared';
 
-// hooks
-import { useTheme } from 'hooks';
-
 // others
-import { className, classNames } from './classNames';
 
 // styles
 import styles from './prompts.scss';
@@ -18,6 +15,13 @@ import { DropAnchorsPosition } from 'store/pageBuilder/enums';
 // utils
 import { promptsData } from './utils/promptsData';
 
+const promptsModificators: Record<string, string> = {
+  bottom: 'Prompts--bottom',
+  left: 'Prompts--left',
+  right: 'Prompts--right',
+  top: 'Prompts--top',
+};
+
 export type TPromptsProps = {
   anchorPos: DropAnchorsPosition;
   displayNextPrompt: boolean;
@@ -27,8 +31,6 @@ export type TPromptsProps = {
 };
 
 const Prompts: FC<TPromptsProps> = ({ anchorPos, displayNextPrompt, displayPrevPrompt, isFlowVertical, isGrid }) => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
-
   const prompts = useMemo(
     () => promptsData(anchorPos, displayNextPrompt, displayPrevPrompt, isFlowVertical, isGrid),
     [anchorPos, displayNextPrompt, displayPrevPrompt, isFlowVertical, isGrid],
@@ -37,7 +39,9 @@ const Prompts: FC<TPromptsProps> = ({ anchorPos, displayNextPrompt, displayPrevP
   return prompts.map(({ key, visible }) => (
     <Box
       classes={{
-        className: cx(classNamesWithTheme[className].name, [classNamesWithTheme[className].modificators[key], visible]),
+        className: cx(styles.Prompts, {
+          [styles[promptsModificators[key]]]: visible,
+        }),
       }}
       key={key}
       sx={{ borderRadius: '1px', boxSizing: 'border-box', position: 'absolute' }}

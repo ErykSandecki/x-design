@@ -2,7 +2,6 @@
 import Icon from './Icon';
 
 // others
-import { className as classNameIcon, classNames } from './classNames';
 
 // types
 import { ColorsTheme } from 'types';
@@ -20,9 +19,7 @@ describe('Typography props', () => {
     const { container } = customRender(<Icon clickable name="StepBackwardOutlined" />);
 
     // result
-    expect(container.querySelector(`.${classNames[classNameIcon].name}`)).toHaveClass(
-      classNames[classNameIcon].modificators.clickable,
-    );
+    expect(container.querySelector(`.${'Icon'}`)).toHaveClass('Icon--clickable');
   });
 
   it('should pass classes', () => {
@@ -38,9 +35,7 @@ describe('Typography props', () => {
     const { container } = customRender(<Icon color={ColorsTheme.blue1} name="StepBackwardOutlined" />);
 
     // result
-    expect(container.querySelector(`.${classNames[classNameIcon].name}`)).toHaveClass(
-      classNames[classNameIcon].modificators.blue1,
-    );
+    expect(container.querySelector(`.${'Icon'}`)).toHaveClass('Icon--blue1');
   });
 
   it('should pass disabled', () => {
@@ -48,9 +43,7 @@ describe('Typography props', () => {
     const { container } = customRender(<Icon disabled name="StepBackwardOutlined" />);
 
     // result
-    expect(container.querySelector(`.${classNames[classNameIcon].name}`)).toHaveClass(
-      classNames[classNameIcon].modificators.disabled,
-    );
+    expect(container.querySelector(`.${'Icon'}`)).toHaveClass('Icon--disabled');
   });
 
   it('should pass e2eAttribute', () => {
@@ -80,7 +73,7 @@ describe('Typography props', () => {
     const { container } = customRender(<Icon height={100} name="StepBackwardOutlined" />);
 
     // result
-    expect(container.querySelector(`.${classNames[classNameIcon].name}`)).toHaveAttribute('height', '100');
+    expect(container.querySelector(`.${'Icon'}`)).toHaveAttribute('height', '100');
   });
 
   it('should pass name', () => {
@@ -88,10 +81,7 @@ describe('Typography props', () => {
     const { container } = customRender(<Icon name="StepBackwardOutlined" />);
 
     // result
-    expect(container.querySelector(`.${classNames[classNameIcon].name}`)).toHaveAttribute(
-      'name',
-      'StepBackwardOutlined',
-    );
+    expect(container.querySelector(`.${'Icon'}`)).toHaveAttribute('name', 'StepBackwardOutlined');
   });
 
   it('should pass width', () => {
@@ -99,7 +89,7 @@ describe('Typography props', () => {
     const { container } = customRender(<Icon name="StepBackwardOutlined" width={100} />);
 
     // result
-    expect(container.querySelector(`.${classNames[classNameIcon].name}`)).toHaveAttribute('width', '100');
+    expect(container.querySelector(`.${'Icon'}`)).toHaveAttribute('width', '100');
   });
 });
 

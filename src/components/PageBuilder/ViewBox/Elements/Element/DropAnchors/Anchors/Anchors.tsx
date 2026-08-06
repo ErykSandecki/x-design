@@ -1,13 +1,10 @@
+import cx from 'classnames';
 import { FC, useMemo } from 'react';
 
 // components
 import { Box } from 'shared';
 
-// hooks
-import { useTheme } from 'hooks';
-
 // others
-import { className, classNames } from './classNames';
 
 // styles
 import styles from './anchors.scss';
@@ -21,6 +18,13 @@ import { TUseMouseLeaveEvent } from '../hooks/useMouseLeaveEvent';
 // utils
 import { getDropAnchorsPosition } from './utils/getDropAnchorsPosition';
 
+const anchorsModificators: Record<string, string> = {
+  bottom: 'Anchors--bottom',
+  left: 'Anchors--left',
+  right: 'Anchors--right',
+  top: 'Anchors--top',
+};
+
 export type TAnchorsProps = {
   isFlowVertical: boolean;
   isGrid: boolean;
@@ -29,16 +33,12 @@ export type TAnchorsProps = {
 };
 
 const Anchors: FC<TAnchorsProps> = ({ isFlowVertical, isGrid, onMouseEnter, onMouseLeave }) => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const anchors = useMemo(() => getDropAnchorsPosition(isFlowVertical, isGrid), [isFlowVertical, isGrid]);
 
   return anchors.map((position) => (
     <Box
       classes={{
-        className: cx(
-          classNamesWithTheme[className].name,
-          classNamesWithTheme[className].modificators[position as keyof typeof DropAnchorsPosition],
-        ),
+        className: cx(styles.Anchors, styles[anchorsModificators[position as keyof typeof DropAnchorsPosition]]),
       }}
       e2eAttribute={E2EAttribute.anchor}
       e2eValue={position as string}

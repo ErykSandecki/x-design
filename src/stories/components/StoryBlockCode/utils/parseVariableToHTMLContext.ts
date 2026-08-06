@@ -1,21 +1,18 @@
+import cx from 'classnames';
+
 // others
-import { classNames as classNamesStoryBlockCode } from '../classNames';
 
 // types
-import { TThemeClassNames, TThemeClassNamesApplier } from 'hooks/useTheme/types';
 import { TVariable } from '../types';
+import { TObject } from 'types';
 
 // utils
 import { getHTMLElement } from './common';
 
-export const parseVariableToHTMLContext = (
-  classNames: TThemeClassNames<typeof classNamesStoryBlockCode>,
-  cx: TThemeClassNamesApplier,
-  { name, type, value }: TVariable,
-): string =>
+export const parseVariableToHTMLContext = (styles: TObject<string>, { name, type, value }: TVariable): string =>
   [
-    getHTMLElement(cx(classNames.variablesType), type),
-    getHTMLElement(cx(classNames.variablesName), name),
-    getHTMLElement(cx(classNames.variablesEqual), '='),
-    getHTMLElement(cx(classNames.variablesValue), value),
+    getHTMLElement(cx(styles['StoryBlockCode__variables--type']), type),
+    getHTMLElement(cx(styles['StoryBlockCode__variables--name']), name),
+    getHTMLElement(cx(styles['StoryBlockCode__variables--equal']), '='),
+    getHTMLElement(cx(styles['StoryBlockCode__variables--value']), value),
   ].join(' ');

@@ -1,8 +1,7 @@
 // others
-import { THEME_COLORS } from 'constant/themeColors';
+import { colors } from 'constant/colors';
 
 // types
-import { Theme } from 'types';
 import { TSXBorders } from './borders';
 import { TSXDisplay } from './display';
 import { TSXFlex } from './flex';
@@ -13,7 +12,7 @@ import { TSXShadows } from './shadows';
 import { TSXSizing } from './sizing';
 import { TSXSpacings } from './spacings';
 
-export type TSXColor = keyof (typeof THEME_COLORS)[Theme];
+export type TSXColor = keyof typeof colors;
 
 export type TSX = TSXBorders &
   TSXDisplay &

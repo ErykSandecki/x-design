@@ -1,0 +1,16 @@
+export const colors = {
+  blue1: 'var(--xd-color-blue-1)',
+  blue2: 'var(--xd-color-blue-2)',
+  green1: 'var(--xd-color-green-1)',
+  green2: 'var(--xd-color-green-2)',
+  neutral1: 'var(--xd-color-neutral-1)',
+  neutral2: 'var(--xd-color-neutral-2)',
+  neutral3: 'var(--xd-color-neutral-3)',
+  neutral4: 'var(--xd-color-neutral-4)',
+  neutral5: 'var(--xd-color-neutral-5)',
+  orange1: 'var(--xd-color-orange-1)',
+  pink1: 'var(--xd-color-pink-1)',
+  red1: 'var(--xd-color-red-1)',
+  skyBlue1: 'var(--xd-color-sky-blue-1)',
+  violet1: 'var(--xd-color-violet-1)',
+} as const;

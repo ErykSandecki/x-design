@@ -1,10 +1,6 @@
 {
   "permissions": {
-    "allow": [
-      "Bash(ls -la /Users/eryksandecki/Desktop/Work/Figma/x-draft 2>&1 | head -50)",
-      "Read(//Users/eryksandecki/Desktop/Work/Figma/x-draft/**)",
-      "Bash(echo \"=== x-design skills ===\"; ls -la /Users/eryksandecki/Desktop/Work/Figma/x-design/.claude/skills; echo; echo \"=== x-draft .claude ===\"; find /Users/eryksandecki/Desktop/Work/Figma/x-draft/.claude -maxdepth 3 2>&1)",
-      "Read(//Users/eryksandecki/Desktop/Work/Figma/x-draft/.claude/**)"
-    ]
+    "allow": ["*"],
+    "additionalDirectories": ["/tmp"]
   }
 }

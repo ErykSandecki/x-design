@@ -3,7 +3,7 @@
 exports[`ColorGrid snapshots should render ColorGrid 1`] = `
 <DocumentFragment>
   <div
-    class="css-1odrpt5 ColorGrid ColorGrid--light"
+    class="css-1odrpt5 ColorGrid"
     data-test-box=""
   >
     <div
@@ -11,13 +11,13 @@ exports[`ColorGrid snapshots should render ColorGrid 1`] = `
       data-test-box=""
     >
       <div
-        class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+        class="css-1jnxvbp ColorGrid__picker-grid"
         data-test-box=""
         style="background-color: rgb(0, 0, 0);"
       />
     </div>
     <div
-      class="css-tnkbza ColorGrid__pickerTargetColor ColorGrid__pickerTargetColor--light"
+      class="css-tnkbza ColorGrid__picker-target-color"
       data-test-box=""
     />
   </div>
@@ -27,7 +27,7 @@ exports[`ColorGrid snapshots should render ColorGrid 1`] = `
 exports[`ColorGrid snapshots should render when is pending 1`] = `
 <DocumentFragment>
   <div
-    class="css-1odrpt5 ColorGrid ColorGrid--light"
+    class="css-1odrpt5 ColorGrid"
     data-test-box=""
   >
     <div
@@ -35,17 +35,17 @@ exports[`ColorGrid snapshots should render when is pending 1`] = `
       data-test-box=""
     >
       <div
-        class="css-1jnxvbp ColorGrid__pickerGrid ColorGrid__pickerGrid--light"
+        class="css-1jnxvbp ColorGrid__picker-grid"
         data-test-box=""
         style="background-color: rgb(0, 0, 0);"
       />
     </div>
     <div
-      class="css-tnkbza ColorGrid__pickerTargetColor ColorGrid__pickerTargetColor--light"
+      class="css-tnkbza ColorGrid__picker-target-color"
       data-test-box=""
     />
     <div
-      class="css-18x4q7r"
+      class="css-1s5h6lf"
       data-test-box=""
     >
       <div

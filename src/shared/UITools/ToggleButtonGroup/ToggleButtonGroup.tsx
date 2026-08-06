@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import { ReactNode } from 'react';
 
 // components
@@ -6,11 +7,9 @@ import E2EDataAttribute, { TE2EDataAttributeProps } from '../../E2EDataAttribute
 import ToggleButton from './ToggleButton/ToggleButton';
 
 // hooks
-import { useTheme } from '../../../hooks/useTheme/useTheme';
 import { useToggleButtonGroupEvents } from './hooks/useToggleButtonGroupEvents';
 
 // others
-import { className as classNameToggleButton, classNames } from './classNames';
 
 // styles
 import styles from './toggle-button-group.scss';
@@ -43,7 +42,6 @@ export const ToggleButtonGroup = <V extends TToggleButtonGroupValue>({
   toggleButtons,
   ...buttonProps
 }: TToggleButtonGroupProps<V>): ReactNode => {
-  const { classNamesWithTheme, cx } = useTheme(classNames, styles);
   const { onChange: onChangeHandler, value } = useToggleButtonGroupEvents(
     alwaysSelected,
     defaultValue,
@@ -55,10 +53,9 @@ export const ToggleButtonGroup = <V extends TToggleButtonGroupValue>({
     <E2EDataAttribute type={E2EAttribute.toggleButtonGroup} value={e2eValue}>
       <Box
         classes={{
-          className: cx(className, classNamesWithTheme[classNameToggleButton].name, [
-            classNamesWithTheme[classNameToggleButton].modificators.fullWidth,
-            fullWidth,
-          ]),
+          className: cx(className, styles.ToggleButtonGroup, {
+            [styles['ToggleButtonGroup--full-width']]: fullWidth,
+          }),
         }}
         sx={{ alignItems: 'center', borderRadius: '5px', boxSizing: 'border-box', display: 'flex', height: '24px' }}
       >
