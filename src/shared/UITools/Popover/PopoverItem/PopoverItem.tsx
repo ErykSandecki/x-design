@@ -3,7 +3,8 @@ import { FC } from 'react';
 
 // components
 import E2EDataAttribute from '../../../E2EDataAttributes/E2EDataAttribute';
-import { Icon, Small, TIconProps } from 'shared';
+import Icon, { TIconProps } from '../../../UI/Icon/Icon';
+import Small from '../../../UI/Typography/Small/Small';
 
 // core
 import { usePopoverRoot } from '../PopoverRoot/core/PopoverRootProvider';

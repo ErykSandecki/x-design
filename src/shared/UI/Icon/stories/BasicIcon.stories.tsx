@@ -1,5 +1,5 @@
 import { keys } from 'lodash';
-import type { Meta, StoryFn } from '@storybook/react-webpack5';
+import type { Meta, StoryFn } from '@storybook/react-vite';
 
 // components
 import Icon, { TIconProps } from '../Icon';

@@ -1,6 +1,9 @@
 import { initReactI18next } from 'react-i18next';
 import i18n from 'i18next';
 
+// others
+import en from '../src/translations/languages/en.json';
+
 const ns = ['common'];
 const supportedLngs = ['en'];
 
@@ -15,10 +18,6 @@ i18n.use(initReactI18next).init({
   supportedLngs,
 });
 
-supportedLngs.forEach((lang) => {
-  ns.forEach((n) => {
-    i18n.addResourceBundle(lang, n, require(`../src/translations/languages/${lang}.json`));
-  });
-});
+i18n.addResourceBundle('en', 'common', en);
 
 export default i18n;

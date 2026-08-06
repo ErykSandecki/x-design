@@ -1,4 +1,4 @@
-import type { Meta, StoryFn } from '@storybook/react-webpack5';
+import type { Meta, StoryFn } from '@storybook/react-vite';
 import { useRef } from 'react';
 
 // components
@@ -11,7 +11,6 @@ import { StoryComponent } from 'stories';
 import { useOutsideClick } from 'hooks';
 
 const description = [];
-
 const title = 'UI Tools/Popover';
 
 export default {
@@ -24,7 +23,7 @@ const Template: StoryFn<typeof Popover> = () => {
   const { selected, setSelected } = useOutsideClick([], ref);
 
   return (
-    <StoryComponent blocksCodeData={[]} description={description} title="Chip">
+    <StoryComponent blocksCodeData={[]} description={description} title="Popover">
       <Button onClick={() => setSelected(!selected)} ref={ref}>
         Open
       </Button>
