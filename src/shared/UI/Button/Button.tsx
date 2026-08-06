@@ -10,6 +10,7 @@ import { useIcon } from './hooks/useIcon';
 import { useRippleEffect } from 'hooks/useRippleEffect/useRippleEffect';
 
 // others
+import { BUTTON_MODIFICATORS } from './constants';
 
 // styles
 import styles from './styles/button.scss';
@@ -20,22 +21,6 @@ import { E2EAttribute } from 'types';
 import { InputSize } from '../enums';
 import { TIconProps } from '../Icon/Icon';
 import { TUIProps } from '../types';
-
-const buttonModificators: Record<string, string> = {
-  contained: 'Button--contained',
-  error: 'Button--error',
-  forcedHover: 'Button--forced-hover',
-  fullwidth: 'Button--fullwidth',
-  large: 'Button--large',
-  medium: 'Button--medium',
-  outlined: 'Button--outlined',
-  primary: 'Button--primary',
-  secondary: 'Button--secondary',
-  small: 'Button--small',
-  success: 'Button--success',
-  text: 'Button--text',
-  warning: 'Button--warning',
-};
 
 export type TButtonProps = Omit<ButtonHTMLAttributes<HTMLElement>, 'className' | 'color' | 'style'> &
   TUIProps<{ className: string }> & {
@@ -82,9 +67,9 @@ export const Button: FC<TButtonProps> = ({
         className={cx(
           classes.className,
           styles.Button,
-          styles[buttonModificators[color]],
-          styles[buttonModificators[size]],
-          styles[buttonModificators[variant]],
+          styles[BUTTON_MODIFICATORS[color]],
+          styles[BUTTON_MODIFICATORS[size]],
+          styles[BUTTON_MODIFICATORS[variant]],
           {
             [styles['Button--fullwidth']]: fullWidth,
             [styles['Button--forced-hover']]: forcedHover,

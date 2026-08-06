@@ -9,7 +9,7 @@ import { useZoomBoxEvents } from './hooks/useZoomBoxEvents';
 
 // others
 import { CURSOR_STATES } from 'constant/constants';
-import { ZOOM_CONTENT_ID } from './constants';
+import { ZOOM_BOX_MODIFICATORS, ZOOM_CONTENT_ID } from './constants';
 
 // styles
 import styles from './zoom-box.scss';
@@ -20,20 +20,6 @@ import { MouseMode } from 'types/enums/mouseMode';
 
 // utils
 import { hexToRgb } from 'utils';
-
-const zoomBoxModificators: Record<string, string> = {
-  colorSampler: 'ZoomBox--color-sampler',
-  comment: 'ZoomBox--comment',
-  default: 'ZoomBox--default',
-  idle: 'ZoomBox--idle',
-  lmb: 'ZoomBox--lmb',
-  mmb: 'ZoomBox--mmb',
-  move: 'ZoomBox--move',
-  pressing: 'ZoomBox--pressing',
-  rmb: 'ZoomBox--rmb',
-  toolBeltA: 'ZoomBox--toolBeltA',
-  unknown: 'ZoomBox--unknown',
-};
 
 export type TZoomBoxProps = {
   alpha: string;
@@ -97,8 +83,8 @@ export const ZoomBox: FC<TZoomBoxProps> = ({
         className={cx(
           classes.className,
           styles.ZoomBox,
-          styles[zoomBoxModificators[cursorState]],
-          styles[zoomBoxModificators[mouseMode]],
+          styles[ZOOM_BOX_MODIFICATORS[cursorState]],
+          styles[ZOOM_BOX_MODIFICATORS[mouseMode]],
           {
             [styles['ZoomBox--color-sampler']]: colorSampler,
             [styles['ZoomBox--pressing']]: mouseMode === MouseMode.move && cursorState === CURSOR_STATES[1],

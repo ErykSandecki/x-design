@@ -4,6 +4,9 @@ import { FC, useMemo } from 'react';
 // components
 import { E2EDataAttribute } from 'shared';
 
+// others
+import { ANCHORS_MODIFICATORS } from './constants';
+
 // styles
 import styles from './anchors.scss';
 
@@ -15,13 +18,6 @@ import { TUseMouseLeaveEvent } from '../hooks/useMouseLeaveEvent';
 
 // utils
 import { getDropAnchorsPosition } from './utils/getDropAnchorsPosition';
-
-const anchorsModificators: Record<string, string> = {
-  bottom: 'Anchors--bottom',
-  left: 'Anchors--left',
-  right: 'Anchors--right',
-  top: 'Anchors--top',
-};
 
 export type TAnchorsProps = {
   isFlowVertical: boolean;
@@ -36,7 +32,7 @@ const Anchors: FC<TAnchorsProps> = ({ isFlowVertical, isGrid, onMouseEnter, onMo
   return anchors.map((position) => (
     <E2EDataAttribute key={position as string} type={E2EAttribute.anchor} value={position as string}>
       <div
-        className={cx(styles.Anchors, styles[anchorsModificators[position as keyof typeof DropAnchorsPosition]])}
+        className={cx(styles.Anchors, styles[ANCHORS_MODIFICATORS[position as keyof typeof DropAnchorsPosition]])}
         onMouseEnter={() => onMouseEnter(DropAnchorsPosition[position as keyof typeof DropAnchorsPosition])}
         onMouseLeave={onMouseLeave}
       />

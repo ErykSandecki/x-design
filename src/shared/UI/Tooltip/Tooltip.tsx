@@ -10,6 +10,7 @@ import { useRenderContainer } from 'hooks';
 import { useUpdatePosition } from './hooks/useUpdatePosition';
 
 // others
+import { CARROT_MODIFICATORS } from './constants';
 
 // styles
 import _styles from './styles/tooltip.scss';
@@ -22,21 +23,6 @@ import { TooltipPosition } from './enums';
 
 // utils
 import { getAttributes } from '../../E2EDataAttributes/utils';
-
-const carrotModificators: Record<string, string> = {
-  bottomCenter: 'Tooltip__carrot--bottom-center',
-  bottomEnd: 'Tooltip__carrot--bottom-end',
-  bottomStart: 'Tooltip__carrot--bottom-start',
-  leftCenter: 'Tooltip__carrot--left-center',
-  leftEnd: 'Tooltip__carrot--left-end',
-  leftStart: 'Tooltip__carrot--left-start',
-  rightCenter: 'Tooltip__carrot--right-center',
-  rightEnd: 'Tooltip__carrot--right-end',
-  rightStart: 'Tooltip__carrot--right-start',
-  topCenter: 'Tooltip__carrot--top-center',
-  topEnd: 'Tooltip__carrot--top-end',
-  topStart: 'Tooltip__carrot--top-start',
-};
 
 export type TTooltipProps = {
   autoPositioning?: boolean;
@@ -110,7 +96,7 @@ export const Tooltip: FC<TTooltipProps> = ({
             {content}
             <Icon
               classes={{
-                className: cx(_styles.Tooltip__carrot, _styles[carrotModificators[position]]),
+                className: cx(_styles.Tooltip__carrot, _styles[CARROT_MODIFICATORS[position]]),
               }}
               height={14}
               name="CarrotDown"

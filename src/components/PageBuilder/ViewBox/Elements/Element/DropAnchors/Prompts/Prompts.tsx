@@ -2,6 +2,7 @@ import cx from 'classnames';
 import { FC, useMemo } from 'react';
 
 // others
+import { PROMPTS_MODIFICATORS } from './constants';
 
 // styles
 import styles from './prompts.scss';
@@ -11,13 +12,6 @@ import { DropAnchorsPosition } from 'store/pageBuilder/enums';
 
 // utils
 import { promptsData } from './utils/promptsData';
-
-const promptsModificators: Record<string, string> = {
-  bottom: 'Prompts--bottom',
-  left: 'Prompts--left',
-  right: 'Prompts--right',
-  top: 'Prompts--top',
-};
 
 export type TPromptsProps = {
   anchorPos: DropAnchorsPosition;
@@ -36,7 +30,7 @@ const Prompts: FC<TPromptsProps> = ({ anchorPos, displayNextPrompt, displayPrevP
   return prompts.map(({ key, visible }) => (
     <div
       className={cx(styles.Prompts, {
-        [styles[promptsModificators[key]]]: visible,
+        [styles[PROMPTS_MODIFICATORS[key]]]: visible,
       })}
       key={key}
     />

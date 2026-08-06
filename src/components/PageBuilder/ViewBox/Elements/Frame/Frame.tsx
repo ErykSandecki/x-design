@@ -12,7 +12,7 @@ import { Small } from 'shared';
 import { useRefs } from 'pages/PageBuilderPage/core/RefsProvider';
 
 // others
-import { translationNameSpace } from './contants';
+import { LABEL_MODIFICATORS, translationNameSpace } from './constants';
 
 // styles
 import styles from './frame.scss';
@@ -22,15 +22,6 @@ import { TElementProps } from '../types';
 
 // utils
 import { getElementStickWallPosition } from 'components/PageBuilder/ViewBox/utils/getElementStickWallPosition';
-
-const labelModificators: Record<string, string> = {
-  bottom: 'Frame__label--bottom',
-  hover: 'Frame__label--hover',
-  left: 'Frame__label--left',
-  right: 'Frame__label--right',
-  selected: 'Frame__label--selected',
-  top: 'Frame__label--top',
-};
 
 export type TFrameProps = TElementProps;
 
@@ -70,7 +61,7 @@ const Frame: FC<TFrameProps> = ({ className, id, index, mouseMode, parentId, typ
                 >
                   <Small
                     classes={{
-                      className: cx(styles.Frame__label, styles[labelModificators[stickWall]], {
+                      className: cx(styles.Frame__label, styles[LABEL_MODIFICATORS[stickWall]], {
                         [styles['Frame__label--hover']]: hover,
                         [styles['Frame__label--selected']]: selected,
                       }),

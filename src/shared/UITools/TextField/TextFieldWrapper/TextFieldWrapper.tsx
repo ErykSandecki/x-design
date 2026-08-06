@@ -11,6 +11,9 @@ import { TPopoverProps } from '../../Popover/Popover';
 // hooks
 import { useOutsideClick } from 'hooks';
 
+// others
+import { TEXT_FIELD_WRAPPER_MODIFICATORS } from './constants';
+
 // styles
 import styles from './text-field-wrapper.scss';
 
@@ -22,14 +25,6 @@ import { TextFieldVariant } from '../enums';
 import { getAttributes } from '../../../E2EDataAttributes/utils';
 import { getChipValue } from './utils/getChipValue';
 import { handleSubmitInput, valueAttached } from 'utils';
-
-const textFieldWrapperModificators: Record<string, string> = {
-  chip: 'TextFieldWrapper--chip',
-  disabled: 'TextFieldWrapper--disabled',
-  filled: 'TextFieldWrapper--filled',
-  fullWidth: 'TextFieldWrapper--full-width',
-  outlined: 'TextFieldWrapper--outlined',
-};
 
 export type TTextFieldWrapperProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'className' | 'color' | 'popover'> & {
   disabledSelection?: boolean;
@@ -78,7 +73,7 @@ export const TextFieldWrapper: FC<TTextFieldWrapperProps> = ({
   return (
     <E2EDataAttribute type={E2EAttribute.textFieldWrapper} value={e2eValue}>
       <div
-        className={cx(styles.TextFieldWrapper, styles[textFieldWrapperModificators[variant]], {
+        className={cx(styles.TextFieldWrapper, styles[TEXT_FIELD_WRAPPER_MODIFICATORS[variant]], {
           [styles['TextFieldWrapper--chip']]: attached,
           [styles['TextFieldWrapper--disabled']]: disabled,
           [styles['TextFieldWrapper--full-width']]: fullWidth,

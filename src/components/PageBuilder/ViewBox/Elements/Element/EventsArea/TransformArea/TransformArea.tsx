@@ -9,6 +9,7 @@ import { E2EDataAttribute } from 'shared';
 import { useTransformAreaEvents } from './hooks/useTransformAreaEvents';
 
 // others
+import { ANCHOR_RESIZE_MODIFICATORS, ANCHOR_ROTATE_MODIFICATORS } from './constants';
 
 // types
 import { AnchorResize, AnchorRotate } from 'store/pageBuilder/enums';
@@ -20,26 +21,6 @@ import styles from './transform-area.scss';
 
 // utils
 import { enumToArray } from 'utils';
-
-const anchorResizeModificators: Record<string, string> = {
-  east: 'TransformArea__anchor-resize--east',
-  none: 'TransformArea__anchor-resize--none',
-  north: 'TransformArea__anchor-resize--north',
-  northEast: 'TransformArea__anchor-resize--north-east',
-  northWest: 'TransformArea__anchor-resize--north-west',
-  south: 'TransformArea__anchor-resize--south',
-  southEast: 'TransformArea__anchor-resize--south-east',
-  southWest: 'TransformArea__anchor-resize--south-west',
-  west: 'TransformArea__anchor-resize--west',
-};
-
-const anchorRotateModificators: Record<string, string> = {
-  none: 'TransformArea__anchor-rotate--none',
-  northEast: 'TransformArea__anchor-rotate--north-east',
-  northWest: 'TransformArea__anchor-rotate--north-west',
-  southEast: 'TransformArea__anchor-rotate--south-east',
-  southWest: 'TransformArea__anchor-rotate--south-west',
-};
 
 export type TTransformAreaProps = {
   angle: TElement['angle'];
@@ -89,7 +70,7 @@ const TransformArea: FC<TTransformAreaProps> = ({
             <div
               className={cx(
                 styles['TransformArea__anchor-resize'],
-                styles[anchorResizeModificators[anchor as keyof typeof AnchorResize]],
+                styles[ANCHOR_RESIZE_MODIFICATORS[anchor as keyof typeof AnchorResize]],
               )}
               onMouseDown={(event) => onMouseDownAnchorResize(anchor as AnchorResize, event)}
               onMouseEnter={() => onMouseEnterAnchorResize(anchor as AnchorResize)}
@@ -110,7 +91,7 @@ const TransformArea: FC<TTransformAreaProps> = ({
             <div
               className={cx(
                 styles['TransformArea__anchor-rotate'],
-                styles[anchorRotateModificators[anchor as keyof typeof AnchorRotate]],
+                styles[ANCHOR_ROTATE_MODIFICATORS[anchor as keyof typeof AnchorRotate]],
               )}
               onMouseDown={(event) => onMouseDownAnchorRotate(anchor as AnchorRotate, event)}
               onMouseEnter={() => onMouseEnterAnchorRotate(anchor as AnchorRotate)}

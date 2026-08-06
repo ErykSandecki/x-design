@@ -5,6 +5,7 @@ import { FC, ReactNode } from 'react';
 import Icon from '../../../UI/Icon/Icon';
 
 // others
+import { SECTION_COLUMN_CONTENT_MODIFICATORS } from './constants';
 
 // styles
 import styles from './section-column-content.scss';
@@ -12,12 +13,6 @@ import styles from './section-column-content.scss';
 // types
 import { ColorsTheme } from 'types';
 import { GridColumnType } from '../enums';
-
-const sectionColumnContentModificators: Record<string, string> = {
-  oneByTwo: 'SectionColumnContent--one-by-two',
-  single: 'SectionColumnContent--single',
-  twoInputs: 'SectionColumnContent--two-inputs',
-};
 
 export type TSectionColumnContentProps = {
   children: ReactNode;
@@ -34,7 +29,7 @@ export const SectionColumnContent: FC<TSectionColumnContentProps> = ({
 }) => {
   return (
     <div
-      className={cx(styles.SectionColumnContent, styles[sectionColumnContentModificators[gridColumnType]])}
+      className={cx(styles.SectionColumnContent, styles[SECTION_COLUMN_CONTENT_MODIFICATORS[gridColumnType]])}
       style={{ width }}
     >
       {children}

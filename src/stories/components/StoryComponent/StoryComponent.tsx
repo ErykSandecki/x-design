@@ -10,29 +10,13 @@ import { useTheme } from 'hooks';
 
 // others
 import { colors } from 'constant/colors';
+import { CONTENT_MODIFICATORS } from './constants';
 
 // styles
 import styles from './story-component.scss';
 
 // types
 import { ContentAlignItems, ContentDisplay, ContentGridFlow } from './enums';
-
-const contentModificators: Record<string, string> = {
-  block: 'StoryComponent__content--block',
-  bottom: 'StoryComponent__content--bottom',
-  center: 'StoryComponent__content--center',
-  column: 'StoryComponent__content--column',
-  flex: 'StoryComponent__content--flex',
-  grid: 'StoryComponent__content--grid',
-  maxEightColumns: 'StoryComponent__content--max-eight-columns',
-  maxFiveColumns: 'StoryComponent__content--max-five-columns',
-  maxFourColumns: 'StoryComponent__content--max-four-columns',
-  maxSixColumns: 'StoryComponent__content--max-six-columns',
-  maxThreeColumns: 'StoryComponent__content--max-three-columns',
-  maxTwoColumns: 'StoryComponent__content--max-two-columns',
-  row: 'StoryComponent__content--row',
-  top: 'StoryComponent__content--top',
-};
 
 export type TStoryComponentProps = TStoryBlockCodeProps & {
   applyMaxWidth?: boolean;
@@ -88,9 +72,9 @@ export const StoryComponent: FC<TStoryComponentProps> = ({
         <section
           className={cx(
             styles['StoryComponent__content'],
-            styles[contentModificators[contentAlignItems]],
-            styles[contentModificators[contentDisplay]],
-            styles[contentModificators[camelCase(contentGridFlow)]],
+            styles[CONTENT_MODIFICATORS[contentAlignItems]],
+            styles[CONTENT_MODIFICATORS[contentDisplay]],
+            styles[CONTENT_MODIFICATORS[camelCase(contentGridFlow)]],
           )}
         >
           {children}
