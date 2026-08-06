@@ -2,14 +2,36 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "allowJs": true,
-    "baseUrl": "./src",
     "jsx": "react-jsx",
     "lib": ["dom", "dom.iterable", "esnext", "es5"],
     "outDir": "./dist",
     "resolveJsonModule": true,
     "moduleResolution": "NodeNext",
     "module": "nodenext",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "paths": {
+      "assets/*": ["./src/assets/*"],
+      "components/*": ["./src/components/*"],
+      "config": ["./src/config"],
+      "constant/*": ["./src/constant/*"],
+      "core": ["./src/core"],
+      "hooks": ["./src/hooks"],
+      "hooks/*": ["./src/hooks/*"],
+      "pages/*": ["./src/pages/*"],
+      "shared": ["./src/shared"],
+      "shared/*": ["./src/shared/*"],
+      "store": ["./src/store"],
+      "store/*": ["./src/store/*"],
+      "stories": ["./src/stories"],
+      "test": ["./src/test"],
+      "test/*": ["./src/test/*"],
+      "translations": ["./src/translations"],
+      "translations/*": ["./src/translations/*"],
+      "types": ["./src/types"],
+      "types/*": ["./src/types/*"],
+      "utils": ["./src/utils"],
+      "utils/*": ["./src/utils/*"]
+    }
   },
   "include": ["src", "scripts/test.js", "config/sass", "config/imports.js"]
 }
