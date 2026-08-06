@@ -1,34 +1,42 @@
-@import '../../../styles/mixins/text-ellipsis';
-@import '../../../styles/mixins/typography/typography';
-@import '../../../styles/mixins/typography/typography-list';
-@import '../../../styles/mixins/typography/typography-map';
+@use 'sass:map';
+
+@forward '../../../styles/mixins/text-ellipsis';
+@forward '../../../styles/mixins/typography/typography';
+@forward '../../../styles/mixins/typography/typography-list';
+@forward '../../../styles/mixins/typography/typography-map';
+@use '../../../styles/mixins/text-ellipsis' as *;
+@use '../../../styles/mixins/typography/typography' as *;
+@use '../../../styles/mixins/typography/typography-list' as *;
+@use '../../../styles/mixins/typography/typography-map' as *;
+
+@use 'xd-variables' as *;
 
 .Typography {
-  @each $color in $--xd-font-colors {
+  @each $color in $font-colors {
     &--#{$color} {
       color: var(--xd-color-#{$color});
     }
   }
 
-  @each $font-type in $--xd-font-types {
+  @each $font-type in $font-types {
     &--gutter-bottom#{&}--#{$font-type} {
-      $--xd-font-size: map.get($--xd-font-size-map, $font-type);
-      $--xd-line-height: map.get($--xd-line-height-map, $font-type);
-      $--xd-margin-bottom: map.get($--xd-margin-bottom-map, $font-type);
+      $font-size: map.get($font-size-map, $font-type);
+      $line-height: map.get($line-height-map, $font-type);
+      $margin-bottom: map.get($margin-bottom-map, $font-type);
 
-      @include typography-styles($--xd-font-size, $--xd-line-height, $--xd-margin-bottom);
+      @include typography-styles($font-size, $line-height, $margin-bottom);
     }
   }
 
-  @each $font-style in $--xd-font-styles {
+  @each $font-style in $font-styles {
     &--#{$font-style} {
-      font-style: map.get($--xd-font-styles-map, $font-style);
+      font-style: map.get($font-styles-map, $font-style);
     }
   }
 
-  @each $font-weight in $--xd-font-weights {
+  @each $font-weight in $font-weights {
     &--#{$font-weight} {
-      font-weight: map.get($--xd-font-weights-map, $font-weight);
+      font-weight: map.get($font-weights-map, $font-weight);
     }
   }
 

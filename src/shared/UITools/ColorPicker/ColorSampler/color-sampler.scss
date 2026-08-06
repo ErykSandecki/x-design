@@ -1,5 +1,9 @@
-@import '../../../../styles/z-indexes';
-@import '../../../../styles/mixins/box-shadow';
+@use 'sass:map';
+
+@forward '../../../../styles/mixins/box-shadow';
+@forward '../../../../styles/z-indexes';
+@use '../../../../styles/mixins/box-shadow' as *;
+@use '../../../../styles/z-indexes' as *;
 
 .ColorSampler {
   @include box-shadow-panel;
@@ -12,7 +16,7 @@
   padding: 8px;
   position: fixed;
   width: 260px;
-  z-index: map.get($map: $--xd-z-indexes, $key: 'overlay');
+  z-index: map.get($map: $z-indexes, $key: 'overlay');
 
   &__prevent-antd-event-mask {
     cursor:

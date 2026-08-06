@@ -1,75 +1,75 @@
-$--xd-value-1: 4px;
-$--xd-value-2: -8px;
-$--xd-value-3: -7px;
+$value-1: 4px;
+$value-2: -8px;
+$value-3: -7px;
 
 @mixin tooltip-carrot-positions() {
   &--top-start {
-    bottom: $--xd-value-2;
-    left: $--xd-value-1;
+    bottom: $value-2;
+    left: $value-1;
   }
 
   &--top-center {
-    bottom: $--xd-value-2;
+    bottom: $value-2;
     left: 50%;
     transform: translateX(-50%);
   }
 
   &--top-end {
-    bottom: $--xd-value-2;
-    right: $--xd-value-1;
+    bottom: $value-2;
+    right: $value-1;
   }
 
   &--bottom-start {
-    left: $--xd-value-1;
-    top: $--xd-value-2;
+    left: $value-1;
+    top: $value-2;
     transform: rotate(180deg);
   }
 
   &--bottom-center {
     left: 50%;
-    top: $--xd-value-2;
+    top: $value-2;
     transform: translateX(-50%) rotate(180deg);
   }
 
   &--bottom-end {
-    right: $--xd-value-1;
-    top: $--xd-value-2;
+    right: $value-1;
+    top: $value-2;
     transform: rotate(180deg);
   }
 
   &--left-start {
-    right: $--xd-value-3;
-    top: $--xd-value-1;
+    right: $value-3;
+    top: $value-1;
     transform: rotate(270deg);
   }
 
   &--left-center {
-    right: $--xd-value-3;
+    right: $value-3;
     top: 50%;
     transform: translateY(-50%) rotate(270deg);
   }
 
   &--left-end {
-    bottom: $--xd-value-1;
-    right: $--xd-value-3;
+    bottom: $value-1;
+    right: $value-3;
     transform: rotate(270deg);
   }
 
   &--right-start {
-    left: $--xd-value-3;
-    top: $--xd-value-1;
+    left: $value-3;
+    top: $value-1;
     transform: rotate(90deg);
   }
 
   &--right-center {
-    left: $--xd-value-3;
+    left: $value-3;
     top: 50%;
     transform: translateY(-50%) rotate(90deg);
   }
 
   &--right-end {
-    bottom: $--xd-value-1;
-    left: $--xd-value-3;
+    bottom: $value-1;
+    left: $value-3;
     transform: rotate(90deg);
   }
 }

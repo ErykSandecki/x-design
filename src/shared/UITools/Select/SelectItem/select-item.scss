@@ -1,4 +1,5 @@
-@import '../../../../styles/typography';
+@forward '../../../../styles/typography';
+@use '../../../../styles/typography' as *;
 
 .SelectItem {
   align-items: center;
@@ -8,10 +9,10 @@
   display: flex;
   flex-shrink: 0;
   font-family: Rubik, sans-serif;
-  font-size: $--xd-typography-font-size-small;
+  font-size: $typography-font-size-small;
   height: 24px;
   justify-content: left;
-  line-height: $--xd-typography-line-height-small;
+  line-height: $typography-line-height-small;
   padding: 0 5px;
 
   &:hover {

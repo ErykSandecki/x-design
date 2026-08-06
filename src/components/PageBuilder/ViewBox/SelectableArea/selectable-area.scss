@@ -1,4 +1,5 @@
-@import '../../styles/z-indexes';
+@forward '../../styles/z-indexes';
+@use '../../styles/z-indexes' as *;
 
 .SelectableArea {
   height: 100%;
@@ -12,7 +13,7 @@
     overflow: visible;
     position: absolute;
     width: 100%;
-    z-index: $--xd-zindex-element-active;
+    z-index: $zindex-element-active;
 
     path {
       stroke: var(--xd-color-blue-1);

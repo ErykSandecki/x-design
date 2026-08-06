@@ -1,45 +1,46 @@
-@import '../../typography';
+@forward '../../typography';
+@use '../../typography' as *;
 
-$--xd-font-size-map: (
-  h1: $--xd-typography-font-size-h1,
-  h2: $--xd-typography-font-size-h2,
-  h3: $--xd-typography-font-size-h3,
-  h4: $--xd-typography-font-size-h4,
-  h5: $--xd-typography-font-size-h5,
-  h6: $--xd-typography-font-size-h6,
-  p: $--xd-typography-font-size-p,
-  small: $--xd-typography-font-size-small,
+$font-size-map: (
+  h1: $typography-font-size-h1,
+  h2: $typography-font-size-h2,
+  h3: $typography-font-size-h3,
+  h4: $typography-font-size-h4,
+  h5: $typography-font-size-h5,
+  h6: $typography-font-size-h6,
+  p: $typography-font-size-p,
+  small: $typography-font-size-small,
 );
 
-$--xd-font-styles-map: (
-  normal: $--xd-typography-font-style-normal,
-  italic: $--xd-typography-font-style-italic,
+$font-styles-map: (
+  normal: $typography-font-style-normal,
+  italic: $typography-font-style-italic,
 );
 
-$--xd-font-weights-map: (
-  regular: $--xd-typography-font-weight-regular,
-  medium: $--xd-typography-font-weight-medium,
-  bold: $--xd-typography-font-weight-bold,
+$font-weights-map: (
+  regular: $typography-font-weight-regular,
+  medium: $typography-font-weight-medium,
+  bold: $typography-font-weight-bold,
 );
 
-$--xd-line-height-map: (
-  h1: $--xd-typography-line-height-h1,
-  h2: $--xd-typography-line-height-h2,
-  h3: $--xd-typography-line-height-h3,
-  h4: $--xd-typography-line-height-h4,
-  h5: $--xd-typography-line-height-h5,
-  h6: $--xd-typography-line-height-h6,
-  p: $--xd-typography-line-height-p,
-  small: $--xd-typography-line-height-small,
+$line-height-map: (
+  h1: $typography-line-height-h1,
+  h2: $typography-line-height-h2,
+  h3: $typography-line-height-h3,
+  h4: $typography-line-height-h4,
+  h5: $typography-line-height-h5,
+  h6: $typography-line-height-h6,
+  p: $typography-line-height-p,
+  small: $typography-line-height-small,
 );
 
-$--xd-margin-bottom-map: (
-  h1: $--xd-typography-margin-bottom-h1,
-  h2: $--xd-typography-margin-bottom-h2,
-  h3: $--xd-typography-margin-bottom-h3,
-  h4: $--xd-typography-margin-bottom-h4,
-  h5: $--xd-typography-margin-bottom-h5,
-  h6: $--xd-typography-margin-bottom-h6,
-  p: $--xd-typography-margin-bottom-p,
-  small: $--xd-typography-margin-bottom-small,
+$margin-bottom-map: (
+  h1: $typography-margin-bottom-h1,
+  h2: $typography-margin-bottom-h2,
+  h3: $typography-margin-bottom-h3,
+  h4: $typography-margin-bottom-h4,
+  h5: $typography-margin-bottom-h5,
+  h6: $typography-margin-bottom-h6,
+  p: $typography-margin-bottom-p,
+  small: $typography-margin-bottom-small,
 );

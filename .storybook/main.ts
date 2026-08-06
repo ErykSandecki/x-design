@@ -9,11 +9,9 @@ const require = createRequire(import.meta.url);
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // styles
-import sassImports from '../config/sassImports.js';
-import sassList from '../config/sassList.js';
-import sassMaps from '../config/sassMaps.js';
-import sassMixins from '../config/sassMixins.js';
-import sassVariables from '../config/sassVariables.js';
+import writeSassVariables from '../config/generateSassVariables.js';
+
+writeSassVariables();
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
@@ -93,7 +91,10 @@ const config: StorybookConfig = {
           loader: 'sass-loader',
           options: {
             additionalData: async (content: any) => {
-              return sassImports + sassList + sassVariables() + sassMaps() + sassMixins + content;
+              return `@use 'xd-variables' as *;\n${content}`;
+            },
+            sassOptions: {
+              loadPaths: [path.resolve(__dirname, '../config/generated')],
             },
             sourceMap: true,
           },

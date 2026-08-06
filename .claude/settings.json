@@ -1,6 +1,12 @@
 {
   "permissions": {
-    "allow": ["*"],
-    "additionalDirectories": ["/tmp"]
+    "allow": [
+      "Bash(mkdir -p /Users/eryksandecki/Desktop/Work/Figma/x-design/.claude/skills/x-design-scss-import-order)",
+      "Edit(/.claude/skills/x-design-scss-import-order/**)"
+    ],
+    "additionalDirectories": [
+      "/tmp",
+      "/Users/eryksandecki/Desktop/Work/Figma/x-design/.claude/skills"
+    ]
   }
 }

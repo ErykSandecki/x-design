@@ -1,5 +1,7 @@
-@import '../../../styles/z-indexes';
-@import '../../../../../styles/mixins/enter-delay';
+@forward '../../../styles/z-indexes';
+@forward '../../../../../styles/mixins/enter-delay';
+@use '../../../styles/z-indexes' as *;
+@use '../../../../../styles/mixins/enter-delay' as *;
 
 .Element {
   $self: &;
@@ -8,19 +10,19 @@
   overflow: hidden;
   transform-origin: center center;
   user-select: none;
-  z-index: $--xd-zindex-element;
+  z-index: $zindex-element;
 
   &--moving {
     opacity: 0.5 !important;
     pointer-events: none;
-    z-index: $--xd-zindex-element-moving !important;
+    z-index: $zindex-element-moving !important;
   }
 
   &--hover {
-    z-index: $--xd-zindex-element-active;
+    z-index: $zindex-element-active;
   }
 
   &:has([data-status='true']) {
-    z-index: $--xd-zindex-element-moving;
+    z-index: $zindex-element-moving;
   }
 }

@@ -1,5 +1,7 @@
-@import '../../styles/z-indexes';
-@import '../../../../styles/mixins/enter-delay';
+@forward '../../styles/z-indexes';
+@forward '../../../../styles/mixins/enter-delay';
+@use '../../styles/z-indexes' as *;
+@use '../../../../styles/mixins/enter-delay' as *;
 
 .Corners {
   @include enter-delay;
@@ -15,5 +17,5 @@
   overflow: visible;
   pointer-events: none;
   position: absolute;
-  z-index: $--xd-zindex-element;
+  z-index: $zindex-element;
 }

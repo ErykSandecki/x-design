@@ -1,5 +1,7 @@
-@import '../../src/styles/antd/color-picker-panel.scss';
-@import '../../src/styles/initRoot.scss';
+@forward '../../src/styles/antd/color-picker-panel.scss';
+@forward '../../src/styles/initRoot.scss';
+@use '../../src/styles/antd/color-picker-panel.scss' as *;
+@use '../../src/styles/initRoot.scss' as *;
 
 html,
 body {

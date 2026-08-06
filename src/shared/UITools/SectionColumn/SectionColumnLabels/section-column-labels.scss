@@ -1,7 +1,8 @@
-@import '../section-column';
+@forward '../section-column';
+@use '../section-column' as *;
 
 .SectionColumnLabels {
-  column-gap: $--xd-column-gap;
+  column-gap: $column-gap;
 
   &__label {
     color: var(--xd-color-neutral-2);

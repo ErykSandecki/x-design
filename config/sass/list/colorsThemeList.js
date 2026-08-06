@@ -1,4 +1,6 @@
-const colorsThemeList = `$--xd-font-colors: 
+const constants = require('../../constants/constants');
+
+const colorsThemeList = `${constants.prefix}font-colors:
 'blue-1', 
 'green-1', 
 'green-2', 

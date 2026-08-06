@@ -1,18 +1,20 @@
-$--xd-attr-fill: '*[data-svg-property=' fill ']';
-$--xd-attr-stroke: '*[data-svg-property=' stroke ']';
+@use 'xd-variables' as *;
+
+$attr-fill: '*[data-svg-property=' fill ']';
+$attr-stroke: '*[data-svg-property=' stroke ']';
 
 @mixin apply-icon-styles($color, $selector: '') {
-  #{$selector}#{$--xd-attr-fill} {
+  #{$selector}#{$attr-fill} {
     fill: var(--xd-color-#{$color});
   }
 
-  #{$selector}#{$--xd-attr-stroke} {
+  #{$selector}#{$attr-stroke} {
     stroke: var(--xd-color-#{$color});
   }
 }
 
 .Icon {
-  @each $color in $--xd-font-colors {
+  @each $color in $font-colors {
     &--#{$color} {
       @include apply-icon-styles($color);
     }

@@ -1,7 +1,8 @@
-@import '../../../../../styles/z-indexes';
+@forward '../../../../../styles/z-indexes';
+@use '../../../../../styles/z-indexes' as *;
 
 .Anchors {
-  z-index: $--xd-zindex-element-anchor;
+  z-index: $zindex-element-anchor;
 
   &--bottom {
     bottom: 0;

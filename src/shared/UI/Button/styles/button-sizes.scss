@@ -1,23 +1,27 @@
 @use 'sass:map';
 
-@import '../../../../styles/typography';
-@import '../../../../styles/lists/input';
+@forward '../../../../styles/lists/input';
+@forward '../../../../styles/map/button';
+@forward '../../../../styles/typography';
+@use '../../../../styles/lists/input' as *;
+@use '../../../../styles/map/button' as *;
+@use '../../../../styles/typography' as *;
 
 @mixin button-size() {
-  @each $size in $--xd-input-sizes {
+  @each $size in $input-sizes {
     &--#{$size} {
-      padding: map.get($--xd-button-map, 'btn' + '-' + $size + '-' + 'padding-tb')
-        map.get($--xd-button-map, 'btn' + '-' + $size + '-' + 'padding-lr');
+      padding: map.get($button-map, 'btn' + '-' + $size + '-' + 'padding-tb')
+        map.get($button-map, 'btn' + '-' + $size + '-' + 'padding-lr');
 
       @if $size == 'small' {
-        font-size: $--xd-typography-font-size-small;
-        line-height: $--xd-typography-line-height-small;
+        font-size: $typography-font-size-small;
+        line-height: $typography-line-height-small;
       } @else if $size == 'medium' {
-        font-size: $--xd-typography-font-size-p;
-        line-height: $--xd-typography-line-height-p;
+        font-size: $typography-font-size-p;
+        line-height: $typography-line-height-p;
       } @else {
-        font-size: $--xd-typography-font-size-h6;
-        line-height: $--xd-typography-line-height-h6;
+        font-size: $typography-font-size-h6;
+        line-height: $typography-line-height-h6;
       }
     }
   }

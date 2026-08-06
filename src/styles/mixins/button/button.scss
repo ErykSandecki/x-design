@@ -1,4 +1,5 @@
-@import '../transitions/common';
+@forward '../transitions/common';
+@use '../transitions/common' as *;
 
 @mixin button() {
   @include transition;

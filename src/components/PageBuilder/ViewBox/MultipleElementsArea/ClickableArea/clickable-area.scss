@@ -1,9 +1,10 @@
-@import '../../../styles/z-indexes';
+@forward '../../../styles/z-indexes';
+@use '../../../styles/z-indexes' as *;
 
 .ClickableArea {
   overflow: visible;
   position: absolute;
-  z-index: $--xd-zindex-multiple-area;
+  z-index: $zindex-multiple-area;
 
   &__outline {
     stroke: var(--xd-color-blue-1);

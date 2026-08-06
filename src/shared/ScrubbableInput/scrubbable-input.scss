@@ -1,4 +1,7 @@
-@import '../../styles/z-indexes';
+@use 'sass:map';
+
+@forward '../../styles/z-indexes';
+@use '../../styles/z-indexes' as *;
 
 .ScrubbableInput {
   cursor: ew-resize !important;
@@ -11,6 +14,6 @@
   &__handler {
     position: fixed;
     transform: translate(-50%, -7px);
-    z-index: map.get($map: $--xd-z-indexes, $key: 'overlay');
+    z-index: map.get($map: $z-indexes, $key: 'overlay');
   }
 }

@@ -1,9 +1,11 @@
-@import '../../../styles/z-indexes';
-@import '../../../../../styles/mixins/text-ellipsis';
+@forward '../../../styles/z-indexes';
+@forward '../../../../../styles/mixins/text-ellipsis';
+@use '../../../styles/z-indexes' as *;
+@use '../../../../../styles/mixins/text-ellipsis' as *;
 
 .PossibleElement {
   pointer-events: none;
-  z-index: $--xd-zindex-element-active;
+  z-index: $zindex-element-active;
 
   &__label {
     @include text-ellipsis;
@@ -12,6 +14,6 @@
     left: 0;
     top: 0;
     transform: translate(1.5px, -20px);
-    z-index: $--xd-zindex-element-active;
+    z-index: $zindex-element-active;
   }
 }

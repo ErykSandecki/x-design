@@ -1,4 +1,5 @@
-@import './box-shadow';
+@forward './box-shadow';
+@use './box-shadow' as *;
 
 @mixin overlay-menu {
   background-color: var(--xd-color-neutral-5);

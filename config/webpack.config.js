@@ -5,15 +5,13 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const webpack = require('webpack');
 
-const sassImports = require('./sassImports');
-const sassList = require('./sassList');
-const sassMaps = require('./sassMaps');
-const sassMixins = require('./sassMixins');
-const sassVariables = require('./sassVariables');
+const writeSassVariables = require('./generateSassVariables');
 
 const getClientEnvironment = require('./env');
 const hasJsxRuntime = require('./utils/hasJsxRuntime');
 const paths = require('./paths');
+
+writeSassVariables();
 
 const disableESLintPlugin = process.env.DISABLE_ESLINT_PLUGIN === 'true';
 const emitErrorsAsWarnings = process.env.ESLINT_NO_DEV_ERRORS === 'true';
@@ -92,7 +90,10 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               additionalData: async (content) => {
-                return sassImports + sassList + sassVariables() + sassMaps() + sassMixins + content;
+                return `@use 'xd-variables' as *;\n${content}`;
+              },
+              sassOptions: {
+                loadPaths: [path.resolve(__dirname, 'generated')],
               },
               sourceMap: isDevelopment,
             },

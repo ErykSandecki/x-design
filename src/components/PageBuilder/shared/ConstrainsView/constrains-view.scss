@@ -51,58 +51,58 @@
 
   &__constrain {
     background-color: var(--xd-color-neutral-2);
-    $--xd-size: 1.5px;
-    $--xd-length: 7.5px;
+    $size: 1.5px;
+    $length: 7.5px;
 
     box-sizing: border-box;
     position: absolute;
 
     &--bottom {
       bottom: 50%;
-      height: $--xd-size;
+      height: $size;
       left: 50%;
       transform: translate(-50%, 7px);
-      width: $--xd-length;
+      width: $length;
     }
 
     &--center-horizontal {
-      height: $--xd-size;
+      height: $size;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      width: $--xd-length;
+      width: $length;
     }
 
     &--center-vertical {
-      height: $--xd-length;
+      height: $length;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      width: $--xd-size;
+      width: $size;
     }
 
     &--left {
-      height: $--xd-length;
+      height: $length;
       left: 50%;
       top: 50%;
       transform: translate(-7px, -50%);
-      width: $--xd-size;
+      width: $size;
     }
 
     &--right {
-      height: $--xd-length;
+      height: $length;
       right: 50%;
       top: 50%;
       transform: translate(7px, -50%);
-      width: $--xd-size;
+      width: $size;
     }
 
     &--top {
-      height: $--xd-size;
+      height: $size;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -7px);
-      width: $--xd-length;
+      width: $length;
     }
   }
 }

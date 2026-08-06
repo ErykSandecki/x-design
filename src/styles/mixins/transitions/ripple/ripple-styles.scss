@@ -1,4 +1,5 @@
-@import './ripple-animations';
+@forward './ripple-animations';
+@use './ripple-animations' as *;
 
 @mixin ripple-circle($background-color) {
   animation: 0.9s ease 1 forwards animation-ripple-circle;

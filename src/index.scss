@@ -1,6 +1,9 @@
-@import './styles/antd/color-picker-panel';
-@import './styles/fonts';
-@import './styles/initRoot';
+@forward './styles/antd/color-picker-panel';
+@forward './styles/fonts';
+@forward './styles/initRoot';
+@use './styles/antd/color-picker-panel' as *;
+@use './styles/fonts' as *;
+@use './styles/initRoot' as *;
 
 :global {
   html {

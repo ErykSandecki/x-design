@@ -1,6 +1,11 @@
-@import './button-sizes';
-@import './button-variants';
-@import '../../../../styles/mixins/button/button';
+@use 'sass:map';
+
+@forward './button-sizes';
+@forward './button-variants';
+@forward '../../../../styles/mixins/button/button';
+@use './button-sizes' as *;
+@use './button-variants' as *;
+@use '../../../../styles/mixins/button/button' as *;
 
 .Button {
   $self: &;
@@ -9,7 +14,7 @@
   @include button-size;
   @include button;
 
-  border-radius: map.get($--xd-button-map, 'btn-border-radius');
+  border-radius: map.get($button-map, 'btn-border-radius');
   user-select: none;
 
   &--full-width {

@@ -42,7 +42,7 @@ module.exports = {
     'scss/at-rule-conditional-no-parentheses': null,
     'scss/at-rule-no-unknown': true,
     'scss/dollar-variable-empty-line-before': null,
-    'scss/dollar-variable-pattern': '(^--xd-)|(^self$)',
+    'scss/dollar-variable-pattern': '^[a-z][a-z0-9-]*$|^self$',
     'selector-class-pattern': null,
     'selector-id-pattern': null,
     'selector-pseudo-class-no-unknown': null,

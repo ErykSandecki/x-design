@@ -1,5 +1,7 @@
-@import './tooltip-carrot-positions';
-@import '../../../../styles/typography';
+@forward './tooltip-carrot-positions';
+@forward '../../../../styles/typography';
+@use './tooltip-carrot-positions' as *;
+@use '../../../../styles/typography' as *;
 
 .Tooltip {
   left: 0;
