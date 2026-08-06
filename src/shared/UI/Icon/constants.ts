@@ -1,0 +1,18 @@
+export const ICON_MODIFICATORS: Record<string, string> = {
+  blue1: 'Icon--blue-1',
+  blue2: 'Icon--blue2',
+  clickable: 'Icon--clickable',
+  disabled: 'Icon--disabled',
+  green1: 'Icon--green-1',
+  green2: 'Icon--green-2',
+  neutral1: 'Icon--neutral-1',
+  neutral2: 'Icon--neutral-2',
+  neutral3: 'Icon--neutral-3',
+  neutral4: 'Icon--neutral-4',
+  neutral5: 'Icon--neutral-5',
+  orange1: 'Icon--orange-1',
+  pink1: 'Icon--pink-1',
+  red1: 'Icon--red-1',
+  skyBlue1: 'Icon--sky-blue-1',
+  violet1: 'Icon--violet-1',
+};

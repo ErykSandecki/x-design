@@ -12,6 +12,7 @@ import Tooltip, { TTooltipProps } from '../Tooltip/Tooltip';
 import { useSX } from '../hooks/sx/useSX';
 
 // others
+import { ICON_MODIFICATORS } from './constants';
 
 // styles
 import styles from './icon.scss';
@@ -22,25 +23,6 @@ import { TE2EDataAttributeProps } from '../../E2EDataAttributes/E2EDataAttribute
 import { TSX } from '../hooks/sx/types/types';
 import { TSXPallete } from '../hooks/sx/types/pallete';
 import { TUIProps } from '../types';
-
-const iconModificators: Record<string, string> = {
-  blue1: 'Icon--blue-1',
-  blue2: 'Icon--blue2',
-  clickable: 'Icon--clickable',
-  disabled: 'Icon--disabled',
-  green1: 'Icon--green-1',
-  green2: 'Icon--green-2',
-  neutral1: 'Icon--neutral-1',
-  neutral2: 'Icon--neutral-2',
-  neutral3: 'Icon--neutral-3',
-  neutral4: 'Icon--neutral-4',
-  neutral5: 'Icon--neutral-5',
-  orange1: 'Icon--orange-1',
-  pink1: 'Icon--pink-1',
-  red1: 'Icon--red-1',
-  skyBlue1: 'Icon--sky-blue-1',
-  violet1: 'Icon--violet-1',
-};
 
 export type TIconProps = Omit<HTMLAttributes<HTMLOrSVGElement>, 'className'> &
   TUIProps<{ className: string }, Omit<TSX, keyof TSXPallete>> & {
@@ -83,7 +65,7 @@ export const Icon: FC<TIconProps> = ({
           sxClassName,
           classes.className,
           styles.Icon,
-          { [styles[iconModificators[color]]]: !isClickable },
+          { [styles[ICON_MODIFICATORS[color]]]: !isClickable },
           { [styles['Icon--clickable']]: isClickable },
           { [styles['Icon--disabled']]: disabled },
         )}

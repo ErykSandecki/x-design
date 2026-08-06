@@ -6,6 +6,7 @@ import { camelCase } from 'lodash';
 import { useSX } from '../hooks/sx/useSX';
 
 // others
+import { ICON_MODIFICATORS } from './constants';
 
 // styles
 import styles from './typography.scss';
@@ -21,44 +22,12 @@ import { TUIProps } from '../types';
 import { getAttributes } from '../../E2EDataAttributes/utils';
 import { renderElement } from './utils/renderElement';
 
-const typographyModificators: Record<string, string> = {
-  blue1: 'Typography--blue-1',
-  blue2: 'Typography--blue2',
-  bold: 'Typography--bold',
-  green1: 'Typography--green-1',
-  green2: 'Typography--green-2',
-  gutterBottom: 'Typography--gutter-bottom',
-  h1: 'Typography--h1',
-  h2: 'Typography--h2',
-  h3: 'Typography--h3',
-  h4: 'Typography--h4',
-  h5: 'Typography--h5',
-  h6: 'Typography--h6',
-  italic: 'Typography--italic',
-  medium: 'Typography--medium',
-  neutral1: 'Typography--neutral-1',
-  neutral2: 'Typography--neutral-2',
-  neutral3: 'Typography--neutral-3',
-  neutral4: 'Typography--neutral-4',
-  neutral5: 'Typography--neutral-5',
-  noWrap: 'Typography--no-wrap',
-  normal: 'Typography--normal',
-  orange1: 'Typography--orange-1',
-  p: 'Typography--p',
-  pink1: 'Typography--pink-1',
-  red1: 'Typography--red-1',
-  regular: 'Typography--regular',
-  skyBlue1: 'Typography--sky-blue-1',
-  small: 'Typography--small',
-  violet1: 'Typography--violet-1',
-};
-
 export type TTypographyProps = Omit<HTMLAttributes<HTMLElement>, 'className' | 'color'> &
   TUIProps<{ className: string }> & {
     align?: CSSProperties['textAlign'];
     children?: ReactNode;
     color?: ColorsTheme;
-    component?: TTypograpghyComponent;
+    component?: TTypograpghyComponent | null;
     e2eAttribute?: TE2EDataAttributeProps['type'];
     e2eValue?: TE2EDataAttributeProps['value'];
     fontStyle?: TypographyFontStyle;
@@ -107,10 +76,10 @@ export const Typography = ({
         sxClassName,
         classes.className,
         styles.Typography,
-        styles[typographyModificators[color]],
-        styles[typographyModificators[camelCase(fontWeight)]],
-        styles[typographyModificators[fontStyle]],
-        styles[typographyModificators[variant]],
+        styles[ICON_MODIFICATORS[color]],
+        styles[ICON_MODIFICATORS[camelCase(fontWeight)]],
+        styles[ICON_MODIFICATORS[fontStyle]],
+        styles[ICON_MODIFICATORS[variant]],
         { [styles['Typography--gutter-bottom']]: gutterBottom },
         { [styles['Typography--no-wrap']]: noWrap },
       ),
