@@ -14,6 +14,7 @@ Nested rotated parents compose visually for free in CSS (each element just does
 `getBoundingClientRect()` + `getComputedStyle().transform` and decodes the resulting matrix:
 
 `getOriginElementBounding(element, z)` (`src/utils/dom/getOriginElementBounding.ts:2`):
+
 1. Reads the real bounding rect + computed `transform` matrix.
 2. Extracts rotation (`atan2`) and scale from the `DOMMatrix`.
 3. Un-rotates around `transformOrigin` to recover the **axis-aligned** (unrotated) box — resize

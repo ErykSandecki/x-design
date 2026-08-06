@@ -28,9 +28,8 @@
     }
 
     &--disabled {
-      color: var(--xd-color-neutral-1);
-
       background-color: unset;
+      color: var(--xd-color-neutral-1);
 
       &:hover {
         background-color: unset;

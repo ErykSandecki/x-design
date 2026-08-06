@@ -29,9 +29,7 @@ export const useKeyboardHandler = (
   const isPrimaryKey = (key: string): boolean =>
     [KeyboardKeys.alt, KeyboardKeys.control, KeyboardKeys.shift].includes(key as KeyboardKeys);
 
-  const handleKeyDown = (
-    event: KeyboardEvent | React.KeyboardEvent<HTMLElement> | Event,
-  ): void => {
+  const handleKeyDown = (event: KeyboardEvent | React.KeyboardEvent<HTMLElement> | Event): void => {
     if (stopPropagation) {
       // Event has stopPropagation
       (event as Event).stopPropagation();

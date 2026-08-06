@@ -1,10 +1,10 @@
 .Chip {
+  align-items: center;
   background-color: var(--xd-color-neutral-4);
   border: 1px solid var(--xd-color-neutral-4);
-  color: var(--xd-color-neutral-1);
-  align-items: center;
   border-radius: 5px;
   box-sizing: border-box;
+  color: var(--xd-color-neutral-1);
   cursor: pointer;
   display: flex;
   height: 100%;

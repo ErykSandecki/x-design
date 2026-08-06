@@ -37,7 +37,9 @@ Never hardcode a path string in a component. Add the route to both:
 
 ```ts
 // constants/routes.ts
-export enum RouteName { home = 'home' }
+export enum RouteName {
+  home = 'home',
+}
 export const ROUTES: Record<RouteName, string> = { [RouteName.home]: '/' };
 ```
 
@@ -56,7 +58,7 @@ Then reference it via `getRouteByName(RouteName.home)`, never `'/'` directly.
 
 `renderRoute` turns each entry into a `<Route element={<ProtectedRoute guards={guards}><Component/></ProtectedRoute>} path={...} />` — this is why `ProtectedRoute` renders `children`/fallback rather than a
 `<Route>` itself (unlike x-design's RR5-era version): in RR6+/7 a `<Route>` must live directly in the
-router's route tree, so the guard-checking wrapper has to sit *inside* `element`, not wrap the
+router's route tree, so the guard-checking wrapper has to sit _inside_ `element`, not wrap the
 `<Route>` from outside.
 
 ## Guards — the protection mechanism
@@ -82,8 +84,7 @@ order stable across renders for a given route.
 ## `Title` — per-route document title
 
 Looks up the current pathname in `APP_ROUTES_DATA`, translates its `titleKey` via `useTranslation()`
-(see [[x-design-i18n]]), and sets `document.title = \`${title} - ${APP_NAME}\`` in a `useEffect`
-keyed on `pathname`. Unmatched paths (the `*` catch-all → `NotFoundPage`) fall back to the
+(see [[x-design-i18n]]), and sets `document.title = \`${title} - ${APP_NAME}\``in a`useEffect`keyed on`pathname`. Unmatched paths (the `\*`catch-all →`NotFoundPage`) fall back to the
 `'routing.title.notFound'` key.
 
 ## `RootLayout`

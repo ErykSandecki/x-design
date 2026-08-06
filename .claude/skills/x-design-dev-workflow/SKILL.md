@@ -39,12 +39,12 @@ Background on the pieces referenced below: [[x-design-element-model]],
 
 ## Testing conventions
 
-- **Co-locate**: `Foo.ts(x)` → `Foo.spec.ts(x)` in the *same folder* (deeper `store/pageBuilder/utils/*`
+- **Co-locate**: `Foo.ts(x)` → `Foo.spec.ts(x)` in the _same folder_ (deeper `store/pageBuilder/utils/*`
   additionally nest a sibling `test/` folder mirroring util filenames 1:1).
 - **Snapshots** land in a sibling `snapshots/` folder automatically via a custom Jest resolver
   (`scripts/snapshotResolver.js`) — not co-located `__snapshots__`.
 - **100% branch/function/line/statement coverage is enforced** (`jest.config.js`, `npm run
-  test:check`) for anything not in the `coveragePathIgnorePatterns` allowlist (styles, constants,
+test:check`) for anything not in the `coveragePathIgnorePatterns` allowlist (styles, constants,
   mocks, stories, types, store-wiring). Any new non-trivial file needs a full-coverage spec or CI
   fails — this is a hard gate, not a suggestion.
 - **Saga tests use `redux-saga-tester`** (a full mini-store + saga runner — dispatch an action,

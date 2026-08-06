@@ -5,9 +5,6 @@
       "Edit(/.claude/skills/x-design-scss-import-order/**)",
       "WebFetch(domain:github.com)"
     ],
-    "additionalDirectories": [
-      "/tmp",
-      "/Users/eryksandecki/Desktop/Work/Figma/x-design/.claude/skills"
-    ]
+    "additionalDirectories": ["/tmp", "/Users/eryksandecki/Desktop/Work/Figma/x-design/.claude/skills"]
   }
 }

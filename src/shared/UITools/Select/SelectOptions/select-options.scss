@@ -1,5 +1,4 @@
 .SelectOptions {
-  color: var(--xd-color-neutral-1);
   background-color: var(--xd-color-neutral-4);
   border-radius: 10px;
   box-shadow:
@@ -7,6 +6,7 @@
     #00000024 0 8px 10px 1px,
     #0000001f 0 3px 14px;
   box-sizing: border-box;
+  color: var(--xd-color-neutral-1);
   display: flex;
   flex-direction: column;
   list-style: none;

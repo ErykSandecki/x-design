@@ -49,9 +49,7 @@ export const AlignmentOption: FC<TAlignmentOptionProps> = ({ alignmentFlow, isSe
         })}
         onClick={() => onClick(alignmentFlow)}
       >
-        <div
-          className={cx(styles['AlignmentOption__option-view'], styles[optionViewModificators[alignmentFlow]])}
-        >
+        <div className={cx(styles['AlignmentOption__option-view'], styles[optionViewModificators[alignmentFlow]])}>
           {Array.from(Array(3), (_, index) => (
             <div
               className={cx(styles.AlignmentOption__indicator, {

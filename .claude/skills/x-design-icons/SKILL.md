@@ -22,8 +22,12 @@ hardcoded color:
 overridden at runtime. `shared/UI/Icon/Icon.module.scss` targets that attribute:
 
 ```scss
-:global([data-svg-property='fill']) { fill: currentColor; }
-:global([data-svg-property='stroke']) { stroke: currentColor; }
+:global([data-svg-property='fill']) {
+  fill: currentColor;
+}
+:global([data-svg-property='stroke']) {
+  stroke: currentColor;
+}
 ```
 
 A CSS attribute-selector rule beats an element's own `fill="..."` presentation attribute in the
@@ -35,7 +39,7 @@ no JS prop-drilling into internal `<path>` elements.
 Configured in `vite.config.ts`:
 
 ```ts
-svgr({ svgrOptions: { titleProp: true, ref: true } })
+svgr({ svgrOptions: { titleProp: true, ref: true } });
 ```
 
 SVGO is **off by default** in this plugin (unlike `@svgr/webpack`, which needed an explicit

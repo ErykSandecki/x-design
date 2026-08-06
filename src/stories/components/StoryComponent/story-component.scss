@@ -20,9 +20,9 @@
   }
 
   &__title {
+    color: #eaeef3;
     font-size: 30px;
     margin: 40px 0 10px;
-    color: #eaeef3;
 
     [data-theme='light'] & {
       color: #1e2839;
@@ -30,6 +30,7 @@
   }
 
   &__description {
+    color: #aab4be;
     font-family:
       'IBM Plex Sans',
       -apple-system,
@@ -53,17 +54,12 @@
     & > code {
       background-color: #66b2ff26;
       border-radius: 5px;
+      color: #ffffff;
       font-family: Consolas, Menlo, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
       font-size: 13px;
       font-weight: 400;
       line-height: 1.5;
       padding: 0 5px;
-    }
-
-    color: #aab4be;
-
-    & > code {
-      color: #ffffff;
     }
 
     [data-theme='light'] & {
@@ -77,12 +73,11 @@
 
   &__content {
     border: 1px solid;
+    border-color: #ffffff1f;
     border-radius: 10px;
     grid-column-gap: 25px;
     justify-content: center;
     padding: 24px;
-
-    border-color: #ffffff1f;
 
     [data-theme='light'] & {
       border-color: #0000001f;

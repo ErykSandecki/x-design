@@ -4,8 +4,8 @@
   width: 100%;
 
   &--hovered {
-    border: 1px solid var(--xd-color-blue-2);
     background-color: var(--xd-color-blue-1);
+    border: 1px solid var(--xd-color-blue-2);
     opacity: 0.4;
   }
 }

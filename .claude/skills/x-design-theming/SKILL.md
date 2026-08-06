@@ -7,7 +7,7 @@ description: How color theming and dark/light mode work in x-design — CSS cust
 
 Single source of truth for color, one mechanism for both SCSS and TSX — no compile-time
 light/dark class variants (that's what x-design does; deliberately not mirrored here, see
-`x-draft-import-order`'s sibling skills for what *was* mirrored). Instead: **CSS custom properties**
+`x-draft-import-order`'s sibling skills for what _was_ mirrored). Instead: **CSS custom properties**
 that both worlds read from the same names.
 
 ## `src/styles/_theme.scss` — the only place with real hex values
@@ -16,12 +16,27 @@ A Sass map per theme + a mixin that emits `--color-*` custom properties:
 
 ```scss
 $themes: (
-  dark: (neutral-1: #ffffff, neutral-2: #b3b3b3, neutral-3: #444444, neutral-4: #2c2c2c, neutral-5: #1e1e1e, blue-1: #0d99ff),
-  light: (neutral-1: #1e1e1e, neutral-2: #6e6e6e, neutral-3: #e6e6e6, neutral-4: #ffffff, neutral-5: #f5f5f5, blue-1: #0d99ff),
+  dark: (
+    neutral-1: #ffffff,
+    neutral-2: #b3b3b3,
+    neutral-3: #444444,
+    neutral-4: #2c2c2c,
+    neutral-5: #1e1e1e,
+    blue-1: #0d99ff,
+  ),
+  light: (
+    neutral-1: #1e1e1e,
+    neutral-2: #6e6e6e,
+    neutral-3: #e6e6e6,
+    neutral-4: #ffffff,
+    neutral-5: #f5f5f5,
+    blue-1: #0d99ff,
+  ),
 );
 ```
 
 Applied four times, by design:
+
 1. `:root { @include theme-variables(dark); }` — dark is the default (matches the reference: Figma's
    own dark UI, see project memory of the original ask).
 2. `@media (prefers-color-scheme: light) { :root { ... } }` — auto light when the OS prefers it and
@@ -44,7 +59,7 @@ export const colors = {
 ```
 
 Each value is the CSS `var()` string, not a resolved hex — so `colors.neutral2` used in an inline
-`style` prop is *exactly* the same token as `var(--color-neutral-2)` in a `.module.scss` file, and
+`style` prop is _exactly_ the same token as `var(--color-neutral-2)` in a `.module.scss` file, and
 both react to theme changes automatically with no re-render needed. Adding a color token means
 touching **both** files (the hex in `_theme.scss`, the `var()` reference in `colors.ts`) — there is
 no codegen step, unlike x-design's `generateThemeColors.js`.

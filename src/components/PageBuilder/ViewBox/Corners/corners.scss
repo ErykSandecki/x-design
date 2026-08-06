@@ -7,15 +7,14 @@
   @include enter-delay;
 
   border: 1px solid var(--xd-color-blue-1);
-
-  rect {
-    fill: var(--xd-color-neutral-1);
-    stroke: var(--xd-color-blue-1);
-  }
-
   box-sizing: border-box;
   overflow: visible;
   pointer-events: none;
   position: absolute;
   z-index: $zindex-element;
+
+  rect {
+    fill: var(--xd-color-neutral-1);
+    stroke: var(--xd-color-blue-1);
+  }
 }

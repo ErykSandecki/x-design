@@ -21,15 +21,15 @@
   }
 
   &__picker-texture {
+    background:
+      url('assets/images/texture--dark.svg') 0 0 / auto 50%,
+      #000000;
     height: 100%;
     left: 0;
     position: absolute;
     top: 0;
     width: 100%;
     z-index: 1;
-    background:
-      url('assets/images/texture--dark.svg') 0 0 / auto 50%,
-      #000000;
 
     [data-theme='light'] & {
       background:

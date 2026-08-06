@@ -40,7 +40,7 @@ src/pages/PageBuilderPage/core/RefsProvider.tsx   id → live HTMLElement ref re
 "Figma" means two unrelated things in this repo — don't conflate them:
 
 1. **The product being cloned** — canvas, panels, tools. This is everything under
-   `src/components/PageBuilder` and `src/store/pageBuilder`. See the other x-design-* skills.
+   `src/components/PageBuilder` and `src/store/pageBuilder`. See the other x-design-\* skills.
 2. **A disconnected manual asset-scraping workflow** — `figma/figma.min.js` (a locally-saved
    copy of Figma's own web-app JS bundle) + `scripts/extract-svgs.js`
    (`npm run generate:figma-svg`) regexes inline `<svg>` strings out of that bundle into

@@ -22,12 +22,14 @@ Mirrors x-design exactly (`shared/UITools/Popover/constants.ts`, `shared/UITools
   ```
 - **Every nested folder** imports the parent's namespace (aliased to `parentNameSpace`) and appends
   its own segment:
+
   ```ts
   // components/PageBuilder/PanelProperties/constants.ts (x-design)
   import { translationNameSpace as parentNameSpace } from '../constants';
 
   export const translationNameSpace = `${parentNameSpace}.panelProperties`;
   ```
+
 - Keys are built as `` `${translationNameSpace}.something` `` and passed straight to `t(...)`.
 
 ## Root lives at the top-level component/feature folder, not under `pages/`

@@ -51,11 +51,10 @@
 
   &__constrain {
     background-color: var(--xd-color-neutral-2);
-    $size: 1.5px;
-    $length: 7.5px;
-
     box-sizing: border-box;
     position: absolute;
+    $size: 1.5px;
+    $length: 7.5px;
 
     &--bottom {
       bottom: 50%;

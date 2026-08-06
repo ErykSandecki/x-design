@@ -13,9 +13,9 @@
     'Segoe UI Symbol';
 
   &__title {
+    color: #eaeef3;
     font-size: 30px;
     margin: 40px 0 10px;
-    color: #eaeef3;
 
     [data-theme='light'] & {
       color: #1e2839;
@@ -30,10 +30,9 @@
 
   &__row-header {
     border-bottom: 1px solid;
-    font-size: 16px;
-
     border-bottom-color: #ffffff1f;
     color: #ffffff;
+    font-size: 16px;
 
     [data-theme='light'] & {
       border-bottom-color: #0000001f;
@@ -48,14 +47,19 @@
 
   &__row-body {
     border-bottom: 1px solid;
+    border-bottom-color: #ffffff1f;
+    color: #ffffff;
     font-size: 13px;
     line-height: 1.5;
 
-    border-bottom-color: #ffffff1f;
-    color: #ffffff;
-
     & code {
+      background-color: #66b2ff26;
+      border-radius: 5px;
       color: #ffffff;
+      font-family: Consolas, Menlo, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+      font-size: 13px;
+      font-weight: 400;
+      padding: 0 5px;
     }
 
     [data-theme='light'] & {
@@ -65,15 +69,6 @@
       & code {
         color: #1a2027;
       }
-    }
-
-    & code {
-      background-color: #66b2ff26;
-      border-radius: 5px;
-      font-family: Consolas, Menlo, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-      font-size: 13px;
-      font-weight: 400;
-      padding: 0 5px;
     }
 
     & > td {
@@ -89,8 +84,8 @@
     }
 
     &-type {
-      font-family: Consolas, Menlo, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
       color: #a6e22e;
+      font-family: Consolas, Menlo, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 
       [data-theme='light'] & {
         color: #932981;

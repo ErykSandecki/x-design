@@ -12,6 +12,7 @@ Defined in `src/types/components/types.ts:43`. Default/zero-value lives in
 real shape at a glance.
 
 Key fields:
+
 - `id`, `parentId` (`'-1'` = no parent / page root), `type: ElementType` (`base | frame | grid | none | rect`)
 - `children: Array<TChildren>` — **only `{id, type}` pointers**, not nested elements (see "flat store" below)
 - `coordinates: T2DCoordinates` — position relative to immediate parent
@@ -67,12 +68,13 @@ it with `reducerHistory` below.
 - Undo **increments** `reducerHistoryIndex`, redo **decrements** it — counter-intuitive; think
   "how many steps back from HEAD," not "array position."
 
-## The reducer does the work; the saga only decides *when* to snapshot
+## The reducer does the work; the saga only decides _when_ to snapshot
 
 `reducer.ts` is a big switch (line ~351) delegating to one `handle*.ts` pure function per action
 under `store/pageBuilder/utils/` — that's where real mutation logic lives, not inline in the reducer.
 
 `watch.ts:10` wires exactly three `takeEvery`s (`saga.ts`):
+
 1. `CHANGE_PARENT` → 100ms `canMoveElements` freeze, a debounce guard after a reparent-drop.
 2. `REDUCER_HISTORY_SAVE_ACTIONS` (`constants.ts:115` — discrete actions like `ADD_ELEMENT`,
    `SELECT_ELEMENT`, `CHANGE_PARENT`) → snapshot history **immediately**.

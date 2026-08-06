@@ -16,8 +16,8 @@
     z-index: $zindex-element-active;
 
     path {
-      stroke: var(--xd-color-blue-1);
       fill: color-mix(in srgb, var(--xd-color-blue-1) 20%, transparent);
+      stroke: var(--xd-color-blue-1);
     }
   }
 }
