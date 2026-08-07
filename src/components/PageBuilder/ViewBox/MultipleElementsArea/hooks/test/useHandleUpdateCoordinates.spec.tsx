@@ -19,7 +19,7 @@ import { configureStore, store as storeToMock } from 'store/store';
 // utils
 import { getProviderWrapper } from 'test';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 const element = document.createElement('div');
 const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages[pageBuilderStateMock[PAGE_BUILDER].currentPage];
 const zoomContent = document.createElement('div');
@@ -58,8 +58,8 @@ const stateMock = {
   },
 };
 
-jest.mock('lodash', () => ({
-  ...(jest.requireActual('lodash') as object),
+vi.mock('lodash', async (importOriginal) => ({
+  ...((await importOriginal()) as any).default,
   defer: (callback: any): any => callback(),
 }));
 

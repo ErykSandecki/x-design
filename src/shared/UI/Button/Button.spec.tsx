@@ -34,7 +34,7 @@ const buttonModificators: Record<string, string> = {
 
 const className = 'className';
 const content = 'Click';
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('Button behaviors', () => {
   it('should render rippleEffect after click', async () => {

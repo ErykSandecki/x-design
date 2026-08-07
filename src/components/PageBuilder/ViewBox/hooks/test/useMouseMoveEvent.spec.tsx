@@ -19,7 +19,7 @@ import { MouseMode } from 'types/enums/mouseMode';
 // utils
 import { getProviderWrapper } from 'test';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 const stateMock = {
   ...pageBuilderStateMock,
 };

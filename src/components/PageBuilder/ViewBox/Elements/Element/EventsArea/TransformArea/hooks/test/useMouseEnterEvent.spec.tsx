@@ -6,7 +6,7 @@ import { useMouseEnterEvent } from '../useMouseEnterEvent';
 // types
 import { AnchorResize, AnchorRotate } from 'store/pageBuilder/enums';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('useMouseEnterEvent', () => {
   it(`should trigger event on resize`, () => {

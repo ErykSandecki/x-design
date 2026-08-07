@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`PopoverSeparator snapshots should render PopoverSeparator 1`] = `
+exports[`PopoverSeparator snapshots > should render PopoverSeparator 1`] = `
 <DocumentFragment>
   <div
     class="PopoverSeparator"
@@ -8,4 +8,4 @@ exports[`PopoverSeparator snapshots should render PopoverSeparator 1`] = `
 </DocumentFragment>
 `;
 
-exports[`PopoverSeparator snapshots should render not visible 1`] = `<DocumentFragment />`;
+exports[`PopoverSeparator snapshots > should render not visible 1`] = `<DocumentFragment />`;

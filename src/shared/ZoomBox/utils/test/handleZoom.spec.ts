@@ -8,7 +8,7 @@ import { DATE_NOW_MOCKED } from 'test';
 import { handleZoom } from '../handleZoom';
 
 const lastWheelTime = { current: 0 };
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 const ref = {
   current: { getBoundingClientRect: (): any => ({ left: 0, top: 0 }) },
 };

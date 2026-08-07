@@ -12,7 +12,7 @@ import { configureStore } from 'store';
 // utils
 import { getProviderWrapper } from 'test';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 const stateMock = {
   ...pageBuilderStateMock,

@@ -7,7 +7,7 @@ describe('useWheelEvent', () => {
   it(`should prevent default`, () => {
     // mock
     const event = new WheelEvent('wheel', { ctrlKey: true });
-    jest.spyOn(event, 'preventDefault');
+    vi.spyOn(event, 'preventDefault');
 
     // before
     renderHook(() => useWheelEvent());
@@ -22,7 +22,7 @@ describe('useWheelEvent', () => {
   it(`should not prevent default`, () => {
     // mock
     const event = new WheelEvent('wheel', {});
-    jest.spyOn(event, 'preventDefault');
+    vi.spyOn(event, 'preventDefault');
 
     // before
     renderHook(() => useWheelEvent());

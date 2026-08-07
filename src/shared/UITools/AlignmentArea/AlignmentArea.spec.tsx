@@ -16,7 +16,7 @@ import { AlignmentLayout, E2EAttribute } from 'types';
 // utils
 import { customRender, getByE2EAttribute } from 'test';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('AlignmentArea snapshots', () => {
   it('should render AlignmentArea', () => {

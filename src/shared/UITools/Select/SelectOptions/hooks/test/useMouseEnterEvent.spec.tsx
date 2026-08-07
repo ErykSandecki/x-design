@@ -3,7 +3,7 @@ import { renderHook } from '@testing-library/react';
 // hooks
 import { useMouseEnterEvent } from '../useMouseEnterEvent';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('useMouseEnterEvent', () => {
   it(`should trigger event`, () => {

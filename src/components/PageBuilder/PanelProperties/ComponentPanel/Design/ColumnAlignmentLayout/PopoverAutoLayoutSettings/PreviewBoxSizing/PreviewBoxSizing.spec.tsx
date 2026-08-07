@@ -4,9 +4,9 @@ import PreviewBoxSizing from './PreviewBoxSizing';
 // utils
 import { customRender } from 'test';
 
-jest.mock('react-redux', () => ({
-  ...jest.requireActual('react-redux'),
-  useDispatch: jest.fn(),
+vi.mock('react-redux', async (importOriginal) => ({
+  ...(await importOriginal()),
+  useDispatch: vi.fn(),
 }));
 
 describe('PopoverAutoLayoutSettings snapshots', () => {

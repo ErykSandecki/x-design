@@ -4,7 +4,7 @@ import { fieldMock } from 'test/mocks/reducer/reduxHookFormMock';
 // utils
 import { markInputsAsTouched } from '../markInputsAsTouched';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('markInputsAsTouched', () => {
   it('should mark all inputs as touched', () => {

@@ -4,7 +4,7 @@ import { KeyboardKeys } from 'types/enums';
 // utils
 import { handleLockBrowserEvents } from '../handleLockBrowserEvents';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('handleLockBrowserEvents', () => {
   it('should lock event when key is "+"', () => {

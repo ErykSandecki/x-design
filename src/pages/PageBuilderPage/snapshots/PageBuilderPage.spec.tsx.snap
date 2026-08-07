@@ -1,10 +1,11 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
+exports[`PageBuilderPage snapshots > should render PageBuilderPage 1`] = `
 <DocumentFragment>
   <div>
     <div
       class="Toolbar"
+      style="touch-action: manipulation;"
     >
       <div
         class="MouseModes"
@@ -65,7 +66,7 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
       class="PanelProperties"
       data-test-box="panel-properties"
       id="panelProperties"
-      style="width: 240px;"
+      style="touch-action: manipulation; width: 240px;"
     >
       <div
         class="PanelProperties__area-handle-resize"
@@ -135,14 +136,14 @@ exports[`PageBuilderPage snapshots should render PageBuilderPage 1`] = `
           >
             <div
               class="SectionColumnLabels"
-              style="width: calc(100% - 24px - 0px - 8px);"
+              style="width: calc(100% - 32px);"
             />
             <div
               class="SectionColumn__row"
             >
               <div
                 class="SectionColumnContent SectionColumnContent--single"
-                style="width: calc(100% - 24px - 0px - 8px);"
+                style="width: calc(100% - 32px);"
               >
                 <div
                   class="FieldGroup"

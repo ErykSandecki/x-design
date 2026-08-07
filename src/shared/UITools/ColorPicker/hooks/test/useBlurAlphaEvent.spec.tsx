@@ -3,7 +3,7 @@ import { renderHook } from '@testing-library/react';
 // hooks
 import { useBlurAlphaEvent } from '../useBlurAlphaEvent';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('useBlurAlphaEvent', () => {
   it(`should trigger on change when current value is valid`, () => {

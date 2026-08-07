@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Select snapshots should render Select 1`] = `
+exports[`Select snapshots > should render Select 1`] = `
 <DocumentFragment>
   <div
     class="Select"
@@ -96,7 +96,7 @@ exports[`Select snapshots should render Select 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Select snapshots should render when mixed 1`] = `
+exports[`Select snapshots > should render when mixed 1`] = `
 <DocumentFragment>
   <div
     class="Select"
@@ -192,7 +192,7 @@ exports[`Select snapshots should render when mixed 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Select snapshots should render with no options 1`] = `
+exports[`Select snapshots > should render with no options 1`] = `
 <DocumentFragment>
   <div
     class="Select"
@@ -250,7 +250,7 @@ exports[`Select snapshots should render with no options 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Select snapshots should render with one option 1`] = `
+exports[`Select snapshots > should render with one option 1`] = `
 <DocumentFragment>
   <div
     class="Select"

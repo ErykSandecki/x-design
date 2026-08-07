@@ -15,12 +15,12 @@ import { store as storeToMock } from 'store/store';
 import { updateElementPosition } from '../updateElementPosition';
 
 const cursorPosition = { current: BASE_2D } as RefObject<T2DCoordinates>;
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 const stateMock = {
   ...pageBuilderStateMock,
 };
 
-jest.mock('../../../../utils/setElementsCoordinatesHandler', () => ({
+vi.mock('../../../../utils/setElementsCoordinatesHandler', () => ({
   setElementsCoordinatesHandler: (): any => mockCallBack(),
 }));
 

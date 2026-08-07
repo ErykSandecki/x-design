@@ -13,7 +13,7 @@ import { customRender, getByE2EAttribute } from 'test';
 
 const id = 'id';
 const element = createHtmlElement('div', { id });
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 const ref = { current: null } as unknown as RefObject<HTMLInputElement>;
 
 describe('TextFieldPopover snapshots', () => {

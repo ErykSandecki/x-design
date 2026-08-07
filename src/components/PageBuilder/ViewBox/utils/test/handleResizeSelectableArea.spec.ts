@@ -8,7 +8,7 @@ import { MouseMode } from 'types/enums/mouseMode';
 // utils
 import { handleResizeSelectableArea } from '../handleResizeSelectableArea';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('handleResizeSelectableArea', () => {
   it(`should resize area`, () => {

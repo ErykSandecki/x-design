@@ -181,7 +181,6 @@ describe('ColumnResizing behaviors', () => {
       bubbles: true,
       cancelable: true,
       shiftKey: false,
-      view: window,
     });
     Object.defineProperty(mouseMoveEvent, 'movementX', { value: -100 });
 

@@ -1,24 +1,24 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`KeyboardKeysGroup snapshots should render with couple keys 1`] = `
+exports[`KeyboardKeysGroup snapshots > should render with couple keys 1`] = `
 <DocumentFragment>
     ⌥⌘⇧A
 </DocumentFragment>
 `;
 
-exports[`KeyboardKeysGroup snapshots should render with couple keys and optional 1`] = `
+exports[`KeyboardKeysGroup snapshots > should render with couple keys and optional 1`] = `
 <DocumentFragment>
    ⌥⌘⇧Aor⌥⌘⇧A
 </DocumentFragment>
 `;
 
-exports[`KeyboardKeysGroup snapshots should render with one key 1`] = `
+exports[`KeyboardKeysGroup snapshots > should render with one key 1`] = `
 <DocumentFragment>
     A
 </DocumentFragment>
 `;
 
-exports[`KeyboardKeysGroup snapshots should render with title 1`] = `
+exports[`KeyboardKeysGroup snapshots > should render with title 1`] = `
 <DocumentFragment>
   title  A
 </DocumentFragment>

@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ColumnBorderRadiusIndividual snapshots should not render when is merged mode 1`] = `<DocumentFragment />`;
+exports[`ColumnBorderRadiusIndividual snapshots > should not render when is merged mode 1`] = `<DocumentFragment />`;
 
-exports[`ColumnBorderRadiusIndividual snapshots should render ColumnBorderRadiusIndividual 1`] = `
+exports[`ColumnBorderRadiusIndividual snapshots > should render ColumnBorderRadiusIndividual 1`] = `
 <DocumentFragment>
   <div
     class="SectionColumn SectionColumn--with-bottom-margin"
@@ -10,14 +10,14 @@ exports[`ColumnBorderRadiusIndividual snapshots should render ColumnBorderRadius
   >
     <div
       class="SectionColumnLabels"
-      style="width: calc(100% - 24px - 0px - 8px);"
+      style="width: calc(100% - 32px);"
     />
     <div
       class="SectionColumn__row"
     >
       <div
         class="SectionColumnContent SectionColumnContent--two-inputs"
-        style="width: calc(100% - 24px - 0px - 8px);"
+        style="width: calc(100% - 32px);"
       >
         <div
           class="TextField"

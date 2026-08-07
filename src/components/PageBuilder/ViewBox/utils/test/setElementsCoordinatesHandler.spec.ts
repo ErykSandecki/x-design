@@ -15,7 +15,7 @@ import { store as storeToMock } from 'store/store';
 import { setElementsCoordinatesHandler } from '../setElementsCoordinatesHandler';
 
 const cursorPosition = { current: BASE_2D } as RefObject<T2DCoordinates>;
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages[pageBuilderStateMock[PAGE_BUILDER].currentPage];
 
 describe('setElementsCoordinatesHandler', () => {

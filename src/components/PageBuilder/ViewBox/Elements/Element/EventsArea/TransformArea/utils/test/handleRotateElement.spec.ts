@@ -9,7 +9,7 @@ const elementRef = {
     getBoundingClientRect: () => ({ height: 100, left: 0, top: 0, width: 100 }),
   },
 } as RefObject<HTMLDivElement>;
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('handleRotateElement', () => {
   it(`should rotate element`, () => {

@@ -4,7 +4,7 @@ import { BASE_2D } from 'shared';
 // utils
 import { handleUpdateMousePosition } from '../handleUpdateMousePosition';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('handleUpdateMousePosition', () => {
   beforeAll(() => {

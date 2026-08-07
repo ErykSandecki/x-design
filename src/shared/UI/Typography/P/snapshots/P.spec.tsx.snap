@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`P snapshots should render P 1`] = `
+exports[`P snapshots > should render P 1`] = `
 <DocumentFragment>
   <p
     class="Typography Typography--neutral-1 Typography--regular Typography--normal Typography--p"

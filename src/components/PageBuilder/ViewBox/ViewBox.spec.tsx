@@ -26,14 +26,14 @@ import { getByE2EAttribute } from 'test';
 
 const element = document.createElement('div');
 const overlayContainer = document.createElement('div');
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 const sharedRefs = {
   [elementMock.id]: element,
   ['2']: element,
 };
 
-jest.mock('lodash', () => ({
-  ...jest.requireActual('lodash'),
+vi.mock('lodash', async (importOriginal) => ({
+  ...((await importOriginal()) as any).default,
   debounce:
     (callback: any) =>
     (value: any): any =>

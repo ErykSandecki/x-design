@@ -9,7 +9,7 @@ import { E2EAttribute, KeyboardKeys } from 'types';
 // utils
 import { customRender, getByE2EAttribute } from 'test';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('ColorPicker snapshots', () => {
   it('should render ColorPicker', () => {
@@ -64,7 +64,6 @@ describe('ColorPicker behaviors', () => {
       bubbles: true,
       cancelable: true,
       shiftKey: false,
-      view: window,
     });
     Object.defineProperty(mouseMoveEvent, 'movementX', { value: -100 });
 

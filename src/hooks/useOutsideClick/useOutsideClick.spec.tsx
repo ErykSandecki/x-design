@@ -7,7 +7,7 @@ import { useOutsideClick } from './useOutsideClick';
 // types
 import { KeyboardKeys } from '../../types/enums';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('useOutsideClick', () => {
   const ref = { current: { contains: () => false } } as RefObject<any>;

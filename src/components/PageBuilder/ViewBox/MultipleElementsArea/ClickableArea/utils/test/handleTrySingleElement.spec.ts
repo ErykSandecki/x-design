@@ -13,7 +13,7 @@ import { handleTrySingleElement } from '../handleTrySingleElement';
 
 const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages[pageBuilderStateMock[PAGE_BUILDER].currentPage];
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('handleTrySingleElement', () => {
   beforeAll(() => {

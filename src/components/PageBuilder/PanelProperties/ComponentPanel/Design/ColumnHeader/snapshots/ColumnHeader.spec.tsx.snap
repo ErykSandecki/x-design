@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ColumnHeader snapshots should render ColumnHeader 1`] = `
+exports[`ColumnHeader snapshots > should render ColumnHeader 1`] = `
 <DocumentFragment>
   <div
     class="SectionColumn"
@@ -8,14 +8,14 @@ exports[`ColumnHeader snapshots should render ColumnHeader 1`] = `
   >
     <div
       class="SectionColumnLabels"
-      style="width: calc(100% - 48px - 2.5px - 8px);"
+      style="width: calc(100% - 58.5px);"
     />
     <div
       class="SectionColumn__row"
     >
       <div
         class="SectionColumnContent SectionColumnContent--single"
-        style="width: calc(100% - 48px - 2.5px - 8px);"
+        style="width: calc(100% - 58.5px);"
       >
         <small
           class="Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -94,7 +94,7 @@ exports[`ColumnHeader snapshots should render ColumnHeader 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ColumnHeader snapshots should render with multiple selects 1`] = `
+exports[`ColumnHeader snapshots > should render with multiple selects 1`] = `
 <DocumentFragment>
   <div
     class="SectionColumn"
@@ -102,14 +102,14 @@ exports[`ColumnHeader snapshots should render with multiple selects 1`] = `
   >
     <div
       class="SectionColumnLabels"
-      style="width: calc(100% - 48px - 2.5px - 8px);"
+      style="width: calc(100% - 58.5px);"
     />
     <div
       class="SectionColumn__row"
     >
       <div
         class="SectionColumnContent SectionColumnContent--single"
-        style="width: calc(100% - 48px - 2.5px - 8px);"
+        style="width: calc(100% - 58.5px);"
       >
         <small
           class="Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"

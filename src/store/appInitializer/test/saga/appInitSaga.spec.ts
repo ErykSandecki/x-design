@@ -11,8 +11,8 @@ import { REDUCER_KEY as APP_INITIALIZER, SET_IS_APP_LOADED } from '../../actions
 import appInitializer from '../../reducer';
 import { appInitSaga, initLanguageSaga } from '../../saga';
 
-jest.mock('utils', () => ({
-  ...jest.requireActual('utils'),
+vi.mock('utils', async (importOriginal) => ({
+  ...(await importOriginal()),
   getFormattedDate: (key: string): any => key,
 }));
 
@@ -23,7 +23,7 @@ describe('appInitSaga', () => {
 
   it('should be success', async () => {
     // mock
-    jest.spyOn(global, 'fetch').mockImplementation(
+    vi.spyOn(global, 'fetch').mockImplementation(
       () =>
         new Promise((resolve) =>
           resolve({
@@ -60,7 +60,7 @@ describe('appInitSaga', () => {
 
   it('should catch server error', async () => {
     // mock
-    jest.spyOn(global, 'fetch').mockImplementation(() => new Promise((_, reject) => reject('error')));
+    vi.spyOn(global, 'fetch').mockImplementation(() => new Promise((_, reject) => reject('error')));
 
     // before
     const sagaTester = new SagaTester({

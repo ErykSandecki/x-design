@@ -13,11 +13,11 @@ import { configureStore } from '../../store/store';
 // types
 import { Theme } from 'types/enums/theme';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 const stateMock = {};
 
-jest.mock('react-redux', () => ({
-  ...(jest.requireActual('react-redux') as object),
+vi.mock('react-redux', async (importOriginal) => ({
+  ...((await importOriginal()) as object),
   useDispatch: () => (): any => {},
 }));
 

@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`PopoverPreview snapshots should render PopoverPreview 1`] = `
+exports[`PopoverPreview snapshots > should render PopoverPreview 1`] = `
 <DocumentFragment>
   <div
     class="PopoverPreview"
@@ -18,7 +18,7 @@ exports[`PopoverPreview snapshots should render PopoverPreview 1`] = `
 </DocumentFragment>
 `;
 
-exports[`PopoverPreview snapshots should render when active preview 1`] = `
+exports[`PopoverPreview snapshots > should render when active preview 1`] = `
 <DocumentFragment>
   <div
     class="PopoverPreview"

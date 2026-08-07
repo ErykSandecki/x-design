@@ -9,17 +9,17 @@ import { BASE_2D } from 'shared/ZoomBox/constants';
 // utils
 import { sleep } from 'test';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
-jest.mock('lodash', () => ({
-  ...jest.requireActual('lodash'),
+vi.mock('lodash', async (importOriginal) => ({
+  ...((await importOriginal()) as any).default,
   throttle:
     (callback: any) =>
     (value: any): any =>
       callback(value),
 }));
 
-jest.mock('../../utils/extractColors', () => ({
+vi.mock('../../utils/extractColors', () => ({
   extractColors: async (): Promise<any> => new Promise((resolve) => resolve([])),
 }));
 

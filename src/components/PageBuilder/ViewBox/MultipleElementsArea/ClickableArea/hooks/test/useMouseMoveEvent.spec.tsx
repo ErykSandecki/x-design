@@ -17,17 +17,17 @@ import { configureStore } from 'store';
 import { getProviderWrapper } from 'test';
 
 const cursorPosition = { current: BASE_2D } as RefObject<T2DCoordinates>;
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 const stateMock = {
   ...pageBuilderStateMock,
 };
 
-jest.mock('react-redux', () => ({
-  ...jest.requireActual('react-redux'),
+vi.mock('react-redux', async (importOriginal) => ({
+  ...(await importOriginal()),
   useDispatch: () => (): any => {},
 }));
 
-jest.mock('../../../../utils/setElementsCoordinatesHandler', () => ({
+vi.mock('../../../../utils/setElementsCoordinatesHandler', () => ({
   setElementsCoordinatesHandler: (): any => mockCallBack(),
 }));
 

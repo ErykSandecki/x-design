@@ -12,7 +12,7 @@ import { MouseMode } from 'types/enums/mouseMode';
 import { handleMoveArea } from '../handleMoveArea';
 
 const cursorPosition = { current: BASE_2D } as RefObject<T2DCoordinates>;
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('handleMoveArea', () => {
   it('should move area', () => {

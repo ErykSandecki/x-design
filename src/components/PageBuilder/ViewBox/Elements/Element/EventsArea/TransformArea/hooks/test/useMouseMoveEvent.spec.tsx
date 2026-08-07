@@ -28,7 +28,7 @@ const elementRef = {
     getBoundingClientRect: () => ({ height: 100, left: 0, top: 0, width: 100 }),
   },
 } as RefObject<HTMLDivElement>;
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 const stateMock = {
   ...pageBuilderStateMock,
   [PAGE_BUILDER]: {
@@ -37,8 +37,8 @@ const stateMock = {
   },
 };
 
-jest.mock('react-redux', () => ({
-  ...jest.requireActual('react-redux'),
+vi.mock('react-redux', async (importOriginal) => ({
+  ...(await importOriginal()),
   useDispatch: (): any => mockCallBack,
 }));
 

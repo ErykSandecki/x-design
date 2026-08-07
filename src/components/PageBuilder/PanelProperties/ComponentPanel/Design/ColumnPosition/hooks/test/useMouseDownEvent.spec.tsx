@@ -6,10 +6,10 @@ import { useMouseDownEvent } from '../useMouseDownEvent';
 // others
 import { CLEAR_PREV_STATE } from 'store/pageBuilder/actionsType';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
-jest.mock('react-redux', () => ({
-  ...jest.requireActual('react-redux'),
+vi.mock('react-redux', async (importOriginal) => ({
+  ...(await importOriginal()),
   useDispatch: (): any => mockCallBack,
 }));
 

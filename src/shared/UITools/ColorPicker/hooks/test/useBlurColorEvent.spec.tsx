@@ -3,7 +3,7 @@ import { renderHook } from '@testing-library/react';
 // hooks
 import { useBlurColorEvent } from '../useBlurColorEvent';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('useBlurColorEvent', () => {
   it(`should trigger on change when current value is valid`, () => {

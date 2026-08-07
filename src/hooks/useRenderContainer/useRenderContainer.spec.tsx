@@ -9,8 +9,8 @@ import { HTMLContainerId } from '../../types/enums';
 // utils
 import { sleep } from 'test';
 
-jest.mock('utils', () => ({
-  ...jest.requireActual('utils'),
+vi.mock('utils', async (importOriginal) => ({
+  ...(await importOriginal()),
   isJestRunning: (): any => false,
 }));
 

@@ -13,24 +13,25 @@ import { configureStore, store } from 'store';
 // types
 import { KeyboardKeys } from 'types';
 import { MouseMode } from 'types/enums/mouseMode';
+import type { Mock } from 'vitest';
 
 // utils
 import { getProviderWrapper } from 'test';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 const stateMock = {
   ...pageBuilderStateMock,
 };
 
-jest.mock('store/pageBuilder/selectors', () => ({
-  ...jest.requireActual('store/pageBuilder/selectors'),
-  canRedoReduxHistorySelector: jest.fn(),
-  canUndoReduxHistorySelector: jest.fn(),
+vi.mock('store/pageBuilder/selectors', async (importOriginal) => ({
+  ...(await importOriginal()),
+  canRedoReduxHistorySelector: vi.fn(),
+  canUndoReduxHistorySelector: vi.fn(),
 }));
 
-jest.mock('react-redux', () => ({
-  ...jest.requireActual('react-redux'),
+vi.mock('react-redux', async (importOriginal) => ({
+  ...(await importOriginal()),
   useDispatch: (): any => mockCallBack,
 }));
 
@@ -43,7 +44,7 @@ describe('useWheelEvent', () => {
   it(`should triger redo`, () => {
     // mock
     const store = configureStore(stateMock);
-    (canRedoReduxHistorySelector as jest.Mock).mockImplementation(() => true);
+    (canRedoReduxHistorySelector as Mock).mockImplementation(() => true);
 
     // before
     renderHook(() => useKeyDown(mockCallBack), {
@@ -64,7 +65,7 @@ describe('useWheelEvent', () => {
   it(`should triger undo`, () => {
     // mock
     const store = configureStore(stateMock);
-    (canUndoReduxHistorySelector as jest.Mock).mockImplementation(() => true);
+    (canUndoReduxHistorySelector as Mock).mockImplementation(() => true);
 
     // before
     renderHook(() => useKeyDown(mockCallBack), {

@@ -4,7 +4,7 @@ import { renderHook } from '@testing-library/react';
 // hooks
 import { useScrubbableInputEvents } from '../useScrubbableInputEvents';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 const ref = { current: {} } as RefObject<HTMLDivElement>;
 
 describe('useScrubbableInputEvents', () => {

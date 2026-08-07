@@ -9,7 +9,7 @@ import { E2EAttribute } from 'types/e2e';
 // utils
 import { customRender, getByE2EAttribute } from 'test';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('ScrubbableInput snapshots', () => {
   it('should render ScrubbableInput', () => {

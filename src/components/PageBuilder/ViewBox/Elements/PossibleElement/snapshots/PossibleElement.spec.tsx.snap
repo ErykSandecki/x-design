@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`PossibleElement snapshots should render PossibleElement 1`] = `
+exports[`PossibleElement snapshots > should render PossibleElement 1`] = `
 <DocumentFragment>
   <div
     class="PossibleElement"
@@ -50,7 +50,7 @@ exports[`PossibleElement snapshots should render PossibleElement 1`] = `
 </DocumentFragment>
 `;
 
-exports[`PossibleElement snapshots should render when parent has position relative 1`] = `
+exports[`PossibleElement snapshots > should render when parent has position relative 1`] = `
 <DocumentFragment>
   <div
     class="PossibleElement"

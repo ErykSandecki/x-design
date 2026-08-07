@@ -3,7 +3,7 @@ import { renderHook } from '@testing-library/react';
 // hooks
 import { useMouseUpEvent } from '../useMouseUpEvent';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('useMouseUpEvent', () => {
   it(`should triiger event`, () => {

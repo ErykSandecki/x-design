@@ -10,7 +10,7 @@ import { BASE_2D } from 'shared';
 import { handleResizeElement } from '../handleResizeElement';
 
 const cursorPosition = { current: BASE_2D } as RefObject<T2DCoordinates>;
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('handleResizeElement', () => {
   it(`should resize element`, () => {

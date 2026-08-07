@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`] = `
+exports[`ColumnAlignmentLayout snapshots > should render ColumnAlignmentLayout 1`] = `
 <DocumentFragment>
   <div
     class="SectionColumn SectionColumn--with-bottom-margin"
@@ -8,7 +8,7 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
   >
     <div
       class="SectionColumnLabels"
-      style="width: calc(100% - 24px - 0px - 8px);"
+      style="width: calc(100% - 32px);"
     >
       <small
         class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -30,7 +30,7 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
     >
       <div
         class="SectionColumnContent SectionColumnContent--one-by-two"
-        style="width: calc(100% - 24px - 0px - 8px);"
+        style="width: calc(100% - 32px);"
       >
         <div
           class="AlignmentArea"
@@ -592,7 +592,7 @@ exports[`ColumnAlignmentLayout snapshots should render ColumnAlignmentLayout 1`]
 </DocumentFragment>
 `;
 
-exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] = `
+exports[`ColumnAlignmentLayout snapshots > should render when gaps are mixed 1`] = `
 <DocumentFragment>
   <div
     class="SectionColumn SectionColumn--with-bottom-margin"
@@ -600,7 +600,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
   >
     <div
       class="SectionColumnLabels"
-      style="width: calc(100% - 24px - 0px - 8px);"
+      style="width: calc(100% - 32px);"
     >
       <small
         class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -622,7 +622,7 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
     >
       <div
         class="SectionColumnContent SectionColumnContent--one-by-two"
-        style="width: calc(100% - 24px - 0px - 8px);"
+        style="width: calc(100% - 32px);"
       >
         <div
           class="GridArea"
@@ -3216,9 +3216,9 @@ exports[`ColumnAlignmentLayout snapshots should render when gaps are mixed 1`] =
 </DocumentFragment>
 `;
 
-exports[`ColumnAlignmentLayout snapshots should render when is free form 1`] = `<DocumentFragment />`;
+exports[`ColumnAlignmentLayout snapshots > should render when is free form 1`] = `<DocumentFragment />`;
 
-exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
+exports[`ColumnAlignmentLayout snapshots > should render when is grid 1`] = `
 <DocumentFragment>
   <div
     class="SectionColumn SectionColumn--with-bottom-margin"
@@ -3226,7 +3226,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
   >
     <div
       class="SectionColumnLabels"
-      style="width: calc(100% - 24px - 0px - 8px);"
+      style="width: calc(100% - 32px);"
     >
       <small
         class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -3248,7 +3248,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
     >
       <div
         class="SectionColumnContent SectionColumnContent--one-by-two"
-        style="width: calc(100% - 24px - 0px - 8px);"
+        style="width: calc(100% - 32px);"
       >
         <div
           class="GridArea"
@@ -5842,7 +5842,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is grid 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ColumnAlignmentLayout snapshots should render when is included option hover 1`] = `
+exports[`ColumnAlignmentLayout snapshots > should render when is included option hover 1`] = `
 <DocumentFragment>
   <div
     class="SectionColumn SectionColumn--with-bottom-margin"
@@ -5850,7 +5850,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is included option h
   >
     <div
       class="SectionColumnLabels"
-      style="width: calc(100% - 24px - 0px - 8px);"
+      style="width: calc(100% - 32px);"
     >
       <small
         class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -5872,7 +5872,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is included option h
     >
       <div
         class="SectionColumnContent SectionColumnContent--one-by-two"
-        style="width: calc(100% - 24px - 0px - 8px);"
+        style="width: calc(100% - 32px);"
       >
         <div
           class="AlignmentArea"
@@ -6448,7 +6448,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is included option h
 </DocumentFragment>
 `;
 
-exports[`ColumnAlignmentLayout snapshots should render when is is enter and leave 1`] = `
+exports[`ColumnAlignmentLayout snapshots > should render when is is enter and leave 1`] = `
 <DocumentFragment>
   <div
     class="SectionColumn SectionColumn--with-bottom-margin"
@@ -6456,7 +6456,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
   >
     <div
       class="SectionColumnLabels"
-      style="width: calc(100% - 24px - 0px - 8px);"
+      style="width: calc(100% - 32px);"
     >
       <small
         class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -6478,7 +6478,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
     >
       <div
         class="SectionColumnContent SectionColumnContent--one-by-two"
-        style="width: calc(100% - 24px - 0px - 8px);"
+        style="width: calc(100% - 32px);"
       >
         <div
           class="AlignmentArea"
@@ -7040,7 +7040,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is is enter and leav
 </DocumentFragment>
 `;
 
-exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
+exports[`ColumnAlignmentLayout snapshots > should render when is vertical 1`] = `
 <DocumentFragment>
   <div
     class="SectionColumn SectionColumn--with-bottom-margin"
@@ -7048,7 +7048,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
   >
     <div
       class="SectionColumnLabels"
-      style="width: calc(100% - 24px - 0px - 8px);"
+      style="width: calc(100% - 32px);"
     >
       <small
         class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -7070,7 +7070,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
     >
       <div
         class="SectionColumnContent SectionColumnContent--one-by-two"
-        style="width: calc(100% - 24px - 0px - 8px);"
+        style="width: calc(100% - 32px);"
       >
         <div
           class="AlignmentArea"
@@ -7632,7 +7632,7 @@ exports[`ColumnAlignmentLayout snapshots should render when is vertical 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ColumnAlignmentLayout snapshots should render when layout alignment are mixed 1`] = `
+exports[`ColumnAlignmentLayout snapshots > should render when layout alignment are mixed 1`] = `
 <DocumentFragment>
   <div
     class="SectionColumn SectionColumn--with-bottom-margin"
@@ -7640,7 +7640,7 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
   >
     <div
       class="SectionColumnLabels"
-      style="width: calc(100% - 24px - 0px - 8px);"
+      style="width: calc(100% - 32px);"
     >
       <small
         class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -7662,7 +7662,7 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
     >
       <div
         class="SectionColumnContent SectionColumnContent--one-by-two"
-        style="width: calc(100% - 24px - 0px - 8px);"
+        style="width: calc(100% - 32px);"
       >
         <div
           class="AlignmentArea"
@@ -8224,4 +8224,4 @@ exports[`ColumnAlignmentLayout snapshots should render when layout alignment are
 </DocumentFragment>
 `;
 
-exports[`ColumnAlignmentLayout snapshots should render when layout types are mixed 1`] = `<DocumentFragment />`;
+exports[`ColumnAlignmentLayout snapshots > should render when layout types are mixed 1`] = `<DocumentFragment />`;

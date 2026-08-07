@@ -4,7 +4,7 @@ import { CHANGE } from '../../../../store/reduxHookForm/actionsType';
 // utils
 import { dispatchFieldHandler } from '../dispatchFieldHandler';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('dispatchFieldHandler', () => {
   const dispatch = dispatchFieldHandler(mockCallBack, 'testForm', 'testField');

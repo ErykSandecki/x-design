@@ -21,7 +21,7 @@ import { TKeyMap } from './types';
 // utils
 import { getProviderWrapper } from 'test/testHelpers';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 const keyMap: TKeyMap = { action: mockCallBack, secondaryKey: KeyboardKeys.c };
 

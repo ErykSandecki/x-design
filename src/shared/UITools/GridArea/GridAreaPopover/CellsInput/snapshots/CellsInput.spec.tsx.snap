@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`CellsInput snapshots should render CellsInput 1`] = `
+exports[`CellsInput snapshots > should render CellsInput 1`] = `
 <DocumentFragment>
   <div
     class="CellsInput"
@@ -2123,7 +2123,7 @@ exports[`CellsInput snapshots should render CellsInput 1`] = `
 </DocumentFragment>
 `;
 
-exports[`CellsInput snapshots should render when select last cell 1`] = `
+exports[`CellsInput snapshots > should render when select last cell 1`] = `
 <DocumentFragment>
   <div
     class="CellsInput"

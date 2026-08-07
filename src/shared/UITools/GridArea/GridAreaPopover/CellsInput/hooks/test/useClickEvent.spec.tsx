@@ -9,7 +9,7 @@ import { useClickEvent } from '../useClickEvent';
 // others
 import { SEPARATOR } from '../../constants';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('useClickEvent', () => {
   it(`should handle click`, () => {

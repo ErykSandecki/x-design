@@ -1,7 +1,7 @@
 // utils
 import { scrollIntoView } from '../scrollIntoView';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('scrollIntoView', () => {
   it('Should scroll into element', () => {

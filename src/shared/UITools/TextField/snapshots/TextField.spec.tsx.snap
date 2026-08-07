@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`TextField snapshots should render TextField 1`] = `
+exports[`TextField snapshots > should render TextField 1`] = `
 <DocumentFragment>
   <div
     class="TextField"
@@ -21,7 +21,7 @@ exports[`TextField snapshots should render TextField 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TextField snapshots should render with label 1`] = `
+exports[`TextField snapshots > should render with label 1`] = `
 <DocumentFragment>
   <div
     class="TextField"

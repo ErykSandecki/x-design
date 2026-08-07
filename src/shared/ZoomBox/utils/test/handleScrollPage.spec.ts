@@ -4,7 +4,7 @@ import { BASE_3D } from 'shared/ZoomBox/constants';
 // utils
 import { handleScrollPage } from '../handleScrollPage';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('handleScrollPage', () => {
   it('should not scroll page', () => {

@@ -15,7 +15,7 @@ import { MouseMode } from 'types/enums/mouseMode';
 // utils
 import { getByE2EAttribute } from 'test';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 const ref = { current: null };
 
 describe('ZoomBox snapshots', () => {

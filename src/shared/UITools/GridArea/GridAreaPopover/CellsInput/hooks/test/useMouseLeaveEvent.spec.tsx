@@ -3,7 +3,7 @@ import { renderHook } from '@testing-library/react';
 // hooks
 import { useMouseLeaveEvent } from '../useMouseLeaveEvent';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('useMouseLeaveEvent', () => {
   it(`should handle trigger leave`, () => {

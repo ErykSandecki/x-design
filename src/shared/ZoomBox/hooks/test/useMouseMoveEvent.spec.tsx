@@ -13,10 +13,10 @@ import { MouseButton } from 'types';
 import { MouseMode } from 'types/enums/mouseMode';
 
 const cursorPosition = { current: BASE_2D } as RefObject<T2DCoordinates>;
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
-jest.mock('lodash', () => ({
-  ...jest.requireActual('lodash'),
+vi.mock('lodash', async (importOriginal) => ({
+  ...((await importOriginal()) as any).default,
   debounce:
     (callback: any) =>
     (value: any): any =>

@@ -4,7 +4,7 @@ import { TReduxHookFormState } from '../../types';
 // utils
 import { notifyFields } from '../../utils';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 const testCases = [
   {

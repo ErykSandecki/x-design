@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ToggleButton snapshots should render ToggleButton 1`] = `
+exports[`ToggleButton snapshots > should render ToggleButton 1`] = `
 <DocumentFragment>
   <button
     class="ToggleButton ToggleButton--selected"

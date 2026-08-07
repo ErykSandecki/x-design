@@ -10,7 +10,7 @@ import { E2EAttribute } from 'types';
 // utils
 import { getByE2EAttribute } from 'test';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('Prompts snapshots', () => {
   it('should render Prompts', () => {

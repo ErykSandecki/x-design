@@ -4,8 +4,8 @@ import { renderHook } from '@testing-library/react';
 // hooks
 import { useSelectOptionsEvents } from '../useSelectOptionsEvents';
 
-const mockCallBack = jest.fn();
-const optionsRef = { current: { getBoundingClientRect: () => ({ height: 100 }) } } as RefObject<HTMLDivElement>;
+const mockCallBack = vi.fn();
+const optionsRef = { current: { getBoundingClientRect: () => ({ height: 100 }) } } as RefObject<HTMLUListElement>;
 const wrapperRef = {
   current: { getBoundingClientRect: () => ({ width: 100, x: 0, y: 0 }) },
 } as RefObject<HTMLDivElement>;

@@ -1,13 +1,13 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Elements snapshots should render Element in relative position 1`] = `
+exports[`Elements snapshots > should render Element in relative position 1`] = `
 <DocumentFragment>
   <div
     class="Elements__element Frame Element"
     data-status="false"
     data-test-element="test-1"
     id="test-1"
-    style="border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; border-top-left-radius: 0px; border-top-right-radius: 0px; left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; height: 100px; margin: 0px 0px 0px 0px; mix-blend-mode: initial; opacity: 1; overflow: hidden; padding: 0px 0px 0px 0px; position: relative; visibility: visible; width: 100px;"
+    style="border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; border-top-left-radius: 0px; border-top-right-radius: 0px; left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; background: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)); height: 100px; margin: 0px; mix-blend-mode: initial; opacity: 1; overflow: hidden; padding: 0px; position: relative; visibility: visible; width: 100px;"
   >
     <div
       class="DropAnchors"
@@ -49,16 +49,16 @@ exports[`Elements snapshots should render Element in relative position 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Elements snapshots should render Elements 1`] = `<DocumentFragment />`;
+exports[`Elements snapshots > should render Elements 1`] = `<DocumentFragment />`;
 
-exports[`Elements snapshots should render Frame 1`] = `
+exports[`Elements snapshots > should render Frame 1`] = `
 <DocumentFragment>
   <div
     class="Elements__element Frame Element"
     data-status="false"
     data-test-element="test-1"
     id="test-1"
-    style="border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; border-top-left-radius: 0px; border-top-right-radius: 0px; left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; height: 100px; margin: 0px 0px 0px 0px; mix-blend-mode: initial; opacity: 1; overflow: hidden; padding: 0px 0px 0px 0px; position: absolute; visibility: visible; width: 100px;"
+    style="border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; border-top-left-radius: 0px; border-top-right-radius: 0px; left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; background: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)); height: 100px; margin: 0px; mix-blend-mode: initial; opacity: 1; overflow: hidden; padding: 0px; position: absolute; visibility: visible; width: 100px;"
   >
     <div
       class="Frame__wrapper"
@@ -76,7 +76,7 @@ exports[`Elements snapshots should render Frame 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Elements snapshots should render default Element 1`] = `
+exports[`Elements snapshots > should render default Element 1`] = `
 <DocumentFragment>
   <div
     class="GridDropArea"
@@ -85,14 +85,14 @@ exports[`Elements snapshots should render default Element 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Elements snapshots should render when possible Element 1`] = `
+exports[`Elements snapshots > should render when possible Element 1`] = `
 <DocumentFragment>
   <div
     class="Elements__element Frame Element"
     data-status="false"
     data-test-element="test-1"
     id="test-1"
-    style="border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; border-top-left-radius: 0px; border-top-right-radius: 0px; left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; height: 100px; margin: 0px 0px 0px 0px; mix-blend-mode: initial; opacity: 1; overflow: hidden; padding: 0px 0px 0px 0px; position: absolute; visibility: visible; width: 100px;"
+    style="border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; border-top-left-radius: 0px; border-top-right-radius: 0px; left: 0px; top: 0px; transform: rotate(0deg) translate(0, 0); transform-origin: center center; background: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)); height: 100px; margin: 0px; mix-blend-mode: initial; opacity: 1; overflow: hidden; padding: 0px; position: absolute; visibility: visible; width: 100px;"
   >
     <div
       class="Frame__wrapper"

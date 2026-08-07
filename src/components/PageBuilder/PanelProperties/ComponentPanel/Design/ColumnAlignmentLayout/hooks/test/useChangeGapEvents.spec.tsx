@@ -3,10 +3,10 @@ import { renderHook } from '@testing-library/react';
 // hooks
 import { useChangeGapEvents } from '../useChangeGapEvents';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
-jest.mock('react-redux', () => ({
-  ...jest.requireActual('react-redux'),
+vi.mock('react-redux', async (importOriginal) => ({
+  ...(await importOriginal()),
   useDispatch: (): any => mockCallBack,
 }));
 

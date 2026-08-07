@@ -6,16 +6,17 @@ import { useTheme } from './useTheme';
 
 // types
 import { Theme } from 'types';
+import type { Mock } from 'vitest';
 
-jest.mock('react', () => ({
-  ...(jest.requireActual('react') as object),
-  useContext: jest.fn(),
+vi.mock('react', async (importOriginal) => ({
+  ...((await importOriginal()) as object),
+  useContext: vi.fn(),
 }));
 
 describe('useTheme', () => {
   it('should return current theme', () => {
     // mock
-    (useContext as jest.Mock).mockImplementation(() => ({ setTheme: jest.fn(), theme: Theme.dark }));
+    (useContext as Mock).mockImplementation(() => ({ setTheme: vi.fn(), theme: Theme.dark }));
 
     // before
     const { result } = renderHook(() => useTheme());
@@ -26,9 +27,9 @@ describe('useTheme', () => {
 
   it('should toggle from dark to light', () => {
     // mock
-    const setTheme = jest.fn();
+    const setTheme = vi.fn();
 
-    (useContext as jest.Mock).mockImplementation(() => ({ setTheme, theme: Theme.dark }));
+    (useContext as Mock).mockImplementation(() => ({ setTheme, theme: Theme.dark }));
 
     // before
     const { result } = renderHook(() => useTheme());
@@ -42,9 +43,9 @@ describe('useTheme', () => {
 
   it('should toggle from light to dark', () => {
     // mock
-    const setTheme = jest.fn();
+    const setTheme = vi.fn();
 
-    (useContext as jest.Mock).mockImplementation(() => ({ setTheme, theme: Theme.light }));
+    (useContext as Mock).mockImplementation(() => ({ setTheme, theme: Theme.light }));
 
     // before
     const { result } = renderHook(() => useTheme());

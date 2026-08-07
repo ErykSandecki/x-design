@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ButtonGroup snapshots should render ButtonGroup 1`] = `
+exports[`ButtonGroup snapshots > should render ButtonGroup 1`] = `
 <DocumentFragment>
   <div
     class="ButtonGroup"
@@ -46,7 +46,7 @@ exports[`ButtonGroup snapshots should render ButtonGroup 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ButtonGroup snapshots should render with disabled states 1`] = `
+exports[`ButtonGroup snapshots > should render with disabled states 1`] = `
 <DocumentFragment>
   <div
     class="ButtonGroup"

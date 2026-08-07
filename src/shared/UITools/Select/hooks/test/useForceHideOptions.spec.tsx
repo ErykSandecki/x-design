@@ -6,7 +6,7 @@ import { PopoverRootProvider } from '../../../Popover/PopoverRoot/core/PopoverRo
 // hooks
 import { useForceHideOptions } from '../useForceHideOptions';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('useForceHideOptions', () => {
   it(`should not force callback`, () => {

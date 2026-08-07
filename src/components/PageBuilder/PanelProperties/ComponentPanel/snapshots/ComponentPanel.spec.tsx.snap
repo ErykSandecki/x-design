@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
+exports[`ComponentPanel snapshots > should render ComponentPanel 1`] = `
 <DocumentFragment>
   <div
     class="Section"
@@ -12,14 +12,14 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
     >
       <div
         class="SectionColumnLabels"
-        style="width: calc(100% - 48px - 2.5px - 8px);"
+        style="width: calc(100% - 58.5px);"
       />
       <div
         class="SectionColumn__row"
       >
         <div
           class="SectionColumnContent SectionColumnContent--single"
-          style="width: calc(100% - 48px - 2.5px - 8px);"
+          style="width: calc(100% - 58.5px);"
         >
           <small
             class="Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -120,7 +120,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
     >
       <div
         class="SectionColumnLabels"
-        style="width: calc(100% - 24px - 0px - 8px);"
+        style="width: calc(100% - 32px);"
       >
         <small
           class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -135,7 +135,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
       >
         <div
           class="SectionColumnContent SectionColumnContent--two-inputs"
-          style="width: calc(100% - 24px - 0px - 8px);"
+          style="width: calc(100% - 32px);"
         >
           <div
             class="ButtonGroup"
@@ -329,7 +329,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
     >
       <div
         class="SectionColumnLabels"
-        style="width: calc(100% - 24px - 0px - 8px);"
+        style="width: calc(100% - 32px);"
       >
         <small
           class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -344,7 +344,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
       >
         <div
           class="SectionColumnContent SectionColumnContent--two-inputs"
-          style="width: calc(100% - 24px - 0px - 8px);"
+          style="width: calc(100% - 32px);"
         >
           <div
             class="TextField"
@@ -452,7 +452,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
     >
       <div
         class="SectionColumnLabels"
-        style="width: calc(100% - 24px - 0px - 8px);"
+        style="width: calc(100% - 32px);"
       >
         <small
           class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -467,7 +467,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
       >
         <div
           class="SectionColumnContent SectionColumnContent--two-inputs"
-          style="width: calc(100% - 24px - 0px - 8px);"
+          style="width: calc(100% - 32px);"
         >
           <div
             class="TextField"
@@ -696,7 +696,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
     >
       <div
         class="SectionColumnLabels"
-        style="width: calc(100% - 24px - 0px - 8px);"
+        style="width: calc(100% - 32px);"
       >
         <small
           class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -711,7 +711,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
       >
         <div
           class="SectionColumnContent SectionColumnContent--single"
-          style="width: calc(100% - 24px - 0px - 8px);"
+          style="width: calc(100% - 32px);"
         >
           <div
             class="ToggleButtonGroup ToggleButtonGroup--full-width"
@@ -848,7 +848,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
     >
       <div
         class="SectionColumnLabels"
-        style="width: calc(100% - 24px - 0px - 8px);"
+        style="width: calc(100% - 32px);"
       >
         <small
           class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -863,7 +863,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
       >
         <div
           class="SectionColumnContent SectionColumnContent--two-inputs"
-          style="width: calc(100% - 24px - 0px - 8px);"
+          style="width: calc(100% - 32px);"
         >
           <div
             class="TextField"
@@ -1269,14 +1269,14 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
     >
       <div
         class="SectionColumnLabels"
-        style="width: calc(100% - 24px - 0px - 8px);"
+        style="width: calc(100% - 32px);"
       />
       <div
         class="SectionColumn__row"
       >
         <div
           class="SectionColumnContent SectionColumnContent--single"
-          style="width: calc(100% - 24px - 0px - 8px);"
+          style="width: calc(100% - 32px);"
         >
           <div
             class="Checkbox"
@@ -1743,7 +1743,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
     >
       <div
         class="SectionColumnLabels"
-        style="width: calc(100% - 24px - 0px - 8px);"
+        style="width: calc(100% - 32px);"
       >
         <small
           class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -1758,7 +1758,7 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
       >
         <div
           class="SectionColumnContent SectionColumnContent--two-inputs"
-          style="width: calc(100% - 24px - 0px - 8px);"
+          style="width: calc(100% - 32px);"
         >
           <div
             class="TextField"
@@ -2172,4 +2172,4 @@ exports[`ComponentPanel snapshots should render ComponentPanel 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ComponentPanel snapshots should render proptype section 1`] = `<DocumentFragment />`;
+exports[`ComponentPanel snapshots > should render proptype section 1`] = `<DocumentFragment />`;

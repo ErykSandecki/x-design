@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
+exports[`ColumnFlow snapshots > should render ColumnFlow 1`] = `
 <DocumentFragment>
   <div
     class="SectionColumn SectionColumn--with-bottom-margin"
@@ -8,7 +8,7 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
   >
     <div
       class="SectionColumnLabels"
-      style="width: calc(100% - 24px - 0px - 8px);"
+      style="width: calc(100% - 32px);"
     >
       <small
         class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -23,7 +23,7 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
     >
       <div
         class="SectionColumnContent SectionColumnContent--single"
-        style="width: calc(100% - 24px - 0px - 8px);"
+        style="width: calc(100% - 32px);"
       >
         <div
           class="ToggleButtonGroup ToggleButtonGroup--full-width"
@@ -157,7 +157,7 @@ exports[`ColumnFlow snapshots should render ColumnFlow 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ColumnFlow snapshots should render when is horizontal but are mixed 1`] = `
+exports[`ColumnFlow snapshots > should render when is horizontal but are mixed 1`] = `
 <DocumentFragment>
   <div
     class="SectionColumn SectionColumn--with-bottom-margin"
@@ -165,7 +165,7 @@ exports[`ColumnFlow snapshots should render when is horizontal but are mixed 1`]
   >
     <div
       class="SectionColumnLabels"
-      style="width: calc(100% - 24px - 0px - 8px);"
+      style="width: calc(100% - 32px);"
     >
       <small
         class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -180,7 +180,7 @@ exports[`ColumnFlow snapshots should render when is horizontal but are mixed 1`]
     >
       <div
         class="SectionColumnContent SectionColumnContent--single"
-        style="width: calc(100% - 24px - 0px - 8px);"
+        style="width: calc(100% - 32px);"
       >
         <div
           class="ToggleButtonGroup ToggleButtonGroup--full-width"
@@ -314,7 +314,7 @@ exports[`ColumnFlow snapshots should render when is horizontal but are mixed 1`]
 </DocumentFragment>
 `;
 
-exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
+exports[`ColumnFlow snapshots > should render when values are mixed 1`] = `
 <DocumentFragment>
   <div
     class="SectionColumn SectionColumn--with-bottom-margin"
@@ -322,7 +322,7 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
   >
     <div
       class="SectionColumnLabels"
-      style="width: calc(100% - 24px - 0px - 8px);"
+      style="width: calc(100% - 32px);"
     >
       <small
         class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -337,7 +337,7 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
     >
       <div
         class="SectionColumnContent SectionColumnContent--single"
-        style="width: calc(100% - 24px - 0px - 8px);"
+        style="width: calc(100% - 32px);"
       >
         <div
           class="ToggleButtonGroup ToggleButtonGroup--full-width"
@@ -471,7 +471,7 @@ exports[`ColumnFlow snapshots should render when values are mixed 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ColumnFlow snapshots should render when wrap are mixed 1`] = `
+exports[`ColumnFlow snapshots > should render when wrap are mixed 1`] = `
 <DocumentFragment>
   <div
     class="SectionColumn SectionColumn--with-bottom-margin"
@@ -479,7 +479,7 @@ exports[`ColumnFlow snapshots should render when wrap are mixed 1`] = `
   >
     <div
       class="SectionColumnLabels"
-      style="width: calc(100% - 24px - 0px - 8px);"
+      style="width: calc(100% - 32px);"
     >
       <small
         class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -494,7 +494,7 @@ exports[`ColumnFlow snapshots should render when wrap are mixed 1`] = `
     >
       <div
         class="SectionColumnContent SectionColumnContent--single"
-        style="width: calc(100% - 24px - 0px - 8px);"
+        style="width: calc(100% - 32px);"
       >
         <div
           class="ToggleButtonGroup ToggleButtonGroup--full-width"

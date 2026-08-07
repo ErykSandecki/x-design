@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Chip snapshots should render Chip 1`] = `
+exports[`Chip snapshots > should render Chip 1`] = `
 <DocumentFragment>
   <div
     class="Chip"
@@ -11,4 +11,4 @@ exports[`Chip snapshots should render Chip 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Chip snapshots should render with empty children 1`] = `<DocumentFragment />`;
+exports[`Chip snapshots > should render with empty children 1`] = `<DocumentFragment />`;

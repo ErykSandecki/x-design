@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Small snapshots should render Small 1`] = `
+exports[`Small snapshots > should render Small 1`] = `
 <DocumentFragment>
   <small
     class="Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"

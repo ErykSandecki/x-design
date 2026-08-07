@@ -19,9 +19,9 @@ const stateMock = {
   ...reduxHookFormStateMock,
 };
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
-jest.mock('../../../utils/dispatchFieldHandler', () => ({
+vi.mock('../../../utils/dispatchFieldHandler', () => ({
   dispatchFieldHandler: (): any => mockCallBack,
 }));
 

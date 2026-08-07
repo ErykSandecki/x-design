@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Typography snapshots should render empty 1`] = `<DocumentFragment />`;
+exports[`Typography snapshots > should render empty 1`] = `<DocumentFragment />`;
 
-exports[`Typography snapshots should render with passed inner html 1`] = `
+exports[`Typography snapshots > should render with passed inner html 1`] = `
 <DocumentFragment>
   <p
     class="Typography Typography--neutral-1 Typography--regular Typography--normal Typography--p"
@@ -16,7 +16,7 @@ exports[`Typography snapshots should render with passed inner html 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Typography snapshots should render with some text 1`] = `
+exports[`Typography snapshots > should render with some text 1`] = `
 <DocumentFragment>
   <p
     class="Typography Typography--neutral-1 Typography--regular Typography--normal Typography--p"

@@ -38,8 +38,8 @@ const stateMock = {
   },
 };
 
-jest.mock('lodash', () => ({
-  ...(jest.requireActual('lodash') as object),
+vi.mock('lodash', async (importOriginal) => ({
+  ...((await importOriginal()) as any).default,
   defer: (callback: any): any => callback(),
 }));
 

@@ -6,7 +6,7 @@ import { useUpdateStates } from '../useUpdateStates';
 // mocks
 import { layoutMock } from 'test/mocks/reducer/pageBuilderMock';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('useUpdateStates', () => {
   it(`should trigger set updates`, () => {

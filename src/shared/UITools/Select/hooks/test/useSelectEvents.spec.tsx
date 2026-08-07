@@ -4,8 +4,8 @@ import { renderHook } from '@testing-library/react';
 // hooks
 import { useSelectEvents } from '../useSelectEvents';
 
-const mockCallBack = jest.fn();
-const optionsRef = { current: { getBoundingClientRect: () => ({ height: 100 }) } } as RefObject<HTMLDivElement>;
+const mockCallBack = vi.fn();
+const optionsRef = { current: { getBoundingClientRect: () => ({ height: 100 }) } } as RefObject<HTMLUListElement>;
 const selectRef = { current: { getBoundingClientRect: () => ({ height: 100 }) } } as RefObject<HTMLDivElement>;
 
 describe('useSelectEvents', () => {

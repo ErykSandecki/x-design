@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`PopoverBorderRadius snapshots should render PopoverBorderRadius 1`] = `
+exports[`PopoverBorderRadius snapshots > should render PopoverBorderRadius 1`] = `
 <DocumentFragment>
   <div
     class="PopoverItem"
@@ -57,7 +57,7 @@ exports[`PopoverBorderRadius snapshots should render PopoverBorderRadius 1`] = `
 </DocumentFragment>
 `;
 
-exports[`PopoverBorderRadius snapshots should render with mixed value 1`] = `
+exports[`PopoverBorderRadius snapshots > should render with mixed value 1`] = `
 <DocumentFragment>
   <div
     class="PopoverItem"

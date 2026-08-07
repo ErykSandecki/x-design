@@ -1,12 +1,12 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`PanelProperties snapshots should render PanelProperties 1`] = `
+exports[`PanelProperties snapshots > should render PanelProperties 1`] = `
 <DocumentFragment>
   <div
     class="PanelProperties"
     data-test-box="panel-properties"
     id="panelProperties"
-    style="width: 240px;"
+    style="touch-action: manipulation; width: 240px;"
   >
     <div
       class="PanelProperties__area-handle-resize"
@@ -76,14 +76,14 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
         >
           <div
             class="SectionColumnLabels"
-            style="width: calc(100% - 24px - 0px - 8px);"
+            style="width: calc(100% - 32px);"
           />
           <div
             class="SectionColumn__row"
           >
             <div
               class="SectionColumnContent SectionColumnContent--single"
-              style="width: calc(100% - 24px - 0px - 8px);"
+              style="width: calc(100% - 32px);"
             >
               <div
                 class="FieldGroup"
@@ -202,13 +202,13 @@ exports[`PanelProperties snapshots should render PanelProperties 1`] = `
 </DocumentFragment>
 `;
 
-exports[`PanelProperties snapshots should render when some element is selected 1`] = `
+exports[`PanelProperties snapshots > should render when some element is selected 1`] = `
 <DocumentFragment>
   <div
     class="PanelProperties"
     data-test-box="panel-properties"
     id="panelProperties"
-    style="width: 240px;"
+    style="touch-action: manipulation; width: 240px;"
   >
     <div
       class="PanelProperties__area-handle-resize"
@@ -264,14 +264,14 @@ exports[`PanelProperties snapshots should render when some element is selected 1
         >
           <div
             class="SectionColumnLabels"
-            style="width: calc(100% - 48px - 2.5px - 8px);"
+            style="width: calc(100% - 58.5px);"
           />
           <div
             class="SectionColumn__row"
           >
             <div
               class="SectionColumnContent SectionColumnContent--single"
-              style="width: calc(100% - 48px - 2.5px - 8px);"
+              style="width: calc(100% - 58.5px);"
             >
               <small
                 class="Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -372,7 +372,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
         >
           <div
             class="SectionColumnLabels"
-            style="width: calc(100% - 24px - 0px - 8px);"
+            style="width: calc(100% - 32px);"
           >
             <small
               class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -387,7 +387,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
           >
             <div
               class="SectionColumnContent SectionColumnContent--two-inputs"
-              style="width: calc(100% - 24px - 0px - 8px);"
+              style="width: calc(100% - 32px);"
             >
               <div
                 class="ButtonGroup"
@@ -581,7 +581,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
         >
           <div
             class="SectionColumnLabels"
-            style="width: calc(100% - 24px - 0px - 8px);"
+            style="width: calc(100% - 32px);"
           >
             <small
               class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -596,7 +596,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
           >
             <div
               class="SectionColumnContent SectionColumnContent--two-inputs"
-              style="width: calc(100% - 24px - 0px - 8px);"
+              style="width: calc(100% - 32px);"
             >
               <div
                 class="TextField"
@@ -704,7 +704,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
         >
           <div
             class="SectionColumnLabels"
-            style="width: calc(100% - 24px - 0px - 8px);"
+            style="width: calc(100% - 32px);"
           >
             <small
               class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -719,7 +719,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
           >
             <div
               class="SectionColumnContent SectionColumnContent--two-inputs"
-              style="width: calc(100% - 24px - 0px - 8px);"
+              style="width: calc(100% - 32px);"
             >
               <div
                 class="TextField"
@@ -948,7 +948,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
         >
           <div
             class="SectionColumnLabels"
-            style="width: calc(100% - 24px - 0px - 8px);"
+            style="width: calc(100% - 32px);"
           >
             <small
               class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -963,7 +963,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
           >
             <div
               class="SectionColumnContent SectionColumnContent--single"
-              style="width: calc(100% - 24px - 0px - 8px);"
+              style="width: calc(100% - 32px);"
             >
               <div
                 class="ToggleButtonGroup ToggleButtonGroup--full-width"
@@ -1100,7 +1100,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
         >
           <div
             class="SectionColumnLabels"
-            style="width: calc(100% - 24px - 0px - 8px);"
+            style="width: calc(100% - 32px);"
           >
             <small
               class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -1115,7 +1115,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
           >
             <div
               class="SectionColumnContent SectionColumnContent--two-inputs"
-              style="width: calc(100% - 24px - 0px - 8px);"
+              style="width: calc(100% - 32px);"
             >
               <div
                 class="TextField"
@@ -1521,14 +1521,14 @@ exports[`PanelProperties snapshots should render when some element is selected 1
         >
           <div
             class="SectionColumnLabels"
-            style="width: calc(100% - 24px - 0px - 8px);"
+            style="width: calc(100% - 32px);"
           />
           <div
             class="SectionColumn__row"
           >
             <div
               class="SectionColumnContent SectionColumnContent--single"
-              style="width: calc(100% - 24px - 0px - 8px);"
+              style="width: calc(100% - 32px);"
             >
               <div
                 class="Checkbox"
@@ -1995,7 +1995,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
         >
           <div
             class="SectionColumnLabels"
-            style="width: calc(100% - 24px - 0px - 8px);"
+            style="width: calc(100% - 32px);"
           >
             <small
               class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -2010,7 +2010,7 @@ exports[`PanelProperties snapshots should render when some element is selected 1
           >
             <div
               class="SectionColumnContent SectionColumnContent--two-inputs"
-              style="width: calc(100% - 24px - 0px - 8px);"
+              style="width: calc(100% - 32px);"
             >
               <div
                 class="TextField"
@@ -2426,13 +2426,13 @@ exports[`PanelProperties snapshots should render when some element is selected 1
 </DocumentFragment>
 `;
 
-exports[`PanelProperties snapshots should render with changed width 1`] = `
+exports[`PanelProperties snapshots > should render with changed width 1`] = `
 <DocumentFragment>
   <div
     class="PanelProperties"
     data-test-box="panel-properties"
     id="panelProperties"
-    style="width: 500px;"
+    style="touch-action: manipulation; width: 500px;"
   >
     <div
       class="PanelProperties__area-handle-resize"
@@ -2502,14 +2502,14 @@ exports[`PanelProperties snapshots should render with changed width 1`] = `
         >
           <div
             class="SectionColumnLabels"
-            style="width: calc(100% - 24px - 0px - 8px);"
+            style="width: calc(100% - 32px);"
           />
           <div
             class="SectionColumn__row"
           >
             <div
               class="SectionColumnContent SectionColumnContent--single"
-              style="width: calc(100% - 24px - 0px - 8px);"
+              style="width: calc(100% - 32px);"
             >
               <div
                 class="FieldGroup"

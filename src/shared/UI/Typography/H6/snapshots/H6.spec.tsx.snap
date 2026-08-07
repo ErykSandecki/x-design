@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`H6 snapshots should render H6 1`] = `
+exports[`H6 snapshots > should render H6 1`] = `
 <DocumentFragment>
   <h6
     class="Typography Typography--neutral-1 Typography--regular Typography--normal Typography--h6"

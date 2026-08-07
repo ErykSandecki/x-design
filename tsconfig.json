@@ -9,6 +9,7 @@
     "moduleResolution": "NodeNext",
     "module": "nodenext",
     "esModuleInterop": true,
+    "types": ["vitest/globals"],
     "paths": {
       "assets/*": ["./src/assets/*"],
       "components/*": ["./src/components/*"],
@@ -33,5 +34,5 @@
       "utils/*": ["./src/utils/*"]
     }
   },
-  "include": ["src", "scripts/test.js", "config/sass", "config/imports.js"]
+  "include": ["src", "config/sass", "config/imports.js"]
 }

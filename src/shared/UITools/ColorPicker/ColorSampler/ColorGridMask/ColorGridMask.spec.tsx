@@ -9,11 +9,11 @@ import { E2EAttribute } from 'types';
 // utils
 import { getByE2EAttribute } from 'test';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
-jest.mock('utils', () => ({
-  ...jest.requireActual('utils'),
-  rgbToHex: jest.fn(),
+vi.mock('utils', async (importOriginal) => ({
+  ...(await importOriginal()),
+  rgbToHex: vi.fn(),
 }));
 
 describe('ColorGrid snapshots', () => {

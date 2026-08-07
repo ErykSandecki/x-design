@@ -3,7 +3,22 @@ import { fireEvent, renderHook } from '@testing-library/react';
 // hooks
 import { useMouseUpEvent } from '../useMouseUpEvent';
 
-const mockCallBack = jest.fn();
+// others
+import { ANCHOR_INDEX } from '../../constants';
+
+const mockCallBack = vi.fn();
+
+const dispatchMouseUp = (anchorIndex: string | null): void => {
+  const anchor = document.createElement('div');
+
+  if (anchorIndex !== null) {
+    anchor.setAttribute(ANCHOR_INDEX, anchorIndex);
+  }
+
+  document.body.appendChild(anchor);
+  fireEvent.mouseUp(anchor);
+  document.body.removeChild(anchor);
+};
 
 describe('useMouseUpEvent', () => {
   it(`should trigger event`, () => {
@@ -11,7 +26,7 @@ describe('useMouseUpEvent', () => {
     renderHook(() => useMouseUpEvent(2, true, mockCallBack, mockCallBack, mockCallBack, mockCallBack));
 
     // action
-    fireEvent.mouseUp(window, { target: { getAttribute: () => '0' } });
+    dispatchMouseUp('0');
 
     // result
     expect(mockCallBack.mock.calls[0][0]).toBe(2);
@@ -26,7 +41,7 @@ describe('useMouseUpEvent', () => {
     renderHook(() => useMouseUpEvent(0, true, mockCallBack, mockCallBack, mockCallBack, mockCallBack));
 
     // action
-    fireEvent.mouseUp(window, { target: { getAttribute: () => NaN } });
+    dispatchMouseUp(null);
 
     // result
     expect(mockCallBack.mock.calls[0][0]).toBe(false);

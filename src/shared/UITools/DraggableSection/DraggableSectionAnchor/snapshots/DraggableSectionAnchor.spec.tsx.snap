@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`DraggableSectionAnchor snapshots should hide prompt when mouse leave 1`] = `
+exports[`DraggableSectionAnchor snapshots > should hide prompt when mouse leave 1`] = `
 <DocumentFragment>
   <div
     class="DraggableSectionAnchor DraggableSectionAnchor--draggable"
@@ -10,7 +10,7 @@ exports[`DraggableSectionAnchor snapshots should hide prompt when mouse leave 1`
 </DocumentFragment>
 `;
 
-exports[`DraggableSectionAnchor snapshots should render DraggableSectionAnchor 1`] = `
+exports[`DraggableSectionAnchor snapshots > should render DraggableSectionAnchor 1`] = `
 <DocumentFragment>
   <div
     class="DraggableSectionAnchor"
@@ -20,7 +20,7 @@ exports[`DraggableSectionAnchor snapshots should render DraggableSectionAnchor 1
 </DocumentFragment>
 `;
 
-exports[`DraggableSectionAnchor snapshots should render prompt when mouse enter 1`] = `
+exports[`DraggableSectionAnchor snapshots > should render prompt when mouse enter 1`] = `
 <DocumentFragment>
   <div
     class="DraggableSectionAnchor DraggableSectionAnchor--draggable"
@@ -34,7 +34,7 @@ exports[`DraggableSectionAnchor snapshots should render prompt when mouse enter 
 </DocumentFragment>
 `;
 
-exports[`DraggableSectionAnchor snapshots should render when is draggable 1`] = `
+exports[`DraggableSectionAnchor snapshots > should render when is draggable 1`] = `
 <DocumentFragment>
   <div
     class="DraggableSectionAnchor DraggableSectionAnchor--draggable"

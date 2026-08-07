@@ -4,7 +4,7 @@ import { useDispatchMany } from './useDispatchMany';
 // types
 import { TAction } from 'types/redux';
 
-const mockDispatch = jest.fn();
+const mockDispatch = vi.fn();
 
 const mockAction = (): TAction => ({
   payload: 'some payload',
@@ -21,17 +21,17 @@ const mockAction3 = (): TAction => ({
   type: 'MOCK_TYPE3',
 });
 
-jest.mock('react', () => ({
+vi.mock('react', () => ({
   useCallback: (args: any): any => args,
 }));
 
-jest.mock('react-redux', () => ({
+vi.mock('react-redux', () => ({
   useDispatch: (): any => mockDispatch,
 }));
 
 describe('useDispatchMany', () => {
   afterEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   [[mockAction()], [mockAction(), mockAction2()], [mockAction(), mockAction2(), mockAction3()]].forEach((actions) => {

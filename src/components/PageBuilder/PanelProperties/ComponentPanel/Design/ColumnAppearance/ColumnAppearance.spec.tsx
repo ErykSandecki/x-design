@@ -51,8 +51,8 @@ const stateMock = {
   },
 };
 
-jest.mock('lodash', () => ({
-  ...(jest.requireActual('lodash') as object),
+vi.mock('lodash', async (importOriginal) => ({
+  ...((await importOriginal()) as any).default,
   defer: (callback: any): any => callback(),
 }));
 
@@ -193,7 +193,6 @@ describe('ColumnAppearance behaviors', () => {
       bubbles: true,
       cancelable: true,
       shiftKey: false,
-      view: window,
     });
     Object.defineProperty(mouseMoveEvent, 'movementX', { value: -200 });
 
@@ -397,7 +396,6 @@ describe('ColumnAppearance behaviors', () => {
       bubbles: true,
       cancelable: true,
       shiftKey: false,
-      view: window,
     });
     Object.defineProperty(mouseMoveEvent, 'movementX', { value: 200 });
 

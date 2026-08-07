@@ -31,7 +31,7 @@ const compareValidator: TSyncValidator = (_, value: TFieldValue, fields: TFields
 
 const syncValidators = [(): any => syncValidator(''), (): any => syncValidator('value')] as Array<TSyncValidator>;
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 const stateMock = {
   [REDUX_HOOK_FORM]: {
@@ -48,12 +48,12 @@ const stateMock = {
   },
 };
 
-jest.mock('../../../utils/dispatchFieldHandler', () => ({
+vi.mock('../../../utils/dispatchFieldHandler', () => ({
   dispatchFieldHandler: (): any => mockCallBack,
 }));
 
-jest.mock('lodash', () => ({
-  ...(jest.requireActual('lodash') as object),
+vi.mock('lodash', async (importOriginal) => ({
+  ...((await importOriginal()) as any).default,
   debounce: async (callback: any): Promise<any> => await callback(),
 }));
 

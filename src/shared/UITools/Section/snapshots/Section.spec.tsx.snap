@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Section snapshots should render Section 1`] = `
+exports[`Section snapshots > should render Section 1`] = `
 <DocumentFragment>
   <div
     class="Section"
@@ -25,7 +25,7 @@ exports[`Section snapshots should render Section 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Section snapshots should render with buttons 1`] = `
+exports[`Section snapshots > should render with buttons 1`] = `
 <DocumentFragment>
   <div
     class="Section"

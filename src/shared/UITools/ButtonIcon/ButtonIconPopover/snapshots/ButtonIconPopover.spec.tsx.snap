@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`TextFieldPopover snapshots should render ButtonIconPopover 1`] = `
+exports[`TextFieldPopover snapshots > should render ButtonIconPopover 1`] = `
 <DocumentFragment>
   <div
     class="ButtonIconPopover"
@@ -16,7 +16,7 @@ exports[`TextFieldPopover snapshots should render ButtonIconPopover 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TextFieldPopover snapshots should render with opened popover 1`] = `
+exports[`TextFieldPopover snapshots > should render with opened popover 1`] = `
 <DocumentFragment>
   <div
     class="ButtonIconPopover"

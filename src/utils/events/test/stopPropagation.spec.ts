@@ -1,7 +1,7 @@
 // utils
 import { stopPropagation } from '../stopPropagation';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('stopPropagation', () => {
   it('should trigger propagation', () => {

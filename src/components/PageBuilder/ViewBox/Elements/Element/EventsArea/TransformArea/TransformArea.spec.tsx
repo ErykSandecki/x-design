@@ -23,6 +23,7 @@ import { configureStore } from 'store/store';
 import { AnchorResize, AnchorRotate } from 'store/pageBuilder/enums';
 import { E2EAttribute } from 'types';
 import { MouseMode } from 'types/enums/mouseMode';
+import type { Mock } from 'vitest';
 
 // utils
 import { createHtmlElement } from 'utils';
@@ -34,20 +35,20 @@ const elementRef = {
   current: createHtmlElement('div'),
 } as RefObject<HTMLDivElement>;
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
-jest.mock('react-redux', () => ({
-  ...jest.requireActual('react-redux'),
+vi.mock('react-redux', async (importOriginal) => ({
+  ...(await importOriginal()),
   useDispatch: (): any => mockCallBack,
 }));
 
-jest.mock('./hooks/useTransformAreaEvents', () => ({
-  useTransformAreaEvents: jest.fn(),
+vi.mock('./hooks/useTransformAreaEvents', () => ({
+  useTransformAreaEvents: vi.fn(),
 }));
 
 describe('TransformArea snapshots', () => {
   beforeEach(() => {
-    (useTransformAreaEvents as jest.Mock).mockReturnValue({
+    (useTransformAreaEvents as Mock).mockReturnValue({
       onMouseDownAnchorResize: mockCallBack,
       onMouseDownAnchorRotate: mockCallBack,
       onMouseEnterAnchorResize: mockCallBack,
@@ -88,7 +89,7 @@ describe('TransformArea snapshots', () => {
 
 describe('TransformArea behaviors', () => {
   beforeEach(() => {
-    (useTransformAreaEvents as jest.Mock).mockImplementation(() => ({
+    (useTransformAreaEvents as Mock).mockImplementation(() => ({
       onMouseDownAnchorResize: mockCallBack,
       onMouseDownAnchorRotate: mockCallBack,
       onMouseEnterAnchorResize: mockCallBack,

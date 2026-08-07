@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
+exports[`PopoverBlendMode snapshots > should render PopoverBlendMode 1`] = `
 <DocumentFragment>
   <div
     class="PopoverItem"
@@ -340,7 +340,7 @@ exports[`PopoverBlendMode snapshots should render PopoverBlendMode 1`] = `
 </DocumentFragment>
 `;
 
-exports[`PopoverBlendMode snapshots should render wiht mixed value 1`] = `
+exports[`PopoverBlendMode snapshots > should render wiht mixed value 1`] = `
 <DocumentFragment>
   <div
     class="PopoverItem"

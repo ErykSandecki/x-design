@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`TextFieldWrapper snapshots should click and open popover 1`] = `
+exports[`TextFieldWrapper snapshots > should click and open popover 1`] = `
 <DocumentFragment>
   <div
     class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--chip"
@@ -42,7 +42,7 @@ exports[`TextFieldWrapper snapshots should click and open popover 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TextFieldWrapper snapshots should click on input 1`] = `
+exports[`TextFieldWrapper snapshots > should click on input 1`] = `
 <DocumentFragment>
   <div
     class="TextFieldWrapper TextFieldWrapper--filled"
@@ -57,7 +57,7 @@ exports[`TextFieldWrapper snapshots should click on input 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TextFieldWrapper snapshots should render TextFieldWrapper 1`] = `
+exports[`TextFieldWrapper snapshots > should render TextFieldWrapper 1`] = `
 <DocumentFragment>
   <div
     class="TextFieldWrapper TextFieldWrapper--filled"
@@ -72,7 +72,7 @@ exports[`TextFieldWrapper snapshots should render TextFieldWrapper 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TextFieldWrapper snapshots should render with chip 1`] = `
+exports[`TextFieldWrapper snapshots > should render with chip 1`] = `
 <DocumentFragment>
   <div
     class="TextFieldWrapper TextFieldWrapper--filled TextFieldWrapper--chip"
@@ -94,7 +94,7 @@ exports[`TextFieldWrapper snapshots should render with chip 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TextFieldWrapper snapshots should render with popover 1`] = `
+exports[`TextFieldWrapper snapshots > should render with popover 1`] = `
 <DocumentFragment>
   <div
     class="TextFieldWrapper TextFieldWrapper--filled"

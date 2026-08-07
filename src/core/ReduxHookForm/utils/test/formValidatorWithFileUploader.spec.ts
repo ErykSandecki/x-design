@@ -7,7 +7,7 @@ import { TFileData } from 'types/types';
 // utils
 import { formValidatorWithFileUploader } from '../validators';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('formValidatorWithFileUploader', () => {
   it('should be not valid', () => {

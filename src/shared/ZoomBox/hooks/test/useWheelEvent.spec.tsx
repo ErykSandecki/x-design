@@ -7,13 +7,13 @@ import { useWheelEvent } from '../useWheelEvent';
 // others
 import { BASE_3D } from 'shared/ZoomBox/constants';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 const ref = {
   current: { getBoundingClientRect: (): any => ({ left: 0, top: 0 }) },
 };
 
-jest.mock('lodash', () => ({
-  ...jest.requireActual('lodash'),
+vi.mock('lodash', async (importOriginal) => ({
+  ...((await importOriginal()) as any).default,
   debounce:
     (callback: any) =>
     (value: any): any =>

@@ -4,7 +4,7 @@ import { MouseMode } from 'types';
 // utils
 import { onEscapeChangeMouseModeHandler } from '../onEscapeChangeMouseModeHandler';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('onEscapeChangeMouseModeHandler', () => {
   it('should trigger callback', () => {

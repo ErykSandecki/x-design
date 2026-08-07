@@ -4,14 +4,17 @@ import { fireEvent, renderHook } from '@testing-library/react';
 // hooks
 import { useChangeCursor } from './useChangeCursor';
 
+// types
+import type { Mock } from 'vitest';
+
 // utils
 import { resetCursor, updateCursor } from './utils';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
-jest.mock('./utils', () => ({
-  resetCursor: jest.fn(),
-  updateCursor: jest.fn(),
+vi.mock('./utils', () => ({
+  resetCursor: vi.fn(),
+  updateCursor: vi.fn(),
 }));
 
 const contentRef = {
@@ -20,8 +23,8 @@ const contentRef = {
 
 describe('useMouseDownEvent', () => {
   beforeEach(() => {
-    (resetCursor as jest.Mock).mockImplementation(mockCallBack);
-    (updateCursor as jest.Mock).mockImplementation(mockCallBack);
+    (resetCursor as Mock).mockImplementation(mockCallBack);
+    (updateCursor as Mock).mockImplementation(mockCallBack);
   });
 
   it(`should change state pressing`, async () => {

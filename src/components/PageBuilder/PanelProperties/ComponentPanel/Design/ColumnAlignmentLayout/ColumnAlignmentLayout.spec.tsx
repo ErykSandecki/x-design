@@ -614,7 +614,6 @@ describe('ColumnAlignmentLayout behaviors', () => {
       bubbles: true,
       cancelable: true,
       shiftKey: false,
-      view: window,
     });
     Object.defineProperty(mouseMoveEvent, 'movementX', { value: 200 });
 
@@ -989,7 +988,6 @@ describe('ColumnAlignmentLayout behaviors', () => {
       bubbles: true,
       cancelable: true,
       shiftKey: false,
-      view: window,
     });
     Object.defineProperty(mouseMoveEvent, 'movementX', { value: 200 });
 

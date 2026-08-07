@@ -18,7 +18,7 @@ describe('initLanguageSaga', () => {
 
   it('should set language from api', async () => {
     // mock
-    jest.spyOn(global, 'fetch').mockImplementation(
+    vi.spyOn(global, 'fetch').mockImplementation(
       () =>
         new Promise((resolve) =>
           resolve({
@@ -56,7 +56,7 @@ describe('initLanguageSaga', () => {
 
   it('should not set language from api when is not on list', async () => {
     // mock
-    jest.spyOn(global, 'fetch').mockImplementation(
+    vi.spyOn(global, 'fetch').mockImplementation(
       () =>
         new Promise((resolve) =>
           resolve({
@@ -94,7 +94,7 @@ describe('initLanguageSaga', () => {
 
   it('should set default language', async () => {
     // mock
-    jest.spyOn(global, 'fetch').mockImplementation(() => new Promise((_, reject) => reject('error')));
+    vi.spyOn(global, 'fetch').mockImplementation(() => new Promise((_, reject) => reject('error')));
 
     // before
     const sagaTester = new SagaTester({

@@ -10,7 +10,7 @@ import { MouseMode } from 'types/enums/mouseMode';
 // utils
 import { handleInitElementArea } from '../handleInitElementArea';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('handleInitElementArea', () => {
   it(`should init position of element`, () => {

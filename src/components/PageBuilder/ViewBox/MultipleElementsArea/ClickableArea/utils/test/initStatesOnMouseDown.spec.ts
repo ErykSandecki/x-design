@@ -3,7 +3,7 @@ import { MouseEvent } from 'react';
 // utils
 import { initStatesOnMouseDown } from '../initStatesOnMouseDown';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('initStatesOnMouseDown', () => {
   it('should trigger events', () => {

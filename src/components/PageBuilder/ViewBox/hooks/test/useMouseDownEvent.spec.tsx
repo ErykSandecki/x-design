@@ -23,7 +23,7 @@ import { MouseMode } from 'types/enums/mouseMode';
 // utils
 import { getProviderWrapper } from 'test';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 const rectCoordinates = {
   current: {
     [elementMock.id]: {
@@ -38,8 +38,8 @@ const stateMock = {
   ...pageBuilderStateMock,
 };
 
-jest.mock('../../utils/calculateAbsolutePositions', () => ({
-  calculateAbsolutePositions: jest.fn(),
+vi.mock('../../utils/calculateAbsolutePositions', () => ({
+  calculateAbsolutePositions: vi.fn(),
 }));
 
 describe('useMouseMoveEvent', () => {

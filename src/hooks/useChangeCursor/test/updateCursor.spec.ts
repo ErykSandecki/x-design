@@ -12,16 +12,16 @@ describe('updateCursor', () => {
     contentRef.current.style.cursor = '';
 
     // spy
-    jest.spyOn(HTMLCanvasElement.prototype, 'getContext').mockReturnValue({
-      drawImage: jest.fn(),
-      rotate: jest.fn(),
-      translate: jest.fn(),
+    vi.spyOn(HTMLCanvasElement.prototype, 'getContext').mockReturnValue({
+      drawImage: vi.fn(),
+      rotate: vi.fn(),
+      translate: vi.fn(),
     } as unknown as CanvasRenderingContext2D);
-    jest.spyOn(HTMLCanvasElement.prototype, 'toDataURL').mockReturnValue('data:image/png;base64,mock');
+    vi.spyOn(HTMLCanvasElement.prototype, 'toDataURL').mockReturnValue('data:image/png;base64,mock');
   });
 
   afterEach(() => {
-    jest.restoreAllMocks();
+    vi.restoreAllMocks();
   });
 
   it(`should update cursor synchronously once the image has already loaded`, () => {
@@ -29,7 +29,9 @@ describe('updateCursor', () => {
     const mockImage = { complete: true, onload: null, src: '' } as unknown as HTMLImageElement;
 
     // spy
-    jest.spyOn(window, 'Image').mockImplementation(() => mockImage);
+    vi.spyOn(window, 'Image').mockImplementation(function Image() {
+      return mockImage;
+    });
 
     // before
     updateCursor(90, contentRef, 'cursor-loaded');
@@ -43,7 +45,9 @@ describe('updateCursor', () => {
     const mockImage = { complete: false, onload: null, src: '' } as unknown as HTMLImageElement;
 
     // spy
-    jest.spyOn(window, 'Image').mockImplementation(() => mockImage);
+    vi.spyOn(window, 'Image').mockImplementation(function Image() {
+      return mockImage;
+    });
 
     // before
     updateCursor(90, contentRef, 'cursor-not-loaded-yet');

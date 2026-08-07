@@ -10,7 +10,7 @@ import { E2EAttribute } from 'types';
 // utils
 import { customRender, getByE2EAttribute } from 'test';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('PopoverItem snapshots', () => {
   it('should render PopoverItem', () => {

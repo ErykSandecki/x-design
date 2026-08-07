@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Tooltip snapshots should adjust correct placement 1`] = `
+exports[`Tooltip snapshots > should adjust correct placement 1`] = `
 <DocumentFragment>
   <div
     data-test-tooltip=""
@@ -9,7 +9,7 @@ exports[`Tooltip snapshots should adjust correct placement 1`] = `
   </div>
   <div
     class="Tooltip Tooltip--visible"
-    style="left: calc(0px - 7px); top: calc(0px + 0px - 14px);"
+    style="left: calc(-7px); top: calc(-14px);"
   >
     <div
       class="Tooltip__content"
@@ -27,7 +27,7 @@ exports[`Tooltip snapshots should adjust correct placement 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Tooltip snapshots should be visible after enter mouse & invisible after leave 1`] = `
+exports[`Tooltip snapshots > should be visible after enter mouse & invisible after leave 1`] = `
 <DocumentFragment>
   <div
     data-test-tooltip=""
@@ -36,7 +36,7 @@ exports[`Tooltip snapshots should be visible after enter mouse & invisible after
   </div>
   <div
     class="Tooltip"
-    style="left: calc(0px - 0px + 0px); top: calc(0px - 0px - 7px);"
+    style="left: calc(0px); top: calc(-7px);"
   >
     <div
       class="Tooltip__content"
@@ -54,7 +54,7 @@ exports[`Tooltip snapshots should be visible after enter mouse & invisible after
 </DocumentFragment>
 `;
 
-exports[`Tooltip snapshots should change position after mouse wheel 1`] = `
+exports[`Tooltip snapshots > should change position after mouse wheel 1`] = `
 <DocumentFragment>
   <div
     data-test-tooltip=""
@@ -63,7 +63,7 @@ exports[`Tooltip snapshots should change position after mouse wheel 1`] = `
   </div>
   <div
     class="Tooltip"
-    style="left: calc(0px - 0px + 0px); top: calc(0px - 0px - 7px);"
+    style="left: calc(0px); top: calc(-7px);"
   >
     <div
       class="Tooltip__content"
@@ -81,7 +81,7 @@ exports[`Tooltip snapshots should change position after mouse wheel 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Tooltip snapshots should render with diffrent positions 1`] = `
+exports[`Tooltip snapshots > should render with diffrent positions 1`] = `
 <DocumentFragment>
   <div
     data-test-tooltip=""
@@ -90,7 +90,7 @@ exports[`Tooltip snapshots should render with diffrent positions 1`] = `
   </div>
   <div
     class="Tooltip"
-    style="left: calc(0px - 17px + 0px); top: calc(0px - 0px - 7px);"
+    style="left: calc(-17px); top: calc(-7px);"
   >
     <div
       class="Tooltip__content"
@@ -108,7 +108,7 @@ exports[`Tooltip snapshots should render with diffrent positions 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Tooltip snapshots should render with diffrent positions 2`] = `
+exports[`Tooltip snapshots > should render with diffrent positions 2`] = `
 <DocumentFragment>
   <div
     data-test-tooltip=""
@@ -117,7 +117,7 @@ exports[`Tooltip snapshots should render with diffrent positions 2`] = `
   </div>
   <div
     class="Tooltip"
-    style="left: calc(0px - 0px + 0px); top: calc(0px - 0px - 7px);"
+    style="left: calc(0px); top: calc(-7px);"
   >
     <div
       class="Tooltip__content"
@@ -135,7 +135,7 @@ exports[`Tooltip snapshots should render with diffrent positions 2`] = `
 </DocumentFragment>
 `;
 
-exports[`Tooltip snapshots should render with diffrent positions 3`] = `
+exports[`Tooltip snapshots > should render with diffrent positions 3`] = `
 <DocumentFragment>
   <div
     data-test-tooltip=""
@@ -144,7 +144,7 @@ exports[`Tooltip snapshots should render with diffrent positions 3`] = `
   </div>
   <div
     class="Tooltip"
-    style="left: calc(0px + 17px - 0px + 0px); top: calc(0px - 0px - 7px);"
+    style="left: calc(17px); top: calc(-7px);"
   >
     <div
       class="Tooltip__content"
@@ -162,7 +162,7 @@ exports[`Tooltip snapshots should render with diffrent positions 3`] = `
 </DocumentFragment>
 `;
 
-exports[`Tooltip snapshots should render with diffrent positions 4`] = `
+exports[`Tooltip snapshots > should render with diffrent positions 4`] = `
 <DocumentFragment>
   <div
     data-test-tooltip=""
@@ -171,7 +171,7 @@ exports[`Tooltip snapshots should render with diffrent positions 4`] = `
   </div>
   <div
     class="Tooltip"
-    style="left: calc(0px - 14px + 0px); top: calc(0px + 0px + 7px);"
+    style="left: calc(-14px); top: calc(7px);"
   >
     <div
       class="Tooltip__content"
@@ -189,7 +189,7 @@ exports[`Tooltip snapshots should render with diffrent positions 4`] = `
 </DocumentFragment>
 `;
 
-exports[`Tooltip snapshots should render with diffrent positions 5`] = `
+exports[`Tooltip snapshots > should render with diffrent positions 5`] = `
 <DocumentFragment>
   <div
     data-test-tooltip=""
@@ -198,7 +198,7 @@ exports[`Tooltip snapshots should render with diffrent positions 5`] = `
   </div>
   <div
     class="Tooltip"
-    style="left: calc(0px - 0px + 0px); top: calc(0px + 0px + 7px);"
+    style="left: calc(0px); top: calc(7px);"
   >
     <div
       class="Tooltip__content"
@@ -216,7 +216,7 @@ exports[`Tooltip snapshots should render with diffrent positions 5`] = `
 </DocumentFragment>
 `;
 
-exports[`Tooltip snapshots should render with diffrent positions 6`] = `
+exports[`Tooltip snapshots > should render with diffrent positions 6`] = `
 <DocumentFragment>
   <div
     data-test-tooltip=""
@@ -225,7 +225,7 @@ exports[`Tooltip snapshots should render with diffrent positions 6`] = `
   </div>
   <div
     class="Tooltip"
-    style="left: calc(0px + 14px - 0px + 0px); top: calc(0px + 0px + 7px);"
+    style="left: calc(14px); top: calc(7px);"
   >
     <div
       class="Tooltip__content"
@@ -243,7 +243,7 @@ exports[`Tooltip snapshots should render with diffrent positions 6`] = `
 </DocumentFragment>
 `;
 
-exports[`Tooltip snapshots should render with diffrent positions 7`] = `
+exports[`Tooltip snapshots > should render with diffrent positions 7`] = `
 <DocumentFragment>
   <div
     data-test-tooltip=""
@@ -252,7 +252,7 @@ exports[`Tooltip snapshots should render with diffrent positions 7`] = `
   </div>
   <div
     class="Tooltip"
-    style="left: calc(0px - 7px); top: calc(0px + 0px - 14px);"
+    style="left: calc(-7px); top: calc(-14px);"
   >
     <div
       class="Tooltip__content"
@@ -270,7 +270,7 @@ exports[`Tooltip snapshots should render with diffrent positions 7`] = `
 </DocumentFragment>
 `;
 
-exports[`Tooltip snapshots should render with diffrent positions 8`] = `
+exports[`Tooltip snapshots > should render with diffrent positions 8`] = `
 <DocumentFragment>
   <div
     data-test-tooltip=""
@@ -279,7 +279,7 @@ exports[`Tooltip snapshots should render with diffrent positions 8`] = `
   </div>
   <div
     class="Tooltip"
-    style="left: calc(0px - 7px); top: calc(0px + 0px - 0px);"
+    style="left: calc(-7px); top: calc(0px);"
   >
     <div
       class="Tooltip__content"
@@ -297,7 +297,7 @@ exports[`Tooltip snapshots should render with diffrent positions 8`] = `
 </DocumentFragment>
 `;
 
-exports[`Tooltip snapshots should render with diffrent positions 9`] = `
+exports[`Tooltip snapshots > should render with diffrent positions 9`] = `
 <DocumentFragment>
   <div
     data-test-tooltip=""
@@ -306,7 +306,7 @@ exports[`Tooltip snapshots should render with diffrent positions 9`] = `
   </div>
   <div
     class="Tooltip"
-    style="left: calc(0px - 7px); top: calc(0px + 0px - 0px + 14px);"
+    style="left: calc(-7px); top: calc(14px);"
   >
     <div
       class="Tooltip__content"
@@ -324,7 +324,7 @@ exports[`Tooltip snapshots should render with diffrent positions 9`] = `
 </DocumentFragment>
 `;
 
-exports[`Tooltip snapshots should render with diffrent positions 10`] = `
+exports[`Tooltip snapshots > should render with diffrent positions 10`] = `
 <DocumentFragment>
   <div
     data-test-tooltip=""
@@ -333,7 +333,7 @@ exports[`Tooltip snapshots should render with diffrent positions 10`] = `
   </div>
   <div
     class="Tooltip"
-    style="left: calc(0px + 7px); top: calc(0px + 0px - 14px);"
+    style="left: calc(7px); top: calc(-14px);"
   >
     <div
       class="Tooltip__content"
@@ -351,7 +351,7 @@ exports[`Tooltip snapshots should render with diffrent positions 10`] = `
 </DocumentFragment>
 `;
 
-exports[`Tooltip snapshots should render with diffrent positions 11`] = `
+exports[`Tooltip snapshots > should render with diffrent positions 11`] = `
 <DocumentFragment>
   <div
     data-test-tooltip=""
@@ -360,7 +360,7 @@ exports[`Tooltip snapshots should render with diffrent positions 11`] = `
   </div>
   <div
     class="Tooltip"
-    style="left: calc(0px + 7px); top: calc(0px + 0px - 0px);"
+    style="left: calc(7px); top: calc(0px);"
   >
     <div
       class="Tooltip__content"
@@ -378,7 +378,7 @@ exports[`Tooltip snapshots should render with diffrent positions 11`] = `
 </DocumentFragment>
 `;
 
-exports[`Tooltip snapshots should render with diffrent positions 12`] = `
+exports[`Tooltip snapshots > should render with diffrent positions 12`] = `
 <DocumentFragment>
   <div
     data-test-tooltip=""
@@ -387,7 +387,7 @@ exports[`Tooltip snapshots should render with diffrent positions 12`] = `
   </div>
   <div
     class="Tooltip"
-    style="left: calc(0px + 7px); top: calc(0px + 0px - 0px + 14px);"
+    style="left: calc(7px); top: calc(14px);"
   >
     <div
       class="Tooltip__content"
@@ -405,9 +405,9 @@ exports[`Tooltip snapshots should render with diffrent positions 12`] = `
 </DocumentFragment>
 `;
 
-exports[`Tooltip snapshots should render with passed container id 1`] = `<DocumentFragment />`;
+exports[`Tooltip snapshots > should render with passed container id 1`] = `<DocumentFragment />`;
 
-exports[`Tooltip snapshots should set tooltip position horizontal automatically after enter 1`] = `
+exports[`Tooltip snapshots > should set tooltip position horizontal automatically after enter 1`] = `
 <DocumentFragment>
   <div
     data-test-tooltip=""
@@ -433,7 +433,7 @@ exports[`Tooltip snapshots should set tooltip position horizontal automatically 
 </DocumentFragment>
 `;
 
-exports[`Tooltip snapshots should set tooltip position vertical automatically after enter 1`] = `
+exports[`Tooltip snapshots > should set tooltip position vertical automatically after enter 1`] = `
 <DocumentFragment>
   <div
     data-test-tooltip=""
@@ -442,7 +442,7 @@ exports[`Tooltip snapshots should set tooltip position vertical automatically af
   </div>
   <div
     class="Tooltip Tooltip--visible"
-    style="left: calc(0px + 17px - 0px + 0px); top: calc(0px - 0px - 7px);"
+    style="left: calc(17px); top: calc(-7px);"
   >
     <div
       class="Tooltip__content"

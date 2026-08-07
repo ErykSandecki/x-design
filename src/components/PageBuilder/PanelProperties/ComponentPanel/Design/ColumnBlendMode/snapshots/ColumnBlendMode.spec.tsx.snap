@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ColumnBlendMode snapshots should not render when initial 1`] = `<DocumentFragment />`;
+exports[`ColumnBlendMode snapshots > should not render when initial 1`] = `<DocumentFragment />`;
 
-exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
+exports[`ColumnBlendMode snapshots > should render ColumnBlendMode 1`] = `
 <DocumentFragment>
   <div
     class="SectionColumn SectionColumn--with-bottom-margin"
@@ -10,7 +10,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
   >
     <div
       class="SectionColumnLabels"
-      style="width: calc(100% - 24px - 0px - 8px);"
+      style="width: calc(100% - 32px);"
     >
       <small
         class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -25,7 +25,7 @@ exports[`ColumnBlendMode snapshots should render ColumnBlendMode 1`] = `
     >
       <div
         class="SectionColumnContent SectionColumnContent--single"
-        style="width: calc(100% - 24px - 0px - 8px);"
+        style="width: calc(100% - 32px);"
       >
         <div
           class="Select"

@@ -25,15 +25,15 @@ import { E2EAttribute, MouseButton } from 'types';
 // utils
 import { customRender, getByE2EAttribute } from 'test';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
 const stateMock = {
   ...pageBuilderStateMock,
 };
 
-jest.mock('lodash', () => ({
-  ...(jest.requireActual('lodash') as object),
+vi.mock('lodash', async (importOriginal) => ({
+  ...((await importOriginal()) as any).default,
   defer: (callback: any): any => callback(),
 }));
 

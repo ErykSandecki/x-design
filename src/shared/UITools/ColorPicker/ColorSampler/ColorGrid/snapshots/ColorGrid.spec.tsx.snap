@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ColorGrid snapshots should render ColorGrid 1`] = `
+exports[`ColorGrid snapshots > should render ColorGrid 1`] = `
 <DocumentFragment>
   <div
     class="ColorGrid"
@@ -20,7 +20,7 @@ exports[`ColorGrid snapshots should render ColorGrid 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ColorGrid snapshots should render when is pending 1`] = `
+exports[`ColorGrid snapshots > should render when is pending 1`] = `
 <DocumentFragment>
   <div
     class="ColorGrid"

@@ -5,7 +5,7 @@ import PopoverRoot from '../../PopoverRoot/PopoverRoot';
 // utils
 import { customRender } from 'test';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('PopoverPreviewItem snapshots', () => {
   it('should render PopoverPreviewItem', () => {

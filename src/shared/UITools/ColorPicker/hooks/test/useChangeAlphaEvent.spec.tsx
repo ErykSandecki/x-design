@@ -4,7 +4,7 @@ import { renderHook } from '@testing-library/react';
 // hooks
 import { useChangeAlphaEvent } from '../useChangeAlphaEvent';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('useChangeAlphaEvent', () => {
   it(`should trigger on change`, () => {

@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`TransformArea snapshots should render TransformArea 1`] = `
+exports[`TransformArea snapshots > should render TransformArea 1`] = `
 <DocumentFragment>
   <div
     class="TransformArea"

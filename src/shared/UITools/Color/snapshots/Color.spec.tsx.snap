@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Color snapshots should render Color 1`] = `
+exports[`Color snapshots > should render Color 1`] = `
 <DocumentFragment>
   <div
     class="Color"
@@ -11,7 +11,6 @@ exports[`Color snapshots should render Color 1`] = `
     />
     <div
       class="Color__picker-alpha"
-      style="background-color: rgb(0, 0, 0);"
     />
     <div
       class="Color__picker-texture"

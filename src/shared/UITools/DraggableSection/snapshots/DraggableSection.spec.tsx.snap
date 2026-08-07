@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`DraggableSection snapshots should render DraggableSection 1`] = `
+exports[`DraggableSection snapshots > should render DraggableSection 1`] = `
 <DocumentFragment>
   <div
     class="DraggableSection"
@@ -9,7 +9,7 @@ exports[`DraggableSection snapshots should render DraggableSection 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DraggableSection snapshots should render items 1`] = `
+exports[`DraggableSection snapshots > should render items 1`] = `
 <DocumentFragment>
   <div
     class="DraggableSection"

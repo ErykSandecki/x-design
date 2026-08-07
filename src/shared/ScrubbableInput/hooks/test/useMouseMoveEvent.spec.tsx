@@ -6,7 +6,7 @@ import { useMouseMoveEvent } from '../useMouseMoveEvent';
 // others
 import { BASE_2D } from 'shared/ZoomBox/constants';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('useMouseMoveEvent', () => {
   beforeAll(() => {
@@ -54,7 +54,6 @@ describe('useMouseMoveEvent', () => {
       bubbles: true,
       cancelable: true,
       shiftKey: false,
-      view: window,
     });
     Object.defineProperty(mouseMoveEvent, 'movementX', { value: 100 });
 

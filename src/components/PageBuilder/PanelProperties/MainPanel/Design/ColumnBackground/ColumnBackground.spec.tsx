@@ -23,8 +23,8 @@ const stateMock = {
   ...pageBuilderStateMock,
 };
 
-jest.mock('utils', () => ({
-  ...jest.requireActual('utils'),
+vi.mock('utils', async (importOriginal) => ({
+  ...(await importOriginal()),
   rgbToHex: (): any => '#ffffff',
 }));
 

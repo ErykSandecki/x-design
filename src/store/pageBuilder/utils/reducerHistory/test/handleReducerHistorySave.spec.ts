@@ -12,8 +12,8 @@ import { handleReducerHistorySave } from '../handleReducerHistorySave';
 
 const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages[pageBuilderStateMock[PAGE_BUILDER].currentPage];
 
-jest.mock('../../../constants', () => ({
-  ...jest.requireActual('../../../constants'),
+vi.mock('../../../constants', async (importOriginal) => ({
+  ...(await importOriginal()),
   MAX_LENGTH_HISTORY: 2,
 }));
 

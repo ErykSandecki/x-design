@@ -5,7 +5,7 @@ import { renderHook } from '@testing-library/react';
 // hooks
 import { useClickEvents } from '../useClickEvents';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('useClickEvents', () => {
   it(`should click option`, () => {

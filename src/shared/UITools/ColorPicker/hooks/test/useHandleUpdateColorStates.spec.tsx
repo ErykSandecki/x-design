@@ -3,10 +3,10 @@ import { renderHook } from '@testing-library/react';
 // hooks
 import { useHandleUpdateColorStates } from '../useHandleUpdateColorStates';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
-jest.mock('lodash', () => ({
-  ...jest.requireActual('lodash'),
+vi.mock('lodash', async (importOriginal) => ({
+  ...((await importOriginal()) as any).default,
   debounce:
     (callback: any) =>
     (...args: any): any =>

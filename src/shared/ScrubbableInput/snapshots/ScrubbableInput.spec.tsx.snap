@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ScrubbableInput snapshots should render ScrubbableInput 1`] = `
+exports[`ScrubbableInput snapshots > should render ScrubbableInput 1`] = `
 <DocumentFragment>
   <div
     class="ScrubbableInput"
@@ -13,7 +13,7 @@ exports[`ScrubbableInput snapshots should render ScrubbableInput 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ScrubbableInput snapshots should render with icon 1`] = `
+exports[`ScrubbableInput snapshots > should render with icon 1`] = `
 <DocumentFragment>
   <div
     class="ScrubbableInput"

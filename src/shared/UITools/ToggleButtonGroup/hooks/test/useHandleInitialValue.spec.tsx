@@ -3,7 +3,7 @@ import { renderHook } from '@testing-library/react';
 // hooks
 import { useHandleInitialValue } from '../useHandleInitialValue';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('useHandleInitialValue', () => {
   it(`should return data`, () => {

@@ -9,7 +9,7 @@ import { CURSOR_STATES } from 'constant/constants';
 // types
 import { MouseButton } from 'types';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('useMouseDownEvent', () => {
   it(`should change cursor to idle state`, () => {

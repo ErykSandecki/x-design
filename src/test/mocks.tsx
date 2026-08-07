@@ -16,8 +16,8 @@ import { createHtmlElement } from 'utils';
 /**
  * React Portal
  */
-jest.mock('react-dom', () => ({
-  ...(jest.requireActual('react-dom') as Object),
+vi.mock('react-dom', async (importOriginal) => ({
+  ...((await importOriginal()) as Object),
   createPortal: (children: ReactNode) => children,
 }));
 
@@ -62,13 +62,13 @@ Element.prototype.scrollTo = () => {};
  * Mock Prompt & Confirm
  */
 delete (window as any).prompt;
-(window as any).prompt = jest.fn(() => true);
-(window as any).confirm = jest.fn(() => true);
+(window as any).prompt = vi.fn(() => true);
+(window as any).confirm = vi.fn(() => true);
 
 /**
  * Mock copy to clipboard
  */
-document.execCommand = jest.fn();
+document.execCommand = vi.fn();
 
 /**
  * Mock containers
@@ -79,14 +79,14 @@ document.body.appendChild(createHtmlElement('div', { id: HTMLContainerId.dropdow
 /**
  * Mock to avoid other keys when different environment
  */
-jest.mock('react-device-detect', () => ({
+vi.mock('react-device-detect', () => ({
   isMacOs: true,
 }));
 
 /**
  * Mock DOM Matrix
  */
-jest.mock('../utils/dom/getOriginElementBounding', () => ({
+vi.mock('../utils/dom/getOriginElementBounding', () => ({
   getOriginElementBounding: (element: HTMLElement) => ({
     x: 0,
     y: 0,

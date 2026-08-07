@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Panel snapshots should render Panel 1`] = `
+exports[`Panel snapshots > should render Panel 1`] = `
 <DocumentFragment>
   <div
     class="Panel"
@@ -53,7 +53,7 @@ exports[`Panel snapshots should render Panel 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Panel snapshots should render with active sampler 1`] = `
+exports[`Panel snapshots > should render with active sampler 1`] = `
 <DocumentFragment>
   <div
     class="Panel"

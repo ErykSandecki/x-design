@@ -3,7 +3,8 @@
     "allow": [
       "Bash(mkdir -p /Users/eryksandecki/Desktop/Work/Figma/x-design/.claude/skills/x-design-scss-import-order)",
       "Edit(/.claude/skills/x-design-scss-import-order/**)",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "WebSearch"
     ],
     "additionalDirectories": ["/tmp", "/Users/eryksandecki/Desktop/Work/Figma/x-design/.claude/skills"]
   }

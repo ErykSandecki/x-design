@@ -3,10 +3,10 @@ import { renderHook } from '@testing-library/react';
 // hooks
 import { useForceRerender } from './useForceRerender';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
-jest.mock('react', () => ({
-  ...(jest.requireActual('react') as object),
+vi.mock('react', async (importOriginal) => ({
+  ...((await importOriginal()) as object),
   useState: (): any => [false, mockCallBack],
 }));
 

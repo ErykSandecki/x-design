@@ -9,10 +9,10 @@ import { insetsMock } from 'test/mocks/reducer/pageBuilderMock';
 // others
 import { MIXED } from 'constant/constants';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
-jest.mock('react-redux', () => ({
-  ...jest.requireActual('react-redux'),
+vi.mock('react-redux', async (importOriginal) => ({
+  ...(await importOriginal()),
   useDispatch: (): any => mockCallBack,
 }));
 

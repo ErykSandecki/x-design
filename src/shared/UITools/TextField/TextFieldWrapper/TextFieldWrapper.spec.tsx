@@ -13,10 +13,10 @@ import { customRender, getByE2EAttribute } from 'test';
 
 const id = 'id';
 const ref = { current: null } as unknown as RefObject<HTMLInputElement>;
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
-jest.mock('utils', () => ({
-  ...jest.requireActual('utils'),
+vi.mock('utils', async (importOriginal) => ({
+  ...(await importOriginal()),
   handleSubmitInput: (): any => mockCallBack,
 }));
 

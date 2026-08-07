@@ -1,9 +1,10 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Toolbar snapshots should render Toolbar 1`] = `
+exports[`Toolbar snapshots > should render Toolbar 1`] = `
 <DocumentFragment>
   <div
     class="Toolbar"
+    style="touch-action: manipulation;"
   >
     <div
       class="MouseModes"

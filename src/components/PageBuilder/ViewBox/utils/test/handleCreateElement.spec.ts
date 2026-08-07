@@ -18,7 +18,7 @@ import { MouseMode } from 'types/enums/mouseMode';
 // utils
 import { handleCreateElement } from '../handleCreateElement';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 const stateMock = {
   [PAGE_BUILDER]: {
     ...pageBuilderStateMock[PAGE_BUILDER],

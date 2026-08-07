@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ButtonIcon snapshots should render ButtonIcon 1`] = `
+exports[`ButtonIcon snapshots > should render ButtonIcon 1`] = `
 <DocumentFragment>
   <div
     class="ButtonIcon"
@@ -18,7 +18,7 @@ exports[`ButtonIcon snapshots should render ButtonIcon 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ButtonIcon snapshots should render when is selected 1`] = `
+exports[`ButtonIcon snapshots > should render when is selected 1`] = `
 <DocumentFragment>
   <div
     class="ButtonIcon ButtonIcon--selected"
@@ -36,7 +36,7 @@ exports[`ButtonIcon snapshots should render when is selected 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ButtonIcon snapshots should render with popover 1`] = `
+exports[`ButtonIcon snapshots > should render with popover 1`] = `
 <DocumentFragment>
   <div
     class="ButtonIcon"

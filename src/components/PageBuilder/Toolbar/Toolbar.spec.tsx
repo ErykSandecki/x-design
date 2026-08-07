@@ -17,7 +17,7 @@ import { MouseMode } from 'types/enums/mouseMode';
 // utils
 import { customRender, getByE2EAttribute } from 'test';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('Toolbar snapshots', () => {
   it('should render Toolbar', () => {

@@ -12,7 +12,7 @@ import { CURSOR_STATES } from 'constant/constants';
 import { MouseButton } from 'types';
 import { MouseMode } from 'types/enums/mouseMode';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 const ref = {
   current: { getBoundingClientRect: (): any => ({ left: 0, top: 0 }) },
 };

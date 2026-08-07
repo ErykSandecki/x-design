@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Checkbox snapshots should render Checkbox 1`] = `
+exports[`Checkbox snapshots > should render Checkbox 1`] = `
 <DocumentFragment>
   <div
     class="Checkbox"
@@ -25,7 +25,7 @@ exports[`Checkbox snapshots should render Checkbox 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Checkbox snapshots should render when checked 1`] = `
+exports[`Checkbox snapshots > should render when checked 1`] = `
 <DocumentFragment>
   <div
     class="Checkbox"
@@ -58,7 +58,7 @@ exports[`Checkbox snapshots should render when checked 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Checkbox snapshots should render when mixed 1`] = `
+exports[`Checkbox snapshots > should render when mixed 1`] = `
 <DocumentFragment>
   <div
     class="Checkbox"

@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`DraggableSectionAnchors snapshots should not render when lenght is less than 2 1`] = `<DocumentFragment />`;
+exports[`DraggableSectionAnchors snapshots > should not render when lenght is less than 2 1`] = `<DocumentFragment />`;
 
-exports[`DraggableSectionAnchors snapshots should render DraggableSectionAnchors 1`] = `
+exports[`DraggableSectionAnchors snapshots > should render DraggableSectionAnchors 1`] = `
 <DocumentFragment>
   <div
     class="DraggableSectionAnchor DraggableSectionAnchor--draggable"
@@ -17,7 +17,7 @@ exports[`DraggableSectionAnchors snapshots should render DraggableSectionAnchors
 </DocumentFragment>
 `;
 
-exports[`DraggableSectionAnchors snapshots should render when is middle 1`] = `
+exports[`DraggableSectionAnchors snapshots > should render when is middle 1`] = `
 <DocumentFragment>
   <div
     class="DraggableSectionAnchor DraggableSectionAnchor--draggable"
@@ -32,7 +32,7 @@ exports[`DraggableSectionAnchors snapshots should render when is middle 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DraggableSectionAnchors snapshots should render when is middle 2`] = `
+exports[`DraggableSectionAnchors snapshots > should render when is middle 2`] = `
 <DocumentFragment>
   <div
     class="DraggableSectionAnchor DraggableSectionAnchor--draggable"

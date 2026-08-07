@@ -13,6 +13,7 @@ import {
 } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
+import { ANCHOR_INDEX } from 'shared/UITools/DraggableSection/constants';
 import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
 
 // store
@@ -47,8 +48,8 @@ const stateMock = {
   },
 };
 
-jest.mock('utils', () => ({
-  ...jest.requireActual('utils'),
+vi.mock('utils', async (importOriginal) => ({
+  ...(await importOriginal()),
   rgbToHex: (): any => '#ffffff',
 }));
 
@@ -353,9 +354,16 @@ describe('ColumnFill behaviors', () => {
     const sectionItem = getByE2EAttribute(container, E2EAttribute.draggableSectionItem, 1);
 
     // action
+    const anchor = document.createElement('div');
+
+    anchor.setAttribute(ANCHOR_INDEX, '0');
+    document.body.appendChild(anchor);
+
     fireEvent.mouseDown(sectionItem);
     fireEvent.mouseMove(sectionItem);
-    fireEvent.mouseUp(window, { target: { getAttribute: () => '0' } });
+    fireEvent.mouseUp(anchor);
+
+    document.body.removeChild(anchor);
 
     // result
     expect(store.getState()[PAGE_BUILDER].pages['0'].elements['test-1'].background).toStrictEqual([

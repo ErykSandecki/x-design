@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Form snapshots should render Form 1`] = `
+exports[`Form snapshots > should render Form 1`] = `
 <DocumentFragment>
   <form
     class=""
@@ -18,7 +18,7 @@ exports[`Form snapshots should render Form 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Form snapshots should render Form when is not valid 1`] = `
+exports[`Form snapshots > should render Form when is not valid 1`] = `
 <DocumentFragment>
   <form
     class=""
@@ -36,7 +36,7 @@ exports[`Form snapshots should render Form when is not valid 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Form snapshots should render Form with not parsed value 1`] = `
+exports[`Form snapshots > should render Form with not parsed value 1`] = `
 <DocumentFragment>
   <form
     class=""
@@ -54,7 +54,7 @@ exports[`Form snapshots should render Form with not parsed value 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Form snapshots should render with init form 1`] = `
+exports[`Form snapshots > should render with init form 1`] = `
 <DocumentFragment>
   <form
     class=""
@@ -72,7 +72,7 @@ exports[`Form snapshots should render with init form 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Form snapshots should render with passed e2evalue 1`] = `
+exports[`Form snapshots > should render with passed e2evalue 1`] = `
 <DocumentFragment>
   <form
     class=""

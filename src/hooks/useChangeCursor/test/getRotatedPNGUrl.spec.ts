@@ -4,15 +4,17 @@ import { getRotatedPNGUrl } from '../utils';
 describe('getRotatedPNGUrl', () => {
   it(`should draw the cursor image rotated onto a canvas and return its data url`, () => {
     // mock
-    const translate = jest.fn();
-    const rotate = jest.fn();
-    const drawImage = jest.fn();
+    const translate = vi.fn();
+    const rotate = vi.fn();
+    const drawImage = vi.fn();
 
     // spy
-    jest
-      .spyOn(HTMLCanvasElement.prototype, 'getContext')
-      .mockReturnValue({ drawImage, rotate, translate } as unknown as CanvasRenderingContext2D);
-    jest.spyOn(HTMLCanvasElement.prototype, 'toDataURL').mockReturnValue('data:image/png;base64,mock');
+    vi.spyOn(HTMLCanvasElement.prototype, 'getContext').mockReturnValue({
+      drawImage,
+      rotate,
+      translate,
+    } as unknown as CanvasRenderingContext2D);
+    vi.spyOn(HTMLCanvasElement.prototype, 'toDataURL').mockReturnValue('data:image/png;base64,mock');
 
     // before
     const result = getRotatedPNGUrl(90, 'cursor');

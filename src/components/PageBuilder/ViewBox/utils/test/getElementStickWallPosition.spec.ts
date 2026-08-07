@@ -4,8 +4,8 @@ import { ElementStickWallPosition } from '../../types/enums';
 // utils
 import { getElementStickWallPosition } from '../getElementStickWallPosition';
 
-jest.mock('lodash', () => ({
-  ...jest.requireActual('lodash'),
+vi.mock('lodash', async (importOriginal) => ({
+  ...((await importOriginal()) as any).default,
   defer: (callback: any): any => callback(),
 }));
 

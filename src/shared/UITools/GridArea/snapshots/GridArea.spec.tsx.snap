@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`GridArea snapshots should render GridArea 1`] = `
+exports[`GridArea snapshots > should render GridArea 1`] = `
 <DocumentFragment>
   <div
     class="GridArea"
@@ -2259,7 +2259,7 @@ exports[`GridArea snapshots should render GridArea 1`] = `
 </DocumentFragment>
 `;
 
-exports[`GridArea snapshots should render when exceed 10x10 1`] = `
+exports[`GridArea snapshots > should render when exceed 10x10 1`] = `
 <DocumentFragment>
   <div
     class="GridArea"
@@ -2272,403 +2272,307 @@ exports[`GridArea snapshots should render when exceed 10x10 1`] = `
     >
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: 5px; border-top-right-radius: none;"
+        style="border-top-left-radius: 5px;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: 5px;"
+        style="border-top-right-radius: 5px;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: 5px; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
+        style="border-bottom-left-radius: 5px;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: none; border-top-left-radius: none; border-top-right-radius: none;"
       />
       <div
         class="Cells__cell"
-        style="border-bottom-left-radius: none; border-bottom-right-radius: 5px; border-top-left-radius: none; border-top-right-radius: none;"
+        style="border-bottom-right-radius: 5px;"
       />
       <small
         class="Cells__sizes Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -4914,7 +4818,7 @@ exports[`GridArea snapshots should render when exceed 10x10 1`] = `
 </DocumentFragment>
 `;
 
-exports[`GridArea snapshots should render wner popover selected 1`] = `
+exports[`GridArea snapshots > should render wner popover selected 1`] = `
 <DocumentFragment>
   <div
     class="GridArea"

@@ -4,7 +4,7 @@ import { renderHook } from '@testing-library/react';
 // hooks
 import { useChangeColorEvent } from '../useChangeColorEvent';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('useChangeColorEvent', () => {
   it(`should trigger on change`, () => {

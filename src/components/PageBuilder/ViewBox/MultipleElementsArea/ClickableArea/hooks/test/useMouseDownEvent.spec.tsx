@@ -20,7 +20,7 @@ import { MouseButton } from 'types';
 import { getProviderWrapper } from 'test';
 
 const cursorPosition = { current: BASE_2D } as RefObject<T2DCoordinates>;
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 const stateMock = {
   ...pageBuilderStateMock,

@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`MultipleElementsArea snapshots should not render MultipleElementsArea 1`] = `<DocumentFragment />`;
+exports[`MultipleElementsArea snapshots > should not render MultipleElementsArea 1`] = `<DocumentFragment />`;
 
-exports[`MultipleElementsArea snapshots should render MultipleElementsArea 1`] = `
+exports[`MultipleElementsArea snapshots > should render MultipleElementsArea 1`] = `
 <DocumentFragment>
   <svg
     class="ClickableArea"

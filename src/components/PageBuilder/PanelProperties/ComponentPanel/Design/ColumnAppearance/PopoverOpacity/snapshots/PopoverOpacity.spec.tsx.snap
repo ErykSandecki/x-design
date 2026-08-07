@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`PopoverOpacity snapshots should render PopoverOpacity 1`] = `
+exports[`PopoverOpacity snapshots > should render PopoverOpacity 1`] = `
 <DocumentFragment>
   <div
     class="PopoverItem"
@@ -31,7 +31,7 @@ exports[`PopoverOpacity snapshots should render PopoverOpacity 1`] = `
 </DocumentFragment>
 `;
 
-exports[`PopoverOpacity snapshots should render with mixed value 1`] = `
+exports[`PopoverOpacity snapshots > should render with mixed value 1`] = `
 <DocumentFragment>
   <div
     class="PopoverItem"

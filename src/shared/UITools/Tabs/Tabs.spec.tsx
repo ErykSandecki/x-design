@@ -17,7 +17,7 @@ import { TTab } from './types';
 // utils
 import { getByE2EAttribute } from 'test';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 const tabs: Array<TTab> = [
   {
     labelTranslationKey: 'label',

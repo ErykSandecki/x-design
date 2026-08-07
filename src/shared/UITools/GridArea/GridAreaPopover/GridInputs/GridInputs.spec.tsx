@@ -10,7 +10,7 @@ import { E2EAttribute, KeyboardKeys } from 'types';
 // utils
 import { customRender, getByE2EAttribute } from 'test';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('GridInputs snapshots', () => {
   it('should render GridInputs', () => {
@@ -72,7 +72,6 @@ describe('GridInputs behaviors', () => {
       bubbles: true,
       cancelable: true,
       shiftKey: false,
-      view: window,
     });
     Object.defineProperty(mouseMoveEvent, 'movementX', { value: 200 });
 

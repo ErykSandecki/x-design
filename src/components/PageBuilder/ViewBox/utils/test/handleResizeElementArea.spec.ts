@@ -9,7 +9,7 @@ import { MouseMode } from 'types/enums/mouseMode';
 import { handleResizeElementArea } from '../handleResizeElementArea';
 import { possibleElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('handleResizeElementArea', () => {
   it(`should resize frame`, () => {

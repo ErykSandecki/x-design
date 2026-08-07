@@ -4,7 +4,7 @@ import { fieldMock } from 'test/mocks/reducer/reduxHookFormMock';
 // utils
 import { triggerSubmitForm } from '../triggerSubmitForm';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('triggerSubmitForm', () => {
   it('should trigger submit form', () => {

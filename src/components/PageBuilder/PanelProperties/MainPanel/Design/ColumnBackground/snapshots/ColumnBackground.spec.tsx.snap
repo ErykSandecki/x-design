@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ColumnBackground snapshots should render ColumnBackground 1`] = `
+exports[`ColumnBackground snapshots > should render ColumnBackground 1`] = `
 <DocumentFragment>
   <div
     class="SectionColumn"
@@ -8,14 +8,14 @@ exports[`ColumnBackground snapshots should render ColumnBackground 1`] = `
   >
     <div
       class="SectionColumnLabels"
-      style="width: calc(100% - 24px - 0px - 8px);"
+      style="width: calc(100% - 32px);"
     />
     <div
       class="SectionColumn__row"
     >
       <div
         class="SectionColumnContent SectionColumnContent--single"
-        style="width: calc(100% - 24px - 0px - 8px);"
+        style="width: calc(100% - 32px);"
       >
         <div
           class="FieldGroup"

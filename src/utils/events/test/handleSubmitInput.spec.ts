@@ -6,7 +6,7 @@ import { KeyboardKeys } from '../../../types/enums';
 // utils
 import { handleSubmitInput } from '../handleSubmitInput';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('handleSubmitInput', () => {
   it('should trigger blur if key is correct & object exists', () => {

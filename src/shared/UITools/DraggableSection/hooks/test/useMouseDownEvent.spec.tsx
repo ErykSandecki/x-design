@@ -3,7 +3,7 @@ import { renderHook } from '@testing-library/react';
 // hooks
 import { useMouseDownEvent } from '../useMouseDownEvent';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('useMouseDownEvent', () => {
   it(`should trigger event`, () => {

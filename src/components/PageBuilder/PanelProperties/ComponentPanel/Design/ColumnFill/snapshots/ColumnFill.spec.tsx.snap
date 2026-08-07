@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ColumnFill snapshots should render ColumnFill 1`] = `
+exports[`ColumnFill snapshots > should render ColumnFill 1`] = `
 <DocumentFragment>
   <div
     class="DraggableSection"
@@ -154,7 +154,7 @@ exports[`ColumnFill snapshots should render ColumnFill 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ColumnFill snapshots should render when mixed 1`] = `
+exports[`ColumnFill snapshots > should render when mixed 1`] = `
 <DocumentFragment>
   <small
     class="Typography Typography--neutral-2 Typography--regular Typography--normal Typography--small"

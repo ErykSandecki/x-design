@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`MainPanel snapshots should render MainPanel 1`] = `
+exports[`MainPanel snapshots > should render MainPanel 1`] = `
 <DocumentFragment>
   <div
     class="Section"
@@ -26,14 +26,14 @@ exports[`MainPanel snapshots should render MainPanel 1`] = `
     >
       <div
         class="SectionColumnLabels"
-        style="width: calc(100% - 24px - 0px - 8px);"
+        style="width: calc(100% - 32px);"
       />
       <div
         class="SectionColumn__row"
       >
         <div
           class="SectionColumnContent SectionColumnContent--single"
-          style="width: calc(100% - 24px - 0px - 8px);"
+          style="width: calc(100% - 32px);"
         >
           <div
             class="FieldGroup"
@@ -150,4 +150,4 @@ exports[`MainPanel snapshots should render MainPanel 1`] = `
 </DocumentFragment>
 `;
 
-exports[`MainPanel snapshots should render proptype section 1`] = `<DocumentFragment />`;
+exports[`MainPanel snapshots > should render proptype section 1`] = `<DocumentFragment />`;

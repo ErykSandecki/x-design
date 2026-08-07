@@ -6,7 +6,7 @@ import { useMouseMoveEvent } from '../useMouseMoveEvent';
 // others
 import { SEPARATOR } from '../../constants';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('useMouseMoveEvent', () => {
   it(`should handle mouse move`, () => {

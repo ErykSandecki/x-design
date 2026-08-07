@@ -13,7 +13,7 @@ import { E2EAttribute } from 'types/e2e';
 // utils
 import { customRender, getByE2EAttribute } from 'test/testHelpers';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('Panel snapshots', () => {
   it('should render Panel', () => {
@@ -43,7 +43,7 @@ describe('Panel snapshots', () => {
 
 describe('Panel behaviors', () => {
   beforeEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   it('should change visibility after click close icon', () => {

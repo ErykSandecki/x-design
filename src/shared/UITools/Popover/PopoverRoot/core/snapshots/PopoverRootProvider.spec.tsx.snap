@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`PopoverRootProvider snapshots should redner PopoverRootProvider 1`] = `
+exports[`PopoverRootProvider snapshots > should redner PopoverRootProvider 1`] = `
 <DocumentFragment>
   children
 </DocumentFragment>

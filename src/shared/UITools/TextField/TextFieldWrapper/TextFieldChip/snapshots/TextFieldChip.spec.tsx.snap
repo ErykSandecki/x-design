@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`TextFieldChip snapshots should not render 1`] = `<DocumentFragment />`;
+exports[`TextFieldChip snapshots > should not render 1`] = `<DocumentFragment />`;
 
-exports[`TextFieldChip snapshots should render TextFieldChip 1`] = `
+exports[`TextFieldChip snapshots > should render TextFieldChip 1`] = `
 <DocumentFragment>
   <div
     class="Chip className TextFieldChip"

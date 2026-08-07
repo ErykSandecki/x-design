@@ -1,7 +1,7 @@
 // utils
 import { extractColors } from '../extractColors';
 
-jest.mock('html2canvas', () => ({
+vi.mock('html2canvas', () => ({
   __esModule: true,
   default: async (): Promise<any> =>
     new Promise((resolve) =>

@@ -9,7 +9,7 @@ import { SELECT_ELEMENTS } from 'store/pageBuilder/actionsType';
 // utils
 import { handleSelectElement } from '../handleSelectElement';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('handleSelectElement', () => {
   it(`should add element to selection`, () => {

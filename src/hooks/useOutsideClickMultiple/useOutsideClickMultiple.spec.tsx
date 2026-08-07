@@ -7,7 +7,7 @@ import { useOutsideClickMultiple } from './useOutsideClickMultiple';
 // types
 import { KeyboardKeys } from 'types';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('useOutsideClickMultiple', () => {
   const ref1 = { current: { contains: () => false } } as RefObject<any>;

@@ -1,9 +1,10 @@
 // types
 import { TObject } from 'types';
+import type { Mock } from 'vitest';
 
-export const mockAll = (pathName: string): TObject<jest.Mock<any, any>> => {
-  const obj = jest.requireActual(pathName);
-  const { mapValues } = jest.requireActual('lodash');
+export const mockAll = async (importOriginal: () => Promise<unknown>): Promise<TObject<Mock>> => {
+  const obj = await importOriginal();
+  const { mapValues } = await vi.importActual<typeof import('lodash')>('lodash');
 
-  return mapValues(obj, () => jest.fn());
+  return mapValues(obj as object, () => vi.fn()) as TObject<Mock>;
 };

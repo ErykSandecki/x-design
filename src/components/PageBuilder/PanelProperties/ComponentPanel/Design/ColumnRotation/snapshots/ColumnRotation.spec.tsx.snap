@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
+exports[`ColumnRotation snapshots > should render ColumnRotation 1`] = `
 <DocumentFragment>
   <div
     class="SectionColumn"
@@ -8,7 +8,7 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
   >
     <div
       class="SectionColumnLabels"
-      style="width: calc(100% - 24px - 0px - 8px);"
+      style="width: calc(100% - 32px);"
     >
       <small
         class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -23,7 +23,7 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
     >
       <div
         class="SectionColumnContent SectionColumnContent--two-inputs"
-        style="width: calc(100% - 24px - 0px - 8px);"
+        style="width: calc(100% - 32px);"
       >
         <div
           class="TextField"
@@ -171,7 +171,7 @@ exports[`ColumnRotation snapshots should render ColumnRotation 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
+exports[`ColumnRotation snapshots > should render when values are mixed 1`] = `
 <DocumentFragment>
   <div
     class="SectionColumn"
@@ -179,7 +179,7 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
   >
     <div
       class="SectionColumnLabels"
-      style="width: calc(100% - 24px - 0px - 8px);"
+      style="width: calc(100% - 32px);"
     >
       <small
         class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -194,7 +194,7 @@ exports[`ColumnRotation snapshots should render when values are mixed 1`] = `
     >
       <div
         class="SectionColumnContent SectionColumnContent--two-inputs"
-        style="width: calc(100% - 24px - 0px - 8px);"
+        style="width: calc(100% - 32px);"
       >
         <div
           class="TextField"

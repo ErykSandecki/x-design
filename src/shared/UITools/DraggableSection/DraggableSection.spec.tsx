@@ -9,9 +9,9 @@ import { E2EAttribute } from 'types';
 // utils
 import { customRender, getByE2EAttribute } from 'test';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
-jest.mock('./hooks/useDraggableSectionEvents', () => ({
+vi.mock('./hooks/useDraggableSectionEvents', () => ({
   useDraggableSectionEvents: (): any => ({
     draggableItem: -1,
     isDraggable: false,

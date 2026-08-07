@@ -5,17 +5,20 @@ import { useContext } from 'react';
 // hooks
 import { useScrollLock } from './useScrollLock';
 
-const mockCallBack = jest.fn();
+// types
+import type { Mock } from 'vitest';
 
-jest.mock('react', () => ({
-  ...(jest.requireActual('react') as object),
-  useContext: jest.fn(),
+const mockCallBack = vi.fn();
+
+vi.mock('react', async (importOriginal) => ({
+  ...((await importOriginal()) as object),
+  useContext: vi.fn(),
 }));
 
 describe('useScrollLock', () => {
   it(`should return scroll lock state`, () => {
     // mock
-    (useContext as jest.Mock).mockImplementation(() => ({
+    (useContext as Mock).mockImplementation(() => ({
       scrollLock: false,
       setScrollLock: noop,
     }));
@@ -29,7 +32,7 @@ describe('useScrollLock', () => {
 
   it(`should return lock html and body`, () => {
     // mock
-    (useContext as jest.Mock).mockImplementation(() => ({
+    (useContext as Mock).mockImplementation(() => ({
       scrollLock: true,
       setScrollLock: noop,
     }));
@@ -46,7 +49,7 @@ describe('useScrollLock', () => {
 
   it(`should trigger lock function`, () => {
     // mock
-    (useContext as jest.Mock).mockImplementation(() => ({
+    (useContext as Mock).mockImplementation(() => ({
       scrollLock: true,
       setScrollLock: mockCallBack,
     }));

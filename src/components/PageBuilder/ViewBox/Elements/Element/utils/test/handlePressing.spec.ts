@@ -3,7 +3,7 @@ import { MouseEvent } from 'react';
 // utils
 import { handlePressing } from '../handlePressing';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('handlePressing', () => {
   it(`should trigger event`, () => {

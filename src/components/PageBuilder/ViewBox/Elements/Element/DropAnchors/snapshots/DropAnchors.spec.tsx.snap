@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`DropAnchors snapshots should render DropAnchors 1`] = `
+exports[`DropAnchors snapshots > should render DropAnchors 1`] = `
 <DocumentFragment>
   <div
     class="DropAnchors"
@@ -29,7 +29,7 @@ exports[`DropAnchors snapshots should render DropAnchors 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DropAnchors snapshots should render some prompt when grid for bottom 1`] = `
+exports[`DropAnchors snapshots > should render some prompt when grid for bottom 1`] = `
 <DocumentFragment>
   <div
     class="DropAnchors"
@@ -66,7 +66,7 @@ exports[`DropAnchors snapshots should render some prompt when grid for bottom 1`
 </DocumentFragment>
 `;
 
-exports[`DropAnchors snapshots should render some prompt when grid for left 1`] = `
+exports[`DropAnchors snapshots > should render some prompt when grid for left 1`] = `
 <DocumentFragment>
   <div
     class="DropAnchors"
@@ -103,7 +103,7 @@ exports[`DropAnchors snapshots should render some prompt when grid for left 1`] 
 </DocumentFragment>
 `;
 
-exports[`DropAnchors snapshots should render some prompt when grid for right 1`] = `
+exports[`DropAnchors snapshots > should render some prompt when grid for right 1`] = `
 <DocumentFragment>
   <div
     class="DropAnchors"
@@ -140,7 +140,7 @@ exports[`DropAnchors snapshots should render some prompt when grid for right 1`]
 </DocumentFragment>
 `;
 
-exports[`DropAnchors snapshots should render some prompt when grid for top 1`] = `
+exports[`DropAnchors snapshots > should render some prompt when grid for top 1`] = `
 <DocumentFragment>
   <div
     class="DropAnchors"
@@ -177,7 +177,7 @@ exports[`DropAnchors snapshots should render some prompt when grid for top 1`] =
 </DocumentFragment>
 `;
 
-exports[`DropAnchors snapshots should render with next prompt for bottom 1`] = `
+exports[`DropAnchors snapshots > should render with next prompt for bottom 1`] = `
 <DocumentFragment>
   <div
     class="DropAnchors"
@@ -206,7 +206,7 @@ exports[`DropAnchors snapshots should render with next prompt for bottom 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DropAnchors snapshots should render with next prompt for right 1`] = `
+exports[`DropAnchors snapshots > should render with next prompt for right 1`] = `
 <DocumentFragment>
   <div
     class="DropAnchors"
@@ -235,7 +235,7 @@ exports[`DropAnchors snapshots should render with next prompt for right 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DropAnchors snapshots should render with prev prompt for left 1`] = `
+exports[`DropAnchors snapshots > should render with prev prompt for left 1`] = `
 <DocumentFragment>
   <div
     class="DropAnchors"
@@ -264,7 +264,7 @@ exports[`DropAnchors snapshots should render with prev prompt for left 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DropAnchors snapshots should render with prev prompt for top 1`] = `
+exports[`DropAnchors snapshots > should render with prev prompt for top 1`] = `
 <DocumentFragment>
   <div
     class="DropAnchors"

@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Design snapshots should render Design 1`] = `
+exports[`Design snapshots > should render Design 1`] = `
 <DocumentFragment>
   <div
     class="Section"
@@ -12,14 +12,14 @@ exports[`Design snapshots should render Design 1`] = `
     >
       <div
         class="SectionColumnLabels"
-        style="width: calc(100% - 48px - 2.5px - 8px);"
+        style="width: calc(100% - 58.5px);"
       />
       <div
         class="SectionColumn__row"
       >
         <div
           class="SectionColumnContent SectionColumnContent--single"
-          style="width: calc(100% - 48px - 2.5px - 8px);"
+          style="width: calc(100% - 58.5px);"
         >
           <small
             class="Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -120,7 +120,7 @@ exports[`Design snapshots should render Design 1`] = `
     >
       <div
         class="SectionColumnLabels"
-        style="width: calc(100% - 24px - 0px - 8px);"
+        style="width: calc(100% - 32px);"
       >
         <small
           class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -135,7 +135,7 @@ exports[`Design snapshots should render Design 1`] = `
       >
         <div
           class="SectionColumnContent SectionColumnContent--two-inputs"
-          style="width: calc(100% - 24px - 0px - 8px);"
+          style="width: calc(100% - 32px);"
         >
           <div
             class="ButtonGroup"
@@ -329,7 +329,7 @@ exports[`Design snapshots should render Design 1`] = `
     >
       <div
         class="SectionColumnLabels"
-        style="width: calc(100% - 24px - 0px - 8px);"
+        style="width: calc(100% - 32px);"
       >
         <small
           class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -344,7 +344,7 @@ exports[`Design snapshots should render Design 1`] = `
       >
         <div
           class="SectionColumnContent SectionColumnContent--two-inputs"
-          style="width: calc(100% - 24px - 0px - 8px);"
+          style="width: calc(100% - 32px);"
         >
           <div
             class="TextField"
@@ -452,7 +452,7 @@ exports[`Design snapshots should render Design 1`] = `
     >
       <div
         class="SectionColumnLabels"
-        style="width: calc(100% - 24px - 0px - 8px);"
+        style="width: calc(100% - 32px);"
       >
         <small
           class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -467,7 +467,7 @@ exports[`Design snapshots should render Design 1`] = `
       >
         <div
           class="SectionColumnContent SectionColumnContent--two-inputs"
-          style="width: calc(100% - 24px - 0px - 8px);"
+          style="width: calc(100% - 32px);"
         >
           <div
             class="TextField"
@@ -696,7 +696,7 @@ exports[`Design snapshots should render Design 1`] = `
     >
       <div
         class="SectionColumnLabels"
-        style="width: calc(100% - 24px - 0px - 8px);"
+        style="width: calc(100% - 32px);"
       >
         <small
           class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -711,7 +711,7 @@ exports[`Design snapshots should render Design 1`] = `
       >
         <div
           class="SectionColumnContent SectionColumnContent--single"
-          style="width: calc(100% - 24px - 0px - 8px);"
+          style="width: calc(100% - 32px);"
         >
           <div
             class="ToggleButtonGroup ToggleButtonGroup--full-width"
@@ -878,7 +878,7 @@ exports[`Design snapshots should render Design 1`] = `
     >
       <div
         class="SectionColumnLabels"
-        style="width: calc(100% - 24px - 0px - 8px);"
+        style="width: calc(100% - 32px);"
       >
         <small
           class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -893,7 +893,7 @@ exports[`Design snapshots should render Design 1`] = `
       >
         <div
           class="SectionColumnContent SectionColumnContent--two-inputs"
-          style="width: calc(100% - 24px - 0px - 8px);"
+          style="width: calc(100% - 32px);"
         >
           <div
             class="TextField"
@@ -1299,7 +1299,7 @@ exports[`Design snapshots should render Design 1`] = `
     >
       <div
         class="SectionColumnLabels"
-        style="width: calc(100% - 24px - 0px - 8px);"
+        style="width: calc(100% - 32px);"
       >
         <small
           class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -1321,7 +1321,7 @@ exports[`Design snapshots should render Design 1`] = `
       >
         <div
           class="SectionColumnContent SectionColumnContent--one-by-two"
-          style="width: calc(100% - 24px - 0px - 8px);"
+          style="width: calc(100% - 32px);"
         >
           <div
             class="AlignmentArea"
@@ -1886,7 +1886,7 @@ exports[`Design snapshots should render Design 1`] = `
     >
       <div
         class="SectionColumnLabels"
-        style="width: calc(100% - 24px - 0px - 8px);"
+        style="width: calc(100% - 32px);"
       >
         <small
           class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -1901,7 +1901,7 @@ exports[`Design snapshots should render Design 1`] = `
       >
         <div
           class="SectionColumnContent SectionColumnContent--two-inputs"
-          style="width: calc(100% - 24px - 0px - 8px);"
+          style="width: calc(100% - 32px);"
         >
           <div
             class="TextField"
@@ -2125,14 +2125,14 @@ exports[`Design snapshots should render Design 1`] = `
     >
       <div
         class="SectionColumnLabels"
-        style="width: calc(100% - 24px - 0px - 8px);"
+        style="width: calc(100% - 32px);"
       />
       <div
         class="SectionColumn__row"
       >
         <div
           class="SectionColumnContent SectionColumnContent--single"
-          style="width: calc(100% - 24px - 0px - 8px);"
+          style="width: calc(100% - 32px);"
         >
           <div
             class="Checkbox"
@@ -2599,7 +2599,7 @@ exports[`Design snapshots should render Design 1`] = `
     >
       <div
         class="SectionColumnLabels"
-        style="width: calc(100% - 24px - 0px - 8px);"
+        style="width: calc(100% - 32px);"
       >
         <small
           class="SectionColumnLabels__label Typography Typography--neutral-1 Typography--regular Typography--normal Typography--small"
@@ -2614,7 +2614,7 @@ exports[`Design snapshots should render Design 1`] = `
       >
         <div
           class="SectionColumnContent SectionColumnContent--two-inputs"
-          style="width: calc(100% - 24px - 0px - 8px);"
+          style="width: calc(100% - 32px);"
         >
           <div
             class="TextField"

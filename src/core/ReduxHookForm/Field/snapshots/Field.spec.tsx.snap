@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Field snapshots should render as boolean type 1`] = `
+exports[`Field snapshots > should render as boolean type 1`] = `
 <DocumentFragment>
   <input
     type="checkbox"
@@ -8,7 +8,7 @@ exports[`Field snapshots should render as boolean type 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Field snapshots should render as component 1`] = `
+exports[`Field snapshots > should render as component 1`] = `
 <DocumentFragment>
   <input
     type="text"
@@ -16,7 +16,7 @@ exports[`Field snapshots should render as component 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Field snapshots should render as number type 1`] = `
+exports[`Field snapshots > should render as number type 1`] = `
 <DocumentFragment>
   <input
     type="text"
@@ -24,7 +24,7 @@ exports[`Field snapshots should render as number type 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Field snapshots should render when name is not defined & redux hook form empty 1`] = `
+exports[`Field snapshots > should render when name is not defined & redux hook form empty 1`] = `
 <DocumentFragment>
   <input
     type="text"
@@ -32,7 +32,7 @@ exports[`Field snapshots should render when name is not defined & redux hook for
 </DocumentFragment>
 `;
 
-exports[`Field snapshots should render when ref is passed 1`] = `
+exports[`Field snapshots > should render when ref is passed 1`] = `
 <DocumentFragment>
   <input
     type="text"
@@ -40,7 +40,7 @@ exports[`Field snapshots should render when ref is passed 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Field snapshots should render with passed default value 1`] = `
+exports[`Field snapshots > should render with passed default value 1`] = `
 <DocumentFragment>
   <input
     type="text"
@@ -48,7 +48,7 @@ exports[`Field snapshots should render with passed default value 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Field snapshots should render with passed function to format value on init 1`] = `
+exports[`Field snapshots > should render with passed function to format value on init 1`] = `
 <DocumentFragment>
   <input
     type="text"

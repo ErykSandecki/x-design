@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ClickableArea snapshots should not render when isMultipleMoving 1`] = `<DocumentFragment />`;
+exports[`ClickableArea snapshots > should not render when isMultipleMoving 1`] = `<DocumentFragment />`;
 
-exports[`ClickableArea snapshots should render ClickableArea 1`] = `
+exports[`ClickableArea snapshots > should render ClickableArea 1`] = `
 <DocumentFragment>
   <svg
     class="ClickableArea"

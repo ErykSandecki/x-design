@@ -14,8 +14,8 @@ import { TooltipPosition } from './enums';
 import { createHtmlElement, enumToArray } from 'utils';
 import { sleep } from 'test';
 
-jest.mock('utils', () => ({
-  ...jest.requireActual('utils'),
+vi.mock('utils', async (importOriginal) => ({
+  ...(await importOriginal()),
   isJestRunning: (): any => false,
 }));
 

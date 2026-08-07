@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`RefsProvider snapshots should redner RefsProvider 1`] = `
+exports[`RefsProvider snapshots > should redner RefsProvider 1`] = `
 <DocumentFragment>
   children
 </DocumentFragment>

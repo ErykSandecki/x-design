@@ -7,9 +7,9 @@ import { UITools } from 'shared';
 // utils
 import { customRender } from 'test';
 
-jest.mock('react-redux', () => ({
-  ...jest.requireActual('react-redux'),
-  useDispatch: jest.fn(),
+vi.mock('react-redux', async (importOriginal) => ({
+  ...(await importOriginal()),
+  useDispatch: vi.fn(),
 }));
 
 describe('PopoverBlendMode snapshots', () => {

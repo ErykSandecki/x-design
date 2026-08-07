@@ -16,7 +16,7 @@ import { store as storeToMock } from 'store/store';
 // types
 import { TObject } from 'types';
 
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 const rectCoordinates = {
   current: {
     [elementMock.id]: {
@@ -43,8 +43,8 @@ const stateMock = {
   },
 };
 
-jest.mock('react-redux', () => ({
-  ...jest.requireActual('react-redux'),
+vi.mock('react-redux', async (importOriginal) => ({
+  ...(await importOriginal()),
   useDispatch: (): any => mockCallBack,
 }));
 

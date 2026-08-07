@@ -1,5 +1,7 @@
-jest.mock('store/appInitializer/saga', () =>
-  jest.requireActual('test/mockAll').mockAll('../store/appInitializer/saga'),
-);
+vi.mock('store/appInitializer/saga', async (importOriginal) => {
+  const { mockAll } = await vi.importActual<typeof import('test/mockAll')>('test/mockAll');
+
+  return mockAll(importOriginal);
+});
 
 export {};

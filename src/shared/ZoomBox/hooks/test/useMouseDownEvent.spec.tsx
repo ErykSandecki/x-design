@@ -12,7 +12,7 @@ import { CURSOR_STATES } from 'constant/constants';
 import { MouseButton } from 'types';
 
 const cursorPosition = { current: BASE_2D } as RefObject<T2DCoordinates>;
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 
 describe('useMouseDownEvent', () => {
   it(`should save mouse position after trigger mouse down`, () => {

@@ -24,19 +24,19 @@ const cursorPosition = { current: BASE_2D } as RefObject<T2DCoordinates>;
 const cursorPositionBase = {
   current: { x: 10, y: 10 },
 } as RefObject<T2DCoordinates>;
-const mockCallBack = jest.fn();
+const mockCallBack = vi.fn();
 const stateMock = {
   ...pageBuilderStateMock,
 };
 
-jest.mock('react-redux', () => ({
-  ...jest.requireActual('react-redux'),
+vi.mock('react-redux', async (importOriginal) => ({
+  ...(await importOriginal()),
   useDispatch: (): any => mockCallBack,
 }));
 
 describe('useMouseMoveEvent', () => {
   beforeEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   it(`should trigger event`, () => {
