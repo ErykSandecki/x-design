@@ -13,6 +13,7 @@ import { REDUCER_KEY as PAGE_BUILDER } from '../../../slice';
 
 // types
 import { AlignmentLayout, LayoutType } from 'types';
+import { TPageBuilderState } from 'store/pageBuilder/types';
 
 // utils
 import { handleChangeLayout } from '../handleChangeLayout';
@@ -39,7 +40,7 @@ describe('handleChangeLayout', () => {
   it(`should return data with changed layout type`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-    const state = {
+    const state: TPageBuilderState = {
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -99,7 +100,7 @@ describe('handleChangeLayout', () => {
   it(`should return data with changed layout type`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-    const state = {
+    const state: TPageBuilderState = {
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -161,7 +162,7 @@ describe('handleChangeLayout', () => {
   it(`should return data with changed layout type`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-    const state = {
+    const state: TPageBuilderState = {
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,

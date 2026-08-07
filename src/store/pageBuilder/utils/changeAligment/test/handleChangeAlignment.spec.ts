@@ -11,6 +11,7 @@ import { REDUCER_KEY as PAGE_BUILDER } from '../../../slice';
 
 // types
 import { AlignmentHorizontal, AlignmentVertical } from 'types';
+import { TPageBuilderState } from 'store/pageBuilder/types';
 
 // utils
 import { handleChangeAlignment } from '../handleChangeAlignment';
@@ -44,7 +45,7 @@ describe('handleChangeAlignment', () => {
       vertical: AlignmentVertical.center,
     };
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-    const state = {
+    const state: TPageBuilderState = {
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,

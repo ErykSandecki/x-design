@@ -9,6 +9,9 @@ import {
 // others
 import { REDUCER_KEY as PAGE_BUILDER } from '../../slice';
 
+// types
+import { TPageBuilderState } from 'store/pageBuilder/types';
+
 // utils
 import { handleChangePosition } from '../handleChangePosition';
 
@@ -37,7 +40,7 @@ describe('handleChangePosition', () => {
   it(`should change on absolute position`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-    const state = {
+    const state: TPageBuilderState = {
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -126,7 +129,7 @@ describe('handleChangePosition', () => {
   it(`should change on relative position`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-    const state = {
+    const state: TPageBuilderState = {
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
