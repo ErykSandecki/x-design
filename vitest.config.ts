@@ -5,7 +5,7 @@ import { defineConfig } from 'vitest/config';
 import { fileURLToPath } from 'url';
 
 // utils
-import { sharedResolveAlias } from './vite.shared';
+import { sharedResolveAlias } from './config/vite.shared';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const assetMockPath = path.resolve(__dirname, '__mocks__/svgrMock.jsx');

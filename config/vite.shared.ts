@@ -3,8 +3,8 @@ import { fileURLToPath } from 'url';
 import { UserConfig } from 'vite';
 
 // utils
-import viteSvgReactComponent from './config/viteSvgReactComponent.js';
-import writeSassVariables from './config/generateSassVariables.js';
+import viteSvgReactComponent from './viteSvgReactComponent.js';
+import writeSassVariables from './generateSassVariables.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -17,13 +17,13 @@ export const sharedCssConfig: UserConfig['css'] = {
   preprocessorOptions: {
     scss: {
       additionalData: (content: string) => `@use 'xd-variables' as *;\n${content}`,
-      loadPaths: [path.resolve(__dirname, 'config/generated')],
+      loadPaths: [path.resolve(__dirname, 'generated')],
     },
   },
 };
 
 export const sharedResolveAlias: Record<string, string> = {
-  assets: path.resolve(__dirname, 'src/assets'),
+  assets: path.resolve(__dirname, '../src/assets'),
 };
 
 export { viteSvgReactComponent };

@@ -4,7 +4,7 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 import { mergeConfig } from 'vite';
 
 // utils
-import { sharedCssConfig, sharedResolveAlias } from '../vite.shared.ts';
+import { sharedCssConfig, sharedResolveAlias } from '../config/vite.shared.ts';
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
