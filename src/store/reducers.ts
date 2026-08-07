@@ -1,9 +1,9 @@
 import { combineReducers, Reducer } from '@reduxjs/toolkit';
 
 // store
-import appInitializer from './appInitializer/reducer';
-import pageBuilder from './pageBuilder/reducer';
-import reduxHookForm from './reduxHookForm/reducer';
+import appInitializer from './appInitializer/slice';
+import pageBuilder from './pageBuilder/slice';
+import reduxHookForm from './reduxHookForm/slice';
 
 // types
 import { TMainState } from 'types/reducers';

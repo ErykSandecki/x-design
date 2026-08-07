@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 
 // store
-import { setElementsGap } from 'store/pageBuilder/reducer';
+import { setElementsGap } from 'store/pageBuilder/slice';
 
 // types
 import { TGap } from 'types';

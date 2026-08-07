@@ -11,7 +11,7 @@ import { RefsProvider } from 'pages/PageBuilderPage/core/RefsProvider';
 import { elementMock, eventsMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
-import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/reducer';
+import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/slice';
 
 // store
 import { configureStore } from 'store/store';

@@ -5,7 +5,7 @@ import { AVAILABLE_LANGUAGES, DEFAULT_LANGUAGE, initI18n, LANGUAGE, LOCATION_API
 import { resources } from 'translations/resources';
 
 // store
-import { initLanguageSuccess, setIsAppLoaded } from './reducer';
+import { initLanguageSuccess, setIsAppLoaded } from './slice';
 
 export function* appInitSaga(): any {
   yield take(initLanguageSuccess);

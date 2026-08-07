@@ -4,7 +4,7 @@ import { RefObject } from 'react';
 // store
 import { selectedElementsSelector } from 'store/pageBuilder/selectors';
 import { store } from 'store';
-import { updateEventsStatus, updatePrevState } from 'store/pageBuilder/reducer';
+import { updateEventsStatus, updatePrevState } from 'store/pageBuilder/slice';
 
 // types
 

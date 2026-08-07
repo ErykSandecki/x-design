@@ -9,7 +9,7 @@ import { useMouseMoveEvent } from '../useMouseMoveEvent';
 
 // others
 import { BASE_2D } from 'shared';
-import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/reducer';
+import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/slice';
 
 // store
 import { configureStore } from 'store';

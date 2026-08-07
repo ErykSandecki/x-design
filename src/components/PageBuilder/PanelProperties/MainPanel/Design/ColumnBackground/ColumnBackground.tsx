@@ -7,7 +7,7 @@ import ColumnBackgroundButtonIcons from './ColumnBackgroundButtonIcons';
 import { UITools } from 'shared';
 
 // store
-import { changeBackground, updateEventsStatus } from 'store/pageBuilder/reducer';
+import { changeBackground, updateEventsStatus } from 'store/pageBuilder/slice';
 import { eventSelectorCreator, pageBackgroundSelectorCreator } from 'store/pageBuilder/selectors';
 
 // types

@@ -8,7 +8,7 @@ import { Icon, ScrubbableInput, Small, TE2EValue, UITools } from 'shared';
 import { MAX, PANEL_PROPERTIES_ID } from '../../../../constants';
 
 // store
-import { applyElementsType } from 'store/pageBuilder/reducer';
+import { applyElementsType } from 'store/pageBuilder/slice';
 
 // types
 import { ColorsTheme, TElement, TValueExtended } from 'types';

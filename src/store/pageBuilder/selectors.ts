@@ -3,7 +3,7 @@ import { get as getFp } from 'lodash/fp';
 import { get, head, size } from 'lodash';
 
 // store
-import { REDUCER_KEY } from './reducer';
+import { REDUCER_KEY } from './slice';
 
 // types
 import { TAlignment, TColor, TElement, TNestedKeyOf } from 'types';

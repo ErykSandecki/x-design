@@ -20,7 +20,7 @@ import { useViewBoxEvents } from './hooks/useViewBoxEvents';
 
 // store
 import { eventSelectorCreator, pageBackgroundSelectorCreator } from 'store/pageBuilder/selectors';
-import { setAreCoordinates } from 'store/pageBuilder/reducer';
+import { setAreCoordinates } from 'store/pageBuilder/slice';
 
 // styles
 import styles from './view-box.module.scss';

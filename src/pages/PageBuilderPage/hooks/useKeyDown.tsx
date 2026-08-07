@@ -8,7 +8,7 @@ import { KEYBOARD_SHORTCUTS } from '../keys';
 
 // store
 import { canRedoReduxHistorySelector, canUndoReduxHistorySelector } from 'store/pageBuilder/selectors';
-import { reducerHistoryRedo, reducerHistoryUndo } from 'store/pageBuilder/reducer';
+import { reducerHistoryRedo, reducerHistoryUndo } from 'store/pageBuilder/slice';
 
 // types
 import { MouseMode } from 'types';

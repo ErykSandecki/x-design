@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 
 // store
-import { changeLayoutGrid } from 'store/pageBuilder/reducer';
+import { changeLayoutGrid } from 'store/pageBuilder/slice';
 
 // types
 import { TElement } from 'types';

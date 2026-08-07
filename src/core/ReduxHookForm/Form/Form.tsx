@@ -3,7 +3,7 @@ import { forOwn, isEmpty, kebabCase } from 'lodash';
 import { useDispatch, useSelector } from 'react-redux';
 
 // store
-import { destroyForm, mountForm, submit, updateFormValidator } from '../../../store/reduxHookForm/reducer';
+import { destroyForm, mountForm, submit, updateFormValidator } from '../../../store/reduxHookForm/slice';
 import { fieldsSelectorCreator, formSelectorCreator } from '../../../store/reduxHookForm/selectors';
 
 // types

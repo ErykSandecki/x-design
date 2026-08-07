@@ -2,7 +2,7 @@
 import { appInitializerStateMock } from 'test/mocks/reducer/appInitializerMock';
 
 // others
-import { REDUCER_KEY as APP_INITIALIZER } from '../../reducer';
+import { REDUCER_KEY as APP_INITIALIZER } from '../../slice';
 
 // store
 import { languageSelector } from '../../selectors';

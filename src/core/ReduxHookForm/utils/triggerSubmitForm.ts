@@ -1,7 +1,7 @@
 import { Dispatch } from '@reduxjs/toolkit';
 
 // store
-import { submit, updateFormValidator } from 'store/reduxHookForm/reducer';
+import { submit, updateFormValidator } from 'store/reduxHookForm/slice';
 
 // types
 import { TFields } from 'store/reduxHookForm/types';

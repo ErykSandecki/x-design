@@ -8,7 +8,7 @@ import { useValidators } from '../useValidators';
 import { fieldMock } from 'test/mocks/reducer/reduxHookFormMock';
 
 // others
-import { REDUCER_KEY as REDUX_HOOK_FORM } from 'store/reduxHookForm/reducer';
+import { REDUCER_KEY as REDUX_HOOK_FORM } from 'store/reduxHookForm/slice';
 
 // store
 import { configureStore } from 'store/store';

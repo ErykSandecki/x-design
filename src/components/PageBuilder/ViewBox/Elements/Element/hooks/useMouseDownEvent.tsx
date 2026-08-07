@@ -2,7 +2,7 @@ import { MouseEvent, RefObject } from 'react';
 import { useDispatch } from 'react-redux';
 
 // store
-import { updatePrevState } from 'store/pageBuilder/reducer';
+import { updatePrevState } from 'store/pageBuilder/slice';
 
 // types
 import { MouseButton } from 'types';

@@ -9,7 +9,7 @@ import { TOOLTIP_TRANSLATION_KEY } from 'constant/constants';
 import { translationNameSpace as parentNameSpace } from '../constants';
 
 // store
-import { flipElements, rotateElements } from 'store/pageBuilder/reducer';
+import { flipElements, rotateElements } from 'store/pageBuilder/slice';
 
 // types
 import { TButtonGroup } from 'shared/UITools/ButtonGroup/types';

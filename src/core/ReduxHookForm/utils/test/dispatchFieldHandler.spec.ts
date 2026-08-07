@@ -1,5 +1,5 @@
 // store
-import { change } from '../../../../store/reduxHookForm/reducer';
+import { change } from '../../../../store/reduxHookForm/slice';
 
 // utils
 import { dispatchFieldHandler } from '../dispatchFieldHandler';

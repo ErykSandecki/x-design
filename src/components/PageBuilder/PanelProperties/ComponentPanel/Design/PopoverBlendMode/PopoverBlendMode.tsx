@@ -11,7 +11,7 @@ import { BLEND_MODES_STRUCTURE } from 'constant/blendModeStructure';
 import { COMMON_TRANSLATION_KEY } from 'constant/constants';
 
 // store
-import { changeProperties } from 'store/pageBuilder/reducer';
+import { changeProperties } from 'store/pageBuilder/slice';
 
 // types
 import { TElement } from 'types';

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
 // store
-import { setPendingField, updateAsyncErrors, updateSyncErrors } from 'store/reduxHookForm/reducer';
+import { setPendingField, updateAsyncErrors, updateSyncErrors } from 'store/reduxHookForm/slice';
 import { fieldsSelectorCreator, formAttributesSelectorCreator } from 'store/reduxHookForm/selectors';
 
 // types

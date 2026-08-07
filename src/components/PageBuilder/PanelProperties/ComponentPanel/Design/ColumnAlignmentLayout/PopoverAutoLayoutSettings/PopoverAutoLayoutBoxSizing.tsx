@@ -10,7 +10,7 @@ import { POPOVER_AUTO_LAYOUT_SETTINGS_ID } from '../constants';
 import { PREVIEW_BOX_SIZING_ID, translationNameSpace } from './constants';
 
 // store
-import { changeLayoutBoxSizing } from 'store/pageBuilder/reducer';
+import { changeLayoutBoxSizing } from 'store/pageBuilder/slice';
 
 // types
 import { TElement, TLayout } from 'types';

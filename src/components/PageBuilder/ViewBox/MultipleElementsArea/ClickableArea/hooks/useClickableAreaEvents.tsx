@@ -11,7 +11,7 @@ import { useOutsideClick } from 'hooks';
 import { BASE_2D } from 'shared';
 
 // store
-import { unselectElements } from 'store/pageBuilder/reducer';
+import { unselectElements } from 'store/pageBuilder/slice';
 
 // types
 import { TElement } from 'types';

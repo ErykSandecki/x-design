@@ -11,7 +11,7 @@ import {
   selectElements,
   setAreCoordinates,
   REDUCER_KEY as PAGE_BUILDER,
-} from '../../../reducer';
+} from '../../../slice';
 
 // types
 import { TPageBuilderState } from 'store/pageBuilder/types';

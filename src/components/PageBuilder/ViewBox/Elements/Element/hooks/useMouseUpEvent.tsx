@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 
 // store
-import { changeParent } from 'store/pageBuilder/reducer';
+import { changeParent } from 'store/pageBuilder/slice';
 
 export type TUseMouseUpEvent = void;
 

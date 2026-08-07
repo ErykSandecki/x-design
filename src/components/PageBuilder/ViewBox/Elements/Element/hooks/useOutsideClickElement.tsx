@@ -5,7 +5,7 @@ import { store } from 'store';
 
 // store
 import { multipleSelectedElementsSelector } from 'store/pageBuilder/selectors';
-import { unselectElement } from 'store/pageBuilder/reducer';
+import { unselectElement } from 'store/pageBuilder/slice';
 
 // types
 import { MouseButton } from 'types';

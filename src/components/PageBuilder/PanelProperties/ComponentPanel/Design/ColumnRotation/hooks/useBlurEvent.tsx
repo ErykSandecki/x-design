@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 
 // store
-import { rotateElements } from 'store/pageBuilder/reducer';
+import { rotateElements } from 'store/pageBuilder/slice';
 
 // types
 import { TElement } from 'types';

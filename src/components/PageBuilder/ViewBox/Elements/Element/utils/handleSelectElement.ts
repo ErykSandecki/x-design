@@ -2,7 +2,7 @@ import { Dispatch } from '@reduxjs/toolkit';
 import { MouseEvent } from 'react';
 
 // store
-import { selectElement, unselectElement, selectElements } from 'store/pageBuilder/reducer';
+import { selectElement, unselectElement, selectElements } from 'store/pageBuilder/slice';
 
 // types
 import { TSelectedElement } from 'store/pageBuilder/types';

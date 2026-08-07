@@ -8,7 +8,7 @@ import { UITools } from 'shared';
 import { TOOLTIP_TRANSLATION_KEY } from 'constant/constants';
 
 // store
-import { changeProperties } from 'store/pageBuilder/reducer';
+import { changeProperties } from 'store/pageBuilder/slice';
 
 // types
 import { LayoutType, TLayout } from 'types';

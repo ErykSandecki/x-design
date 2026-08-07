@@ -8,7 +8,7 @@ import ColumnBackground from './ColumnBackground';
 import { pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
-import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/reducer';
+import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/slice';
 
 // store
 import { configureStore } from 'store/store';

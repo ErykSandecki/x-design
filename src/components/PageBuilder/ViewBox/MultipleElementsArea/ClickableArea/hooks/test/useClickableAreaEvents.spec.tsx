@@ -9,7 +9,7 @@ import { pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // store
 import { configureStore } from 'store';
-import { unselectElements } from 'store/pageBuilder/reducer';
+import { unselectElements } from 'store/pageBuilder/slice';
 
 // utils
 import { createHtmlElement } from 'utils';

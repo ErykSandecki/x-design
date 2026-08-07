@@ -2,7 +2,7 @@
 import { pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
-import { REDUCER_KEY as PAGE_BUILDER } from '../../reducer';
+import { REDUCER_KEY as PAGE_BUILDER } from '../../slice';
 
 // store
 import { childrenSelectorCreator } from '../../selectors';

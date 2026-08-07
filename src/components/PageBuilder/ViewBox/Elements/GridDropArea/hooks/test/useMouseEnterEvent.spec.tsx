@@ -7,7 +7,7 @@ import { eventsMock, pageBuilderStateMock } from 'test/mocks/reducer/pageBuilder
 import { useMouseEnterEvent } from '../useMouseEnterEvent';
 
 // others
-import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/reducer';
+import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/slice';
 
 // store
 import { store } from 'store/store';

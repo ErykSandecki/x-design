@@ -9,7 +9,7 @@ import {
 import { createSelector, Selector } from 'reselect';
 
 // store
-import { REDUCER_KEY } from './reducer';
+import { REDUCER_KEY } from './slice';
 
 // types
 import { TField, TFields, TForm, TReduxHookFormState } from './types';

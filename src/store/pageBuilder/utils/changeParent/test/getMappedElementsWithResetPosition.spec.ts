@@ -3,7 +3,7 @@ import { childrenMock, elementMock, eventsMock, pageBuilderStateMock } from 'tes
 
 // others
 import { BASE_2D } from 'shared';
-import { REDUCER_KEY as PAGE_BUILDER } from '../../../reducer';
+import { REDUCER_KEY as PAGE_BUILDER } from '../../../slice';
 
 // utils
 import { getMappedElementsWithResetPosition } from '../getMappedElementsWithResetPosition';

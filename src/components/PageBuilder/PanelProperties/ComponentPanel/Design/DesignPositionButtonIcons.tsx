@@ -12,7 +12,7 @@ import {
   firstSelectedElementIdSelector,
   firstSelectedElementParentIdSelector,
 } from 'store/pageBuilder/selectors';
-import { changePosition } from 'store/pageBuilder/reducer';
+import { changePosition } from 'store/pageBuilder/slice';
 
 // types
 import { LayoutType } from 'types';

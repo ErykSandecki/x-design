@@ -1,5 +1,5 @@
 // others
-import { REDUCER_KEY as APP_INITIALIZER } from 'store/appInitializer/reducer';
+import { REDUCER_KEY as APP_INITIALIZER } from 'store/appInitializer/slice';
 
 // types
 import { TAppInitializerState } from 'store/appInitializer/types';

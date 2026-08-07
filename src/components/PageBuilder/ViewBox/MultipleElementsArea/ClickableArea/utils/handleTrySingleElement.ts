@@ -2,7 +2,7 @@ import { Dispatch } from '@reduxjs/toolkit';
 
 // store
 import { elementsSelector } from 'store/pageBuilder/selectors';
-import { selectElements } from 'store/pageBuilder/reducer';
+import { selectElements } from 'store/pageBuilder/slice';
 import { store } from 'store';
 
 // types

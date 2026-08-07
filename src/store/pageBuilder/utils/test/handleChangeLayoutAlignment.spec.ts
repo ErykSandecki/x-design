@@ -2,7 +2,7 @@
 import { elementMock, layoutMock, pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
-import { REDUCER_KEY as PAGE_BUILDER } from '../../reducer';
+import { REDUCER_KEY as PAGE_BUILDER } from '../../slice';
 
 // types
 import { AlignmentLayout, LayoutType } from 'types';

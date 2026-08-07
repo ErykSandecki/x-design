@@ -4,7 +4,7 @@ import { RefObject, useEffect } from 'react';
 
 // store
 import { selectedElementsSelector } from 'store/pageBuilder/selectors';
-import { selectElements } from 'store/pageBuilder/reducer';
+import { selectElements } from 'store/pageBuilder/slice';
 import { store } from 'store';
 
 // types

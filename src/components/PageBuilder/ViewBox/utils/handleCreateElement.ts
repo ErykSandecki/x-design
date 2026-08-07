@@ -4,7 +4,7 @@ import { Dispatch } from '@reduxjs/toolkit';
 import { BACKGROUND } from 'constant/background';
 
 // store
-import { addElement } from 'store/pageBuilder/reducer';
+import { addElement } from 'store/pageBuilder/slice';
 import { elementsSelector, eventSelectorCreator } from 'store/pageBuilder/selectors';
 
 // types

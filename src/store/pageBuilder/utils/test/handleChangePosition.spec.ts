@@ -7,7 +7,7 @@ import {
 } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
-import { REDUCER_KEY as PAGE_BUILDER } from '../../reducer';
+import { REDUCER_KEY as PAGE_BUILDER } from '../../slice';
 
 // utils
 import { handleChangePosition } from '../handleChangePosition';

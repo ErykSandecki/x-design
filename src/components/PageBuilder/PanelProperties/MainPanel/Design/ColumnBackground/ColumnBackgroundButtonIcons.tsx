@@ -9,7 +9,7 @@ import { UITools } from 'shared';
 import { TOOLTIP_TRANSLATION_KEY } from 'constant/constants';
 
 // store
-import { changeBackground } from 'store/pageBuilder/reducer';
+import { changeBackground } from 'store/pageBuilder/slice';
 import { pageBackgroundSelectorCreator } from 'store/pageBuilder/selectors';
 
 const ColumnBackgroundButtonIcons = (dispatch: Dispatch, t: TT, useSelector: UseSelector): Array<ReactNode> => {

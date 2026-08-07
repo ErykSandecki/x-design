@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 
 // store
-import { changeLayoutAlignment } from 'store/pageBuilder/reducer';
+import { changeLayoutAlignment } from 'store/pageBuilder/slice';
 
 // types
 import { AlignmentLayout } from 'types';

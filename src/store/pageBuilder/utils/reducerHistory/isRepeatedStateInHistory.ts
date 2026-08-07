@@ -1,7 +1,7 @@
 import { head } from 'lodash';
 
 // store
-import { changeParent, selectElement, selectElements, setAreCoordinates } from 'store/pageBuilder/reducer';
+import { changeParent, selectElement, selectElements, setAreCoordinates } from 'store/pageBuilder/slice';
 
 // types
 import { TAction } from 'types';

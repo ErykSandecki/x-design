@@ -7,7 +7,7 @@ import { appInitializerStateMock } from 'test/mocks/reducer/appInitializerMock';
 import { DEFAULT_LANGUAGE } from 'translations';
 
 // store
-import appInitializer, { REDUCER_KEY as APP_INITIALIZER, setIsAppLoaded } from '../../reducer';
+import appInitializer, { REDUCER_KEY as APP_INITIALIZER, setIsAppLoaded } from '../../slice';
 import { appInitSaga, initLanguageSaga } from '../../saga';
 
 vi.mock('utils', async (importOriginal) => ({

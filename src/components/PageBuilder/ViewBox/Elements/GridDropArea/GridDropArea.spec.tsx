@@ -10,7 +10,7 @@ import { wholeStateMock } from 'test/mocks/reducer/wholeStateMock';
 import 'test/mocks/sagas/allSagas';
 
 // others
-import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/reducer';
+import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/slice';
 
 // store
 import { configureStore, store } from 'store/store';

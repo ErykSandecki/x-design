@@ -56,7 +56,7 @@ import pageBuilder, {
   unselectElements,
   updateEventsStatus,
   updatePrevState,
-} from '../reducer';
+} from '../slice';
 
 // types
 import {

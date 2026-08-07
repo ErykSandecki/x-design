@@ -14,7 +14,7 @@ import {
 } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
-import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/reducer';
+import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/slice';
 import { translationNameSpace as paddingTranslationNameSpace } from '../../PanelProperties/ComponentPanel/Design/ColumnPadding/constants';
 
 // store

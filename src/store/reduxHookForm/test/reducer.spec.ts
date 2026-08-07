@@ -20,7 +20,7 @@ import reduxHookForm, {
   updateAsyncErrors,
   updateFormValidator,
   updateSyncErrors,
-} from '../reducer';
+} from '../slice';
 
 // types
 import { TAction } from 'types/redux';

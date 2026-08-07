@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 
 // store
-import { updateEventsStatus } from 'store/pageBuilder/reducer';
+import { updateEventsStatus } from 'store/pageBuilder/slice';
 
 // types
 import { AnchorResize, AnchorRotate } from 'store/pageBuilder/enums';

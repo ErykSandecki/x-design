@@ -13,7 +13,7 @@ import {
 } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
-import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/reducer';
+import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/slice';
 import { ZOOM_CONTENT_ID } from 'shared';
 
 // store

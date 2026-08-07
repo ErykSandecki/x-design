@@ -4,7 +4,7 @@ import SagaTester from 'redux-saga-tester';
 import { pageBuilderStateMock, reducerHistoryMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // store
-import pageBuilder, { addElement, reducerHistorySave, REDUCER_KEY as PAGE_BUILDER } from '../../reducer';
+import pageBuilder, { addElement, reducerHistorySave, REDUCER_KEY as PAGE_BUILDER } from '../../slice';
 import { reducerHistorySaveSaga } from '../../saga';
 
 describe('reducerHistorySaveSaga', () => {

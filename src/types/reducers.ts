@@ -1,7 +1,7 @@
 // others
-import { REDUCER_KEY as APP_INITIALIZER_REDUCER_KEY } from '../store/appInitializer/reducer';
-import { REDUCER_KEY as PAGE_BUILDER_REDUCER_KEY } from '../store/pageBuilder/reducer';
-import { REDUCER_KEY as REDUX_HOOK_FORM } from '../store/reduxHookForm/reducer';
+import { REDUCER_KEY as APP_INITIALIZER_REDUCER_KEY } from '../store/appInitializer/slice';
+import { REDUCER_KEY as PAGE_BUILDER_REDUCER_KEY } from '../store/pageBuilder/slice';
+import { REDUCER_KEY as REDUX_HOOK_FORM } from '../store/reduxHookForm/slice';
 
 // types
 import { TAppInitializerState } from '../store/appInitializer/types';

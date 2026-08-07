@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { UITools } from 'shared';
 
 // store
-import { addVariant, changeProperties } from 'store/pageBuilder/reducer';
+import { addVariant, changeProperties } from 'store/pageBuilder/slice';
 import { isMixedBackgroundSelector } from 'store/pageBuilder/selectors';
 
 // others

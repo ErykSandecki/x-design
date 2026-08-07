@@ -1,7 +1,7 @@
 import { Dispatch } from '@reduxjs/toolkit';
 
 // store
-import { updateEventsStatus } from 'store/pageBuilder/reducer';
+import { updateEventsStatus } from 'store/pageBuilder/slice';
 
 // types
 import { MouseButton } from 'types';

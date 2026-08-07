@@ -4,7 +4,7 @@ import SagaTester from 'redux-saga-tester';
 import { eventsMock, pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // store
-import pageBuilder, { updateEventsStatus, REDUCER_KEY as PAGE_BUILDER } from '../../reducer';
+import pageBuilder, { updateEventsStatus, REDUCER_KEY as PAGE_BUILDER } from '../../slice';
 import { freezeEventMoveElements } from '../../saga';
 
 // utils

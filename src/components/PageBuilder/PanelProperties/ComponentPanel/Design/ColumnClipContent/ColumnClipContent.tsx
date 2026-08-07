@@ -9,7 +9,7 @@ import { UITools } from 'shared';
 import { translationNameSpace } from './constants';
 
 // store
-import { changeProperties } from 'store/pageBuilder/reducer';
+import { changeProperties } from 'store/pageBuilder/slice';
 import {
   elementAttributeSelectorCreator,
   firstSelectedElementIdSelector,

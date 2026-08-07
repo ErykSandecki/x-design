@@ -1,5 +1,5 @@
 // store
-import { REDUCER_KEY as REDUX_HOOK_FORM } from 'store/reduxHookForm/reducer';
+import { REDUCER_KEY as REDUX_HOOK_FORM } from 'store/reduxHookForm/slice';
 
 // types
 import { TField, TForm, TReduxHookFormState } from 'store/reduxHookForm/types';

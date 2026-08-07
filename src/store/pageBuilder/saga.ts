@@ -27,7 +27,7 @@ import {
   setElementsSizesMinMax,
   unselectElement,
   updateEventsStatus,
-} from './reducer';
+} from './slice';
 
 // types
 import { TAction } from 'types';

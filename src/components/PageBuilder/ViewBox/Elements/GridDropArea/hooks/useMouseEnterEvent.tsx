@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 
 // store
 import { eventSelectorCreator } from 'store/pageBuilder/selectors';
-import { updateEventsStatus } from 'store/pageBuilder/reducer';
+import { updateEventsStatus } from 'store/pageBuilder/slice';
 
 // types
 import { MouseMode, TElement } from 'types';

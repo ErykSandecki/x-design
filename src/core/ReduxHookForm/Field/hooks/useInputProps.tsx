@@ -2,7 +2,7 @@ import { isArray } from 'lodash';
 import { useDispatch, useSelector } from 'react-redux';
 
 // store
-import { blur, change, clearFields, focus } from 'store/reduxHookForm/reducer';
+import { blur, change, clearFields, focus } from 'store/reduxHookForm/slice';
 import { fieldAttributesSelectorCreator, fieldSelectorCreator } from 'store/reduxHookForm/selectors';
 
 // types

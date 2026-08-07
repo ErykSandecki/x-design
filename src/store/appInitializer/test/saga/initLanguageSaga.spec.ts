@@ -7,7 +7,7 @@ import { appInitializerStateMock } from 'test/mocks/reducer/appInitializerMock';
 import { AVAILABLE_LANGUAGES, LANGUAGE } from 'translations';
 
 // store
-import appInitializer, { initLanguageSuccess, REDUCER_KEY as APP_INITIALIZER } from '../../reducer';
+import appInitializer, { initLanguageSuccess, REDUCER_KEY as APP_INITIALIZER } from '../../slice';
 import { initLanguageSaga } from '../../saga';
 
 describe('initLanguageSaga', () => {

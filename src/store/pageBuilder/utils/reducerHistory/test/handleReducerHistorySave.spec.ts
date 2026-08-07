@@ -2,7 +2,7 @@
 import { pageBuilderStateMock, reducerHistoryMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
-import { REDUCER_KEY as PAGE_BUILDER, selectElements } from '../../../reducer';
+import { REDUCER_KEY as PAGE_BUILDER, selectElements } from '../../../slice';
 
 // types
 import { TPageBuilderState } from 'store/pageBuilder/types';

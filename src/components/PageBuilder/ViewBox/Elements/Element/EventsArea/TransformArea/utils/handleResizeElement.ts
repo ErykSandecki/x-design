@@ -3,7 +3,7 @@ import { RefObject } from 'react';
 
 // store
 import { areaAxisSelectorCreator } from 'store/pageBuilder/selectors';
-import { resizeElement } from 'store/pageBuilder/reducer';
+import { resizeElement } from 'store/pageBuilder/slice';
 import { store } from 'store';
 
 // types

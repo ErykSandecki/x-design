@@ -2,7 +2,7 @@ import { Dispatch } from '@reduxjs/toolkit';
 import { RefObject } from 'react';
 
 // store
-import { rotateElements } from 'store/pageBuilder/reducer';
+import { rotateElements } from 'store/pageBuilder/slice';
 
 // utils
 import { getElementAngle } from './getElementAngle';

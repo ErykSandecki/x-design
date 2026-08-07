@@ -1,7 +1,7 @@
 import { all, AllEffect, ForkEffect, takeEvery } from 'redux-saga/effects';
 
 // store
-import { changeParent } from './reducer';
+import { changeParent } from './slice';
 import {
   freezeEventMoveElements,
   reducerHistorySaveSaga,

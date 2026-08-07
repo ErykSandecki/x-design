@@ -8,7 +8,7 @@ import { TElement } from 'types';
 
 // store
 import { store } from 'store';
-import { updateEventsStatus } from 'store/pageBuilder/reducer';
+import { updateEventsStatus } from 'store/pageBuilder/slice';
 
 // utils
 import { eventSelectorCreator } from 'store/pageBuilder/selectors';

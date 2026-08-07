@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 
 // store
-import { setElementsSizesMinMax } from 'store/pageBuilder/reducer';
+import { setElementsSizesMinMax } from 'store/pageBuilder/slice';
 
 // types
 import { TElement, TValueScore } from 'types';

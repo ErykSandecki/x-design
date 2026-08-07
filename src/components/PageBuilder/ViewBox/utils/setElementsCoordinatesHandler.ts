@@ -3,7 +3,7 @@ import { RefObject } from 'react';
 
 // store
 import { selectedElementsSelector } from 'store/pageBuilder/selectors';
-import { setElementsCoordinates } from 'store/pageBuilder/reducer';
+import { setElementsCoordinates } from 'store/pageBuilder/slice';
 import { store } from 'store';
 
 // utils

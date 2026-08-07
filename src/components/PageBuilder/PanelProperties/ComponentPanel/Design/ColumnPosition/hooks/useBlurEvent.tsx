@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 
 // store
-import { setElementsCoordinates } from 'store/pageBuilder/reducer';
+import { setElementsCoordinates } from 'store/pageBuilder/slice';
 
 export type TUseBlurEvent = {
   onBlurX: TFunc;

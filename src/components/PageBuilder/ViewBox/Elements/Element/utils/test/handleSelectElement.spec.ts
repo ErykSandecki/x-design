@@ -4,7 +4,7 @@ import { MouseEvent } from 'react';
 import { selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // store
-import { selectElements } from 'store/pageBuilder/reducer';
+import { selectElements } from 'store/pageBuilder/slice';
 
 // utils
 import { handleSelectElement } from '../handleSelectElement';

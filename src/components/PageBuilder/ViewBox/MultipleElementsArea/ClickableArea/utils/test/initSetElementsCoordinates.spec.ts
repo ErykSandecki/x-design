@@ -5,7 +5,7 @@ import { pageBuilderStateMock, selectedElementMock } from 'test/mocks/reducer/pa
 
 // others
 import { BASE_2D } from 'shared';
-import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/reducer';
+import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/slice';
 
 // store
 import { store as storeToMock } from 'store/store';

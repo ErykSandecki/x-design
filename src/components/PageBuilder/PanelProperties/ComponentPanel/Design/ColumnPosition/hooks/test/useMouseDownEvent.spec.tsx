@@ -4,7 +4,7 @@ import { renderHook } from '@testing-library/react';
 import { useMouseDownEvent } from '../useMouseDownEvent';
 
 // store
-import { clearPrevState } from 'store/pageBuilder/reducer';
+import { clearPrevState } from 'store/pageBuilder/slice';
 
 const mockCallBack = vi.fn();
 

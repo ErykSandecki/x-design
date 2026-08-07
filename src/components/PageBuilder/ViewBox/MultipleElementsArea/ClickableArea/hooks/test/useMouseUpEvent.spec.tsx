@@ -8,7 +8,7 @@ import { wholeStateMock } from 'test/mocks/reducer/wholeStateMock';
 import { useMouseUpEvent } from '../useMouseUpEvent';
 
 // others
-import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/reducer';
+import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/slice';
 
 // store
 import { configureStore, store as storeToMock } from 'store';

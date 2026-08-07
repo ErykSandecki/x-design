@@ -11,7 +11,7 @@ import appInitializer, {
   initLanguageSuccess,
   setIsAppLoaded,
   setTheme,
-} from '../reducer';
+} from '../slice';
 
 // types
 import { TAction, Theme } from 'types';

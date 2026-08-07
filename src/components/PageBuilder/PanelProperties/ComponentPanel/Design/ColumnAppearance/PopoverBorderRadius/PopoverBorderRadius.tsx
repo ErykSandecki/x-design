@@ -9,7 +9,7 @@ import { UITools } from 'shared';
 import { translationNameSpace } from './constants';
 
 // store
-import { applyElementsType } from 'store/pageBuilder/reducer';
+import { applyElementsType } from 'store/pageBuilder/slice';
 
 // types
 import { PopoverItem } from '../enums';

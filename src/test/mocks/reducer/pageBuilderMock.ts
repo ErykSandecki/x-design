@@ -1,7 +1,7 @@
 // others
 import { BASE_3D, BASE_RECT } from 'shared';
 import { BASE_PAGE, BASE_PAGE_ELEMENTS } from 'store/pageBuilder/constants';
-import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/reducer';
+import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/slice';
 
 // types
 import {

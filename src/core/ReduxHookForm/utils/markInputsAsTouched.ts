@@ -2,7 +2,7 @@ import { Dispatch } from '@reduxjs/toolkit';
 import { keys } from 'lodash';
 
 // store
-import { setTouchedField } from 'store/reduxHookForm/reducer';
+import { setTouchedField } from 'store/reduxHookForm/slice';
 
 // types
 import { TFields } from 'store/reduxHookForm/types';

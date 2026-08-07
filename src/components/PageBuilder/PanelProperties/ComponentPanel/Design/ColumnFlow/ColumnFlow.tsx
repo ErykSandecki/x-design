@@ -10,7 +10,7 @@ import { UITools } from 'shared';
 import { toggleButtons, translationNameSpace } from './constants';
 
 // store
-import { changeLayout } from 'store/pageBuilder/reducer';
+import { changeLayout } from 'store/pageBuilder/slice';
 import {
   isMixedSelectorCreator,
   firstSelectedElementIdSelector,
