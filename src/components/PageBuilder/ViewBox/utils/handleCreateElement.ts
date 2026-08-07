@@ -13,7 +13,7 @@ import { MouseMode } from '../../../../types/enums/mouseMode';
 import { TAddELementActionPayload } from 'store/pageBuilder/types';
 
 // utils
-import { generateJestID } from 'utils';
+import { generateVitestID } from 'utils';
 
 export const handleCreateElement = (
   dispatch: Dispatch,
@@ -47,7 +47,7 @@ export const handleCreateElement = (
         mode: 'fixed',
         value: Math.abs(y1 - y2),
       },
-      id: generateJestID(elementsSelector(window.store.getState())),
+      id: generateVitestID(elementsSelector(window.store.getState())),
       layout: {
         alignment: AlignmentLayout.none,
         boxSizing: 'excluded',

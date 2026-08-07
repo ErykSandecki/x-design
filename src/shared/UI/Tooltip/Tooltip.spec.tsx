@@ -16,7 +16,7 @@ import { sleep } from 'test';
 
 vi.mock('utils', async (importOriginal) => ({
   ...(await importOriginal()),
-  isJestRunning: (): any => false,
+  isVitestRunning: (): any => false,
 }));
 
 const className = 'className';

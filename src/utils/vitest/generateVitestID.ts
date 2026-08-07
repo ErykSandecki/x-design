@@ -7,10 +7,10 @@ import { TObject } from 'types';
 // utils
 import { generateID } from 'utils/common/generateID';
 import { isBaseParent } from 'utils/common/isBaseParent';
-import { isJestRunning } from './isJestRunning';
+import { isVitestRunning } from './isVitestRunning';
 
-export const generateJestID = (elements: TObject<any>): string => {
-  if (isJestRunning()) {
+export const generateVitestID = (elements: TObject<any>): string => {
+  if (isVitestRunning()) {
     const ids = keys(elements)
       .filter((id) => !isBaseParent(id))
       .map((id) => parseInt(id.split('-')[1]));

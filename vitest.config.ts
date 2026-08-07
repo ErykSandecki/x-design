@@ -73,6 +73,7 @@ export default defineConfig({
         'src/translations/**',
         'src/types/**',
         'src/utils/history/**',
+        'src/utils/vitest/**',
       ],
       include: ['src/**/*.{js,jsx,ts,tsx}'],
       provider: 'istanbul',

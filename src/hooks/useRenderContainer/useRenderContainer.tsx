@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { HTMLContainerId } from '../../types';
 
 // utils
-import { isJestRunning } from 'utils';
+import { isVitestRunning } from 'utils';
 
 export type TUseRenderContainer = HTMLElement;
 
@@ -28,7 +28,7 @@ export const useRenderContainer = (customId: string, htmlContainerId?: HTMLConta
   };
 
   useEffect(() => {
-    if (customId && !isJestRunning()) {
+    if (customId && !isVitestRunning()) {
       tryFindContainer();
     } else {
       setContainer(document.getElementById(htmlContainerId!));
