@@ -20,12 +20,23 @@ describe('handleAddElement', () => {
   it(`should return data with added element`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+    const state = {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      events: { ...pageBuilderStateMock[PAGE_BUILDER].events },
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: { ...currentPage.elements },
+        },
+      },
+    };
 
-    // before
-    const result = handleAddElement(createFrameMock, pageBuilderStateMock[PAGE_BUILDER]);
+    // action
+    handleAddElement(createFrameMock, state);
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -47,37 +58,36 @@ describe('handleAddElement', () => {
   it(`should return data with added element inside element when layout is not free form`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-
-    // before
-    const result = handleAddElement(
-      { ...createFrameMock, id: 'test-2', parentId: 'test-1' },
-      {
-        ...pageBuilderStateMock[PAGE_BUILDER],
-        pages: {
-          ...pageBuilderStateMock[PAGE_BUILDER].pages,
-          ['0']: {
-            ...currentPage,
-            elements: {
-              ...currentPage.elements,
-              ['-1']: {
-                ...currentPage.elements['-1'],
-                children: [childrenMock],
-              },
-              [elementMock.id]: {
-                ...elementMock,
-                layout: {
-                  ...layoutMock,
-                  type: LayoutType.vertical,
-                },
+    const state = {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      events: { ...pageBuilderStateMock[PAGE_BUILDER].events },
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [childrenMock],
+            },
+            [elementMock.id]: {
+              ...elementMock,
+              layout: {
+                ...layoutMock,
+                type: LayoutType.vertical,
               },
             },
           },
         },
       },
-    );
+    };
+
+    // action
+    handleAddElement({ ...createFrameMock, id: 'test-2', parentId: 'test-1' }, state);
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,

@@ -33,9 +33,7 @@ describe('handleChangeParent', () => {
   it(`should not change parent when possible parent is null`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-
-    // before
-    const result = handleChangeParent({
+    const state = {
       ...pageBuilderStateMock[PAGE_BUILDER],
       events: {
         ...eventsMock,
@@ -60,10 +58,13 @@ describe('handleChangeParent', () => {
           selectedElements: [selectedElementMock],
         },
       },
-    });
+    };
+
+    // action
+    handleChangeParent(state);
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -88,9 +89,7 @@ describe('handleChangeParent', () => {
   it(`should change parent`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-
-    // before
-    const result = handleChangeParent({
+    const state = {
       ...pageBuilderStateMock[PAGE_BUILDER],
       events: {
         ...eventsMock,
@@ -121,10 +120,13 @@ describe('handleChangeParent', () => {
           selectedElements: [{ ...selectedElementMock, id: 'test-2' }],
         },
       },
-    });
+    };
+
+    // action
+    handleChangeParent(state);
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -156,9 +158,7 @@ describe('handleChangeParent', () => {
   it(`should change parent when element is put inside another element`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-
-    // before
-    const result = handleChangeParent({
+    const state = {
       ...pageBuilderStateMock[PAGE_BUILDER],
       events: {
         ...eventsMock,
@@ -190,10 +190,13 @@ describe('handleChangeParent', () => {
           selectedElements: [{ ...selectedElementMock, id: 'test-2' }],
         },
       },
-    });
+    };
+
+    // action
+    handleChangeParent(state);
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,

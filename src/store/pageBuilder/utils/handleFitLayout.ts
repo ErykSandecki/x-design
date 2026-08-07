@@ -4,26 +4,17 @@ import { TPageBuilderState } from '../types';
 // utils
 import { extractObjectValues, mapFilteredValues } from 'utils';
 
-export const handleFitLayout = (state: TPageBuilderState): TPageBuilderState => {
+export const handleFitLayout = (state: TPageBuilderState): void => {
   const currentPage = state.pages[state.currentPage];
   const { selectedElements } = currentPage;
   const ids = extractObjectValues(selectedElements, ['id']);
 
-  return {
-    ...state,
-    pages: {
-      ...state.pages,
-      [state.currentPage]: {
-        ...currentPage,
-        elements: {
-          ...currentPage.elements,
-          ...mapFilteredValues(currentPage.elements, ids, (element) => ({
-            ...element,
-            height: { ...element.height, mode: 'auto' },
-            width: { ...element.width, mode: 'auto' },
-          })),
-        },
-      },
-    },
+  currentPage.elements = {
+    ...currentPage.elements,
+    ...mapFilteredValues(currentPage.elements, ids, (element) => ({
+      ...element,
+      height: { ...element.height, mode: 'auto' },
+      width: { ...element.width, mode: 'auto' },
+    })),
   };
 };

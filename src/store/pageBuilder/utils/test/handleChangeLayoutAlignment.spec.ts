@@ -14,9 +14,7 @@ describe('handleChangeLayoutAlignment', () => {
   it(`should return data with changed aligmment type`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-
-    // before
-    const result = handleChangeLayoutAlignment(AlignmentLayout.center, {
+    const state = {
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -36,10 +34,13 @@ describe('handleChangeLayoutAlignment', () => {
           selectedElements: [selectedElementMock],
         },
       },
-    });
+    };
+
+    // action
+    handleChangeLayoutAlignment(AlignmentLayout.center, state);
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,

@@ -1,20 +1,14 @@
 // types
 import { TPageBuilderState } from '../../types';
 
-export const handleReducerHistoryUndo = (state: TPageBuilderState): TPageBuilderState => {
+export const handleReducerHistoryUndo = (state: TPageBuilderState): void => {
   const currentPage = state.pages[state.currentPage];
   const { reducerHistory } = currentPage;
   const reducerHistoryIndex = currentPage.reducerHistoryIndex + 1;
+  const { areaCoordinates, elements, selectedElements } = reducerHistory[reducerHistoryIndex];
 
-  return {
-    ...state,
-    pages: {
-      ...state.pages,
-      [state.currentPage]: {
-        ...currentPage,
-        ...reducerHistory[reducerHistoryIndex],
-        reducerHistoryIndex,
-      },
-    },
-  };
+  currentPage.areaCoordinates = areaCoordinates;
+  currentPage.elements = elements;
+  currentPage.selectedElements = selectedElements;
+  currentPage.reducerHistoryIndex = reducerHistoryIndex;
 };

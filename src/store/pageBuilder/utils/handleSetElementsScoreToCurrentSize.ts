@@ -24,32 +24,23 @@ export const handleSetElementsScoreToCurrentSize = (
   scoreType: TSetElementsScoreToCurrentSizeActionPayload['scoreType'],
   sizeType: TSetElementsScoreToCurrentSizeActionPayload['sizeType'],
   state: TPageBuilderState,
-): TPageBuilderState => {
+): void => {
   const currentPage = state.pages[state.currentPage];
   const { selectedElements } = currentPage;
   const ids = extractObjectValues(selectedElements, ['id']);
   const zoomContent = document.getElementById(ZOOM_CONTENT_ID);
 
-  return {
-    ...state,
-    pages: {
-      ...state.pages,
-      [state.currentPage]: {
-        ...currentPage,
-        elements: {
-          ...currentPage.elements,
-          ...mapFilteredValues(currentPage.elements, ids, (element) => ({
-            ...element,
-            [sizeType]: {
-              ...element[sizeType],
-              [scoreType]: {
-                ...applyMode(element, 'fixed', `${sizeType}.${scoreType}`, undefined),
-                value: getSize(element, sizeType, zoomContent),
-              },
-            },
-          })),
+  currentPage.elements = {
+    ...currentPage.elements,
+    ...mapFilteredValues(currentPage.elements, ids, (element) => ({
+      ...element,
+      [sizeType]: {
+        ...element[sizeType],
+        [scoreType]: {
+          ...applyMode(element, 'fixed', `${sizeType}.${scoreType}`, undefined),
+          value: getSize(element, sizeType, zoomContent),
         },
       },
-    },
+    })),
   };
 };

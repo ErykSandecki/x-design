@@ -20,35 +20,33 @@ describe('handleSetElementsGap', () => {
   it(`should return data with changed gap value`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-
-    // before
-    const result = handleSetElementsGap(
-      { gap: 'column', value: 100 },
-      {
-        ...pageBuilderStateMock[PAGE_BUILDER],
-        pages: {
-          ...pageBuilderStateMock[PAGE_BUILDER].pages,
-          ['0']: {
-            ...currentPage,
-            elements: {
-              ...currentPage.elements,
-              [elementMock.id]: {
-                ...elementMock,
-                layout: {
-                  ...layoutMock,
-                  alignment: AlignmentLayout.topLeft,
-                  type: LayoutType.vertical,
-                },
+    const state = {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            [elementMock.id]: {
+              ...elementMock,
+              layout: {
+                ...layoutMock,
+                alignment: AlignmentLayout.topLeft,
+                type: LayoutType.vertical,
               },
             },
-            selectedElements: [selectedElementMock],
           },
+          selectedElements: [selectedElementMock],
         },
       },
-    );
+    };
+
+    // action
+    handleSetElementsGap({ gap: 'column', value: 100 }, state);
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,

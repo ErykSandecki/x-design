@@ -44,59 +44,60 @@ describe('handleChangeAlignment', () => {
       vertical: AlignmentVertical.center,
     };
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+    const state = {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              children: [childrenMock],
+            },
+            [elementMock.id]: {
+              ...elementMock,
+              children: [
+                { ...childrenMock, id: 'test-2' },
+                { ...childrenMock, id: 'test-3' },
+              ],
+              position: 'absolute',
+            },
+            ['test-2']: {
+              ...elementMock,
+              children: [],
+              id: 'test-2',
+              parentId: 'test-1',
+              position: 'absolute',
+            },
+            ['test-3']: {
+              ...elementMock,
+              children: [],
+              id: 'test-3',
+              parentId: 'test-1',
+              position: 'relative',
+            },
+          },
+          selectedElements: [
+            { ...selectedElementMock, id: 'test-2', parentId: 'test-1' },
+            { ...selectedElementMock, id: 'test-3', parentId: 'test-1' },
+          ],
+        },
+      },
+    };
 
-    // before
-    const result = handleChangeAlignment(
+    // action
+    handleChangeAlignment(
       {
         horizontal: AlignmentHorizontal.center,
         vertical: AlignmentVertical.center,
       },
-      {
-        ...pageBuilderStateMock[PAGE_BUILDER],
-        pages: {
-          ...pageBuilderStateMock[PAGE_BUILDER].pages,
-          ['0']: {
-            ...currentPage,
-            elements: {
-              ...currentPage.elements,
-              ['-1']: {
-                ...currentPage.elements['-1'],
-                children: [childrenMock],
-              },
-              [elementMock.id]: {
-                ...elementMock,
-                children: [
-                  { ...childrenMock, id: 'test-2' },
-                  { ...childrenMock, id: 'test-3' },
-                ],
-                position: 'absolute',
-              },
-              ['test-2']: {
-                ...elementMock,
-                children: [],
-                id: 'test-2',
-                parentId: 'test-1',
-                position: 'absolute',
-              },
-              ['test-3']: {
-                ...elementMock,
-                children: [],
-                id: 'test-3',
-                parentId: 'test-1',
-                position: 'relative',
-              },
-            },
-            selectedElements: [
-              { ...selectedElementMock, id: 'test-2', parentId: 'test-1' },
-              { ...selectedElementMock, id: 'test-3', parentId: 'test-1' },
-            ],
-          },
-        },
-      },
+      state,
     );
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,

@@ -16,35 +16,37 @@ describe('handleChangeBackground', () => {
   it(`should return data with changed background`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+    const state = {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      events: { ...pageBuilderStateMock[PAGE_BUILDER].events },
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            [elementMock.id]: {
+              ...elementMock,
+              background: [backgroundMock[0], backgroundMock[0]],
+            },
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    };
 
-    // before
-    const result = handleChangeBackground(
+    // action
+    handleChangeBackground(
       {
         background: { ...backgroundMock[0], properties: { ...backgroundMock[0].properties, alpha: '0' } },
         id: 'test-1',
         index: 0,
       },
-      {
-        ...pageBuilderStateMock[PAGE_BUILDER],
-        pages: {
-          ...pageBuilderStateMock[PAGE_BUILDER].pages,
-          ['0']: {
-            ...currentPage,
-            elements: {
-              ...currentPage.elements,
-              [elementMock.id]: {
-                ...elementMock,
-                background: [backgroundMock[0], backgroundMock[0]],
-              },
-            },
-            selectedElements: [selectedElementMock],
-          },
-        },
-      },
+      state,
     );
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -75,34 +77,36 @@ describe('handleChangeBackground', () => {
   it(`should return data with changed background for main parent`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+    const state = {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      events: { ...pageBuilderStateMock[PAGE_BUILDER].events },
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            ['-1']: {
+              ...currentPage.elements['-1'],
+              background: [backgroundMock[0], backgroundMock[0]],
+            },
+          },
+        },
+      },
+    };
 
-    // before
-    const result = handleChangeBackground(
+    // action
+    handleChangeBackground(
       {
         background: { ...backgroundMock[0], properties: { ...backgroundMock[0].properties, alpha: '0' } },
         id: '-1',
         index: 0,
       },
-      {
-        ...pageBuilderStateMock[PAGE_BUILDER],
-        pages: {
-          ...pageBuilderStateMock[PAGE_BUILDER].pages,
-          ['0']: {
-            ...currentPage,
-            elements: {
-              ...currentPage.elements,
-              ['-1']: {
-                ...currentPage.elements['-1'],
-                background: [backgroundMock[0], backgroundMock[0]],
-              },
-            },
-          },
-        },
-      },
+      state,
     );
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,

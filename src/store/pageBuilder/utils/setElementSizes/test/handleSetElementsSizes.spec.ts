@@ -11,29 +11,26 @@ describe('handleSetElementsSizes', () => {
   it(`should change height`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-
-    // before
-    const result = handleSetElementsSizes(
-      'height',
-      {
-        ...pageBuilderStateMock[PAGE_BUILDER],
-        pages: {
-          ...pageBuilderStateMock[PAGE_BUILDER].pages,
-          ['0']: {
-            ...currentPage,
-            elements: {
-              ...currentPage.elements,
-              [elementMock.id]: elementMock,
-            },
-            selectedElements: [selectedElementMock],
+    const state = {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            [elementMock.id]: elementMock,
           },
+          selectedElements: [selectedElementMock],
         },
       },
-      100,
-    );
+    };
+
+    // action
+    handleSetElementsSizes('height', state, 100);
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,

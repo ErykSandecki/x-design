@@ -12,9 +12,7 @@ describe('handleRotateElement', () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
     const angle = 180;
-
-    // before
-    const result = handleRotateElements(angle, {
+    const state = {
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -29,10 +27,13 @@ describe('handleRotateElement', () => {
           selectedElements: [selectedElementMock],
         },
       },
-    });
+    };
+
+    // action
+    handleRotateElements(angle, state);
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,

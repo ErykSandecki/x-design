@@ -14,28 +14,26 @@ describe('handleChangeLayoutGrid', () => {
   it(`should return data with changed gap type`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-
-    // before
-    const result = handleChangeLayoutGrid(
-      { columns: 10 },
-      {
-        ...pageBuilderStateMock[PAGE_BUILDER],
-        pages: {
-          ...pageBuilderStateMock[PAGE_BUILDER].pages,
-          ['0']: {
-            ...currentPage,
-            elements: {
-              ...currentPage.elements,
-              [elementMock.id]: elementMock,
-            },
-            selectedElements: [selectedElementMock],
+    const state = {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            [elementMock.id]: elementMock,
           },
+          selectedElements: [selectedElementMock],
         },
       },
-    );
+    };
+
+    // action
+    handleChangeLayoutGrid({ columns: 10 }, state);
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,

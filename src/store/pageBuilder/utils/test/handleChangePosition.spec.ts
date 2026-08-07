@@ -37,9 +37,7 @@ describe('handleChangePosition', () => {
   it(`should change on absolute position`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-
-    // before
-    const result = handleChangePosition({
+    const state = {
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -77,10 +75,13 @@ describe('handleChangePosition', () => {
           selectedElements: [{ ...selectedElementMock, id: 'test-2', parentId: 'test-1' }],
         },
       },
-    });
+    };
+
+    // action
+    handleChangePosition(state);
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -125,9 +126,7 @@ describe('handleChangePosition', () => {
   it(`should change on relative position`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-
-    // before
-    const result = handleChangePosition({
+    const state = {
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -165,10 +164,13 @@ describe('handleChangePosition', () => {
           selectedElements: [{ ...selectedElementMock, id: 'test-3', parentId: 'test-1' }],
         },
       },
-    });
+    };
+
+    // action
+    handleChangePosition(state);
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,

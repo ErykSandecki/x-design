@@ -24,25 +24,23 @@ describe('handleSetElementsCoordinates', () => {
     const coordinates = { x: 100, y: 100 };
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
     const prevState = cloneDeep(mockPage);
-
-    // before
-    const result = handleSetElementsCoordinates(
-      { coordinates, mode: 'dynamic' },
-      {
-        ...pageBuilderStateMock[PAGE_BUILDER],
-        pages: {
-          ...pageBuilderStateMock[PAGE_BUILDER].pages,
-          ['0']: {
-            ...currentPage,
-            ...mockPage,
-            prevState,
-          },
+    const state = {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          ...mockPage,
+          prevState,
         },
       },
-    );
+    };
+
+    // action
+    handleSetElementsCoordinates({ coordinates, mode: 'dynamic' }, state);
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -67,25 +65,23 @@ describe('handleSetElementsCoordinates', () => {
     const coordinates = { x: NaN, y: NaN };
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
     const prevState = cloneDeep(mockPage);
-
-    // before
-    const result = handleSetElementsCoordinates(
-      { coordinates, mode: 'dynamic' },
-      {
-        ...pageBuilderStateMock[PAGE_BUILDER],
-        pages: {
-          ...pageBuilderStateMock[PAGE_BUILDER].pages,
-          ['0']: {
-            ...currentPage,
-            ...mockPage,
-            prevState,
-          },
+    const state = {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          ...mockPage,
+          prevState,
         },
       },
-    );
+    };
+
+    // action
+    handleSetElementsCoordinates({ coordinates, mode: 'dynamic' }, state);
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -109,25 +105,23 @@ describe('handleSetElementsCoordinates', () => {
     // mock
     const coordinates = { x: 100, y: 100 };
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-
-    // before
-    const result = handleSetElementsCoordinates(
-      { coordinates, mode: 'static' },
-      {
-        ...pageBuilderStateMock[PAGE_BUILDER],
-        pages: {
-          ...pageBuilderStateMock[PAGE_BUILDER].pages,
-          ['0']: {
-            ...currentPage,
-            ...mockPage,
-            prevState: undefined,
-          },
+    const state = {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          ...mockPage,
+          prevState: undefined,
         },
       },
-    );
+    };
+
+    // action
+    handleSetElementsCoordinates({ coordinates, mode: 'static' }, state);
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -151,25 +145,23 @@ describe('handleSetElementsCoordinates', () => {
     // mock
     const coordinates = { x: NaN, y: NaN };
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-
-    // before
-    const result = handleSetElementsCoordinates(
-      { coordinates, mode: 'static' },
-      {
-        ...pageBuilderStateMock[PAGE_BUILDER],
-        pages: {
-          ...pageBuilderStateMock[PAGE_BUILDER].pages,
-          ['0']: {
-            ...currentPage,
-            ...mockPage,
-            prevState: undefined,
-          },
+    const state = {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          ...mockPage,
+          prevState: undefined,
         },
       },
-    );
+    };
+
+    // action
+    handleSetElementsCoordinates({ coordinates, mode: 'static' }, state);
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -194,29 +186,27 @@ describe('handleSetElementsCoordinates', () => {
     const coordinates = { x: 100, y: 100 };
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
     const prevState = cloneDeep(mockPage);
-
-    // before
-    const result = handleSetElementsCoordinates(
-      { coordinates, mode: 'dynamic' },
-      {
-        ...pageBuilderStateMock[PAGE_BUILDER],
-        events: {
-          ...pageBuilderStateMock[PAGE_BUILDER].events,
-          canMoveElements: false,
-        },
-        pages: {
-          ...pageBuilderStateMock[PAGE_BUILDER].pages,
-          ['0']: {
-            ...currentPage,
-            ...mockPage,
-            prevState,
-          },
+    const state = {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      events: {
+        ...pageBuilderStateMock[PAGE_BUILDER].events,
+        canMoveElements: false,
+      },
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          ...mockPage,
+          prevState,
         },
       },
-    );
+    };
+
+    // action
+    handleSetElementsCoordinates({ coordinates, mode: 'dynamic' }, state);
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       events: {
         ...pageBuilderStateMock[PAGE_BUILDER].events,

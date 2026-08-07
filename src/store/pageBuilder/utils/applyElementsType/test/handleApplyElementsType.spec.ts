@@ -16,28 +16,26 @@ describe('handleApplyElementsType', () => {
   it(`should apply variable`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-
-    // before
-    const result = handleApplyElementsType(
-      { mode: 'variable', properties: ['opacity'] },
-      {
-        ...pageBuilderStateMock[PAGE_BUILDER],
-        pages: {
-          ...pageBuilderStateMock[PAGE_BUILDER].pages,
-          ['0']: {
-            ...currentPage,
-            elements: {
-              ...currentPage.elements,
-              [elementMock.id]: elementMock,
-            },
-            selectedElements: [selectedElementMock],
+    const state = {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            [elementMock.id]: elementMock,
           },
+          selectedElements: [selectedElementMock],
         },
       },
-    );
+    };
+
+    // action
+    handleApplyElementsType({ mode: 'variable', properties: ['opacity'] }, state);
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -59,28 +57,26 @@ describe('handleApplyElementsType', () => {
   it(`should apply variable when nested`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-
-    // before
-    const result = handleApplyElementsType(
-      { mode: 'variable', properties: ['padding.b', 'padding.l'] },
-      {
-        ...pageBuilderStateMock[PAGE_BUILDER],
-        pages: {
-          ...pageBuilderStateMock[PAGE_BUILDER].pages,
-          ['0']: {
-            ...currentPage,
-            elements: {
-              ...currentPage.elements,
-              [elementMock.id]: elementMock,
-            },
-            selectedElements: [selectedElementMock],
+    const state = {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            [elementMock.id]: elementMock,
           },
+          selectedElements: [selectedElementMock],
         },
       },
-    );
+    };
+
+    // action
+    handleApplyElementsType({ mode: 'variable', properties: ['padding.b', 'padding.l'] }, state);
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,

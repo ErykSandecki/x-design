@@ -16,39 +16,35 @@ describe('handleSetElementsSizesMinMax', () => {
   it(`should change height min`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-
-    // before
-    const result = handleSetElementsSizesMinMax(
-      'min',
-      'height',
-      {
-        ...pageBuilderStateMock[PAGE_BUILDER],
-        pages: {
-          ...pageBuilderStateMock[PAGE_BUILDER].pages,
-          ['0']: {
-            ...currentPage,
-            elements: {
-              ...currentPage.elements,
-              [elementMock.id]: {
-                ...elementMock,
-                height: {
-                  ...elementMock.height,
-                  min: {
-                    ...valueExtendMock,
-                    value: 0,
-                  },
+    const state = {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            [elementMock.id]: {
+              ...elementMock,
+              height: {
+                ...elementMock.height,
+                min: {
+                  ...valueExtendMock,
+                  value: 0,
                 },
               },
             },
-            selectedElements: [selectedElementMock],
           },
+          selectedElements: [selectedElementMock],
         },
       },
-      100,
-    );
+    };
+
+    // action
+    handleSetElementsSizesMinMax('min', 'height', state, 100);
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,

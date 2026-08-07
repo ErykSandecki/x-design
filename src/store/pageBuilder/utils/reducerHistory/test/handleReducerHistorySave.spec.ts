@@ -32,11 +32,11 @@ describe('handleReducerHistorySave', () => {
       },
     } as TPageBuilderState;
 
-    // before
-    const result = handleReducerHistorySave(state, '');
+    // action
+    handleReducerHistorySave(state, '');
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -75,11 +75,11 @@ describe('handleReducerHistorySave', () => {
       },
     } as TPageBuilderState;
 
-    // before
-    const result = handleReducerHistorySave(state, '');
+    // action
+    handleReducerHistorySave(state, '');
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -123,11 +123,11 @@ describe('handleReducerHistorySave', () => {
       },
     } as TPageBuilderState;
 
-    // before
-    const result = handleReducerHistorySave(state, '');
+    // action
+    handleReducerHistorySave(state, '');
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -171,11 +171,11 @@ describe('handleReducerHistorySave', () => {
       },
     } as TPageBuilderState;
 
-    // before
-    const result = handleReducerHistorySave(state, selectElements.type);
+    // action
+    handleReducerHistorySave(state, selectElements.type);
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,

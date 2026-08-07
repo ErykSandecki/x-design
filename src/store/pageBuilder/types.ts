@@ -59,7 +59,7 @@ export type TPage = {
   elements: TElements;
   id: string;
   name: string;
-  prevState: TPage;
+  prevState: TPage | undefined;
   reducerHistory: Array<TReducerHistory>;
   reducerHistoryIndex: number;
   selectedElements: TSelectedElements;

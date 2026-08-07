@@ -16,37 +16,38 @@ describe('handleRemoveVariant', () => {
   it(`should return data with removed variant`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
+    const state = {
+      ...pageBuilderStateMock[PAGE_BUILDER],
+      pages: {
+        ...pageBuilderStateMock[PAGE_BUILDER].pages,
+        ['0']: {
+          ...currentPage,
+          elements: {
+            ...currentPage.elements,
+            [elementMock.id]: {
+              ...elementMock,
+              background: [
+                { ...backgroundMock[0], properties: { ...backgroundMock[0].properties, color: 'color' } },
+                backgroundMock[0],
+              ],
+            },
+          },
+          selectedElements: [selectedElementMock],
+        },
+      },
+    };
 
-    // before
-    const result = handleRemoveVariant(
+    // action
+    handleRemoveVariant(
       {
         index: 0,
         key: 'background',
       },
-      {
-        ...pageBuilderStateMock[PAGE_BUILDER],
-        pages: {
-          ...pageBuilderStateMock[PAGE_BUILDER].pages,
-          ['0']: {
-            ...currentPage,
-            elements: {
-              ...currentPage.elements,
-              [elementMock.id]: {
-                ...elementMock,
-                background: [
-                  { ...backgroundMock[0], properties: { ...backgroundMock[0].properties, color: 'color' } },
-                  backgroundMock[0],
-                ],
-              },
-            },
-            selectedElements: [selectedElementMock],
-          },
-        },
-      },
+      state,
     );
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,

@@ -11,9 +11,7 @@ describe('handleChangeLayout', () => {
   it(`should return data with changed layout type`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-
-    // before
-    const result = handleFitLayout({
+    const state = {
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -26,10 +24,13 @@ describe('handleChangeLayout', () => {
           selectedElements: [selectedElementMock],
         },
       },
-    });
+    };
+
+    // action
+    handleFitLayout(state);
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,

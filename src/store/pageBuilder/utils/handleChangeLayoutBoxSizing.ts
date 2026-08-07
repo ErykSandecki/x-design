@@ -7,25 +7,16 @@ import { extractObjectValues, mapFilteredValues } from 'utils';
 export const handleChangeLayoutBoxSizing = (
   boxSizing: TChangeLayoutBoxSizingActionPayload,
   state: TPageBuilderState,
-): TPageBuilderState => {
+): void => {
   const currentPage = state.pages[state.currentPage];
   const { selectedElements } = currentPage;
   const ids = extractObjectValues(selectedElements, ['id']);
 
-  return {
-    ...state,
-    pages: {
-      ...state.pages,
-      [state.currentPage]: {
-        ...currentPage,
-        elements: {
-          ...currentPage.elements,
-          ...mapFilteredValues(currentPage.elements, ids, (element) => ({
-            ...element,
-            layout: { ...element.layout, boxSizing },
-          })),
-        },
-      },
-    },
+  currentPage.elements = {
+    ...currentPage.elements,
+    ...mapFilteredValues(currentPage.elements, ids, (element) => ({
+      ...element,
+      layout: { ...element.layout, boxSizing },
+    })),
   };
 };

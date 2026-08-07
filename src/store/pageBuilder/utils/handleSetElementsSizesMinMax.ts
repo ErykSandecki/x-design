@@ -9,25 +9,16 @@ export const handleSetElementsSizesMinMax = (
   sizeType: TSetElementsSizesMinMaxActionPayload['sizeType'],
   state: TPageBuilderState,
   value: TSetElementsSizesMinMaxActionPayload['value'],
-): TPageBuilderState => {
+): void => {
   const currentPage = state.pages[state.currentPage];
   const { selectedElements } = currentPage;
   const ids = extractObjectValues(selectedElements, ['id']);
 
-  return {
-    ...state,
-    pages: {
-      ...state.pages,
-      [state.currentPage]: {
-        ...currentPage,
-        elements: {
-          ...currentPage.elements,
-          ...mapFilteredValues(currentPage.elements, ids, (element) => ({
-            ...element,
-            [sizeType]: { ...element[sizeType], [scoreType]: { ...element[sizeType][scoreType], value } },
-          })),
-        },
-      },
-    },
+  currentPage.elements = {
+    ...currentPage.elements,
+    ...mapFilteredValues(currentPage.elements, ids, (element) => ({
+      ...element,
+      [sizeType]: { ...element[sizeType], [scoreType]: { ...element[sizeType][scoreType], value } },
+    })),
   };
 };

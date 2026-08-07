@@ -17,7 +17,7 @@ export const handleResizeElement = (
   id: TResizeElementActionPayload['id'],
   mouseCoordinates: TResizeElementActionPayload['mouseCoordinates'],
   state: TPageBuilderState,
-): TPageBuilderState => {
+): void => {
   const currentPage = state.pages[state.currentPage];
   const element = currentPage.elements[id];
   const { selectedAnchorResize: anchor } = state.events;
@@ -39,35 +39,26 @@ export const handleResizeElement = (
     position,
   );
 
-  return {
-    ...state,
-    pages: {
-      ...state.pages,
-      [state.currentPage]: {
-        ...currentPage,
-        elements: {
-          ...currentPage.elements,
-          ...flippedElements,
-          [id]: {
-            ...element,
-            ...currentElement,
-            coordinates,
-            flip: {
-              ...element.flip,
-              ...omitBy(flipAxisToChange, isUndefined),
-            },
-            height: {
-              ...element.height,
-              mode: 'fixed',
-              value: height,
-            },
-            width: {
-              ...element.width,
-              mode: 'fixed',
-              value: width,
-            },
-          },
-        },
+  currentPage.elements = {
+    ...currentPage.elements,
+    ...flippedElements,
+    [id]: {
+      ...element,
+      ...currentElement,
+      coordinates,
+      flip: {
+        ...element.flip,
+        ...omitBy(flipAxisToChange, isUndefined),
+      },
+      height: {
+        ...element.height,
+        mode: 'fixed',
+        value: height,
+      },
+      width: {
+        ...element.width,
+        mode: 'fixed',
+        value: width,
       },
     },
   };

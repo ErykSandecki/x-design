@@ -23,10 +23,7 @@ export const getAlignmentData = (
   };
 };
 
-export const handleChangeAlignment = (
-  payload: TChangeAlignmentActionPayload,
-  state: TPageBuilderState,
-): TPageBuilderState => {
+export const handleChangeAlignment = (payload: TChangeAlignmentActionPayload, state: TPageBuilderState): void => {
   const currentPage = state.pages[state.currentPage];
   const { elements, selectedElements } = currentPage;
   const { parentId } = first(selectedElements);
@@ -34,28 +31,19 @@ export const handleChangeAlignment = (
   const elementsInAbsolutePosition = extractObjectValues(selectedElements, ['id', 'type']);
   const elementsInRelativePosition = elements[parentId].children.filter((children) => !ids.includes(children.id));
 
-  return {
-    ...state,
-    pages: {
-      ...state.pages,
-      [state.currentPage]: {
-        ...currentPage,
-        elements: {
-          ...currentPage.elements,
-          ...mapFilteredValues(currentPage.elements, ids, (element) => ({
-            ...element,
-            ...getAlignmentData(element, payload),
-          })),
-          [parentId]: {
-            ...currentPage.elements[parentId],
-            children: [...elementsInRelativePosition, ...elementsInAbsolutePosition],
-          },
-        },
-        selectedElements: selectedElements.map((selectedElement) => ({
-          ...selectedElement,
-          position: 'absolute',
-        })),
-      },
+  currentPage.elements = {
+    ...currentPage.elements,
+    ...mapFilteredValues(currentPage.elements, ids, (element) => ({
+      ...element,
+      ...getAlignmentData(element, payload),
+    })),
+    [parentId]: {
+      ...currentPage.elements[parentId],
+      children: [...elementsInRelativePosition, ...elementsInAbsolutePosition],
     },
   };
+  currentPage.selectedElements = selectedElements.map((selectedElement) => ({
+    ...selectedElement,
+    position: 'absolute',
+  }));
 };

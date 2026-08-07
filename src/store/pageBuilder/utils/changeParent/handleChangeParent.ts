@@ -18,60 +18,43 @@ export const handleWithPossibleParent = (
   possibleParent: TEvents['possibleParent'],
   state: TPageBuilderState,
   stateCopy: TPageBuilderState,
-): TPageBuilderState => {
+): void => {
   const prevParentId = currentPage.elements[id].parentId;
   const parentHasChanged = prevParentId !== possibleParent;
   const children = getMappedElementsToMove(parentHasChanged, stateCopy);
   const nestedChildren = getMappedNestedChildren(currentPage, children);
   const parents = getMappedParentsChildren(parentHasChanged, possibleAnchorPosition, state);
+  const selectedElements = currentPage.selectedElements.map((selectedElement) => ({
+    ...selectedElement,
+    parentId: possibleParent,
+    position: children[selectedElement.id].position,
+  }));
 
-  return {
-    ...state,
-    events,
-    pages: {
-      ...state.pages,
-      [state.currentPage]: {
-        ...state.pages[state.currentPage],
-        elements: {
-          ...currentPage.elements,
-          ...children,
-          ...parents,
-          ...nestedChildren,
-        },
-        selectedElements: currentPage.selectedElements.map((selectedElement) => ({
-          ...selectedElement,
-          parentId: possibleParent,
-          position: children[selectedElement.id].position,
-        })),
-      },
-    },
+  state.events = events;
+  currentPage.elements = {
+    ...currentPage.elements,
+    ...children,
+    ...parents,
+    ...nestedChildren,
   };
+  currentPage.selectedElements = selectedElements;
 };
 
 export const handleWithResetPosition = (
   currentPage: TPage,
   events: TPageBuilderState['events'],
   state: TPageBuilderState,
-): TPageBuilderState => {
+): void => {
   const children = getMappedElementsWithResetPosition(state);
 
-  return {
-    ...state,
-    events,
-    pages: {
-      ...state.pages,
-      [state.currentPage]: {
-        ...currentPage,
-        elements: {
-          ...currentPage.elements,
-          ...children,
-        },
-      },
-    },
+  state.events = events;
+  currentPage.elements = {
+    ...currentPage.elements,
+    ...children,
   };
 };
 
-export const handleChangeParent = (state: TPageBuilderState): TPageBuilderState => {
+export const handleChangeParent = (state: TPageBuilderState): void => {
   const { draggableElements, possibleAnchorPosition, possibleParent } = state.events;
   const currentPage = state.pages[state.currentPage];
   const stateCopy = cloneDeep(state);
@@ -90,7 +73,7 @@ export const handleChangeParent = (state: TPageBuilderState): TPageBuilderState 
   };
 
   if (!hasAnomalies && possibleParent && !draggableElementsId.includes(possibleParent)) {
-    return handleWithPossibleParent(
+    handleWithPossibleParent(
       currentPage,
       events,
       draggableElement.id,
@@ -99,7 +82,9 @@ export const handleChangeParent = (state: TPageBuilderState): TPageBuilderState 
       state,
       stateCopy,
     );
+
+    return;
   }
 
-  return handleWithResetPosition(currentPage, events, state);
+  handleWithResetPosition(currentPage, events, state);
 };

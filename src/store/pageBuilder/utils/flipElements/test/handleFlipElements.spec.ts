@@ -23,9 +23,7 @@ describe('handleFlipElements', () => {
     // mock
     const angle = 45;
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-
-    // before
-    const result = handleFlipElements('x', {
+    const state = {
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -63,10 +61,13 @@ describe('handleFlipElements', () => {
           selectedElements: [selectedElementMock],
         },
       },
-    });
+    };
+
+    // action
+    handleFlipElements('x', state);
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -115,9 +116,7 @@ describe('handleFlipElements', () => {
     // mock
     const angle = 45;
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-
-    // before
-    const result = handleFlipElements('y', {
+    const state = {
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -155,10 +154,13 @@ describe('handleFlipElements', () => {
           selectedElements: [selectedElementMock],
         },
       },
-    });
+    };
+
+    // action
+    handleFlipElements('y', state);
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -207,9 +209,7 @@ describe('handleFlipElements', () => {
     // mock
     const angle = 45;
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-
-    // before
-    const result = handleFlipElements('y', {
+    const state = {
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -247,10 +247,13 @@ describe('handleFlipElements', () => {
           selectedElements: [selectedElementMock],
         },
       },
-    });
+    };
+
+    // action
+    handleFlipElements('y', state);
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,

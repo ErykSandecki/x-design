@@ -24,9 +24,7 @@ describe('handleSetElementsScoreToCurrentSize', () => {
   it(`should get value for min height`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-
-    // before
-    const result = handleSetElementsScoreToCurrentSize('min', 'height', {
+    const state = {
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
@@ -39,10 +37,13 @@ describe('handleSetElementsScoreToCurrentSize', () => {
           selectedElements: [selectedElementMock],
         },
       },
-    });
+    };
+
+    // action
+    handleSetElementsScoreToCurrentSize('min', 'height', state);
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,

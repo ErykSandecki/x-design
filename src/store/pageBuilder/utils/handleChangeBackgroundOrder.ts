@@ -20,30 +20,17 @@ export const changeOrder = (
 export const handleChangeBackgroundOrder = (
   { draggableItem, position }: TChangeBackgroundOrderActionPayload,
   state: TPageBuilderState,
-): TPageBuilderState => {
+): void => {
   const currentPage = state.pages[state.currentPage];
   const { selectedElements } = currentPage;
   const ids = extractObjectValues(selectedElements, ['id']);
-  const events = {
-    ...state.events,
-    colorSampler: false,
-  };
 
-  return {
-    ...state,
-    events,
-    pages: {
-      ...state.pages,
-      [state.currentPage]: {
-        ...currentPage,
-        elements: {
-          ...currentPage.elements,
-          ...mapFilteredValues(currentPage.elements, ids, (element) => ({
-            ...element,
-            background: changeOrder(element.background, draggableItem, position),
-          })),
-        },
-      },
-    },
+  state.events.colorSampler = false;
+  currentPage.elements = {
+    ...currentPage.elements,
+    ...mapFilteredValues(currentPage.elements, ids, (element) => ({
+      ...element,
+      background: changeOrder(element.background, draggableItem, position),
+    })),
   };
 };

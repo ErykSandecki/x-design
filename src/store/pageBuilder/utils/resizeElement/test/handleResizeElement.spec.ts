@@ -17,9 +17,7 @@ describe('handleResizeElement', () => {
   it(`should handle set element sizes`, () => {
     // mock
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages['0'];
-
-    // before
-    const result = handleResizeElement(baseCoordinates, flipMock, 100, 100, selectedElementMock.id, mouseCoordinates, {
+    const state = {
       ...pageBuilderStateMock[PAGE_BUILDER],
       events: {
         ...pageBuilderStateMock[PAGE_BUILDER].events,
@@ -36,10 +34,13 @@ describe('handleResizeElement', () => {
           selectedElements: [selectedElementMock],
         },
       },
-    });
+    };
+
+    // action
+    handleResizeElement(baseCoordinates, flipMock, 100, 100, selectedElementMock.id, mouseCoordinates, state);
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       events: {
         ...pageBuilderStateMock[PAGE_BUILDER].events,

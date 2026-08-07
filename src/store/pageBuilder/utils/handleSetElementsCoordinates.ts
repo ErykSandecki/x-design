@@ -58,23 +58,14 @@ export const getPositions = (
 export const handleSetElementsCoordinates = (
   coordinates: TSetElementsCoordinatesActionPayload,
   state: TPageBuilderState,
-): TPageBuilderState => {
+): void => {
   const { canMoveElements } = state.events;
   const currentPage = state.pages[state.currentPage];
   const positions = getPositions(canMoveElements, coordinates, currentPage.prevState || currentPage, currentPage);
 
-  return {
-    ...state,
-    pages: {
-      ...state.pages,
-      [state.currentPage]: {
-        ...currentPage,
-        elements: {
-          ...currentPage.elements,
-          ...positions.elements,
-        },
-        selectedElements: positions.selectedElements,
-      },
-    },
+  currentPage.elements = {
+    ...currentPage.elements,
+    ...positions.elements,
   };
+  currentPage.selectedElements = positions.selectedElements;
 };

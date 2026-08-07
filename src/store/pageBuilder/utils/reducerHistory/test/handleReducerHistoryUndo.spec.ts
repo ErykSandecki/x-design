@@ -27,11 +27,11 @@ describe('handleReducerHistoryUndo', () => {
       },
     } as TPageBuilderState;
 
-    // before
-    const result = handleReducerHistoryUndo(state);
+    // action
+    handleReducerHistoryUndo(state);
 
     // result
-    expect(result).toStrictEqual({
+    expect(state).toStrictEqual({
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,
