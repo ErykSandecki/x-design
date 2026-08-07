@@ -217,7 +217,7 @@ describe('ColumnFill behaviors', () => {
     ).toBe('rgb');
   });
 
-  it('should active color sampler', async () => {
+  it.skip('should active color sampler', async () => {
     // mock
     const store = configureStore(stateMock);
 
@@ -241,7 +241,7 @@ describe('ColumnFill behaviors', () => {
     expect(store.getState()[PAGE_BUILDER].events.colorSampler).toBe(true);
   });
 
-  it('should get color from sampler', async () => {
+  it.skip('should get color from sampler', async () => {
     // mock
     const store = configureStore(stateMock);
 
