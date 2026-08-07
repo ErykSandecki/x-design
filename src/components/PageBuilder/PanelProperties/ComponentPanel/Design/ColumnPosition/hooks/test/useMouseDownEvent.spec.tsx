@@ -3,8 +3,8 @@ import { renderHook } from '@testing-library/react';
 // hooks
 import { useMouseDownEvent } from '../useMouseDownEvent';
 
-// others
-import { CLEAR_PREV_STATE } from 'store/pageBuilder/actionsType';
+// store
+import { clearPrevState } from 'store/pageBuilder/reducer';
 
 const mockCallBack = vi.fn();
 
@@ -22,7 +22,7 @@ describe('useMouseDownEvent', () => {
     result.current();
 
     // result
-    expect(mockCallBack.mock.calls[0][0].type).toBe(CLEAR_PREV_STATE);
+    expect(mockCallBack.mock.calls[0][0].type).toBe(clearPrevState.type);
     expect(mockCallBack.mock.calls[1][0].payload).toStrictEqual({
       isMultipleMoving: true,
     });

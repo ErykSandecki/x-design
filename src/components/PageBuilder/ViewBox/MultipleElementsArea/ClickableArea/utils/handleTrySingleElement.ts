@@ -1,8 +1,8 @@
-import { Dispatch } from 'redux';
+import { Dispatch } from '@reduxjs/toolkit';
 
 // store
 import { elementsSelector } from 'store/pageBuilder/selectors';
-import { selectElements } from 'store/pageBuilder/actions';
+import { selectElements } from 'store/pageBuilder/reducer';
 import { store } from 'store';
 
 // types

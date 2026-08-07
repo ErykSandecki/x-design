@@ -3,7 +3,7 @@ import { BASE_2D } from 'shared';
 
 // types
 import { AlignmentLayout, ElementType, LayoutType } from 'types';
-import { TChangeLayoutAction, TPageBuilderState } from '../../types';
+import { TChangeLayoutActionPayload, TPageBuilderState } from '../../types';
 
 // utils
 import { calculateCoordinatesAbsoluteToParent } from '../calculateCoordinatesAbsoluteToParent';
@@ -11,7 +11,7 @@ import { extractObjectValues, mapFilteredValues } from 'utils';
 import { getGridLayout } from './getGridLayout';
 
 export const handleChangeLayout = (
-  layoutType: TChangeLayoutAction['payload'],
+  layoutType: TChangeLayoutActionPayload,
   state: TPageBuilderState,
 ): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];

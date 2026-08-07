@@ -9,7 +9,7 @@ import { KEYBOARD_SHORTCUTS } from 'pages/PageBuilderPage/keys';
 import { TOOLTIP_TRANSLATION_KEY } from 'constant/constants';
 
 // store
-import { fitLayout } from 'store/pageBuilder/actions';
+import { fitLayout } from 'store/pageBuilder/reducer';
 
 // types
 import { LayoutType } from 'types';

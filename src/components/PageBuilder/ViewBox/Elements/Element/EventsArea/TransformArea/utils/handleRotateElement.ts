@@ -1,8 +1,8 @@
-import { Dispatch } from 'redux';
+import { Dispatch } from '@reduxjs/toolkit';
 import { RefObject } from 'react';
 
 // store
-import { rotateElements } from 'store/pageBuilder/actions';
+import { rotateElements } from 'store/pageBuilder/reducer';
 
 // utils
 import { getElementAngle } from './getElementAngle';

@@ -17,7 +17,7 @@ import { MAX } from '../../../../constants';
 import { translationNameSpace } from './constants';
 
 // store
-import { applyElementsType } from 'store/pageBuilder/actions';
+import { applyElementsType } from 'store/pageBuilder/reducer';
 
 // types
 import { BorderRadiusMode } from '../enums';

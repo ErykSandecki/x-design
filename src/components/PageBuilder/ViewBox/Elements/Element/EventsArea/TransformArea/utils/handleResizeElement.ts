@@ -1,9 +1,9 @@
-import { Dispatch } from 'redux';
+import { Dispatch } from '@reduxjs/toolkit';
 import { RefObject } from 'react';
 
 // store
 import { areaAxisSelectorCreator } from 'store/pageBuilder/selectors';
-import { resizeElement } from 'store/pageBuilder/actions';
+import { resizeElement } from 'store/pageBuilder/reducer';
 import { store } from 'store';
 
 // types

@@ -1,11 +1,11 @@
 // types
-import { TPageBuilderState, TRotateElementsAction } from '../types';
+import { TPageBuilderState, TRotateElementsActionPayload } from '../types';
 
 // utils
 import { extractObjectValues, mapFilteredValues } from 'utils';
 
 export const handleRotateElements = (
-  angle: TRotateElementsAction['payload'],
+  angle: TRotateElementsActionPayload,
   state: TPageBuilderState,
 ): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];

@@ -1,10 +1,10 @@
+import { createSlice, current, PayloadAction } from '@reduxjs/toolkit';
+
 // others
 import { DEFAULT_LANGUAGE } from 'translations';
-import { INIT_LANGUAGE_SUCCESS, SET_IS_APP_LOADED, SET_THEME } from './actionsType';
 
 // types
-import { TAction } from 'types';
-import { TAppInitializerState, TInitLanguageSuccessAction, TSetIsAppLoadedAction, TSetThemeAction } from './types';
+import { TAppInitializerState } from './types';
 
 // utils
 import { getThemePreferences } from 'utils';
@@ -16,42 +16,37 @@ const initialState: TAppInitializerState = {
   theme: getThemePreferences(),
 };
 
-const initLanguageSuccess = (
-  state: TAppInitializerState,
-  { payload: language }: TAction<TInitLanguageSuccessAction['payload']>,
-): TAppInitializerState => ({
+const handleInitLanguageSuccess = (state: TAppInitializerState, language: string): TAppInitializerState => ({
   ...state,
   language,
 });
 
-const setIsAppLoaded = (
-  state: TAppInitializerState,
-  { payload: isAppLoaded }: TAction<TSetIsAppLoadedAction['payload']>,
-): TAppInitializerState => ({
+const handleSetIsAppLoaded = (state: TAppInitializerState, isAppLoaded: boolean): TAppInitializerState => ({
   ...state,
   isAppLoaded,
   isPending: false,
 });
 
-const setTheme = (
-  state: TAppInitializerState,
-  { payload: theme }: TAction<TSetThemeAction['payload']>,
-): TAppInitializerState => ({
+const handleSetTheme = (state: TAppInitializerState, theme: TAppInitializerState['theme']): TAppInitializerState => ({
   ...state,
   theme,
 });
 
-const appInitializer = (state: TAppInitializerState = initialState, action: TAction): TAppInitializerState => {
-  switch (action.type) {
-    case INIT_LANGUAGE_SUCCESS:
-      return initLanguageSuccess(state, action);
-    case SET_IS_APP_LOADED:
-      return setIsAppLoaded(state, action);
-    case SET_THEME:
-      return setTheme(state, action);
-    default:
-      return state;
-  }
-};
+const appInitializerSlice = createSlice({
+  initialState,
+  name: 'appInitializer',
+  reducers: {
+    appInit: (state) => state,
+    initLanguage: (state) => state,
+    initLanguageSuccess: (state, action: PayloadAction<string>) =>
+      handleInitLanguageSuccess(current(state) as TAppInitializerState, action.payload),
+    setIsAppLoaded: (state, action: PayloadAction<boolean>) =>
+      handleSetIsAppLoaded(current(state) as TAppInitializerState, action.payload),
+    setTheme: (state, action: PayloadAction<TAppInitializerState['theme']>) =>
+      handleSetTheme(current(state) as TAppInitializerState, action.payload),
+  },
+});
 
-export default appInitializer;
+export const { appInit, initLanguage, initLanguageSuccess, setIsAppLoaded, setTheme } = appInitializerSlice.actions;
+export const REDUCER_KEY = appInitializerSlice.name;
+export default appInitializerSlice.reducer;

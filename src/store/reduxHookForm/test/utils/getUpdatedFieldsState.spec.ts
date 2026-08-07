@@ -2,7 +2,7 @@
 import { reduxHookFormStateMock } from 'test/mocks/reducer/reduxHookFormMock';
 
 // others
-import { REDUCER_KEY as REDUX_HOOK_FORM } from '../../actionsType';
+import { REDUCER_KEY as REDUX_HOOK_FORM } from '../../reducer';
 
 // types
 import { TField, TReduxHookFormState } from '../../types';

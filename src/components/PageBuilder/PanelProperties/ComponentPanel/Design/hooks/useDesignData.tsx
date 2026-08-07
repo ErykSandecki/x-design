@@ -8,7 +8,7 @@ import {
   hasVariantsSelectorCreator,
   isMixedSelectorCreator,
 } from 'store/pageBuilder/selectors';
-import { changeLayout } from 'store/pageBuilder/actions';
+import { changeLayout } from 'store/pageBuilder/reducer';
 
 // types
 import { BorderRadiusMode } from '../enums';

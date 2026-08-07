@@ -1,8 +1,8 @@
-import { Dispatch } from 'redux';
+import { Dispatch } from '@reduxjs/toolkit';
 import { MouseEvent } from 'react';
 
 // store
-import { unselectElement } from 'store/pageBuilder/actions';
+import { unselectElement } from 'store/pageBuilder/reducer';
 
 // types
 import { TElement } from 'types';

@@ -11,7 +11,7 @@ import { PANEL_PROPERTIES_ID } from '../../../constants';
 import { TOOLTIP_TRANSLATION_KEY } from 'constant/constants';
 
 // store
-import { changeProperties } from 'store/pageBuilder/actions';
+import { changeProperties } from 'store/pageBuilder/reducer';
 import {
   elementAttributeSelectorCreator,
   firstSelectedElementIdSelector,

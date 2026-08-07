@@ -3,8 +3,8 @@ import { MouseEvent } from 'react';
 // mocks
 import { selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
-// others
-import { SELECT_ELEMENTS } from 'store/pageBuilder/actionsType';
+// store
+import { selectElements } from 'store/pageBuilder/reducer';
 
 // utils
 import { handleSelectElement } from '../handleSelectElement';
@@ -41,7 +41,7 @@ describe('handleSelectElement', () => {
     handleSelectElement(mockCallBack, { shiftKey: false } as MouseEvent, false, false, selectedElementMock);
 
     // result
-    expect(mockCallBack.mock.calls[0][0].type).toBe(SELECT_ELEMENTS);
+    expect(mockCallBack.mock.calls[0][0].type).toBe(selectElements.type);
     expect(mockCallBack.mock.calls[0][0].payload).toStrictEqual([selectedElementMock]);
   });
 

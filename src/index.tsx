@@ -17,7 +17,6 @@ import './index.scss';
 // utils
 import { appendOverlayContainers } from 'config';
 import { noop } from 'lodash';
-// import { setTheme } from 'store/appInitializer/actions';
 
 appendOverlayContainers();
 

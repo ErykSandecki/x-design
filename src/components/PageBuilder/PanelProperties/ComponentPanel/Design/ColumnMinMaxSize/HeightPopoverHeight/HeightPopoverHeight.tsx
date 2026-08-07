@@ -10,7 +10,7 @@ import { UITools } from 'shared';
 import { translationNameSpace } from './constants';
 
 // store
-import { applyElementsType, setElementsScoreToCurrentSize } from 'store/pageBuilder/actions';
+import { applyElementsType, setElementsScoreToCurrentSize } from 'store/pageBuilder/reducer';
 
 // types
 import { PopoverItem } from '../enums';

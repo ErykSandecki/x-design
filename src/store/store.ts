@@ -1,6 +1,5 @@
 import createSagaMiddleware from 'redux-saga';
-import { applyMiddleware, createStore } from 'redux';
-import { composeWithDevTools } from '@redux-devtools/extension';
+import { configureStore as configureReduxStore } from '@reduxjs/toolkit';
 
 // store
 import reducers from './reducers';
@@ -9,14 +8,15 @@ import sagaMiddlewareRuns from './watchers';
 // types
 import { TStore } from './types';
 
-const composeEnhancers = composeWithDevTools({
-  trace: true,
-});
-
 const sagaMiddleware = createSagaMiddleware();
 
-export const configureStore = (initialState = {}): TStore => {
-  const store = createStore(reducers(), initialState, composeEnhancers(applyMiddleware(sagaMiddleware)));
+export const configureStore = (preloadedState = {}): TStore => {
+  const store = configureReduxStore({
+    devTools: { trace: true },
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(sagaMiddleware),
+    preloadedState,
+    reducer: reducers(),
+  });
 
   sagaMiddlewareRuns(sagaMiddleware);
 

@@ -3,10 +3,8 @@ import { useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
-// others
-import { SET_PENDING_FIELD, UPDATE_ASYNC_ERRORS, UPDATE_SYNC_ERRORS } from 'store/reduxHookForm/actionsType';
-
 // store
+import { setPendingField, updateAsyncErrors, updateSyncErrors } from 'store/reduxHookForm/reducer';
 import { fieldsSelectorCreator, formAttributesSelectorCreator } from 'store/reduxHookForm/selectors';
 
 // types
@@ -49,7 +47,7 @@ export const useValidators = (
   const subscriptionFieldsValues = subscriptionFields.map((fieldName) => fields && fields[fieldName]?.value);
 
   const getAsyncErrors = async (value: TFieldValue): Promise<Array<string>> => {
-    dispatchField({ isPending: true }, SET_PENDING_FIELD);
+    dispatchField({ isPending: true }, setPendingField);
 
     return await getErrorsFromAsyncValidators(asyncValidators, value, fields, t);
   };
@@ -62,7 +60,7 @@ export const useValidators = (
       if (asyncValidators.length) {
         const asyncErrors = await getAsyncErrors(value);
 
-        dispatchField({ asyncErrors, isPending: false }, UPDATE_ASYNC_ERRORS);
+        dispatchField({ asyncErrors, isPending: false }, updateAsyncErrors);
       }
     }, asyncTimeDelay),
     [],
@@ -70,7 +68,7 @@ export const useValidators = (
 
   const updateSyncValidators = (value: TFieldValue): void => {
     if (syncValidators.length) {
-      dispatchField({ syncErrors: getSyncErrors(value) }, UPDATE_SYNC_ERRORS);
+      dispatchField({ syncErrors: getSyncErrors(value) }, updateSyncErrors);
     }
   };
 

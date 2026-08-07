@@ -6,7 +6,7 @@ import { wholeStateMock } from 'test/mocks/reducer/wholeStateMock';
 
 // others
 import { BASE_2D } from 'shared';
-import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
+import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/reducer';
 
 // store
 import { store as storeToMock } from 'store/store';

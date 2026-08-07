@@ -2,7 +2,7 @@
 import { pageBuilderStateMock, reducerHistoryMock, selectedElementMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
-import { REDUCER_KEY as PAGE_BUILDER, SELECT_ELEMENTS } from '../../../actionsType';
+import { REDUCER_KEY as PAGE_BUILDER, selectElements } from '../../../reducer';
 
 // types
 import { TPageBuilderState } from 'store/pageBuilder/types';
@@ -172,7 +172,7 @@ describe('handleReducerHistorySave', () => {
     } as TPageBuilderState;
 
     // before
-    const result = handleReducerHistorySave(state, SELECT_ELEMENTS);
+    const result = handleReducerHistorySave(state, selectElements.type);
 
     // result
     expect(result).toStrictEqual({

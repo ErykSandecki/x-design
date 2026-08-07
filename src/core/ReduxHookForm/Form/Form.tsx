@@ -2,11 +2,8 @@ import { createContext, FormEvent, ReactNode, useEffect } from 'react';
 import { forOwn, isEmpty, kebabCase } from 'lodash';
 import { useDispatch, useSelector } from 'react-redux';
 
-// others
-import { UPDATE_FORM_VALIDATOR } from '../../../store/reduxHookForm/actionsType';
-
 // store
-import { destroyForm, mountForm, submit, updateForm } from '../../../store/reduxHookForm/actions';
+import { destroyForm, mountForm, submit, updateFormValidator } from '../../../store/reduxHookForm/reducer';
 import { fieldsSelectorCreator, formSelectorCreator } from '../../../store/reduxHookForm/selectors';
 
 // types
@@ -66,7 +63,7 @@ export const Form = <T extends {}>({
       onSubmit(getFieldsValues());
     }
 
-    dispatch(updateForm({ form: { isValid }, formName }, UPDATE_FORM_VALIDATOR));
+    dispatch(updateFormValidator({ form: { isValid }, formName }));
   };
 
   const onSubmitHandler = (event: FormEvent): void => {

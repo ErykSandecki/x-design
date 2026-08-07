@@ -1,13 +1,10 @@
 // types
-import { TFlipElementsAction, TPageBuilderState } from '../../types';
+import { TFlipElementsActionPayload, TPageBuilderState } from '../../types';
 
 // utils
 import { getFlippedElements } from './getFlippedElements';
 
-export const handleFlipElements = (
-  axis: TFlipElementsAction['payload'],
-  state: TPageBuilderState,
-): TPageBuilderState => {
+export const handleFlipElements = (axis: TFlipElementsActionPayload, state: TPageBuilderState): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];
 
   return {

@@ -1,24 +1,18 @@
-import { Dispatch } from 'redux';
+import { ActionCreatorWithPayload, Dispatch } from '@reduxjs/toolkit';
 
 // types
-import { TField, TUpdateFieldActions } from 'store/reduxHookForm/types';
-
-// store
-import { updateField } from 'store/reduxHookForm/actions';
+import { TField, TUpdateFieldActionPayload } from 'store/reduxHookForm/types';
 
 export const dispatchFieldHandler =
   (dispatch: Dispatch, formName: string, name: string) =>
-  (field: Partial<TField>, actionType: TUpdateFieldActions): void => {
+  (field: Partial<TField>, actionCreator: ActionCreatorWithPayload<TUpdateFieldActionPayload>): void => {
     dispatch(
-      updateField(
-        {
-          field: {
-            ...field,
-          },
-          formName,
-          name,
+      actionCreator({
+        field: {
+          ...field,
         },
-        actionType,
-      ),
+        formName,
+        name,
+      }),
     );
   };

@@ -9,7 +9,7 @@ import {
 } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
-import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
+import { REDUCER_KEY as PAGE_BUILDER } from '../../reducer';
 
 // utils
 import { handleSetElementsScoreToCurrentSize } from '../handleSetElementsScoreToCurrentSize';

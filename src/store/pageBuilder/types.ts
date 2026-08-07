@@ -1,41 +1,3 @@
-// others
-import {
-  ADD_ELEMENT,
-  CHANGE_ALIGNMENT,
-  CHANGE_BACKGROUND,
-  CHANGE_LAYOUT,
-  CHANGE_LAYOUT_ALIGNMENT,
-  CHANGE_LAYOUT_BOX_SIZING,
-  CHANGE_LAYOUT_GRID,
-  CHANGE_PARENT,
-  CHANGE_POSITION,
-  CLEAR_PREV_STATE,
-  FIT_LAYOUT,
-  FLIP_ELEMENTS,
-  REDUCER_HISTORY_REDO,
-  REDUCER_HISTORY_SAVE,
-  REDUCER_HISTORY_UNDO,
-  RESIZE_ELEMENT,
-  ROTATE_ELEMENTS,
-  SELECT_ELEMENT,
-  SELECT_ELEMENTS,
-  SET_AREA_COORDINATES,
-  SET_ELEMENTS_COORDINATES,
-  SET_ELEMENTS_GAP,
-  SET_ELEMENTS_SCORE_TO_CURRENT_SIZE,
-  SET_ELEMENTS_SIZES,
-  SET_ELEMENTS_SIZES_MIN_MAX,
-  UNSELECT_ELEMENT,
-  UPDATE_EVENTS_STATUS,
-  UPDATE_PREV_STATE,
-  UNSELECT_ELEMENTS,
-  CHANGE_PROPERTIES,
-  APPLY_ELEMENTS_TYPE,
-  CHANGE_BACKGROUND_ORDER,
-  ADD_VARIANT,
-  REMOVE_VARIANT,
-} from './actionsType';
-
 // types
 import { AnchorResize, AnchorRotate, DropAnchorsPosition } from './enums';
 import {
@@ -43,7 +5,6 @@ import {
   AlignmentVertical,
   ElementType,
   KeyboardKeys,
-  TAction,
   TBackground,
   TChildren,
   TElement,
@@ -121,17 +82,7 @@ export type TPageBuilderState = {
 
 export type TAddELementActionPayload = Omit<TElement, 'index'>;
 
-export type TAddELementAction = {
-  payload: TAddELementActionPayload;
-  type: typeof ADD_ELEMENT;
-};
-
 export type TAddVariantActionPayload = { key: 'background'; value: TBackground };
-
-export type TAddVariantAction = {
-  payload: TAddVariantActionPayload;
-  type: typeof ADD_VARIANT;
-};
 
 export type TApplyElementsInsetTypeActionPayload = {
   insets: Array<keyof TInsets>;
@@ -145,19 +96,9 @@ export type TApplyElementsTypeActionPayload = {
   unit?: Unit;
 };
 
-export type TApplyElementsTypeAction = {
-  payload: TApplyElementsTypeActionPayload;
-  type: typeof APPLY_ELEMENTS_TYPE;
-};
-
 export type TChangeAlignmentActionPayload = {
   horizontal?: AlignmentHorizontal;
   vertical?: AlignmentVertical;
-};
-
-export type TChangeAlignmentAction = {
-  payload: TChangeAlignmentActionPayload;
-  type: typeof CHANGE_ALIGNMENT;
 };
 
 export type TChangeBackgroundActionPayload = Pick<TElement, 'id'> & {
@@ -165,88 +106,26 @@ export type TChangeBackgroundActionPayload = Pick<TElement, 'id'> & {
   index: number;
 };
 
-export type TChangeBackgroundAction = {
-  payload: TChangeBackgroundActionPayload;
-  type: typeof CHANGE_BACKGROUND;
-};
-
 export type TChangeBackgroundOrderActionPayload = {
   draggableItem: number;
   position: number;
 };
 
-export type TChangeBackgroundOrderAction = {
-  payload: TChangeBackgroundOrderActionPayload;
-  type: typeof CHANGE_BACKGROUND_ORDER;
-};
+export type TChangeLayoutActionPayload = TElement['layout']['type'];
 
-export type TChangeLayoutAction = {
-  payload: TElement['layout']['type'];
-  type: typeof CHANGE_LAYOUT;
-};
+export type TChangeLayoutAlignmentActionPayload = TElement['layout']['alignment'];
 
-export type TChangeLayoutAlignmentAction = {
-  payload: TElement['layout']['alignment'];
-  type: typeof CHANGE_LAYOUT_ALIGNMENT;
-};
+export type TChangeLayoutBoxSizingActionPayload = TElement['layout']['boxSizing'];
 
-export type TChangeLayoutBoxSizingAction = {
-  payload: TElement['layout']['boxSizing'];
-  type: typeof CHANGE_LAYOUT_BOX_SIZING;
-};
+export type TChangeLayoutGridActionPayload = Partial<TGrid>;
 
-export type TChangeLayoutGridAction = {
-  payload: Partial<TGrid>;
-  type: typeof CHANGE_LAYOUT_GRID;
-};
+export type TChangePropertiesActionPayload = Partial<TElement>;
 
-export type TChangeParentAction = {
-  type: typeof CHANGE_PARENT;
-};
-
-export type TChangePositionAction = {
-  type: typeof CHANGE_POSITION;
-};
-
-export type TChangePropertiesAction = {
-  payload: Partial<TElement>;
-  type: typeof CHANGE_PROPERTIES;
-};
-
-export type TClearPrevStateAction = {
-  type: typeof CLEAR_PREV_STATE;
-};
-
-export type TFitLayoutAction = {
-  type: typeof FIT_LAYOUT;
-};
-
-export type TFlipElementsAction = {
-  payload: keyof T2DCoordinates;
-  type: typeof FLIP_ELEMENTS;
-};
-
-export type TReducerHistoryRedoAction = {
-  type: typeof REDUCER_HISTORY_REDO;
-};
-
-export type TReducerHistorySaveAction = {
-  payload: TAction['type'];
-  type: typeof REDUCER_HISTORY_SAVE;
-};
-
-export type TReducerHistoryUndoAction = {
-  type: typeof REDUCER_HISTORY_UNDO;
-};
+export type TFlipElementsActionPayload = keyof T2DCoordinates;
 
 export type TRemoveVariantActionPayload = {
   index: number;
   key: 'background';
-};
-
-export type TRemoveVariantAction = {
-  payload: TRemoveVariantActionPayload;
-  type: typeof REMOVE_VARIANT;
 };
 
 export type TResizeElementActionPayload = Pick<TElement, 'id'> & {
@@ -257,39 +136,11 @@ export type TResizeElementActionPayload = Pick<TElement, 'id'> & {
   width: TValue['value'];
 };
 
-export type TResizeElementAction = {
-  payload: TResizeElementActionPayload;
-  type: typeof RESIZE_ELEMENT;
-};
-
-export type TRotateElementsAction = {
-  payload: TElement['angle'];
-  type: typeof ROTATE_ELEMENTS;
-};
-
-export type TSelectElementAction = {
-  payload: TSelectedElement;
-  type: typeof SELECT_ELEMENT;
-};
-
-export type TSelectElementsAction = {
-  payload: TSelectedElements;
-  type: typeof SELECT_ELEMENTS;
-};
-
-export type TSetAreaCoordinatesAction = {
-  payload: Partial<T3DCoordinates>;
-  type: typeof SET_AREA_COORDINATES;
-};
+export type TRotateElementsActionPayload = TElement['angle'];
 
 export type TSetElementsCoordinatesActionPayload = {
   coordinates: T2DCoordinates;
   mode: 'dynamic' | 'static';
-};
-
-export type TSetElementsCoordinatesAction = {
-  payload: TSetElementsCoordinatesActionPayload;
-  type: typeof SET_ELEMENTS_COORDINATES;
 };
 
 export type TSetElementsGapActionPayload = {
@@ -297,29 +148,14 @@ export type TSetElementsGapActionPayload = {
   value: TValue['value'];
 };
 
-export type TSetElementsGapAction = {
-  payload: TSetElementsGapActionPayload;
-  type: typeof SET_ELEMENTS_GAP;
-};
-
 export type TSetElementsScoreToCurrentSizeActionPayload = {
   scoreType: keyof TValueScore;
   sizeType: keyof Pick<TElement, 'height' | 'width'>;
 };
 
-export type TSetElementsScoreToCurrentSizeAction = {
-  payload: TSetElementsScoreToCurrentSizeActionPayload;
-  type: typeof SET_ELEMENTS_SCORE_TO_CURRENT_SIZE;
-};
-
 export type TSetElementsSizesActionPayload = {
   sizeType: keyof Pick<TElement, 'height' | 'width'>;
   value: TValue['value'];
-};
-
-export type TSetElementsSizesAction = {
-  payload: TSetElementsSizesActionPayload;
-  type: typeof SET_ELEMENTS_SIZES;
 };
 
 export type TSetElementsSizesMinMaxActionPayload = {
@@ -330,27 +166,4 @@ export type TSetElementsSizesMinMaxActionPayload = {
     | TElement['height']['min']['value']
     | TElement['width']['max']['value']
     | TElement['width']['min']['value'];
-};
-
-export type TSetElementsSizesMinMaxAction = {
-  payload: TSetElementsSizesMinMaxActionPayload;
-  type: typeof SET_ELEMENTS_SIZES_MIN_MAX;
-};
-
-export type TUpdateEventsStatusAction = {
-  payload: Partial<TEvents>;
-  type: typeof UPDATE_EVENTS_STATUS;
-};
-
-export type TUpdatePrevStateAction = {
-  type: typeof UPDATE_PREV_STATE;
-};
-
-export type TUnselectElementAction = {
-  payload: TElement['id'];
-  type: typeof UNSELECT_ELEMENT;
-};
-
-export type TUnselectElementsAction = {
-  type: typeof UNSELECT_ELEMENTS;
 };

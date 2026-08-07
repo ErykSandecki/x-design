@@ -3,13 +3,15 @@ import { pageBuilderStateMock, reducerHistoryMock, selectedElementMock } from 't
 
 // others
 import { BASE_3D } from 'shared';
+
+// store
 import {
-  CHANGE_PARENT,
+  changeParent,
+  selectElement,
+  selectElements,
+  setAreCoordinates,
   REDUCER_KEY as PAGE_BUILDER,
-  SELECT_ELEMENT,
-  SELECT_ELEMENTS,
-  SET_AREA_COORDINATES,
-} from '../../../actionsType';
+} from '../../../reducer';
 
 // types
 import { TPageBuilderState } from 'store/pageBuilder/types';
@@ -41,7 +43,7 @@ describe('isRepeatedStateInHistory', () => {
     } as TPageBuilderState;
 
     // before
-    const result = isRepeatedStateInHistory(state, CHANGE_PARENT);
+    const result = isRepeatedStateInHistory(state, changeParent.type);
 
     // result
     expect(result).toBe(true);
@@ -68,7 +70,7 @@ describe('isRepeatedStateInHistory', () => {
     } as TPageBuilderState;
 
     // before
-    const result = isRepeatedStateInHistory(state, SELECT_ELEMENT);
+    const result = isRepeatedStateInHistory(state, selectElement.type);
 
     // result
     expect(result).toBe(true);
@@ -95,7 +97,7 @@ describe('isRepeatedStateInHistory', () => {
     } as TPageBuilderState;
 
     // before
-    const result = isRepeatedStateInHistory(state, SELECT_ELEMENTS);
+    const result = isRepeatedStateInHistory(state, selectElements.type);
 
     // result
     expect(result).toBe(true);
@@ -123,7 +125,7 @@ describe('isRepeatedStateInHistory', () => {
     } as TPageBuilderState;
 
     // before
-    const result = isRepeatedStateInHistory(state, SET_AREA_COORDINATES);
+    const result = isRepeatedStateInHistory(state, setAreCoordinates.type);
 
     // result
     expect(result).toBe(true);

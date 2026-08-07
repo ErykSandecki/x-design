@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 
 // store
-import { setElementsCoordinates } from 'store/pageBuilder/actions';
+import { setElementsCoordinates } from 'store/pageBuilder/reducer';
 
 // utils
 import { canChangeValue } from '../utils/canChangeValue';

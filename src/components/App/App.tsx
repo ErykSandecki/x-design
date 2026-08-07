@@ -8,7 +8,7 @@ import PageBuilderPage from 'pages/PageBuilderPage/PageBuilderPage';
 import { useDispatchMany } from 'hooks';
 
 // store
-import { appInit, initLanguage } from 'store/appInitializer/actions';
+import { appInit, initLanguage } from 'store/appInitializer/reducer';
 import { isAppLoadedSelector, isPendingSelector } from 'store/appInitializer/selectors';
 
 const App: FC = () => {

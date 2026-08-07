@@ -1,11 +1,8 @@
 import { isArray } from 'lodash';
 import { useDispatch, useSelector } from 'react-redux';
 
-// others
-import { BLUR, CHANGE, FOCUS } from 'store/reduxHookForm/actionsType';
-
 // store
-import { clearFields } from 'store/reduxHookForm/actions';
+import { blur, change, clearFields, focus } from 'store/reduxHookForm/reducer';
 import { fieldAttributesSelectorCreator, fieldSelectorCreator } from 'store/reduxHookForm/selectors';
 
 // types
@@ -45,10 +42,10 @@ export const useInputProps = <V extends TFieldValue>(formName: string, name: str
         const someValueHasChanged = !nextValue.every((value) => previousValue.includes(value));
 
         if (someValueHasChanged) {
-          dispatch(clearFields(formName, fieldsToClearOnChange));
+          dispatch(clearFields({ formName, names: fieldsToClearOnChange }));
         }
       } else if (previousValue !== nextValue) {
-        dispatch(clearFields(formName, fieldsToClearOnChange));
+        dispatch(clearFields({ formName, names: fieldsToClearOnChange }));
       }
     }
   };
@@ -60,7 +57,7 @@ export const useInputProps = <V extends TFieldValue>(formName: string, name: str
         touched: true,
         value: formatOnBlur ? formatOnBlur(value, name) : value,
       },
-      BLUR,
+      blur,
     );
   };
 
@@ -74,7 +71,7 @@ export const useInputProps = <V extends TFieldValue>(formName: string, name: str
         previousValue: value,
         value: targetValue,
       },
-      CHANGE,
+      change,
     );
 
     handleClearFields(targetValue as V);
@@ -87,7 +84,7 @@ export const useInputProps = <V extends TFieldValue>(formName: string, name: str
         value: formatOnFocus ? formatOnFocus(value, name) : value,
         visited: true,
       },
-      FOCUS,
+      focus,
     );
   };
 

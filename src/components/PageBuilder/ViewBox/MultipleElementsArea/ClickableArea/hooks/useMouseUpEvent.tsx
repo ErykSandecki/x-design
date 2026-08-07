@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 
 // store
-import { changeParent } from 'store/pageBuilder/actions';
+import { changeParent } from 'store/pageBuilder/reducer';
 
 // types
 import { TElement } from 'types';

@@ -17,12 +17,11 @@ import {
 } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
-import { REDUCER_KEY as PAGE_BUILDER, SET_AREA_COORDINATES } from '../actionsType';
 import { ZOOM_CONTENT_ID } from 'shared';
 
 // store
-import pageBuilder from '../reducer';
-import {
+import pageBuilder, {
+  REDUCER_KEY as PAGE_BUILDER,
   addElement,
   addVariant,
   applyElementsType,
@@ -57,7 +56,7 @@ import {
   unselectElements,
   updateEventsStatus,
   updatePrevState,
-} from '../actions';
+} from '../reducer';
 
 // types
 import {
@@ -1094,7 +1093,7 @@ describe('PageBuilderReducer', () => {
     const currentPage = pageBuilderStateMock[PAGE_BUILDER].pages[pageBuilderStateMock[PAGE_BUILDER].currentPage];
 
     // before
-    const state = reducer(reducerHistorySave(SET_AREA_COORDINATES), {
+    const state = reducer(reducerHistorySave(setAreCoordinates.type), {
       ...pageBuilderStateMock[PAGE_BUILDER],
       pages: {
         ...pageBuilderStateMock[PAGE_BUILDER].pages,

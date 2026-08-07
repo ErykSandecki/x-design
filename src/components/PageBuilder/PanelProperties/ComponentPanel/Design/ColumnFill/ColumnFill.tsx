@@ -10,7 +10,7 @@ import { PANEL_PROPERTIES_ID } from '../../../../constants';
 import { translationNameSpace } from './constants';
 
 // store
-import { changeBackground, changeBackgroundOrder, removeVariant, updateEventsStatus } from 'store/pageBuilder/actions';
+import { changeBackground, changeBackgroundOrder, removeVariant, updateEventsStatus } from 'store/pageBuilder/reducer';
 import {
   elementAttributeSelectorCreator,
   eventSelectorCreator,

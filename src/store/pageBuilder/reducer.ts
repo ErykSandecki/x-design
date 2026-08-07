@@ -1,73 +1,36 @@
+import { createSlice, current, PayloadAction } from '@reduxjs/toolkit';
+
 // others
-import {
-  ADD_ELEMENT,
-  CHANGE_ALIGNMENT,
-  CHANGE_BACKGROUND,
-  CHANGE_LAYOUT,
-  CHANGE_PARENT,
-  CHANGE_POSITION,
-  CLEAR_PREV_STATE,
-  CHANGE_LAYOUT_BOX_SIZING,
-  CHANGE_LAYOUT_GRID,
-  FIT_LAYOUT,
-  FLIP_ELEMENTS,
-  REDUCER_HISTORY_REDO,
-  REDUCER_HISTORY_SAVE,
-  REDUCER_HISTORY_UNDO,
-  ROTATE_ELEMENTS,
-  SELECT_ELEMENT,
-  SELECT_ELEMENTS,
-  SET_AREA_COORDINATES,
-  RESIZE_ELEMENT,
-  SET_ELEMENTS_COORDINATES,
-  UNSELECT_ELEMENT,
-  UPDATE_EVENTS_STATUS,
-  UPDATE_PREV_STATE,
-  SET_ELEMENTS_SIZES,
-  SET_ELEMENTS_SIZES_MIN_MAX,
-  SET_ELEMENTS_SCORE_TO_CURRENT_SIZE,
-  CHANGE_LAYOUT_ALIGNMENT,
-  SET_ELEMENTS_GAP,
-  UNSELECT_ELEMENTS,
-  CHANGE_PROPERTIES,
-  APPLY_ELEMENTS_TYPE,
-  CHANGE_BACKGROUND_ORDER,
-  ADD_VARIANT,
-  REMOVE_VARIANT,
-} from './actionsType';
 import { BASE_PAGE } from './constants';
 
 // types
 import { AnchorResize, AnchorRotate } from './enums';
-import { KeyboardKeys, TAction } from 'types';
+import { KeyboardKeys, TElement } from 'types';
 import {
-  TAddELementAction,
-  TSelectElementAction,
+  TAddELementActionPayload,
+  TAddVariantActionPayload,
+  TApplyElementsTypeActionPayload,
+  TChangeAlignmentActionPayload,
+  TChangeBackgroundActionPayload,
+  TChangeBackgroundOrderActionPayload,
+  TChangeLayoutActionPayload,
+  TChangeLayoutAlignmentActionPayload,
+  TChangeLayoutBoxSizingActionPayload,
+  TChangeLayoutGridActionPayload,
+  TChangePropertiesActionPayload,
+  TEvents,
+  TFlipElementsActionPayload,
   TPageBuilderState,
-  TUnselectElementAction,
-  TSelectElementsAction,
-  TSetAreaCoordinatesAction,
-  TUpdateEventsStatusAction,
-  TResizeElementAction,
-  TRotateElementsAction,
-  TChangeBackgroundAction,
-  TReducerHistorySaveAction,
-  TChangeAlignmentAction,
-  TFlipElementsAction,
-  TChangeLayoutAction,
-  TSetElementsCoordinatesAction,
-  TSetElementsSizesAction,
-  TSetElementsSizesMinMaxAction,
-  TSetElementsScoreToCurrentSizeAction,
-  TChangeLayoutAlignmentAction,
-  TSetElementsGapAction,
-  TChangeLayoutBoxSizingAction,
-  TChangeLayoutGridAction,
-  TChangePropertiesAction,
-  TApplyElementsTypeAction,
-  TChangeBackgroundOrderAction,
-  TAddVariantAction,
-  TRemoveVariantAction,
+  TRemoveVariantActionPayload,
+  TResizeElementActionPayload,
+  TRotateElementsActionPayload,
+  TSelectedElement,
+  TSelectedElements,
+  TSetElementsCoordinatesActionPayload,
+  TSetElementsGapActionPayload,
+  TSetElementsScoreToCurrentSizeActionPayload,
+  TSetElementsSizesActionPayload,
+  TSetElementsSizesMinMaxActionPayload,
 } from './types';
 
 // utils
@@ -121,7 +84,6 @@ const initialState: TPageBuilderState = {
   },
   isLoading: true,
   isPending: false,
-  // @ts-ignore
   pages: {
     [BASE_PAGE.id]: {
       ...BASE_PAGE,
@@ -129,64 +91,7 @@ const initialState: TPageBuilderState = {
   },
 };
 
-const addElement = (
-  state: TPageBuilderState,
-  { payload: element }: TAction<TAddELementAction['payload']>,
-): TPageBuilderState => handleAddElement(element, state);
-
-const addVariant = (state: TPageBuilderState, { payload }: TAction<TAddVariantAction['payload']>): TPageBuilderState =>
-  handleAddVariant(payload, state);
-
-const applyElementsType = (
-  state: TPageBuilderState,
-  { payload }: TAction<TApplyElementsTypeAction['payload']>,
-): TPageBuilderState => handleApplyElementsType(payload, state);
-
-const changeAlignment = (
-  state: TPageBuilderState,
-  { payload }: TAction<TChangeAlignmentAction['payload']>,
-): TPageBuilderState => handleChangeAlignment(payload, state);
-
-const changeBackground = (
-  state: TPageBuilderState,
-  { payload }: TAction<TChangeBackgroundAction['payload']>,
-): TPageBuilderState => handleChangeBackground(payload, state);
-
-const changeBackgroundOrder = (
-  state: TPageBuilderState,
-  { payload }: TAction<TChangeBackgroundOrderAction['payload']>,
-): TPageBuilderState => handleChangeBackgroundOrder(payload, state);
-
-const changeLayout = (
-  state: TPageBuilderState,
-  { payload }: TAction<TChangeLayoutAction['payload']>,
-): TPageBuilderState => handleChangeLayout(payload, state);
-
-const changeLayoutAlignment = (
-  state: TPageBuilderState,
-  { payload }: TAction<TChangeLayoutAlignmentAction['payload']>,
-): TPageBuilderState => handleChangeLayoutAlignment(payload, state);
-
-const changeLayoutBoxSizing = (
-  state: TPageBuilderState,
-  { payload }: TAction<TChangeLayoutBoxSizingAction['payload']>,
-): TPageBuilderState => handleChangeLayoutBoxSizing(payload, state);
-
-const changeLayoutGrid = (
-  state: TPageBuilderState,
-  { payload }: TAction<TChangeLayoutGridAction['payload']>,
-): TPageBuilderState => handleChangeLayoutGrid(payload, state);
-
-const changeParent = (state: TPageBuilderState): TPageBuilderState => handleChangeParent(state);
-
-const changePosition = (state: TPageBuilderState): TPageBuilderState => handleChangePosition(state);
-
-const changeVisibility = (
-  state: TPageBuilderState,
-  { payload }: TAction<TChangePropertiesAction['payload']>,
-): TPageBuilderState => handleChangeProperties(payload, state);
-
-const clearPrevState = (state: TPageBuilderState): TPageBuilderState => ({
+const handleClearPrevState = (state: TPageBuilderState): TPageBuilderState => ({
   ...state,
   pages: {
     ...state.pages,
@@ -197,41 +102,7 @@ const clearPrevState = (state: TPageBuilderState): TPageBuilderState => ({
   },
 });
 
-const fitLayout = (state: TPageBuilderState): TPageBuilderState => handleFitLayout(state);
-
-const flipElements = (
-  state: TPageBuilderState,
-  { payload }: TAction<TFlipElementsAction['payload']>,
-): TPageBuilderState => handleFlipElements(payload, state);
-
-const reducerHistoryRedo = (state: TPageBuilderState): TPageBuilderState => handleReducerHistoryRedo(state);
-
-const reducerHistorySave = (
-  state: TPageBuilderState,
-  { payload }: TAction<TReducerHistorySaveAction['payload']>,
-): TPageBuilderState => handleReducerHistorySave(state, payload);
-
-const reducerHistoryUndo = (state: TPageBuilderState): TPageBuilderState => handleReducerHistoryUndo(state);
-
-const removeVariant = (
-  state: TPageBuilderState,
-  { payload }: TAction<TRemoveVariantAction['payload']>,
-): TPageBuilderState => handleRemoveVariant(payload, state);
-
-const resizeElement = (
-  state: TPageBuilderState,
-  { payload: { baseCoordinates, flip, height, id, mouseCoordinates, width } }: TAction<TResizeElementAction['payload']>,
-): TPageBuilderState => handleResizeElement(baseCoordinates, flip, height, width, id, mouseCoordinates, state);
-
-const rotateElements = (
-  state: TPageBuilderState,
-  { payload }: TAction<TRotateElementsAction['payload']>,
-): TPageBuilderState => handleRotateElements(payload, state);
-
-const selectElement = (
-  state: TPageBuilderState,
-  { payload: selectedElement }: TAction<TSelectElementAction['payload']>,
-): TPageBuilderState => ({
+const handleSelectElement = (state: TPageBuilderState, selectedElement: TSelectedElement): TPageBuilderState => ({
   ...state,
   pages: {
     ...state.pages,
@@ -245,10 +116,7 @@ const selectElement = (
   },
 });
 
-const selectElements = (
-  state: TPageBuilderState,
-  { payload: selectedElements }: TAction<TSelectElementsAction['payload']>,
-): TPageBuilderState => ({
+const handleSelectElements = (state: TPageBuilderState, selectedElements: TSelectedElements): TPageBuilderState => ({
   ...state,
   pages: {
     ...state.pages,
@@ -259,9 +127,9 @@ const selectElements = (
   },
 });
 
-const setAreaCoordinates = (
+const handleSetAreaCoordinates = (
   state: TPageBuilderState,
-  { payload: areaCoordinates }: TAction<TSetAreaCoordinatesAction['payload']>,
+  areaCoordinates: Partial<T3DCoordinates>,
 ): TPageBuilderState => ({
   ...state,
   pages: {
@@ -276,35 +144,7 @@ const setAreaCoordinates = (
   },
 });
 
-const setElementsCoordinates = (
-  state: TPageBuilderState,
-  { payload: coordinates }: TAction<TSetElementsCoordinatesAction['payload']>,
-): TPageBuilderState => handleSetElementsCoordinates(coordinates, state);
-
-const setElementsGap = (
-  state: TPageBuilderState,
-  { payload }: TAction<TSetElementsGapAction['payload']>,
-): TPageBuilderState => handleSetElementsGap(payload, state);
-
-const setElementsScoreToCurrentSize = (
-  state: TPageBuilderState,
-  { payload: { scoreType, sizeType } }: TAction<TSetElementsScoreToCurrentSizeAction['payload']>,
-): TPageBuilderState => handleSetElementsScoreToCurrentSize(scoreType, sizeType, state);
-
-const setElementsSizes = (
-  state: TPageBuilderState,
-  { payload: { sizeType, value } }: TAction<TSetElementsSizesAction['payload']>,
-): TPageBuilderState => handleSetElementsSizes(sizeType, state, value);
-
-const setElementsSizesMinMax = (
-  state: TPageBuilderState,
-  { payload: { scoreType, sizeType, value } }: TAction<TSetElementsSizesMinMaxAction['payload']>,
-): TPageBuilderState => handleSetElementsSizesMinMax(scoreType, sizeType, state, value);
-
-const updateEventsStatus = (
-  state: TPageBuilderState,
-  { payload: events }: TAction<TUpdateEventsStatusAction['payload']>,
-): TPageBuilderState => ({
+const handleUpdateEventsStatus = (state: TPageBuilderState, events: Partial<TEvents>): TPageBuilderState => ({
   ...state,
   events: {
     ...state.events,
@@ -312,7 +152,7 @@ const updateEventsStatus = (
   },
 });
 
-const updatePrevState = (state: TPageBuilderState): TPageBuilderState => ({
+const handleUpdatePrevState = (state: TPageBuilderState): TPageBuilderState => ({
   ...state,
   pages: {
     ...state.pages,
@@ -323,10 +163,7 @@ const updatePrevState = (state: TPageBuilderState): TPageBuilderState => ({
   },
 });
 
-const unselectElement = (
-  state: TPageBuilderState,
-  { payload: id }: TAction<TUnselectElementAction['payload']>,
-): TPageBuilderState => ({
+const handleUnselectElement = (state: TPageBuilderState, id: TElement['id']): TPageBuilderState => ({
   ...state,
   pages: {
     ...state.pages,
@@ -337,7 +174,7 @@ const unselectElement = (
   },
 });
 
-const unselectElements = (state: TPageBuilderState): TPageBuilderState => ({
+const handleUnselectElements = (state: TPageBuilderState): TPageBuilderState => ({
   ...state,
   pages: {
     ...state.pages,
@@ -348,79 +185,198 @@ const unselectElements = (state: TPageBuilderState): TPageBuilderState => ({
   },
 });
 
-const pageBuilder = (state: TPageBuilderState = initialState, action: TAction): TPageBuilderState => {
-  switch (action.type) {
-    case ADD_ELEMENT:
-      return addElement(state, action);
-    case ADD_VARIANT:
-      return addVariant(state, action);
-    case APPLY_ELEMENTS_TYPE:
-      return applyElementsType(state, action);
-    case CHANGE_ALIGNMENT:
-      return changeAlignment(state, action);
-    case CHANGE_BACKGROUND:
-      return changeBackground(state, action);
-    case CHANGE_BACKGROUND_ORDER:
-      return changeBackgroundOrder(state, action);
-    case CHANGE_LAYOUT:
-      return changeLayout(state, action);
-    case CHANGE_LAYOUT_ALIGNMENT:
-      return changeLayoutAlignment(state, action);
-    case CHANGE_LAYOUT_BOX_SIZING:
-      return changeLayoutBoxSizing(state, action);
-    case CHANGE_LAYOUT_GRID:
-      return changeLayoutGrid(state, action);
-    case CHANGE_PARENT:
-      return changeParent(state);
-    case CHANGE_POSITION:
-      return changePosition(state);
-    case CHANGE_PROPERTIES:
-      return changeVisibility(state, action);
-    case CLEAR_PREV_STATE:
-      return clearPrevState(state);
-    case FIT_LAYOUT:
-      return fitLayout(state);
-    case FLIP_ELEMENTS:
-      return flipElements(state, action);
-    case REDUCER_HISTORY_REDO:
-      return reducerHistoryRedo(state);
-    case REDUCER_HISTORY_SAVE:
-      return reducerHistorySave(state, action);
-    case REDUCER_HISTORY_UNDO:
-      return reducerHistoryUndo(state);
-    case REMOVE_VARIANT:
-      return removeVariant(state, action);
-    case RESIZE_ELEMENT:
-      return resizeElement(state, action);
-    case ROTATE_ELEMENTS:
-      return rotateElements(state, action);
-    case SELECT_ELEMENT:
-      return selectElement(state, action);
-    case SELECT_ELEMENTS:
-      return selectElements(state, action);
-    case SET_AREA_COORDINATES:
-      return setAreaCoordinates(state, action);
-    case SET_ELEMENTS_COORDINATES:
-      return setElementsCoordinates(state, action);
-    case SET_ELEMENTS_GAP:
-      return setElementsGap(state, action);
-    case SET_ELEMENTS_SCORE_TO_CURRENT_SIZE:
-      return setElementsScoreToCurrentSize(state, action);
-    case SET_ELEMENTS_SIZES:
-      return setElementsSizes(state, action);
-    case SET_ELEMENTS_SIZES_MIN_MAX:
-      return setElementsSizesMinMax(state, action);
-    case UPDATE_EVENTS_STATUS:
-      return updateEventsStatus(state, action);
-    case UPDATE_PREV_STATE:
-      return updatePrevState(state);
-    case UNSELECT_ELEMENT:
-      return unselectElement(state, action);
-    case UNSELECT_ELEMENTS:
-      return unselectElements(state);
-    default:
-      return state;
-  }
-};
+const pageBuilderSlice = createSlice({
+  initialState,
+  name: 'pageBuilder',
+  reducers: {
+    addElement: (state, action: PayloadAction<TAddELementActionPayload>) =>
+      handleAddElement(action.payload, current(state) as TPageBuilderState),
+    addVariant: {
+      prepare: (key: TAddVariantActionPayload['key'], value: TAddVariantActionPayload['value']) => ({
+        payload: { key, value },
+      }),
+      reducer: (state, action: PayloadAction<TAddVariantActionPayload>) =>
+        handleAddVariant(action.payload, current(state) as TPageBuilderState),
+    },
+    applyElementsType: {
+      prepare: (
+        mode: TApplyElementsTypeActionPayload['mode'],
+        properties: TApplyElementsTypeActionPayload['properties'],
+        unit?: TApplyElementsTypeActionPayload['unit'],
+      ) => ({ payload: { mode, properties, unit } }),
+      reducer: (state, action: PayloadAction<TApplyElementsTypeActionPayload>) =>
+        handleApplyElementsType(action.payload, current(state) as TPageBuilderState),
+    },
+    changeAlignment: (state, action: PayloadAction<TChangeAlignmentActionPayload>) =>
+      handleChangeAlignment(action.payload, current(state) as TPageBuilderState),
+    changeBackground: {
+      prepare: (
+        background: TChangeBackgroundActionPayload['background'],
+        id: TChangeBackgroundActionPayload['id'],
+        index: TChangeBackgroundActionPayload['index'],
+      ) => ({ payload: { background, id, index } }),
+      reducer: (state, action: PayloadAction<TChangeBackgroundActionPayload>) =>
+        handleChangeBackground(action.payload, current(state) as TPageBuilderState),
+    },
+    changeBackgroundOrder: {
+      prepare: (
+        draggableItem: TChangeBackgroundOrderActionPayload['draggableItem'],
+        position: TChangeBackgroundOrderActionPayload['position'],
+      ) => ({ payload: { draggableItem, position } }),
+      reducer: (state, action: PayloadAction<TChangeBackgroundOrderActionPayload>) =>
+        handleChangeBackgroundOrder(action.payload, current(state) as TPageBuilderState),
+    },
+    changeLayout: (state, action: PayloadAction<TChangeLayoutActionPayload>) =>
+      handleChangeLayout(action.payload, current(state) as TPageBuilderState),
+    changeLayoutAlignment: (state, action: PayloadAction<TChangeLayoutAlignmentActionPayload>) =>
+      handleChangeLayoutAlignment(action.payload, current(state) as TPageBuilderState),
+    changeLayoutBoxSizing: (state, action: PayloadAction<TChangeLayoutBoxSizingActionPayload>) =>
+      handleChangeLayoutBoxSizing(action.payload, current(state) as TPageBuilderState),
+    changeLayoutGrid: (state, action: PayloadAction<TChangeLayoutGridActionPayload>) =>
+      handleChangeLayoutGrid(action.payload, current(state) as TPageBuilderState),
+    changeParent: (state) => handleChangeParent(current(state) as TPageBuilderState),
+    changePosition: (state) => handleChangePosition(current(state) as TPageBuilderState),
+    changeProperties: (state, action: PayloadAction<TChangePropertiesActionPayload>) =>
+      handleChangeProperties(action.payload, current(state) as TPageBuilderState),
+    clearPrevState: (state) => handleClearPrevState(current(state) as TPageBuilderState),
+    fitLayout: (state) => handleFitLayout(current(state) as TPageBuilderState),
+    flipElements: (state, action: PayloadAction<TFlipElementsActionPayload>) =>
+      handleFlipElements(action.payload, current(state) as TPageBuilderState),
+    reducerHistoryRedo: (state) => handleReducerHistoryRedo(current(state) as TPageBuilderState),
+    reducerHistorySave: (state, action: PayloadAction<string>) =>
+      handleReducerHistorySave(current(state) as TPageBuilderState, action.payload),
+    reducerHistoryUndo: (state) => handleReducerHistoryUndo(current(state) as TPageBuilderState),
+    removeVariant: {
+      prepare: (index: TRemoveVariantActionPayload['index'], key: TRemoveVariantActionPayload['key']) => ({
+        payload: { index, key },
+      }),
+      reducer: (state, action: PayloadAction<TRemoveVariantActionPayload>) =>
+        handleRemoveVariant(action.payload, current(state) as TPageBuilderState),
+    },
+    resizeElement: {
+      prepare: (
+        baseCoordinates: TResizeElementActionPayload['baseCoordinates'],
+        flip: TResizeElementActionPayload['flip'],
+        height: TResizeElementActionPayload['height'],
+        id: TResizeElementActionPayload['id'],
+        mouseCoordinates: TResizeElementActionPayload['mouseCoordinates'],
+        width: TResizeElementActionPayload['width'],
+      ) => ({ payload: { baseCoordinates, flip, height, id, mouseCoordinates, width } }),
+      reducer: (state, action: PayloadAction<TResizeElementActionPayload>) => {
+        const { baseCoordinates, flip, height, id, mouseCoordinates, width } = action.payload;
 
-export default pageBuilder;
+        return handleResizeElement(
+          baseCoordinates,
+          flip,
+          height,
+          width,
+          id,
+          mouseCoordinates,
+          current(state) as TPageBuilderState,
+        );
+      },
+    },
+    rotateElements: (state, action: PayloadAction<TRotateElementsActionPayload>) =>
+      handleRotateElements(action.payload, current(state) as TPageBuilderState),
+    selectElement: (state, action: PayloadAction<TSelectedElement>) =>
+      handleSelectElement(current(state) as TPageBuilderState, action.payload),
+    selectElements: (state, action: PayloadAction<TSelectedElements>) =>
+      handleSelectElements(current(state) as TPageBuilderState, action.payload),
+    setAreCoordinates: (state, action: PayloadAction<Partial<T3DCoordinates>>) =>
+      handleSetAreaCoordinates(current(state) as TPageBuilderState, action.payload),
+    setElementsCoordinates: {
+      prepare: (
+        coordinates: TSetElementsCoordinatesActionPayload['coordinates'],
+        mode: TSetElementsCoordinatesActionPayload['mode'],
+      ) => ({ payload: { coordinates, mode } }),
+      reducer: (state, action: PayloadAction<TSetElementsCoordinatesActionPayload>) =>
+        handleSetElementsCoordinates(action.payload, current(state) as TPageBuilderState),
+    },
+    setElementsGap: {
+      prepare: (gap: TSetElementsGapActionPayload['gap'], value: TSetElementsGapActionPayload['value']) => ({
+        payload: { gap, value },
+      }),
+      reducer: (state, action: PayloadAction<TSetElementsGapActionPayload>) =>
+        handleSetElementsGap(action.payload, current(state) as TPageBuilderState),
+    },
+    setElementsScoreToCurrentSize: {
+      prepare: (
+        scoreType: TSetElementsScoreToCurrentSizeActionPayload['scoreType'],
+        sizeType: TSetElementsScoreToCurrentSizeActionPayload['sizeType'],
+      ) => ({ payload: { scoreType, sizeType } }),
+      reducer: (state, action: PayloadAction<TSetElementsScoreToCurrentSizeActionPayload>) => {
+        const { scoreType, sizeType } = action.payload;
+
+        return handleSetElementsScoreToCurrentSize(scoreType, sizeType, current(state) as TPageBuilderState);
+      },
+    },
+    setElementsSizes: {
+      prepare: (
+        sizeType: TSetElementsSizesActionPayload['sizeType'],
+        value: TSetElementsSizesActionPayload['value'],
+      ) => ({ payload: { sizeType, value } }),
+      reducer: (state, action: PayloadAction<TSetElementsSizesActionPayload>) => {
+        const { sizeType, value } = action.payload;
+
+        return handleSetElementsSizes(sizeType, current(state) as TPageBuilderState, value);
+      },
+    },
+    setElementsSizesMinMax: {
+      prepare: (
+        scoreType: TSetElementsSizesMinMaxActionPayload['scoreType'],
+        sizeType: TSetElementsSizesMinMaxActionPayload['sizeType'],
+        value: TSetElementsSizesMinMaxActionPayload['value'],
+      ) => ({ payload: { scoreType, sizeType, value } }),
+      reducer: (state, action: PayloadAction<TSetElementsSizesMinMaxActionPayload>) => {
+        const { scoreType, sizeType, value } = action.payload;
+
+        return handleSetElementsSizesMinMax(scoreType, sizeType, current(state) as TPageBuilderState, value);
+      },
+    },
+    unselectElement: (state, action: PayloadAction<TElement['id']>) =>
+      handleUnselectElement(current(state) as TPageBuilderState, action.payload),
+    unselectElements: (state) => handleUnselectElements(current(state) as TPageBuilderState),
+    updateEventsStatus: (state, action: PayloadAction<Partial<TEvents>>) =>
+      handleUpdateEventsStatus(current(state) as TPageBuilderState, action.payload),
+    updatePrevState: (state) => handleUpdatePrevState(current(state) as TPageBuilderState),
+  },
+});
+
+export const {
+  addElement,
+  addVariant,
+  applyElementsType,
+  changeAlignment,
+  changeBackground,
+  changeBackgroundOrder,
+  changeLayout,
+  changeLayoutAlignment,
+  changeLayoutBoxSizing,
+  changeLayoutGrid,
+  changeParent,
+  changePosition,
+  changeProperties,
+  clearPrevState,
+  fitLayout,
+  flipElements,
+  reducerHistoryRedo,
+  reducerHistorySave,
+  reducerHistoryUndo,
+  removeVariant,
+  resizeElement,
+  rotateElements,
+  selectElement,
+  selectElements,
+  setAreCoordinates,
+  setElementsCoordinates,
+  setElementsGap,
+  setElementsScoreToCurrentSize,
+  setElementsSizes,
+  setElementsSizesMinMax,
+  unselectElement,
+  unselectElements,
+  updateEventsStatus,
+  updatePrevState,
+} = pageBuilderSlice.actions;
+export const REDUCER_KEY = pageBuilderSlice.name;
+export default pageBuilderSlice.reducer;

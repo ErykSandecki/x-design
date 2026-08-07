@@ -3,7 +3,7 @@ import { pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
 
 // others
 import { BASE_3D } from 'shared';
-import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
+import { REDUCER_KEY as PAGE_BUILDER } from '../../reducer';
 
 // store
 import { areaCoordinatesSelector } from '../../selectors';

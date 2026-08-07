@@ -3,12 +3,8 @@ import SagaTester from 'redux-saga-tester';
 // mocks
 import { elementMock, pageBuilderStateMock, reducerHistoryMock } from 'test/mocks/reducer/pageBuilderMock';
 
-// others
-import { CHANGE_BACKGROUND, REDUCER_KEY as PAGE_BUILDER, REDUCER_HISTORY_SAVE } from '../../actionsType';
-import { REDUCER_HISTORY_SAVE_WITH_DELAY_ACTIONS } from 'store/pageBuilder/constants';
-
 // store
-import pageBuilder from '../../reducer';
+import pageBuilder, { changeBackground, reducerHistorySave, REDUCER_KEY as PAGE_BUILDER } from '../../reducer';
 import { reducerHistorySaveWithDelaySaga } from '../../saga';
 
 describe('reducerHistorySaveWithDelaySaga', () => {
@@ -36,11 +32,11 @@ describe('reducerHistorySaveWithDelaySaga', () => {
 
     // action
     sagaTester.start(reducerHistorySaveWithDelaySaga, {
-      type: CHANGE_BACKGROUND,
+      type: changeBackground.type,
     });
 
     // wait
-    await sagaTester.waitFor(REDUCER_HISTORY_SAVE);
+    await sagaTester.waitFor(reducerHistorySave.type);
 
     // result
     expect(sagaTester.getState()[PAGE_BUILDER].pages['0'].reducerHistory.length).toEqual(3);
@@ -76,7 +72,7 @@ describe('reducerHistorySaveWithDelaySaga', () => {
 
     // action
     sagaTester.start(reducerHistorySaveWithDelaySaga, {
-      type: CHANGE_BACKGROUND,
+      type: changeBackground.type,
     });
 
     sagaTester.dispatch({
@@ -87,10 +83,10 @@ describe('reducerHistorySaveWithDelaySaga', () => {
         },
         id: elementMock.id,
       },
-      type: REDUCER_HISTORY_SAVE_WITH_DELAY_ACTIONS[0],
+      type: changeBackground.type,
     });
 
     // result
-    expect(sagaTester.numCalled(REDUCER_HISTORY_SAVE)).toBe(0);
+    expect(sagaTester.numCalled(reducerHistorySave.type)).toBe(0);
   });
 });

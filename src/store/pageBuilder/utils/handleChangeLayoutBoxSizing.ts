@@ -1,11 +1,11 @@
 // types
-import { TChangeLayoutBoxSizingAction, TPageBuilderState } from '../types';
+import { TChangeLayoutBoxSizingActionPayload, TPageBuilderState } from '../types';
 
 // utils
 import { extractObjectValues, mapFilteredValues } from 'utils';
 
 export const handleChangeLayoutBoxSizing = (
-  boxSizing: TChangeLayoutBoxSizingAction['payload'],
+  boxSizing: TChangeLayoutBoxSizingActionPayload,
   state: TPageBuilderState,
 ): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];

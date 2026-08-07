@@ -9,7 +9,7 @@ import 'test/mocks/sagas/allSagas';
 
 // others
 import { BASE_RECT } from 'shared';
-import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
+import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/reducer';
 
 // store
 import { configureStore } from 'store/store';

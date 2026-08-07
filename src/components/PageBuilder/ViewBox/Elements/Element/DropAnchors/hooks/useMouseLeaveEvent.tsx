@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 // store
 import { eventSelectorCreator } from 'store/pageBuilder/selectors';
 import { store } from 'store';
-import { updateEventsStatus } from 'store/pageBuilder/actions';
+import { updateEventsStatus } from 'store/pageBuilder/reducer';
 
 // types
 import { MouseMode } from 'types/enums/mouseMode';

@@ -1,4 +1,4 @@
-import { Dispatch } from 'redux';
+import { Dispatch } from '@reduxjs/toolkit';
 import { ReactNode } from 'react';
 import { UseSelector } from 'react-redux';
 
@@ -9,7 +9,7 @@ import { UITools } from 'shared';
 import { TOOLTIP_TRANSLATION_KEY } from 'constant/constants';
 
 // store
-import { changeBackground } from 'store/pageBuilder/actions';
+import { changeBackground } from 'store/pageBuilder/reducer';
 import { pageBackgroundSelectorCreator } from 'store/pageBuilder/selectors';
 
 const ColumnBackgroundButtonIcons = (dispatch: Dispatch, t: TT, useSelector: UseSelector): Array<ReactNode> => {

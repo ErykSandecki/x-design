@@ -3,7 +3,7 @@ import { get as getFp, getOr as getOrFp } from 'lodash/fp';
 
 // others
 import { DEFAULT_LANGUAGE } from 'translations';
-import { REDUCER_KEY } from './actionsType';
+import { REDUCER_KEY } from './reducer';
 
 // types
 import { TAppInitializerState } from './types';

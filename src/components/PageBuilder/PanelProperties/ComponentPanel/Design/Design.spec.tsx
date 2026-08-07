@@ -15,7 +15,7 @@ import {
 
 // others
 import { PANEL_PROPERTIES_ID } from '../../../constants';
-import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
+import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/reducer';
 
 // store
 import { configureStore } from 'store/store';

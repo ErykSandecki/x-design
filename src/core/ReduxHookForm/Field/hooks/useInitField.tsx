@@ -6,8 +6,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { FormContext } from '../../Form/Form';
 
 // store
+import { initField } from 'store/reduxHookForm/reducer';
 import { fieldSelectorCreator } from 'store/reduxHookForm/selectors';
-import { initField } from 'store/reduxHookForm/actions';
 
 // types
 import { TAsyncValidator, TFieldValue, TSyncValidator } from '../../types';

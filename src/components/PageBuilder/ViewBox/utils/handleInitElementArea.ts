@@ -1,8 +1,8 @@
-import { Dispatch } from 'redux';
+import { Dispatch } from '@reduxjs/toolkit';
 import { MouseEvent } from 'react';
 
 // store
-import { updateEventsStatus } from 'store/pageBuilder/actions';
+import { updateEventsStatus } from 'store/pageBuilder/reducer';
 
 // types
 import { MouseButton } from 'types';

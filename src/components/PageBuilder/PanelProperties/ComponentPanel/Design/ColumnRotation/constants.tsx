@@ -1,4 +1,4 @@
-import { Dispatch } from 'redux';
+import { Dispatch } from '@reduxjs/toolkit';
 
 // components
 import { KeyboardKeysGroup } from 'shared';
@@ -9,7 +9,7 @@ import { TOOLTIP_TRANSLATION_KEY } from 'constant/constants';
 import { translationNameSpace as parentNameSpace } from '../constants';
 
 // store
-import { flipElements, rotateElements } from 'store/pageBuilder/actions';
+import { flipElements, rotateElements } from 'store/pageBuilder/reducer';
 
 // types
 import { TButtonGroup } from 'shared/UITools/ButtonGroup/types';

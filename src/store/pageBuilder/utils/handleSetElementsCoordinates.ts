@@ -1,7 +1,7 @@
 import { isNaN } from 'lodash';
 
 // types
-import { TElements, TPage, TPageBuilderState, TSelectedElements, TSetElementsCoordinatesAction } from '../types';
+import { TElements, TPage, TPageBuilderState, TSelectedElements, TSetElementsCoordinatesActionPayload } from '../types';
 
 export const getCoordinates = (
   coordinates: T2DCoordinates,
@@ -20,7 +20,7 @@ export const getCoordinates = (
 
 export const getPositions = (
   canMoveElements: boolean,
-  { coordinates: currentCoordinates, mode }: TSetElementsCoordinatesAction['payload'],
+  { coordinates: currentCoordinates, mode }: TSetElementsCoordinatesActionPayload,
   prevPageState: TPage['prevState'],
   currentPage: TPage,
 ): { elements: TElements; selectedElements: TSelectedElements } => {
@@ -56,7 +56,7 @@ export const getPositions = (
 };
 
 export const handleSetElementsCoordinates = (
-  coordinates: TSetElementsCoordinatesAction['payload'],
+  coordinates: TSetElementsCoordinatesActionPayload,
   state: TPageBuilderState,
 ): TPageBuilderState => {
   const { canMoveElements } = state.events;

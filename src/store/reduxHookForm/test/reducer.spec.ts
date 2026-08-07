@@ -1,33 +1,26 @@
 // mocks
 import { fieldMock, formMock, reduxHookFormStateMock } from 'test/mocks/reducer/reduxHookFormMock';
 
-// others
-import {
-  BLUR,
-  CHANGE,
-  FOCUS,
-  REDUCER_KEY,
-  SET_PENDING,
-  SET_PENDING_FIELD,
-  SET_TOUCHED_FIELD,
-  UPDATE_ASYNC_ERRORS,
-  UPDATE_FORM_VALIDATOR,
-  UPDATE_SYNC_ERRORS,
-} from '../actionsType';
-import {
+// store
+import reduxHookForm, {
+  blur,
+  change,
   clearFields,
   destroyForm,
+  focus,
   initField,
   mountForm,
+  REDUCER_KEY,
+  setPending,
+  setPendingField,
+  setTouchedField,
   submit,
   submitError,
   submitSuccess,
-  updateField,
-  updateForm,
-} from '../actions';
-
-// store
-import reduxHookForm from '../reducer';
+  updateAsyncErrors,
+  updateFormValidator,
+  updateSyncErrors,
+} from '../reducer';
 
 // types
 import { TAction } from 'types/redux';
@@ -52,7 +45,7 @@ describe('ReduxHookForm', () => {
     const names = ['testField'];
 
     // before
-    const state = reducer(clearFields(formName, names), {
+    const state = reducer(clearFields({ formName, names }), {
       [formName]: {
         ...formMock,
         fields: { [name]: { ...fieldMock, value: 'value' } },
@@ -83,7 +76,7 @@ describe('ReduxHookForm', () => {
     };
 
     // before
-    const state = reducer(updateField(payload, BLUR), {
+    const state = reducer(blur(payload), {
       testForm: {
         ...formMock,
         fields: { testField: { ...fieldMock, active: true } },
@@ -116,7 +109,7 @@ describe('ReduxHookForm', () => {
     };
 
     // before
-    const state = reducer(updateField(payload, CHANGE), {
+    const state = reducer(change(payload), {
       testForm: { ...formMock, fields: { testField: fieldMock } },
     });
 
@@ -155,7 +148,7 @@ describe('ReduxHookForm', () => {
     };
 
     // before
-    const state = reducer(updateField(payload, FOCUS), {
+    const state = reducer(focus(payload), {
       testForm: { ...formMock, fields: { testField: fieldMock } },
     });
 
@@ -226,7 +219,7 @@ describe('ReduxHookForm', () => {
     };
 
     // before
-    const state = reducer(updateForm(payload, SET_PENDING), {
+    const state = reducer(setPending(payload), {
       testForm: formMock,
     });
 
@@ -248,7 +241,7 @@ describe('ReduxHookForm', () => {
     };
 
     // before
-    const state = reducer(updateField(payload, SET_PENDING_FIELD), {
+    const state = reducer(setPendingField(payload), {
       testForm: { ...formMock, fields: { testField: fieldMock } },
     });
 
@@ -276,7 +269,7 @@ describe('ReduxHookForm', () => {
     };
 
     // before
-    const state = reducer(updateField(payload, SET_TOUCHED_FIELD), {
+    const state = reducer(setTouchedField(payload), {
       testForm: { ...formMock, fields: { testField: fieldMock } },
     });
 
@@ -367,7 +360,7 @@ describe('ReduxHookForm', () => {
     };
 
     // before
-    const state = reducer(updateField(payload, UPDATE_ASYNC_ERRORS), {
+    const state = reducer(updateAsyncErrors(payload), {
       testForm: {
         ...formMock,
         fields: {
@@ -400,7 +393,7 @@ describe('ReduxHookForm', () => {
     };
 
     // before
-    const state = reducer(updateForm(payload, UPDATE_FORM_VALIDATOR), {
+    const state = reducer(updateFormValidator(payload), {
       testForm: formMock,
     });
 
@@ -422,7 +415,7 @@ describe('ReduxHookForm', () => {
     };
 
     // before
-    const state = reducer(updateField(payload, UPDATE_SYNC_ERRORS), {
+    const state = reducer(updateSyncErrors(payload), {
       testForm: {
         ...formMock,
         fields: {

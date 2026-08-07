@@ -9,7 +9,7 @@ import { Icon, ScrubbableInput, TE2EValue, TIconProps, UITools } from 'shared';
 import { MAX, PANEL_PROPERTIES_ID } from '../../../../constants';
 
 // store
-import { applyElementsType } from 'store/pageBuilder/actions';
+import { applyElementsType } from 'store/pageBuilder/reducer';
 
 // types
 import { ColorsTheme, TElement, TValueExtended, TValueScore } from 'types';

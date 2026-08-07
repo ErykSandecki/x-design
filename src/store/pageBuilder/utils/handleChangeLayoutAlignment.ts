@@ -1,11 +1,11 @@
 // types
-import { TChangeLayoutAlignmentAction, TPageBuilderState } from '../types';
+import { TChangeLayoutAlignmentActionPayload, TPageBuilderState } from '../types';
 
 // utils
 import { extractObjectValues, mapFilteredValues } from 'utils';
 
 export const handleChangeLayoutAlignment = (
-  alignment: TChangeLayoutAlignmentAction['payload'],
+  alignment: TChangeLayoutAlignmentActionPayload,
   state: TPageBuilderState,
 ): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];

@@ -9,7 +9,7 @@ import { ScrubbableInput, UITools } from 'shared';
 import { TOOLTIP_TRANSLATION_KEY } from 'constant/constants';
 
 // store
-import { updateEventsStatus } from 'store/pageBuilder/actions';
+import { updateEventsStatus } from 'store/pageBuilder/reducer';
 
 // types
 import { TUseBlurEvent } from './hooks/useBlurEvent';

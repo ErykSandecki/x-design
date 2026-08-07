@@ -1,4 +1,4 @@
-import { Store } from 'redux';
+import { Store } from '@reduxjs/toolkit';
 
 // types
 import { TAction } from 'types/redux';

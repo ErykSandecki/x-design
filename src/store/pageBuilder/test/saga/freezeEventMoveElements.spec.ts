@@ -3,11 +3,8 @@ import SagaTester from 'redux-saga-tester';
 // mocks
 import { eventsMock, pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
 
-// others
-import { REDUCER_KEY as PAGE_BUILDER, UPDATE_EVENTS_STATUS } from '../../actionsType';
-
 // store
-import pageBuilder from '../../reducer';
+import pageBuilder, { updateEventsStatus, REDUCER_KEY as PAGE_BUILDER } from '../../reducer';
 import { freezeEventMoveElements } from '../../saga';
 
 // utils
@@ -32,7 +29,7 @@ describe('freezeEventMoveElements', () => {
     sagaTester.start(freezeEventMoveElements);
 
     // wait
-    await sagaTester.waitFor(UPDATE_EVENTS_STATUS);
+    await sagaTester.waitFor(updateEventsStatus.type);
 
     // result
     expect(sagaTester.getState()).toStrictEqual({

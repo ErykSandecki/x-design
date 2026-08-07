@@ -7,7 +7,7 @@ import { useFormValues } from '../useFormValues';
 import { reduxHookFormStateMock } from 'test/mocks/reducer/reduxHookFormMock';
 
 // others
-import { REDUCER_KEY as REDUX_HOOK_FORM } from 'store/reduxHookForm/actionsType';
+import { REDUCER_KEY as REDUX_HOOK_FORM } from 'store/reduxHookForm/reducer';
 
 // utils
 import { configureStore } from 'store/store';

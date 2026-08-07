@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 
 // store
-import { setElementsSizesMinMax } from 'store/pageBuilder/actions';
+import { setElementsSizesMinMax } from 'store/pageBuilder/reducer';
 
 // types
 import { TSetElementsSizesActionPayload } from 'store/pageBuilder/types';

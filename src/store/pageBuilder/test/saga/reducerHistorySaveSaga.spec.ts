@@ -3,11 +3,8 @@ import SagaTester from 'redux-saga-tester';
 // mocks
 import { pageBuilderStateMock, reducerHistoryMock } from 'test/mocks/reducer/pageBuilderMock';
 
-// others
-import { ADD_ELEMENT, REDUCER_KEY as PAGE_BUILDER, REDUCER_HISTORY_SAVE } from '../../actionsType';
-
 // store
-import pageBuilder from '../../reducer';
+import pageBuilder, { addElement, reducerHistorySave, REDUCER_KEY as PAGE_BUILDER } from '../../reducer';
 import { reducerHistorySaveSaga } from '../../saga';
 
 describe('reducerHistorySaveSaga', () => {
@@ -34,10 +31,10 @@ describe('reducerHistorySaveSaga', () => {
     });
 
     // action
-    sagaTester.start(reducerHistorySaveSaga, { type: ADD_ELEMENT });
+    sagaTester.start(reducerHistorySaveSaga, { type: addElement.type });
 
     // wait
-    await sagaTester.waitFor(REDUCER_HISTORY_SAVE);
+    await sagaTester.waitFor(reducerHistorySave.type);
 
     // result
     expect(sagaTester.getState()[PAGE_BUILDER].pages['0'].reducerHistory.length).toEqual(3);

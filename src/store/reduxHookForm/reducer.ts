@@ -1,38 +1,15 @@
 import { mapValues, omit } from 'lodash';
-
-// others
-import {
-  BLUR,
-  CHANGE,
-  CLEAR_FIELDS,
-  DESTROY_FORM,
-  FOCUS,
-  INIT_FIELD,
-  MOUNT_FORM,
-  SET_PENDING,
-  SET_PENDING_FIELD,
-  SET_TOUCHED_FIELD,
-  SUBMIT,
-  SUBMIT_ERROR,
-  SUBMIT_SUCCESS,
-  UPDATE_ASYNC_ERRORS,
-  UPDATE_FORM_VALIDATOR,
-  UPDATE_SYNC_ERRORS,
-} from './actionsType';
+import { createSlice, current, PayloadAction } from '@reduxjs/toolkit';
 
 // types
-import { TAction } from 'types/redux';
 import {
-  TClearFieldsAction,
-  TDestroyFormAction,
-  TInitFieldAction,
-  TMountFormAction,
+  TClearFieldsActionPayload,
+  TInitFieldActionPayload,
+  TMountFormActionPayload,
   TReduxHookFormState,
-  TSubmitAction,
-  TSubmitErrorAction,
-  TSubmitSuccessAction,
-  TUpdateFieldAction,
-  TUpdateFormAction,
+  TSubmitErrorActionPayload,
+  TUpdateFieldActionPayload,
+  TUpdateFormActionPayload,
 } from './types';
 
 // utils
@@ -40,14 +17,11 @@ import { getUpdatedFieldsState, getFieldsWithModifiedAttributes, notifyFields } 
 
 const initialState: TReduxHookFormState = {};
 
-const clearFields = (
+const handleClearFields = (
   state: TReduxHookFormState,
-  { payload }: TAction<TClearFieldsAction['payload']>,
+  { formName, names }: TClearFieldsActionPayload,
 ): TReduxHookFormState => {
-  const names = payload!.names;
-  const formName = payload!.formName;
-
-  const fields = mapValues(state[payload!.formName].fields, (field, name) =>
+  const fields = mapValues(state[formName].fields, (field, name) =>
     names.includes(name)
       ? {
           ...field,
@@ -69,20 +43,13 @@ const clearFields = (
   };
 };
 
-const destroyForm = (
-  state: TReduxHookFormState,
-  { payload: formName }: TAction<TDestroyFormAction['payload']>,
-): TReduxHookFormState => {
-  const newState = omit({ ...state }, [formName]);
+const handleDestroyForm = (state: TReduxHookFormState, formName: string): TReduxHookFormState => ({
+  ...omit({ ...state }, [formName]),
+});
 
-  return {
-    ...newState,
-  };
-};
-
-const initField = (
+const handleInitField = (
   state: TReduxHookFormState,
-  { payload: { formName, field, name } }: TAction<TInitFieldAction['payload']>,
+  { formName, field, name }: TInitFieldActionPayload,
 ): TReduxHookFormState => {
   if (!state[formName]) {
     return state;
@@ -97,15 +64,12 @@ const initField = (
   };
 };
 
-const mountForm = (
-  state: TReduxHookFormState,
-  { payload }: TAction<TMountFormAction['payload']>,
-): TReduxHookFormState => ({ ...state, ...payload });
+const handleMountForm = (state: TReduxHookFormState, payload: TMountFormActionPayload): TReduxHookFormState => ({
+  ...state,
+  ...payload,
+});
 
-const submit = (
-  state: TReduxHookFormState,
-  { payload: formName }: TAction<TSubmitAction['payload']>,
-): TReduxHookFormState => {
+const handleSubmit = (state: TReduxHookFormState, formName: string): TReduxHookFormState => {
   notifyFields(formName, state, 'before');
 
   return {
@@ -119,11 +83,12 @@ const submit = (
   };
 };
 
-const submitError = (
+const handleSubmitError = (
   state: TReduxHookFormState,
-  { payload: { error, formName } }: TAction<TSubmitErrorAction['payload']>,
+  { error, formName }: TSubmitErrorActionPayload,
 ): TReduxHookFormState => {
   notifyFields(formName, state, 'after');
+
   return {
     ...state,
     [formName]: {
@@ -134,11 +99,9 @@ const submitError = (
   };
 };
 
-const submitSuccess = (
-  state: TReduxHookFormState,
-  { payload: formName }: TAction<TSubmitSuccessAction['payload']>,
-): TReduxHookFormState => {
+const handleSubmitSuccess = (state: TReduxHookFormState, formName: string): TReduxHookFormState => {
   notifyFields(formName, state, 'after');
+
   return {
     ...state,
     [formName]: {
@@ -148,9 +111,9 @@ const submitSuccess = (
   };
 };
 
-const updateField = (
+const handleUpdateField = (
   state: TReduxHookFormState,
-  { payload: { formName, field, name } }: TAction<TUpdateFieldAction['payload']>,
+  { formName, field, name }: TUpdateFieldActionPayload,
 ): TReduxHookFormState => ({
   ...state,
   [formName]: {
@@ -159,9 +122,9 @@ const updateField = (
   },
 });
 
-const updateForm = (
+const handleUpdateForm = (
   state: TReduxHookFormState,
-  { payload: { form, formName } }: TAction<TUpdateFormAction['payload']>,
+  { form, formName }: TUpdateFormActionPayload,
 ): TReduxHookFormState => ({
   ...state,
   [formName]: {
@@ -170,36 +133,62 @@ const updateForm = (
   },
 });
 
-export const reduxHookForm = (state: TReduxHookFormState = initialState, action: TAction): TReduxHookFormState => {
-  switch (action.type) {
-    case CLEAR_FIELDS:
-      return clearFields(state, action);
-    case DESTROY_FORM:
-      return destroyForm(state, action);
-    case INIT_FIELD:
-      return initField(state, action);
-    case MOUNT_FORM:
-      return mountForm(state, action);
-    case SUBMIT:
-      return submit(state, action);
-    case SUBMIT_ERROR:
-      return submitError(state, action);
-    case SUBMIT_SUCCESS:
-      return submitSuccess(state, action);
-    case BLUR:
-    case CHANGE:
-    case FOCUS:
-    case SET_PENDING_FIELD:
-    case SET_TOUCHED_FIELD:
-    case UPDATE_ASYNC_ERRORS:
-    case UPDATE_SYNC_ERRORS:
-      return updateField(state, action);
-    case SET_PENDING:
-    case UPDATE_FORM_VALIDATOR:
-      return updateForm(state, action);
-    default:
-      return state;
-  }
-};
+const reduxHookFormSlice = createSlice({
+  initialState,
+  name: 'reduxHookForm',
+  reducers: {
+    blur: (state, action: PayloadAction<TUpdateFieldActionPayload>) =>
+      handleUpdateField(current(state) as TReduxHookFormState, action.payload),
+    change: (state, action: PayloadAction<TUpdateFieldActionPayload>) =>
+      handleUpdateField(current(state) as TReduxHookFormState, action.payload),
+    clearFields: (state, action: PayloadAction<TClearFieldsActionPayload>) =>
+      handleClearFields(current(state) as TReduxHookFormState, action.payload),
+    destroyForm: (state, action: PayloadAction<string>) =>
+      handleDestroyForm(current(state) as TReduxHookFormState, action.payload),
+    focus: (state, action: PayloadAction<TUpdateFieldActionPayload>) =>
+      handleUpdateField(current(state) as TReduxHookFormState, action.payload),
+    initField: (state, action: PayloadAction<TInitFieldActionPayload>) =>
+      handleInitField(current(state) as TReduxHookFormState, action.payload),
+    mountForm: (state, action: PayloadAction<TMountFormActionPayload>) =>
+      handleMountForm(current(state) as TReduxHookFormState, action.payload),
+    setPending: (state, action: PayloadAction<TUpdateFormActionPayload>) =>
+      handleUpdateForm(current(state) as TReduxHookFormState, action.payload),
+    setPendingField: (state, action: PayloadAction<TUpdateFieldActionPayload>) =>
+      handleUpdateField(current(state) as TReduxHookFormState, action.payload),
+    setTouchedField: (state, action: PayloadAction<TUpdateFieldActionPayload>) =>
+      handleUpdateField(current(state) as TReduxHookFormState, action.payload),
+    submit: (state, action: PayloadAction<string>) =>
+      handleSubmit(current(state) as TReduxHookFormState, action.payload),
+    submitError: (state, action: PayloadAction<TSubmitErrorActionPayload>) =>
+      handleSubmitError(current(state) as TReduxHookFormState, action.payload),
+    submitSuccess: (state, action: PayloadAction<string>) =>
+      handleSubmitSuccess(current(state) as TReduxHookFormState, action.payload),
+    updateAsyncErrors: (state, action: PayloadAction<TUpdateFieldActionPayload>) =>
+      handleUpdateField(current(state) as TReduxHookFormState, action.payload),
+    updateFormValidator: (state, action: PayloadAction<TUpdateFormActionPayload>) =>
+      handleUpdateForm(current(state) as TReduxHookFormState, action.payload),
+    updateSyncErrors: (state, action: PayloadAction<TUpdateFieldActionPayload>) =>
+      handleUpdateField(current(state) as TReduxHookFormState, action.payload),
+  },
+});
 
-export default reduxHookForm;
+export const {
+  blur,
+  change,
+  clearFields,
+  destroyForm,
+  focus,
+  initField,
+  mountForm,
+  setPending,
+  setPendingField,
+  setTouchedField,
+  submit,
+  submitError,
+  submitSuccess,
+  updateAsyncErrors,
+  updateFormValidator,
+  updateSyncErrors,
+} = reduxHookFormSlice.actions;
+export const REDUCER_KEY = reduxHookFormSlice.name;
+export default reduxHookFormSlice.reducer;

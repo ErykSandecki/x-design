@@ -1,5 +1,5 @@
 // types
-import { TChangeLayoutGridAction, TPageBuilderState } from '../../types';
+import { TChangeLayoutGridActionPayload, TPageBuilderState } from '../../types';
 
 // utils
 import { extractObjectValues, mapFilteredValues } from 'utils';
@@ -7,7 +7,7 @@ import { getCorrectChildren } from './getCorrectChildren';
 import { getCorrectGrid } from './getCorrectGrid';
 
 export const handleChangeLayoutGrid = (
-  cell: TChangeLayoutGridAction['payload'],
+  cell: TChangeLayoutGridActionPayload,
   state: TPageBuilderState,
 ): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];

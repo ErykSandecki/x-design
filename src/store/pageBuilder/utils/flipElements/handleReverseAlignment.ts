@@ -1,10 +1,10 @@
 // types
 import { AlignmentHorizontal, AlignmentVertical, TAlignment, TElement } from 'types';
-import { TFlipElementsAction, TStrictAxis } from '../../types';
+import { TFlipElementsActionPayload, TStrictAxis } from '../../types';
 
 export const reverseAligment = (
   aligment: TElement['alignment'],
-  axis: TFlipElementsAction['payload'],
+  axis: TFlipElementsActionPayload,
 ): TElement['alignment'] => {
   if (aligment.horizontal || aligment.vertical) {
     let horizontal = aligment.horizontal;

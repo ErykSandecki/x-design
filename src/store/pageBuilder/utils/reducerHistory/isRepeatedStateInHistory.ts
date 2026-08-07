@@ -1,7 +1,7 @@
 import { head } from 'lodash';
 
-// others
-import { CHANGE_PARENT, SELECT_ELEMENT, SELECT_ELEMENTS, SET_AREA_COORDINATES } from 'store/pageBuilder/actionsType';
+// store
+import { changeParent, selectElement, selectElements, setAreCoordinates } from 'store/pageBuilder/reducer';
 
 // types
 import { TAction } from 'types';
@@ -37,12 +37,12 @@ export const isRepeatedStateInHistory = (state: TPageBuilderState, type: TAction
     const prevState = head(currentPage.reducerHistory);
 
     switch (type) {
-      case CHANGE_PARENT:
+      case changeParent.type:
         return parentHasNotChanged(prevState, currentPage);
-      case SELECT_ELEMENT:
-      case SELECT_ELEMENTS:
+      case selectElement.type:
+      case selectElements.type:
         return hasTheSameSelectedElements(prevState.selectedElements, currentPage.selectedElements);
-      case SET_AREA_COORDINATES:
+      case setAreCoordinates.type:
         return areaHasTheSameCoordinates(prevState, currentPage);
       default:
         return false;

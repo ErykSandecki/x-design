@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 
 // store
-import { changeAlignment } from 'store/pageBuilder/actions';
+import { changeAlignment } from 'store/pageBuilder/reducer';
 
 // types
 import { AlignmentHorizontal } from 'types';

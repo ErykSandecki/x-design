@@ -3,11 +3,15 @@ import { appInitializerStateMock } from 'test/mocks/reducer/appInitializerMock';
 
 // others
 import { DEFAULT_LANGUAGE } from 'translations';
-import { REDUCER_KEY as APP_INITIALIZER } from '../actionsType';
 
 // store
-import appInitializer from '../reducer';
-import { appInit, initLanguageSuccess, setIsAppLoaded, setTheme } from '../actions';
+import appInitializer, {
+  REDUCER_KEY as APP_INITIALIZER,
+  appInit,
+  initLanguageSuccess,
+  setIsAppLoaded,
+  setTheme,
+} from '../reducer';
 
 // types
 import { TAction, Theme } from 'types';

@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 
 // store
-import { setElementsSizes } from 'store/pageBuilder/actions';
+import { setElementsSizes } from 'store/pageBuilder/reducer';
 
 // types
 import { TElement } from 'types';

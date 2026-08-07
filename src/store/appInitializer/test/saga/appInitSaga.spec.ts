@@ -5,10 +5,9 @@ import { appInitializerStateMock } from 'test/mocks/reducer/appInitializerMock';
 
 // others
 import { DEFAULT_LANGUAGE } from 'translations';
-import { REDUCER_KEY as APP_INITIALIZER, SET_IS_APP_LOADED } from '../../actionsType';
 
 // store
-import appInitializer from '../../reducer';
+import appInitializer, { REDUCER_KEY as APP_INITIALIZER, setIsAppLoaded } from '../../reducer';
 import { appInitSaga, initLanguageSaga } from '../../saga';
 
 vi.mock('utils', async (importOriginal) => ({
@@ -45,7 +44,7 @@ describe('appInitSaga', () => {
     sagaTester.start(initLanguageSaga);
 
     // wait
-    await sagaTester.waitFor(SET_IS_APP_LOADED);
+    await sagaTester.waitFor(setIsAppLoaded.type);
 
     // result
     expect(sagaTester.getState()).toEqual({
@@ -75,7 +74,7 @@ describe('appInitSaga', () => {
     sagaTester.start(initLanguageSaga);
 
     // wait
-    await sagaTester.waitFor(SET_IS_APP_LOADED);
+    await sagaTester.waitFor(setIsAppLoaded.type);
 
     // result
     expect(sagaTester.getState()).toEqual({

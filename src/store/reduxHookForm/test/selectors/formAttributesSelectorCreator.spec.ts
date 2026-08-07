@@ -2,7 +2,7 @@
 import { reduxHookFormStateMock } from 'test/mocks/reducer/reduxHookFormMock';
 
 // others
-import { REDUCER_KEY } from '../../actionsType';
+import { REDUCER_KEY } from '../../reducer';
 
 // store
 import { formAttributesSelectorCreator } from '../../selectors';

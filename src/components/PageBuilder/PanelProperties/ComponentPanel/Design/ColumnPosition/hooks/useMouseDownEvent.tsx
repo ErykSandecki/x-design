@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 
 // store
-import { clearPrevState, updateEventsStatus } from 'store/pageBuilder/actions';
+import { clearPrevState, updateEventsStatus } from 'store/pageBuilder/reducer';
 
 export type TUseMouseDownEvent = TFunc;
 

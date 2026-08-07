@@ -1,7 +1,7 @@
 import { first } from 'lodash';
 
 // types
-import { TChangeAlignmentAction, TPageBuilderState } from '../../types';
+import { TChangeAlignmentActionPayload, TPageBuilderState } from '../../types';
 import { TElement } from 'types';
 
 // utils
@@ -10,7 +10,7 @@ import { getDefaultCoordinates } from './getDefaultCoordinates';
 
 export const getAlignmentData = (
   element: TElement,
-  payload: TChangeAlignmentAction['payload'],
+  payload: TChangeAlignmentActionPayload,
 ): Pick<TElement, 'alignment' | 'coordinates' | 'position'> => {
   const { alignment, id, parentId } = element;
   const targetAlignment = { ...alignment, ...payload };
@@ -24,7 +24,7 @@ export const getAlignmentData = (
 };
 
 export const handleChangeAlignment = (
-  payload: TChangeAlignmentAction['payload'],
+  payload: TChangeAlignmentActionPayload,
   state: TPageBuilderState,
 ): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];

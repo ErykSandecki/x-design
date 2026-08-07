@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 
 // store
-import { rotateElements } from 'store/pageBuilder/actions';
+import { rotateElements } from 'store/pageBuilder/reducer';
 
 export type TUseChangeEvent = TFunc<[string, boolean?]>;
 

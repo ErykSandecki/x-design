@@ -5,10 +5,9 @@ import { appInitializerStateMock } from 'test/mocks/reducer/appInitializerMock';
 
 // others
 import { AVAILABLE_LANGUAGES, LANGUAGE } from 'translations';
-import { INIT_LANGUAGE_SUCCESS, REDUCER_KEY as APP_INITIALIZER } from '../../actionsType';
 
 // store
-import appInitializer from '../../reducer';
+import appInitializer, { initLanguageSuccess, REDUCER_KEY as APP_INITIALIZER } from '../../reducer';
 import { initLanguageSaga } from '../../saga';
 
 describe('initLanguageSaga', () => {
@@ -43,7 +42,7 @@ describe('initLanguageSaga', () => {
     sagaTester.start(initLanguageSaga);
 
     // wait
-    await sagaTester.waitFor(INIT_LANGUAGE_SUCCESS);
+    await sagaTester.waitFor(initLanguageSuccess.type);
 
     // result
     expect(sagaTester.getState()).toStrictEqual({
@@ -81,7 +80,7 @@ describe('initLanguageSaga', () => {
     sagaTester.start(initLanguageSaga);
 
     // wait
-    await sagaTester.waitFor(INIT_LANGUAGE_SUCCESS);
+    await sagaTester.waitFor(initLanguageSuccess.type);
 
     // result
     expect(sagaTester.getState()).toStrictEqual({
@@ -112,7 +111,7 @@ describe('initLanguageSaga', () => {
     sagaTester.start(initLanguageSaga);
 
     // wait
-    await sagaTester.waitFor(INIT_LANGUAGE_SUCCESS);
+    await sagaTester.waitFor(initLanguageSuccess.type);
 
     // result
     expect(sagaTester.getState()).toStrictEqual({
@@ -142,7 +141,7 @@ describe('initLanguageSaga', () => {
     sagaTester.start(initLanguageSaga);
 
     // wait
-    await sagaTester.waitFor(INIT_LANGUAGE_SUCCESS);
+    await sagaTester.waitFor(initLanguageSuccess.type);
 
     // result
     expect(sagaTester.getState()).toStrictEqual({

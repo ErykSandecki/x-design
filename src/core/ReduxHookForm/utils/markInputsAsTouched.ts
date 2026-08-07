@@ -1,11 +1,8 @@
-import { Dispatch } from 'redux';
+import { Dispatch } from '@reduxjs/toolkit';
 import { keys } from 'lodash';
 
-// others
-import { SET_TOUCHED_FIELD } from 'store/reduxHookForm/actionsType';
-
 // store
-import { updateField } from 'store/reduxHookForm/actions';
+import { setTouchedField } from 'store/reduxHookForm/reducer';
 
 // types
 import { TFields } from 'store/reduxHookForm/types';
@@ -15,14 +12,11 @@ export const markInputsAsTouched = (dispatch: Dispatch, formName: string, fields
 
   fieldNames.forEach((fieldName) => {
     dispatch(
-      updateField(
-        {
-          field: { touched: true },
-          formName,
-          name: fieldName,
-        },
-        SET_TOUCHED_FIELD,
-      ),
+      setTouchedField({
+        field: { touched: true },
+        formName,
+        name: fieldName,
+      }),
     );
   });
 };

@@ -2,7 +2,7 @@ import { MouseEvent, RefObject } from 'react';
 import { useDispatch } from 'react-redux';
 
 // store
-import { updateEventsStatus } from 'store/pageBuilder/actions';
+import { updateEventsStatus } from 'store/pageBuilder/reducer';
 
 // types
 import { AnchorResize, AnchorRotate } from 'store/pageBuilder/enums';

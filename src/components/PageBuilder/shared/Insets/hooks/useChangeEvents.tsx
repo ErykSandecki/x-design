@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 
 // store
-import { changeProperties } from 'store/pageBuilder/actions';
+import { changeProperties } from 'store/pageBuilder/reducer';
 
 // types
 import { TInsets, TInsetsName } from 'types';

@@ -2,14 +2,13 @@ import { put, take } from 'redux-saga/effects';
 
 // others
 import { AVAILABLE_LANGUAGES, DEFAULT_LANGUAGE, initI18n, LANGUAGE, LOCATION_API } from 'translations';
-import { INIT_LANGUAGE_SUCCESS } from './actionsType';
 import { resources } from 'translations/resources';
 
 // store
-import { initLanguageSuccess, setIsAppLoaded } from './actions';
+import { initLanguageSuccess, setIsAppLoaded } from './reducer';
 
 export function* appInitSaga(): any {
-  yield take(INIT_LANGUAGE_SUCCESS);
+  yield take(initLanguageSuccess);
 
   try {
     yield put(setIsAppLoaded(true));

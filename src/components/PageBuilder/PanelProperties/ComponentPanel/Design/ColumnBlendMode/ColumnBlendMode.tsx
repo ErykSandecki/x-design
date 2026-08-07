@@ -16,7 +16,7 @@ import { PANEL_PROPERTIES_ID } from '../../../../constants';
 import { translationNameSpace } from './constants';
 
 // store
-import { changeProperties } from 'store/pageBuilder/actions';
+import { changeProperties } from 'store/pageBuilder/reducer';
 
 // types
 import { BlendMode } from 'types';

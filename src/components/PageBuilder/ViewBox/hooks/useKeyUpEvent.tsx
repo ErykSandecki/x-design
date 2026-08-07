@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 
 // hooks
-import { updateEventsStatus } from 'store/pageBuilder/actions';
+import { updateEventsStatus } from 'store/pageBuilder/reducer';
 
 // types
 import { KeyboardKeys } from 'types';

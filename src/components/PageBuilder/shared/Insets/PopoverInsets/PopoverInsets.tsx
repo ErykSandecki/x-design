@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { TIconProps, UITools } from 'shared';
 
 // store
-import { applyElementsType } from 'store/pageBuilder/actions';
+import { applyElementsType } from 'store/pageBuilder/reducer';
 
 // types
 import { PopoverItem } from '../enums';

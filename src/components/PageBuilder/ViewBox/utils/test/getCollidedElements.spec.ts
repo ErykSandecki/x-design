@@ -5,7 +5,7 @@ import { elementMock, eventsMock, pageBuilderStateMock, selectedElementMock } fr
 import { wholeStateMock } from 'test/mocks/reducer/wholeStateMock';
 
 // others
-import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
+import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/reducer';
 
 // store
 import { store as storeToMock } from 'store/store';

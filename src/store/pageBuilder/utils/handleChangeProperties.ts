@@ -1,11 +1,11 @@
 // types
-import { TChangePropertiesAction, TPageBuilderState } from '../types';
+import { TChangePropertiesActionPayload, TPageBuilderState } from '../types';
 
 // utils
 import { extractObjectValues, mapFilteredValues } from 'utils';
 
 export const handleChangeProperties = (
-  properties: TChangePropertiesAction['payload'],
+  properties: TChangePropertiesActionPayload,
   state: TPageBuilderState,
 ): TPageBuilderState => {
   const currentPage = state.pages[state.currentPage];

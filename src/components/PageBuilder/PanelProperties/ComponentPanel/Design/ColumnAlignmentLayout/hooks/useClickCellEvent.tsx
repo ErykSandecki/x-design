@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 
 // store
-import { changeLayoutGrid } from 'store/pageBuilder/actions';
+import { changeLayoutGrid } from 'store/pageBuilder/reducer';
 
 // types
 import { TUITypes } from 'shared';

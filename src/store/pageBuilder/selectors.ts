@@ -2,8 +2,8 @@ import { createSelector, Selector } from 'reselect';
 import { get as getFp } from 'lodash/fp';
 import { get, head, size } from 'lodash';
 
-// others
-import { REDUCER_KEY } from './actionsType';
+// store
+import { REDUCER_KEY } from './reducer';
 
 // types
 import { TAlignment, TColor, TElement, TNestedKeyOf } from 'types';

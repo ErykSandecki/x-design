@@ -5,7 +5,7 @@ import { elementMock, pageBuilderStateMock, selectedElementMock } from 'test/moc
 
 // others
 import { BASE_2D } from 'shared';
-import { REDUCER_KEY as PAGE_BUILDER } from '../../actionsType';
+import { REDUCER_KEY as PAGE_BUILDER } from '../../reducer';
 
 // utils
 import { handleSetElementsCoordinates } from '../handleSetElementsCoordinates';

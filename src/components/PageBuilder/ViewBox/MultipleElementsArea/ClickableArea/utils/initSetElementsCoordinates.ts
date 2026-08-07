@@ -1,10 +1,10 @@
-import { Dispatch } from 'redux';
+import { Dispatch } from '@reduxjs/toolkit';
 import { RefObject } from 'react';
 
 // store
 import { selectedElementsSelector } from 'store/pageBuilder/selectors';
 import { store } from 'store';
-import { updateEventsStatus, updatePrevState } from 'store/pageBuilder/actions';
+import { updateEventsStatus, updatePrevState } from 'store/pageBuilder/reducer';
 
 // types
 

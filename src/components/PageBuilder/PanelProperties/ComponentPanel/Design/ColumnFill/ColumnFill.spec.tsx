@@ -14,7 +14,7 @@ import {
 
 // others
 import { ANCHOR_INDEX } from 'shared/UITools/DraggableSection/constants';
-import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/actionsType';
+import { REDUCER_KEY as PAGE_BUILDER } from 'store/pageBuilder/reducer';
 
 // store
 import { configureStore } from 'store/store';

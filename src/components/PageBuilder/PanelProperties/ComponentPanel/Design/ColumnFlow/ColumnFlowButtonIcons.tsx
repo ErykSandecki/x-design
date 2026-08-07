@@ -1,4 +1,4 @@
-import { Dispatch } from 'redux';
+import { Dispatch } from '@reduxjs/toolkit';
 import { ReactNode } from 'react';
 
 // components
@@ -8,7 +8,7 @@ import { UITools } from 'shared';
 import { TOOLTIP_TRANSLATION_KEY } from 'constant/constants';
 
 // store
-import { changeProperties } from 'store/pageBuilder/actions';
+import { changeProperties } from 'store/pageBuilder/reducer';
 
 // types
 import { LayoutType, TLayout } from 'types';

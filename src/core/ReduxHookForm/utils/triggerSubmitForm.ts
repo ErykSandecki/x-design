@@ -1,10 +1,7 @@
-import { Dispatch } from 'redux';
-
-// others
-import { UPDATE_FORM_VALIDATOR } from 'store/reduxHookForm/actionsType';
+import { Dispatch } from '@reduxjs/toolkit';
 
 // store
-import { submit, updateForm } from 'store/reduxHookForm/actions';
+import { submit, updateFormValidator } from 'store/reduxHookForm/reducer';
 
 // types
 import { TFields } from 'store/reduxHookForm/types';
@@ -15,5 +12,5 @@ import { markInputsAsTouched } from './markInputsAsTouched';
 export const triggerSubmitForm = (dispatch: Dispatch, fields: TFields, formName: string, isValid: boolean): void => {
   markInputsAsTouched(dispatch, formName, fields);
   dispatch(submit(formName));
-  dispatch(updateForm({ form: { isValid }, formName }, UPDATE_FORM_VALIDATOR));
+  dispatch(updateFormValidator({ form: { isValid }, formName }));
 };

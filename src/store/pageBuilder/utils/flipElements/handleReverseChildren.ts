@@ -1,6 +1,6 @@
 // types
 import { LayoutType, TChildren, TElement, TGrid } from 'types';
-import { TFlipElementsAction, TStrictAxis } from '../../types';
+import { TFlipElementsActionPayload, TStrictAxis } from '../../types';
 
 export const flipHorizontal = (
   children: TElement['children'],
@@ -38,7 +38,7 @@ export const flipVertical = (
 };
 
 export const reverseChildren = (
-  axis: TFlipElementsAction['payload'],
+  axis: TFlipElementsActionPayload,
   children: TElement['children'],
   layout: TElement['layout'],
 ): TElement['children'] => {

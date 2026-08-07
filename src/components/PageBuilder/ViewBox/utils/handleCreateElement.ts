@@ -1,10 +1,10 @@
-import { Dispatch } from 'redux';
+import { Dispatch } from '@reduxjs/toolkit';
 
 // others
 import { BACKGROUND } from 'constant/background';
 
 // store
-import { addElement } from 'store/pageBuilder/actions';
+import { addElement } from 'store/pageBuilder/reducer';
 import { elementsSelector, eventSelectorCreator } from 'store/pageBuilder/selectors';
 
 // types

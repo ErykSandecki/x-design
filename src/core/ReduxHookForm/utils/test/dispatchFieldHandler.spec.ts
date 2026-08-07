@@ -1,5 +1,5 @@
-// others
-import { CHANGE } from '../../../../store/reduxHookForm/actionsType';
+// store
+import { change } from '../../../../store/reduxHookForm/reducer';
 
 // utils
 import { dispatchFieldHandler } from '../dispatchFieldHandler';
@@ -11,7 +11,7 @@ describe('dispatchFieldHandler', () => {
 
   it('should trigger dispatch', () => {
     // action
-    dispatch({}, CHANGE);
+    dispatch({}, change);
 
     // result
     expect(mockCallBack.mock.calls.length).toBe(1);

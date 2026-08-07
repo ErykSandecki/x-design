@@ -12,7 +12,7 @@ import { FormContext } from '../Form/Form';
 import { reduxHookFormStateMock } from 'test/mocks/reducer/reduxHookFormMock';
 
 // others
-import { REDUCER_KEY as REDUX_HOOK_FORM } from 'store/reduxHookForm/actionsType';
+import { REDUCER_KEY as REDUX_HOOK_FORM } from 'store/reduxHookForm/reducer';
 
 // store
 import { configureStore } from 'store/store';

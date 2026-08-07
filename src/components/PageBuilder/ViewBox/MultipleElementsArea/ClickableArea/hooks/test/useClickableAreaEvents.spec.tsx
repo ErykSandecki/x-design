@@ -7,11 +7,9 @@ import { useClickableAreaEvents } from '../useClickableAreaEvents';
 // mocks
 import { pageBuilderStateMock } from 'test/mocks/reducer/pageBuilderMock';
 
-// others
-import { UNSELECT_ELEMENTS } from 'store/pageBuilder/actionsType';
-
 // store
 import { configureStore } from 'store';
+import { unselectElements } from 'store/pageBuilder/reducer';
 
 // utils
 import { createHtmlElement } from 'utils';
@@ -59,6 +57,6 @@ describe('useClickableAreaEvents', () => {
     fireEvent.mouseDown(document);
 
     // result
-    expect(mockCallBack.mock.calls[0][0]).toStrictEqual({ type: UNSELECT_ELEMENTS });
+    expect(mockCallBack.mock.calls[0][0]).toStrictEqual({ payload: undefined, type: unselectElements.type });
   });
 });
