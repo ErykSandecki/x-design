@@ -5,6 +5,7 @@ import { defineConfig } from 'vite';
 
 // utils
 import { sharedCssConfig, sharedResolveAlias, viteSvgReactComponent } from './vite.shared';
+import viteCleanConsole from './viteCleanConsole';
 
 export default defineConfig({
   build: {
@@ -18,6 +19,7 @@ export default defineConfig({
     react(),
     tsconfigPaths(),
     viteSvgReactComponent(),
+    viteCleanConsole(),
     checker({
       typescript: {
         tsconfigPath: 'tsconfig.vite.json',
